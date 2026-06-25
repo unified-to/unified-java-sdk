@@ -4,27 +4,27 @@
 
 ### Available Operations
 
-* [createAccountingAccount](#createaccountingaccount) - Create an account
-* [getAccountingAccount](#getaccountingaccount) - Retrieve an account
-* [listAccountingAccounts](#listaccountingaccounts) - List all accounts
-* [patchAccountingAccount](#patchaccountingaccount) - Update an account
-* [removeAccountingAccount](#removeaccountingaccount) - Remove an account
-* [updateAccountingAccount](#updateaccountingaccount) - Update an account
+* [createAccountingAccount2](#createaccountingaccount2) - Create an account
+* [getAccountingAccount2](#getaccountingaccount2) - Retrieve an account
+* [listAccountingAccounts2](#listaccountingaccounts2) - List all accounts
+* [patchAccountingAccount2](#patchaccountingaccount2) - Update an account
+* [removeAccountingAccount2](#removeaccountingaccount2) - Remove an account
+* [updateAccountingAccount2](#updateaccountingaccount2) - Update an account
 
-## createAccountingAccount
+## createAccountingAccount2
 
 Create an account
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createAccountingAccount" method="post" path="/accounting/{connection_id}/account" -->
+<!-- UsageSnippet language="java" operationID="createAccountingAccount2" method="post" path="/accounting/{connection_id}/account" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.CreateAccountingAccountRequest;
-import to.unified.unified_java_sdk.models.operations.CreateAccountingAccountResponse;
+import to.unified.unified_java_sdk.models.operations.CreateAccountingAccount2Request;
+import to.unified.unified_java_sdk.models.operations.CreateAccountingAccount2Response;
 import to.unified.unified_java_sdk.models.shared.AccountingAccount;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -38,13 +38,13 @@ public class Application {
                     .build())
             .build();
 
-        CreateAccountingAccountRequest req = CreateAccountingAccountRequest.builder()
+        CreateAccountingAccount2Request req = CreateAccountingAccount2Request.builder()
                 .accountingAccount(AccountingAccount.builder()
                     .build())
                 .connectionId("<id>")
                 .build();
 
-        CreateAccountingAccountResponse res = sdk.account().createAccountingAccount()
+        CreateAccountingAccount2Response res = sdk.account().createAccountingAccount2()
                 .request(req)
                 .call();
 
@@ -57,13 +57,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                   | Type                                                                                        | Required                                                                                    | Description                                                                                 |
-| ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
-| `request`                                                                                   | [CreateAccountingAccountRequest](../../models/operations/CreateAccountingAccountRequest.md) | :heavy_check_mark:                                                                          | The request object to use for the request.                                                  |
+| Parameter                                                                                     | Type                                                                                          | Required                                                                                      | Description                                                                                   |
+| --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
+| `request`                                                                                     | [CreateAccountingAccount2Request](../../models/operations/CreateAccountingAccount2Request.md) | :heavy_check_mark:                                                                            | The request object to use for the request.                                                    |
 
 ### Response
 
-**[CreateAccountingAccountResponse](../../models/operations/CreateAccountingAccountResponse.md)**
+**[CreateAccountingAccount2Response](../../models/operations/CreateAccountingAccount2Response.md)**
 
 ### Errors
 
@@ -71,20 +71,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## getAccountingAccount
+## getAccountingAccount2
 
 Retrieve an account
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="getAccountingAccount" method="get" path="/accounting/{connection_id}/account/{id}" -->
+<!-- UsageSnippet language="java" operationID="getAccountingAccount2" method="get" path="/accounting/{connection_id}/account/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.GetAccountingAccountRequest;
-import to.unified.unified_java_sdk.models.operations.GetAccountingAccountResponse;
+import to.unified.unified_java_sdk.models.operations.GetAccountingAccount2Request;
+import to.unified.unified_java_sdk.models.operations.GetAccountingAccount2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -97,12 +97,12 @@ public class Application {
                     .build())
             .build();
 
-        GetAccountingAccountRequest req = GetAccountingAccountRequest.builder()
+        GetAccountingAccount2Request req = GetAccountingAccount2Request.builder()
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        GetAccountingAccountResponse res = sdk.account().getAccountingAccount()
+        GetAccountingAccount2Response res = sdk.account().getAccountingAccount2()
                 .request(req)
                 .call();
 
@@ -115,13 +115,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                             | Type                                                                                  | Required                                                                              | Description                                                                           |
-| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
-| `request`                                                                             | [GetAccountingAccountRequest](../../models/operations/GetAccountingAccountRequest.md) | :heavy_check_mark:                                                                    | The request object to use for the request.                                            |
+| Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
+| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| `request`                                                                               | [GetAccountingAccount2Request](../../models/operations/GetAccountingAccount2Request.md) | :heavy_check_mark:                                                                      | The request object to use for the request.                                              |
 
 ### Response
 
-**[GetAccountingAccountResponse](../../models/operations/GetAccountingAccountResponse.md)**
+**[GetAccountingAccount2Response](../../models/operations/GetAccountingAccount2Response.md)**
 
 ### Errors
 
@@ -129,20 +129,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## listAccountingAccounts
+## listAccountingAccounts2
 
 List all accounts
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="listAccountingAccounts" method="get" path="/accounting/{connection_id}/account" -->
+<!-- UsageSnippet language="java" operationID="listAccountingAccounts2" method="get" path="/accounting/{connection_id}/account" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.ListAccountingAccountsRequest;
-import to.unified.unified_java_sdk.models.operations.ListAccountingAccountsResponse;
+import to.unified.unified_java_sdk.models.operations.ListAccountingAccounts2Request;
+import to.unified.unified_java_sdk.models.operations.ListAccountingAccounts2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -155,11 +155,11 @@ public class Application {
                     .build())
             .build();
 
-        ListAccountingAccountsRequest req = ListAccountingAccountsRequest.builder()
+        ListAccountingAccounts2Request req = ListAccountingAccounts2Request.builder()
                 .connectionId("<id>")
                 .build();
 
-        ListAccountingAccountsResponse res = sdk.account().listAccountingAccounts()
+        ListAccountingAccounts2Response res = sdk.account().listAccountingAccounts2()
                 .request(req)
                 .call();
 
@@ -172,13 +172,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                 | Type                                                                                      | Required                                                                                  | Description                                                                               |
-| ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
-| `request`                                                                                 | [ListAccountingAccountsRequest](../../models/operations/ListAccountingAccountsRequest.md) | :heavy_check_mark:                                                                        | The request object to use for the request.                                                |
+| Parameter                                                                                   | Type                                                                                        | Required                                                                                    | Description                                                                                 |
+| ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
+| `request`                                                                                   | [ListAccountingAccounts2Request](../../models/operations/ListAccountingAccounts2Request.md) | :heavy_check_mark:                                                                          | The request object to use for the request.                                                  |
 
 ### Response
 
-**[ListAccountingAccountsResponse](../../models/operations/ListAccountingAccountsResponse.md)**
+**[ListAccountingAccounts2Response](../../models/operations/ListAccountingAccounts2Response.md)**
 
 ### Errors
 
@@ -186,20 +186,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## patchAccountingAccount
+## patchAccountingAccount2
 
 Update an account
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchAccountingAccount" method="patch" path="/accounting/{connection_id}/account/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchAccountingAccount2" method="patch" path="/accounting/{connection_id}/account/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.PatchAccountingAccountRequest;
-import to.unified.unified_java_sdk.models.operations.PatchAccountingAccountResponse;
+import to.unified.unified_java_sdk.models.operations.PatchAccountingAccount2Request;
+import to.unified.unified_java_sdk.models.operations.PatchAccountingAccount2Response;
 import to.unified.unified_java_sdk.models.shared.AccountingAccount;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -213,14 +213,14 @@ public class Application {
                     .build())
             .build();
 
-        PatchAccountingAccountRequest req = PatchAccountingAccountRequest.builder()
+        PatchAccountingAccount2Request req = PatchAccountingAccount2Request.builder()
                 .accountingAccount(AccountingAccount.builder()
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        PatchAccountingAccountResponse res = sdk.account().patchAccountingAccount()
+        PatchAccountingAccount2Response res = sdk.account().patchAccountingAccount2()
                 .request(req)
                 .call();
 
@@ -233,13 +233,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                 | Type                                                                                      | Required                                                                                  | Description                                                                               |
-| ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
-| `request`                                                                                 | [PatchAccountingAccountRequest](../../models/operations/PatchAccountingAccountRequest.md) | :heavy_check_mark:                                                                        | The request object to use for the request.                                                |
+| Parameter                                                                                   | Type                                                                                        | Required                                                                                    | Description                                                                                 |
+| ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
+| `request`                                                                                   | [PatchAccountingAccount2Request](../../models/operations/PatchAccountingAccount2Request.md) | :heavy_check_mark:                                                                          | The request object to use for the request.                                                  |
 
 ### Response
 
-**[PatchAccountingAccountResponse](../../models/operations/PatchAccountingAccountResponse.md)**
+**[PatchAccountingAccount2Response](../../models/operations/PatchAccountingAccount2Response.md)**
 
 ### Errors
 
@@ -247,20 +247,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## removeAccountingAccount
+## removeAccountingAccount2
 
 Remove an account
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="removeAccountingAccount" method="delete" path="/accounting/{connection_id}/account/{id}" -->
+<!-- UsageSnippet language="java" operationID="removeAccountingAccount2" method="delete" path="/accounting/{connection_id}/account/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.RemoveAccountingAccountRequest;
-import to.unified.unified_java_sdk.models.operations.RemoveAccountingAccountResponse;
+import to.unified.unified_java_sdk.models.operations.RemoveAccountingAccount2Request;
+import to.unified.unified_java_sdk.models.operations.RemoveAccountingAccount2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -273,12 +273,12 @@ public class Application {
                     .build())
             .build();
 
-        RemoveAccountingAccountRequest req = RemoveAccountingAccountRequest.builder()
+        RemoveAccountingAccount2Request req = RemoveAccountingAccount2Request.builder()
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        RemoveAccountingAccountResponse res = sdk.account().removeAccountingAccount()
+        RemoveAccountingAccount2Response res = sdk.account().removeAccountingAccount2()
                 .request(req)
                 .call();
 
@@ -289,13 +289,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                   | Type                                                                                        | Required                                                                                    | Description                                                                                 |
-| ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
-| `request`                                                                                   | [RemoveAccountingAccountRequest](../../models/operations/RemoveAccountingAccountRequest.md) | :heavy_check_mark:                                                                          | The request object to use for the request.                                                  |
+| Parameter                                                                                     | Type                                                                                          | Required                                                                                      | Description                                                                                   |
+| --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
+| `request`                                                                                     | [RemoveAccountingAccount2Request](../../models/operations/RemoveAccountingAccount2Request.md) | :heavy_check_mark:                                                                            | The request object to use for the request.                                                    |
 
 ### Response
 
-**[RemoveAccountingAccountResponse](../../models/operations/RemoveAccountingAccountResponse.md)**
+**[RemoveAccountingAccount2Response](../../models/operations/RemoveAccountingAccount2Response.md)**
 
 ### Errors
 
@@ -303,20 +303,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## updateAccountingAccount
+## updateAccountingAccount2
 
 Update an account
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateAccountingAccount" method="put" path="/accounting/{connection_id}/account/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateAccountingAccount2" method="put" path="/accounting/{connection_id}/account/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.UpdateAccountingAccountRequest;
-import to.unified.unified_java_sdk.models.operations.UpdateAccountingAccountResponse;
+import to.unified.unified_java_sdk.models.operations.UpdateAccountingAccount2Request;
+import to.unified.unified_java_sdk.models.operations.UpdateAccountingAccount2Response;
 import to.unified.unified_java_sdk.models.shared.AccountingAccount;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -330,14 +330,14 @@ public class Application {
                     .build())
             .build();
 
-        UpdateAccountingAccountRequest req = UpdateAccountingAccountRequest.builder()
+        UpdateAccountingAccount2Request req = UpdateAccountingAccount2Request.builder()
                 .accountingAccount(AccountingAccount.builder()
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        UpdateAccountingAccountResponse res = sdk.account().updateAccountingAccount()
+        UpdateAccountingAccount2Response res = sdk.account().updateAccountingAccount2()
                 .request(req)
                 .call();
 
@@ -350,13 +350,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                   | Type                                                                                        | Required                                                                                    | Description                                                                                 |
-| ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
-| `request`                                                                                   | [UpdateAccountingAccountRequest](../../models/operations/UpdateAccountingAccountRequest.md) | :heavy_check_mark:                                                                          | The request object to use for the request.                                                  |
+| Parameter                                                                                     | Type                                                                                          | Required                                                                                      | Description                                                                                   |
+| --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
+| `request`                                                                                     | [UpdateAccountingAccount2Request](../../models/operations/UpdateAccountingAccount2Request.md) | :heavy_check_mark:                                                                            | The request object to use for the request.                                                    |
 
 ### Response
 
-**[UpdateAccountingAccountResponse](../../models/operations/UpdateAccountingAccountResponse.md)**
+**[UpdateAccountingAccount2Response](../../models/operations/UpdateAccountingAccount2Response.md)**
 
 ### Errors
 

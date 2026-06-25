@@ -4,39 +4,39 @@
 
 ### Available Operations
 
-* [createKmsComment](#createkmscomment) - Create a comment
-* [createTaskComment](#createtaskcomment) - Create a comment
-* [createUcComment](#createuccomment) - Create a comment
-* [getKmsComment](#getkmscomment) - Retrieve a comment
-* [getTaskComment](#gettaskcomment) - Retrieve a comment
-* [getUcComment](#getuccomment) - Retrieve a comment
-* [listKmsComments](#listkmscomments) - List all comments
-* [listTaskComments](#listtaskcomments) - List all comments
-* [listUcComments](#listuccomments) - List all comments
-* [patchKmsComment](#patchkmscomment) - Update a comment
-* [patchTaskComment](#patchtaskcomment) - Update a comment
-* [patchUcComment](#patchuccomment) - Update a comment
-* [removeKmsComment](#removekmscomment) - Remove a comment
-* [removeTaskComment](#removetaskcomment) - Remove a comment
-* [removeUcComment](#removeuccomment) - Remove a comment
-* [updateKmsComment](#updatekmscomment) - Update a comment
-* [updateTaskComment](#updatetaskcomment) - Update a comment
-* [updateUcComment](#updateuccomment) - Update a comment
+* [createKmsComment2](#createkmscomment2) - Create a comment
+* [createTaskComment2](#createtaskcomment2) - Create a comment
+* [createUcComment2](#createuccomment2) - Create a comment
+* [getKmsComment2](#getkmscomment2) - Retrieve a comment
+* [getTaskComment2](#gettaskcomment2) - Retrieve a comment
+* [getUcComment2](#getuccomment2) - Retrieve a comment
+* [listKmsComments2](#listkmscomments2) - List all comments
+* [listTaskComments2](#listtaskcomments2) - List all comments
+* [listUcComments2](#listuccomments2) - List all comments
+* [patchKmsComment2](#patchkmscomment2) - Update a comment
+* [patchTaskComment2](#patchtaskcomment2) - Update a comment
+* [patchUcComment2](#patchuccomment2) - Update a comment
+* [removeKmsComment2](#removekmscomment2) - Remove a comment
+* [removeTaskComment2](#removetaskcomment2) - Remove a comment
+* [removeUcComment2](#removeuccomment2) - Remove a comment
+* [updateKmsComment2](#updatekmscomment2) - Update a comment
+* [updateTaskComment2](#updatetaskcomment2) - Update a comment
+* [updateUcComment2](#updateuccomment2) - Update a comment
 
-## createKmsComment
+## createKmsComment2
 
 Create a comment
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createKmsComment" method="post" path="/kms/{connection_id}/comment" -->
+<!-- UsageSnippet language="java" operationID="createKmsComment2" method="post" path="/kms/{connection_id}/comment" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.CreateKmsCommentRequest;
-import to.unified.unified_java_sdk.models.operations.CreateKmsCommentResponse;
+import to.unified.unified_java_sdk.models.operations.CreateKmsComment2Request;
+import to.unified.unified_java_sdk.models.operations.CreateKmsComment2Response;
 import to.unified.unified_java_sdk.models.shared.KmsComment;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -50,13 +50,13 @@ public class Application {
                     .build())
             .build();
 
-        CreateKmsCommentRequest req = CreateKmsCommentRequest.builder()
+        CreateKmsComment2Request req = CreateKmsComment2Request.builder()
                 .kmsComment(KmsComment.builder()
                     .build())
                 .connectionId("<id>")
                 .build();
 
-        CreateKmsCommentResponse res = sdk.comment().createKmsComment()
+        CreateKmsComment2Response res = sdk.comment().createKmsComment2()
                 .request(req)
                 .call();
 
@@ -69,13 +69,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
-| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
-| `request`                                                                     | [CreateKmsCommentRequest](../../models/operations/CreateKmsCommentRequest.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
+| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| `request`                                                                       | [CreateKmsComment2Request](../../models/operations/CreateKmsComment2Request.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
 
 ### Response
 
-**[CreateKmsCommentResponse](../../models/operations/CreateKmsCommentResponse.md)**
+**[CreateKmsComment2Response](../../models/operations/CreateKmsComment2Response.md)**
 
 ### Errors
 
@@ -83,20 +83,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## createTaskComment
+## createTaskComment2
 
 Create a comment
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createTaskComment" method="post" path="/task/{connection_id}/comment" -->
+<!-- UsageSnippet language="java" operationID="createTaskComment2" method="post" path="/task/{connection_id}/comment" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.CreateTaskCommentRequest;
-import to.unified.unified_java_sdk.models.operations.CreateTaskCommentResponse;
+import to.unified.unified_java_sdk.models.operations.CreateTaskComment2Request;
+import to.unified.unified_java_sdk.models.operations.CreateTaskComment2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 import to.unified.unified_java_sdk.models.shared.TaskComment;
 
@@ -110,13 +110,13 @@ public class Application {
                     .build())
             .build();
 
-        CreateTaskCommentRequest req = CreateTaskCommentRequest.builder()
+        CreateTaskComment2Request req = CreateTaskComment2Request.builder()
                 .taskComment(TaskComment.builder()
                     .build())
                 .connectionId("<id>")
                 .build();
 
-        CreateTaskCommentResponse res = sdk.comment().createTaskComment()
+        CreateTaskComment2Response res = sdk.comment().createTaskComment2()
                 .request(req)
                 .call();
 
@@ -129,13 +129,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
-| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
-| `request`                                                                       | [CreateTaskCommentRequest](../../models/operations/CreateTaskCommentRequest.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
+| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
+| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| `request`                                                                         | [CreateTaskComment2Request](../../models/operations/CreateTaskComment2Request.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
 
 ### Response
 
-**[CreateTaskCommentResponse](../../models/operations/CreateTaskCommentResponse.md)**
+**[CreateTaskComment2Response](../../models/operations/CreateTaskComment2Response.md)**
 
 ### Errors
 
@@ -143,20 +143,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## createUcComment
+## createUcComment2
 
 Create a comment
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createUcComment" method="post" path="/uc/{connection_id}/comment" -->
+<!-- UsageSnippet language="java" operationID="createUcComment2" method="post" path="/uc/{connection_id}/comment" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.CreateUcCommentRequest;
-import to.unified.unified_java_sdk.models.operations.CreateUcCommentResponse;
+import to.unified.unified_java_sdk.models.operations.CreateUcComment2Request;
+import to.unified.unified_java_sdk.models.operations.CreateUcComment2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 import to.unified.unified_java_sdk.models.shared.UcComment;
 
@@ -170,13 +170,13 @@ public class Application {
                     .build())
             .build();
 
-        CreateUcCommentRequest req = CreateUcCommentRequest.builder()
+        CreateUcComment2Request req = CreateUcComment2Request.builder()
                 .ucComment(UcComment.builder()
                     .build())
                 .connectionId("<id>")
                 .build();
 
-        CreateUcCommentResponse res = sdk.comment().createUcComment()
+        CreateUcComment2Response res = sdk.comment().createUcComment2()
                 .request(req)
                 .call();
 
@@ -189,13 +189,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                   | Type                                                                        | Required                                                                    | Description                                                                 |
-| --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
-| `request`                                                                   | [CreateUcCommentRequest](../../models/operations/CreateUcCommentRequest.md) | :heavy_check_mark:                                                          | The request object to use for the request.                                  |
+| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
+| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| `request`                                                                     | [CreateUcComment2Request](../../models/operations/CreateUcComment2Request.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
 
 ### Response
 
-**[CreateUcCommentResponse](../../models/operations/CreateUcCommentResponse.md)**
+**[CreateUcComment2Response](../../models/operations/CreateUcComment2Response.md)**
 
 ### Errors
 
@@ -203,20 +203,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## getKmsComment
+## getKmsComment2
 
 Retrieve a comment
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="getKmsComment" method="get" path="/kms/{connection_id}/comment/{id}" -->
+<!-- UsageSnippet language="java" operationID="getKmsComment2" method="get" path="/kms/{connection_id}/comment/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.GetKmsCommentRequest;
-import to.unified.unified_java_sdk.models.operations.GetKmsCommentResponse;
+import to.unified.unified_java_sdk.models.operations.GetKmsComment2Request;
+import to.unified.unified_java_sdk.models.operations.GetKmsComment2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -229,12 +229,12 @@ public class Application {
                     .build())
             .build();
 
-        GetKmsCommentRequest req = GetKmsCommentRequest.builder()
+        GetKmsComment2Request req = GetKmsComment2Request.builder()
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        GetKmsCommentResponse res = sdk.comment().getKmsComment()
+        GetKmsComment2Response res = sdk.comment().getKmsComment2()
                 .request(req)
                 .call();
 
@@ -247,13 +247,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                               | Type                                                                    | Required                                                                | Description                                                             |
-| ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- |
-| `request`                                                               | [GetKmsCommentRequest](../../models/operations/GetKmsCommentRequest.md) | :heavy_check_mark:                                                      | The request object to use for the request.                              |
+| Parameter                                                                 | Type                                                                      | Required                                                                  | Description                                                               |
+| ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
+| `request`                                                                 | [GetKmsComment2Request](../../models/operations/GetKmsComment2Request.md) | :heavy_check_mark:                                                        | The request object to use for the request.                                |
 
 ### Response
 
-**[GetKmsCommentResponse](../../models/operations/GetKmsCommentResponse.md)**
+**[GetKmsComment2Response](../../models/operations/GetKmsComment2Response.md)**
 
 ### Errors
 
@@ -261,20 +261,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## getTaskComment
+## getTaskComment2
 
 Retrieve a comment
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="getTaskComment" method="get" path="/task/{connection_id}/comment/{id}" -->
+<!-- UsageSnippet language="java" operationID="getTaskComment2" method="get" path="/task/{connection_id}/comment/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.GetTaskCommentRequest;
-import to.unified.unified_java_sdk.models.operations.GetTaskCommentResponse;
+import to.unified.unified_java_sdk.models.operations.GetTaskComment2Request;
+import to.unified.unified_java_sdk.models.operations.GetTaskComment2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -287,12 +287,12 @@ public class Application {
                     .build())
             .build();
 
-        GetTaskCommentRequest req = GetTaskCommentRequest.builder()
+        GetTaskComment2Request req = GetTaskComment2Request.builder()
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        GetTaskCommentResponse res = sdk.comment().getTaskComment()
+        GetTaskComment2Response res = sdk.comment().getTaskComment2()
                 .request(req)
                 .call();
 
@@ -305,13 +305,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                 | Type                                                                      | Required                                                                  | Description                                                               |
-| ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
-| `request`                                                                 | [GetTaskCommentRequest](../../models/operations/GetTaskCommentRequest.md) | :heavy_check_mark:                                                        | The request object to use for the request.                                |
+| Parameter                                                                   | Type                                                                        | Required                                                                    | Description                                                                 |
+| --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| `request`                                                                   | [GetTaskComment2Request](../../models/operations/GetTaskComment2Request.md) | :heavy_check_mark:                                                          | The request object to use for the request.                                  |
 
 ### Response
 
-**[GetTaskCommentResponse](../../models/operations/GetTaskCommentResponse.md)**
+**[GetTaskComment2Response](../../models/operations/GetTaskComment2Response.md)**
 
 ### Errors
 
@@ -319,20 +319,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## getUcComment
+## getUcComment2
 
 Retrieve a comment
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="getUcComment" method="get" path="/uc/{connection_id}/comment/{id}" -->
+<!-- UsageSnippet language="java" operationID="getUcComment2" method="get" path="/uc/{connection_id}/comment/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.GetUcCommentRequest;
-import to.unified.unified_java_sdk.models.operations.GetUcCommentResponse;
+import to.unified.unified_java_sdk.models.operations.GetUcComment2Request;
+import to.unified.unified_java_sdk.models.operations.GetUcComment2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -345,12 +345,12 @@ public class Application {
                     .build())
             .build();
 
-        GetUcCommentRequest req = GetUcCommentRequest.builder()
+        GetUcComment2Request req = GetUcComment2Request.builder()
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        GetUcCommentResponse res = sdk.comment().getUcComment()
+        GetUcComment2Response res = sdk.comment().getUcComment2()
                 .request(req)
                 .call();
 
@@ -363,13 +363,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                             | Type                                                                  | Required                                                              | Description                                                           |
-| --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- |
-| `request`                                                             | [GetUcCommentRequest](../../models/operations/GetUcCommentRequest.md) | :heavy_check_mark:                                                    | The request object to use for the request.                            |
+| Parameter                                                               | Type                                                                    | Required                                                                | Description                                                             |
+| ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- |
+| `request`                                                               | [GetUcComment2Request](../../models/operations/GetUcComment2Request.md) | :heavy_check_mark:                                                      | The request object to use for the request.                              |
 
 ### Response
 
-**[GetUcCommentResponse](../../models/operations/GetUcCommentResponse.md)**
+**[GetUcComment2Response](../../models/operations/GetUcComment2Response.md)**
 
 ### Errors
 
@@ -377,20 +377,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## listKmsComments
+## listKmsComments2
 
 List all comments
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="listKmsComments" method="get" path="/kms/{connection_id}/comment" -->
+<!-- UsageSnippet language="java" operationID="listKmsComments2" method="get" path="/kms/{connection_id}/comment" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.ListKmsCommentsRequest;
-import to.unified.unified_java_sdk.models.operations.ListKmsCommentsResponse;
+import to.unified.unified_java_sdk.models.operations.ListKmsComments2Request;
+import to.unified.unified_java_sdk.models.operations.ListKmsComments2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -403,11 +403,11 @@ public class Application {
                     .build())
             .build();
 
-        ListKmsCommentsRequest req = ListKmsCommentsRequest.builder()
+        ListKmsComments2Request req = ListKmsComments2Request.builder()
                 .connectionId("<id>")
                 .build();
 
-        ListKmsCommentsResponse res = sdk.comment().listKmsComments()
+        ListKmsComments2Response res = sdk.comment().listKmsComments2()
                 .request(req)
                 .call();
 
@@ -420,13 +420,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                   | Type                                                                        | Required                                                                    | Description                                                                 |
-| --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
-| `request`                                                                   | [ListKmsCommentsRequest](../../models/operations/ListKmsCommentsRequest.md) | :heavy_check_mark:                                                          | The request object to use for the request.                                  |
+| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
+| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| `request`                                                                     | [ListKmsComments2Request](../../models/operations/ListKmsComments2Request.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
 
 ### Response
 
-**[ListKmsCommentsResponse](../../models/operations/ListKmsCommentsResponse.md)**
+**[ListKmsComments2Response](../../models/operations/ListKmsComments2Response.md)**
 
 ### Errors
 
@@ -434,20 +434,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## listTaskComments
+## listTaskComments2
 
 List all comments
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="listTaskComments" method="get" path="/task/{connection_id}/comment" -->
+<!-- UsageSnippet language="java" operationID="listTaskComments2" method="get" path="/task/{connection_id}/comment" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.ListTaskCommentsRequest;
-import to.unified.unified_java_sdk.models.operations.ListTaskCommentsResponse;
+import to.unified.unified_java_sdk.models.operations.ListTaskComments2Request;
+import to.unified.unified_java_sdk.models.operations.ListTaskComments2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -460,11 +460,11 @@ public class Application {
                     .build())
             .build();
 
-        ListTaskCommentsRequest req = ListTaskCommentsRequest.builder()
+        ListTaskComments2Request req = ListTaskComments2Request.builder()
                 .connectionId("<id>")
                 .build();
 
-        ListTaskCommentsResponse res = sdk.comment().listTaskComments()
+        ListTaskComments2Response res = sdk.comment().listTaskComments2()
                 .request(req)
                 .call();
 
@@ -477,13 +477,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
-| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
-| `request`                                                                     | [ListTaskCommentsRequest](../../models/operations/ListTaskCommentsRequest.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
+| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| `request`                                                                       | [ListTaskComments2Request](../../models/operations/ListTaskComments2Request.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
 
 ### Response
 
-**[ListTaskCommentsResponse](../../models/operations/ListTaskCommentsResponse.md)**
+**[ListTaskComments2Response](../../models/operations/ListTaskComments2Response.md)**
 
 ### Errors
 
@@ -491,20 +491,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## listUcComments
+## listUcComments2
 
 List all comments
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="listUcComments" method="get" path="/uc/{connection_id}/comment" -->
+<!-- UsageSnippet language="java" operationID="listUcComments2" method="get" path="/uc/{connection_id}/comment" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.ListUcCommentsRequest;
-import to.unified.unified_java_sdk.models.operations.ListUcCommentsResponse;
+import to.unified.unified_java_sdk.models.operations.ListUcComments2Request;
+import to.unified.unified_java_sdk.models.operations.ListUcComments2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -517,11 +517,11 @@ public class Application {
                     .build())
             .build();
 
-        ListUcCommentsRequest req = ListUcCommentsRequest.builder()
+        ListUcComments2Request req = ListUcComments2Request.builder()
                 .connectionId("<id>")
                 .build();
 
-        ListUcCommentsResponse res = sdk.comment().listUcComments()
+        ListUcComments2Response res = sdk.comment().listUcComments2()
                 .request(req)
                 .call();
 
@@ -534,13 +534,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                 | Type                                                                      | Required                                                                  | Description                                                               |
-| ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
-| `request`                                                                 | [ListUcCommentsRequest](../../models/operations/ListUcCommentsRequest.md) | :heavy_check_mark:                                                        | The request object to use for the request.                                |
+| Parameter                                                                   | Type                                                                        | Required                                                                    | Description                                                                 |
+| --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| `request`                                                                   | [ListUcComments2Request](../../models/operations/ListUcComments2Request.md) | :heavy_check_mark:                                                          | The request object to use for the request.                                  |
 
 ### Response
 
-**[ListUcCommentsResponse](../../models/operations/ListUcCommentsResponse.md)**
+**[ListUcComments2Response](../../models/operations/ListUcComments2Response.md)**
 
 ### Errors
 
@@ -548,20 +548,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## patchKmsComment
+## patchKmsComment2
 
 Update a comment
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchKmsComment" method="patch" path="/kms/{connection_id}/comment/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchKmsComment2" method="patch" path="/kms/{connection_id}/comment/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.PatchKmsCommentRequest;
-import to.unified.unified_java_sdk.models.operations.PatchKmsCommentResponse;
+import to.unified.unified_java_sdk.models.operations.PatchKmsComment2Request;
+import to.unified.unified_java_sdk.models.operations.PatchKmsComment2Response;
 import to.unified.unified_java_sdk.models.shared.KmsComment;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -575,365 +575,14 @@ public class Application {
                     .build())
             .build();
 
-        PatchKmsCommentRequest req = PatchKmsCommentRequest.builder()
+        PatchKmsComment2Request req = PatchKmsComment2Request.builder()
                 .kmsComment(KmsComment.builder()
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        PatchKmsCommentResponse res = sdk.comment().patchKmsComment()
-                .request(req)
-                .call();
-
-        if (res.kmsComment().isPresent()) {
-            System.out.println(res.kmsComment().get());
-        }
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                   | Type                                                                        | Required                                                                    | Description                                                                 |
-| --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
-| `request`                                                                   | [PatchKmsCommentRequest](../../models/operations/PatchKmsCommentRequest.md) | :heavy_check_mark:                                                          | The request object to use for the request.                                  |
-
-### Response
-
-**[PatchKmsCommentResponse](../../models/operations/PatchKmsCommentResponse.md)**
-
-### Errors
-
-| Error Type             | Status Code            | Content Type           |
-| ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
-
-## patchTaskComment
-
-Update a comment
-
-### Example Usage
-
-<!-- UsageSnippet language="java" operationID="patchTaskComment" method="patch" path="/task/{connection_id}/comment/{id}" -->
-```java
-package hello.world;
-
-import java.lang.Exception;
-import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.PatchTaskCommentRequest;
-import to.unified.unified_java_sdk.models.operations.PatchTaskCommentResponse;
-import to.unified.unified_java_sdk.models.shared.Security;
-import to.unified.unified_java_sdk.models.shared.TaskComment;
-
-public class Application {
-
-    public static void main(String[] args) throws Exception {
-
-        UnifiedTo sdk = UnifiedTo.builder()
-                .security(Security.builder()
-                    .jwt(System.getenv().getOrDefault("JWT", ""))
-                    .build())
-            .build();
-
-        PatchTaskCommentRequest req = PatchTaskCommentRequest.builder()
-                .taskComment(TaskComment.builder()
-                    .build())
-                .connectionId("<id>")
-                .id("<id>")
-                .build();
-
-        PatchTaskCommentResponse res = sdk.comment().patchTaskComment()
-                .request(req)
-                .call();
-
-        if (res.taskComment().isPresent()) {
-            System.out.println(res.taskComment().get());
-        }
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
-| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
-| `request`                                                                     | [PatchTaskCommentRequest](../../models/operations/PatchTaskCommentRequest.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
-
-### Response
-
-**[PatchTaskCommentResponse](../../models/operations/PatchTaskCommentResponse.md)**
-
-### Errors
-
-| Error Type             | Status Code            | Content Type           |
-| ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
-
-## patchUcComment
-
-Update a comment
-
-### Example Usage
-
-<!-- UsageSnippet language="java" operationID="patchUcComment" method="patch" path="/uc/{connection_id}/comment/{id}" -->
-```java
-package hello.world;
-
-import java.lang.Exception;
-import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.PatchUcCommentRequest;
-import to.unified.unified_java_sdk.models.operations.PatchUcCommentResponse;
-import to.unified.unified_java_sdk.models.shared.Security;
-import to.unified.unified_java_sdk.models.shared.UcComment;
-
-public class Application {
-
-    public static void main(String[] args) throws Exception {
-
-        UnifiedTo sdk = UnifiedTo.builder()
-                .security(Security.builder()
-                    .jwt(System.getenv().getOrDefault("JWT", ""))
-                    .build())
-            .build();
-
-        PatchUcCommentRequest req = PatchUcCommentRequest.builder()
-                .ucComment(UcComment.builder()
-                    .build())
-                .connectionId("<id>")
-                .id("<id>")
-                .build();
-
-        PatchUcCommentResponse res = sdk.comment().patchUcComment()
-                .request(req)
-                .call();
-
-        if (res.ucComment().isPresent()) {
-            System.out.println(res.ucComment().get());
-        }
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                 | Type                                                                      | Required                                                                  | Description                                                               |
-| ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
-| `request`                                                                 | [PatchUcCommentRequest](../../models/operations/PatchUcCommentRequest.md) | :heavy_check_mark:                                                        | The request object to use for the request.                                |
-
-### Response
-
-**[PatchUcCommentResponse](../../models/operations/PatchUcCommentResponse.md)**
-
-### Errors
-
-| Error Type             | Status Code            | Content Type           |
-| ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
-
-## removeKmsComment
-
-Remove a comment
-
-### Example Usage
-
-<!-- UsageSnippet language="java" operationID="removeKmsComment" method="delete" path="/kms/{connection_id}/comment/{id}" -->
-```java
-package hello.world;
-
-import java.lang.Exception;
-import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.RemoveKmsCommentRequest;
-import to.unified.unified_java_sdk.models.operations.RemoveKmsCommentResponse;
-import to.unified.unified_java_sdk.models.shared.Security;
-
-public class Application {
-
-    public static void main(String[] args) throws Exception {
-
-        UnifiedTo sdk = UnifiedTo.builder()
-                .security(Security.builder()
-                    .jwt(System.getenv().getOrDefault("JWT", ""))
-                    .build())
-            .build();
-
-        RemoveKmsCommentRequest req = RemoveKmsCommentRequest.builder()
-                .connectionId("<id>")
-                .id("<id>")
-                .build();
-
-        RemoveKmsCommentResponse res = sdk.comment().removeKmsComment()
-                .request(req)
-                .call();
-
-        // handle response
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
-| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
-| `request`                                                                     | [RemoveKmsCommentRequest](../../models/operations/RemoveKmsCommentRequest.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
-
-### Response
-
-**[RemoveKmsCommentResponse](../../models/operations/RemoveKmsCommentResponse.md)**
-
-### Errors
-
-| Error Type             | Status Code            | Content Type           |
-| ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
-
-## removeTaskComment
-
-Remove a comment
-
-### Example Usage
-
-<!-- UsageSnippet language="java" operationID="removeTaskComment" method="delete" path="/task/{connection_id}/comment/{id}" -->
-```java
-package hello.world;
-
-import java.lang.Exception;
-import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.RemoveTaskCommentRequest;
-import to.unified.unified_java_sdk.models.operations.RemoveTaskCommentResponse;
-import to.unified.unified_java_sdk.models.shared.Security;
-
-public class Application {
-
-    public static void main(String[] args) throws Exception {
-
-        UnifiedTo sdk = UnifiedTo.builder()
-                .security(Security.builder()
-                    .jwt(System.getenv().getOrDefault("JWT", ""))
-                    .build())
-            .build();
-
-        RemoveTaskCommentRequest req = RemoveTaskCommentRequest.builder()
-                .connectionId("<id>")
-                .id("<id>")
-                .build();
-
-        RemoveTaskCommentResponse res = sdk.comment().removeTaskComment()
-                .request(req)
-                .call();
-
-        // handle response
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
-| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
-| `request`                                                                       | [RemoveTaskCommentRequest](../../models/operations/RemoveTaskCommentRequest.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
-
-### Response
-
-**[RemoveTaskCommentResponse](../../models/operations/RemoveTaskCommentResponse.md)**
-
-### Errors
-
-| Error Type             | Status Code            | Content Type           |
-| ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
-
-## removeUcComment
-
-Remove a comment
-
-### Example Usage
-
-<!-- UsageSnippet language="java" operationID="removeUcComment" method="delete" path="/uc/{connection_id}/comment/{id}" -->
-```java
-package hello.world;
-
-import java.lang.Exception;
-import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.RemoveUcCommentRequest;
-import to.unified.unified_java_sdk.models.operations.RemoveUcCommentResponse;
-import to.unified.unified_java_sdk.models.shared.Security;
-
-public class Application {
-
-    public static void main(String[] args) throws Exception {
-
-        UnifiedTo sdk = UnifiedTo.builder()
-                .security(Security.builder()
-                    .jwt(System.getenv().getOrDefault("JWT", ""))
-                    .build())
-            .build();
-
-        RemoveUcCommentRequest req = RemoveUcCommentRequest.builder()
-                .connectionId("<id>")
-                .id("<id>")
-                .build();
-
-        RemoveUcCommentResponse res = sdk.comment().removeUcComment()
-                .request(req)
-                .call();
-
-        // handle response
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                   | Type                                                                        | Required                                                                    | Description                                                                 |
-| --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
-| `request`                                                                   | [RemoveUcCommentRequest](../../models/operations/RemoveUcCommentRequest.md) | :heavy_check_mark:                                                          | The request object to use for the request.                                  |
-
-### Response
-
-**[RemoveUcCommentResponse](../../models/operations/RemoveUcCommentResponse.md)**
-
-### Errors
-
-| Error Type             | Status Code            | Content Type           |
-| ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
-
-## updateKmsComment
-
-Update a comment
-
-### Example Usage
-
-<!-- UsageSnippet language="java" operationID="updateKmsComment" method="put" path="/kms/{connection_id}/comment/{id}" -->
-```java
-package hello.world;
-
-import java.lang.Exception;
-import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.UpdateKmsCommentRequest;
-import to.unified.unified_java_sdk.models.operations.UpdateKmsCommentResponse;
-import to.unified.unified_java_sdk.models.shared.KmsComment;
-import to.unified.unified_java_sdk.models.shared.Security;
-
-public class Application {
-
-    public static void main(String[] args) throws Exception {
-
-        UnifiedTo sdk = UnifiedTo.builder()
-                .security(Security.builder()
-                    .jwt(System.getenv().getOrDefault("JWT", ""))
-                    .build())
-            .build();
-
-        UpdateKmsCommentRequest req = UpdateKmsCommentRequest.builder()
-                .kmsComment(KmsComment.builder()
-                    .build())
-                .connectionId("<id>")
-                .id("<id>")
-                .build();
-
-        UpdateKmsCommentResponse res = sdk.comment().updateKmsComment()
+        PatchKmsComment2Response res = sdk.comment().patchKmsComment2()
                 .request(req)
                 .call();
 
@@ -948,11 +597,11 @@ public class Application {
 
 | Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
 | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
-| `request`                                                                     | [UpdateKmsCommentRequest](../../models/operations/UpdateKmsCommentRequest.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
+| `request`                                                                     | [PatchKmsComment2Request](../../models/operations/PatchKmsComment2Request.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
 
 ### Response
 
-**[UpdateKmsCommentResponse](../../models/operations/UpdateKmsCommentResponse.md)**
+**[PatchKmsComment2Response](../../models/operations/PatchKmsComment2Response.md)**
 
 ### Errors
 
@@ -960,20 +609,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## updateTaskComment
+## patchTaskComment2
 
 Update a comment
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateTaskComment" method="put" path="/task/{connection_id}/comment/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchTaskComment2" method="patch" path="/task/{connection_id}/comment/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.UpdateTaskCommentRequest;
-import to.unified.unified_java_sdk.models.operations.UpdateTaskCommentResponse;
+import to.unified.unified_java_sdk.models.operations.PatchTaskComment2Request;
+import to.unified.unified_java_sdk.models.operations.PatchTaskComment2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 import to.unified.unified_java_sdk.models.shared.TaskComment;
 
@@ -987,14 +636,14 @@ public class Application {
                     .build())
             .build();
 
-        UpdateTaskCommentRequest req = UpdateTaskCommentRequest.builder()
+        PatchTaskComment2Request req = PatchTaskComment2Request.builder()
                 .taskComment(TaskComment.builder()
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        UpdateTaskCommentResponse res = sdk.comment().updateTaskComment()
+        PatchTaskComment2Response res = sdk.comment().patchTaskComment2()
                 .request(req)
                 .call();
 
@@ -1009,11 +658,11 @@ public class Application {
 
 | Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
 | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
-| `request`                                                                       | [UpdateTaskCommentRequest](../../models/operations/UpdateTaskCommentRequest.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
+| `request`                                                                       | [PatchTaskComment2Request](../../models/operations/PatchTaskComment2Request.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
 
 ### Response
 
-**[UpdateTaskCommentResponse](../../models/operations/UpdateTaskCommentResponse.md)**
+**[PatchTaskComment2Response](../../models/operations/PatchTaskComment2Response.md)**
 
 ### Errors
 
@@ -1021,20 +670,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## updateUcComment
+## patchUcComment2
 
 Update a comment
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateUcComment" method="put" path="/uc/{connection_id}/comment/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchUcComment2" method="patch" path="/uc/{connection_id}/comment/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.UpdateUcCommentRequest;
-import to.unified.unified_java_sdk.models.operations.UpdateUcCommentResponse;
+import to.unified.unified_java_sdk.models.operations.PatchUcComment2Request;
+import to.unified.unified_java_sdk.models.operations.PatchUcComment2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 import to.unified.unified_java_sdk.models.shared.UcComment;
 
@@ -1048,14 +697,14 @@ public class Application {
                     .build())
             .build();
 
-        UpdateUcCommentRequest req = UpdateUcCommentRequest.builder()
+        PatchUcComment2Request req = PatchUcComment2Request.builder()
                 .ucComment(UcComment.builder()
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        UpdateUcCommentResponse res = sdk.comment().updateUcComment()
+        PatchUcComment2Response res = sdk.comment().patchUcComment2()
                 .request(req)
                 .call();
 
@@ -1070,11 +719,362 @@ public class Application {
 
 | Parameter                                                                   | Type                                                                        | Required                                                                    | Description                                                                 |
 | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
-| `request`                                                                   | [UpdateUcCommentRequest](../../models/operations/UpdateUcCommentRequest.md) | :heavy_check_mark:                                                          | The request object to use for the request.                                  |
+| `request`                                                                   | [PatchUcComment2Request](../../models/operations/PatchUcComment2Request.md) | :heavy_check_mark:                                                          | The request object to use for the request.                                  |
 
 ### Response
 
-**[UpdateUcCommentResponse](../../models/operations/UpdateUcCommentResponse.md)**
+**[PatchUcComment2Response](../../models/operations/PatchUcComment2Response.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## removeKmsComment2
+
+Remove a comment
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="removeKmsComment2" method="delete" path="/kms/{connection_id}/comment/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.RemoveKmsComment2Request;
+import to.unified.unified_java_sdk.models.operations.RemoveKmsComment2Response;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        RemoveKmsComment2Request req = RemoveKmsComment2Request.builder()
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        RemoveKmsComment2Response res = sdk.comment().removeKmsComment2()
+                .request(req)
+                .call();
+
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| `request`                                                                       | [RemoveKmsComment2Request](../../models/operations/RemoveKmsComment2Request.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
+
+### Response
+
+**[RemoveKmsComment2Response](../../models/operations/RemoveKmsComment2Response.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## removeTaskComment2
+
+Remove a comment
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="removeTaskComment2" method="delete" path="/task/{connection_id}/comment/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.RemoveTaskComment2Request;
+import to.unified.unified_java_sdk.models.operations.RemoveTaskComment2Response;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        RemoveTaskComment2Request req = RemoveTaskComment2Request.builder()
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        RemoveTaskComment2Response res = sdk.comment().removeTaskComment2()
+                .request(req)
+                .call();
+
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
+| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| `request`                                                                         | [RemoveTaskComment2Request](../../models/operations/RemoveTaskComment2Request.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
+
+### Response
+
+**[RemoveTaskComment2Response](../../models/operations/RemoveTaskComment2Response.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## removeUcComment2
+
+Remove a comment
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="removeUcComment2" method="delete" path="/uc/{connection_id}/comment/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.RemoveUcComment2Request;
+import to.unified.unified_java_sdk.models.operations.RemoveUcComment2Response;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        RemoveUcComment2Request req = RemoveUcComment2Request.builder()
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        RemoveUcComment2Response res = sdk.comment().removeUcComment2()
+                .request(req)
+                .call();
+
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
+| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| `request`                                                                     | [RemoveUcComment2Request](../../models/operations/RemoveUcComment2Request.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
+
+### Response
+
+**[RemoveUcComment2Response](../../models/operations/RemoveUcComment2Response.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## updateKmsComment2
+
+Update a comment
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="updateKmsComment2" method="put" path="/kms/{connection_id}/comment/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.UpdateKmsComment2Request;
+import to.unified.unified_java_sdk.models.operations.UpdateKmsComment2Response;
+import to.unified.unified_java_sdk.models.shared.KmsComment;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        UpdateKmsComment2Request req = UpdateKmsComment2Request.builder()
+                .kmsComment(KmsComment.builder()
+                    .build())
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        UpdateKmsComment2Response res = sdk.comment().updateKmsComment2()
+                .request(req)
+                .call();
+
+        if (res.kmsComment().isPresent()) {
+            System.out.println(res.kmsComment().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| `request`                                                                       | [UpdateKmsComment2Request](../../models/operations/UpdateKmsComment2Request.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
+
+### Response
+
+**[UpdateKmsComment2Response](../../models/operations/UpdateKmsComment2Response.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## updateTaskComment2
+
+Update a comment
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="updateTaskComment2" method="put" path="/task/{connection_id}/comment/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.UpdateTaskComment2Request;
+import to.unified.unified_java_sdk.models.operations.UpdateTaskComment2Response;
+import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.TaskComment;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        UpdateTaskComment2Request req = UpdateTaskComment2Request.builder()
+                .taskComment(TaskComment.builder()
+                    .build())
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        UpdateTaskComment2Response res = sdk.comment().updateTaskComment2()
+                .request(req)
+                .call();
+
+        if (res.taskComment().isPresent()) {
+            System.out.println(res.taskComment().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
+| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| `request`                                                                         | [UpdateTaskComment2Request](../../models/operations/UpdateTaskComment2Request.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
+
+### Response
+
+**[UpdateTaskComment2Response](../../models/operations/UpdateTaskComment2Response.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## updateUcComment2
+
+Update a comment
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="updateUcComment2" method="put" path="/uc/{connection_id}/comment/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.UpdateUcComment2Request;
+import to.unified.unified_java_sdk.models.operations.UpdateUcComment2Response;
+import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.UcComment;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        UpdateUcComment2Request req = UpdateUcComment2Request.builder()
+                .ucComment(UcComment.builder()
+                    .build())
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        UpdateUcComment2Response res = sdk.comment().updateUcComment2()
+                .request(req)
+                .call();
+
+        if (res.ucComment().isPresent()) {
+            System.out.println(res.ucComment().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
+| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| `request`                                                                     | [UpdateUcComment2Request](../../models/operations/UpdateUcComment2Request.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
+
+### Response
+
+**[UpdateUcComment2Response](../../models/operations/UpdateUcComment2Response.md)**
 
 ### Errors
 

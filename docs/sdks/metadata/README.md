@@ -4,27 +4,27 @@
 
 ### Available Operations
 
-* [createMetadataMetadata](#createmetadatametadata) - Create a metadata
-* [getMetadataMetadata](#getmetadatametadata) - Retrieve a metadata
-* [listMetadataMetadatas](#listmetadatametadatas) - List all metadatas
-* [patchMetadataMetadata](#patchmetadatametadata) - Update a metadata
-* [removeMetadataMetadata](#removemetadatametadata) - Remove a metadata
-* [updateMetadataMetadata](#updatemetadatametadata) - Update a metadata
+* [createMetadataMetadata2](#createmetadatametadata2) - Create a metadata
+* [getMetadataMetadata2](#getmetadatametadata2) - Retrieve a metadata
+* [listMetadataMetadatas2](#listmetadatametadatas2) - List all metadatas
+* [patchMetadataMetadata2](#patchmetadatametadata2) - Update a metadata
+* [removeMetadataMetadata2](#removemetadatametadata2) - Remove a metadata
+* [updateMetadataMetadata2](#updatemetadatametadata2) - Update a metadata
 
-## createMetadataMetadata
+## createMetadataMetadata2
 
 Create a metadata
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createMetadataMetadata" method="post" path="/metadata/{connection_id}/metadata" -->
+<!-- UsageSnippet language="java" operationID="createMetadataMetadata2" method="post" path="/metadata/{connection_id}/metadata" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.CreateMetadataMetadataRequest;
-import to.unified.unified_java_sdk.models.operations.CreateMetadataMetadataResponse;
+import to.unified.unified_java_sdk.models.operations.CreateMetadataMetadata2Request;
+import to.unified.unified_java_sdk.models.operations.CreateMetadataMetadata2Response;
 import to.unified.unified_java_sdk.models.shared.MetadataMetadata;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -38,7 +38,7 @@ public class Application {
                     .build())
             .build();
 
-        CreateMetadataMetadataRequest req = CreateMetadataMetadataRequest.builder()
+        CreateMetadataMetadata2Request req = CreateMetadataMetadata2Request.builder()
                 .metadataMetadata(MetadataMetadata.builder()
                     .name("<value>")
                     .objectType("<value>")
@@ -46,7 +46,7 @@ public class Application {
                 .connectionId("<id>")
                 .build();
 
-        CreateMetadataMetadataResponse res = sdk.metadata().createMetadataMetadata()
+        CreateMetadataMetadata2Response res = sdk.metadata().createMetadataMetadata2()
                 .request(req)
                 .call();
 
@@ -59,13 +59,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                 | Type                                                                                      | Required                                                                                  | Description                                                                               |
-| ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
-| `request`                                                                                 | [CreateMetadataMetadataRequest](../../models/operations/CreateMetadataMetadataRequest.md) | :heavy_check_mark:                                                                        | The request object to use for the request.                                                |
+| Parameter                                                                                   | Type                                                                                        | Required                                                                                    | Description                                                                                 |
+| ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
+| `request`                                                                                   | [CreateMetadataMetadata2Request](../../models/operations/CreateMetadataMetadata2Request.md) | :heavy_check_mark:                                                                          | The request object to use for the request.                                                  |
 
 ### Response
 
-**[CreateMetadataMetadataResponse](../../models/operations/CreateMetadataMetadataResponse.md)**
+**[CreateMetadataMetadata2Response](../../models/operations/CreateMetadataMetadata2Response.md)**
 
 ### Errors
 
@@ -73,20 +73,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## getMetadataMetadata
+## getMetadataMetadata2
 
 Retrieve a metadata
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="getMetadataMetadata" method="get" path="/metadata/{connection_id}/metadata/{id}" -->
+<!-- UsageSnippet language="java" operationID="getMetadataMetadata2" method="get" path="/metadata/{connection_id}/metadata/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.GetMetadataMetadataRequest;
-import to.unified.unified_java_sdk.models.operations.GetMetadataMetadataResponse;
+import to.unified.unified_java_sdk.models.operations.GetMetadataMetadata2Request;
+import to.unified.unified_java_sdk.models.operations.GetMetadataMetadata2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -99,12 +99,12 @@ public class Application {
                     .build())
             .build();
 
-        GetMetadataMetadataRequest req = GetMetadataMetadataRequest.builder()
+        GetMetadataMetadata2Request req = GetMetadataMetadata2Request.builder()
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        GetMetadataMetadataResponse res = sdk.metadata().getMetadataMetadata()
+        GetMetadataMetadata2Response res = sdk.metadata().getMetadataMetadata2()
                 .request(req)
                 .call();
 
@@ -117,13 +117,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                           | Type                                                                                | Required                                                                            | Description                                                                         |
-| ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
-| `request`                                                                           | [GetMetadataMetadataRequest](../../models/operations/GetMetadataMetadataRequest.md) | :heavy_check_mark:                                                                  | The request object to use for the request.                                          |
+| Parameter                                                                             | Type                                                                                  | Required                                                                              | Description                                                                           |
+| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| `request`                                                                             | [GetMetadataMetadata2Request](../../models/operations/GetMetadataMetadata2Request.md) | :heavy_check_mark:                                                                    | The request object to use for the request.                                            |
 
 ### Response
 
-**[GetMetadataMetadataResponse](../../models/operations/GetMetadataMetadataResponse.md)**
+**[GetMetadataMetadata2Response](../../models/operations/GetMetadataMetadata2Response.md)**
 
 ### Errors
 
@@ -131,20 +131,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## listMetadataMetadatas
+## listMetadataMetadatas2
 
 List all metadatas
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="listMetadataMetadatas" method="get" path="/metadata/{connection_id}/metadata" -->
+<!-- UsageSnippet language="java" operationID="listMetadataMetadatas2" method="get" path="/metadata/{connection_id}/metadata" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.ListMetadataMetadatasRequest;
-import to.unified.unified_java_sdk.models.operations.ListMetadataMetadatasResponse;
+import to.unified.unified_java_sdk.models.operations.ListMetadataMetadatas2Request;
+import to.unified.unified_java_sdk.models.operations.ListMetadataMetadatas2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -157,11 +157,11 @@ public class Application {
                     .build())
             .build();
 
-        ListMetadataMetadatasRequest req = ListMetadataMetadatasRequest.builder()
+        ListMetadataMetadatas2Request req = ListMetadataMetadatas2Request.builder()
                 .connectionId("<id>")
                 .build();
 
-        ListMetadataMetadatasResponse res = sdk.metadata().listMetadataMetadatas()
+        ListMetadataMetadatas2Response res = sdk.metadata().listMetadataMetadatas2()
                 .request(req)
                 .call();
 
@@ -174,13 +174,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
-| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
-| `request`                                                                               | [ListMetadataMetadatasRequest](../../models/operations/ListMetadataMetadatasRequest.md) | :heavy_check_mark:                                                                      | The request object to use for the request.                                              |
+| Parameter                                                                                 | Type                                                                                      | Required                                                                                  | Description                                                                               |
+| ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
+| `request`                                                                                 | [ListMetadataMetadatas2Request](../../models/operations/ListMetadataMetadatas2Request.md) | :heavy_check_mark:                                                                        | The request object to use for the request.                                                |
 
 ### Response
 
-**[ListMetadataMetadatasResponse](../../models/operations/ListMetadataMetadatasResponse.md)**
+**[ListMetadataMetadatas2Response](../../models/operations/ListMetadataMetadatas2Response.md)**
 
 ### Errors
 
@@ -188,20 +188,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## patchMetadataMetadata
+## patchMetadataMetadata2
 
 Update a metadata
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchMetadataMetadata" method="patch" path="/metadata/{connection_id}/metadata/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchMetadataMetadata2" method="patch" path="/metadata/{connection_id}/metadata/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.PatchMetadataMetadataRequest;
-import to.unified.unified_java_sdk.models.operations.PatchMetadataMetadataResponse;
+import to.unified.unified_java_sdk.models.operations.PatchMetadataMetadata2Request;
+import to.unified.unified_java_sdk.models.operations.PatchMetadataMetadata2Response;
 import to.unified.unified_java_sdk.models.shared.MetadataMetadata;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -215,7 +215,7 @@ public class Application {
                     .build())
             .build();
 
-        PatchMetadataMetadataRequest req = PatchMetadataMetadataRequest.builder()
+        PatchMetadataMetadata2Request req = PatchMetadataMetadata2Request.builder()
                 .metadataMetadata(MetadataMetadata.builder()
                     .name("<value>")
                     .objectType("<value>")
@@ -224,7 +224,7 @@ public class Application {
                 .id("<id>")
                 .build();
 
-        PatchMetadataMetadataResponse res = sdk.metadata().patchMetadataMetadata()
+        PatchMetadataMetadata2Response res = sdk.metadata().patchMetadataMetadata2()
                 .request(req)
                 .call();
 
@@ -237,13 +237,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
-| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
-| `request`                                                                               | [PatchMetadataMetadataRequest](../../models/operations/PatchMetadataMetadataRequest.md) | :heavy_check_mark:                                                                      | The request object to use for the request.                                              |
+| Parameter                                                                                 | Type                                                                                      | Required                                                                                  | Description                                                                               |
+| ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
+| `request`                                                                                 | [PatchMetadataMetadata2Request](../../models/operations/PatchMetadataMetadata2Request.md) | :heavy_check_mark:                                                                        | The request object to use for the request.                                                |
 
 ### Response
 
-**[PatchMetadataMetadataResponse](../../models/operations/PatchMetadataMetadataResponse.md)**
+**[PatchMetadataMetadata2Response](../../models/operations/PatchMetadataMetadata2Response.md)**
 
 ### Errors
 
@@ -251,20 +251,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## removeMetadataMetadata
+## removeMetadataMetadata2
 
 Remove a metadata
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="removeMetadataMetadata" method="delete" path="/metadata/{connection_id}/metadata/{id}" -->
+<!-- UsageSnippet language="java" operationID="removeMetadataMetadata2" method="delete" path="/metadata/{connection_id}/metadata/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.RemoveMetadataMetadataRequest;
-import to.unified.unified_java_sdk.models.operations.RemoveMetadataMetadataResponse;
+import to.unified.unified_java_sdk.models.operations.RemoveMetadataMetadata2Request;
+import to.unified.unified_java_sdk.models.operations.RemoveMetadataMetadata2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -277,12 +277,12 @@ public class Application {
                     .build())
             .build();
 
-        RemoveMetadataMetadataRequest req = RemoveMetadataMetadataRequest.builder()
+        RemoveMetadataMetadata2Request req = RemoveMetadataMetadata2Request.builder()
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        RemoveMetadataMetadataResponse res = sdk.metadata().removeMetadataMetadata()
+        RemoveMetadataMetadata2Response res = sdk.metadata().removeMetadataMetadata2()
                 .request(req)
                 .call();
 
@@ -293,13 +293,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                 | Type                                                                                      | Required                                                                                  | Description                                                                               |
-| ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
-| `request`                                                                                 | [RemoveMetadataMetadataRequest](../../models/operations/RemoveMetadataMetadataRequest.md) | :heavy_check_mark:                                                                        | The request object to use for the request.                                                |
+| Parameter                                                                                   | Type                                                                                        | Required                                                                                    | Description                                                                                 |
+| ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
+| `request`                                                                                   | [RemoveMetadataMetadata2Request](../../models/operations/RemoveMetadataMetadata2Request.md) | :heavy_check_mark:                                                                          | The request object to use for the request.                                                  |
 
 ### Response
 
-**[RemoveMetadataMetadataResponse](../../models/operations/RemoveMetadataMetadataResponse.md)**
+**[RemoveMetadataMetadata2Response](../../models/operations/RemoveMetadataMetadata2Response.md)**
 
 ### Errors
 
@@ -307,20 +307,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## updateMetadataMetadata
+## updateMetadataMetadata2
 
 Update a metadata
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateMetadataMetadata" method="put" path="/metadata/{connection_id}/metadata/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateMetadataMetadata2" method="put" path="/metadata/{connection_id}/metadata/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.UpdateMetadataMetadataRequest;
-import to.unified.unified_java_sdk.models.operations.UpdateMetadataMetadataResponse;
+import to.unified.unified_java_sdk.models.operations.UpdateMetadataMetadata2Request;
+import to.unified.unified_java_sdk.models.operations.UpdateMetadataMetadata2Response;
 import to.unified.unified_java_sdk.models.shared.MetadataMetadata;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -334,7 +334,7 @@ public class Application {
                     .build())
             .build();
 
-        UpdateMetadataMetadataRequest req = UpdateMetadataMetadataRequest.builder()
+        UpdateMetadataMetadata2Request req = UpdateMetadataMetadata2Request.builder()
                 .metadataMetadata(MetadataMetadata.builder()
                     .name("<value>")
                     .objectType("<value>")
@@ -343,7 +343,7 @@ public class Application {
                 .id("<id>")
                 .build();
 
-        UpdateMetadataMetadataResponse res = sdk.metadata().updateMetadataMetadata()
+        UpdateMetadataMetadata2Response res = sdk.metadata().updateMetadataMetadata2()
                 .request(req)
                 .call();
 
@@ -356,13 +356,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                 | Type                                                                                      | Required                                                                                  | Description                                                                               |
-| ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
-| `request`                                                                                 | [UpdateMetadataMetadataRequest](../../models/operations/UpdateMetadataMetadataRequest.md) | :heavy_check_mark:                                                                        | The request object to use for the request.                                                |
+| Parameter                                                                                   | Type                                                                                        | Required                                                                                    | Description                                                                                 |
+| ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
+| `request`                                                                                   | [UpdateMetadataMetadata2Request](../../models/operations/UpdateMetadataMetadata2Request.md) | :heavy_check_mark:                                                                          | The request object to use for the request.                                                  |
 
 ### Response
 
-**[UpdateMetadataMetadataResponse](../../models/operations/UpdateMetadataMetadataResponse.md)**
+**[UpdateMetadataMetadata2Response](../../models/operations/UpdateMetadataMetadata2Response.md)**
 
 ### Errors
 

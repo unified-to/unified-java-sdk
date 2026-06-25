@@ -6,14 +6,14 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
-import to.unified.unified_java_sdk.models.operations.GetAccountingProfitlossRequest;
-import to.unified.unified_java_sdk.models.operations.GetAccountingProfitlossRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.GetAccountingProfitlossResponse;
-import to.unified.unified_java_sdk.models.operations.ListAccountingProfitlossesRequest;
-import to.unified.unified_java_sdk.models.operations.ListAccountingProfitlossesRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.ListAccountingProfitlossesResponse;
-import to.unified.unified_java_sdk.operations.GetAccountingProfitloss;
-import to.unified.unified_java_sdk.operations.ListAccountingProfitlosses;
+import to.unified.unified_java_sdk.models.operations.GetAccountingProfitloss2Request;
+import to.unified.unified_java_sdk.models.operations.GetAccountingProfitloss2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetAccountingProfitloss2Response;
+import to.unified.unified_java_sdk.models.operations.ListAccountingProfitlosses2Request;
+import to.unified.unified_java_sdk.models.operations.ListAccountingProfitlosses2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListAccountingProfitlosses2Response;
+import to.unified.unified_java_sdk.operations.GetAccountingProfitloss2;
+import to.unified.unified_java_sdk.operations.ListAccountingProfitlosses2;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -41,8 +41,8 @@ public class Profitloss {
      * 
      * @return The call builder
      */
-    public GetAccountingProfitlossRequestBuilder getAccountingProfitloss() {
-        return new GetAccountingProfitlossRequestBuilder(sdkConfiguration);
+    public GetAccountingProfitloss2RequestBuilder getAccountingProfitloss2() {
+        return new GetAccountingProfitloss2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -52,9 +52,9 @@ public class Profitloss {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetAccountingProfitlossResponse getAccountingProfitloss(@Nonnull GetAccountingProfitlossRequest request) {
-        RequestOperation<GetAccountingProfitlossRequest, GetAccountingProfitlossResponse> operation
-              = new GetAccountingProfitloss.Sync(sdkConfiguration, _headers);
+    public GetAccountingProfitloss2Response getAccountingProfitloss2(@Nonnull GetAccountingProfitloss2Request request) {
+        RequestOperation<GetAccountingProfitloss2Request, GetAccountingProfitloss2Response> operation
+              = new GetAccountingProfitloss2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -63,8 +63,8 @@ public class Profitloss {
      * 
      * @return The call builder
      */
-    public ListAccountingProfitlossesRequestBuilder listAccountingProfitlosses() {
-        return new ListAccountingProfitlossesRequestBuilder(sdkConfiguration);
+    public ListAccountingProfitlosses2RequestBuilder listAccountingProfitlosses2() {
+        return new ListAccountingProfitlosses2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -74,9 +74,9 @@ public class Profitloss {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListAccountingProfitlossesResponse listAccountingProfitlosses(@Nonnull ListAccountingProfitlossesRequest request) {
-        RequestOperation<ListAccountingProfitlossesRequest, ListAccountingProfitlossesResponse> operation
-              = new ListAccountingProfitlosses.Sync(sdkConfiguration, _headers);
+    public ListAccountingProfitlosses2Response listAccountingProfitlosses2(@Nonnull ListAccountingProfitlosses2Request request) {
+        RequestOperation<ListAccountingProfitlosses2Request, ListAccountingProfitlosses2Response> operation
+              = new ListAccountingProfitlosses2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

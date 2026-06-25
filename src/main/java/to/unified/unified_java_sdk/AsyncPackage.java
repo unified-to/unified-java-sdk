@@ -7,38 +7,38 @@ import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOper
 
 import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
-import to.unified.unified_java_sdk.models.operations.CreateAssessmentPackageRequest;
-import to.unified.unified_java_sdk.models.operations.GetAssessmentPackageRequest;
-import to.unified.unified_java_sdk.models.operations.GetVerificationPackageRequest;
-import to.unified.unified_java_sdk.models.operations.ListAssessmentPackagesRequest;
-import to.unified.unified_java_sdk.models.operations.ListVerificationPackagesRequest;
-import to.unified.unified_java_sdk.models.operations.PatchAssessmentPackageRequest;
-import to.unified.unified_java_sdk.models.operations.RemoveAssessmentPackageRequest;
-import to.unified.unified_java_sdk.models.operations.UpdateAssessmentPackageRequest;
-import to.unified.unified_java_sdk.models.operations.async.CreateAssessmentPackageRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.CreateAssessmentPackageResponse;
-import to.unified.unified_java_sdk.models.operations.async.GetAssessmentPackageRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.GetAssessmentPackageResponse;
-import to.unified.unified_java_sdk.models.operations.async.GetVerificationPackageRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.GetVerificationPackageResponse;
-import to.unified.unified_java_sdk.models.operations.async.ListAssessmentPackagesRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.ListAssessmentPackagesResponse;
-import to.unified.unified_java_sdk.models.operations.async.ListVerificationPackagesRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.ListVerificationPackagesResponse;
-import to.unified.unified_java_sdk.models.operations.async.PatchAssessmentPackageRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.PatchAssessmentPackageResponse;
-import to.unified.unified_java_sdk.models.operations.async.RemoveAssessmentPackageRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.RemoveAssessmentPackageResponse;
-import to.unified.unified_java_sdk.models.operations.async.UpdateAssessmentPackageRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.UpdateAssessmentPackageResponse;
-import to.unified.unified_java_sdk.operations.CreateAssessmentPackage;
-import to.unified.unified_java_sdk.operations.GetAssessmentPackage;
-import to.unified.unified_java_sdk.operations.GetVerificationPackage;
-import to.unified.unified_java_sdk.operations.ListAssessmentPackages;
-import to.unified.unified_java_sdk.operations.ListVerificationPackages;
-import to.unified.unified_java_sdk.operations.PatchAssessmentPackage;
-import to.unified.unified_java_sdk.operations.RemoveAssessmentPackage;
-import to.unified.unified_java_sdk.operations.UpdateAssessmentPackage;
+import to.unified.unified_java_sdk.models.operations.CreateAssessmentPackage2Request;
+import to.unified.unified_java_sdk.models.operations.GetAssessmentPackage2Request;
+import to.unified.unified_java_sdk.models.operations.GetVerificationPackage2Request;
+import to.unified.unified_java_sdk.models.operations.ListAssessmentPackages2Request;
+import to.unified.unified_java_sdk.models.operations.ListVerificationPackages2Request;
+import to.unified.unified_java_sdk.models.operations.PatchAssessmentPackage2Request;
+import to.unified.unified_java_sdk.models.operations.RemoveAssessmentPackage2Request;
+import to.unified.unified_java_sdk.models.operations.UpdateAssessmentPackage2Request;
+import to.unified.unified_java_sdk.models.operations.async.CreateAssessmentPackage2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.CreateAssessmentPackage2Response;
+import to.unified.unified_java_sdk.models.operations.async.GetAssessmentPackage2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetAssessmentPackage2Response;
+import to.unified.unified_java_sdk.models.operations.async.GetVerificationPackage2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetVerificationPackage2Response;
+import to.unified.unified_java_sdk.models.operations.async.ListAssessmentPackages2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListAssessmentPackages2Response;
+import to.unified.unified_java_sdk.models.operations.async.ListVerificationPackages2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListVerificationPackages2Response;
+import to.unified.unified_java_sdk.models.operations.async.PatchAssessmentPackage2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.PatchAssessmentPackage2Response;
+import to.unified.unified_java_sdk.models.operations.async.RemoveAssessmentPackage2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.RemoveAssessmentPackage2Response;
+import to.unified.unified_java_sdk.models.operations.async.UpdateAssessmentPackage2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.UpdateAssessmentPackage2Response;
+import to.unified.unified_java_sdk.operations.CreateAssessmentPackage2;
+import to.unified.unified_java_sdk.operations.GetAssessmentPackage2;
+import to.unified.unified_java_sdk.operations.GetVerificationPackage2;
+import to.unified.unified_java_sdk.operations.ListAssessmentPackages2;
+import to.unified.unified_java_sdk.operations.ListVerificationPackages2;
+import to.unified.unified_java_sdk.operations.PatchAssessmentPackage2;
+import to.unified.unified_java_sdk.operations.RemoveAssessmentPackage2;
+import to.unified.unified_java_sdk.operations.UpdateAssessmentPackage2;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -67,19 +67,19 @@ public class AsyncPackage {
      * 
      * @return The async call builder
      */
-    public CreateAssessmentPackageRequestBuilder createAssessmentPackage() {
-        return new CreateAssessmentPackageRequestBuilder(sdkConfiguration);
+    public CreateAssessmentPackage2RequestBuilder createAssessmentPackage2() {
+        return new CreateAssessmentPackage2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Create an assessment package
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<CreateAssessmentPackageResponse>} - The async response
+     * @return {@code CompletableFuture<CreateAssessmentPackage2Response>} - The async response
      */
-    public CompletableFuture<CreateAssessmentPackageResponse> createAssessmentPackage(@Nonnull CreateAssessmentPackageRequest request) {
-        AsyncRequestOperation<CreateAssessmentPackageRequest, CreateAssessmentPackageResponse> operation
-              = new CreateAssessmentPackage.Async(sdkConfiguration, _headers);
+    public CompletableFuture<CreateAssessmentPackage2Response> createAssessmentPackage2(@Nonnull CreateAssessmentPackage2Request request) {
+        AsyncRequestOperation<CreateAssessmentPackage2Request, CreateAssessmentPackage2Response> operation
+              = new CreateAssessmentPackage2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -90,19 +90,19 @@ public class AsyncPackage {
      * 
      * @return The async call builder
      */
-    public GetAssessmentPackageRequestBuilder getAssessmentPackage() {
-        return new GetAssessmentPackageRequestBuilder(sdkConfiguration);
+    public GetAssessmentPackage2RequestBuilder getAssessmentPackage2() {
+        return new GetAssessmentPackage2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Get an assessment package
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<GetAssessmentPackageResponse>} - The async response
+     * @return {@code CompletableFuture<GetAssessmentPackage2Response>} - The async response
      */
-    public CompletableFuture<GetAssessmentPackageResponse> getAssessmentPackage(@Nonnull GetAssessmentPackageRequest request) {
-        AsyncRequestOperation<GetAssessmentPackageRequest, GetAssessmentPackageResponse> operation
-              = new GetAssessmentPackage.Async(sdkConfiguration, _headers);
+    public CompletableFuture<GetAssessmentPackage2Response> getAssessmentPackage2(@Nonnull GetAssessmentPackage2Request request) {
+        AsyncRequestOperation<GetAssessmentPackage2Request, GetAssessmentPackage2Response> operation
+              = new GetAssessmentPackage2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -113,19 +113,19 @@ public class AsyncPackage {
      * 
      * @return The async call builder
      */
-    public GetVerificationPackageRequestBuilder getVerificationPackage() {
-        return new GetVerificationPackageRequestBuilder(sdkConfiguration);
+    public GetVerificationPackage2RequestBuilder getVerificationPackage2() {
+        return new GetVerificationPackage2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Retrieve a package
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<GetVerificationPackageResponse>} - The async response
+     * @return {@code CompletableFuture<GetVerificationPackage2Response>} - The async response
      */
-    public CompletableFuture<GetVerificationPackageResponse> getVerificationPackage(@Nonnull GetVerificationPackageRequest request) {
-        AsyncRequestOperation<GetVerificationPackageRequest, GetVerificationPackageResponse> operation
-              = new GetVerificationPackage.Async(sdkConfiguration, _headers);
+    public CompletableFuture<GetVerificationPackage2Response> getVerificationPackage2(@Nonnull GetVerificationPackage2Request request) {
+        AsyncRequestOperation<GetVerificationPackage2Request, GetVerificationPackage2Response> operation
+              = new GetVerificationPackage2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -136,19 +136,19 @@ public class AsyncPackage {
      * 
      * @return The async call builder
      */
-    public ListAssessmentPackagesRequestBuilder listAssessmentPackages() {
-        return new ListAssessmentPackagesRequestBuilder(sdkConfiguration);
+    public ListAssessmentPackages2RequestBuilder listAssessmentPackages2() {
+        return new ListAssessmentPackages2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * List assessment packages
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<ListAssessmentPackagesResponse>} - The async response
+     * @return {@code CompletableFuture<ListAssessmentPackages2Response>} - The async response
      */
-    public CompletableFuture<ListAssessmentPackagesResponse> listAssessmentPackages(@Nonnull ListAssessmentPackagesRequest request) {
-        AsyncRequestOperation<ListAssessmentPackagesRequest, ListAssessmentPackagesResponse> operation
-              = new ListAssessmentPackages.Async(sdkConfiguration, _headers);
+    public CompletableFuture<ListAssessmentPackages2Response> listAssessmentPackages2(@Nonnull ListAssessmentPackages2Request request) {
+        AsyncRequestOperation<ListAssessmentPackages2Request, ListAssessmentPackages2Response> operation
+              = new ListAssessmentPackages2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -159,19 +159,19 @@ public class AsyncPackage {
      * 
      * @return The async call builder
      */
-    public ListVerificationPackagesRequestBuilder listVerificationPackages() {
-        return new ListVerificationPackagesRequestBuilder(sdkConfiguration);
+    public ListVerificationPackages2RequestBuilder listVerificationPackages2() {
+        return new ListVerificationPackages2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * List all packages
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<ListVerificationPackagesResponse>} - The async response
+     * @return {@code CompletableFuture<ListVerificationPackages2Response>} - The async response
      */
-    public CompletableFuture<ListVerificationPackagesResponse> listVerificationPackages(@Nonnull ListVerificationPackagesRequest request) {
-        AsyncRequestOperation<ListVerificationPackagesRequest, ListVerificationPackagesResponse> operation
-              = new ListVerificationPackages.Async(sdkConfiguration, _headers);
+    public CompletableFuture<ListVerificationPackages2Response> listVerificationPackages2(@Nonnull ListVerificationPackages2Request request) {
+        AsyncRequestOperation<ListVerificationPackages2Request, ListVerificationPackages2Response> operation
+              = new ListVerificationPackages2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -182,19 +182,19 @@ public class AsyncPackage {
      * 
      * @return The async call builder
      */
-    public PatchAssessmentPackageRequestBuilder patchAssessmentPackage() {
-        return new PatchAssessmentPackageRequestBuilder(sdkConfiguration);
+    public PatchAssessmentPackage2RequestBuilder patchAssessmentPackage2() {
+        return new PatchAssessmentPackage2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update an assessment package
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<PatchAssessmentPackageResponse>} - The async response
+     * @return {@code CompletableFuture<PatchAssessmentPackage2Response>} - The async response
      */
-    public CompletableFuture<PatchAssessmentPackageResponse> patchAssessmentPackage(@Nonnull PatchAssessmentPackageRequest request) {
-        AsyncRequestOperation<PatchAssessmentPackageRequest, PatchAssessmentPackageResponse> operation
-              = new PatchAssessmentPackage.Async(sdkConfiguration, _headers);
+    public CompletableFuture<PatchAssessmentPackage2Response> patchAssessmentPackage2(@Nonnull PatchAssessmentPackage2Request request) {
+        AsyncRequestOperation<PatchAssessmentPackage2Request, PatchAssessmentPackage2Response> operation
+              = new PatchAssessmentPackage2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -205,19 +205,19 @@ public class AsyncPackage {
      * 
      * @return The async call builder
      */
-    public RemoveAssessmentPackageRequestBuilder removeAssessmentPackage() {
-        return new RemoveAssessmentPackageRequestBuilder(sdkConfiguration);
+    public RemoveAssessmentPackage2RequestBuilder removeAssessmentPackage2() {
+        return new RemoveAssessmentPackage2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Delete an assessment package
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<RemoveAssessmentPackageResponse>} - The async response
+     * @return {@code CompletableFuture<RemoveAssessmentPackage2Response>} - The async response
      */
-    public CompletableFuture<RemoveAssessmentPackageResponse> removeAssessmentPackage(@Nonnull RemoveAssessmentPackageRequest request) {
-        AsyncRequestOperation<RemoveAssessmentPackageRequest, RemoveAssessmentPackageResponse> operation
-              = new RemoveAssessmentPackage.Async(sdkConfiguration, _headers);
+    public CompletableFuture<RemoveAssessmentPackage2Response> removeAssessmentPackage2(@Nonnull RemoveAssessmentPackage2Request request) {
+        AsyncRequestOperation<RemoveAssessmentPackage2Request, RemoveAssessmentPackage2Response> operation
+              = new RemoveAssessmentPackage2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -228,19 +228,19 @@ public class AsyncPackage {
      * 
      * @return The async call builder
      */
-    public UpdateAssessmentPackageRequestBuilder updateAssessmentPackage() {
-        return new UpdateAssessmentPackageRequestBuilder(sdkConfiguration);
+    public UpdateAssessmentPackage2RequestBuilder updateAssessmentPackage2() {
+        return new UpdateAssessmentPackage2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update an assessment package
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<UpdateAssessmentPackageResponse>} - The async response
+     * @return {@code CompletableFuture<UpdateAssessmentPackage2Response>} - The async response
      */
-    public CompletableFuture<UpdateAssessmentPackageResponse> updateAssessmentPackage(@Nonnull UpdateAssessmentPackageRequest request) {
-        AsyncRequestOperation<UpdateAssessmentPackageRequest, UpdateAssessmentPackageResponse> operation
-              = new UpdateAssessmentPackage.Async(sdkConfiguration, _headers);
+    public CompletableFuture<UpdateAssessmentPackage2Response> updateAssessmentPackage2(@Nonnull UpdateAssessmentPackage2Request request) {
+        AsyncRequestOperation<UpdateAssessmentPackage2Request, UpdateAssessmentPackage2Response> operation
+              = new UpdateAssessmentPackage2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

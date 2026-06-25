@@ -6,30 +6,30 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
-import to.unified.unified_java_sdk.models.operations.CreateAccountingInvoiceRequest;
-import to.unified.unified_java_sdk.models.operations.CreateAccountingInvoiceRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.CreateAccountingInvoiceResponse;
-import to.unified.unified_java_sdk.models.operations.GetAccountingInvoiceRequest;
-import to.unified.unified_java_sdk.models.operations.GetAccountingInvoiceRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.GetAccountingInvoiceResponse;
-import to.unified.unified_java_sdk.models.operations.ListAccountingInvoicesRequest;
-import to.unified.unified_java_sdk.models.operations.ListAccountingInvoicesRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.ListAccountingInvoicesResponse;
-import to.unified.unified_java_sdk.models.operations.PatchAccountingInvoiceRequest;
-import to.unified.unified_java_sdk.models.operations.PatchAccountingInvoiceRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.PatchAccountingInvoiceResponse;
-import to.unified.unified_java_sdk.models.operations.RemoveAccountingInvoiceRequest;
-import to.unified.unified_java_sdk.models.operations.RemoveAccountingInvoiceRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.RemoveAccountingInvoiceResponse;
-import to.unified.unified_java_sdk.models.operations.UpdateAccountingInvoiceRequest;
-import to.unified.unified_java_sdk.models.operations.UpdateAccountingInvoiceRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.UpdateAccountingInvoiceResponse;
-import to.unified.unified_java_sdk.operations.CreateAccountingInvoice;
-import to.unified.unified_java_sdk.operations.GetAccountingInvoice;
-import to.unified.unified_java_sdk.operations.ListAccountingInvoices;
-import to.unified.unified_java_sdk.operations.PatchAccountingInvoice;
-import to.unified.unified_java_sdk.operations.RemoveAccountingInvoice;
-import to.unified.unified_java_sdk.operations.UpdateAccountingInvoice;
+import to.unified.unified_java_sdk.models.operations.CreateAccountingInvoice2Request;
+import to.unified.unified_java_sdk.models.operations.CreateAccountingInvoice2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.CreateAccountingInvoice2Response;
+import to.unified.unified_java_sdk.models.operations.GetAccountingInvoice2Request;
+import to.unified.unified_java_sdk.models.operations.GetAccountingInvoice2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetAccountingInvoice2Response;
+import to.unified.unified_java_sdk.models.operations.ListAccountingInvoices2Request;
+import to.unified.unified_java_sdk.models.operations.ListAccountingInvoices2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListAccountingInvoices2Response;
+import to.unified.unified_java_sdk.models.operations.PatchAccountingInvoice2Request;
+import to.unified.unified_java_sdk.models.operations.PatchAccountingInvoice2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.PatchAccountingInvoice2Response;
+import to.unified.unified_java_sdk.models.operations.RemoveAccountingInvoice2Request;
+import to.unified.unified_java_sdk.models.operations.RemoveAccountingInvoice2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.RemoveAccountingInvoice2Response;
+import to.unified.unified_java_sdk.models.operations.UpdateAccountingInvoice2Request;
+import to.unified.unified_java_sdk.models.operations.UpdateAccountingInvoice2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.UpdateAccountingInvoice2Response;
+import to.unified.unified_java_sdk.operations.CreateAccountingInvoice2;
+import to.unified.unified_java_sdk.operations.GetAccountingInvoice2;
+import to.unified.unified_java_sdk.operations.ListAccountingInvoices2;
+import to.unified.unified_java_sdk.operations.PatchAccountingInvoice2;
+import to.unified.unified_java_sdk.operations.RemoveAccountingInvoice2;
+import to.unified.unified_java_sdk.operations.UpdateAccountingInvoice2;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -57,8 +57,8 @@ public class Invoice {
      * 
      * @return The call builder
      */
-    public CreateAccountingInvoiceRequestBuilder createAccountingInvoice() {
-        return new CreateAccountingInvoiceRequestBuilder(sdkConfiguration);
+    public CreateAccountingInvoice2RequestBuilder createAccountingInvoice2() {
+        return new CreateAccountingInvoice2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -68,9 +68,9 @@ public class Invoice {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateAccountingInvoiceResponse createAccountingInvoice(@Nonnull CreateAccountingInvoiceRequest request) {
-        RequestOperation<CreateAccountingInvoiceRequest, CreateAccountingInvoiceResponse> operation
-              = new CreateAccountingInvoice.Sync(sdkConfiguration, _headers);
+    public CreateAccountingInvoice2Response createAccountingInvoice2(@Nonnull CreateAccountingInvoice2Request request) {
+        RequestOperation<CreateAccountingInvoice2Request, CreateAccountingInvoice2Response> operation
+              = new CreateAccountingInvoice2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -79,8 +79,8 @@ public class Invoice {
      * 
      * @return The call builder
      */
-    public GetAccountingInvoiceRequestBuilder getAccountingInvoice() {
-        return new GetAccountingInvoiceRequestBuilder(sdkConfiguration);
+    public GetAccountingInvoice2RequestBuilder getAccountingInvoice2() {
+        return new GetAccountingInvoice2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -90,9 +90,9 @@ public class Invoice {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetAccountingInvoiceResponse getAccountingInvoice(@Nonnull GetAccountingInvoiceRequest request) {
-        RequestOperation<GetAccountingInvoiceRequest, GetAccountingInvoiceResponse> operation
-              = new GetAccountingInvoice.Sync(sdkConfiguration, _headers);
+    public GetAccountingInvoice2Response getAccountingInvoice2(@Nonnull GetAccountingInvoice2Request request) {
+        RequestOperation<GetAccountingInvoice2Request, GetAccountingInvoice2Response> operation
+              = new GetAccountingInvoice2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -101,8 +101,8 @@ public class Invoice {
      * 
      * @return The call builder
      */
-    public ListAccountingInvoicesRequestBuilder listAccountingInvoices() {
-        return new ListAccountingInvoicesRequestBuilder(sdkConfiguration);
+    public ListAccountingInvoices2RequestBuilder listAccountingInvoices2() {
+        return new ListAccountingInvoices2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -112,9 +112,9 @@ public class Invoice {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListAccountingInvoicesResponse listAccountingInvoices(@Nonnull ListAccountingInvoicesRequest request) {
-        RequestOperation<ListAccountingInvoicesRequest, ListAccountingInvoicesResponse> operation
-              = new ListAccountingInvoices.Sync(sdkConfiguration, _headers);
+    public ListAccountingInvoices2Response listAccountingInvoices2(@Nonnull ListAccountingInvoices2Request request) {
+        RequestOperation<ListAccountingInvoices2Request, ListAccountingInvoices2Response> operation
+              = new ListAccountingInvoices2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -123,8 +123,8 @@ public class Invoice {
      * 
      * @return The call builder
      */
-    public PatchAccountingInvoiceRequestBuilder patchAccountingInvoice() {
-        return new PatchAccountingInvoiceRequestBuilder(sdkConfiguration);
+    public PatchAccountingInvoice2RequestBuilder patchAccountingInvoice2() {
+        return new PatchAccountingInvoice2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -134,9 +134,9 @@ public class Invoice {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchAccountingInvoiceResponse patchAccountingInvoice(@Nonnull PatchAccountingInvoiceRequest request) {
-        RequestOperation<PatchAccountingInvoiceRequest, PatchAccountingInvoiceResponse> operation
-              = new PatchAccountingInvoice.Sync(sdkConfiguration, _headers);
+    public PatchAccountingInvoice2Response patchAccountingInvoice2(@Nonnull PatchAccountingInvoice2Request request) {
+        RequestOperation<PatchAccountingInvoice2Request, PatchAccountingInvoice2Response> operation
+              = new PatchAccountingInvoice2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -145,8 +145,8 @@ public class Invoice {
      * 
      * @return The call builder
      */
-    public RemoveAccountingInvoiceRequestBuilder removeAccountingInvoice() {
-        return new RemoveAccountingInvoiceRequestBuilder(sdkConfiguration);
+    public RemoveAccountingInvoice2RequestBuilder removeAccountingInvoice2() {
+        return new RemoveAccountingInvoice2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -156,9 +156,9 @@ public class Invoice {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveAccountingInvoiceResponse removeAccountingInvoice(@Nonnull RemoveAccountingInvoiceRequest request) {
-        RequestOperation<RemoveAccountingInvoiceRequest, RemoveAccountingInvoiceResponse> operation
-              = new RemoveAccountingInvoice.Sync(sdkConfiguration, _headers);
+    public RemoveAccountingInvoice2Response removeAccountingInvoice2(@Nonnull RemoveAccountingInvoice2Request request) {
+        RequestOperation<RemoveAccountingInvoice2Request, RemoveAccountingInvoice2Response> operation
+              = new RemoveAccountingInvoice2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -167,8 +167,8 @@ public class Invoice {
      * 
      * @return The call builder
      */
-    public UpdateAccountingInvoiceRequestBuilder updateAccountingInvoice() {
-        return new UpdateAccountingInvoiceRequestBuilder(sdkConfiguration);
+    public UpdateAccountingInvoice2RequestBuilder updateAccountingInvoice2() {
+        return new UpdateAccountingInvoice2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -178,9 +178,9 @@ public class Invoice {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateAccountingInvoiceResponse updateAccountingInvoice(@Nonnull UpdateAccountingInvoiceRequest request) {
-        RequestOperation<UpdateAccountingInvoiceRequest, UpdateAccountingInvoiceResponse> operation
-              = new UpdateAccountingInvoice.Sync(sdkConfiguration, _headers);
+    public UpdateAccountingInvoice2Response updateAccountingInvoice2(@Nonnull UpdateAccountingInvoice2Request request) {
+        RequestOperation<UpdateAccountingInvoice2Request, UpdateAccountingInvoice2Response> operation
+              = new UpdateAccountingInvoice2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

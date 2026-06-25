@@ -7,30 +7,30 @@ import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOper
 
 import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
-import to.unified.unified_java_sdk.models.operations.CreateTicketingNoteRequest;
-import to.unified.unified_java_sdk.models.operations.GetTicketingNoteRequest;
-import to.unified.unified_java_sdk.models.operations.ListTicketingNotesRequest;
-import to.unified.unified_java_sdk.models.operations.PatchTicketingNoteRequest;
-import to.unified.unified_java_sdk.models.operations.RemoveTicketingNoteRequest;
-import to.unified.unified_java_sdk.models.operations.UpdateTicketingNoteRequest;
-import to.unified.unified_java_sdk.models.operations.async.CreateTicketingNoteRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.CreateTicketingNoteResponse;
-import to.unified.unified_java_sdk.models.operations.async.GetTicketingNoteRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.GetTicketingNoteResponse;
-import to.unified.unified_java_sdk.models.operations.async.ListTicketingNotesRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.ListTicketingNotesResponse;
-import to.unified.unified_java_sdk.models.operations.async.PatchTicketingNoteRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.PatchTicketingNoteResponse;
-import to.unified.unified_java_sdk.models.operations.async.RemoveTicketingNoteRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.RemoveTicketingNoteResponse;
-import to.unified.unified_java_sdk.models.operations.async.UpdateTicketingNoteRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.UpdateTicketingNoteResponse;
-import to.unified.unified_java_sdk.operations.CreateTicketingNote;
-import to.unified.unified_java_sdk.operations.GetTicketingNote;
-import to.unified.unified_java_sdk.operations.ListTicketingNotes;
-import to.unified.unified_java_sdk.operations.PatchTicketingNote;
-import to.unified.unified_java_sdk.operations.RemoveTicketingNote;
-import to.unified.unified_java_sdk.operations.UpdateTicketingNote;
+import to.unified.unified_java_sdk.models.operations.CreateTicketingNote2Request;
+import to.unified.unified_java_sdk.models.operations.GetTicketingNote2Request;
+import to.unified.unified_java_sdk.models.operations.ListTicketingNotes2Request;
+import to.unified.unified_java_sdk.models.operations.PatchTicketingNote2Request;
+import to.unified.unified_java_sdk.models.operations.RemoveTicketingNote2Request;
+import to.unified.unified_java_sdk.models.operations.UpdateTicketingNote2Request;
+import to.unified.unified_java_sdk.models.operations.async.CreateTicketingNote2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.CreateTicketingNote2Response;
+import to.unified.unified_java_sdk.models.operations.async.GetTicketingNote2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetTicketingNote2Response;
+import to.unified.unified_java_sdk.models.operations.async.ListTicketingNotes2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListTicketingNotes2Response;
+import to.unified.unified_java_sdk.models.operations.async.PatchTicketingNote2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.PatchTicketingNote2Response;
+import to.unified.unified_java_sdk.models.operations.async.RemoveTicketingNote2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.RemoveTicketingNote2Response;
+import to.unified.unified_java_sdk.models.operations.async.UpdateTicketingNote2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.UpdateTicketingNote2Response;
+import to.unified.unified_java_sdk.operations.CreateTicketingNote2;
+import to.unified.unified_java_sdk.operations.GetTicketingNote2;
+import to.unified.unified_java_sdk.operations.ListTicketingNotes2;
+import to.unified.unified_java_sdk.operations.PatchTicketingNote2;
+import to.unified.unified_java_sdk.operations.RemoveTicketingNote2;
+import to.unified.unified_java_sdk.operations.UpdateTicketingNote2;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -59,19 +59,19 @@ public class AsyncNote {
      * 
      * @return The async call builder
      */
-    public CreateTicketingNoteRequestBuilder createTicketingNote() {
-        return new CreateTicketingNoteRequestBuilder(sdkConfiguration);
+    public CreateTicketingNote2RequestBuilder createTicketingNote2() {
+        return new CreateTicketingNote2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Create a note
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<CreateTicketingNoteResponse>} - The async response
+     * @return {@code CompletableFuture<CreateTicketingNote2Response>} - The async response
      */
-    public CompletableFuture<CreateTicketingNoteResponse> createTicketingNote(@Nonnull CreateTicketingNoteRequest request) {
-        AsyncRequestOperation<CreateTicketingNoteRequest, CreateTicketingNoteResponse> operation
-              = new CreateTicketingNote.Async(sdkConfiguration, _headers);
+    public CompletableFuture<CreateTicketingNote2Response> createTicketingNote2(@Nonnull CreateTicketingNote2Request request) {
+        AsyncRequestOperation<CreateTicketingNote2Request, CreateTicketingNote2Response> operation
+              = new CreateTicketingNote2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -82,19 +82,19 @@ public class AsyncNote {
      * 
      * @return The async call builder
      */
-    public GetTicketingNoteRequestBuilder getTicketingNote() {
-        return new GetTicketingNoteRequestBuilder(sdkConfiguration);
+    public GetTicketingNote2RequestBuilder getTicketingNote2() {
+        return new GetTicketingNote2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Retrieve a note
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<GetTicketingNoteResponse>} - The async response
+     * @return {@code CompletableFuture<GetTicketingNote2Response>} - The async response
      */
-    public CompletableFuture<GetTicketingNoteResponse> getTicketingNote(@Nonnull GetTicketingNoteRequest request) {
-        AsyncRequestOperation<GetTicketingNoteRequest, GetTicketingNoteResponse> operation
-              = new GetTicketingNote.Async(sdkConfiguration, _headers);
+    public CompletableFuture<GetTicketingNote2Response> getTicketingNote2(@Nonnull GetTicketingNote2Request request) {
+        AsyncRequestOperation<GetTicketingNote2Request, GetTicketingNote2Response> operation
+              = new GetTicketingNote2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -105,19 +105,19 @@ public class AsyncNote {
      * 
      * @return The async call builder
      */
-    public ListTicketingNotesRequestBuilder listTicketingNotes() {
-        return new ListTicketingNotesRequestBuilder(sdkConfiguration);
+    public ListTicketingNotes2RequestBuilder listTicketingNotes2() {
+        return new ListTicketingNotes2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * List all notes
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<ListTicketingNotesResponse>} - The async response
+     * @return {@code CompletableFuture<ListTicketingNotes2Response>} - The async response
      */
-    public CompletableFuture<ListTicketingNotesResponse> listTicketingNotes(@Nonnull ListTicketingNotesRequest request) {
-        AsyncRequestOperation<ListTicketingNotesRequest, ListTicketingNotesResponse> operation
-              = new ListTicketingNotes.Async(sdkConfiguration, _headers);
+    public CompletableFuture<ListTicketingNotes2Response> listTicketingNotes2(@Nonnull ListTicketingNotes2Request request) {
+        AsyncRequestOperation<ListTicketingNotes2Request, ListTicketingNotes2Response> operation
+              = new ListTicketingNotes2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -128,19 +128,19 @@ public class AsyncNote {
      * 
      * @return The async call builder
      */
-    public PatchTicketingNoteRequestBuilder patchTicketingNote() {
-        return new PatchTicketingNoteRequestBuilder(sdkConfiguration);
+    public PatchTicketingNote2RequestBuilder patchTicketingNote2() {
+        return new PatchTicketingNote2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update a note
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<PatchTicketingNoteResponse>} - The async response
+     * @return {@code CompletableFuture<PatchTicketingNote2Response>} - The async response
      */
-    public CompletableFuture<PatchTicketingNoteResponse> patchTicketingNote(@Nonnull PatchTicketingNoteRequest request) {
-        AsyncRequestOperation<PatchTicketingNoteRequest, PatchTicketingNoteResponse> operation
-              = new PatchTicketingNote.Async(sdkConfiguration, _headers);
+    public CompletableFuture<PatchTicketingNote2Response> patchTicketingNote2(@Nonnull PatchTicketingNote2Request request) {
+        AsyncRequestOperation<PatchTicketingNote2Request, PatchTicketingNote2Response> operation
+              = new PatchTicketingNote2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -151,19 +151,19 @@ public class AsyncNote {
      * 
      * @return The async call builder
      */
-    public RemoveTicketingNoteRequestBuilder removeTicketingNote() {
-        return new RemoveTicketingNoteRequestBuilder(sdkConfiguration);
+    public RemoveTicketingNote2RequestBuilder removeTicketingNote2() {
+        return new RemoveTicketingNote2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Remove a note
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<RemoveTicketingNoteResponse>} - The async response
+     * @return {@code CompletableFuture<RemoveTicketingNote2Response>} - The async response
      */
-    public CompletableFuture<RemoveTicketingNoteResponse> removeTicketingNote(@Nonnull RemoveTicketingNoteRequest request) {
-        AsyncRequestOperation<RemoveTicketingNoteRequest, RemoveTicketingNoteResponse> operation
-              = new RemoveTicketingNote.Async(sdkConfiguration, _headers);
+    public CompletableFuture<RemoveTicketingNote2Response> removeTicketingNote2(@Nonnull RemoveTicketingNote2Request request) {
+        AsyncRequestOperation<RemoveTicketingNote2Request, RemoveTicketingNote2Response> operation
+              = new RemoveTicketingNote2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -174,19 +174,19 @@ public class AsyncNote {
      * 
      * @return The async call builder
      */
-    public UpdateTicketingNoteRequestBuilder updateTicketingNote() {
-        return new UpdateTicketingNoteRequestBuilder(sdkConfiguration);
+    public UpdateTicketingNote2RequestBuilder updateTicketingNote2() {
+        return new UpdateTicketingNote2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update a note
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<UpdateTicketingNoteResponse>} - The async response
+     * @return {@code CompletableFuture<UpdateTicketingNote2Response>} - The async response
      */
-    public CompletableFuture<UpdateTicketingNoteResponse> updateTicketingNote(@Nonnull UpdateTicketingNoteRequest request) {
-        AsyncRequestOperation<UpdateTicketingNoteRequest, UpdateTicketingNoteResponse> operation
-              = new UpdateTicketingNote.Async(sdkConfiguration, _headers);
+    public CompletableFuture<UpdateTicketingNote2Response> updateTicketingNote2(@Nonnull UpdateTicketingNote2Request request) {
+        AsyncRequestOperation<UpdateTicketingNote2Request, UpdateTicketingNote2Response> operation
+              = new UpdateTicketingNote2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

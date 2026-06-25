@@ -7,30 +7,30 @@ import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOper
 
 import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
-import to.unified.unified_java_sdk.models.operations.CreateHrisBenefitRequest;
-import to.unified.unified_java_sdk.models.operations.GetHrisBenefitRequest;
-import to.unified.unified_java_sdk.models.operations.ListHrisBenefitsRequest;
-import to.unified.unified_java_sdk.models.operations.PatchHrisBenefitRequest;
-import to.unified.unified_java_sdk.models.operations.RemoveHrisBenefitRequest;
-import to.unified.unified_java_sdk.models.operations.UpdateHrisBenefitRequest;
-import to.unified.unified_java_sdk.models.operations.async.CreateHrisBenefitRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.CreateHrisBenefitResponse;
-import to.unified.unified_java_sdk.models.operations.async.GetHrisBenefitRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.GetHrisBenefitResponse;
-import to.unified.unified_java_sdk.models.operations.async.ListHrisBenefitsRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.ListHrisBenefitsResponse;
-import to.unified.unified_java_sdk.models.operations.async.PatchHrisBenefitRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.PatchHrisBenefitResponse;
-import to.unified.unified_java_sdk.models.operations.async.RemoveHrisBenefitRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.RemoveHrisBenefitResponse;
-import to.unified.unified_java_sdk.models.operations.async.UpdateHrisBenefitRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.UpdateHrisBenefitResponse;
-import to.unified.unified_java_sdk.operations.CreateHrisBenefit;
-import to.unified.unified_java_sdk.operations.GetHrisBenefit;
-import to.unified.unified_java_sdk.operations.ListHrisBenefits;
-import to.unified.unified_java_sdk.operations.PatchHrisBenefit;
-import to.unified.unified_java_sdk.operations.RemoveHrisBenefit;
-import to.unified.unified_java_sdk.operations.UpdateHrisBenefit;
+import to.unified.unified_java_sdk.models.operations.CreateHrisBenefit2Request;
+import to.unified.unified_java_sdk.models.operations.GetHrisBenefit2Request;
+import to.unified.unified_java_sdk.models.operations.ListHrisBenefits2Request;
+import to.unified.unified_java_sdk.models.operations.PatchHrisBenefit2Request;
+import to.unified.unified_java_sdk.models.operations.RemoveHrisBenefit2Request;
+import to.unified.unified_java_sdk.models.operations.UpdateHrisBenefit2Request;
+import to.unified.unified_java_sdk.models.operations.async.CreateHrisBenefit2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.CreateHrisBenefit2Response;
+import to.unified.unified_java_sdk.models.operations.async.GetHrisBenefit2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetHrisBenefit2Response;
+import to.unified.unified_java_sdk.models.operations.async.ListHrisBenefits2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListHrisBenefits2Response;
+import to.unified.unified_java_sdk.models.operations.async.PatchHrisBenefit2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.PatchHrisBenefit2Response;
+import to.unified.unified_java_sdk.models.operations.async.RemoveHrisBenefit2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.RemoveHrisBenefit2Response;
+import to.unified.unified_java_sdk.models.operations.async.UpdateHrisBenefit2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.UpdateHrisBenefit2Response;
+import to.unified.unified_java_sdk.operations.CreateHrisBenefit2;
+import to.unified.unified_java_sdk.operations.GetHrisBenefit2;
+import to.unified.unified_java_sdk.operations.ListHrisBenefits2;
+import to.unified.unified_java_sdk.operations.PatchHrisBenefit2;
+import to.unified.unified_java_sdk.operations.RemoveHrisBenefit2;
+import to.unified.unified_java_sdk.operations.UpdateHrisBenefit2;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -59,19 +59,19 @@ public class AsyncBenefit {
      * 
      * @return The async call builder
      */
-    public CreateHrisBenefitRequestBuilder createHrisBenefit() {
-        return new CreateHrisBenefitRequestBuilder(sdkConfiguration);
+    public CreateHrisBenefit2RequestBuilder createHrisBenefit2() {
+        return new CreateHrisBenefit2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Create a benefit
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<CreateHrisBenefitResponse>} - The async response
+     * @return {@code CompletableFuture<CreateHrisBenefit2Response>} - The async response
      */
-    public CompletableFuture<CreateHrisBenefitResponse> createHrisBenefit(@Nonnull CreateHrisBenefitRequest request) {
-        AsyncRequestOperation<CreateHrisBenefitRequest, CreateHrisBenefitResponse> operation
-              = new CreateHrisBenefit.Async(sdkConfiguration, _headers);
+    public CompletableFuture<CreateHrisBenefit2Response> createHrisBenefit2(@Nonnull CreateHrisBenefit2Request request) {
+        AsyncRequestOperation<CreateHrisBenefit2Request, CreateHrisBenefit2Response> operation
+              = new CreateHrisBenefit2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -82,19 +82,19 @@ public class AsyncBenefit {
      * 
      * @return The async call builder
      */
-    public GetHrisBenefitRequestBuilder getHrisBenefit() {
-        return new GetHrisBenefitRequestBuilder(sdkConfiguration);
+    public GetHrisBenefit2RequestBuilder getHrisBenefit2() {
+        return new GetHrisBenefit2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Retrieve a benefit
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<GetHrisBenefitResponse>} - The async response
+     * @return {@code CompletableFuture<GetHrisBenefit2Response>} - The async response
      */
-    public CompletableFuture<GetHrisBenefitResponse> getHrisBenefit(@Nonnull GetHrisBenefitRequest request) {
-        AsyncRequestOperation<GetHrisBenefitRequest, GetHrisBenefitResponse> operation
-              = new GetHrisBenefit.Async(sdkConfiguration, _headers);
+    public CompletableFuture<GetHrisBenefit2Response> getHrisBenefit2(@Nonnull GetHrisBenefit2Request request) {
+        AsyncRequestOperation<GetHrisBenefit2Request, GetHrisBenefit2Response> operation
+              = new GetHrisBenefit2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -105,19 +105,19 @@ public class AsyncBenefit {
      * 
      * @return The async call builder
      */
-    public ListHrisBenefitsRequestBuilder listHrisBenefits() {
-        return new ListHrisBenefitsRequestBuilder(sdkConfiguration);
+    public ListHrisBenefits2RequestBuilder listHrisBenefits2() {
+        return new ListHrisBenefits2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * List all benefits
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<ListHrisBenefitsResponse>} - The async response
+     * @return {@code CompletableFuture<ListHrisBenefits2Response>} - The async response
      */
-    public CompletableFuture<ListHrisBenefitsResponse> listHrisBenefits(@Nonnull ListHrisBenefitsRequest request) {
-        AsyncRequestOperation<ListHrisBenefitsRequest, ListHrisBenefitsResponse> operation
-              = new ListHrisBenefits.Async(sdkConfiguration, _headers);
+    public CompletableFuture<ListHrisBenefits2Response> listHrisBenefits2(@Nonnull ListHrisBenefits2Request request) {
+        AsyncRequestOperation<ListHrisBenefits2Request, ListHrisBenefits2Response> operation
+              = new ListHrisBenefits2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -128,19 +128,19 @@ public class AsyncBenefit {
      * 
      * @return The async call builder
      */
-    public PatchHrisBenefitRequestBuilder patchHrisBenefit() {
-        return new PatchHrisBenefitRequestBuilder(sdkConfiguration);
+    public PatchHrisBenefit2RequestBuilder patchHrisBenefit2() {
+        return new PatchHrisBenefit2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update a benefit
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<PatchHrisBenefitResponse>} - The async response
+     * @return {@code CompletableFuture<PatchHrisBenefit2Response>} - The async response
      */
-    public CompletableFuture<PatchHrisBenefitResponse> patchHrisBenefit(@Nonnull PatchHrisBenefitRequest request) {
-        AsyncRequestOperation<PatchHrisBenefitRequest, PatchHrisBenefitResponse> operation
-              = new PatchHrisBenefit.Async(sdkConfiguration, _headers);
+    public CompletableFuture<PatchHrisBenefit2Response> patchHrisBenefit2(@Nonnull PatchHrisBenefit2Request request) {
+        AsyncRequestOperation<PatchHrisBenefit2Request, PatchHrisBenefit2Response> operation
+              = new PatchHrisBenefit2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -151,19 +151,19 @@ public class AsyncBenefit {
      * 
      * @return The async call builder
      */
-    public RemoveHrisBenefitRequestBuilder removeHrisBenefit() {
-        return new RemoveHrisBenefitRequestBuilder(sdkConfiguration);
+    public RemoveHrisBenefit2RequestBuilder removeHrisBenefit2() {
+        return new RemoveHrisBenefit2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Remove a benefit
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<RemoveHrisBenefitResponse>} - The async response
+     * @return {@code CompletableFuture<RemoveHrisBenefit2Response>} - The async response
      */
-    public CompletableFuture<RemoveHrisBenefitResponse> removeHrisBenefit(@Nonnull RemoveHrisBenefitRequest request) {
-        AsyncRequestOperation<RemoveHrisBenefitRequest, RemoveHrisBenefitResponse> operation
-              = new RemoveHrisBenefit.Async(sdkConfiguration, _headers);
+    public CompletableFuture<RemoveHrisBenefit2Response> removeHrisBenefit2(@Nonnull RemoveHrisBenefit2Request request) {
+        AsyncRequestOperation<RemoveHrisBenefit2Request, RemoveHrisBenefit2Response> operation
+              = new RemoveHrisBenefit2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -174,19 +174,19 @@ public class AsyncBenefit {
      * 
      * @return The async call builder
      */
-    public UpdateHrisBenefitRequestBuilder updateHrisBenefit() {
-        return new UpdateHrisBenefitRequestBuilder(sdkConfiguration);
+    public UpdateHrisBenefit2RequestBuilder updateHrisBenefit2() {
+        return new UpdateHrisBenefit2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update a benefit
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<UpdateHrisBenefitResponse>} - The async response
+     * @return {@code CompletableFuture<UpdateHrisBenefit2Response>} - The async response
      */
-    public CompletableFuture<UpdateHrisBenefitResponse> updateHrisBenefit(@Nonnull UpdateHrisBenefitRequest request) {
-        AsyncRequestOperation<UpdateHrisBenefitRequest, UpdateHrisBenefitResponse> operation
-              = new UpdateHrisBenefit.Async(sdkConfiguration, _headers);
+    public CompletableFuture<UpdateHrisBenefit2Response> updateHrisBenefit2(@Nonnull UpdateHrisBenefit2Request request) {
+        AsyncRequestOperation<UpdateHrisBenefit2Request, UpdateHrisBenefit2Response> operation
+              = new UpdateHrisBenefit2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

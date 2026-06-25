@@ -6,170 +6,170 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
-import to.unified.unified_java_sdk.models.operations.CreateAdsAdRequest;
-import to.unified.unified_java_sdk.models.operations.CreateAdsAdRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.CreateAdsAdResponse;
-import to.unified.unified_java_sdk.models.operations.CreateAdsCampaignRequest;
-import to.unified.unified_java_sdk.models.operations.CreateAdsCampaignRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.CreateAdsCampaignResponse;
-import to.unified.unified_java_sdk.models.operations.CreateAdsCreativeRequest;
-import to.unified.unified_java_sdk.models.operations.CreateAdsCreativeRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.CreateAdsCreativeResponse;
-import to.unified.unified_java_sdk.models.operations.CreateAdsGroupRequest;
-import to.unified.unified_java_sdk.models.operations.CreateAdsGroupRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.CreateAdsGroupResponse;
-import to.unified.unified_java_sdk.models.operations.CreateAdsInsertionorderRequest;
-import to.unified.unified_java_sdk.models.operations.CreateAdsInsertionorderRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.CreateAdsInsertionorderResponse;
-import to.unified.unified_java_sdk.models.operations.CreateAdsOrganizationRequest;
-import to.unified.unified_java_sdk.models.operations.CreateAdsOrganizationRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.CreateAdsOrganizationResponse;
-import to.unified.unified_java_sdk.models.operations.GetAdsAdRequest;
-import to.unified.unified_java_sdk.models.operations.GetAdsAdRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.GetAdsAdResponse;
-import to.unified.unified_java_sdk.models.operations.GetAdsCampaignRequest;
-import to.unified.unified_java_sdk.models.operations.GetAdsCampaignRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.GetAdsCampaignResponse;
-import to.unified.unified_java_sdk.models.operations.GetAdsCreativeRequest;
-import to.unified.unified_java_sdk.models.operations.GetAdsCreativeRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.GetAdsCreativeResponse;
-import to.unified.unified_java_sdk.models.operations.GetAdsGroupRequest;
-import to.unified.unified_java_sdk.models.operations.GetAdsGroupRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.GetAdsGroupResponse;
-import to.unified.unified_java_sdk.models.operations.GetAdsInsertionorderRequest;
-import to.unified.unified_java_sdk.models.operations.GetAdsInsertionorderRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.GetAdsInsertionorderResponse;
-import to.unified.unified_java_sdk.models.operations.GetAdsOrganizationRequest;
-import to.unified.unified_java_sdk.models.operations.GetAdsOrganizationRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.GetAdsOrganizationResponse;
-import to.unified.unified_java_sdk.models.operations.GetAdsPromotedRequest;
-import to.unified.unified_java_sdk.models.operations.GetAdsPromotedRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.GetAdsPromotedResponse;
-import to.unified.unified_java_sdk.models.operations.GetAdsTargetRequest;
-import to.unified.unified_java_sdk.models.operations.GetAdsTargetRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.GetAdsTargetResponse;
-import to.unified.unified_java_sdk.models.operations.ListAdsAdsRequest;
-import to.unified.unified_java_sdk.models.operations.ListAdsAdsRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.ListAdsAdsResponse;
-import to.unified.unified_java_sdk.models.operations.ListAdsCampaignsRequest;
-import to.unified.unified_java_sdk.models.operations.ListAdsCampaignsRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.ListAdsCampaignsResponse;
-import to.unified.unified_java_sdk.models.operations.ListAdsCreativesRequest;
-import to.unified.unified_java_sdk.models.operations.ListAdsCreativesRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.ListAdsCreativesResponse;
-import to.unified.unified_java_sdk.models.operations.ListAdsGroupsRequest;
-import to.unified.unified_java_sdk.models.operations.ListAdsGroupsRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.ListAdsGroupsResponse;
-import to.unified.unified_java_sdk.models.operations.ListAdsInsertionordersRequest;
-import to.unified.unified_java_sdk.models.operations.ListAdsInsertionordersRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.ListAdsInsertionordersResponse;
-import to.unified.unified_java_sdk.models.operations.ListAdsOrganizationsRequest;
-import to.unified.unified_java_sdk.models.operations.ListAdsOrganizationsRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.ListAdsOrganizationsResponse;
-import to.unified.unified_java_sdk.models.operations.ListAdsPromotedsRequest;
-import to.unified.unified_java_sdk.models.operations.ListAdsPromotedsRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.ListAdsPromotedsResponse;
-import to.unified.unified_java_sdk.models.operations.ListAdsReportsRequest;
-import to.unified.unified_java_sdk.models.operations.ListAdsReportsRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.ListAdsReportsResponse;
-import to.unified.unified_java_sdk.models.operations.ListAdsTargetsRequest;
-import to.unified.unified_java_sdk.models.operations.ListAdsTargetsRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.ListAdsTargetsResponse;
-import to.unified.unified_java_sdk.models.operations.PatchAdsAdRequest;
-import to.unified.unified_java_sdk.models.operations.PatchAdsAdRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.PatchAdsAdResponse;
-import to.unified.unified_java_sdk.models.operations.PatchAdsCampaignRequest;
-import to.unified.unified_java_sdk.models.operations.PatchAdsCampaignRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.PatchAdsCampaignResponse;
-import to.unified.unified_java_sdk.models.operations.PatchAdsCreativeRequest;
-import to.unified.unified_java_sdk.models.operations.PatchAdsCreativeRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.PatchAdsCreativeResponse;
-import to.unified.unified_java_sdk.models.operations.PatchAdsGroupRequest;
-import to.unified.unified_java_sdk.models.operations.PatchAdsGroupRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.PatchAdsGroupResponse;
-import to.unified.unified_java_sdk.models.operations.PatchAdsInsertionorderRequest;
-import to.unified.unified_java_sdk.models.operations.PatchAdsInsertionorderRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.PatchAdsInsertionorderResponse;
-import to.unified.unified_java_sdk.models.operations.PatchAdsOrganizationRequest;
-import to.unified.unified_java_sdk.models.operations.PatchAdsOrganizationRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.PatchAdsOrganizationResponse;
-import to.unified.unified_java_sdk.models.operations.RemoveAdsAdRequest;
-import to.unified.unified_java_sdk.models.operations.RemoveAdsAdRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.RemoveAdsAdResponse;
-import to.unified.unified_java_sdk.models.operations.RemoveAdsCampaignRequest;
-import to.unified.unified_java_sdk.models.operations.RemoveAdsCampaignRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.RemoveAdsCampaignResponse;
-import to.unified.unified_java_sdk.models.operations.RemoveAdsCreativeRequest;
-import to.unified.unified_java_sdk.models.operations.RemoveAdsCreativeRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.RemoveAdsCreativeResponse;
-import to.unified.unified_java_sdk.models.operations.RemoveAdsGroupRequest;
-import to.unified.unified_java_sdk.models.operations.RemoveAdsGroupRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.RemoveAdsGroupResponse;
-import to.unified.unified_java_sdk.models.operations.RemoveAdsInsertionorderRequest;
-import to.unified.unified_java_sdk.models.operations.RemoveAdsInsertionorderRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.RemoveAdsInsertionorderResponse;
-import to.unified.unified_java_sdk.models.operations.RemoveAdsOrganizationRequest;
-import to.unified.unified_java_sdk.models.operations.RemoveAdsOrganizationRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.RemoveAdsOrganizationResponse;
-import to.unified.unified_java_sdk.models.operations.UpdateAdsAdRequest;
-import to.unified.unified_java_sdk.models.operations.UpdateAdsAdRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.UpdateAdsAdResponse;
-import to.unified.unified_java_sdk.models.operations.UpdateAdsCampaignRequest;
-import to.unified.unified_java_sdk.models.operations.UpdateAdsCampaignRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.UpdateAdsCampaignResponse;
-import to.unified.unified_java_sdk.models.operations.UpdateAdsCreativeRequest;
-import to.unified.unified_java_sdk.models.operations.UpdateAdsCreativeRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.UpdateAdsCreativeResponse;
-import to.unified.unified_java_sdk.models.operations.UpdateAdsGroupRequest;
-import to.unified.unified_java_sdk.models.operations.UpdateAdsGroupRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.UpdateAdsGroupResponse;
-import to.unified.unified_java_sdk.models.operations.UpdateAdsInsertionorderRequest;
-import to.unified.unified_java_sdk.models.operations.UpdateAdsInsertionorderRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.UpdateAdsInsertionorderResponse;
-import to.unified.unified_java_sdk.models.operations.UpdateAdsOrganizationRequest;
-import to.unified.unified_java_sdk.models.operations.UpdateAdsOrganizationRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.UpdateAdsOrganizationResponse;
-import to.unified.unified_java_sdk.operations.CreateAdsAd;
-import to.unified.unified_java_sdk.operations.CreateAdsCampaign;
-import to.unified.unified_java_sdk.operations.CreateAdsCreative;
-import to.unified.unified_java_sdk.operations.CreateAdsGroup;
-import to.unified.unified_java_sdk.operations.CreateAdsInsertionorder;
-import to.unified.unified_java_sdk.operations.CreateAdsOrganization;
-import to.unified.unified_java_sdk.operations.GetAdsAd;
-import to.unified.unified_java_sdk.operations.GetAdsCampaign;
-import to.unified.unified_java_sdk.operations.GetAdsCreative;
-import to.unified.unified_java_sdk.operations.GetAdsGroup;
-import to.unified.unified_java_sdk.operations.GetAdsInsertionorder;
-import to.unified.unified_java_sdk.operations.GetAdsOrganization;
-import to.unified.unified_java_sdk.operations.GetAdsPromoted;
-import to.unified.unified_java_sdk.operations.GetAdsTarget;
-import to.unified.unified_java_sdk.operations.ListAdsAds;
-import to.unified.unified_java_sdk.operations.ListAdsCampaigns;
-import to.unified.unified_java_sdk.operations.ListAdsCreatives;
-import to.unified.unified_java_sdk.operations.ListAdsGroups;
-import to.unified.unified_java_sdk.operations.ListAdsInsertionorders;
-import to.unified.unified_java_sdk.operations.ListAdsOrganizations;
-import to.unified.unified_java_sdk.operations.ListAdsPromoteds;
-import to.unified.unified_java_sdk.operations.ListAdsReports;
-import to.unified.unified_java_sdk.operations.ListAdsTargets;
-import to.unified.unified_java_sdk.operations.PatchAdsAd;
-import to.unified.unified_java_sdk.operations.PatchAdsCampaign;
-import to.unified.unified_java_sdk.operations.PatchAdsCreative;
-import to.unified.unified_java_sdk.operations.PatchAdsGroup;
-import to.unified.unified_java_sdk.operations.PatchAdsInsertionorder;
-import to.unified.unified_java_sdk.operations.PatchAdsOrganization;
-import to.unified.unified_java_sdk.operations.RemoveAdsAd;
-import to.unified.unified_java_sdk.operations.RemoveAdsCampaign;
-import to.unified.unified_java_sdk.operations.RemoveAdsCreative;
-import to.unified.unified_java_sdk.operations.RemoveAdsGroup;
-import to.unified.unified_java_sdk.operations.RemoveAdsInsertionorder;
-import to.unified.unified_java_sdk.operations.RemoveAdsOrganization;
-import to.unified.unified_java_sdk.operations.UpdateAdsAd;
-import to.unified.unified_java_sdk.operations.UpdateAdsCampaign;
-import to.unified.unified_java_sdk.operations.UpdateAdsCreative;
-import to.unified.unified_java_sdk.operations.UpdateAdsGroup;
-import to.unified.unified_java_sdk.operations.UpdateAdsInsertionorder;
-import to.unified.unified_java_sdk.operations.UpdateAdsOrganization;
+import to.unified.unified_java_sdk.models.operations.CreateAdsAd2Request;
+import to.unified.unified_java_sdk.models.operations.CreateAdsAd2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.CreateAdsAd2Response;
+import to.unified.unified_java_sdk.models.operations.CreateAdsCampaign2Request;
+import to.unified.unified_java_sdk.models.operations.CreateAdsCampaign2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.CreateAdsCampaign2Response;
+import to.unified.unified_java_sdk.models.operations.CreateAdsCreative2Request;
+import to.unified.unified_java_sdk.models.operations.CreateAdsCreative2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.CreateAdsCreative2Response;
+import to.unified.unified_java_sdk.models.operations.CreateAdsGroup2Request;
+import to.unified.unified_java_sdk.models.operations.CreateAdsGroup2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.CreateAdsGroup2Response;
+import to.unified.unified_java_sdk.models.operations.CreateAdsInsertionorder2Request;
+import to.unified.unified_java_sdk.models.operations.CreateAdsInsertionorder2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.CreateAdsInsertionorder2Response;
+import to.unified.unified_java_sdk.models.operations.CreateAdsOrganization2Request;
+import to.unified.unified_java_sdk.models.operations.CreateAdsOrganization2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.CreateAdsOrganization2Response;
+import to.unified.unified_java_sdk.models.operations.GetAdsAd2Request;
+import to.unified.unified_java_sdk.models.operations.GetAdsAd2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetAdsAd2Response;
+import to.unified.unified_java_sdk.models.operations.GetAdsCampaign2Request;
+import to.unified.unified_java_sdk.models.operations.GetAdsCampaign2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetAdsCampaign2Response;
+import to.unified.unified_java_sdk.models.operations.GetAdsCreative2Request;
+import to.unified.unified_java_sdk.models.operations.GetAdsCreative2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetAdsCreative2Response;
+import to.unified.unified_java_sdk.models.operations.GetAdsGroup2Request;
+import to.unified.unified_java_sdk.models.operations.GetAdsGroup2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetAdsGroup2Response;
+import to.unified.unified_java_sdk.models.operations.GetAdsInsertionorder2Request;
+import to.unified.unified_java_sdk.models.operations.GetAdsInsertionorder2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetAdsInsertionorder2Response;
+import to.unified.unified_java_sdk.models.operations.GetAdsOrganization2Request;
+import to.unified.unified_java_sdk.models.operations.GetAdsOrganization2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetAdsOrganization2Response;
+import to.unified.unified_java_sdk.models.operations.GetAdsPromoted2Request;
+import to.unified.unified_java_sdk.models.operations.GetAdsPromoted2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetAdsPromoted2Response;
+import to.unified.unified_java_sdk.models.operations.GetAdsTarget2Request;
+import to.unified.unified_java_sdk.models.operations.GetAdsTarget2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetAdsTarget2Response;
+import to.unified.unified_java_sdk.models.operations.ListAdsAds2Request;
+import to.unified.unified_java_sdk.models.operations.ListAdsAds2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListAdsAds2Response;
+import to.unified.unified_java_sdk.models.operations.ListAdsCampaigns2Request;
+import to.unified.unified_java_sdk.models.operations.ListAdsCampaigns2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListAdsCampaigns2Response;
+import to.unified.unified_java_sdk.models.operations.ListAdsCreatives2Request;
+import to.unified.unified_java_sdk.models.operations.ListAdsCreatives2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListAdsCreatives2Response;
+import to.unified.unified_java_sdk.models.operations.ListAdsGroups2Request;
+import to.unified.unified_java_sdk.models.operations.ListAdsGroups2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListAdsGroups2Response;
+import to.unified.unified_java_sdk.models.operations.ListAdsInsertionorders2Request;
+import to.unified.unified_java_sdk.models.operations.ListAdsInsertionorders2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListAdsInsertionorders2Response;
+import to.unified.unified_java_sdk.models.operations.ListAdsOrganizations2Request;
+import to.unified.unified_java_sdk.models.operations.ListAdsOrganizations2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListAdsOrganizations2Response;
+import to.unified.unified_java_sdk.models.operations.ListAdsPromoteds2Request;
+import to.unified.unified_java_sdk.models.operations.ListAdsPromoteds2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListAdsPromoteds2Response;
+import to.unified.unified_java_sdk.models.operations.ListAdsReports2Request;
+import to.unified.unified_java_sdk.models.operations.ListAdsReports2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListAdsReports2Response;
+import to.unified.unified_java_sdk.models.operations.ListAdsTargets2Request;
+import to.unified.unified_java_sdk.models.operations.ListAdsTargets2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListAdsTargets2Response;
+import to.unified.unified_java_sdk.models.operations.PatchAdsAd2Request;
+import to.unified.unified_java_sdk.models.operations.PatchAdsAd2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.PatchAdsAd2Response;
+import to.unified.unified_java_sdk.models.operations.PatchAdsCampaign2Request;
+import to.unified.unified_java_sdk.models.operations.PatchAdsCampaign2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.PatchAdsCampaign2Response;
+import to.unified.unified_java_sdk.models.operations.PatchAdsCreative2Request;
+import to.unified.unified_java_sdk.models.operations.PatchAdsCreative2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.PatchAdsCreative2Response;
+import to.unified.unified_java_sdk.models.operations.PatchAdsGroup2Request;
+import to.unified.unified_java_sdk.models.operations.PatchAdsGroup2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.PatchAdsGroup2Response;
+import to.unified.unified_java_sdk.models.operations.PatchAdsInsertionorder2Request;
+import to.unified.unified_java_sdk.models.operations.PatchAdsInsertionorder2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.PatchAdsInsertionorder2Response;
+import to.unified.unified_java_sdk.models.operations.PatchAdsOrganization2Request;
+import to.unified.unified_java_sdk.models.operations.PatchAdsOrganization2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.PatchAdsOrganization2Response;
+import to.unified.unified_java_sdk.models.operations.RemoveAdsAd2Request;
+import to.unified.unified_java_sdk.models.operations.RemoveAdsAd2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.RemoveAdsAd2Response;
+import to.unified.unified_java_sdk.models.operations.RemoveAdsCampaign2Request;
+import to.unified.unified_java_sdk.models.operations.RemoveAdsCampaign2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.RemoveAdsCampaign2Response;
+import to.unified.unified_java_sdk.models.operations.RemoveAdsCreative2Request;
+import to.unified.unified_java_sdk.models.operations.RemoveAdsCreative2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.RemoveAdsCreative2Response;
+import to.unified.unified_java_sdk.models.operations.RemoveAdsGroup2Request;
+import to.unified.unified_java_sdk.models.operations.RemoveAdsGroup2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.RemoveAdsGroup2Response;
+import to.unified.unified_java_sdk.models.operations.RemoveAdsInsertionorder2Request;
+import to.unified.unified_java_sdk.models.operations.RemoveAdsInsertionorder2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.RemoveAdsInsertionorder2Response;
+import to.unified.unified_java_sdk.models.operations.RemoveAdsOrganization2Request;
+import to.unified.unified_java_sdk.models.operations.RemoveAdsOrganization2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.RemoveAdsOrganization2Response;
+import to.unified.unified_java_sdk.models.operations.UpdateAdsAd2Request;
+import to.unified.unified_java_sdk.models.operations.UpdateAdsAd2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.UpdateAdsAd2Response;
+import to.unified.unified_java_sdk.models.operations.UpdateAdsCampaign2Request;
+import to.unified.unified_java_sdk.models.operations.UpdateAdsCampaign2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.UpdateAdsCampaign2Response;
+import to.unified.unified_java_sdk.models.operations.UpdateAdsCreative2Request;
+import to.unified.unified_java_sdk.models.operations.UpdateAdsCreative2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.UpdateAdsCreative2Response;
+import to.unified.unified_java_sdk.models.operations.UpdateAdsGroup2Request;
+import to.unified.unified_java_sdk.models.operations.UpdateAdsGroup2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.UpdateAdsGroup2Response;
+import to.unified.unified_java_sdk.models.operations.UpdateAdsInsertionorder2Request;
+import to.unified.unified_java_sdk.models.operations.UpdateAdsInsertionorder2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.UpdateAdsInsertionorder2Response;
+import to.unified.unified_java_sdk.models.operations.UpdateAdsOrganization2Request;
+import to.unified.unified_java_sdk.models.operations.UpdateAdsOrganization2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.UpdateAdsOrganization2Response;
+import to.unified.unified_java_sdk.operations.CreateAdsAd2;
+import to.unified.unified_java_sdk.operations.CreateAdsCampaign2;
+import to.unified.unified_java_sdk.operations.CreateAdsCreative2;
+import to.unified.unified_java_sdk.operations.CreateAdsGroup2;
+import to.unified.unified_java_sdk.operations.CreateAdsInsertionorder2;
+import to.unified.unified_java_sdk.operations.CreateAdsOrganization2;
+import to.unified.unified_java_sdk.operations.GetAdsAd2;
+import to.unified.unified_java_sdk.operations.GetAdsCampaign2;
+import to.unified.unified_java_sdk.operations.GetAdsCreative2;
+import to.unified.unified_java_sdk.operations.GetAdsGroup2;
+import to.unified.unified_java_sdk.operations.GetAdsInsertionorder2;
+import to.unified.unified_java_sdk.operations.GetAdsOrganization2;
+import to.unified.unified_java_sdk.operations.GetAdsPromoted2;
+import to.unified.unified_java_sdk.operations.GetAdsTarget2;
+import to.unified.unified_java_sdk.operations.ListAdsAds2;
+import to.unified.unified_java_sdk.operations.ListAdsCampaigns2;
+import to.unified.unified_java_sdk.operations.ListAdsCreatives2;
+import to.unified.unified_java_sdk.operations.ListAdsGroups2;
+import to.unified.unified_java_sdk.operations.ListAdsInsertionorders2;
+import to.unified.unified_java_sdk.operations.ListAdsOrganizations2;
+import to.unified.unified_java_sdk.operations.ListAdsPromoteds2;
+import to.unified.unified_java_sdk.operations.ListAdsReports2;
+import to.unified.unified_java_sdk.operations.ListAdsTargets2;
+import to.unified.unified_java_sdk.operations.PatchAdsAd2;
+import to.unified.unified_java_sdk.operations.PatchAdsCampaign2;
+import to.unified.unified_java_sdk.operations.PatchAdsCreative2;
+import to.unified.unified_java_sdk.operations.PatchAdsGroup2;
+import to.unified.unified_java_sdk.operations.PatchAdsInsertionorder2;
+import to.unified.unified_java_sdk.operations.PatchAdsOrganization2;
+import to.unified.unified_java_sdk.operations.RemoveAdsAd2;
+import to.unified.unified_java_sdk.operations.RemoveAdsCampaign2;
+import to.unified.unified_java_sdk.operations.RemoveAdsCreative2;
+import to.unified.unified_java_sdk.operations.RemoveAdsGroup2;
+import to.unified.unified_java_sdk.operations.RemoveAdsInsertionorder2;
+import to.unified.unified_java_sdk.operations.RemoveAdsOrganization2;
+import to.unified.unified_java_sdk.operations.UpdateAdsAd2;
+import to.unified.unified_java_sdk.operations.UpdateAdsCampaign2;
+import to.unified.unified_java_sdk.operations.UpdateAdsCreative2;
+import to.unified.unified_java_sdk.operations.UpdateAdsGroup2;
+import to.unified.unified_java_sdk.operations.UpdateAdsInsertionorder2;
+import to.unified.unified_java_sdk.operations.UpdateAdsOrganization2;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -197,8 +197,8 @@ public class Ads {
      * 
      * @return The call builder
      */
-    public CreateAdsAdRequestBuilder createAdsAd() {
-        return new CreateAdsAdRequestBuilder(sdkConfiguration);
+    public CreateAdsAd2RequestBuilder createAdsAd2() {
+        return new CreateAdsAd2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -208,9 +208,9 @@ public class Ads {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateAdsAdResponse createAdsAd(@Nonnull CreateAdsAdRequest request) {
-        RequestOperation<CreateAdsAdRequest, CreateAdsAdResponse> operation
-              = new CreateAdsAd.Sync(sdkConfiguration, _headers);
+    public CreateAdsAd2Response createAdsAd2(@Nonnull CreateAdsAd2Request request) {
+        RequestOperation<CreateAdsAd2Request, CreateAdsAd2Response> operation
+              = new CreateAdsAd2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -219,8 +219,8 @@ public class Ads {
      * 
      * @return The call builder
      */
-    public CreateAdsCampaignRequestBuilder createAdsCampaign() {
-        return new CreateAdsCampaignRequestBuilder(sdkConfiguration);
+    public CreateAdsCampaign2RequestBuilder createAdsCampaign2() {
+        return new CreateAdsCampaign2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -230,9 +230,9 @@ public class Ads {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateAdsCampaignResponse createAdsCampaign(@Nonnull CreateAdsCampaignRequest request) {
-        RequestOperation<CreateAdsCampaignRequest, CreateAdsCampaignResponse> operation
-              = new CreateAdsCampaign.Sync(sdkConfiguration, _headers);
+    public CreateAdsCampaign2Response createAdsCampaign2(@Nonnull CreateAdsCampaign2Request request) {
+        RequestOperation<CreateAdsCampaign2Request, CreateAdsCampaign2Response> operation
+              = new CreateAdsCampaign2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -241,8 +241,8 @@ public class Ads {
      * 
      * @return The call builder
      */
-    public CreateAdsCreativeRequestBuilder createAdsCreative() {
-        return new CreateAdsCreativeRequestBuilder(sdkConfiguration);
+    public CreateAdsCreative2RequestBuilder createAdsCreative2() {
+        return new CreateAdsCreative2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -252,9 +252,9 @@ public class Ads {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateAdsCreativeResponse createAdsCreative(@Nonnull CreateAdsCreativeRequest request) {
-        RequestOperation<CreateAdsCreativeRequest, CreateAdsCreativeResponse> operation
-              = new CreateAdsCreative.Sync(sdkConfiguration, _headers);
+    public CreateAdsCreative2Response createAdsCreative2(@Nonnull CreateAdsCreative2Request request) {
+        RequestOperation<CreateAdsCreative2Request, CreateAdsCreative2Response> operation
+              = new CreateAdsCreative2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -263,8 +263,8 @@ public class Ads {
      * 
      * @return The call builder
      */
-    public CreateAdsGroupRequestBuilder createAdsGroup() {
-        return new CreateAdsGroupRequestBuilder(sdkConfiguration);
+    public CreateAdsGroup2RequestBuilder createAdsGroup2() {
+        return new CreateAdsGroup2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -274,9 +274,9 @@ public class Ads {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateAdsGroupResponse createAdsGroup(@Nonnull CreateAdsGroupRequest request) {
-        RequestOperation<CreateAdsGroupRequest, CreateAdsGroupResponse> operation
-              = new CreateAdsGroup.Sync(sdkConfiguration, _headers);
+    public CreateAdsGroup2Response createAdsGroup2(@Nonnull CreateAdsGroup2Request request) {
+        RequestOperation<CreateAdsGroup2Request, CreateAdsGroup2Response> operation
+              = new CreateAdsGroup2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -285,8 +285,8 @@ public class Ads {
      * 
      * @return The call builder
      */
-    public CreateAdsInsertionorderRequestBuilder createAdsInsertionorder() {
-        return new CreateAdsInsertionorderRequestBuilder(sdkConfiguration);
+    public CreateAdsInsertionorder2RequestBuilder createAdsInsertionorder2() {
+        return new CreateAdsInsertionorder2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -296,9 +296,9 @@ public class Ads {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateAdsInsertionorderResponse createAdsInsertionorder(@Nonnull CreateAdsInsertionorderRequest request) {
-        RequestOperation<CreateAdsInsertionorderRequest, CreateAdsInsertionorderResponse> operation
-              = new CreateAdsInsertionorder.Sync(sdkConfiguration, _headers);
+    public CreateAdsInsertionorder2Response createAdsInsertionorder2(@Nonnull CreateAdsInsertionorder2Request request) {
+        RequestOperation<CreateAdsInsertionorder2Request, CreateAdsInsertionorder2Response> operation
+              = new CreateAdsInsertionorder2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -307,8 +307,8 @@ public class Ads {
      * 
      * @return The call builder
      */
-    public CreateAdsOrganizationRequestBuilder createAdsOrganization() {
-        return new CreateAdsOrganizationRequestBuilder(sdkConfiguration);
+    public CreateAdsOrganization2RequestBuilder createAdsOrganization2() {
+        return new CreateAdsOrganization2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -318,9 +318,9 @@ public class Ads {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateAdsOrganizationResponse createAdsOrganization(@Nonnull CreateAdsOrganizationRequest request) {
-        RequestOperation<CreateAdsOrganizationRequest, CreateAdsOrganizationResponse> operation
-              = new CreateAdsOrganization.Sync(sdkConfiguration, _headers);
+    public CreateAdsOrganization2Response createAdsOrganization2(@Nonnull CreateAdsOrganization2Request request) {
+        RequestOperation<CreateAdsOrganization2Request, CreateAdsOrganization2Response> operation
+              = new CreateAdsOrganization2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -329,8 +329,8 @@ public class Ads {
      * 
      * @return The call builder
      */
-    public GetAdsAdRequestBuilder getAdsAd() {
-        return new GetAdsAdRequestBuilder(sdkConfiguration);
+    public GetAdsAd2RequestBuilder getAdsAd2() {
+        return new GetAdsAd2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -340,9 +340,9 @@ public class Ads {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetAdsAdResponse getAdsAd(@Nonnull GetAdsAdRequest request) {
-        RequestOperation<GetAdsAdRequest, GetAdsAdResponse> operation
-              = new GetAdsAd.Sync(sdkConfiguration, _headers);
+    public GetAdsAd2Response getAdsAd2(@Nonnull GetAdsAd2Request request) {
+        RequestOperation<GetAdsAd2Request, GetAdsAd2Response> operation
+              = new GetAdsAd2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -351,8 +351,8 @@ public class Ads {
      * 
      * @return The call builder
      */
-    public GetAdsCampaignRequestBuilder getAdsCampaign() {
-        return new GetAdsCampaignRequestBuilder(sdkConfiguration);
+    public GetAdsCampaign2RequestBuilder getAdsCampaign2() {
+        return new GetAdsCampaign2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -362,9 +362,9 @@ public class Ads {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetAdsCampaignResponse getAdsCampaign(@Nonnull GetAdsCampaignRequest request) {
-        RequestOperation<GetAdsCampaignRequest, GetAdsCampaignResponse> operation
-              = new GetAdsCampaign.Sync(sdkConfiguration, _headers);
+    public GetAdsCampaign2Response getAdsCampaign2(@Nonnull GetAdsCampaign2Request request) {
+        RequestOperation<GetAdsCampaign2Request, GetAdsCampaign2Response> operation
+              = new GetAdsCampaign2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -373,8 +373,8 @@ public class Ads {
      * 
      * @return The call builder
      */
-    public GetAdsCreativeRequestBuilder getAdsCreative() {
-        return new GetAdsCreativeRequestBuilder(sdkConfiguration);
+    public GetAdsCreative2RequestBuilder getAdsCreative2() {
+        return new GetAdsCreative2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -384,9 +384,9 @@ public class Ads {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetAdsCreativeResponse getAdsCreative(@Nonnull GetAdsCreativeRequest request) {
-        RequestOperation<GetAdsCreativeRequest, GetAdsCreativeResponse> operation
-              = new GetAdsCreative.Sync(sdkConfiguration, _headers);
+    public GetAdsCreative2Response getAdsCreative2(@Nonnull GetAdsCreative2Request request) {
+        RequestOperation<GetAdsCreative2Request, GetAdsCreative2Response> operation
+              = new GetAdsCreative2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -395,8 +395,8 @@ public class Ads {
      * 
      * @return The call builder
      */
-    public GetAdsGroupRequestBuilder getAdsGroup() {
-        return new GetAdsGroupRequestBuilder(sdkConfiguration);
+    public GetAdsGroup2RequestBuilder getAdsGroup2() {
+        return new GetAdsGroup2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -406,9 +406,9 @@ public class Ads {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetAdsGroupResponse getAdsGroup(@Nonnull GetAdsGroupRequest request) {
-        RequestOperation<GetAdsGroupRequest, GetAdsGroupResponse> operation
-              = new GetAdsGroup.Sync(sdkConfiguration, _headers);
+    public GetAdsGroup2Response getAdsGroup2(@Nonnull GetAdsGroup2Request request) {
+        RequestOperation<GetAdsGroup2Request, GetAdsGroup2Response> operation
+              = new GetAdsGroup2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -417,8 +417,8 @@ public class Ads {
      * 
      * @return The call builder
      */
-    public GetAdsInsertionorderRequestBuilder getAdsInsertionorder() {
-        return new GetAdsInsertionorderRequestBuilder(sdkConfiguration);
+    public GetAdsInsertionorder2RequestBuilder getAdsInsertionorder2() {
+        return new GetAdsInsertionorder2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -428,9 +428,9 @@ public class Ads {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetAdsInsertionorderResponse getAdsInsertionorder(@Nonnull GetAdsInsertionorderRequest request) {
-        RequestOperation<GetAdsInsertionorderRequest, GetAdsInsertionorderResponse> operation
-              = new GetAdsInsertionorder.Sync(sdkConfiguration, _headers);
+    public GetAdsInsertionorder2Response getAdsInsertionorder2(@Nonnull GetAdsInsertionorder2Request request) {
+        RequestOperation<GetAdsInsertionorder2Request, GetAdsInsertionorder2Response> operation
+              = new GetAdsInsertionorder2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -439,8 +439,8 @@ public class Ads {
      * 
      * @return The call builder
      */
-    public GetAdsOrganizationRequestBuilder getAdsOrganization() {
-        return new GetAdsOrganizationRequestBuilder(sdkConfiguration);
+    public GetAdsOrganization2RequestBuilder getAdsOrganization2() {
+        return new GetAdsOrganization2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -450,9 +450,9 @@ public class Ads {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetAdsOrganizationResponse getAdsOrganization(@Nonnull GetAdsOrganizationRequest request) {
-        RequestOperation<GetAdsOrganizationRequest, GetAdsOrganizationResponse> operation
-              = new GetAdsOrganization.Sync(sdkConfiguration, _headers);
+    public GetAdsOrganization2Response getAdsOrganization2(@Nonnull GetAdsOrganization2Request request) {
+        RequestOperation<GetAdsOrganization2Request, GetAdsOrganization2Response> operation
+              = new GetAdsOrganization2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -461,8 +461,8 @@ public class Ads {
      * 
      * @return The call builder
      */
-    public GetAdsPromotedRequestBuilder getAdsPromoted() {
-        return new GetAdsPromotedRequestBuilder(sdkConfiguration);
+    public GetAdsPromoted2RequestBuilder getAdsPromoted2() {
+        return new GetAdsPromoted2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -472,9 +472,9 @@ public class Ads {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetAdsPromotedResponse getAdsPromoted(@Nonnull GetAdsPromotedRequest request) {
-        RequestOperation<GetAdsPromotedRequest, GetAdsPromotedResponse> operation
-              = new GetAdsPromoted.Sync(sdkConfiguration, _headers);
+    public GetAdsPromoted2Response getAdsPromoted2(@Nonnull GetAdsPromoted2Request request) {
+        RequestOperation<GetAdsPromoted2Request, GetAdsPromoted2Response> operation
+              = new GetAdsPromoted2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -483,8 +483,8 @@ public class Ads {
      * 
      * @return The call builder
      */
-    public GetAdsTargetRequestBuilder getAdsTarget() {
-        return new GetAdsTargetRequestBuilder(sdkConfiguration);
+    public GetAdsTarget2RequestBuilder getAdsTarget2() {
+        return new GetAdsTarget2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -494,9 +494,9 @@ public class Ads {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetAdsTargetResponse getAdsTarget(@Nonnull GetAdsTargetRequest request) {
-        RequestOperation<GetAdsTargetRequest, GetAdsTargetResponse> operation
-              = new GetAdsTarget.Sync(sdkConfiguration, _headers);
+    public GetAdsTarget2Response getAdsTarget2(@Nonnull GetAdsTarget2Request request) {
+        RequestOperation<GetAdsTarget2Request, GetAdsTarget2Response> operation
+              = new GetAdsTarget2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -505,8 +505,8 @@ public class Ads {
      * 
      * @return The call builder
      */
-    public ListAdsAdsRequestBuilder listAdsAds() {
-        return new ListAdsAdsRequestBuilder(sdkConfiguration);
+    public ListAdsAds2RequestBuilder listAdsAds2() {
+        return new ListAdsAds2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -516,9 +516,9 @@ public class Ads {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListAdsAdsResponse listAdsAds(@Nonnull ListAdsAdsRequest request) {
-        RequestOperation<ListAdsAdsRequest, ListAdsAdsResponse> operation
-              = new ListAdsAds.Sync(sdkConfiguration, _headers);
+    public ListAdsAds2Response listAdsAds2(@Nonnull ListAdsAds2Request request) {
+        RequestOperation<ListAdsAds2Request, ListAdsAds2Response> operation
+              = new ListAdsAds2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -527,8 +527,8 @@ public class Ads {
      * 
      * @return The call builder
      */
-    public ListAdsCampaignsRequestBuilder listAdsCampaigns() {
-        return new ListAdsCampaignsRequestBuilder(sdkConfiguration);
+    public ListAdsCampaigns2RequestBuilder listAdsCampaigns2() {
+        return new ListAdsCampaigns2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -538,9 +538,9 @@ public class Ads {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListAdsCampaignsResponse listAdsCampaigns(@Nonnull ListAdsCampaignsRequest request) {
-        RequestOperation<ListAdsCampaignsRequest, ListAdsCampaignsResponse> operation
-              = new ListAdsCampaigns.Sync(sdkConfiguration, _headers);
+    public ListAdsCampaigns2Response listAdsCampaigns2(@Nonnull ListAdsCampaigns2Request request) {
+        RequestOperation<ListAdsCampaigns2Request, ListAdsCampaigns2Response> operation
+              = new ListAdsCampaigns2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -549,8 +549,8 @@ public class Ads {
      * 
      * @return The call builder
      */
-    public ListAdsCreativesRequestBuilder listAdsCreatives() {
-        return new ListAdsCreativesRequestBuilder(sdkConfiguration);
+    public ListAdsCreatives2RequestBuilder listAdsCreatives2() {
+        return new ListAdsCreatives2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -560,9 +560,9 @@ public class Ads {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListAdsCreativesResponse listAdsCreatives(@Nonnull ListAdsCreativesRequest request) {
-        RequestOperation<ListAdsCreativesRequest, ListAdsCreativesResponse> operation
-              = new ListAdsCreatives.Sync(sdkConfiguration, _headers);
+    public ListAdsCreatives2Response listAdsCreatives2(@Nonnull ListAdsCreatives2Request request) {
+        RequestOperation<ListAdsCreatives2Request, ListAdsCreatives2Response> operation
+              = new ListAdsCreatives2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -571,8 +571,8 @@ public class Ads {
      * 
      * @return The call builder
      */
-    public ListAdsGroupsRequestBuilder listAdsGroups() {
-        return new ListAdsGroupsRequestBuilder(sdkConfiguration);
+    public ListAdsGroups2RequestBuilder listAdsGroups2() {
+        return new ListAdsGroups2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -582,9 +582,9 @@ public class Ads {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListAdsGroupsResponse listAdsGroups(@Nonnull ListAdsGroupsRequest request) {
-        RequestOperation<ListAdsGroupsRequest, ListAdsGroupsResponse> operation
-              = new ListAdsGroups.Sync(sdkConfiguration, _headers);
+    public ListAdsGroups2Response listAdsGroups2(@Nonnull ListAdsGroups2Request request) {
+        RequestOperation<ListAdsGroups2Request, ListAdsGroups2Response> operation
+              = new ListAdsGroups2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -593,8 +593,8 @@ public class Ads {
      * 
      * @return The call builder
      */
-    public ListAdsInsertionordersRequestBuilder listAdsInsertionorders() {
-        return new ListAdsInsertionordersRequestBuilder(sdkConfiguration);
+    public ListAdsInsertionorders2RequestBuilder listAdsInsertionorders2() {
+        return new ListAdsInsertionorders2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -604,9 +604,9 @@ public class Ads {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListAdsInsertionordersResponse listAdsInsertionorders(@Nonnull ListAdsInsertionordersRequest request) {
-        RequestOperation<ListAdsInsertionordersRequest, ListAdsInsertionordersResponse> operation
-              = new ListAdsInsertionorders.Sync(sdkConfiguration, _headers);
+    public ListAdsInsertionorders2Response listAdsInsertionorders2(@Nonnull ListAdsInsertionorders2Request request) {
+        RequestOperation<ListAdsInsertionorders2Request, ListAdsInsertionorders2Response> operation
+              = new ListAdsInsertionorders2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -615,8 +615,8 @@ public class Ads {
      * 
      * @return The call builder
      */
-    public ListAdsOrganizationsRequestBuilder listAdsOrganizations() {
-        return new ListAdsOrganizationsRequestBuilder(sdkConfiguration);
+    public ListAdsOrganizations2RequestBuilder listAdsOrganizations2() {
+        return new ListAdsOrganizations2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -626,9 +626,9 @@ public class Ads {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListAdsOrganizationsResponse listAdsOrganizations(@Nonnull ListAdsOrganizationsRequest request) {
-        RequestOperation<ListAdsOrganizationsRequest, ListAdsOrganizationsResponse> operation
-              = new ListAdsOrganizations.Sync(sdkConfiguration, _headers);
+    public ListAdsOrganizations2Response listAdsOrganizations2(@Nonnull ListAdsOrganizations2Request request) {
+        RequestOperation<ListAdsOrganizations2Request, ListAdsOrganizations2Response> operation
+              = new ListAdsOrganizations2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -637,8 +637,8 @@ public class Ads {
      * 
      * @return The call builder
      */
-    public ListAdsPromotedsRequestBuilder listAdsPromoteds() {
-        return new ListAdsPromotedsRequestBuilder(sdkConfiguration);
+    public ListAdsPromoteds2RequestBuilder listAdsPromoteds2() {
+        return new ListAdsPromoteds2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -648,9 +648,9 @@ public class Ads {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListAdsPromotedsResponse listAdsPromoteds(@Nonnull ListAdsPromotedsRequest request) {
-        RequestOperation<ListAdsPromotedsRequest, ListAdsPromotedsResponse> operation
-              = new ListAdsPromoteds.Sync(sdkConfiguration, _headers);
+    public ListAdsPromoteds2Response listAdsPromoteds2(@Nonnull ListAdsPromoteds2Request request) {
+        RequestOperation<ListAdsPromoteds2Request, ListAdsPromoteds2Response> operation
+              = new ListAdsPromoteds2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -659,8 +659,8 @@ public class Ads {
      * 
      * @return The call builder
      */
-    public ListAdsReportsRequestBuilder listAdsReports() {
-        return new ListAdsReportsRequestBuilder(sdkConfiguration);
+    public ListAdsReports2RequestBuilder listAdsReports2() {
+        return new ListAdsReports2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -670,9 +670,9 @@ public class Ads {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListAdsReportsResponse listAdsReports(@Nonnull ListAdsReportsRequest request) {
-        RequestOperation<ListAdsReportsRequest, ListAdsReportsResponse> operation
-              = new ListAdsReports.Sync(sdkConfiguration, _headers);
+    public ListAdsReports2Response listAdsReports2(@Nonnull ListAdsReports2Request request) {
+        RequestOperation<ListAdsReports2Request, ListAdsReports2Response> operation
+              = new ListAdsReports2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -681,8 +681,8 @@ public class Ads {
      * 
      * @return The call builder
      */
-    public ListAdsTargetsRequestBuilder listAdsTargets() {
-        return new ListAdsTargetsRequestBuilder(sdkConfiguration);
+    public ListAdsTargets2RequestBuilder listAdsTargets2() {
+        return new ListAdsTargets2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -692,9 +692,9 @@ public class Ads {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListAdsTargetsResponse listAdsTargets(@Nonnull ListAdsTargetsRequest request) {
-        RequestOperation<ListAdsTargetsRequest, ListAdsTargetsResponse> operation
-              = new ListAdsTargets.Sync(sdkConfiguration, _headers);
+    public ListAdsTargets2Response listAdsTargets2(@Nonnull ListAdsTargets2Request request) {
+        RequestOperation<ListAdsTargets2Request, ListAdsTargets2Response> operation
+              = new ListAdsTargets2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -703,8 +703,8 @@ public class Ads {
      * 
      * @return The call builder
      */
-    public PatchAdsAdRequestBuilder patchAdsAd() {
-        return new PatchAdsAdRequestBuilder(sdkConfiguration);
+    public PatchAdsAd2RequestBuilder patchAdsAd2() {
+        return new PatchAdsAd2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -714,9 +714,9 @@ public class Ads {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchAdsAdResponse patchAdsAd(@Nonnull PatchAdsAdRequest request) {
-        RequestOperation<PatchAdsAdRequest, PatchAdsAdResponse> operation
-              = new PatchAdsAd.Sync(sdkConfiguration, _headers);
+    public PatchAdsAd2Response patchAdsAd2(@Nonnull PatchAdsAd2Request request) {
+        RequestOperation<PatchAdsAd2Request, PatchAdsAd2Response> operation
+              = new PatchAdsAd2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -725,8 +725,8 @@ public class Ads {
      * 
      * @return The call builder
      */
-    public PatchAdsCampaignRequestBuilder patchAdsCampaign() {
-        return new PatchAdsCampaignRequestBuilder(sdkConfiguration);
+    public PatchAdsCampaign2RequestBuilder patchAdsCampaign2() {
+        return new PatchAdsCampaign2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -736,9 +736,9 @@ public class Ads {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchAdsCampaignResponse patchAdsCampaign(@Nonnull PatchAdsCampaignRequest request) {
-        RequestOperation<PatchAdsCampaignRequest, PatchAdsCampaignResponse> operation
-              = new PatchAdsCampaign.Sync(sdkConfiguration, _headers);
+    public PatchAdsCampaign2Response patchAdsCampaign2(@Nonnull PatchAdsCampaign2Request request) {
+        RequestOperation<PatchAdsCampaign2Request, PatchAdsCampaign2Response> operation
+              = new PatchAdsCampaign2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -747,8 +747,8 @@ public class Ads {
      * 
      * @return The call builder
      */
-    public PatchAdsCreativeRequestBuilder patchAdsCreative() {
-        return new PatchAdsCreativeRequestBuilder(sdkConfiguration);
+    public PatchAdsCreative2RequestBuilder patchAdsCreative2() {
+        return new PatchAdsCreative2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -758,9 +758,9 @@ public class Ads {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchAdsCreativeResponse patchAdsCreative(@Nonnull PatchAdsCreativeRequest request) {
-        RequestOperation<PatchAdsCreativeRequest, PatchAdsCreativeResponse> operation
-              = new PatchAdsCreative.Sync(sdkConfiguration, _headers);
+    public PatchAdsCreative2Response patchAdsCreative2(@Nonnull PatchAdsCreative2Request request) {
+        RequestOperation<PatchAdsCreative2Request, PatchAdsCreative2Response> operation
+              = new PatchAdsCreative2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -769,8 +769,8 @@ public class Ads {
      * 
      * @return The call builder
      */
-    public PatchAdsGroupRequestBuilder patchAdsGroup() {
-        return new PatchAdsGroupRequestBuilder(sdkConfiguration);
+    public PatchAdsGroup2RequestBuilder patchAdsGroup2() {
+        return new PatchAdsGroup2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -780,9 +780,9 @@ public class Ads {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchAdsGroupResponse patchAdsGroup(@Nonnull PatchAdsGroupRequest request) {
-        RequestOperation<PatchAdsGroupRequest, PatchAdsGroupResponse> operation
-              = new PatchAdsGroup.Sync(sdkConfiguration, _headers);
+    public PatchAdsGroup2Response patchAdsGroup2(@Nonnull PatchAdsGroup2Request request) {
+        RequestOperation<PatchAdsGroup2Request, PatchAdsGroup2Response> operation
+              = new PatchAdsGroup2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -791,8 +791,8 @@ public class Ads {
      * 
      * @return The call builder
      */
-    public PatchAdsInsertionorderRequestBuilder patchAdsInsertionorder() {
-        return new PatchAdsInsertionorderRequestBuilder(sdkConfiguration);
+    public PatchAdsInsertionorder2RequestBuilder patchAdsInsertionorder2() {
+        return new PatchAdsInsertionorder2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -802,9 +802,9 @@ public class Ads {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchAdsInsertionorderResponse patchAdsInsertionorder(@Nonnull PatchAdsInsertionorderRequest request) {
-        RequestOperation<PatchAdsInsertionorderRequest, PatchAdsInsertionorderResponse> operation
-              = new PatchAdsInsertionorder.Sync(sdkConfiguration, _headers);
+    public PatchAdsInsertionorder2Response patchAdsInsertionorder2(@Nonnull PatchAdsInsertionorder2Request request) {
+        RequestOperation<PatchAdsInsertionorder2Request, PatchAdsInsertionorder2Response> operation
+              = new PatchAdsInsertionorder2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -813,8 +813,8 @@ public class Ads {
      * 
      * @return The call builder
      */
-    public PatchAdsOrganizationRequestBuilder patchAdsOrganization() {
-        return new PatchAdsOrganizationRequestBuilder(sdkConfiguration);
+    public PatchAdsOrganization2RequestBuilder patchAdsOrganization2() {
+        return new PatchAdsOrganization2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -824,9 +824,9 @@ public class Ads {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchAdsOrganizationResponse patchAdsOrganization(@Nonnull PatchAdsOrganizationRequest request) {
-        RequestOperation<PatchAdsOrganizationRequest, PatchAdsOrganizationResponse> operation
-              = new PatchAdsOrganization.Sync(sdkConfiguration, _headers);
+    public PatchAdsOrganization2Response patchAdsOrganization2(@Nonnull PatchAdsOrganization2Request request) {
+        RequestOperation<PatchAdsOrganization2Request, PatchAdsOrganization2Response> operation
+              = new PatchAdsOrganization2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -835,8 +835,8 @@ public class Ads {
      * 
      * @return The call builder
      */
-    public RemoveAdsAdRequestBuilder removeAdsAd() {
-        return new RemoveAdsAdRequestBuilder(sdkConfiguration);
+    public RemoveAdsAd2RequestBuilder removeAdsAd2() {
+        return new RemoveAdsAd2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -846,9 +846,9 @@ public class Ads {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveAdsAdResponse removeAdsAd(@Nonnull RemoveAdsAdRequest request) {
-        RequestOperation<RemoveAdsAdRequest, RemoveAdsAdResponse> operation
-              = new RemoveAdsAd.Sync(sdkConfiguration, _headers);
+    public RemoveAdsAd2Response removeAdsAd2(@Nonnull RemoveAdsAd2Request request) {
+        RequestOperation<RemoveAdsAd2Request, RemoveAdsAd2Response> operation
+              = new RemoveAdsAd2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -857,8 +857,8 @@ public class Ads {
      * 
      * @return The call builder
      */
-    public RemoveAdsCampaignRequestBuilder removeAdsCampaign() {
-        return new RemoveAdsCampaignRequestBuilder(sdkConfiguration);
+    public RemoveAdsCampaign2RequestBuilder removeAdsCampaign2() {
+        return new RemoveAdsCampaign2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -868,9 +868,9 @@ public class Ads {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveAdsCampaignResponse removeAdsCampaign(@Nonnull RemoveAdsCampaignRequest request) {
-        RequestOperation<RemoveAdsCampaignRequest, RemoveAdsCampaignResponse> operation
-              = new RemoveAdsCampaign.Sync(sdkConfiguration, _headers);
+    public RemoveAdsCampaign2Response removeAdsCampaign2(@Nonnull RemoveAdsCampaign2Request request) {
+        RequestOperation<RemoveAdsCampaign2Request, RemoveAdsCampaign2Response> operation
+              = new RemoveAdsCampaign2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -879,8 +879,8 @@ public class Ads {
      * 
      * @return The call builder
      */
-    public RemoveAdsCreativeRequestBuilder removeAdsCreative() {
-        return new RemoveAdsCreativeRequestBuilder(sdkConfiguration);
+    public RemoveAdsCreative2RequestBuilder removeAdsCreative2() {
+        return new RemoveAdsCreative2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -890,9 +890,9 @@ public class Ads {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveAdsCreativeResponse removeAdsCreative(@Nonnull RemoveAdsCreativeRequest request) {
-        RequestOperation<RemoveAdsCreativeRequest, RemoveAdsCreativeResponse> operation
-              = new RemoveAdsCreative.Sync(sdkConfiguration, _headers);
+    public RemoveAdsCreative2Response removeAdsCreative2(@Nonnull RemoveAdsCreative2Request request) {
+        RequestOperation<RemoveAdsCreative2Request, RemoveAdsCreative2Response> operation
+              = new RemoveAdsCreative2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -901,8 +901,8 @@ public class Ads {
      * 
      * @return The call builder
      */
-    public RemoveAdsGroupRequestBuilder removeAdsGroup() {
-        return new RemoveAdsGroupRequestBuilder(sdkConfiguration);
+    public RemoveAdsGroup2RequestBuilder removeAdsGroup2() {
+        return new RemoveAdsGroup2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -912,9 +912,9 @@ public class Ads {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveAdsGroupResponse removeAdsGroup(@Nonnull RemoveAdsGroupRequest request) {
-        RequestOperation<RemoveAdsGroupRequest, RemoveAdsGroupResponse> operation
-              = new RemoveAdsGroup.Sync(sdkConfiguration, _headers);
+    public RemoveAdsGroup2Response removeAdsGroup2(@Nonnull RemoveAdsGroup2Request request) {
+        RequestOperation<RemoveAdsGroup2Request, RemoveAdsGroup2Response> operation
+              = new RemoveAdsGroup2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -923,8 +923,8 @@ public class Ads {
      * 
      * @return The call builder
      */
-    public RemoveAdsInsertionorderRequestBuilder removeAdsInsertionorder() {
-        return new RemoveAdsInsertionorderRequestBuilder(sdkConfiguration);
+    public RemoveAdsInsertionorder2RequestBuilder removeAdsInsertionorder2() {
+        return new RemoveAdsInsertionorder2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -934,9 +934,9 @@ public class Ads {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveAdsInsertionorderResponse removeAdsInsertionorder(@Nonnull RemoveAdsInsertionorderRequest request) {
-        RequestOperation<RemoveAdsInsertionorderRequest, RemoveAdsInsertionorderResponse> operation
-              = new RemoveAdsInsertionorder.Sync(sdkConfiguration, _headers);
+    public RemoveAdsInsertionorder2Response removeAdsInsertionorder2(@Nonnull RemoveAdsInsertionorder2Request request) {
+        RequestOperation<RemoveAdsInsertionorder2Request, RemoveAdsInsertionorder2Response> operation
+              = new RemoveAdsInsertionorder2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -945,8 +945,8 @@ public class Ads {
      * 
      * @return The call builder
      */
-    public RemoveAdsOrganizationRequestBuilder removeAdsOrganization() {
-        return new RemoveAdsOrganizationRequestBuilder(sdkConfiguration);
+    public RemoveAdsOrganization2RequestBuilder removeAdsOrganization2() {
+        return new RemoveAdsOrganization2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -956,9 +956,9 @@ public class Ads {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveAdsOrganizationResponse removeAdsOrganization(@Nonnull RemoveAdsOrganizationRequest request) {
-        RequestOperation<RemoveAdsOrganizationRequest, RemoveAdsOrganizationResponse> operation
-              = new RemoveAdsOrganization.Sync(sdkConfiguration, _headers);
+    public RemoveAdsOrganization2Response removeAdsOrganization2(@Nonnull RemoveAdsOrganization2Request request) {
+        RequestOperation<RemoveAdsOrganization2Request, RemoveAdsOrganization2Response> operation
+              = new RemoveAdsOrganization2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -967,8 +967,8 @@ public class Ads {
      * 
      * @return The call builder
      */
-    public UpdateAdsAdRequestBuilder updateAdsAd() {
-        return new UpdateAdsAdRequestBuilder(sdkConfiguration);
+    public UpdateAdsAd2RequestBuilder updateAdsAd2() {
+        return new UpdateAdsAd2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -978,9 +978,9 @@ public class Ads {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateAdsAdResponse updateAdsAd(@Nonnull UpdateAdsAdRequest request) {
-        RequestOperation<UpdateAdsAdRequest, UpdateAdsAdResponse> operation
-              = new UpdateAdsAd.Sync(sdkConfiguration, _headers);
+    public UpdateAdsAd2Response updateAdsAd2(@Nonnull UpdateAdsAd2Request request) {
+        RequestOperation<UpdateAdsAd2Request, UpdateAdsAd2Response> operation
+              = new UpdateAdsAd2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -989,8 +989,8 @@ public class Ads {
      * 
      * @return The call builder
      */
-    public UpdateAdsCampaignRequestBuilder updateAdsCampaign() {
-        return new UpdateAdsCampaignRequestBuilder(sdkConfiguration);
+    public UpdateAdsCampaign2RequestBuilder updateAdsCampaign2() {
+        return new UpdateAdsCampaign2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -1000,9 +1000,9 @@ public class Ads {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateAdsCampaignResponse updateAdsCampaign(@Nonnull UpdateAdsCampaignRequest request) {
-        RequestOperation<UpdateAdsCampaignRequest, UpdateAdsCampaignResponse> operation
-              = new UpdateAdsCampaign.Sync(sdkConfiguration, _headers);
+    public UpdateAdsCampaign2Response updateAdsCampaign2(@Nonnull UpdateAdsCampaign2Request request) {
+        RequestOperation<UpdateAdsCampaign2Request, UpdateAdsCampaign2Response> operation
+              = new UpdateAdsCampaign2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1011,8 +1011,8 @@ public class Ads {
      * 
      * @return The call builder
      */
-    public UpdateAdsCreativeRequestBuilder updateAdsCreative() {
-        return new UpdateAdsCreativeRequestBuilder(sdkConfiguration);
+    public UpdateAdsCreative2RequestBuilder updateAdsCreative2() {
+        return new UpdateAdsCreative2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -1022,9 +1022,9 @@ public class Ads {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateAdsCreativeResponse updateAdsCreative(@Nonnull UpdateAdsCreativeRequest request) {
-        RequestOperation<UpdateAdsCreativeRequest, UpdateAdsCreativeResponse> operation
-              = new UpdateAdsCreative.Sync(sdkConfiguration, _headers);
+    public UpdateAdsCreative2Response updateAdsCreative2(@Nonnull UpdateAdsCreative2Request request) {
+        RequestOperation<UpdateAdsCreative2Request, UpdateAdsCreative2Response> operation
+              = new UpdateAdsCreative2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1033,8 +1033,8 @@ public class Ads {
      * 
      * @return The call builder
      */
-    public UpdateAdsGroupRequestBuilder updateAdsGroup() {
-        return new UpdateAdsGroupRequestBuilder(sdkConfiguration);
+    public UpdateAdsGroup2RequestBuilder updateAdsGroup2() {
+        return new UpdateAdsGroup2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -1044,9 +1044,9 @@ public class Ads {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateAdsGroupResponse updateAdsGroup(@Nonnull UpdateAdsGroupRequest request) {
-        RequestOperation<UpdateAdsGroupRequest, UpdateAdsGroupResponse> operation
-              = new UpdateAdsGroup.Sync(sdkConfiguration, _headers);
+    public UpdateAdsGroup2Response updateAdsGroup2(@Nonnull UpdateAdsGroup2Request request) {
+        RequestOperation<UpdateAdsGroup2Request, UpdateAdsGroup2Response> operation
+              = new UpdateAdsGroup2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1055,8 +1055,8 @@ public class Ads {
      * 
      * @return The call builder
      */
-    public UpdateAdsInsertionorderRequestBuilder updateAdsInsertionorder() {
-        return new UpdateAdsInsertionorderRequestBuilder(sdkConfiguration);
+    public UpdateAdsInsertionorder2RequestBuilder updateAdsInsertionorder2() {
+        return new UpdateAdsInsertionorder2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -1066,9 +1066,9 @@ public class Ads {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateAdsInsertionorderResponse updateAdsInsertionorder(@Nonnull UpdateAdsInsertionorderRequest request) {
-        RequestOperation<UpdateAdsInsertionorderRequest, UpdateAdsInsertionorderResponse> operation
-              = new UpdateAdsInsertionorder.Sync(sdkConfiguration, _headers);
+    public UpdateAdsInsertionorder2Response updateAdsInsertionorder2(@Nonnull UpdateAdsInsertionorder2Request request) {
+        RequestOperation<UpdateAdsInsertionorder2Request, UpdateAdsInsertionorder2Response> operation
+              = new UpdateAdsInsertionorder2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1077,8 +1077,8 @@ public class Ads {
      * 
      * @return The call builder
      */
-    public UpdateAdsOrganizationRequestBuilder updateAdsOrganization() {
-        return new UpdateAdsOrganizationRequestBuilder(sdkConfiguration);
+    public UpdateAdsOrganization2RequestBuilder updateAdsOrganization2() {
+        return new UpdateAdsOrganization2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -1088,9 +1088,9 @@ public class Ads {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateAdsOrganizationResponse updateAdsOrganization(@Nonnull UpdateAdsOrganizationRequest request) {
-        RequestOperation<UpdateAdsOrganizationRequest, UpdateAdsOrganizationResponse> operation
-              = new UpdateAdsOrganization.Sync(sdkConfiguration, _headers);
+    public UpdateAdsOrganization2Response updateAdsOrganization2(@Nonnull UpdateAdsOrganization2Request request) {
+        RequestOperation<UpdateAdsOrganization2Request, UpdateAdsOrganization2Response> operation
+              = new UpdateAdsOrganization2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

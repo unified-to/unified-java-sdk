@@ -41,6 +41,111 @@ public class AdsReportMetricsType {
     public static final AdsReportMetricsType SHARES = new AdsReportMetricsType("SHARES");
     public static final AdsReportMetricsType COMMENTS = new AdsReportMetricsType("COMMENTS");
     public static final AdsReportMetricsType FOLLOWS = new AdsReportMetricsType("FOLLOWS");
+    public static final AdsReportMetricsType POST_CLICK_CONVERSIONS = new AdsReportMetricsType("POST_CLICK_CONVERSIONS");
+    public static final AdsReportMetricsType VIEW_THROUGH_CONVERSIONS = new AdsReportMetricsType("VIEW_THROUGH_CONVERSIONS");
+    public static final AdsReportMetricsType ALL_CONVERSIONS = new AdsReportMetricsType("ALL_CONVERSIONS");
+    public static final AdsReportMetricsType ALL_CONVERSION_VALUE = new AdsReportMetricsType("ALL_CONVERSION_VALUE");
+    public static final AdsReportMetricsType INTERACTIONS = new AdsReportMetricsType("INTERACTIONS");
+    public static final AdsReportMetricsType REVENUE = new AdsReportMetricsType("REVENUE");
+    public static final AdsReportMetricsType MEDIA_COST = new AdsReportMetricsType("MEDIA_COST");
+    public static final AdsReportMetricsType TOTAL_MEDIA_COST = new AdsReportMetricsType("TOTAL_MEDIA_COST");
+    public static final AdsReportMetricsType VIDEO_PLAYS = new AdsReportMetricsType("VIDEO_PLAYS");
+    public static final AdsReportMetricsType VIDEO_QUARTILE25 = new AdsReportMetricsType("VIDEO_QUARTILE_25");
+    public static final AdsReportMetricsType VIDEO_QUARTILE50 = new AdsReportMetricsType("VIDEO_QUARTILE_50");
+    public static final AdsReportMetricsType VIDEO_QUARTILE75 = new AdsReportMetricsType("VIDEO_QUARTILE_75");
+    public static final AdsReportMetricsType VIDEO_QUARTILE100 = new AdsReportMetricsType("VIDEO_QUARTILE_100");
+    public static final AdsReportMetricsType VIDEO_AVG_TIME_WATCHED = new AdsReportMetricsType("VIDEO_AVG_TIME_WATCHED");
+    public static final AdsReportMetricsType VIDEO_THRUPLAY = new AdsReportMetricsType("VIDEO_THRUPLAY");
+    public static final AdsReportMetricsType VIEWABLE_IMPRESSIONS = new AdsReportMetricsType("VIEWABLE_IMPRESSIONS");
+    public static final AdsReportMetricsType MEASURABLE_IMPRESSIONS = new AdsReportMetricsType("MEASURABLE_IMPRESSIONS");
+    public static final AdsReportMetricsType VIEWABILITY_RATE = new AdsReportMetricsType("VIEWABILITY_RATE");
+    public static final AdsReportMetricsType BILLABLE_IMPRESSIONS = new AdsReportMetricsType("BILLABLE_IMPRESSIONS");
+    public static final AdsReportMetricsType DATA_FEES = new AdsReportMetricsType("DATA_FEES");
+    public static final AdsReportMetricsType PLATFORM_FEES = new AdsReportMetricsType("PLATFORM_FEES");
+    public static final AdsReportMetricsType PROFIT = new AdsReportMetricsType("PROFIT");
+    public static final AdsReportMetricsType LANDING_PAGE_CLICKS = new AdsReportMetricsType("LANDING_PAGE_CLICKS");
+    public static final AdsReportMetricsType LEAD_FORM_OPENS = new AdsReportMetricsType("LEAD_FORM_OPENS");
+    public static final AdsReportMetricsType AD_UNIT_CLICKS = new AdsReportMetricsType("AD_UNIT_CLICKS");
+    public static final AdsReportMetricsType CARD_CLICKS = new AdsReportMetricsType("CARD_CLICKS");
+    public static final AdsReportMetricsType CARD_IMPRESSIONS = new AdsReportMetricsType("CARD_IMPRESSIONS");
+    public static final AdsReportMetricsType COMMENT_LIKES = new AdsReportMetricsType("COMMENT_LIKES");
+    public static final AdsReportMetricsType COMPANY_PAGE_CLICKS = new AdsReportMetricsType("COMPANY_PAGE_CLICKS");
+    public static final AdsReportMetricsType ACTION_CLICKS = new AdsReportMetricsType("ACTION_CLICKS");
+    public static final AdsReportMetricsType TEXT_URL_CLICKS = new AdsReportMetricsType("TEXT_URL_CLICKS");
+    public static final AdsReportMetricsType OTHER_ENGAGEMENTS = new AdsReportMetricsType("OTHER_ENGAGEMENTS");
+    public static final AdsReportMetricsType OPENS = new AdsReportMetricsType("OPENS");
+    public static final AdsReportMetricsType TOTAL_ENGAGEMENTS = new AdsReportMetricsType("TOTAL_ENGAGEMENTS");
+    public static final AdsReportMetricsType UNIQUE_IMPRESSIONS = new AdsReportMetricsType("UNIQUE_IMPRESSIONS");
+    public static final AdsReportMetricsType UNIQUE_CLICKS = new AdsReportMetricsType("UNIQUE_CLICKS");
+    public static final AdsReportMetricsType VIRAL_IMPRESSIONS = new AdsReportMetricsType("VIRAL_IMPRESSIONS");
+    public static final AdsReportMetricsType VIRAL_CLICKS = new AdsReportMetricsType("VIRAL_CLICKS");
+    public static final AdsReportMetricsType VIRAL_LIKES = new AdsReportMetricsType("VIRAL_LIKES");
+    public static final AdsReportMetricsType VIRAL_COMMENTS = new AdsReportMetricsType("VIRAL_COMMENTS");
+    public static final AdsReportMetricsType VIRAL_SHARES = new AdsReportMetricsType("VIRAL_SHARES");
+    public static final AdsReportMetricsType VIRAL_FOLLOWS = new AdsReportMetricsType("VIRAL_FOLLOWS");
+    public static final AdsReportMetricsType VIRAL_VIDEO_PLAYS = new AdsReportMetricsType("VIRAL_VIDEO_PLAYS");
+    public static final AdsReportMetricsType VIRAL_VIDEO_VIEWS = new AdsReportMetricsType("VIRAL_VIDEO_VIEWS");
+    public static final AdsReportMetricsType VIRAL_VIDEO_COMPLETIONS = new AdsReportMetricsType("VIRAL_VIDEO_COMPLETIONS");
+    public static final AdsReportMetricsType VIRAL_VIDEO_QUARTILE25 = new AdsReportMetricsType("VIRAL_VIDEO_QUARTILE_25");
+    public static final AdsReportMetricsType VIRAL_VIDEO_QUARTILE50 = new AdsReportMetricsType("VIRAL_VIDEO_QUARTILE_50");
+    public static final AdsReportMetricsType VIRAL_VIDEO_QUARTILE75 = new AdsReportMetricsType("VIRAL_VIDEO_QUARTILE_75");
+    public static final AdsReportMetricsType VIRAL_LEADS = new AdsReportMetricsType("VIRAL_LEADS");
+    public static final AdsReportMetricsType VIRAL_LEAD_FORM_OPENS = new AdsReportMetricsType("VIRAL_LEAD_FORM_OPENS");
+    public static final AdsReportMetricsType VIRAL_LANDING_PAGE_CLICKS = new AdsReportMetricsType("VIRAL_LANDING_PAGE_CLICKS");
+    public static final AdsReportMetricsType VIRAL_CONVERSIONS = new AdsReportMetricsType("VIRAL_CONVERSIONS");
+    public static final AdsReportMetricsType VIRAL_POST_CLICK_CONVERSIONS = new AdsReportMetricsType("VIRAL_POST_CLICK_CONVERSIONS");
+    public static final AdsReportMetricsType VIRAL_VIEW_THROUGH_CONVERSIONS = new AdsReportMetricsType("VIRAL_VIEW_THROUGH_CONVERSIONS");
+    public static final AdsReportMetricsType VIRAL_ENGAGEMENTS = new AdsReportMetricsType("VIRAL_ENGAGEMENTS");
+    public static final AdsReportMetricsType GMAIL_SECONDARY_CLICKS = new AdsReportMetricsType("GMAIL_SECONDARY_CLICKS");
+    public static final AdsReportMetricsType AVERAGE_CPV = new AdsReportMetricsType("AVERAGE_CPV");
+    public static final AdsReportMetricsType VIDEO_VIEWS_FROM_SEARCH = new AdsReportMetricsType("VIDEO_VIEWS_FROM_SEARCH");
+    public static final AdsReportMetricsType CROSS_DEVICE_CONVERSIONS = new AdsReportMetricsType("CROSS_DEVICE_CONVERSIONS");
+    public static final AdsReportMetricsType ABSOLUTE_TOP_IMPRESSION_SHARE = new AdsReportMetricsType("ABSOLUTE_TOP_IMPRESSION_SHARE");
+    public static final AdsReportMetricsType TOP_IMPRESSION_SHARE = new AdsReportMetricsType("TOP_IMPRESSION_SHARE");
+    public static final AdsReportMetricsType VIDEO_FULLSCREENS = new AdsReportMetricsType("VIDEO_FULLSCREENS");
+    public static final AdsReportMetricsType VIDEO_PAUSES = new AdsReportMetricsType("VIDEO_PAUSES");
+    public static final AdsReportMetricsType VIDEO_MUTES = new AdsReportMetricsType("VIDEO_MUTES");
+    public static final AdsReportMetricsType VIDEO_SKIPS = new AdsReportMetricsType("VIDEO_SKIPS");
+    public static final AdsReportMetricsType COMPANION_CLICKS = new AdsReportMetricsType("COMPANION_CLICKS");
+    public static final AdsReportMetricsType COMPANION_VIEWS = new AdsReportMetricsType("COMPANION_VIEWS");
+    public static final AdsReportMetricsType ACTIVE_VIEW_AVG_TIME = new AdsReportMetricsType("ACTIVE_VIEW_AVG_TIME");
+    public static final AdsReportMetricsType ELIGIBLE_IMPRESSIONS = new AdsReportMetricsType("ELIGIBLE_IMPRESSIONS");
+    public static final AdsReportMetricsType EARNED_VIEWS = new AdsReportMetricsType("EARNED_VIEWS");
+    public static final AdsReportMetricsType UNIQUE_VIEWERS = new AdsReportMetricsType("UNIQUE_VIEWERS");
+    public static final AdsReportMetricsType COST_USD = new AdsReportMetricsType("COST_USD");
+    public static final AdsReportMetricsType VIRAL_CARD_CLICKS = new AdsReportMetricsType("VIRAL_CARD_CLICKS");
+    public static final AdsReportMetricsType VIRAL_CARD_IMPRESSIONS = new AdsReportMetricsType("VIRAL_CARD_IMPRESSIONS");
+    public static final AdsReportMetricsType VIRAL_COMPANY_PAGE_CLICKS = new AdsReportMetricsType("VIRAL_COMPANY_PAGE_CLICKS");
+    public static final AdsReportMetricsType VIRAL_VIDEO_FULLSCREENS = new AdsReportMetricsType("VIRAL_VIDEO_FULLSCREENS");
+    public static final AdsReportMetricsType VIRAL_OTHER_ENGAGEMENTS = new AdsReportMetricsType("VIRAL_OTHER_ENGAGEMENTS");
+    public static final AdsReportMetricsType LEAD_GEN_CONTACT_SHARES = new AdsReportMetricsType("LEAD_GEN_CONTACT_SHARES");
+    public static final AdsReportMetricsType LEAD_GEN_INTERESTED_CLICKS = new AdsReportMetricsType("LEAD_GEN_INTERESTED_CLICKS");
+    public static final AdsReportMetricsType CM360_POST_CLICK_REVENUE = new AdsReportMetricsType("CM360_POST_CLICK_REVENUE");
+    public static final AdsReportMetricsType CM360_POST_VIEW_REVENUE = new AdsReportMetricsType("CM360_POST_VIEW_REVENUE");
+    public static final AdsReportMetricsType SCROLLS = new AdsReportMetricsType("SCROLLS");
+    public static final AdsReportMetricsType MEDIA_FEE1 = new AdsReportMetricsType("MEDIA_FEE_1");
+    public static final AdsReportMetricsType MEDIA_FEE2 = new AdsReportMetricsType("MEDIA_FEE_2");
+    public static final AdsReportMetricsType MEDIA_FEE3 = new AdsReportMetricsType("MEDIA_FEE_3");
+    public static final AdsReportMetricsType MEDIA_FEE4 = new AdsReportMetricsType("MEDIA_FEE_4");
+    public static final AdsReportMetricsType MEDIA_FEE5 = new AdsReportMetricsType("MEDIA_FEE_5");
+    public static final AdsReportMetricsType ACTIVE_VIEW_DIST_UNMEASURABLE = new AdsReportMetricsType("ACTIVE_VIEW_DIST_UNMEASURABLE");
+    public static final AdsReportMetricsType ACTIVE_VIEW_DIST_UNVIEWABLE = new AdsReportMetricsType("ACTIVE_VIEW_DIST_UNVIEWABLE");
+    public static final AdsReportMetricsType ACTIVE_VIEW_DIST_VIEWABLE = new AdsReportMetricsType("ACTIVE_VIEW_DIST_VIEWABLE");
+    public static final AdsReportMetricsType ACTIVE_VIEW_AUDIBLE_VISIBLE_COMPLETE = new AdsReportMetricsType("ACTIVE_VIEW_AUDIBLE_VISIBLE_COMPLETE");
+    public static final AdsReportMetricsType ACTIVE_VIEW_VISIBLE10_S = new AdsReportMetricsType("ACTIVE_VIEW_VISIBLE_10S");
+    public static final AdsReportMetricsType NOT_MEASURABLE_IMPRESSIONS = new AdsReportMetricsType("NOT_MEASURABLE_IMPRESSIONS");
+    public static final AdsReportMetricsType NOT_VIEWABLE_IMPRESSIONS = new AdsReportMetricsType("NOT_VIEWABLE_IMPRESSIONS");
+    public static final AdsReportMetricsType PUBLISHER_PLATFORM = new AdsReportMetricsType("PUBLISHER_PLATFORM");
+    public static final AdsReportMetricsType PLATFORM_POSITION = new AdsReportMetricsType("PLATFORM_POSITION");
+    public static final AdsReportMetricsType IMPRESSION_DEVICE = new AdsReportMetricsType("IMPRESSION_DEVICE");
+    public static final AdsReportMetricsType ONE_DVIEW = new AdsReportMetricsType("1D_VIEW");
+    public static final AdsReportMetricsType ONE_DCLICK = new AdsReportMetricsType("1D_CLICK");
+    public static final AdsReportMetricsType SEVEN_DVIEW = new AdsReportMetricsType("7D_VIEW");
+    public static final AdsReportMetricsType SEVEN_DCLICK = new AdsReportMetricsType("7D_CLICK");
+    public static final AdsReportMetricsType FOURTEEN_DCLICK = new AdsReportMetricsType("14D_CLICK");
+    public static final AdsReportMetricsType TWENTY_EIGHT_DVIEW = new AdsReportMetricsType("28D_VIEW");
+    public static final AdsReportMetricsType TWENTY_EIGHT_DCLICK = new AdsReportMetricsType("28D_CLICK");
+    public static final AdsReportMetricsType THIRTY_DCLICK = new AdsReportMetricsType("30D_CLICK");
 
     // This map will grow whenever a Color gets created with a new
     // unrecognized value (a potential memory leak if the user is not
@@ -135,6 +240,111 @@ public class AdsReportMetricsType {
         map.put("SHARES", SHARES);
         map.put("COMMENTS", COMMENTS);
         map.put("FOLLOWS", FOLLOWS);
+        map.put("POST_CLICK_CONVERSIONS", POST_CLICK_CONVERSIONS);
+        map.put("VIEW_THROUGH_CONVERSIONS", VIEW_THROUGH_CONVERSIONS);
+        map.put("ALL_CONVERSIONS", ALL_CONVERSIONS);
+        map.put("ALL_CONVERSION_VALUE", ALL_CONVERSION_VALUE);
+        map.put("INTERACTIONS", INTERACTIONS);
+        map.put("REVENUE", REVENUE);
+        map.put("MEDIA_COST", MEDIA_COST);
+        map.put("TOTAL_MEDIA_COST", TOTAL_MEDIA_COST);
+        map.put("VIDEO_PLAYS", VIDEO_PLAYS);
+        map.put("VIDEO_QUARTILE_25", VIDEO_QUARTILE25);
+        map.put("VIDEO_QUARTILE_50", VIDEO_QUARTILE50);
+        map.put("VIDEO_QUARTILE_75", VIDEO_QUARTILE75);
+        map.put("VIDEO_QUARTILE_100", VIDEO_QUARTILE100);
+        map.put("VIDEO_AVG_TIME_WATCHED", VIDEO_AVG_TIME_WATCHED);
+        map.put("VIDEO_THRUPLAY", VIDEO_THRUPLAY);
+        map.put("VIEWABLE_IMPRESSIONS", VIEWABLE_IMPRESSIONS);
+        map.put("MEASURABLE_IMPRESSIONS", MEASURABLE_IMPRESSIONS);
+        map.put("VIEWABILITY_RATE", VIEWABILITY_RATE);
+        map.put("BILLABLE_IMPRESSIONS", BILLABLE_IMPRESSIONS);
+        map.put("DATA_FEES", DATA_FEES);
+        map.put("PLATFORM_FEES", PLATFORM_FEES);
+        map.put("PROFIT", PROFIT);
+        map.put("LANDING_PAGE_CLICKS", LANDING_PAGE_CLICKS);
+        map.put("LEAD_FORM_OPENS", LEAD_FORM_OPENS);
+        map.put("AD_UNIT_CLICKS", AD_UNIT_CLICKS);
+        map.put("CARD_CLICKS", CARD_CLICKS);
+        map.put("CARD_IMPRESSIONS", CARD_IMPRESSIONS);
+        map.put("COMMENT_LIKES", COMMENT_LIKES);
+        map.put("COMPANY_PAGE_CLICKS", COMPANY_PAGE_CLICKS);
+        map.put("ACTION_CLICKS", ACTION_CLICKS);
+        map.put("TEXT_URL_CLICKS", TEXT_URL_CLICKS);
+        map.put("OTHER_ENGAGEMENTS", OTHER_ENGAGEMENTS);
+        map.put("OPENS", OPENS);
+        map.put("TOTAL_ENGAGEMENTS", TOTAL_ENGAGEMENTS);
+        map.put("UNIQUE_IMPRESSIONS", UNIQUE_IMPRESSIONS);
+        map.put("UNIQUE_CLICKS", UNIQUE_CLICKS);
+        map.put("VIRAL_IMPRESSIONS", VIRAL_IMPRESSIONS);
+        map.put("VIRAL_CLICKS", VIRAL_CLICKS);
+        map.put("VIRAL_LIKES", VIRAL_LIKES);
+        map.put("VIRAL_COMMENTS", VIRAL_COMMENTS);
+        map.put("VIRAL_SHARES", VIRAL_SHARES);
+        map.put("VIRAL_FOLLOWS", VIRAL_FOLLOWS);
+        map.put("VIRAL_VIDEO_PLAYS", VIRAL_VIDEO_PLAYS);
+        map.put("VIRAL_VIDEO_VIEWS", VIRAL_VIDEO_VIEWS);
+        map.put("VIRAL_VIDEO_COMPLETIONS", VIRAL_VIDEO_COMPLETIONS);
+        map.put("VIRAL_VIDEO_QUARTILE_25", VIRAL_VIDEO_QUARTILE25);
+        map.put("VIRAL_VIDEO_QUARTILE_50", VIRAL_VIDEO_QUARTILE50);
+        map.put("VIRAL_VIDEO_QUARTILE_75", VIRAL_VIDEO_QUARTILE75);
+        map.put("VIRAL_LEADS", VIRAL_LEADS);
+        map.put("VIRAL_LEAD_FORM_OPENS", VIRAL_LEAD_FORM_OPENS);
+        map.put("VIRAL_LANDING_PAGE_CLICKS", VIRAL_LANDING_PAGE_CLICKS);
+        map.put("VIRAL_CONVERSIONS", VIRAL_CONVERSIONS);
+        map.put("VIRAL_POST_CLICK_CONVERSIONS", VIRAL_POST_CLICK_CONVERSIONS);
+        map.put("VIRAL_VIEW_THROUGH_CONVERSIONS", VIRAL_VIEW_THROUGH_CONVERSIONS);
+        map.put("VIRAL_ENGAGEMENTS", VIRAL_ENGAGEMENTS);
+        map.put("GMAIL_SECONDARY_CLICKS", GMAIL_SECONDARY_CLICKS);
+        map.put("AVERAGE_CPV", AVERAGE_CPV);
+        map.put("VIDEO_VIEWS_FROM_SEARCH", VIDEO_VIEWS_FROM_SEARCH);
+        map.put("CROSS_DEVICE_CONVERSIONS", CROSS_DEVICE_CONVERSIONS);
+        map.put("ABSOLUTE_TOP_IMPRESSION_SHARE", ABSOLUTE_TOP_IMPRESSION_SHARE);
+        map.put("TOP_IMPRESSION_SHARE", TOP_IMPRESSION_SHARE);
+        map.put("VIDEO_FULLSCREENS", VIDEO_FULLSCREENS);
+        map.put("VIDEO_PAUSES", VIDEO_PAUSES);
+        map.put("VIDEO_MUTES", VIDEO_MUTES);
+        map.put("VIDEO_SKIPS", VIDEO_SKIPS);
+        map.put("COMPANION_CLICKS", COMPANION_CLICKS);
+        map.put("COMPANION_VIEWS", COMPANION_VIEWS);
+        map.put("ACTIVE_VIEW_AVG_TIME", ACTIVE_VIEW_AVG_TIME);
+        map.put("ELIGIBLE_IMPRESSIONS", ELIGIBLE_IMPRESSIONS);
+        map.put("EARNED_VIEWS", EARNED_VIEWS);
+        map.put("UNIQUE_VIEWERS", UNIQUE_VIEWERS);
+        map.put("COST_USD", COST_USD);
+        map.put("VIRAL_CARD_CLICKS", VIRAL_CARD_CLICKS);
+        map.put("VIRAL_CARD_IMPRESSIONS", VIRAL_CARD_IMPRESSIONS);
+        map.put("VIRAL_COMPANY_PAGE_CLICKS", VIRAL_COMPANY_PAGE_CLICKS);
+        map.put("VIRAL_VIDEO_FULLSCREENS", VIRAL_VIDEO_FULLSCREENS);
+        map.put("VIRAL_OTHER_ENGAGEMENTS", VIRAL_OTHER_ENGAGEMENTS);
+        map.put("LEAD_GEN_CONTACT_SHARES", LEAD_GEN_CONTACT_SHARES);
+        map.put("LEAD_GEN_INTERESTED_CLICKS", LEAD_GEN_INTERESTED_CLICKS);
+        map.put("CM360_POST_CLICK_REVENUE", CM360_POST_CLICK_REVENUE);
+        map.put("CM360_POST_VIEW_REVENUE", CM360_POST_VIEW_REVENUE);
+        map.put("SCROLLS", SCROLLS);
+        map.put("MEDIA_FEE_1", MEDIA_FEE1);
+        map.put("MEDIA_FEE_2", MEDIA_FEE2);
+        map.put("MEDIA_FEE_3", MEDIA_FEE3);
+        map.put("MEDIA_FEE_4", MEDIA_FEE4);
+        map.put("MEDIA_FEE_5", MEDIA_FEE5);
+        map.put("ACTIVE_VIEW_DIST_UNMEASURABLE", ACTIVE_VIEW_DIST_UNMEASURABLE);
+        map.put("ACTIVE_VIEW_DIST_UNVIEWABLE", ACTIVE_VIEW_DIST_UNVIEWABLE);
+        map.put("ACTIVE_VIEW_DIST_VIEWABLE", ACTIVE_VIEW_DIST_VIEWABLE);
+        map.put("ACTIVE_VIEW_AUDIBLE_VISIBLE_COMPLETE", ACTIVE_VIEW_AUDIBLE_VISIBLE_COMPLETE);
+        map.put("ACTIVE_VIEW_VISIBLE_10S", ACTIVE_VIEW_VISIBLE10_S);
+        map.put("NOT_MEASURABLE_IMPRESSIONS", NOT_MEASURABLE_IMPRESSIONS);
+        map.put("NOT_VIEWABLE_IMPRESSIONS", NOT_VIEWABLE_IMPRESSIONS);
+        map.put("PUBLISHER_PLATFORM", PUBLISHER_PLATFORM);
+        map.put("PLATFORM_POSITION", PLATFORM_POSITION);
+        map.put("IMPRESSION_DEVICE", IMPRESSION_DEVICE);
+        map.put("1D_VIEW", ONE_DVIEW);
+        map.put("1D_CLICK", ONE_DCLICK);
+        map.put("7D_VIEW", SEVEN_DVIEW);
+        map.put("7D_CLICK", SEVEN_DCLICK);
+        map.put("14D_CLICK", FOURTEEN_DCLICK);
+        map.put("28D_VIEW", TWENTY_EIGHT_DVIEW);
+        map.put("28D_CLICK", TWENTY_EIGHT_DCLICK);
+        map.put("30D_CLICK", THIRTY_DCLICK);
         return map;
     }
 
@@ -161,6 +371,111 @@ public class AdsReportMetricsType {
         map.put("SHARES", AdsReportMetricsTypeEnum.SHARES);
         map.put("COMMENTS", AdsReportMetricsTypeEnum.COMMENTS);
         map.put("FOLLOWS", AdsReportMetricsTypeEnum.FOLLOWS);
+        map.put("POST_CLICK_CONVERSIONS", AdsReportMetricsTypeEnum.POST_CLICK_CONVERSIONS);
+        map.put("VIEW_THROUGH_CONVERSIONS", AdsReportMetricsTypeEnum.VIEW_THROUGH_CONVERSIONS);
+        map.put("ALL_CONVERSIONS", AdsReportMetricsTypeEnum.ALL_CONVERSIONS);
+        map.put("ALL_CONVERSION_VALUE", AdsReportMetricsTypeEnum.ALL_CONVERSION_VALUE);
+        map.put("INTERACTIONS", AdsReportMetricsTypeEnum.INTERACTIONS);
+        map.put("REVENUE", AdsReportMetricsTypeEnum.REVENUE);
+        map.put("MEDIA_COST", AdsReportMetricsTypeEnum.MEDIA_COST);
+        map.put("TOTAL_MEDIA_COST", AdsReportMetricsTypeEnum.TOTAL_MEDIA_COST);
+        map.put("VIDEO_PLAYS", AdsReportMetricsTypeEnum.VIDEO_PLAYS);
+        map.put("VIDEO_QUARTILE_25", AdsReportMetricsTypeEnum.VIDEO_QUARTILE25);
+        map.put("VIDEO_QUARTILE_50", AdsReportMetricsTypeEnum.VIDEO_QUARTILE50);
+        map.put("VIDEO_QUARTILE_75", AdsReportMetricsTypeEnum.VIDEO_QUARTILE75);
+        map.put("VIDEO_QUARTILE_100", AdsReportMetricsTypeEnum.VIDEO_QUARTILE100);
+        map.put("VIDEO_AVG_TIME_WATCHED", AdsReportMetricsTypeEnum.VIDEO_AVG_TIME_WATCHED);
+        map.put("VIDEO_THRUPLAY", AdsReportMetricsTypeEnum.VIDEO_THRUPLAY);
+        map.put("VIEWABLE_IMPRESSIONS", AdsReportMetricsTypeEnum.VIEWABLE_IMPRESSIONS);
+        map.put("MEASURABLE_IMPRESSIONS", AdsReportMetricsTypeEnum.MEASURABLE_IMPRESSIONS);
+        map.put("VIEWABILITY_RATE", AdsReportMetricsTypeEnum.VIEWABILITY_RATE);
+        map.put("BILLABLE_IMPRESSIONS", AdsReportMetricsTypeEnum.BILLABLE_IMPRESSIONS);
+        map.put("DATA_FEES", AdsReportMetricsTypeEnum.DATA_FEES);
+        map.put("PLATFORM_FEES", AdsReportMetricsTypeEnum.PLATFORM_FEES);
+        map.put("PROFIT", AdsReportMetricsTypeEnum.PROFIT);
+        map.put("LANDING_PAGE_CLICKS", AdsReportMetricsTypeEnum.LANDING_PAGE_CLICKS);
+        map.put("LEAD_FORM_OPENS", AdsReportMetricsTypeEnum.LEAD_FORM_OPENS);
+        map.put("AD_UNIT_CLICKS", AdsReportMetricsTypeEnum.AD_UNIT_CLICKS);
+        map.put("CARD_CLICKS", AdsReportMetricsTypeEnum.CARD_CLICKS);
+        map.put("CARD_IMPRESSIONS", AdsReportMetricsTypeEnum.CARD_IMPRESSIONS);
+        map.put("COMMENT_LIKES", AdsReportMetricsTypeEnum.COMMENT_LIKES);
+        map.put("COMPANY_PAGE_CLICKS", AdsReportMetricsTypeEnum.COMPANY_PAGE_CLICKS);
+        map.put("ACTION_CLICKS", AdsReportMetricsTypeEnum.ACTION_CLICKS);
+        map.put("TEXT_URL_CLICKS", AdsReportMetricsTypeEnum.TEXT_URL_CLICKS);
+        map.put("OTHER_ENGAGEMENTS", AdsReportMetricsTypeEnum.OTHER_ENGAGEMENTS);
+        map.put("OPENS", AdsReportMetricsTypeEnum.OPENS);
+        map.put("TOTAL_ENGAGEMENTS", AdsReportMetricsTypeEnum.TOTAL_ENGAGEMENTS);
+        map.put("UNIQUE_IMPRESSIONS", AdsReportMetricsTypeEnum.UNIQUE_IMPRESSIONS);
+        map.put("UNIQUE_CLICKS", AdsReportMetricsTypeEnum.UNIQUE_CLICKS);
+        map.put("VIRAL_IMPRESSIONS", AdsReportMetricsTypeEnum.VIRAL_IMPRESSIONS);
+        map.put("VIRAL_CLICKS", AdsReportMetricsTypeEnum.VIRAL_CLICKS);
+        map.put("VIRAL_LIKES", AdsReportMetricsTypeEnum.VIRAL_LIKES);
+        map.put("VIRAL_COMMENTS", AdsReportMetricsTypeEnum.VIRAL_COMMENTS);
+        map.put("VIRAL_SHARES", AdsReportMetricsTypeEnum.VIRAL_SHARES);
+        map.put("VIRAL_FOLLOWS", AdsReportMetricsTypeEnum.VIRAL_FOLLOWS);
+        map.put("VIRAL_VIDEO_PLAYS", AdsReportMetricsTypeEnum.VIRAL_VIDEO_PLAYS);
+        map.put("VIRAL_VIDEO_VIEWS", AdsReportMetricsTypeEnum.VIRAL_VIDEO_VIEWS);
+        map.put("VIRAL_VIDEO_COMPLETIONS", AdsReportMetricsTypeEnum.VIRAL_VIDEO_COMPLETIONS);
+        map.put("VIRAL_VIDEO_QUARTILE_25", AdsReportMetricsTypeEnum.VIRAL_VIDEO_QUARTILE25);
+        map.put("VIRAL_VIDEO_QUARTILE_50", AdsReportMetricsTypeEnum.VIRAL_VIDEO_QUARTILE50);
+        map.put("VIRAL_VIDEO_QUARTILE_75", AdsReportMetricsTypeEnum.VIRAL_VIDEO_QUARTILE75);
+        map.put("VIRAL_LEADS", AdsReportMetricsTypeEnum.VIRAL_LEADS);
+        map.put("VIRAL_LEAD_FORM_OPENS", AdsReportMetricsTypeEnum.VIRAL_LEAD_FORM_OPENS);
+        map.put("VIRAL_LANDING_PAGE_CLICKS", AdsReportMetricsTypeEnum.VIRAL_LANDING_PAGE_CLICKS);
+        map.put("VIRAL_CONVERSIONS", AdsReportMetricsTypeEnum.VIRAL_CONVERSIONS);
+        map.put("VIRAL_POST_CLICK_CONVERSIONS", AdsReportMetricsTypeEnum.VIRAL_POST_CLICK_CONVERSIONS);
+        map.put("VIRAL_VIEW_THROUGH_CONVERSIONS", AdsReportMetricsTypeEnum.VIRAL_VIEW_THROUGH_CONVERSIONS);
+        map.put("VIRAL_ENGAGEMENTS", AdsReportMetricsTypeEnum.VIRAL_ENGAGEMENTS);
+        map.put("GMAIL_SECONDARY_CLICKS", AdsReportMetricsTypeEnum.GMAIL_SECONDARY_CLICKS);
+        map.put("AVERAGE_CPV", AdsReportMetricsTypeEnum.AVERAGE_CPV);
+        map.put("VIDEO_VIEWS_FROM_SEARCH", AdsReportMetricsTypeEnum.VIDEO_VIEWS_FROM_SEARCH);
+        map.put("CROSS_DEVICE_CONVERSIONS", AdsReportMetricsTypeEnum.CROSS_DEVICE_CONVERSIONS);
+        map.put("ABSOLUTE_TOP_IMPRESSION_SHARE", AdsReportMetricsTypeEnum.ABSOLUTE_TOP_IMPRESSION_SHARE);
+        map.put("TOP_IMPRESSION_SHARE", AdsReportMetricsTypeEnum.TOP_IMPRESSION_SHARE);
+        map.put("VIDEO_FULLSCREENS", AdsReportMetricsTypeEnum.VIDEO_FULLSCREENS);
+        map.put("VIDEO_PAUSES", AdsReportMetricsTypeEnum.VIDEO_PAUSES);
+        map.put("VIDEO_MUTES", AdsReportMetricsTypeEnum.VIDEO_MUTES);
+        map.put("VIDEO_SKIPS", AdsReportMetricsTypeEnum.VIDEO_SKIPS);
+        map.put("COMPANION_CLICKS", AdsReportMetricsTypeEnum.COMPANION_CLICKS);
+        map.put("COMPANION_VIEWS", AdsReportMetricsTypeEnum.COMPANION_VIEWS);
+        map.put("ACTIVE_VIEW_AVG_TIME", AdsReportMetricsTypeEnum.ACTIVE_VIEW_AVG_TIME);
+        map.put("ELIGIBLE_IMPRESSIONS", AdsReportMetricsTypeEnum.ELIGIBLE_IMPRESSIONS);
+        map.put("EARNED_VIEWS", AdsReportMetricsTypeEnum.EARNED_VIEWS);
+        map.put("UNIQUE_VIEWERS", AdsReportMetricsTypeEnum.UNIQUE_VIEWERS);
+        map.put("COST_USD", AdsReportMetricsTypeEnum.COST_USD);
+        map.put("VIRAL_CARD_CLICKS", AdsReportMetricsTypeEnum.VIRAL_CARD_CLICKS);
+        map.put("VIRAL_CARD_IMPRESSIONS", AdsReportMetricsTypeEnum.VIRAL_CARD_IMPRESSIONS);
+        map.put("VIRAL_COMPANY_PAGE_CLICKS", AdsReportMetricsTypeEnum.VIRAL_COMPANY_PAGE_CLICKS);
+        map.put("VIRAL_VIDEO_FULLSCREENS", AdsReportMetricsTypeEnum.VIRAL_VIDEO_FULLSCREENS);
+        map.put("VIRAL_OTHER_ENGAGEMENTS", AdsReportMetricsTypeEnum.VIRAL_OTHER_ENGAGEMENTS);
+        map.put("LEAD_GEN_CONTACT_SHARES", AdsReportMetricsTypeEnum.LEAD_GEN_CONTACT_SHARES);
+        map.put("LEAD_GEN_INTERESTED_CLICKS", AdsReportMetricsTypeEnum.LEAD_GEN_INTERESTED_CLICKS);
+        map.put("CM360_POST_CLICK_REVENUE", AdsReportMetricsTypeEnum.CM360_POST_CLICK_REVENUE);
+        map.put("CM360_POST_VIEW_REVENUE", AdsReportMetricsTypeEnum.CM360_POST_VIEW_REVENUE);
+        map.put("SCROLLS", AdsReportMetricsTypeEnum.SCROLLS);
+        map.put("MEDIA_FEE_1", AdsReportMetricsTypeEnum.MEDIA_FEE1);
+        map.put("MEDIA_FEE_2", AdsReportMetricsTypeEnum.MEDIA_FEE2);
+        map.put("MEDIA_FEE_3", AdsReportMetricsTypeEnum.MEDIA_FEE3);
+        map.put("MEDIA_FEE_4", AdsReportMetricsTypeEnum.MEDIA_FEE4);
+        map.put("MEDIA_FEE_5", AdsReportMetricsTypeEnum.MEDIA_FEE5);
+        map.put("ACTIVE_VIEW_DIST_UNMEASURABLE", AdsReportMetricsTypeEnum.ACTIVE_VIEW_DIST_UNMEASURABLE);
+        map.put("ACTIVE_VIEW_DIST_UNVIEWABLE", AdsReportMetricsTypeEnum.ACTIVE_VIEW_DIST_UNVIEWABLE);
+        map.put("ACTIVE_VIEW_DIST_VIEWABLE", AdsReportMetricsTypeEnum.ACTIVE_VIEW_DIST_VIEWABLE);
+        map.put("ACTIVE_VIEW_AUDIBLE_VISIBLE_COMPLETE", AdsReportMetricsTypeEnum.ACTIVE_VIEW_AUDIBLE_VISIBLE_COMPLETE);
+        map.put("ACTIVE_VIEW_VISIBLE_10S", AdsReportMetricsTypeEnum.ACTIVE_VIEW_VISIBLE10_S);
+        map.put("NOT_MEASURABLE_IMPRESSIONS", AdsReportMetricsTypeEnum.NOT_MEASURABLE_IMPRESSIONS);
+        map.put("NOT_VIEWABLE_IMPRESSIONS", AdsReportMetricsTypeEnum.NOT_VIEWABLE_IMPRESSIONS);
+        map.put("PUBLISHER_PLATFORM", AdsReportMetricsTypeEnum.PUBLISHER_PLATFORM);
+        map.put("PLATFORM_POSITION", AdsReportMetricsTypeEnum.PLATFORM_POSITION);
+        map.put("IMPRESSION_DEVICE", AdsReportMetricsTypeEnum.IMPRESSION_DEVICE);
+        map.put("1D_VIEW", AdsReportMetricsTypeEnum.ONE_DVIEW);
+        map.put("1D_CLICK", AdsReportMetricsTypeEnum.ONE_DCLICK);
+        map.put("7D_VIEW", AdsReportMetricsTypeEnum.SEVEN_DVIEW);
+        map.put("7D_CLICK", AdsReportMetricsTypeEnum.SEVEN_DCLICK);
+        map.put("14D_CLICK", AdsReportMetricsTypeEnum.FOURTEEN_DCLICK);
+        map.put("28D_VIEW", AdsReportMetricsTypeEnum.TWENTY_EIGHT_DVIEW);
+        map.put("28D_CLICK", AdsReportMetricsTypeEnum.TWENTY_EIGHT_DCLICK);
+        map.put("30D_CLICK", AdsReportMetricsTypeEnum.THIRTY_DCLICK);
         return map;
     }
     
@@ -187,7 +502,112 @@ public class AdsReportMetricsType {
         LIKES("LIKES"),
         SHARES("SHARES"),
         COMMENTS("COMMENTS"),
-        FOLLOWS("FOLLOWS"),;
+        FOLLOWS("FOLLOWS"),
+        POST_CLICK_CONVERSIONS("POST_CLICK_CONVERSIONS"),
+        VIEW_THROUGH_CONVERSIONS("VIEW_THROUGH_CONVERSIONS"),
+        ALL_CONVERSIONS("ALL_CONVERSIONS"),
+        ALL_CONVERSION_VALUE("ALL_CONVERSION_VALUE"),
+        INTERACTIONS("INTERACTIONS"),
+        REVENUE("REVENUE"),
+        MEDIA_COST("MEDIA_COST"),
+        TOTAL_MEDIA_COST("TOTAL_MEDIA_COST"),
+        VIDEO_PLAYS("VIDEO_PLAYS"),
+        VIDEO_QUARTILE25("VIDEO_QUARTILE_25"),
+        VIDEO_QUARTILE50("VIDEO_QUARTILE_50"),
+        VIDEO_QUARTILE75("VIDEO_QUARTILE_75"),
+        VIDEO_QUARTILE100("VIDEO_QUARTILE_100"),
+        VIDEO_AVG_TIME_WATCHED("VIDEO_AVG_TIME_WATCHED"),
+        VIDEO_THRUPLAY("VIDEO_THRUPLAY"),
+        VIEWABLE_IMPRESSIONS("VIEWABLE_IMPRESSIONS"),
+        MEASURABLE_IMPRESSIONS("MEASURABLE_IMPRESSIONS"),
+        VIEWABILITY_RATE("VIEWABILITY_RATE"),
+        BILLABLE_IMPRESSIONS("BILLABLE_IMPRESSIONS"),
+        DATA_FEES("DATA_FEES"),
+        PLATFORM_FEES("PLATFORM_FEES"),
+        PROFIT("PROFIT"),
+        LANDING_PAGE_CLICKS("LANDING_PAGE_CLICKS"),
+        LEAD_FORM_OPENS("LEAD_FORM_OPENS"),
+        AD_UNIT_CLICKS("AD_UNIT_CLICKS"),
+        CARD_CLICKS("CARD_CLICKS"),
+        CARD_IMPRESSIONS("CARD_IMPRESSIONS"),
+        COMMENT_LIKES("COMMENT_LIKES"),
+        COMPANY_PAGE_CLICKS("COMPANY_PAGE_CLICKS"),
+        ACTION_CLICKS("ACTION_CLICKS"),
+        TEXT_URL_CLICKS("TEXT_URL_CLICKS"),
+        OTHER_ENGAGEMENTS("OTHER_ENGAGEMENTS"),
+        OPENS("OPENS"),
+        TOTAL_ENGAGEMENTS("TOTAL_ENGAGEMENTS"),
+        UNIQUE_IMPRESSIONS("UNIQUE_IMPRESSIONS"),
+        UNIQUE_CLICKS("UNIQUE_CLICKS"),
+        VIRAL_IMPRESSIONS("VIRAL_IMPRESSIONS"),
+        VIRAL_CLICKS("VIRAL_CLICKS"),
+        VIRAL_LIKES("VIRAL_LIKES"),
+        VIRAL_COMMENTS("VIRAL_COMMENTS"),
+        VIRAL_SHARES("VIRAL_SHARES"),
+        VIRAL_FOLLOWS("VIRAL_FOLLOWS"),
+        VIRAL_VIDEO_PLAYS("VIRAL_VIDEO_PLAYS"),
+        VIRAL_VIDEO_VIEWS("VIRAL_VIDEO_VIEWS"),
+        VIRAL_VIDEO_COMPLETIONS("VIRAL_VIDEO_COMPLETIONS"),
+        VIRAL_VIDEO_QUARTILE25("VIRAL_VIDEO_QUARTILE_25"),
+        VIRAL_VIDEO_QUARTILE50("VIRAL_VIDEO_QUARTILE_50"),
+        VIRAL_VIDEO_QUARTILE75("VIRAL_VIDEO_QUARTILE_75"),
+        VIRAL_LEADS("VIRAL_LEADS"),
+        VIRAL_LEAD_FORM_OPENS("VIRAL_LEAD_FORM_OPENS"),
+        VIRAL_LANDING_PAGE_CLICKS("VIRAL_LANDING_PAGE_CLICKS"),
+        VIRAL_CONVERSIONS("VIRAL_CONVERSIONS"),
+        VIRAL_POST_CLICK_CONVERSIONS("VIRAL_POST_CLICK_CONVERSIONS"),
+        VIRAL_VIEW_THROUGH_CONVERSIONS("VIRAL_VIEW_THROUGH_CONVERSIONS"),
+        VIRAL_ENGAGEMENTS("VIRAL_ENGAGEMENTS"),
+        GMAIL_SECONDARY_CLICKS("GMAIL_SECONDARY_CLICKS"),
+        AVERAGE_CPV("AVERAGE_CPV"),
+        VIDEO_VIEWS_FROM_SEARCH("VIDEO_VIEWS_FROM_SEARCH"),
+        CROSS_DEVICE_CONVERSIONS("CROSS_DEVICE_CONVERSIONS"),
+        ABSOLUTE_TOP_IMPRESSION_SHARE("ABSOLUTE_TOP_IMPRESSION_SHARE"),
+        TOP_IMPRESSION_SHARE("TOP_IMPRESSION_SHARE"),
+        VIDEO_FULLSCREENS("VIDEO_FULLSCREENS"),
+        VIDEO_PAUSES("VIDEO_PAUSES"),
+        VIDEO_MUTES("VIDEO_MUTES"),
+        VIDEO_SKIPS("VIDEO_SKIPS"),
+        COMPANION_CLICKS("COMPANION_CLICKS"),
+        COMPANION_VIEWS("COMPANION_VIEWS"),
+        ACTIVE_VIEW_AVG_TIME("ACTIVE_VIEW_AVG_TIME"),
+        ELIGIBLE_IMPRESSIONS("ELIGIBLE_IMPRESSIONS"),
+        EARNED_VIEWS("EARNED_VIEWS"),
+        UNIQUE_VIEWERS("UNIQUE_VIEWERS"),
+        COST_USD("COST_USD"),
+        VIRAL_CARD_CLICKS("VIRAL_CARD_CLICKS"),
+        VIRAL_CARD_IMPRESSIONS("VIRAL_CARD_IMPRESSIONS"),
+        VIRAL_COMPANY_PAGE_CLICKS("VIRAL_COMPANY_PAGE_CLICKS"),
+        VIRAL_VIDEO_FULLSCREENS("VIRAL_VIDEO_FULLSCREENS"),
+        VIRAL_OTHER_ENGAGEMENTS("VIRAL_OTHER_ENGAGEMENTS"),
+        LEAD_GEN_CONTACT_SHARES("LEAD_GEN_CONTACT_SHARES"),
+        LEAD_GEN_INTERESTED_CLICKS("LEAD_GEN_INTERESTED_CLICKS"),
+        CM360_POST_CLICK_REVENUE("CM360_POST_CLICK_REVENUE"),
+        CM360_POST_VIEW_REVENUE("CM360_POST_VIEW_REVENUE"),
+        SCROLLS("SCROLLS"),
+        MEDIA_FEE1("MEDIA_FEE_1"),
+        MEDIA_FEE2("MEDIA_FEE_2"),
+        MEDIA_FEE3("MEDIA_FEE_3"),
+        MEDIA_FEE4("MEDIA_FEE_4"),
+        MEDIA_FEE5("MEDIA_FEE_5"),
+        ACTIVE_VIEW_DIST_UNMEASURABLE("ACTIVE_VIEW_DIST_UNMEASURABLE"),
+        ACTIVE_VIEW_DIST_UNVIEWABLE("ACTIVE_VIEW_DIST_UNVIEWABLE"),
+        ACTIVE_VIEW_DIST_VIEWABLE("ACTIVE_VIEW_DIST_VIEWABLE"),
+        ACTIVE_VIEW_AUDIBLE_VISIBLE_COMPLETE("ACTIVE_VIEW_AUDIBLE_VISIBLE_COMPLETE"),
+        ACTIVE_VIEW_VISIBLE10_S("ACTIVE_VIEW_VISIBLE_10S"),
+        NOT_MEASURABLE_IMPRESSIONS("NOT_MEASURABLE_IMPRESSIONS"),
+        NOT_VIEWABLE_IMPRESSIONS("NOT_VIEWABLE_IMPRESSIONS"),
+        PUBLISHER_PLATFORM("PUBLISHER_PLATFORM"),
+        PLATFORM_POSITION("PLATFORM_POSITION"),
+        IMPRESSION_DEVICE("IMPRESSION_DEVICE"),
+        ONE_DVIEW("1D_VIEW"),
+        ONE_DCLICK("1D_CLICK"),
+        SEVEN_DVIEW("7D_VIEW"),
+        SEVEN_DCLICK("7D_CLICK"),
+        FOURTEEN_DCLICK("14D_CLICK"),
+        TWENTY_EIGHT_DVIEW("28D_VIEW"),
+        TWENTY_EIGHT_DCLICK("28D_CLICK"),
+        THIRTY_DCLICK("30D_CLICK"),;
 
         private final String value;
 

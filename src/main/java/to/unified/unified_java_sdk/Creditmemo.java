@@ -6,30 +6,30 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
-import to.unified.unified_java_sdk.models.operations.CreateAccountingCreditmemoRequest;
-import to.unified.unified_java_sdk.models.operations.CreateAccountingCreditmemoRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.CreateAccountingCreditmemoResponse;
-import to.unified.unified_java_sdk.models.operations.GetAccountingCreditmemoRequest;
-import to.unified.unified_java_sdk.models.operations.GetAccountingCreditmemoRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.GetAccountingCreditmemoResponse;
-import to.unified.unified_java_sdk.models.operations.ListAccountingCreditmemoesRequest;
-import to.unified.unified_java_sdk.models.operations.ListAccountingCreditmemoesRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.ListAccountingCreditmemoesResponse;
-import to.unified.unified_java_sdk.models.operations.PatchAccountingCreditmemoRequest;
-import to.unified.unified_java_sdk.models.operations.PatchAccountingCreditmemoRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.PatchAccountingCreditmemoResponse;
-import to.unified.unified_java_sdk.models.operations.RemoveAccountingCreditmemoRequest;
-import to.unified.unified_java_sdk.models.operations.RemoveAccountingCreditmemoRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.RemoveAccountingCreditmemoResponse;
-import to.unified.unified_java_sdk.models.operations.UpdateAccountingCreditmemoRequest;
-import to.unified.unified_java_sdk.models.operations.UpdateAccountingCreditmemoRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.UpdateAccountingCreditmemoResponse;
-import to.unified.unified_java_sdk.operations.CreateAccountingCreditmemo;
-import to.unified.unified_java_sdk.operations.GetAccountingCreditmemo;
-import to.unified.unified_java_sdk.operations.ListAccountingCreditmemoes;
-import to.unified.unified_java_sdk.operations.PatchAccountingCreditmemo;
-import to.unified.unified_java_sdk.operations.RemoveAccountingCreditmemo;
-import to.unified.unified_java_sdk.operations.UpdateAccountingCreditmemo;
+import to.unified.unified_java_sdk.models.operations.CreateAccountingCreditmemo2Request;
+import to.unified.unified_java_sdk.models.operations.CreateAccountingCreditmemo2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.CreateAccountingCreditmemo2Response;
+import to.unified.unified_java_sdk.models.operations.GetAccountingCreditmemo2Request;
+import to.unified.unified_java_sdk.models.operations.GetAccountingCreditmemo2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetAccountingCreditmemo2Response;
+import to.unified.unified_java_sdk.models.operations.ListAccountingCreditmemoes2Request;
+import to.unified.unified_java_sdk.models.operations.ListAccountingCreditmemoes2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListAccountingCreditmemoes2Response;
+import to.unified.unified_java_sdk.models.operations.PatchAccountingCreditmemo2Request;
+import to.unified.unified_java_sdk.models.operations.PatchAccountingCreditmemo2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.PatchAccountingCreditmemo2Response;
+import to.unified.unified_java_sdk.models.operations.RemoveAccountingCreditmemo2Request;
+import to.unified.unified_java_sdk.models.operations.RemoveAccountingCreditmemo2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.RemoveAccountingCreditmemo2Response;
+import to.unified.unified_java_sdk.models.operations.UpdateAccountingCreditmemo2Request;
+import to.unified.unified_java_sdk.models.operations.UpdateAccountingCreditmemo2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.UpdateAccountingCreditmemo2Response;
+import to.unified.unified_java_sdk.operations.CreateAccountingCreditmemo2;
+import to.unified.unified_java_sdk.operations.GetAccountingCreditmemo2;
+import to.unified.unified_java_sdk.operations.ListAccountingCreditmemoes2;
+import to.unified.unified_java_sdk.operations.PatchAccountingCreditmemo2;
+import to.unified.unified_java_sdk.operations.RemoveAccountingCreditmemo2;
+import to.unified.unified_java_sdk.operations.UpdateAccountingCreditmemo2;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -57,8 +57,8 @@ public class Creditmemo {
      * 
      * @return The call builder
      */
-    public CreateAccountingCreditmemoRequestBuilder createAccountingCreditmemo() {
-        return new CreateAccountingCreditmemoRequestBuilder(sdkConfiguration);
+    public CreateAccountingCreditmemo2RequestBuilder createAccountingCreditmemo2() {
+        return new CreateAccountingCreditmemo2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -68,9 +68,9 @@ public class Creditmemo {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateAccountingCreditmemoResponse createAccountingCreditmemo(@Nonnull CreateAccountingCreditmemoRequest request) {
-        RequestOperation<CreateAccountingCreditmemoRequest, CreateAccountingCreditmemoResponse> operation
-              = new CreateAccountingCreditmemo.Sync(sdkConfiguration, _headers);
+    public CreateAccountingCreditmemo2Response createAccountingCreditmemo2(@Nonnull CreateAccountingCreditmemo2Request request) {
+        RequestOperation<CreateAccountingCreditmemo2Request, CreateAccountingCreditmemo2Response> operation
+              = new CreateAccountingCreditmemo2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -79,8 +79,8 @@ public class Creditmemo {
      * 
      * @return The call builder
      */
-    public GetAccountingCreditmemoRequestBuilder getAccountingCreditmemo() {
-        return new GetAccountingCreditmemoRequestBuilder(sdkConfiguration);
+    public GetAccountingCreditmemo2RequestBuilder getAccountingCreditmemo2() {
+        return new GetAccountingCreditmemo2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -90,9 +90,9 @@ public class Creditmemo {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetAccountingCreditmemoResponse getAccountingCreditmemo(@Nonnull GetAccountingCreditmemoRequest request) {
-        RequestOperation<GetAccountingCreditmemoRequest, GetAccountingCreditmemoResponse> operation
-              = new GetAccountingCreditmemo.Sync(sdkConfiguration, _headers);
+    public GetAccountingCreditmemo2Response getAccountingCreditmemo2(@Nonnull GetAccountingCreditmemo2Request request) {
+        RequestOperation<GetAccountingCreditmemo2Request, GetAccountingCreditmemo2Response> operation
+              = new GetAccountingCreditmemo2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -101,8 +101,8 @@ public class Creditmemo {
      * 
      * @return The call builder
      */
-    public ListAccountingCreditmemoesRequestBuilder listAccountingCreditmemoes() {
-        return new ListAccountingCreditmemoesRequestBuilder(sdkConfiguration);
+    public ListAccountingCreditmemoes2RequestBuilder listAccountingCreditmemoes2() {
+        return new ListAccountingCreditmemoes2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -112,9 +112,9 @@ public class Creditmemo {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListAccountingCreditmemoesResponse listAccountingCreditmemoes(@Nonnull ListAccountingCreditmemoesRequest request) {
-        RequestOperation<ListAccountingCreditmemoesRequest, ListAccountingCreditmemoesResponse> operation
-              = new ListAccountingCreditmemoes.Sync(sdkConfiguration, _headers);
+    public ListAccountingCreditmemoes2Response listAccountingCreditmemoes2(@Nonnull ListAccountingCreditmemoes2Request request) {
+        RequestOperation<ListAccountingCreditmemoes2Request, ListAccountingCreditmemoes2Response> operation
+              = new ListAccountingCreditmemoes2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -123,8 +123,8 @@ public class Creditmemo {
      * 
      * @return The call builder
      */
-    public PatchAccountingCreditmemoRequestBuilder patchAccountingCreditmemo() {
-        return new PatchAccountingCreditmemoRequestBuilder(sdkConfiguration);
+    public PatchAccountingCreditmemo2RequestBuilder patchAccountingCreditmemo2() {
+        return new PatchAccountingCreditmemo2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -134,9 +134,9 @@ public class Creditmemo {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchAccountingCreditmemoResponse patchAccountingCreditmemo(@Nonnull PatchAccountingCreditmemoRequest request) {
-        RequestOperation<PatchAccountingCreditmemoRequest, PatchAccountingCreditmemoResponse> operation
-              = new PatchAccountingCreditmemo.Sync(sdkConfiguration, _headers);
+    public PatchAccountingCreditmemo2Response patchAccountingCreditmemo2(@Nonnull PatchAccountingCreditmemo2Request request) {
+        RequestOperation<PatchAccountingCreditmemo2Request, PatchAccountingCreditmemo2Response> operation
+              = new PatchAccountingCreditmemo2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -145,8 +145,8 @@ public class Creditmemo {
      * 
      * @return The call builder
      */
-    public RemoveAccountingCreditmemoRequestBuilder removeAccountingCreditmemo() {
-        return new RemoveAccountingCreditmemoRequestBuilder(sdkConfiguration);
+    public RemoveAccountingCreditmemo2RequestBuilder removeAccountingCreditmemo2() {
+        return new RemoveAccountingCreditmemo2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -156,9 +156,9 @@ public class Creditmemo {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveAccountingCreditmemoResponse removeAccountingCreditmemo(@Nonnull RemoveAccountingCreditmemoRequest request) {
-        RequestOperation<RemoveAccountingCreditmemoRequest, RemoveAccountingCreditmemoResponse> operation
-              = new RemoveAccountingCreditmemo.Sync(sdkConfiguration, _headers);
+    public RemoveAccountingCreditmemo2Response removeAccountingCreditmemo2(@Nonnull RemoveAccountingCreditmemo2Request request) {
+        RequestOperation<RemoveAccountingCreditmemo2Request, RemoveAccountingCreditmemo2Response> operation
+              = new RemoveAccountingCreditmemo2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -167,8 +167,8 @@ public class Creditmemo {
      * 
      * @return The call builder
      */
-    public UpdateAccountingCreditmemoRequestBuilder updateAccountingCreditmemo() {
-        return new UpdateAccountingCreditmemoRequestBuilder(sdkConfiguration);
+    public UpdateAccountingCreditmemo2RequestBuilder updateAccountingCreditmemo2() {
+        return new UpdateAccountingCreditmemo2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -178,9 +178,9 @@ public class Creditmemo {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateAccountingCreditmemoResponse updateAccountingCreditmemo(@Nonnull UpdateAccountingCreditmemoRequest request) {
-        RequestOperation<UpdateAccountingCreditmemoRequest, UpdateAccountingCreditmemoResponse> operation
-              = new UpdateAccountingCreditmemo.Sync(sdkConfiguration, _headers);
+    public UpdateAccountingCreditmemo2Response updateAccountingCreditmemo2(@Nonnull UpdateAccountingCreditmemo2Request request) {
+        RequestOperation<UpdateAccountingCreditmemo2Request, UpdateAccountingCreditmemo2Response> operation
+              = new UpdateAccountingCreditmemo2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

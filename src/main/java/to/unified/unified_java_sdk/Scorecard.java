@@ -6,30 +6,30 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
-import to.unified.unified_java_sdk.models.operations.CreateAtsScorecardRequest;
-import to.unified.unified_java_sdk.models.operations.CreateAtsScorecardRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.CreateAtsScorecardResponse;
-import to.unified.unified_java_sdk.models.operations.GetAtsScorecardRequest;
-import to.unified.unified_java_sdk.models.operations.GetAtsScorecardRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.GetAtsScorecardResponse;
-import to.unified.unified_java_sdk.models.operations.ListAtsScorecardsRequest;
-import to.unified.unified_java_sdk.models.operations.ListAtsScorecardsRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.ListAtsScorecardsResponse;
-import to.unified.unified_java_sdk.models.operations.PatchAtsScorecardRequest;
-import to.unified.unified_java_sdk.models.operations.PatchAtsScorecardRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.PatchAtsScorecardResponse;
-import to.unified.unified_java_sdk.models.operations.RemoveAtsScorecardRequest;
-import to.unified.unified_java_sdk.models.operations.RemoveAtsScorecardRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.RemoveAtsScorecardResponse;
-import to.unified.unified_java_sdk.models.operations.UpdateAtsScorecardRequest;
-import to.unified.unified_java_sdk.models.operations.UpdateAtsScorecardRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.UpdateAtsScorecardResponse;
-import to.unified.unified_java_sdk.operations.CreateAtsScorecard;
-import to.unified.unified_java_sdk.operations.GetAtsScorecard;
-import to.unified.unified_java_sdk.operations.ListAtsScorecards;
-import to.unified.unified_java_sdk.operations.PatchAtsScorecard;
-import to.unified.unified_java_sdk.operations.RemoveAtsScorecard;
-import to.unified.unified_java_sdk.operations.UpdateAtsScorecard;
+import to.unified.unified_java_sdk.models.operations.CreateAtsScorecard2Request;
+import to.unified.unified_java_sdk.models.operations.CreateAtsScorecard2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.CreateAtsScorecard2Response;
+import to.unified.unified_java_sdk.models.operations.GetAtsScorecard2Request;
+import to.unified.unified_java_sdk.models.operations.GetAtsScorecard2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetAtsScorecard2Response;
+import to.unified.unified_java_sdk.models.operations.ListAtsScorecards2Request;
+import to.unified.unified_java_sdk.models.operations.ListAtsScorecards2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListAtsScorecards2Response;
+import to.unified.unified_java_sdk.models.operations.PatchAtsScorecard2Request;
+import to.unified.unified_java_sdk.models.operations.PatchAtsScorecard2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.PatchAtsScorecard2Response;
+import to.unified.unified_java_sdk.models.operations.RemoveAtsScorecard2Request;
+import to.unified.unified_java_sdk.models.operations.RemoveAtsScorecard2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.RemoveAtsScorecard2Response;
+import to.unified.unified_java_sdk.models.operations.UpdateAtsScorecard2Request;
+import to.unified.unified_java_sdk.models.operations.UpdateAtsScorecard2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.UpdateAtsScorecard2Response;
+import to.unified.unified_java_sdk.operations.CreateAtsScorecard2;
+import to.unified.unified_java_sdk.operations.GetAtsScorecard2;
+import to.unified.unified_java_sdk.operations.ListAtsScorecards2;
+import to.unified.unified_java_sdk.operations.PatchAtsScorecard2;
+import to.unified.unified_java_sdk.operations.RemoveAtsScorecard2;
+import to.unified.unified_java_sdk.operations.UpdateAtsScorecard2;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -57,8 +57,8 @@ public class Scorecard {
      * 
      * @return The call builder
      */
-    public CreateAtsScorecardRequestBuilder createAtsScorecard() {
-        return new CreateAtsScorecardRequestBuilder(sdkConfiguration);
+    public CreateAtsScorecard2RequestBuilder createAtsScorecard2() {
+        return new CreateAtsScorecard2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -68,9 +68,9 @@ public class Scorecard {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateAtsScorecardResponse createAtsScorecard(@Nonnull CreateAtsScorecardRequest request) {
-        RequestOperation<CreateAtsScorecardRequest, CreateAtsScorecardResponse> operation
-              = new CreateAtsScorecard.Sync(sdkConfiguration, _headers);
+    public CreateAtsScorecard2Response createAtsScorecard2(@Nonnull CreateAtsScorecard2Request request) {
+        RequestOperation<CreateAtsScorecard2Request, CreateAtsScorecard2Response> operation
+              = new CreateAtsScorecard2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -79,8 +79,8 @@ public class Scorecard {
      * 
      * @return The call builder
      */
-    public GetAtsScorecardRequestBuilder getAtsScorecard() {
-        return new GetAtsScorecardRequestBuilder(sdkConfiguration);
+    public GetAtsScorecard2RequestBuilder getAtsScorecard2() {
+        return new GetAtsScorecard2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -90,9 +90,9 @@ public class Scorecard {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetAtsScorecardResponse getAtsScorecard(@Nonnull GetAtsScorecardRequest request) {
-        RequestOperation<GetAtsScorecardRequest, GetAtsScorecardResponse> operation
-              = new GetAtsScorecard.Sync(sdkConfiguration, _headers);
+    public GetAtsScorecard2Response getAtsScorecard2(@Nonnull GetAtsScorecard2Request request) {
+        RequestOperation<GetAtsScorecard2Request, GetAtsScorecard2Response> operation
+              = new GetAtsScorecard2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -101,8 +101,8 @@ public class Scorecard {
      * 
      * @return The call builder
      */
-    public ListAtsScorecardsRequestBuilder listAtsScorecards() {
-        return new ListAtsScorecardsRequestBuilder(sdkConfiguration);
+    public ListAtsScorecards2RequestBuilder listAtsScorecards2() {
+        return new ListAtsScorecards2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -112,9 +112,9 @@ public class Scorecard {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListAtsScorecardsResponse listAtsScorecards(@Nonnull ListAtsScorecardsRequest request) {
-        RequestOperation<ListAtsScorecardsRequest, ListAtsScorecardsResponse> operation
-              = new ListAtsScorecards.Sync(sdkConfiguration, _headers);
+    public ListAtsScorecards2Response listAtsScorecards2(@Nonnull ListAtsScorecards2Request request) {
+        RequestOperation<ListAtsScorecards2Request, ListAtsScorecards2Response> operation
+              = new ListAtsScorecards2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -123,8 +123,8 @@ public class Scorecard {
      * 
      * @return The call builder
      */
-    public PatchAtsScorecardRequestBuilder patchAtsScorecard() {
-        return new PatchAtsScorecardRequestBuilder(sdkConfiguration);
+    public PatchAtsScorecard2RequestBuilder patchAtsScorecard2() {
+        return new PatchAtsScorecard2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -134,9 +134,9 @@ public class Scorecard {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchAtsScorecardResponse patchAtsScorecard(@Nonnull PatchAtsScorecardRequest request) {
-        RequestOperation<PatchAtsScorecardRequest, PatchAtsScorecardResponse> operation
-              = new PatchAtsScorecard.Sync(sdkConfiguration, _headers);
+    public PatchAtsScorecard2Response patchAtsScorecard2(@Nonnull PatchAtsScorecard2Request request) {
+        RequestOperation<PatchAtsScorecard2Request, PatchAtsScorecard2Response> operation
+              = new PatchAtsScorecard2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -145,8 +145,8 @@ public class Scorecard {
      * 
      * @return The call builder
      */
-    public RemoveAtsScorecardRequestBuilder removeAtsScorecard() {
-        return new RemoveAtsScorecardRequestBuilder(sdkConfiguration);
+    public RemoveAtsScorecard2RequestBuilder removeAtsScorecard2() {
+        return new RemoveAtsScorecard2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -156,9 +156,9 @@ public class Scorecard {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveAtsScorecardResponse removeAtsScorecard(@Nonnull RemoveAtsScorecardRequest request) {
-        RequestOperation<RemoveAtsScorecardRequest, RemoveAtsScorecardResponse> operation
-              = new RemoveAtsScorecard.Sync(sdkConfiguration, _headers);
+    public RemoveAtsScorecard2Response removeAtsScorecard2(@Nonnull RemoveAtsScorecard2Request request) {
+        RequestOperation<RemoveAtsScorecard2Request, RemoveAtsScorecard2Response> operation
+              = new RemoveAtsScorecard2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -167,8 +167,8 @@ public class Scorecard {
      * 
      * @return The call builder
      */
-    public UpdateAtsScorecardRequestBuilder updateAtsScorecard() {
-        return new UpdateAtsScorecardRequestBuilder(sdkConfiguration);
+    public UpdateAtsScorecard2RequestBuilder updateAtsScorecard2() {
+        return new UpdateAtsScorecard2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -178,9 +178,9 @@ public class Scorecard {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateAtsScorecardResponse updateAtsScorecard(@Nonnull UpdateAtsScorecardRequest request) {
-        RequestOperation<UpdateAtsScorecardRequest, UpdateAtsScorecardResponse> operation
-              = new UpdateAtsScorecard.Sync(sdkConfiguration, _headers);
+    public UpdateAtsScorecard2Response updateAtsScorecard2(@Nonnull UpdateAtsScorecard2Request request) {
+        RequestOperation<UpdateAtsScorecard2Request, UpdateAtsScorecard2Response> operation
+              = new UpdateAtsScorecard2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

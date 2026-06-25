@@ -6,30 +6,30 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
-import to.unified.unified_java_sdk.models.operations.CreateRepoBranchRequest;
-import to.unified.unified_java_sdk.models.operations.CreateRepoBranchRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.CreateRepoBranchResponse;
-import to.unified.unified_java_sdk.models.operations.GetRepoBranchRequest;
-import to.unified.unified_java_sdk.models.operations.GetRepoBranchRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.GetRepoBranchResponse;
-import to.unified.unified_java_sdk.models.operations.ListRepoBranchesRequest;
-import to.unified.unified_java_sdk.models.operations.ListRepoBranchesRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.ListRepoBranchesResponse;
-import to.unified.unified_java_sdk.models.operations.PatchRepoBranchRequest;
-import to.unified.unified_java_sdk.models.operations.PatchRepoBranchRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.PatchRepoBranchResponse;
-import to.unified.unified_java_sdk.models.operations.RemoveRepoBranchRequest;
-import to.unified.unified_java_sdk.models.operations.RemoveRepoBranchRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.RemoveRepoBranchResponse;
-import to.unified.unified_java_sdk.models.operations.UpdateRepoBranchRequest;
-import to.unified.unified_java_sdk.models.operations.UpdateRepoBranchRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.UpdateRepoBranchResponse;
-import to.unified.unified_java_sdk.operations.CreateRepoBranch;
-import to.unified.unified_java_sdk.operations.GetRepoBranch;
-import to.unified.unified_java_sdk.operations.ListRepoBranches;
-import to.unified.unified_java_sdk.operations.PatchRepoBranch;
-import to.unified.unified_java_sdk.operations.RemoveRepoBranch;
-import to.unified.unified_java_sdk.operations.UpdateRepoBranch;
+import to.unified.unified_java_sdk.models.operations.CreateRepoBranch2Request;
+import to.unified.unified_java_sdk.models.operations.CreateRepoBranch2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.CreateRepoBranch2Response;
+import to.unified.unified_java_sdk.models.operations.GetRepoBranch2Request;
+import to.unified.unified_java_sdk.models.operations.GetRepoBranch2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetRepoBranch2Response;
+import to.unified.unified_java_sdk.models.operations.ListRepoBranches2Request;
+import to.unified.unified_java_sdk.models.operations.ListRepoBranches2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListRepoBranches2Response;
+import to.unified.unified_java_sdk.models.operations.PatchRepoBranch2Request;
+import to.unified.unified_java_sdk.models.operations.PatchRepoBranch2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.PatchRepoBranch2Response;
+import to.unified.unified_java_sdk.models.operations.RemoveRepoBranch2Request;
+import to.unified.unified_java_sdk.models.operations.RemoveRepoBranch2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.RemoveRepoBranch2Response;
+import to.unified.unified_java_sdk.models.operations.UpdateRepoBranch2Request;
+import to.unified.unified_java_sdk.models.operations.UpdateRepoBranch2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.UpdateRepoBranch2Response;
+import to.unified.unified_java_sdk.operations.CreateRepoBranch2;
+import to.unified.unified_java_sdk.operations.GetRepoBranch2;
+import to.unified.unified_java_sdk.operations.ListRepoBranches2;
+import to.unified.unified_java_sdk.operations.PatchRepoBranch2;
+import to.unified.unified_java_sdk.operations.RemoveRepoBranch2;
+import to.unified.unified_java_sdk.operations.UpdateRepoBranch2;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -57,8 +57,8 @@ public class Branch {
      * 
      * @return The call builder
      */
-    public CreateRepoBranchRequestBuilder createRepoBranch() {
-        return new CreateRepoBranchRequestBuilder(sdkConfiguration);
+    public CreateRepoBranch2RequestBuilder createRepoBranch2() {
+        return new CreateRepoBranch2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -68,9 +68,9 @@ public class Branch {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateRepoBranchResponse createRepoBranch(@Nonnull CreateRepoBranchRequest request) {
-        RequestOperation<CreateRepoBranchRequest, CreateRepoBranchResponse> operation
-              = new CreateRepoBranch.Sync(sdkConfiguration, _headers);
+    public CreateRepoBranch2Response createRepoBranch2(@Nonnull CreateRepoBranch2Request request) {
+        RequestOperation<CreateRepoBranch2Request, CreateRepoBranch2Response> operation
+              = new CreateRepoBranch2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -79,8 +79,8 @@ public class Branch {
      * 
      * @return The call builder
      */
-    public GetRepoBranchRequestBuilder getRepoBranch() {
-        return new GetRepoBranchRequestBuilder(sdkConfiguration);
+    public GetRepoBranch2RequestBuilder getRepoBranch2() {
+        return new GetRepoBranch2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -90,9 +90,9 @@ public class Branch {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetRepoBranchResponse getRepoBranch(@Nonnull GetRepoBranchRequest request) {
-        RequestOperation<GetRepoBranchRequest, GetRepoBranchResponse> operation
-              = new GetRepoBranch.Sync(sdkConfiguration, _headers);
+    public GetRepoBranch2Response getRepoBranch2(@Nonnull GetRepoBranch2Request request) {
+        RequestOperation<GetRepoBranch2Request, GetRepoBranch2Response> operation
+              = new GetRepoBranch2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -101,8 +101,8 @@ public class Branch {
      * 
      * @return The call builder
      */
-    public ListRepoBranchesRequestBuilder listRepoBranches() {
-        return new ListRepoBranchesRequestBuilder(sdkConfiguration);
+    public ListRepoBranches2RequestBuilder listRepoBranches2() {
+        return new ListRepoBranches2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -112,9 +112,9 @@ public class Branch {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListRepoBranchesResponse listRepoBranches(@Nonnull ListRepoBranchesRequest request) {
-        RequestOperation<ListRepoBranchesRequest, ListRepoBranchesResponse> operation
-              = new ListRepoBranches.Sync(sdkConfiguration, _headers);
+    public ListRepoBranches2Response listRepoBranches2(@Nonnull ListRepoBranches2Request request) {
+        RequestOperation<ListRepoBranches2Request, ListRepoBranches2Response> operation
+              = new ListRepoBranches2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -123,8 +123,8 @@ public class Branch {
      * 
      * @return The call builder
      */
-    public PatchRepoBranchRequestBuilder patchRepoBranch() {
-        return new PatchRepoBranchRequestBuilder(sdkConfiguration);
+    public PatchRepoBranch2RequestBuilder patchRepoBranch2() {
+        return new PatchRepoBranch2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -134,9 +134,9 @@ public class Branch {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchRepoBranchResponse patchRepoBranch(@Nonnull PatchRepoBranchRequest request) {
-        RequestOperation<PatchRepoBranchRequest, PatchRepoBranchResponse> operation
-              = new PatchRepoBranch.Sync(sdkConfiguration, _headers);
+    public PatchRepoBranch2Response patchRepoBranch2(@Nonnull PatchRepoBranch2Request request) {
+        RequestOperation<PatchRepoBranch2Request, PatchRepoBranch2Response> operation
+              = new PatchRepoBranch2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -145,8 +145,8 @@ public class Branch {
      * 
      * @return The call builder
      */
-    public RemoveRepoBranchRequestBuilder removeRepoBranch() {
-        return new RemoveRepoBranchRequestBuilder(sdkConfiguration);
+    public RemoveRepoBranch2RequestBuilder removeRepoBranch2() {
+        return new RemoveRepoBranch2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -156,9 +156,9 @@ public class Branch {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveRepoBranchResponse removeRepoBranch(@Nonnull RemoveRepoBranchRequest request) {
-        RequestOperation<RemoveRepoBranchRequest, RemoveRepoBranchResponse> operation
-              = new RemoveRepoBranch.Sync(sdkConfiguration, _headers);
+    public RemoveRepoBranch2Response removeRepoBranch2(@Nonnull RemoveRepoBranch2Request request) {
+        RequestOperation<RemoveRepoBranch2Request, RemoveRepoBranch2Response> operation
+              = new RemoveRepoBranch2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -167,8 +167,8 @@ public class Branch {
      * 
      * @return The call builder
      */
-    public UpdateRepoBranchRequestBuilder updateRepoBranch() {
-        return new UpdateRepoBranchRequestBuilder(sdkConfiguration);
+    public UpdateRepoBranch2RequestBuilder updateRepoBranch2() {
+        return new UpdateRepoBranch2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -178,9 +178,9 @@ public class Branch {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateRepoBranchResponse updateRepoBranch(@Nonnull UpdateRepoBranchRequest request) {
-        RequestOperation<UpdateRepoBranchRequest, UpdateRepoBranchResponse> operation
-              = new UpdateRepoBranch.Sync(sdkConfiguration, _headers);
+    public UpdateRepoBranch2Response updateRepoBranch2(@Nonnull UpdateRepoBranch2Request request) {
+        RequestOperation<UpdateRepoBranch2Request, UpdateRepoBranch2Response> operation
+              = new UpdateRepoBranch2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

@@ -4,35 +4,35 @@
 
 ### Available Operations
 
-* [createAdsOrganization](#createadsorganization) - Create an organization
-* [createRepoOrganization](#createrepoorganization) - Create an organization
-* [getAccountingOrganization](#getaccountingorganization) - Retrieve an organization
-* [getAdsOrganization](#getadsorganization) - Retrieve an organization
-* [getRepoOrganization](#getrepoorganization) - Retrieve an organization
-* [listAccountingOrganizations](#listaccountingorganizations) - List all organizations
-* [listAdsOrganizations](#listadsorganizations) - List all organizations
-* [listRepoOrganizations](#listrepoorganizations) - List all organizations
-* [patchAdsOrganization](#patchadsorganization) - Update an organization
-* [patchRepoOrganization](#patchrepoorganization) - Update an organization
-* [removeAdsOrganization](#removeadsorganization) - Remove an organization
-* [removeRepoOrganization](#removerepoorganization) - Remove an organization
-* [updateAdsOrganization](#updateadsorganization) - Update an organization
-* [updateRepoOrganization](#updaterepoorganization) - Update an organization
+* [createAdsOrganization2](#createadsorganization2) - Create an organization
+* [createRepoOrganization2](#createrepoorganization2) - Create an organization
+* [getAccountingOrganization2](#getaccountingorganization2) - Retrieve an organization
+* [getAdsOrganization2](#getadsorganization2) - Retrieve an organization
+* [getRepoOrganization2](#getrepoorganization2) - Retrieve an organization
+* [listAccountingOrganizations2](#listaccountingorganizations2) - List all organizations
+* [listAdsOrganizations2](#listadsorganizations2) - List all organizations
+* [listRepoOrganizations2](#listrepoorganizations2) - List all organizations
+* [patchAdsOrganization2](#patchadsorganization2) - Update an organization
+* [patchRepoOrganization2](#patchrepoorganization2) - Update an organization
+* [removeAdsOrganization2](#removeadsorganization2) - Remove an organization
+* [removeRepoOrganization2](#removerepoorganization2) - Remove an organization
+* [updateAdsOrganization2](#updateadsorganization2) - Update an organization
+* [updateRepoOrganization2](#updaterepoorganization2) - Update an organization
 
-## createAdsOrganization
+## createAdsOrganization2
 
 Create an organization
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createAdsOrganization" method="post" path="/ads/{connection_id}/organization" -->
+<!-- UsageSnippet language="java" operationID="createAdsOrganization2" method="post" path="/ads/{connection_id}/organization" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.CreateAdsOrganizationRequest;
-import to.unified.unified_java_sdk.models.operations.CreateAdsOrganizationResponse;
+import to.unified.unified_java_sdk.models.operations.CreateAdsOrganization2Request;
+import to.unified.unified_java_sdk.models.operations.CreateAdsOrganization2Response;
 import to.unified.unified_java_sdk.models.shared.AdsOrganization;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -46,13 +46,13 @@ public class Application {
                     .build())
             .build();
 
-        CreateAdsOrganizationRequest req = CreateAdsOrganizationRequest.builder()
+        CreateAdsOrganization2Request req = CreateAdsOrganization2Request.builder()
                 .adsOrganization(AdsOrganization.builder()
                     .build())
                 .connectionId("<id>")
                 .build();
 
-        CreateAdsOrganizationResponse res = sdk.organization().createAdsOrganization()
+        CreateAdsOrganization2Response res = sdk.organization().createAdsOrganization2()
                 .request(req)
                 .call();
 
@@ -65,13 +65,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
-| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
-| `request`                                                                               | [CreateAdsOrganizationRequest](../../models/operations/CreateAdsOrganizationRequest.md) | :heavy_check_mark:                                                                      | The request object to use for the request.                                              |
+| Parameter                                                                                 | Type                                                                                      | Required                                                                                  | Description                                                                               |
+| ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
+| `request`                                                                                 | [CreateAdsOrganization2Request](../../models/operations/CreateAdsOrganization2Request.md) | :heavy_check_mark:                                                                        | The request object to use for the request.                                                |
 
 ### Response
 
-**[CreateAdsOrganizationResponse](../../models/operations/CreateAdsOrganizationResponse.md)**
+**[CreateAdsOrganization2Response](../../models/operations/CreateAdsOrganization2Response.md)**
 
 ### Errors
 
@@ -79,20 +79,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## createRepoOrganization
+## createRepoOrganization2
 
 Create an organization
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createRepoOrganization" method="post" path="/repo/{connection_id}/organization" -->
+<!-- UsageSnippet language="java" operationID="createRepoOrganization2" method="post" path="/repo/{connection_id}/organization" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.CreateRepoOrganizationRequest;
-import to.unified.unified_java_sdk.models.operations.CreateRepoOrganizationResponse;
+import to.unified.unified_java_sdk.models.operations.CreateRepoOrganization2Request;
+import to.unified.unified_java_sdk.models.operations.CreateRepoOrganization2Response;
 import to.unified.unified_java_sdk.models.shared.RepoOrganization;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -106,13 +106,13 @@ public class Application {
                     .build())
             .build();
 
-        CreateRepoOrganizationRequest req = CreateRepoOrganizationRequest.builder()
+        CreateRepoOrganization2Request req = CreateRepoOrganization2Request.builder()
                 .repoOrganization(RepoOrganization.builder()
                     .build())
                 .connectionId("<id>")
                 .build();
 
-        CreateRepoOrganizationResponse res = sdk.organization().createRepoOrganization()
+        CreateRepoOrganization2Response res = sdk.organization().createRepoOrganization2()
                 .request(req)
                 .call();
 
@@ -125,13 +125,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                 | Type                                                                                      | Required                                                                                  | Description                                                                               |
-| ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
-| `request`                                                                                 | [CreateRepoOrganizationRequest](../../models/operations/CreateRepoOrganizationRequest.md) | :heavy_check_mark:                                                                        | The request object to use for the request.                                                |
+| Parameter                                                                                   | Type                                                                                        | Required                                                                                    | Description                                                                                 |
+| ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
+| `request`                                                                                   | [CreateRepoOrganization2Request](../../models/operations/CreateRepoOrganization2Request.md) | :heavy_check_mark:                                                                          | The request object to use for the request.                                                  |
 
 ### Response
 
-**[CreateRepoOrganizationResponse](../../models/operations/CreateRepoOrganizationResponse.md)**
+**[CreateRepoOrganization2Response](../../models/operations/CreateRepoOrganization2Response.md)**
 
 ### Errors
 
@@ -139,20 +139,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## getAccountingOrganization
+## getAccountingOrganization2
 
 Retrieve an organization
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="getAccountingOrganization" method="get" path="/accounting/{connection_id}/organization/{id}" -->
+<!-- UsageSnippet language="java" operationID="getAccountingOrganization2" method="get" path="/accounting/{connection_id}/organization/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.GetAccountingOrganizationRequest;
-import to.unified.unified_java_sdk.models.operations.GetAccountingOrganizationResponse;
+import to.unified.unified_java_sdk.models.operations.GetAccountingOrganization2Request;
+import to.unified.unified_java_sdk.models.operations.GetAccountingOrganization2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -165,12 +165,12 @@ public class Application {
                     .build())
             .build();
 
-        GetAccountingOrganizationRequest req = GetAccountingOrganizationRequest.builder()
+        GetAccountingOrganization2Request req = GetAccountingOrganization2Request.builder()
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        GetAccountingOrganizationResponse res = sdk.organization().getAccountingOrganization()
+        GetAccountingOrganization2Response res = sdk.organization().getAccountingOrganization2()
                 .request(req)
                 .call();
 
@@ -183,13 +183,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                       | Type                                                                                            | Required                                                                                        | Description                                                                                     |
-| ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
-| `request`                                                                                       | [GetAccountingOrganizationRequest](../../models/operations/GetAccountingOrganizationRequest.md) | :heavy_check_mark:                                                                              | The request object to use for the request.                                                      |
+| Parameter                                                                                         | Type                                                                                              | Required                                                                                          | Description                                                                                       |
+| ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
+| `request`                                                                                         | [GetAccountingOrganization2Request](../../models/operations/GetAccountingOrganization2Request.md) | :heavy_check_mark:                                                                                | The request object to use for the request.                                                        |
 
 ### Response
 
-**[GetAccountingOrganizationResponse](../../models/operations/GetAccountingOrganizationResponse.md)**
+**[GetAccountingOrganization2Response](../../models/operations/GetAccountingOrganization2Response.md)**
 
 ### Errors
 
@@ -197,20 +197,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## getAdsOrganization
+## getAdsOrganization2
 
 Retrieve an organization
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="getAdsOrganization" method="get" path="/ads/{connection_id}/organization/{id}" -->
+<!-- UsageSnippet language="java" operationID="getAdsOrganization2" method="get" path="/ads/{connection_id}/organization/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.GetAdsOrganizationRequest;
-import to.unified.unified_java_sdk.models.operations.GetAdsOrganizationResponse;
+import to.unified.unified_java_sdk.models.operations.GetAdsOrganization2Request;
+import to.unified.unified_java_sdk.models.operations.GetAdsOrganization2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -223,12 +223,12 @@ public class Application {
                     .build())
             .build();
 
-        GetAdsOrganizationRequest req = GetAdsOrganizationRequest.builder()
+        GetAdsOrganization2Request req = GetAdsOrganization2Request.builder()
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        GetAdsOrganizationResponse res = sdk.organization().getAdsOrganization()
+        GetAdsOrganization2Response res = sdk.organization().getAdsOrganization2()
                 .request(req)
                 .call();
 
@@ -241,13 +241,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
-| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
-| `request`                                                                         | [GetAdsOrganizationRequest](../../models/operations/GetAdsOrganizationRequest.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
+| Parameter                                                                           | Type                                                                                | Required                                                                            | Description                                                                         |
+| ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| `request`                                                                           | [GetAdsOrganization2Request](../../models/operations/GetAdsOrganization2Request.md) | :heavy_check_mark:                                                                  | The request object to use for the request.                                          |
 
 ### Response
 
-**[GetAdsOrganizationResponse](../../models/operations/GetAdsOrganizationResponse.md)**
+**[GetAdsOrganization2Response](../../models/operations/GetAdsOrganization2Response.md)**
 
 ### Errors
 
@@ -255,20 +255,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## getRepoOrganization
+## getRepoOrganization2
 
 Retrieve an organization
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="getRepoOrganization" method="get" path="/repo/{connection_id}/organization/{id}" -->
+<!-- UsageSnippet language="java" operationID="getRepoOrganization2" method="get" path="/repo/{connection_id}/organization/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.GetRepoOrganizationRequest;
-import to.unified.unified_java_sdk.models.operations.GetRepoOrganizationResponse;
+import to.unified.unified_java_sdk.models.operations.GetRepoOrganization2Request;
+import to.unified.unified_java_sdk.models.operations.GetRepoOrganization2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -281,12 +281,12 @@ public class Application {
                     .build())
             .build();
 
-        GetRepoOrganizationRequest req = GetRepoOrganizationRequest.builder()
+        GetRepoOrganization2Request req = GetRepoOrganization2Request.builder()
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        GetRepoOrganizationResponse res = sdk.organization().getRepoOrganization()
+        GetRepoOrganization2Response res = sdk.organization().getRepoOrganization2()
                 .request(req)
                 .call();
 
@@ -299,13 +299,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                           | Type                                                                                | Required                                                                            | Description                                                                         |
-| ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
-| `request`                                                                           | [GetRepoOrganizationRequest](../../models/operations/GetRepoOrganizationRequest.md) | :heavy_check_mark:                                                                  | The request object to use for the request.                                          |
+| Parameter                                                                             | Type                                                                                  | Required                                                                              | Description                                                                           |
+| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| `request`                                                                             | [GetRepoOrganization2Request](../../models/operations/GetRepoOrganization2Request.md) | :heavy_check_mark:                                                                    | The request object to use for the request.                                            |
 
 ### Response
 
-**[GetRepoOrganizationResponse](../../models/operations/GetRepoOrganizationResponse.md)**
+**[GetRepoOrganization2Response](../../models/operations/GetRepoOrganization2Response.md)**
 
 ### Errors
 
@@ -313,20 +313,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## listAccountingOrganizations
+## listAccountingOrganizations2
 
 List all organizations
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="listAccountingOrganizations" method="get" path="/accounting/{connection_id}/organization" -->
+<!-- UsageSnippet language="java" operationID="listAccountingOrganizations2" method="get" path="/accounting/{connection_id}/organization" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.ListAccountingOrganizationsRequest;
-import to.unified.unified_java_sdk.models.operations.ListAccountingOrganizationsResponse;
+import to.unified.unified_java_sdk.models.operations.ListAccountingOrganizations2Request;
+import to.unified.unified_java_sdk.models.operations.ListAccountingOrganizations2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -339,11 +339,11 @@ public class Application {
                     .build())
             .build();
 
-        ListAccountingOrganizationsRequest req = ListAccountingOrganizationsRequest.builder()
+        ListAccountingOrganizations2Request req = ListAccountingOrganizations2Request.builder()
                 .connectionId("<id>")
                 .build();
 
-        ListAccountingOrganizationsResponse res = sdk.organization().listAccountingOrganizations()
+        ListAccountingOrganizations2Response res = sdk.organization().listAccountingOrganizations2()
                 .request(req)
                 .call();
 
@@ -356,13 +356,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                           | Type                                                                                                | Required                                                                                            | Description                                                                                         |
-| --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
-| `request`                                                                                           | [ListAccountingOrganizationsRequest](../../models/operations/ListAccountingOrganizationsRequest.md) | :heavy_check_mark:                                                                                  | The request object to use for the request.                                                          |
+| Parameter                                                                                             | Type                                                                                                  | Required                                                                                              | Description                                                                                           |
+| ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
+| `request`                                                                                             | [ListAccountingOrganizations2Request](../../models/operations/ListAccountingOrganizations2Request.md) | :heavy_check_mark:                                                                                    | The request object to use for the request.                                                            |
 
 ### Response
 
-**[ListAccountingOrganizationsResponse](../../models/operations/ListAccountingOrganizationsResponse.md)**
+**[ListAccountingOrganizations2Response](../../models/operations/ListAccountingOrganizations2Response.md)**
 
 ### Errors
 
@@ -370,20 +370,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## listAdsOrganizations
+## listAdsOrganizations2
 
 List all organizations
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="listAdsOrganizations" method="get" path="/ads/{connection_id}/organization" -->
+<!-- UsageSnippet language="java" operationID="listAdsOrganizations2" method="get" path="/ads/{connection_id}/organization" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.ListAdsOrganizationsRequest;
-import to.unified.unified_java_sdk.models.operations.ListAdsOrganizationsResponse;
+import to.unified.unified_java_sdk.models.operations.ListAdsOrganizations2Request;
+import to.unified.unified_java_sdk.models.operations.ListAdsOrganizations2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -396,11 +396,11 @@ public class Application {
                     .build())
             .build();
 
-        ListAdsOrganizationsRequest req = ListAdsOrganizationsRequest.builder()
+        ListAdsOrganizations2Request req = ListAdsOrganizations2Request.builder()
                 .connectionId("<id>")
                 .build();
 
-        ListAdsOrganizationsResponse res = sdk.organization().listAdsOrganizations()
+        ListAdsOrganizations2Response res = sdk.organization().listAdsOrganizations2()
                 .request(req)
                 .call();
 
@@ -413,13 +413,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                             | Type                                                                                  | Required                                                                              | Description                                                                           |
-| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
-| `request`                                                                             | [ListAdsOrganizationsRequest](../../models/operations/ListAdsOrganizationsRequest.md) | :heavy_check_mark:                                                                    | The request object to use for the request.                                            |
+| Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
+| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| `request`                                                                               | [ListAdsOrganizations2Request](../../models/operations/ListAdsOrganizations2Request.md) | :heavy_check_mark:                                                                      | The request object to use for the request.                                              |
 
 ### Response
 
-**[ListAdsOrganizationsResponse](../../models/operations/ListAdsOrganizationsResponse.md)**
+**[ListAdsOrganizations2Response](../../models/operations/ListAdsOrganizations2Response.md)**
 
 ### Errors
 
@@ -427,20 +427,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## listRepoOrganizations
+## listRepoOrganizations2
 
 List all organizations
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="listRepoOrganizations" method="get" path="/repo/{connection_id}/organization" -->
+<!-- UsageSnippet language="java" operationID="listRepoOrganizations2" method="get" path="/repo/{connection_id}/organization" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.ListRepoOrganizationsRequest;
-import to.unified.unified_java_sdk.models.operations.ListRepoOrganizationsResponse;
+import to.unified.unified_java_sdk.models.operations.ListRepoOrganizations2Request;
+import to.unified.unified_java_sdk.models.operations.ListRepoOrganizations2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -453,11 +453,11 @@ public class Application {
                     .build())
             .build();
 
-        ListRepoOrganizationsRequest req = ListRepoOrganizationsRequest.builder()
+        ListRepoOrganizations2Request req = ListRepoOrganizations2Request.builder()
                 .connectionId("<id>")
                 .build();
 
-        ListRepoOrganizationsResponse res = sdk.organization().listRepoOrganizations()
+        ListRepoOrganizations2Response res = sdk.organization().listRepoOrganizations2()
                 .request(req)
                 .call();
 
@@ -470,247 +470,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
-| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
-| `request`                                                                               | [ListRepoOrganizationsRequest](../../models/operations/ListRepoOrganizationsRequest.md) | :heavy_check_mark:                                                                      | The request object to use for the request.                                              |
-
-### Response
-
-**[ListRepoOrganizationsResponse](../../models/operations/ListRepoOrganizationsResponse.md)**
-
-### Errors
-
-| Error Type             | Status Code            | Content Type           |
-| ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
-
-## patchAdsOrganization
-
-Update an organization
-
-### Example Usage
-
-<!-- UsageSnippet language="java" operationID="patchAdsOrganization" method="patch" path="/ads/{connection_id}/organization/{id}" -->
-```java
-package hello.world;
-
-import java.lang.Exception;
-import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.PatchAdsOrganizationRequest;
-import to.unified.unified_java_sdk.models.operations.PatchAdsOrganizationResponse;
-import to.unified.unified_java_sdk.models.shared.AdsOrganization;
-import to.unified.unified_java_sdk.models.shared.Security;
-
-public class Application {
-
-    public static void main(String[] args) throws Exception {
-
-        UnifiedTo sdk = UnifiedTo.builder()
-                .security(Security.builder()
-                    .jwt(System.getenv().getOrDefault("JWT", ""))
-                    .build())
-            .build();
-
-        PatchAdsOrganizationRequest req = PatchAdsOrganizationRequest.builder()
-                .adsOrganization(AdsOrganization.builder()
-                    .build())
-                .connectionId("<id>")
-                .id("<id>")
-                .build();
-
-        PatchAdsOrganizationResponse res = sdk.organization().patchAdsOrganization()
-                .request(req)
-                .call();
-
-        if (res.adsOrganization().isPresent()) {
-            System.out.println(res.adsOrganization().get());
-        }
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                             | Type                                                                                  | Required                                                                              | Description                                                                           |
-| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
-| `request`                                                                             | [PatchAdsOrganizationRequest](../../models/operations/PatchAdsOrganizationRequest.md) | :heavy_check_mark:                                                                    | The request object to use for the request.                                            |
-
-### Response
-
-**[PatchAdsOrganizationResponse](../../models/operations/PatchAdsOrganizationResponse.md)**
-
-### Errors
-
-| Error Type             | Status Code            | Content Type           |
-| ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
-
-## patchRepoOrganization
-
-Update an organization
-
-### Example Usage
-
-<!-- UsageSnippet language="java" operationID="patchRepoOrganization" method="patch" path="/repo/{connection_id}/organization/{id}" -->
-```java
-package hello.world;
-
-import java.lang.Exception;
-import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.PatchRepoOrganizationRequest;
-import to.unified.unified_java_sdk.models.operations.PatchRepoOrganizationResponse;
-import to.unified.unified_java_sdk.models.shared.RepoOrganization;
-import to.unified.unified_java_sdk.models.shared.Security;
-
-public class Application {
-
-    public static void main(String[] args) throws Exception {
-
-        UnifiedTo sdk = UnifiedTo.builder()
-                .security(Security.builder()
-                    .jwt(System.getenv().getOrDefault("JWT", ""))
-                    .build())
-            .build();
-
-        PatchRepoOrganizationRequest req = PatchRepoOrganizationRequest.builder()
-                .repoOrganization(RepoOrganization.builder()
-                    .build())
-                .connectionId("<id>")
-                .id("<id>")
-                .build();
-
-        PatchRepoOrganizationResponse res = sdk.organization().patchRepoOrganization()
-                .request(req)
-                .call();
-
-        if (res.repoOrganization().isPresent()) {
-            System.out.println(res.repoOrganization().get());
-        }
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
-| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
-| `request`                                                                               | [PatchRepoOrganizationRequest](../../models/operations/PatchRepoOrganizationRequest.md) | :heavy_check_mark:                                                                      | The request object to use for the request.                                              |
-
-### Response
-
-**[PatchRepoOrganizationResponse](../../models/operations/PatchRepoOrganizationResponse.md)**
-
-### Errors
-
-| Error Type             | Status Code            | Content Type           |
-| ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
-
-## removeAdsOrganization
-
-Remove an organization
-
-### Example Usage
-
-<!-- UsageSnippet language="java" operationID="removeAdsOrganization" method="delete" path="/ads/{connection_id}/organization/{id}" -->
-```java
-package hello.world;
-
-import java.lang.Exception;
-import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.RemoveAdsOrganizationRequest;
-import to.unified.unified_java_sdk.models.operations.RemoveAdsOrganizationResponse;
-import to.unified.unified_java_sdk.models.shared.Security;
-
-public class Application {
-
-    public static void main(String[] args) throws Exception {
-
-        UnifiedTo sdk = UnifiedTo.builder()
-                .security(Security.builder()
-                    .jwt(System.getenv().getOrDefault("JWT", ""))
-                    .build())
-            .build();
-
-        RemoveAdsOrganizationRequest req = RemoveAdsOrganizationRequest.builder()
-                .connectionId("<id>")
-                .id("<id>")
-                .build();
-
-        RemoveAdsOrganizationResponse res = sdk.organization().removeAdsOrganization()
-                .request(req)
-                .call();
-
-        // handle response
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
-| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
-| `request`                                                                               | [RemoveAdsOrganizationRequest](../../models/operations/RemoveAdsOrganizationRequest.md) | :heavy_check_mark:                                                                      | The request object to use for the request.                                              |
-
-### Response
-
-**[RemoveAdsOrganizationResponse](../../models/operations/RemoveAdsOrganizationResponse.md)**
-
-### Errors
-
-| Error Type             | Status Code            | Content Type           |
-| ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
-
-## removeRepoOrganization
-
-Remove an organization
-
-### Example Usage
-
-<!-- UsageSnippet language="java" operationID="removeRepoOrganization" method="delete" path="/repo/{connection_id}/organization/{id}" -->
-```java
-package hello.world;
-
-import java.lang.Exception;
-import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.RemoveRepoOrganizationRequest;
-import to.unified.unified_java_sdk.models.operations.RemoveRepoOrganizationResponse;
-import to.unified.unified_java_sdk.models.shared.Security;
-
-public class Application {
-
-    public static void main(String[] args) throws Exception {
-
-        UnifiedTo sdk = UnifiedTo.builder()
-                .security(Security.builder()
-                    .jwt(System.getenv().getOrDefault("JWT", ""))
-                    .build())
-            .build();
-
-        RemoveRepoOrganizationRequest req = RemoveRepoOrganizationRequest.builder()
-                .connectionId("<id>")
-                .id("<id>")
-                .build();
-
-        RemoveRepoOrganizationResponse res = sdk.organization().removeRepoOrganization()
-                .request(req)
-                .call();
-
-        // handle response
-    }
-}
-```
-
-### Parameters
-
 | Parameter                                                                                 | Type                                                                                      | Required                                                                                  | Description                                                                               |
 | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
-| `request`                                                                                 | [RemoveRepoOrganizationRequest](../../models/operations/RemoveRepoOrganizationRequest.md) | :heavy_check_mark:                                                                        | The request object to use for the request.                                                |
+| `request`                                                                                 | [ListRepoOrganizations2Request](../../models/operations/ListRepoOrganizations2Request.md) | :heavy_check_mark:                                                                        | The request object to use for the request.                                                |
 
 ### Response
 
-**[RemoveRepoOrganizationResponse](../../models/operations/RemoveRepoOrganizationResponse.md)**
+**[ListRepoOrganizations2Response](../../models/operations/ListRepoOrganizations2Response.md)**
 
 ### Errors
 
@@ -718,20 +484,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## updateAdsOrganization
+## patchAdsOrganization2
 
 Update an organization
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateAdsOrganization" method="put" path="/ads/{connection_id}/organization/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchAdsOrganization2" method="patch" path="/ads/{connection_id}/organization/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.UpdateAdsOrganizationRequest;
-import to.unified.unified_java_sdk.models.operations.UpdateAdsOrganizationResponse;
+import to.unified.unified_java_sdk.models.operations.PatchAdsOrganization2Request;
+import to.unified.unified_java_sdk.models.operations.PatchAdsOrganization2Response;
 import to.unified.unified_java_sdk.models.shared.AdsOrganization;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -745,14 +511,14 @@ public class Application {
                     .build())
             .build();
 
-        UpdateAdsOrganizationRequest req = UpdateAdsOrganizationRequest.builder()
+        PatchAdsOrganization2Request req = PatchAdsOrganization2Request.builder()
                 .adsOrganization(AdsOrganization.builder()
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        UpdateAdsOrganizationResponse res = sdk.organization().updateAdsOrganization()
+        PatchAdsOrganization2Response res = sdk.organization().patchAdsOrganization2()
                 .request(req)
                 .call();
 
@@ -767,11 +533,11 @@ public class Application {
 
 | Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
 | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
-| `request`                                                                               | [UpdateAdsOrganizationRequest](../../models/operations/UpdateAdsOrganizationRequest.md) | :heavy_check_mark:                                                                      | The request object to use for the request.                                              |
+| `request`                                                                               | [PatchAdsOrganization2Request](../../models/operations/PatchAdsOrganization2Request.md) | :heavy_check_mark:                                                                      | The request object to use for the request.                                              |
 
 ### Response
 
-**[UpdateAdsOrganizationResponse](../../models/operations/UpdateAdsOrganizationResponse.md)**
+**[PatchAdsOrganization2Response](../../models/operations/PatchAdsOrganization2Response.md)**
 
 ### Errors
 
@@ -779,20 +545,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## updateRepoOrganization
+## patchRepoOrganization2
 
 Update an organization
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateRepoOrganization" method="put" path="/repo/{connection_id}/organization/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchRepoOrganization2" method="patch" path="/repo/{connection_id}/organization/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.UpdateRepoOrganizationRequest;
-import to.unified.unified_java_sdk.models.operations.UpdateRepoOrganizationResponse;
+import to.unified.unified_java_sdk.models.operations.PatchRepoOrganization2Request;
+import to.unified.unified_java_sdk.models.operations.PatchRepoOrganization2Response;
 import to.unified.unified_java_sdk.models.shared.RepoOrganization;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -806,14 +572,14 @@ public class Application {
                     .build())
             .build();
 
-        UpdateRepoOrganizationRequest req = UpdateRepoOrganizationRequest.builder()
+        PatchRepoOrganization2Request req = PatchRepoOrganization2Request.builder()
                 .repoOrganization(RepoOrganization.builder()
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        UpdateRepoOrganizationResponse res = sdk.organization().updateRepoOrganization()
+        PatchRepoOrganization2Response res = sdk.organization().patchRepoOrganization2()
                 .request(req)
                 .call();
 
@@ -828,11 +594,245 @@ public class Application {
 
 | Parameter                                                                                 | Type                                                                                      | Required                                                                                  | Description                                                                               |
 | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
-| `request`                                                                                 | [UpdateRepoOrganizationRequest](../../models/operations/UpdateRepoOrganizationRequest.md) | :heavy_check_mark:                                                                        | The request object to use for the request.                                                |
+| `request`                                                                                 | [PatchRepoOrganization2Request](../../models/operations/PatchRepoOrganization2Request.md) | :heavy_check_mark:                                                                        | The request object to use for the request.                                                |
 
 ### Response
 
-**[UpdateRepoOrganizationResponse](../../models/operations/UpdateRepoOrganizationResponse.md)**
+**[PatchRepoOrganization2Response](../../models/operations/PatchRepoOrganization2Response.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## removeAdsOrganization2
+
+Remove an organization
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="removeAdsOrganization2" method="delete" path="/ads/{connection_id}/organization/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.RemoveAdsOrganization2Request;
+import to.unified.unified_java_sdk.models.operations.RemoveAdsOrganization2Response;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        RemoveAdsOrganization2Request req = RemoveAdsOrganization2Request.builder()
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        RemoveAdsOrganization2Response res = sdk.organization().removeAdsOrganization2()
+                .request(req)
+                .call();
+
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                 | Type                                                                                      | Required                                                                                  | Description                                                                               |
+| ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
+| `request`                                                                                 | [RemoveAdsOrganization2Request](../../models/operations/RemoveAdsOrganization2Request.md) | :heavy_check_mark:                                                                        | The request object to use for the request.                                                |
+
+### Response
+
+**[RemoveAdsOrganization2Response](../../models/operations/RemoveAdsOrganization2Response.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## removeRepoOrganization2
+
+Remove an organization
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="removeRepoOrganization2" method="delete" path="/repo/{connection_id}/organization/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.RemoveRepoOrganization2Request;
+import to.unified.unified_java_sdk.models.operations.RemoveRepoOrganization2Response;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        RemoveRepoOrganization2Request req = RemoveRepoOrganization2Request.builder()
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        RemoveRepoOrganization2Response res = sdk.organization().removeRepoOrganization2()
+                .request(req)
+                .call();
+
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                   | Type                                                                                        | Required                                                                                    | Description                                                                                 |
+| ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
+| `request`                                                                                   | [RemoveRepoOrganization2Request](../../models/operations/RemoveRepoOrganization2Request.md) | :heavy_check_mark:                                                                          | The request object to use for the request.                                                  |
+
+### Response
+
+**[RemoveRepoOrganization2Response](../../models/operations/RemoveRepoOrganization2Response.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## updateAdsOrganization2
+
+Update an organization
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="updateAdsOrganization2" method="put" path="/ads/{connection_id}/organization/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.UpdateAdsOrganization2Request;
+import to.unified.unified_java_sdk.models.operations.UpdateAdsOrganization2Response;
+import to.unified.unified_java_sdk.models.shared.AdsOrganization;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        UpdateAdsOrganization2Request req = UpdateAdsOrganization2Request.builder()
+                .adsOrganization(AdsOrganization.builder()
+                    .build())
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        UpdateAdsOrganization2Response res = sdk.organization().updateAdsOrganization2()
+                .request(req)
+                .call();
+
+        if (res.adsOrganization().isPresent()) {
+            System.out.println(res.adsOrganization().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                 | Type                                                                                      | Required                                                                                  | Description                                                                               |
+| ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
+| `request`                                                                                 | [UpdateAdsOrganization2Request](../../models/operations/UpdateAdsOrganization2Request.md) | :heavy_check_mark:                                                                        | The request object to use for the request.                                                |
+
+### Response
+
+**[UpdateAdsOrganization2Response](../../models/operations/UpdateAdsOrganization2Response.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## updateRepoOrganization2
+
+Update an organization
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="updateRepoOrganization2" method="put" path="/repo/{connection_id}/organization/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.UpdateRepoOrganization2Request;
+import to.unified.unified_java_sdk.models.operations.UpdateRepoOrganization2Response;
+import to.unified.unified_java_sdk.models.shared.RepoOrganization;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        UpdateRepoOrganization2Request req = UpdateRepoOrganization2Request.builder()
+                .repoOrganization(RepoOrganization.builder()
+                    .build())
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        UpdateRepoOrganization2Response res = sdk.organization().updateRepoOrganization2()
+                .request(req)
+                .call();
+
+        if (res.repoOrganization().isPresent()) {
+            System.out.println(res.repoOrganization().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                   | Type                                                                                        | Required                                                                                    | Description                                                                                 |
+| ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
+| `request`                                                                                   | [UpdateRepoOrganization2Request](../../models/operations/UpdateRepoOrganization2Request.md) | :heavy_check_mark:                                                                          | The request object to use for the request.                                                  |
+
+### Response
+
+**[UpdateRepoOrganization2Response](../../models/operations/UpdateRepoOrganization2Response.md)**
 
 ### Errors
 

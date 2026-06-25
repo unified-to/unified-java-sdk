@@ -6,30 +6,30 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
-import to.unified.unified_java_sdk.models.operations.CreateMessagingMessageRequest;
-import to.unified.unified_java_sdk.models.operations.CreateMessagingMessageRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.CreateMessagingMessageResponse;
-import to.unified.unified_java_sdk.models.operations.GetMessagingMessageRequest;
-import to.unified.unified_java_sdk.models.operations.GetMessagingMessageRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.GetMessagingMessageResponse;
-import to.unified.unified_java_sdk.models.operations.ListMessagingMessagesRequest;
-import to.unified.unified_java_sdk.models.operations.ListMessagingMessagesRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.ListMessagingMessagesResponse;
-import to.unified.unified_java_sdk.models.operations.PatchMessagingMessageRequest;
-import to.unified.unified_java_sdk.models.operations.PatchMessagingMessageRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.PatchMessagingMessageResponse;
-import to.unified.unified_java_sdk.models.operations.RemoveMessagingMessageRequest;
-import to.unified.unified_java_sdk.models.operations.RemoveMessagingMessageRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.RemoveMessagingMessageResponse;
-import to.unified.unified_java_sdk.models.operations.UpdateMessagingMessageRequest;
-import to.unified.unified_java_sdk.models.operations.UpdateMessagingMessageRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.UpdateMessagingMessageResponse;
-import to.unified.unified_java_sdk.operations.CreateMessagingMessage;
-import to.unified.unified_java_sdk.operations.GetMessagingMessage;
-import to.unified.unified_java_sdk.operations.ListMessagingMessages;
-import to.unified.unified_java_sdk.operations.PatchMessagingMessage;
-import to.unified.unified_java_sdk.operations.RemoveMessagingMessage;
-import to.unified.unified_java_sdk.operations.UpdateMessagingMessage;
+import to.unified.unified_java_sdk.models.operations.CreateMessagingMessage2Request;
+import to.unified.unified_java_sdk.models.operations.CreateMessagingMessage2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.CreateMessagingMessage2Response;
+import to.unified.unified_java_sdk.models.operations.GetMessagingMessage2Request;
+import to.unified.unified_java_sdk.models.operations.GetMessagingMessage2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetMessagingMessage2Response;
+import to.unified.unified_java_sdk.models.operations.ListMessagingMessages2Request;
+import to.unified.unified_java_sdk.models.operations.ListMessagingMessages2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListMessagingMessages2Response;
+import to.unified.unified_java_sdk.models.operations.PatchMessagingMessage2Request;
+import to.unified.unified_java_sdk.models.operations.PatchMessagingMessage2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.PatchMessagingMessage2Response;
+import to.unified.unified_java_sdk.models.operations.RemoveMessagingMessage2Request;
+import to.unified.unified_java_sdk.models.operations.RemoveMessagingMessage2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.RemoveMessagingMessage2Response;
+import to.unified.unified_java_sdk.models.operations.UpdateMessagingMessage2Request;
+import to.unified.unified_java_sdk.models.operations.UpdateMessagingMessage2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.UpdateMessagingMessage2Response;
+import to.unified.unified_java_sdk.operations.CreateMessagingMessage2;
+import to.unified.unified_java_sdk.operations.GetMessagingMessage2;
+import to.unified.unified_java_sdk.operations.ListMessagingMessages2;
+import to.unified.unified_java_sdk.operations.PatchMessagingMessage2;
+import to.unified.unified_java_sdk.operations.RemoveMessagingMessage2;
+import to.unified.unified_java_sdk.operations.UpdateMessagingMessage2;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -57,8 +57,8 @@ public class Message {
      * 
      * @return The call builder
      */
-    public CreateMessagingMessageRequestBuilder createMessagingMessage() {
-        return new CreateMessagingMessageRequestBuilder(sdkConfiguration);
+    public CreateMessagingMessage2RequestBuilder createMessagingMessage2() {
+        return new CreateMessagingMessage2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -68,9 +68,9 @@ public class Message {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateMessagingMessageResponse createMessagingMessage(@Nonnull CreateMessagingMessageRequest request) {
-        RequestOperation<CreateMessagingMessageRequest, CreateMessagingMessageResponse> operation
-              = new CreateMessagingMessage.Sync(sdkConfiguration, _headers);
+    public CreateMessagingMessage2Response createMessagingMessage2(@Nonnull CreateMessagingMessage2Request request) {
+        RequestOperation<CreateMessagingMessage2Request, CreateMessagingMessage2Response> operation
+              = new CreateMessagingMessage2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -79,8 +79,8 @@ public class Message {
      * 
      * @return The call builder
      */
-    public GetMessagingMessageRequestBuilder getMessagingMessage() {
-        return new GetMessagingMessageRequestBuilder(sdkConfiguration);
+    public GetMessagingMessage2RequestBuilder getMessagingMessage2() {
+        return new GetMessagingMessage2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -90,9 +90,9 @@ public class Message {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetMessagingMessageResponse getMessagingMessage(@Nonnull GetMessagingMessageRequest request) {
-        RequestOperation<GetMessagingMessageRequest, GetMessagingMessageResponse> operation
-              = new GetMessagingMessage.Sync(sdkConfiguration, _headers);
+    public GetMessagingMessage2Response getMessagingMessage2(@Nonnull GetMessagingMessage2Request request) {
+        RequestOperation<GetMessagingMessage2Request, GetMessagingMessage2Response> operation
+              = new GetMessagingMessage2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -101,8 +101,8 @@ public class Message {
      * 
      * @return The call builder
      */
-    public ListMessagingMessagesRequestBuilder listMessagingMessages() {
-        return new ListMessagingMessagesRequestBuilder(sdkConfiguration);
+    public ListMessagingMessages2RequestBuilder listMessagingMessages2() {
+        return new ListMessagingMessages2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -112,9 +112,9 @@ public class Message {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListMessagingMessagesResponse listMessagingMessages(@Nonnull ListMessagingMessagesRequest request) {
-        RequestOperation<ListMessagingMessagesRequest, ListMessagingMessagesResponse> operation
-              = new ListMessagingMessages.Sync(sdkConfiguration, _headers);
+    public ListMessagingMessages2Response listMessagingMessages2(@Nonnull ListMessagingMessages2Request request) {
+        RequestOperation<ListMessagingMessages2Request, ListMessagingMessages2Response> operation
+              = new ListMessagingMessages2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -123,8 +123,8 @@ public class Message {
      * 
      * @return The call builder
      */
-    public PatchMessagingMessageRequestBuilder patchMessagingMessage() {
-        return new PatchMessagingMessageRequestBuilder(sdkConfiguration);
+    public PatchMessagingMessage2RequestBuilder patchMessagingMessage2() {
+        return new PatchMessagingMessage2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -134,9 +134,9 @@ public class Message {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchMessagingMessageResponse patchMessagingMessage(@Nonnull PatchMessagingMessageRequest request) {
-        RequestOperation<PatchMessagingMessageRequest, PatchMessagingMessageResponse> operation
-              = new PatchMessagingMessage.Sync(sdkConfiguration, _headers);
+    public PatchMessagingMessage2Response patchMessagingMessage2(@Nonnull PatchMessagingMessage2Request request) {
+        RequestOperation<PatchMessagingMessage2Request, PatchMessagingMessage2Response> operation
+              = new PatchMessagingMessage2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -145,8 +145,8 @@ public class Message {
      * 
      * @return The call builder
      */
-    public RemoveMessagingMessageRequestBuilder removeMessagingMessage() {
-        return new RemoveMessagingMessageRequestBuilder(sdkConfiguration);
+    public RemoveMessagingMessage2RequestBuilder removeMessagingMessage2() {
+        return new RemoveMessagingMessage2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -156,9 +156,9 @@ public class Message {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveMessagingMessageResponse removeMessagingMessage(@Nonnull RemoveMessagingMessageRequest request) {
-        RequestOperation<RemoveMessagingMessageRequest, RemoveMessagingMessageResponse> operation
-              = new RemoveMessagingMessage.Sync(sdkConfiguration, _headers);
+    public RemoveMessagingMessage2Response removeMessagingMessage2(@Nonnull RemoveMessagingMessage2Request request) {
+        RequestOperation<RemoveMessagingMessage2Request, RemoveMessagingMessage2Response> operation
+              = new RemoveMessagingMessage2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -167,8 +167,8 @@ public class Message {
      * 
      * @return The call builder
      */
-    public UpdateMessagingMessageRequestBuilder updateMessagingMessage() {
-        return new UpdateMessagingMessageRequestBuilder(sdkConfiguration);
+    public UpdateMessagingMessage2RequestBuilder updateMessagingMessage2() {
+        return new UpdateMessagingMessage2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -178,9 +178,9 @@ public class Message {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateMessagingMessageResponse updateMessagingMessage(@Nonnull UpdateMessagingMessageRequest request) {
-        RequestOperation<UpdateMessagingMessageRequest, UpdateMessagingMessageResponse> operation
-              = new UpdateMessagingMessage.Sync(sdkConfiguration, _headers);
+    public UpdateMessagingMessage2Response updateMessagingMessage2(@Nonnull UpdateMessagingMessage2Request request) {
+        RequestOperation<UpdateMessagingMessage2Request, UpdateMessagingMessage2Response> operation
+              = new UpdateMessagingMessage2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

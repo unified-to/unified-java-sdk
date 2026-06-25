@@ -6,30 +6,30 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
-import to.unified.unified_java_sdk.models.operations.CreateAccountingExpenseRequest;
-import to.unified.unified_java_sdk.models.operations.CreateAccountingExpenseRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.CreateAccountingExpenseResponse;
-import to.unified.unified_java_sdk.models.operations.GetAccountingExpenseRequest;
-import to.unified.unified_java_sdk.models.operations.GetAccountingExpenseRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.GetAccountingExpenseResponse;
-import to.unified.unified_java_sdk.models.operations.ListAccountingExpensesRequest;
-import to.unified.unified_java_sdk.models.operations.ListAccountingExpensesRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.ListAccountingExpensesResponse;
-import to.unified.unified_java_sdk.models.operations.PatchAccountingExpenseRequest;
-import to.unified.unified_java_sdk.models.operations.PatchAccountingExpenseRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.PatchAccountingExpenseResponse;
-import to.unified.unified_java_sdk.models.operations.RemoveAccountingExpenseRequest;
-import to.unified.unified_java_sdk.models.operations.RemoveAccountingExpenseRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.RemoveAccountingExpenseResponse;
-import to.unified.unified_java_sdk.models.operations.UpdateAccountingExpenseRequest;
-import to.unified.unified_java_sdk.models.operations.UpdateAccountingExpenseRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.UpdateAccountingExpenseResponse;
-import to.unified.unified_java_sdk.operations.CreateAccountingExpense;
-import to.unified.unified_java_sdk.operations.GetAccountingExpense;
-import to.unified.unified_java_sdk.operations.ListAccountingExpenses;
-import to.unified.unified_java_sdk.operations.PatchAccountingExpense;
-import to.unified.unified_java_sdk.operations.RemoveAccountingExpense;
-import to.unified.unified_java_sdk.operations.UpdateAccountingExpense;
+import to.unified.unified_java_sdk.models.operations.CreateAccountingExpense2Request;
+import to.unified.unified_java_sdk.models.operations.CreateAccountingExpense2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.CreateAccountingExpense2Response;
+import to.unified.unified_java_sdk.models.operations.GetAccountingExpense2Request;
+import to.unified.unified_java_sdk.models.operations.GetAccountingExpense2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetAccountingExpense2Response;
+import to.unified.unified_java_sdk.models.operations.ListAccountingExpenses2Request;
+import to.unified.unified_java_sdk.models.operations.ListAccountingExpenses2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListAccountingExpenses2Response;
+import to.unified.unified_java_sdk.models.operations.PatchAccountingExpense2Request;
+import to.unified.unified_java_sdk.models.operations.PatchAccountingExpense2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.PatchAccountingExpense2Response;
+import to.unified.unified_java_sdk.models.operations.RemoveAccountingExpense2Request;
+import to.unified.unified_java_sdk.models.operations.RemoveAccountingExpense2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.RemoveAccountingExpense2Response;
+import to.unified.unified_java_sdk.models.operations.UpdateAccountingExpense2Request;
+import to.unified.unified_java_sdk.models.operations.UpdateAccountingExpense2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.UpdateAccountingExpense2Response;
+import to.unified.unified_java_sdk.operations.CreateAccountingExpense2;
+import to.unified.unified_java_sdk.operations.GetAccountingExpense2;
+import to.unified.unified_java_sdk.operations.ListAccountingExpenses2;
+import to.unified.unified_java_sdk.operations.PatchAccountingExpense2;
+import to.unified.unified_java_sdk.operations.RemoveAccountingExpense2;
+import to.unified.unified_java_sdk.operations.UpdateAccountingExpense2;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -57,8 +57,8 @@ public class Expense {
      * 
      * @return The call builder
      */
-    public CreateAccountingExpenseRequestBuilder createAccountingExpense() {
-        return new CreateAccountingExpenseRequestBuilder(sdkConfiguration);
+    public CreateAccountingExpense2RequestBuilder createAccountingExpense2() {
+        return new CreateAccountingExpense2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -68,9 +68,9 @@ public class Expense {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateAccountingExpenseResponse createAccountingExpense(@Nonnull CreateAccountingExpenseRequest request) {
-        RequestOperation<CreateAccountingExpenseRequest, CreateAccountingExpenseResponse> operation
-              = new CreateAccountingExpense.Sync(sdkConfiguration, _headers);
+    public CreateAccountingExpense2Response createAccountingExpense2(@Nonnull CreateAccountingExpense2Request request) {
+        RequestOperation<CreateAccountingExpense2Request, CreateAccountingExpense2Response> operation
+              = new CreateAccountingExpense2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -79,8 +79,8 @@ public class Expense {
      * 
      * @return The call builder
      */
-    public GetAccountingExpenseRequestBuilder getAccountingExpense() {
-        return new GetAccountingExpenseRequestBuilder(sdkConfiguration);
+    public GetAccountingExpense2RequestBuilder getAccountingExpense2() {
+        return new GetAccountingExpense2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -90,9 +90,9 @@ public class Expense {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetAccountingExpenseResponse getAccountingExpense(@Nonnull GetAccountingExpenseRequest request) {
-        RequestOperation<GetAccountingExpenseRequest, GetAccountingExpenseResponse> operation
-              = new GetAccountingExpense.Sync(sdkConfiguration, _headers);
+    public GetAccountingExpense2Response getAccountingExpense2(@Nonnull GetAccountingExpense2Request request) {
+        RequestOperation<GetAccountingExpense2Request, GetAccountingExpense2Response> operation
+              = new GetAccountingExpense2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -101,8 +101,8 @@ public class Expense {
      * 
      * @return The call builder
      */
-    public ListAccountingExpensesRequestBuilder listAccountingExpenses() {
-        return new ListAccountingExpensesRequestBuilder(sdkConfiguration);
+    public ListAccountingExpenses2RequestBuilder listAccountingExpenses2() {
+        return new ListAccountingExpenses2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -112,9 +112,9 @@ public class Expense {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListAccountingExpensesResponse listAccountingExpenses(@Nonnull ListAccountingExpensesRequest request) {
-        RequestOperation<ListAccountingExpensesRequest, ListAccountingExpensesResponse> operation
-              = new ListAccountingExpenses.Sync(sdkConfiguration, _headers);
+    public ListAccountingExpenses2Response listAccountingExpenses2(@Nonnull ListAccountingExpenses2Request request) {
+        RequestOperation<ListAccountingExpenses2Request, ListAccountingExpenses2Response> operation
+              = new ListAccountingExpenses2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -123,8 +123,8 @@ public class Expense {
      * 
      * @return The call builder
      */
-    public PatchAccountingExpenseRequestBuilder patchAccountingExpense() {
-        return new PatchAccountingExpenseRequestBuilder(sdkConfiguration);
+    public PatchAccountingExpense2RequestBuilder patchAccountingExpense2() {
+        return new PatchAccountingExpense2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -134,9 +134,9 @@ public class Expense {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchAccountingExpenseResponse patchAccountingExpense(@Nonnull PatchAccountingExpenseRequest request) {
-        RequestOperation<PatchAccountingExpenseRequest, PatchAccountingExpenseResponse> operation
-              = new PatchAccountingExpense.Sync(sdkConfiguration, _headers);
+    public PatchAccountingExpense2Response patchAccountingExpense2(@Nonnull PatchAccountingExpense2Request request) {
+        RequestOperation<PatchAccountingExpense2Request, PatchAccountingExpense2Response> operation
+              = new PatchAccountingExpense2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -145,8 +145,8 @@ public class Expense {
      * 
      * @return The call builder
      */
-    public RemoveAccountingExpenseRequestBuilder removeAccountingExpense() {
-        return new RemoveAccountingExpenseRequestBuilder(sdkConfiguration);
+    public RemoveAccountingExpense2RequestBuilder removeAccountingExpense2() {
+        return new RemoveAccountingExpense2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -156,9 +156,9 @@ public class Expense {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveAccountingExpenseResponse removeAccountingExpense(@Nonnull RemoveAccountingExpenseRequest request) {
-        RequestOperation<RemoveAccountingExpenseRequest, RemoveAccountingExpenseResponse> operation
-              = new RemoveAccountingExpense.Sync(sdkConfiguration, _headers);
+    public RemoveAccountingExpense2Response removeAccountingExpense2(@Nonnull RemoveAccountingExpense2Request request) {
+        RequestOperation<RemoveAccountingExpense2Request, RemoveAccountingExpense2Response> operation
+              = new RemoveAccountingExpense2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -167,8 +167,8 @@ public class Expense {
      * 
      * @return The call builder
      */
-    public UpdateAccountingExpenseRequestBuilder updateAccountingExpense() {
-        return new UpdateAccountingExpenseRequestBuilder(sdkConfiguration);
+    public UpdateAccountingExpense2RequestBuilder updateAccountingExpense2() {
+        return new UpdateAccountingExpense2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -178,9 +178,9 @@ public class Expense {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateAccountingExpenseResponse updateAccountingExpense(@Nonnull UpdateAccountingExpenseRequest request) {
-        RequestOperation<UpdateAccountingExpenseRequest, UpdateAccountingExpenseResponse> operation
-              = new UpdateAccountingExpense.Sync(sdkConfiguration, _headers);
+    public UpdateAccountingExpense2Response updateAccountingExpense2(@Nonnull UpdateAccountingExpense2Request request) {
+        RequestOperation<UpdateAccountingExpense2Request, UpdateAccountingExpense2Response> operation
+              = new UpdateAccountingExpense2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

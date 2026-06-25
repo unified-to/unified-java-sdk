@@ -6,14 +6,14 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
-import to.unified.unified_java_sdk.models.operations.GetPaymentRefundRequest;
-import to.unified.unified_java_sdk.models.operations.GetPaymentRefundRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.GetPaymentRefundResponse;
-import to.unified.unified_java_sdk.models.operations.ListPaymentRefundsRequest;
-import to.unified.unified_java_sdk.models.operations.ListPaymentRefundsRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.ListPaymentRefundsResponse;
-import to.unified.unified_java_sdk.operations.GetPaymentRefund;
-import to.unified.unified_java_sdk.operations.ListPaymentRefunds;
+import to.unified.unified_java_sdk.models.operations.GetPaymentRefund2Request;
+import to.unified.unified_java_sdk.models.operations.GetPaymentRefund2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetPaymentRefund2Response;
+import to.unified.unified_java_sdk.models.operations.ListPaymentRefunds2Request;
+import to.unified.unified_java_sdk.models.operations.ListPaymentRefunds2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListPaymentRefunds2Response;
+import to.unified.unified_java_sdk.operations.GetPaymentRefund2;
+import to.unified.unified_java_sdk.operations.ListPaymentRefunds2;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -41,8 +41,8 @@ public class Refund {
      * 
      * @return The call builder
      */
-    public GetPaymentRefundRequestBuilder getPaymentRefund() {
-        return new GetPaymentRefundRequestBuilder(sdkConfiguration);
+    public GetPaymentRefund2RequestBuilder getPaymentRefund2() {
+        return new GetPaymentRefund2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -52,9 +52,9 @@ public class Refund {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetPaymentRefundResponse getPaymentRefund(@Nonnull GetPaymentRefundRequest request) {
-        RequestOperation<GetPaymentRefundRequest, GetPaymentRefundResponse> operation
-              = new GetPaymentRefund.Sync(sdkConfiguration, _headers);
+    public GetPaymentRefund2Response getPaymentRefund2(@Nonnull GetPaymentRefund2Request request) {
+        RequestOperation<GetPaymentRefund2Request, GetPaymentRefund2Response> operation
+              = new GetPaymentRefund2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -63,8 +63,8 @@ public class Refund {
      * 
      * @return The call builder
      */
-    public ListPaymentRefundsRequestBuilder listPaymentRefunds() {
-        return new ListPaymentRefundsRequestBuilder(sdkConfiguration);
+    public ListPaymentRefunds2RequestBuilder listPaymentRefunds2() {
+        return new ListPaymentRefunds2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -74,9 +74,9 @@ public class Refund {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListPaymentRefundsResponse listPaymentRefunds(@Nonnull ListPaymentRefundsRequest request) {
-        RequestOperation<ListPaymentRefundsRequest, ListPaymentRefundsResponse> operation
-              = new ListPaymentRefunds.Sync(sdkConfiguration, _headers);
+    public ListPaymentRefunds2Response listPaymentRefunds2(@Nonnull ListPaymentRefunds2Request request) {
+        RequestOperation<ListPaymentRefunds2Request, ListPaymentRefunds2Response> operation
+              = new ListPaymentRefunds2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

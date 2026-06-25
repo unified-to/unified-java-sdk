@@ -6,14 +6,14 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
-import to.unified.unified_java_sdk.models.operations.ListEnrichCompaniesRequest;
-import to.unified.unified_java_sdk.models.operations.ListEnrichCompaniesRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.ListEnrichCompaniesResponse;
-import to.unified.unified_java_sdk.models.operations.ListEnrichPeopleRequest;
-import to.unified.unified_java_sdk.models.operations.ListEnrichPeopleRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.ListEnrichPeopleResponse;
-import to.unified.unified_java_sdk.operations.ListEnrichCompanies;
-import to.unified.unified_java_sdk.operations.ListEnrichPeople;
+import to.unified.unified_java_sdk.models.operations.ListEnrichCompanies2Request;
+import to.unified.unified_java_sdk.models.operations.ListEnrichCompanies2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListEnrichCompanies2Response;
+import to.unified.unified_java_sdk.models.operations.ListEnrichPeople2Request;
+import to.unified.unified_java_sdk.models.operations.ListEnrichPeople2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListEnrichPeople2Response;
+import to.unified.unified_java_sdk.operations.ListEnrichCompanies2;
+import to.unified.unified_java_sdk.operations.ListEnrichPeople2;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -41,8 +41,8 @@ public class Enrich {
      * 
      * @return The call builder
      */
-    public ListEnrichCompaniesRequestBuilder listEnrichCompanies() {
-        return new ListEnrichCompaniesRequestBuilder(sdkConfiguration);
+    public ListEnrichCompanies2RequestBuilder listEnrichCompanies2() {
+        return new ListEnrichCompanies2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -52,9 +52,9 @@ public class Enrich {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListEnrichCompaniesResponse listEnrichCompanies(@Nonnull ListEnrichCompaniesRequest request) {
-        RequestOperation<ListEnrichCompaniesRequest, ListEnrichCompaniesResponse> operation
-              = new ListEnrichCompanies.Sync(sdkConfiguration, _headers);
+    public ListEnrichCompanies2Response listEnrichCompanies2(@Nonnull ListEnrichCompanies2Request request) {
+        RequestOperation<ListEnrichCompanies2Request, ListEnrichCompanies2Response> operation
+              = new ListEnrichCompanies2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -63,8 +63,8 @@ public class Enrich {
      * 
      * @return The call builder
      */
-    public ListEnrichPeopleRequestBuilder listEnrichPeople() {
-        return new ListEnrichPeopleRequestBuilder(sdkConfiguration);
+    public ListEnrichPeople2RequestBuilder listEnrichPeople2() {
+        return new ListEnrichPeople2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -74,9 +74,9 @@ public class Enrich {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListEnrichPeopleResponse listEnrichPeople(@Nonnull ListEnrichPeopleRequest request) {
-        RequestOperation<ListEnrichPeopleRequest, ListEnrichPeopleResponse> operation
-              = new ListEnrichPeople.Sync(sdkConfiguration, _headers);
+    public ListEnrichPeople2Response listEnrichPeople2(@Nonnull ListEnrichPeople2Request request) {
+        RequestOperation<ListEnrichPeople2Request, ListEnrichPeople2Response> operation
+              = new ListEnrichPeople2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

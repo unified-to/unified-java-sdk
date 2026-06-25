@@ -7,114 +7,114 @@ import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOper
 
 import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
-import to.unified.unified_java_sdk.models.operations.CreateCalendarCalendarRequest;
-import to.unified.unified_java_sdk.models.operations.CreateCalendarEventRequest;
-import to.unified.unified_java_sdk.models.operations.CreateCalendarLinkRequest;
-import to.unified.unified_java_sdk.models.operations.CreateCalendarWebinarRequest;
-import to.unified.unified_java_sdk.models.operations.GetCalendarCalendarRequest;
-import to.unified.unified_java_sdk.models.operations.GetCalendarEventRequest;
-import to.unified.unified_java_sdk.models.operations.GetCalendarLinkRequest;
-import to.unified.unified_java_sdk.models.operations.GetCalendarRecordingRequest;
-import to.unified.unified_java_sdk.models.operations.GetCalendarWebinarRequest;
-import to.unified.unified_java_sdk.models.operations.ListCalendarBusiesRequest;
-import to.unified.unified_java_sdk.models.operations.ListCalendarCalendarsRequest;
-import to.unified.unified_java_sdk.models.operations.ListCalendarEventsRequest;
-import to.unified.unified_java_sdk.models.operations.ListCalendarLinksRequest;
-import to.unified.unified_java_sdk.models.operations.ListCalendarRecordingsRequest;
-import to.unified.unified_java_sdk.models.operations.ListCalendarWebinarsRequest;
-import to.unified.unified_java_sdk.models.operations.PatchCalendarCalendarRequest;
-import to.unified.unified_java_sdk.models.operations.PatchCalendarEventRequest;
-import to.unified.unified_java_sdk.models.operations.PatchCalendarLinkRequest;
-import to.unified.unified_java_sdk.models.operations.PatchCalendarWebinarRequest;
-import to.unified.unified_java_sdk.models.operations.RemoveCalendarCalendarRequest;
-import to.unified.unified_java_sdk.models.operations.RemoveCalendarEventRequest;
-import to.unified.unified_java_sdk.models.operations.RemoveCalendarLinkRequest;
-import to.unified.unified_java_sdk.models.operations.RemoveCalendarWebinarRequest;
-import to.unified.unified_java_sdk.models.operations.UpdateCalendarCalendarRequest;
-import to.unified.unified_java_sdk.models.operations.UpdateCalendarEventRequest;
-import to.unified.unified_java_sdk.models.operations.UpdateCalendarLinkRequest;
-import to.unified.unified_java_sdk.models.operations.UpdateCalendarWebinarRequest;
-import to.unified.unified_java_sdk.models.operations.async.CreateCalendarCalendarRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.CreateCalendarCalendarResponse;
-import to.unified.unified_java_sdk.models.operations.async.CreateCalendarEventRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.CreateCalendarEventResponse;
-import to.unified.unified_java_sdk.models.operations.async.CreateCalendarLinkRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.CreateCalendarLinkResponse;
-import to.unified.unified_java_sdk.models.operations.async.CreateCalendarWebinarRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.CreateCalendarWebinarResponse;
-import to.unified.unified_java_sdk.models.operations.async.GetCalendarCalendarRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.GetCalendarCalendarResponse;
-import to.unified.unified_java_sdk.models.operations.async.GetCalendarEventRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.GetCalendarEventResponse;
-import to.unified.unified_java_sdk.models.operations.async.GetCalendarLinkRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.GetCalendarLinkResponse;
-import to.unified.unified_java_sdk.models.operations.async.GetCalendarRecordingRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.GetCalendarRecordingResponse;
-import to.unified.unified_java_sdk.models.operations.async.GetCalendarWebinarRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.GetCalendarWebinarResponse;
-import to.unified.unified_java_sdk.models.operations.async.ListCalendarBusiesRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.ListCalendarBusiesResponse;
-import to.unified.unified_java_sdk.models.operations.async.ListCalendarCalendarsRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.ListCalendarCalendarsResponse;
-import to.unified.unified_java_sdk.models.operations.async.ListCalendarEventsRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.ListCalendarEventsResponse;
-import to.unified.unified_java_sdk.models.operations.async.ListCalendarLinksRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.ListCalendarLinksResponse;
-import to.unified.unified_java_sdk.models.operations.async.ListCalendarRecordingsRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.ListCalendarRecordingsResponse;
-import to.unified.unified_java_sdk.models.operations.async.ListCalendarWebinarsRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.ListCalendarWebinarsResponse;
-import to.unified.unified_java_sdk.models.operations.async.PatchCalendarCalendarRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.PatchCalendarCalendarResponse;
-import to.unified.unified_java_sdk.models.operations.async.PatchCalendarEventRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.PatchCalendarEventResponse;
-import to.unified.unified_java_sdk.models.operations.async.PatchCalendarLinkRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.PatchCalendarLinkResponse;
-import to.unified.unified_java_sdk.models.operations.async.PatchCalendarWebinarRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.PatchCalendarWebinarResponse;
-import to.unified.unified_java_sdk.models.operations.async.RemoveCalendarCalendarRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.RemoveCalendarCalendarResponse;
-import to.unified.unified_java_sdk.models.operations.async.RemoveCalendarEventRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.RemoveCalendarEventResponse;
-import to.unified.unified_java_sdk.models.operations.async.RemoveCalendarLinkRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.RemoveCalendarLinkResponse;
-import to.unified.unified_java_sdk.models.operations.async.RemoveCalendarWebinarRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.RemoveCalendarWebinarResponse;
-import to.unified.unified_java_sdk.models.operations.async.UpdateCalendarCalendarRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.UpdateCalendarCalendarResponse;
-import to.unified.unified_java_sdk.models.operations.async.UpdateCalendarEventRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.UpdateCalendarEventResponse;
-import to.unified.unified_java_sdk.models.operations.async.UpdateCalendarLinkRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.UpdateCalendarLinkResponse;
-import to.unified.unified_java_sdk.models.operations.async.UpdateCalendarWebinarRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.UpdateCalendarWebinarResponse;
-import to.unified.unified_java_sdk.operations.CreateCalendarCalendar;
-import to.unified.unified_java_sdk.operations.CreateCalendarEvent;
-import to.unified.unified_java_sdk.operations.CreateCalendarLink;
-import to.unified.unified_java_sdk.operations.CreateCalendarWebinar;
-import to.unified.unified_java_sdk.operations.GetCalendarCalendar;
-import to.unified.unified_java_sdk.operations.GetCalendarEvent;
-import to.unified.unified_java_sdk.operations.GetCalendarLink;
-import to.unified.unified_java_sdk.operations.GetCalendarRecording;
-import to.unified.unified_java_sdk.operations.GetCalendarWebinar;
-import to.unified.unified_java_sdk.operations.ListCalendarBusies;
-import to.unified.unified_java_sdk.operations.ListCalendarCalendars;
-import to.unified.unified_java_sdk.operations.ListCalendarEvents;
-import to.unified.unified_java_sdk.operations.ListCalendarLinks;
-import to.unified.unified_java_sdk.operations.ListCalendarRecordings;
-import to.unified.unified_java_sdk.operations.ListCalendarWebinars;
-import to.unified.unified_java_sdk.operations.PatchCalendarCalendar;
-import to.unified.unified_java_sdk.operations.PatchCalendarEvent;
-import to.unified.unified_java_sdk.operations.PatchCalendarLink;
-import to.unified.unified_java_sdk.operations.PatchCalendarWebinar;
-import to.unified.unified_java_sdk.operations.RemoveCalendarCalendar;
-import to.unified.unified_java_sdk.operations.RemoveCalendarEvent;
-import to.unified.unified_java_sdk.operations.RemoveCalendarLink;
-import to.unified.unified_java_sdk.operations.RemoveCalendarWebinar;
-import to.unified.unified_java_sdk.operations.UpdateCalendarCalendar;
-import to.unified.unified_java_sdk.operations.UpdateCalendarEvent;
-import to.unified.unified_java_sdk.operations.UpdateCalendarLink;
-import to.unified.unified_java_sdk.operations.UpdateCalendarWebinar;
+import to.unified.unified_java_sdk.models.operations.CreateCalendarCalendar2Request;
+import to.unified.unified_java_sdk.models.operations.CreateCalendarEvent2Request;
+import to.unified.unified_java_sdk.models.operations.CreateCalendarLink2Request;
+import to.unified.unified_java_sdk.models.operations.CreateCalendarWebinar2Request;
+import to.unified.unified_java_sdk.models.operations.GetCalendarCalendar2Request;
+import to.unified.unified_java_sdk.models.operations.GetCalendarEvent2Request;
+import to.unified.unified_java_sdk.models.operations.GetCalendarLink2Request;
+import to.unified.unified_java_sdk.models.operations.GetCalendarRecording2Request;
+import to.unified.unified_java_sdk.models.operations.GetCalendarWebinar2Request;
+import to.unified.unified_java_sdk.models.operations.ListCalendarBusies2Request;
+import to.unified.unified_java_sdk.models.operations.ListCalendarCalendars2Request;
+import to.unified.unified_java_sdk.models.operations.ListCalendarEvents2Request;
+import to.unified.unified_java_sdk.models.operations.ListCalendarLinks2Request;
+import to.unified.unified_java_sdk.models.operations.ListCalendarRecordings2Request;
+import to.unified.unified_java_sdk.models.operations.ListCalendarWebinars2Request;
+import to.unified.unified_java_sdk.models.operations.PatchCalendarCalendar2Request;
+import to.unified.unified_java_sdk.models.operations.PatchCalendarEvent2Request;
+import to.unified.unified_java_sdk.models.operations.PatchCalendarLink2Request;
+import to.unified.unified_java_sdk.models.operations.PatchCalendarWebinar2Request;
+import to.unified.unified_java_sdk.models.operations.RemoveCalendarCalendar2Request;
+import to.unified.unified_java_sdk.models.operations.RemoveCalendarEvent2Request;
+import to.unified.unified_java_sdk.models.operations.RemoveCalendarLink2Request;
+import to.unified.unified_java_sdk.models.operations.RemoveCalendarWebinar2Request;
+import to.unified.unified_java_sdk.models.operations.UpdateCalendarCalendar2Request;
+import to.unified.unified_java_sdk.models.operations.UpdateCalendarEvent2Request;
+import to.unified.unified_java_sdk.models.operations.UpdateCalendarLink2Request;
+import to.unified.unified_java_sdk.models.operations.UpdateCalendarWebinar2Request;
+import to.unified.unified_java_sdk.models.operations.async.CreateCalendarCalendar2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.CreateCalendarCalendar2Response;
+import to.unified.unified_java_sdk.models.operations.async.CreateCalendarEvent2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.CreateCalendarEvent2Response;
+import to.unified.unified_java_sdk.models.operations.async.CreateCalendarLink2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.CreateCalendarLink2Response;
+import to.unified.unified_java_sdk.models.operations.async.CreateCalendarWebinar2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.CreateCalendarWebinar2Response;
+import to.unified.unified_java_sdk.models.operations.async.GetCalendarCalendar2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetCalendarCalendar2Response;
+import to.unified.unified_java_sdk.models.operations.async.GetCalendarEvent2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetCalendarEvent2Response;
+import to.unified.unified_java_sdk.models.operations.async.GetCalendarLink2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetCalendarLink2Response;
+import to.unified.unified_java_sdk.models.operations.async.GetCalendarRecording2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetCalendarRecording2Response;
+import to.unified.unified_java_sdk.models.operations.async.GetCalendarWebinar2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetCalendarWebinar2Response;
+import to.unified.unified_java_sdk.models.operations.async.ListCalendarBusies2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListCalendarBusies2Response;
+import to.unified.unified_java_sdk.models.operations.async.ListCalendarCalendars2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListCalendarCalendars2Response;
+import to.unified.unified_java_sdk.models.operations.async.ListCalendarEvents2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListCalendarEvents2Response;
+import to.unified.unified_java_sdk.models.operations.async.ListCalendarLinks2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListCalendarLinks2Response;
+import to.unified.unified_java_sdk.models.operations.async.ListCalendarRecordings2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListCalendarRecordings2Response;
+import to.unified.unified_java_sdk.models.operations.async.ListCalendarWebinars2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListCalendarWebinars2Response;
+import to.unified.unified_java_sdk.models.operations.async.PatchCalendarCalendar2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.PatchCalendarCalendar2Response;
+import to.unified.unified_java_sdk.models.operations.async.PatchCalendarEvent2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.PatchCalendarEvent2Response;
+import to.unified.unified_java_sdk.models.operations.async.PatchCalendarLink2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.PatchCalendarLink2Response;
+import to.unified.unified_java_sdk.models.operations.async.PatchCalendarWebinar2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.PatchCalendarWebinar2Response;
+import to.unified.unified_java_sdk.models.operations.async.RemoveCalendarCalendar2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.RemoveCalendarCalendar2Response;
+import to.unified.unified_java_sdk.models.operations.async.RemoveCalendarEvent2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.RemoveCalendarEvent2Response;
+import to.unified.unified_java_sdk.models.operations.async.RemoveCalendarLink2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.RemoveCalendarLink2Response;
+import to.unified.unified_java_sdk.models.operations.async.RemoveCalendarWebinar2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.RemoveCalendarWebinar2Response;
+import to.unified.unified_java_sdk.models.operations.async.UpdateCalendarCalendar2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.UpdateCalendarCalendar2Response;
+import to.unified.unified_java_sdk.models.operations.async.UpdateCalendarEvent2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.UpdateCalendarEvent2Response;
+import to.unified.unified_java_sdk.models.operations.async.UpdateCalendarLink2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.UpdateCalendarLink2Response;
+import to.unified.unified_java_sdk.models.operations.async.UpdateCalendarWebinar2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.UpdateCalendarWebinar2Response;
+import to.unified.unified_java_sdk.operations.CreateCalendarCalendar2;
+import to.unified.unified_java_sdk.operations.CreateCalendarEvent2;
+import to.unified.unified_java_sdk.operations.CreateCalendarLink2;
+import to.unified.unified_java_sdk.operations.CreateCalendarWebinar2;
+import to.unified.unified_java_sdk.operations.GetCalendarCalendar2;
+import to.unified.unified_java_sdk.operations.GetCalendarEvent2;
+import to.unified.unified_java_sdk.operations.GetCalendarLink2;
+import to.unified.unified_java_sdk.operations.GetCalendarRecording2;
+import to.unified.unified_java_sdk.operations.GetCalendarWebinar2;
+import to.unified.unified_java_sdk.operations.ListCalendarBusies2;
+import to.unified.unified_java_sdk.operations.ListCalendarCalendars2;
+import to.unified.unified_java_sdk.operations.ListCalendarEvents2;
+import to.unified.unified_java_sdk.operations.ListCalendarLinks2;
+import to.unified.unified_java_sdk.operations.ListCalendarRecordings2;
+import to.unified.unified_java_sdk.operations.ListCalendarWebinars2;
+import to.unified.unified_java_sdk.operations.PatchCalendarCalendar2;
+import to.unified.unified_java_sdk.operations.PatchCalendarEvent2;
+import to.unified.unified_java_sdk.operations.PatchCalendarLink2;
+import to.unified.unified_java_sdk.operations.PatchCalendarWebinar2;
+import to.unified.unified_java_sdk.operations.RemoveCalendarCalendar2;
+import to.unified.unified_java_sdk.operations.RemoveCalendarEvent2;
+import to.unified.unified_java_sdk.operations.RemoveCalendarLink2;
+import to.unified.unified_java_sdk.operations.RemoveCalendarWebinar2;
+import to.unified.unified_java_sdk.operations.UpdateCalendarCalendar2;
+import to.unified.unified_java_sdk.operations.UpdateCalendarEvent2;
+import to.unified.unified_java_sdk.operations.UpdateCalendarLink2;
+import to.unified.unified_java_sdk.operations.UpdateCalendarWebinar2;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -143,19 +143,19 @@ public class AsyncCalendar {
      * 
      * @return The async call builder
      */
-    public CreateCalendarCalendarRequestBuilder createCalendarCalendar() {
-        return new CreateCalendarCalendarRequestBuilder(sdkConfiguration);
+    public CreateCalendarCalendar2RequestBuilder createCalendarCalendar2() {
+        return new CreateCalendarCalendar2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Create a calendar
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<CreateCalendarCalendarResponse>} - The async response
+     * @return {@code CompletableFuture<CreateCalendarCalendar2Response>} - The async response
      */
-    public CompletableFuture<CreateCalendarCalendarResponse> createCalendarCalendar(@Nonnull CreateCalendarCalendarRequest request) {
-        AsyncRequestOperation<CreateCalendarCalendarRequest, CreateCalendarCalendarResponse> operation
-              = new CreateCalendarCalendar.Async(sdkConfiguration, _headers);
+    public CompletableFuture<CreateCalendarCalendar2Response> createCalendarCalendar2(@Nonnull CreateCalendarCalendar2Request request) {
+        AsyncRequestOperation<CreateCalendarCalendar2Request, CreateCalendarCalendar2Response> operation
+              = new CreateCalendarCalendar2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -166,19 +166,19 @@ public class AsyncCalendar {
      * 
      * @return The async call builder
      */
-    public CreateCalendarEventRequestBuilder createCalendarEvent() {
-        return new CreateCalendarEventRequestBuilder(sdkConfiguration);
+    public CreateCalendarEvent2RequestBuilder createCalendarEvent2() {
+        return new CreateCalendarEvent2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Create an event
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<CreateCalendarEventResponse>} - The async response
+     * @return {@code CompletableFuture<CreateCalendarEvent2Response>} - The async response
      */
-    public CompletableFuture<CreateCalendarEventResponse> createCalendarEvent(@Nonnull CreateCalendarEventRequest request) {
-        AsyncRequestOperation<CreateCalendarEventRequest, CreateCalendarEventResponse> operation
-              = new CreateCalendarEvent.Async(sdkConfiguration, _headers);
+    public CompletableFuture<CreateCalendarEvent2Response> createCalendarEvent2(@Nonnull CreateCalendarEvent2Request request) {
+        AsyncRequestOperation<CreateCalendarEvent2Request, CreateCalendarEvent2Response> operation
+              = new CreateCalendarEvent2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -189,19 +189,19 @@ public class AsyncCalendar {
      * 
      * @return The async call builder
      */
-    public CreateCalendarLinkRequestBuilder createCalendarLink() {
-        return new CreateCalendarLinkRequestBuilder(sdkConfiguration);
+    public CreateCalendarLink2RequestBuilder createCalendarLink2() {
+        return new CreateCalendarLink2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Create a link
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<CreateCalendarLinkResponse>} - The async response
+     * @return {@code CompletableFuture<CreateCalendarLink2Response>} - The async response
      */
-    public CompletableFuture<CreateCalendarLinkResponse> createCalendarLink(@Nonnull CreateCalendarLinkRequest request) {
-        AsyncRequestOperation<CreateCalendarLinkRequest, CreateCalendarLinkResponse> operation
-              = new CreateCalendarLink.Async(sdkConfiguration, _headers);
+    public CompletableFuture<CreateCalendarLink2Response> createCalendarLink2(@Nonnull CreateCalendarLink2Request request) {
+        AsyncRequestOperation<CreateCalendarLink2Request, CreateCalendarLink2Response> operation
+              = new CreateCalendarLink2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -212,19 +212,19 @@ public class AsyncCalendar {
      * 
      * @return The async call builder
      */
-    public CreateCalendarWebinarRequestBuilder createCalendarWebinar() {
-        return new CreateCalendarWebinarRequestBuilder(sdkConfiguration);
+    public CreateCalendarWebinar2RequestBuilder createCalendarWebinar2() {
+        return new CreateCalendarWebinar2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Create a webinar
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<CreateCalendarWebinarResponse>} - The async response
+     * @return {@code CompletableFuture<CreateCalendarWebinar2Response>} - The async response
      */
-    public CompletableFuture<CreateCalendarWebinarResponse> createCalendarWebinar(@Nonnull CreateCalendarWebinarRequest request) {
-        AsyncRequestOperation<CreateCalendarWebinarRequest, CreateCalendarWebinarResponse> operation
-              = new CreateCalendarWebinar.Async(sdkConfiguration, _headers);
+    public CompletableFuture<CreateCalendarWebinar2Response> createCalendarWebinar2(@Nonnull CreateCalendarWebinar2Request request) {
+        AsyncRequestOperation<CreateCalendarWebinar2Request, CreateCalendarWebinar2Response> operation
+              = new CreateCalendarWebinar2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -235,19 +235,19 @@ public class AsyncCalendar {
      * 
      * @return The async call builder
      */
-    public GetCalendarCalendarRequestBuilder getCalendarCalendar() {
-        return new GetCalendarCalendarRequestBuilder(sdkConfiguration);
+    public GetCalendarCalendar2RequestBuilder getCalendarCalendar2() {
+        return new GetCalendarCalendar2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Retrieve a calendar
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<GetCalendarCalendarResponse>} - The async response
+     * @return {@code CompletableFuture<GetCalendarCalendar2Response>} - The async response
      */
-    public CompletableFuture<GetCalendarCalendarResponse> getCalendarCalendar(@Nonnull GetCalendarCalendarRequest request) {
-        AsyncRequestOperation<GetCalendarCalendarRequest, GetCalendarCalendarResponse> operation
-              = new GetCalendarCalendar.Async(sdkConfiguration, _headers);
+    public CompletableFuture<GetCalendarCalendar2Response> getCalendarCalendar2(@Nonnull GetCalendarCalendar2Request request) {
+        AsyncRequestOperation<GetCalendarCalendar2Request, GetCalendarCalendar2Response> operation
+              = new GetCalendarCalendar2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -258,19 +258,19 @@ public class AsyncCalendar {
      * 
      * @return The async call builder
      */
-    public GetCalendarEventRequestBuilder getCalendarEvent() {
-        return new GetCalendarEventRequestBuilder(sdkConfiguration);
+    public GetCalendarEvent2RequestBuilder getCalendarEvent2() {
+        return new GetCalendarEvent2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Retrieve an event
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<GetCalendarEventResponse>} - The async response
+     * @return {@code CompletableFuture<GetCalendarEvent2Response>} - The async response
      */
-    public CompletableFuture<GetCalendarEventResponse> getCalendarEvent(@Nonnull GetCalendarEventRequest request) {
-        AsyncRequestOperation<GetCalendarEventRequest, GetCalendarEventResponse> operation
-              = new GetCalendarEvent.Async(sdkConfiguration, _headers);
+    public CompletableFuture<GetCalendarEvent2Response> getCalendarEvent2(@Nonnull GetCalendarEvent2Request request) {
+        AsyncRequestOperation<GetCalendarEvent2Request, GetCalendarEvent2Response> operation
+              = new GetCalendarEvent2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -281,19 +281,19 @@ public class AsyncCalendar {
      * 
      * @return The async call builder
      */
-    public GetCalendarLinkRequestBuilder getCalendarLink() {
-        return new GetCalendarLinkRequestBuilder(sdkConfiguration);
+    public GetCalendarLink2RequestBuilder getCalendarLink2() {
+        return new GetCalendarLink2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Retrieve a link
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<GetCalendarLinkResponse>} - The async response
+     * @return {@code CompletableFuture<GetCalendarLink2Response>} - The async response
      */
-    public CompletableFuture<GetCalendarLinkResponse> getCalendarLink(@Nonnull GetCalendarLinkRequest request) {
-        AsyncRequestOperation<GetCalendarLinkRequest, GetCalendarLinkResponse> operation
-              = new GetCalendarLink.Async(sdkConfiguration, _headers);
+    public CompletableFuture<GetCalendarLink2Response> getCalendarLink2(@Nonnull GetCalendarLink2Request request) {
+        AsyncRequestOperation<GetCalendarLink2Request, GetCalendarLink2Response> operation
+              = new GetCalendarLink2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -304,19 +304,19 @@ public class AsyncCalendar {
      * 
      * @return The async call builder
      */
-    public GetCalendarRecordingRequestBuilder getCalendarRecording() {
-        return new GetCalendarRecordingRequestBuilder(sdkConfiguration);
+    public GetCalendarRecording2RequestBuilder getCalendarRecording2() {
+        return new GetCalendarRecording2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Retrieve a recording
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<GetCalendarRecordingResponse>} - The async response
+     * @return {@code CompletableFuture<GetCalendarRecording2Response>} - The async response
      */
-    public CompletableFuture<GetCalendarRecordingResponse> getCalendarRecording(@Nonnull GetCalendarRecordingRequest request) {
-        AsyncRequestOperation<GetCalendarRecordingRequest, GetCalendarRecordingResponse> operation
-              = new GetCalendarRecording.Async(sdkConfiguration, _headers);
+    public CompletableFuture<GetCalendarRecording2Response> getCalendarRecording2(@Nonnull GetCalendarRecording2Request request) {
+        AsyncRequestOperation<GetCalendarRecording2Request, GetCalendarRecording2Response> operation
+              = new GetCalendarRecording2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -327,19 +327,19 @@ public class AsyncCalendar {
      * 
      * @return The async call builder
      */
-    public GetCalendarWebinarRequestBuilder getCalendarWebinar() {
-        return new GetCalendarWebinarRequestBuilder(sdkConfiguration);
+    public GetCalendarWebinar2RequestBuilder getCalendarWebinar2() {
+        return new GetCalendarWebinar2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Retrieve a webinar
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<GetCalendarWebinarResponse>} - The async response
+     * @return {@code CompletableFuture<GetCalendarWebinar2Response>} - The async response
      */
-    public CompletableFuture<GetCalendarWebinarResponse> getCalendarWebinar(@Nonnull GetCalendarWebinarRequest request) {
-        AsyncRequestOperation<GetCalendarWebinarRequest, GetCalendarWebinarResponse> operation
-              = new GetCalendarWebinar.Async(sdkConfiguration, _headers);
+    public CompletableFuture<GetCalendarWebinar2Response> getCalendarWebinar2(@Nonnull GetCalendarWebinar2Request request) {
+        AsyncRequestOperation<GetCalendarWebinar2Request, GetCalendarWebinar2Response> operation
+              = new GetCalendarWebinar2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -350,19 +350,19 @@ public class AsyncCalendar {
      * 
      * @return The async call builder
      */
-    public ListCalendarBusiesRequestBuilder listCalendarBusies() {
-        return new ListCalendarBusiesRequestBuilder(sdkConfiguration);
+    public ListCalendarBusies2RequestBuilder listCalendarBusies2() {
+        return new ListCalendarBusies2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * List all busies
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<ListCalendarBusiesResponse>} - The async response
+     * @return {@code CompletableFuture<ListCalendarBusies2Response>} - The async response
      */
-    public CompletableFuture<ListCalendarBusiesResponse> listCalendarBusies(@Nonnull ListCalendarBusiesRequest request) {
-        AsyncRequestOperation<ListCalendarBusiesRequest, ListCalendarBusiesResponse> operation
-              = new ListCalendarBusies.Async(sdkConfiguration, _headers);
+    public CompletableFuture<ListCalendarBusies2Response> listCalendarBusies2(@Nonnull ListCalendarBusies2Request request) {
+        AsyncRequestOperation<ListCalendarBusies2Request, ListCalendarBusies2Response> operation
+              = new ListCalendarBusies2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -373,19 +373,19 @@ public class AsyncCalendar {
      * 
      * @return The async call builder
      */
-    public ListCalendarCalendarsRequestBuilder listCalendarCalendars() {
-        return new ListCalendarCalendarsRequestBuilder(sdkConfiguration);
+    public ListCalendarCalendars2RequestBuilder listCalendarCalendars2() {
+        return new ListCalendarCalendars2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * List all calendars
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<ListCalendarCalendarsResponse>} - The async response
+     * @return {@code CompletableFuture<ListCalendarCalendars2Response>} - The async response
      */
-    public CompletableFuture<ListCalendarCalendarsResponse> listCalendarCalendars(@Nonnull ListCalendarCalendarsRequest request) {
-        AsyncRequestOperation<ListCalendarCalendarsRequest, ListCalendarCalendarsResponse> operation
-              = new ListCalendarCalendars.Async(sdkConfiguration, _headers);
+    public CompletableFuture<ListCalendarCalendars2Response> listCalendarCalendars2(@Nonnull ListCalendarCalendars2Request request) {
+        AsyncRequestOperation<ListCalendarCalendars2Request, ListCalendarCalendars2Response> operation
+              = new ListCalendarCalendars2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -396,19 +396,19 @@ public class AsyncCalendar {
      * 
      * @return The async call builder
      */
-    public ListCalendarEventsRequestBuilder listCalendarEvents() {
-        return new ListCalendarEventsRequestBuilder(sdkConfiguration);
+    public ListCalendarEvents2RequestBuilder listCalendarEvents2() {
+        return new ListCalendarEvents2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * List all events
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<ListCalendarEventsResponse>} - The async response
+     * @return {@code CompletableFuture<ListCalendarEvents2Response>} - The async response
      */
-    public CompletableFuture<ListCalendarEventsResponse> listCalendarEvents(@Nonnull ListCalendarEventsRequest request) {
-        AsyncRequestOperation<ListCalendarEventsRequest, ListCalendarEventsResponse> operation
-              = new ListCalendarEvents.Async(sdkConfiguration, _headers);
+    public CompletableFuture<ListCalendarEvents2Response> listCalendarEvents2(@Nonnull ListCalendarEvents2Request request) {
+        AsyncRequestOperation<ListCalendarEvents2Request, ListCalendarEvents2Response> operation
+              = new ListCalendarEvents2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -419,19 +419,19 @@ public class AsyncCalendar {
      * 
      * @return The async call builder
      */
-    public ListCalendarLinksRequestBuilder listCalendarLinks() {
-        return new ListCalendarLinksRequestBuilder(sdkConfiguration);
+    public ListCalendarLinks2RequestBuilder listCalendarLinks2() {
+        return new ListCalendarLinks2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * List all links
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<ListCalendarLinksResponse>} - The async response
+     * @return {@code CompletableFuture<ListCalendarLinks2Response>} - The async response
      */
-    public CompletableFuture<ListCalendarLinksResponse> listCalendarLinks(@Nonnull ListCalendarLinksRequest request) {
-        AsyncRequestOperation<ListCalendarLinksRequest, ListCalendarLinksResponse> operation
-              = new ListCalendarLinks.Async(sdkConfiguration, _headers);
+    public CompletableFuture<ListCalendarLinks2Response> listCalendarLinks2(@Nonnull ListCalendarLinks2Request request) {
+        AsyncRequestOperation<ListCalendarLinks2Request, ListCalendarLinks2Response> operation
+              = new ListCalendarLinks2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -442,19 +442,19 @@ public class AsyncCalendar {
      * 
      * @return The async call builder
      */
-    public ListCalendarRecordingsRequestBuilder listCalendarRecordings() {
-        return new ListCalendarRecordingsRequestBuilder(sdkConfiguration);
+    public ListCalendarRecordings2RequestBuilder listCalendarRecordings2() {
+        return new ListCalendarRecordings2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * List all recordings
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<ListCalendarRecordingsResponse>} - The async response
+     * @return {@code CompletableFuture<ListCalendarRecordings2Response>} - The async response
      */
-    public CompletableFuture<ListCalendarRecordingsResponse> listCalendarRecordings(@Nonnull ListCalendarRecordingsRequest request) {
-        AsyncRequestOperation<ListCalendarRecordingsRequest, ListCalendarRecordingsResponse> operation
-              = new ListCalendarRecordings.Async(sdkConfiguration, _headers);
+    public CompletableFuture<ListCalendarRecordings2Response> listCalendarRecordings2(@Nonnull ListCalendarRecordings2Request request) {
+        AsyncRequestOperation<ListCalendarRecordings2Request, ListCalendarRecordings2Response> operation
+              = new ListCalendarRecordings2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -465,19 +465,19 @@ public class AsyncCalendar {
      * 
      * @return The async call builder
      */
-    public ListCalendarWebinarsRequestBuilder listCalendarWebinars() {
-        return new ListCalendarWebinarsRequestBuilder(sdkConfiguration);
+    public ListCalendarWebinars2RequestBuilder listCalendarWebinars2() {
+        return new ListCalendarWebinars2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * List all webinars
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<ListCalendarWebinarsResponse>} - The async response
+     * @return {@code CompletableFuture<ListCalendarWebinars2Response>} - The async response
      */
-    public CompletableFuture<ListCalendarWebinarsResponse> listCalendarWebinars(@Nonnull ListCalendarWebinarsRequest request) {
-        AsyncRequestOperation<ListCalendarWebinarsRequest, ListCalendarWebinarsResponse> operation
-              = new ListCalendarWebinars.Async(sdkConfiguration, _headers);
+    public CompletableFuture<ListCalendarWebinars2Response> listCalendarWebinars2(@Nonnull ListCalendarWebinars2Request request) {
+        AsyncRequestOperation<ListCalendarWebinars2Request, ListCalendarWebinars2Response> operation
+              = new ListCalendarWebinars2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -488,19 +488,19 @@ public class AsyncCalendar {
      * 
      * @return The async call builder
      */
-    public PatchCalendarCalendarRequestBuilder patchCalendarCalendar() {
-        return new PatchCalendarCalendarRequestBuilder(sdkConfiguration);
+    public PatchCalendarCalendar2RequestBuilder patchCalendarCalendar2() {
+        return new PatchCalendarCalendar2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update a calendar
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<PatchCalendarCalendarResponse>} - The async response
+     * @return {@code CompletableFuture<PatchCalendarCalendar2Response>} - The async response
      */
-    public CompletableFuture<PatchCalendarCalendarResponse> patchCalendarCalendar(@Nonnull PatchCalendarCalendarRequest request) {
-        AsyncRequestOperation<PatchCalendarCalendarRequest, PatchCalendarCalendarResponse> operation
-              = new PatchCalendarCalendar.Async(sdkConfiguration, _headers);
+    public CompletableFuture<PatchCalendarCalendar2Response> patchCalendarCalendar2(@Nonnull PatchCalendarCalendar2Request request) {
+        AsyncRequestOperation<PatchCalendarCalendar2Request, PatchCalendarCalendar2Response> operation
+              = new PatchCalendarCalendar2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -511,19 +511,19 @@ public class AsyncCalendar {
      * 
      * @return The async call builder
      */
-    public PatchCalendarEventRequestBuilder patchCalendarEvent() {
-        return new PatchCalendarEventRequestBuilder(sdkConfiguration);
+    public PatchCalendarEvent2RequestBuilder patchCalendarEvent2() {
+        return new PatchCalendarEvent2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update an event
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<PatchCalendarEventResponse>} - The async response
+     * @return {@code CompletableFuture<PatchCalendarEvent2Response>} - The async response
      */
-    public CompletableFuture<PatchCalendarEventResponse> patchCalendarEvent(@Nonnull PatchCalendarEventRequest request) {
-        AsyncRequestOperation<PatchCalendarEventRequest, PatchCalendarEventResponse> operation
-              = new PatchCalendarEvent.Async(sdkConfiguration, _headers);
+    public CompletableFuture<PatchCalendarEvent2Response> patchCalendarEvent2(@Nonnull PatchCalendarEvent2Request request) {
+        AsyncRequestOperation<PatchCalendarEvent2Request, PatchCalendarEvent2Response> operation
+              = new PatchCalendarEvent2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -534,19 +534,19 @@ public class AsyncCalendar {
      * 
      * @return The async call builder
      */
-    public PatchCalendarLinkRequestBuilder patchCalendarLink() {
-        return new PatchCalendarLinkRequestBuilder(sdkConfiguration);
+    public PatchCalendarLink2RequestBuilder patchCalendarLink2() {
+        return new PatchCalendarLink2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update a link
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<PatchCalendarLinkResponse>} - The async response
+     * @return {@code CompletableFuture<PatchCalendarLink2Response>} - The async response
      */
-    public CompletableFuture<PatchCalendarLinkResponse> patchCalendarLink(@Nonnull PatchCalendarLinkRequest request) {
-        AsyncRequestOperation<PatchCalendarLinkRequest, PatchCalendarLinkResponse> operation
-              = new PatchCalendarLink.Async(sdkConfiguration, _headers);
+    public CompletableFuture<PatchCalendarLink2Response> patchCalendarLink2(@Nonnull PatchCalendarLink2Request request) {
+        AsyncRequestOperation<PatchCalendarLink2Request, PatchCalendarLink2Response> operation
+              = new PatchCalendarLink2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -557,19 +557,19 @@ public class AsyncCalendar {
      * 
      * @return The async call builder
      */
-    public PatchCalendarWebinarRequestBuilder patchCalendarWebinar() {
-        return new PatchCalendarWebinarRequestBuilder(sdkConfiguration);
+    public PatchCalendarWebinar2RequestBuilder patchCalendarWebinar2() {
+        return new PatchCalendarWebinar2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update a webinar
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<PatchCalendarWebinarResponse>} - The async response
+     * @return {@code CompletableFuture<PatchCalendarWebinar2Response>} - The async response
      */
-    public CompletableFuture<PatchCalendarWebinarResponse> patchCalendarWebinar(@Nonnull PatchCalendarWebinarRequest request) {
-        AsyncRequestOperation<PatchCalendarWebinarRequest, PatchCalendarWebinarResponse> operation
-              = new PatchCalendarWebinar.Async(sdkConfiguration, _headers);
+    public CompletableFuture<PatchCalendarWebinar2Response> patchCalendarWebinar2(@Nonnull PatchCalendarWebinar2Request request) {
+        AsyncRequestOperation<PatchCalendarWebinar2Request, PatchCalendarWebinar2Response> operation
+              = new PatchCalendarWebinar2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -580,19 +580,19 @@ public class AsyncCalendar {
      * 
      * @return The async call builder
      */
-    public RemoveCalendarCalendarRequestBuilder removeCalendarCalendar() {
-        return new RemoveCalendarCalendarRequestBuilder(sdkConfiguration);
+    public RemoveCalendarCalendar2RequestBuilder removeCalendarCalendar2() {
+        return new RemoveCalendarCalendar2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Remove a calendar
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<RemoveCalendarCalendarResponse>} - The async response
+     * @return {@code CompletableFuture<RemoveCalendarCalendar2Response>} - The async response
      */
-    public CompletableFuture<RemoveCalendarCalendarResponse> removeCalendarCalendar(@Nonnull RemoveCalendarCalendarRequest request) {
-        AsyncRequestOperation<RemoveCalendarCalendarRequest, RemoveCalendarCalendarResponse> operation
-              = new RemoveCalendarCalendar.Async(sdkConfiguration, _headers);
+    public CompletableFuture<RemoveCalendarCalendar2Response> removeCalendarCalendar2(@Nonnull RemoveCalendarCalendar2Request request) {
+        AsyncRequestOperation<RemoveCalendarCalendar2Request, RemoveCalendarCalendar2Response> operation
+              = new RemoveCalendarCalendar2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -603,19 +603,19 @@ public class AsyncCalendar {
      * 
      * @return The async call builder
      */
-    public RemoveCalendarEventRequestBuilder removeCalendarEvent() {
-        return new RemoveCalendarEventRequestBuilder(sdkConfiguration);
+    public RemoveCalendarEvent2RequestBuilder removeCalendarEvent2() {
+        return new RemoveCalendarEvent2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Remove an event
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<RemoveCalendarEventResponse>} - The async response
+     * @return {@code CompletableFuture<RemoveCalendarEvent2Response>} - The async response
      */
-    public CompletableFuture<RemoveCalendarEventResponse> removeCalendarEvent(@Nonnull RemoveCalendarEventRequest request) {
-        AsyncRequestOperation<RemoveCalendarEventRequest, RemoveCalendarEventResponse> operation
-              = new RemoveCalendarEvent.Async(sdkConfiguration, _headers);
+    public CompletableFuture<RemoveCalendarEvent2Response> removeCalendarEvent2(@Nonnull RemoveCalendarEvent2Request request) {
+        AsyncRequestOperation<RemoveCalendarEvent2Request, RemoveCalendarEvent2Response> operation
+              = new RemoveCalendarEvent2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -626,19 +626,19 @@ public class AsyncCalendar {
      * 
      * @return The async call builder
      */
-    public RemoveCalendarLinkRequestBuilder removeCalendarLink() {
-        return new RemoveCalendarLinkRequestBuilder(sdkConfiguration);
+    public RemoveCalendarLink2RequestBuilder removeCalendarLink2() {
+        return new RemoveCalendarLink2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Remove a link
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<RemoveCalendarLinkResponse>} - The async response
+     * @return {@code CompletableFuture<RemoveCalendarLink2Response>} - The async response
      */
-    public CompletableFuture<RemoveCalendarLinkResponse> removeCalendarLink(@Nonnull RemoveCalendarLinkRequest request) {
-        AsyncRequestOperation<RemoveCalendarLinkRequest, RemoveCalendarLinkResponse> operation
-              = new RemoveCalendarLink.Async(sdkConfiguration, _headers);
+    public CompletableFuture<RemoveCalendarLink2Response> removeCalendarLink2(@Nonnull RemoveCalendarLink2Request request) {
+        AsyncRequestOperation<RemoveCalendarLink2Request, RemoveCalendarLink2Response> operation
+              = new RemoveCalendarLink2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -649,19 +649,19 @@ public class AsyncCalendar {
      * 
      * @return The async call builder
      */
-    public RemoveCalendarWebinarRequestBuilder removeCalendarWebinar() {
-        return new RemoveCalendarWebinarRequestBuilder(sdkConfiguration);
+    public RemoveCalendarWebinar2RequestBuilder removeCalendarWebinar2() {
+        return new RemoveCalendarWebinar2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Remove a webinar
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<RemoveCalendarWebinarResponse>} - The async response
+     * @return {@code CompletableFuture<RemoveCalendarWebinar2Response>} - The async response
      */
-    public CompletableFuture<RemoveCalendarWebinarResponse> removeCalendarWebinar(@Nonnull RemoveCalendarWebinarRequest request) {
-        AsyncRequestOperation<RemoveCalendarWebinarRequest, RemoveCalendarWebinarResponse> operation
-              = new RemoveCalendarWebinar.Async(sdkConfiguration, _headers);
+    public CompletableFuture<RemoveCalendarWebinar2Response> removeCalendarWebinar2(@Nonnull RemoveCalendarWebinar2Request request) {
+        AsyncRequestOperation<RemoveCalendarWebinar2Request, RemoveCalendarWebinar2Response> operation
+              = new RemoveCalendarWebinar2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -672,19 +672,19 @@ public class AsyncCalendar {
      * 
      * @return The async call builder
      */
-    public UpdateCalendarCalendarRequestBuilder updateCalendarCalendar() {
-        return new UpdateCalendarCalendarRequestBuilder(sdkConfiguration);
+    public UpdateCalendarCalendar2RequestBuilder updateCalendarCalendar2() {
+        return new UpdateCalendarCalendar2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update a calendar
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<UpdateCalendarCalendarResponse>} - The async response
+     * @return {@code CompletableFuture<UpdateCalendarCalendar2Response>} - The async response
      */
-    public CompletableFuture<UpdateCalendarCalendarResponse> updateCalendarCalendar(@Nonnull UpdateCalendarCalendarRequest request) {
-        AsyncRequestOperation<UpdateCalendarCalendarRequest, UpdateCalendarCalendarResponse> operation
-              = new UpdateCalendarCalendar.Async(sdkConfiguration, _headers);
+    public CompletableFuture<UpdateCalendarCalendar2Response> updateCalendarCalendar2(@Nonnull UpdateCalendarCalendar2Request request) {
+        AsyncRequestOperation<UpdateCalendarCalendar2Request, UpdateCalendarCalendar2Response> operation
+              = new UpdateCalendarCalendar2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -695,19 +695,19 @@ public class AsyncCalendar {
      * 
      * @return The async call builder
      */
-    public UpdateCalendarEventRequestBuilder updateCalendarEvent() {
-        return new UpdateCalendarEventRequestBuilder(sdkConfiguration);
+    public UpdateCalendarEvent2RequestBuilder updateCalendarEvent2() {
+        return new UpdateCalendarEvent2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update an event
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<UpdateCalendarEventResponse>} - The async response
+     * @return {@code CompletableFuture<UpdateCalendarEvent2Response>} - The async response
      */
-    public CompletableFuture<UpdateCalendarEventResponse> updateCalendarEvent(@Nonnull UpdateCalendarEventRequest request) {
-        AsyncRequestOperation<UpdateCalendarEventRequest, UpdateCalendarEventResponse> operation
-              = new UpdateCalendarEvent.Async(sdkConfiguration, _headers);
+    public CompletableFuture<UpdateCalendarEvent2Response> updateCalendarEvent2(@Nonnull UpdateCalendarEvent2Request request) {
+        AsyncRequestOperation<UpdateCalendarEvent2Request, UpdateCalendarEvent2Response> operation
+              = new UpdateCalendarEvent2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -718,19 +718,19 @@ public class AsyncCalendar {
      * 
      * @return The async call builder
      */
-    public UpdateCalendarLinkRequestBuilder updateCalendarLink() {
-        return new UpdateCalendarLinkRequestBuilder(sdkConfiguration);
+    public UpdateCalendarLink2RequestBuilder updateCalendarLink2() {
+        return new UpdateCalendarLink2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update a link
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<UpdateCalendarLinkResponse>} - The async response
+     * @return {@code CompletableFuture<UpdateCalendarLink2Response>} - The async response
      */
-    public CompletableFuture<UpdateCalendarLinkResponse> updateCalendarLink(@Nonnull UpdateCalendarLinkRequest request) {
-        AsyncRequestOperation<UpdateCalendarLinkRequest, UpdateCalendarLinkResponse> operation
-              = new UpdateCalendarLink.Async(sdkConfiguration, _headers);
+    public CompletableFuture<UpdateCalendarLink2Response> updateCalendarLink2(@Nonnull UpdateCalendarLink2Request request) {
+        AsyncRequestOperation<UpdateCalendarLink2Request, UpdateCalendarLink2Response> operation
+              = new UpdateCalendarLink2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -741,19 +741,19 @@ public class AsyncCalendar {
      * 
      * @return The async call builder
      */
-    public UpdateCalendarWebinarRequestBuilder updateCalendarWebinar() {
-        return new UpdateCalendarWebinarRequestBuilder(sdkConfiguration);
+    public UpdateCalendarWebinar2RequestBuilder updateCalendarWebinar2() {
+        return new UpdateCalendarWebinar2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update a webinar
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<UpdateCalendarWebinarResponse>} - The async response
+     * @return {@code CompletableFuture<UpdateCalendarWebinar2Response>} - The async response
      */
-    public CompletableFuture<UpdateCalendarWebinarResponse> updateCalendarWebinar(@Nonnull UpdateCalendarWebinarRequest request) {
-        AsyncRequestOperation<UpdateCalendarWebinarRequest, UpdateCalendarWebinarResponse> operation
-              = new UpdateCalendarWebinar.Async(sdkConfiguration, _headers);
+    public CompletableFuture<UpdateCalendarWebinar2Response> updateCalendarWebinar2(@Nonnull UpdateCalendarWebinar2Request request) {
+        AsyncRequestOperation<UpdateCalendarWebinar2Request, UpdateCalendarWebinar2Response> operation
+              = new UpdateCalendarWebinar2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

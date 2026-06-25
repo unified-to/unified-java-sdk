@@ -4,27 +4,27 @@
 
 ### Available Operations
 
-* [createAtsScorecard](#createatsscorecard) - Create a scorecard
-* [getAtsScorecard](#getatsscorecard) - Retrieve a scorecard
-* [listAtsScorecards](#listatsscorecards) - List all scorecards
-* [patchAtsScorecard](#patchatsscorecard) - Update a scorecard
-* [removeAtsScorecard](#removeatsscorecard) - Remove a scorecard
-* [updateAtsScorecard](#updateatsscorecard) - Update a scorecard
+* [createAtsScorecard2](#createatsscorecard2) - Create a scorecard
+* [getAtsScorecard2](#getatsscorecard2) - Retrieve a scorecard
+* [listAtsScorecards2](#listatsscorecards2) - List all scorecards
+* [patchAtsScorecard2](#patchatsscorecard2) - Update a scorecard
+* [removeAtsScorecard2](#removeatsscorecard2) - Remove a scorecard
+* [updateAtsScorecard2](#updateatsscorecard2) - Update a scorecard
 
-## createAtsScorecard
+## createAtsScorecard2
 
 Create a scorecard
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createAtsScorecard" method="post" path="/ats/{connection_id}/scorecard" -->
+<!-- UsageSnippet language="java" operationID="createAtsScorecard2" method="post" path="/ats/{connection_id}/scorecard" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.CreateAtsScorecardRequest;
-import to.unified.unified_java_sdk.models.operations.CreateAtsScorecardResponse;
+import to.unified.unified_java_sdk.models.operations.CreateAtsScorecard2Request;
+import to.unified.unified_java_sdk.models.operations.CreateAtsScorecard2Response;
 import to.unified.unified_java_sdk.models.shared.AtsScorecard;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -38,13 +38,13 @@ public class Application {
                     .build())
             .build();
 
-        CreateAtsScorecardRequest req = CreateAtsScorecardRequest.builder()
+        CreateAtsScorecard2Request req = CreateAtsScorecard2Request.builder()
                 .atsScorecard(AtsScorecard.builder()
                     .build())
                 .connectionId("<id>")
                 .build();
 
-        CreateAtsScorecardResponse res = sdk.scorecard().createAtsScorecard()
+        CreateAtsScorecard2Response res = sdk.scorecard().createAtsScorecard2()
                 .request(req)
                 .call();
 
@@ -57,13 +57,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
-| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
-| `request`                                                                         | [CreateAtsScorecardRequest](../../models/operations/CreateAtsScorecardRequest.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
+| Parameter                                                                           | Type                                                                                | Required                                                                            | Description                                                                         |
+| ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| `request`                                                                           | [CreateAtsScorecard2Request](../../models/operations/CreateAtsScorecard2Request.md) | :heavy_check_mark:                                                                  | The request object to use for the request.                                          |
 
 ### Response
 
-**[CreateAtsScorecardResponse](../../models/operations/CreateAtsScorecardResponse.md)**
+**[CreateAtsScorecard2Response](../../models/operations/CreateAtsScorecard2Response.md)**
 
 ### Errors
 
@@ -71,20 +71,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## getAtsScorecard
+## getAtsScorecard2
 
 Retrieve a scorecard
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="getAtsScorecard" method="get" path="/ats/{connection_id}/scorecard/{id}" -->
+<!-- UsageSnippet language="java" operationID="getAtsScorecard2" method="get" path="/ats/{connection_id}/scorecard/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.GetAtsScorecardRequest;
-import to.unified.unified_java_sdk.models.operations.GetAtsScorecardResponse;
+import to.unified.unified_java_sdk.models.operations.GetAtsScorecard2Request;
+import to.unified.unified_java_sdk.models.operations.GetAtsScorecard2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -97,12 +97,12 @@ public class Application {
                     .build())
             .build();
 
-        GetAtsScorecardRequest req = GetAtsScorecardRequest.builder()
+        GetAtsScorecard2Request req = GetAtsScorecard2Request.builder()
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        GetAtsScorecardResponse res = sdk.scorecard().getAtsScorecard()
+        GetAtsScorecard2Response res = sdk.scorecard().getAtsScorecard2()
                 .request(req)
                 .call();
 
@@ -115,13 +115,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                   | Type                                                                        | Required                                                                    | Description                                                                 |
-| --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
-| `request`                                                                   | [GetAtsScorecardRequest](../../models/operations/GetAtsScorecardRequest.md) | :heavy_check_mark:                                                          | The request object to use for the request.                                  |
+| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
+| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| `request`                                                                     | [GetAtsScorecard2Request](../../models/operations/GetAtsScorecard2Request.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
 
 ### Response
 
-**[GetAtsScorecardResponse](../../models/operations/GetAtsScorecardResponse.md)**
+**[GetAtsScorecard2Response](../../models/operations/GetAtsScorecard2Response.md)**
 
 ### Errors
 
@@ -129,20 +129,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## listAtsScorecards
+## listAtsScorecards2
 
 List all scorecards
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="listAtsScorecards" method="get" path="/ats/{connection_id}/scorecard" -->
+<!-- UsageSnippet language="java" operationID="listAtsScorecards2" method="get" path="/ats/{connection_id}/scorecard" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.ListAtsScorecardsRequest;
-import to.unified.unified_java_sdk.models.operations.ListAtsScorecardsResponse;
+import to.unified.unified_java_sdk.models.operations.ListAtsScorecards2Request;
+import to.unified.unified_java_sdk.models.operations.ListAtsScorecards2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -155,11 +155,11 @@ public class Application {
                     .build())
             .build();
 
-        ListAtsScorecardsRequest req = ListAtsScorecardsRequest.builder()
+        ListAtsScorecards2Request req = ListAtsScorecards2Request.builder()
                 .connectionId("<id>")
                 .build();
 
-        ListAtsScorecardsResponse res = sdk.scorecard().listAtsScorecards()
+        ListAtsScorecards2Response res = sdk.scorecard().listAtsScorecards2()
                 .request(req)
                 .call();
 
@@ -172,13 +172,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
-| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
-| `request`                                                                       | [ListAtsScorecardsRequest](../../models/operations/ListAtsScorecardsRequest.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
+| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
+| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| `request`                                                                         | [ListAtsScorecards2Request](../../models/operations/ListAtsScorecards2Request.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
 
 ### Response
 
-**[ListAtsScorecardsResponse](../../models/operations/ListAtsScorecardsResponse.md)**
+**[ListAtsScorecards2Response](../../models/operations/ListAtsScorecards2Response.md)**
 
 ### Errors
 
@@ -186,20 +186,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## patchAtsScorecard
+## patchAtsScorecard2
 
 Update a scorecard
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchAtsScorecard" method="patch" path="/ats/{connection_id}/scorecard/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchAtsScorecard2" method="patch" path="/ats/{connection_id}/scorecard/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.PatchAtsScorecardRequest;
-import to.unified.unified_java_sdk.models.operations.PatchAtsScorecardResponse;
+import to.unified.unified_java_sdk.models.operations.PatchAtsScorecard2Request;
+import to.unified.unified_java_sdk.models.operations.PatchAtsScorecard2Response;
 import to.unified.unified_java_sdk.models.shared.AtsScorecard;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -213,14 +213,14 @@ public class Application {
                     .build())
             .build();
 
-        PatchAtsScorecardRequest req = PatchAtsScorecardRequest.builder()
+        PatchAtsScorecard2Request req = PatchAtsScorecard2Request.builder()
                 .atsScorecard(AtsScorecard.builder()
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        PatchAtsScorecardResponse res = sdk.scorecard().patchAtsScorecard()
+        PatchAtsScorecard2Response res = sdk.scorecard().patchAtsScorecard2()
                 .request(req)
                 .call();
 
@@ -233,13 +233,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
-| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
-| `request`                                                                       | [PatchAtsScorecardRequest](../../models/operations/PatchAtsScorecardRequest.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
+| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
+| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| `request`                                                                         | [PatchAtsScorecard2Request](../../models/operations/PatchAtsScorecard2Request.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
 
 ### Response
 
-**[PatchAtsScorecardResponse](../../models/operations/PatchAtsScorecardResponse.md)**
+**[PatchAtsScorecard2Response](../../models/operations/PatchAtsScorecard2Response.md)**
 
 ### Errors
 
@@ -247,20 +247,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## removeAtsScorecard
+## removeAtsScorecard2
 
 Remove a scorecard
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="removeAtsScorecard" method="delete" path="/ats/{connection_id}/scorecard/{id}" -->
+<!-- UsageSnippet language="java" operationID="removeAtsScorecard2" method="delete" path="/ats/{connection_id}/scorecard/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.RemoveAtsScorecardRequest;
-import to.unified.unified_java_sdk.models.operations.RemoveAtsScorecardResponse;
+import to.unified.unified_java_sdk.models.operations.RemoveAtsScorecard2Request;
+import to.unified.unified_java_sdk.models.operations.RemoveAtsScorecard2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -273,12 +273,12 @@ public class Application {
                     .build())
             .build();
 
-        RemoveAtsScorecardRequest req = RemoveAtsScorecardRequest.builder()
+        RemoveAtsScorecard2Request req = RemoveAtsScorecard2Request.builder()
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        RemoveAtsScorecardResponse res = sdk.scorecard().removeAtsScorecard()
+        RemoveAtsScorecard2Response res = sdk.scorecard().removeAtsScorecard2()
                 .request(req)
                 .call();
 
@@ -289,13 +289,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
-| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
-| `request`                                                                         | [RemoveAtsScorecardRequest](../../models/operations/RemoveAtsScorecardRequest.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
+| Parameter                                                                           | Type                                                                                | Required                                                                            | Description                                                                         |
+| ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| `request`                                                                           | [RemoveAtsScorecard2Request](../../models/operations/RemoveAtsScorecard2Request.md) | :heavy_check_mark:                                                                  | The request object to use for the request.                                          |
 
 ### Response
 
-**[RemoveAtsScorecardResponse](../../models/operations/RemoveAtsScorecardResponse.md)**
+**[RemoveAtsScorecard2Response](../../models/operations/RemoveAtsScorecard2Response.md)**
 
 ### Errors
 
@@ -303,20 +303,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## updateAtsScorecard
+## updateAtsScorecard2
 
 Update a scorecard
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateAtsScorecard" method="put" path="/ats/{connection_id}/scorecard/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateAtsScorecard2" method="put" path="/ats/{connection_id}/scorecard/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.UpdateAtsScorecardRequest;
-import to.unified.unified_java_sdk.models.operations.UpdateAtsScorecardResponse;
+import to.unified.unified_java_sdk.models.operations.UpdateAtsScorecard2Request;
+import to.unified.unified_java_sdk.models.operations.UpdateAtsScorecard2Response;
 import to.unified.unified_java_sdk.models.shared.AtsScorecard;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -330,14 +330,14 @@ public class Application {
                     .build())
             .build();
 
-        UpdateAtsScorecardRequest req = UpdateAtsScorecardRequest.builder()
+        UpdateAtsScorecard2Request req = UpdateAtsScorecard2Request.builder()
                 .atsScorecard(AtsScorecard.builder()
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        UpdateAtsScorecardResponse res = sdk.scorecard().updateAtsScorecard()
+        UpdateAtsScorecard2Response res = sdk.scorecard().updateAtsScorecard2()
                 .request(req)
                 .call();
 
@@ -350,13 +350,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
-| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
-| `request`                                                                         | [UpdateAtsScorecardRequest](../../models/operations/UpdateAtsScorecardRequest.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
+| Parameter                                                                           | Type                                                                                | Required                                                                            | Description                                                                         |
+| ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| `request`                                                                           | [UpdateAtsScorecard2Request](../../models/operations/UpdateAtsScorecard2Request.md) | :heavy_check_mark:                                                                  | The request object to use for the request.                                          |
 
 ### Response
 
-**[UpdateAtsScorecardResponse](../../models/operations/UpdateAtsScorecardResponse.md)**
+**[UpdateAtsScorecard2Response](../../models/operations/UpdateAtsScorecard2Response.md)**
 
 ### Errors
 

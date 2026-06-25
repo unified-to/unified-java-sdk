@@ -7,30 +7,30 @@ import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOper
 
 import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
-import to.unified.unified_java_sdk.models.operations.CreateAtsApplicationRequest;
-import to.unified.unified_java_sdk.models.operations.GetAtsApplicationRequest;
-import to.unified.unified_java_sdk.models.operations.ListAtsApplicationsRequest;
-import to.unified.unified_java_sdk.models.operations.PatchAtsApplicationRequest;
-import to.unified.unified_java_sdk.models.operations.RemoveAtsApplicationRequest;
-import to.unified.unified_java_sdk.models.operations.UpdateAtsApplicationRequest;
-import to.unified.unified_java_sdk.models.operations.async.CreateAtsApplicationRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.CreateAtsApplicationResponse;
-import to.unified.unified_java_sdk.models.operations.async.GetAtsApplicationRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.GetAtsApplicationResponse;
-import to.unified.unified_java_sdk.models.operations.async.ListAtsApplicationsRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.ListAtsApplicationsResponse;
-import to.unified.unified_java_sdk.models.operations.async.PatchAtsApplicationRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.PatchAtsApplicationResponse;
-import to.unified.unified_java_sdk.models.operations.async.RemoveAtsApplicationRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.RemoveAtsApplicationResponse;
-import to.unified.unified_java_sdk.models.operations.async.UpdateAtsApplicationRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.UpdateAtsApplicationResponse;
-import to.unified.unified_java_sdk.operations.CreateAtsApplication;
-import to.unified.unified_java_sdk.operations.GetAtsApplication;
-import to.unified.unified_java_sdk.operations.ListAtsApplications;
-import to.unified.unified_java_sdk.operations.PatchAtsApplication;
-import to.unified.unified_java_sdk.operations.RemoveAtsApplication;
-import to.unified.unified_java_sdk.operations.UpdateAtsApplication;
+import to.unified.unified_java_sdk.models.operations.CreateAtsApplication2Request;
+import to.unified.unified_java_sdk.models.operations.GetAtsApplication2Request;
+import to.unified.unified_java_sdk.models.operations.ListAtsApplications2Request;
+import to.unified.unified_java_sdk.models.operations.PatchAtsApplication2Request;
+import to.unified.unified_java_sdk.models.operations.RemoveAtsApplication2Request;
+import to.unified.unified_java_sdk.models.operations.UpdateAtsApplication2Request;
+import to.unified.unified_java_sdk.models.operations.async.CreateAtsApplication2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.CreateAtsApplication2Response;
+import to.unified.unified_java_sdk.models.operations.async.GetAtsApplication2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetAtsApplication2Response;
+import to.unified.unified_java_sdk.models.operations.async.ListAtsApplications2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListAtsApplications2Response;
+import to.unified.unified_java_sdk.models.operations.async.PatchAtsApplication2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.PatchAtsApplication2Response;
+import to.unified.unified_java_sdk.models.operations.async.RemoveAtsApplication2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.RemoveAtsApplication2Response;
+import to.unified.unified_java_sdk.models.operations.async.UpdateAtsApplication2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.UpdateAtsApplication2Response;
+import to.unified.unified_java_sdk.operations.CreateAtsApplication2;
+import to.unified.unified_java_sdk.operations.GetAtsApplication2;
+import to.unified.unified_java_sdk.operations.ListAtsApplications2;
+import to.unified.unified_java_sdk.operations.PatchAtsApplication2;
+import to.unified.unified_java_sdk.operations.RemoveAtsApplication2;
+import to.unified.unified_java_sdk.operations.UpdateAtsApplication2;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -59,19 +59,19 @@ public class AsyncApplication {
      * 
      * @return The async call builder
      */
-    public CreateAtsApplicationRequestBuilder createAtsApplication() {
-        return new CreateAtsApplicationRequestBuilder(sdkConfiguration);
+    public CreateAtsApplication2RequestBuilder createAtsApplication2() {
+        return new CreateAtsApplication2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Create an application
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<CreateAtsApplicationResponse>} - The async response
+     * @return {@code CompletableFuture<CreateAtsApplication2Response>} - The async response
      */
-    public CompletableFuture<CreateAtsApplicationResponse> createAtsApplication(@Nonnull CreateAtsApplicationRequest request) {
-        AsyncRequestOperation<CreateAtsApplicationRequest, CreateAtsApplicationResponse> operation
-              = new CreateAtsApplication.Async(sdkConfiguration, _headers);
+    public CompletableFuture<CreateAtsApplication2Response> createAtsApplication2(@Nonnull CreateAtsApplication2Request request) {
+        AsyncRequestOperation<CreateAtsApplication2Request, CreateAtsApplication2Response> operation
+              = new CreateAtsApplication2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -82,19 +82,19 @@ public class AsyncApplication {
      * 
      * @return The async call builder
      */
-    public GetAtsApplicationRequestBuilder getAtsApplication() {
-        return new GetAtsApplicationRequestBuilder(sdkConfiguration);
+    public GetAtsApplication2RequestBuilder getAtsApplication2() {
+        return new GetAtsApplication2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Retrieve an application
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<GetAtsApplicationResponse>} - The async response
+     * @return {@code CompletableFuture<GetAtsApplication2Response>} - The async response
      */
-    public CompletableFuture<GetAtsApplicationResponse> getAtsApplication(@Nonnull GetAtsApplicationRequest request) {
-        AsyncRequestOperation<GetAtsApplicationRequest, GetAtsApplicationResponse> operation
-              = new GetAtsApplication.Async(sdkConfiguration, _headers);
+    public CompletableFuture<GetAtsApplication2Response> getAtsApplication2(@Nonnull GetAtsApplication2Request request) {
+        AsyncRequestOperation<GetAtsApplication2Request, GetAtsApplication2Response> operation
+              = new GetAtsApplication2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -105,19 +105,19 @@ public class AsyncApplication {
      * 
      * @return The async call builder
      */
-    public ListAtsApplicationsRequestBuilder listAtsApplications() {
-        return new ListAtsApplicationsRequestBuilder(sdkConfiguration);
+    public ListAtsApplications2RequestBuilder listAtsApplications2() {
+        return new ListAtsApplications2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * List all applications
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<ListAtsApplicationsResponse>} - The async response
+     * @return {@code CompletableFuture<ListAtsApplications2Response>} - The async response
      */
-    public CompletableFuture<ListAtsApplicationsResponse> listAtsApplications(@Nonnull ListAtsApplicationsRequest request) {
-        AsyncRequestOperation<ListAtsApplicationsRequest, ListAtsApplicationsResponse> operation
-              = new ListAtsApplications.Async(sdkConfiguration, _headers);
+    public CompletableFuture<ListAtsApplications2Response> listAtsApplications2(@Nonnull ListAtsApplications2Request request) {
+        AsyncRequestOperation<ListAtsApplications2Request, ListAtsApplications2Response> operation
+              = new ListAtsApplications2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -128,19 +128,19 @@ public class AsyncApplication {
      * 
      * @return The async call builder
      */
-    public PatchAtsApplicationRequestBuilder patchAtsApplication() {
-        return new PatchAtsApplicationRequestBuilder(sdkConfiguration);
+    public PatchAtsApplication2RequestBuilder patchAtsApplication2() {
+        return new PatchAtsApplication2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update an application
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<PatchAtsApplicationResponse>} - The async response
+     * @return {@code CompletableFuture<PatchAtsApplication2Response>} - The async response
      */
-    public CompletableFuture<PatchAtsApplicationResponse> patchAtsApplication(@Nonnull PatchAtsApplicationRequest request) {
-        AsyncRequestOperation<PatchAtsApplicationRequest, PatchAtsApplicationResponse> operation
-              = new PatchAtsApplication.Async(sdkConfiguration, _headers);
+    public CompletableFuture<PatchAtsApplication2Response> patchAtsApplication2(@Nonnull PatchAtsApplication2Request request) {
+        AsyncRequestOperation<PatchAtsApplication2Request, PatchAtsApplication2Response> operation
+              = new PatchAtsApplication2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -151,19 +151,19 @@ public class AsyncApplication {
      * 
      * @return The async call builder
      */
-    public RemoveAtsApplicationRequestBuilder removeAtsApplication() {
-        return new RemoveAtsApplicationRequestBuilder(sdkConfiguration);
+    public RemoveAtsApplication2RequestBuilder removeAtsApplication2() {
+        return new RemoveAtsApplication2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Remove an application
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<RemoveAtsApplicationResponse>} - The async response
+     * @return {@code CompletableFuture<RemoveAtsApplication2Response>} - The async response
      */
-    public CompletableFuture<RemoveAtsApplicationResponse> removeAtsApplication(@Nonnull RemoveAtsApplicationRequest request) {
-        AsyncRequestOperation<RemoveAtsApplicationRequest, RemoveAtsApplicationResponse> operation
-              = new RemoveAtsApplication.Async(sdkConfiguration, _headers);
+    public CompletableFuture<RemoveAtsApplication2Response> removeAtsApplication2(@Nonnull RemoveAtsApplication2Request request) {
+        AsyncRequestOperation<RemoveAtsApplication2Request, RemoveAtsApplication2Response> operation
+              = new RemoveAtsApplication2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -174,19 +174,19 @@ public class AsyncApplication {
      * 
      * @return The async call builder
      */
-    public UpdateAtsApplicationRequestBuilder updateAtsApplication() {
-        return new UpdateAtsApplicationRequestBuilder(sdkConfiguration);
+    public UpdateAtsApplication2RequestBuilder updateAtsApplication2() {
+        return new UpdateAtsApplication2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update an application
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<UpdateAtsApplicationResponse>} - The async response
+     * @return {@code CompletableFuture<UpdateAtsApplication2Response>} - The async response
      */
-    public CompletableFuture<UpdateAtsApplicationResponse> updateAtsApplication(@Nonnull UpdateAtsApplicationRequest request) {
-        AsyncRequestOperation<UpdateAtsApplicationRequest, UpdateAtsApplicationResponse> operation
-              = new UpdateAtsApplication.Async(sdkConfiguration, _headers);
+    public CompletableFuture<UpdateAtsApplication2Response> updateAtsApplication2(@Nonnull UpdateAtsApplication2Request request) {
+        AsyncRequestOperation<UpdateAtsApplication2Request, UpdateAtsApplication2Response> operation
+              = new UpdateAtsApplication2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

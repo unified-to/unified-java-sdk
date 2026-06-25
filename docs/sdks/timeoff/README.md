@@ -4,27 +4,27 @@
 
 ### Available Operations
 
-* [createHrisTimeoff](#createhristimeoff) - Create a timeoff
-* [getHrisTimeoff](#gethristimeoff) - Retrieve a timeoff
-* [listHrisTimeoffs](#listhristimeoffs) - List all timeoffs
-* [patchHrisTimeoff](#patchhristimeoff) - Update a timeoff
-* [removeHrisTimeoff](#removehristimeoff) - Remove a timeoff
-* [updateHrisTimeoff](#updatehristimeoff) - Update a timeoff
+* [createHrisTimeoff2](#createhristimeoff2) - Create a timeoff
+* [getHrisTimeoff2](#gethristimeoff2) - Retrieve a timeoff
+* [listHrisTimeoffs2](#listhristimeoffs2) - List all timeoffs
+* [patchHrisTimeoff2](#patchhristimeoff2) - Update a timeoff
+* [removeHrisTimeoff2](#removehristimeoff2) - Remove a timeoff
+* [updateHrisTimeoff2](#updatehristimeoff2) - Update a timeoff
 
-## createHrisTimeoff
+## createHrisTimeoff2
 
 Create a timeoff
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createHrisTimeoff" method="post" path="/hris/{connection_id}/timeoff" -->
+<!-- UsageSnippet language="java" operationID="createHrisTimeoff2" method="post" path="/hris/{connection_id}/timeoff" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.CreateHrisTimeoffRequest;
-import to.unified.unified_java_sdk.models.operations.CreateHrisTimeoffResponse;
+import to.unified.unified_java_sdk.models.operations.CreateHrisTimeoff2Request;
+import to.unified.unified_java_sdk.models.operations.CreateHrisTimeoff2Response;
 import to.unified.unified_java_sdk.models.shared.HrisTimeoff;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -38,14 +38,14 @@ public class Application {
                     .build())
             .build();
 
-        CreateHrisTimeoffRequest req = CreateHrisTimeoffRequest.builder()
+        CreateHrisTimeoff2Request req = CreateHrisTimeoff2Request.builder()
                 .hrisTimeoff(HrisTimeoff.builder()
                     .userId("<id>")
                     .build())
                 .connectionId("<id>")
                 .build();
 
-        CreateHrisTimeoffResponse res = sdk.timeoff().createHrisTimeoff()
+        CreateHrisTimeoff2Response res = sdk.timeoff().createHrisTimeoff2()
                 .request(req)
                 .call();
 
@@ -58,13 +58,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
-| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
-| `request`                                                                       | [CreateHrisTimeoffRequest](../../models/operations/CreateHrisTimeoffRequest.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
+| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
+| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| `request`                                                                         | [CreateHrisTimeoff2Request](../../models/operations/CreateHrisTimeoff2Request.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
 
 ### Response
 
-**[CreateHrisTimeoffResponse](../../models/operations/CreateHrisTimeoffResponse.md)**
+**[CreateHrisTimeoff2Response](../../models/operations/CreateHrisTimeoff2Response.md)**
 
 ### Errors
 
@@ -72,20 +72,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## getHrisTimeoff
+## getHrisTimeoff2
 
 Retrieve a timeoff
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="getHrisTimeoff" method="get" path="/hris/{connection_id}/timeoff/{id}" -->
+<!-- UsageSnippet language="java" operationID="getHrisTimeoff2" method="get" path="/hris/{connection_id}/timeoff/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.GetHrisTimeoffRequest;
-import to.unified.unified_java_sdk.models.operations.GetHrisTimeoffResponse;
+import to.unified.unified_java_sdk.models.operations.GetHrisTimeoff2Request;
+import to.unified.unified_java_sdk.models.operations.GetHrisTimeoff2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -98,12 +98,12 @@ public class Application {
                     .build())
             .build();
 
-        GetHrisTimeoffRequest req = GetHrisTimeoffRequest.builder()
+        GetHrisTimeoff2Request req = GetHrisTimeoff2Request.builder()
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        GetHrisTimeoffResponse res = sdk.timeoff().getHrisTimeoff()
+        GetHrisTimeoff2Response res = sdk.timeoff().getHrisTimeoff2()
                 .request(req)
                 .call();
 
@@ -116,13 +116,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                 | Type                                                                      | Required                                                                  | Description                                                               |
-| ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
-| `request`                                                                 | [GetHrisTimeoffRequest](../../models/operations/GetHrisTimeoffRequest.md) | :heavy_check_mark:                                                        | The request object to use for the request.                                |
+| Parameter                                                                   | Type                                                                        | Required                                                                    | Description                                                                 |
+| --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| `request`                                                                   | [GetHrisTimeoff2Request](../../models/operations/GetHrisTimeoff2Request.md) | :heavy_check_mark:                                                          | The request object to use for the request.                                  |
 
 ### Response
 
-**[GetHrisTimeoffResponse](../../models/operations/GetHrisTimeoffResponse.md)**
+**[GetHrisTimeoff2Response](../../models/operations/GetHrisTimeoff2Response.md)**
 
 ### Errors
 
@@ -130,20 +130,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## listHrisTimeoffs
+## listHrisTimeoffs2
 
 List all timeoffs
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="listHrisTimeoffs" method="get" path="/hris/{connection_id}/timeoff" -->
+<!-- UsageSnippet language="java" operationID="listHrisTimeoffs2" method="get" path="/hris/{connection_id}/timeoff" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.ListHrisTimeoffsRequest;
-import to.unified.unified_java_sdk.models.operations.ListHrisTimeoffsResponse;
+import to.unified.unified_java_sdk.models.operations.ListHrisTimeoffs2Request;
+import to.unified.unified_java_sdk.models.operations.ListHrisTimeoffs2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -156,11 +156,11 @@ public class Application {
                     .build())
             .build();
 
-        ListHrisTimeoffsRequest req = ListHrisTimeoffsRequest.builder()
+        ListHrisTimeoffs2Request req = ListHrisTimeoffs2Request.builder()
                 .connectionId("<id>")
                 .build();
 
-        ListHrisTimeoffsResponse res = sdk.timeoff().listHrisTimeoffs()
+        ListHrisTimeoffs2Response res = sdk.timeoff().listHrisTimeoffs2()
                 .request(req)
                 .call();
 
@@ -173,13 +173,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
-| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
-| `request`                                                                     | [ListHrisTimeoffsRequest](../../models/operations/ListHrisTimeoffsRequest.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
+| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| `request`                                                                       | [ListHrisTimeoffs2Request](../../models/operations/ListHrisTimeoffs2Request.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
 
 ### Response
 
-**[ListHrisTimeoffsResponse](../../models/operations/ListHrisTimeoffsResponse.md)**
+**[ListHrisTimeoffs2Response](../../models/operations/ListHrisTimeoffs2Response.md)**
 
 ### Errors
 
@@ -187,20 +187,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## patchHrisTimeoff
+## patchHrisTimeoff2
 
 Update a timeoff
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchHrisTimeoff" method="patch" path="/hris/{connection_id}/timeoff/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchHrisTimeoff2" method="patch" path="/hris/{connection_id}/timeoff/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.PatchHrisTimeoffRequest;
-import to.unified.unified_java_sdk.models.operations.PatchHrisTimeoffResponse;
+import to.unified.unified_java_sdk.models.operations.PatchHrisTimeoff2Request;
+import to.unified.unified_java_sdk.models.operations.PatchHrisTimeoff2Response;
 import to.unified.unified_java_sdk.models.shared.HrisTimeoff;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -214,7 +214,7 @@ public class Application {
                     .build())
             .build();
 
-        PatchHrisTimeoffRequest req = PatchHrisTimeoffRequest.builder()
+        PatchHrisTimeoff2Request req = PatchHrisTimeoff2Request.builder()
                 .hrisTimeoff(HrisTimeoff.builder()
                     .userId("<id>")
                     .build())
@@ -222,7 +222,7 @@ public class Application {
                 .id("<id>")
                 .build();
 
-        PatchHrisTimeoffResponse res = sdk.timeoff().patchHrisTimeoff()
+        PatchHrisTimeoff2Response res = sdk.timeoff().patchHrisTimeoff2()
                 .request(req)
                 .call();
 
@@ -235,13 +235,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
-| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
-| `request`                                                                     | [PatchHrisTimeoffRequest](../../models/operations/PatchHrisTimeoffRequest.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
+| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| `request`                                                                       | [PatchHrisTimeoff2Request](../../models/operations/PatchHrisTimeoff2Request.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
 
 ### Response
 
-**[PatchHrisTimeoffResponse](../../models/operations/PatchHrisTimeoffResponse.md)**
+**[PatchHrisTimeoff2Response](../../models/operations/PatchHrisTimeoff2Response.md)**
 
 ### Errors
 
@@ -249,20 +249,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## removeHrisTimeoff
+## removeHrisTimeoff2
 
 Remove a timeoff
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="removeHrisTimeoff" method="delete" path="/hris/{connection_id}/timeoff/{id}" -->
+<!-- UsageSnippet language="java" operationID="removeHrisTimeoff2" method="delete" path="/hris/{connection_id}/timeoff/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.RemoveHrisTimeoffRequest;
-import to.unified.unified_java_sdk.models.operations.RemoveHrisTimeoffResponse;
+import to.unified.unified_java_sdk.models.operations.RemoveHrisTimeoff2Request;
+import to.unified.unified_java_sdk.models.operations.RemoveHrisTimeoff2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -275,12 +275,12 @@ public class Application {
                     .build())
             .build();
 
-        RemoveHrisTimeoffRequest req = RemoveHrisTimeoffRequest.builder()
+        RemoveHrisTimeoff2Request req = RemoveHrisTimeoff2Request.builder()
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        RemoveHrisTimeoffResponse res = sdk.timeoff().removeHrisTimeoff()
+        RemoveHrisTimeoff2Response res = sdk.timeoff().removeHrisTimeoff2()
                 .request(req)
                 .call();
 
@@ -291,13 +291,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
-| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
-| `request`                                                                       | [RemoveHrisTimeoffRequest](../../models/operations/RemoveHrisTimeoffRequest.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
+| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
+| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| `request`                                                                         | [RemoveHrisTimeoff2Request](../../models/operations/RemoveHrisTimeoff2Request.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
 
 ### Response
 
-**[RemoveHrisTimeoffResponse](../../models/operations/RemoveHrisTimeoffResponse.md)**
+**[RemoveHrisTimeoff2Response](../../models/operations/RemoveHrisTimeoff2Response.md)**
 
 ### Errors
 
@@ -305,20 +305,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## updateHrisTimeoff
+## updateHrisTimeoff2
 
 Update a timeoff
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateHrisTimeoff" method="put" path="/hris/{connection_id}/timeoff/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateHrisTimeoff2" method="put" path="/hris/{connection_id}/timeoff/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.UpdateHrisTimeoffRequest;
-import to.unified.unified_java_sdk.models.operations.UpdateHrisTimeoffResponse;
+import to.unified.unified_java_sdk.models.operations.UpdateHrisTimeoff2Request;
+import to.unified.unified_java_sdk.models.operations.UpdateHrisTimeoff2Response;
 import to.unified.unified_java_sdk.models.shared.HrisTimeoff;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -332,7 +332,7 @@ public class Application {
                     .build())
             .build();
 
-        UpdateHrisTimeoffRequest req = UpdateHrisTimeoffRequest.builder()
+        UpdateHrisTimeoff2Request req = UpdateHrisTimeoff2Request.builder()
                 .hrisTimeoff(HrisTimeoff.builder()
                     .userId("<id>")
                     .build())
@@ -340,7 +340,7 @@ public class Application {
                 .id("<id>")
                 .build();
 
-        UpdateHrisTimeoffResponse res = sdk.timeoff().updateHrisTimeoff()
+        UpdateHrisTimeoff2Response res = sdk.timeoff().updateHrisTimeoff2()
                 .request(req)
                 .call();
 
@@ -353,13 +353,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
-| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
-| `request`                                                                       | [UpdateHrisTimeoffRequest](../../models/operations/UpdateHrisTimeoffRequest.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
+| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
+| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| `request`                                                                         | [UpdateHrisTimeoff2Request](../../models/operations/UpdateHrisTimeoff2Request.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
 
 ### Response
 
-**[UpdateHrisTimeoffResponse](../../models/operations/UpdateHrisTimeoffResponse.md)**
+**[UpdateHrisTimeoff2Response](../../models/operations/UpdateHrisTimeoff2Response.md)**
 
 ### Errors
 

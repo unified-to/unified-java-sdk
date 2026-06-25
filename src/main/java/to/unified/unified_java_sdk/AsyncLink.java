@@ -7,54 +7,54 @@ import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOper
 
 import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
-import to.unified.unified_java_sdk.models.operations.CreateCalendarLinkRequest;
-import to.unified.unified_java_sdk.models.operations.CreatePaymentLinkRequest;
-import to.unified.unified_java_sdk.models.operations.GetCalendarLinkRequest;
-import to.unified.unified_java_sdk.models.operations.GetPaymentLinkRequest;
-import to.unified.unified_java_sdk.models.operations.ListCalendarLinksRequest;
-import to.unified.unified_java_sdk.models.operations.ListPaymentLinksRequest;
-import to.unified.unified_java_sdk.models.operations.PatchCalendarLinkRequest;
-import to.unified.unified_java_sdk.models.operations.PatchPaymentLinkRequest;
-import to.unified.unified_java_sdk.models.operations.RemoveCalendarLinkRequest;
-import to.unified.unified_java_sdk.models.operations.RemovePaymentLinkRequest;
-import to.unified.unified_java_sdk.models.operations.UpdateCalendarLinkRequest;
-import to.unified.unified_java_sdk.models.operations.UpdatePaymentLinkRequest;
-import to.unified.unified_java_sdk.models.operations.async.CreateCalendarLinkRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.CreateCalendarLinkResponse;
-import to.unified.unified_java_sdk.models.operations.async.CreatePaymentLinkRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.CreatePaymentLinkResponse;
-import to.unified.unified_java_sdk.models.operations.async.GetCalendarLinkRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.GetCalendarLinkResponse;
-import to.unified.unified_java_sdk.models.operations.async.GetPaymentLinkRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.GetPaymentLinkResponse;
-import to.unified.unified_java_sdk.models.operations.async.ListCalendarLinksRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.ListCalendarLinksResponse;
-import to.unified.unified_java_sdk.models.operations.async.ListPaymentLinksRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.ListPaymentLinksResponse;
-import to.unified.unified_java_sdk.models.operations.async.PatchCalendarLinkRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.PatchCalendarLinkResponse;
-import to.unified.unified_java_sdk.models.operations.async.PatchPaymentLinkRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.PatchPaymentLinkResponse;
-import to.unified.unified_java_sdk.models.operations.async.RemoveCalendarLinkRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.RemoveCalendarLinkResponse;
-import to.unified.unified_java_sdk.models.operations.async.RemovePaymentLinkRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.RemovePaymentLinkResponse;
-import to.unified.unified_java_sdk.models.operations.async.UpdateCalendarLinkRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.UpdateCalendarLinkResponse;
-import to.unified.unified_java_sdk.models.operations.async.UpdatePaymentLinkRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.UpdatePaymentLinkResponse;
-import to.unified.unified_java_sdk.operations.CreateCalendarLink;
-import to.unified.unified_java_sdk.operations.CreatePaymentLink;
-import to.unified.unified_java_sdk.operations.GetCalendarLink;
-import to.unified.unified_java_sdk.operations.GetPaymentLink;
-import to.unified.unified_java_sdk.operations.ListCalendarLinks;
-import to.unified.unified_java_sdk.operations.ListPaymentLinks;
-import to.unified.unified_java_sdk.operations.PatchCalendarLink;
-import to.unified.unified_java_sdk.operations.PatchPaymentLink;
-import to.unified.unified_java_sdk.operations.RemoveCalendarLink;
-import to.unified.unified_java_sdk.operations.RemovePaymentLink;
-import to.unified.unified_java_sdk.operations.UpdateCalendarLink;
-import to.unified.unified_java_sdk.operations.UpdatePaymentLink;
+import to.unified.unified_java_sdk.models.operations.CreateCalendarLink2Request;
+import to.unified.unified_java_sdk.models.operations.CreatePaymentLink2Request;
+import to.unified.unified_java_sdk.models.operations.GetCalendarLink2Request;
+import to.unified.unified_java_sdk.models.operations.GetPaymentLink2Request;
+import to.unified.unified_java_sdk.models.operations.ListCalendarLinks2Request;
+import to.unified.unified_java_sdk.models.operations.ListPaymentLinks2Request;
+import to.unified.unified_java_sdk.models.operations.PatchCalendarLink2Request;
+import to.unified.unified_java_sdk.models.operations.PatchPaymentLink2Request;
+import to.unified.unified_java_sdk.models.operations.RemoveCalendarLink2Request;
+import to.unified.unified_java_sdk.models.operations.RemovePaymentLink2Request;
+import to.unified.unified_java_sdk.models.operations.UpdateCalendarLink2Request;
+import to.unified.unified_java_sdk.models.operations.UpdatePaymentLink2Request;
+import to.unified.unified_java_sdk.models.operations.async.CreateCalendarLink2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.CreateCalendarLink2Response;
+import to.unified.unified_java_sdk.models.operations.async.CreatePaymentLink2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.CreatePaymentLink2Response;
+import to.unified.unified_java_sdk.models.operations.async.GetCalendarLink2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetCalendarLink2Response;
+import to.unified.unified_java_sdk.models.operations.async.GetPaymentLink2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetPaymentLink2Response;
+import to.unified.unified_java_sdk.models.operations.async.ListCalendarLinks2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListCalendarLinks2Response;
+import to.unified.unified_java_sdk.models.operations.async.ListPaymentLinks2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListPaymentLinks2Response;
+import to.unified.unified_java_sdk.models.operations.async.PatchCalendarLink2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.PatchCalendarLink2Response;
+import to.unified.unified_java_sdk.models.operations.async.PatchPaymentLink2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.PatchPaymentLink2Response;
+import to.unified.unified_java_sdk.models.operations.async.RemoveCalendarLink2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.RemoveCalendarLink2Response;
+import to.unified.unified_java_sdk.models.operations.async.RemovePaymentLink2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.RemovePaymentLink2Response;
+import to.unified.unified_java_sdk.models.operations.async.UpdateCalendarLink2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.UpdateCalendarLink2Response;
+import to.unified.unified_java_sdk.models.operations.async.UpdatePaymentLink2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.UpdatePaymentLink2Response;
+import to.unified.unified_java_sdk.operations.CreateCalendarLink2;
+import to.unified.unified_java_sdk.operations.CreatePaymentLink2;
+import to.unified.unified_java_sdk.operations.GetCalendarLink2;
+import to.unified.unified_java_sdk.operations.GetPaymentLink2;
+import to.unified.unified_java_sdk.operations.ListCalendarLinks2;
+import to.unified.unified_java_sdk.operations.ListPaymentLinks2;
+import to.unified.unified_java_sdk.operations.PatchCalendarLink2;
+import to.unified.unified_java_sdk.operations.PatchPaymentLink2;
+import to.unified.unified_java_sdk.operations.RemoveCalendarLink2;
+import to.unified.unified_java_sdk.operations.RemovePaymentLink2;
+import to.unified.unified_java_sdk.operations.UpdateCalendarLink2;
+import to.unified.unified_java_sdk.operations.UpdatePaymentLink2;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -83,19 +83,19 @@ public class AsyncLink {
      * 
      * @return The async call builder
      */
-    public CreateCalendarLinkRequestBuilder createCalendarLink() {
-        return new CreateCalendarLinkRequestBuilder(sdkConfiguration);
+    public CreateCalendarLink2RequestBuilder createCalendarLink2() {
+        return new CreateCalendarLink2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Create a link
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<CreateCalendarLinkResponse>} - The async response
+     * @return {@code CompletableFuture<CreateCalendarLink2Response>} - The async response
      */
-    public CompletableFuture<CreateCalendarLinkResponse> createCalendarLink(@Nonnull CreateCalendarLinkRequest request) {
-        AsyncRequestOperation<CreateCalendarLinkRequest, CreateCalendarLinkResponse> operation
-              = new CreateCalendarLink.Async(sdkConfiguration, _headers);
+    public CompletableFuture<CreateCalendarLink2Response> createCalendarLink2(@Nonnull CreateCalendarLink2Request request) {
+        AsyncRequestOperation<CreateCalendarLink2Request, CreateCalendarLink2Response> operation
+              = new CreateCalendarLink2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -106,19 +106,19 @@ public class AsyncLink {
      * 
      * @return The async call builder
      */
-    public CreatePaymentLinkRequestBuilder createPaymentLink() {
-        return new CreatePaymentLinkRequestBuilder(sdkConfiguration);
+    public CreatePaymentLink2RequestBuilder createPaymentLink2() {
+        return new CreatePaymentLink2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Create a link
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<CreatePaymentLinkResponse>} - The async response
+     * @return {@code CompletableFuture<CreatePaymentLink2Response>} - The async response
      */
-    public CompletableFuture<CreatePaymentLinkResponse> createPaymentLink(@Nonnull CreatePaymentLinkRequest request) {
-        AsyncRequestOperation<CreatePaymentLinkRequest, CreatePaymentLinkResponse> operation
-              = new CreatePaymentLink.Async(sdkConfiguration, _headers);
+    public CompletableFuture<CreatePaymentLink2Response> createPaymentLink2(@Nonnull CreatePaymentLink2Request request) {
+        AsyncRequestOperation<CreatePaymentLink2Request, CreatePaymentLink2Response> operation
+              = new CreatePaymentLink2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -129,19 +129,19 @@ public class AsyncLink {
      * 
      * @return The async call builder
      */
-    public GetCalendarLinkRequestBuilder getCalendarLink() {
-        return new GetCalendarLinkRequestBuilder(sdkConfiguration);
+    public GetCalendarLink2RequestBuilder getCalendarLink2() {
+        return new GetCalendarLink2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Retrieve a link
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<GetCalendarLinkResponse>} - The async response
+     * @return {@code CompletableFuture<GetCalendarLink2Response>} - The async response
      */
-    public CompletableFuture<GetCalendarLinkResponse> getCalendarLink(@Nonnull GetCalendarLinkRequest request) {
-        AsyncRequestOperation<GetCalendarLinkRequest, GetCalendarLinkResponse> operation
-              = new GetCalendarLink.Async(sdkConfiguration, _headers);
+    public CompletableFuture<GetCalendarLink2Response> getCalendarLink2(@Nonnull GetCalendarLink2Request request) {
+        AsyncRequestOperation<GetCalendarLink2Request, GetCalendarLink2Response> operation
+              = new GetCalendarLink2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -152,19 +152,19 @@ public class AsyncLink {
      * 
      * @return The async call builder
      */
-    public GetPaymentLinkRequestBuilder getPaymentLink() {
-        return new GetPaymentLinkRequestBuilder(sdkConfiguration);
+    public GetPaymentLink2RequestBuilder getPaymentLink2() {
+        return new GetPaymentLink2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Retrieve a link
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<GetPaymentLinkResponse>} - The async response
+     * @return {@code CompletableFuture<GetPaymentLink2Response>} - The async response
      */
-    public CompletableFuture<GetPaymentLinkResponse> getPaymentLink(@Nonnull GetPaymentLinkRequest request) {
-        AsyncRequestOperation<GetPaymentLinkRequest, GetPaymentLinkResponse> operation
-              = new GetPaymentLink.Async(sdkConfiguration, _headers);
+    public CompletableFuture<GetPaymentLink2Response> getPaymentLink2(@Nonnull GetPaymentLink2Request request) {
+        AsyncRequestOperation<GetPaymentLink2Request, GetPaymentLink2Response> operation
+              = new GetPaymentLink2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -175,19 +175,19 @@ public class AsyncLink {
      * 
      * @return The async call builder
      */
-    public ListCalendarLinksRequestBuilder listCalendarLinks() {
-        return new ListCalendarLinksRequestBuilder(sdkConfiguration);
+    public ListCalendarLinks2RequestBuilder listCalendarLinks2() {
+        return new ListCalendarLinks2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * List all links
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<ListCalendarLinksResponse>} - The async response
+     * @return {@code CompletableFuture<ListCalendarLinks2Response>} - The async response
      */
-    public CompletableFuture<ListCalendarLinksResponse> listCalendarLinks(@Nonnull ListCalendarLinksRequest request) {
-        AsyncRequestOperation<ListCalendarLinksRequest, ListCalendarLinksResponse> operation
-              = new ListCalendarLinks.Async(sdkConfiguration, _headers);
+    public CompletableFuture<ListCalendarLinks2Response> listCalendarLinks2(@Nonnull ListCalendarLinks2Request request) {
+        AsyncRequestOperation<ListCalendarLinks2Request, ListCalendarLinks2Response> operation
+              = new ListCalendarLinks2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -198,19 +198,19 @@ public class AsyncLink {
      * 
      * @return The async call builder
      */
-    public ListPaymentLinksRequestBuilder listPaymentLinks() {
-        return new ListPaymentLinksRequestBuilder(sdkConfiguration);
+    public ListPaymentLinks2RequestBuilder listPaymentLinks2() {
+        return new ListPaymentLinks2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * List all links
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<ListPaymentLinksResponse>} - The async response
+     * @return {@code CompletableFuture<ListPaymentLinks2Response>} - The async response
      */
-    public CompletableFuture<ListPaymentLinksResponse> listPaymentLinks(@Nonnull ListPaymentLinksRequest request) {
-        AsyncRequestOperation<ListPaymentLinksRequest, ListPaymentLinksResponse> operation
-              = new ListPaymentLinks.Async(sdkConfiguration, _headers);
+    public CompletableFuture<ListPaymentLinks2Response> listPaymentLinks2(@Nonnull ListPaymentLinks2Request request) {
+        AsyncRequestOperation<ListPaymentLinks2Request, ListPaymentLinks2Response> operation
+              = new ListPaymentLinks2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -221,19 +221,19 @@ public class AsyncLink {
      * 
      * @return The async call builder
      */
-    public PatchCalendarLinkRequestBuilder patchCalendarLink() {
-        return new PatchCalendarLinkRequestBuilder(sdkConfiguration);
+    public PatchCalendarLink2RequestBuilder patchCalendarLink2() {
+        return new PatchCalendarLink2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update a link
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<PatchCalendarLinkResponse>} - The async response
+     * @return {@code CompletableFuture<PatchCalendarLink2Response>} - The async response
      */
-    public CompletableFuture<PatchCalendarLinkResponse> patchCalendarLink(@Nonnull PatchCalendarLinkRequest request) {
-        AsyncRequestOperation<PatchCalendarLinkRequest, PatchCalendarLinkResponse> operation
-              = new PatchCalendarLink.Async(sdkConfiguration, _headers);
+    public CompletableFuture<PatchCalendarLink2Response> patchCalendarLink2(@Nonnull PatchCalendarLink2Request request) {
+        AsyncRequestOperation<PatchCalendarLink2Request, PatchCalendarLink2Response> operation
+              = new PatchCalendarLink2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -244,42 +244,19 @@ public class AsyncLink {
      * 
      * @return The async call builder
      */
-    public PatchPaymentLinkRequestBuilder patchPaymentLink() {
-        return new PatchPaymentLinkRequestBuilder(sdkConfiguration);
+    public PatchPaymentLink2RequestBuilder patchPaymentLink2() {
+        return new PatchPaymentLink2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update a link
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<PatchPaymentLinkResponse>} - The async response
+     * @return {@code CompletableFuture<PatchPaymentLink2Response>} - The async response
      */
-    public CompletableFuture<PatchPaymentLinkResponse> patchPaymentLink(@Nonnull PatchPaymentLinkRequest request) {
-        AsyncRequestOperation<PatchPaymentLinkRequest, PatchPaymentLinkResponse> operation
-              = new PatchPaymentLink.Async(sdkConfiguration, _headers);
-        return operation.doRequest(request)
-            .thenCompose(operation::handleResponse);
-    }
-
-
-    /**
-     * Remove a link
-     * 
-     * @return The async call builder
-     */
-    public RemoveCalendarLinkRequestBuilder removeCalendarLink() {
-        return new RemoveCalendarLinkRequestBuilder(sdkConfiguration);
-    }
-
-    /**
-     * Remove a link
-     * 
-     * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<RemoveCalendarLinkResponse>} - The async response
-     */
-    public CompletableFuture<RemoveCalendarLinkResponse> removeCalendarLink(@Nonnull RemoveCalendarLinkRequest request) {
-        AsyncRequestOperation<RemoveCalendarLinkRequest, RemoveCalendarLinkResponse> operation
-              = new RemoveCalendarLink.Async(sdkConfiguration, _headers);
+    public CompletableFuture<PatchPaymentLink2Response> patchPaymentLink2(@Nonnull PatchPaymentLink2Request request) {
+        AsyncRequestOperation<PatchPaymentLink2Request, PatchPaymentLink2Response> operation
+              = new PatchPaymentLink2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -290,19 +267,42 @@ public class AsyncLink {
      * 
      * @return The async call builder
      */
-    public RemovePaymentLinkRequestBuilder removePaymentLink() {
-        return new RemovePaymentLinkRequestBuilder(sdkConfiguration);
+    public RemoveCalendarLink2RequestBuilder removeCalendarLink2() {
+        return new RemoveCalendarLink2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Remove a link
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<RemovePaymentLinkResponse>} - The async response
+     * @return {@code CompletableFuture<RemoveCalendarLink2Response>} - The async response
      */
-    public CompletableFuture<RemovePaymentLinkResponse> removePaymentLink(@Nonnull RemovePaymentLinkRequest request) {
-        AsyncRequestOperation<RemovePaymentLinkRequest, RemovePaymentLinkResponse> operation
-              = new RemovePaymentLink.Async(sdkConfiguration, _headers);
+    public CompletableFuture<RemoveCalendarLink2Response> removeCalendarLink2(@Nonnull RemoveCalendarLink2Request request) {
+        AsyncRequestOperation<RemoveCalendarLink2Request, RemoveCalendarLink2Response> operation
+              = new RemoveCalendarLink2.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * Remove a link
+     * 
+     * @return The async call builder
+     */
+    public RemovePaymentLink2RequestBuilder removePaymentLink2() {
+        return new RemovePaymentLink2RequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Remove a link
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<RemovePaymentLink2Response>} - The async response
+     */
+    public CompletableFuture<RemovePaymentLink2Response> removePaymentLink2(@Nonnull RemovePaymentLink2Request request) {
+        AsyncRequestOperation<RemovePaymentLink2Request, RemovePaymentLink2Response> operation
+              = new RemovePaymentLink2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -313,19 +313,19 @@ public class AsyncLink {
      * 
      * @return The async call builder
      */
-    public UpdateCalendarLinkRequestBuilder updateCalendarLink() {
-        return new UpdateCalendarLinkRequestBuilder(sdkConfiguration);
+    public UpdateCalendarLink2RequestBuilder updateCalendarLink2() {
+        return new UpdateCalendarLink2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update a link
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<UpdateCalendarLinkResponse>} - The async response
+     * @return {@code CompletableFuture<UpdateCalendarLink2Response>} - The async response
      */
-    public CompletableFuture<UpdateCalendarLinkResponse> updateCalendarLink(@Nonnull UpdateCalendarLinkRequest request) {
-        AsyncRequestOperation<UpdateCalendarLinkRequest, UpdateCalendarLinkResponse> operation
-              = new UpdateCalendarLink.Async(sdkConfiguration, _headers);
+    public CompletableFuture<UpdateCalendarLink2Response> updateCalendarLink2(@Nonnull UpdateCalendarLink2Request request) {
+        AsyncRequestOperation<UpdateCalendarLink2Request, UpdateCalendarLink2Response> operation
+              = new UpdateCalendarLink2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -336,19 +336,19 @@ public class AsyncLink {
      * 
      * @return The async call builder
      */
-    public UpdatePaymentLinkRequestBuilder updatePaymentLink() {
-        return new UpdatePaymentLinkRequestBuilder(sdkConfiguration);
+    public UpdatePaymentLink2RequestBuilder updatePaymentLink2() {
+        return new UpdatePaymentLink2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update a link
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<UpdatePaymentLinkResponse>} - The async response
+     * @return {@code CompletableFuture<UpdatePaymentLink2Response>} - The async response
      */
-    public CompletableFuture<UpdatePaymentLinkResponse> updatePaymentLink(@Nonnull UpdatePaymentLinkRequest request) {
-        AsyncRequestOperation<UpdatePaymentLinkRequest, UpdatePaymentLinkResponse> operation
-              = new UpdatePaymentLink.Async(sdkConfiguration, _headers);
+    public CompletableFuture<UpdatePaymentLink2Response> updatePaymentLink2(@Nonnull UpdatePaymentLink2Request request) {
+        AsyncRequestOperation<UpdatePaymentLink2Request, UpdatePaymentLink2Response> operation
+              = new UpdatePaymentLink2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

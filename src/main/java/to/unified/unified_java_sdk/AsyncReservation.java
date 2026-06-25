@@ -7,30 +7,30 @@ import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOper
 
 import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
-import to.unified.unified_java_sdk.models.operations.CreateCommerceReservationRequest;
-import to.unified.unified_java_sdk.models.operations.GetCommerceReservationRequest;
-import to.unified.unified_java_sdk.models.operations.ListCommerceReservationsRequest;
-import to.unified.unified_java_sdk.models.operations.PatchCommerceReservationRequest;
-import to.unified.unified_java_sdk.models.operations.RemoveCommerceReservationRequest;
-import to.unified.unified_java_sdk.models.operations.UpdateCommerceReservationRequest;
-import to.unified.unified_java_sdk.models.operations.async.CreateCommerceReservationRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.CreateCommerceReservationResponse;
-import to.unified.unified_java_sdk.models.operations.async.GetCommerceReservationRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.GetCommerceReservationResponse;
-import to.unified.unified_java_sdk.models.operations.async.ListCommerceReservationsRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.ListCommerceReservationsResponse;
-import to.unified.unified_java_sdk.models.operations.async.PatchCommerceReservationRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.PatchCommerceReservationResponse;
-import to.unified.unified_java_sdk.models.operations.async.RemoveCommerceReservationRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.RemoveCommerceReservationResponse;
-import to.unified.unified_java_sdk.models.operations.async.UpdateCommerceReservationRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.UpdateCommerceReservationResponse;
-import to.unified.unified_java_sdk.operations.CreateCommerceReservation;
-import to.unified.unified_java_sdk.operations.GetCommerceReservation;
-import to.unified.unified_java_sdk.operations.ListCommerceReservations;
-import to.unified.unified_java_sdk.operations.PatchCommerceReservation;
-import to.unified.unified_java_sdk.operations.RemoveCommerceReservation;
-import to.unified.unified_java_sdk.operations.UpdateCommerceReservation;
+import to.unified.unified_java_sdk.models.operations.CreateCommerceReservation2Request;
+import to.unified.unified_java_sdk.models.operations.GetCommerceReservation2Request;
+import to.unified.unified_java_sdk.models.operations.ListCommerceReservations2Request;
+import to.unified.unified_java_sdk.models.operations.PatchCommerceReservation2Request;
+import to.unified.unified_java_sdk.models.operations.RemoveCommerceReservation2Request;
+import to.unified.unified_java_sdk.models.operations.UpdateCommerceReservation2Request;
+import to.unified.unified_java_sdk.models.operations.async.CreateCommerceReservation2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.CreateCommerceReservation2Response;
+import to.unified.unified_java_sdk.models.operations.async.GetCommerceReservation2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetCommerceReservation2Response;
+import to.unified.unified_java_sdk.models.operations.async.ListCommerceReservations2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListCommerceReservations2Response;
+import to.unified.unified_java_sdk.models.operations.async.PatchCommerceReservation2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.PatchCommerceReservation2Response;
+import to.unified.unified_java_sdk.models.operations.async.RemoveCommerceReservation2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.RemoveCommerceReservation2Response;
+import to.unified.unified_java_sdk.models.operations.async.UpdateCommerceReservation2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.UpdateCommerceReservation2Response;
+import to.unified.unified_java_sdk.operations.CreateCommerceReservation2;
+import to.unified.unified_java_sdk.operations.GetCommerceReservation2;
+import to.unified.unified_java_sdk.operations.ListCommerceReservations2;
+import to.unified.unified_java_sdk.operations.PatchCommerceReservation2;
+import to.unified.unified_java_sdk.operations.RemoveCommerceReservation2;
+import to.unified.unified_java_sdk.operations.UpdateCommerceReservation2;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -59,19 +59,19 @@ public class AsyncReservation {
      * 
      * @return The async call builder
      */
-    public CreateCommerceReservationRequestBuilder createCommerceReservation() {
-        return new CreateCommerceReservationRequestBuilder(sdkConfiguration);
+    public CreateCommerceReservation2RequestBuilder createCommerceReservation2() {
+        return new CreateCommerceReservation2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Create a reservation
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<CreateCommerceReservationResponse>} - The async response
+     * @return {@code CompletableFuture<CreateCommerceReservation2Response>} - The async response
      */
-    public CompletableFuture<CreateCommerceReservationResponse> createCommerceReservation(@Nonnull CreateCommerceReservationRequest request) {
-        AsyncRequestOperation<CreateCommerceReservationRequest, CreateCommerceReservationResponse> operation
-              = new CreateCommerceReservation.Async(sdkConfiguration, _headers);
+    public CompletableFuture<CreateCommerceReservation2Response> createCommerceReservation2(@Nonnull CreateCommerceReservation2Request request) {
+        AsyncRequestOperation<CreateCommerceReservation2Request, CreateCommerceReservation2Response> operation
+              = new CreateCommerceReservation2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -82,19 +82,19 @@ public class AsyncReservation {
      * 
      * @return The async call builder
      */
-    public GetCommerceReservationRequestBuilder getCommerceReservation() {
-        return new GetCommerceReservationRequestBuilder(sdkConfiguration);
+    public GetCommerceReservation2RequestBuilder getCommerceReservation2() {
+        return new GetCommerceReservation2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Retrieve a reservation
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<GetCommerceReservationResponse>} - The async response
+     * @return {@code CompletableFuture<GetCommerceReservation2Response>} - The async response
      */
-    public CompletableFuture<GetCommerceReservationResponse> getCommerceReservation(@Nonnull GetCommerceReservationRequest request) {
-        AsyncRequestOperation<GetCommerceReservationRequest, GetCommerceReservationResponse> operation
-              = new GetCommerceReservation.Async(sdkConfiguration, _headers);
+    public CompletableFuture<GetCommerceReservation2Response> getCommerceReservation2(@Nonnull GetCommerceReservation2Request request) {
+        AsyncRequestOperation<GetCommerceReservation2Request, GetCommerceReservation2Response> operation
+              = new GetCommerceReservation2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -105,19 +105,19 @@ public class AsyncReservation {
      * 
      * @return The async call builder
      */
-    public ListCommerceReservationsRequestBuilder listCommerceReservations() {
-        return new ListCommerceReservationsRequestBuilder(sdkConfiguration);
+    public ListCommerceReservations2RequestBuilder listCommerceReservations2() {
+        return new ListCommerceReservations2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * List all reservations
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<ListCommerceReservationsResponse>} - The async response
+     * @return {@code CompletableFuture<ListCommerceReservations2Response>} - The async response
      */
-    public CompletableFuture<ListCommerceReservationsResponse> listCommerceReservations(@Nonnull ListCommerceReservationsRequest request) {
-        AsyncRequestOperation<ListCommerceReservationsRequest, ListCommerceReservationsResponse> operation
-              = new ListCommerceReservations.Async(sdkConfiguration, _headers);
+    public CompletableFuture<ListCommerceReservations2Response> listCommerceReservations2(@Nonnull ListCommerceReservations2Request request) {
+        AsyncRequestOperation<ListCommerceReservations2Request, ListCommerceReservations2Response> operation
+              = new ListCommerceReservations2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -128,19 +128,19 @@ public class AsyncReservation {
      * 
      * @return The async call builder
      */
-    public PatchCommerceReservationRequestBuilder patchCommerceReservation() {
-        return new PatchCommerceReservationRequestBuilder(sdkConfiguration);
+    public PatchCommerceReservation2RequestBuilder patchCommerceReservation2() {
+        return new PatchCommerceReservation2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update a reservation
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<PatchCommerceReservationResponse>} - The async response
+     * @return {@code CompletableFuture<PatchCommerceReservation2Response>} - The async response
      */
-    public CompletableFuture<PatchCommerceReservationResponse> patchCommerceReservation(@Nonnull PatchCommerceReservationRequest request) {
-        AsyncRequestOperation<PatchCommerceReservationRequest, PatchCommerceReservationResponse> operation
-              = new PatchCommerceReservation.Async(sdkConfiguration, _headers);
+    public CompletableFuture<PatchCommerceReservation2Response> patchCommerceReservation2(@Nonnull PatchCommerceReservation2Request request) {
+        AsyncRequestOperation<PatchCommerceReservation2Request, PatchCommerceReservation2Response> operation
+              = new PatchCommerceReservation2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -151,19 +151,19 @@ public class AsyncReservation {
      * 
      * @return The async call builder
      */
-    public RemoveCommerceReservationRequestBuilder removeCommerceReservation() {
-        return new RemoveCommerceReservationRequestBuilder(sdkConfiguration);
+    public RemoveCommerceReservation2RequestBuilder removeCommerceReservation2() {
+        return new RemoveCommerceReservation2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Remove a reservation
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<RemoveCommerceReservationResponse>} - The async response
+     * @return {@code CompletableFuture<RemoveCommerceReservation2Response>} - The async response
      */
-    public CompletableFuture<RemoveCommerceReservationResponse> removeCommerceReservation(@Nonnull RemoveCommerceReservationRequest request) {
-        AsyncRequestOperation<RemoveCommerceReservationRequest, RemoveCommerceReservationResponse> operation
-              = new RemoveCommerceReservation.Async(sdkConfiguration, _headers);
+    public CompletableFuture<RemoveCommerceReservation2Response> removeCommerceReservation2(@Nonnull RemoveCommerceReservation2Request request) {
+        AsyncRequestOperation<RemoveCommerceReservation2Request, RemoveCommerceReservation2Response> operation
+              = new RemoveCommerceReservation2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -174,19 +174,19 @@ public class AsyncReservation {
      * 
      * @return The async call builder
      */
-    public UpdateCommerceReservationRequestBuilder updateCommerceReservation() {
-        return new UpdateCommerceReservationRequestBuilder(sdkConfiguration);
+    public UpdateCommerceReservation2RequestBuilder updateCommerceReservation2() {
+        return new UpdateCommerceReservation2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update a reservation
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<UpdateCommerceReservationResponse>} - The async response
+     * @return {@code CompletableFuture<UpdateCommerceReservation2Response>} - The async response
      */
-    public CompletableFuture<UpdateCommerceReservationResponse> updateCommerceReservation(@Nonnull UpdateCommerceReservationRequest request) {
-        AsyncRequestOperation<UpdateCommerceReservationRequest, UpdateCommerceReservationResponse> operation
-              = new UpdateCommerceReservation.Async(sdkConfiguration, _headers);
+    public CompletableFuture<UpdateCommerceReservation2Response> updateCommerceReservation2(@Nonnull UpdateCommerceReservation2Request request) {
+        AsyncRequestOperation<UpdateCommerceReservation2Request, UpdateCommerceReservation2Response> operation
+              = new UpdateCommerceReservation2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

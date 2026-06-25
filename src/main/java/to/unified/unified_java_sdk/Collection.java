@@ -6,54 +6,54 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
-import to.unified.unified_java_sdk.models.operations.CreateCommerceCollectionRequest;
-import to.unified.unified_java_sdk.models.operations.CreateCommerceCollectionRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.CreateCommerceCollectionResponse;
-import to.unified.unified_java_sdk.models.operations.CreateLmsCollectionRequest;
-import to.unified.unified_java_sdk.models.operations.CreateLmsCollectionRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.CreateLmsCollectionResponse;
-import to.unified.unified_java_sdk.models.operations.GetCommerceCollectionRequest;
-import to.unified.unified_java_sdk.models.operations.GetCommerceCollectionRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.GetCommerceCollectionResponse;
-import to.unified.unified_java_sdk.models.operations.GetLmsCollectionRequest;
-import to.unified.unified_java_sdk.models.operations.GetLmsCollectionRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.GetLmsCollectionResponse;
-import to.unified.unified_java_sdk.models.operations.ListCommerceCollectionsRequest;
-import to.unified.unified_java_sdk.models.operations.ListCommerceCollectionsRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.ListCommerceCollectionsResponse;
-import to.unified.unified_java_sdk.models.operations.ListLmsCollectionsRequest;
-import to.unified.unified_java_sdk.models.operations.ListLmsCollectionsRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.ListLmsCollectionsResponse;
-import to.unified.unified_java_sdk.models.operations.PatchCommerceCollectionRequest;
-import to.unified.unified_java_sdk.models.operations.PatchCommerceCollectionRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.PatchCommerceCollectionResponse;
-import to.unified.unified_java_sdk.models.operations.PatchLmsCollectionRequest;
-import to.unified.unified_java_sdk.models.operations.PatchLmsCollectionRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.PatchLmsCollectionResponse;
-import to.unified.unified_java_sdk.models.operations.RemoveCommerceCollectionRequest;
-import to.unified.unified_java_sdk.models.operations.RemoveCommerceCollectionRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.RemoveCommerceCollectionResponse;
-import to.unified.unified_java_sdk.models.operations.RemoveLmsCollectionRequest;
-import to.unified.unified_java_sdk.models.operations.RemoveLmsCollectionRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.RemoveLmsCollectionResponse;
-import to.unified.unified_java_sdk.models.operations.UpdateCommerceCollectionRequest;
-import to.unified.unified_java_sdk.models.operations.UpdateCommerceCollectionRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.UpdateCommerceCollectionResponse;
-import to.unified.unified_java_sdk.models.operations.UpdateLmsCollectionRequest;
-import to.unified.unified_java_sdk.models.operations.UpdateLmsCollectionRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.UpdateLmsCollectionResponse;
-import to.unified.unified_java_sdk.operations.CreateCommerceCollection;
-import to.unified.unified_java_sdk.operations.CreateLmsCollection;
-import to.unified.unified_java_sdk.operations.GetCommerceCollection;
-import to.unified.unified_java_sdk.operations.GetLmsCollection;
-import to.unified.unified_java_sdk.operations.ListCommerceCollections;
-import to.unified.unified_java_sdk.operations.ListLmsCollections;
-import to.unified.unified_java_sdk.operations.PatchCommerceCollection;
-import to.unified.unified_java_sdk.operations.PatchLmsCollection;
-import to.unified.unified_java_sdk.operations.RemoveCommerceCollection;
-import to.unified.unified_java_sdk.operations.RemoveLmsCollection;
-import to.unified.unified_java_sdk.operations.UpdateCommerceCollection;
-import to.unified.unified_java_sdk.operations.UpdateLmsCollection;
+import to.unified.unified_java_sdk.models.operations.CreateCommerceCollection2Request;
+import to.unified.unified_java_sdk.models.operations.CreateCommerceCollection2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.CreateCommerceCollection2Response;
+import to.unified.unified_java_sdk.models.operations.CreateLmsCollection2Request;
+import to.unified.unified_java_sdk.models.operations.CreateLmsCollection2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.CreateLmsCollection2Response;
+import to.unified.unified_java_sdk.models.operations.GetCommerceCollection2Request;
+import to.unified.unified_java_sdk.models.operations.GetCommerceCollection2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetCommerceCollection2Response;
+import to.unified.unified_java_sdk.models.operations.GetLmsCollection2Request;
+import to.unified.unified_java_sdk.models.operations.GetLmsCollection2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetLmsCollection2Response;
+import to.unified.unified_java_sdk.models.operations.ListCommerceCollections2Request;
+import to.unified.unified_java_sdk.models.operations.ListCommerceCollections2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListCommerceCollections2Response;
+import to.unified.unified_java_sdk.models.operations.ListLmsCollections2Request;
+import to.unified.unified_java_sdk.models.operations.ListLmsCollections2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListLmsCollections2Response;
+import to.unified.unified_java_sdk.models.operations.PatchCommerceCollection2Request;
+import to.unified.unified_java_sdk.models.operations.PatchCommerceCollection2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.PatchCommerceCollection2Response;
+import to.unified.unified_java_sdk.models.operations.PatchLmsCollection2Request;
+import to.unified.unified_java_sdk.models.operations.PatchLmsCollection2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.PatchLmsCollection2Response;
+import to.unified.unified_java_sdk.models.operations.RemoveCommerceCollection2Request;
+import to.unified.unified_java_sdk.models.operations.RemoveCommerceCollection2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.RemoveCommerceCollection2Response;
+import to.unified.unified_java_sdk.models.operations.RemoveLmsCollection2Request;
+import to.unified.unified_java_sdk.models.operations.RemoveLmsCollection2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.RemoveLmsCollection2Response;
+import to.unified.unified_java_sdk.models.operations.UpdateCommerceCollection2Request;
+import to.unified.unified_java_sdk.models.operations.UpdateCommerceCollection2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.UpdateCommerceCollection2Response;
+import to.unified.unified_java_sdk.models.operations.UpdateLmsCollection2Request;
+import to.unified.unified_java_sdk.models.operations.UpdateLmsCollection2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.UpdateLmsCollection2Response;
+import to.unified.unified_java_sdk.operations.CreateCommerceCollection2;
+import to.unified.unified_java_sdk.operations.CreateLmsCollection2;
+import to.unified.unified_java_sdk.operations.GetCommerceCollection2;
+import to.unified.unified_java_sdk.operations.GetLmsCollection2;
+import to.unified.unified_java_sdk.operations.ListCommerceCollections2;
+import to.unified.unified_java_sdk.operations.ListLmsCollections2;
+import to.unified.unified_java_sdk.operations.PatchCommerceCollection2;
+import to.unified.unified_java_sdk.operations.PatchLmsCollection2;
+import to.unified.unified_java_sdk.operations.RemoveCommerceCollection2;
+import to.unified.unified_java_sdk.operations.RemoveLmsCollection2;
+import to.unified.unified_java_sdk.operations.UpdateCommerceCollection2;
+import to.unified.unified_java_sdk.operations.UpdateLmsCollection2;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -81,8 +81,8 @@ public class Collection {
      * 
      * @return The call builder
      */
-    public CreateCommerceCollectionRequestBuilder createCommerceCollection() {
-        return new CreateCommerceCollectionRequestBuilder(sdkConfiguration);
+    public CreateCommerceCollection2RequestBuilder createCommerceCollection2() {
+        return new CreateCommerceCollection2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -92,9 +92,9 @@ public class Collection {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateCommerceCollectionResponse createCommerceCollection(@Nonnull CreateCommerceCollectionRequest request) {
-        RequestOperation<CreateCommerceCollectionRequest, CreateCommerceCollectionResponse> operation
-              = new CreateCommerceCollection.Sync(sdkConfiguration, _headers);
+    public CreateCommerceCollection2Response createCommerceCollection2(@Nonnull CreateCommerceCollection2Request request) {
+        RequestOperation<CreateCommerceCollection2Request, CreateCommerceCollection2Response> operation
+              = new CreateCommerceCollection2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -103,8 +103,8 @@ public class Collection {
      * 
      * @return The call builder
      */
-    public CreateLmsCollectionRequestBuilder createLmsCollection() {
-        return new CreateLmsCollectionRequestBuilder(sdkConfiguration);
+    public CreateLmsCollection2RequestBuilder createLmsCollection2() {
+        return new CreateLmsCollection2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -114,9 +114,9 @@ public class Collection {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateLmsCollectionResponse createLmsCollection(@Nonnull CreateLmsCollectionRequest request) {
-        RequestOperation<CreateLmsCollectionRequest, CreateLmsCollectionResponse> operation
-              = new CreateLmsCollection.Sync(sdkConfiguration, _headers);
+    public CreateLmsCollection2Response createLmsCollection2(@Nonnull CreateLmsCollection2Request request) {
+        RequestOperation<CreateLmsCollection2Request, CreateLmsCollection2Response> operation
+              = new CreateLmsCollection2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -125,30 +125,8 @@ public class Collection {
      * 
      * @return The call builder
      */
-    public GetCommerceCollectionRequestBuilder getCommerceCollection() {
-        return new GetCommerceCollectionRequestBuilder(sdkConfiguration);
-    }
-
-    /**
-     * Retrieve a collection
-     * 
-     * @param request The request object containing all the parameters for the API call.
-     * @return The response from the API call
-     * @throws RuntimeException subclass if the API call fails
-     */
-    public GetCommerceCollectionResponse getCommerceCollection(@Nonnull GetCommerceCollectionRequest request) {
-        RequestOperation<GetCommerceCollectionRequest, GetCommerceCollectionResponse> operation
-              = new GetCommerceCollection.Sync(sdkConfiguration, _headers);
-        return operation.handleResponse(operation.doRequest(request));
-    }
-
-    /**
-     * Retrieve a collection
-     * 
-     * @return The call builder
-     */
-    public GetLmsCollectionRequestBuilder getLmsCollection() {
-        return new GetLmsCollectionRequestBuilder(sdkConfiguration);
+    public GetCommerceCollection2RequestBuilder getCommerceCollection2() {
+        return new GetCommerceCollection2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -158,9 +136,31 @@ public class Collection {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetLmsCollectionResponse getLmsCollection(@Nonnull GetLmsCollectionRequest request) {
-        RequestOperation<GetLmsCollectionRequest, GetLmsCollectionResponse> operation
-              = new GetLmsCollection.Sync(sdkConfiguration, _headers);
+    public GetCommerceCollection2Response getCommerceCollection2(@Nonnull GetCommerceCollection2Request request) {
+        RequestOperation<GetCommerceCollection2Request, GetCommerceCollection2Response> operation
+              = new GetCommerceCollection2.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Retrieve a collection
+     * 
+     * @return The call builder
+     */
+    public GetLmsCollection2RequestBuilder getLmsCollection2() {
+        return new GetLmsCollection2RequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Retrieve a collection
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetLmsCollection2Response getLmsCollection2(@Nonnull GetLmsCollection2Request request) {
+        RequestOperation<GetLmsCollection2Request, GetLmsCollection2Response> operation
+              = new GetLmsCollection2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -169,8 +169,8 @@ public class Collection {
      * 
      * @return The call builder
      */
-    public ListCommerceCollectionsRequestBuilder listCommerceCollections() {
-        return new ListCommerceCollectionsRequestBuilder(sdkConfiguration);
+    public ListCommerceCollections2RequestBuilder listCommerceCollections2() {
+        return new ListCommerceCollections2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -180,9 +180,9 @@ public class Collection {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListCommerceCollectionsResponse listCommerceCollections(@Nonnull ListCommerceCollectionsRequest request) {
-        RequestOperation<ListCommerceCollectionsRequest, ListCommerceCollectionsResponse> operation
-              = new ListCommerceCollections.Sync(sdkConfiguration, _headers);
+    public ListCommerceCollections2Response listCommerceCollections2(@Nonnull ListCommerceCollections2Request request) {
+        RequestOperation<ListCommerceCollections2Request, ListCommerceCollections2Response> operation
+              = new ListCommerceCollections2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -191,8 +191,8 @@ public class Collection {
      * 
      * @return The call builder
      */
-    public ListLmsCollectionsRequestBuilder listLmsCollections() {
-        return new ListLmsCollectionsRequestBuilder(sdkConfiguration);
+    public ListLmsCollections2RequestBuilder listLmsCollections2() {
+        return new ListLmsCollections2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -202,9 +202,9 @@ public class Collection {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListLmsCollectionsResponse listLmsCollections(@Nonnull ListLmsCollectionsRequest request) {
-        RequestOperation<ListLmsCollectionsRequest, ListLmsCollectionsResponse> operation
-              = new ListLmsCollections.Sync(sdkConfiguration, _headers);
+    public ListLmsCollections2Response listLmsCollections2(@Nonnull ListLmsCollections2Request request) {
+        RequestOperation<ListLmsCollections2Request, ListLmsCollections2Response> operation
+              = new ListLmsCollections2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -213,30 +213,8 @@ public class Collection {
      * 
      * @return The call builder
      */
-    public PatchCommerceCollectionRequestBuilder patchCommerceCollection() {
-        return new PatchCommerceCollectionRequestBuilder(sdkConfiguration);
-    }
-
-    /**
-     * Update a collection
-     * 
-     * @param request The request object containing all the parameters for the API call.
-     * @return The response from the API call
-     * @throws RuntimeException subclass if the API call fails
-     */
-    public PatchCommerceCollectionResponse patchCommerceCollection(@Nonnull PatchCommerceCollectionRequest request) {
-        RequestOperation<PatchCommerceCollectionRequest, PatchCommerceCollectionResponse> operation
-              = new PatchCommerceCollection.Sync(sdkConfiguration, _headers);
-        return operation.handleResponse(operation.doRequest(request));
-    }
-
-    /**
-     * Update a collection
-     * 
-     * @return The call builder
-     */
-    public PatchLmsCollectionRequestBuilder patchLmsCollection() {
-        return new PatchLmsCollectionRequestBuilder(sdkConfiguration);
+    public PatchCommerceCollection2RequestBuilder patchCommerceCollection2() {
+        return new PatchCommerceCollection2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -246,31 +224,31 @@ public class Collection {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchLmsCollectionResponse patchLmsCollection(@Nonnull PatchLmsCollectionRequest request) {
-        RequestOperation<PatchLmsCollectionRequest, PatchLmsCollectionResponse> operation
-              = new PatchLmsCollection.Sync(sdkConfiguration, _headers);
+    public PatchCommerceCollection2Response patchCommerceCollection2(@Nonnull PatchCommerceCollection2Request request) {
+        RequestOperation<PatchCommerceCollection2Request, PatchCommerceCollection2Response> operation
+              = new PatchCommerceCollection2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
     /**
-     * Remove a collection
+     * Update a collection
      * 
      * @return The call builder
      */
-    public RemoveCommerceCollectionRequestBuilder removeCommerceCollection() {
-        return new RemoveCommerceCollectionRequestBuilder(sdkConfiguration);
+    public PatchLmsCollection2RequestBuilder patchLmsCollection2() {
+        return new PatchLmsCollection2RequestBuilder(sdkConfiguration);
     }
 
     /**
-     * Remove a collection
+     * Update a collection
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveCommerceCollectionResponse removeCommerceCollection(@Nonnull RemoveCommerceCollectionRequest request) {
-        RequestOperation<RemoveCommerceCollectionRequest, RemoveCommerceCollectionResponse> operation
-              = new RemoveCommerceCollection.Sync(sdkConfiguration, _headers);
+    public PatchLmsCollection2Response patchLmsCollection2(@Nonnull PatchLmsCollection2Request request) {
+        RequestOperation<PatchLmsCollection2Request, PatchLmsCollection2Response> operation
+              = new PatchLmsCollection2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -279,8 +257,8 @@ public class Collection {
      * 
      * @return The call builder
      */
-    public RemoveLmsCollectionRequestBuilder removeLmsCollection() {
-        return new RemoveLmsCollectionRequestBuilder(sdkConfiguration);
+    public RemoveCommerceCollection2RequestBuilder removeCommerceCollection2() {
+        return new RemoveCommerceCollection2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -290,9 +268,31 @@ public class Collection {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveLmsCollectionResponse removeLmsCollection(@Nonnull RemoveLmsCollectionRequest request) {
-        RequestOperation<RemoveLmsCollectionRequest, RemoveLmsCollectionResponse> operation
-              = new RemoveLmsCollection.Sync(sdkConfiguration, _headers);
+    public RemoveCommerceCollection2Response removeCommerceCollection2(@Nonnull RemoveCommerceCollection2Request request) {
+        RequestOperation<RemoveCommerceCollection2Request, RemoveCommerceCollection2Response> operation
+              = new RemoveCommerceCollection2.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Remove a collection
+     * 
+     * @return The call builder
+     */
+    public RemoveLmsCollection2RequestBuilder removeLmsCollection2() {
+        return new RemoveLmsCollection2RequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Remove a collection
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveLmsCollection2Response removeLmsCollection2(@Nonnull RemoveLmsCollection2Request request) {
+        RequestOperation<RemoveLmsCollection2Request, RemoveLmsCollection2Response> operation
+              = new RemoveLmsCollection2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -301,8 +301,8 @@ public class Collection {
      * 
      * @return The call builder
      */
-    public UpdateCommerceCollectionRequestBuilder updateCommerceCollection() {
-        return new UpdateCommerceCollectionRequestBuilder(sdkConfiguration);
+    public UpdateCommerceCollection2RequestBuilder updateCommerceCollection2() {
+        return new UpdateCommerceCollection2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -312,9 +312,9 @@ public class Collection {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateCommerceCollectionResponse updateCommerceCollection(@Nonnull UpdateCommerceCollectionRequest request) {
-        RequestOperation<UpdateCommerceCollectionRequest, UpdateCommerceCollectionResponse> operation
-              = new UpdateCommerceCollection.Sync(sdkConfiguration, _headers);
+    public UpdateCommerceCollection2Response updateCommerceCollection2(@Nonnull UpdateCommerceCollection2Request request) {
+        RequestOperation<UpdateCommerceCollection2Request, UpdateCommerceCollection2Response> operation
+              = new UpdateCommerceCollection2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -323,8 +323,8 @@ public class Collection {
      * 
      * @return The call builder
      */
-    public UpdateLmsCollectionRequestBuilder updateLmsCollection() {
-        return new UpdateLmsCollectionRequestBuilder(sdkConfiguration);
+    public UpdateLmsCollection2RequestBuilder updateLmsCollection2() {
+        return new UpdateLmsCollection2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -334,9 +334,9 @@ public class Collection {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateLmsCollectionResponse updateLmsCollection(@Nonnull UpdateLmsCollectionRequest request) {
-        RequestOperation<UpdateLmsCollectionRequest, UpdateLmsCollectionResponse> operation
-              = new UpdateLmsCollection.Sync(sdkConfiguration, _headers);
+    public UpdateLmsCollection2Response updateLmsCollection2(@Nonnull UpdateLmsCollection2Request request) {
+        RequestOperation<UpdateLmsCollection2Request, UpdateLmsCollection2Response> operation
+              = new UpdateLmsCollection2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

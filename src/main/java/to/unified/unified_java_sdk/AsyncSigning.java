@@ -7,62 +7,62 @@ import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOper
 
 import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
-import to.unified.unified_java_sdk.models.operations.CreateSigningDocumentRequest;
-import to.unified.unified_java_sdk.models.operations.CreateSigningSignatoryRequest;
-import to.unified.unified_java_sdk.models.operations.GetSigningDocumentRequest;
-import to.unified.unified_java_sdk.models.operations.GetSigningSignatoryRequest;
-import to.unified.unified_java_sdk.models.operations.GetSigningTemplateRequest;
-import to.unified.unified_java_sdk.models.operations.ListSigningDocumentsRequest;
-import to.unified.unified_java_sdk.models.operations.ListSigningSignatoriesRequest;
-import to.unified.unified_java_sdk.models.operations.ListSigningTemplatesRequest;
-import to.unified.unified_java_sdk.models.operations.PatchSigningDocumentRequest;
-import to.unified.unified_java_sdk.models.operations.PatchSigningSignatoryRequest;
-import to.unified.unified_java_sdk.models.operations.RemoveSigningDocumentRequest;
-import to.unified.unified_java_sdk.models.operations.RemoveSigningSignatoryRequest;
-import to.unified.unified_java_sdk.models.operations.UpdateSigningDocumentRequest;
-import to.unified.unified_java_sdk.models.operations.UpdateSigningSignatoryRequest;
-import to.unified.unified_java_sdk.models.operations.async.CreateSigningDocumentRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.CreateSigningDocumentResponse;
-import to.unified.unified_java_sdk.models.operations.async.CreateSigningSignatoryRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.CreateSigningSignatoryResponse;
-import to.unified.unified_java_sdk.models.operations.async.GetSigningDocumentRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.GetSigningDocumentResponse;
-import to.unified.unified_java_sdk.models.operations.async.GetSigningSignatoryRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.GetSigningSignatoryResponse;
-import to.unified.unified_java_sdk.models.operations.async.GetSigningTemplateRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.GetSigningTemplateResponse;
-import to.unified.unified_java_sdk.models.operations.async.ListSigningDocumentsRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.ListSigningDocumentsResponse;
-import to.unified.unified_java_sdk.models.operations.async.ListSigningSignatoriesRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.ListSigningSignatoriesResponse;
-import to.unified.unified_java_sdk.models.operations.async.ListSigningTemplatesRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.ListSigningTemplatesResponse;
-import to.unified.unified_java_sdk.models.operations.async.PatchSigningDocumentRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.PatchSigningDocumentResponse;
-import to.unified.unified_java_sdk.models.operations.async.PatchSigningSignatoryRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.PatchSigningSignatoryResponse;
-import to.unified.unified_java_sdk.models.operations.async.RemoveSigningDocumentRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.RemoveSigningDocumentResponse;
-import to.unified.unified_java_sdk.models.operations.async.RemoveSigningSignatoryRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.RemoveSigningSignatoryResponse;
-import to.unified.unified_java_sdk.models.operations.async.UpdateSigningDocumentRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.UpdateSigningDocumentResponse;
-import to.unified.unified_java_sdk.models.operations.async.UpdateSigningSignatoryRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.UpdateSigningSignatoryResponse;
-import to.unified.unified_java_sdk.operations.CreateSigningDocument;
-import to.unified.unified_java_sdk.operations.CreateSigningSignatory;
-import to.unified.unified_java_sdk.operations.GetSigningDocument;
-import to.unified.unified_java_sdk.operations.GetSigningSignatory;
-import to.unified.unified_java_sdk.operations.GetSigningTemplate;
-import to.unified.unified_java_sdk.operations.ListSigningDocuments;
-import to.unified.unified_java_sdk.operations.ListSigningSignatories;
-import to.unified.unified_java_sdk.operations.ListSigningTemplates;
-import to.unified.unified_java_sdk.operations.PatchSigningDocument;
-import to.unified.unified_java_sdk.operations.PatchSigningSignatory;
-import to.unified.unified_java_sdk.operations.RemoveSigningDocument;
-import to.unified.unified_java_sdk.operations.RemoveSigningSignatory;
-import to.unified.unified_java_sdk.operations.UpdateSigningDocument;
-import to.unified.unified_java_sdk.operations.UpdateSigningSignatory;
+import to.unified.unified_java_sdk.models.operations.CreateSigningDocument2Request;
+import to.unified.unified_java_sdk.models.operations.CreateSigningSignatory2Request;
+import to.unified.unified_java_sdk.models.operations.GetSigningDocument2Request;
+import to.unified.unified_java_sdk.models.operations.GetSigningSignatory2Request;
+import to.unified.unified_java_sdk.models.operations.GetSigningTemplate2Request;
+import to.unified.unified_java_sdk.models.operations.ListSigningDocuments2Request;
+import to.unified.unified_java_sdk.models.operations.ListSigningSignatories2Request;
+import to.unified.unified_java_sdk.models.operations.ListSigningTemplates2Request;
+import to.unified.unified_java_sdk.models.operations.PatchSigningDocument2Request;
+import to.unified.unified_java_sdk.models.operations.PatchSigningSignatory2Request;
+import to.unified.unified_java_sdk.models.operations.RemoveSigningDocument2Request;
+import to.unified.unified_java_sdk.models.operations.RemoveSigningSignatory2Request;
+import to.unified.unified_java_sdk.models.operations.UpdateSigningDocument2Request;
+import to.unified.unified_java_sdk.models.operations.UpdateSigningSignatory2Request;
+import to.unified.unified_java_sdk.models.operations.async.CreateSigningDocument2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.CreateSigningDocument2Response;
+import to.unified.unified_java_sdk.models.operations.async.CreateSigningSignatory2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.CreateSigningSignatory2Response;
+import to.unified.unified_java_sdk.models.operations.async.GetSigningDocument2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetSigningDocument2Response;
+import to.unified.unified_java_sdk.models.operations.async.GetSigningSignatory2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetSigningSignatory2Response;
+import to.unified.unified_java_sdk.models.operations.async.GetSigningTemplate2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetSigningTemplate2Response;
+import to.unified.unified_java_sdk.models.operations.async.ListSigningDocuments2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListSigningDocuments2Response;
+import to.unified.unified_java_sdk.models.operations.async.ListSigningSignatories2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListSigningSignatories2Response;
+import to.unified.unified_java_sdk.models.operations.async.ListSigningTemplates2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListSigningTemplates2Response;
+import to.unified.unified_java_sdk.models.operations.async.PatchSigningDocument2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.PatchSigningDocument2Response;
+import to.unified.unified_java_sdk.models.operations.async.PatchSigningSignatory2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.PatchSigningSignatory2Response;
+import to.unified.unified_java_sdk.models.operations.async.RemoveSigningDocument2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.RemoveSigningDocument2Response;
+import to.unified.unified_java_sdk.models.operations.async.RemoveSigningSignatory2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.RemoveSigningSignatory2Response;
+import to.unified.unified_java_sdk.models.operations.async.UpdateSigningDocument2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.UpdateSigningDocument2Response;
+import to.unified.unified_java_sdk.models.operations.async.UpdateSigningSignatory2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.UpdateSigningSignatory2Response;
+import to.unified.unified_java_sdk.operations.CreateSigningDocument2;
+import to.unified.unified_java_sdk.operations.CreateSigningSignatory2;
+import to.unified.unified_java_sdk.operations.GetSigningDocument2;
+import to.unified.unified_java_sdk.operations.GetSigningSignatory2;
+import to.unified.unified_java_sdk.operations.GetSigningTemplate2;
+import to.unified.unified_java_sdk.operations.ListSigningDocuments2;
+import to.unified.unified_java_sdk.operations.ListSigningSignatories2;
+import to.unified.unified_java_sdk.operations.ListSigningTemplates2;
+import to.unified.unified_java_sdk.operations.PatchSigningDocument2;
+import to.unified.unified_java_sdk.operations.PatchSigningSignatory2;
+import to.unified.unified_java_sdk.operations.RemoveSigningDocument2;
+import to.unified.unified_java_sdk.operations.RemoveSigningSignatory2;
+import to.unified.unified_java_sdk.operations.UpdateSigningDocument2;
+import to.unified.unified_java_sdk.operations.UpdateSigningSignatory2;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -91,19 +91,19 @@ public class AsyncSigning {
      * 
      * @return The async call builder
      */
-    public CreateSigningDocumentRequestBuilder createSigningDocument() {
-        return new CreateSigningDocumentRequestBuilder(sdkConfiguration);
+    public CreateSigningDocument2RequestBuilder createSigningDocument2() {
+        return new CreateSigningDocument2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Create a document
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<CreateSigningDocumentResponse>} - The async response
+     * @return {@code CompletableFuture<CreateSigningDocument2Response>} - The async response
      */
-    public CompletableFuture<CreateSigningDocumentResponse> createSigningDocument(@Nonnull CreateSigningDocumentRequest request) {
-        AsyncRequestOperation<CreateSigningDocumentRequest, CreateSigningDocumentResponse> operation
-              = new CreateSigningDocument.Async(sdkConfiguration, _headers);
+    public CompletableFuture<CreateSigningDocument2Response> createSigningDocument2(@Nonnull CreateSigningDocument2Request request) {
+        AsyncRequestOperation<CreateSigningDocument2Request, CreateSigningDocument2Response> operation
+              = new CreateSigningDocument2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -114,19 +114,19 @@ public class AsyncSigning {
      * 
      * @return The async call builder
      */
-    public CreateSigningSignatoryRequestBuilder createSigningSignatory() {
-        return new CreateSigningSignatoryRequestBuilder(sdkConfiguration);
+    public CreateSigningSignatory2RequestBuilder createSigningSignatory2() {
+        return new CreateSigningSignatory2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Create a signatory
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<CreateSigningSignatoryResponse>} - The async response
+     * @return {@code CompletableFuture<CreateSigningSignatory2Response>} - The async response
      */
-    public CompletableFuture<CreateSigningSignatoryResponse> createSigningSignatory(@Nonnull CreateSigningSignatoryRequest request) {
-        AsyncRequestOperation<CreateSigningSignatoryRequest, CreateSigningSignatoryResponse> operation
-              = new CreateSigningSignatory.Async(sdkConfiguration, _headers);
+    public CompletableFuture<CreateSigningSignatory2Response> createSigningSignatory2(@Nonnull CreateSigningSignatory2Request request) {
+        AsyncRequestOperation<CreateSigningSignatory2Request, CreateSigningSignatory2Response> operation
+              = new CreateSigningSignatory2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -137,19 +137,19 @@ public class AsyncSigning {
      * 
      * @return The async call builder
      */
-    public GetSigningDocumentRequestBuilder getSigningDocument() {
-        return new GetSigningDocumentRequestBuilder(sdkConfiguration);
+    public GetSigningDocument2RequestBuilder getSigningDocument2() {
+        return new GetSigningDocument2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Retrieve a document
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<GetSigningDocumentResponse>} - The async response
+     * @return {@code CompletableFuture<GetSigningDocument2Response>} - The async response
      */
-    public CompletableFuture<GetSigningDocumentResponse> getSigningDocument(@Nonnull GetSigningDocumentRequest request) {
-        AsyncRequestOperation<GetSigningDocumentRequest, GetSigningDocumentResponse> operation
-              = new GetSigningDocument.Async(sdkConfiguration, _headers);
+    public CompletableFuture<GetSigningDocument2Response> getSigningDocument2(@Nonnull GetSigningDocument2Request request) {
+        AsyncRequestOperation<GetSigningDocument2Request, GetSigningDocument2Response> operation
+              = new GetSigningDocument2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -160,19 +160,19 @@ public class AsyncSigning {
      * 
      * @return The async call builder
      */
-    public GetSigningSignatoryRequestBuilder getSigningSignatory() {
-        return new GetSigningSignatoryRequestBuilder(sdkConfiguration);
+    public GetSigningSignatory2RequestBuilder getSigningSignatory2() {
+        return new GetSigningSignatory2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Retrieve a signatory
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<GetSigningSignatoryResponse>} - The async response
+     * @return {@code CompletableFuture<GetSigningSignatory2Response>} - The async response
      */
-    public CompletableFuture<GetSigningSignatoryResponse> getSigningSignatory(@Nonnull GetSigningSignatoryRequest request) {
-        AsyncRequestOperation<GetSigningSignatoryRequest, GetSigningSignatoryResponse> operation
-              = new GetSigningSignatory.Async(sdkConfiguration, _headers);
+    public CompletableFuture<GetSigningSignatory2Response> getSigningSignatory2(@Nonnull GetSigningSignatory2Request request) {
+        AsyncRequestOperation<GetSigningSignatory2Request, GetSigningSignatory2Response> operation
+              = new GetSigningSignatory2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -183,19 +183,19 @@ public class AsyncSigning {
      * 
      * @return The async call builder
      */
-    public GetSigningTemplateRequestBuilder getSigningTemplate() {
-        return new GetSigningTemplateRequestBuilder(sdkConfiguration);
+    public GetSigningTemplate2RequestBuilder getSigningTemplate2() {
+        return new GetSigningTemplate2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Retrieve a template
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<GetSigningTemplateResponse>} - The async response
+     * @return {@code CompletableFuture<GetSigningTemplate2Response>} - The async response
      */
-    public CompletableFuture<GetSigningTemplateResponse> getSigningTemplate(@Nonnull GetSigningTemplateRequest request) {
-        AsyncRequestOperation<GetSigningTemplateRequest, GetSigningTemplateResponse> operation
-              = new GetSigningTemplate.Async(sdkConfiguration, _headers);
+    public CompletableFuture<GetSigningTemplate2Response> getSigningTemplate2(@Nonnull GetSigningTemplate2Request request) {
+        AsyncRequestOperation<GetSigningTemplate2Request, GetSigningTemplate2Response> operation
+              = new GetSigningTemplate2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -206,19 +206,19 @@ public class AsyncSigning {
      * 
      * @return The async call builder
      */
-    public ListSigningDocumentsRequestBuilder listSigningDocuments() {
-        return new ListSigningDocumentsRequestBuilder(sdkConfiguration);
+    public ListSigningDocuments2RequestBuilder listSigningDocuments2() {
+        return new ListSigningDocuments2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * List all documents
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<ListSigningDocumentsResponse>} - The async response
+     * @return {@code CompletableFuture<ListSigningDocuments2Response>} - The async response
      */
-    public CompletableFuture<ListSigningDocumentsResponse> listSigningDocuments(@Nonnull ListSigningDocumentsRequest request) {
-        AsyncRequestOperation<ListSigningDocumentsRequest, ListSigningDocumentsResponse> operation
-              = new ListSigningDocuments.Async(sdkConfiguration, _headers);
+    public CompletableFuture<ListSigningDocuments2Response> listSigningDocuments2(@Nonnull ListSigningDocuments2Request request) {
+        AsyncRequestOperation<ListSigningDocuments2Request, ListSigningDocuments2Response> operation
+              = new ListSigningDocuments2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -229,19 +229,19 @@ public class AsyncSigning {
      * 
      * @return The async call builder
      */
-    public ListSigningSignatoriesRequestBuilder listSigningSignatories() {
-        return new ListSigningSignatoriesRequestBuilder(sdkConfiguration);
+    public ListSigningSignatories2RequestBuilder listSigningSignatories2() {
+        return new ListSigningSignatories2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * List all signatories
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<ListSigningSignatoriesResponse>} - The async response
+     * @return {@code CompletableFuture<ListSigningSignatories2Response>} - The async response
      */
-    public CompletableFuture<ListSigningSignatoriesResponse> listSigningSignatories(@Nonnull ListSigningSignatoriesRequest request) {
-        AsyncRequestOperation<ListSigningSignatoriesRequest, ListSigningSignatoriesResponse> operation
-              = new ListSigningSignatories.Async(sdkConfiguration, _headers);
+    public CompletableFuture<ListSigningSignatories2Response> listSigningSignatories2(@Nonnull ListSigningSignatories2Request request) {
+        AsyncRequestOperation<ListSigningSignatories2Request, ListSigningSignatories2Response> operation
+              = new ListSigningSignatories2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -252,19 +252,19 @@ public class AsyncSigning {
      * 
      * @return The async call builder
      */
-    public ListSigningTemplatesRequestBuilder listSigningTemplates() {
-        return new ListSigningTemplatesRequestBuilder(sdkConfiguration);
+    public ListSigningTemplates2RequestBuilder listSigningTemplates2() {
+        return new ListSigningTemplates2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * List all templates
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<ListSigningTemplatesResponse>} - The async response
+     * @return {@code CompletableFuture<ListSigningTemplates2Response>} - The async response
      */
-    public CompletableFuture<ListSigningTemplatesResponse> listSigningTemplates(@Nonnull ListSigningTemplatesRequest request) {
-        AsyncRequestOperation<ListSigningTemplatesRequest, ListSigningTemplatesResponse> operation
-              = new ListSigningTemplates.Async(sdkConfiguration, _headers);
+    public CompletableFuture<ListSigningTemplates2Response> listSigningTemplates2(@Nonnull ListSigningTemplates2Request request) {
+        AsyncRequestOperation<ListSigningTemplates2Request, ListSigningTemplates2Response> operation
+              = new ListSigningTemplates2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -275,19 +275,19 @@ public class AsyncSigning {
      * 
      * @return The async call builder
      */
-    public PatchSigningDocumentRequestBuilder patchSigningDocument() {
-        return new PatchSigningDocumentRequestBuilder(sdkConfiguration);
+    public PatchSigningDocument2RequestBuilder patchSigningDocument2() {
+        return new PatchSigningDocument2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update a document
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<PatchSigningDocumentResponse>} - The async response
+     * @return {@code CompletableFuture<PatchSigningDocument2Response>} - The async response
      */
-    public CompletableFuture<PatchSigningDocumentResponse> patchSigningDocument(@Nonnull PatchSigningDocumentRequest request) {
-        AsyncRequestOperation<PatchSigningDocumentRequest, PatchSigningDocumentResponse> operation
-              = new PatchSigningDocument.Async(sdkConfiguration, _headers);
+    public CompletableFuture<PatchSigningDocument2Response> patchSigningDocument2(@Nonnull PatchSigningDocument2Request request) {
+        AsyncRequestOperation<PatchSigningDocument2Request, PatchSigningDocument2Response> operation
+              = new PatchSigningDocument2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -298,19 +298,19 @@ public class AsyncSigning {
      * 
      * @return The async call builder
      */
-    public PatchSigningSignatoryRequestBuilder patchSigningSignatory() {
-        return new PatchSigningSignatoryRequestBuilder(sdkConfiguration);
+    public PatchSigningSignatory2RequestBuilder patchSigningSignatory2() {
+        return new PatchSigningSignatory2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update a signatory
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<PatchSigningSignatoryResponse>} - The async response
+     * @return {@code CompletableFuture<PatchSigningSignatory2Response>} - The async response
      */
-    public CompletableFuture<PatchSigningSignatoryResponse> patchSigningSignatory(@Nonnull PatchSigningSignatoryRequest request) {
-        AsyncRequestOperation<PatchSigningSignatoryRequest, PatchSigningSignatoryResponse> operation
-              = new PatchSigningSignatory.Async(sdkConfiguration, _headers);
+    public CompletableFuture<PatchSigningSignatory2Response> patchSigningSignatory2(@Nonnull PatchSigningSignatory2Request request) {
+        AsyncRequestOperation<PatchSigningSignatory2Request, PatchSigningSignatory2Response> operation
+              = new PatchSigningSignatory2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -321,19 +321,19 @@ public class AsyncSigning {
      * 
      * @return The async call builder
      */
-    public RemoveSigningDocumentRequestBuilder removeSigningDocument() {
-        return new RemoveSigningDocumentRequestBuilder(sdkConfiguration);
+    public RemoveSigningDocument2RequestBuilder removeSigningDocument2() {
+        return new RemoveSigningDocument2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Remove a document
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<RemoveSigningDocumentResponse>} - The async response
+     * @return {@code CompletableFuture<RemoveSigningDocument2Response>} - The async response
      */
-    public CompletableFuture<RemoveSigningDocumentResponse> removeSigningDocument(@Nonnull RemoveSigningDocumentRequest request) {
-        AsyncRequestOperation<RemoveSigningDocumentRequest, RemoveSigningDocumentResponse> operation
-              = new RemoveSigningDocument.Async(sdkConfiguration, _headers);
+    public CompletableFuture<RemoveSigningDocument2Response> removeSigningDocument2(@Nonnull RemoveSigningDocument2Request request) {
+        AsyncRequestOperation<RemoveSigningDocument2Request, RemoveSigningDocument2Response> operation
+              = new RemoveSigningDocument2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -344,19 +344,19 @@ public class AsyncSigning {
      * 
      * @return The async call builder
      */
-    public RemoveSigningSignatoryRequestBuilder removeSigningSignatory() {
-        return new RemoveSigningSignatoryRequestBuilder(sdkConfiguration);
+    public RemoveSigningSignatory2RequestBuilder removeSigningSignatory2() {
+        return new RemoveSigningSignatory2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Remove a signatory
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<RemoveSigningSignatoryResponse>} - The async response
+     * @return {@code CompletableFuture<RemoveSigningSignatory2Response>} - The async response
      */
-    public CompletableFuture<RemoveSigningSignatoryResponse> removeSigningSignatory(@Nonnull RemoveSigningSignatoryRequest request) {
-        AsyncRequestOperation<RemoveSigningSignatoryRequest, RemoveSigningSignatoryResponse> operation
-              = new RemoveSigningSignatory.Async(sdkConfiguration, _headers);
+    public CompletableFuture<RemoveSigningSignatory2Response> removeSigningSignatory2(@Nonnull RemoveSigningSignatory2Request request) {
+        AsyncRequestOperation<RemoveSigningSignatory2Request, RemoveSigningSignatory2Response> operation
+              = new RemoveSigningSignatory2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -367,19 +367,19 @@ public class AsyncSigning {
      * 
      * @return The async call builder
      */
-    public UpdateSigningDocumentRequestBuilder updateSigningDocument() {
-        return new UpdateSigningDocumentRequestBuilder(sdkConfiguration);
+    public UpdateSigningDocument2RequestBuilder updateSigningDocument2() {
+        return new UpdateSigningDocument2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update a document
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<UpdateSigningDocumentResponse>} - The async response
+     * @return {@code CompletableFuture<UpdateSigningDocument2Response>} - The async response
      */
-    public CompletableFuture<UpdateSigningDocumentResponse> updateSigningDocument(@Nonnull UpdateSigningDocumentRequest request) {
-        AsyncRequestOperation<UpdateSigningDocumentRequest, UpdateSigningDocumentResponse> operation
-              = new UpdateSigningDocument.Async(sdkConfiguration, _headers);
+    public CompletableFuture<UpdateSigningDocument2Response> updateSigningDocument2(@Nonnull UpdateSigningDocument2Request request) {
+        AsyncRequestOperation<UpdateSigningDocument2Request, UpdateSigningDocument2Response> operation
+              = new UpdateSigningDocument2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -390,19 +390,19 @@ public class AsyncSigning {
      * 
      * @return The async call builder
      */
-    public UpdateSigningSignatoryRequestBuilder updateSigningSignatory() {
-        return new UpdateSigningSignatoryRequestBuilder(sdkConfiguration);
+    public UpdateSigningSignatory2RequestBuilder updateSigningSignatory2() {
+        return new UpdateSigningSignatory2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update a signatory
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<UpdateSigningSignatoryResponse>} - The async response
+     * @return {@code CompletableFuture<UpdateSigningSignatory2Response>} - The async response
      */
-    public CompletableFuture<UpdateSigningSignatoryResponse> updateSigningSignatory(@Nonnull UpdateSigningSignatoryRequest request) {
-        AsyncRequestOperation<UpdateSigningSignatoryRequest, UpdateSigningSignatoryResponse> operation
-              = new UpdateSigningSignatory.Async(sdkConfiguration, _headers);
+    public CompletableFuture<UpdateSigningSignatory2Response> updateSigningSignatory2(@Nonnull UpdateSigningSignatory2Request request) {
+        AsyncRequestOperation<UpdateSigningSignatory2Request, UpdateSigningSignatory2Response> operation
+              = new UpdateSigningSignatory2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

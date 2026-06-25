@@ -4,27 +4,27 @@
 
 ### Available Operations
 
-* [createCommerceInventory](#createcommerceinventory) - Create an inventory
-* [getCommerceInventory](#getcommerceinventory) - Retrieve an inventory
-* [listCommerceInventories](#listcommerceinventories) - List all inventories
-* [patchCommerceInventory](#patchcommerceinventory) - Update an inventory
-* [removeCommerceInventory](#removecommerceinventory) - Remove an inventory
-* [updateCommerceInventory](#updatecommerceinventory) - Update an inventory
+* [createCommerceInventory2](#createcommerceinventory2) - Create an inventory
+* [getCommerceInventory2](#getcommerceinventory2) - Retrieve an inventory
+* [listCommerceInventories2](#listcommerceinventories2) - List all inventories
+* [patchCommerceInventory2](#patchcommerceinventory2) - Update an inventory
+* [removeCommerceInventory2](#removecommerceinventory2) - Remove an inventory
+* [updateCommerceInventory2](#updatecommerceinventory2) - Update an inventory
 
-## createCommerceInventory
+## createCommerceInventory2
 
 Create an inventory
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createCommerceInventory" method="post" path="/commerce/{connection_id}/inventory" -->
+<!-- UsageSnippet language="java" operationID="createCommerceInventory2" method="post" path="/commerce/{connection_id}/inventory" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.CreateCommerceInventoryRequest;
-import to.unified.unified_java_sdk.models.operations.CreateCommerceInventoryResponse;
+import to.unified.unified_java_sdk.models.operations.CreateCommerceInventory2Request;
+import to.unified.unified_java_sdk.models.operations.CreateCommerceInventory2Response;
 import to.unified.unified_java_sdk.models.shared.CommerceInventory;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -38,13 +38,13 @@ public class Application {
                     .build())
             .build();
 
-        CreateCommerceInventoryRequest req = CreateCommerceInventoryRequest.builder()
+        CreateCommerceInventory2Request req = CreateCommerceInventory2Request.builder()
                 .commerceInventory(CommerceInventory.builder()
                     .build())
                 .connectionId("<id>")
                 .build();
 
-        CreateCommerceInventoryResponse res = sdk.inventory().createCommerceInventory()
+        CreateCommerceInventory2Response res = sdk.inventory().createCommerceInventory2()
                 .request(req)
                 .call();
 
@@ -57,13 +57,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                   | Type                                                                                        | Required                                                                                    | Description                                                                                 |
-| ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
-| `request`                                                                                   | [CreateCommerceInventoryRequest](../../models/operations/CreateCommerceInventoryRequest.md) | :heavy_check_mark:                                                                          | The request object to use for the request.                                                  |
+| Parameter                                                                                     | Type                                                                                          | Required                                                                                      | Description                                                                                   |
+| --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
+| `request`                                                                                     | [CreateCommerceInventory2Request](../../models/operations/CreateCommerceInventory2Request.md) | :heavy_check_mark:                                                                            | The request object to use for the request.                                                    |
 
 ### Response
 
-**[CreateCommerceInventoryResponse](../../models/operations/CreateCommerceInventoryResponse.md)**
+**[CreateCommerceInventory2Response](../../models/operations/CreateCommerceInventory2Response.md)**
 
 ### Errors
 
@@ -71,20 +71,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## getCommerceInventory
+## getCommerceInventory2
 
 Retrieve an inventory
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="getCommerceInventory" method="get" path="/commerce/{connection_id}/inventory/{id}" -->
+<!-- UsageSnippet language="java" operationID="getCommerceInventory2" method="get" path="/commerce/{connection_id}/inventory/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.GetCommerceInventoryRequest;
-import to.unified.unified_java_sdk.models.operations.GetCommerceInventoryResponse;
+import to.unified.unified_java_sdk.models.operations.GetCommerceInventory2Request;
+import to.unified.unified_java_sdk.models.operations.GetCommerceInventory2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -97,12 +97,12 @@ public class Application {
                     .build())
             .build();
 
-        GetCommerceInventoryRequest req = GetCommerceInventoryRequest.builder()
+        GetCommerceInventory2Request req = GetCommerceInventory2Request.builder()
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        GetCommerceInventoryResponse res = sdk.inventory().getCommerceInventory()
+        GetCommerceInventory2Response res = sdk.inventory().getCommerceInventory2()
                 .request(req)
                 .call();
 
@@ -115,13 +115,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                             | Type                                                                                  | Required                                                                              | Description                                                                           |
-| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
-| `request`                                                                             | [GetCommerceInventoryRequest](../../models/operations/GetCommerceInventoryRequest.md) | :heavy_check_mark:                                                                    | The request object to use for the request.                                            |
+| Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
+| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| `request`                                                                               | [GetCommerceInventory2Request](../../models/operations/GetCommerceInventory2Request.md) | :heavy_check_mark:                                                                      | The request object to use for the request.                                              |
 
 ### Response
 
-**[GetCommerceInventoryResponse](../../models/operations/GetCommerceInventoryResponse.md)**
+**[GetCommerceInventory2Response](../../models/operations/GetCommerceInventory2Response.md)**
 
 ### Errors
 
@@ -129,20 +129,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## listCommerceInventories
+## listCommerceInventories2
 
 List all inventories
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="listCommerceInventories" method="get" path="/commerce/{connection_id}/inventory" -->
+<!-- UsageSnippet language="java" operationID="listCommerceInventories2" method="get" path="/commerce/{connection_id}/inventory" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.ListCommerceInventoriesRequest;
-import to.unified.unified_java_sdk.models.operations.ListCommerceInventoriesResponse;
+import to.unified.unified_java_sdk.models.operations.ListCommerceInventories2Request;
+import to.unified.unified_java_sdk.models.operations.ListCommerceInventories2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -155,11 +155,11 @@ public class Application {
                     .build())
             .build();
 
-        ListCommerceInventoriesRequest req = ListCommerceInventoriesRequest.builder()
+        ListCommerceInventories2Request req = ListCommerceInventories2Request.builder()
                 .connectionId("<id>")
                 .build();
 
-        ListCommerceInventoriesResponse res = sdk.inventory().listCommerceInventories()
+        ListCommerceInventories2Response res = sdk.inventory().listCommerceInventories2()
                 .request(req)
                 .call();
 
@@ -172,13 +172,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                   | Type                                                                                        | Required                                                                                    | Description                                                                                 |
-| ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
-| `request`                                                                                   | [ListCommerceInventoriesRequest](../../models/operations/ListCommerceInventoriesRequest.md) | :heavy_check_mark:                                                                          | The request object to use for the request.                                                  |
+| Parameter                                                                                     | Type                                                                                          | Required                                                                                      | Description                                                                                   |
+| --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
+| `request`                                                                                     | [ListCommerceInventories2Request](../../models/operations/ListCommerceInventories2Request.md) | :heavy_check_mark:                                                                            | The request object to use for the request.                                                    |
 
 ### Response
 
-**[ListCommerceInventoriesResponse](../../models/operations/ListCommerceInventoriesResponse.md)**
+**[ListCommerceInventories2Response](../../models/operations/ListCommerceInventories2Response.md)**
 
 ### Errors
 
@@ -186,20 +186,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## patchCommerceInventory
+## patchCommerceInventory2
 
 Update an inventory
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchCommerceInventory" method="patch" path="/commerce/{connection_id}/inventory/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchCommerceInventory2" method="patch" path="/commerce/{connection_id}/inventory/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.PatchCommerceInventoryRequest;
-import to.unified.unified_java_sdk.models.operations.PatchCommerceInventoryResponse;
+import to.unified.unified_java_sdk.models.operations.PatchCommerceInventory2Request;
+import to.unified.unified_java_sdk.models.operations.PatchCommerceInventory2Response;
 import to.unified.unified_java_sdk.models.shared.CommerceInventory;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -213,14 +213,14 @@ public class Application {
                     .build())
             .build();
 
-        PatchCommerceInventoryRequest req = PatchCommerceInventoryRequest.builder()
+        PatchCommerceInventory2Request req = PatchCommerceInventory2Request.builder()
                 .commerceInventory(CommerceInventory.builder()
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        PatchCommerceInventoryResponse res = sdk.inventory().patchCommerceInventory()
+        PatchCommerceInventory2Response res = sdk.inventory().patchCommerceInventory2()
                 .request(req)
                 .call();
 
@@ -233,13 +233,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                 | Type                                                                                      | Required                                                                                  | Description                                                                               |
-| ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
-| `request`                                                                                 | [PatchCommerceInventoryRequest](../../models/operations/PatchCommerceInventoryRequest.md) | :heavy_check_mark:                                                                        | The request object to use for the request.                                                |
+| Parameter                                                                                   | Type                                                                                        | Required                                                                                    | Description                                                                                 |
+| ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
+| `request`                                                                                   | [PatchCommerceInventory2Request](../../models/operations/PatchCommerceInventory2Request.md) | :heavy_check_mark:                                                                          | The request object to use for the request.                                                  |
 
 ### Response
 
-**[PatchCommerceInventoryResponse](../../models/operations/PatchCommerceInventoryResponse.md)**
+**[PatchCommerceInventory2Response](../../models/operations/PatchCommerceInventory2Response.md)**
 
 ### Errors
 
@@ -247,20 +247,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## removeCommerceInventory
+## removeCommerceInventory2
 
 Remove an inventory
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="removeCommerceInventory" method="delete" path="/commerce/{connection_id}/inventory/{id}" -->
+<!-- UsageSnippet language="java" operationID="removeCommerceInventory2" method="delete" path="/commerce/{connection_id}/inventory/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.RemoveCommerceInventoryRequest;
-import to.unified.unified_java_sdk.models.operations.RemoveCommerceInventoryResponse;
+import to.unified.unified_java_sdk.models.operations.RemoveCommerceInventory2Request;
+import to.unified.unified_java_sdk.models.operations.RemoveCommerceInventory2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -273,12 +273,12 @@ public class Application {
                     .build())
             .build();
 
-        RemoveCommerceInventoryRequest req = RemoveCommerceInventoryRequest.builder()
+        RemoveCommerceInventory2Request req = RemoveCommerceInventory2Request.builder()
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        RemoveCommerceInventoryResponse res = sdk.inventory().removeCommerceInventory()
+        RemoveCommerceInventory2Response res = sdk.inventory().removeCommerceInventory2()
                 .request(req)
                 .call();
 
@@ -289,13 +289,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                   | Type                                                                                        | Required                                                                                    | Description                                                                                 |
-| ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
-| `request`                                                                                   | [RemoveCommerceInventoryRequest](../../models/operations/RemoveCommerceInventoryRequest.md) | :heavy_check_mark:                                                                          | The request object to use for the request.                                                  |
+| Parameter                                                                                     | Type                                                                                          | Required                                                                                      | Description                                                                                   |
+| --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
+| `request`                                                                                     | [RemoveCommerceInventory2Request](../../models/operations/RemoveCommerceInventory2Request.md) | :heavy_check_mark:                                                                            | The request object to use for the request.                                                    |
 
 ### Response
 
-**[RemoveCommerceInventoryResponse](../../models/operations/RemoveCommerceInventoryResponse.md)**
+**[RemoveCommerceInventory2Response](../../models/operations/RemoveCommerceInventory2Response.md)**
 
 ### Errors
 
@@ -303,20 +303,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## updateCommerceInventory
+## updateCommerceInventory2
 
 Update an inventory
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateCommerceInventory" method="put" path="/commerce/{connection_id}/inventory/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateCommerceInventory2" method="put" path="/commerce/{connection_id}/inventory/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.UpdateCommerceInventoryRequest;
-import to.unified.unified_java_sdk.models.operations.UpdateCommerceInventoryResponse;
+import to.unified.unified_java_sdk.models.operations.UpdateCommerceInventory2Request;
+import to.unified.unified_java_sdk.models.operations.UpdateCommerceInventory2Response;
 import to.unified.unified_java_sdk.models.shared.CommerceInventory;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -330,14 +330,14 @@ public class Application {
                     .build())
             .build();
 
-        UpdateCommerceInventoryRequest req = UpdateCommerceInventoryRequest.builder()
+        UpdateCommerceInventory2Request req = UpdateCommerceInventory2Request.builder()
                 .commerceInventory(CommerceInventory.builder()
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        UpdateCommerceInventoryResponse res = sdk.inventory().updateCommerceInventory()
+        UpdateCommerceInventory2Response res = sdk.inventory().updateCommerceInventory2()
                 .request(req)
                 .call();
 
@@ -350,13 +350,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                   | Type                                                                                        | Required                                                                                    | Description                                                                                 |
-| ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
-| `request`                                                                                   | [UpdateCommerceInventoryRequest](../../models/operations/UpdateCommerceInventoryRequest.md) | :heavy_check_mark:                                                                          | The request object to use for the request.                                                  |
+| Parameter                                                                                     | Type                                                                                          | Required                                                                                      | Description                                                                                   |
+| --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
+| `request`                                                                                     | [UpdateCommerceInventory2Request](../../models/operations/UpdateCommerceInventory2Request.md) | :heavy_check_mark:                                                                            | The request object to use for the request.                                                    |
 
 ### Response
 
-**[UpdateCommerceInventoryResponse](../../models/operations/UpdateCommerceInventoryResponse.md)**
+**[UpdateCommerceInventory2Response](../../models/operations/UpdateCommerceInventory2Response.md)**
 
 ### Errors
 

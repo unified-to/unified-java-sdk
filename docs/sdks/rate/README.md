@@ -4,22 +4,22 @@
 
 ### Available Operations
 
-* [createShippingRate](#createshippingrate) - Create a rate
+* [createShippingRate2](#createshippingrate2) - Create a rate
 
-## createShippingRate
+## createShippingRate2
 
 Create a rate
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createShippingRate" method="post" path="/shipping/{connection_id}/rate" -->
+<!-- UsageSnippet language="java" operationID="createShippingRate2" method="post" path="/shipping/{connection_id}/rate" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.CreateShippingRateRequest;
-import to.unified.unified_java_sdk.models.operations.CreateShippingRateResponse;
+import to.unified.unified_java_sdk.models.operations.CreateShippingRate2Request;
+import to.unified.unified_java_sdk.models.operations.CreateShippingRate2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 import to.unified.unified_java_sdk.models.shared.ShippingRate;
 
@@ -33,13 +33,13 @@ public class Application {
                     .build())
             .build();
 
-        CreateShippingRateRequest req = CreateShippingRateRequest.builder()
+        CreateShippingRate2Request req = CreateShippingRate2Request.builder()
                 .shippingRate(ShippingRate.builder()
                     .build())
                 .connectionId("<id>")
                 .build();
 
-        CreateShippingRateResponse res = sdk.rate().createShippingRate()
+        CreateShippingRate2Response res = sdk.rate().createShippingRate2()
                 .request(req)
                 .call();
 
@@ -52,13 +52,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
-| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
-| `request`                                                                         | [CreateShippingRateRequest](../../models/operations/CreateShippingRateRequest.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
+| Parameter                                                                           | Type                                                                                | Required                                                                            | Description                                                                         |
+| ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| `request`                                                                           | [CreateShippingRate2Request](../../models/operations/CreateShippingRate2Request.md) | :heavy_check_mark:                                                                  | The request object to use for the request.                                          |
 
 ### Response
 
-**[CreateShippingRateResponse](../../models/operations/CreateShippingRateResponse.md)**
+**[CreateShippingRate2Response](../../models/operations/CreateShippingRate2Response.md)**
 
 ### Errors
 

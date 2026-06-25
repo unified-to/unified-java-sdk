@@ -4,27 +4,27 @@
 
 ### Available Operations
 
-* [createRepoBranch](#createrepobranch) - Create a branch
-* [getRepoBranch](#getrepobranch) - Retrieve a branch
-* [listRepoBranches](#listrepobranches) - List all branches
-* [patchRepoBranch](#patchrepobranch) - Update a branch
-* [removeRepoBranch](#removerepobranch) - Remove a branch
-* [updateRepoBranch](#updaterepobranch) - Update a branch
+* [createRepoBranch2](#createrepobranch2) - Create a branch
+* [getRepoBranch2](#getrepobranch2) - Retrieve a branch
+* [listRepoBranches2](#listrepobranches2) - List all branches
+* [patchRepoBranch2](#patchrepobranch2) - Update a branch
+* [removeRepoBranch2](#removerepobranch2) - Remove a branch
+* [updateRepoBranch2](#updaterepobranch2) - Update a branch
 
-## createRepoBranch
+## createRepoBranch2
 
 Create a branch
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createRepoBranch" method="post" path="/repo/{connection_id}/branch" -->
+<!-- UsageSnippet language="java" operationID="createRepoBranch2" method="post" path="/repo/{connection_id}/branch" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.CreateRepoBranchRequest;
-import to.unified.unified_java_sdk.models.operations.CreateRepoBranchResponse;
+import to.unified.unified_java_sdk.models.operations.CreateRepoBranch2Request;
+import to.unified.unified_java_sdk.models.operations.CreateRepoBranch2Response;
 import to.unified.unified_java_sdk.models.shared.RepoBranch;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -38,7 +38,7 @@ public class Application {
                     .build())
             .build();
 
-        CreateRepoBranchRequest req = CreateRepoBranchRequest.builder()
+        CreateRepoBranch2Request req = CreateRepoBranch2Request.builder()
                 .repoBranch(RepoBranch.builder()
                     .name("<value>")
                     .repoId("<id>")
@@ -46,7 +46,7 @@ public class Application {
                 .connectionId("<id>")
                 .build();
 
-        CreateRepoBranchResponse res = sdk.branch().createRepoBranch()
+        CreateRepoBranch2Response res = sdk.branch().createRepoBranch2()
                 .request(req)
                 .call();
 
@@ -59,13 +59,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
-| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
-| `request`                                                                     | [CreateRepoBranchRequest](../../models/operations/CreateRepoBranchRequest.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
+| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| `request`                                                                       | [CreateRepoBranch2Request](../../models/operations/CreateRepoBranch2Request.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
 
 ### Response
 
-**[CreateRepoBranchResponse](../../models/operations/CreateRepoBranchResponse.md)**
+**[CreateRepoBranch2Response](../../models/operations/CreateRepoBranch2Response.md)**
 
 ### Errors
 
@@ -73,20 +73,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## getRepoBranch
+## getRepoBranch2
 
 Retrieve a branch
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="getRepoBranch" method="get" path="/repo/{connection_id}/branch/{id}" -->
+<!-- UsageSnippet language="java" operationID="getRepoBranch2" method="get" path="/repo/{connection_id}/branch/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.GetRepoBranchRequest;
-import to.unified.unified_java_sdk.models.operations.GetRepoBranchResponse;
+import to.unified.unified_java_sdk.models.operations.GetRepoBranch2Request;
+import to.unified.unified_java_sdk.models.operations.GetRepoBranch2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -99,12 +99,12 @@ public class Application {
                     .build())
             .build();
 
-        GetRepoBranchRequest req = GetRepoBranchRequest.builder()
+        GetRepoBranch2Request req = GetRepoBranch2Request.builder()
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        GetRepoBranchResponse res = sdk.branch().getRepoBranch()
+        GetRepoBranch2Response res = sdk.branch().getRepoBranch2()
                 .request(req)
                 .call();
 
@@ -117,13 +117,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                               | Type                                                                    | Required                                                                | Description                                                             |
-| ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- |
-| `request`                                                               | [GetRepoBranchRequest](../../models/operations/GetRepoBranchRequest.md) | :heavy_check_mark:                                                      | The request object to use for the request.                              |
+| Parameter                                                                 | Type                                                                      | Required                                                                  | Description                                                               |
+| ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
+| `request`                                                                 | [GetRepoBranch2Request](../../models/operations/GetRepoBranch2Request.md) | :heavy_check_mark:                                                        | The request object to use for the request.                                |
 
 ### Response
 
-**[GetRepoBranchResponse](../../models/operations/GetRepoBranchResponse.md)**
+**[GetRepoBranch2Response](../../models/operations/GetRepoBranch2Response.md)**
 
 ### Errors
 
@@ -131,20 +131,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## listRepoBranches
+## listRepoBranches2
 
 List all branches
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="listRepoBranches" method="get" path="/repo/{connection_id}/branch" -->
+<!-- UsageSnippet language="java" operationID="listRepoBranches2" method="get" path="/repo/{connection_id}/branch" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.ListRepoBranchesRequest;
-import to.unified.unified_java_sdk.models.operations.ListRepoBranchesResponse;
+import to.unified.unified_java_sdk.models.operations.ListRepoBranches2Request;
+import to.unified.unified_java_sdk.models.operations.ListRepoBranches2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -157,11 +157,11 @@ public class Application {
                     .build())
             .build();
 
-        ListRepoBranchesRequest req = ListRepoBranchesRequest.builder()
+        ListRepoBranches2Request req = ListRepoBranches2Request.builder()
                 .connectionId("<id>")
                 .build();
 
-        ListRepoBranchesResponse res = sdk.branch().listRepoBranches()
+        ListRepoBranches2Response res = sdk.branch().listRepoBranches2()
                 .request(req)
                 .call();
 
@@ -174,13 +174,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
-| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
-| `request`                                                                     | [ListRepoBranchesRequest](../../models/operations/ListRepoBranchesRequest.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
+| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| `request`                                                                       | [ListRepoBranches2Request](../../models/operations/ListRepoBranches2Request.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
 
 ### Response
 
-**[ListRepoBranchesResponse](../../models/operations/ListRepoBranchesResponse.md)**
+**[ListRepoBranches2Response](../../models/operations/ListRepoBranches2Response.md)**
 
 ### Errors
 
@@ -188,20 +188,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## patchRepoBranch
+## patchRepoBranch2
 
 Update a branch
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchRepoBranch" method="patch" path="/repo/{connection_id}/branch/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchRepoBranch2" method="patch" path="/repo/{connection_id}/branch/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.PatchRepoBranchRequest;
-import to.unified.unified_java_sdk.models.operations.PatchRepoBranchResponse;
+import to.unified.unified_java_sdk.models.operations.PatchRepoBranch2Request;
+import to.unified.unified_java_sdk.models.operations.PatchRepoBranch2Response;
 import to.unified.unified_java_sdk.models.shared.RepoBranch;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -215,7 +215,7 @@ public class Application {
                     .build())
             .build();
 
-        PatchRepoBranchRequest req = PatchRepoBranchRequest.builder()
+        PatchRepoBranch2Request req = PatchRepoBranch2Request.builder()
                 .repoBranch(RepoBranch.builder()
                     .name("<value>")
                     .repoId("<id>")
@@ -224,7 +224,7 @@ public class Application {
                 .id("<id>")
                 .build();
 
-        PatchRepoBranchResponse res = sdk.branch().patchRepoBranch()
+        PatchRepoBranch2Response res = sdk.branch().patchRepoBranch2()
                 .request(req)
                 .call();
 
@@ -237,13 +237,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                   | Type                                                                        | Required                                                                    | Description                                                                 |
-| --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
-| `request`                                                                   | [PatchRepoBranchRequest](../../models/operations/PatchRepoBranchRequest.md) | :heavy_check_mark:                                                          | The request object to use for the request.                                  |
+| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
+| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| `request`                                                                     | [PatchRepoBranch2Request](../../models/operations/PatchRepoBranch2Request.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
 
 ### Response
 
-**[PatchRepoBranchResponse](../../models/operations/PatchRepoBranchResponse.md)**
+**[PatchRepoBranch2Response](../../models/operations/PatchRepoBranch2Response.md)**
 
 ### Errors
 
@@ -251,20 +251,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## removeRepoBranch
+## removeRepoBranch2
 
 Remove a branch
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="removeRepoBranch" method="delete" path="/repo/{connection_id}/branch/{id}" -->
+<!-- UsageSnippet language="java" operationID="removeRepoBranch2" method="delete" path="/repo/{connection_id}/branch/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.RemoveRepoBranchRequest;
-import to.unified.unified_java_sdk.models.operations.RemoveRepoBranchResponse;
+import to.unified.unified_java_sdk.models.operations.RemoveRepoBranch2Request;
+import to.unified.unified_java_sdk.models.operations.RemoveRepoBranch2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -277,12 +277,12 @@ public class Application {
                     .build())
             .build();
 
-        RemoveRepoBranchRequest req = RemoveRepoBranchRequest.builder()
+        RemoveRepoBranch2Request req = RemoveRepoBranch2Request.builder()
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        RemoveRepoBranchResponse res = sdk.branch().removeRepoBranch()
+        RemoveRepoBranch2Response res = sdk.branch().removeRepoBranch2()
                 .request(req)
                 .call();
 
@@ -293,13 +293,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
-| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
-| `request`                                                                     | [RemoveRepoBranchRequest](../../models/operations/RemoveRepoBranchRequest.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
+| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| `request`                                                                       | [RemoveRepoBranch2Request](../../models/operations/RemoveRepoBranch2Request.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
 
 ### Response
 
-**[RemoveRepoBranchResponse](../../models/operations/RemoveRepoBranchResponse.md)**
+**[RemoveRepoBranch2Response](../../models/operations/RemoveRepoBranch2Response.md)**
 
 ### Errors
 
@@ -307,20 +307,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## updateRepoBranch
+## updateRepoBranch2
 
 Update a branch
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateRepoBranch" method="put" path="/repo/{connection_id}/branch/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateRepoBranch2" method="put" path="/repo/{connection_id}/branch/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.UpdateRepoBranchRequest;
-import to.unified.unified_java_sdk.models.operations.UpdateRepoBranchResponse;
+import to.unified.unified_java_sdk.models.operations.UpdateRepoBranch2Request;
+import to.unified.unified_java_sdk.models.operations.UpdateRepoBranch2Response;
 import to.unified.unified_java_sdk.models.shared.RepoBranch;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -334,7 +334,7 @@ public class Application {
                     .build())
             .build();
 
-        UpdateRepoBranchRequest req = UpdateRepoBranchRequest.builder()
+        UpdateRepoBranch2Request req = UpdateRepoBranch2Request.builder()
                 .repoBranch(RepoBranch.builder()
                     .name("<value>")
                     .repoId("<id>")
@@ -343,7 +343,7 @@ public class Application {
                 .id("<id>")
                 .build();
 
-        UpdateRepoBranchResponse res = sdk.branch().updateRepoBranch()
+        UpdateRepoBranch2Response res = sdk.branch().updateRepoBranch2()
                 .request(req)
                 .call();
 
@@ -356,13 +356,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
-| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
-| `request`                                                                     | [UpdateRepoBranchRequest](../../models/operations/UpdateRepoBranchRequest.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
+| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| `request`                                                                       | [UpdateRepoBranch2Request](../../models/operations/UpdateRepoBranch2Request.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
 
 ### Response
 
-**[UpdateRepoBranchResponse](../../models/operations/UpdateRepoBranchResponse.md)**
+**[UpdateRepoBranch2Response](../../models/operations/UpdateRepoBranch2Response.md)**
 
 ### Errors
 

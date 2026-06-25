@@ -4,27 +4,27 @@
 
 ### Available Operations
 
-* [createLmsStudent](#createlmsstudent) - Create a student
-* [getLmsStudent](#getlmsstudent) - Retrieve a student
-* [listLmsStudents](#listlmsstudents) - List all students
-* [patchLmsStudent](#patchlmsstudent) - Update a student
-* [removeLmsStudent](#removelmsstudent) - Remove a student
-* [updateLmsStudent](#updatelmsstudent) - Update a student
+* [createLmsStudent2](#createlmsstudent2) - Create a student
+* [getLmsStudent2](#getlmsstudent2) - Retrieve a student
+* [listLmsStudents2](#listlmsstudents2) - List all students
+* [patchLmsStudent2](#patchlmsstudent2) - Update a student
+* [removeLmsStudent2](#removelmsstudent2) - Remove a student
+* [updateLmsStudent2](#updatelmsstudent2) - Update a student
 
-## createLmsStudent
+## createLmsStudent2
 
 Create a student
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createLmsStudent" method="post" path="/lms/{connection_id}/student" -->
+<!-- UsageSnippet language="java" operationID="createLmsStudent2" method="post" path="/lms/{connection_id}/student" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.CreateLmsStudentRequest;
-import to.unified.unified_java_sdk.models.operations.CreateLmsStudentResponse;
+import to.unified.unified_java_sdk.models.operations.CreateLmsStudent2Request;
+import to.unified.unified_java_sdk.models.operations.CreateLmsStudent2Response;
 import to.unified.unified_java_sdk.models.shared.LmsStudent;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -38,13 +38,13 @@ public class Application {
                     .build())
             .build();
 
-        CreateLmsStudentRequest req = CreateLmsStudentRequest.builder()
+        CreateLmsStudent2Request req = CreateLmsStudent2Request.builder()
                 .lmsStudent(LmsStudent.builder()
                     .build())
                 .connectionId("<id>")
                 .build();
 
-        CreateLmsStudentResponse res = sdk.student().createLmsStudent()
+        CreateLmsStudent2Response res = sdk.student().createLmsStudent2()
                 .request(req)
                 .call();
 
@@ -57,13 +57,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
-| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
-| `request`                                                                     | [CreateLmsStudentRequest](../../models/operations/CreateLmsStudentRequest.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
+| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| `request`                                                                       | [CreateLmsStudent2Request](../../models/operations/CreateLmsStudent2Request.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
 
 ### Response
 
-**[CreateLmsStudentResponse](../../models/operations/CreateLmsStudentResponse.md)**
+**[CreateLmsStudent2Response](../../models/operations/CreateLmsStudent2Response.md)**
 
 ### Errors
 
@@ -71,20 +71,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## getLmsStudent
+## getLmsStudent2
 
 Retrieve a student
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="getLmsStudent" method="get" path="/lms/{connection_id}/student/{id}" -->
+<!-- UsageSnippet language="java" operationID="getLmsStudent2" method="get" path="/lms/{connection_id}/student/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.GetLmsStudentRequest;
-import to.unified.unified_java_sdk.models.operations.GetLmsStudentResponse;
+import to.unified.unified_java_sdk.models.operations.GetLmsStudent2Request;
+import to.unified.unified_java_sdk.models.operations.GetLmsStudent2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -97,12 +97,12 @@ public class Application {
                     .build())
             .build();
 
-        GetLmsStudentRequest req = GetLmsStudentRequest.builder()
+        GetLmsStudent2Request req = GetLmsStudent2Request.builder()
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        GetLmsStudentResponse res = sdk.student().getLmsStudent()
+        GetLmsStudent2Response res = sdk.student().getLmsStudent2()
                 .request(req)
                 .call();
 
@@ -115,13 +115,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                               | Type                                                                    | Required                                                                | Description                                                             |
-| ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- |
-| `request`                                                               | [GetLmsStudentRequest](../../models/operations/GetLmsStudentRequest.md) | :heavy_check_mark:                                                      | The request object to use for the request.                              |
+| Parameter                                                                 | Type                                                                      | Required                                                                  | Description                                                               |
+| ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
+| `request`                                                                 | [GetLmsStudent2Request](../../models/operations/GetLmsStudent2Request.md) | :heavy_check_mark:                                                        | The request object to use for the request.                                |
 
 ### Response
 
-**[GetLmsStudentResponse](../../models/operations/GetLmsStudentResponse.md)**
+**[GetLmsStudent2Response](../../models/operations/GetLmsStudent2Response.md)**
 
 ### Errors
 
@@ -129,20 +129,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## listLmsStudents
+## listLmsStudents2
 
 List all students
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="listLmsStudents" method="get" path="/lms/{connection_id}/student" -->
+<!-- UsageSnippet language="java" operationID="listLmsStudents2" method="get" path="/lms/{connection_id}/student" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.ListLmsStudentsRequest;
-import to.unified.unified_java_sdk.models.operations.ListLmsStudentsResponse;
+import to.unified.unified_java_sdk.models.operations.ListLmsStudents2Request;
+import to.unified.unified_java_sdk.models.operations.ListLmsStudents2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -155,11 +155,11 @@ public class Application {
                     .build())
             .build();
 
-        ListLmsStudentsRequest req = ListLmsStudentsRequest.builder()
+        ListLmsStudents2Request req = ListLmsStudents2Request.builder()
                 .connectionId("<id>")
                 .build();
 
-        ListLmsStudentsResponse res = sdk.student().listLmsStudents()
+        ListLmsStudents2Response res = sdk.student().listLmsStudents2()
                 .request(req)
                 .call();
 
@@ -172,13 +172,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                   | Type                                                                        | Required                                                                    | Description                                                                 |
-| --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
-| `request`                                                                   | [ListLmsStudentsRequest](../../models/operations/ListLmsStudentsRequest.md) | :heavy_check_mark:                                                          | The request object to use for the request.                                  |
+| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
+| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| `request`                                                                     | [ListLmsStudents2Request](../../models/operations/ListLmsStudents2Request.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
 
 ### Response
 
-**[ListLmsStudentsResponse](../../models/operations/ListLmsStudentsResponse.md)**
+**[ListLmsStudents2Response](../../models/operations/ListLmsStudents2Response.md)**
 
 ### Errors
 
@@ -186,20 +186,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## patchLmsStudent
+## patchLmsStudent2
 
 Update a student
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchLmsStudent" method="patch" path="/lms/{connection_id}/student/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchLmsStudent2" method="patch" path="/lms/{connection_id}/student/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.PatchLmsStudentRequest;
-import to.unified.unified_java_sdk.models.operations.PatchLmsStudentResponse;
+import to.unified.unified_java_sdk.models.operations.PatchLmsStudent2Request;
+import to.unified.unified_java_sdk.models.operations.PatchLmsStudent2Response;
 import to.unified.unified_java_sdk.models.shared.LmsStudent;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -213,14 +213,14 @@ public class Application {
                     .build())
             .build();
 
-        PatchLmsStudentRequest req = PatchLmsStudentRequest.builder()
+        PatchLmsStudent2Request req = PatchLmsStudent2Request.builder()
                 .lmsStudent(LmsStudent.builder()
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        PatchLmsStudentResponse res = sdk.student().patchLmsStudent()
+        PatchLmsStudent2Response res = sdk.student().patchLmsStudent2()
                 .request(req)
                 .call();
 
@@ -233,13 +233,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                   | Type                                                                        | Required                                                                    | Description                                                                 |
-| --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
-| `request`                                                                   | [PatchLmsStudentRequest](../../models/operations/PatchLmsStudentRequest.md) | :heavy_check_mark:                                                          | The request object to use for the request.                                  |
+| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
+| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| `request`                                                                     | [PatchLmsStudent2Request](../../models/operations/PatchLmsStudent2Request.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
 
 ### Response
 
-**[PatchLmsStudentResponse](../../models/operations/PatchLmsStudentResponse.md)**
+**[PatchLmsStudent2Response](../../models/operations/PatchLmsStudent2Response.md)**
 
 ### Errors
 
@@ -247,20 +247,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## removeLmsStudent
+## removeLmsStudent2
 
 Remove a student
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="removeLmsStudent" method="delete" path="/lms/{connection_id}/student/{id}" -->
+<!-- UsageSnippet language="java" operationID="removeLmsStudent2" method="delete" path="/lms/{connection_id}/student/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.RemoveLmsStudentRequest;
-import to.unified.unified_java_sdk.models.operations.RemoveLmsStudentResponse;
+import to.unified.unified_java_sdk.models.operations.RemoveLmsStudent2Request;
+import to.unified.unified_java_sdk.models.operations.RemoveLmsStudent2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -273,12 +273,12 @@ public class Application {
                     .build())
             .build();
 
-        RemoveLmsStudentRequest req = RemoveLmsStudentRequest.builder()
+        RemoveLmsStudent2Request req = RemoveLmsStudent2Request.builder()
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        RemoveLmsStudentResponse res = sdk.student().removeLmsStudent()
+        RemoveLmsStudent2Response res = sdk.student().removeLmsStudent2()
                 .request(req)
                 .call();
 
@@ -289,13 +289,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
-| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
-| `request`                                                                     | [RemoveLmsStudentRequest](../../models/operations/RemoveLmsStudentRequest.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
+| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| `request`                                                                       | [RemoveLmsStudent2Request](../../models/operations/RemoveLmsStudent2Request.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
 
 ### Response
 
-**[RemoveLmsStudentResponse](../../models/operations/RemoveLmsStudentResponse.md)**
+**[RemoveLmsStudent2Response](../../models/operations/RemoveLmsStudent2Response.md)**
 
 ### Errors
 
@@ -303,20 +303,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## updateLmsStudent
+## updateLmsStudent2
 
 Update a student
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateLmsStudent" method="put" path="/lms/{connection_id}/student/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateLmsStudent2" method="put" path="/lms/{connection_id}/student/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.UpdateLmsStudentRequest;
-import to.unified.unified_java_sdk.models.operations.UpdateLmsStudentResponse;
+import to.unified.unified_java_sdk.models.operations.UpdateLmsStudent2Request;
+import to.unified.unified_java_sdk.models.operations.UpdateLmsStudent2Response;
 import to.unified.unified_java_sdk.models.shared.LmsStudent;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -330,14 +330,14 @@ public class Application {
                     .build())
             .build();
 
-        UpdateLmsStudentRequest req = UpdateLmsStudentRequest.builder()
+        UpdateLmsStudent2Request req = UpdateLmsStudent2Request.builder()
                 .lmsStudent(LmsStudent.builder()
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        UpdateLmsStudentResponse res = sdk.student().updateLmsStudent()
+        UpdateLmsStudent2Response res = sdk.student().updateLmsStudent2()
                 .request(req)
                 .call();
 
@@ -350,13 +350,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
-| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
-| `request`                                                                     | [UpdateLmsStudentRequest](../../models/operations/UpdateLmsStudentRequest.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
+| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| `request`                                                                       | [UpdateLmsStudent2Request](../../models/operations/UpdateLmsStudent2Request.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
 
 ### Response
 
-**[UpdateLmsStudentResponse](../../models/operations/UpdateLmsStudentResponse.md)**
+**[UpdateLmsStudent2Response](../../models/operations/UpdateLmsStudent2Response.md)**
 
 ### Errors
 

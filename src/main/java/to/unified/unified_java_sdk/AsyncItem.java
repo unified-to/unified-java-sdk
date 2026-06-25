@@ -7,30 +7,30 @@ import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOper
 
 import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
-import to.unified.unified_java_sdk.models.operations.CreateCommerceItemRequest;
-import to.unified.unified_java_sdk.models.operations.GetCommerceItemRequest;
-import to.unified.unified_java_sdk.models.operations.ListCommerceItemsRequest;
-import to.unified.unified_java_sdk.models.operations.PatchCommerceItemRequest;
-import to.unified.unified_java_sdk.models.operations.RemoveCommerceItemRequest;
-import to.unified.unified_java_sdk.models.operations.UpdateCommerceItemRequest;
-import to.unified.unified_java_sdk.models.operations.async.CreateCommerceItemRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.CreateCommerceItemResponse;
-import to.unified.unified_java_sdk.models.operations.async.GetCommerceItemRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.GetCommerceItemResponse;
-import to.unified.unified_java_sdk.models.operations.async.ListCommerceItemsRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.ListCommerceItemsResponse;
-import to.unified.unified_java_sdk.models.operations.async.PatchCommerceItemRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.PatchCommerceItemResponse;
-import to.unified.unified_java_sdk.models.operations.async.RemoveCommerceItemRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.RemoveCommerceItemResponse;
-import to.unified.unified_java_sdk.models.operations.async.UpdateCommerceItemRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.UpdateCommerceItemResponse;
-import to.unified.unified_java_sdk.operations.CreateCommerceItem;
-import to.unified.unified_java_sdk.operations.GetCommerceItem;
-import to.unified.unified_java_sdk.operations.ListCommerceItems;
-import to.unified.unified_java_sdk.operations.PatchCommerceItem;
-import to.unified.unified_java_sdk.operations.RemoveCommerceItem;
-import to.unified.unified_java_sdk.operations.UpdateCommerceItem;
+import to.unified.unified_java_sdk.models.operations.CreateCommerceItem2Request;
+import to.unified.unified_java_sdk.models.operations.GetCommerceItem2Request;
+import to.unified.unified_java_sdk.models.operations.ListCommerceItems2Request;
+import to.unified.unified_java_sdk.models.operations.PatchCommerceItem2Request;
+import to.unified.unified_java_sdk.models.operations.RemoveCommerceItem2Request;
+import to.unified.unified_java_sdk.models.operations.UpdateCommerceItem2Request;
+import to.unified.unified_java_sdk.models.operations.async.CreateCommerceItem2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.CreateCommerceItem2Response;
+import to.unified.unified_java_sdk.models.operations.async.GetCommerceItem2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetCommerceItem2Response;
+import to.unified.unified_java_sdk.models.operations.async.ListCommerceItems2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListCommerceItems2Response;
+import to.unified.unified_java_sdk.models.operations.async.PatchCommerceItem2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.PatchCommerceItem2Response;
+import to.unified.unified_java_sdk.models.operations.async.RemoveCommerceItem2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.RemoveCommerceItem2Response;
+import to.unified.unified_java_sdk.models.operations.async.UpdateCommerceItem2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.UpdateCommerceItem2Response;
+import to.unified.unified_java_sdk.operations.CreateCommerceItem2;
+import to.unified.unified_java_sdk.operations.GetCommerceItem2;
+import to.unified.unified_java_sdk.operations.ListCommerceItems2;
+import to.unified.unified_java_sdk.operations.PatchCommerceItem2;
+import to.unified.unified_java_sdk.operations.RemoveCommerceItem2;
+import to.unified.unified_java_sdk.operations.UpdateCommerceItem2;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -59,19 +59,19 @@ public class AsyncItem {
      * 
      * @return The async call builder
      */
-    public CreateCommerceItemRequestBuilder createCommerceItem() {
-        return new CreateCommerceItemRequestBuilder(sdkConfiguration);
+    public CreateCommerceItem2RequestBuilder createCommerceItem2() {
+        return new CreateCommerceItem2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Create an item
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<CreateCommerceItemResponse>} - The async response
+     * @return {@code CompletableFuture<CreateCommerceItem2Response>} - The async response
      */
-    public CompletableFuture<CreateCommerceItemResponse> createCommerceItem(@Nonnull CreateCommerceItemRequest request) {
-        AsyncRequestOperation<CreateCommerceItemRequest, CreateCommerceItemResponse> operation
-              = new CreateCommerceItem.Async(sdkConfiguration, _headers);
+    public CompletableFuture<CreateCommerceItem2Response> createCommerceItem2(@Nonnull CreateCommerceItem2Request request) {
+        AsyncRequestOperation<CreateCommerceItem2Request, CreateCommerceItem2Response> operation
+              = new CreateCommerceItem2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -82,19 +82,19 @@ public class AsyncItem {
      * 
      * @return The async call builder
      */
-    public GetCommerceItemRequestBuilder getCommerceItem() {
-        return new GetCommerceItemRequestBuilder(sdkConfiguration);
+    public GetCommerceItem2RequestBuilder getCommerceItem2() {
+        return new GetCommerceItem2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Retrieve an item
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<GetCommerceItemResponse>} - The async response
+     * @return {@code CompletableFuture<GetCommerceItem2Response>} - The async response
      */
-    public CompletableFuture<GetCommerceItemResponse> getCommerceItem(@Nonnull GetCommerceItemRequest request) {
-        AsyncRequestOperation<GetCommerceItemRequest, GetCommerceItemResponse> operation
-              = new GetCommerceItem.Async(sdkConfiguration, _headers);
+    public CompletableFuture<GetCommerceItem2Response> getCommerceItem2(@Nonnull GetCommerceItem2Request request) {
+        AsyncRequestOperation<GetCommerceItem2Request, GetCommerceItem2Response> operation
+              = new GetCommerceItem2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -105,19 +105,19 @@ public class AsyncItem {
      * 
      * @return The async call builder
      */
-    public ListCommerceItemsRequestBuilder listCommerceItems() {
-        return new ListCommerceItemsRequestBuilder(sdkConfiguration);
+    public ListCommerceItems2RequestBuilder listCommerceItems2() {
+        return new ListCommerceItems2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * List all items
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<ListCommerceItemsResponse>} - The async response
+     * @return {@code CompletableFuture<ListCommerceItems2Response>} - The async response
      */
-    public CompletableFuture<ListCommerceItemsResponse> listCommerceItems(@Nonnull ListCommerceItemsRequest request) {
-        AsyncRequestOperation<ListCommerceItemsRequest, ListCommerceItemsResponse> operation
-              = new ListCommerceItems.Async(sdkConfiguration, _headers);
+    public CompletableFuture<ListCommerceItems2Response> listCommerceItems2(@Nonnull ListCommerceItems2Request request) {
+        AsyncRequestOperation<ListCommerceItems2Request, ListCommerceItems2Response> operation
+              = new ListCommerceItems2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -128,19 +128,19 @@ public class AsyncItem {
      * 
      * @return The async call builder
      */
-    public PatchCommerceItemRequestBuilder patchCommerceItem() {
-        return new PatchCommerceItemRequestBuilder(sdkConfiguration);
+    public PatchCommerceItem2RequestBuilder patchCommerceItem2() {
+        return new PatchCommerceItem2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update an item
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<PatchCommerceItemResponse>} - The async response
+     * @return {@code CompletableFuture<PatchCommerceItem2Response>} - The async response
      */
-    public CompletableFuture<PatchCommerceItemResponse> patchCommerceItem(@Nonnull PatchCommerceItemRequest request) {
-        AsyncRequestOperation<PatchCommerceItemRequest, PatchCommerceItemResponse> operation
-              = new PatchCommerceItem.Async(sdkConfiguration, _headers);
+    public CompletableFuture<PatchCommerceItem2Response> patchCommerceItem2(@Nonnull PatchCommerceItem2Request request) {
+        AsyncRequestOperation<PatchCommerceItem2Request, PatchCommerceItem2Response> operation
+              = new PatchCommerceItem2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -151,19 +151,19 @@ public class AsyncItem {
      * 
      * @return The async call builder
      */
-    public RemoveCommerceItemRequestBuilder removeCommerceItem() {
-        return new RemoveCommerceItemRequestBuilder(sdkConfiguration);
+    public RemoveCommerceItem2RequestBuilder removeCommerceItem2() {
+        return new RemoveCommerceItem2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Remove an item
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<RemoveCommerceItemResponse>} - The async response
+     * @return {@code CompletableFuture<RemoveCommerceItem2Response>} - The async response
      */
-    public CompletableFuture<RemoveCommerceItemResponse> removeCommerceItem(@Nonnull RemoveCommerceItemRequest request) {
-        AsyncRequestOperation<RemoveCommerceItemRequest, RemoveCommerceItemResponse> operation
-              = new RemoveCommerceItem.Async(sdkConfiguration, _headers);
+    public CompletableFuture<RemoveCommerceItem2Response> removeCommerceItem2(@Nonnull RemoveCommerceItem2Request request) {
+        AsyncRequestOperation<RemoveCommerceItem2Request, RemoveCommerceItem2Response> operation
+              = new RemoveCommerceItem2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -174,19 +174,19 @@ public class AsyncItem {
      * 
      * @return The async call builder
      */
-    public UpdateCommerceItemRequestBuilder updateCommerceItem() {
-        return new UpdateCommerceItemRequestBuilder(sdkConfiguration);
+    public UpdateCommerceItem2RequestBuilder updateCommerceItem2() {
+        return new UpdateCommerceItem2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update an item
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<UpdateCommerceItemResponse>} - The async response
+     * @return {@code CompletableFuture<UpdateCommerceItem2Response>} - The async response
      */
-    public CompletableFuture<UpdateCommerceItemResponse> updateCommerceItem(@Nonnull UpdateCommerceItemRequest request) {
-        AsyncRequestOperation<UpdateCommerceItemRequest, UpdateCommerceItemResponse> operation
-              = new UpdateCommerceItem.Async(sdkConfiguration, _headers);
+    public CompletableFuture<UpdateCommerceItem2Response> updateCommerceItem2(@Nonnull UpdateCommerceItem2Request request) {
+        AsyncRequestOperation<UpdateCommerceItem2Request, UpdateCommerceItem2Response> operation
+              = new UpdateCommerceItem2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

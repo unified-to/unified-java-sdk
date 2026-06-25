@@ -4,27 +4,27 @@
 
 ### Available Operations
 
-* [createAccountingBill](#createaccountingbill) - Create a bill
-* [getAccountingBill](#getaccountingbill) - Retrieve a bill
-* [listAccountingBills](#listaccountingbills) - List all bills
-* [patchAccountingBill](#patchaccountingbill) - Update a bill
-* [removeAccountingBill](#removeaccountingbill) - Remove a bill
-* [updateAccountingBill](#updateaccountingbill) - Update a bill
+* [createAccountingBill2](#createaccountingbill2) - Create a bill
+* [getAccountingBill2](#getaccountingbill2) - Retrieve a bill
+* [listAccountingBills2](#listaccountingbills2) - List all bills
+* [patchAccountingBill2](#patchaccountingbill2) - Update a bill
+* [removeAccountingBill2](#removeaccountingbill2) - Remove a bill
+* [updateAccountingBill2](#updateaccountingbill2) - Update a bill
 
-## createAccountingBill
+## createAccountingBill2
 
 Create a bill
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createAccountingBill" method="post" path="/accounting/{connection_id}/bill" -->
+<!-- UsageSnippet language="java" operationID="createAccountingBill2" method="post" path="/accounting/{connection_id}/bill" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.CreateAccountingBillRequest;
-import to.unified.unified_java_sdk.models.operations.CreateAccountingBillResponse;
+import to.unified.unified_java_sdk.models.operations.CreateAccountingBill2Request;
+import to.unified.unified_java_sdk.models.operations.CreateAccountingBill2Response;
 import to.unified.unified_java_sdk.models.shared.AccountingBill;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -38,13 +38,13 @@ public class Application {
                     .build())
             .build();
 
-        CreateAccountingBillRequest req = CreateAccountingBillRequest.builder()
+        CreateAccountingBill2Request req = CreateAccountingBill2Request.builder()
                 .accountingBill(AccountingBill.builder()
                     .build())
                 .connectionId("<id>")
                 .build();
 
-        CreateAccountingBillResponse res = sdk.bill().createAccountingBill()
+        CreateAccountingBill2Response res = sdk.bill().createAccountingBill2()
                 .request(req)
                 .call();
 
@@ -57,13 +57,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                             | Type                                                                                  | Required                                                                              | Description                                                                           |
-| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
-| `request`                                                                             | [CreateAccountingBillRequest](../../models/operations/CreateAccountingBillRequest.md) | :heavy_check_mark:                                                                    | The request object to use for the request.                                            |
+| Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
+| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| `request`                                                                               | [CreateAccountingBill2Request](../../models/operations/CreateAccountingBill2Request.md) | :heavy_check_mark:                                                                      | The request object to use for the request.                                              |
 
 ### Response
 
-**[CreateAccountingBillResponse](../../models/operations/CreateAccountingBillResponse.md)**
+**[CreateAccountingBill2Response](../../models/operations/CreateAccountingBill2Response.md)**
 
 ### Errors
 
@@ -71,20 +71,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## getAccountingBill
+## getAccountingBill2
 
 Retrieve a bill
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="getAccountingBill" method="get" path="/accounting/{connection_id}/bill/{id}" -->
+<!-- UsageSnippet language="java" operationID="getAccountingBill2" method="get" path="/accounting/{connection_id}/bill/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.GetAccountingBillRequest;
-import to.unified.unified_java_sdk.models.operations.GetAccountingBillResponse;
+import to.unified.unified_java_sdk.models.operations.GetAccountingBill2Request;
+import to.unified.unified_java_sdk.models.operations.GetAccountingBill2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -97,12 +97,12 @@ public class Application {
                     .build())
             .build();
 
-        GetAccountingBillRequest req = GetAccountingBillRequest.builder()
+        GetAccountingBill2Request req = GetAccountingBill2Request.builder()
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        GetAccountingBillResponse res = sdk.bill().getAccountingBill()
+        GetAccountingBill2Response res = sdk.bill().getAccountingBill2()
                 .request(req)
                 .call();
 
@@ -115,13 +115,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
-| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
-| `request`                                                                       | [GetAccountingBillRequest](../../models/operations/GetAccountingBillRequest.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
+| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
+| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| `request`                                                                         | [GetAccountingBill2Request](../../models/operations/GetAccountingBill2Request.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
 
 ### Response
 
-**[GetAccountingBillResponse](../../models/operations/GetAccountingBillResponse.md)**
+**[GetAccountingBill2Response](../../models/operations/GetAccountingBill2Response.md)**
 
 ### Errors
 
@@ -129,20 +129,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## listAccountingBills
+## listAccountingBills2
 
 List all bills
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="listAccountingBills" method="get" path="/accounting/{connection_id}/bill" -->
+<!-- UsageSnippet language="java" operationID="listAccountingBills2" method="get" path="/accounting/{connection_id}/bill" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.ListAccountingBillsRequest;
-import to.unified.unified_java_sdk.models.operations.ListAccountingBillsResponse;
+import to.unified.unified_java_sdk.models.operations.ListAccountingBills2Request;
+import to.unified.unified_java_sdk.models.operations.ListAccountingBills2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -155,11 +155,11 @@ public class Application {
                     .build())
             .build();
 
-        ListAccountingBillsRequest req = ListAccountingBillsRequest.builder()
+        ListAccountingBills2Request req = ListAccountingBills2Request.builder()
                 .connectionId("<id>")
                 .build();
 
-        ListAccountingBillsResponse res = sdk.bill().listAccountingBills()
+        ListAccountingBills2Response res = sdk.bill().listAccountingBills2()
                 .request(req)
                 .call();
 
@@ -172,13 +172,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                           | Type                                                                                | Required                                                                            | Description                                                                         |
-| ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
-| `request`                                                                           | [ListAccountingBillsRequest](../../models/operations/ListAccountingBillsRequest.md) | :heavy_check_mark:                                                                  | The request object to use for the request.                                          |
+| Parameter                                                                             | Type                                                                                  | Required                                                                              | Description                                                                           |
+| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| `request`                                                                             | [ListAccountingBills2Request](../../models/operations/ListAccountingBills2Request.md) | :heavy_check_mark:                                                                    | The request object to use for the request.                                            |
 
 ### Response
 
-**[ListAccountingBillsResponse](../../models/operations/ListAccountingBillsResponse.md)**
+**[ListAccountingBills2Response](../../models/operations/ListAccountingBills2Response.md)**
 
 ### Errors
 
@@ -186,20 +186,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## patchAccountingBill
+## patchAccountingBill2
 
 Update a bill
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchAccountingBill" method="patch" path="/accounting/{connection_id}/bill/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchAccountingBill2" method="patch" path="/accounting/{connection_id}/bill/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.PatchAccountingBillRequest;
-import to.unified.unified_java_sdk.models.operations.PatchAccountingBillResponse;
+import to.unified.unified_java_sdk.models.operations.PatchAccountingBill2Request;
+import to.unified.unified_java_sdk.models.operations.PatchAccountingBill2Response;
 import to.unified.unified_java_sdk.models.shared.AccountingBill;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -213,14 +213,14 @@ public class Application {
                     .build())
             .build();
 
-        PatchAccountingBillRequest req = PatchAccountingBillRequest.builder()
+        PatchAccountingBill2Request req = PatchAccountingBill2Request.builder()
                 .accountingBill(AccountingBill.builder()
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        PatchAccountingBillResponse res = sdk.bill().patchAccountingBill()
+        PatchAccountingBill2Response res = sdk.bill().patchAccountingBill2()
                 .request(req)
                 .call();
 
@@ -233,13 +233,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                           | Type                                                                                | Required                                                                            | Description                                                                         |
-| ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
-| `request`                                                                           | [PatchAccountingBillRequest](../../models/operations/PatchAccountingBillRequest.md) | :heavy_check_mark:                                                                  | The request object to use for the request.                                          |
+| Parameter                                                                             | Type                                                                                  | Required                                                                              | Description                                                                           |
+| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| `request`                                                                             | [PatchAccountingBill2Request](../../models/operations/PatchAccountingBill2Request.md) | :heavy_check_mark:                                                                    | The request object to use for the request.                                            |
 
 ### Response
 
-**[PatchAccountingBillResponse](../../models/operations/PatchAccountingBillResponse.md)**
+**[PatchAccountingBill2Response](../../models/operations/PatchAccountingBill2Response.md)**
 
 ### Errors
 
@@ -247,20 +247,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## removeAccountingBill
+## removeAccountingBill2
 
 Remove a bill
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="removeAccountingBill" method="delete" path="/accounting/{connection_id}/bill/{id}" -->
+<!-- UsageSnippet language="java" operationID="removeAccountingBill2" method="delete" path="/accounting/{connection_id}/bill/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.RemoveAccountingBillRequest;
-import to.unified.unified_java_sdk.models.operations.RemoveAccountingBillResponse;
+import to.unified.unified_java_sdk.models.operations.RemoveAccountingBill2Request;
+import to.unified.unified_java_sdk.models.operations.RemoveAccountingBill2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -273,12 +273,12 @@ public class Application {
                     .build())
             .build();
 
-        RemoveAccountingBillRequest req = RemoveAccountingBillRequest.builder()
+        RemoveAccountingBill2Request req = RemoveAccountingBill2Request.builder()
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        RemoveAccountingBillResponse res = sdk.bill().removeAccountingBill()
+        RemoveAccountingBill2Response res = sdk.bill().removeAccountingBill2()
                 .request(req)
                 .call();
 
@@ -289,13 +289,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                             | Type                                                                                  | Required                                                                              | Description                                                                           |
-| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
-| `request`                                                                             | [RemoveAccountingBillRequest](../../models/operations/RemoveAccountingBillRequest.md) | :heavy_check_mark:                                                                    | The request object to use for the request.                                            |
+| Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
+| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| `request`                                                                               | [RemoveAccountingBill2Request](../../models/operations/RemoveAccountingBill2Request.md) | :heavy_check_mark:                                                                      | The request object to use for the request.                                              |
 
 ### Response
 
-**[RemoveAccountingBillResponse](../../models/operations/RemoveAccountingBillResponse.md)**
+**[RemoveAccountingBill2Response](../../models/operations/RemoveAccountingBill2Response.md)**
 
 ### Errors
 
@@ -303,20 +303,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## updateAccountingBill
+## updateAccountingBill2
 
 Update a bill
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateAccountingBill" method="put" path="/accounting/{connection_id}/bill/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateAccountingBill2" method="put" path="/accounting/{connection_id}/bill/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.UpdateAccountingBillRequest;
-import to.unified.unified_java_sdk.models.operations.UpdateAccountingBillResponse;
+import to.unified.unified_java_sdk.models.operations.UpdateAccountingBill2Request;
+import to.unified.unified_java_sdk.models.operations.UpdateAccountingBill2Response;
 import to.unified.unified_java_sdk.models.shared.AccountingBill;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -330,14 +330,14 @@ public class Application {
                     .build())
             .build();
 
-        UpdateAccountingBillRequest req = UpdateAccountingBillRequest.builder()
+        UpdateAccountingBill2Request req = UpdateAccountingBill2Request.builder()
                 .accountingBill(AccountingBill.builder()
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        UpdateAccountingBillResponse res = sdk.bill().updateAccountingBill()
+        UpdateAccountingBill2Response res = sdk.bill().updateAccountingBill2()
                 .request(req)
                 .call();
 
@@ -350,13 +350,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                             | Type                                                                                  | Required                                                                              | Description                                                                           |
-| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
-| `request`                                                                             | [UpdateAccountingBillRequest](../../models/operations/UpdateAccountingBillRequest.md) | :heavy_check_mark:                                                                    | The request object to use for the request.                                            |
+| Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
+| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| `request`                                                                               | [UpdateAccountingBill2Request](../../models/operations/UpdateAccountingBill2Request.md) | :heavy_check_mark:                                                                      | The request object to use for the request.                                              |
 
 ### Response
 
-**[UpdateAccountingBillResponse](../../models/operations/UpdateAccountingBillResponse.md)**
+**[UpdateAccountingBill2Response](../../models/operations/UpdateAccountingBill2Response.md)**
 
 ### Errors
 

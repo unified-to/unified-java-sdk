@@ -4,39 +4,39 @@
 
 ### Available Operations
 
-* [createKmsComment](#createkmscomment) - Create a comment
-* [createKmsPage](#createkmspage) - Create a page
-* [createKmsSpace](#createkmsspace) - Create a space
-* [getKmsComment](#getkmscomment) - Retrieve a comment
-* [getKmsPage](#getkmspage) - Retrieve a page
-* [getKmsSpace](#getkmsspace) - Retrieve a space
-* [listKmsComments](#listkmscomments) - List all comments
-* [listKmsPages](#listkmspages) - List all pages
-* [listKmsSpaces](#listkmsspaces) - List all spaces
-* [patchKmsComment](#patchkmscomment) - Update a comment
-* [patchKmsPage](#patchkmspage) - Update a page
-* [patchKmsSpace](#patchkmsspace) - Update a space
-* [removeKmsComment](#removekmscomment) - Remove a comment
-* [removeKmsPage](#removekmspage) - Remove a page
-* [removeKmsSpace](#removekmsspace) - Remove a space
-* [updateKmsComment](#updatekmscomment) - Update a comment
-* [updateKmsPage](#updatekmspage) - Update a page
-* [updateKmsSpace](#updatekmsspace) - Update a space
+* [createKmsComment2](#createkmscomment2) - Create a comment
+* [createKmsPage2](#createkmspage2) - Create a page
+* [createKmsSpace2](#createkmsspace2) - Create a space
+* [getKmsComment2](#getkmscomment2) - Retrieve a comment
+* [getKmsPage2](#getkmspage2) - Retrieve a page
+* [getKmsSpace2](#getkmsspace2) - Retrieve a space
+* [listKmsComments2](#listkmscomments2) - List all comments
+* [listKmsPages2](#listkmspages2) - List all pages
+* [listKmsSpaces2](#listkmsspaces2) - List all spaces
+* [patchKmsComment2](#patchkmscomment2) - Update a comment
+* [patchKmsPage2](#patchkmspage2) - Update a page
+* [patchKmsSpace2](#patchkmsspace2) - Update a space
+* [removeKmsComment2](#removekmscomment2) - Remove a comment
+* [removeKmsPage2](#removekmspage2) - Remove a page
+* [removeKmsSpace2](#removekmsspace2) - Remove a space
+* [updateKmsComment2](#updatekmscomment2) - Update a comment
+* [updateKmsPage2](#updatekmspage2) - Update a page
+* [updateKmsSpace2](#updatekmsspace2) - Update a space
 
-## createKmsComment
+## createKmsComment2
 
 Create a comment
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createKmsComment" method="post" path="/kms/{connection_id}/comment" -->
+<!-- UsageSnippet language="java" operationID="createKmsComment2" method="post" path="/kms/{connection_id}/comment" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.CreateKmsCommentRequest;
-import to.unified.unified_java_sdk.models.operations.CreateKmsCommentResponse;
+import to.unified.unified_java_sdk.models.operations.CreateKmsComment2Request;
+import to.unified.unified_java_sdk.models.operations.CreateKmsComment2Response;
 import to.unified.unified_java_sdk.models.shared.KmsComment;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -50,13 +50,13 @@ public class Application {
                     .build())
             .build();
 
-        CreateKmsCommentRequest req = CreateKmsCommentRequest.builder()
+        CreateKmsComment2Request req = CreateKmsComment2Request.builder()
                 .kmsComment(KmsComment.builder()
                     .build())
                 .connectionId("<id>")
                 .build();
 
-        CreateKmsCommentResponse res = sdk.kms().createKmsComment()
+        CreateKmsComment2Response res = sdk.kms().createKmsComment2()
                 .request(req)
                 .call();
 
@@ -69,13 +69,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
-| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
-| `request`                                                                     | [CreateKmsCommentRequest](../../models/operations/CreateKmsCommentRequest.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
+| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| `request`                                                                       | [CreateKmsComment2Request](../../models/operations/CreateKmsComment2Request.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
 
 ### Response
 
-**[CreateKmsCommentResponse](../../models/operations/CreateKmsCommentResponse.md)**
+**[CreateKmsComment2Response](../../models/operations/CreateKmsComment2Response.md)**
 
 ### Errors
 
@@ -83,20 +83,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## createKmsPage
+## createKmsPage2
 
 Create a page
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createKmsPage" method="post" path="/kms/{connection_id}/page" -->
+<!-- UsageSnippet language="java" operationID="createKmsPage2" method="post" path="/kms/{connection_id}/page" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.CreateKmsPageRequest;
-import to.unified.unified_java_sdk.models.operations.CreateKmsPageResponse;
+import to.unified.unified_java_sdk.models.operations.CreateKmsPage2Request;
+import to.unified.unified_java_sdk.models.operations.CreateKmsPage2Response;
 import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
@@ -109,14 +109,14 @@ public class Application {
                     .build())
             .build();
 
-        CreateKmsPageRequest req = CreateKmsPageRequest.builder()
+        CreateKmsPage2Request req = CreateKmsPage2Request.builder()
                 .kmsPage(KmsPage.builder()
-                    .type(KmsPageType.TEXT)
+                    .type(KmsPageType.OTHER)
                     .build())
                 .connectionId("<id>")
                 .build();
 
-        CreateKmsPageResponse res = sdk.kms().createKmsPage()
+        CreateKmsPage2Response res = sdk.kms().createKmsPage2()
                 .request(req)
                 .call();
 
@@ -129,13 +129,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                               | Type                                                                    | Required                                                                | Description                                                             |
-| ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- |
-| `request`                                                               | [CreateKmsPageRequest](../../models/operations/CreateKmsPageRequest.md) | :heavy_check_mark:                                                      | The request object to use for the request.                              |
+| Parameter                                                                 | Type                                                                      | Required                                                                  | Description                                                               |
+| ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
+| `request`                                                                 | [CreateKmsPage2Request](../../models/operations/CreateKmsPage2Request.md) | :heavy_check_mark:                                                        | The request object to use for the request.                                |
 
 ### Response
 
-**[CreateKmsPageResponse](../../models/operations/CreateKmsPageResponse.md)**
+**[CreateKmsPage2Response](../../models/operations/CreateKmsPage2Response.md)**
 
 ### Errors
 
@@ -143,20 +143,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## createKmsSpace
+## createKmsSpace2
 
 Create a space
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createKmsSpace" method="post" path="/kms/{connection_id}/space" -->
+<!-- UsageSnippet language="java" operationID="createKmsSpace2" method="post" path="/kms/{connection_id}/space" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.CreateKmsSpaceRequest;
-import to.unified.unified_java_sdk.models.operations.CreateKmsSpaceResponse;
+import to.unified.unified_java_sdk.models.operations.CreateKmsSpace2Request;
+import to.unified.unified_java_sdk.models.operations.CreateKmsSpace2Response;
 import to.unified.unified_java_sdk.models.shared.KmsSpace;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -170,13 +170,13 @@ public class Application {
                     .build())
             .build();
 
-        CreateKmsSpaceRequest req = CreateKmsSpaceRequest.builder()
+        CreateKmsSpace2Request req = CreateKmsSpace2Request.builder()
                 .kmsSpace(KmsSpace.builder()
                     .build())
                 .connectionId("<id>")
                 .build();
 
-        CreateKmsSpaceResponse res = sdk.kms().createKmsSpace()
+        CreateKmsSpace2Response res = sdk.kms().createKmsSpace2()
                 .request(req)
                 .call();
 
@@ -189,13 +189,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                 | Type                                                                      | Required                                                                  | Description                                                               |
-| ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
-| `request`                                                                 | [CreateKmsSpaceRequest](../../models/operations/CreateKmsSpaceRequest.md) | :heavy_check_mark:                                                        | The request object to use for the request.                                |
+| Parameter                                                                   | Type                                                                        | Required                                                                    | Description                                                                 |
+| --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| `request`                                                                   | [CreateKmsSpace2Request](../../models/operations/CreateKmsSpace2Request.md) | :heavy_check_mark:                                                          | The request object to use for the request.                                  |
 
 ### Response
 
-**[CreateKmsSpaceResponse](../../models/operations/CreateKmsSpaceResponse.md)**
+**[CreateKmsSpace2Response](../../models/operations/CreateKmsSpace2Response.md)**
 
 ### Errors
 
@@ -203,20 +203,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## getKmsComment
+## getKmsComment2
 
 Retrieve a comment
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="getKmsComment" method="get" path="/kms/{connection_id}/comment/{id}" -->
+<!-- UsageSnippet language="java" operationID="getKmsComment2" method="get" path="/kms/{connection_id}/comment/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.GetKmsCommentRequest;
-import to.unified.unified_java_sdk.models.operations.GetKmsCommentResponse;
+import to.unified.unified_java_sdk.models.operations.GetKmsComment2Request;
+import to.unified.unified_java_sdk.models.operations.GetKmsComment2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -229,12 +229,12 @@ public class Application {
                     .build())
             .build();
 
-        GetKmsCommentRequest req = GetKmsCommentRequest.builder()
+        GetKmsComment2Request req = GetKmsComment2Request.builder()
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        GetKmsCommentResponse res = sdk.kms().getKmsComment()
+        GetKmsComment2Response res = sdk.kms().getKmsComment2()
                 .request(req)
                 .call();
 
@@ -247,13 +247,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                               | Type                                                                    | Required                                                                | Description                                                             |
-| ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- |
-| `request`                                                               | [GetKmsCommentRequest](../../models/operations/GetKmsCommentRequest.md) | :heavy_check_mark:                                                      | The request object to use for the request.                              |
+| Parameter                                                                 | Type                                                                      | Required                                                                  | Description                                                               |
+| ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
+| `request`                                                                 | [GetKmsComment2Request](../../models/operations/GetKmsComment2Request.md) | :heavy_check_mark:                                                        | The request object to use for the request.                                |
 
 ### Response
 
-**[GetKmsCommentResponse](../../models/operations/GetKmsCommentResponse.md)**
+**[GetKmsComment2Response](../../models/operations/GetKmsComment2Response.md)**
 
 ### Errors
 
@@ -261,20 +261,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## getKmsPage
+## getKmsPage2
 
 Retrieve a page
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="getKmsPage" method="get" path="/kms/{connection_id}/page/{id}" -->
+<!-- UsageSnippet language="java" operationID="getKmsPage2" method="get" path="/kms/{connection_id}/page/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.GetKmsPageRequest;
-import to.unified.unified_java_sdk.models.operations.GetKmsPageResponse;
+import to.unified.unified_java_sdk.models.operations.GetKmsPage2Request;
+import to.unified.unified_java_sdk.models.operations.GetKmsPage2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -287,12 +287,12 @@ public class Application {
                     .build())
             .build();
 
-        GetKmsPageRequest req = GetKmsPageRequest.builder()
+        GetKmsPage2Request req = GetKmsPage2Request.builder()
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        GetKmsPageResponse res = sdk.kms().getKmsPage()
+        GetKmsPage2Response res = sdk.kms().getKmsPage2()
                 .request(req)
                 .call();
 
@@ -305,13 +305,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                         | Type                                                              | Required                                                          | Description                                                       |
-| ----------------------------------------------------------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------- |
-| `request`                                                         | [GetKmsPageRequest](../../models/operations/GetKmsPageRequest.md) | :heavy_check_mark:                                                | The request object to use for the request.                        |
+| Parameter                                                           | Type                                                                | Required                                                            | Description                                                         |
+| ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- |
+| `request`                                                           | [GetKmsPage2Request](../../models/operations/GetKmsPage2Request.md) | :heavy_check_mark:                                                  | The request object to use for the request.                          |
 
 ### Response
 
-**[GetKmsPageResponse](../../models/operations/GetKmsPageResponse.md)**
+**[GetKmsPage2Response](../../models/operations/GetKmsPage2Response.md)**
 
 ### Errors
 
@@ -319,20 +319,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## getKmsSpace
+## getKmsSpace2
 
 Retrieve a space
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="getKmsSpace" method="get" path="/kms/{connection_id}/space/{id}" -->
+<!-- UsageSnippet language="java" operationID="getKmsSpace2" method="get" path="/kms/{connection_id}/space/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.GetKmsSpaceRequest;
-import to.unified.unified_java_sdk.models.operations.GetKmsSpaceResponse;
+import to.unified.unified_java_sdk.models.operations.GetKmsSpace2Request;
+import to.unified.unified_java_sdk.models.operations.GetKmsSpace2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -345,12 +345,12 @@ public class Application {
                     .build())
             .build();
 
-        GetKmsSpaceRequest req = GetKmsSpaceRequest.builder()
+        GetKmsSpace2Request req = GetKmsSpace2Request.builder()
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        GetKmsSpaceResponse res = sdk.kms().getKmsSpace()
+        GetKmsSpace2Response res = sdk.kms().getKmsSpace2()
                 .request(req)
                 .call();
 
@@ -363,13 +363,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                           | Type                                                                | Required                                                            | Description                                                         |
-| ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- |
-| `request`                                                           | [GetKmsSpaceRequest](../../models/operations/GetKmsSpaceRequest.md) | :heavy_check_mark:                                                  | The request object to use for the request.                          |
+| Parameter                                                             | Type                                                                  | Required                                                              | Description                                                           |
+| --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- |
+| `request`                                                             | [GetKmsSpace2Request](../../models/operations/GetKmsSpace2Request.md) | :heavy_check_mark:                                                    | The request object to use for the request.                            |
 
 ### Response
 
-**[GetKmsSpaceResponse](../../models/operations/GetKmsSpaceResponse.md)**
+**[GetKmsSpace2Response](../../models/operations/GetKmsSpace2Response.md)**
 
 ### Errors
 
@@ -377,20 +377,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## listKmsComments
+## listKmsComments2
 
 List all comments
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="listKmsComments" method="get" path="/kms/{connection_id}/comment" -->
+<!-- UsageSnippet language="java" operationID="listKmsComments2" method="get" path="/kms/{connection_id}/comment" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.ListKmsCommentsRequest;
-import to.unified.unified_java_sdk.models.operations.ListKmsCommentsResponse;
+import to.unified.unified_java_sdk.models.operations.ListKmsComments2Request;
+import to.unified.unified_java_sdk.models.operations.ListKmsComments2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -403,11 +403,11 @@ public class Application {
                     .build())
             .build();
 
-        ListKmsCommentsRequest req = ListKmsCommentsRequest.builder()
+        ListKmsComments2Request req = ListKmsComments2Request.builder()
                 .connectionId("<id>")
                 .build();
 
-        ListKmsCommentsResponse res = sdk.kms().listKmsComments()
+        ListKmsComments2Response res = sdk.kms().listKmsComments2()
                 .request(req)
                 .call();
 
@@ -420,13 +420,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                   | Type                                                                        | Required                                                                    | Description                                                                 |
-| --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
-| `request`                                                                   | [ListKmsCommentsRequest](../../models/operations/ListKmsCommentsRequest.md) | :heavy_check_mark:                                                          | The request object to use for the request.                                  |
+| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
+| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| `request`                                                                     | [ListKmsComments2Request](../../models/operations/ListKmsComments2Request.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
 
 ### Response
 
-**[ListKmsCommentsResponse](../../models/operations/ListKmsCommentsResponse.md)**
+**[ListKmsComments2Response](../../models/operations/ListKmsComments2Response.md)**
 
 ### Errors
 
@@ -434,20 +434,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## listKmsPages
+## listKmsPages2
 
 List all pages
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="listKmsPages" method="get" path="/kms/{connection_id}/page" -->
+<!-- UsageSnippet language="java" operationID="listKmsPages2" method="get" path="/kms/{connection_id}/page" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.ListKmsPagesRequest;
-import to.unified.unified_java_sdk.models.operations.ListKmsPagesResponse;
+import to.unified.unified_java_sdk.models.operations.ListKmsPages2Request;
+import to.unified.unified_java_sdk.models.operations.ListKmsPages2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -460,11 +460,11 @@ public class Application {
                     .build())
             .build();
 
-        ListKmsPagesRequest req = ListKmsPagesRequest.builder()
+        ListKmsPages2Request req = ListKmsPages2Request.builder()
                 .connectionId("<id>")
                 .build();
 
-        ListKmsPagesResponse res = sdk.kms().listKmsPages()
+        ListKmsPages2Response res = sdk.kms().listKmsPages2()
                 .request(req)
                 .call();
 
@@ -477,13 +477,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                             | Type                                                                  | Required                                                              | Description                                                           |
-| --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- |
-| `request`                                                             | [ListKmsPagesRequest](../../models/operations/ListKmsPagesRequest.md) | :heavy_check_mark:                                                    | The request object to use for the request.                            |
+| Parameter                                                               | Type                                                                    | Required                                                                | Description                                                             |
+| ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- |
+| `request`                                                               | [ListKmsPages2Request](../../models/operations/ListKmsPages2Request.md) | :heavy_check_mark:                                                      | The request object to use for the request.                              |
 
 ### Response
 
-**[ListKmsPagesResponse](../../models/operations/ListKmsPagesResponse.md)**
+**[ListKmsPages2Response](../../models/operations/ListKmsPages2Response.md)**
 
 ### Errors
 
@@ -491,20 +491,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## listKmsSpaces
+## listKmsSpaces2
 
 List all spaces
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="listKmsSpaces" method="get" path="/kms/{connection_id}/space" -->
+<!-- UsageSnippet language="java" operationID="listKmsSpaces2" method="get" path="/kms/{connection_id}/space" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.ListKmsSpacesRequest;
-import to.unified.unified_java_sdk.models.operations.ListKmsSpacesResponse;
+import to.unified.unified_java_sdk.models.operations.ListKmsSpaces2Request;
+import to.unified.unified_java_sdk.models.operations.ListKmsSpaces2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -517,11 +517,11 @@ public class Application {
                     .build())
             .build();
 
-        ListKmsSpacesRequest req = ListKmsSpacesRequest.builder()
+        ListKmsSpaces2Request req = ListKmsSpaces2Request.builder()
                 .connectionId("<id>")
                 .build();
 
-        ListKmsSpacesResponse res = sdk.kms().listKmsSpaces()
+        ListKmsSpaces2Response res = sdk.kms().listKmsSpaces2()
                 .request(req)
                 .call();
 
@@ -534,13 +534,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                               | Type                                                                    | Required                                                                | Description                                                             |
-| ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- |
-| `request`                                                               | [ListKmsSpacesRequest](../../models/operations/ListKmsSpacesRequest.md) | :heavy_check_mark:                                                      | The request object to use for the request.                              |
+| Parameter                                                                 | Type                                                                      | Required                                                                  | Description                                                               |
+| ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
+| `request`                                                                 | [ListKmsSpaces2Request](../../models/operations/ListKmsSpaces2Request.md) | :heavy_check_mark:                                                        | The request object to use for the request.                                |
 
 ### Response
 
-**[ListKmsSpacesResponse](../../models/operations/ListKmsSpacesResponse.md)**
+**[ListKmsSpaces2Response](../../models/operations/ListKmsSpaces2Response.md)**
 
 ### Errors
 
@@ -548,20 +548,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## patchKmsComment
+## patchKmsComment2
 
 Update a comment
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchKmsComment" method="patch" path="/kms/{connection_id}/comment/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchKmsComment2" method="patch" path="/kms/{connection_id}/comment/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.PatchKmsCommentRequest;
-import to.unified.unified_java_sdk.models.operations.PatchKmsCommentResponse;
+import to.unified.unified_java_sdk.models.operations.PatchKmsComment2Request;
+import to.unified.unified_java_sdk.models.operations.PatchKmsComment2Response;
 import to.unified.unified_java_sdk.models.shared.KmsComment;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -575,19 +575,492 @@ public class Application {
                     .build())
             .build();
 
-        PatchKmsCommentRequest req = PatchKmsCommentRequest.builder()
+        PatchKmsComment2Request req = PatchKmsComment2Request.builder()
                 .kmsComment(KmsComment.builder()
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        PatchKmsCommentResponse res = sdk.kms().patchKmsComment()
+        PatchKmsComment2Response res = sdk.kms().patchKmsComment2()
                 .request(req)
                 .call();
 
         if (res.kmsComment().isPresent()) {
             System.out.println(res.kmsComment().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
+| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| `request`                                                                     | [PatchKmsComment2Request](../../models/operations/PatchKmsComment2Request.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
+
+### Response
+
+**[PatchKmsComment2Response](../../models/operations/PatchKmsComment2Response.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## patchKmsPage2
+
+Update a page
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="patchKmsPage2" method="patch" path="/kms/{connection_id}/page/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.PatchKmsPage2Request;
+import to.unified.unified_java_sdk.models.operations.PatchKmsPage2Response;
+import to.unified.unified_java_sdk.models.shared.*;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        PatchKmsPage2Request req = PatchKmsPage2Request.builder()
+                .kmsPage(KmsPage.builder()
+                    .type(KmsPageType.OTHER)
+                    .build())
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        PatchKmsPage2Response res = sdk.kms().patchKmsPage2()
+                .request(req)
+                .call();
+
+        if (res.kmsPage().isPresent()) {
+            System.out.println(res.kmsPage().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                               | Type                                                                    | Required                                                                | Description                                                             |
+| ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- |
+| `request`                                                               | [PatchKmsPage2Request](../../models/operations/PatchKmsPage2Request.md) | :heavy_check_mark:                                                      | The request object to use for the request.                              |
+
+### Response
+
+**[PatchKmsPage2Response](../../models/operations/PatchKmsPage2Response.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## patchKmsSpace2
+
+Update a space
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="patchKmsSpace2" method="patch" path="/kms/{connection_id}/space/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.PatchKmsSpace2Request;
+import to.unified.unified_java_sdk.models.operations.PatchKmsSpace2Response;
+import to.unified.unified_java_sdk.models.shared.KmsSpace;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        PatchKmsSpace2Request req = PatchKmsSpace2Request.builder()
+                .kmsSpace(KmsSpace.builder()
+                    .build())
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        PatchKmsSpace2Response res = sdk.kms().patchKmsSpace2()
+                .request(req)
+                .call();
+
+        if (res.kmsSpace().isPresent()) {
+            System.out.println(res.kmsSpace().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                 | Type                                                                      | Required                                                                  | Description                                                               |
+| ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
+| `request`                                                                 | [PatchKmsSpace2Request](../../models/operations/PatchKmsSpace2Request.md) | :heavy_check_mark:                                                        | The request object to use for the request.                                |
+
+### Response
+
+**[PatchKmsSpace2Response](../../models/operations/PatchKmsSpace2Response.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## removeKmsComment2
+
+Remove a comment
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="removeKmsComment2" method="delete" path="/kms/{connection_id}/comment/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.RemoveKmsComment2Request;
+import to.unified.unified_java_sdk.models.operations.RemoveKmsComment2Response;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        RemoveKmsComment2Request req = RemoveKmsComment2Request.builder()
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        RemoveKmsComment2Response res = sdk.kms().removeKmsComment2()
+                .request(req)
+                .call();
+
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| `request`                                                                       | [RemoveKmsComment2Request](../../models/operations/RemoveKmsComment2Request.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
+
+### Response
+
+**[RemoveKmsComment2Response](../../models/operations/RemoveKmsComment2Response.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## removeKmsPage2
+
+Remove a page
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="removeKmsPage2" method="delete" path="/kms/{connection_id}/page/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.RemoveKmsPage2Request;
+import to.unified.unified_java_sdk.models.operations.RemoveKmsPage2Response;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        RemoveKmsPage2Request req = RemoveKmsPage2Request.builder()
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        RemoveKmsPage2Response res = sdk.kms().removeKmsPage2()
+                .request(req)
+                .call();
+
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                 | Type                                                                      | Required                                                                  | Description                                                               |
+| ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
+| `request`                                                                 | [RemoveKmsPage2Request](../../models/operations/RemoveKmsPage2Request.md) | :heavy_check_mark:                                                        | The request object to use for the request.                                |
+
+### Response
+
+**[RemoveKmsPage2Response](../../models/operations/RemoveKmsPage2Response.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## removeKmsSpace2
+
+Remove a space
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="removeKmsSpace2" method="delete" path="/kms/{connection_id}/space/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.RemoveKmsSpace2Request;
+import to.unified.unified_java_sdk.models.operations.RemoveKmsSpace2Response;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        RemoveKmsSpace2Request req = RemoveKmsSpace2Request.builder()
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        RemoveKmsSpace2Response res = sdk.kms().removeKmsSpace2()
+                .request(req)
+                .call();
+
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                   | Type                                                                        | Required                                                                    | Description                                                                 |
+| --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| `request`                                                                   | [RemoveKmsSpace2Request](../../models/operations/RemoveKmsSpace2Request.md) | :heavy_check_mark:                                                          | The request object to use for the request.                                  |
+
+### Response
+
+**[RemoveKmsSpace2Response](../../models/operations/RemoveKmsSpace2Response.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## updateKmsComment2
+
+Update a comment
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="updateKmsComment2" method="put" path="/kms/{connection_id}/comment/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.UpdateKmsComment2Request;
+import to.unified.unified_java_sdk.models.operations.UpdateKmsComment2Response;
+import to.unified.unified_java_sdk.models.shared.KmsComment;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        UpdateKmsComment2Request req = UpdateKmsComment2Request.builder()
+                .kmsComment(KmsComment.builder()
+                    .build())
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        UpdateKmsComment2Response res = sdk.kms().updateKmsComment2()
+                .request(req)
+                .call();
+
+        if (res.kmsComment().isPresent()) {
+            System.out.println(res.kmsComment().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| `request`                                                                       | [UpdateKmsComment2Request](../../models/operations/UpdateKmsComment2Request.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
+
+### Response
+
+**[UpdateKmsComment2Response](../../models/operations/UpdateKmsComment2Response.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## updateKmsPage2
+
+Update a page
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="updateKmsPage2" method="put" path="/kms/{connection_id}/page/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.UpdateKmsPage2Request;
+import to.unified.unified_java_sdk.models.operations.UpdateKmsPage2Response;
+import to.unified.unified_java_sdk.models.shared.*;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        UpdateKmsPage2Request req = UpdateKmsPage2Request.builder()
+                .kmsPage(KmsPage.builder()
+                    .type(KmsPageType.MARKDOWN)
+                    .build())
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        UpdateKmsPage2Response res = sdk.kms().updateKmsPage2()
+                .request(req)
+                .call();
+
+        if (res.kmsPage().isPresent()) {
+            System.out.println(res.kmsPage().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                 | Type                                                                      | Required                                                                  | Description                                                               |
+| ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
+| `request`                                                                 | [UpdateKmsPage2Request](../../models/operations/UpdateKmsPage2Request.md) | :heavy_check_mark:                                                        | The request object to use for the request.                                |
+
+### Response
+
+**[UpdateKmsPage2Response](../../models/operations/UpdateKmsPage2Response.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## updateKmsSpace2
+
+Update a space
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="updateKmsSpace2" method="put" path="/kms/{connection_id}/space/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.UpdateKmsSpace2Request;
+import to.unified.unified_java_sdk.models.operations.UpdateKmsSpace2Response;
+import to.unified.unified_java_sdk.models.shared.KmsSpace;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        UpdateKmsSpace2Request req = UpdateKmsSpace2Request.builder()
+                .kmsSpace(KmsSpace.builder()
+                    .build())
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        UpdateKmsSpace2Response res = sdk.kms().updateKmsSpace2()
+                .request(req)
+                .call();
+
+        if (res.kmsSpace().isPresent()) {
+            System.out.println(res.kmsSpace().get());
         }
     }
 }
@@ -597,484 +1070,11 @@ public class Application {
 
 | Parameter                                                                   | Type                                                                        | Required                                                                    | Description                                                                 |
 | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
-| `request`                                                                   | [PatchKmsCommentRequest](../../models/operations/PatchKmsCommentRequest.md) | :heavy_check_mark:                                                          | The request object to use for the request.                                  |
+| `request`                                                                   | [UpdateKmsSpace2Request](../../models/operations/UpdateKmsSpace2Request.md) | :heavy_check_mark:                                                          | The request object to use for the request.                                  |
 
 ### Response
 
-**[PatchKmsCommentResponse](../../models/operations/PatchKmsCommentResponse.md)**
-
-### Errors
-
-| Error Type             | Status Code            | Content Type           |
-| ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
-
-## patchKmsPage
-
-Update a page
-
-### Example Usage
-
-<!-- UsageSnippet language="java" operationID="patchKmsPage" method="patch" path="/kms/{connection_id}/page/{id}" -->
-```java
-package hello.world;
-
-import java.lang.Exception;
-import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.PatchKmsPageRequest;
-import to.unified.unified_java_sdk.models.operations.PatchKmsPageResponse;
-import to.unified.unified_java_sdk.models.shared.*;
-
-public class Application {
-
-    public static void main(String[] args) throws Exception {
-
-        UnifiedTo sdk = UnifiedTo.builder()
-                .security(Security.builder()
-                    .jwt(System.getenv().getOrDefault("JWT", ""))
-                    .build())
-            .build();
-
-        PatchKmsPageRequest req = PatchKmsPageRequest.builder()
-                .kmsPage(KmsPage.builder()
-                    .type(KmsPageType.OTHER)
-                    .build())
-                .connectionId("<id>")
-                .id("<id>")
-                .build();
-
-        PatchKmsPageResponse res = sdk.kms().patchKmsPage()
-                .request(req)
-                .call();
-
-        if (res.kmsPage().isPresent()) {
-            System.out.println(res.kmsPage().get());
-        }
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                             | Type                                                                  | Required                                                              | Description                                                           |
-| --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- |
-| `request`                                                             | [PatchKmsPageRequest](../../models/operations/PatchKmsPageRequest.md) | :heavy_check_mark:                                                    | The request object to use for the request.                            |
-
-### Response
-
-**[PatchKmsPageResponse](../../models/operations/PatchKmsPageResponse.md)**
-
-### Errors
-
-| Error Type             | Status Code            | Content Type           |
-| ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
-
-## patchKmsSpace
-
-Update a space
-
-### Example Usage
-
-<!-- UsageSnippet language="java" operationID="patchKmsSpace" method="patch" path="/kms/{connection_id}/space/{id}" -->
-```java
-package hello.world;
-
-import java.lang.Exception;
-import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.PatchKmsSpaceRequest;
-import to.unified.unified_java_sdk.models.operations.PatchKmsSpaceResponse;
-import to.unified.unified_java_sdk.models.shared.KmsSpace;
-import to.unified.unified_java_sdk.models.shared.Security;
-
-public class Application {
-
-    public static void main(String[] args) throws Exception {
-
-        UnifiedTo sdk = UnifiedTo.builder()
-                .security(Security.builder()
-                    .jwt(System.getenv().getOrDefault("JWT", ""))
-                    .build())
-            .build();
-
-        PatchKmsSpaceRequest req = PatchKmsSpaceRequest.builder()
-                .kmsSpace(KmsSpace.builder()
-                    .build())
-                .connectionId("<id>")
-                .id("<id>")
-                .build();
-
-        PatchKmsSpaceResponse res = sdk.kms().patchKmsSpace()
-                .request(req)
-                .call();
-
-        if (res.kmsSpace().isPresent()) {
-            System.out.println(res.kmsSpace().get());
-        }
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                               | Type                                                                    | Required                                                                | Description                                                             |
-| ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- |
-| `request`                                                               | [PatchKmsSpaceRequest](../../models/operations/PatchKmsSpaceRequest.md) | :heavy_check_mark:                                                      | The request object to use for the request.                              |
-
-### Response
-
-**[PatchKmsSpaceResponse](../../models/operations/PatchKmsSpaceResponse.md)**
-
-### Errors
-
-| Error Type             | Status Code            | Content Type           |
-| ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
-
-## removeKmsComment
-
-Remove a comment
-
-### Example Usage
-
-<!-- UsageSnippet language="java" operationID="removeKmsComment" method="delete" path="/kms/{connection_id}/comment/{id}" -->
-```java
-package hello.world;
-
-import java.lang.Exception;
-import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.RemoveKmsCommentRequest;
-import to.unified.unified_java_sdk.models.operations.RemoveKmsCommentResponse;
-import to.unified.unified_java_sdk.models.shared.Security;
-
-public class Application {
-
-    public static void main(String[] args) throws Exception {
-
-        UnifiedTo sdk = UnifiedTo.builder()
-                .security(Security.builder()
-                    .jwt(System.getenv().getOrDefault("JWT", ""))
-                    .build())
-            .build();
-
-        RemoveKmsCommentRequest req = RemoveKmsCommentRequest.builder()
-                .connectionId("<id>")
-                .id("<id>")
-                .build();
-
-        RemoveKmsCommentResponse res = sdk.kms().removeKmsComment()
-                .request(req)
-                .call();
-
-        // handle response
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
-| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
-| `request`                                                                     | [RemoveKmsCommentRequest](../../models/operations/RemoveKmsCommentRequest.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
-
-### Response
-
-**[RemoveKmsCommentResponse](../../models/operations/RemoveKmsCommentResponse.md)**
-
-### Errors
-
-| Error Type             | Status Code            | Content Type           |
-| ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
-
-## removeKmsPage
-
-Remove a page
-
-### Example Usage
-
-<!-- UsageSnippet language="java" operationID="removeKmsPage" method="delete" path="/kms/{connection_id}/page/{id}" -->
-```java
-package hello.world;
-
-import java.lang.Exception;
-import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.RemoveKmsPageRequest;
-import to.unified.unified_java_sdk.models.operations.RemoveKmsPageResponse;
-import to.unified.unified_java_sdk.models.shared.Security;
-
-public class Application {
-
-    public static void main(String[] args) throws Exception {
-
-        UnifiedTo sdk = UnifiedTo.builder()
-                .security(Security.builder()
-                    .jwt(System.getenv().getOrDefault("JWT", ""))
-                    .build())
-            .build();
-
-        RemoveKmsPageRequest req = RemoveKmsPageRequest.builder()
-                .connectionId("<id>")
-                .id("<id>")
-                .build();
-
-        RemoveKmsPageResponse res = sdk.kms().removeKmsPage()
-                .request(req)
-                .call();
-
-        // handle response
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                               | Type                                                                    | Required                                                                | Description                                                             |
-| ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- |
-| `request`                                                               | [RemoveKmsPageRequest](../../models/operations/RemoveKmsPageRequest.md) | :heavy_check_mark:                                                      | The request object to use for the request.                              |
-
-### Response
-
-**[RemoveKmsPageResponse](../../models/operations/RemoveKmsPageResponse.md)**
-
-### Errors
-
-| Error Type             | Status Code            | Content Type           |
-| ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
-
-## removeKmsSpace
-
-Remove a space
-
-### Example Usage
-
-<!-- UsageSnippet language="java" operationID="removeKmsSpace" method="delete" path="/kms/{connection_id}/space/{id}" -->
-```java
-package hello.world;
-
-import java.lang.Exception;
-import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.RemoveKmsSpaceRequest;
-import to.unified.unified_java_sdk.models.operations.RemoveKmsSpaceResponse;
-import to.unified.unified_java_sdk.models.shared.Security;
-
-public class Application {
-
-    public static void main(String[] args) throws Exception {
-
-        UnifiedTo sdk = UnifiedTo.builder()
-                .security(Security.builder()
-                    .jwt(System.getenv().getOrDefault("JWT", ""))
-                    .build())
-            .build();
-
-        RemoveKmsSpaceRequest req = RemoveKmsSpaceRequest.builder()
-                .connectionId("<id>")
-                .id("<id>")
-                .build();
-
-        RemoveKmsSpaceResponse res = sdk.kms().removeKmsSpace()
-                .request(req)
-                .call();
-
-        // handle response
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                 | Type                                                                      | Required                                                                  | Description                                                               |
-| ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
-| `request`                                                                 | [RemoveKmsSpaceRequest](../../models/operations/RemoveKmsSpaceRequest.md) | :heavy_check_mark:                                                        | The request object to use for the request.                                |
-
-### Response
-
-**[RemoveKmsSpaceResponse](../../models/operations/RemoveKmsSpaceResponse.md)**
-
-### Errors
-
-| Error Type             | Status Code            | Content Type           |
-| ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
-
-## updateKmsComment
-
-Update a comment
-
-### Example Usage
-
-<!-- UsageSnippet language="java" operationID="updateKmsComment" method="put" path="/kms/{connection_id}/comment/{id}" -->
-```java
-package hello.world;
-
-import java.lang.Exception;
-import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.UpdateKmsCommentRequest;
-import to.unified.unified_java_sdk.models.operations.UpdateKmsCommentResponse;
-import to.unified.unified_java_sdk.models.shared.KmsComment;
-import to.unified.unified_java_sdk.models.shared.Security;
-
-public class Application {
-
-    public static void main(String[] args) throws Exception {
-
-        UnifiedTo sdk = UnifiedTo.builder()
-                .security(Security.builder()
-                    .jwt(System.getenv().getOrDefault("JWT", ""))
-                    .build())
-            .build();
-
-        UpdateKmsCommentRequest req = UpdateKmsCommentRequest.builder()
-                .kmsComment(KmsComment.builder()
-                    .build())
-                .connectionId("<id>")
-                .id("<id>")
-                .build();
-
-        UpdateKmsCommentResponse res = sdk.kms().updateKmsComment()
-                .request(req)
-                .call();
-
-        if (res.kmsComment().isPresent()) {
-            System.out.println(res.kmsComment().get());
-        }
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
-| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
-| `request`                                                                     | [UpdateKmsCommentRequest](../../models/operations/UpdateKmsCommentRequest.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
-
-### Response
-
-**[UpdateKmsCommentResponse](../../models/operations/UpdateKmsCommentResponse.md)**
-
-### Errors
-
-| Error Type             | Status Code            | Content Type           |
-| ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
-
-## updateKmsPage
-
-Update a page
-
-### Example Usage
-
-<!-- UsageSnippet language="java" operationID="updateKmsPage" method="put" path="/kms/{connection_id}/page/{id}" -->
-```java
-package hello.world;
-
-import java.lang.Exception;
-import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.UpdateKmsPageRequest;
-import to.unified.unified_java_sdk.models.operations.UpdateKmsPageResponse;
-import to.unified.unified_java_sdk.models.shared.*;
-
-public class Application {
-
-    public static void main(String[] args) throws Exception {
-
-        UnifiedTo sdk = UnifiedTo.builder()
-                .security(Security.builder()
-                    .jwt(System.getenv().getOrDefault("JWT", ""))
-                    .build())
-            .build();
-
-        UpdateKmsPageRequest req = UpdateKmsPageRequest.builder()
-                .kmsPage(KmsPage.builder()
-                    .type(KmsPageType.OTHER)
-                    .build())
-                .connectionId("<id>")
-                .id("<id>")
-                .build();
-
-        UpdateKmsPageResponse res = sdk.kms().updateKmsPage()
-                .request(req)
-                .call();
-
-        if (res.kmsPage().isPresent()) {
-            System.out.println(res.kmsPage().get());
-        }
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                               | Type                                                                    | Required                                                                | Description                                                             |
-| ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- |
-| `request`                                                               | [UpdateKmsPageRequest](../../models/operations/UpdateKmsPageRequest.md) | :heavy_check_mark:                                                      | The request object to use for the request.                              |
-
-### Response
-
-**[UpdateKmsPageResponse](../../models/operations/UpdateKmsPageResponse.md)**
-
-### Errors
-
-| Error Type             | Status Code            | Content Type           |
-| ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
-
-## updateKmsSpace
-
-Update a space
-
-### Example Usage
-
-<!-- UsageSnippet language="java" operationID="updateKmsSpace" method="put" path="/kms/{connection_id}/space/{id}" -->
-```java
-package hello.world;
-
-import java.lang.Exception;
-import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.UpdateKmsSpaceRequest;
-import to.unified.unified_java_sdk.models.operations.UpdateKmsSpaceResponse;
-import to.unified.unified_java_sdk.models.shared.KmsSpace;
-import to.unified.unified_java_sdk.models.shared.Security;
-
-public class Application {
-
-    public static void main(String[] args) throws Exception {
-
-        UnifiedTo sdk = UnifiedTo.builder()
-                .security(Security.builder()
-                    .jwt(System.getenv().getOrDefault("JWT", ""))
-                    .build())
-            .build();
-
-        UpdateKmsSpaceRequest req = UpdateKmsSpaceRequest.builder()
-                .kmsSpace(KmsSpace.builder()
-                    .build())
-                .connectionId("<id>")
-                .id("<id>")
-                .build();
-
-        UpdateKmsSpaceResponse res = sdk.kms().updateKmsSpace()
-                .request(req)
-                .call();
-
-        if (res.kmsSpace().isPresent()) {
-            System.out.println(res.kmsSpace().get());
-        }
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                 | Type                                                                      | Required                                                                  | Description                                                               |
-| ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
-| `request`                                                                 | [UpdateKmsSpaceRequest](../../models/operations/UpdateKmsSpaceRequest.md) | :heavy_check_mark:                                                        | The request object to use for the request.                                |
-
-### Response
-
-**[UpdateKmsSpaceResponse](../../models/operations/UpdateKmsSpaceResponse.md)**
+**[UpdateKmsSpace2Response](../../models/operations/UpdateKmsSpace2Response.md)**
 
 ### Errors
 

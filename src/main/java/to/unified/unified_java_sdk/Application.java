@@ -6,30 +6,30 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
-import to.unified.unified_java_sdk.models.operations.CreateAtsApplicationRequest;
-import to.unified.unified_java_sdk.models.operations.CreateAtsApplicationRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.CreateAtsApplicationResponse;
-import to.unified.unified_java_sdk.models.operations.GetAtsApplicationRequest;
-import to.unified.unified_java_sdk.models.operations.GetAtsApplicationRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.GetAtsApplicationResponse;
-import to.unified.unified_java_sdk.models.operations.ListAtsApplicationsRequest;
-import to.unified.unified_java_sdk.models.operations.ListAtsApplicationsRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.ListAtsApplicationsResponse;
-import to.unified.unified_java_sdk.models.operations.PatchAtsApplicationRequest;
-import to.unified.unified_java_sdk.models.operations.PatchAtsApplicationRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.PatchAtsApplicationResponse;
-import to.unified.unified_java_sdk.models.operations.RemoveAtsApplicationRequest;
-import to.unified.unified_java_sdk.models.operations.RemoveAtsApplicationRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.RemoveAtsApplicationResponse;
-import to.unified.unified_java_sdk.models.operations.UpdateAtsApplicationRequest;
-import to.unified.unified_java_sdk.models.operations.UpdateAtsApplicationRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.UpdateAtsApplicationResponse;
-import to.unified.unified_java_sdk.operations.CreateAtsApplication;
-import to.unified.unified_java_sdk.operations.GetAtsApplication;
-import to.unified.unified_java_sdk.operations.ListAtsApplications;
-import to.unified.unified_java_sdk.operations.PatchAtsApplication;
-import to.unified.unified_java_sdk.operations.RemoveAtsApplication;
-import to.unified.unified_java_sdk.operations.UpdateAtsApplication;
+import to.unified.unified_java_sdk.models.operations.CreateAtsApplication2Request;
+import to.unified.unified_java_sdk.models.operations.CreateAtsApplication2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.CreateAtsApplication2Response;
+import to.unified.unified_java_sdk.models.operations.GetAtsApplication2Request;
+import to.unified.unified_java_sdk.models.operations.GetAtsApplication2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetAtsApplication2Response;
+import to.unified.unified_java_sdk.models.operations.ListAtsApplications2Request;
+import to.unified.unified_java_sdk.models.operations.ListAtsApplications2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListAtsApplications2Response;
+import to.unified.unified_java_sdk.models.operations.PatchAtsApplication2Request;
+import to.unified.unified_java_sdk.models.operations.PatchAtsApplication2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.PatchAtsApplication2Response;
+import to.unified.unified_java_sdk.models.operations.RemoveAtsApplication2Request;
+import to.unified.unified_java_sdk.models.operations.RemoveAtsApplication2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.RemoveAtsApplication2Response;
+import to.unified.unified_java_sdk.models.operations.UpdateAtsApplication2Request;
+import to.unified.unified_java_sdk.models.operations.UpdateAtsApplication2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.UpdateAtsApplication2Response;
+import to.unified.unified_java_sdk.operations.CreateAtsApplication2;
+import to.unified.unified_java_sdk.operations.GetAtsApplication2;
+import to.unified.unified_java_sdk.operations.ListAtsApplications2;
+import to.unified.unified_java_sdk.operations.PatchAtsApplication2;
+import to.unified.unified_java_sdk.operations.RemoveAtsApplication2;
+import to.unified.unified_java_sdk.operations.UpdateAtsApplication2;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -57,8 +57,8 @@ public class Application {
      * 
      * @return The call builder
      */
-    public CreateAtsApplicationRequestBuilder createAtsApplication() {
-        return new CreateAtsApplicationRequestBuilder(sdkConfiguration);
+    public CreateAtsApplication2RequestBuilder createAtsApplication2() {
+        return new CreateAtsApplication2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -68,9 +68,9 @@ public class Application {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateAtsApplicationResponse createAtsApplication(@Nonnull CreateAtsApplicationRequest request) {
-        RequestOperation<CreateAtsApplicationRequest, CreateAtsApplicationResponse> operation
-              = new CreateAtsApplication.Sync(sdkConfiguration, _headers);
+    public CreateAtsApplication2Response createAtsApplication2(@Nonnull CreateAtsApplication2Request request) {
+        RequestOperation<CreateAtsApplication2Request, CreateAtsApplication2Response> operation
+              = new CreateAtsApplication2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -79,8 +79,8 @@ public class Application {
      * 
      * @return The call builder
      */
-    public GetAtsApplicationRequestBuilder getAtsApplication() {
-        return new GetAtsApplicationRequestBuilder(sdkConfiguration);
+    public GetAtsApplication2RequestBuilder getAtsApplication2() {
+        return new GetAtsApplication2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -90,9 +90,9 @@ public class Application {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetAtsApplicationResponse getAtsApplication(@Nonnull GetAtsApplicationRequest request) {
-        RequestOperation<GetAtsApplicationRequest, GetAtsApplicationResponse> operation
-              = new GetAtsApplication.Sync(sdkConfiguration, _headers);
+    public GetAtsApplication2Response getAtsApplication2(@Nonnull GetAtsApplication2Request request) {
+        RequestOperation<GetAtsApplication2Request, GetAtsApplication2Response> operation
+              = new GetAtsApplication2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -101,8 +101,8 @@ public class Application {
      * 
      * @return The call builder
      */
-    public ListAtsApplicationsRequestBuilder listAtsApplications() {
-        return new ListAtsApplicationsRequestBuilder(sdkConfiguration);
+    public ListAtsApplications2RequestBuilder listAtsApplications2() {
+        return new ListAtsApplications2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -112,9 +112,9 @@ public class Application {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListAtsApplicationsResponse listAtsApplications(@Nonnull ListAtsApplicationsRequest request) {
-        RequestOperation<ListAtsApplicationsRequest, ListAtsApplicationsResponse> operation
-              = new ListAtsApplications.Sync(sdkConfiguration, _headers);
+    public ListAtsApplications2Response listAtsApplications2(@Nonnull ListAtsApplications2Request request) {
+        RequestOperation<ListAtsApplications2Request, ListAtsApplications2Response> operation
+              = new ListAtsApplications2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -123,8 +123,8 @@ public class Application {
      * 
      * @return The call builder
      */
-    public PatchAtsApplicationRequestBuilder patchAtsApplication() {
-        return new PatchAtsApplicationRequestBuilder(sdkConfiguration);
+    public PatchAtsApplication2RequestBuilder patchAtsApplication2() {
+        return new PatchAtsApplication2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -134,9 +134,9 @@ public class Application {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchAtsApplicationResponse patchAtsApplication(@Nonnull PatchAtsApplicationRequest request) {
-        RequestOperation<PatchAtsApplicationRequest, PatchAtsApplicationResponse> operation
-              = new PatchAtsApplication.Sync(sdkConfiguration, _headers);
+    public PatchAtsApplication2Response patchAtsApplication2(@Nonnull PatchAtsApplication2Request request) {
+        RequestOperation<PatchAtsApplication2Request, PatchAtsApplication2Response> operation
+              = new PatchAtsApplication2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -145,8 +145,8 @@ public class Application {
      * 
      * @return The call builder
      */
-    public RemoveAtsApplicationRequestBuilder removeAtsApplication() {
-        return new RemoveAtsApplicationRequestBuilder(sdkConfiguration);
+    public RemoveAtsApplication2RequestBuilder removeAtsApplication2() {
+        return new RemoveAtsApplication2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -156,9 +156,9 @@ public class Application {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveAtsApplicationResponse removeAtsApplication(@Nonnull RemoveAtsApplicationRequest request) {
-        RequestOperation<RemoveAtsApplicationRequest, RemoveAtsApplicationResponse> operation
-              = new RemoveAtsApplication.Sync(sdkConfiguration, _headers);
+    public RemoveAtsApplication2Response removeAtsApplication2(@Nonnull RemoveAtsApplication2Request request) {
+        RequestOperation<RemoveAtsApplication2Request, RemoveAtsApplication2Response> operation
+              = new RemoveAtsApplication2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -167,8 +167,8 @@ public class Application {
      * 
      * @return The call builder
      */
-    public UpdateAtsApplicationRequestBuilder updateAtsApplication() {
-        return new UpdateAtsApplicationRequestBuilder(sdkConfiguration);
+    public UpdateAtsApplication2RequestBuilder updateAtsApplication2() {
+        return new UpdateAtsApplication2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -178,9 +178,9 @@ public class Application {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateAtsApplicationResponse updateAtsApplication(@Nonnull UpdateAtsApplicationRequest request) {
-        RequestOperation<UpdateAtsApplicationRequest, UpdateAtsApplicationResponse> operation
-              = new UpdateAtsApplication.Sync(sdkConfiguration, _headers);
+    public UpdateAtsApplication2Response updateAtsApplication2(@Nonnull UpdateAtsApplication2Request request) {
+        RequestOperation<UpdateAtsApplication2Request, UpdateAtsApplication2Response> operation
+              = new UpdateAtsApplication2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

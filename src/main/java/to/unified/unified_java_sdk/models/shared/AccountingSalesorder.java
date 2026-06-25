@@ -47,6 +47,11 @@ public class AccountingSalesorder {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("fees")
+    private List<AccountingFee> fees;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     private String id;
 
@@ -102,6 +107,7 @@ public class AccountingSalesorder {
             @JsonProperty("contact_id") @Nullable String contactId,
             @JsonProperty("created_at") @Nullable OffsetDateTime createdAt,
             @JsonProperty("currency") @Nullable String currency,
+            @JsonProperty("fees") @Nullable List<AccountingFee> fees,
             @JsonProperty("id") @Nullable String id,
             @JsonProperty("lineitems") @Nullable List<AccountingLineitem> lineitems,
             @JsonProperty("organization_id") @Nullable String organizationId,
@@ -117,6 +123,7 @@ public class AccountingSalesorder {
         this.contactId = contactId;
         this.createdAt = createdAt;
         this.currency = currency;
+        this.fees = fees;
         this.id = id;
         this.lineitems = lineitems;
         this.organizationId = organizationId;
@@ -134,7 +141,8 @@ public class AccountingSalesorder {
             null, null, null,
             null, null, null,
             null, null, null,
-            null, null, null);
+            null, null, null,
+            null);
     }
 
     public Optional<String> accountId() {
@@ -155,6 +163,10 @@ public class AccountingSalesorder {
 
     public Optional<String> currency() {
         return Optional.ofNullable(this.currency);
+    }
+
+    public Optional<List<AccountingFee>> fees() {
+        return Optional.ofNullable(this.fees);
     }
 
     public Optional<String> id() {
@@ -228,6 +240,12 @@ public class AccountingSalesorder {
 
     public AccountingSalesorder withCurrency(@Nullable String currency) {
         this.currency = currency;
+        return this;
+    }
+
+
+    public AccountingSalesorder withFees(@Nullable List<AccountingFee> fees) {
+        this.fees = fees;
         return this;
     }
 
@@ -307,6 +325,7 @@ public class AccountingSalesorder {
             Utils.enhancedDeepEquals(this.contactId, other.contactId) &&
             Utils.enhancedDeepEquals(this.createdAt, other.createdAt) &&
             Utils.enhancedDeepEquals(this.currency, other.currency) &&
+            Utils.enhancedDeepEquals(this.fees, other.fees) &&
             Utils.enhancedDeepEquals(this.id, other.id) &&
             Utils.enhancedDeepEquals(this.lineitems, other.lineitems) &&
             Utils.enhancedDeepEquals(this.organizationId, other.organizationId) &&
@@ -323,10 +342,11 @@ public class AccountingSalesorder {
     public int hashCode() {
         return Utils.enhancedHash(
             accountId, billingAddress, contactId,
-            createdAt, currency, id,
-            lineitems, organizationId, postedAt,
-            raw, salesChannel, shippingAddress,
-            status, totalAmount, updatedAt);
+            createdAt, currency, fees,
+            id, lineitems, organizationId,
+            postedAt, raw, salesChannel,
+            shippingAddress, status, totalAmount,
+            updatedAt);
     }
     
     @Override
@@ -337,6 +357,7 @@ public class AccountingSalesorder {
                 "contactId", contactId,
                 "createdAt", createdAt,
                 "currency", currency,
+                "fees", fees,
                 "id", id,
                 "lineitems", lineitems,
                 "organizationId", organizationId,
@@ -361,6 +382,8 @@ public class AccountingSalesorder {
         private OffsetDateTime createdAt;
 
         private String currency;
+
+        private List<AccountingFee> fees;
 
         private String id;
 
@@ -408,6 +431,11 @@ public class AccountingSalesorder {
 
         public Builder currency(@Nullable String currency) {
             this.currency = currency;
+            return this;
+        }
+
+        public Builder fees(@Nullable List<AccountingFee> fees) {
+            this.fees = fees;
             return this;
         }
 
@@ -464,10 +492,11 @@ public class AccountingSalesorder {
         public AccountingSalesorder build() {
             return new AccountingSalesorder(
                 accountId, billingAddress, contactId,
-                createdAt, currency, id,
-                lineitems, organizationId, postedAt,
-                raw, salesChannel, shippingAddress,
-                status, totalAmount, updatedAt);
+                createdAt, currency, fees,
+                id, lineitems, organizationId,
+                postedAt, raw, salesChannel,
+                shippingAddress, status, totalAmount,
+                updatedAt);
         }
 
     }

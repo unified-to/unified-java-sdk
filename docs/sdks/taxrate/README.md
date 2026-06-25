@@ -4,27 +4,27 @@
 
 ### Available Operations
 
-* [createAccountingTaxrate](#createaccountingtaxrate) - Create a taxrate
-* [getAccountingTaxrate](#getaccountingtaxrate) - Retrieve a taxrate
-* [listAccountingTaxrates](#listaccountingtaxrates) - List all taxrates
-* [patchAccountingTaxrate](#patchaccountingtaxrate) - Update a taxrate
-* [removeAccountingTaxrate](#removeaccountingtaxrate) - Remove a taxrate
-* [updateAccountingTaxrate](#updateaccountingtaxrate) - Update a taxrate
+* [createAccountingTaxrate2](#createaccountingtaxrate2) - Create a taxrate
+* [getAccountingTaxrate2](#getaccountingtaxrate2) - Retrieve a taxrate
+* [listAccountingTaxrates2](#listaccountingtaxrates2) - List all taxrates
+* [patchAccountingTaxrate2](#patchaccountingtaxrate2) - Update a taxrate
+* [removeAccountingTaxrate2](#removeaccountingtaxrate2) - Remove a taxrate
+* [updateAccountingTaxrate2](#updateaccountingtaxrate2) - Update a taxrate
 
-## createAccountingTaxrate
+## createAccountingTaxrate2
 
 Create a taxrate
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createAccountingTaxrate" method="post" path="/accounting/{connection_id}/taxrate" -->
+<!-- UsageSnippet language="java" operationID="createAccountingTaxrate2" method="post" path="/accounting/{connection_id}/taxrate" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.CreateAccountingTaxrateRequest;
-import to.unified.unified_java_sdk.models.operations.CreateAccountingTaxrateResponse;
+import to.unified.unified_java_sdk.models.operations.CreateAccountingTaxrate2Request;
+import to.unified.unified_java_sdk.models.operations.CreateAccountingTaxrate2Response;
 import to.unified.unified_java_sdk.models.shared.AccountingTaxrate;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -38,13 +38,13 @@ public class Application {
                     .build())
             .build();
 
-        CreateAccountingTaxrateRequest req = CreateAccountingTaxrateRequest.builder()
+        CreateAccountingTaxrate2Request req = CreateAccountingTaxrate2Request.builder()
                 .accountingTaxrate(AccountingTaxrate.builder()
                     .build())
                 .connectionId("<id>")
                 .build();
 
-        CreateAccountingTaxrateResponse res = sdk.taxrate().createAccountingTaxrate()
+        CreateAccountingTaxrate2Response res = sdk.taxrate().createAccountingTaxrate2()
                 .request(req)
                 .call();
 
@@ -57,13 +57,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                   | Type                                                                                        | Required                                                                                    | Description                                                                                 |
-| ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
-| `request`                                                                                   | [CreateAccountingTaxrateRequest](../../models/operations/CreateAccountingTaxrateRequest.md) | :heavy_check_mark:                                                                          | The request object to use for the request.                                                  |
+| Parameter                                                                                     | Type                                                                                          | Required                                                                                      | Description                                                                                   |
+| --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
+| `request`                                                                                     | [CreateAccountingTaxrate2Request](../../models/operations/CreateAccountingTaxrate2Request.md) | :heavy_check_mark:                                                                            | The request object to use for the request.                                                    |
 
 ### Response
 
-**[CreateAccountingTaxrateResponse](../../models/operations/CreateAccountingTaxrateResponse.md)**
+**[CreateAccountingTaxrate2Response](../../models/operations/CreateAccountingTaxrate2Response.md)**
 
 ### Errors
 
@@ -71,20 +71,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## getAccountingTaxrate
+## getAccountingTaxrate2
 
 Retrieve a taxrate
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="getAccountingTaxrate" method="get" path="/accounting/{connection_id}/taxrate/{id}" -->
+<!-- UsageSnippet language="java" operationID="getAccountingTaxrate2" method="get" path="/accounting/{connection_id}/taxrate/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.GetAccountingTaxrateRequest;
-import to.unified.unified_java_sdk.models.operations.GetAccountingTaxrateResponse;
+import to.unified.unified_java_sdk.models.operations.GetAccountingTaxrate2Request;
+import to.unified.unified_java_sdk.models.operations.GetAccountingTaxrate2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -97,12 +97,12 @@ public class Application {
                     .build())
             .build();
 
-        GetAccountingTaxrateRequest req = GetAccountingTaxrateRequest.builder()
+        GetAccountingTaxrate2Request req = GetAccountingTaxrate2Request.builder()
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        GetAccountingTaxrateResponse res = sdk.taxrate().getAccountingTaxrate()
+        GetAccountingTaxrate2Response res = sdk.taxrate().getAccountingTaxrate2()
                 .request(req)
                 .call();
 
@@ -115,13 +115,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                             | Type                                                                                  | Required                                                                              | Description                                                                           |
-| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
-| `request`                                                                             | [GetAccountingTaxrateRequest](../../models/operations/GetAccountingTaxrateRequest.md) | :heavy_check_mark:                                                                    | The request object to use for the request.                                            |
+| Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
+| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| `request`                                                                               | [GetAccountingTaxrate2Request](../../models/operations/GetAccountingTaxrate2Request.md) | :heavy_check_mark:                                                                      | The request object to use for the request.                                              |
 
 ### Response
 
-**[GetAccountingTaxrateResponse](../../models/operations/GetAccountingTaxrateResponse.md)**
+**[GetAccountingTaxrate2Response](../../models/operations/GetAccountingTaxrate2Response.md)**
 
 ### Errors
 
@@ -129,20 +129,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## listAccountingTaxrates
+## listAccountingTaxrates2
 
 List all taxrates
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="listAccountingTaxrates" method="get" path="/accounting/{connection_id}/taxrate" -->
+<!-- UsageSnippet language="java" operationID="listAccountingTaxrates2" method="get" path="/accounting/{connection_id}/taxrate" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.ListAccountingTaxratesRequest;
-import to.unified.unified_java_sdk.models.operations.ListAccountingTaxratesResponse;
+import to.unified.unified_java_sdk.models.operations.ListAccountingTaxrates2Request;
+import to.unified.unified_java_sdk.models.operations.ListAccountingTaxrates2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -155,11 +155,11 @@ public class Application {
                     .build())
             .build();
 
-        ListAccountingTaxratesRequest req = ListAccountingTaxratesRequest.builder()
+        ListAccountingTaxrates2Request req = ListAccountingTaxrates2Request.builder()
                 .connectionId("<id>")
                 .build();
 
-        ListAccountingTaxratesResponse res = sdk.taxrate().listAccountingTaxrates()
+        ListAccountingTaxrates2Response res = sdk.taxrate().listAccountingTaxrates2()
                 .request(req)
                 .call();
 
@@ -172,13 +172,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                 | Type                                                                                      | Required                                                                                  | Description                                                                               |
-| ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
-| `request`                                                                                 | [ListAccountingTaxratesRequest](../../models/operations/ListAccountingTaxratesRequest.md) | :heavy_check_mark:                                                                        | The request object to use for the request.                                                |
+| Parameter                                                                                   | Type                                                                                        | Required                                                                                    | Description                                                                                 |
+| ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
+| `request`                                                                                   | [ListAccountingTaxrates2Request](../../models/operations/ListAccountingTaxrates2Request.md) | :heavy_check_mark:                                                                          | The request object to use for the request.                                                  |
 
 ### Response
 
-**[ListAccountingTaxratesResponse](../../models/operations/ListAccountingTaxratesResponse.md)**
+**[ListAccountingTaxrates2Response](../../models/operations/ListAccountingTaxrates2Response.md)**
 
 ### Errors
 
@@ -186,20 +186,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## patchAccountingTaxrate
+## patchAccountingTaxrate2
 
 Update a taxrate
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchAccountingTaxrate" method="patch" path="/accounting/{connection_id}/taxrate/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchAccountingTaxrate2" method="patch" path="/accounting/{connection_id}/taxrate/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.PatchAccountingTaxrateRequest;
-import to.unified.unified_java_sdk.models.operations.PatchAccountingTaxrateResponse;
+import to.unified.unified_java_sdk.models.operations.PatchAccountingTaxrate2Request;
+import to.unified.unified_java_sdk.models.operations.PatchAccountingTaxrate2Response;
 import to.unified.unified_java_sdk.models.shared.AccountingTaxrate;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -213,14 +213,14 @@ public class Application {
                     .build())
             .build();
 
-        PatchAccountingTaxrateRequest req = PatchAccountingTaxrateRequest.builder()
+        PatchAccountingTaxrate2Request req = PatchAccountingTaxrate2Request.builder()
                 .accountingTaxrate(AccountingTaxrate.builder()
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        PatchAccountingTaxrateResponse res = sdk.taxrate().patchAccountingTaxrate()
+        PatchAccountingTaxrate2Response res = sdk.taxrate().patchAccountingTaxrate2()
                 .request(req)
                 .call();
 
@@ -233,13 +233,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                 | Type                                                                                      | Required                                                                                  | Description                                                                               |
-| ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
-| `request`                                                                                 | [PatchAccountingTaxrateRequest](../../models/operations/PatchAccountingTaxrateRequest.md) | :heavy_check_mark:                                                                        | The request object to use for the request.                                                |
+| Parameter                                                                                   | Type                                                                                        | Required                                                                                    | Description                                                                                 |
+| ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
+| `request`                                                                                   | [PatchAccountingTaxrate2Request](../../models/operations/PatchAccountingTaxrate2Request.md) | :heavy_check_mark:                                                                          | The request object to use for the request.                                                  |
 
 ### Response
 
-**[PatchAccountingTaxrateResponse](../../models/operations/PatchAccountingTaxrateResponse.md)**
+**[PatchAccountingTaxrate2Response](../../models/operations/PatchAccountingTaxrate2Response.md)**
 
 ### Errors
 
@@ -247,20 +247,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## removeAccountingTaxrate
+## removeAccountingTaxrate2
 
 Remove a taxrate
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="removeAccountingTaxrate" method="delete" path="/accounting/{connection_id}/taxrate/{id}" -->
+<!-- UsageSnippet language="java" operationID="removeAccountingTaxrate2" method="delete" path="/accounting/{connection_id}/taxrate/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.RemoveAccountingTaxrateRequest;
-import to.unified.unified_java_sdk.models.operations.RemoveAccountingTaxrateResponse;
+import to.unified.unified_java_sdk.models.operations.RemoveAccountingTaxrate2Request;
+import to.unified.unified_java_sdk.models.operations.RemoveAccountingTaxrate2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -273,12 +273,12 @@ public class Application {
                     .build())
             .build();
 
-        RemoveAccountingTaxrateRequest req = RemoveAccountingTaxrateRequest.builder()
+        RemoveAccountingTaxrate2Request req = RemoveAccountingTaxrate2Request.builder()
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        RemoveAccountingTaxrateResponse res = sdk.taxrate().removeAccountingTaxrate()
+        RemoveAccountingTaxrate2Response res = sdk.taxrate().removeAccountingTaxrate2()
                 .request(req)
                 .call();
 
@@ -289,13 +289,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                   | Type                                                                                        | Required                                                                                    | Description                                                                                 |
-| ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
-| `request`                                                                                   | [RemoveAccountingTaxrateRequest](../../models/operations/RemoveAccountingTaxrateRequest.md) | :heavy_check_mark:                                                                          | The request object to use for the request.                                                  |
+| Parameter                                                                                     | Type                                                                                          | Required                                                                                      | Description                                                                                   |
+| --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
+| `request`                                                                                     | [RemoveAccountingTaxrate2Request](../../models/operations/RemoveAccountingTaxrate2Request.md) | :heavy_check_mark:                                                                            | The request object to use for the request.                                                    |
 
 ### Response
 
-**[RemoveAccountingTaxrateResponse](../../models/operations/RemoveAccountingTaxrateResponse.md)**
+**[RemoveAccountingTaxrate2Response](../../models/operations/RemoveAccountingTaxrate2Response.md)**
 
 ### Errors
 
@@ -303,20 +303,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## updateAccountingTaxrate
+## updateAccountingTaxrate2
 
 Update a taxrate
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateAccountingTaxrate" method="put" path="/accounting/{connection_id}/taxrate/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateAccountingTaxrate2" method="put" path="/accounting/{connection_id}/taxrate/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.UpdateAccountingTaxrateRequest;
-import to.unified.unified_java_sdk.models.operations.UpdateAccountingTaxrateResponse;
+import to.unified.unified_java_sdk.models.operations.UpdateAccountingTaxrate2Request;
+import to.unified.unified_java_sdk.models.operations.UpdateAccountingTaxrate2Response;
 import to.unified.unified_java_sdk.models.shared.AccountingTaxrate;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -330,14 +330,14 @@ public class Application {
                     .build())
             .build();
 
-        UpdateAccountingTaxrateRequest req = UpdateAccountingTaxrateRequest.builder()
+        UpdateAccountingTaxrate2Request req = UpdateAccountingTaxrate2Request.builder()
                 .accountingTaxrate(AccountingTaxrate.builder()
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        UpdateAccountingTaxrateResponse res = sdk.taxrate().updateAccountingTaxrate()
+        UpdateAccountingTaxrate2Response res = sdk.taxrate().updateAccountingTaxrate2()
                 .request(req)
                 .call();
 
@@ -350,13 +350,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                   | Type                                                                                        | Required                                                                                    | Description                                                                                 |
-| ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
-| `request`                                                                                   | [UpdateAccountingTaxrateRequest](../../models/operations/UpdateAccountingTaxrateRequest.md) | :heavy_check_mark:                                                                          | The request object to use for the request.                                                  |
+| Parameter                                                                                     | Type                                                                                          | Required                                                                                      | Description                                                                                   |
+| --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
+| `request`                                                                                     | [UpdateAccountingTaxrate2Request](../../models/operations/UpdateAccountingTaxrate2Request.md) | :heavy_check_mark:                                                                            | The request object to use for the request.                                                    |
 
 ### Response
 
-**[UpdateAccountingTaxrateResponse](../../models/operations/UpdateAccountingTaxrateResponse.md)**
+**[UpdateAccountingTaxrate2Response](../../models/operations/UpdateAccountingTaxrate2Response.md)**
 
 ### Errors
 

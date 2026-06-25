@@ -4,41 +4,41 @@
 
 ### Available Operations
 
-* [createAdsGroup](#createadsgroup) - Create a group
-* [createHrisGroup](#createhrisgroup) - Create a group
+* [createAdsGroup2](#createadsgroup2) - Create a group
+* [createHrisGroup2](#createhrisgroup2) - Create a group
 * [createScimGroups](#createscimgroups) - Create group
-* [getAdsGroup](#getadsgroup) - Retrieve a group
-* [getClubsGroup](#getclubsgroup) - Retrieve a group
-* [getHrisGroup](#gethrisgroup) - Retrieve a group
+* [getAdsGroup2](#getadsgroup2) - Retrieve a group
+* [getClubsGroup2](#getclubsgroup2) - Retrieve a group
+* [getHrisGroup2](#gethrisgroup2) - Retrieve a group
 * [getScimGroups](#getscimgroups) - Get group
-* [listAdsGroups](#listadsgroups) - List all groups
-* [listClubsGroups](#listclubsgroups) - List all groups
-* [listHrisGroups](#listhrisgroups) - List all groups
+* [listAdsGroups2](#listadsgroups2) - List all groups
+* [listClubsGroups2](#listclubsgroups2) - List all groups
+* [listHrisGroups2](#listhrisgroups2) - List all groups
 * [listScimGroups](#listscimgroups) - List groups
-* [patchAdsGroup](#patchadsgroup) - Update a group
-* [patchHrisGroup](#patchhrisgroup) - Update a group
+* [patchAdsGroup2](#patchadsgroup2) - Update a group
+* [patchHrisGroup2](#patchhrisgroup2) - Update a group
 * [patchScimGroups](#patchscimgroups) - Update group
-* [removeAdsGroup](#removeadsgroup) - Remove a group
-* [removeHrisGroup](#removehrisgroup) - Remove a group
+* [removeAdsGroup2](#removeadsgroup2) - Remove a group
+* [removeHrisGroup2](#removehrisgroup2) - Remove a group
 * [removeScimGroups](#removescimgroups) - Delete group
-* [updateAdsGroup](#updateadsgroup) - Update a group
-* [updateHrisGroup](#updatehrisgroup) - Update a group
+* [updateAdsGroup2](#updateadsgroup2) - Update a group
+* [updateHrisGroup2](#updatehrisgroup2) - Update a group
 * [updateScimGroups](#updatescimgroups) - Update group
 
-## createAdsGroup
+## createAdsGroup2
 
 Create a group
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createAdsGroup" method="post" path="/ads/{connection_id}/group" -->
+<!-- UsageSnippet language="java" operationID="createAdsGroup2" method="post" path="/ads/{connection_id}/group" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.CreateAdsGroupRequest;
-import to.unified.unified_java_sdk.models.operations.CreateAdsGroupResponse;
+import to.unified.unified_java_sdk.models.operations.CreateAdsGroup2Request;
+import to.unified.unified_java_sdk.models.operations.CreateAdsGroup2Response;
 import to.unified.unified_java_sdk.models.shared.AdsGroup;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -52,13 +52,13 @@ public class Application {
                     .build())
             .build();
 
-        CreateAdsGroupRequest req = CreateAdsGroupRequest.builder()
+        CreateAdsGroup2Request req = CreateAdsGroup2Request.builder()
                 .adsGroup(AdsGroup.builder()
                     .build())
                 .connectionId("<id>")
                 .build();
 
-        CreateAdsGroupResponse res = sdk.group().createAdsGroup()
+        CreateAdsGroup2Response res = sdk.group().createAdsGroup2()
                 .request(req)
                 .call();
 
@@ -71,13 +71,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                 | Type                                                                      | Required                                                                  | Description                                                               |
-| ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
-| `request`                                                                 | [CreateAdsGroupRequest](../../models/operations/CreateAdsGroupRequest.md) | :heavy_check_mark:                                                        | The request object to use for the request.                                |
+| Parameter                                                                   | Type                                                                        | Required                                                                    | Description                                                                 |
+| --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| `request`                                                                   | [CreateAdsGroup2Request](../../models/operations/CreateAdsGroup2Request.md) | :heavy_check_mark:                                                          | The request object to use for the request.                                  |
 
 ### Response
 
-**[CreateAdsGroupResponse](../../models/operations/CreateAdsGroupResponse.md)**
+**[CreateAdsGroup2Response](../../models/operations/CreateAdsGroup2Response.md)**
 
 ### Errors
 
@@ -85,20 +85,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## createHrisGroup
+## createHrisGroup2
 
 Create a group
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createHrisGroup" method="post" path="/hris/{connection_id}/group" -->
+<!-- UsageSnippet language="java" operationID="createHrisGroup2" method="post" path="/hris/{connection_id}/group" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.CreateHrisGroupRequest;
-import to.unified.unified_java_sdk.models.operations.CreateHrisGroupResponse;
+import to.unified.unified_java_sdk.models.operations.CreateHrisGroup2Request;
+import to.unified.unified_java_sdk.models.operations.CreateHrisGroup2Response;
 import to.unified.unified_java_sdk.models.shared.HrisGroup;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -112,13 +112,13 @@ public class Application {
                     .build())
             .build();
 
-        CreateHrisGroupRequest req = CreateHrisGroupRequest.builder()
+        CreateHrisGroup2Request req = CreateHrisGroup2Request.builder()
                 .hrisGroup(HrisGroup.builder()
                     .build())
                 .connectionId("<id>")
                 .build();
 
-        CreateHrisGroupResponse res = sdk.group().createHrisGroup()
+        CreateHrisGroup2Response res = sdk.group().createHrisGroup2()
                 .request(req)
                 .call();
 
@@ -131,13 +131,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                   | Type                                                                        | Required                                                                    | Description                                                                 |
-| --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
-| `request`                                                                   | [CreateHrisGroupRequest](../../models/operations/CreateHrisGroupRequest.md) | :heavy_check_mark:                                                          | The request object to use for the request.                                  |
+| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
+| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| `request`                                                                     | [CreateHrisGroup2Request](../../models/operations/CreateHrisGroup2Request.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
 
 ### Response
 
-**[CreateHrisGroupResponse](../../models/operations/CreateHrisGroupResponse.md)**
+**[CreateHrisGroup2Response](../../models/operations/CreateHrisGroup2Response.md)**
 
 ### Errors
 
@@ -206,20 +206,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## getAdsGroup
+## getAdsGroup2
 
 Retrieve a group
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="getAdsGroup" method="get" path="/ads/{connection_id}/group/{id}" -->
+<!-- UsageSnippet language="java" operationID="getAdsGroup2" method="get" path="/ads/{connection_id}/group/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.GetAdsGroupRequest;
-import to.unified.unified_java_sdk.models.operations.GetAdsGroupResponse;
+import to.unified.unified_java_sdk.models.operations.GetAdsGroup2Request;
+import to.unified.unified_java_sdk.models.operations.GetAdsGroup2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -232,12 +232,12 @@ public class Application {
                     .build())
             .build();
 
-        GetAdsGroupRequest req = GetAdsGroupRequest.builder()
+        GetAdsGroup2Request req = GetAdsGroup2Request.builder()
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        GetAdsGroupResponse res = sdk.group().getAdsGroup()
+        GetAdsGroup2Response res = sdk.group().getAdsGroup2()
                 .request(req)
                 .call();
 
@@ -250,13 +250,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                           | Type                                                                | Required                                                            | Description                                                         |
-| ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- |
-| `request`                                                           | [GetAdsGroupRequest](../../models/operations/GetAdsGroupRequest.md) | :heavy_check_mark:                                                  | The request object to use for the request.                          |
+| Parameter                                                             | Type                                                                  | Required                                                              | Description                                                           |
+| --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- |
+| `request`                                                             | [GetAdsGroup2Request](../../models/operations/GetAdsGroup2Request.md) | :heavy_check_mark:                                                    | The request object to use for the request.                            |
 
 ### Response
 
-**[GetAdsGroupResponse](../../models/operations/GetAdsGroupResponse.md)**
+**[GetAdsGroup2Response](../../models/operations/GetAdsGroup2Response.md)**
 
 ### Errors
 
@@ -264,20 +264,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## getClubsGroup
+## getClubsGroup2
 
 Retrieve a group
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="getClubsGroup" method="get" path="/clubs/{connection_id}/group/{id}" -->
+<!-- UsageSnippet language="java" operationID="getClubsGroup2" method="get" path="/clubs/{connection_id}/group/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.GetClubsGroupRequest;
-import to.unified.unified_java_sdk.models.operations.GetClubsGroupResponse;
+import to.unified.unified_java_sdk.models.operations.GetClubsGroup2Request;
+import to.unified.unified_java_sdk.models.operations.GetClubsGroup2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -290,12 +290,12 @@ public class Application {
                     .build())
             .build();
 
-        GetClubsGroupRequest req = GetClubsGroupRequest.builder()
+        GetClubsGroup2Request req = GetClubsGroup2Request.builder()
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        GetClubsGroupResponse res = sdk.group().getClubsGroup()
+        GetClubsGroup2Response res = sdk.group().getClubsGroup2()
                 .request(req)
                 .call();
 
@@ -308,13 +308,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                               | Type                                                                    | Required                                                                | Description                                                             |
-| ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- |
-| `request`                                                               | [GetClubsGroupRequest](../../models/operations/GetClubsGroupRequest.md) | :heavy_check_mark:                                                      | The request object to use for the request.                              |
+| Parameter                                                                 | Type                                                                      | Required                                                                  | Description                                                               |
+| ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
+| `request`                                                                 | [GetClubsGroup2Request](../../models/operations/GetClubsGroup2Request.md) | :heavy_check_mark:                                                        | The request object to use for the request.                                |
 
 ### Response
 
-**[GetClubsGroupResponse](../../models/operations/GetClubsGroupResponse.md)**
+**[GetClubsGroup2Response](../../models/operations/GetClubsGroup2Response.md)**
 
 ### Errors
 
@@ -322,20 +322,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## getHrisGroup
+## getHrisGroup2
 
 Retrieve a group
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="getHrisGroup" method="get" path="/hris/{connection_id}/group/{id}" -->
+<!-- UsageSnippet language="java" operationID="getHrisGroup2" method="get" path="/hris/{connection_id}/group/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.GetHrisGroupRequest;
-import to.unified.unified_java_sdk.models.operations.GetHrisGroupResponse;
+import to.unified.unified_java_sdk.models.operations.GetHrisGroup2Request;
+import to.unified.unified_java_sdk.models.operations.GetHrisGroup2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -348,12 +348,12 @@ public class Application {
                     .build())
             .build();
 
-        GetHrisGroupRequest req = GetHrisGroupRequest.builder()
+        GetHrisGroup2Request req = GetHrisGroup2Request.builder()
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        GetHrisGroupResponse res = sdk.group().getHrisGroup()
+        GetHrisGroup2Response res = sdk.group().getHrisGroup2()
                 .request(req)
                 .call();
 
@@ -366,13 +366,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                             | Type                                                                  | Required                                                              | Description                                                           |
-| --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- |
-| `request`                                                             | [GetHrisGroupRequest](../../models/operations/GetHrisGroupRequest.md) | :heavy_check_mark:                                                    | The request object to use for the request.                            |
+| Parameter                                                               | Type                                                                    | Required                                                                | Description                                                             |
+| ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- |
+| `request`                                                               | [GetHrisGroup2Request](../../models/operations/GetHrisGroup2Request.md) | :heavy_check_mark:                                                      | The request object to use for the request.                              |
 
 ### Response
 
-**[GetHrisGroupResponse](../../models/operations/GetHrisGroupResponse.md)**
+**[GetHrisGroup2Response](../../models/operations/GetHrisGroup2Response.md)**
 
 ### Errors
 
@@ -438,20 +438,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## listAdsGroups
+## listAdsGroups2
 
 List all groups
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="listAdsGroups" method="get" path="/ads/{connection_id}/group" -->
+<!-- UsageSnippet language="java" operationID="listAdsGroups2" method="get" path="/ads/{connection_id}/group" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.ListAdsGroupsRequest;
-import to.unified.unified_java_sdk.models.operations.ListAdsGroupsResponse;
+import to.unified.unified_java_sdk.models.operations.ListAdsGroups2Request;
+import to.unified.unified_java_sdk.models.operations.ListAdsGroups2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -464,11 +464,11 @@ public class Application {
                     .build())
             .build();
 
-        ListAdsGroupsRequest req = ListAdsGroupsRequest.builder()
+        ListAdsGroups2Request req = ListAdsGroups2Request.builder()
                 .connectionId("<id>")
                 .build();
 
-        ListAdsGroupsResponse res = sdk.group().listAdsGroups()
+        ListAdsGroups2Response res = sdk.group().listAdsGroups2()
                 .request(req)
                 .call();
 
@@ -481,13 +481,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                               | Type                                                                    | Required                                                                | Description                                                             |
-| ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- |
-| `request`                                                               | [ListAdsGroupsRequest](../../models/operations/ListAdsGroupsRequest.md) | :heavy_check_mark:                                                      | The request object to use for the request.                              |
+| Parameter                                                                 | Type                                                                      | Required                                                                  | Description                                                               |
+| ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
+| `request`                                                                 | [ListAdsGroups2Request](../../models/operations/ListAdsGroups2Request.md) | :heavy_check_mark:                                                        | The request object to use for the request.                                |
 
 ### Response
 
-**[ListAdsGroupsResponse](../../models/operations/ListAdsGroupsResponse.md)**
+**[ListAdsGroups2Response](../../models/operations/ListAdsGroups2Response.md)**
 
 ### Errors
 
@@ -495,20 +495,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## listClubsGroups
+## listClubsGroups2
 
 List all groups
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="listClubsGroups" method="get" path="/clubs/{connection_id}/group" -->
+<!-- UsageSnippet language="java" operationID="listClubsGroups2" method="get" path="/clubs/{connection_id}/group" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.ListClubsGroupsRequest;
-import to.unified.unified_java_sdk.models.operations.ListClubsGroupsResponse;
+import to.unified.unified_java_sdk.models.operations.ListClubsGroups2Request;
+import to.unified.unified_java_sdk.models.operations.ListClubsGroups2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -521,11 +521,11 @@ public class Application {
                     .build())
             .build();
 
-        ListClubsGroupsRequest req = ListClubsGroupsRequest.builder()
+        ListClubsGroups2Request req = ListClubsGroups2Request.builder()
                 .connectionId("<id>")
                 .build();
 
-        ListClubsGroupsResponse res = sdk.group().listClubsGroups()
+        ListClubsGroups2Response res = sdk.group().listClubsGroups2()
                 .request(req)
                 .call();
 
@@ -538,13 +538,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                   | Type                                                                        | Required                                                                    | Description                                                                 |
-| --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
-| `request`                                                                   | [ListClubsGroupsRequest](../../models/operations/ListClubsGroupsRequest.md) | :heavy_check_mark:                                                          | The request object to use for the request.                                  |
+| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
+| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| `request`                                                                     | [ListClubsGroups2Request](../../models/operations/ListClubsGroups2Request.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
 
 ### Response
 
-**[ListClubsGroupsResponse](../../models/operations/ListClubsGroupsResponse.md)**
+**[ListClubsGroups2Response](../../models/operations/ListClubsGroups2Response.md)**
 
 ### Errors
 
@@ -552,20 +552,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## listHrisGroups
+## listHrisGroups2
 
 List all groups
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="listHrisGroups" method="get" path="/hris/{connection_id}/group" -->
+<!-- UsageSnippet language="java" operationID="listHrisGroups2" method="get" path="/hris/{connection_id}/group" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.ListHrisGroupsRequest;
-import to.unified.unified_java_sdk.models.operations.ListHrisGroupsResponse;
+import to.unified.unified_java_sdk.models.operations.ListHrisGroups2Request;
+import to.unified.unified_java_sdk.models.operations.ListHrisGroups2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -578,11 +578,11 @@ public class Application {
                     .build())
             .build();
 
-        ListHrisGroupsRequest req = ListHrisGroupsRequest.builder()
+        ListHrisGroups2Request req = ListHrisGroups2Request.builder()
                 .connectionId("<id>")
                 .build();
 
-        ListHrisGroupsResponse res = sdk.group().listHrisGroups()
+        ListHrisGroups2Response res = sdk.group().listHrisGroups2()
                 .request(req)
                 .call();
 
@@ -595,13 +595,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                 | Type                                                                      | Required                                                                  | Description                                                               |
-| ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
-| `request`                                                                 | [ListHrisGroupsRequest](../../models/operations/ListHrisGroupsRequest.md) | :heavy_check_mark:                                                        | The request object to use for the request.                                |
+| Parameter                                                                   | Type                                                                        | Required                                                                    | Description                                                                 |
+| --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| `request`                                                                   | [ListHrisGroups2Request](../../models/operations/ListHrisGroups2Request.md) | :heavy_check_mark:                                                          | The request object to use for the request.                                  |
 
 ### Response
 
-**[ListHrisGroupsResponse](../../models/operations/ListHrisGroupsResponse.md)**
+**[ListHrisGroups2Response](../../models/operations/ListHrisGroups2Response.md)**
 
 ### Errors
 
@@ -666,20 +666,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## patchAdsGroup
+## patchAdsGroup2
 
 Update a group
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchAdsGroup" method="patch" path="/ads/{connection_id}/group/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchAdsGroup2" method="patch" path="/ads/{connection_id}/group/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.PatchAdsGroupRequest;
-import to.unified.unified_java_sdk.models.operations.PatchAdsGroupResponse;
+import to.unified.unified_java_sdk.models.operations.PatchAdsGroup2Request;
+import to.unified.unified_java_sdk.models.operations.PatchAdsGroup2Response;
 import to.unified.unified_java_sdk.models.shared.AdsGroup;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -693,14 +693,14 @@ public class Application {
                     .build())
             .build();
 
-        PatchAdsGroupRequest req = PatchAdsGroupRequest.builder()
+        PatchAdsGroup2Request req = PatchAdsGroup2Request.builder()
                 .adsGroup(AdsGroup.builder()
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        PatchAdsGroupResponse res = sdk.group().patchAdsGroup()
+        PatchAdsGroup2Response res = sdk.group().patchAdsGroup2()
                 .request(req)
                 .call();
 
@@ -713,13 +713,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                               | Type                                                                    | Required                                                                | Description                                                             |
-| ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- |
-| `request`                                                               | [PatchAdsGroupRequest](../../models/operations/PatchAdsGroupRequest.md) | :heavy_check_mark:                                                      | The request object to use for the request.                              |
+| Parameter                                                                 | Type                                                                      | Required                                                                  | Description                                                               |
+| ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
+| `request`                                                                 | [PatchAdsGroup2Request](../../models/operations/PatchAdsGroup2Request.md) | :heavy_check_mark:                                                        | The request object to use for the request.                                |
 
 ### Response
 
-**[PatchAdsGroupResponse](../../models/operations/PatchAdsGroupResponse.md)**
+**[PatchAdsGroup2Response](../../models/operations/PatchAdsGroup2Response.md)**
 
 ### Errors
 
@@ -727,20 +727,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## patchHrisGroup
+## patchHrisGroup2
 
 Update a group
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchHrisGroup" method="patch" path="/hris/{connection_id}/group/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchHrisGroup2" method="patch" path="/hris/{connection_id}/group/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.PatchHrisGroupRequest;
-import to.unified.unified_java_sdk.models.operations.PatchHrisGroupResponse;
+import to.unified.unified_java_sdk.models.operations.PatchHrisGroup2Request;
+import to.unified.unified_java_sdk.models.operations.PatchHrisGroup2Response;
 import to.unified.unified_java_sdk.models.shared.HrisGroup;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -754,14 +754,14 @@ public class Application {
                     .build())
             .build();
 
-        PatchHrisGroupRequest req = PatchHrisGroupRequest.builder()
+        PatchHrisGroup2Request req = PatchHrisGroup2Request.builder()
                 .hrisGroup(HrisGroup.builder()
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        PatchHrisGroupResponse res = sdk.group().patchHrisGroup()
+        PatchHrisGroup2Response res = sdk.group().patchHrisGroup2()
                 .request(req)
                 .call();
 
@@ -774,13 +774,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                 | Type                                                                      | Required                                                                  | Description                                                               |
-| ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
-| `request`                                                                 | [PatchHrisGroupRequest](../../models/operations/PatchHrisGroupRequest.md) | :heavy_check_mark:                                                        | The request object to use for the request.                                |
+| Parameter                                                                   | Type                                                                        | Required                                                                    | Description                                                                 |
+| --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| `request`                                                                   | [PatchHrisGroup2Request](../../models/operations/PatchHrisGroup2Request.md) | :heavy_check_mark:                                                          | The request object to use for the request.                                  |
 
 ### Response
 
-**[PatchHrisGroupResponse](../../models/operations/PatchHrisGroupResponse.md)**
+**[PatchHrisGroup2Response](../../models/operations/PatchHrisGroup2Response.md)**
 
 ### Errors
 
@@ -850,20 +850,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## removeAdsGroup
+## removeAdsGroup2
 
 Remove a group
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="removeAdsGroup" method="delete" path="/ads/{connection_id}/group/{id}" -->
+<!-- UsageSnippet language="java" operationID="removeAdsGroup2" method="delete" path="/ads/{connection_id}/group/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.RemoveAdsGroupRequest;
-import to.unified.unified_java_sdk.models.operations.RemoveAdsGroupResponse;
+import to.unified.unified_java_sdk.models.operations.RemoveAdsGroup2Request;
+import to.unified.unified_java_sdk.models.operations.RemoveAdsGroup2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -876,68 +876,12 @@ public class Application {
                     .build())
             .build();
 
-        RemoveAdsGroupRequest req = RemoveAdsGroupRequest.builder()
+        RemoveAdsGroup2Request req = RemoveAdsGroup2Request.builder()
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        RemoveAdsGroupResponse res = sdk.group().removeAdsGroup()
-                .request(req)
-                .call();
-
-        // handle response
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                 | Type                                                                      | Required                                                                  | Description                                                               |
-| ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
-| `request`                                                                 | [RemoveAdsGroupRequest](../../models/operations/RemoveAdsGroupRequest.md) | :heavy_check_mark:                                                        | The request object to use for the request.                                |
-
-### Response
-
-**[RemoveAdsGroupResponse](../../models/operations/RemoveAdsGroupResponse.md)**
-
-### Errors
-
-| Error Type             | Status Code            | Content Type           |
-| ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
-
-## removeHrisGroup
-
-Remove a group
-
-### Example Usage
-
-<!-- UsageSnippet language="java" operationID="removeHrisGroup" method="delete" path="/hris/{connection_id}/group/{id}" -->
-```java
-package hello.world;
-
-import java.lang.Exception;
-import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.RemoveHrisGroupRequest;
-import to.unified.unified_java_sdk.models.operations.RemoveHrisGroupResponse;
-import to.unified.unified_java_sdk.models.shared.Security;
-
-public class Application {
-
-    public static void main(String[] args) throws Exception {
-
-        UnifiedTo sdk = UnifiedTo.builder()
-                .security(Security.builder()
-                    .jwt(System.getenv().getOrDefault("JWT", ""))
-                    .build())
-            .build();
-
-        RemoveHrisGroupRequest req = RemoveHrisGroupRequest.builder()
-                .connectionId("<id>")
-                .id("<id>")
-                .build();
-
-        RemoveHrisGroupResponse res = sdk.group().removeHrisGroup()
+        RemoveAdsGroup2Response res = sdk.group().removeAdsGroup2()
                 .request(req)
                 .call();
 
@@ -950,11 +894,67 @@ public class Application {
 
 | Parameter                                                                   | Type                                                                        | Required                                                                    | Description                                                                 |
 | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
-| `request`                                                                   | [RemoveHrisGroupRequest](../../models/operations/RemoveHrisGroupRequest.md) | :heavy_check_mark:                                                          | The request object to use for the request.                                  |
+| `request`                                                                   | [RemoveAdsGroup2Request](../../models/operations/RemoveAdsGroup2Request.md) | :heavy_check_mark:                                                          | The request object to use for the request.                                  |
 
 ### Response
 
-**[RemoveHrisGroupResponse](../../models/operations/RemoveHrisGroupResponse.md)**
+**[RemoveAdsGroup2Response](../../models/operations/RemoveAdsGroup2Response.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## removeHrisGroup2
+
+Remove a group
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="removeHrisGroup2" method="delete" path="/hris/{connection_id}/group/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.RemoveHrisGroup2Request;
+import to.unified.unified_java_sdk.models.operations.RemoveHrisGroup2Response;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        RemoveHrisGroup2Request req = RemoveHrisGroup2Request.builder()
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        RemoveHrisGroup2Response res = sdk.group().removeHrisGroup2()
+                .request(req)
+                .call();
+
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
+| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| `request`                                                                     | [RemoveHrisGroup2Request](../../models/operations/RemoveHrisGroup2Request.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
+
+### Response
+
+**[RemoveHrisGroup2Response](../../models/operations/RemoveHrisGroup2Response.md)**
 
 ### Errors
 
@@ -1018,20 +1018,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## updateAdsGroup
+## updateAdsGroup2
 
 Update a group
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateAdsGroup" method="put" path="/ads/{connection_id}/group/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateAdsGroup2" method="put" path="/ads/{connection_id}/group/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.UpdateAdsGroupRequest;
-import to.unified.unified_java_sdk.models.operations.UpdateAdsGroupResponse;
+import to.unified.unified_java_sdk.models.operations.UpdateAdsGroup2Request;
+import to.unified.unified_java_sdk.models.operations.UpdateAdsGroup2Response;
 import to.unified.unified_java_sdk.models.shared.AdsGroup;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -1045,14 +1045,14 @@ public class Application {
                     .build())
             .build();
 
-        UpdateAdsGroupRequest req = UpdateAdsGroupRequest.builder()
+        UpdateAdsGroup2Request req = UpdateAdsGroup2Request.builder()
                 .adsGroup(AdsGroup.builder()
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        UpdateAdsGroupResponse res = sdk.group().updateAdsGroup()
+        UpdateAdsGroup2Response res = sdk.group().updateAdsGroup2()
                 .request(req)
                 .call();
 
@@ -1065,13 +1065,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                 | Type                                                                      | Required                                                                  | Description                                                               |
-| ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
-| `request`                                                                 | [UpdateAdsGroupRequest](../../models/operations/UpdateAdsGroupRequest.md) | :heavy_check_mark:                                                        | The request object to use for the request.                                |
+| Parameter                                                                   | Type                                                                        | Required                                                                    | Description                                                                 |
+| --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| `request`                                                                   | [UpdateAdsGroup2Request](../../models/operations/UpdateAdsGroup2Request.md) | :heavy_check_mark:                                                          | The request object to use for the request.                                  |
 
 ### Response
 
-**[UpdateAdsGroupResponse](../../models/operations/UpdateAdsGroupResponse.md)**
+**[UpdateAdsGroup2Response](../../models/operations/UpdateAdsGroup2Response.md)**
 
 ### Errors
 
@@ -1079,20 +1079,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## updateHrisGroup
+## updateHrisGroup2
 
 Update a group
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateHrisGroup" method="put" path="/hris/{connection_id}/group/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateHrisGroup2" method="put" path="/hris/{connection_id}/group/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.UpdateHrisGroupRequest;
-import to.unified.unified_java_sdk.models.operations.UpdateHrisGroupResponse;
+import to.unified.unified_java_sdk.models.operations.UpdateHrisGroup2Request;
+import to.unified.unified_java_sdk.models.operations.UpdateHrisGroup2Response;
 import to.unified.unified_java_sdk.models.shared.HrisGroup;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -1106,14 +1106,14 @@ public class Application {
                     .build())
             .build();
 
-        UpdateHrisGroupRequest req = UpdateHrisGroupRequest.builder()
+        UpdateHrisGroup2Request req = UpdateHrisGroup2Request.builder()
                 .hrisGroup(HrisGroup.builder()
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        UpdateHrisGroupResponse res = sdk.group().updateHrisGroup()
+        UpdateHrisGroup2Response res = sdk.group().updateHrisGroup2()
                 .request(req)
                 .call();
 
@@ -1126,13 +1126,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                   | Type                                                                        | Required                                                                    | Description                                                                 |
-| --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
-| `request`                                                                   | [UpdateHrisGroupRequest](../../models/operations/UpdateHrisGroupRequest.md) | :heavy_check_mark:                                                          | The request object to use for the request.                                  |
+| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
+| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| `request`                                                                     | [UpdateHrisGroup2Request](../../models/operations/UpdateHrisGroup2Request.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
 
 ### Response
 
-**[UpdateHrisGroupResponse](../../models/operations/UpdateHrisGroupResponse.md)**
+**[UpdateHrisGroup2Response](../../models/operations/UpdateHrisGroup2Response.md)**
 
 ### Errors
 

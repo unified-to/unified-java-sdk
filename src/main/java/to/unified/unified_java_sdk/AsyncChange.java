@@ -7,14 +7,14 @@ import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOper
 
 import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
-import to.unified.unified_java_sdk.models.operations.GetTaskChangeRequest;
-import to.unified.unified_java_sdk.models.operations.ListTaskChangesRequest;
-import to.unified.unified_java_sdk.models.operations.async.GetTaskChangeRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.GetTaskChangeResponse;
-import to.unified.unified_java_sdk.models.operations.async.ListTaskChangesRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.ListTaskChangesResponse;
-import to.unified.unified_java_sdk.operations.GetTaskChange;
-import to.unified.unified_java_sdk.operations.ListTaskChanges;
+import to.unified.unified_java_sdk.models.operations.GetTaskChange2Request;
+import to.unified.unified_java_sdk.models.operations.ListTaskChanges2Request;
+import to.unified.unified_java_sdk.models.operations.async.GetTaskChange2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetTaskChange2Response;
+import to.unified.unified_java_sdk.models.operations.async.ListTaskChanges2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListTaskChanges2Response;
+import to.unified.unified_java_sdk.operations.GetTaskChange2;
+import to.unified.unified_java_sdk.operations.ListTaskChanges2;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -43,19 +43,19 @@ public class AsyncChange {
      * 
      * @return The async call builder
      */
-    public GetTaskChangeRequestBuilder getTaskChange() {
-        return new GetTaskChangeRequestBuilder(sdkConfiguration);
+    public GetTaskChange2RequestBuilder getTaskChange2() {
+        return new GetTaskChange2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Retrieve a change
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<GetTaskChangeResponse>} - The async response
+     * @return {@code CompletableFuture<GetTaskChange2Response>} - The async response
      */
-    public CompletableFuture<GetTaskChangeResponse> getTaskChange(@Nonnull GetTaskChangeRequest request) {
-        AsyncRequestOperation<GetTaskChangeRequest, GetTaskChangeResponse> operation
-              = new GetTaskChange.Async(sdkConfiguration, _headers);
+    public CompletableFuture<GetTaskChange2Response> getTaskChange2(@Nonnull GetTaskChange2Request request) {
+        AsyncRequestOperation<GetTaskChange2Request, GetTaskChange2Response> operation
+              = new GetTaskChange2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -66,19 +66,19 @@ public class AsyncChange {
      * 
      * @return The async call builder
      */
-    public ListTaskChangesRequestBuilder listTaskChanges() {
-        return new ListTaskChangesRequestBuilder(sdkConfiguration);
+    public ListTaskChanges2RequestBuilder listTaskChanges2() {
+        return new ListTaskChanges2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * List all changes
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<ListTaskChangesResponse>} - The async response
+     * @return {@code CompletableFuture<ListTaskChanges2Response>} - The async response
      */
-    public CompletableFuture<ListTaskChangesResponse> listTaskChanges(@Nonnull ListTaskChangesRequest request) {
-        AsyncRequestOperation<ListTaskChangesRequest, ListTaskChangesResponse> operation
-              = new ListTaskChanges.Async(sdkConfiguration, _headers);
+    public CompletableFuture<ListTaskChanges2Response> listTaskChanges2(@Nonnull ListTaskChanges2Request request) {
+        AsyncRequestOperation<ListTaskChanges2Request, ListTaskChanges2Response> operation
+              = new ListTaskChanges2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

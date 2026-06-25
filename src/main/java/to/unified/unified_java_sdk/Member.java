@@ -6,38 +6,38 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
-import to.unified.unified_java_sdk.models.operations.CreateMartechMemberRequest;
-import to.unified.unified_java_sdk.models.operations.CreateMartechMemberRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.CreateMartechMemberResponse;
-import to.unified.unified_java_sdk.models.operations.GetClubsMemberRequest;
-import to.unified.unified_java_sdk.models.operations.GetClubsMemberRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.GetClubsMemberResponse;
-import to.unified.unified_java_sdk.models.operations.GetMartechMemberRequest;
-import to.unified.unified_java_sdk.models.operations.GetMartechMemberRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.GetMartechMemberResponse;
-import to.unified.unified_java_sdk.models.operations.ListClubsMembersRequest;
-import to.unified.unified_java_sdk.models.operations.ListClubsMembersRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.ListClubsMembersResponse;
-import to.unified.unified_java_sdk.models.operations.ListMartechMembersRequest;
-import to.unified.unified_java_sdk.models.operations.ListMartechMembersRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.ListMartechMembersResponse;
-import to.unified.unified_java_sdk.models.operations.PatchMartechMemberRequest;
-import to.unified.unified_java_sdk.models.operations.PatchMartechMemberRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.PatchMartechMemberResponse;
-import to.unified.unified_java_sdk.models.operations.RemoveMartechMemberRequest;
-import to.unified.unified_java_sdk.models.operations.RemoveMartechMemberRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.RemoveMartechMemberResponse;
-import to.unified.unified_java_sdk.models.operations.UpdateMartechMemberRequest;
-import to.unified.unified_java_sdk.models.operations.UpdateMartechMemberRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.UpdateMartechMemberResponse;
-import to.unified.unified_java_sdk.operations.CreateMartechMember;
-import to.unified.unified_java_sdk.operations.GetClubsMember;
-import to.unified.unified_java_sdk.operations.GetMartechMember;
-import to.unified.unified_java_sdk.operations.ListClubsMembers;
-import to.unified.unified_java_sdk.operations.ListMartechMembers;
-import to.unified.unified_java_sdk.operations.PatchMartechMember;
-import to.unified.unified_java_sdk.operations.RemoveMartechMember;
-import to.unified.unified_java_sdk.operations.UpdateMartechMember;
+import to.unified.unified_java_sdk.models.operations.CreateMartechMember2Request;
+import to.unified.unified_java_sdk.models.operations.CreateMartechMember2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.CreateMartechMember2Response;
+import to.unified.unified_java_sdk.models.operations.GetClubsMember2Request;
+import to.unified.unified_java_sdk.models.operations.GetClubsMember2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetClubsMember2Response;
+import to.unified.unified_java_sdk.models.operations.GetMartechMember2Request;
+import to.unified.unified_java_sdk.models.operations.GetMartechMember2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetMartechMember2Response;
+import to.unified.unified_java_sdk.models.operations.ListClubsMembers2Request;
+import to.unified.unified_java_sdk.models.operations.ListClubsMembers2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListClubsMembers2Response;
+import to.unified.unified_java_sdk.models.operations.ListMartechMembers2Request;
+import to.unified.unified_java_sdk.models.operations.ListMartechMembers2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListMartechMembers2Response;
+import to.unified.unified_java_sdk.models.operations.PatchMartechMember2Request;
+import to.unified.unified_java_sdk.models.operations.PatchMartechMember2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.PatchMartechMember2Response;
+import to.unified.unified_java_sdk.models.operations.RemoveMartechMember2Request;
+import to.unified.unified_java_sdk.models.operations.RemoveMartechMember2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.RemoveMartechMember2Response;
+import to.unified.unified_java_sdk.models.operations.UpdateMartechMember2Request;
+import to.unified.unified_java_sdk.models.operations.UpdateMartechMember2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.UpdateMartechMember2Response;
+import to.unified.unified_java_sdk.operations.CreateMartechMember2;
+import to.unified.unified_java_sdk.operations.GetClubsMember2;
+import to.unified.unified_java_sdk.operations.GetMartechMember2;
+import to.unified.unified_java_sdk.operations.ListClubsMembers2;
+import to.unified.unified_java_sdk.operations.ListMartechMembers2;
+import to.unified.unified_java_sdk.operations.PatchMartechMember2;
+import to.unified.unified_java_sdk.operations.RemoveMartechMember2;
+import to.unified.unified_java_sdk.operations.UpdateMartechMember2;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -65,8 +65,8 @@ public class Member {
      * 
      * @return The call builder
      */
-    public CreateMartechMemberRequestBuilder createMartechMember() {
-        return new CreateMartechMemberRequestBuilder(sdkConfiguration);
+    public CreateMartechMember2RequestBuilder createMartechMember2() {
+        return new CreateMartechMember2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -76,9 +76,9 @@ public class Member {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateMartechMemberResponse createMartechMember(@Nonnull CreateMartechMemberRequest request) {
-        RequestOperation<CreateMartechMemberRequest, CreateMartechMemberResponse> operation
-              = new CreateMartechMember.Sync(sdkConfiguration, _headers);
+    public CreateMartechMember2Response createMartechMember2(@Nonnull CreateMartechMember2Request request) {
+        RequestOperation<CreateMartechMember2Request, CreateMartechMember2Response> operation
+              = new CreateMartechMember2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -87,30 +87,8 @@ public class Member {
      * 
      * @return The call builder
      */
-    public GetClubsMemberRequestBuilder getClubsMember() {
-        return new GetClubsMemberRequestBuilder(sdkConfiguration);
-    }
-
-    /**
-     * Retrieve a member
-     * 
-     * @param request The request object containing all the parameters for the API call.
-     * @return The response from the API call
-     * @throws RuntimeException subclass if the API call fails
-     */
-    public GetClubsMemberResponse getClubsMember(@Nonnull GetClubsMemberRequest request) {
-        RequestOperation<GetClubsMemberRequest, GetClubsMemberResponse> operation
-              = new GetClubsMember.Sync(sdkConfiguration, _headers);
-        return operation.handleResponse(operation.doRequest(request));
-    }
-
-    /**
-     * Retrieve a member
-     * 
-     * @return The call builder
-     */
-    public GetMartechMemberRequestBuilder getMartechMember() {
-        return new GetMartechMemberRequestBuilder(sdkConfiguration);
+    public GetClubsMember2RequestBuilder getClubsMember2() {
+        return new GetClubsMember2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -120,9 +98,31 @@ public class Member {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetMartechMemberResponse getMartechMember(@Nonnull GetMartechMemberRequest request) {
-        RequestOperation<GetMartechMemberRequest, GetMartechMemberResponse> operation
-              = new GetMartechMember.Sync(sdkConfiguration, _headers);
+    public GetClubsMember2Response getClubsMember2(@Nonnull GetClubsMember2Request request) {
+        RequestOperation<GetClubsMember2Request, GetClubsMember2Response> operation
+              = new GetClubsMember2.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Retrieve a member
+     * 
+     * @return The call builder
+     */
+    public GetMartechMember2RequestBuilder getMartechMember2() {
+        return new GetMartechMember2RequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Retrieve a member
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetMartechMember2Response getMartechMember2(@Nonnull GetMartechMember2Request request) {
+        RequestOperation<GetMartechMember2Request, GetMartechMember2Response> operation
+              = new GetMartechMember2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -131,8 +131,8 @@ public class Member {
      * 
      * @return The call builder
      */
-    public ListClubsMembersRequestBuilder listClubsMembers() {
-        return new ListClubsMembersRequestBuilder(sdkConfiguration);
+    public ListClubsMembers2RequestBuilder listClubsMembers2() {
+        return new ListClubsMembers2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -142,9 +142,9 @@ public class Member {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListClubsMembersResponse listClubsMembers(@Nonnull ListClubsMembersRequest request) {
-        RequestOperation<ListClubsMembersRequest, ListClubsMembersResponse> operation
-              = new ListClubsMembers.Sync(sdkConfiguration, _headers);
+    public ListClubsMembers2Response listClubsMembers2(@Nonnull ListClubsMembers2Request request) {
+        RequestOperation<ListClubsMembers2Request, ListClubsMembers2Response> operation
+              = new ListClubsMembers2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -153,8 +153,8 @@ public class Member {
      * 
      * @return The call builder
      */
-    public ListMartechMembersRequestBuilder listMartechMembers() {
-        return new ListMartechMembersRequestBuilder(sdkConfiguration);
+    public ListMartechMembers2RequestBuilder listMartechMembers2() {
+        return new ListMartechMembers2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -164,9 +164,9 @@ public class Member {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListMartechMembersResponse listMartechMembers(@Nonnull ListMartechMembersRequest request) {
-        RequestOperation<ListMartechMembersRequest, ListMartechMembersResponse> operation
-              = new ListMartechMembers.Sync(sdkConfiguration, _headers);
+    public ListMartechMembers2Response listMartechMembers2(@Nonnull ListMartechMembers2Request request) {
+        RequestOperation<ListMartechMembers2Request, ListMartechMembers2Response> operation
+              = new ListMartechMembers2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -175,8 +175,8 @@ public class Member {
      * 
      * @return The call builder
      */
-    public PatchMartechMemberRequestBuilder patchMartechMember() {
-        return new PatchMartechMemberRequestBuilder(sdkConfiguration);
+    public PatchMartechMember2RequestBuilder patchMartechMember2() {
+        return new PatchMartechMember2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -186,9 +186,9 @@ public class Member {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchMartechMemberResponse patchMartechMember(@Nonnull PatchMartechMemberRequest request) {
-        RequestOperation<PatchMartechMemberRequest, PatchMartechMemberResponse> operation
-              = new PatchMartechMember.Sync(sdkConfiguration, _headers);
+    public PatchMartechMember2Response patchMartechMember2(@Nonnull PatchMartechMember2Request request) {
+        RequestOperation<PatchMartechMember2Request, PatchMartechMember2Response> operation
+              = new PatchMartechMember2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -197,8 +197,8 @@ public class Member {
      * 
      * @return The call builder
      */
-    public RemoveMartechMemberRequestBuilder removeMartechMember() {
-        return new RemoveMartechMemberRequestBuilder(sdkConfiguration);
+    public RemoveMartechMember2RequestBuilder removeMartechMember2() {
+        return new RemoveMartechMember2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -208,9 +208,9 @@ public class Member {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveMartechMemberResponse removeMartechMember(@Nonnull RemoveMartechMemberRequest request) {
-        RequestOperation<RemoveMartechMemberRequest, RemoveMartechMemberResponse> operation
-              = new RemoveMartechMember.Sync(sdkConfiguration, _headers);
+    public RemoveMartechMember2Response removeMartechMember2(@Nonnull RemoveMartechMember2Request request) {
+        RequestOperation<RemoveMartechMember2Request, RemoveMartechMember2Response> operation
+              = new RemoveMartechMember2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -219,8 +219,8 @@ public class Member {
      * 
      * @return The call builder
      */
-    public UpdateMartechMemberRequestBuilder updateMartechMember() {
-        return new UpdateMartechMemberRequestBuilder(sdkConfiguration);
+    public UpdateMartechMember2RequestBuilder updateMartechMember2() {
+        return new UpdateMartechMember2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -230,9 +230,9 @@ public class Member {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateMartechMemberResponse updateMartechMember(@Nonnull UpdateMartechMemberRequest request) {
-        RequestOperation<UpdateMartechMemberRequest, UpdateMartechMemberResponse> operation
-              = new UpdateMartechMember.Sync(sdkConfiguration, _headers);
+    public UpdateMartechMember2Response updateMartechMember2(@Nonnull UpdateMartechMember2Request request) {
+        RequestOperation<UpdateMartechMember2Request, UpdateMartechMember2Response> operation
+              = new UpdateMartechMember2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

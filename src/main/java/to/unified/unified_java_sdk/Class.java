@@ -6,30 +6,30 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
-import to.unified.unified_java_sdk.models.operations.CreateLmsClassRequest;
-import to.unified.unified_java_sdk.models.operations.CreateLmsClassRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.CreateLmsClassResponse;
-import to.unified.unified_java_sdk.models.operations.GetLmsClassRequest;
-import to.unified.unified_java_sdk.models.operations.GetLmsClassRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.GetLmsClassResponse;
-import to.unified.unified_java_sdk.models.operations.ListLmsClassesRequest;
-import to.unified.unified_java_sdk.models.operations.ListLmsClassesRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.ListLmsClassesResponse;
-import to.unified.unified_java_sdk.models.operations.PatchLmsClassRequest;
-import to.unified.unified_java_sdk.models.operations.PatchLmsClassRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.PatchLmsClassResponse;
-import to.unified.unified_java_sdk.models.operations.RemoveLmsClassRequest;
-import to.unified.unified_java_sdk.models.operations.RemoveLmsClassRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.RemoveLmsClassResponse;
-import to.unified.unified_java_sdk.models.operations.UpdateLmsClassRequest;
-import to.unified.unified_java_sdk.models.operations.UpdateLmsClassRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.UpdateLmsClassResponse;
-import to.unified.unified_java_sdk.operations.CreateLmsClass;
-import to.unified.unified_java_sdk.operations.GetLmsClass;
-import to.unified.unified_java_sdk.operations.ListLmsClasses;
-import to.unified.unified_java_sdk.operations.PatchLmsClass;
-import to.unified.unified_java_sdk.operations.RemoveLmsClass;
-import to.unified.unified_java_sdk.operations.UpdateLmsClass;
+import to.unified.unified_java_sdk.models.operations.CreateLmsClass2Request;
+import to.unified.unified_java_sdk.models.operations.CreateLmsClass2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.CreateLmsClass2Response;
+import to.unified.unified_java_sdk.models.operations.GetLmsClass2Request;
+import to.unified.unified_java_sdk.models.operations.GetLmsClass2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetLmsClass2Response;
+import to.unified.unified_java_sdk.models.operations.ListLmsClasses2Request;
+import to.unified.unified_java_sdk.models.operations.ListLmsClasses2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListLmsClasses2Response;
+import to.unified.unified_java_sdk.models.operations.PatchLmsClass2Request;
+import to.unified.unified_java_sdk.models.operations.PatchLmsClass2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.PatchLmsClass2Response;
+import to.unified.unified_java_sdk.models.operations.RemoveLmsClass2Request;
+import to.unified.unified_java_sdk.models.operations.RemoveLmsClass2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.RemoveLmsClass2Response;
+import to.unified.unified_java_sdk.models.operations.UpdateLmsClass2Request;
+import to.unified.unified_java_sdk.models.operations.UpdateLmsClass2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.UpdateLmsClass2Response;
+import to.unified.unified_java_sdk.operations.CreateLmsClass2;
+import to.unified.unified_java_sdk.operations.GetLmsClass2;
+import to.unified.unified_java_sdk.operations.ListLmsClasses2;
+import to.unified.unified_java_sdk.operations.PatchLmsClass2;
+import to.unified.unified_java_sdk.operations.RemoveLmsClass2;
+import to.unified.unified_java_sdk.operations.UpdateLmsClass2;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -57,8 +57,8 @@ public class Class {
      * 
      * @return The call builder
      */
-    public CreateLmsClassRequestBuilder createLmsClass() {
-        return new CreateLmsClassRequestBuilder(sdkConfiguration);
+    public CreateLmsClass2RequestBuilder createLmsClass2() {
+        return new CreateLmsClass2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -68,9 +68,9 @@ public class Class {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateLmsClassResponse createLmsClass(@Nonnull CreateLmsClassRequest request) {
-        RequestOperation<CreateLmsClassRequest, CreateLmsClassResponse> operation
-              = new CreateLmsClass.Sync(sdkConfiguration, _headers);
+    public CreateLmsClass2Response createLmsClass2(@Nonnull CreateLmsClass2Request request) {
+        RequestOperation<CreateLmsClass2Request, CreateLmsClass2Response> operation
+              = new CreateLmsClass2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -79,8 +79,8 @@ public class Class {
      * 
      * @return The call builder
      */
-    public GetLmsClassRequestBuilder getLmsClass() {
-        return new GetLmsClassRequestBuilder(sdkConfiguration);
+    public GetLmsClass2RequestBuilder getLmsClass2() {
+        return new GetLmsClass2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -90,9 +90,9 @@ public class Class {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetLmsClassResponse getLmsClass(@Nonnull GetLmsClassRequest request) {
-        RequestOperation<GetLmsClassRequest, GetLmsClassResponse> operation
-              = new GetLmsClass.Sync(sdkConfiguration, _headers);
+    public GetLmsClass2Response getLmsClass2(@Nonnull GetLmsClass2Request request) {
+        RequestOperation<GetLmsClass2Request, GetLmsClass2Response> operation
+              = new GetLmsClass2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -101,8 +101,8 @@ public class Class {
      * 
      * @return The call builder
      */
-    public ListLmsClassesRequestBuilder listLmsClasses() {
-        return new ListLmsClassesRequestBuilder(sdkConfiguration);
+    public ListLmsClasses2RequestBuilder listLmsClasses2() {
+        return new ListLmsClasses2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -112,9 +112,9 @@ public class Class {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListLmsClassesResponse listLmsClasses(@Nonnull ListLmsClassesRequest request) {
-        RequestOperation<ListLmsClassesRequest, ListLmsClassesResponse> operation
-              = new ListLmsClasses.Sync(sdkConfiguration, _headers);
+    public ListLmsClasses2Response listLmsClasses2(@Nonnull ListLmsClasses2Request request) {
+        RequestOperation<ListLmsClasses2Request, ListLmsClasses2Response> operation
+              = new ListLmsClasses2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -123,8 +123,8 @@ public class Class {
      * 
      * @return The call builder
      */
-    public PatchLmsClassRequestBuilder patchLmsClass() {
-        return new PatchLmsClassRequestBuilder(sdkConfiguration);
+    public PatchLmsClass2RequestBuilder patchLmsClass2() {
+        return new PatchLmsClass2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -134,9 +134,9 @@ public class Class {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchLmsClassResponse patchLmsClass(@Nonnull PatchLmsClassRequest request) {
-        RequestOperation<PatchLmsClassRequest, PatchLmsClassResponse> operation
-              = new PatchLmsClass.Sync(sdkConfiguration, _headers);
+    public PatchLmsClass2Response patchLmsClass2(@Nonnull PatchLmsClass2Request request) {
+        RequestOperation<PatchLmsClass2Request, PatchLmsClass2Response> operation
+              = new PatchLmsClass2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -145,8 +145,8 @@ public class Class {
      * 
      * @return The call builder
      */
-    public RemoveLmsClassRequestBuilder removeLmsClass() {
-        return new RemoveLmsClassRequestBuilder(sdkConfiguration);
+    public RemoveLmsClass2RequestBuilder removeLmsClass2() {
+        return new RemoveLmsClass2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -156,9 +156,9 @@ public class Class {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveLmsClassResponse removeLmsClass(@Nonnull RemoveLmsClassRequest request) {
-        RequestOperation<RemoveLmsClassRequest, RemoveLmsClassResponse> operation
-              = new RemoveLmsClass.Sync(sdkConfiguration, _headers);
+    public RemoveLmsClass2Response removeLmsClass2(@Nonnull RemoveLmsClass2Request request) {
+        RequestOperation<RemoveLmsClass2Request, RemoveLmsClass2Response> operation
+              = new RemoveLmsClass2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -167,8 +167,8 @@ public class Class {
      * 
      * @return The call builder
      */
-    public UpdateLmsClassRequestBuilder updateLmsClass() {
-        return new UpdateLmsClassRequestBuilder(sdkConfiguration);
+    public UpdateLmsClass2RequestBuilder updateLmsClass2() {
+        return new UpdateLmsClass2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -178,9 +178,9 @@ public class Class {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateLmsClassResponse updateLmsClass(@Nonnull UpdateLmsClassRequest request) {
-        RequestOperation<UpdateLmsClassRequest, UpdateLmsClassResponse> operation
-              = new UpdateLmsClass.Sync(sdkConfiguration, _headers);
+    public UpdateLmsClass2Response updateLmsClass2(@Nonnull UpdateLmsClass2Request request) {
+        RequestOperation<UpdateLmsClass2Request, UpdateLmsClass2Response> operation
+              = new UpdateLmsClass2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

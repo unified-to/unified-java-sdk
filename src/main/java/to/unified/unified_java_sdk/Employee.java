@@ -6,30 +6,30 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
-import to.unified.unified_java_sdk.models.operations.CreateHrisEmployeeRequest;
-import to.unified.unified_java_sdk.models.operations.CreateHrisEmployeeRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.CreateHrisEmployeeResponse;
-import to.unified.unified_java_sdk.models.operations.GetHrisEmployeeRequest;
-import to.unified.unified_java_sdk.models.operations.GetHrisEmployeeRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.GetHrisEmployeeResponse;
-import to.unified.unified_java_sdk.models.operations.ListHrisEmployeesRequest;
-import to.unified.unified_java_sdk.models.operations.ListHrisEmployeesRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.ListHrisEmployeesResponse;
-import to.unified.unified_java_sdk.models.operations.PatchHrisEmployeeRequest;
-import to.unified.unified_java_sdk.models.operations.PatchHrisEmployeeRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.PatchHrisEmployeeResponse;
-import to.unified.unified_java_sdk.models.operations.RemoveHrisEmployeeRequest;
-import to.unified.unified_java_sdk.models.operations.RemoveHrisEmployeeRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.RemoveHrisEmployeeResponse;
-import to.unified.unified_java_sdk.models.operations.UpdateHrisEmployeeRequest;
-import to.unified.unified_java_sdk.models.operations.UpdateHrisEmployeeRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.UpdateHrisEmployeeResponse;
-import to.unified.unified_java_sdk.operations.CreateHrisEmployee;
-import to.unified.unified_java_sdk.operations.GetHrisEmployee;
-import to.unified.unified_java_sdk.operations.ListHrisEmployees;
-import to.unified.unified_java_sdk.operations.PatchHrisEmployee;
-import to.unified.unified_java_sdk.operations.RemoveHrisEmployee;
-import to.unified.unified_java_sdk.operations.UpdateHrisEmployee;
+import to.unified.unified_java_sdk.models.operations.CreateHrisEmployee2Request;
+import to.unified.unified_java_sdk.models.operations.CreateHrisEmployee2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.CreateHrisEmployee2Response;
+import to.unified.unified_java_sdk.models.operations.GetHrisEmployee2Request;
+import to.unified.unified_java_sdk.models.operations.GetHrisEmployee2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetHrisEmployee2Response;
+import to.unified.unified_java_sdk.models.operations.ListHrisEmployees2Request;
+import to.unified.unified_java_sdk.models.operations.ListHrisEmployees2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListHrisEmployees2Response;
+import to.unified.unified_java_sdk.models.operations.PatchHrisEmployee2Request;
+import to.unified.unified_java_sdk.models.operations.PatchHrisEmployee2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.PatchHrisEmployee2Response;
+import to.unified.unified_java_sdk.models.operations.RemoveHrisEmployee2Request;
+import to.unified.unified_java_sdk.models.operations.RemoveHrisEmployee2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.RemoveHrisEmployee2Response;
+import to.unified.unified_java_sdk.models.operations.UpdateHrisEmployee2Request;
+import to.unified.unified_java_sdk.models.operations.UpdateHrisEmployee2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.UpdateHrisEmployee2Response;
+import to.unified.unified_java_sdk.operations.CreateHrisEmployee2;
+import to.unified.unified_java_sdk.operations.GetHrisEmployee2;
+import to.unified.unified_java_sdk.operations.ListHrisEmployees2;
+import to.unified.unified_java_sdk.operations.PatchHrisEmployee2;
+import to.unified.unified_java_sdk.operations.RemoveHrisEmployee2;
+import to.unified.unified_java_sdk.operations.UpdateHrisEmployee2;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -57,8 +57,8 @@ public class Employee {
      * 
      * @return The call builder
      */
-    public CreateHrisEmployeeRequestBuilder createHrisEmployee() {
-        return new CreateHrisEmployeeRequestBuilder(sdkConfiguration);
+    public CreateHrisEmployee2RequestBuilder createHrisEmployee2() {
+        return new CreateHrisEmployee2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -68,9 +68,9 @@ public class Employee {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateHrisEmployeeResponse createHrisEmployee(@Nonnull CreateHrisEmployeeRequest request) {
-        RequestOperation<CreateHrisEmployeeRequest, CreateHrisEmployeeResponse> operation
-              = new CreateHrisEmployee.Sync(sdkConfiguration, _headers);
+    public CreateHrisEmployee2Response createHrisEmployee2(@Nonnull CreateHrisEmployee2Request request) {
+        RequestOperation<CreateHrisEmployee2Request, CreateHrisEmployee2Response> operation
+              = new CreateHrisEmployee2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -79,8 +79,8 @@ public class Employee {
      * 
      * @return The call builder
      */
-    public GetHrisEmployeeRequestBuilder getHrisEmployee() {
-        return new GetHrisEmployeeRequestBuilder(sdkConfiguration);
+    public GetHrisEmployee2RequestBuilder getHrisEmployee2() {
+        return new GetHrisEmployee2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -90,9 +90,9 @@ public class Employee {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetHrisEmployeeResponse getHrisEmployee(@Nonnull GetHrisEmployeeRequest request) {
-        RequestOperation<GetHrisEmployeeRequest, GetHrisEmployeeResponse> operation
-              = new GetHrisEmployee.Sync(sdkConfiguration, _headers);
+    public GetHrisEmployee2Response getHrisEmployee2(@Nonnull GetHrisEmployee2Request request) {
+        RequestOperation<GetHrisEmployee2Request, GetHrisEmployee2Response> operation
+              = new GetHrisEmployee2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -101,8 +101,8 @@ public class Employee {
      * 
      * @return The call builder
      */
-    public ListHrisEmployeesRequestBuilder listHrisEmployees() {
-        return new ListHrisEmployeesRequestBuilder(sdkConfiguration);
+    public ListHrisEmployees2RequestBuilder listHrisEmployees2() {
+        return new ListHrisEmployees2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -112,9 +112,9 @@ public class Employee {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListHrisEmployeesResponse listHrisEmployees(@Nonnull ListHrisEmployeesRequest request) {
-        RequestOperation<ListHrisEmployeesRequest, ListHrisEmployeesResponse> operation
-              = new ListHrisEmployees.Sync(sdkConfiguration, _headers);
+    public ListHrisEmployees2Response listHrisEmployees2(@Nonnull ListHrisEmployees2Request request) {
+        RequestOperation<ListHrisEmployees2Request, ListHrisEmployees2Response> operation
+              = new ListHrisEmployees2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -123,8 +123,8 @@ public class Employee {
      * 
      * @return The call builder
      */
-    public PatchHrisEmployeeRequestBuilder patchHrisEmployee() {
-        return new PatchHrisEmployeeRequestBuilder(sdkConfiguration);
+    public PatchHrisEmployee2RequestBuilder patchHrisEmployee2() {
+        return new PatchHrisEmployee2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -134,9 +134,9 @@ public class Employee {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchHrisEmployeeResponse patchHrisEmployee(@Nonnull PatchHrisEmployeeRequest request) {
-        RequestOperation<PatchHrisEmployeeRequest, PatchHrisEmployeeResponse> operation
-              = new PatchHrisEmployee.Sync(sdkConfiguration, _headers);
+    public PatchHrisEmployee2Response patchHrisEmployee2(@Nonnull PatchHrisEmployee2Request request) {
+        RequestOperation<PatchHrisEmployee2Request, PatchHrisEmployee2Response> operation
+              = new PatchHrisEmployee2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -145,8 +145,8 @@ public class Employee {
      * 
      * @return The call builder
      */
-    public RemoveHrisEmployeeRequestBuilder removeHrisEmployee() {
-        return new RemoveHrisEmployeeRequestBuilder(sdkConfiguration);
+    public RemoveHrisEmployee2RequestBuilder removeHrisEmployee2() {
+        return new RemoveHrisEmployee2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -156,9 +156,9 @@ public class Employee {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveHrisEmployeeResponse removeHrisEmployee(@Nonnull RemoveHrisEmployeeRequest request) {
-        RequestOperation<RemoveHrisEmployeeRequest, RemoveHrisEmployeeResponse> operation
-              = new RemoveHrisEmployee.Sync(sdkConfiguration, _headers);
+    public RemoveHrisEmployee2Response removeHrisEmployee2(@Nonnull RemoveHrisEmployee2Request request) {
+        RequestOperation<RemoveHrisEmployee2Request, RemoveHrisEmployee2Response> operation
+              = new RemoveHrisEmployee2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -167,8 +167,8 @@ public class Employee {
      * 
      * @return The call builder
      */
-    public UpdateHrisEmployeeRequestBuilder updateHrisEmployee() {
-        return new UpdateHrisEmployeeRequestBuilder(sdkConfiguration);
+    public UpdateHrisEmployee2RequestBuilder updateHrisEmployee2() {
+        return new UpdateHrisEmployee2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -178,9 +178,9 @@ public class Employee {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateHrisEmployeeResponse updateHrisEmployee(@Nonnull UpdateHrisEmployeeRequest request) {
-        RequestOperation<UpdateHrisEmployeeRequest, UpdateHrisEmployeeResponse> operation
-              = new UpdateHrisEmployee.Sync(sdkConfiguration, _headers);
+    public UpdateHrisEmployee2Response updateHrisEmployee2(@Nonnull UpdateHrisEmployee2Request request) {
+        RequestOperation<UpdateHrisEmployee2Request, UpdateHrisEmployee2Response> operation
+              = new UpdateHrisEmployee2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

@@ -4,45 +4,45 @@
 
 ### Available Operations
 
-* [createTicketingCategory](#createticketingcategory) - Create a category
-* [createTicketingCustomer](#createticketingcustomer) - Create a customer
-* [createTicketingNote](#createticketingnote) - Create a note
-* [createTicketingTicket](#createticketingticket) - Create a ticket
-* [getTicketingCategory](#getticketingcategory) - Retrieve a category
-* [getTicketingCustomer](#getticketingcustomer) - Retrieve a customer
-* [getTicketingNote](#getticketingnote) - Retrieve a note
-* [getTicketingTicket](#getticketingticket) - Retrieve a ticket
-* [listTicketingCategories](#listticketingcategories) - List all categories
-* [listTicketingCustomers](#listticketingcustomers) - List all customers
-* [listTicketingNotes](#listticketingnotes) - List all notes
-* [listTicketingTickets](#listticketingtickets) - List all tickets
-* [patchTicketingCategory](#patchticketingcategory) - Update a category
-* [patchTicketingCustomer](#patchticketingcustomer) - Update a customer
-* [patchTicketingNote](#patchticketingnote) - Update a note
-* [patchTicketingTicket](#patchticketingticket) - Update a ticket
-* [removeTicketingCategory](#removeticketingcategory) - Remove a category
-* [removeTicketingCustomer](#removeticketingcustomer) - Remove a customer
-* [removeTicketingNote](#removeticketingnote) - Remove a note
-* [removeTicketingTicket](#removeticketingticket) - Remove a ticket
-* [updateTicketingCategory](#updateticketingcategory) - Update a category
-* [updateTicketingCustomer](#updateticketingcustomer) - Update a customer
-* [updateTicketingNote](#updateticketingnote) - Update a note
-* [updateTicketingTicket](#updateticketingticket) - Update a ticket
+* [createTicketingCategory2](#createticketingcategory2) - Create a category
+* [createTicketingCustomer2](#createticketingcustomer2) - Create a customer
+* [createTicketingNote2](#createticketingnote2) - Create a note
+* [createTicketingTicket2](#createticketingticket2) - Create a ticket
+* [getTicketingCategory2](#getticketingcategory2) - Retrieve a category
+* [getTicketingCustomer2](#getticketingcustomer2) - Retrieve a customer
+* [getTicketingNote2](#getticketingnote2) - Retrieve a note
+* [getTicketingTicket2](#getticketingticket2) - Retrieve a ticket
+* [listTicketingCategories2](#listticketingcategories2) - List all categories
+* [listTicketingCustomers2](#listticketingcustomers2) - List all customers
+* [listTicketingNotes2](#listticketingnotes2) - List all notes
+* [listTicketingTickets2](#listticketingtickets2) - List all tickets
+* [patchTicketingCategory2](#patchticketingcategory2) - Update a category
+* [patchTicketingCustomer2](#patchticketingcustomer2) - Update a customer
+* [patchTicketingNote2](#patchticketingnote2) - Update a note
+* [patchTicketingTicket2](#patchticketingticket2) - Update a ticket
+* [removeTicketingCategory2](#removeticketingcategory2) - Remove a category
+* [removeTicketingCustomer2](#removeticketingcustomer2) - Remove a customer
+* [removeTicketingNote2](#removeticketingnote2) - Remove a note
+* [removeTicketingTicket2](#removeticketingticket2) - Remove a ticket
+* [updateTicketingCategory2](#updateticketingcategory2) - Update a category
+* [updateTicketingCustomer2](#updateticketingcustomer2) - Update a customer
+* [updateTicketingNote2](#updateticketingnote2) - Update a note
+* [updateTicketingTicket2](#updateticketingticket2) - Update a ticket
 
-## createTicketingCategory
+## createTicketingCategory2
 
 Create a category
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createTicketingCategory" method="post" path="/ticketing/{connection_id}/category" -->
+<!-- UsageSnippet language="java" operationID="createTicketingCategory2" method="post" path="/ticketing/{connection_id}/category" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.CreateTicketingCategoryRequest;
-import to.unified.unified_java_sdk.models.operations.CreateTicketingCategoryResponse;
+import to.unified.unified_java_sdk.models.operations.CreateTicketingCategory2Request;
+import to.unified.unified_java_sdk.models.operations.CreateTicketingCategory2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 import to.unified.unified_java_sdk.models.shared.TicketingCategory;
 
@@ -56,13 +56,13 @@ public class Application {
                     .build())
             .build();
 
-        CreateTicketingCategoryRequest req = CreateTicketingCategoryRequest.builder()
+        CreateTicketingCategory2Request req = CreateTicketingCategory2Request.builder()
                 .ticketingCategory(TicketingCategory.builder()
                     .build())
                 .connectionId("<id>")
                 .build();
 
-        CreateTicketingCategoryResponse res = sdk.ticketing().createTicketingCategory()
+        CreateTicketingCategory2Response res = sdk.ticketing().createTicketingCategory2()
                 .request(req)
                 .call();
 
@@ -75,13 +75,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                   | Type                                                                                        | Required                                                                                    | Description                                                                                 |
-| ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
-| `request`                                                                                   | [CreateTicketingCategoryRequest](../../models/operations/CreateTicketingCategoryRequest.md) | :heavy_check_mark:                                                                          | The request object to use for the request.                                                  |
+| Parameter                                                                                     | Type                                                                                          | Required                                                                                      | Description                                                                                   |
+| --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
+| `request`                                                                                     | [CreateTicketingCategory2Request](../../models/operations/CreateTicketingCategory2Request.md) | :heavy_check_mark:                                                                            | The request object to use for the request.                                                    |
 
 ### Response
 
-**[CreateTicketingCategoryResponse](../../models/operations/CreateTicketingCategoryResponse.md)**
+**[CreateTicketingCategory2Response](../../models/operations/CreateTicketingCategory2Response.md)**
 
 ### Errors
 
@@ -89,20 +89,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## createTicketingCustomer
+## createTicketingCustomer2
 
 Create a customer
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createTicketingCustomer" method="post" path="/ticketing/{connection_id}/customer" -->
+<!-- UsageSnippet language="java" operationID="createTicketingCustomer2" method="post" path="/ticketing/{connection_id}/customer" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.CreateTicketingCustomerRequest;
-import to.unified.unified_java_sdk.models.operations.CreateTicketingCustomerResponse;
+import to.unified.unified_java_sdk.models.operations.CreateTicketingCustomer2Request;
+import to.unified.unified_java_sdk.models.operations.CreateTicketingCustomer2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 import to.unified.unified_java_sdk.models.shared.TicketingCustomer;
 
@@ -116,13 +116,13 @@ public class Application {
                     .build())
             .build();
 
-        CreateTicketingCustomerRequest req = CreateTicketingCustomerRequest.builder()
+        CreateTicketingCustomer2Request req = CreateTicketingCustomer2Request.builder()
                 .ticketingCustomer(TicketingCustomer.builder()
                     .build())
                 .connectionId("<id>")
                 .build();
 
-        CreateTicketingCustomerResponse res = sdk.ticketing().createTicketingCustomer()
+        CreateTicketingCustomer2Response res = sdk.ticketing().createTicketingCustomer2()
                 .request(req)
                 .call();
 
@@ -135,13 +135,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                   | Type                                                                                        | Required                                                                                    | Description                                                                                 |
-| ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
-| `request`                                                                                   | [CreateTicketingCustomerRequest](../../models/operations/CreateTicketingCustomerRequest.md) | :heavy_check_mark:                                                                          | The request object to use for the request.                                                  |
+| Parameter                                                                                     | Type                                                                                          | Required                                                                                      | Description                                                                                   |
+| --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
+| `request`                                                                                     | [CreateTicketingCustomer2Request](../../models/operations/CreateTicketingCustomer2Request.md) | :heavy_check_mark:                                                                            | The request object to use for the request.                                                    |
 
 ### Response
 
-**[CreateTicketingCustomerResponse](../../models/operations/CreateTicketingCustomerResponse.md)**
+**[CreateTicketingCustomer2Response](../../models/operations/CreateTicketingCustomer2Response.md)**
 
 ### Errors
 
@@ -149,20 +149,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## createTicketingNote
+## createTicketingNote2
 
 Create a note
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createTicketingNote" method="post" path="/ticketing/{connection_id}/note" -->
+<!-- UsageSnippet language="java" operationID="createTicketingNote2" method="post" path="/ticketing/{connection_id}/note" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.CreateTicketingNoteRequest;
-import to.unified.unified_java_sdk.models.operations.CreateTicketingNoteResponse;
+import to.unified.unified_java_sdk.models.operations.CreateTicketingNote2Request;
+import to.unified.unified_java_sdk.models.operations.CreateTicketingNote2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 import to.unified.unified_java_sdk.models.shared.TicketingNote;
 
@@ -176,13 +176,13 @@ public class Application {
                     .build())
             .build();
 
-        CreateTicketingNoteRequest req = CreateTicketingNoteRequest.builder()
+        CreateTicketingNote2Request req = CreateTicketingNote2Request.builder()
                 .ticketingNote(TicketingNote.builder()
                     .build())
                 .connectionId("<id>")
                 .build();
 
-        CreateTicketingNoteResponse res = sdk.ticketing().createTicketingNote()
+        CreateTicketingNote2Response res = sdk.ticketing().createTicketingNote2()
                 .request(req)
                 .call();
 
@@ -195,13 +195,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                           | Type                                                                                | Required                                                                            | Description                                                                         |
-| ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
-| `request`                                                                           | [CreateTicketingNoteRequest](../../models/operations/CreateTicketingNoteRequest.md) | :heavy_check_mark:                                                                  | The request object to use for the request.                                          |
+| Parameter                                                                             | Type                                                                                  | Required                                                                              | Description                                                                           |
+| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| `request`                                                                             | [CreateTicketingNote2Request](../../models/operations/CreateTicketingNote2Request.md) | :heavy_check_mark:                                                                    | The request object to use for the request.                                            |
 
 ### Response
 
-**[CreateTicketingNoteResponse](../../models/operations/CreateTicketingNoteResponse.md)**
+**[CreateTicketingNote2Response](../../models/operations/CreateTicketingNote2Response.md)**
 
 ### Errors
 
@@ -209,20 +209,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## createTicketingTicket
+## createTicketingTicket2
 
 Create a ticket
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createTicketingTicket" method="post" path="/ticketing/{connection_id}/ticket" -->
+<!-- UsageSnippet language="java" operationID="createTicketingTicket2" method="post" path="/ticketing/{connection_id}/ticket" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.CreateTicketingTicketRequest;
-import to.unified.unified_java_sdk.models.operations.CreateTicketingTicketResponse;
+import to.unified.unified_java_sdk.models.operations.CreateTicketingTicket2Request;
+import to.unified.unified_java_sdk.models.operations.CreateTicketingTicket2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 import to.unified.unified_java_sdk.models.shared.TicketingTicket;
 
@@ -236,13 +236,13 @@ public class Application {
                     .build())
             .build();
 
-        CreateTicketingTicketRequest req = CreateTicketingTicketRequest.builder()
+        CreateTicketingTicket2Request req = CreateTicketingTicket2Request.builder()
                 .ticketingTicket(TicketingTicket.builder()
                     .build())
                 .connectionId("<id>")
                 .build();
 
-        CreateTicketingTicketResponse res = sdk.ticketing().createTicketingTicket()
+        CreateTicketingTicket2Response res = sdk.ticketing().createTicketingTicket2()
                 .request(req)
                 .call();
 
@@ -255,13 +255,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
-| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
-| `request`                                                                               | [CreateTicketingTicketRequest](../../models/operations/CreateTicketingTicketRequest.md) | :heavy_check_mark:                                                                      | The request object to use for the request.                                              |
+| Parameter                                                                                 | Type                                                                                      | Required                                                                                  | Description                                                                               |
+| ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
+| `request`                                                                                 | [CreateTicketingTicket2Request](../../models/operations/CreateTicketingTicket2Request.md) | :heavy_check_mark:                                                                        | The request object to use for the request.                                                |
 
 ### Response
 
-**[CreateTicketingTicketResponse](../../models/operations/CreateTicketingTicketResponse.md)**
+**[CreateTicketingTicket2Response](../../models/operations/CreateTicketingTicket2Response.md)**
 
 ### Errors
 
@@ -269,20 +269,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## getTicketingCategory
+## getTicketingCategory2
 
 Retrieve a category
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="getTicketingCategory" method="get" path="/ticketing/{connection_id}/category/{id}" -->
+<!-- UsageSnippet language="java" operationID="getTicketingCategory2" method="get" path="/ticketing/{connection_id}/category/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.GetTicketingCategoryRequest;
-import to.unified.unified_java_sdk.models.operations.GetTicketingCategoryResponse;
+import to.unified.unified_java_sdk.models.operations.GetTicketingCategory2Request;
+import to.unified.unified_java_sdk.models.operations.GetTicketingCategory2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -295,12 +295,12 @@ public class Application {
                     .build())
             .build();
 
-        GetTicketingCategoryRequest req = GetTicketingCategoryRequest.builder()
+        GetTicketingCategory2Request req = GetTicketingCategory2Request.builder()
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        GetTicketingCategoryResponse res = sdk.ticketing().getTicketingCategory()
+        GetTicketingCategory2Response res = sdk.ticketing().getTicketingCategory2()
                 .request(req)
                 .call();
 
@@ -313,13 +313,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                             | Type                                                                                  | Required                                                                              | Description                                                                           |
-| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
-| `request`                                                                             | [GetTicketingCategoryRequest](../../models/operations/GetTicketingCategoryRequest.md) | :heavy_check_mark:                                                                    | The request object to use for the request.                                            |
+| Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
+| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| `request`                                                                               | [GetTicketingCategory2Request](../../models/operations/GetTicketingCategory2Request.md) | :heavy_check_mark:                                                                      | The request object to use for the request.                                              |
 
 ### Response
 
-**[GetTicketingCategoryResponse](../../models/operations/GetTicketingCategoryResponse.md)**
+**[GetTicketingCategory2Response](../../models/operations/GetTicketingCategory2Response.md)**
 
 ### Errors
 
@@ -327,20 +327,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## getTicketingCustomer
+## getTicketingCustomer2
 
 Retrieve a customer
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="getTicketingCustomer" method="get" path="/ticketing/{connection_id}/customer/{id}" -->
+<!-- UsageSnippet language="java" operationID="getTicketingCustomer2" method="get" path="/ticketing/{connection_id}/customer/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.GetTicketingCustomerRequest;
-import to.unified.unified_java_sdk.models.operations.GetTicketingCustomerResponse;
+import to.unified.unified_java_sdk.models.operations.GetTicketingCustomer2Request;
+import to.unified.unified_java_sdk.models.operations.GetTicketingCustomer2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -353,12 +353,12 @@ public class Application {
                     .build())
             .build();
 
-        GetTicketingCustomerRequest req = GetTicketingCustomerRequest.builder()
+        GetTicketingCustomer2Request req = GetTicketingCustomer2Request.builder()
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        GetTicketingCustomerResponse res = sdk.ticketing().getTicketingCustomer()
+        GetTicketingCustomer2Response res = sdk.ticketing().getTicketingCustomer2()
                 .request(req)
                 .call();
 
@@ -371,13 +371,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                             | Type                                                                                  | Required                                                                              | Description                                                                           |
-| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
-| `request`                                                                             | [GetTicketingCustomerRequest](../../models/operations/GetTicketingCustomerRequest.md) | :heavy_check_mark:                                                                    | The request object to use for the request.                                            |
+| Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
+| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| `request`                                                                               | [GetTicketingCustomer2Request](../../models/operations/GetTicketingCustomer2Request.md) | :heavy_check_mark:                                                                      | The request object to use for the request.                                              |
 
 ### Response
 
-**[GetTicketingCustomerResponse](../../models/operations/GetTicketingCustomerResponse.md)**
+**[GetTicketingCustomer2Response](../../models/operations/GetTicketingCustomer2Response.md)**
 
 ### Errors
 
@@ -385,20 +385,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## getTicketingNote
+## getTicketingNote2
 
 Retrieve a note
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="getTicketingNote" method="get" path="/ticketing/{connection_id}/note/{id}" -->
+<!-- UsageSnippet language="java" operationID="getTicketingNote2" method="get" path="/ticketing/{connection_id}/note/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.GetTicketingNoteRequest;
-import to.unified.unified_java_sdk.models.operations.GetTicketingNoteResponse;
+import to.unified.unified_java_sdk.models.operations.GetTicketingNote2Request;
+import to.unified.unified_java_sdk.models.operations.GetTicketingNote2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -411,12 +411,12 @@ public class Application {
                     .build())
             .build();
 
-        GetTicketingNoteRequest req = GetTicketingNoteRequest.builder()
+        GetTicketingNote2Request req = GetTicketingNote2Request.builder()
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        GetTicketingNoteResponse res = sdk.ticketing().getTicketingNote()
+        GetTicketingNote2Response res = sdk.ticketing().getTicketingNote2()
                 .request(req)
                 .call();
 
@@ -429,13 +429,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
-| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
-| `request`                                                                     | [GetTicketingNoteRequest](../../models/operations/GetTicketingNoteRequest.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
+| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| `request`                                                                       | [GetTicketingNote2Request](../../models/operations/GetTicketingNote2Request.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
 
 ### Response
 
-**[GetTicketingNoteResponse](../../models/operations/GetTicketingNoteResponse.md)**
+**[GetTicketingNote2Response](../../models/operations/GetTicketingNote2Response.md)**
 
 ### Errors
 
@@ -443,20 +443,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## getTicketingTicket
+## getTicketingTicket2
 
 Retrieve a ticket
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="getTicketingTicket" method="get" path="/ticketing/{connection_id}/ticket/{id}" -->
+<!-- UsageSnippet language="java" operationID="getTicketingTicket2" method="get" path="/ticketing/{connection_id}/ticket/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.GetTicketingTicketRequest;
-import to.unified.unified_java_sdk.models.operations.GetTicketingTicketResponse;
+import to.unified.unified_java_sdk.models.operations.GetTicketingTicket2Request;
+import to.unified.unified_java_sdk.models.operations.GetTicketingTicket2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -469,12 +469,12 @@ public class Application {
                     .build())
             .build();
 
-        GetTicketingTicketRequest req = GetTicketingTicketRequest.builder()
+        GetTicketingTicket2Request req = GetTicketingTicket2Request.builder()
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        GetTicketingTicketResponse res = sdk.ticketing().getTicketingTicket()
+        GetTicketingTicket2Response res = sdk.ticketing().getTicketingTicket2()
                 .request(req)
                 .call();
 
@@ -487,13 +487,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
-| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
-| `request`                                                                         | [GetTicketingTicketRequest](../../models/operations/GetTicketingTicketRequest.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
+| Parameter                                                                           | Type                                                                                | Required                                                                            | Description                                                                         |
+| ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| `request`                                                                           | [GetTicketingTicket2Request](../../models/operations/GetTicketingTicket2Request.md) | :heavy_check_mark:                                                                  | The request object to use for the request.                                          |
 
 ### Response
 
-**[GetTicketingTicketResponse](../../models/operations/GetTicketingTicketResponse.md)**
+**[GetTicketingTicket2Response](../../models/operations/GetTicketingTicket2Response.md)**
 
 ### Errors
 
@@ -501,20 +501,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## listTicketingCategories
+## listTicketingCategories2
 
 List all categories
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="listTicketingCategories" method="get" path="/ticketing/{connection_id}/category" -->
+<!-- UsageSnippet language="java" operationID="listTicketingCategories2" method="get" path="/ticketing/{connection_id}/category" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.ListTicketingCategoriesRequest;
-import to.unified.unified_java_sdk.models.operations.ListTicketingCategoriesResponse;
+import to.unified.unified_java_sdk.models.operations.ListTicketingCategories2Request;
+import to.unified.unified_java_sdk.models.operations.ListTicketingCategories2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -527,11 +527,11 @@ public class Application {
                     .build())
             .build();
 
-        ListTicketingCategoriesRequest req = ListTicketingCategoriesRequest.builder()
+        ListTicketingCategories2Request req = ListTicketingCategories2Request.builder()
                 .connectionId("<id>")
                 .build();
 
-        ListTicketingCategoriesResponse res = sdk.ticketing().listTicketingCategories()
+        ListTicketingCategories2Response res = sdk.ticketing().listTicketingCategories2()
                 .request(req)
                 .call();
 
@@ -544,13 +544,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                   | Type                                                                                        | Required                                                                                    | Description                                                                                 |
-| ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
-| `request`                                                                                   | [ListTicketingCategoriesRequest](../../models/operations/ListTicketingCategoriesRequest.md) | :heavy_check_mark:                                                                          | The request object to use for the request.                                                  |
+| Parameter                                                                                     | Type                                                                                          | Required                                                                                      | Description                                                                                   |
+| --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
+| `request`                                                                                     | [ListTicketingCategories2Request](../../models/operations/ListTicketingCategories2Request.md) | :heavy_check_mark:                                                                            | The request object to use for the request.                                                    |
 
 ### Response
 
-**[ListTicketingCategoriesResponse](../../models/operations/ListTicketingCategoriesResponse.md)**
+**[ListTicketingCategories2Response](../../models/operations/ListTicketingCategories2Response.md)**
 
 ### Errors
 
@@ -558,20 +558,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## listTicketingCustomers
+## listTicketingCustomers2
 
 List all customers
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="listTicketingCustomers" method="get" path="/ticketing/{connection_id}/customer" -->
+<!-- UsageSnippet language="java" operationID="listTicketingCustomers2" method="get" path="/ticketing/{connection_id}/customer" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.ListTicketingCustomersRequest;
-import to.unified.unified_java_sdk.models.operations.ListTicketingCustomersResponse;
+import to.unified.unified_java_sdk.models.operations.ListTicketingCustomers2Request;
+import to.unified.unified_java_sdk.models.operations.ListTicketingCustomers2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -584,11 +584,11 @@ public class Application {
                     .build())
             .build();
 
-        ListTicketingCustomersRequest req = ListTicketingCustomersRequest.builder()
+        ListTicketingCustomers2Request req = ListTicketingCustomers2Request.builder()
                 .connectionId("<id>")
                 .build();
 
-        ListTicketingCustomersResponse res = sdk.ticketing().listTicketingCustomers()
+        ListTicketingCustomers2Response res = sdk.ticketing().listTicketingCustomers2()
                 .request(req)
                 .call();
 
@@ -601,13 +601,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                 | Type                                                                                      | Required                                                                                  | Description                                                                               |
-| ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
-| `request`                                                                                 | [ListTicketingCustomersRequest](../../models/operations/ListTicketingCustomersRequest.md) | :heavy_check_mark:                                                                        | The request object to use for the request.                                                |
+| Parameter                                                                                   | Type                                                                                        | Required                                                                                    | Description                                                                                 |
+| ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
+| `request`                                                                                   | [ListTicketingCustomers2Request](../../models/operations/ListTicketingCustomers2Request.md) | :heavy_check_mark:                                                                          | The request object to use for the request.                                                  |
 
 ### Response
 
-**[ListTicketingCustomersResponse](../../models/operations/ListTicketingCustomersResponse.md)**
+**[ListTicketingCustomers2Response](../../models/operations/ListTicketingCustomers2Response.md)**
 
 ### Errors
 
@@ -615,20 +615,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## listTicketingNotes
+## listTicketingNotes2
 
 List all notes
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="listTicketingNotes" method="get" path="/ticketing/{connection_id}/note" -->
+<!-- UsageSnippet language="java" operationID="listTicketingNotes2" method="get" path="/ticketing/{connection_id}/note" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.ListTicketingNotesRequest;
-import to.unified.unified_java_sdk.models.operations.ListTicketingNotesResponse;
+import to.unified.unified_java_sdk.models.operations.ListTicketingNotes2Request;
+import to.unified.unified_java_sdk.models.operations.ListTicketingNotes2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -641,11 +641,11 @@ public class Application {
                     .build())
             .build();
 
-        ListTicketingNotesRequest req = ListTicketingNotesRequest.builder()
+        ListTicketingNotes2Request req = ListTicketingNotes2Request.builder()
                 .connectionId("<id>")
                 .build();
 
-        ListTicketingNotesResponse res = sdk.ticketing().listTicketingNotes()
+        ListTicketingNotes2Response res = sdk.ticketing().listTicketingNotes2()
                 .request(req)
                 .call();
 
@@ -658,13 +658,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
-| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
-| `request`                                                                         | [ListTicketingNotesRequest](../../models/operations/ListTicketingNotesRequest.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
+| Parameter                                                                           | Type                                                                                | Required                                                                            | Description                                                                         |
+| ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| `request`                                                                           | [ListTicketingNotes2Request](../../models/operations/ListTicketingNotes2Request.md) | :heavy_check_mark:                                                                  | The request object to use for the request.                                          |
 
 ### Response
 
-**[ListTicketingNotesResponse](../../models/operations/ListTicketingNotesResponse.md)**
+**[ListTicketingNotes2Response](../../models/operations/ListTicketingNotes2Response.md)**
 
 ### Errors
 
@@ -672,20 +672,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## listTicketingTickets
+## listTicketingTickets2
 
 List all tickets
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="listTicketingTickets" method="get" path="/ticketing/{connection_id}/ticket" -->
+<!-- UsageSnippet language="java" operationID="listTicketingTickets2" method="get" path="/ticketing/{connection_id}/ticket" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.ListTicketingTicketsRequest;
-import to.unified.unified_java_sdk.models.operations.ListTicketingTicketsResponse;
+import to.unified.unified_java_sdk.models.operations.ListTicketingTickets2Request;
+import to.unified.unified_java_sdk.models.operations.ListTicketingTickets2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -698,11 +698,11 @@ public class Application {
                     .build())
             .build();
 
-        ListTicketingTicketsRequest req = ListTicketingTicketsRequest.builder()
+        ListTicketingTickets2Request req = ListTicketingTickets2Request.builder()
                 .connectionId("<id>")
                 .build();
 
-        ListTicketingTicketsResponse res = sdk.ticketing().listTicketingTickets()
+        ListTicketingTickets2Response res = sdk.ticketing().listTicketingTickets2()
                 .request(req)
                 .call();
 
@@ -715,13 +715,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                             | Type                                                                                  | Required                                                                              | Description                                                                           |
-| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
-| `request`                                                                             | [ListTicketingTicketsRequest](../../models/operations/ListTicketingTicketsRequest.md) | :heavy_check_mark:                                                                    | The request object to use for the request.                                            |
+| Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
+| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| `request`                                                                               | [ListTicketingTickets2Request](../../models/operations/ListTicketingTickets2Request.md) | :heavy_check_mark:                                                                      | The request object to use for the request.                                              |
 
 ### Response
 
-**[ListTicketingTicketsResponse](../../models/operations/ListTicketingTicketsResponse.md)**
+**[ListTicketingTickets2Response](../../models/operations/ListTicketingTickets2Response.md)**
 
 ### Errors
 
@@ -729,20 +729,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## patchTicketingCategory
+## patchTicketingCategory2
 
 Update a category
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchTicketingCategory" method="patch" path="/ticketing/{connection_id}/category/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchTicketingCategory2" method="patch" path="/ticketing/{connection_id}/category/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.PatchTicketingCategoryRequest;
-import to.unified.unified_java_sdk.models.operations.PatchTicketingCategoryResponse;
+import to.unified.unified_java_sdk.models.operations.PatchTicketingCategory2Request;
+import to.unified.unified_java_sdk.models.operations.PatchTicketingCategory2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 import to.unified.unified_java_sdk.models.shared.TicketingCategory;
 
@@ -756,14 +756,14 @@ public class Application {
                     .build())
             .build();
 
-        PatchTicketingCategoryRequest req = PatchTicketingCategoryRequest.builder()
+        PatchTicketingCategory2Request req = PatchTicketingCategory2Request.builder()
                 .ticketingCategory(TicketingCategory.builder()
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        PatchTicketingCategoryResponse res = sdk.ticketing().patchTicketingCategory()
+        PatchTicketingCategory2Response res = sdk.ticketing().patchTicketingCategory2()
                 .request(req)
                 .call();
 
@@ -776,13 +776,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                 | Type                                                                                      | Required                                                                                  | Description                                                                               |
-| ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
-| `request`                                                                                 | [PatchTicketingCategoryRequest](../../models/operations/PatchTicketingCategoryRequest.md) | :heavy_check_mark:                                                                        | The request object to use for the request.                                                |
+| Parameter                                                                                   | Type                                                                                        | Required                                                                                    | Description                                                                                 |
+| ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
+| `request`                                                                                   | [PatchTicketingCategory2Request](../../models/operations/PatchTicketingCategory2Request.md) | :heavy_check_mark:                                                                          | The request object to use for the request.                                                  |
 
 ### Response
 
-**[PatchTicketingCategoryResponse](../../models/operations/PatchTicketingCategoryResponse.md)**
+**[PatchTicketingCategory2Response](../../models/operations/PatchTicketingCategory2Response.md)**
 
 ### Errors
 
@@ -790,20 +790,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## patchTicketingCustomer
+## patchTicketingCustomer2
 
 Update a customer
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchTicketingCustomer" method="patch" path="/ticketing/{connection_id}/customer/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchTicketingCustomer2" method="patch" path="/ticketing/{connection_id}/customer/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.PatchTicketingCustomerRequest;
-import to.unified.unified_java_sdk.models.operations.PatchTicketingCustomerResponse;
+import to.unified.unified_java_sdk.models.operations.PatchTicketingCustomer2Request;
+import to.unified.unified_java_sdk.models.operations.PatchTicketingCustomer2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 import to.unified.unified_java_sdk.models.shared.TicketingCustomer;
 
@@ -817,14 +817,14 @@ public class Application {
                     .build())
             .build();
 
-        PatchTicketingCustomerRequest req = PatchTicketingCustomerRequest.builder()
+        PatchTicketingCustomer2Request req = PatchTicketingCustomer2Request.builder()
                 .ticketingCustomer(TicketingCustomer.builder()
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        PatchTicketingCustomerResponse res = sdk.ticketing().patchTicketingCustomer()
+        PatchTicketingCustomer2Response res = sdk.ticketing().patchTicketingCustomer2()
                 .request(req)
                 .call();
 
@@ -837,13 +837,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                 | Type                                                                                      | Required                                                                                  | Description                                                                               |
-| ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
-| `request`                                                                                 | [PatchTicketingCustomerRequest](../../models/operations/PatchTicketingCustomerRequest.md) | :heavy_check_mark:                                                                        | The request object to use for the request.                                                |
+| Parameter                                                                                   | Type                                                                                        | Required                                                                                    | Description                                                                                 |
+| ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
+| `request`                                                                                   | [PatchTicketingCustomer2Request](../../models/operations/PatchTicketingCustomer2Request.md) | :heavy_check_mark:                                                                          | The request object to use for the request.                                                  |
 
 ### Response
 
-**[PatchTicketingCustomerResponse](../../models/operations/PatchTicketingCustomerResponse.md)**
+**[PatchTicketingCustomer2Response](../../models/operations/PatchTicketingCustomer2Response.md)**
 
 ### Errors
 
@@ -851,20 +851,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## patchTicketingNote
+## patchTicketingNote2
 
 Update a note
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchTicketingNote" method="patch" path="/ticketing/{connection_id}/note/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchTicketingNote2" method="patch" path="/ticketing/{connection_id}/note/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.PatchTicketingNoteRequest;
-import to.unified.unified_java_sdk.models.operations.PatchTicketingNoteResponse;
+import to.unified.unified_java_sdk.models.operations.PatchTicketingNote2Request;
+import to.unified.unified_java_sdk.models.operations.PatchTicketingNote2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 import to.unified.unified_java_sdk.models.shared.TicketingNote;
 
@@ -878,14 +878,14 @@ public class Application {
                     .build())
             .build();
 
-        PatchTicketingNoteRequest req = PatchTicketingNoteRequest.builder()
+        PatchTicketingNote2Request req = PatchTicketingNote2Request.builder()
                 .ticketingNote(TicketingNote.builder()
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        PatchTicketingNoteResponse res = sdk.ticketing().patchTicketingNote()
+        PatchTicketingNote2Response res = sdk.ticketing().patchTicketingNote2()
                 .request(req)
                 .call();
 
@@ -898,13 +898,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
-| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
-| `request`                                                                         | [PatchTicketingNoteRequest](../../models/operations/PatchTicketingNoteRequest.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
+| Parameter                                                                           | Type                                                                                | Required                                                                            | Description                                                                         |
+| ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| `request`                                                                           | [PatchTicketingNote2Request](../../models/operations/PatchTicketingNote2Request.md) | :heavy_check_mark:                                                                  | The request object to use for the request.                                          |
 
 ### Response
 
-**[PatchTicketingNoteResponse](../../models/operations/PatchTicketingNoteResponse.md)**
+**[PatchTicketingNote2Response](../../models/operations/PatchTicketingNote2Response.md)**
 
 ### Errors
 
@@ -912,20 +912,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## patchTicketingTicket
+## patchTicketingTicket2
 
 Update a ticket
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchTicketingTicket" method="patch" path="/ticketing/{connection_id}/ticket/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchTicketingTicket2" method="patch" path="/ticketing/{connection_id}/ticket/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.PatchTicketingTicketRequest;
-import to.unified.unified_java_sdk.models.operations.PatchTicketingTicketResponse;
+import to.unified.unified_java_sdk.models.operations.PatchTicketingTicket2Request;
+import to.unified.unified_java_sdk.models.operations.PatchTicketingTicket2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 import to.unified.unified_java_sdk.models.shared.TicketingTicket;
 
@@ -939,14 +939,14 @@ public class Application {
                     .build())
             .build();
 
-        PatchTicketingTicketRequest req = PatchTicketingTicketRequest.builder()
+        PatchTicketingTicket2Request req = PatchTicketingTicket2Request.builder()
                 .ticketingTicket(TicketingTicket.builder()
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        PatchTicketingTicketResponse res = sdk.ticketing().patchTicketingTicket()
+        PatchTicketingTicket2Response res = sdk.ticketing().patchTicketingTicket2()
                 .request(req)
                 .call();
 
@@ -959,13 +959,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                             | Type                                                                                  | Required                                                                              | Description                                                                           |
-| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
-| `request`                                                                             | [PatchTicketingTicketRequest](../../models/operations/PatchTicketingTicketRequest.md) | :heavy_check_mark:                                                                    | The request object to use for the request.                                            |
+| Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
+| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| `request`                                                                               | [PatchTicketingTicket2Request](../../models/operations/PatchTicketingTicket2Request.md) | :heavy_check_mark:                                                                      | The request object to use for the request.                                              |
 
 ### Response
 
-**[PatchTicketingTicketResponse](../../models/operations/PatchTicketingTicketResponse.md)**
+**[PatchTicketingTicket2Response](../../models/operations/PatchTicketingTicket2Response.md)**
 
 ### Errors
 
@@ -973,20 +973,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## removeTicketingCategory
+## removeTicketingCategory2
 
 Remove a category
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="removeTicketingCategory" method="delete" path="/ticketing/{connection_id}/category/{id}" -->
+<!-- UsageSnippet language="java" operationID="removeTicketingCategory2" method="delete" path="/ticketing/{connection_id}/category/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.RemoveTicketingCategoryRequest;
-import to.unified.unified_java_sdk.models.operations.RemoveTicketingCategoryResponse;
+import to.unified.unified_java_sdk.models.operations.RemoveTicketingCategory2Request;
+import to.unified.unified_java_sdk.models.operations.RemoveTicketingCategory2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -999,12 +999,12 @@ public class Application {
                     .build())
             .build();
 
-        RemoveTicketingCategoryRequest req = RemoveTicketingCategoryRequest.builder()
+        RemoveTicketingCategory2Request req = RemoveTicketingCategory2Request.builder()
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        RemoveTicketingCategoryResponse res = sdk.ticketing().removeTicketingCategory()
+        RemoveTicketingCategory2Response res = sdk.ticketing().removeTicketingCategory2()
                 .request(req)
                 .call();
 
@@ -1015,13 +1015,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                   | Type                                                                                        | Required                                                                                    | Description                                                                                 |
-| ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
-| `request`                                                                                   | [RemoveTicketingCategoryRequest](../../models/operations/RemoveTicketingCategoryRequest.md) | :heavy_check_mark:                                                                          | The request object to use for the request.                                                  |
+| Parameter                                                                                     | Type                                                                                          | Required                                                                                      | Description                                                                                   |
+| --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
+| `request`                                                                                     | [RemoveTicketingCategory2Request](../../models/operations/RemoveTicketingCategory2Request.md) | :heavy_check_mark:                                                                            | The request object to use for the request.                                                    |
 
 ### Response
 
-**[RemoveTicketingCategoryResponse](../../models/operations/RemoveTicketingCategoryResponse.md)**
+**[RemoveTicketingCategory2Response](../../models/operations/RemoveTicketingCategory2Response.md)**
 
 ### Errors
 
@@ -1029,20 +1029,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## removeTicketingCustomer
+## removeTicketingCustomer2
 
 Remove a customer
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="removeTicketingCustomer" method="delete" path="/ticketing/{connection_id}/customer/{id}" -->
+<!-- UsageSnippet language="java" operationID="removeTicketingCustomer2" method="delete" path="/ticketing/{connection_id}/customer/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.RemoveTicketingCustomerRequest;
-import to.unified.unified_java_sdk.models.operations.RemoveTicketingCustomerResponse;
+import to.unified.unified_java_sdk.models.operations.RemoveTicketingCustomer2Request;
+import to.unified.unified_java_sdk.models.operations.RemoveTicketingCustomer2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -1055,12 +1055,12 @@ public class Application {
                     .build())
             .build();
 
-        RemoveTicketingCustomerRequest req = RemoveTicketingCustomerRequest.builder()
+        RemoveTicketingCustomer2Request req = RemoveTicketingCustomer2Request.builder()
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        RemoveTicketingCustomerResponse res = sdk.ticketing().removeTicketingCustomer()
+        RemoveTicketingCustomer2Response res = sdk.ticketing().removeTicketingCustomer2()
                 .request(req)
                 .call();
 
@@ -1071,13 +1071,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                   | Type                                                                                        | Required                                                                                    | Description                                                                                 |
-| ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
-| `request`                                                                                   | [RemoveTicketingCustomerRequest](../../models/operations/RemoveTicketingCustomerRequest.md) | :heavy_check_mark:                                                                          | The request object to use for the request.                                                  |
+| Parameter                                                                                     | Type                                                                                          | Required                                                                                      | Description                                                                                   |
+| --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
+| `request`                                                                                     | [RemoveTicketingCustomer2Request](../../models/operations/RemoveTicketingCustomer2Request.md) | :heavy_check_mark:                                                                            | The request object to use for the request.                                                    |
 
 ### Response
 
-**[RemoveTicketingCustomerResponse](../../models/operations/RemoveTicketingCustomerResponse.md)**
+**[RemoveTicketingCustomer2Response](../../models/operations/RemoveTicketingCustomer2Response.md)**
 
 ### Errors
 
@@ -1085,20 +1085,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## removeTicketingNote
+## removeTicketingNote2
 
 Remove a note
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="removeTicketingNote" method="delete" path="/ticketing/{connection_id}/note/{id}" -->
+<!-- UsageSnippet language="java" operationID="removeTicketingNote2" method="delete" path="/ticketing/{connection_id}/note/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.RemoveTicketingNoteRequest;
-import to.unified.unified_java_sdk.models.operations.RemoveTicketingNoteResponse;
+import to.unified.unified_java_sdk.models.operations.RemoveTicketingNote2Request;
+import to.unified.unified_java_sdk.models.operations.RemoveTicketingNote2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -1111,12 +1111,12 @@ public class Application {
                     .build())
             .build();
 
-        RemoveTicketingNoteRequest req = RemoveTicketingNoteRequest.builder()
+        RemoveTicketingNote2Request req = RemoveTicketingNote2Request.builder()
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        RemoveTicketingNoteResponse res = sdk.ticketing().removeTicketingNote()
+        RemoveTicketingNote2Response res = sdk.ticketing().removeTicketingNote2()
                 .request(req)
                 .call();
 
@@ -1127,13 +1127,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                           | Type                                                                                | Required                                                                            | Description                                                                         |
-| ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
-| `request`                                                                           | [RemoveTicketingNoteRequest](../../models/operations/RemoveTicketingNoteRequest.md) | :heavy_check_mark:                                                                  | The request object to use for the request.                                          |
+| Parameter                                                                             | Type                                                                                  | Required                                                                              | Description                                                                           |
+| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| `request`                                                                             | [RemoveTicketingNote2Request](../../models/operations/RemoveTicketingNote2Request.md) | :heavy_check_mark:                                                                    | The request object to use for the request.                                            |
 
 ### Response
 
-**[RemoveTicketingNoteResponse](../../models/operations/RemoveTicketingNoteResponse.md)**
+**[RemoveTicketingNote2Response](../../models/operations/RemoveTicketingNote2Response.md)**
 
 ### Errors
 
@@ -1141,20 +1141,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## removeTicketingTicket
+## removeTicketingTicket2
 
 Remove a ticket
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="removeTicketingTicket" method="delete" path="/ticketing/{connection_id}/ticket/{id}" -->
+<!-- UsageSnippet language="java" operationID="removeTicketingTicket2" method="delete" path="/ticketing/{connection_id}/ticket/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.RemoveTicketingTicketRequest;
-import to.unified.unified_java_sdk.models.operations.RemoveTicketingTicketResponse;
+import to.unified.unified_java_sdk.models.operations.RemoveTicketingTicket2Request;
+import to.unified.unified_java_sdk.models.operations.RemoveTicketingTicket2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -1167,12 +1167,12 @@ public class Application {
                     .build())
             .build();
 
-        RemoveTicketingTicketRequest req = RemoveTicketingTicketRequest.builder()
+        RemoveTicketingTicket2Request req = RemoveTicketingTicket2Request.builder()
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        RemoveTicketingTicketResponse res = sdk.ticketing().removeTicketingTicket()
+        RemoveTicketingTicket2Response res = sdk.ticketing().removeTicketingTicket2()
                 .request(req)
                 .call();
 
@@ -1183,13 +1183,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
-| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
-| `request`                                                                               | [RemoveTicketingTicketRequest](../../models/operations/RemoveTicketingTicketRequest.md) | :heavy_check_mark:                                                                      | The request object to use for the request.                                              |
+| Parameter                                                                                 | Type                                                                                      | Required                                                                                  | Description                                                                               |
+| ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
+| `request`                                                                                 | [RemoveTicketingTicket2Request](../../models/operations/RemoveTicketingTicket2Request.md) | :heavy_check_mark:                                                                        | The request object to use for the request.                                                |
 
 ### Response
 
-**[RemoveTicketingTicketResponse](../../models/operations/RemoveTicketingTicketResponse.md)**
+**[RemoveTicketingTicket2Response](../../models/operations/RemoveTicketingTicket2Response.md)**
 
 ### Errors
 
@@ -1197,20 +1197,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## updateTicketingCategory
+## updateTicketingCategory2
 
 Update a category
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateTicketingCategory" method="put" path="/ticketing/{connection_id}/category/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateTicketingCategory2" method="put" path="/ticketing/{connection_id}/category/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.UpdateTicketingCategoryRequest;
-import to.unified.unified_java_sdk.models.operations.UpdateTicketingCategoryResponse;
+import to.unified.unified_java_sdk.models.operations.UpdateTicketingCategory2Request;
+import to.unified.unified_java_sdk.models.operations.UpdateTicketingCategory2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 import to.unified.unified_java_sdk.models.shared.TicketingCategory;
 
@@ -1224,14 +1224,14 @@ public class Application {
                     .build())
             .build();
 
-        UpdateTicketingCategoryRequest req = UpdateTicketingCategoryRequest.builder()
+        UpdateTicketingCategory2Request req = UpdateTicketingCategory2Request.builder()
                 .ticketingCategory(TicketingCategory.builder()
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        UpdateTicketingCategoryResponse res = sdk.ticketing().updateTicketingCategory()
+        UpdateTicketingCategory2Response res = sdk.ticketing().updateTicketingCategory2()
                 .request(req)
                 .call();
 
@@ -1244,13 +1244,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                   | Type                                                                                        | Required                                                                                    | Description                                                                                 |
-| ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
-| `request`                                                                                   | [UpdateTicketingCategoryRequest](../../models/operations/UpdateTicketingCategoryRequest.md) | :heavy_check_mark:                                                                          | The request object to use for the request.                                                  |
+| Parameter                                                                                     | Type                                                                                          | Required                                                                                      | Description                                                                                   |
+| --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
+| `request`                                                                                     | [UpdateTicketingCategory2Request](../../models/operations/UpdateTicketingCategory2Request.md) | :heavy_check_mark:                                                                            | The request object to use for the request.                                                    |
 
 ### Response
 
-**[UpdateTicketingCategoryResponse](../../models/operations/UpdateTicketingCategoryResponse.md)**
+**[UpdateTicketingCategory2Response](../../models/operations/UpdateTicketingCategory2Response.md)**
 
 ### Errors
 
@@ -1258,20 +1258,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## updateTicketingCustomer
+## updateTicketingCustomer2
 
 Update a customer
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateTicketingCustomer" method="put" path="/ticketing/{connection_id}/customer/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateTicketingCustomer2" method="put" path="/ticketing/{connection_id}/customer/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.UpdateTicketingCustomerRequest;
-import to.unified.unified_java_sdk.models.operations.UpdateTicketingCustomerResponse;
+import to.unified.unified_java_sdk.models.operations.UpdateTicketingCustomer2Request;
+import to.unified.unified_java_sdk.models.operations.UpdateTicketingCustomer2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 import to.unified.unified_java_sdk.models.shared.TicketingCustomer;
 
@@ -1285,14 +1285,14 @@ public class Application {
                     .build())
             .build();
 
-        UpdateTicketingCustomerRequest req = UpdateTicketingCustomerRequest.builder()
+        UpdateTicketingCustomer2Request req = UpdateTicketingCustomer2Request.builder()
                 .ticketingCustomer(TicketingCustomer.builder()
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        UpdateTicketingCustomerResponse res = sdk.ticketing().updateTicketingCustomer()
+        UpdateTicketingCustomer2Response res = sdk.ticketing().updateTicketingCustomer2()
                 .request(req)
                 .call();
 
@@ -1305,13 +1305,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                   | Type                                                                                        | Required                                                                                    | Description                                                                                 |
-| ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
-| `request`                                                                                   | [UpdateTicketingCustomerRequest](../../models/operations/UpdateTicketingCustomerRequest.md) | :heavy_check_mark:                                                                          | The request object to use for the request.                                                  |
+| Parameter                                                                                     | Type                                                                                          | Required                                                                                      | Description                                                                                   |
+| --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
+| `request`                                                                                     | [UpdateTicketingCustomer2Request](../../models/operations/UpdateTicketingCustomer2Request.md) | :heavy_check_mark:                                                                            | The request object to use for the request.                                                    |
 
 ### Response
 
-**[UpdateTicketingCustomerResponse](../../models/operations/UpdateTicketingCustomerResponse.md)**
+**[UpdateTicketingCustomer2Response](../../models/operations/UpdateTicketingCustomer2Response.md)**
 
 ### Errors
 
@@ -1319,20 +1319,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## updateTicketingNote
+## updateTicketingNote2
 
 Update a note
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateTicketingNote" method="put" path="/ticketing/{connection_id}/note/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateTicketingNote2" method="put" path="/ticketing/{connection_id}/note/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.UpdateTicketingNoteRequest;
-import to.unified.unified_java_sdk.models.operations.UpdateTicketingNoteResponse;
+import to.unified.unified_java_sdk.models.operations.UpdateTicketingNote2Request;
+import to.unified.unified_java_sdk.models.operations.UpdateTicketingNote2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 import to.unified.unified_java_sdk.models.shared.TicketingNote;
 
@@ -1346,14 +1346,14 @@ public class Application {
                     .build())
             .build();
 
-        UpdateTicketingNoteRequest req = UpdateTicketingNoteRequest.builder()
+        UpdateTicketingNote2Request req = UpdateTicketingNote2Request.builder()
                 .ticketingNote(TicketingNote.builder()
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        UpdateTicketingNoteResponse res = sdk.ticketing().updateTicketingNote()
+        UpdateTicketingNote2Response res = sdk.ticketing().updateTicketingNote2()
                 .request(req)
                 .call();
 
@@ -1366,13 +1366,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                           | Type                                                                                | Required                                                                            | Description                                                                         |
-| ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
-| `request`                                                                           | [UpdateTicketingNoteRequest](../../models/operations/UpdateTicketingNoteRequest.md) | :heavy_check_mark:                                                                  | The request object to use for the request.                                          |
+| Parameter                                                                             | Type                                                                                  | Required                                                                              | Description                                                                           |
+| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| `request`                                                                             | [UpdateTicketingNote2Request](../../models/operations/UpdateTicketingNote2Request.md) | :heavy_check_mark:                                                                    | The request object to use for the request.                                            |
 
 ### Response
 
-**[UpdateTicketingNoteResponse](../../models/operations/UpdateTicketingNoteResponse.md)**
+**[UpdateTicketingNote2Response](../../models/operations/UpdateTicketingNote2Response.md)**
 
 ### Errors
 
@@ -1380,20 +1380,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## updateTicketingTicket
+## updateTicketingTicket2
 
 Update a ticket
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateTicketingTicket" method="put" path="/ticketing/{connection_id}/ticket/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateTicketingTicket2" method="put" path="/ticketing/{connection_id}/ticket/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.UpdateTicketingTicketRequest;
-import to.unified.unified_java_sdk.models.operations.UpdateTicketingTicketResponse;
+import to.unified.unified_java_sdk.models.operations.UpdateTicketingTicket2Request;
+import to.unified.unified_java_sdk.models.operations.UpdateTicketingTicket2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 import to.unified.unified_java_sdk.models.shared.TicketingTicket;
 
@@ -1407,14 +1407,14 @@ public class Application {
                     .build())
             .build();
 
-        UpdateTicketingTicketRequest req = UpdateTicketingTicketRequest.builder()
+        UpdateTicketingTicket2Request req = UpdateTicketingTicket2Request.builder()
                 .ticketingTicket(TicketingTicket.builder()
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        UpdateTicketingTicketResponse res = sdk.ticketing().updateTicketingTicket()
+        UpdateTicketingTicket2Response res = sdk.ticketing().updateTicketingTicket2()
                 .request(req)
                 .call();
 
@@ -1427,13 +1427,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
-| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
-| `request`                                                                               | [UpdateTicketingTicketRequest](../../models/operations/UpdateTicketingTicketRequest.md) | :heavy_check_mark:                                                                      | The request object to use for the request.                                              |
+| Parameter                                                                                 | Type                                                                                      | Required                                                                                  | Description                                                                               |
+| ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
+| `request`                                                                                 | [UpdateTicketingTicket2Request](../../models/operations/UpdateTicketingTicket2Request.md) | :heavy_check_mark:                                                                        | The request object to use for the request.                                                |
 
 ### Response
 
-**[UpdateTicketingTicketResponse](../../models/operations/UpdateTicketingTicketResponse.md)**
+**[UpdateTicketingTicket2Response](../../models/operations/UpdateTicketingTicket2Response.md)**
 
 ### Errors
 

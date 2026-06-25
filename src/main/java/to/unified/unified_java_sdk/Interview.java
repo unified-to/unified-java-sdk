@@ -6,30 +6,30 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
-import to.unified.unified_java_sdk.models.operations.CreateAtsInterviewRequest;
-import to.unified.unified_java_sdk.models.operations.CreateAtsInterviewRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.CreateAtsInterviewResponse;
-import to.unified.unified_java_sdk.models.operations.GetAtsInterviewRequest;
-import to.unified.unified_java_sdk.models.operations.GetAtsInterviewRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.GetAtsInterviewResponse;
-import to.unified.unified_java_sdk.models.operations.ListAtsInterviewsRequest;
-import to.unified.unified_java_sdk.models.operations.ListAtsInterviewsRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.ListAtsInterviewsResponse;
-import to.unified.unified_java_sdk.models.operations.PatchAtsInterviewRequest;
-import to.unified.unified_java_sdk.models.operations.PatchAtsInterviewRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.PatchAtsInterviewResponse;
-import to.unified.unified_java_sdk.models.operations.RemoveAtsInterviewRequest;
-import to.unified.unified_java_sdk.models.operations.RemoveAtsInterviewRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.RemoveAtsInterviewResponse;
-import to.unified.unified_java_sdk.models.operations.UpdateAtsInterviewRequest;
-import to.unified.unified_java_sdk.models.operations.UpdateAtsInterviewRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.UpdateAtsInterviewResponse;
-import to.unified.unified_java_sdk.operations.CreateAtsInterview;
-import to.unified.unified_java_sdk.operations.GetAtsInterview;
-import to.unified.unified_java_sdk.operations.ListAtsInterviews;
-import to.unified.unified_java_sdk.operations.PatchAtsInterview;
-import to.unified.unified_java_sdk.operations.RemoveAtsInterview;
-import to.unified.unified_java_sdk.operations.UpdateAtsInterview;
+import to.unified.unified_java_sdk.models.operations.CreateAtsInterview2Request;
+import to.unified.unified_java_sdk.models.operations.CreateAtsInterview2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.CreateAtsInterview2Response;
+import to.unified.unified_java_sdk.models.operations.GetAtsInterview2Request;
+import to.unified.unified_java_sdk.models.operations.GetAtsInterview2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetAtsInterview2Response;
+import to.unified.unified_java_sdk.models.operations.ListAtsInterviews2Request;
+import to.unified.unified_java_sdk.models.operations.ListAtsInterviews2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListAtsInterviews2Response;
+import to.unified.unified_java_sdk.models.operations.PatchAtsInterview2Request;
+import to.unified.unified_java_sdk.models.operations.PatchAtsInterview2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.PatchAtsInterview2Response;
+import to.unified.unified_java_sdk.models.operations.RemoveAtsInterview2Request;
+import to.unified.unified_java_sdk.models.operations.RemoveAtsInterview2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.RemoveAtsInterview2Response;
+import to.unified.unified_java_sdk.models.operations.UpdateAtsInterview2Request;
+import to.unified.unified_java_sdk.models.operations.UpdateAtsInterview2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.UpdateAtsInterview2Response;
+import to.unified.unified_java_sdk.operations.CreateAtsInterview2;
+import to.unified.unified_java_sdk.operations.GetAtsInterview2;
+import to.unified.unified_java_sdk.operations.ListAtsInterviews2;
+import to.unified.unified_java_sdk.operations.PatchAtsInterview2;
+import to.unified.unified_java_sdk.operations.RemoveAtsInterview2;
+import to.unified.unified_java_sdk.operations.UpdateAtsInterview2;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -57,8 +57,8 @@ public class Interview {
      * 
      * @return The call builder
      */
-    public CreateAtsInterviewRequestBuilder createAtsInterview() {
-        return new CreateAtsInterviewRequestBuilder(sdkConfiguration);
+    public CreateAtsInterview2RequestBuilder createAtsInterview2() {
+        return new CreateAtsInterview2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -68,9 +68,9 @@ public class Interview {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateAtsInterviewResponse createAtsInterview(@Nonnull CreateAtsInterviewRequest request) {
-        RequestOperation<CreateAtsInterviewRequest, CreateAtsInterviewResponse> operation
-              = new CreateAtsInterview.Sync(sdkConfiguration, _headers);
+    public CreateAtsInterview2Response createAtsInterview2(@Nonnull CreateAtsInterview2Request request) {
+        RequestOperation<CreateAtsInterview2Request, CreateAtsInterview2Response> operation
+              = new CreateAtsInterview2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -79,8 +79,8 @@ public class Interview {
      * 
      * @return The call builder
      */
-    public GetAtsInterviewRequestBuilder getAtsInterview() {
-        return new GetAtsInterviewRequestBuilder(sdkConfiguration);
+    public GetAtsInterview2RequestBuilder getAtsInterview2() {
+        return new GetAtsInterview2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -90,9 +90,9 @@ public class Interview {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetAtsInterviewResponse getAtsInterview(@Nonnull GetAtsInterviewRequest request) {
-        RequestOperation<GetAtsInterviewRequest, GetAtsInterviewResponse> operation
-              = new GetAtsInterview.Sync(sdkConfiguration, _headers);
+    public GetAtsInterview2Response getAtsInterview2(@Nonnull GetAtsInterview2Request request) {
+        RequestOperation<GetAtsInterview2Request, GetAtsInterview2Response> operation
+              = new GetAtsInterview2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -101,8 +101,8 @@ public class Interview {
      * 
      * @return The call builder
      */
-    public ListAtsInterviewsRequestBuilder listAtsInterviews() {
-        return new ListAtsInterviewsRequestBuilder(sdkConfiguration);
+    public ListAtsInterviews2RequestBuilder listAtsInterviews2() {
+        return new ListAtsInterviews2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -112,9 +112,9 @@ public class Interview {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListAtsInterviewsResponse listAtsInterviews(@Nonnull ListAtsInterviewsRequest request) {
-        RequestOperation<ListAtsInterviewsRequest, ListAtsInterviewsResponse> operation
-              = new ListAtsInterviews.Sync(sdkConfiguration, _headers);
+    public ListAtsInterviews2Response listAtsInterviews2(@Nonnull ListAtsInterviews2Request request) {
+        RequestOperation<ListAtsInterviews2Request, ListAtsInterviews2Response> operation
+              = new ListAtsInterviews2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -123,8 +123,8 @@ public class Interview {
      * 
      * @return The call builder
      */
-    public PatchAtsInterviewRequestBuilder patchAtsInterview() {
-        return new PatchAtsInterviewRequestBuilder(sdkConfiguration);
+    public PatchAtsInterview2RequestBuilder patchAtsInterview2() {
+        return new PatchAtsInterview2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -134,9 +134,9 @@ public class Interview {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchAtsInterviewResponse patchAtsInterview(@Nonnull PatchAtsInterviewRequest request) {
-        RequestOperation<PatchAtsInterviewRequest, PatchAtsInterviewResponse> operation
-              = new PatchAtsInterview.Sync(sdkConfiguration, _headers);
+    public PatchAtsInterview2Response patchAtsInterview2(@Nonnull PatchAtsInterview2Request request) {
+        RequestOperation<PatchAtsInterview2Request, PatchAtsInterview2Response> operation
+              = new PatchAtsInterview2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -145,8 +145,8 @@ public class Interview {
      * 
      * @return The call builder
      */
-    public RemoveAtsInterviewRequestBuilder removeAtsInterview() {
-        return new RemoveAtsInterviewRequestBuilder(sdkConfiguration);
+    public RemoveAtsInterview2RequestBuilder removeAtsInterview2() {
+        return new RemoveAtsInterview2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -156,9 +156,9 @@ public class Interview {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveAtsInterviewResponse removeAtsInterview(@Nonnull RemoveAtsInterviewRequest request) {
-        RequestOperation<RemoveAtsInterviewRequest, RemoveAtsInterviewResponse> operation
-              = new RemoveAtsInterview.Sync(sdkConfiguration, _headers);
+    public RemoveAtsInterview2Response removeAtsInterview2(@Nonnull RemoveAtsInterview2Request request) {
+        RequestOperation<RemoveAtsInterview2Request, RemoveAtsInterview2Response> operation
+              = new RemoveAtsInterview2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -167,8 +167,8 @@ public class Interview {
      * 
      * @return The call builder
      */
-    public UpdateAtsInterviewRequestBuilder updateAtsInterview() {
-        return new UpdateAtsInterviewRequestBuilder(sdkConfiguration);
+    public UpdateAtsInterview2RequestBuilder updateAtsInterview2() {
+        return new UpdateAtsInterview2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -178,9 +178,9 @@ public class Interview {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateAtsInterviewResponse updateAtsInterview(@Nonnull UpdateAtsInterviewRequest request) {
-        RequestOperation<UpdateAtsInterviewRequest, UpdateAtsInterviewResponse> operation
-              = new UpdateAtsInterview.Sync(sdkConfiguration, _headers);
+    public UpdateAtsInterview2Response updateAtsInterview2(@Nonnull UpdateAtsInterview2Request request) {
+        RequestOperation<UpdateAtsInterview2Request, UpdateAtsInterview2Response> operation
+              = new UpdateAtsInterview2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

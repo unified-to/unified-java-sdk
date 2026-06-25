@@ -7,30 +7,30 @@ import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOper
 
 import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
-import to.unified.unified_java_sdk.models.operations.CreateAccountingInvoiceRequest;
-import to.unified.unified_java_sdk.models.operations.GetAccountingInvoiceRequest;
-import to.unified.unified_java_sdk.models.operations.ListAccountingInvoicesRequest;
-import to.unified.unified_java_sdk.models.operations.PatchAccountingInvoiceRequest;
-import to.unified.unified_java_sdk.models.operations.RemoveAccountingInvoiceRequest;
-import to.unified.unified_java_sdk.models.operations.UpdateAccountingInvoiceRequest;
-import to.unified.unified_java_sdk.models.operations.async.CreateAccountingInvoiceRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.CreateAccountingInvoiceResponse;
-import to.unified.unified_java_sdk.models.operations.async.GetAccountingInvoiceRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.GetAccountingInvoiceResponse;
-import to.unified.unified_java_sdk.models.operations.async.ListAccountingInvoicesRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.ListAccountingInvoicesResponse;
-import to.unified.unified_java_sdk.models.operations.async.PatchAccountingInvoiceRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.PatchAccountingInvoiceResponse;
-import to.unified.unified_java_sdk.models.operations.async.RemoveAccountingInvoiceRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.RemoveAccountingInvoiceResponse;
-import to.unified.unified_java_sdk.models.operations.async.UpdateAccountingInvoiceRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.UpdateAccountingInvoiceResponse;
-import to.unified.unified_java_sdk.operations.CreateAccountingInvoice;
-import to.unified.unified_java_sdk.operations.GetAccountingInvoice;
-import to.unified.unified_java_sdk.operations.ListAccountingInvoices;
-import to.unified.unified_java_sdk.operations.PatchAccountingInvoice;
-import to.unified.unified_java_sdk.operations.RemoveAccountingInvoice;
-import to.unified.unified_java_sdk.operations.UpdateAccountingInvoice;
+import to.unified.unified_java_sdk.models.operations.CreateAccountingInvoice2Request;
+import to.unified.unified_java_sdk.models.operations.GetAccountingInvoice2Request;
+import to.unified.unified_java_sdk.models.operations.ListAccountingInvoices2Request;
+import to.unified.unified_java_sdk.models.operations.PatchAccountingInvoice2Request;
+import to.unified.unified_java_sdk.models.operations.RemoveAccountingInvoice2Request;
+import to.unified.unified_java_sdk.models.operations.UpdateAccountingInvoice2Request;
+import to.unified.unified_java_sdk.models.operations.async.CreateAccountingInvoice2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.CreateAccountingInvoice2Response;
+import to.unified.unified_java_sdk.models.operations.async.GetAccountingInvoice2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetAccountingInvoice2Response;
+import to.unified.unified_java_sdk.models.operations.async.ListAccountingInvoices2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListAccountingInvoices2Response;
+import to.unified.unified_java_sdk.models.operations.async.PatchAccountingInvoice2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.PatchAccountingInvoice2Response;
+import to.unified.unified_java_sdk.models.operations.async.RemoveAccountingInvoice2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.RemoveAccountingInvoice2Response;
+import to.unified.unified_java_sdk.models.operations.async.UpdateAccountingInvoice2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.UpdateAccountingInvoice2Response;
+import to.unified.unified_java_sdk.operations.CreateAccountingInvoice2;
+import to.unified.unified_java_sdk.operations.GetAccountingInvoice2;
+import to.unified.unified_java_sdk.operations.ListAccountingInvoices2;
+import to.unified.unified_java_sdk.operations.PatchAccountingInvoice2;
+import to.unified.unified_java_sdk.operations.RemoveAccountingInvoice2;
+import to.unified.unified_java_sdk.operations.UpdateAccountingInvoice2;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -59,19 +59,19 @@ public class AsyncInvoice {
      * 
      * @return The async call builder
      */
-    public CreateAccountingInvoiceRequestBuilder createAccountingInvoice() {
-        return new CreateAccountingInvoiceRequestBuilder(sdkConfiguration);
+    public CreateAccountingInvoice2RequestBuilder createAccountingInvoice2() {
+        return new CreateAccountingInvoice2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Create an invoice
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<CreateAccountingInvoiceResponse>} - The async response
+     * @return {@code CompletableFuture<CreateAccountingInvoice2Response>} - The async response
      */
-    public CompletableFuture<CreateAccountingInvoiceResponse> createAccountingInvoice(@Nonnull CreateAccountingInvoiceRequest request) {
-        AsyncRequestOperation<CreateAccountingInvoiceRequest, CreateAccountingInvoiceResponse> operation
-              = new CreateAccountingInvoice.Async(sdkConfiguration, _headers);
+    public CompletableFuture<CreateAccountingInvoice2Response> createAccountingInvoice2(@Nonnull CreateAccountingInvoice2Request request) {
+        AsyncRequestOperation<CreateAccountingInvoice2Request, CreateAccountingInvoice2Response> operation
+              = new CreateAccountingInvoice2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -82,19 +82,19 @@ public class AsyncInvoice {
      * 
      * @return The async call builder
      */
-    public GetAccountingInvoiceRequestBuilder getAccountingInvoice() {
-        return new GetAccountingInvoiceRequestBuilder(sdkConfiguration);
+    public GetAccountingInvoice2RequestBuilder getAccountingInvoice2() {
+        return new GetAccountingInvoice2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Retrieve an invoice
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<GetAccountingInvoiceResponse>} - The async response
+     * @return {@code CompletableFuture<GetAccountingInvoice2Response>} - The async response
      */
-    public CompletableFuture<GetAccountingInvoiceResponse> getAccountingInvoice(@Nonnull GetAccountingInvoiceRequest request) {
-        AsyncRequestOperation<GetAccountingInvoiceRequest, GetAccountingInvoiceResponse> operation
-              = new GetAccountingInvoice.Async(sdkConfiguration, _headers);
+    public CompletableFuture<GetAccountingInvoice2Response> getAccountingInvoice2(@Nonnull GetAccountingInvoice2Request request) {
+        AsyncRequestOperation<GetAccountingInvoice2Request, GetAccountingInvoice2Response> operation
+              = new GetAccountingInvoice2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -105,19 +105,19 @@ public class AsyncInvoice {
      * 
      * @return The async call builder
      */
-    public ListAccountingInvoicesRequestBuilder listAccountingInvoices() {
-        return new ListAccountingInvoicesRequestBuilder(sdkConfiguration);
+    public ListAccountingInvoices2RequestBuilder listAccountingInvoices2() {
+        return new ListAccountingInvoices2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * List all invoices
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<ListAccountingInvoicesResponse>} - The async response
+     * @return {@code CompletableFuture<ListAccountingInvoices2Response>} - The async response
      */
-    public CompletableFuture<ListAccountingInvoicesResponse> listAccountingInvoices(@Nonnull ListAccountingInvoicesRequest request) {
-        AsyncRequestOperation<ListAccountingInvoicesRequest, ListAccountingInvoicesResponse> operation
-              = new ListAccountingInvoices.Async(sdkConfiguration, _headers);
+    public CompletableFuture<ListAccountingInvoices2Response> listAccountingInvoices2(@Nonnull ListAccountingInvoices2Request request) {
+        AsyncRequestOperation<ListAccountingInvoices2Request, ListAccountingInvoices2Response> operation
+              = new ListAccountingInvoices2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -128,19 +128,19 @@ public class AsyncInvoice {
      * 
      * @return The async call builder
      */
-    public PatchAccountingInvoiceRequestBuilder patchAccountingInvoice() {
-        return new PatchAccountingInvoiceRequestBuilder(sdkConfiguration);
+    public PatchAccountingInvoice2RequestBuilder patchAccountingInvoice2() {
+        return new PatchAccountingInvoice2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update an invoice
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<PatchAccountingInvoiceResponse>} - The async response
+     * @return {@code CompletableFuture<PatchAccountingInvoice2Response>} - The async response
      */
-    public CompletableFuture<PatchAccountingInvoiceResponse> patchAccountingInvoice(@Nonnull PatchAccountingInvoiceRequest request) {
-        AsyncRequestOperation<PatchAccountingInvoiceRequest, PatchAccountingInvoiceResponse> operation
-              = new PatchAccountingInvoice.Async(sdkConfiguration, _headers);
+    public CompletableFuture<PatchAccountingInvoice2Response> patchAccountingInvoice2(@Nonnull PatchAccountingInvoice2Request request) {
+        AsyncRequestOperation<PatchAccountingInvoice2Request, PatchAccountingInvoice2Response> operation
+              = new PatchAccountingInvoice2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -151,19 +151,19 @@ public class AsyncInvoice {
      * 
      * @return The async call builder
      */
-    public RemoveAccountingInvoiceRequestBuilder removeAccountingInvoice() {
-        return new RemoveAccountingInvoiceRequestBuilder(sdkConfiguration);
+    public RemoveAccountingInvoice2RequestBuilder removeAccountingInvoice2() {
+        return new RemoveAccountingInvoice2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Remove an invoice
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<RemoveAccountingInvoiceResponse>} - The async response
+     * @return {@code CompletableFuture<RemoveAccountingInvoice2Response>} - The async response
      */
-    public CompletableFuture<RemoveAccountingInvoiceResponse> removeAccountingInvoice(@Nonnull RemoveAccountingInvoiceRequest request) {
-        AsyncRequestOperation<RemoveAccountingInvoiceRequest, RemoveAccountingInvoiceResponse> operation
-              = new RemoveAccountingInvoice.Async(sdkConfiguration, _headers);
+    public CompletableFuture<RemoveAccountingInvoice2Response> removeAccountingInvoice2(@Nonnull RemoveAccountingInvoice2Request request) {
+        AsyncRequestOperation<RemoveAccountingInvoice2Request, RemoveAccountingInvoice2Response> operation
+              = new RemoveAccountingInvoice2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -174,19 +174,19 @@ public class AsyncInvoice {
      * 
      * @return The async call builder
      */
-    public UpdateAccountingInvoiceRequestBuilder updateAccountingInvoice() {
-        return new UpdateAccountingInvoiceRequestBuilder(sdkConfiguration);
+    public UpdateAccountingInvoice2RequestBuilder updateAccountingInvoice2() {
+        return new UpdateAccountingInvoice2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update an invoice
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<UpdateAccountingInvoiceResponse>} - The async response
+     * @return {@code CompletableFuture<UpdateAccountingInvoice2Response>} - The async response
      */
-    public CompletableFuture<UpdateAccountingInvoiceResponse> updateAccountingInvoice(@Nonnull UpdateAccountingInvoiceRequest request) {
-        AsyncRequestOperation<UpdateAccountingInvoiceRequest, UpdateAccountingInvoiceResponse> operation
-              = new UpdateAccountingInvoice.Async(sdkConfiguration, _headers);
+    public CompletableFuture<UpdateAccountingInvoice2Response> updateAccountingInvoice2(@Nonnull UpdateAccountingInvoice2Request request) {
+        AsyncRequestOperation<UpdateAccountingInvoice2Request, UpdateAccountingInvoice2Response> operation
+              = new UpdateAccountingInvoice2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

@@ -6,30 +6,30 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
-import to.unified.unified_java_sdk.models.operations.CreateTicketingNoteRequest;
-import to.unified.unified_java_sdk.models.operations.CreateTicketingNoteRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.CreateTicketingNoteResponse;
-import to.unified.unified_java_sdk.models.operations.GetTicketingNoteRequest;
-import to.unified.unified_java_sdk.models.operations.GetTicketingNoteRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.GetTicketingNoteResponse;
-import to.unified.unified_java_sdk.models.operations.ListTicketingNotesRequest;
-import to.unified.unified_java_sdk.models.operations.ListTicketingNotesRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.ListTicketingNotesResponse;
-import to.unified.unified_java_sdk.models.operations.PatchTicketingNoteRequest;
-import to.unified.unified_java_sdk.models.operations.PatchTicketingNoteRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.PatchTicketingNoteResponse;
-import to.unified.unified_java_sdk.models.operations.RemoveTicketingNoteRequest;
-import to.unified.unified_java_sdk.models.operations.RemoveTicketingNoteRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.RemoveTicketingNoteResponse;
-import to.unified.unified_java_sdk.models.operations.UpdateTicketingNoteRequest;
-import to.unified.unified_java_sdk.models.operations.UpdateTicketingNoteRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.UpdateTicketingNoteResponse;
-import to.unified.unified_java_sdk.operations.CreateTicketingNote;
-import to.unified.unified_java_sdk.operations.GetTicketingNote;
-import to.unified.unified_java_sdk.operations.ListTicketingNotes;
-import to.unified.unified_java_sdk.operations.PatchTicketingNote;
-import to.unified.unified_java_sdk.operations.RemoveTicketingNote;
-import to.unified.unified_java_sdk.operations.UpdateTicketingNote;
+import to.unified.unified_java_sdk.models.operations.CreateTicketingNote2Request;
+import to.unified.unified_java_sdk.models.operations.CreateTicketingNote2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.CreateTicketingNote2Response;
+import to.unified.unified_java_sdk.models.operations.GetTicketingNote2Request;
+import to.unified.unified_java_sdk.models.operations.GetTicketingNote2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetTicketingNote2Response;
+import to.unified.unified_java_sdk.models.operations.ListTicketingNotes2Request;
+import to.unified.unified_java_sdk.models.operations.ListTicketingNotes2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListTicketingNotes2Response;
+import to.unified.unified_java_sdk.models.operations.PatchTicketingNote2Request;
+import to.unified.unified_java_sdk.models.operations.PatchTicketingNote2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.PatchTicketingNote2Response;
+import to.unified.unified_java_sdk.models.operations.RemoveTicketingNote2Request;
+import to.unified.unified_java_sdk.models.operations.RemoveTicketingNote2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.RemoveTicketingNote2Response;
+import to.unified.unified_java_sdk.models.operations.UpdateTicketingNote2Request;
+import to.unified.unified_java_sdk.models.operations.UpdateTicketingNote2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.UpdateTicketingNote2Response;
+import to.unified.unified_java_sdk.operations.CreateTicketingNote2;
+import to.unified.unified_java_sdk.operations.GetTicketingNote2;
+import to.unified.unified_java_sdk.operations.ListTicketingNotes2;
+import to.unified.unified_java_sdk.operations.PatchTicketingNote2;
+import to.unified.unified_java_sdk.operations.RemoveTicketingNote2;
+import to.unified.unified_java_sdk.operations.UpdateTicketingNote2;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -57,8 +57,8 @@ public class Note {
      * 
      * @return The call builder
      */
-    public CreateTicketingNoteRequestBuilder createTicketingNote() {
-        return new CreateTicketingNoteRequestBuilder(sdkConfiguration);
+    public CreateTicketingNote2RequestBuilder createTicketingNote2() {
+        return new CreateTicketingNote2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -68,9 +68,9 @@ public class Note {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateTicketingNoteResponse createTicketingNote(@Nonnull CreateTicketingNoteRequest request) {
-        RequestOperation<CreateTicketingNoteRequest, CreateTicketingNoteResponse> operation
-              = new CreateTicketingNote.Sync(sdkConfiguration, _headers);
+    public CreateTicketingNote2Response createTicketingNote2(@Nonnull CreateTicketingNote2Request request) {
+        RequestOperation<CreateTicketingNote2Request, CreateTicketingNote2Response> operation
+              = new CreateTicketingNote2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -79,8 +79,8 @@ public class Note {
      * 
      * @return The call builder
      */
-    public GetTicketingNoteRequestBuilder getTicketingNote() {
-        return new GetTicketingNoteRequestBuilder(sdkConfiguration);
+    public GetTicketingNote2RequestBuilder getTicketingNote2() {
+        return new GetTicketingNote2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -90,9 +90,9 @@ public class Note {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetTicketingNoteResponse getTicketingNote(@Nonnull GetTicketingNoteRequest request) {
-        RequestOperation<GetTicketingNoteRequest, GetTicketingNoteResponse> operation
-              = new GetTicketingNote.Sync(sdkConfiguration, _headers);
+    public GetTicketingNote2Response getTicketingNote2(@Nonnull GetTicketingNote2Request request) {
+        RequestOperation<GetTicketingNote2Request, GetTicketingNote2Response> operation
+              = new GetTicketingNote2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -101,8 +101,8 @@ public class Note {
      * 
      * @return The call builder
      */
-    public ListTicketingNotesRequestBuilder listTicketingNotes() {
-        return new ListTicketingNotesRequestBuilder(sdkConfiguration);
+    public ListTicketingNotes2RequestBuilder listTicketingNotes2() {
+        return new ListTicketingNotes2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -112,9 +112,9 @@ public class Note {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListTicketingNotesResponse listTicketingNotes(@Nonnull ListTicketingNotesRequest request) {
-        RequestOperation<ListTicketingNotesRequest, ListTicketingNotesResponse> operation
-              = new ListTicketingNotes.Sync(sdkConfiguration, _headers);
+    public ListTicketingNotes2Response listTicketingNotes2(@Nonnull ListTicketingNotes2Request request) {
+        RequestOperation<ListTicketingNotes2Request, ListTicketingNotes2Response> operation
+              = new ListTicketingNotes2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -123,8 +123,8 @@ public class Note {
      * 
      * @return The call builder
      */
-    public PatchTicketingNoteRequestBuilder patchTicketingNote() {
-        return new PatchTicketingNoteRequestBuilder(sdkConfiguration);
+    public PatchTicketingNote2RequestBuilder patchTicketingNote2() {
+        return new PatchTicketingNote2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -134,9 +134,9 @@ public class Note {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchTicketingNoteResponse patchTicketingNote(@Nonnull PatchTicketingNoteRequest request) {
-        RequestOperation<PatchTicketingNoteRequest, PatchTicketingNoteResponse> operation
-              = new PatchTicketingNote.Sync(sdkConfiguration, _headers);
+    public PatchTicketingNote2Response patchTicketingNote2(@Nonnull PatchTicketingNote2Request request) {
+        RequestOperation<PatchTicketingNote2Request, PatchTicketingNote2Response> operation
+              = new PatchTicketingNote2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -145,8 +145,8 @@ public class Note {
      * 
      * @return The call builder
      */
-    public RemoveTicketingNoteRequestBuilder removeTicketingNote() {
-        return new RemoveTicketingNoteRequestBuilder(sdkConfiguration);
+    public RemoveTicketingNote2RequestBuilder removeTicketingNote2() {
+        return new RemoveTicketingNote2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -156,9 +156,9 @@ public class Note {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveTicketingNoteResponse removeTicketingNote(@Nonnull RemoveTicketingNoteRequest request) {
-        RequestOperation<RemoveTicketingNoteRequest, RemoveTicketingNoteResponse> operation
-              = new RemoveTicketingNote.Sync(sdkConfiguration, _headers);
+    public RemoveTicketingNote2Response removeTicketingNote2(@Nonnull RemoveTicketingNote2Request request) {
+        RequestOperation<RemoveTicketingNote2Request, RemoveTicketingNote2Response> operation
+              = new RemoveTicketingNote2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -167,8 +167,8 @@ public class Note {
      * 
      * @return The call builder
      */
-    public UpdateTicketingNoteRequestBuilder updateTicketingNote() {
-        return new UpdateTicketingNoteRequestBuilder(sdkConfiguration);
+    public UpdateTicketingNote2RequestBuilder updateTicketingNote2() {
+        return new UpdateTicketingNote2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -178,9 +178,9 @@ public class Note {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateTicketingNoteResponse updateTicketingNote(@Nonnull UpdateTicketingNoteRequest request) {
-        RequestOperation<UpdateTicketingNoteRequest, UpdateTicketingNoteResponse> operation
-              = new UpdateTicketingNote.Sync(sdkConfiguration, _headers);
+    public UpdateTicketingNote2Response updateTicketingNote2(@Nonnull UpdateTicketingNote2Request request) {
+        RequestOperation<UpdateTicketingNote2Request, UpdateTicketingNote2Response> operation
+              = new UpdateTicketingNote2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

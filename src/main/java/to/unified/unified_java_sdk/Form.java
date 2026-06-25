@@ -6,30 +6,30 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
-import to.unified.unified_java_sdk.models.operations.CreateFormsFormRequest;
-import to.unified.unified_java_sdk.models.operations.CreateFormsFormRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.CreateFormsFormResponse;
-import to.unified.unified_java_sdk.models.operations.GetFormsFormRequest;
-import to.unified.unified_java_sdk.models.operations.GetFormsFormRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.GetFormsFormResponse;
-import to.unified.unified_java_sdk.models.operations.ListFormsFormsRequest;
-import to.unified.unified_java_sdk.models.operations.ListFormsFormsRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.ListFormsFormsResponse;
-import to.unified.unified_java_sdk.models.operations.PatchFormsFormRequest;
-import to.unified.unified_java_sdk.models.operations.PatchFormsFormRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.PatchFormsFormResponse;
-import to.unified.unified_java_sdk.models.operations.RemoveFormsFormRequest;
-import to.unified.unified_java_sdk.models.operations.RemoveFormsFormRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.RemoveFormsFormResponse;
-import to.unified.unified_java_sdk.models.operations.UpdateFormsFormRequest;
-import to.unified.unified_java_sdk.models.operations.UpdateFormsFormRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.UpdateFormsFormResponse;
-import to.unified.unified_java_sdk.operations.CreateFormsForm;
-import to.unified.unified_java_sdk.operations.GetFormsForm;
-import to.unified.unified_java_sdk.operations.ListFormsForms;
-import to.unified.unified_java_sdk.operations.PatchFormsForm;
-import to.unified.unified_java_sdk.operations.RemoveFormsForm;
-import to.unified.unified_java_sdk.operations.UpdateFormsForm;
+import to.unified.unified_java_sdk.models.operations.CreateFormsForm2Request;
+import to.unified.unified_java_sdk.models.operations.CreateFormsForm2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.CreateFormsForm2Response;
+import to.unified.unified_java_sdk.models.operations.GetFormsForm2Request;
+import to.unified.unified_java_sdk.models.operations.GetFormsForm2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetFormsForm2Response;
+import to.unified.unified_java_sdk.models.operations.ListFormsForms2Request;
+import to.unified.unified_java_sdk.models.operations.ListFormsForms2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListFormsForms2Response;
+import to.unified.unified_java_sdk.models.operations.PatchFormsForm2Request;
+import to.unified.unified_java_sdk.models.operations.PatchFormsForm2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.PatchFormsForm2Response;
+import to.unified.unified_java_sdk.models.operations.RemoveFormsForm2Request;
+import to.unified.unified_java_sdk.models.operations.RemoveFormsForm2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.RemoveFormsForm2Response;
+import to.unified.unified_java_sdk.models.operations.UpdateFormsForm2Request;
+import to.unified.unified_java_sdk.models.operations.UpdateFormsForm2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.UpdateFormsForm2Response;
+import to.unified.unified_java_sdk.operations.CreateFormsForm2;
+import to.unified.unified_java_sdk.operations.GetFormsForm2;
+import to.unified.unified_java_sdk.operations.ListFormsForms2;
+import to.unified.unified_java_sdk.operations.PatchFormsForm2;
+import to.unified.unified_java_sdk.operations.RemoveFormsForm2;
+import to.unified.unified_java_sdk.operations.UpdateFormsForm2;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -57,8 +57,8 @@ public class Form {
      * 
      * @return The call builder
      */
-    public CreateFormsFormRequestBuilder createFormsForm() {
-        return new CreateFormsFormRequestBuilder(sdkConfiguration);
+    public CreateFormsForm2RequestBuilder createFormsForm2() {
+        return new CreateFormsForm2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -68,9 +68,9 @@ public class Form {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateFormsFormResponse createFormsForm(@Nonnull CreateFormsFormRequest request) {
-        RequestOperation<CreateFormsFormRequest, CreateFormsFormResponse> operation
-              = new CreateFormsForm.Sync(sdkConfiguration, _headers);
+    public CreateFormsForm2Response createFormsForm2(@Nonnull CreateFormsForm2Request request) {
+        RequestOperation<CreateFormsForm2Request, CreateFormsForm2Response> operation
+              = new CreateFormsForm2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -79,8 +79,8 @@ public class Form {
      * 
      * @return The call builder
      */
-    public GetFormsFormRequestBuilder getFormsForm() {
-        return new GetFormsFormRequestBuilder(sdkConfiguration);
+    public GetFormsForm2RequestBuilder getFormsForm2() {
+        return new GetFormsForm2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -90,9 +90,9 @@ public class Form {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetFormsFormResponse getFormsForm(@Nonnull GetFormsFormRequest request) {
-        RequestOperation<GetFormsFormRequest, GetFormsFormResponse> operation
-              = new GetFormsForm.Sync(sdkConfiguration, _headers);
+    public GetFormsForm2Response getFormsForm2(@Nonnull GetFormsForm2Request request) {
+        RequestOperation<GetFormsForm2Request, GetFormsForm2Response> operation
+              = new GetFormsForm2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -101,8 +101,8 @@ public class Form {
      * 
      * @return The call builder
      */
-    public ListFormsFormsRequestBuilder listFormsForms() {
-        return new ListFormsFormsRequestBuilder(sdkConfiguration);
+    public ListFormsForms2RequestBuilder listFormsForms2() {
+        return new ListFormsForms2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -112,9 +112,9 @@ public class Form {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListFormsFormsResponse listFormsForms(@Nonnull ListFormsFormsRequest request) {
-        RequestOperation<ListFormsFormsRequest, ListFormsFormsResponse> operation
-              = new ListFormsForms.Sync(sdkConfiguration, _headers);
+    public ListFormsForms2Response listFormsForms2(@Nonnull ListFormsForms2Request request) {
+        RequestOperation<ListFormsForms2Request, ListFormsForms2Response> operation
+              = new ListFormsForms2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -123,8 +123,8 @@ public class Form {
      * 
      * @return The call builder
      */
-    public PatchFormsFormRequestBuilder patchFormsForm() {
-        return new PatchFormsFormRequestBuilder(sdkConfiguration);
+    public PatchFormsForm2RequestBuilder patchFormsForm2() {
+        return new PatchFormsForm2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -134,9 +134,9 @@ public class Form {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchFormsFormResponse patchFormsForm(@Nonnull PatchFormsFormRequest request) {
-        RequestOperation<PatchFormsFormRequest, PatchFormsFormResponse> operation
-              = new PatchFormsForm.Sync(sdkConfiguration, _headers);
+    public PatchFormsForm2Response patchFormsForm2(@Nonnull PatchFormsForm2Request request) {
+        RequestOperation<PatchFormsForm2Request, PatchFormsForm2Response> operation
+              = new PatchFormsForm2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -145,8 +145,8 @@ public class Form {
      * 
      * @return The call builder
      */
-    public RemoveFormsFormRequestBuilder removeFormsForm() {
-        return new RemoveFormsFormRequestBuilder(sdkConfiguration);
+    public RemoveFormsForm2RequestBuilder removeFormsForm2() {
+        return new RemoveFormsForm2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -156,9 +156,9 @@ public class Form {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveFormsFormResponse removeFormsForm(@Nonnull RemoveFormsFormRequest request) {
-        RequestOperation<RemoveFormsFormRequest, RemoveFormsFormResponse> operation
-              = new RemoveFormsForm.Sync(sdkConfiguration, _headers);
+    public RemoveFormsForm2Response removeFormsForm2(@Nonnull RemoveFormsForm2Request request) {
+        RequestOperation<RemoveFormsForm2Request, RemoveFormsForm2Response> operation
+              = new RemoveFormsForm2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -167,8 +167,8 @@ public class Form {
      * 
      * @return The call builder
      */
-    public UpdateFormsFormRequestBuilder updateFormsForm() {
-        return new UpdateFormsFormRequestBuilder(sdkConfiguration);
+    public UpdateFormsForm2RequestBuilder updateFormsForm2() {
+        return new UpdateFormsForm2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -178,9 +178,9 @@ public class Form {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateFormsFormResponse updateFormsForm(@Nonnull UpdateFormsFormRequest request) {
-        RequestOperation<UpdateFormsFormRequest, UpdateFormsFormResponse> operation
-              = new UpdateFormsForm.Sync(sdkConfiguration, _headers);
+    public UpdateFormsForm2Response updateFormsForm2(@Nonnull UpdateFormsForm2Request request) {
+        RequestOperation<UpdateFormsForm2Request, UpdateFormsForm2Response> operation
+              = new UpdateFormsForm2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

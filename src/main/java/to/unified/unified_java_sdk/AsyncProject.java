@@ -7,30 +7,30 @@ import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOper
 
 import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
-import to.unified.unified_java_sdk.models.operations.CreateTaskProjectRequest;
-import to.unified.unified_java_sdk.models.operations.GetTaskProjectRequest;
-import to.unified.unified_java_sdk.models.operations.ListTaskProjectsRequest;
-import to.unified.unified_java_sdk.models.operations.PatchTaskProjectRequest;
-import to.unified.unified_java_sdk.models.operations.RemoveTaskProjectRequest;
-import to.unified.unified_java_sdk.models.operations.UpdateTaskProjectRequest;
-import to.unified.unified_java_sdk.models.operations.async.CreateTaskProjectRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.CreateTaskProjectResponse;
-import to.unified.unified_java_sdk.models.operations.async.GetTaskProjectRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.GetTaskProjectResponse;
-import to.unified.unified_java_sdk.models.operations.async.ListTaskProjectsRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.ListTaskProjectsResponse;
-import to.unified.unified_java_sdk.models.operations.async.PatchTaskProjectRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.PatchTaskProjectResponse;
-import to.unified.unified_java_sdk.models.operations.async.RemoveTaskProjectRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.RemoveTaskProjectResponse;
-import to.unified.unified_java_sdk.models.operations.async.UpdateTaskProjectRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.UpdateTaskProjectResponse;
-import to.unified.unified_java_sdk.operations.CreateTaskProject;
-import to.unified.unified_java_sdk.operations.GetTaskProject;
-import to.unified.unified_java_sdk.operations.ListTaskProjects;
-import to.unified.unified_java_sdk.operations.PatchTaskProject;
-import to.unified.unified_java_sdk.operations.RemoveTaskProject;
-import to.unified.unified_java_sdk.operations.UpdateTaskProject;
+import to.unified.unified_java_sdk.models.operations.CreateTaskProject2Request;
+import to.unified.unified_java_sdk.models.operations.GetTaskProject2Request;
+import to.unified.unified_java_sdk.models.operations.ListTaskProjects2Request;
+import to.unified.unified_java_sdk.models.operations.PatchTaskProject2Request;
+import to.unified.unified_java_sdk.models.operations.RemoveTaskProject2Request;
+import to.unified.unified_java_sdk.models.operations.UpdateTaskProject2Request;
+import to.unified.unified_java_sdk.models.operations.async.CreateTaskProject2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.CreateTaskProject2Response;
+import to.unified.unified_java_sdk.models.operations.async.GetTaskProject2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetTaskProject2Response;
+import to.unified.unified_java_sdk.models.operations.async.ListTaskProjects2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListTaskProjects2Response;
+import to.unified.unified_java_sdk.models.operations.async.PatchTaskProject2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.PatchTaskProject2Response;
+import to.unified.unified_java_sdk.models.operations.async.RemoveTaskProject2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.RemoveTaskProject2Response;
+import to.unified.unified_java_sdk.models.operations.async.UpdateTaskProject2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.UpdateTaskProject2Response;
+import to.unified.unified_java_sdk.operations.CreateTaskProject2;
+import to.unified.unified_java_sdk.operations.GetTaskProject2;
+import to.unified.unified_java_sdk.operations.ListTaskProjects2;
+import to.unified.unified_java_sdk.operations.PatchTaskProject2;
+import to.unified.unified_java_sdk.operations.RemoveTaskProject2;
+import to.unified.unified_java_sdk.operations.UpdateTaskProject2;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -59,19 +59,19 @@ public class AsyncProject {
      * 
      * @return The async call builder
      */
-    public CreateTaskProjectRequestBuilder createTaskProject() {
-        return new CreateTaskProjectRequestBuilder(sdkConfiguration);
+    public CreateTaskProject2RequestBuilder createTaskProject2() {
+        return new CreateTaskProject2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Create a project
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<CreateTaskProjectResponse>} - The async response
+     * @return {@code CompletableFuture<CreateTaskProject2Response>} - The async response
      */
-    public CompletableFuture<CreateTaskProjectResponse> createTaskProject(@Nonnull CreateTaskProjectRequest request) {
-        AsyncRequestOperation<CreateTaskProjectRequest, CreateTaskProjectResponse> operation
-              = new CreateTaskProject.Async(sdkConfiguration, _headers);
+    public CompletableFuture<CreateTaskProject2Response> createTaskProject2(@Nonnull CreateTaskProject2Request request) {
+        AsyncRequestOperation<CreateTaskProject2Request, CreateTaskProject2Response> operation
+              = new CreateTaskProject2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -82,19 +82,19 @@ public class AsyncProject {
      * 
      * @return The async call builder
      */
-    public GetTaskProjectRequestBuilder getTaskProject() {
-        return new GetTaskProjectRequestBuilder(sdkConfiguration);
+    public GetTaskProject2RequestBuilder getTaskProject2() {
+        return new GetTaskProject2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Retrieve a project
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<GetTaskProjectResponse>} - The async response
+     * @return {@code CompletableFuture<GetTaskProject2Response>} - The async response
      */
-    public CompletableFuture<GetTaskProjectResponse> getTaskProject(@Nonnull GetTaskProjectRequest request) {
-        AsyncRequestOperation<GetTaskProjectRequest, GetTaskProjectResponse> operation
-              = new GetTaskProject.Async(sdkConfiguration, _headers);
+    public CompletableFuture<GetTaskProject2Response> getTaskProject2(@Nonnull GetTaskProject2Request request) {
+        AsyncRequestOperation<GetTaskProject2Request, GetTaskProject2Response> operation
+              = new GetTaskProject2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -105,19 +105,19 @@ public class AsyncProject {
      * 
      * @return The async call builder
      */
-    public ListTaskProjectsRequestBuilder listTaskProjects() {
-        return new ListTaskProjectsRequestBuilder(sdkConfiguration);
+    public ListTaskProjects2RequestBuilder listTaskProjects2() {
+        return new ListTaskProjects2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * List all projects
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<ListTaskProjectsResponse>} - The async response
+     * @return {@code CompletableFuture<ListTaskProjects2Response>} - The async response
      */
-    public CompletableFuture<ListTaskProjectsResponse> listTaskProjects(@Nonnull ListTaskProjectsRequest request) {
-        AsyncRequestOperation<ListTaskProjectsRequest, ListTaskProjectsResponse> operation
-              = new ListTaskProjects.Async(sdkConfiguration, _headers);
+    public CompletableFuture<ListTaskProjects2Response> listTaskProjects2(@Nonnull ListTaskProjects2Request request) {
+        AsyncRequestOperation<ListTaskProjects2Request, ListTaskProjects2Response> operation
+              = new ListTaskProjects2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -128,19 +128,19 @@ public class AsyncProject {
      * 
      * @return The async call builder
      */
-    public PatchTaskProjectRequestBuilder patchTaskProject() {
-        return new PatchTaskProjectRequestBuilder(sdkConfiguration);
+    public PatchTaskProject2RequestBuilder patchTaskProject2() {
+        return new PatchTaskProject2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update a project
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<PatchTaskProjectResponse>} - The async response
+     * @return {@code CompletableFuture<PatchTaskProject2Response>} - The async response
      */
-    public CompletableFuture<PatchTaskProjectResponse> patchTaskProject(@Nonnull PatchTaskProjectRequest request) {
-        AsyncRequestOperation<PatchTaskProjectRequest, PatchTaskProjectResponse> operation
-              = new PatchTaskProject.Async(sdkConfiguration, _headers);
+    public CompletableFuture<PatchTaskProject2Response> patchTaskProject2(@Nonnull PatchTaskProject2Request request) {
+        AsyncRequestOperation<PatchTaskProject2Request, PatchTaskProject2Response> operation
+              = new PatchTaskProject2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -151,19 +151,19 @@ public class AsyncProject {
      * 
      * @return The async call builder
      */
-    public RemoveTaskProjectRequestBuilder removeTaskProject() {
-        return new RemoveTaskProjectRequestBuilder(sdkConfiguration);
+    public RemoveTaskProject2RequestBuilder removeTaskProject2() {
+        return new RemoveTaskProject2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Remove a project
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<RemoveTaskProjectResponse>} - The async response
+     * @return {@code CompletableFuture<RemoveTaskProject2Response>} - The async response
      */
-    public CompletableFuture<RemoveTaskProjectResponse> removeTaskProject(@Nonnull RemoveTaskProjectRequest request) {
-        AsyncRequestOperation<RemoveTaskProjectRequest, RemoveTaskProjectResponse> operation
-              = new RemoveTaskProject.Async(sdkConfiguration, _headers);
+    public CompletableFuture<RemoveTaskProject2Response> removeTaskProject2(@Nonnull RemoveTaskProject2Request request) {
+        AsyncRequestOperation<RemoveTaskProject2Request, RemoveTaskProject2Response> operation
+              = new RemoveTaskProject2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -174,19 +174,19 @@ public class AsyncProject {
      * 
      * @return The async call builder
      */
-    public UpdateTaskProjectRequestBuilder updateTaskProject() {
-        return new UpdateTaskProjectRequestBuilder(sdkConfiguration);
+    public UpdateTaskProject2RequestBuilder updateTaskProject2() {
+        return new UpdateTaskProject2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update a project
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<UpdateTaskProjectResponse>} - The async response
+     * @return {@code CompletableFuture<UpdateTaskProject2Response>} - The async response
      */
-    public CompletableFuture<UpdateTaskProjectResponse> updateTaskProject(@Nonnull UpdateTaskProjectRequest request) {
-        AsyncRequestOperation<UpdateTaskProjectRequest, UpdateTaskProjectResponse> operation
-              = new UpdateTaskProject.Async(sdkConfiguration, _headers);
+    public CompletableFuture<UpdateTaskProject2Response> updateTaskProject2(@Nonnull UpdateTaskProject2Request request) {
+        AsyncRequestOperation<UpdateTaskProject2Request, UpdateTaskProject2Response> operation
+              = new UpdateTaskProject2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

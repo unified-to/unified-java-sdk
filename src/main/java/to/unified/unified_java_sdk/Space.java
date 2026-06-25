@@ -6,30 +6,30 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
-import to.unified.unified_java_sdk.models.operations.CreateKmsSpaceRequest;
-import to.unified.unified_java_sdk.models.operations.CreateKmsSpaceRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.CreateKmsSpaceResponse;
-import to.unified.unified_java_sdk.models.operations.GetKmsSpaceRequest;
-import to.unified.unified_java_sdk.models.operations.GetKmsSpaceRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.GetKmsSpaceResponse;
-import to.unified.unified_java_sdk.models.operations.ListKmsSpacesRequest;
-import to.unified.unified_java_sdk.models.operations.ListKmsSpacesRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.ListKmsSpacesResponse;
-import to.unified.unified_java_sdk.models.operations.PatchKmsSpaceRequest;
-import to.unified.unified_java_sdk.models.operations.PatchKmsSpaceRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.PatchKmsSpaceResponse;
-import to.unified.unified_java_sdk.models.operations.RemoveKmsSpaceRequest;
-import to.unified.unified_java_sdk.models.operations.RemoveKmsSpaceRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.RemoveKmsSpaceResponse;
-import to.unified.unified_java_sdk.models.operations.UpdateKmsSpaceRequest;
-import to.unified.unified_java_sdk.models.operations.UpdateKmsSpaceRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.UpdateKmsSpaceResponse;
-import to.unified.unified_java_sdk.operations.CreateKmsSpace;
-import to.unified.unified_java_sdk.operations.GetKmsSpace;
-import to.unified.unified_java_sdk.operations.ListKmsSpaces;
-import to.unified.unified_java_sdk.operations.PatchKmsSpace;
-import to.unified.unified_java_sdk.operations.RemoveKmsSpace;
-import to.unified.unified_java_sdk.operations.UpdateKmsSpace;
+import to.unified.unified_java_sdk.models.operations.CreateKmsSpace2Request;
+import to.unified.unified_java_sdk.models.operations.CreateKmsSpace2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.CreateKmsSpace2Response;
+import to.unified.unified_java_sdk.models.operations.GetKmsSpace2Request;
+import to.unified.unified_java_sdk.models.operations.GetKmsSpace2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetKmsSpace2Response;
+import to.unified.unified_java_sdk.models.operations.ListKmsSpaces2Request;
+import to.unified.unified_java_sdk.models.operations.ListKmsSpaces2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListKmsSpaces2Response;
+import to.unified.unified_java_sdk.models.operations.PatchKmsSpace2Request;
+import to.unified.unified_java_sdk.models.operations.PatchKmsSpace2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.PatchKmsSpace2Response;
+import to.unified.unified_java_sdk.models.operations.RemoveKmsSpace2Request;
+import to.unified.unified_java_sdk.models.operations.RemoveKmsSpace2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.RemoveKmsSpace2Response;
+import to.unified.unified_java_sdk.models.operations.UpdateKmsSpace2Request;
+import to.unified.unified_java_sdk.models.operations.UpdateKmsSpace2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.UpdateKmsSpace2Response;
+import to.unified.unified_java_sdk.operations.CreateKmsSpace2;
+import to.unified.unified_java_sdk.operations.GetKmsSpace2;
+import to.unified.unified_java_sdk.operations.ListKmsSpaces2;
+import to.unified.unified_java_sdk.operations.PatchKmsSpace2;
+import to.unified.unified_java_sdk.operations.RemoveKmsSpace2;
+import to.unified.unified_java_sdk.operations.UpdateKmsSpace2;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -57,8 +57,8 @@ public class Space {
      * 
      * @return The call builder
      */
-    public CreateKmsSpaceRequestBuilder createKmsSpace() {
-        return new CreateKmsSpaceRequestBuilder(sdkConfiguration);
+    public CreateKmsSpace2RequestBuilder createKmsSpace2() {
+        return new CreateKmsSpace2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -68,9 +68,9 @@ public class Space {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateKmsSpaceResponse createKmsSpace(@Nonnull CreateKmsSpaceRequest request) {
-        RequestOperation<CreateKmsSpaceRequest, CreateKmsSpaceResponse> operation
-              = new CreateKmsSpace.Sync(sdkConfiguration, _headers);
+    public CreateKmsSpace2Response createKmsSpace2(@Nonnull CreateKmsSpace2Request request) {
+        RequestOperation<CreateKmsSpace2Request, CreateKmsSpace2Response> operation
+              = new CreateKmsSpace2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -79,8 +79,8 @@ public class Space {
      * 
      * @return The call builder
      */
-    public GetKmsSpaceRequestBuilder getKmsSpace() {
-        return new GetKmsSpaceRequestBuilder(sdkConfiguration);
+    public GetKmsSpace2RequestBuilder getKmsSpace2() {
+        return new GetKmsSpace2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -90,9 +90,9 @@ public class Space {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetKmsSpaceResponse getKmsSpace(@Nonnull GetKmsSpaceRequest request) {
-        RequestOperation<GetKmsSpaceRequest, GetKmsSpaceResponse> operation
-              = new GetKmsSpace.Sync(sdkConfiguration, _headers);
+    public GetKmsSpace2Response getKmsSpace2(@Nonnull GetKmsSpace2Request request) {
+        RequestOperation<GetKmsSpace2Request, GetKmsSpace2Response> operation
+              = new GetKmsSpace2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -101,8 +101,8 @@ public class Space {
      * 
      * @return The call builder
      */
-    public ListKmsSpacesRequestBuilder listKmsSpaces() {
-        return new ListKmsSpacesRequestBuilder(sdkConfiguration);
+    public ListKmsSpaces2RequestBuilder listKmsSpaces2() {
+        return new ListKmsSpaces2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -112,9 +112,9 @@ public class Space {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListKmsSpacesResponse listKmsSpaces(@Nonnull ListKmsSpacesRequest request) {
-        RequestOperation<ListKmsSpacesRequest, ListKmsSpacesResponse> operation
-              = new ListKmsSpaces.Sync(sdkConfiguration, _headers);
+    public ListKmsSpaces2Response listKmsSpaces2(@Nonnull ListKmsSpaces2Request request) {
+        RequestOperation<ListKmsSpaces2Request, ListKmsSpaces2Response> operation
+              = new ListKmsSpaces2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -123,8 +123,8 @@ public class Space {
      * 
      * @return The call builder
      */
-    public PatchKmsSpaceRequestBuilder patchKmsSpace() {
-        return new PatchKmsSpaceRequestBuilder(sdkConfiguration);
+    public PatchKmsSpace2RequestBuilder patchKmsSpace2() {
+        return new PatchKmsSpace2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -134,9 +134,9 @@ public class Space {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchKmsSpaceResponse patchKmsSpace(@Nonnull PatchKmsSpaceRequest request) {
-        RequestOperation<PatchKmsSpaceRequest, PatchKmsSpaceResponse> operation
-              = new PatchKmsSpace.Sync(sdkConfiguration, _headers);
+    public PatchKmsSpace2Response patchKmsSpace2(@Nonnull PatchKmsSpace2Request request) {
+        RequestOperation<PatchKmsSpace2Request, PatchKmsSpace2Response> operation
+              = new PatchKmsSpace2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -145,8 +145,8 @@ public class Space {
      * 
      * @return The call builder
      */
-    public RemoveKmsSpaceRequestBuilder removeKmsSpace() {
-        return new RemoveKmsSpaceRequestBuilder(sdkConfiguration);
+    public RemoveKmsSpace2RequestBuilder removeKmsSpace2() {
+        return new RemoveKmsSpace2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -156,9 +156,9 @@ public class Space {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveKmsSpaceResponse removeKmsSpace(@Nonnull RemoveKmsSpaceRequest request) {
-        RequestOperation<RemoveKmsSpaceRequest, RemoveKmsSpaceResponse> operation
-              = new RemoveKmsSpace.Sync(sdkConfiguration, _headers);
+    public RemoveKmsSpace2Response removeKmsSpace2(@Nonnull RemoveKmsSpace2Request request) {
+        RequestOperation<RemoveKmsSpace2Request, RemoveKmsSpace2Response> operation
+              = new RemoveKmsSpace2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -167,8 +167,8 @@ public class Space {
      * 
      * @return The call builder
      */
-    public UpdateKmsSpaceRequestBuilder updateKmsSpace() {
-        return new UpdateKmsSpaceRequestBuilder(sdkConfiguration);
+    public UpdateKmsSpace2RequestBuilder updateKmsSpace2() {
+        return new UpdateKmsSpace2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -178,9 +178,9 @@ public class Space {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateKmsSpaceResponse updateKmsSpace(@Nonnull UpdateKmsSpaceRequest request) {
-        RequestOperation<UpdateKmsSpaceRequest, UpdateKmsSpaceResponse> operation
-              = new UpdateKmsSpace.Sync(sdkConfiguration, _headers);
+    public UpdateKmsSpace2Response updateKmsSpace2(@Nonnull UpdateKmsSpace2Request request) {
+        RequestOperation<UpdateKmsSpace2Request, UpdateKmsSpace2Response> operation
+              = new UpdateKmsSpace2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

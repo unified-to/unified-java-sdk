@@ -6,30 +6,30 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
-import to.unified.unified_java_sdk.models.operations.CreateHrisTimeshiftRequest;
-import to.unified.unified_java_sdk.models.operations.CreateHrisTimeshiftRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.CreateHrisTimeshiftResponse;
-import to.unified.unified_java_sdk.models.operations.GetHrisTimeshiftRequest;
-import to.unified.unified_java_sdk.models.operations.GetHrisTimeshiftRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.GetHrisTimeshiftResponse;
-import to.unified.unified_java_sdk.models.operations.ListHrisTimeshiftsRequest;
-import to.unified.unified_java_sdk.models.operations.ListHrisTimeshiftsRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.ListHrisTimeshiftsResponse;
-import to.unified.unified_java_sdk.models.operations.PatchHrisTimeshiftRequest;
-import to.unified.unified_java_sdk.models.operations.PatchHrisTimeshiftRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.PatchHrisTimeshiftResponse;
-import to.unified.unified_java_sdk.models.operations.RemoveHrisTimeshiftRequest;
-import to.unified.unified_java_sdk.models.operations.RemoveHrisTimeshiftRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.RemoveHrisTimeshiftResponse;
-import to.unified.unified_java_sdk.models.operations.UpdateHrisTimeshiftRequest;
-import to.unified.unified_java_sdk.models.operations.UpdateHrisTimeshiftRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.UpdateHrisTimeshiftResponse;
-import to.unified.unified_java_sdk.operations.CreateHrisTimeshift;
-import to.unified.unified_java_sdk.operations.GetHrisTimeshift;
-import to.unified.unified_java_sdk.operations.ListHrisTimeshifts;
-import to.unified.unified_java_sdk.operations.PatchHrisTimeshift;
-import to.unified.unified_java_sdk.operations.RemoveHrisTimeshift;
-import to.unified.unified_java_sdk.operations.UpdateHrisTimeshift;
+import to.unified.unified_java_sdk.models.operations.CreateHrisTimeshift2Request;
+import to.unified.unified_java_sdk.models.operations.CreateHrisTimeshift2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.CreateHrisTimeshift2Response;
+import to.unified.unified_java_sdk.models.operations.GetHrisTimeshift2Request;
+import to.unified.unified_java_sdk.models.operations.GetHrisTimeshift2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetHrisTimeshift2Response;
+import to.unified.unified_java_sdk.models.operations.ListHrisTimeshifts2Request;
+import to.unified.unified_java_sdk.models.operations.ListHrisTimeshifts2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListHrisTimeshifts2Response;
+import to.unified.unified_java_sdk.models.operations.PatchHrisTimeshift2Request;
+import to.unified.unified_java_sdk.models.operations.PatchHrisTimeshift2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.PatchHrisTimeshift2Response;
+import to.unified.unified_java_sdk.models.operations.RemoveHrisTimeshift2Request;
+import to.unified.unified_java_sdk.models.operations.RemoveHrisTimeshift2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.RemoveHrisTimeshift2Response;
+import to.unified.unified_java_sdk.models.operations.UpdateHrisTimeshift2Request;
+import to.unified.unified_java_sdk.models.operations.UpdateHrisTimeshift2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.UpdateHrisTimeshift2Response;
+import to.unified.unified_java_sdk.operations.CreateHrisTimeshift2;
+import to.unified.unified_java_sdk.operations.GetHrisTimeshift2;
+import to.unified.unified_java_sdk.operations.ListHrisTimeshifts2;
+import to.unified.unified_java_sdk.operations.PatchHrisTimeshift2;
+import to.unified.unified_java_sdk.operations.RemoveHrisTimeshift2;
+import to.unified.unified_java_sdk.operations.UpdateHrisTimeshift2;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -57,8 +57,8 @@ public class Timeshift {
      * 
      * @return The call builder
      */
-    public CreateHrisTimeshiftRequestBuilder createHrisTimeshift() {
-        return new CreateHrisTimeshiftRequestBuilder(sdkConfiguration);
+    public CreateHrisTimeshift2RequestBuilder createHrisTimeshift2() {
+        return new CreateHrisTimeshift2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -68,9 +68,9 @@ public class Timeshift {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateHrisTimeshiftResponse createHrisTimeshift(@Nonnull CreateHrisTimeshiftRequest request) {
-        RequestOperation<CreateHrisTimeshiftRequest, CreateHrisTimeshiftResponse> operation
-              = new CreateHrisTimeshift.Sync(sdkConfiguration, _headers);
+    public CreateHrisTimeshift2Response createHrisTimeshift2(@Nonnull CreateHrisTimeshift2Request request) {
+        RequestOperation<CreateHrisTimeshift2Request, CreateHrisTimeshift2Response> operation
+              = new CreateHrisTimeshift2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -79,8 +79,8 @@ public class Timeshift {
      * 
      * @return The call builder
      */
-    public GetHrisTimeshiftRequestBuilder getHrisTimeshift() {
-        return new GetHrisTimeshiftRequestBuilder(sdkConfiguration);
+    public GetHrisTimeshift2RequestBuilder getHrisTimeshift2() {
+        return new GetHrisTimeshift2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -90,9 +90,9 @@ public class Timeshift {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetHrisTimeshiftResponse getHrisTimeshift(@Nonnull GetHrisTimeshiftRequest request) {
-        RequestOperation<GetHrisTimeshiftRequest, GetHrisTimeshiftResponse> operation
-              = new GetHrisTimeshift.Sync(sdkConfiguration, _headers);
+    public GetHrisTimeshift2Response getHrisTimeshift2(@Nonnull GetHrisTimeshift2Request request) {
+        RequestOperation<GetHrisTimeshift2Request, GetHrisTimeshift2Response> operation
+              = new GetHrisTimeshift2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -101,8 +101,8 @@ public class Timeshift {
      * 
      * @return The call builder
      */
-    public ListHrisTimeshiftsRequestBuilder listHrisTimeshifts() {
-        return new ListHrisTimeshiftsRequestBuilder(sdkConfiguration);
+    public ListHrisTimeshifts2RequestBuilder listHrisTimeshifts2() {
+        return new ListHrisTimeshifts2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -112,9 +112,9 @@ public class Timeshift {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListHrisTimeshiftsResponse listHrisTimeshifts(@Nonnull ListHrisTimeshiftsRequest request) {
-        RequestOperation<ListHrisTimeshiftsRequest, ListHrisTimeshiftsResponse> operation
-              = new ListHrisTimeshifts.Sync(sdkConfiguration, _headers);
+    public ListHrisTimeshifts2Response listHrisTimeshifts2(@Nonnull ListHrisTimeshifts2Request request) {
+        RequestOperation<ListHrisTimeshifts2Request, ListHrisTimeshifts2Response> operation
+              = new ListHrisTimeshifts2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -123,8 +123,8 @@ public class Timeshift {
      * 
      * @return The call builder
      */
-    public PatchHrisTimeshiftRequestBuilder patchHrisTimeshift() {
-        return new PatchHrisTimeshiftRequestBuilder(sdkConfiguration);
+    public PatchHrisTimeshift2RequestBuilder patchHrisTimeshift2() {
+        return new PatchHrisTimeshift2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -134,9 +134,9 @@ public class Timeshift {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchHrisTimeshiftResponse patchHrisTimeshift(@Nonnull PatchHrisTimeshiftRequest request) {
-        RequestOperation<PatchHrisTimeshiftRequest, PatchHrisTimeshiftResponse> operation
-              = new PatchHrisTimeshift.Sync(sdkConfiguration, _headers);
+    public PatchHrisTimeshift2Response patchHrisTimeshift2(@Nonnull PatchHrisTimeshift2Request request) {
+        RequestOperation<PatchHrisTimeshift2Request, PatchHrisTimeshift2Response> operation
+              = new PatchHrisTimeshift2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -145,8 +145,8 @@ public class Timeshift {
      * 
      * @return The call builder
      */
-    public RemoveHrisTimeshiftRequestBuilder removeHrisTimeshift() {
-        return new RemoveHrisTimeshiftRequestBuilder(sdkConfiguration);
+    public RemoveHrisTimeshift2RequestBuilder removeHrisTimeshift2() {
+        return new RemoveHrisTimeshift2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -156,9 +156,9 @@ public class Timeshift {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveHrisTimeshiftResponse removeHrisTimeshift(@Nonnull RemoveHrisTimeshiftRequest request) {
-        RequestOperation<RemoveHrisTimeshiftRequest, RemoveHrisTimeshiftResponse> operation
-              = new RemoveHrisTimeshift.Sync(sdkConfiguration, _headers);
+    public RemoveHrisTimeshift2Response removeHrisTimeshift2(@Nonnull RemoveHrisTimeshift2Request request) {
+        RequestOperation<RemoveHrisTimeshift2Request, RemoveHrisTimeshift2Response> operation
+              = new RemoveHrisTimeshift2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -167,8 +167,8 @@ public class Timeshift {
      * 
      * @return The call builder
      */
-    public UpdateHrisTimeshiftRequestBuilder updateHrisTimeshift() {
-        return new UpdateHrisTimeshiftRequestBuilder(sdkConfiguration);
+    public UpdateHrisTimeshift2RequestBuilder updateHrisTimeshift2() {
+        return new UpdateHrisTimeshift2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -178,9 +178,9 @@ public class Timeshift {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateHrisTimeshiftResponse updateHrisTimeshift(@Nonnull UpdateHrisTimeshiftRequest request) {
-        RequestOperation<UpdateHrisTimeshiftRequest, UpdateHrisTimeshiftResponse> operation
-              = new UpdateHrisTimeshift.Sync(sdkConfiguration, _headers);
+    public UpdateHrisTimeshift2Response updateHrisTimeshift2(@Nonnull UpdateHrisTimeshift2Request request) {
+        RequestOperation<UpdateHrisTimeshift2Request, UpdateHrisTimeshift2Response> operation
+              = new UpdateHrisTimeshift2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

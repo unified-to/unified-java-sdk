@@ -7,86 +7,86 @@ import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOper
 
 import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
-import to.unified.unified_java_sdk.models.operations.CreateUcCommentRequest;
-import to.unified.unified_java_sdk.models.operations.CreateUcContactRequest;
-import to.unified.unified_java_sdk.models.operations.CreateUcRecordingRequest;
-import to.unified.unified_java_sdk.models.operations.GetUcCallRequest;
-import to.unified.unified_java_sdk.models.operations.GetUcCommentRequest;
-import to.unified.unified_java_sdk.models.operations.GetUcContactRequest;
-import to.unified.unified_java_sdk.models.operations.GetUcRecordingRequest;
-import to.unified.unified_java_sdk.models.operations.ListUcCallsRequest;
-import to.unified.unified_java_sdk.models.operations.ListUcCommentsRequest;
-import to.unified.unified_java_sdk.models.operations.ListUcContactsRequest;
-import to.unified.unified_java_sdk.models.operations.ListUcRecordingsRequest;
-import to.unified.unified_java_sdk.models.operations.PatchUcCommentRequest;
-import to.unified.unified_java_sdk.models.operations.PatchUcContactRequest;
-import to.unified.unified_java_sdk.models.operations.PatchUcRecordingRequest;
-import to.unified.unified_java_sdk.models.operations.RemoveUcCommentRequest;
-import to.unified.unified_java_sdk.models.operations.RemoveUcContactRequest;
-import to.unified.unified_java_sdk.models.operations.RemoveUcRecordingRequest;
-import to.unified.unified_java_sdk.models.operations.UpdateUcCommentRequest;
-import to.unified.unified_java_sdk.models.operations.UpdateUcContactRequest;
-import to.unified.unified_java_sdk.models.operations.UpdateUcRecordingRequest;
-import to.unified.unified_java_sdk.models.operations.async.CreateUcCommentRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.CreateUcCommentResponse;
-import to.unified.unified_java_sdk.models.operations.async.CreateUcContactRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.CreateUcContactResponse;
-import to.unified.unified_java_sdk.models.operations.async.CreateUcRecordingRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.CreateUcRecordingResponse;
-import to.unified.unified_java_sdk.models.operations.async.GetUcCallRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.GetUcCallResponse;
-import to.unified.unified_java_sdk.models.operations.async.GetUcCommentRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.GetUcCommentResponse;
-import to.unified.unified_java_sdk.models.operations.async.GetUcContactRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.GetUcContactResponse;
-import to.unified.unified_java_sdk.models.operations.async.GetUcRecordingRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.GetUcRecordingResponse;
-import to.unified.unified_java_sdk.models.operations.async.ListUcCallsRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.ListUcCallsResponse;
-import to.unified.unified_java_sdk.models.operations.async.ListUcCommentsRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.ListUcCommentsResponse;
-import to.unified.unified_java_sdk.models.operations.async.ListUcContactsRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.ListUcContactsResponse;
-import to.unified.unified_java_sdk.models.operations.async.ListUcRecordingsRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.ListUcRecordingsResponse;
-import to.unified.unified_java_sdk.models.operations.async.PatchUcCommentRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.PatchUcCommentResponse;
-import to.unified.unified_java_sdk.models.operations.async.PatchUcContactRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.PatchUcContactResponse;
-import to.unified.unified_java_sdk.models.operations.async.PatchUcRecordingRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.PatchUcRecordingResponse;
-import to.unified.unified_java_sdk.models.operations.async.RemoveUcCommentRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.RemoveUcCommentResponse;
-import to.unified.unified_java_sdk.models.operations.async.RemoveUcContactRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.RemoveUcContactResponse;
-import to.unified.unified_java_sdk.models.operations.async.RemoveUcRecordingRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.RemoveUcRecordingResponse;
-import to.unified.unified_java_sdk.models.operations.async.UpdateUcCommentRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.UpdateUcCommentResponse;
-import to.unified.unified_java_sdk.models.operations.async.UpdateUcContactRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.UpdateUcContactResponse;
-import to.unified.unified_java_sdk.models.operations.async.UpdateUcRecordingRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.UpdateUcRecordingResponse;
-import to.unified.unified_java_sdk.operations.CreateUcComment;
-import to.unified.unified_java_sdk.operations.CreateUcContact;
-import to.unified.unified_java_sdk.operations.CreateUcRecording;
-import to.unified.unified_java_sdk.operations.GetUcCall;
-import to.unified.unified_java_sdk.operations.GetUcComment;
-import to.unified.unified_java_sdk.operations.GetUcContact;
-import to.unified.unified_java_sdk.operations.GetUcRecording;
-import to.unified.unified_java_sdk.operations.ListUcCalls;
-import to.unified.unified_java_sdk.operations.ListUcComments;
-import to.unified.unified_java_sdk.operations.ListUcContacts;
-import to.unified.unified_java_sdk.operations.ListUcRecordings;
-import to.unified.unified_java_sdk.operations.PatchUcComment;
-import to.unified.unified_java_sdk.operations.PatchUcContact;
-import to.unified.unified_java_sdk.operations.PatchUcRecording;
-import to.unified.unified_java_sdk.operations.RemoveUcComment;
-import to.unified.unified_java_sdk.operations.RemoveUcContact;
-import to.unified.unified_java_sdk.operations.RemoveUcRecording;
-import to.unified.unified_java_sdk.operations.UpdateUcComment;
-import to.unified.unified_java_sdk.operations.UpdateUcContact;
-import to.unified.unified_java_sdk.operations.UpdateUcRecording;
+import to.unified.unified_java_sdk.models.operations.CreateUcComment2Request;
+import to.unified.unified_java_sdk.models.operations.CreateUcContact2Request;
+import to.unified.unified_java_sdk.models.operations.CreateUcRecording2Request;
+import to.unified.unified_java_sdk.models.operations.GetUcCall2Request;
+import to.unified.unified_java_sdk.models.operations.GetUcComment2Request;
+import to.unified.unified_java_sdk.models.operations.GetUcContact2Request;
+import to.unified.unified_java_sdk.models.operations.GetUcRecording2Request;
+import to.unified.unified_java_sdk.models.operations.ListUcCalls2Request;
+import to.unified.unified_java_sdk.models.operations.ListUcComments2Request;
+import to.unified.unified_java_sdk.models.operations.ListUcContacts2Request;
+import to.unified.unified_java_sdk.models.operations.ListUcRecordings2Request;
+import to.unified.unified_java_sdk.models.operations.PatchUcComment2Request;
+import to.unified.unified_java_sdk.models.operations.PatchUcContact2Request;
+import to.unified.unified_java_sdk.models.operations.PatchUcRecording2Request;
+import to.unified.unified_java_sdk.models.operations.RemoveUcComment2Request;
+import to.unified.unified_java_sdk.models.operations.RemoveUcContact2Request;
+import to.unified.unified_java_sdk.models.operations.RemoveUcRecording2Request;
+import to.unified.unified_java_sdk.models.operations.UpdateUcComment2Request;
+import to.unified.unified_java_sdk.models.operations.UpdateUcContact2Request;
+import to.unified.unified_java_sdk.models.operations.UpdateUcRecording2Request;
+import to.unified.unified_java_sdk.models.operations.async.CreateUcComment2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.CreateUcComment2Response;
+import to.unified.unified_java_sdk.models.operations.async.CreateUcContact2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.CreateUcContact2Response;
+import to.unified.unified_java_sdk.models.operations.async.CreateUcRecording2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.CreateUcRecording2Response;
+import to.unified.unified_java_sdk.models.operations.async.GetUcCall2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetUcCall2Response;
+import to.unified.unified_java_sdk.models.operations.async.GetUcComment2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetUcComment2Response;
+import to.unified.unified_java_sdk.models.operations.async.GetUcContact2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetUcContact2Response;
+import to.unified.unified_java_sdk.models.operations.async.GetUcRecording2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetUcRecording2Response;
+import to.unified.unified_java_sdk.models.operations.async.ListUcCalls2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListUcCalls2Response;
+import to.unified.unified_java_sdk.models.operations.async.ListUcComments2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListUcComments2Response;
+import to.unified.unified_java_sdk.models.operations.async.ListUcContacts2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListUcContacts2Response;
+import to.unified.unified_java_sdk.models.operations.async.ListUcRecordings2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListUcRecordings2Response;
+import to.unified.unified_java_sdk.models.operations.async.PatchUcComment2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.PatchUcComment2Response;
+import to.unified.unified_java_sdk.models.operations.async.PatchUcContact2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.PatchUcContact2Response;
+import to.unified.unified_java_sdk.models.operations.async.PatchUcRecording2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.PatchUcRecording2Response;
+import to.unified.unified_java_sdk.models.operations.async.RemoveUcComment2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.RemoveUcComment2Response;
+import to.unified.unified_java_sdk.models.operations.async.RemoveUcContact2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.RemoveUcContact2Response;
+import to.unified.unified_java_sdk.models.operations.async.RemoveUcRecording2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.RemoveUcRecording2Response;
+import to.unified.unified_java_sdk.models.operations.async.UpdateUcComment2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.UpdateUcComment2Response;
+import to.unified.unified_java_sdk.models.operations.async.UpdateUcContact2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.UpdateUcContact2Response;
+import to.unified.unified_java_sdk.models.operations.async.UpdateUcRecording2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.UpdateUcRecording2Response;
+import to.unified.unified_java_sdk.operations.CreateUcComment2;
+import to.unified.unified_java_sdk.operations.CreateUcContact2;
+import to.unified.unified_java_sdk.operations.CreateUcRecording2;
+import to.unified.unified_java_sdk.operations.GetUcCall2;
+import to.unified.unified_java_sdk.operations.GetUcComment2;
+import to.unified.unified_java_sdk.operations.GetUcContact2;
+import to.unified.unified_java_sdk.operations.GetUcRecording2;
+import to.unified.unified_java_sdk.operations.ListUcCalls2;
+import to.unified.unified_java_sdk.operations.ListUcComments2;
+import to.unified.unified_java_sdk.operations.ListUcContacts2;
+import to.unified.unified_java_sdk.operations.ListUcRecordings2;
+import to.unified.unified_java_sdk.operations.PatchUcComment2;
+import to.unified.unified_java_sdk.operations.PatchUcContact2;
+import to.unified.unified_java_sdk.operations.PatchUcRecording2;
+import to.unified.unified_java_sdk.operations.RemoveUcComment2;
+import to.unified.unified_java_sdk.operations.RemoveUcContact2;
+import to.unified.unified_java_sdk.operations.RemoveUcRecording2;
+import to.unified.unified_java_sdk.operations.UpdateUcComment2;
+import to.unified.unified_java_sdk.operations.UpdateUcContact2;
+import to.unified.unified_java_sdk.operations.UpdateUcRecording2;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -115,19 +115,19 @@ public class AsyncUc {
      * 
      * @return The async call builder
      */
-    public CreateUcCommentRequestBuilder createUcComment() {
-        return new CreateUcCommentRequestBuilder(sdkConfiguration);
+    public CreateUcComment2RequestBuilder createUcComment2() {
+        return new CreateUcComment2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Create a comment
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<CreateUcCommentResponse>} - The async response
+     * @return {@code CompletableFuture<CreateUcComment2Response>} - The async response
      */
-    public CompletableFuture<CreateUcCommentResponse> createUcComment(@Nonnull CreateUcCommentRequest request) {
-        AsyncRequestOperation<CreateUcCommentRequest, CreateUcCommentResponse> operation
-              = new CreateUcComment.Async(sdkConfiguration, _headers);
+    public CompletableFuture<CreateUcComment2Response> createUcComment2(@Nonnull CreateUcComment2Request request) {
+        AsyncRequestOperation<CreateUcComment2Request, CreateUcComment2Response> operation
+              = new CreateUcComment2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -138,19 +138,19 @@ public class AsyncUc {
      * 
      * @return The async call builder
      */
-    public CreateUcContactRequestBuilder createUcContact() {
-        return new CreateUcContactRequestBuilder(sdkConfiguration);
+    public CreateUcContact2RequestBuilder createUcContact2() {
+        return new CreateUcContact2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Create a contact
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<CreateUcContactResponse>} - The async response
+     * @return {@code CompletableFuture<CreateUcContact2Response>} - The async response
      */
-    public CompletableFuture<CreateUcContactResponse> createUcContact(@Nonnull CreateUcContactRequest request) {
-        AsyncRequestOperation<CreateUcContactRequest, CreateUcContactResponse> operation
-              = new CreateUcContact.Async(sdkConfiguration, _headers);
+    public CompletableFuture<CreateUcContact2Response> createUcContact2(@Nonnull CreateUcContact2Request request) {
+        AsyncRequestOperation<CreateUcContact2Request, CreateUcContact2Response> operation
+              = new CreateUcContact2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -161,19 +161,19 @@ public class AsyncUc {
      * 
      * @return The async call builder
      */
-    public CreateUcRecordingRequestBuilder createUcRecording() {
-        return new CreateUcRecordingRequestBuilder(sdkConfiguration);
+    public CreateUcRecording2RequestBuilder createUcRecording2() {
+        return new CreateUcRecording2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Create a recording
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<CreateUcRecordingResponse>} - The async response
+     * @return {@code CompletableFuture<CreateUcRecording2Response>} - The async response
      */
-    public CompletableFuture<CreateUcRecordingResponse> createUcRecording(@Nonnull CreateUcRecordingRequest request) {
-        AsyncRequestOperation<CreateUcRecordingRequest, CreateUcRecordingResponse> operation
-              = new CreateUcRecording.Async(sdkConfiguration, _headers);
+    public CompletableFuture<CreateUcRecording2Response> createUcRecording2(@Nonnull CreateUcRecording2Request request) {
+        AsyncRequestOperation<CreateUcRecording2Request, CreateUcRecording2Response> operation
+              = new CreateUcRecording2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -184,19 +184,19 @@ public class AsyncUc {
      * 
      * @return The async call builder
      */
-    public GetUcCallRequestBuilder getUcCall() {
-        return new GetUcCallRequestBuilder(sdkConfiguration);
+    public GetUcCall2RequestBuilder getUcCall2() {
+        return new GetUcCall2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Retrieve a call
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<GetUcCallResponse>} - The async response
+     * @return {@code CompletableFuture<GetUcCall2Response>} - The async response
      */
-    public CompletableFuture<GetUcCallResponse> getUcCall(@Nonnull GetUcCallRequest request) {
-        AsyncRequestOperation<GetUcCallRequest, GetUcCallResponse> operation
-              = new GetUcCall.Async(sdkConfiguration, _headers);
+    public CompletableFuture<GetUcCall2Response> getUcCall2(@Nonnull GetUcCall2Request request) {
+        AsyncRequestOperation<GetUcCall2Request, GetUcCall2Response> operation
+              = new GetUcCall2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -207,19 +207,19 @@ public class AsyncUc {
      * 
      * @return The async call builder
      */
-    public GetUcCommentRequestBuilder getUcComment() {
-        return new GetUcCommentRequestBuilder(sdkConfiguration);
+    public GetUcComment2RequestBuilder getUcComment2() {
+        return new GetUcComment2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Retrieve a comment
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<GetUcCommentResponse>} - The async response
+     * @return {@code CompletableFuture<GetUcComment2Response>} - The async response
      */
-    public CompletableFuture<GetUcCommentResponse> getUcComment(@Nonnull GetUcCommentRequest request) {
-        AsyncRequestOperation<GetUcCommentRequest, GetUcCommentResponse> operation
-              = new GetUcComment.Async(sdkConfiguration, _headers);
+    public CompletableFuture<GetUcComment2Response> getUcComment2(@Nonnull GetUcComment2Request request) {
+        AsyncRequestOperation<GetUcComment2Request, GetUcComment2Response> operation
+              = new GetUcComment2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -230,19 +230,19 @@ public class AsyncUc {
      * 
      * @return The async call builder
      */
-    public GetUcContactRequestBuilder getUcContact() {
-        return new GetUcContactRequestBuilder(sdkConfiguration);
+    public GetUcContact2RequestBuilder getUcContact2() {
+        return new GetUcContact2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Retrieve a contact
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<GetUcContactResponse>} - The async response
+     * @return {@code CompletableFuture<GetUcContact2Response>} - The async response
      */
-    public CompletableFuture<GetUcContactResponse> getUcContact(@Nonnull GetUcContactRequest request) {
-        AsyncRequestOperation<GetUcContactRequest, GetUcContactResponse> operation
-              = new GetUcContact.Async(sdkConfiguration, _headers);
+    public CompletableFuture<GetUcContact2Response> getUcContact2(@Nonnull GetUcContact2Request request) {
+        AsyncRequestOperation<GetUcContact2Request, GetUcContact2Response> operation
+              = new GetUcContact2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -253,19 +253,19 @@ public class AsyncUc {
      * 
      * @return The async call builder
      */
-    public GetUcRecordingRequestBuilder getUcRecording() {
-        return new GetUcRecordingRequestBuilder(sdkConfiguration);
+    public GetUcRecording2RequestBuilder getUcRecording2() {
+        return new GetUcRecording2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Retrieve a recording
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<GetUcRecordingResponse>} - The async response
+     * @return {@code CompletableFuture<GetUcRecording2Response>} - The async response
      */
-    public CompletableFuture<GetUcRecordingResponse> getUcRecording(@Nonnull GetUcRecordingRequest request) {
-        AsyncRequestOperation<GetUcRecordingRequest, GetUcRecordingResponse> operation
-              = new GetUcRecording.Async(sdkConfiguration, _headers);
+    public CompletableFuture<GetUcRecording2Response> getUcRecording2(@Nonnull GetUcRecording2Request request) {
+        AsyncRequestOperation<GetUcRecording2Request, GetUcRecording2Response> operation
+              = new GetUcRecording2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -276,19 +276,19 @@ public class AsyncUc {
      * 
      * @return The async call builder
      */
-    public ListUcCallsRequestBuilder listUcCalls() {
-        return new ListUcCallsRequestBuilder(sdkConfiguration);
+    public ListUcCalls2RequestBuilder listUcCalls2() {
+        return new ListUcCalls2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * List all calls
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<ListUcCallsResponse>} - The async response
+     * @return {@code CompletableFuture<ListUcCalls2Response>} - The async response
      */
-    public CompletableFuture<ListUcCallsResponse> listUcCalls(@Nonnull ListUcCallsRequest request) {
-        AsyncRequestOperation<ListUcCallsRequest, ListUcCallsResponse> operation
-              = new ListUcCalls.Async(sdkConfiguration, _headers);
+    public CompletableFuture<ListUcCalls2Response> listUcCalls2(@Nonnull ListUcCalls2Request request) {
+        AsyncRequestOperation<ListUcCalls2Request, ListUcCalls2Response> operation
+              = new ListUcCalls2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -299,19 +299,19 @@ public class AsyncUc {
      * 
      * @return The async call builder
      */
-    public ListUcCommentsRequestBuilder listUcComments() {
-        return new ListUcCommentsRequestBuilder(sdkConfiguration);
+    public ListUcComments2RequestBuilder listUcComments2() {
+        return new ListUcComments2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * List all comments
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<ListUcCommentsResponse>} - The async response
+     * @return {@code CompletableFuture<ListUcComments2Response>} - The async response
      */
-    public CompletableFuture<ListUcCommentsResponse> listUcComments(@Nonnull ListUcCommentsRequest request) {
-        AsyncRequestOperation<ListUcCommentsRequest, ListUcCommentsResponse> operation
-              = new ListUcComments.Async(sdkConfiguration, _headers);
+    public CompletableFuture<ListUcComments2Response> listUcComments2(@Nonnull ListUcComments2Request request) {
+        AsyncRequestOperation<ListUcComments2Request, ListUcComments2Response> operation
+              = new ListUcComments2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -322,19 +322,19 @@ public class AsyncUc {
      * 
      * @return The async call builder
      */
-    public ListUcContactsRequestBuilder listUcContacts() {
-        return new ListUcContactsRequestBuilder(sdkConfiguration);
+    public ListUcContacts2RequestBuilder listUcContacts2() {
+        return new ListUcContacts2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * List all contacts
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<ListUcContactsResponse>} - The async response
+     * @return {@code CompletableFuture<ListUcContacts2Response>} - The async response
      */
-    public CompletableFuture<ListUcContactsResponse> listUcContacts(@Nonnull ListUcContactsRequest request) {
-        AsyncRequestOperation<ListUcContactsRequest, ListUcContactsResponse> operation
-              = new ListUcContacts.Async(sdkConfiguration, _headers);
+    public CompletableFuture<ListUcContacts2Response> listUcContacts2(@Nonnull ListUcContacts2Request request) {
+        AsyncRequestOperation<ListUcContacts2Request, ListUcContacts2Response> operation
+              = new ListUcContacts2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -345,19 +345,19 @@ public class AsyncUc {
      * 
      * @return The async call builder
      */
-    public ListUcRecordingsRequestBuilder listUcRecordings() {
-        return new ListUcRecordingsRequestBuilder(sdkConfiguration);
+    public ListUcRecordings2RequestBuilder listUcRecordings2() {
+        return new ListUcRecordings2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * List all recordings
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<ListUcRecordingsResponse>} - The async response
+     * @return {@code CompletableFuture<ListUcRecordings2Response>} - The async response
      */
-    public CompletableFuture<ListUcRecordingsResponse> listUcRecordings(@Nonnull ListUcRecordingsRequest request) {
-        AsyncRequestOperation<ListUcRecordingsRequest, ListUcRecordingsResponse> operation
-              = new ListUcRecordings.Async(sdkConfiguration, _headers);
+    public CompletableFuture<ListUcRecordings2Response> listUcRecordings2(@Nonnull ListUcRecordings2Request request) {
+        AsyncRequestOperation<ListUcRecordings2Request, ListUcRecordings2Response> operation
+              = new ListUcRecordings2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -368,19 +368,19 @@ public class AsyncUc {
      * 
      * @return The async call builder
      */
-    public PatchUcCommentRequestBuilder patchUcComment() {
-        return new PatchUcCommentRequestBuilder(sdkConfiguration);
+    public PatchUcComment2RequestBuilder patchUcComment2() {
+        return new PatchUcComment2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update a comment
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<PatchUcCommentResponse>} - The async response
+     * @return {@code CompletableFuture<PatchUcComment2Response>} - The async response
      */
-    public CompletableFuture<PatchUcCommentResponse> patchUcComment(@Nonnull PatchUcCommentRequest request) {
-        AsyncRequestOperation<PatchUcCommentRequest, PatchUcCommentResponse> operation
-              = new PatchUcComment.Async(sdkConfiguration, _headers);
+    public CompletableFuture<PatchUcComment2Response> patchUcComment2(@Nonnull PatchUcComment2Request request) {
+        AsyncRequestOperation<PatchUcComment2Request, PatchUcComment2Response> operation
+              = new PatchUcComment2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -391,19 +391,19 @@ public class AsyncUc {
      * 
      * @return The async call builder
      */
-    public PatchUcContactRequestBuilder patchUcContact() {
-        return new PatchUcContactRequestBuilder(sdkConfiguration);
+    public PatchUcContact2RequestBuilder patchUcContact2() {
+        return new PatchUcContact2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update a contact
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<PatchUcContactResponse>} - The async response
+     * @return {@code CompletableFuture<PatchUcContact2Response>} - The async response
      */
-    public CompletableFuture<PatchUcContactResponse> patchUcContact(@Nonnull PatchUcContactRequest request) {
-        AsyncRequestOperation<PatchUcContactRequest, PatchUcContactResponse> operation
-              = new PatchUcContact.Async(sdkConfiguration, _headers);
+    public CompletableFuture<PatchUcContact2Response> patchUcContact2(@Nonnull PatchUcContact2Request request) {
+        AsyncRequestOperation<PatchUcContact2Request, PatchUcContact2Response> operation
+              = new PatchUcContact2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -414,19 +414,19 @@ public class AsyncUc {
      * 
      * @return The async call builder
      */
-    public PatchUcRecordingRequestBuilder patchUcRecording() {
-        return new PatchUcRecordingRequestBuilder(sdkConfiguration);
+    public PatchUcRecording2RequestBuilder patchUcRecording2() {
+        return new PatchUcRecording2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update a recording
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<PatchUcRecordingResponse>} - The async response
+     * @return {@code CompletableFuture<PatchUcRecording2Response>} - The async response
      */
-    public CompletableFuture<PatchUcRecordingResponse> patchUcRecording(@Nonnull PatchUcRecordingRequest request) {
-        AsyncRequestOperation<PatchUcRecordingRequest, PatchUcRecordingResponse> operation
-              = new PatchUcRecording.Async(sdkConfiguration, _headers);
+    public CompletableFuture<PatchUcRecording2Response> patchUcRecording2(@Nonnull PatchUcRecording2Request request) {
+        AsyncRequestOperation<PatchUcRecording2Request, PatchUcRecording2Response> operation
+              = new PatchUcRecording2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -437,19 +437,19 @@ public class AsyncUc {
      * 
      * @return The async call builder
      */
-    public RemoveUcCommentRequestBuilder removeUcComment() {
-        return new RemoveUcCommentRequestBuilder(sdkConfiguration);
+    public RemoveUcComment2RequestBuilder removeUcComment2() {
+        return new RemoveUcComment2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Remove a comment
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<RemoveUcCommentResponse>} - The async response
+     * @return {@code CompletableFuture<RemoveUcComment2Response>} - The async response
      */
-    public CompletableFuture<RemoveUcCommentResponse> removeUcComment(@Nonnull RemoveUcCommentRequest request) {
-        AsyncRequestOperation<RemoveUcCommentRequest, RemoveUcCommentResponse> operation
-              = new RemoveUcComment.Async(sdkConfiguration, _headers);
+    public CompletableFuture<RemoveUcComment2Response> removeUcComment2(@Nonnull RemoveUcComment2Request request) {
+        AsyncRequestOperation<RemoveUcComment2Request, RemoveUcComment2Response> operation
+              = new RemoveUcComment2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -460,19 +460,19 @@ public class AsyncUc {
      * 
      * @return The async call builder
      */
-    public RemoveUcContactRequestBuilder removeUcContact() {
-        return new RemoveUcContactRequestBuilder(sdkConfiguration);
+    public RemoveUcContact2RequestBuilder removeUcContact2() {
+        return new RemoveUcContact2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Remove a contact
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<RemoveUcContactResponse>} - The async response
+     * @return {@code CompletableFuture<RemoveUcContact2Response>} - The async response
      */
-    public CompletableFuture<RemoveUcContactResponse> removeUcContact(@Nonnull RemoveUcContactRequest request) {
-        AsyncRequestOperation<RemoveUcContactRequest, RemoveUcContactResponse> operation
-              = new RemoveUcContact.Async(sdkConfiguration, _headers);
+    public CompletableFuture<RemoveUcContact2Response> removeUcContact2(@Nonnull RemoveUcContact2Request request) {
+        AsyncRequestOperation<RemoveUcContact2Request, RemoveUcContact2Response> operation
+              = new RemoveUcContact2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -483,19 +483,19 @@ public class AsyncUc {
      * 
      * @return The async call builder
      */
-    public RemoveUcRecordingRequestBuilder removeUcRecording() {
-        return new RemoveUcRecordingRequestBuilder(sdkConfiguration);
+    public RemoveUcRecording2RequestBuilder removeUcRecording2() {
+        return new RemoveUcRecording2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Remove a recording
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<RemoveUcRecordingResponse>} - The async response
+     * @return {@code CompletableFuture<RemoveUcRecording2Response>} - The async response
      */
-    public CompletableFuture<RemoveUcRecordingResponse> removeUcRecording(@Nonnull RemoveUcRecordingRequest request) {
-        AsyncRequestOperation<RemoveUcRecordingRequest, RemoveUcRecordingResponse> operation
-              = new RemoveUcRecording.Async(sdkConfiguration, _headers);
+    public CompletableFuture<RemoveUcRecording2Response> removeUcRecording2(@Nonnull RemoveUcRecording2Request request) {
+        AsyncRequestOperation<RemoveUcRecording2Request, RemoveUcRecording2Response> operation
+              = new RemoveUcRecording2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -506,19 +506,19 @@ public class AsyncUc {
      * 
      * @return The async call builder
      */
-    public UpdateUcCommentRequestBuilder updateUcComment() {
-        return new UpdateUcCommentRequestBuilder(sdkConfiguration);
+    public UpdateUcComment2RequestBuilder updateUcComment2() {
+        return new UpdateUcComment2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update a comment
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<UpdateUcCommentResponse>} - The async response
+     * @return {@code CompletableFuture<UpdateUcComment2Response>} - The async response
      */
-    public CompletableFuture<UpdateUcCommentResponse> updateUcComment(@Nonnull UpdateUcCommentRequest request) {
-        AsyncRequestOperation<UpdateUcCommentRequest, UpdateUcCommentResponse> operation
-              = new UpdateUcComment.Async(sdkConfiguration, _headers);
+    public CompletableFuture<UpdateUcComment2Response> updateUcComment2(@Nonnull UpdateUcComment2Request request) {
+        AsyncRequestOperation<UpdateUcComment2Request, UpdateUcComment2Response> operation
+              = new UpdateUcComment2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -529,19 +529,19 @@ public class AsyncUc {
      * 
      * @return The async call builder
      */
-    public UpdateUcContactRequestBuilder updateUcContact() {
-        return new UpdateUcContactRequestBuilder(sdkConfiguration);
+    public UpdateUcContact2RequestBuilder updateUcContact2() {
+        return new UpdateUcContact2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update a contact
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<UpdateUcContactResponse>} - The async response
+     * @return {@code CompletableFuture<UpdateUcContact2Response>} - The async response
      */
-    public CompletableFuture<UpdateUcContactResponse> updateUcContact(@Nonnull UpdateUcContactRequest request) {
-        AsyncRequestOperation<UpdateUcContactRequest, UpdateUcContactResponse> operation
-              = new UpdateUcContact.Async(sdkConfiguration, _headers);
+    public CompletableFuture<UpdateUcContact2Response> updateUcContact2(@Nonnull UpdateUcContact2Request request) {
+        AsyncRequestOperation<UpdateUcContact2Request, UpdateUcContact2Response> operation
+              = new UpdateUcContact2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -552,19 +552,19 @@ public class AsyncUc {
      * 
      * @return The async call builder
      */
-    public UpdateUcRecordingRequestBuilder updateUcRecording() {
-        return new UpdateUcRecordingRequestBuilder(sdkConfiguration);
+    public UpdateUcRecording2RequestBuilder updateUcRecording2() {
+        return new UpdateUcRecording2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update a recording
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<UpdateUcRecordingResponse>} - The async response
+     * @return {@code CompletableFuture<UpdateUcRecording2Response>} - The async response
      */
-    public CompletableFuture<UpdateUcRecordingResponse> updateUcRecording(@Nonnull UpdateUcRecordingRequest request) {
-        AsyncRequestOperation<UpdateUcRecordingRequest, UpdateUcRecordingResponse> operation
-              = new UpdateUcRecording.Async(sdkConfiguration, _headers);
+    public CompletableFuture<UpdateUcRecording2Response> updateUcRecording2(@Nonnull UpdateUcRecording2Request request) {
+        AsyncRequestOperation<UpdateUcRecording2Request, UpdateUcRecording2Response> operation
+              = new UpdateUcRecording2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

@@ -44,6 +44,16 @@ public class CalendarRecordingMedia {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("summary")
+    private String summary;
+
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("summary_download_url")
+    private String summaryDownloadUrl;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transcript_download_url")
     private String transcriptDownloadUrl;
 
@@ -59,6 +69,8 @@ public class CalendarRecordingMedia {
             @JsonProperty("language") @Nullable String language,
             @JsonProperty("recording_download_url") @Nullable String recordingDownloadUrl,
             @JsonProperty("start_at") @Nullable OffsetDateTime startAt,
+            @JsonProperty("summary") @Nullable String summary,
+            @JsonProperty("summary_download_url") @Nullable String summaryDownloadUrl,
             @JsonProperty("transcript_download_url") @Nullable String transcriptDownloadUrl,
             @JsonProperty("transcripts") @Nullable List<CalendarRecordingTranscript> transcripts) {
         this.attendees = attendees;
@@ -66,6 +78,8 @@ public class CalendarRecordingMedia {
         this.language = language;
         this.recordingDownloadUrl = recordingDownloadUrl;
         this.startAt = startAt;
+        this.summary = summary;
+        this.summaryDownloadUrl = summaryDownloadUrl;
         this.transcriptDownloadUrl = transcriptDownloadUrl;
         this.transcripts = transcripts;
     }
@@ -73,7 +87,7 @@ public class CalendarRecordingMedia {
     public CalendarRecordingMedia() {
         this(null, null, null,
             null, null, null,
-            null);
+            null, null, null);
     }
 
     public Optional<List<CalendarAttendee>> attendees() {
@@ -94,6 +108,14 @@ public class CalendarRecordingMedia {
 
     public Optional<OffsetDateTime> startAt() {
         return Optional.ofNullable(this.startAt);
+    }
+
+    public Optional<String> summary() {
+        return Optional.ofNullable(this.summary);
+    }
+
+    public Optional<String> summaryDownloadUrl() {
+        return Optional.ofNullable(this.summaryDownloadUrl);
     }
 
     public Optional<String> transcriptDownloadUrl() {
@@ -139,6 +161,18 @@ public class CalendarRecordingMedia {
     }
 
 
+    public CalendarRecordingMedia withSummary(@Nullable String summary) {
+        this.summary = summary;
+        return this;
+    }
+
+
+    public CalendarRecordingMedia withSummaryDownloadUrl(@Nullable String summaryDownloadUrl) {
+        this.summaryDownloadUrl = summaryDownloadUrl;
+        return this;
+    }
+
+
     public CalendarRecordingMedia withTranscriptDownloadUrl(@Nullable String transcriptDownloadUrl) {
         this.transcriptDownloadUrl = transcriptDownloadUrl;
         return this;
@@ -166,6 +200,8 @@ public class CalendarRecordingMedia {
             Utils.enhancedDeepEquals(this.language, other.language) &&
             Utils.enhancedDeepEquals(this.recordingDownloadUrl, other.recordingDownloadUrl) &&
             Utils.enhancedDeepEquals(this.startAt, other.startAt) &&
+            Utils.enhancedDeepEquals(this.summary, other.summary) &&
+            Utils.enhancedDeepEquals(this.summaryDownloadUrl, other.summaryDownloadUrl) &&
             Utils.enhancedDeepEquals(this.transcriptDownloadUrl, other.transcriptDownloadUrl) &&
             Utils.enhancedDeepEquals(this.transcripts, other.transcripts);
     }
@@ -174,8 +210,8 @@ public class CalendarRecordingMedia {
     public int hashCode() {
         return Utils.enhancedHash(
             attendees, endAt, language,
-            recordingDownloadUrl, startAt, transcriptDownloadUrl,
-            transcripts);
+            recordingDownloadUrl, startAt, summary,
+            summaryDownloadUrl, transcriptDownloadUrl, transcripts);
     }
     
     @Override
@@ -186,6 +222,8 @@ public class CalendarRecordingMedia {
                 "language", language,
                 "recordingDownloadUrl", recordingDownloadUrl,
                 "startAt", startAt,
+                "summary", summary,
+                "summaryDownloadUrl", summaryDownloadUrl,
                 "transcriptDownloadUrl", transcriptDownloadUrl,
                 "transcripts", transcripts);
     }
@@ -202,6 +240,10 @@ public class CalendarRecordingMedia {
         private String recordingDownloadUrl;
 
         private OffsetDateTime startAt;
+
+        private String summary;
+
+        private String summaryDownloadUrl;
 
         private String transcriptDownloadUrl;
 
@@ -236,6 +278,16 @@ public class CalendarRecordingMedia {
             return this;
         }
 
+        public Builder summary(@Nullable String summary) {
+            this.summary = summary;
+            return this;
+        }
+
+        public Builder summaryDownloadUrl(@Nullable String summaryDownloadUrl) {
+            this.summaryDownloadUrl = summaryDownloadUrl;
+            return this;
+        }
+
         public Builder transcriptDownloadUrl(@Nullable String transcriptDownloadUrl) {
             this.transcriptDownloadUrl = transcriptDownloadUrl;
             return this;
@@ -249,8 +301,8 @@ public class CalendarRecordingMedia {
         public CalendarRecordingMedia build() {
             return new CalendarRecordingMedia(
                 attendees, endAt, language,
-                recordingDownloadUrl, startAt, transcriptDownloadUrl,
-                transcripts);
+                recordingDownloadUrl, startAt, summary,
+                summaryDownloadUrl, transcriptDownloadUrl, transcripts);
         }
 
     }

@@ -43,7 +43,7 @@ public class AtsMetadata {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
-    private Value value;
+    private AtsMetadataValue value;
 
     @JsonCreator
     public AtsMetadata(
@@ -52,7 +52,7 @@ public class AtsMetadata {
             @JsonProperty("id") @Nullable String id,
             @JsonProperty("namespace") @Nullable String namespace,
             @JsonProperty("slug") @Nullable String slug,
-            @JsonProperty("value") @Nullable Value value) {
+            @JsonProperty("value") @Nullable AtsMetadataValue value) {
         this.extraData = extraData;
         this.format = format;
         this.id = id;
@@ -86,7 +86,7 @@ public class AtsMetadata {
         return Optional.ofNullable(this.slug);
     }
 
-    public Optional<Value> value() {
+    public Optional<AtsMetadataValue> value() {
         return Optional.ofNullable(this.value);
     }
 
@@ -125,7 +125,7 @@ public class AtsMetadata {
     }
 
 
-    public AtsMetadata withValue(@Nullable Value value) {
+    public AtsMetadata withValue(@Nullable AtsMetadataValue value) {
         this.value = value;
         return this;
     }
@@ -180,7 +180,7 @@ public class AtsMetadata {
 
         private String slug;
 
-        private Value value;
+        private AtsMetadataValue value;
 
         private Builder() {
           // force use of static builder() method
@@ -211,7 +211,7 @@ public class AtsMetadata {
             return this;
         }
 
-        public Builder value(@Nullable Value value) {
+        public Builder value(@Nullable AtsMetadataValue value) {
             this.value = value;
             return this;
         }

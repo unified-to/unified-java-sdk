@@ -4,70 +4,70 @@
 
 ### Available Operations
 
-* [createAtsActivity](#createatsactivity) - Create an activity
-* [createAtsApplication](#createatsapplication) - Create an application
-* [createAtsCandidate](#createatscandidate) - Create a candidate
-* [createAtsCompany](#createatscompany) - Create a company
-* [createAtsDocument](#createatsdocument) - Create a document
-* [createAtsInterview](#createatsinterview) - Create an interview
-* [createAtsJob](#createatsjob) - Create a job
-* [createAtsScorecard](#createatsscorecard) - Create a scorecard
-* [getAtsActivity](#getatsactivity) - Retrieve an activity
-* [getAtsApplication](#getatsapplication) - Retrieve an application
-* [getAtsCandidate](#getatscandidate) - Retrieve a candidate
-* [getAtsCompany](#getatscompany) - Retrieve a company
-* [getAtsDocument](#getatsdocument) - Retrieve a document
-* [getAtsInterview](#getatsinterview) - Retrieve an interview
-* [getAtsJob](#getatsjob) - Retrieve a job
-* [getAtsScorecard](#getatsscorecard) - Retrieve a scorecard
-* [listAtsActivities](#listatsactivities) - List all activities
-* [listAtsApplications](#listatsapplications) - List all applications
-* [listAtsApplicationstatuses](#listatsapplicationstatuses) - List all applicationstatuses
-* [listAtsCandidates](#listatscandidates) - List all candidates
-* [listAtsCompanies](#listatscompanies) - List all companies
-* [listAtsDocuments](#listatsdocuments) - List all documents
-* [listAtsInterviews](#listatsinterviews) - List all interviews
-* [listAtsJobs](#listatsjobs) - List all jobs
-* [listAtsScorecards](#listatsscorecards) - List all scorecards
-* [patchAtsActivity](#patchatsactivity) - Update an activity
-* [patchAtsApplication](#patchatsapplication) - Update an application
-* [patchAtsCandidate](#patchatscandidate) - Update a candidate
-* [patchAtsCompany](#patchatscompany) - Update a company
-* [patchAtsDocument](#patchatsdocument) - Update a document
-* [patchAtsInterview](#patchatsinterview) - Update an interview
-* [patchAtsJob](#patchatsjob) - Update a job
-* [patchAtsScorecard](#patchatsscorecard) - Update a scorecard
-* [removeAtsActivity](#removeatsactivity) - Remove an activity
-* [removeAtsApplication](#removeatsapplication) - Remove an application
-* [removeAtsCandidate](#removeatscandidate) - Remove a candidate
-* [removeAtsCompany](#removeatscompany) - Remove a company
-* [removeAtsDocument](#removeatsdocument) - Remove a document
-* [removeAtsInterview](#removeatsinterview) - Remove an interview
-* [removeAtsJob](#removeatsjob) - Remove a job
-* [removeAtsScorecard](#removeatsscorecard) - Remove a scorecard
-* [updateAtsActivity](#updateatsactivity) - Update an activity
-* [updateAtsApplication](#updateatsapplication) - Update an application
-* [updateAtsCandidate](#updateatscandidate) - Update a candidate
-* [updateAtsCompany](#updateatscompany) - Update a company
-* [updateAtsDocument](#updateatsdocument) - Update a document
-* [updateAtsInterview](#updateatsinterview) - Update an interview
-* [updateAtsJob](#updateatsjob) - Update a job
-* [updateAtsScorecard](#updateatsscorecard) - Update a scorecard
+* [createAtsActivity2](#createatsactivity2) - Create an activity
+* [createAtsApplication2](#createatsapplication2) - Create an application
+* [createAtsCandidate2](#createatscandidate2) - Create a candidate
+* [createAtsCompany2](#createatscompany2) - Create a company
+* [createAtsDocument2](#createatsdocument2) - Create a document
+* [createAtsInterview2](#createatsinterview2) - Create an interview
+* [createAtsJob2](#createatsjob2) - Create a job
+* [createAtsScorecard2](#createatsscorecard2) - Create a scorecard
+* [getAtsActivity2](#getatsactivity2) - Retrieve an activity
+* [getAtsApplication2](#getatsapplication2) - Retrieve an application
+* [getAtsCandidate2](#getatscandidate2) - Retrieve a candidate
+* [getAtsCompany2](#getatscompany2) - Retrieve a company
+* [getAtsDocument2](#getatsdocument2) - Retrieve a document
+* [getAtsInterview2](#getatsinterview2) - Retrieve an interview
+* [getAtsJob2](#getatsjob2) - Retrieve a job
+* [getAtsScorecard2](#getatsscorecard2) - Retrieve a scorecard
+* [listAtsActivities2](#listatsactivities2) - List all activities
+* [listAtsApplications2](#listatsapplications2) - List all applications
+* [listAtsApplicationstatuses2](#listatsapplicationstatuses2) - List all applicationstatuses
+* [listAtsCandidates2](#listatscandidates2) - List all candidates
+* [listAtsCompanies2](#listatscompanies2) - List all companies
+* [listAtsDocuments2](#listatsdocuments2) - List all documents
+* [listAtsInterviews2](#listatsinterviews2) - List all interviews
+* [listAtsJobs2](#listatsjobs2) - List all jobs
+* [listAtsScorecards2](#listatsscorecards2) - List all scorecards
+* [patchAtsActivity2](#patchatsactivity2) - Update an activity
+* [patchAtsApplication2](#patchatsapplication2) - Update an application
+* [patchAtsCandidate2](#patchatscandidate2) - Update a candidate
+* [patchAtsCompany2](#patchatscompany2) - Update a company
+* [patchAtsDocument2](#patchatsdocument2) - Update a document
+* [patchAtsInterview2](#patchatsinterview2) - Update an interview
+* [patchAtsJob2](#patchatsjob2) - Update a job
+* [patchAtsScorecard2](#patchatsscorecard2) - Update a scorecard
+* [removeAtsActivity2](#removeatsactivity2) - Remove an activity
+* [removeAtsApplication2](#removeatsapplication2) - Remove an application
+* [removeAtsCandidate2](#removeatscandidate2) - Remove a candidate
+* [removeAtsCompany2](#removeatscompany2) - Remove a company
+* [removeAtsDocument2](#removeatsdocument2) - Remove a document
+* [removeAtsInterview2](#removeatsinterview2) - Remove an interview
+* [removeAtsJob2](#removeatsjob2) - Remove a job
+* [removeAtsScorecard2](#removeatsscorecard2) - Remove a scorecard
+* [updateAtsActivity2](#updateatsactivity2) - Update an activity
+* [updateAtsApplication2](#updateatsapplication2) - Update an application
+* [updateAtsCandidate2](#updateatscandidate2) - Update a candidate
+* [updateAtsCompany2](#updateatscompany2) - Update a company
+* [updateAtsDocument2](#updateatsdocument2) - Update a document
+* [updateAtsInterview2](#updateatsinterview2) - Update an interview
+* [updateAtsJob2](#updateatsjob2) - Update a job
+* [updateAtsScorecard2](#updateatsscorecard2) - Update a scorecard
 
-## createAtsActivity
+## createAtsActivity2
 
 Create an activity
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createAtsActivity" method="post" path="/ats/{connection_id}/activity" -->
+<!-- UsageSnippet language="java" operationID="createAtsActivity2" method="post" path="/ats/{connection_id}/activity" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.CreateAtsActivityRequest;
-import to.unified.unified_java_sdk.models.operations.CreateAtsActivityResponse;
+import to.unified.unified_java_sdk.models.operations.CreateAtsActivity2Request;
+import to.unified.unified_java_sdk.models.operations.CreateAtsActivity2Response;
 import to.unified.unified_java_sdk.models.shared.AtsActivity;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -81,13 +81,13 @@ public class Application {
                     .build())
             .build();
 
-        CreateAtsActivityRequest req = CreateAtsActivityRequest.builder()
+        CreateAtsActivity2Request req = CreateAtsActivity2Request.builder()
                 .atsActivity(AtsActivity.builder()
                     .build())
                 .connectionId("<id>")
                 .build();
 
-        CreateAtsActivityResponse res = sdk.ats().createAtsActivity()
+        CreateAtsActivity2Response res = sdk.ats().createAtsActivity2()
                 .request(req)
                 .call();
 
@@ -100,13 +100,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
-| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
-| `request`                                                                       | [CreateAtsActivityRequest](../../models/operations/CreateAtsActivityRequest.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
+| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
+| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| `request`                                                                         | [CreateAtsActivity2Request](../../models/operations/CreateAtsActivity2Request.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
 
 ### Response
 
-**[CreateAtsActivityResponse](../../models/operations/CreateAtsActivityResponse.md)**
+**[CreateAtsActivity2Response](../../models/operations/CreateAtsActivity2Response.md)**
 
 ### Errors
 
@@ -114,20 +114,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## createAtsApplication
+## createAtsApplication2
 
 Create an application
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createAtsApplication" method="post" path="/ats/{connection_id}/application" -->
+<!-- UsageSnippet language="java" operationID="createAtsApplication2" method="post" path="/ats/{connection_id}/application" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.CreateAtsApplicationRequest;
-import to.unified.unified_java_sdk.models.operations.CreateAtsApplicationResponse;
+import to.unified.unified_java_sdk.models.operations.CreateAtsApplication2Request;
+import to.unified.unified_java_sdk.models.operations.CreateAtsApplication2Response;
 import to.unified.unified_java_sdk.models.shared.AtsApplication;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -141,13 +141,13 @@ public class Application {
                     .build())
             .build();
 
-        CreateAtsApplicationRequest req = CreateAtsApplicationRequest.builder()
+        CreateAtsApplication2Request req = CreateAtsApplication2Request.builder()
                 .atsApplication(AtsApplication.builder()
                     .build())
                 .connectionId("<id>")
                 .build();
 
-        CreateAtsApplicationResponse res = sdk.ats().createAtsApplication()
+        CreateAtsApplication2Response res = sdk.ats().createAtsApplication2()
                 .request(req)
                 .call();
 
@@ -160,13 +160,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                             | Type                                                                                  | Required                                                                              | Description                                                                           |
-| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
-| `request`                                                                             | [CreateAtsApplicationRequest](../../models/operations/CreateAtsApplicationRequest.md) | :heavy_check_mark:                                                                    | The request object to use for the request.                                            |
+| Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
+| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| `request`                                                                               | [CreateAtsApplication2Request](../../models/operations/CreateAtsApplication2Request.md) | :heavy_check_mark:                                                                      | The request object to use for the request.                                              |
 
 ### Response
 
-**[CreateAtsApplicationResponse](../../models/operations/CreateAtsApplicationResponse.md)**
+**[CreateAtsApplication2Response](../../models/operations/CreateAtsApplication2Response.md)**
 
 ### Errors
 
@@ -174,20 +174,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## createAtsCandidate
+## createAtsCandidate2
 
 Create a candidate
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createAtsCandidate" method="post" path="/ats/{connection_id}/candidate" -->
+<!-- UsageSnippet language="java" operationID="createAtsCandidate2" method="post" path="/ats/{connection_id}/candidate" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.CreateAtsCandidateRequest;
-import to.unified.unified_java_sdk.models.operations.CreateAtsCandidateResponse;
+import to.unified.unified_java_sdk.models.operations.CreateAtsCandidate2Request;
+import to.unified.unified_java_sdk.models.operations.CreateAtsCandidate2Response;
 import to.unified.unified_java_sdk.models.shared.AtsCandidate;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -201,13 +201,13 @@ public class Application {
                     .build())
             .build();
 
-        CreateAtsCandidateRequest req = CreateAtsCandidateRequest.builder()
+        CreateAtsCandidate2Request req = CreateAtsCandidate2Request.builder()
                 .atsCandidate(AtsCandidate.builder()
                     .build())
                 .connectionId("<id>")
                 .build();
 
-        CreateAtsCandidateResponse res = sdk.ats().createAtsCandidate()
+        CreateAtsCandidate2Response res = sdk.ats().createAtsCandidate2()
                 .request(req)
                 .call();
 
@@ -220,13 +220,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
-| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
-| `request`                                                                         | [CreateAtsCandidateRequest](../../models/operations/CreateAtsCandidateRequest.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
+| Parameter                                                                           | Type                                                                                | Required                                                                            | Description                                                                         |
+| ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| `request`                                                                           | [CreateAtsCandidate2Request](../../models/operations/CreateAtsCandidate2Request.md) | :heavy_check_mark:                                                                  | The request object to use for the request.                                          |
 
 ### Response
 
-**[CreateAtsCandidateResponse](../../models/operations/CreateAtsCandidateResponse.md)**
+**[CreateAtsCandidate2Response](../../models/operations/CreateAtsCandidate2Response.md)**
 
 ### Errors
 
@@ -234,20 +234,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## createAtsCompany
+## createAtsCompany2
 
 Create a company
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createAtsCompany" method="post" path="/ats/{connection_id}/company" -->
+<!-- UsageSnippet language="java" operationID="createAtsCompany2" method="post" path="/ats/{connection_id}/company" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.CreateAtsCompanyRequest;
-import to.unified.unified_java_sdk.models.operations.CreateAtsCompanyResponse;
+import to.unified.unified_java_sdk.models.operations.CreateAtsCompany2Request;
+import to.unified.unified_java_sdk.models.operations.CreateAtsCompany2Response;
 import to.unified.unified_java_sdk.models.shared.AtsCompany;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -261,13 +261,13 @@ public class Application {
                     .build())
             .build();
 
-        CreateAtsCompanyRequest req = CreateAtsCompanyRequest.builder()
+        CreateAtsCompany2Request req = CreateAtsCompany2Request.builder()
                 .atsCompany(AtsCompany.builder()
                     .build())
                 .connectionId("<id>")
                 .build();
 
-        CreateAtsCompanyResponse res = sdk.ats().createAtsCompany()
+        CreateAtsCompany2Response res = sdk.ats().createAtsCompany2()
                 .request(req)
                 .call();
 
@@ -280,13 +280,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
-| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
-| `request`                                                                     | [CreateAtsCompanyRequest](../../models/operations/CreateAtsCompanyRequest.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
+| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| `request`                                                                       | [CreateAtsCompany2Request](../../models/operations/CreateAtsCompany2Request.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
 
 ### Response
 
-**[CreateAtsCompanyResponse](../../models/operations/CreateAtsCompanyResponse.md)**
+**[CreateAtsCompany2Response](../../models/operations/CreateAtsCompany2Response.md)**
 
 ### Errors
 
@@ -294,20 +294,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## createAtsDocument
+## createAtsDocument2
 
 Create a document
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createAtsDocument" method="post" path="/ats/{connection_id}/document" -->
+<!-- UsageSnippet language="java" operationID="createAtsDocument2" method="post" path="/ats/{connection_id}/document" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.CreateAtsDocumentRequest;
-import to.unified.unified_java_sdk.models.operations.CreateAtsDocumentResponse;
+import to.unified.unified_java_sdk.models.operations.CreateAtsDocument2Request;
+import to.unified.unified_java_sdk.models.operations.CreateAtsDocument2Response;
 import to.unified.unified_java_sdk.models.shared.AtsDocument;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -321,13 +321,13 @@ public class Application {
                     .build())
             .build();
 
-        CreateAtsDocumentRequest req = CreateAtsDocumentRequest.builder()
+        CreateAtsDocument2Request req = CreateAtsDocument2Request.builder()
                 .atsDocument(AtsDocument.builder()
                     .build())
                 .connectionId("<id>")
                 .build();
 
-        CreateAtsDocumentResponse res = sdk.ats().createAtsDocument()
+        CreateAtsDocument2Response res = sdk.ats().createAtsDocument2()
                 .request(req)
                 .call();
 
@@ -340,13 +340,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
-| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
-| `request`                                                                       | [CreateAtsDocumentRequest](../../models/operations/CreateAtsDocumentRequest.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
+| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
+| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| `request`                                                                         | [CreateAtsDocument2Request](../../models/operations/CreateAtsDocument2Request.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
 
 ### Response
 
-**[CreateAtsDocumentResponse](../../models/operations/CreateAtsDocumentResponse.md)**
+**[CreateAtsDocument2Response](../../models/operations/CreateAtsDocument2Response.md)**
 
 ### Errors
 
@@ -354,20 +354,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## createAtsInterview
+## createAtsInterview2
 
 Create an interview
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createAtsInterview" method="post" path="/ats/{connection_id}/interview" -->
+<!-- UsageSnippet language="java" operationID="createAtsInterview2" method="post" path="/ats/{connection_id}/interview" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.CreateAtsInterviewRequest;
-import to.unified.unified_java_sdk.models.operations.CreateAtsInterviewResponse;
+import to.unified.unified_java_sdk.models.operations.CreateAtsInterview2Request;
+import to.unified.unified_java_sdk.models.operations.CreateAtsInterview2Response;
 import to.unified.unified_java_sdk.models.shared.AtsInterview;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -381,13 +381,13 @@ public class Application {
                     .build())
             .build();
 
-        CreateAtsInterviewRequest req = CreateAtsInterviewRequest.builder()
+        CreateAtsInterview2Request req = CreateAtsInterview2Request.builder()
                 .atsInterview(AtsInterview.builder()
                     .build())
                 .connectionId("<id>")
                 .build();
 
-        CreateAtsInterviewResponse res = sdk.ats().createAtsInterview()
+        CreateAtsInterview2Response res = sdk.ats().createAtsInterview2()
                 .request(req)
                 .call();
 
@@ -400,13 +400,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
-| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
-| `request`                                                                         | [CreateAtsInterviewRequest](../../models/operations/CreateAtsInterviewRequest.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
+| Parameter                                                                           | Type                                                                                | Required                                                                            | Description                                                                         |
+| ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| `request`                                                                           | [CreateAtsInterview2Request](../../models/operations/CreateAtsInterview2Request.md) | :heavy_check_mark:                                                                  | The request object to use for the request.                                          |
 
 ### Response
 
-**[CreateAtsInterviewResponse](../../models/operations/CreateAtsInterviewResponse.md)**
+**[CreateAtsInterview2Response](../../models/operations/CreateAtsInterview2Response.md)**
 
 ### Errors
 
@@ -414,20 +414,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## createAtsJob
+## createAtsJob2
 
 Create a job
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createAtsJob" method="post" path="/ats/{connection_id}/job" -->
+<!-- UsageSnippet language="java" operationID="createAtsJob2" method="post" path="/ats/{connection_id}/job" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.CreateAtsJobRequest;
-import to.unified.unified_java_sdk.models.operations.CreateAtsJobResponse;
+import to.unified.unified_java_sdk.models.operations.CreateAtsJob2Request;
+import to.unified.unified_java_sdk.models.operations.CreateAtsJob2Response;
 import to.unified.unified_java_sdk.models.shared.AtsJob;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -441,13 +441,13 @@ public class Application {
                     .build())
             .build();
 
-        CreateAtsJobRequest req = CreateAtsJobRequest.builder()
+        CreateAtsJob2Request req = CreateAtsJob2Request.builder()
                 .atsJob(AtsJob.builder()
                     .build())
                 .connectionId("<id>")
                 .build();
 
-        CreateAtsJobResponse res = sdk.ats().createAtsJob()
+        CreateAtsJob2Response res = sdk.ats().createAtsJob2()
                 .request(req)
                 .call();
 
@@ -460,13 +460,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                             | Type                                                                  | Required                                                              | Description                                                           |
-| --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- |
-| `request`                                                             | [CreateAtsJobRequest](../../models/operations/CreateAtsJobRequest.md) | :heavy_check_mark:                                                    | The request object to use for the request.                            |
+| Parameter                                                               | Type                                                                    | Required                                                                | Description                                                             |
+| ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- |
+| `request`                                                               | [CreateAtsJob2Request](../../models/operations/CreateAtsJob2Request.md) | :heavy_check_mark:                                                      | The request object to use for the request.                              |
 
 ### Response
 
-**[CreateAtsJobResponse](../../models/operations/CreateAtsJobResponse.md)**
+**[CreateAtsJob2Response](../../models/operations/CreateAtsJob2Response.md)**
 
 ### Errors
 
@@ -474,20 +474,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## createAtsScorecard
+## createAtsScorecard2
 
 Create a scorecard
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createAtsScorecard" method="post" path="/ats/{connection_id}/scorecard" -->
+<!-- UsageSnippet language="java" operationID="createAtsScorecard2" method="post" path="/ats/{connection_id}/scorecard" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.CreateAtsScorecardRequest;
-import to.unified.unified_java_sdk.models.operations.CreateAtsScorecardResponse;
+import to.unified.unified_java_sdk.models.operations.CreateAtsScorecard2Request;
+import to.unified.unified_java_sdk.models.operations.CreateAtsScorecard2Response;
 import to.unified.unified_java_sdk.models.shared.AtsScorecard;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -501,13 +501,13 @@ public class Application {
                     .build())
             .build();
 
-        CreateAtsScorecardRequest req = CreateAtsScorecardRequest.builder()
+        CreateAtsScorecard2Request req = CreateAtsScorecard2Request.builder()
                 .atsScorecard(AtsScorecard.builder()
                     .build())
                 .connectionId("<id>")
                 .build();
 
-        CreateAtsScorecardResponse res = sdk.ats().createAtsScorecard()
+        CreateAtsScorecard2Response res = sdk.ats().createAtsScorecard2()
                 .request(req)
                 .call();
 
@@ -520,13 +520,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
-| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
-| `request`                                                                         | [CreateAtsScorecardRequest](../../models/operations/CreateAtsScorecardRequest.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
+| Parameter                                                                           | Type                                                                                | Required                                                                            | Description                                                                         |
+| ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| `request`                                                                           | [CreateAtsScorecard2Request](../../models/operations/CreateAtsScorecard2Request.md) | :heavy_check_mark:                                                                  | The request object to use for the request.                                          |
 
 ### Response
 
-**[CreateAtsScorecardResponse](../../models/operations/CreateAtsScorecardResponse.md)**
+**[CreateAtsScorecard2Response](../../models/operations/CreateAtsScorecard2Response.md)**
 
 ### Errors
 
@@ -534,20 +534,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## getAtsActivity
+## getAtsActivity2
 
 Retrieve an activity
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="getAtsActivity" method="get" path="/ats/{connection_id}/activity/{id}" -->
+<!-- UsageSnippet language="java" operationID="getAtsActivity2" method="get" path="/ats/{connection_id}/activity/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.GetAtsActivityRequest;
-import to.unified.unified_java_sdk.models.operations.GetAtsActivityResponse;
+import to.unified.unified_java_sdk.models.operations.GetAtsActivity2Request;
+import to.unified.unified_java_sdk.models.operations.GetAtsActivity2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -560,12 +560,12 @@ public class Application {
                     .build())
             .build();
 
-        GetAtsActivityRequest req = GetAtsActivityRequest.builder()
+        GetAtsActivity2Request req = GetAtsActivity2Request.builder()
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        GetAtsActivityResponse res = sdk.ats().getAtsActivity()
+        GetAtsActivity2Response res = sdk.ats().getAtsActivity2()
                 .request(req)
                 .call();
 
@@ -578,13 +578,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                 | Type                                                                      | Required                                                                  | Description                                                               |
-| ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
-| `request`                                                                 | [GetAtsActivityRequest](../../models/operations/GetAtsActivityRequest.md) | :heavy_check_mark:                                                        | The request object to use for the request.                                |
+| Parameter                                                                   | Type                                                                        | Required                                                                    | Description                                                                 |
+| --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| `request`                                                                   | [GetAtsActivity2Request](../../models/operations/GetAtsActivity2Request.md) | :heavy_check_mark:                                                          | The request object to use for the request.                                  |
 
 ### Response
 
-**[GetAtsActivityResponse](../../models/operations/GetAtsActivityResponse.md)**
+**[GetAtsActivity2Response](../../models/operations/GetAtsActivity2Response.md)**
 
 ### Errors
 
@@ -592,20 +592,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## getAtsApplication
+## getAtsApplication2
 
 Retrieve an application
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="getAtsApplication" method="get" path="/ats/{connection_id}/application/{id}" -->
+<!-- UsageSnippet language="java" operationID="getAtsApplication2" method="get" path="/ats/{connection_id}/application/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.GetAtsApplicationRequest;
-import to.unified.unified_java_sdk.models.operations.GetAtsApplicationResponse;
+import to.unified.unified_java_sdk.models.operations.GetAtsApplication2Request;
+import to.unified.unified_java_sdk.models.operations.GetAtsApplication2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -618,12 +618,12 @@ public class Application {
                     .build())
             .build();
 
-        GetAtsApplicationRequest req = GetAtsApplicationRequest.builder()
+        GetAtsApplication2Request req = GetAtsApplication2Request.builder()
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        GetAtsApplicationResponse res = sdk.ats().getAtsApplication()
+        GetAtsApplication2Response res = sdk.ats().getAtsApplication2()
                 .request(req)
                 .call();
 
@@ -636,13 +636,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
-| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
-| `request`                                                                       | [GetAtsApplicationRequest](../../models/operations/GetAtsApplicationRequest.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
+| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
+| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| `request`                                                                         | [GetAtsApplication2Request](../../models/operations/GetAtsApplication2Request.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
 
 ### Response
 
-**[GetAtsApplicationResponse](../../models/operations/GetAtsApplicationResponse.md)**
+**[GetAtsApplication2Response](../../models/operations/GetAtsApplication2Response.md)**
 
 ### Errors
 
@@ -650,20 +650,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## getAtsCandidate
+## getAtsCandidate2
 
 Retrieve a candidate
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="getAtsCandidate" method="get" path="/ats/{connection_id}/candidate/{id}" -->
+<!-- UsageSnippet language="java" operationID="getAtsCandidate2" method="get" path="/ats/{connection_id}/candidate/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.GetAtsCandidateRequest;
-import to.unified.unified_java_sdk.models.operations.GetAtsCandidateResponse;
+import to.unified.unified_java_sdk.models.operations.GetAtsCandidate2Request;
+import to.unified.unified_java_sdk.models.operations.GetAtsCandidate2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -676,12 +676,12 @@ public class Application {
                     .build())
             .build();
 
-        GetAtsCandidateRequest req = GetAtsCandidateRequest.builder()
+        GetAtsCandidate2Request req = GetAtsCandidate2Request.builder()
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        GetAtsCandidateResponse res = sdk.ats().getAtsCandidate()
+        GetAtsCandidate2Response res = sdk.ats().getAtsCandidate2()
                 .request(req)
                 .call();
 
@@ -694,13 +694,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                   | Type                                                                        | Required                                                                    | Description                                                                 |
-| --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
-| `request`                                                                   | [GetAtsCandidateRequest](../../models/operations/GetAtsCandidateRequest.md) | :heavy_check_mark:                                                          | The request object to use for the request.                                  |
+| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
+| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| `request`                                                                     | [GetAtsCandidate2Request](../../models/operations/GetAtsCandidate2Request.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
 
 ### Response
 
-**[GetAtsCandidateResponse](../../models/operations/GetAtsCandidateResponse.md)**
+**[GetAtsCandidate2Response](../../models/operations/GetAtsCandidate2Response.md)**
 
 ### Errors
 
@@ -708,20 +708,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## getAtsCompany
+## getAtsCompany2
 
 Retrieve a company
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="getAtsCompany" method="get" path="/ats/{connection_id}/company/{id}" -->
+<!-- UsageSnippet language="java" operationID="getAtsCompany2" method="get" path="/ats/{connection_id}/company/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.GetAtsCompanyRequest;
-import to.unified.unified_java_sdk.models.operations.GetAtsCompanyResponse;
+import to.unified.unified_java_sdk.models.operations.GetAtsCompany2Request;
+import to.unified.unified_java_sdk.models.operations.GetAtsCompany2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -734,12 +734,12 @@ public class Application {
                     .build())
             .build();
 
-        GetAtsCompanyRequest req = GetAtsCompanyRequest.builder()
+        GetAtsCompany2Request req = GetAtsCompany2Request.builder()
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        GetAtsCompanyResponse res = sdk.ats().getAtsCompany()
+        GetAtsCompany2Response res = sdk.ats().getAtsCompany2()
                 .request(req)
                 .call();
 
@@ -752,13 +752,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                               | Type                                                                    | Required                                                                | Description                                                             |
-| ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- |
-| `request`                                                               | [GetAtsCompanyRequest](../../models/operations/GetAtsCompanyRequest.md) | :heavy_check_mark:                                                      | The request object to use for the request.                              |
+| Parameter                                                                 | Type                                                                      | Required                                                                  | Description                                                               |
+| ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
+| `request`                                                                 | [GetAtsCompany2Request](../../models/operations/GetAtsCompany2Request.md) | :heavy_check_mark:                                                        | The request object to use for the request.                                |
 
 ### Response
 
-**[GetAtsCompanyResponse](../../models/operations/GetAtsCompanyResponse.md)**
+**[GetAtsCompany2Response](../../models/operations/GetAtsCompany2Response.md)**
 
 ### Errors
 
@@ -766,20 +766,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## getAtsDocument
+## getAtsDocument2
 
 Retrieve a document
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="getAtsDocument" method="get" path="/ats/{connection_id}/document/{id}" -->
+<!-- UsageSnippet language="java" operationID="getAtsDocument2" method="get" path="/ats/{connection_id}/document/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.GetAtsDocumentRequest;
-import to.unified.unified_java_sdk.models.operations.GetAtsDocumentResponse;
+import to.unified.unified_java_sdk.models.operations.GetAtsDocument2Request;
+import to.unified.unified_java_sdk.models.operations.GetAtsDocument2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -792,12 +792,12 @@ public class Application {
                     .build())
             .build();
 
-        GetAtsDocumentRequest req = GetAtsDocumentRequest.builder()
+        GetAtsDocument2Request req = GetAtsDocument2Request.builder()
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        GetAtsDocumentResponse res = sdk.ats().getAtsDocument()
+        GetAtsDocument2Response res = sdk.ats().getAtsDocument2()
                 .request(req)
                 .call();
 
@@ -810,13 +810,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                 | Type                                                                      | Required                                                                  | Description                                                               |
-| ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
-| `request`                                                                 | [GetAtsDocumentRequest](../../models/operations/GetAtsDocumentRequest.md) | :heavy_check_mark:                                                        | The request object to use for the request.                                |
+| Parameter                                                                   | Type                                                                        | Required                                                                    | Description                                                                 |
+| --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| `request`                                                                   | [GetAtsDocument2Request](../../models/operations/GetAtsDocument2Request.md) | :heavy_check_mark:                                                          | The request object to use for the request.                                  |
 
 ### Response
 
-**[GetAtsDocumentResponse](../../models/operations/GetAtsDocumentResponse.md)**
+**[GetAtsDocument2Response](../../models/operations/GetAtsDocument2Response.md)**
 
 ### Errors
 
@@ -824,20 +824,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## getAtsInterview
+## getAtsInterview2
 
 Retrieve an interview
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="getAtsInterview" method="get" path="/ats/{connection_id}/interview/{id}" -->
+<!-- UsageSnippet language="java" operationID="getAtsInterview2" method="get" path="/ats/{connection_id}/interview/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.GetAtsInterviewRequest;
-import to.unified.unified_java_sdk.models.operations.GetAtsInterviewResponse;
+import to.unified.unified_java_sdk.models.operations.GetAtsInterview2Request;
+import to.unified.unified_java_sdk.models.operations.GetAtsInterview2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -850,12 +850,12 @@ public class Application {
                     .build())
             .build();
 
-        GetAtsInterviewRequest req = GetAtsInterviewRequest.builder()
+        GetAtsInterview2Request req = GetAtsInterview2Request.builder()
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        GetAtsInterviewResponse res = sdk.ats().getAtsInterview()
+        GetAtsInterview2Response res = sdk.ats().getAtsInterview2()
                 .request(req)
                 .call();
 
@@ -868,13 +868,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                   | Type                                                                        | Required                                                                    | Description                                                                 |
-| --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
-| `request`                                                                   | [GetAtsInterviewRequest](../../models/operations/GetAtsInterviewRequest.md) | :heavy_check_mark:                                                          | The request object to use for the request.                                  |
+| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
+| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| `request`                                                                     | [GetAtsInterview2Request](../../models/operations/GetAtsInterview2Request.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
 
 ### Response
 
-**[GetAtsInterviewResponse](../../models/operations/GetAtsInterviewResponse.md)**
+**[GetAtsInterview2Response](../../models/operations/GetAtsInterview2Response.md)**
 
 ### Errors
 
@@ -882,20 +882,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## getAtsJob
+## getAtsJob2
 
 Retrieve a job
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="getAtsJob" method="get" path="/ats/{connection_id}/job/{id}" -->
+<!-- UsageSnippet language="java" operationID="getAtsJob2" method="get" path="/ats/{connection_id}/job/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.GetAtsJobRequest;
-import to.unified.unified_java_sdk.models.operations.GetAtsJobResponse;
+import to.unified.unified_java_sdk.models.operations.GetAtsJob2Request;
+import to.unified.unified_java_sdk.models.operations.GetAtsJob2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -908,12 +908,12 @@ public class Application {
                     .build())
             .build();
 
-        GetAtsJobRequest req = GetAtsJobRequest.builder()
+        GetAtsJob2Request req = GetAtsJob2Request.builder()
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        GetAtsJobResponse res = sdk.ats().getAtsJob()
+        GetAtsJob2Response res = sdk.ats().getAtsJob2()
                 .request(req)
                 .call();
 
@@ -926,13 +926,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                       | Type                                                            | Required                                                        | Description                                                     |
-| --------------------------------------------------------------- | --------------------------------------------------------------- | --------------------------------------------------------------- | --------------------------------------------------------------- |
-| `request`                                                       | [GetAtsJobRequest](../../models/operations/GetAtsJobRequest.md) | :heavy_check_mark:                                              | The request object to use for the request.                      |
+| Parameter                                                         | Type                                                              | Required                                                          | Description                                                       |
+| ----------------------------------------------------------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------- |
+| `request`                                                         | [GetAtsJob2Request](../../models/operations/GetAtsJob2Request.md) | :heavy_check_mark:                                                | The request object to use for the request.                        |
 
 ### Response
 
-**[GetAtsJobResponse](../../models/operations/GetAtsJobResponse.md)**
+**[GetAtsJob2Response](../../models/operations/GetAtsJob2Response.md)**
 
 ### Errors
 
@@ -940,20 +940,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## getAtsScorecard
+## getAtsScorecard2
 
 Retrieve a scorecard
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="getAtsScorecard" method="get" path="/ats/{connection_id}/scorecard/{id}" -->
+<!-- UsageSnippet language="java" operationID="getAtsScorecard2" method="get" path="/ats/{connection_id}/scorecard/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.GetAtsScorecardRequest;
-import to.unified.unified_java_sdk.models.operations.GetAtsScorecardResponse;
+import to.unified.unified_java_sdk.models.operations.GetAtsScorecard2Request;
+import to.unified.unified_java_sdk.models.operations.GetAtsScorecard2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -966,12 +966,12 @@ public class Application {
                     .build())
             .build();
 
-        GetAtsScorecardRequest req = GetAtsScorecardRequest.builder()
+        GetAtsScorecard2Request req = GetAtsScorecard2Request.builder()
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        GetAtsScorecardResponse res = sdk.ats().getAtsScorecard()
+        GetAtsScorecard2Response res = sdk.ats().getAtsScorecard2()
                 .request(req)
                 .call();
 
@@ -984,13 +984,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                   | Type                                                                        | Required                                                                    | Description                                                                 |
-| --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
-| `request`                                                                   | [GetAtsScorecardRequest](../../models/operations/GetAtsScorecardRequest.md) | :heavy_check_mark:                                                          | The request object to use for the request.                                  |
+| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
+| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| `request`                                                                     | [GetAtsScorecard2Request](../../models/operations/GetAtsScorecard2Request.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
 
 ### Response
 
-**[GetAtsScorecardResponse](../../models/operations/GetAtsScorecardResponse.md)**
+**[GetAtsScorecard2Response](../../models/operations/GetAtsScorecard2Response.md)**
 
 ### Errors
 
@@ -998,20 +998,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## listAtsActivities
+## listAtsActivities2
 
 List all activities
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="listAtsActivities" method="get" path="/ats/{connection_id}/activity" -->
+<!-- UsageSnippet language="java" operationID="listAtsActivities2" method="get" path="/ats/{connection_id}/activity" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.ListAtsActivitiesRequest;
-import to.unified.unified_java_sdk.models.operations.ListAtsActivitiesResponse;
+import to.unified.unified_java_sdk.models.operations.ListAtsActivities2Request;
+import to.unified.unified_java_sdk.models.operations.ListAtsActivities2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -1024,11 +1024,11 @@ public class Application {
                     .build())
             .build();
 
-        ListAtsActivitiesRequest req = ListAtsActivitiesRequest.builder()
+        ListAtsActivities2Request req = ListAtsActivities2Request.builder()
                 .connectionId("<id>")
                 .build();
 
-        ListAtsActivitiesResponse res = sdk.ats().listAtsActivities()
+        ListAtsActivities2Response res = sdk.ats().listAtsActivities2()
                 .request(req)
                 .call();
 
@@ -1041,13 +1041,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
-| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
-| `request`                                                                       | [ListAtsActivitiesRequest](../../models/operations/ListAtsActivitiesRequest.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
+| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
+| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| `request`                                                                         | [ListAtsActivities2Request](../../models/operations/ListAtsActivities2Request.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
 
 ### Response
 
-**[ListAtsActivitiesResponse](../../models/operations/ListAtsActivitiesResponse.md)**
+**[ListAtsActivities2Response](../../models/operations/ListAtsActivities2Response.md)**
 
 ### Errors
 
@@ -1055,20 +1055,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## listAtsApplications
+## listAtsApplications2
 
 List all applications
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="listAtsApplications" method="get" path="/ats/{connection_id}/application" -->
+<!-- UsageSnippet language="java" operationID="listAtsApplications2" method="get" path="/ats/{connection_id}/application" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.ListAtsApplicationsRequest;
-import to.unified.unified_java_sdk.models.operations.ListAtsApplicationsResponse;
+import to.unified.unified_java_sdk.models.operations.ListAtsApplications2Request;
+import to.unified.unified_java_sdk.models.operations.ListAtsApplications2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -1081,11 +1081,11 @@ public class Application {
                     .build())
             .build();
 
-        ListAtsApplicationsRequest req = ListAtsApplicationsRequest.builder()
+        ListAtsApplications2Request req = ListAtsApplications2Request.builder()
                 .connectionId("<id>")
                 .build();
 
-        ListAtsApplicationsResponse res = sdk.ats().listAtsApplications()
+        ListAtsApplications2Response res = sdk.ats().listAtsApplications2()
                 .request(req)
                 .call();
 
@@ -1098,13 +1098,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                           | Type                                                                                | Required                                                                            | Description                                                                         |
-| ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
-| `request`                                                                           | [ListAtsApplicationsRequest](../../models/operations/ListAtsApplicationsRequest.md) | :heavy_check_mark:                                                                  | The request object to use for the request.                                          |
+| Parameter                                                                             | Type                                                                                  | Required                                                                              | Description                                                                           |
+| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| `request`                                                                             | [ListAtsApplications2Request](../../models/operations/ListAtsApplications2Request.md) | :heavy_check_mark:                                                                    | The request object to use for the request.                                            |
 
 ### Response
 
-**[ListAtsApplicationsResponse](../../models/operations/ListAtsApplicationsResponse.md)**
+**[ListAtsApplications2Response](../../models/operations/ListAtsApplications2Response.md)**
 
 ### Errors
 
@@ -1112,20 +1112,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## listAtsApplicationstatuses
+## listAtsApplicationstatuses2
 
 List all applicationstatuses
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="listAtsApplicationstatuses" method="get" path="/ats/{connection_id}/applicationstatus" -->
+<!-- UsageSnippet language="java" operationID="listAtsApplicationstatuses2" method="get" path="/ats/{connection_id}/applicationstatus" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.ListAtsApplicationstatusesRequest;
-import to.unified.unified_java_sdk.models.operations.ListAtsApplicationstatusesResponse;
+import to.unified.unified_java_sdk.models.operations.ListAtsApplicationstatuses2Request;
+import to.unified.unified_java_sdk.models.operations.ListAtsApplicationstatuses2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -1138,11 +1138,11 @@ public class Application {
                     .build())
             .build();
 
-        ListAtsApplicationstatusesRequest req = ListAtsApplicationstatusesRequest.builder()
+        ListAtsApplicationstatuses2Request req = ListAtsApplicationstatuses2Request.builder()
                 .connectionId("<id>")
                 .build();
 
-        ListAtsApplicationstatusesResponse res = sdk.ats().listAtsApplicationstatuses()
+        ListAtsApplicationstatuses2Response res = sdk.ats().listAtsApplicationstatuses2()
                 .request(req)
                 .call();
 
@@ -1155,13 +1155,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                         | Type                                                                                              | Required                                                                                          | Description                                                                                       |
-| ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
-| `request`                                                                                         | [ListAtsApplicationstatusesRequest](../../models/operations/ListAtsApplicationstatusesRequest.md) | :heavy_check_mark:                                                                                | The request object to use for the request.                                                        |
+| Parameter                                                                                           | Type                                                                                                | Required                                                                                            | Description                                                                                         |
+| --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
+| `request`                                                                                           | [ListAtsApplicationstatuses2Request](../../models/operations/ListAtsApplicationstatuses2Request.md) | :heavy_check_mark:                                                                                  | The request object to use for the request.                                                          |
 
 ### Response
 
-**[ListAtsApplicationstatusesResponse](../../models/operations/ListAtsApplicationstatusesResponse.md)**
+**[ListAtsApplicationstatuses2Response](../../models/operations/ListAtsApplicationstatuses2Response.md)**
 
 ### Errors
 
@@ -1169,20 +1169,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## listAtsCandidates
+## listAtsCandidates2
 
 List all candidates
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="listAtsCandidates" method="get" path="/ats/{connection_id}/candidate" -->
+<!-- UsageSnippet language="java" operationID="listAtsCandidates2" method="get" path="/ats/{connection_id}/candidate" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.ListAtsCandidatesRequest;
-import to.unified.unified_java_sdk.models.operations.ListAtsCandidatesResponse;
+import to.unified.unified_java_sdk.models.operations.ListAtsCandidates2Request;
+import to.unified.unified_java_sdk.models.operations.ListAtsCandidates2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -1195,11 +1195,11 @@ public class Application {
                     .build())
             .build();
 
-        ListAtsCandidatesRequest req = ListAtsCandidatesRequest.builder()
+        ListAtsCandidates2Request req = ListAtsCandidates2Request.builder()
                 .connectionId("<id>")
                 .build();
 
-        ListAtsCandidatesResponse res = sdk.ats().listAtsCandidates()
+        ListAtsCandidates2Response res = sdk.ats().listAtsCandidates2()
                 .request(req)
                 .call();
 
@@ -1212,13 +1212,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
-| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
-| `request`                                                                       | [ListAtsCandidatesRequest](../../models/operations/ListAtsCandidatesRequest.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
+| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
+| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| `request`                                                                         | [ListAtsCandidates2Request](../../models/operations/ListAtsCandidates2Request.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
 
 ### Response
 
-**[ListAtsCandidatesResponse](../../models/operations/ListAtsCandidatesResponse.md)**
+**[ListAtsCandidates2Response](../../models/operations/ListAtsCandidates2Response.md)**
 
 ### Errors
 
@@ -1226,20 +1226,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## listAtsCompanies
+## listAtsCompanies2
 
 List all companies
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="listAtsCompanies" method="get" path="/ats/{connection_id}/company" -->
+<!-- UsageSnippet language="java" operationID="listAtsCompanies2" method="get" path="/ats/{connection_id}/company" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.ListAtsCompaniesRequest;
-import to.unified.unified_java_sdk.models.operations.ListAtsCompaniesResponse;
+import to.unified.unified_java_sdk.models.operations.ListAtsCompanies2Request;
+import to.unified.unified_java_sdk.models.operations.ListAtsCompanies2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -1252,11 +1252,11 @@ public class Application {
                     .build())
             .build();
 
-        ListAtsCompaniesRequest req = ListAtsCompaniesRequest.builder()
+        ListAtsCompanies2Request req = ListAtsCompanies2Request.builder()
                 .connectionId("<id>")
                 .build();
 
-        ListAtsCompaniesResponse res = sdk.ats().listAtsCompanies()
+        ListAtsCompanies2Response res = sdk.ats().listAtsCompanies2()
                 .request(req)
                 .call();
 
@@ -1269,13 +1269,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
-| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
-| `request`                                                                     | [ListAtsCompaniesRequest](../../models/operations/ListAtsCompaniesRequest.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
+| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| `request`                                                                       | [ListAtsCompanies2Request](../../models/operations/ListAtsCompanies2Request.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
 
 ### Response
 
-**[ListAtsCompaniesResponse](../../models/operations/ListAtsCompaniesResponse.md)**
+**[ListAtsCompanies2Response](../../models/operations/ListAtsCompanies2Response.md)**
 
 ### Errors
 
@@ -1283,20 +1283,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## listAtsDocuments
+## listAtsDocuments2
 
 List all documents
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="listAtsDocuments" method="get" path="/ats/{connection_id}/document" -->
+<!-- UsageSnippet language="java" operationID="listAtsDocuments2" method="get" path="/ats/{connection_id}/document" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.ListAtsDocumentsRequest;
-import to.unified.unified_java_sdk.models.operations.ListAtsDocumentsResponse;
+import to.unified.unified_java_sdk.models.operations.ListAtsDocuments2Request;
+import to.unified.unified_java_sdk.models.operations.ListAtsDocuments2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -1309,11 +1309,11 @@ public class Application {
                     .build())
             .build();
 
-        ListAtsDocumentsRequest req = ListAtsDocumentsRequest.builder()
+        ListAtsDocuments2Request req = ListAtsDocuments2Request.builder()
                 .connectionId("<id>")
                 .build();
 
-        ListAtsDocumentsResponse res = sdk.ats().listAtsDocuments()
+        ListAtsDocuments2Response res = sdk.ats().listAtsDocuments2()
                 .request(req)
                 .call();
 
@@ -1326,13 +1326,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
-| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
-| `request`                                                                     | [ListAtsDocumentsRequest](../../models/operations/ListAtsDocumentsRequest.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
+| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| `request`                                                                       | [ListAtsDocuments2Request](../../models/operations/ListAtsDocuments2Request.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
 
 ### Response
 
-**[ListAtsDocumentsResponse](../../models/operations/ListAtsDocumentsResponse.md)**
+**[ListAtsDocuments2Response](../../models/operations/ListAtsDocuments2Response.md)**
 
 ### Errors
 
@@ -1340,20 +1340,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## listAtsInterviews
+## listAtsInterviews2
 
 List all interviews
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="listAtsInterviews" method="get" path="/ats/{connection_id}/interview" -->
+<!-- UsageSnippet language="java" operationID="listAtsInterviews2" method="get" path="/ats/{connection_id}/interview" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.ListAtsInterviewsRequest;
-import to.unified.unified_java_sdk.models.operations.ListAtsInterviewsResponse;
+import to.unified.unified_java_sdk.models.operations.ListAtsInterviews2Request;
+import to.unified.unified_java_sdk.models.operations.ListAtsInterviews2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -1366,11 +1366,11 @@ public class Application {
                     .build())
             .build();
 
-        ListAtsInterviewsRequest req = ListAtsInterviewsRequest.builder()
+        ListAtsInterviews2Request req = ListAtsInterviews2Request.builder()
                 .connectionId("<id>")
                 .build();
 
-        ListAtsInterviewsResponse res = sdk.ats().listAtsInterviews()
+        ListAtsInterviews2Response res = sdk.ats().listAtsInterviews2()
                 .request(req)
                 .call();
 
@@ -1383,13 +1383,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
-| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
-| `request`                                                                       | [ListAtsInterviewsRequest](../../models/operations/ListAtsInterviewsRequest.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
+| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
+| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| `request`                                                                         | [ListAtsInterviews2Request](../../models/operations/ListAtsInterviews2Request.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
 
 ### Response
 
-**[ListAtsInterviewsResponse](../../models/operations/ListAtsInterviewsResponse.md)**
+**[ListAtsInterviews2Response](../../models/operations/ListAtsInterviews2Response.md)**
 
 ### Errors
 
@@ -1397,20 +1397,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## listAtsJobs
+## listAtsJobs2
 
 List all jobs
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="listAtsJobs" method="get" path="/ats/{connection_id}/job" -->
+<!-- UsageSnippet language="java" operationID="listAtsJobs2" method="get" path="/ats/{connection_id}/job" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.ListAtsJobsRequest;
-import to.unified.unified_java_sdk.models.operations.ListAtsJobsResponse;
+import to.unified.unified_java_sdk.models.operations.ListAtsJobs2Request;
+import to.unified.unified_java_sdk.models.operations.ListAtsJobs2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -1423,11 +1423,11 @@ public class Application {
                     .build())
             .build();
 
-        ListAtsJobsRequest req = ListAtsJobsRequest.builder()
+        ListAtsJobs2Request req = ListAtsJobs2Request.builder()
                 .connectionId("<id>")
                 .build();
 
-        ListAtsJobsResponse res = sdk.ats().listAtsJobs()
+        ListAtsJobs2Response res = sdk.ats().listAtsJobs2()
                 .request(req)
                 .call();
 
@@ -1440,13 +1440,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                           | Type                                                                | Required                                                            | Description                                                         |
-| ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- |
-| `request`                                                           | [ListAtsJobsRequest](../../models/operations/ListAtsJobsRequest.md) | :heavy_check_mark:                                                  | The request object to use for the request.                          |
+| Parameter                                                             | Type                                                                  | Required                                                              | Description                                                           |
+| --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- |
+| `request`                                                             | [ListAtsJobs2Request](../../models/operations/ListAtsJobs2Request.md) | :heavy_check_mark:                                                    | The request object to use for the request.                            |
 
 ### Response
 
-**[ListAtsJobsResponse](../../models/operations/ListAtsJobsResponse.md)**
+**[ListAtsJobs2Response](../../models/operations/ListAtsJobs2Response.md)**
 
 ### Errors
 
@@ -1454,20 +1454,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## listAtsScorecards
+## listAtsScorecards2
 
 List all scorecards
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="listAtsScorecards" method="get" path="/ats/{connection_id}/scorecard" -->
+<!-- UsageSnippet language="java" operationID="listAtsScorecards2" method="get" path="/ats/{connection_id}/scorecard" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.ListAtsScorecardsRequest;
-import to.unified.unified_java_sdk.models.operations.ListAtsScorecardsResponse;
+import to.unified.unified_java_sdk.models.operations.ListAtsScorecards2Request;
+import to.unified.unified_java_sdk.models.operations.ListAtsScorecards2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -1480,11 +1480,11 @@ public class Application {
                     .build())
             .build();
 
-        ListAtsScorecardsRequest req = ListAtsScorecardsRequest.builder()
+        ListAtsScorecards2Request req = ListAtsScorecards2Request.builder()
                 .connectionId("<id>")
                 .build();
 
-        ListAtsScorecardsResponse res = sdk.ats().listAtsScorecards()
+        ListAtsScorecards2Response res = sdk.ats().listAtsScorecards2()
                 .request(req)
                 .call();
 
@@ -1497,13 +1497,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
-| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
-| `request`                                                                       | [ListAtsScorecardsRequest](../../models/operations/ListAtsScorecardsRequest.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
+| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
+| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| `request`                                                                         | [ListAtsScorecards2Request](../../models/operations/ListAtsScorecards2Request.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
 
 ### Response
 
-**[ListAtsScorecardsResponse](../../models/operations/ListAtsScorecardsResponse.md)**
+**[ListAtsScorecards2Response](../../models/operations/ListAtsScorecards2Response.md)**
 
 ### Errors
 
@@ -1511,20 +1511,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## patchAtsActivity
+## patchAtsActivity2
 
 Update an activity
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchAtsActivity" method="patch" path="/ats/{connection_id}/activity/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchAtsActivity2" method="patch" path="/ats/{connection_id}/activity/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.PatchAtsActivityRequest;
-import to.unified.unified_java_sdk.models.operations.PatchAtsActivityResponse;
+import to.unified.unified_java_sdk.models.operations.PatchAtsActivity2Request;
+import to.unified.unified_java_sdk.models.operations.PatchAtsActivity2Response;
 import to.unified.unified_java_sdk.models.shared.AtsActivity;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -1538,14 +1538,14 @@ public class Application {
                     .build())
             .build();
 
-        PatchAtsActivityRequest req = PatchAtsActivityRequest.builder()
+        PatchAtsActivity2Request req = PatchAtsActivity2Request.builder()
                 .atsActivity(AtsActivity.builder()
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        PatchAtsActivityResponse res = sdk.ats().patchAtsActivity()
+        PatchAtsActivity2Response res = sdk.ats().patchAtsActivity2()
                 .request(req)
                 .call();
 
@@ -1558,13 +1558,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
-| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
-| `request`                                                                     | [PatchAtsActivityRequest](../../models/operations/PatchAtsActivityRequest.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
+| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| `request`                                                                       | [PatchAtsActivity2Request](../../models/operations/PatchAtsActivity2Request.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
 
 ### Response
 
-**[PatchAtsActivityResponse](../../models/operations/PatchAtsActivityResponse.md)**
+**[PatchAtsActivity2Response](../../models/operations/PatchAtsActivity2Response.md)**
 
 ### Errors
 
@@ -1572,20 +1572,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## patchAtsApplication
+## patchAtsApplication2
 
 Update an application
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchAtsApplication" method="patch" path="/ats/{connection_id}/application/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchAtsApplication2" method="patch" path="/ats/{connection_id}/application/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.PatchAtsApplicationRequest;
-import to.unified.unified_java_sdk.models.operations.PatchAtsApplicationResponse;
+import to.unified.unified_java_sdk.models.operations.PatchAtsApplication2Request;
+import to.unified.unified_java_sdk.models.operations.PatchAtsApplication2Response;
 import to.unified.unified_java_sdk.models.shared.AtsApplication;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -1599,19 +1599,1016 @@ public class Application {
                     .build())
             .build();
 
-        PatchAtsApplicationRequest req = PatchAtsApplicationRequest.builder()
+        PatchAtsApplication2Request req = PatchAtsApplication2Request.builder()
                 .atsApplication(AtsApplication.builder()
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        PatchAtsApplicationResponse res = sdk.ats().patchAtsApplication()
+        PatchAtsApplication2Response res = sdk.ats().patchAtsApplication2()
                 .request(req)
                 .call();
 
         if (res.atsApplication().isPresent()) {
             System.out.println(res.atsApplication().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                             | Type                                                                                  | Required                                                                              | Description                                                                           |
+| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| `request`                                                                             | [PatchAtsApplication2Request](../../models/operations/PatchAtsApplication2Request.md) | :heavy_check_mark:                                                                    | The request object to use for the request.                                            |
+
+### Response
+
+**[PatchAtsApplication2Response](../../models/operations/PatchAtsApplication2Response.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## patchAtsCandidate2
+
+Update a candidate
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="patchAtsCandidate2" method="patch" path="/ats/{connection_id}/candidate/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.PatchAtsCandidate2Request;
+import to.unified.unified_java_sdk.models.operations.PatchAtsCandidate2Response;
+import to.unified.unified_java_sdk.models.shared.AtsCandidate;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        PatchAtsCandidate2Request req = PatchAtsCandidate2Request.builder()
+                .atsCandidate(AtsCandidate.builder()
+                    .build())
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        PatchAtsCandidate2Response res = sdk.ats().patchAtsCandidate2()
+                .request(req)
+                .call();
+
+        if (res.atsCandidate().isPresent()) {
+            System.out.println(res.atsCandidate().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
+| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| `request`                                                                         | [PatchAtsCandidate2Request](../../models/operations/PatchAtsCandidate2Request.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
+
+### Response
+
+**[PatchAtsCandidate2Response](../../models/operations/PatchAtsCandidate2Response.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## patchAtsCompany2
+
+Update a company
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="patchAtsCompany2" method="patch" path="/ats/{connection_id}/company/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.PatchAtsCompany2Request;
+import to.unified.unified_java_sdk.models.operations.PatchAtsCompany2Response;
+import to.unified.unified_java_sdk.models.shared.AtsCompany;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        PatchAtsCompany2Request req = PatchAtsCompany2Request.builder()
+                .atsCompany(AtsCompany.builder()
+                    .build())
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        PatchAtsCompany2Response res = sdk.ats().patchAtsCompany2()
+                .request(req)
+                .call();
+
+        if (res.atsCompany().isPresent()) {
+            System.out.println(res.atsCompany().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
+| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| `request`                                                                     | [PatchAtsCompany2Request](../../models/operations/PatchAtsCompany2Request.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
+
+### Response
+
+**[PatchAtsCompany2Response](../../models/operations/PatchAtsCompany2Response.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## patchAtsDocument2
+
+Update a document
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="patchAtsDocument2" method="patch" path="/ats/{connection_id}/document/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.PatchAtsDocument2Request;
+import to.unified.unified_java_sdk.models.operations.PatchAtsDocument2Response;
+import to.unified.unified_java_sdk.models.shared.AtsDocument;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        PatchAtsDocument2Request req = PatchAtsDocument2Request.builder()
+                .atsDocument(AtsDocument.builder()
+                    .build())
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        PatchAtsDocument2Response res = sdk.ats().patchAtsDocument2()
+                .request(req)
+                .call();
+
+        if (res.atsDocument().isPresent()) {
+            System.out.println(res.atsDocument().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| `request`                                                                       | [PatchAtsDocument2Request](../../models/operations/PatchAtsDocument2Request.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
+
+### Response
+
+**[PatchAtsDocument2Response](../../models/operations/PatchAtsDocument2Response.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## patchAtsInterview2
+
+Update an interview
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="patchAtsInterview2" method="patch" path="/ats/{connection_id}/interview/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.PatchAtsInterview2Request;
+import to.unified.unified_java_sdk.models.operations.PatchAtsInterview2Response;
+import to.unified.unified_java_sdk.models.shared.AtsInterview;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        PatchAtsInterview2Request req = PatchAtsInterview2Request.builder()
+                .atsInterview(AtsInterview.builder()
+                    .build())
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        PatchAtsInterview2Response res = sdk.ats().patchAtsInterview2()
+                .request(req)
+                .call();
+
+        if (res.atsInterview().isPresent()) {
+            System.out.println(res.atsInterview().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
+| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| `request`                                                                         | [PatchAtsInterview2Request](../../models/operations/PatchAtsInterview2Request.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
+
+### Response
+
+**[PatchAtsInterview2Response](../../models/operations/PatchAtsInterview2Response.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## patchAtsJob2
+
+Update a job
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="patchAtsJob2" method="patch" path="/ats/{connection_id}/job/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.PatchAtsJob2Request;
+import to.unified.unified_java_sdk.models.operations.PatchAtsJob2Response;
+import to.unified.unified_java_sdk.models.shared.AtsJob;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        PatchAtsJob2Request req = PatchAtsJob2Request.builder()
+                .atsJob(AtsJob.builder()
+                    .build())
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        PatchAtsJob2Response res = sdk.ats().patchAtsJob2()
+                .request(req)
+                .call();
+
+        if (res.atsJob().isPresent()) {
+            System.out.println(res.atsJob().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                             | Type                                                                  | Required                                                              | Description                                                           |
+| --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- |
+| `request`                                                             | [PatchAtsJob2Request](../../models/operations/PatchAtsJob2Request.md) | :heavy_check_mark:                                                    | The request object to use for the request.                            |
+
+### Response
+
+**[PatchAtsJob2Response](../../models/operations/PatchAtsJob2Response.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## patchAtsScorecard2
+
+Update a scorecard
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="patchAtsScorecard2" method="patch" path="/ats/{connection_id}/scorecard/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.PatchAtsScorecard2Request;
+import to.unified.unified_java_sdk.models.operations.PatchAtsScorecard2Response;
+import to.unified.unified_java_sdk.models.shared.AtsScorecard;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        PatchAtsScorecard2Request req = PatchAtsScorecard2Request.builder()
+                .atsScorecard(AtsScorecard.builder()
+                    .build())
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        PatchAtsScorecard2Response res = sdk.ats().patchAtsScorecard2()
+                .request(req)
+                .call();
+
+        if (res.atsScorecard().isPresent()) {
+            System.out.println(res.atsScorecard().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
+| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| `request`                                                                         | [PatchAtsScorecard2Request](../../models/operations/PatchAtsScorecard2Request.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
+
+### Response
+
+**[PatchAtsScorecard2Response](../../models/operations/PatchAtsScorecard2Response.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## removeAtsActivity2
+
+Remove an activity
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="removeAtsActivity2" method="delete" path="/ats/{connection_id}/activity/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.RemoveAtsActivity2Request;
+import to.unified.unified_java_sdk.models.operations.RemoveAtsActivity2Response;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        RemoveAtsActivity2Request req = RemoveAtsActivity2Request.builder()
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        RemoveAtsActivity2Response res = sdk.ats().removeAtsActivity2()
+                .request(req)
+                .call();
+
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
+| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| `request`                                                                         | [RemoveAtsActivity2Request](../../models/operations/RemoveAtsActivity2Request.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
+
+### Response
+
+**[RemoveAtsActivity2Response](../../models/operations/RemoveAtsActivity2Response.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## removeAtsApplication2
+
+Remove an application
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="removeAtsApplication2" method="delete" path="/ats/{connection_id}/application/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.RemoveAtsApplication2Request;
+import to.unified.unified_java_sdk.models.operations.RemoveAtsApplication2Response;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        RemoveAtsApplication2Request req = RemoveAtsApplication2Request.builder()
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        RemoveAtsApplication2Response res = sdk.ats().removeAtsApplication2()
+                .request(req)
+                .call();
+
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
+| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| `request`                                                                               | [RemoveAtsApplication2Request](../../models/operations/RemoveAtsApplication2Request.md) | :heavy_check_mark:                                                                      | The request object to use for the request.                                              |
+
+### Response
+
+**[RemoveAtsApplication2Response](../../models/operations/RemoveAtsApplication2Response.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## removeAtsCandidate2
+
+Remove a candidate
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="removeAtsCandidate2" method="delete" path="/ats/{connection_id}/candidate/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.RemoveAtsCandidate2Request;
+import to.unified.unified_java_sdk.models.operations.RemoveAtsCandidate2Response;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        RemoveAtsCandidate2Request req = RemoveAtsCandidate2Request.builder()
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        RemoveAtsCandidate2Response res = sdk.ats().removeAtsCandidate2()
+                .request(req)
+                .call();
+
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                           | Type                                                                                | Required                                                                            | Description                                                                         |
+| ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| `request`                                                                           | [RemoveAtsCandidate2Request](../../models/operations/RemoveAtsCandidate2Request.md) | :heavy_check_mark:                                                                  | The request object to use for the request.                                          |
+
+### Response
+
+**[RemoveAtsCandidate2Response](../../models/operations/RemoveAtsCandidate2Response.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## removeAtsCompany2
+
+Remove a company
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="removeAtsCompany2" method="delete" path="/ats/{connection_id}/company/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.RemoveAtsCompany2Request;
+import to.unified.unified_java_sdk.models.operations.RemoveAtsCompany2Response;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        RemoveAtsCompany2Request req = RemoveAtsCompany2Request.builder()
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        RemoveAtsCompany2Response res = sdk.ats().removeAtsCompany2()
+                .request(req)
+                .call();
+
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| `request`                                                                       | [RemoveAtsCompany2Request](../../models/operations/RemoveAtsCompany2Request.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
+
+### Response
+
+**[RemoveAtsCompany2Response](../../models/operations/RemoveAtsCompany2Response.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## removeAtsDocument2
+
+Remove a document
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="removeAtsDocument2" method="delete" path="/ats/{connection_id}/document/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.RemoveAtsDocument2Request;
+import to.unified.unified_java_sdk.models.operations.RemoveAtsDocument2Response;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        RemoveAtsDocument2Request req = RemoveAtsDocument2Request.builder()
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        RemoveAtsDocument2Response res = sdk.ats().removeAtsDocument2()
+                .request(req)
+                .call();
+
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
+| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| `request`                                                                         | [RemoveAtsDocument2Request](../../models/operations/RemoveAtsDocument2Request.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
+
+### Response
+
+**[RemoveAtsDocument2Response](../../models/operations/RemoveAtsDocument2Response.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## removeAtsInterview2
+
+Remove an interview
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="removeAtsInterview2" method="delete" path="/ats/{connection_id}/interview/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.RemoveAtsInterview2Request;
+import to.unified.unified_java_sdk.models.operations.RemoveAtsInterview2Response;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        RemoveAtsInterview2Request req = RemoveAtsInterview2Request.builder()
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        RemoveAtsInterview2Response res = sdk.ats().removeAtsInterview2()
+                .request(req)
+                .call();
+
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                           | Type                                                                                | Required                                                                            | Description                                                                         |
+| ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| `request`                                                                           | [RemoveAtsInterview2Request](../../models/operations/RemoveAtsInterview2Request.md) | :heavy_check_mark:                                                                  | The request object to use for the request.                                          |
+
+### Response
+
+**[RemoveAtsInterview2Response](../../models/operations/RemoveAtsInterview2Response.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## removeAtsJob2
+
+Remove a job
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="removeAtsJob2" method="delete" path="/ats/{connection_id}/job/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.RemoveAtsJob2Request;
+import to.unified.unified_java_sdk.models.operations.RemoveAtsJob2Response;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        RemoveAtsJob2Request req = RemoveAtsJob2Request.builder()
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        RemoveAtsJob2Response res = sdk.ats().removeAtsJob2()
+                .request(req)
+                .call();
+
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                               | Type                                                                    | Required                                                                | Description                                                             |
+| ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- |
+| `request`                                                               | [RemoveAtsJob2Request](../../models/operations/RemoveAtsJob2Request.md) | :heavy_check_mark:                                                      | The request object to use for the request.                              |
+
+### Response
+
+**[RemoveAtsJob2Response](../../models/operations/RemoveAtsJob2Response.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## removeAtsScorecard2
+
+Remove a scorecard
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="removeAtsScorecard2" method="delete" path="/ats/{connection_id}/scorecard/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.RemoveAtsScorecard2Request;
+import to.unified.unified_java_sdk.models.operations.RemoveAtsScorecard2Response;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        RemoveAtsScorecard2Request req = RemoveAtsScorecard2Request.builder()
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        RemoveAtsScorecard2Response res = sdk.ats().removeAtsScorecard2()
+                .request(req)
+                .call();
+
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                           | Type                                                                                | Required                                                                            | Description                                                                         |
+| ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| `request`                                                                           | [RemoveAtsScorecard2Request](../../models/operations/RemoveAtsScorecard2Request.md) | :heavy_check_mark:                                                                  | The request object to use for the request.                                          |
+
+### Response
+
+**[RemoveAtsScorecard2Response](../../models/operations/RemoveAtsScorecard2Response.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## updateAtsActivity2
+
+Update an activity
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="updateAtsActivity2" method="put" path="/ats/{connection_id}/activity/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.UpdateAtsActivity2Request;
+import to.unified.unified_java_sdk.models.operations.UpdateAtsActivity2Response;
+import to.unified.unified_java_sdk.models.shared.AtsActivity;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        UpdateAtsActivity2Request req = UpdateAtsActivity2Request.builder()
+                .atsActivity(AtsActivity.builder()
+                    .build())
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        UpdateAtsActivity2Response res = sdk.ats().updateAtsActivity2()
+                .request(req)
+                .call();
+
+        if (res.atsActivity().isPresent()) {
+            System.out.println(res.atsActivity().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
+| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| `request`                                                                         | [UpdateAtsActivity2Request](../../models/operations/UpdateAtsActivity2Request.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
+
+### Response
+
+**[UpdateAtsActivity2Response](../../models/operations/UpdateAtsActivity2Response.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## updateAtsApplication2
+
+Update an application
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="updateAtsApplication2" method="put" path="/ats/{connection_id}/application/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.UpdateAtsApplication2Request;
+import to.unified.unified_java_sdk.models.operations.UpdateAtsApplication2Response;
+import to.unified.unified_java_sdk.models.shared.AtsApplication;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        UpdateAtsApplication2Request req = UpdateAtsApplication2Request.builder()
+                .atsApplication(AtsApplication.builder()
+                    .build())
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        UpdateAtsApplication2Response res = sdk.ats().updateAtsApplication2()
+                .request(req)
+                .call();
+
+        if (res.atsApplication().isPresent()) {
+            System.out.println(res.atsApplication().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
+| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| `request`                                                                               | [UpdateAtsApplication2Request](../../models/operations/UpdateAtsApplication2Request.md) | :heavy_check_mark:                                                                      | The request object to use for the request.                                              |
+
+### Response
+
+**[UpdateAtsApplication2Response](../../models/operations/UpdateAtsApplication2Response.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## updateAtsCandidate2
+
+Update a candidate
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="updateAtsCandidate2" method="put" path="/ats/{connection_id}/candidate/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.UpdateAtsCandidate2Request;
+import to.unified.unified_java_sdk.models.operations.UpdateAtsCandidate2Response;
+import to.unified.unified_java_sdk.models.shared.AtsCandidate;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        UpdateAtsCandidate2Request req = UpdateAtsCandidate2Request.builder()
+                .atsCandidate(AtsCandidate.builder()
+                    .build())
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        UpdateAtsCandidate2Response res = sdk.ats().updateAtsCandidate2()
+                .request(req)
+                .call();
+
+        if (res.atsCandidate().isPresent()) {
+            System.out.println(res.atsCandidate().get());
         }
     }
 }
@@ -1621,11 +2618,11 @@ public class Application {
 
 | Parameter                                                                           | Type                                                                                | Required                                                                            | Description                                                                         |
 | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
-| `request`                                                                           | [PatchAtsApplicationRequest](../../models/operations/PatchAtsApplicationRequest.md) | :heavy_check_mark:                                                                  | The request object to use for the request.                                          |
+| `request`                                                                           | [UpdateAtsCandidate2Request](../../models/operations/UpdateAtsCandidate2Request.md) | :heavy_check_mark:                                                                  | The request object to use for the request.                                          |
 
 ### Response
 
-**[PatchAtsApplicationResponse](../../models/operations/PatchAtsApplicationResponse.md)**
+**[UpdateAtsCandidate2Response](../../models/operations/UpdateAtsCandidate2Response.md)**
 
 ### Errors
 
@@ -1633,81 +2630,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## patchAtsCandidate
-
-Update a candidate
-
-### Example Usage
-
-<!-- UsageSnippet language="java" operationID="patchAtsCandidate" method="patch" path="/ats/{connection_id}/candidate/{id}" -->
-```java
-package hello.world;
-
-import java.lang.Exception;
-import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.PatchAtsCandidateRequest;
-import to.unified.unified_java_sdk.models.operations.PatchAtsCandidateResponse;
-import to.unified.unified_java_sdk.models.shared.AtsCandidate;
-import to.unified.unified_java_sdk.models.shared.Security;
-
-public class Application {
-
-    public static void main(String[] args) throws Exception {
-
-        UnifiedTo sdk = UnifiedTo.builder()
-                .security(Security.builder()
-                    .jwt(System.getenv().getOrDefault("JWT", ""))
-                    .build())
-            .build();
-
-        PatchAtsCandidateRequest req = PatchAtsCandidateRequest.builder()
-                .atsCandidate(AtsCandidate.builder()
-                    .build())
-                .connectionId("<id>")
-                .id("<id>")
-                .build();
-
-        PatchAtsCandidateResponse res = sdk.ats().patchAtsCandidate()
-                .request(req)
-                .call();
-
-        if (res.atsCandidate().isPresent()) {
-            System.out.println(res.atsCandidate().get());
-        }
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
-| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
-| `request`                                                                       | [PatchAtsCandidateRequest](../../models/operations/PatchAtsCandidateRequest.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
-
-### Response
-
-**[PatchAtsCandidateResponse](../../models/operations/PatchAtsCandidateResponse.md)**
-
-### Errors
-
-| Error Type             | Status Code            | Content Type           |
-| ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
-
-## patchAtsCompany
+## updateAtsCompany2
 
 Update a company
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchAtsCompany" method="patch" path="/ats/{connection_id}/company/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateAtsCompany2" method="put" path="/ats/{connection_id}/company/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.PatchAtsCompanyRequest;
-import to.unified.unified_java_sdk.models.operations.PatchAtsCompanyResponse;
+import to.unified.unified_java_sdk.models.operations.UpdateAtsCompany2Request;
+import to.unified.unified_java_sdk.models.operations.UpdateAtsCompany2Response;
 import to.unified.unified_java_sdk.models.shared.AtsCompany;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -1721,14 +2657,14 @@ public class Application {
                     .build())
             .build();
 
-        PatchAtsCompanyRequest req = PatchAtsCompanyRequest.builder()
+        UpdateAtsCompany2Request req = UpdateAtsCompany2Request.builder()
                 .atsCompany(AtsCompany.builder()
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        PatchAtsCompanyResponse res = sdk.ats().patchAtsCompany()
+        UpdateAtsCompany2Response res = sdk.ats().updateAtsCompany2()
                 .request(req)
                 .call();
 
@@ -1741,13 +2677,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                   | Type                                                                        | Required                                                                    | Description                                                                 |
-| --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
-| `request`                                                                   | [PatchAtsCompanyRequest](../../models/operations/PatchAtsCompanyRequest.md) | :heavy_check_mark:                                                          | The request object to use for the request.                                  |
+| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| `request`                                                                       | [UpdateAtsCompany2Request](../../models/operations/UpdateAtsCompany2Request.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
 
 ### Response
 
-**[PatchAtsCompanyResponse](../../models/operations/PatchAtsCompanyResponse.md)**
+**[UpdateAtsCompany2Response](../../models/operations/UpdateAtsCompany2Response.md)**
 
 ### Errors
 
@@ -1755,20 +2691,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## patchAtsDocument
+## updateAtsDocument2
 
 Update a document
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchAtsDocument" method="patch" path="/ats/{connection_id}/document/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateAtsDocument2" method="put" path="/ats/{connection_id}/document/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.PatchAtsDocumentRequest;
-import to.unified.unified_java_sdk.models.operations.PatchAtsDocumentResponse;
+import to.unified.unified_java_sdk.models.operations.UpdateAtsDocument2Request;
+import to.unified.unified_java_sdk.models.operations.UpdateAtsDocument2Response;
 import to.unified.unified_java_sdk.models.shared.AtsDocument;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -1782,14 +2718,14 @@ public class Application {
                     .build())
             .build();
 
-        PatchAtsDocumentRequest req = PatchAtsDocumentRequest.builder()
+        UpdateAtsDocument2Request req = UpdateAtsDocument2Request.builder()
                 .atsDocument(AtsDocument.builder()
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        PatchAtsDocumentResponse res = sdk.ats().patchAtsDocument()
+        UpdateAtsDocument2Response res = sdk.ats().updateAtsDocument2()
                 .request(req)
                 .call();
 
@@ -1802,13 +2738,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
-| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
-| `request`                                                                     | [PatchAtsDocumentRequest](../../models/operations/PatchAtsDocumentRequest.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
+| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
+| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| `request`                                                                         | [UpdateAtsDocument2Request](../../models/operations/UpdateAtsDocument2Request.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
 
 ### Response
 
-**[PatchAtsDocumentResponse](../../models/operations/PatchAtsDocumentResponse.md)**
+**[UpdateAtsDocument2Response](../../models/operations/UpdateAtsDocument2Response.md)**
 
 ### Errors
 
@@ -1816,20 +2752,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## patchAtsInterview
+## updateAtsInterview2
 
 Update an interview
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchAtsInterview" method="patch" path="/ats/{connection_id}/interview/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateAtsInterview2" method="put" path="/ats/{connection_id}/interview/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.PatchAtsInterviewRequest;
-import to.unified.unified_java_sdk.models.operations.PatchAtsInterviewResponse;
+import to.unified.unified_java_sdk.models.operations.UpdateAtsInterview2Request;
+import to.unified.unified_java_sdk.models.operations.UpdateAtsInterview2Response;
 import to.unified.unified_java_sdk.models.shared.AtsInterview;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -1843,14 +2779,14 @@ public class Application {
                     .build())
             .build();
 
-        PatchAtsInterviewRequest req = PatchAtsInterviewRequest.builder()
+        UpdateAtsInterview2Request req = UpdateAtsInterview2Request.builder()
                 .atsInterview(AtsInterview.builder()
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        PatchAtsInterviewResponse res = sdk.ats().patchAtsInterview()
+        UpdateAtsInterview2Response res = sdk.ats().updateAtsInterview2()
                 .request(req)
                 .call();
 
@@ -1863,13 +2799,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
-| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
-| `request`                                                                       | [PatchAtsInterviewRequest](../../models/operations/PatchAtsInterviewRequest.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
+| Parameter                                                                           | Type                                                                                | Required                                                                            | Description                                                                         |
+| ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| `request`                                                                           | [UpdateAtsInterview2Request](../../models/operations/UpdateAtsInterview2Request.md) | :heavy_check_mark:                                                                  | The request object to use for the request.                                          |
 
 ### Response
 
-**[PatchAtsInterviewResponse](../../models/operations/PatchAtsInterviewResponse.md)**
+**[UpdateAtsInterview2Response](../../models/operations/UpdateAtsInterview2Response.md)**
 
 ### Errors
 
@@ -1877,20 +2813,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## patchAtsJob
+## updateAtsJob2
 
 Update a job
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchAtsJob" method="patch" path="/ats/{connection_id}/job/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateAtsJob2" method="put" path="/ats/{connection_id}/job/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.PatchAtsJobRequest;
-import to.unified.unified_java_sdk.models.operations.PatchAtsJobResponse;
+import to.unified.unified_java_sdk.models.operations.UpdateAtsJob2Request;
+import to.unified.unified_java_sdk.models.operations.UpdateAtsJob2Response;
 import to.unified.unified_java_sdk.models.shared.AtsJob;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -1904,14 +2840,14 @@ public class Application {
                     .build())
             .build();
 
-        PatchAtsJobRequest req = PatchAtsJobRequest.builder()
+        UpdateAtsJob2Request req = UpdateAtsJob2Request.builder()
                 .atsJob(AtsJob.builder()
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        PatchAtsJobResponse res = sdk.ats().patchAtsJob()
+        UpdateAtsJob2Response res = sdk.ats().updateAtsJob2()
                 .request(req)
                 .call();
 
@@ -1924,13 +2860,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                           | Type                                                                | Required                                                            | Description                                                         |
-| ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- |
-| `request`                                                           | [PatchAtsJobRequest](../../models/operations/PatchAtsJobRequest.md) | :heavy_check_mark:                                                  | The request object to use for the request.                          |
+| Parameter                                                               | Type                                                                    | Required                                                                | Description                                                             |
+| ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- |
+| `request`                                                               | [UpdateAtsJob2Request](../../models/operations/UpdateAtsJob2Request.md) | :heavy_check_mark:                                                      | The request object to use for the request.                              |
 
 ### Response
 
-**[PatchAtsJobResponse](../../models/operations/PatchAtsJobResponse.md)**
+**[UpdateAtsJob2Response](../../models/operations/UpdateAtsJob2Response.md)**
 
 ### Errors
 
@@ -1938,20 +2874,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## patchAtsScorecard
+## updateAtsScorecard2
 
 Update a scorecard
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchAtsScorecard" method="patch" path="/ats/{connection_id}/scorecard/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateAtsScorecard2" method="put" path="/ats/{connection_id}/scorecard/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.PatchAtsScorecardRequest;
-import to.unified.unified_java_sdk.models.operations.PatchAtsScorecardResponse;
+import to.unified.unified_java_sdk.models.operations.UpdateAtsScorecard2Request;
+import to.unified.unified_java_sdk.models.operations.UpdateAtsScorecard2Response;
 import to.unified.unified_java_sdk.models.shared.AtsScorecard;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -1965,14 +2901,14 @@ public class Application {
                     .build())
             .build();
 
-        PatchAtsScorecardRequest req = PatchAtsScorecardRequest.builder()
+        UpdateAtsScorecard2Request req = UpdateAtsScorecard2Request.builder()
                 .atsScorecard(AtsScorecard.builder()
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        PatchAtsScorecardResponse res = sdk.ats().patchAtsScorecard()
+        UpdateAtsScorecard2Response res = sdk.ats().updateAtsScorecard2()
                 .request(req)
                 .call();
 
@@ -1985,949 +2921,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
-| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
-| `request`                                                                       | [PatchAtsScorecardRequest](../../models/operations/PatchAtsScorecardRequest.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
+| Parameter                                                                           | Type                                                                                | Required                                                                            | Description                                                                         |
+| ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| `request`                                                                           | [UpdateAtsScorecard2Request](../../models/operations/UpdateAtsScorecard2Request.md) | :heavy_check_mark:                                                                  | The request object to use for the request.                                          |
 
 ### Response
 
-**[PatchAtsScorecardResponse](../../models/operations/PatchAtsScorecardResponse.md)**
-
-### Errors
-
-| Error Type             | Status Code            | Content Type           |
-| ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
-
-## removeAtsActivity
-
-Remove an activity
-
-### Example Usage
-
-<!-- UsageSnippet language="java" operationID="removeAtsActivity" method="delete" path="/ats/{connection_id}/activity/{id}" -->
-```java
-package hello.world;
-
-import java.lang.Exception;
-import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.RemoveAtsActivityRequest;
-import to.unified.unified_java_sdk.models.operations.RemoveAtsActivityResponse;
-import to.unified.unified_java_sdk.models.shared.Security;
-
-public class Application {
-
-    public static void main(String[] args) throws Exception {
-
-        UnifiedTo sdk = UnifiedTo.builder()
-                .security(Security.builder()
-                    .jwt(System.getenv().getOrDefault("JWT", ""))
-                    .build())
-            .build();
-
-        RemoveAtsActivityRequest req = RemoveAtsActivityRequest.builder()
-                .connectionId("<id>")
-                .id("<id>")
-                .build();
-
-        RemoveAtsActivityResponse res = sdk.ats().removeAtsActivity()
-                .request(req)
-                .call();
-
-        // handle response
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
-| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
-| `request`                                                                       | [RemoveAtsActivityRequest](../../models/operations/RemoveAtsActivityRequest.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
-
-### Response
-
-**[RemoveAtsActivityResponse](../../models/operations/RemoveAtsActivityResponse.md)**
-
-### Errors
-
-| Error Type             | Status Code            | Content Type           |
-| ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
-
-## removeAtsApplication
-
-Remove an application
-
-### Example Usage
-
-<!-- UsageSnippet language="java" operationID="removeAtsApplication" method="delete" path="/ats/{connection_id}/application/{id}" -->
-```java
-package hello.world;
-
-import java.lang.Exception;
-import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.RemoveAtsApplicationRequest;
-import to.unified.unified_java_sdk.models.operations.RemoveAtsApplicationResponse;
-import to.unified.unified_java_sdk.models.shared.Security;
-
-public class Application {
-
-    public static void main(String[] args) throws Exception {
-
-        UnifiedTo sdk = UnifiedTo.builder()
-                .security(Security.builder()
-                    .jwt(System.getenv().getOrDefault("JWT", ""))
-                    .build())
-            .build();
-
-        RemoveAtsApplicationRequest req = RemoveAtsApplicationRequest.builder()
-                .connectionId("<id>")
-                .id("<id>")
-                .build();
-
-        RemoveAtsApplicationResponse res = sdk.ats().removeAtsApplication()
-                .request(req)
-                .call();
-
-        // handle response
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                             | Type                                                                                  | Required                                                                              | Description                                                                           |
-| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
-| `request`                                                                             | [RemoveAtsApplicationRequest](../../models/operations/RemoveAtsApplicationRequest.md) | :heavy_check_mark:                                                                    | The request object to use for the request.                                            |
-
-### Response
-
-**[RemoveAtsApplicationResponse](../../models/operations/RemoveAtsApplicationResponse.md)**
-
-### Errors
-
-| Error Type             | Status Code            | Content Type           |
-| ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
-
-## removeAtsCandidate
-
-Remove a candidate
-
-### Example Usage
-
-<!-- UsageSnippet language="java" operationID="removeAtsCandidate" method="delete" path="/ats/{connection_id}/candidate/{id}" -->
-```java
-package hello.world;
-
-import java.lang.Exception;
-import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.RemoveAtsCandidateRequest;
-import to.unified.unified_java_sdk.models.operations.RemoveAtsCandidateResponse;
-import to.unified.unified_java_sdk.models.shared.Security;
-
-public class Application {
-
-    public static void main(String[] args) throws Exception {
-
-        UnifiedTo sdk = UnifiedTo.builder()
-                .security(Security.builder()
-                    .jwt(System.getenv().getOrDefault("JWT", ""))
-                    .build())
-            .build();
-
-        RemoveAtsCandidateRequest req = RemoveAtsCandidateRequest.builder()
-                .connectionId("<id>")
-                .id("<id>")
-                .build();
-
-        RemoveAtsCandidateResponse res = sdk.ats().removeAtsCandidate()
-                .request(req)
-                .call();
-
-        // handle response
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
-| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
-| `request`                                                                         | [RemoveAtsCandidateRequest](../../models/operations/RemoveAtsCandidateRequest.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
-
-### Response
-
-**[RemoveAtsCandidateResponse](../../models/operations/RemoveAtsCandidateResponse.md)**
-
-### Errors
-
-| Error Type             | Status Code            | Content Type           |
-| ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
-
-## removeAtsCompany
-
-Remove a company
-
-### Example Usage
-
-<!-- UsageSnippet language="java" operationID="removeAtsCompany" method="delete" path="/ats/{connection_id}/company/{id}" -->
-```java
-package hello.world;
-
-import java.lang.Exception;
-import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.RemoveAtsCompanyRequest;
-import to.unified.unified_java_sdk.models.operations.RemoveAtsCompanyResponse;
-import to.unified.unified_java_sdk.models.shared.Security;
-
-public class Application {
-
-    public static void main(String[] args) throws Exception {
-
-        UnifiedTo sdk = UnifiedTo.builder()
-                .security(Security.builder()
-                    .jwt(System.getenv().getOrDefault("JWT", ""))
-                    .build())
-            .build();
-
-        RemoveAtsCompanyRequest req = RemoveAtsCompanyRequest.builder()
-                .connectionId("<id>")
-                .id("<id>")
-                .build();
-
-        RemoveAtsCompanyResponse res = sdk.ats().removeAtsCompany()
-                .request(req)
-                .call();
-
-        // handle response
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
-| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
-| `request`                                                                     | [RemoveAtsCompanyRequest](../../models/operations/RemoveAtsCompanyRequest.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
-
-### Response
-
-**[RemoveAtsCompanyResponse](../../models/operations/RemoveAtsCompanyResponse.md)**
-
-### Errors
-
-| Error Type             | Status Code            | Content Type           |
-| ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
-
-## removeAtsDocument
-
-Remove a document
-
-### Example Usage
-
-<!-- UsageSnippet language="java" operationID="removeAtsDocument" method="delete" path="/ats/{connection_id}/document/{id}" -->
-```java
-package hello.world;
-
-import java.lang.Exception;
-import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.RemoveAtsDocumentRequest;
-import to.unified.unified_java_sdk.models.operations.RemoveAtsDocumentResponse;
-import to.unified.unified_java_sdk.models.shared.Security;
-
-public class Application {
-
-    public static void main(String[] args) throws Exception {
-
-        UnifiedTo sdk = UnifiedTo.builder()
-                .security(Security.builder()
-                    .jwt(System.getenv().getOrDefault("JWT", ""))
-                    .build())
-            .build();
-
-        RemoveAtsDocumentRequest req = RemoveAtsDocumentRequest.builder()
-                .connectionId("<id>")
-                .id("<id>")
-                .build();
-
-        RemoveAtsDocumentResponse res = sdk.ats().removeAtsDocument()
-                .request(req)
-                .call();
-
-        // handle response
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
-| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
-| `request`                                                                       | [RemoveAtsDocumentRequest](../../models/operations/RemoveAtsDocumentRequest.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
-
-### Response
-
-**[RemoveAtsDocumentResponse](../../models/operations/RemoveAtsDocumentResponse.md)**
-
-### Errors
-
-| Error Type             | Status Code            | Content Type           |
-| ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
-
-## removeAtsInterview
-
-Remove an interview
-
-### Example Usage
-
-<!-- UsageSnippet language="java" operationID="removeAtsInterview" method="delete" path="/ats/{connection_id}/interview/{id}" -->
-```java
-package hello.world;
-
-import java.lang.Exception;
-import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.RemoveAtsInterviewRequest;
-import to.unified.unified_java_sdk.models.operations.RemoveAtsInterviewResponse;
-import to.unified.unified_java_sdk.models.shared.Security;
-
-public class Application {
-
-    public static void main(String[] args) throws Exception {
-
-        UnifiedTo sdk = UnifiedTo.builder()
-                .security(Security.builder()
-                    .jwt(System.getenv().getOrDefault("JWT", ""))
-                    .build())
-            .build();
-
-        RemoveAtsInterviewRequest req = RemoveAtsInterviewRequest.builder()
-                .connectionId("<id>")
-                .id("<id>")
-                .build();
-
-        RemoveAtsInterviewResponse res = sdk.ats().removeAtsInterview()
-                .request(req)
-                .call();
-
-        // handle response
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
-| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
-| `request`                                                                         | [RemoveAtsInterviewRequest](../../models/operations/RemoveAtsInterviewRequest.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
-
-### Response
-
-**[RemoveAtsInterviewResponse](../../models/operations/RemoveAtsInterviewResponse.md)**
-
-### Errors
-
-| Error Type             | Status Code            | Content Type           |
-| ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
-
-## removeAtsJob
-
-Remove a job
-
-### Example Usage
-
-<!-- UsageSnippet language="java" operationID="removeAtsJob" method="delete" path="/ats/{connection_id}/job/{id}" -->
-```java
-package hello.world;
-
-import java.lang.Exception;
-import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.RemoveAtsJobRequest;
-import to.unified.unified_java_sdk.models.operations.RemoveAtsJobResponse;
-import to.unified.unified_java_sdk.models.shared.Security;
-
-public class Application {
-
-    public static void main(String[] args) throws Exception {
-
-        UnifiedTo sdk = UnifiedTo.builder()
-                .security(Security.builder()
-                    .jwt(System.getenv().getOrDefault("JWT", ""))
-                    .build())
-            .build();
-
-        RemoveAtsJobRequest req = RemoveAtsJobRequest.builder()
-                .connectionId("<id>")
-                .id("<id>")
-                .build();
-
-        RemoveAtsJobResponse res = sdk.ats().removeAtsJob()
-                .request(req)
-                .call();
-
-        // handle response
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                             | Type                                                                  | Required                                                              | Description                                                           |
-| --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- |
-| `request`                                                             | [RemoveAtsJobRequest](../../models/operations/RemoveAtsJobRequest.md) | :heavy_check_mark:                                                    | The request object to use for the request.                            |
-
-### Response
-
-**[RemoveAtsJobResponse](../../models/operations/RemoveAtsJobResponse.md)**
-
-### Errors
-
-| Error Type             | Status Code            | Content Type           |
-| ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
-
-## removeAtsScorecard
-
-Remove a scorecard
-
-### Example Usage
-
-<!-- UsageSnippet language="java" operationID="removeAtsScorecard" method="delete" path="/ats/{connection_id}/scorecard/{id}" -->
-```java
-package hello.world;
-
-import java.lang.Exception;
-import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.RemoveAtsScorecardRequest;
-import to.unified.unified_java_sdk.models.operations.RemoveAtsScorecardResponse;
-import to.unified.unified_java_sdk.models.shared.Security;
-
-public class Application {
-
-    public static void main(String[] args) throws Exception {
-
-        UnifiedTo sdk = UnifiedTo.builder()
-                .security(Security.builder()
-                    .jwt(System.getenv().getOrDefault("JWT", ""))
-                    .build())
-            .build();
-
-        RemoveAtsScorecardRequest req = RemoveAtsScorecardRequest.builder()
-                .connectionId("<id>")
-                .id("<id>")
-                .build();
-
-        RemoveAtsScorecardResponse res = sdk.ats().removeAtsScorecard()
-                .request(req)
-                .call();
-
-        // handle response
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
-| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
-| `request`                                                                         | [RemoveAtsScorecardRequest](../../models/operations/RemoveAtsScorecardRequest.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
-
-### Response
-
-**[RemoveAtsScorecardResponse](../../models/operations/RemoveAtsScorecardResponse.md)**
-
-### Errors
-
-| Error Type             | Status Code            | Content Type           |
-| ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
-
-## updateAtsActivity
-
-Update an activity
-
-### Example Usage
-
-<!-- UsageSnippet language="java" operationID="updateAtsActivity" method="put" path="/ats/{connection_id}/activity/{id}" -->
-```java
-package hello.world;
-
-import java.lang.Exception;
-import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.UpdateAtsActivityRequest;
-import to.unified.unified_java_sdk.models.operations.UpdateAtsActivityResponse;
-import to.unified.unified_java_sdk.models.shared.AtsActivity;
-import to.unified.unified_java_sdk.models.shared.Security;
-
-public class Application {
-
-    public static void main(String[] args) throws Exception {
-
-        UnifiedTo sdk = UnifiedTo.builder()
-                .security(Security.builder()
-                    .jwt(System.getenv().getOrDefault("JWT", ""))
-                    .build())
-            .build();
-
-        UpdateAtsActivityRequest req = UpdateAtsActivityRequest.builder()
-                .atsActivity(AtsActivity.builder()
-                    .build())
-                .connectionId("<id>")
-                .id("<id>")
-                .build();
-
-        UpdateAtsActivityResponse res = sdk.ats().updateAtsActivity()
-                .request(req)
-                .call();
-
-        if (res.atsActivity().isPresent()) {
-            System.out.println(res.atsActivity().get());
-        }
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
-| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
-| `request`                                                                       | [UpdateAtsActivityRequest](../../models/operations/UpdateAtsActivityRequest.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
-
-### Response
-
-**[UpdateAtsActivityResponse](../../models/operations/UpdateAtsActivityResponse.md)**
-
-### Errors
-
-| Error Type             | Status Code            | Content Type           |
-| ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
-
-## updateAtsApplication
-
-Update an application
-
-### Example Usage
-
-<!-- UsageSnippet language="java" operationID="updateAtsApplication" method="put" path="/ats/{connection_id}/application/{id}" -->
-```java
-package hello.world;
-
-import java.lang.Exception;
-import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.UpdateAtsApplicationRequest;
-import to.unified.unified_java_sdk.models.operations.UpdateAtsApplicationResponse;
-import to.unified.unified_java_sdk.models.shared.AtsApplication;
-import to.unified.unified_java_sdk.models.shared.Security;
-
-public class Application {
-
-    public static void main(String[] args) throws Exception {
-
-        UnifiedTo sdk = UnifiedTo.builder()
-                .security(Security.builder()
-                    .jwt(System.getenv().getOrDefault("JWT", ""))
-                    .build())
-            .build();
-
-        UpdateAtsApplicationRequest req = UpdateAtsApplicationRequest.builder()
-                .atsApplication(AtsApplication.builder()
-                    .build())
-                .connectionId("<id>")
-                .id("<id>")
-                .build();
-
-        UpdateAtsApplicationResponse res = sdk.ats().updateAtsApplication()
-                .request(req)
-                .call();
-
-        if (res.atsApplication().isPresent()) {
-            System.out.println(res.atsApplication().get());
-        }
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                             | Type                                                                                  | Required                                                                              | Description                                                                           |
-| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
-| `request`                                                                             | [UpdateAtsApplicationRequest](../../models/operations/UpdateAtsApplicationRequest.md) | :heavy_check_mark:                                                                    | The request object to use for the request.                                            |
-
-### Response
-
-**[UpdateAtsApplicationResponse](../../models/operations/UpdateAtsApplicationResponse.md)**
-
-### Errors
-
-| Error Type             | Status Code            | Content Type           |
-| ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
-
-## updateAtsCandidate
-
-Update a candidate
-
-### Example Usage
-
-<!-- UsageSnippet language="java" operationID="updateAtsCandidate" method="put" path="/ats/{connection_id}/candidate/{id}" -->
-```java
-package hello.world;
-
-import java.lang.Exception;
-import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.UpdateAtsCandidateRequest;
-import to.unified.unified_java_sdk.models.operations.UpdateAtsCandidateResponse;
-import to.unified.unified_java_sdk.models.shared.AtsCandidate;
-import to.unified.unified_java_sdk.models.shared.Security;
-
-public class Application {
-
-    public static void main(String[] args) throws Exception {
-
-        UnifiedTo sdk = UnifiedTo.builder()
-                .security(Security.builder()
-                    .jwt(System.getenv().getOrDefault("JWT", ""))
-                    .build())
-            .build();
-
-        UpdateAtsCandidateRequest req = UpdateAtsCandidateRequest.builder()
-                .atsCandidate(AtsCandidate.builder()
-                    .build())
-                .connectionId("<id>")
-                .id("<id>")
-                .build();
-
-        UpdateAtsCandidateResponse res = sdk.ats().updateAtsCandidate()
-                .request(req)
-                .call();
-
-        if (res.atsCandidate().isPresent()) {
-            System.out.println(res.atsCandidate().get());
-        }
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
-| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
-| `request`                                                                         | [UpdateAtsCandidateRequest](../../models/operations/UpdateAtsCandidateRequest.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
-
-### Response
-
-**[UpdateAtsCandidateResponse](../../models/operations/UpdateAtsCandidateResponse.md)**
-
-### Errors
-
-| Error Type             | Status Code            | Content Type           |
-| ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
-
-## updateAtsCompany
-
-Update a company
-
-### Example Usage
-
-<!-- UsageSnippet language="java" operationID="updateAtsCompany" method="put" path="/ats/{connection_id}/company/{id}" -->
-```java
-package hello.world;
-
-import java.lang.Exception;
-import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.UpdateAtsCompanyRequest;
-import to.unified.unified_java_sdk.models.operations.UpdateAtsCompanyResponse;
-import to.unified.unified_java_sdk.models.shared.AtsCompany;
-import to.unified.unified_java_sdk.models.shared.Security;
-
-public class Application {
-
-    public static void main(String[] args) throws Exception {
-
-        UnifiedTo sdk = UnifiedTo.builder()
-                .security(Security.builder()
-                    .jwt(System.getenv().getOrDefault("JWT", ""))
-                    .build())
-            .build();
-
-        UpdateAtsCompanyRequest req = UpdateAtsCompanyRequest.builder()
-                .atsCompany(AtsCompany.builder()
-                    .build())
-                .connectionId("<id>")
-                .id("<id>")
-                .build();
-
-        UpdateAtsCompanyResponse res = sdk.ats().updateAtsCompany()
-                .request(req)
-                .call();
-
-        if (res.atsCompany().isPresent()) {
-            System.out.println(res.atsCompany().get());
-        }
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
-| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
-| `request`                                                                     | [UpdateAtsCompanyRequest](../../models/operations/UpdateAtsCompanyRequest.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
-
-### Response
-
-**[UpdateAtsCompanyResponse](../../models/operations/UpdateAtsCompanyResponse.md)**
-
-### Errors
-
-| Error Type             | Status Code            | Content Type           |
-| ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
-
-## updateAtsDocument
-
-Update a document
-
-### Example Usage
-
-<!-- UsageSnippet language="java" operationID="updateAtsDocument" method="put" path="/ats/{connection_id}/document/{id}" -->
-```java
-package hello.world;
-
-import java.lang.Exception;
-import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.UpdateAtsDocumentRequest;
-import to.unified.unified_java_sdk.models.operations.UpdateAtsDocumentResponse;
-import to.unified.unified_java_sdk.models.shared.AtsDocument;
-import to.unified.unified_java_sdk.models.shared.Security;
-
-public class Application {
-
-    public static void main(String[] args) throws Exception {
-
-        UnifiedTo sdk = UnifiedTo.builder()
-                .security(Security.builder()
-                    .jwt(System.getenv().getOrDefault("JWT", ""))
-                    .build())
-            .build();
-
-        UpdateAtsDocumentRequest req = UpdateAtsDocumentRequest.builder()
-                .atsDocument(AtsDocument.builder()
-                    .build())
-                .connectionId("<id>")
-                .id("<id>")
-                .build();
-
-        UpdateAtsDocumentResponse res = sdk.ats().updateAtsDocument()
-                .request(req)
-                .call();
-
-        if (res.atsDocument().isPresent()) {
-            System.out.println(res.atsDocument().get());
-        }
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
-| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
-| `request`                                                                       | [UpdateAtsDocumentRequest](../../models/operations/UpdateAtsDocumentRequest.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
-
-### Response
-
-**[UpdateAtsDocumentResponse](../../models/operations/UpdateAtsDocumentResponse.md)**
-
-### Errors
-
-| Error Type             | Status Code            | Content Type           |
-| ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
-
-## updateAtsInterview
-
-Update an interview
-
-### Example Usage
-
-<!-- UsageSnippet language="java" operationID="updateAtsInterview" method="put" path="/ats/{connection_id}/interview/{id}" -->
-```java
-package hello.world;
-
-import java.lang.Exception;
-import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.UpdateAtsInterviewRequest;
-import to.unified.unified_java_sdk.models.operations.UpdateAtsInterviewResponse;
-import to.unified.unified_java_sdk.models.shared.AtsInterview;
-import to.unified.unified_java_sdk.models.shared.Security;
-
-public class Application {
-
-    public static void main(String[] args) throws Exception {
-
-        UnifiedTo sdk = UnifiedTo.builder()
-                .security(Security.builder()
-                    .jwt(System.getenv().getOrDefault("JWT", ""))
-                    .build())
-            .build();
-
-        UpdateAtsInterviewRequest req = UpdateAtsInterviewRequest.builder()
-                .atsInterview(AtsInterview.builder()
-                    .build())
-                .connectionId("<id>")
-                .id("<id>")
-                .build();
-
-        UpdateAtsInterviewResponse res = sdk.ats().updateAtsInterview()
-                .request(req)
-                .call();
-
-        if (res.atsInterview().isPresent()) {
-            System.out.println(res.atsInterview().get());
-        }
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
-| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
-| `request`                                                                         | [UpdateAtsInterviewRequest](../../models/operations/UpdateAtsInterviewRequest.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
-
-### Response
-
-**[UpdateAtsInterviewResponse](../../models/operations/UpdateAtsInterviewResponse.md)**
-
-### Errors
-
-| Error Type             | Status Code            | Content Type           |
-| ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
-
-## updateAtsJob
-
-Update a job
-
-### Example Usage
-
-<!-- UsageSnippet language="java" operationID="updateAtsJob" method="put" path="/ats/{connection_id}/job/{id}" -->
-```java
-package hello.world;
-
-import java.lang.Exception;
-import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.UpdateAtsJobRequest;
-import to.unified.unified_java_sdk.models.operations.UpdateAtsJobResponse;
-import to.unified.unified_java_sdk.models.shared.AtsJob;
-import to.unified.unified_java_sdk.models.shared.Security;
-
-public class Application {
-
-    public static void main(String[] args) throws Exception {
-
-        UnifiedTo sdk = UnifiedTo.builder()
-                .security(Security.builder()
-                    .jwt(System.getenv().getOrDefault("JWT", ""))
-                    .build())
-            .build();
-
-        UpdateAtsJobRequest req = UpdateAtsJobRequest.builder()
-                .atsJob(AtsJob.builder()
-                    .build())
-                .connectionId("<id>")
-                .id("<id>")
-                .build();
-
-        UpdateAtsJobResponse res = sdk.ats().updateAtsJob()
-                .request(req)
-                .call();
-
-        if (res.atsJob().isPresent()) {
-            System.out.println(res.atsJob().get());
-        }
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                             | Type                                                                  | Required                                                              | Description                                                           |
-| --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- |
-| `request`                                                             | [UpdateAtsJobRequest](../../models/operations/UpdateAtsJobRequest.md) | :heavy_check_mark:                                                    | The request object to use for the request.                            |
-
-### Response
-
-**[UpdateAtsJobResponse](../../models/operations/UpdateAtsJobResponse.md)**
-
-### Errors
-
-| Error Type             | Status Code            | Content Type           |
-| ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
-
-## updateAtsScorecard
-
-Update a scorecard
-
-### Example Usage
-
-<!-- UsageSnippet language="java" operationID="updateAtsScorecard" method="put" path="/ats/{connection_id}/scorecard/{id}" -->
-```java
-package hello.world;
-
-import java.lang.Exception;
-import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.UpdateAtsScorecardRequest;
-import to.unified.unified_java_sdk.models.operations.UpdateAtsScorecardResponse;
-import to.unified.unified_java_sdk.models.shared.AtsScorecard;
-import to.unified.unified_java_sdk.models.shared.Security;
-
-public class Application {
-
-    public static void main(String[] args) throws Exception {
-
-        UnifiedTo sdk = UnifiedTo.builder()
-                .security(Security.builder()
-                    .jwt(System.getenv().getOrDefault("JWT", ""))
-                    .build())
-            .build();
-
-        UpdateAtsScorecardRequest req = UpdateAtsScorecardRequest.builder()
-                .atsScorecard(AtsScorecard.builder()
-                    .build())
-                .connectionId("<id>")
-                .id("<id>")
-                .build();
-
-        UpdateAtsScorecardResponse res = sdk.ats().updateAtsScorecard()
-                .request(req)
-                .call();
-
-        if (res.atsScorecard().isPresent()) {
-            System.out.println(res.atsScorecard().get());
-        }
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
-| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
-| `request`                                                                         | [UpdateAtsScorecardRequest](../../models/operations/UpdateAtsScorecardRequest.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
-
-### Response
-
-**[UpdateAtsScorecardResponse](../../models/operations/UpdateAtsScorecardResponse.md)**
+**[UpdateAtsScorecard2Response](../../models/operations/UpdateAtsScorecard2Response.md)**
 
 ### Errors
 

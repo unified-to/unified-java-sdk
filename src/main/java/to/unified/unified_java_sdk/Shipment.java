@@ -6,30 +6,30 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
-import to.unified.unified_java_sdk.models.operations.CreateShippingShipmentRequest;
-import to.unified.unified_java_sdk.models.operations.CreateShippingShipmentRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.CreateShippingShipmentResponse;
-import to.unified.unified_java_sdk.models.operations.GetShippingShipmentRequest;
-import to.unified.unified_java_sdk.models.operations.GetShippingShipmentRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.GetShippingShipmentResponse;
-import to.unified.unified_java_sdk.models.operations.ListShippingShipmentsRequest;
-import to.unified.unified_java_sdk.models.operations.ListShippingShipmentsRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.ListShippingShipmentsResponse;
-import to.unified.unified_java_sdk.models.operations.PatchShippingShipmentRequest;
-import to.unified.unified_java_sdk.models.operations.PatchShippingShipmentRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.PatchShippingShipmentResponse;
-import to.unified.unified_java_sdk.models.operations.RemoveShippingShipmentRequest;
-import to.unified.unified_java_sdk.models.operations.RemoveShippingShipmentRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.RemoveShippingShipmentResponse;
-import to.unified.unified_java_sdk.models.operations.UpdateShippingShipmentRequest;
-import to.unified.unified_java_sdk.models.operations.UpdateShippingShipmentRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.UpdateShippingShipmentResponse;
-import to.unified.unified_java_sdk.operations.CreateShippingShipment;
-import to.unified.unified_java_sdk.operations.GetShippingShipment;
-import to.unified.unified_java_sdk.operations.ListShippingShipments;
-import to.unified.unified_java_sdk.operations.PatchShippingShipment;
-import to.unified.unified_java_sdk.operations.RemoveShippingShipment;
-import to.unified.unified_java_sdk.operations.UpdateShippingShipment;
+import to.unified.unified_java_sdk.models.operations.CreateShippingShipment2Request;
+import to.unified.unified_java_sdk.models.operations.CreateShippingShipment2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.CreateShippingShipment2Response;
+import to.unified.unified_java_sdk.models.operations.GetShippingShipment2Request;
+import to.unified.unified_java_sdk.models.operations.GetShippingShipment2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetShippingShipment2Response;
+import to.unified.unified_java_sdk.models.operations.ListShippingShipments2Request;
+import to.unified.unified_java_sdk.models.operations.ListShippingShipments2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListShippingShipments2Response;
+import to.unified.unified_java_sdk.models.operations.PatchShippingShipment2Request;
+import to.unified.unified_java_sdk.models.operations.PatchShippingShipment2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.PatchShippingShipment2Response;
+import to.unified.unified_java_sdk.models.operations.RemoveShippingShipment2Request;
+import to.unified.unified_java_sdk.models.operations.RemoveShippingShipment2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.RemoveShippingShipment2Response;
+import to.unified.unified_java_sdk.models.operations.UpdateShippingShipment2Request;
+import to.unified.unified_java_sdk.models.operations.UpdateShippingShipment2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.UpdateShippingShipment2Response;
+import to.unified.unified_java_sdk.operations.CreateShippingShipment2;
+import to.unified.unified_java_sdk.operations.GetShippingShipment2;
+import to.unified.unified_java_sdk.operations.ListShippingShipments2;
+import to.unified.unified_java_sdk.operations.PatchShippingShipment2;
+import to.unified.unified_java_sdk.operations.RemoveShippingShipment2;
+import to.unified.unified_java_sdk.operations.UpdateShippingShipment2;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -57,8 +57,8 @@ public class Shipment {
      * 
      * @return The call builder
      */
-    public CreateShippingShipmentRequestBuilder createShippingShipment() {
-        return new CreateShippingShipmentRequestBuilder(sdkConfiguration);
+    public CreateShippingShipment2RequestBuilder createShippingShipment2() {
+        return new CreateShippingShipment2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -68,9 +68,9 @@ public class Shipment {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateShippingShipmentResponse createShippingShipment(@Nonnull CreateShippingShipmentRequest request) {
-        RequestOperation<CreateShippingShipmentRequest, CreateShippingShipmentResponse> operation
-              = new CreateShippingShipment.Sync(sdkConfiguration, _headers);
+    public CreateShippingShipment2Response createShippingShipment2(@Nonnull CreateShippingShipment2Request request) {
+        RequestOperation<CreateShippingShipment2Request, CreateShippingShipment2Response> operation
+              = new CreateShippingShipment2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -79,8 +79,8 @@ public class Shipment {
      * 
      * @return The call builder
      */
-    public GetShippingShipmentRequestBuilder getShippingShipment() {
-        return new GetShippingShipmentRequestBuilder(sdkConfiguration);
+    public GetShippingShipment2RequestBuilder getShippingShipment2() {
+        return new GetShippingShipment2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -90,9 +90,9 @@ public class Shipment {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetShippingShipmentResponse getShippingShipment(@Nonnull GetShippingShipmentRequest request) {
-        RequestOperation<GetShippingShipmentRequest, GetShippingShipmentResponse> operation
-              = new GetShippingShipment.Sync(sdkConfiguration, _headers);
+    public GetShippingShipment2Response getShippingShipment2(@Nonnull GetShippingShipment2Request request) {
+        RequestOperation<GetShippingShipment2Request, GetShippingShipment2Response> operation
+              = new GetShippingShipment2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -101,8 +101,8 @@ public class Shipment {
      * 
      * @return The call builder
      */
-    public ListShippingShipmentsRequestBuilder listShippingShipments() {
-        return new ListShippingShipmentsRequestBuilder(sdkConfiguration);
+    public ListShippingShipments2RequestBuilder listShippingShipments2() {
+        return new ListShippingShipments2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -112,9 +112,9 @@ public class Shipment {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListShippingShipmentsResponse listShippingShipments(@Nonnull ListShippingShipmentsRequest request) {
-        RequestOperation<ListShippingShipmentsRequest, ListShippingShipmentsResponse> operation
-              = new ListShippingShipments.Sync(sdkConfiguration, _headers);
+    public ListShippingShipments2Response listShippingShipments2(@Nonnull ListShippingShipments2Request request) {
+        RequestOperation<ListShippingShipments2Request, ListShippingShipments2Response> operation
+              = new ListShippingShipments2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -123,8 +123,8 @@ public class Shipment {
      * 
      * @return The call builder
      */
-    public PatchShippingShipmentRequestBuilder patchShippingShipment() {
-        return new PatchShippingShipmentRequestBuilder(sdkConfiguration);
+    public PatchShippingShipment2RequestBuilder patchShippingShipment2() {
+        return new PatchShippingShipment2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -134,9 +134,9 @@ public class Shipment {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchShippingShipmentResponse patchShippingShipment(@Nonnull PatchShippingShipmentRequest request) {
-        RequestOperation<PatchShippingShipmentRequest, PatchShippingShipmentResponse> operation
-              = new PatchShippingShipment.Sync(sdkConfiguration, _headers);
+    public PatchShippingShipment2Response patchShippingShipment2(@Nonnull PatchShippingShipment2Request request) {
+        RequestOperation<PatchShippingShipment2Request, PatchShippingShipment2Response> operation
+              = new PatchShippingShipment2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -145,8 +145,8 @@ public class Shipment {
      * 
      * @return The call builder
      */
-    public RemoveShippingShipmentRequestBuilder removeShippingShipment() {
-        return new RemoveShippingShipmentRequestBuilder(sdkConfiguration);
+    public RemoveShippingShipment2RequestBuilder removeShippingShipment2() {
+        return new RemoveShippingShipment2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -156,9 +156,9 @@ public class Shipment {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveShippingShipmentResponse removeShippingShipment(@Nonnull RemoveShippingShipmentRequest request) {
-        RequestOperation<RemoveShippingShipmentRequest, RemoveShippingShipmentResponse> operation
-              = new RemoveShippingShipment.Sync(sdkConfiguration, _headers);
+    public RemoveShippingShipment2Response removeShippingShipment2(@Nonnull RemoveShippingShipment2Request request) {
+        RequestOperation<RemoveShippingShipment2Request, RemoveShippingShipment2Response> operation
+              = new RemoveShippingShipment2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -167,8 +167,8 @@ public class Shipment {
      * 
      * @return The call builder
      */
-    public UpdateShippingShipmentRequestBuilder updateShippingShipment() {
-        return new UpdateShippingShipmentRequestBuilder(sdkConfiguration);
+    public UpdateShippingShipment2RequestBuilder updateShippingShipment2() {
+        return new UpdateShippingShipment2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -178,9 +178,9 @@ public class Shipment {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateShippingShipmentResponse updateShippingShipment(@Nonnull UpdateShippingShipmentRequest request) {
-        RequestOperation<UpdateShippingShipmentRequest, UpdateShippingShipmentResponse> operation
-              = new UpdateShippingShipment.Sync(sdkConfiguration, _headers);
+    public UpdateShippingShipment2Response updateShippingShipment2(@Nonnull UpdateShippingShipment2Request request) {
+        RequestOperation<UpdateShippingShipment2Request, UpdateShippingShipment2Response> operation
+              = new UpdateShippingShipment2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

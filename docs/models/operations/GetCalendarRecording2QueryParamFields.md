@@ -1,0 +1,25 @@
+# GetCalendarRecording2QueryParamFields
+
+## Example Usage
+
+```java
+import to.unified.unified_java_sdk.models.operations.GetCalendarRecording2QueryParamFields;
+
+GetCalendarRecording2QueryParamFields value = GetCalendarRecording2QueryParamFields.ID;
+```
+
+
+## Values
+
+| Name         | Value        |
+| ------------ | ------------ |
+| `ID`         | id           |
+| `CREATED_AT` | created_at   |
+| `UPDATED_AT` | updated_at   |
+| `START_AT`   | start_at     |
+| `END_AT`     | end_at       |
+| `EXPIRES_AT` | expires_at   |
+| `EVENT_ID`   | event_id     |
+| `WEB_URL`    | web_url      |
+| `MEDIA`      | media        |
+| `RAW`        | raw          |

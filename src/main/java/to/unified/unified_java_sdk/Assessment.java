@@ -6,38 +6,38 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
-import to.unified.unified_java_sdk.models.operations.CreateAssessmentPackageRequest;
-import to.unified.unified_java_sdk.models.operations.CreateAssessmentPackageRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.CreateAssessmentPackageResponse;
-import to.unified.unified_java_sdk.models.operations.GetAssessmentPackageRequest;
-import to.unified.unified_java_sdk.models.operations.GetAssessmentPackageRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.GetAssessmentPackageResponse;
-import to.unified.unified_java_sdk.models.operations.ListAssessmentPackagesRequest;
-import to.unified.unified_java_sdk.models.operations.ListAssessmentPackagesRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.ListAssessmentPackagesResponse;
-import to.unified.unified_java_sdk.models.operations.PatchAssessmentOrderRequest;
-import to.unified.unified_java_sdk.models.operations.PatchAssessmentOrderRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.PatchAssessmentOrderResponse;
-import to.unified.unified_java_sdk.models.operations.PatchAssessmentPackageRequest;
-import to.unified.unified_java_sdk.models.operations.PatchAssessmentPackageRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.PatchAssessmentPackageResponse;
-import to.unified.unified_java_sdk.models.operations.RemoveAssessmentPackageRequest;
-import to.unified.unified_java_sdk.models.operations.RemoveAssessmentPackageRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.RemoveAssessmentPackageResponse;
-import to.unified.unified_java_sdk.models.operations.UpdateAssessmentOrderRequest;
-import to.unified.unified_java_sdk.models.operations.UpdateAssessmentOrderRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.UpdateAssessmentOrderResponse;
-import to.unified.unified_java_sdk.models.operations.UpdateAssessmentPackageRequest;
-import to.unified.unified_java_sdk.models.operations.UpdateAssessmentPackageRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.UpdateAssessmentPackageResponse;
-import to.unified.unified_java_sdk.operations.CreateAssessmentPackage;
-import to.unified.unified_java_sdk.operations.GetAssessmentPackage;
-import to.unified.unified_java_sdk.operations.ListAssessmentPackages;
-import to.unified.unified_java_sdk.operations.PatchAssessmentOrder;
-import to.unified.unified_java_sdk.operations.PatchAssessmentPackage;
-import to.unified.unified_java_sdk.operations.RemoveAssessmentPackage;
-import to.unified.unified_java_sdk.operations.UpdateAssessmentOrder;
-import to.unified.unified_java_sdk.operations.UpdateAssessmentPackage;
+import to.unified.unified_java_sdk.models.operations.CreateAssessmentPackage2Request;
+import to.unified.unified_java_sdk.models.operations.CreateAssessmentPackage2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.CreateAssessmentPackage2Response;
+import to.unified.unified_java_sdk.models.operations.GetAssessmentPackage2Request;
+import to.unified.unified_java_sdk.models.operations.GetAssessmentPackage2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetAssessmentPackage2Response;
+import to.unified.unified_java_sdk.models.operations.ListAssessmentPackages2Request;
+import to.unified.unified_java_sdk.models.operations.ListAssessmentPackages2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListAssessmentPackages2Response;
+import to.unified.unified_java_sdk.models.operations.PatchAssessmentOrder2Request;
+import to.unified.unified_java_sdk.models.operations.PatchAssessmentOrder2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.PatchAssessmentOrder2Response;
+import to.unified.unified_java_sdk.models.operations.PatchAssessmentPackage2Request;
+import to.unified.unified_java_sdk.models.operations.PatchAssessmentPackage2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.PatchAssessmentPackage2Response;
+import to.unified.unified_java_sdk.models.operations.RemoveAssessmentPackage2Request;
+import to.unified.unified_java_sdk.models.operations.RemoveAssessmentPackage2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.RemoveAssessmentPackage2Response;
+import to.unified.unified_java_sdk.models.operations.UpdateAssessmentOrder2Request;
+import to.unified.unified_java_sdk.models.operations.UpdateAssessmentOrder2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.UpdateAssessmentOrder2Response;
+import to.unified.unified_java_sdk.models.operations.UpdateAssessmentPackage2Request;
+import to.unified.unified_java_sdk.models.operations.UpdateAssessmentPackage2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.UpdateAssessmentPackage2Response;
+import to.unified.unified_java_sdk.operations.CreateAssessmentPackage2;
+import to.unified.unified_java_sdk.operations.GetAssessmentPackage2;
+import to.unified.unified_java_sdk.operations.ListAssessmentPackages2;
+import to.unified.unified_java_sdk.operations.PatchAssessmentOrder2;
+import to.unified.unified_java_sdk.operations.PatchAssessmentPackage2;
+import to.unified.unified_java_sdk.operations.RemoveAssessmentPackage2;
+import to.unified.unified_java_sdk.operations.UpdateAssessmentOrder2;
+import to.unified.unified_java_sdk.operations.UpdateAssessmentPackage2;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -65,8 +65,8 @@ public class Assessment {
      * 
      * @return The call builder
      */
-    public CreateAssessmentPackageRequestBuilder createAssessmentPackage() {
-        return new CreateAssessmentPackageRequestBuilder(sdkConfiguration);
+    public CreateAssessmentPackage2RequestBuilder createAssessmentPackage2() {
+        return new CreateAssessmentPackage2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -76,9 +76,9 @@ public class Assessment {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateAssessmentPackageResponse createAssessmentPackage(@Nonnull CreateAssessmentPackageRequest request) {
-        RequestOperation<CreateAssessmentPackageRequest, CreateAssessmentPackageResponse> operation
-              = new CreateAssessmentPackage.Sync(sdkConfiguration, _headers);
+    public CreateAssessmentPackage2Response createAssessmentPackage2(@Nonnull CreateAssessmentPackage2Request request) {
+        RequestOperation<CreateAssessmentPackage2Request, CreateAssessmentPackage2Response> operation
+              = new CreateAssessmentPackage2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -87,8 +87,8 @@ public class Assessment {
      * 
      * @return The call builder
      */
-    public GetAssessmentPackageRequestBuilder getAssessmentPackage() {
-        return new GetAssessmentPackageRequestBuilder(sdkConfiguration);
+    public GetAssessmentPackage2RequestBuilder getAssessmentPackage2() {
+        return new GetAssessmentPackage2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -98,9 +98,9 @@ public class Assessment {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetAssessmentPackageResponse getAssessmentPackage(@Nonnull GetAssessmentPackageRequest request) {
-        RequestOperation<GetAssessmentPackageRequest, GetAssessmentPackageResponse> operation
-              = new GetAssessmentPackage.Sync(sdkConfiguration, _headers);
+    public GetAssessmentPackage2Response getAssessmentPackage2(@Nonnull GetAssessmentPackage2Request request) {
+        RequestOperation<GetAssessmentPackage2Request, GetAssessmentPackage2Response> operation
+              = new GetAssessmentPackage2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -109,8 +109,8 @@ public class Assessment {
      * 
      * @return The call builder
      */
-    public ListAssessmentPackagesRequestBuilder listAssessmentPackages() {
-        return new ListAssessmentPackagesRequestBuilder(sdkConfiguration);
+    public ListAssessmentPackages2RequestBuilder listAssessmentPackages2() {
+        return new ListAssessmentPackages2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -120,9 +120,9 @@ public class Assessment {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListAssessmentPackagesResponse listAssessmentPackages(@Nonnull ListAssessmentPackagesRequest request) {
-        RequestOperation<ListAssessmentPackagesRequest, ListAssessmentPackagesResponse> operation
-              = new ListAssessmentPackages.Sync(sdkConfiguration, _headers);
+    public ListAssessmentPackages2Response listAssessmentPackages2(@Nonnull ListAssessmentPackages2Request request) {
+        RequestOperation<ListAssessmentPackages2Request, ListAssessmentPackages2Response> operation
+              = new ListAssessmentPackages2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -131,8 +131,8 @@ public class Assessment {
      * 
      * @return The call builder
      */
-    public PatchAssessmentOrderRequestBuilder patchAssessmentOrder() {
-        return new PatchAssessmentOrderRequestBuilder(sdkConfiguration);
+    public PatchAssessmentOrder2RequestBuilder patchAssessmentOrder2() {
+        return new PatchAssessmentOrder2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -142,9 +142,9 @@ public class Assessment {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchAssessmentOrderResponse patchAssessmentOrder(@Nonnull PatchAssessmentOrderRequest request) {
-        RequestOperation<PatchAssessmentOrderRequest, PatchAssessmentOrderResponse> operation
-              = new PatchAssessmentOrder.Sync(sdkConfiguration, _headers);
+    public PatchAssessmentOrder2Response patchAssessmentOrder2(@Nonnull PatchAssessmentOrder2Request request) {
+        RequestOperation<PatchAssessmentOrder2Request, PatchAssessmentOrder2Response> operation
+              = new PatchAssessmentOrder2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -153,8 +153,8 @@ public class Assessment {
      * 
      * @return The call builder
      */
-    public PatchAssessmentPackageRequestBuilder patchAssessmentPackage() {
-        return new PatchAssessmentPackageRequestBuilder(sdkConfiguration);
+    public PatchAssessmentPackage2RequestBuilder patchAssessmentPackage2() {
+        return new PatchAssessmentPackage2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -164,9 +164,9 @@ public class Assessment {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchAssessmentPackageResponse patchAssessmentPackage(@Nonnull PatchAssessmentPackageRequest request) {
-        RequestOperation<PatchAssessmentPackageRequest, PatchAssessmentPackageResponse> operation
-              = new PatchAssessmentPackage.Sync(sdkConfiguration, _headers);
+    public PatchAssessmentPackage2Response patchAssessmentPackage2(@Nonnull PatchAssessmentPackage2Request request) {
+        RequestOperation<PatchAssessmentPackage2Request, PatchAssessmentPackage2Response> operation
+              = new PatchAssessmentPackage2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -175,8 +175,8 @@ public class Assessment {
      * 
      * @return The call builder
      */
-    public RemoveAssessmentPackageRequestBuilder removeAssessmentPackage() {
-        return new RemoveAssessmentPackageRequestBuilder(sdkConfiguration);
+    public RemoveAssessmentPackage2RequestBuilder removeAssessmentPackage2() {
+        return new RemoveAssessmentPackage2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -186,9 +186,9 @@ public class Assessment {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveAssessmentPackageResponse removeAssessmentPackage(@Nonnull RemoveAssessmentPackageRequest request) {
-        RequestOperation<RemoveAssessmentPackageRequest, RemoveAssessmentPackageResponse> operation
-              = new RemoveAssessmentPackage.Sync(sdkConfiguration, _headers);
+    public RemoveAssessmentPackage2Response removeAssessmentPackage2(@Nonnull RemoveAssessmentPackage2Request request) {
+        RequestOperation<RemoveAssessmentPackage2Request, RemoveAssessmentPackage2Response> operation
+              = new RemoveAssessmentPackage2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -197,8 +197,8 @@ public class Assessment {
      * 
      * @return The call builder
      */
-    public UpdateAssessmentOrderRequestBuilder updateAssessmentOrder() {
-        return new UpdateAssessmentOrderRequestBuilder(sdkConfiguration);
+    public UpdateAssessmentOrder2RequestBuilder updateAssessmentOrder2() {
+        return new UpdateAssessmentOrder2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -208,9 +208,9 @@ public class Assessment {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateAssessmentOrderResponse updateAssessmentOrder(@Nonnull UpdateAssessmentOrderRequest request) {
-        RequestOperation<UpdateAssessmentOrderRequest, UpdateAssessmentOrderResponse> operation
-              = new UpdateAssessmentOrder.Sync(sdkConfiguration, _headers);
+    public UpdateAssessmentOrder2Response updateAssessmentOrder2(@Nonnull UpdateAssessmentOrder2Request request) {
+        RequestOperation<UpdateAssessmentOrder2Request, UpdateAssessmentOrder2Response> operation
+              = new UpdateAssessmentOrder2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -219,8 +219,8 @@ public class Assessment {
      * 
      * @return The call builder
      */
-    public UpdateAssessmentPackageRequestBuilder updateAssessmentPackage() {
-        return new UpdateAssessmentPackageRequestBuilder(sdkConfiguration);
+    public UpdateAssessmentPackage2RequestBuilder updateAssessmentPackage2() {
+        return new UpdateAssessmentPackage2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -230,9 +230,9 @@ public class Assessment {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateAssessmentPackageResponse updateAssessmentPackage(@Nonnull UpdateAssessmentPackageRequest request) {
-        RequestOperation<UpdateAssessmentPackageRequest, UpdateAssessmentPackageResponse> operation
-              = new UpdateAssessmentPackage.Sync(sdkConfiguration, _headers);
+    public UpdateAssessmentPackage2Response updateAssessmentPackage2(@Nonnull UpdateAssessmentPackage2Request request) {
+        RequestOperation<UpdateAssessmentPackage2Request, UpdateAssessmentPackage2Response> operation
+              = new UpdateAssessmentPackage2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

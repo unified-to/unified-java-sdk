@@ -4,29 +4,29 @@
 
 ### Available Operations
 
-* [createMartechMember](#createmartechmember) - Create a member
-* [getClubsMember](#getclubsmember) - Retrieve a member
-* [getMartechMember](#getmartechmember) - Retrieve a member
-* [listClubsMembers](#listclubsmembers) - List all members
-* [listMartechMembers](#listmartechmembers) - List all members
-* [patchMartechMember](#patchmartechmember) - Update a member
-* [removeMartechMember](#removemartechmember) - Remove a member
-* [updateMartechMember](#updatemartechmember) - Update a member
+* [createMartechMember2](#createmartechmember2) - Create a member
+* [getClubsMember2](#getclubsmember2) - Retrieve a member
+* [getMartechMember2](#getmartechmember2) - Retrieve a member
+* [listClubsMembers2](#listclubsmembers2) - List all members
+* [listMartechMembers2](#listmartechmembers2) - List all members
+* [patchMartechMember2](#patchmartechmember2) - Update a member
+* [removeMartechMember2](#removemartechmember2) - Remove a member
+* [updateMartechMember2](#updatemartechmember2) - Update a member
 
-## createMartechMember
+## createMartechMember2
 
 Create a member
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createMartechMember" method="post" path="/martech/{connection_id}/member" -->
+<!-- UsageSnippet language="java" operationID="createMartechMember2" method="post" path="/martech/{connection_id}/member" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.CreateMartechMemberRequest;
-import to.unified.unified_java_sdk.models.operations.CreateMartechMemberResponse;
+import to.unified.unified_java_sdk.models.operations.CreateMartechMember2Request;
+import to.unified.unified_java_sdk.models.operations.CreateMartechMember2Response;
 import to.unified.unified_java_sdk.models.shared.MarketingMember;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -40,13 +40,13 @@ public class Application {
                     .build())
             .build();
 
-        CreateMartechMemberRequest req = CreateMartechMemberRequest.builder()
+        CreateMartechMember2Request req = CreateMartechMember2Request.builder()
                 .marketingMember(MarketingMember.builder()
                     .build())
                 .connectionId("<id>")
                 .build();
 
-        CreateMartechMemberResponse res = sdk.member().createMartechMember()
+        CreateMartechMember2Response res = sdk.member().createMartechMember2()
                 .request(req)
                 .call();
 
@@ -59,13 +59,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                           | Type                                                                                | Required                                                                            | Description                                                                         |
-| ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
-| `request`                                                                           | [CreateMartechMemberRequest](../../models/operations/CreateMartechMemberRequest.md) | :heavy_check_mark:                                                                  | The request object to use for the request.                                          |
+| Parameter                                                                             | Type                                                                                  | Required                                                                              | Description                                                                           |
+| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| `request`                                                                             | [CreateMartechMember2Request](../../models/operations/CreateMartechMember2Request.md) | :heavy_check_mark:                                                                    | The request object to use for the request.                                            |
 
 ### Response
 
-**[CreateMartechMemberResponse](../../models/operations/CreateMartechMemberResponse.md)**
+**[CreateMartechMember2Response](../../models/operations/CreateMartechMember2Response.md)**
 
 ### Errors
 
@@ -73,20 +73,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## getClubsMember
+## getClubsMember2
 
 Retrieve a member
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="getClubsMember" method="get" path="/clubs/{connection_id}/member/{id}" -->
+<!-- UsageSnippet language="java" operationID="getClubsMember2" method="get" path="/clubs/{connection_id}/member/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.GetClubsMemberRequest;
-import to.unified.unified_java_sdk.models.operations.GetClubsMemberResponse;
+import to.unified.unified_java_sdk.models.operations.GetClubsMember2Request;
+import to.unified.unified_java_sdk.models.operations.GetClubsMember2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -99,12 +99,12 @@ public class Application {
                     .build())
             .build();
 
-        GetClubsMemberRequest req = GetClubsMemberRequest.builder()
+        GetClubsMember2Request req = GetClubsMember2Request.builder()
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        GetClubsMemberResponse res = sdk.member().getClubsMember()
+        GetClubsMember2Response res = sdk.member().getClubsMember2()
                 .request(req)
                 .call();
 
@@ -117,13 +117,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                 | Type                                                                      | Required                                                                  | Description                                                               |
-| ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
-| `request`                                                                 | [GetClubsMemberRequest](../../models/operations/GetClubsMemberRequest.md) | :heavy_check_mark:                                                        | The request object to use for the request.                                |
+| Parameter                                                                   | Type                                                                        | Required                                                                    | Description                                                                 |
+| --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| `request`                                                                   | [GetClubsMember2Request](../../models/operations/GetClubsMember2Request.md) | :heavy_check_mark:                                                          | The request object to use for the request.                                  |
 
 ### Response
 
-**[GetClubsMemberResponse](../../models/operations/GetClubsMemberResponse.md)**
+**[GetClubsMember2Response](../../models/operations/GetClubsMember2Response.md)**
 
 ### Errors
 
@@ -131,20 +131,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## getMartechMember
+## getMartechMember2
 
 Retrieve a member
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="getMartechMember" method="get" path="/martech/{connection_id}/member/{id}" -->
+<!-- UsageSnippet language="java" operationID="getMartechMember2" method="get" path="/martech/{connection_id}/member/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.GetMartechMemberRequest;
-import to.unified.unified_java_sdk.models.operations.GetMartechMemberResponse;
+import to.unified.unified_java_sdk.models.operations.GetMartechMember2Request;
+import to.unified.unified_java_sdk.models.operations.GetMartechMember2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -157,12 +157,12 @@ public class Application {
                     .build())
             .build();
 
-        GetMartechMemberRequest req = GetMartechMemberRequest.builder()
+        GetMartechMember2Request req = GetMartechMember2Request.builder()
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        GetMartechMemberResponse res = sdk.member().getMartechMember()
+        GetMartechMember2Response res = sdk.member().getMartechMember2()
                 .request(req)
                 .call();
 
@@ -175,13 +175,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
-| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
-| `request`                                                                     | [GetMartechMemberRequest](../../models/operations/GetMartechMemberRequest.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
+| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| `request`                                                                       | [GetMartechMember2Request](../../models/operations/GetMartechMember2Request.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
 
 ### Response
 
-**[GetMartechMemberResponse](../../models/operations/GetMartechMemberResponse.md)**
+**[GetMartechMember2Response](../../models/operations/GetMartechMember2Response.md)**
 
 ### Errors
 
@@ -189,20 +189,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## listClubsMembers
+## listClubsMembers2
 
 List all members
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="listClubsMembers" method="get" path="/clubs/{connection_id}/member" -->
+<!-- UsageSnippet language="java" operationID="listClubsMembers2" method="get" path="/clubs/{connection_id}/member" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.ListClubsMembersRequest;
-import to.unified.unified_java_sdk.models.operations.ListClubsMembersResponse;
+import to.unified.unified_java_sdk.models.operations.ListClubsMembers2Request;
+import to.unified.unified_java_sdk.models.operations.ListClubsMembers2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -215,11 +215,11 @@ public class Application {
                     .build())
             .build();
 
-        ListClubsMembersRequest req = ListClubsMembersRequest.builder()
+        ListClubsMembers2Request req = ListClubsMembers2Request.builder()
                 .connectionId("<id>")
                 .build();
 
-        ListClubsMembersResponse res = sdk.member().listClubsMembers()
+        ListClubsMembers2Response res = sdk.member().listClubsMembers2()
                 .request(req)
                 .call();
 
@@ -232,13 +232,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
-| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
-| `request`                                                                     | [ListClubsMembersRequest](../../models/operations/ListClubsMembersRequest.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
+| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| `request`                                                                       | [ListClubsMembers2Request](../../models/operations/ListClubsMembers2Request.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
 
 ### Response
 
-**[ListClubsMembersResponse](../../models/operations/ListClubsMembersResponse.md)**
+**[ListClubsMembers2Response](../../models/operations/ListClubsMembers2Response.md)**
 
 ### Errors
 
@@ -246,20 +246,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## listMartechMembers
+## listMartechMembers2
 
 List all members
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="listMartechMembers" method="get" path="/martech/{connection_id}/member" -->
+<!-- UsageSnippet language="java" operationID="listMartechMembers2" method="get" path="/martech/{connection_id}/member" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.ListMartechMembersRequest;
-import to.unified.unified_java_sdk.models.operations.ListMartechMembersResponse;
+import to.unified.unified_java_sdk.models.operations.ListMartechMembers2Request;
+import to.unified.unified_java_sdk.models.operations.ListMartechMembers2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -272,11 +272,11 @@ public class Application {
                     .build())
             .build();
 
-        ListMartechMembersRequest req = ListMartechMembersRequest.builder()
+        ListMartechMembers2Request req = ListMartechMembers2Request.builder()
                 .connectionId("<id>")
                 .build();
 
-        ListMartechMembersResponse res = sdk.member().listMartechMembers()
+        ListMartechMembers2Response res = sdk.member().listMartechMembers2()
                 .request(req)
                 .call();
 
@@ -289,13 +289,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
-| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
-| `request`                                                                         | [ListMartechMembersRequest](../../models/operations/ListMartechMembersRequest.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
+| Parameter                                                                           | Type                                                                                | Required                                                                            | Description                                                                         |
+| ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| `request`                                                                           | [ListMartechMembers2Request](../../models/operations/ListMartechMembers2Request.md) | :heavy_check_mark:                                                                  | The request object to use for the request.                                          |
 
 ### Response
 
-**[ListMartechMembersResponse](../../models/operations/ListMartechMembersResponse.md)**
+**[ListMartechMembers2Response](../../models/operations/ListMartechMembers2Response.md)**
 
 ### Errors
 
@@ -303,20 +303,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## patchMartechMember
+## patchMartechMember2
 
 Update a member
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchMartechMember" method="patch" path="/martech/{connection_id}/member/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchMartechMember2" method="patch" path="/martech/{connection_id}/member/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.PatchMartechMemberRequest;
-import to.unified.unified_java_sdk.models.operations.PatchMartechMemberResponse;
+import to.unified.unified_java_sdk.models.operations.PatchMartechMember2Request;
+import to.unified.unified_java_sdk.models.operations.PatchMartechMember2Response;
 import to.unified.unified_java_sdk.models.shared.MarketingMember;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -330,14 +330,14 @@ public class Application {
                     .build())
             .build();
 
-        PatchMartechMemberRequest req = PatchMartechMemberRequest.builder()
+        PatchMartechMember2Request req = PatchMartechMember2Request.builder()
                 .marketingMember(MarketingMember.builder()
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        PatchMartechMemberResponse res = sdk.member().patchMartechMember()
+        PatchMartechMember2Response res = sdk.member().patchMartechMember2()
                 .request(req)
                 .call();
 
@@ -350,13 +350,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
-| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
-| `request`                                                                         | [PatchMartechMemberRequest](../../models/operations/PatchMartechMemberRequest.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
+| Parameter                                                                           | Type                                                                                | Required                                                                            | Description                                                                         |
+| ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| `request`                                                                           | [PatchMartechMember2Request](../../models/operations/PatchMartechMember2Request.md) | :heavy_check_mark:                                                                  | The request object to use for the request.                                          |
 
 ### Response
 
-**[PatchMartechMemberResponse](../../models/operations/PatchMartechMemberResponse.md)**
+**[PatchMartechMember2Response](../../models/operations/PatchMartechMember2Response.md)**
 
 ### Errors
 
@@ -364,20 +364,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## removeMartechMember
+## removeMartechMember2
 
 Remove a member
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="removeMartechMember" method="delete" path="/martech/{connection_id}/member/{id}" -->
+<!-- UsageSnippet language="java" operationID="removeMartechMember2" method="delete" path="/martech/{connection_id}/member/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.RemoveMartechMemberRequest;
-import to.unified.unified_java_sdk.models.operations.RemoveMartechMemberResponse;
+import to.unified.unified_java_sdk.models.operations.RemoveMartechMember2Request;
+import to.unified.unified_java_sdk.models.operations.RemoveMartechMember2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -390,12 +390,12 @@ public class Application {
                     .build())
             .build();
 
-        RemoveMartechMemberRequest req = RemoveMartechMemberRequest.builder()
+        RemoveMartechMember2Request req = RemoveMartechMember2Request.builder()
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        RemoveMartechMemberResponse res = sdk.member().removeMartechMember()
+        RemoveMartechMember2Response res = sdk.member().removeMartechMember2()
                 .request(req)
                 .call();
 
@@ -406,13 +406,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                           | Type                                                                                | Required                                                                            | Description                                                                         |
-| ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
-| `request`                                                                           | [RemoveMartechMemberRequest](../../models/operations/RemoveMartechMemberRequest.md) | :heavy_check_mark:                                                                  | The request object to use for the request.                                          |
+| Parameter                                                                             | Type                                                                                  | Required                                                                              | Description                                                                           |
+| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| `request`                                                                             | [RemoveMartechMember2Request](../../models/operations/RemoveMartechMember2Request.md) | :heavy_check_mark:                                                                    | The request object to use for the request.                                            |
 
 ### Response
 
-**[RemoveMartechMemberResponse](../../models/operations/RemoveMartechMemberResponse.md)**
+**[RemoveMartechMember2Response](../../models/operations/RemoveMartechMember2Response.md)**
 
 ### Errors
 
@@ -420,20 +420,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## updateMartechMember
+## updateMartechMember2
 
 Update a member
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateMartechMember" method="put" path="/martech/{connection_id}/member/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateMartechMember2" method="put" path="/martech/{connection_id}/member/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.UpdateMartechMemberRequest;
-import to.unified.unified_java_sdk.models.operations.UpdateMartechMemberResponse;
+import to.unified.unified_java_sdk.models.operations.UpdateMartechMember2Request;
+import to.unified.unified_java_sdk.models.operations.UpdateMartechMember2Response;
 import to.unified.unified_java_sdk.models.shared.MarketingMember;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -447,14 +447,14 @@ public class Application {
                     .build())
             .build();
 
-        UpdateMartechMemberRequest req = UpdateMartechMemberRequest.builder()
+        UpdateMartechMember2Request req = UpdateMartechMember2Request.builder()
                 .marketingMember(MarketingMember.builder()
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        UpdateMartechMemberResponse res = sdk.member().updateMartechMember()
+        UpdateMartechMember2Response res = sdk.member().updateMartechMember2()
                 .request(req)
                 .call();
 
@@ -467,13 +467,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                           | Type                                                                                | Required                                                                            | Description                                                                         |
-| ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
-| `request`                                                                           | [UpdateMartechMemberRequest](../../models/operations/UpdateMartechMemberRequest.md) | :heavy_check_mark:                                                                  | The request object to use for the request.                                          |
+| Parameter                                                                             | Type                                                                                  | Required                                                                              | Description                                                                           |
+| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| `request`                                                                             | [UpdateMartechMember2Request](../../models/operations/UpdateMartechMember2Request.md) | :heavy_check_mark:                                                                    | The request object to use for the request.                                            |
 
 ### Response
 
-**[UpdateMartechMemberResponse](../../models/operations/UpdateMartechMemberResponse.md)**
+**[UpdateMartechMember2Response](../../models/operations/UpdateMartechMember2Response.md)**
 
 ### Errors
 

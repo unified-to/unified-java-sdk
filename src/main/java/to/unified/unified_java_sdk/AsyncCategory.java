@@ -7,54 +7,54 @@ import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOper
 
 import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
-import to.unified.unified_java_sdk.models.operations.CreateAccountingCategoryRequest;
-import to.unified.unified_java_sdk.models.operations.CreateTicketingCategoryRequest;
-import to.unified.unified_java_sdk.models.operations.GetAccountingCategoryRequest;
-import to.unified.unified_java_sdk.models.operations.GetTicketingCategoryRequest;
-import to.unified.unified_java_sdk.models.operations.ListAccountingCategoriesRequest;
-import to.unified.unified_java_sdk.models.operations.ListTicketingCategoriesRequest;
-import to.unified.unified_java_sdk.models.operations.PatchAccountingCategoryRequest;
-import to.unified.unified_java_sdk.models.operations.PatchTicketingCategoryRequest;
-import to.unified.unified_java_sdk.models.operations.RemoveAccountingCategoryRequest;
-import to.unified.unified_java_sdk.models.operations.RemoveTicketingCategoryRequest;
-import to.unified.unified_java_sdk.models.operations.UpdateAccountingCategoryRequest;
-import to.unified.unified_java_sdk.models.operations.UpdateTicketingCategoryRequest;
-import to.unified.unified_java_sdk.models.operations.async.CreateAccountingCategoryRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.CreateAccountingCategoryResponse;
-import to.unified.unified_java_sdk.models.operations.async.CreateTicketingCategoryRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.CreateTicketingCategoryResponse;
-import to.unified.unified_java_sdk.models.operations.async.GetAccountingCategoryRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.GetAccountingCategoryResponse;
-import to.unified.unified_java_sdk.models.operations.async.GetTicketingCategoryRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.GetTicketingCategoryResponse;
-import to.unified.unified_java_sdk.models.operations.async.ListAccountingCategoriesRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.ListAccountingCategoriesResponse;
-import to.unified.unified_java_sdk.models.operations.async.ListTicketingCategoriesRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.ListTicketingCategoriesResponse;
-import to.unified.unified_java_sdk.models.operations.async.PatchAccountingCategoryRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.PatchAccountingCategoryResponse;
-import to.unified.unified_java_sdk.models.operations.async.PatchTicketingCategoryRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.PatchTicketingCategoryResponse;
-import to.unified.unified_java_sdk.models.operations.async.RemoveAccountingCategoryRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.RemoveAccountingCategoryResponse;
-import to.unified.unified_java_sdk.models.operations.async.RemoveTicketingCategoryRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.RemoveTicketingCategoryResponse;
-import to.unified.unified_java_sdk.models.operations.async.UpdateAccountingCategoryRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.UpdateAccountingCategoryResponse;
-import to.unified.unified_java_sdk.models.operations.async.UpdateTicketingCategoryRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.UpdateTicketingCategoryResponse;
-import to.unified.unified_java_sdk.operations.CreateAccountingCategory;
-import to.unified.unified_java_sdk.operations.CreateTicketingCategory;
-import to.unified.unified_java_sdk.operations.GetAccountingCategory;
-import to.unified.unified_java_sdk.operations.GetTicketingCategory;
-import to.unified.unified_java_sdk.operations.ListAccountingCategories;
-import to.unified.unified_java_sdk.operations.ListTicketingCategories;
-import to.unified.unified_java_sdk.operations.PatchAccountingCategory;
-import to.unified.unified_java_sdk.operations.PatchTicketingCategory;
-import to.unified.unified_java_sdk.operations.RemoveAccountingCategory;
-import to.unified.unified_java_sdk.operations.RemoveTicketingCategory;
-import to.unified.unified_java_sdk.operations.UpdateAccountingCategory;
-import to.unified.unified_java_sdk.operations.UpdateTicketingCategory;
+import to.unified.unified_java_sdk.models.operations.CreateAccountingCategory2Request;
+import to.unified.unified_java_sdk.models.operations.CreateTicketingCategory2Request;
+import to.unified.unified_java_sdk.models.operations.GetAccountingCategory2Request;
+import to.unified.unified_java_sdk.models.operations.GetTicketingCategory2Request;
+import to.unified.unified_java_sdk.models.operations.ListAccountingCategories2Request;
+import to.unified.unified_java_sdk.models.operations.ListTicketingCategories2Request;
+import to.unified.unified_java_sdk.models.operations.PatchAccountingCategory2Request;
+import to.unified.unified_java_sdk.models.operations.PatchTicketingCategory2Request;
+import to.unified.unified_java_sdk.models.operations.RemoveAccountingCategory2Request;
+import to.unified.unified_java_sdk.models.operations.RemoveTicketingCategory2Request;
+import to.unified.unified_java_sdk.models.operations.UpdateAccountingCategory2Request;
+import to.unified.unified_java_sdk.models.operations.UpdateTicketingCategory2Request;
+import to.unified.unified_java_sdk.models.operations.async.CreateAccountingCategory2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.CreateAccountingCategory2Response;
+import to.unified.unified_java_sdk.models.operations.async.CreateTicketingCategory2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.CreateTicketingCategory2Response;
+import to.unified.unified_java_sdk.models.operations.async.GetAccountingCategory2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetAccountingCategory2Response;
+import to.unified.unified_java_sdk.models.operations.async.GetTicketingCategory2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetTicketingCategory2Response;
+import to.unified.unified_java_sdk.models.operations.async.ListAccountingCategories2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListAccountingCategories2Response;
+import to.unified.unified_java_sdk.models.operations.async.ListTicketingCategories2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListTicketingCategories2Response;
+import to.unified.unified_java_sdk.models.operations.async.PatchAccountingCategory2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.PatchAccountingCategory2Response;
+import to.unified.unified_java_sdk.models.operations.async.PatchTicketingCategory2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.PatchTicketingCategory2Response;
+import to.unified.unified_java_sdk.models.operations.async.RemoveAccountingCategory2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.RemoveAccountingCategory2Response;
+import to.unified.unified_java_sdk.models.operations.async.RemoveTicketingCategory2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.RemoveTicketingCategory2Response;
+import to.unified.unified_java_sdk.models.operations.async.UpdateAccountingCategory2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.UpdateAccountingCategory2Response;
+import to.unified.unified_java_sdk.models.operations.async.UpdateTicketingCategory2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.UpdateTicketingCategory2Response;
+import to.unified.unified_java_sdk.operations.CreateAccountingCategory2;
+import to.unified.unified_java_sdk.operations.CreateTicketingCategory2;
+import to.unified.unified_java_sdk.operations.GetAccountingCategory2;
+import to.unified.unified_java_sdk.operations.GetTicketingCategory2;
+import to.unified.unified_java_sdk.operations.ListAccountingCategories2;
+import to.unified.unified_java_sdk.operations.ListTicketingCategories2;
+import to.unified.unified_java_sdk.operations.PatchAccountingCategory2;
+import to.unified.unified_java_sdk.operations.PatchTicketingCategory2;
+import to.unified.unified_java_sdk.operations.RemoveAccountingCategory2;
+import to.unified.unified_java_sdk.operations.RemoveTicketingCategory2;
+import to.unified.unified_java_sdk.operations.UpdateAccountingCategory2;
+import to.unified.unified_java_sdk.operations.UpdateTicketingCategory2;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -83,19 +83,19 @@ public class AsyncCategory {
      * 
      * @return The async call builder
      */
-    public CreateAccountingCategoryRequestBuilder createAccountingCategory() {
-        return new CreateAccountingCategoryRequestBuilder(sdkConfiguration);
+    public CreateAccountingCategory2RequestBuilder createAccountingCategory2() {
+        return new CreateAccountingCategory2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Create a category
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<CreateAccountingCategoryResponse>} - The async response
+     * @return {@code CompletableFuture<CreateAccountingCategory2Response>} - The async response
      */
-    public CompletableFuture<CreateAccountingCategoryResponse> createAccountingCategory(@Nonnull CreateAccountingCategoryRequest request) {
-        AsyncRequestOperation<CreateAccountingCategoryRequest, CreateAccountingCategoryResponse> operation
-              = new CreateAccountingCategory.Async(sdkConfiguration, _headers);
+    public CompletableFuture<CreateAccountingCategory2Response> createAccountingCategory2(@Nonnull CreateAccountingCategory2Request request) {
+        AsyncRequestOperation<CreateAccountingCategory2Request, CreateAccountingCategory2Response> operation
+              = new CreateAccountingCategory2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -106,19 +106,19 @@ public class AsyncCategory {
      * 
      * @return The async call builder
      */
-    public CreateTicketingCategoryRequestBuilder createTicketingCategory() {
-        return new CreateTicketingCategoryRequestBuilder(sdkConfiguration);
+    public CreateTicketingCategory2RequestBuilder createTicketingCategory2() {
+        return new CreateTicketingCategory2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Create a category
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<CreateTicketingCategoryResponse>} - The async response
+     * @return {@code CompletableFuture<CreateTicketingCategory2Response>} - The async response
      */
-    public CompletableFuture<CreateTicketingCategoryResponse> createTicketingCategory(@Nonnull CreateTicketingCategoryRequest request) {
-        AsyncRequestOperation<CreateTicketingCategoryRequest, CreateTicketingCategoryResponse> operation
-              = new CreateTicketingCategory.Async(sdkConfiguration, _headers);
+    public CompletableFuture<CreateTicketingCategory2Response> createTicketingCategory2(@Nonnull CreateTicketingCategory2Request request) {
+        AsyncRequestOperation<CreateTicketingCategory2Request, CreateTicketingCategory2Response> operation
+              = new CreateTicketingCategory2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -129,19 +129,19 @@ public class AsyncCategory {
      * 
      * @return The async call builder
      */
-    public GetAccountingCategoryRequestBuilder getAccountingCategory() {
-        return new GetAccountingCategoryRequestBuilder(sdkConfiguration);
+    public GetAccountingCategory2RequestBuilder getAccountingCategory2() {
+        return new GetAccountingCategory2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Retrieve a category
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<GetAccountingCategoryResponse>} - The async response
+     * @return {@code CompletableFuture<GetAccountingCategory2Response>} - The async response
      */
-    public CompletableFuture<GetAccountingCategoryResponse> getAccountingCategory(@Nonnull GetAccountingCategoryRequest request) {
-        AsyncRequestOperation<GetAccountingCategoryRequest, GetAccountingCategoryResponse> operation
-              = new GetAccountingCategory.Async(sdkConfiguration, _headers);
+    public CompletableFuture<GetAccountingCategory2Response> getAccountingCategory2(@Nonnull GetAccountingCategory2Request request) {
+        AsyncRequestOperation<GetAccountingCategory2Request, GetAccountingCategory2Response> operation
+              = new GetAccountingCategory2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -152,19 +152,19 @@ public class AsyncCategory {
      * 
      * @return The async call builder
      */
-    public GetTicketingCategoryRequestBuilder getTicketingCategory() {
-        return new GetTicketingCategoryRequestBuilder(sdkConfiguration);
+    public GetTicketingCategory2RequestBuilder getTicketingCategory2() {
+        return new GetTicketingCategory2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Retrieve a category
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<GetTicketingCategoryResponse>} - The async response
+     * @return {@code CompletableFuture<GetTicketingCategory2Response>} - The async response
      */
-    public CompletableFuture<GetTicketingCategoryResponse> getTicketingCategory(@Nonnull GetTicketingCategoryRequest request) {
-        AsyncRequestOperation<GetTicketingCategoryRequest, GetTicketingCategoryResponse> operation
-              = new GetTicketingCategory.Async(sdkConfiguration, _headers);
+    public CompletableFuture<GetTicketingCategory2Response> getTicketingCategory2(@Nonnull GetTicketingCategory2Request request) {
+        AsyncRequestOperation<GetTicketingCategory2Request, GetTicketingCategory2Response> operation
+              = new GetTicketingCategory2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -175,19 +175,19 @@ public class AsyncCategory {
      * 
      * @return The async call builder
      */
-    public ListAccountingCategoriesRequestBuilder listAccountingCategories() {
-        return new ListAccountingCategoriesRequestBuilder(sdkConfiguration);
+    public ListAccountingCategories2RequestBuilder listAccountingCategories2() {
+        return new ListAccountingCategories2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * List all categories
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<ListAccountingCategoriesResponse>} - The async response
+     * @return {@code CompletableFuture<ListAccountingCategories2Response>} - The async response
      */
-    public CompletableFuture<ListAccountingCategoriesResponse> listAccountingCategories(@Nonnull ListAccountingCategoriesRequest request) {
-        AsyncRequestOperation<ListAccountingCategoriesRequest, ListAccountingCategoriesResponse> operation
-              = new ListAccountingCategories.Async(sdkConfiguration, _headers);
+    public CompletableFuture<ListAccountingCategories2Response> listAccountingCategories2(@Nonnull ListAccountingCategories2Request request) {
+        AsyncRequestOperation<ListAccountingCategories2Request, ListAccountingCategories2Response> operation
+              = new ListAccountingCategories2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -198,19 +198,19 @@ public class AsyncCategory {
      * 
      * @return The async call builder
      */
-    public ListTicketingCategoriesRequestBuilder listTicketingCategories() {
-        return new ListTicketingCategoriesRequestBuilder(sdkConfiguration);
+    public ListTicketingCategories2RequestBuilder listTicketingCategories2() {
+        return new ListTicketingCategories2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * List all categories
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<ListTicketingCategoriesResponse>} - The async response
+     * @return {@code CompletableFuture<ListTicketingCategories2Response>} - The async response
      */
-    public CompletableFuture<ListTicketingCategoriesResponse> listTicketingCategories(@Nonnull ListTicketingCategoriesRequest request) {
-        AsyncRequestOperation<ListTicketingCategoriesRequest, ListTicketingCategoriesResponse> operation
-              = new ListTicketingCategories.Async(sdkConfiguration, _headers);
+    public CompletableFuture<ListTicketingCategories2Response> listTicketingCategories2(@Nonnull ListTicketingCategories2Request request) {
+        AsyncRequestOperation<ListTicketingCategories2Request, ListTicketingCategories2Response> operation
+              = new ListTicketingCategories2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -221,19 +221,19 @@ public class AsyncCategory {
      * 
      * @return The async call builder
      */
-    public PatchAccountingCategoryRequestBuilder patchAccountingCategory() {
-        return new PatchAccountingCategoryRequestBuilder(sdkConfiguration);
+    public PatchAccountingCategory2RequestBuilder patchAccountingCategory2() {
+        return new PatchAccountingCategory2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update a category
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<PatchAccountingCategoryResponse>} - The async response
+     * @return {@code CompletableFuture<PatchAccountingCategory2Response>} - The async response
      */
-    public CompletableFuture<PatchAccountingCategoryResponse> patchAccountingCategory(@Nonnull PatchAccountingCategoryRequest request) {
-        AsyncRequestOperation<PatchAccountingCategoryRequest, PatchAccountingCategoryResponse> operation
-              = new PatchAccountingCategory.Async(sdkConfiguration, _headers);
+    public CompletableFuture<PatchAccountingCategory2Response> patchAccountingCategory2(@Nonnull PatchAccountingCategory2Request request) {
+        AsyncRequestOperation<PatchAccountingCategory2Request, PatchAccountingCategory2Response> operation
+              = new PatchAccountingCategory2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -244,42 +244,19 @@ public class AsyncCategory {
      * 
      * @return The async call builder
      */
-    public PatchTicketingCategoryRequestBuilder patchTicketingCategory() {
-        return new PatchTicketingCategoryRequestBuilder(sdkConfiguration);
+    public PatchTicketingCategory2RequestBuilder patchTicketingCategory2() {
+        return new PatchTicketingCategory2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update a category
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<PatchTicketingCategoryResponse>} - The async response
+     * @return {@code CompletableFuture<PatchTicketingCategory2Response>} - The async response
      */
-    public CompletableFuture<PatchTicketingCategoryResponse> patchTicketingCategory(@Nonnull PatchTicketingCategoryRequest request) {
-        AsyncRequestOperation<PatchTicketingCategoryRequest, PatchTicketingCategoryResponse> operation
-              = new PatchTicketingCategory.Async(sdkConfiguration, _headers);
-        return operation.doRequest(request)
-            .thenCompose(operation::handleResponse);
-    }
-
-
-    /**
-     * Remove a category
-     * 
-     * @return The async call builder
-     */
-    public RemoveAccountingCategoryRequestBuilder removeAccountingCategory() {
-        return new RemoveAccountingCategoryRequestBuilder(sdkConfiguration);
-    }
-
-    /**
-     * Remove a category
-     * 
-     * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<RemoveAccountingCategoryResponse>} - The async response
-     */
-    public CompletableFuture<RemoveAccountingCategoryResponse> removeAccountingCategory(@Nonnull RemoveAccountingCategoryRequest request) {
-        AsyncRequestOperation<RemoveAccountingCategoryRequest, RemoveAccountingCategoryResponse> operation
-              = new RemoveAccountingCategory.Async(sdkConfiguration, _headers);
+    public CompletableFuture<PatchTicketingCategory2Response> patchTicketingCategory2(@Nonnull PatchTicketingCategory2Request request) {
+        AsyncRequestOperation<PatchTicketingCategory2Request, PatchTicketingCategory2Response> operation
+              = new PatchTicketingCategory2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -290,19 +267,42 @@ public class AsyncCategory {
      * 
      * @return The async call builder
      */
-    public RemoveTicketingCategoryRequestBuilder removeTicketingCategory() {
-        return new RemoveTicketingCategoryRequestBuilder(sdkConfiguration);
+    public RemoveAccountingCategory2RequestBuilder removeAccountingCategory2() {
+        return new RemoveAccountingCategory2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Remove a category
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<RemoveTicketingCategoryResponse>} - The async response
+     * @return {@code CompletableFuture<RemoveAccountingCategory2Response>} - The async response
      */
-    public CompletableFuture<RemoveTicketingCategoryResponse> removeTicketingCategory(@Nonnull RemoveTicketingCategoryRequest request) {
-        AsyncRequestOperation<RemoveTicketingCategoryRequest, RemoveTicketingCategoryResponse> operation
-              = new RemoveTicketingCategory.Async(sdkConfiguration, _headers);
+    public CompletableFuture<RemoveAccountingCategory2Response> removeAccountingCategory2(@Nonnull RemoveAccountingCategory2Request request) {
+        AsyncRequestOperation<RemoveAccountingCategory2Request, RemoveAccountingCategory2Response> operation
+              = new RemoveAccountingCategory2.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * Remove a category
+     * 
+     * @return The async call builder
+     */
+    public RemoveTicketingCategory2RequestBuilder removeTicketingCategory2() {
+        return new RemoveTicketingCategory2RequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Remove a category
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<RemoveTicketingCategory2Response>} - The async response
+     */
+    public CompletableFuture<RemoveTicketingCategory2Response> removeTicketingCategory2(@Nonnull RemoveTicketingCategory2Request request) {
+        AsyncRequestOperation<RemoveTicketingCategory2Request, RemoveTicketingCategory2Response> operation
+              = new RemoveTicketingCategory2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -313,19 +313,19 @@ public class AsyncCategory {
      * 
      * @return The async call builder
      */
-    public UpdateAccountingCategoryRequestBuilder updateAccountingCategory() {
-        return new UpdateAccountingCategoryRequestBuilder(sdkConfiguration);
+    public UpdateAccountingCategory2RequestBuilder updateAccountingCategory2() {
+        return new UpdateAccountingCategory2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update a category
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<UpdateAccountingCategoryResponse>} - The async response
+     * @return {@code CompletableFuture<UpdateAccountingCategory2Response>} - The async response
      */
-    public CompletableFuture<UpdateAccountingCategoryResponse> updateAccountingCategory(@Nonnull UpdateAccountingCategoryRequest request) {
-        AsyncRequestOperation<UpdateAccountingCategoryRequest, UpdateAccountingCategoryResponse> operation
-              = new UpdateAccountingCategory.Async(sdkConfiguration, _headers);
+    public CompletableFuture<UpdateAccountingCategory2Response> updateAccountingCategory2(@Nonnull UpdateAccountingCategory2Request request) {
+        AsyncRequestOperation<UpdateAccountingCategory2Request, UpdateAccountingCategory2Response> operation
+              = new UpdateAccountingCategory2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -336,19 +336,19 @@ public class AsyncCategory {
      * 
      * @return The async call builder
      */
-    public UpdateTicketingCategoryRequestBuilder updateTicketingCategory() {
-        return new UpdateTicketingCategoryRequestBuilder(sdkConfiguration);
+    public UpdateTicketingCategory2RequestBuilder updateTicketingCategory2() {
+        return new UpdateTicketingCategory2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update a category
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<UpdateTicketingCategoryResponse>} - The async response
+     * @return {@code CompletableFuture<UpdateTicketingCategory2Response>} - The async response
      */
-    public CompletableFuture<UpdateTicketingCategoryResponse> updateTicketingCategory(@Nonnull UpdateTicketingCategoryRequest request) {
-        AsyncRequestOperation<UpdateTicketingCategoryRequest, UpdateTicketingCategoryResponse> operation
-              = new UpdateTicketingCategory.Async(sdkConfiguration, _headers);
+    public CompletableFuture<UpdateTicketingCategory2Response> updateTicketingCategory2(@Nonnull UpdateTicketingCategory2Request request) {
+        AsyncRequestOperation<UpdateTicketingCategory2Request, UpdateTicketingCategory2Response> operation
+              = new UpdateTicketingCategory2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

@@ -22,6 +22,9 @@ public class Gender {
 
     public static final Gender MALE = new Gender("MALE");
     public static final Gender FEMALE = new Gender("FEMALE");
+    public static final Gender INTERSEX = new Gender("INTERSEX");
+    public static final Gender TRANS = new Gender("TRANS");
+    public static final Gender NON_BINARY = new Gender("NON_BINARY");
 
     // This map will grow whenever a Color gets created with a new
     // unrecognized value (a potential memory leak if the user is not
@@ -97,6 +100,9 @@ public class Gender {
         Map<String, Gender> map = new LinkedHashMap<>();
         map.put("MALE", MALE);
         map.put("FEMALE", FEMALE);
+        map.put("INTERSEX", INTERSEX);
+        map.put("TRANS", TRANS);
+        map.put("NON_BINARY", NON_BINARY);
         return map;
     }
 
@@ -104,6 +110,9 @@ public class Gender {
         Map<String, GenderEnum> map = new HashMap<>();
         map.put("MALE", GenderEnum.MALE);
         map.put("FEMALE", GenderEnum.FEMALE);
+        map.put("INTERSEX", GenderEnum.INTERSEX);
+        map.put("TRANS", GenderEnum.TRANS);
+        map.put("NON_BINARY", GenderEnum.NON_BINARY);
         return map;
     }
     
@@ -111,7 +120,10 @@ public class Gender {
     public enum GenderEnum {
 
         MALE("MALE"),
-        FEMALE("FEMALE"),;
+        FEMALE("FEMALE"),
+        INTERSEX("INTERSEX"),
+        TRANS("TRANS"),
+        NON_BINARY("NON_BINARY"),;
 
         private final String value;
 

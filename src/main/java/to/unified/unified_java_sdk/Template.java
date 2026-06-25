@@ -6,14 +6,14 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
-import to.unified.unified_java_sdk.models.operations.GetSigningTemplateRequest;
-import to.unified.unified_java_sdk.models.operations.GetSigningTemplateRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.GetSigningTemplateResponse;
-import to.unified.unified_java_sdk.models.operations.ListSigningTemplatesRequest;
-import to.unified.unified_java_sdk.models.operations.ListSigningTemplatesRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.ListSigningTemplatesResponse;
-import to.unified.unified_java_sdk.operations.GetSigningTemplate;
-import to.unified.unified_java_sdk.operations.ListSigningTemplates;
+import to.unified.unified_java_sdk.models.operations.GetSigningTemplate2Request;
+import to.unified.unified_java_sdk.models.operations.GetSigningTemplate2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetSigningTemplate2Response;
+import to.unified.unified_java_sdk.models.operations.ListSigningTemplates2Request;
+import to.unified.unified_java_sdk.models.operations.ListSigningTemplates2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListSigningTemplates2Response;
+import to.unified.unified_java_sdk.operations.GetSigningTemplate2;
+import to.unified.unified_java_sdk.operations.ListSigningTemplates2;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -41,8 +41,8 @@ public class Template {
      * 
      * @return The call builder
      */
-    public GetSigningTemplateRequestBuilder getSigningTemplate() {
-        return new GetSigningTemplateRequestBuilder(sdkConfiguration);
+    public GetSigningTemplate2RequestBuilder getSigningTemplate2() {
+        return new GetSigningTemplate2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -52,9 +52,9 @@ public class Template {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetSigningTemplateResponse getSigningTemplate(@Nonnull GetSigningTemplateRequest request) {
-        RequestOperation<GetSigningTemplateRequest, GetSigningTemplateResponse> operation
-              = new GetSigningTemplate.Sync(sdkConfiguration, _headers);
+    public GetSigningTemplate2Response getSigningTemplate2(@Nonnull GetSigningTemplate2Request request) {
+        RequestOperation<GetSigningTemplate2Request, GetSigningTemplate2Response> operation
+              = new GetSigningTemplate2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -63,8 +63,8 @@ public class Template {
      * 
      * @return The call builder
      */
-    public ListSigningTemplatesRequestBuilder listSigningTemplates() {
-        return new ListSigningTemplatesRequestBuilder(sdkConfiguration);
+    public ListSigningTemplates2RequestBuilder listSigningTemplates2() {
+        return new ListSigningTemplates2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -74,9 +74,9 @@ public class Template {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListSigningTemplatesResponse listSigningTemplates(@Nonnull ListSigningTemplatesRequest request) {
-        RequestOperation<ListSigningTemplatesRequest, ListSigningTemplatesResponse> operation
-              = new ListSigningTemplates.Sync(sdkConfiguration, _headers);
+    public ListSigningTemplates2Response listSigningTemplates2(@Nonnull ListSigningTemplates2Request request) {
+        RequestOperation<ListSigningTemplates2Request, ListSigningTemplates2Response> operation
+              = new ListSigningTemplates2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

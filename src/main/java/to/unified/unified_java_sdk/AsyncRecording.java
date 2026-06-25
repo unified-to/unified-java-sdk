@@ -7,38 +7,38 @@ import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOper
 
 import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
-import to.unified.unified_java_sdk.models.operations.CreateUcRecordingRequest;
-import to.unified.unified_java_sdk.models.operations.GetCalendarRecordingRequest;
-import to.unified.unified_java_sdk.models.operations.GetUcRecordingRequest;
-import to.unified.unified_java_sdk.models.operations.ListCalendarRecordingsRequest;
-import to.unified.unified_java_sdk.models.operations.ListUcRecordingsRequest;
-import to.unified.unified_java_sdk.models.operations.PatchUcRecordingRequest;
-import to.unified.unified_java_sdk.models.operations.RemoveUcRecordingRequest;
-import to.unified.unified_java_sdk.models.operations.UpdateUcRecordingRequest;
-import to.unified.unified_java_sdk.models.operations.async.CreateUcRecordingRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.CreateUcRecordingResponse;
-import to.unified.unified_java_sdk.models.operations.async.GetCalendarRecordingRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.GetCalendarRecordingResponse;
-import to.unified.unified_java_sdk.models.operations.async.GetUcRecordingRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.GetUcRecordingResponse;
-import to.unified.unified_java_sdk.models.operations.async.ListCalendarRecordingsRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.ListCalendarRecordingsResponse;
-import to.unified.unified_java_sdk.models.operations.async.ListUcRecordingsRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.ListUcRecordingsResponse;
-import to.unified.unified_java_sdk.models.operations.async.PatchUcRecordingRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.PatchUcRecordingResponse;
-import to.unified.unified_java_sdk.models.operations.async.RemoveUcRecordingRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.RemoveUcRecordingResponse;
-import to.unified.unified_java_sdk.models.operations.async.UpdateUcRecordingRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.UpdateUcRecordingResponse;
-import to.unified.unified_java_sdk.operations.CreateUcRecording;
-import to.unified.unified_java_sdk.operations.GetCalendarRecording;
-import to.unified.unified_java_sdk.operations.GetUcRecording;
-import to.unified.unified_java_sdk.operations.ListCalendarRecordings;
-import to.unified.unified_java_sdk.operations.ListUcRecordings;
-import to.unified.unified_java_sdk.operations.PatchUcRecording;
-import to.unified.unified_java_sdk.operations.RemoveUcRecording;
-import to.unified.unified_java_sdk.operations.UpdateUcRecording;
+import to.unified.unified_java_sdk.models.operations.CreateUcRecording2Request;
+import to.unified.unified_java_sdk.models.operations.GetCalendarRecording2Request;
+import to.unified.unified_java_sdk.models.operations.GetUcRecording2Request;
+import to.unified.unified_java_sdk.models.operations.ListCalendarRecordings2Request;
+import to.unified.unified_java_sdk.models.operations.ListUcRecordings2Request;
+import to.unified.unified_java_sdk.models.operations.PatchUcRecording2Request;
+import to.unified.unified_java_sdk.models.operations.RemoveUcRecording2Request;
+import to.unified.unified_java_sdk.models.operations.UpdateUcRecording2Request;
+import to.unified.unified_java_sdk.models.operations.async.CreateUcRecording2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.CreateUcRecording2Response;
+import to.unified.unified_java_sdk.models.operations.async.GetCalendarRecording2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetCalendarRecording2Response;
+import to.unified.unified_java_sdk.models.operations.async.GetUcRecording2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetUcRecording2Response;
+import to.unified.unified_java_sdk.models.operations.async.ListCalendarRecordings2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListCalendarRecordings2Response;
+import to.unified.unified_java_sdk.models.operations.async.ListUcRecordings2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListUcRecordings2Response;
+import to.unified.unified_java_sdk.models.operations.async.PatchUcRecording2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.PatchUcRecording2Response;
+import to.unified.unified_java_sdk.models.operations.async.RemoveUcRecording2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.RemoveUcRecording2Response;
+import to.unified.unified_java_sdk.models.operations.async.UpdateUcRecording2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.UpdateUcRecording2Response;
+import to.unified.unified_java_sdk.operations.CreateUcRecording2;
+import to.unified.unified_java_sdk.operations.GetCalendarRecording2;
+import to.unified.unified_java_sdk.operations.GetUcRecording2;
+import to.unified.unified_java_sdk.operations.ListCalendarRecordings2;
+import to.unified.unified_java_sdk.operations.ListUcRecordings2;
+import to.unified.unified_java_sdk.operations.PatchUcRecording2;
+import to.unified.unified_java_sdk.operations.RemoveUcRecording2;
+import to.unified.unified_java_sdk.operations.UpdateUcRecording2;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -67,19 +67,19 @@ public class AsyncRecording {
      * 
      * @return The async call builder
      */
-    public CreateUcRecordingRequestBuilder createUcRecording() {
-        return new CreateUcRecordingRequestBuilder(sdkConfiguration);
+    public CreateUcRecording2RequestBuilder createUcRecording2() {
+        return new CreateUcRecording2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Create a recording
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<CreateUcRecordingResponse>} - The async response
+     * @return {@code CompletableFuture<CreateUcRecording2Response>} - The async response
      */
-    public CompletableFuture<CreateUcRecordingResponse> createUcRecording(@Nonnull CreateUcRecordingRequest request) {
-        AsyncRequestOperation<CreateUcRecordingRequest, CreateUcRecordingResponse> operation
-              = new CreateUcRecording.Async(sdkConfiguration, _headers);
+    public CompletableFuture<CreateUcRecording2Response> createUcRecording2(@Nonnull CreateUcRecording2Request request) {
+        AsyncRequestOperation<CreateUcRecording2Request, CreateUcRecording2Response> operation
+              = new CreateUcRecording2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -90,19 +90,19 @@ public class AsyncRecording {
      * 
      * @return The async call builder
      */
-    public GetCalendarRecordingRequestBuilder getCalendarRecording() {
-        return new GetCalendarRecordingRequestBuilder(sdkConfiguration);
+    public GetCalendarRecording2RequestBuilder getCalendarRecording2() {
+        return new GetCalendarRecording2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Retrieve a recording
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<GetCalendarRecordingResponse>} - The async response
+     * @return {@code CompletableFuture<GetCalendarRecording2Response>} - The async response
      */
-    public CompletableFuture<GetCalendarRecordingResponse> getCalendarRecording(@Nonnull GetCalendarRecordingRequest request) {
-        AsyncRequestOperation<GetCalendarRecordingRequest, GetCalendarRecordingResponse> operation
-              = new GetCalendarRecording.Async(sdkConfiguration, _headers);
+    public CompletableFuture<GetCalendarRecording2Response> getCalendarRecording2(@Nonnull GetCalendarRecording2Request request) {
+        AsyncRequestOperation<GetCalendarRecording2Request, GetCalendarRecording2Response> operation
+              = new GetCalendarRecording2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -113,19 +113,19 @@ public class AsyncRecording {
      * 
      * @return The async call builder
      */
-    public GetUcRecordingRequestBuilder getUcRecording() {
-        return new GetUcRecordingRequestBuilder(sdkConfiguration);
+    public GetUcRecording2RequestBuilder getUcRecording2() {
+        return new GetUcRecording2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Retrieve a recording
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<GetUcRecordingResponse>} - The async response
+     * @return {@code CompletableFuture<GetUcRecording2Response>} - The async response
      */
-    public CompletableFuture<GetUcRecordingResponse> getUcRecording(@Nonnull GetUcRecordingRequest request) {
-        AsyncRequestOperation<GetUcRecordingRequest, GetUcRecordingResponse> operation
-              = new GetUcRecording.Async(sdkConfiguration, _headers);
+    public CompletableFuture<GetUcRecording2Response> getUcRecording2(@Nonnull GetUcRecording2Request request) {
+        AsyncRequestOperation<GetUcRecording2Request, GetUcRecording2Response> operation
+              = new GetUcRecording2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -136,19 +136,19 @@ public class AsyncRecording {
      * 
      * @return The async call builder
      */
-    public ListCalendarRecordingsRequestBuilder listCalendarRecordings() {
-        return new ListCalendarRecordingsRequestBuilder(sdkConfiguration);
+    public ListCalendarRecordings2RequestBuilder listCalendarRecordings2() {
+        return new ListCalendarRecordings2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * List all recordings
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<ListCalendarRecordingsResponse>} - The async response
+     * @return {@code CompletableFuture<ListCalendarRecordings2Response>} - The async response
      */
-    public CompletableFuture<ListCalendarRecordingsResponse> listCalendarRecordings(@Nonnull ListCalendarRecordingsRequest request) {
-        AsyncRequestOperation<ListCalendarRecordingsRequest, ListCalendarRecordingsResponse> operation
-              = new ListCalendarRecordings.Async(sdkConfiguration, _headers);
+    public CompletableFuture<ListCalendarRecordings2Response> listCalendarRecordings2(@Nonnull ListCalendarRecordings2Request request) {
+        AsyncRequestOperation<ListCalendarRecordings2Request, ListCalendarRecordings2Response> operation
+              = new ListCalendarRecordings2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -159,19 +159,19 @@ public class AsyncRecording {
      * 
      * @return The async call builder
      */
-    public ListUcRecordingsRequestBuilder listUcRecordings() {
-        return new ListUcRecordingsRequestBuilder(sdkConfiguration);
+    public ListUcRecordings2RequestBuilder listUcRecordings2() {
+        return new ListUcRecordings2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * List all recordings
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<ListUcRecordingsResponse>} - The async response
+     * @return {@code CompletableFuture<ListUcRecordings2Response>} - The async response
      */
-    public CompletableFuture<ListUcRecordingsResponse> listUcRecordings(@Nonnull ListUcRecordingsRequest request) {
-        AsyncRequestOperation<ListUcRecordingsRequest, ListUcRecordingsResponse> operation
-              = new ListUcRecordings.Async(sdkConfiguration, _headers);
+    public CompletableFuture<ListUcRecordings2Response> listUcRecordings2(@Nonnull ListUcRecordings2Request request) {
+        AsyncRequestOperation<ListUcRecordings2Request, ListUcRecordings2Response> operation
+              = new ListUcRecordings2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -182,19 +182,19 @@ public class AsyncRecording {
      * 
      * @return The async call builder
      */
-    public PatchUcRecordingRequestBuilder patchUcRecording() {
-        return new PatchUcRecordingRequestBuilder(sdkConfiguration);
+    public PatchUcRecording2RequestBuilder patchUcRecording2() {
+        return new PatchUcRecording2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update a recording
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<PatchUcRecordingResponse>} - The async response
+     * @return {@code CompletableFuture<PatchUcRecording2Response>} - The async response
      */
-    public CompletableFuture<PatchUcRecordingResponse> patchUcRecording(@Nonnull PatchUcRecordingRequest request) {
-        AsyncRequestOperation<PatchUcRecordingRequest, PatchUcRecordingResponse> operation
-              = new PatchUcRecording.Async(sdkConfiguration, _headers);
+    public CompletableFuture<PatchUcRecording2Response> patchUcRecording2(@Nonnull PatchUcRecording2Request request) {
+        AsyncRequestOperation<PatchUcRecording2Request, PatchUcRecording2Response> operation
+              = new PatchUcRecording2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -205,19 +205,19 @@ public class AsyncRecording {
      * 
      * @return The async call builder
      */
-    public RemoveUcRecordingRequestBuilder removeUcRecording() {
-        return new RemoveUcRecordingRequestBuilder(sdkConfiguration);
+    public RemoveUcRecording2RequestBuilder removeUcRecording2() {
+        return new RemoveUcRecording2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Remove a recording
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<RemoveUcRecordingResponse>} - The async response
+     * @return {@code CompletableFuture<RemoveUcRecording2Response>} - The async response
      */
-    public CompletableFuture<RemoveUcRecordingResponse> removeUcRecording(@Nonnull RemoveUcRecordingRequest request) {
-        AsyncRequestOperation<RemoveUcRecordingRequest, RemoveUcRecordingResponse> operation
-              = new RemoveUcRecording.Async(sdkConfiguration, _headers);
+    public CompletableFuture<RemoveUcRecording2Response> removeUcRecording2(@Nonnull RemoveUcRecording2Request request) {
+        AsyncRequestOperation<RemoveUcRecording2Request, RemoveUcRecording2Response> operation
+              = new RemoveUcRecording2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -228,19 +228,19 @@ public class AsyncRecording {
      * 
      * @return The async call builder
      */
-    public UpdateUcRecordingRequestBuilder updateUcRecording() {
-        return new UpdateUcRecordingRequestBuilder(sdkConfiguration);
+    public UpdateUcRecording2RequestBuilder updateUcRecording2() {
+        return new UpdateUcRecording2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update a recording
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<UpdateUcRecordingResponse>} - The async response
+     * @return {@code CompletableFuture<UpdateUcRecording2Response>} - The async response
      */
-    public CompletableFuture<UpdateUcRecordingResponse> updateUcRecording(@Nonnull UpdateUcRecordingRequest request) {
-        AsyncRequestOperation<UpdateUcRecordingRequest, UpdateUcRecordingResponse> operation
-              = new UpdateUcRecording.Async(sdkConfiguration, _headers);
+    public CompletableFuture<UpdateUcRecording2Response> updateUcRecording2(@Nonnull UpdateUcRecording2Request request) {
+        AsyncRequestOperation<UpdateUcRecording2Request, UpdateUcRecording2Response> operation
+              = new UpdateUcRecording2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

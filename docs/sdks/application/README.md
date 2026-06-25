@@ -4,27 +4,27 @@
 
 ### Available Operations
 
-* [createAtsApplication](#createatsapplication) - Create an application
-* [getAtsApplication](#getatsapplication) - Retrieve an application
-* [listAtsApplications](#listatsapplications) - List all applications
-* [patchAtsApplication](#patchatsapplication) - Update an application
-* [removeAtsApplication](#removeatsapplication) - Remove an application
-* [updateAtsApplication](#updateatsapplication) - Update an application
+* [createAtsApplication2](#createatsapplication2) - Create an application
+* [getAtsApplication2](#getatsapplication2) - Retrieve an application
+* [listAtsApplications2](#listatsapplications2) - List all applications
+* [patchAtsApplication2](#patchatsapplication2) - Update an application
+* [removeAtsApplication2](#removeatsapplication2) - Remove an application
+* [updateAtsApplication2](#updateatsapplication2) - Update an application
 
-## createAtsApplication
+## createAtsApplication2
 
 Create an application
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createAtsApplication" method="post" path="/ats/{connection_id}/application" -->
+<!-- UsageSnippet language="java" operationID="createAtsApplication2" method="post" path="/ats/{connection_id}/application" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.CreateAtsApplicationRequest;
-import to.unified.unified_java_sdk.models.operations.CreateAtsApplicationResponse;
+import to.unified.unified_java_sdk.models.operations.CreateAtsApplication2Request;
+import to.unified.unified_java_sdk.models.operations.CreateAtsApplication2Response;
 import to.unified.unified_java_sdk.models.shared.AtsApplication;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -38,13 +38,13 @@ public class Application {
                     .build())
             .build();
 
-        CreateAtsApplicationRequest req = CreateAtsApplicationRequest.builder()
+        CreateAtsApplication2Request req = CreateAtsApplication2Request.builder()
                 .atsApplication(AtsApplication.builder()
                     .build())
                 .connectionId("<id>")
                 .build();
 
-        CreateAtsApplicationResponse res = sdk.application().createAtsApplication()
+        CreateAtsApplication2Response res = sdk.application().createAtsApplication2()
                 .request(req)
                 .call();
 
@@ -57,13 +57,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                             | Type                                                                                  | Required                                                                              | Description                                                                           |
-| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
-| `request`                                                                             | [CreateAtsApplicationRequest](../../models/operations/CreateAtsApplicationRequest.md) | :heavy_check_mark:                                                                    | The request object to use for the request.                                            |
+| Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
+| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| `request`                                                                               | [CreateAtsApplication2Request](../../models/operations/CreateAtsApplication2Request.md) | :heavy_check_mark:                                                                      | The request object to use for the request.                                              |
 
 ### Response
 
-**[CreateAtsApplicationResponse](../../models/operations/CreateAtsApplicationResponse.md)**
+**[CreateAtsApplication2Response](../../models/operations/CreateAtsApplication2Response.md)**
 
 ### Errors
 
@@ -71,20 +71,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## getAtsApplication
+## getAtsApplication2
 
 Retrieve an application
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="getAtsApplication" method="get" path="/ats/{connection_id}/application/{id}" -->
+<!-- UsageSnippet language="java" operationID="getAtsApplication2" method="get" path="/ats/{connection_id}/application/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.GetAtsApplicationRequest;
-import to.unified.unified_java_sdk.models.operations.GetAtsApplicationResponse;
+import to.unified.unified_java_sdk.models.operations.GetAtsApplication2Request;
+import to.unified.unified_java_sdk.models.operations.GetAtsApplication2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -97,12 +97,12 @@ public class Application {
                     .build())
             .build();
 
-        GetAtsApplicationRequest req = GetAtsApplicationRequest.builder()
+        GetAtsApplication2Request req = GetAtsApplication2Request.builder()
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        GetAtsApplicationResponse res = sdk.application().getAtsApplication()
+        GetAtsApplication2Response res = sdk.application().getAtsApplication2()
                 .request(req)
                 .call();
 
@@ -115,13 +115,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
-| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
-| `request`                                                                       | [GetAtsApplicationRequest](../../models/operations/GetAtsApplicationRequest.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
+| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
+| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| `request`                                                                         | [GetAtsApplication2Request](../../models/operations/GetAtsApplication2Request.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
 
 ### Response
 
-**[GetAtsApplicationResponse](../../models/operations/GetAtsApplicationResponse.md)**
+**[GetAtsApplication2Response](../../models/operations/GetAtsApplication2Response.md)**
 
 ### Errors
 
@@ -129,20 +129,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## listAtsApplications
+## listAtsApplications2
 
 List all applications
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="listAtsApplications" method="get" path="/ats/{connection_id}/application" -->
+<!-- UsageSnippet language="java" operationID="listAtsApplications2" method="get" path="/ats/{connection_id}/application" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.ListAtsApplicationsRequest;
-import to.unified.unified_java_sdk.models.operations.ListAtsApplicationsResponse;
+import to.unified.unified_java_sdk.models.operations.ListAtsApplications2Request;
+import to.unified.unified_java_sdk.models.operations.ListAtsApplications2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -155,11 +155,11 @@ public class Application {
                     .build())
             .build();
 
-        ListAtsApplicationsRequest req = ListAtsApplicationsRequest.builder()
+        ListAtsApplications2Request req = ListAtsApplications2Request.builder()
                 .connectionId("<id>")
                 .build();
 
-        ListAtsApplicationsResponse res = sdk.application().listAtsApplications()
+        ListAtsApplications2Response res = sdk.application().listAtsApplications2()
                 .request(req)
                 .call();
 
@@ -172,13 +172,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                           | Type                                                                                | Required                                                                            | Description                                                                         |
-| ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
-| `request`                                                                           | [ListAtsApplicationsRequest](../../models/operations/ListAtsApplicationsRequest.md) | :heavy_check_mark:                                                                  | The request object to use for the request.                                          |
+| Parameter                                                                             | Type                                                                                  | Required                                                                              | Description                                                                           |
+| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| `request`                                                                             | [ListAtsApplications2Request](../../models/operations/ListAtsApplications2Request.md) | :heavy_check_mark:                                                                    | The request object to use for the request.                                            |
 
 ### Response
 
-**[ListAtsApplicationsResponse](../../models/operations/ListAtsApplicationsResponse.md)**
+**[ListAtsApplications2Response](../../models/operations/ListAtsApplications2Response.md)**
 
 ### Errors
 
@@ -186,20 +186,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## patchAtsApplication
+## patchAtsApplication2
 
 Update an application
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchAtsApplication" method="patch" path="/ats/{connection_id}/application/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchAtsApplication2" method="patch" path="/ats/{connection_id}/application/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.PatchAtsApplicationRequest;
-import to.unified.unified_java_sdk.models.operations.PatchAtsApplicationResponse;
+import to.unified.unified_java_sdk.models.operations.PatchAtsApplication2Request;
+import to.unified.unified_java_sdk.models.operations.PatchAtsApplication2Response;
 import to.unified.unified_java_sdk.models.shared.AtsApplication;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -213,14 +213,14 @@ public class Application {
                     .build())
             .build();
 
-        PatchAtsApplicationRequest req = PatchAtsApplicationRequest.builder()
+        PatchAtsApplication2Request req = PatchAtsApplication2Request.builder()
                 .atsApplication(AtsApplication.builder()
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        PatchAtsApplicationResponse res = sdk.application().patchAtsApplication()
+        PatchAtsApplication2Response res = sdk.application().patchAtsApplication2()
                 .request(req)
                 .call();
 
@@ -233,13 +233,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                           | Type                                                                                | Required                                                                            | Description                                                                         |
-| ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
-| `request`                                                                           | [PatchAtsApplicationRequest](../../models/operations/PatchAtsApplicationRequest.md) | :heavy_check_mark:                                                                  | The request object to use for the request.                                          |
+| Parameter                                                                             | Type                                                                                  | Required                                                                              | Description                                                                           |
+| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| `request`                                                                             | [PatchAtsApplication2Request](../../models/operations/PatchAtsApplication2Request.md) | :heavy_check_mark:                                                                    | The request object to use for the request.                                            |
 
 ### Response
 
-**[PatchAtsApplicationResponse](../../models/operations/PatchAtsApplicationResponse.md)**
+**[PatchAtsApplication2Response](../../models/operations/PatchAtsApplication2Response.md)**
 
 ### Errors
 
@@ -247,20 +247,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## removeAtsApplication
+## removeAtsApplication2
 
 Remove an application
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="removeAtsApplication" method="delete" path="/ats/{connection_id}/application/{id}" -->
+<!-- UsageSnippet language="java" operationID="removeAtsApplication2" method="delete" path="/ats/{connection_id}/application/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.RemoveAtsApplicationRequest;
-import to.unified.unified_java_sdk.models.operations.RemoveAtsApplicationResponse;
+import to.unified.unified_java_sdk.models.operations.RemoveAtsApplication2Request;
+import to.unified.unified_java_sdk.models.operations.RemoveAtsApplication2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -273,12 +273,12 @@ public class Application {
                     .build())
             .build();
 
-        RemoveAtsApplicationRequest req = RemoveAtsApplicationRequest.builder()
+        RemoveAtsApplication2Request req = RemoveAtsApplication2Request.builder()
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        RemoveAtsApplicationResponse res = sdk.application().removeAtsApplication()
+        RemoveAtsApplication2Response res = sdk.application().removeAtsApplication2()
                 .request(req)
                 .call();
 
@@ -289,13 +289,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                             | Type                                                                                  | Required                                                                              | Description                                                                           |
-| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
-| `request`                                                                             | [RemoveAtsApplicationRequest](../../models/operations/RemoveAtsApplicationRequest.md) | :heavy_check_mark:                                                                    | The request object to use for the request.                                            |
+| Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
+| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| `request`                                                                               | [RemoveAtsApplication2Request](../../models/operations/RemoveAtsApplication2Request.md) | :heavy_check_mark:                                                                      | The request object to use for the request.                                              |
 
 ### Response
 
-**[RemoveAtsApplicationResponse](../../models/operations/RemoveAtsApplicationResponse.md)**
+**[RemoveAtsApplication2Response](../../models/operations/RemoveAtsApplication2Response.md)**
 
 ### Errors
 
@@ -303,20 +303,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## updateAtsApplication
+## updateAtsApplication2
 
 Update an application
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateAtsApplication" method="put" path="/ats/{connection_id}/application/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateAtsApplication2" method="put" path="/ats/{connection_id}/application/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.UpdateAtsApplicationRequest;
-import to.unified.unified_java_sdk.models.operations.UpdateAtsApplicationResponse;
+import to.unified.unified_java_sdk.models.operations.UpdateAtsApplication2Request;
+import to.unified.unified_java_sdk.models.operations.UpdateAtsApplication2Response;
 import to.unified.unified_java_sdk.models.shared.AtsApplication;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -330,14 +330,14 @@ public class Application {
                     .build())
             .build();
 
-        UpdateAtsApplicationRequest req = UpdateAtsApplicationRequest.builder()
+        UpdateAtsApplication2Request req = UpdateAtsApplication2Request.builder()
                 .atsApplication(AtsApplication.builder()
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        UpdateAtsApplicationResponse res = sdk.application().updateAtsApplication()
+        UpdateAtsApplication2Response res = sdk.application().updateAtsApplication2()
                 .request(req)
                 .call();
 
@@ -350,13 +350,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                             | Type                                                                                  | Required                                                                              | Description                                                                           |
-| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
-| `request`                                                                             | [UpdateAtsApplicationRequest](../../models/operations/UpdateAtsApplicationRequest.md) | :heavy_check_mark:                                                                    | The request object to use for the request.                                            |
+| Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
+| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| `request`                                                                               | [UpdateAtsApplication2Request](../../models/operations/UpdateAtsApplication2Request.md) | :heavy_check_mark:                                                                      | The request object to use for the request.                                              |
 
 ### Response
 
-**[UpdateAtsApplicationResponse](../../models/operations/UpdateAtsApplicationResponse.md)**
+**[UpdateAtsApplication2Response](../../models/operations/UpdateAtsApplication2Response.md)**
 
 ### Errors
 

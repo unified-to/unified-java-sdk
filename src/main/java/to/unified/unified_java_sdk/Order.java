@@ -6,38 +6,38 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
-import to.unified.unified_java_sdk.models.operations.CreateAccountingOrderRequest;
-import to.unified.unified_java_sdk.models.operations.CreateAccountingOrderRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.CreateAccountingOrderResponse;
-import to.unified.unified_java_sdk.models.operations.GetAccountingOrderRequest;
-import to.unified.unified_java_sdk.models.operations.GetAccountingOrderRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.GetAccountingOrderResponse;
-import to.unified.unified_java_sdk.models.operations.ListAccountingOrdersRequest;
-import to.unified.unified_java_sdk.models.operations.ListAccountingOrdersRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.ListAccountingOrdersResponse;
-import to.unified.unified_java_sdk.models.operations.PatchAccountingOrderRequest;
-import to.unified.unified_java_sdk.models.operations.PatchAccountingOrderRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.PatchAccountingOrderResponse;
-import to.unified.unified_java_sdk.models.operations.PatchAssessmentOrderRequest;
-import to.unified.unified_java_sdk.models.operations.PatchAssessmentOrderRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.PatchAssessmentOrderResponse;
-import to.unified.unified_java_sdk.models.operations.RemoveAccountingOrderRequest;
-import to.unified.unified_java_sdk.models.operations.RemoveAccountingOrderRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.RemoveAccountingOrderResponse;
-import to.unified.unified_java_sdk.models.operations.UpdateAccountingOrderRequest;
-import to.unified.unified_java_sdk.models.operations.UpdateAccountingOrderRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.UpdateAccountingOrderResponse;
-import to.unified.unified_java_sdk.models.operations.UpdateAssessmentOrderRequest;
-import to.unified.unified_java_sdk.models.operations.UpdateAssessmentOrderRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.UpdateAssessmentOrderResponse;
-import to.unified.unified_java_sdk.operations.CreateAccountingOrder;
-import to.unified.unified_java_sdk.operations.GetAccountingOrder;
-import to.unified.unified_java_sdk.operations.ListAccountingOrders;
-import to.unified.unified_java_sdk.operations.PatchAccountingOrder;
-import to.unified.unified_java_sdk.operations.PatchAssessmentOrder;
-import to.unified.unified_java_sdk.operations.RemoveAccountingOrder;
-import to.unified.unified_java_sdk.operations.UpdateAccountingOrder;
-import to.unified.unified_java_sdk.operations.UpdateAssessmentOrder;
+import to.unified.unified_java_sdk.models.operations.CreateAccountingOrder2Request;
+import to.unified.unified_java_sdk.models.operations.CreateAccountingOrder2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.CreateAccountingOrder2Response;
+import to.unified.unified_java_sdk.models.operations.GetAccountingOrder2Request;
+import to.unified.unified_java_sdk.models.operations.GetAccountingOrder2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetAccountingOrder2Response;
+import to.unified.unified_java_sdk.models.operations.ListAccountingOrders2Request;
+import to.unified.unified_java_sdk.models.operations.ListAccountingOrders2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListAccountingOrders2Response;
+import to.unified.unified_java_sdk.models.operations.PatchAccountingOrder2Request;
+import to.unified.unified_java_sdk.models.operations.PatchAccountingOrder2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.PatchAccountingOrder2Response;
+import to.unified.unified_java_sdk.models.operations.PatchAssessmentOrder2Request;
+import to.unified.unified_java_sdk.models.operations.PatchAssessmentOrder2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.PatchAssessmentOrder2Response;
+import to.unified.unified_java_sdk.models.operations.RemoveAccountingOrder2Request;
+import to.unified.unified_java_sdk.models.operations.RemoveAccountingOrder2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.RemoveAccountingOrder2Response;
+import to.unified.unified_java_sdk.models.operations.UpdateAccountingOrder2Request;
+import to.unified.unified_java_sdk.models.operations.UpdateAccountingOrder2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.UpdateAccountingOrder2Response;
+import to.unified.unified_java_sdk.models.operations.UpdateAssessmentOrder2Request;
+import to.unified.unified_java_sdk.models.operations.UpdateAssessmentOrder2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.UpdateAssessmentOrder2Response;
+import to.unified.unified_java_sdk.operations.CreateAccountingOrder2;
+import to.unified.unified_java_sdk.operations.GetAccountingOrder2;
+import to.unified.unified_java_sdk.operations.ListAccountingOrders2;
+import to.unified.unified_java_sdk.operations.PatchAccountingOrder2;
+import to.unified.unified_java_sdk.operations.PatchAssessmentOrder2;
+import to.unified.unified_java_sdk.operations.RemoveAccountingOrder2;
+import to.unified.unified_java_sdk.operations.UpdateAccountingOrder2;
+import to.unified.unified_java_sdk.operations.UpdateAssessmentOrder2;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -65,8 +65,8 @@ public class Order {
      * 
      * @return The call builder
      */
-    public CreateAccountingOrderRequestBuilder createAccountingOrder() {
-        return new CreateAccountingOrderRequestBuilder(sdkConfiguration);
+    public CreateAccountingOrder2RequestBuilder createAccountingOrder2() {
+        return new CreateAccountingOrder2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -76,9 +76,9 @@ public class Order {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateAccountingOrderResponse createAccountingOrder(@Nonnull CreateAccountingOrderRequest request) {
-        RequestOperation<CreateAccountingOrderRequest, CreateAccountingOrderResponse> operation
-              = new CreateAccountingOrder.Sync(sdkConfiguration, _headers);
+    public CreateAccountingOrder2Response createAccountingOrder2(@Nonnull CreateAccountingOrder2Request request) {
+        RequestOperation<CreateAccountingOrder2Request, CreateAccountingOrder2Response> operation
+              = new CreateAccountingOrder2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -87,8 +87,8 @@ public class Order {
      * 
      * @return The call builder
      */
-    public GetAccountingOrderRequestBuilder getAccountingOrder() {
-        return new GetAccountingOrderRequestBuilder(sdkConfiguration);
+    public GetAccountingOrder2RequestBuilder getAccountingOrder2() {
+        return new GetAccountingOrder2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -98,9 +98,9 @@ public class Order {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetAccountingOrderResponse getAccountingOrder(@Nonnull GetAccountingOrderRequest request) {
-        RequestOperation<GetAccountingOrderRequest, GetAccountingOrderResponse> operation
-              = new GetAccountingOrder.Sync(sdkConfiguration, _headers);
+    public GetAccountingOrder2Response getAccountingOrder2(@Nonnull GetAccountingOrder2Request request) {
+        RequestOperation<GetAccountingOrder2Request, GetAccountingOrder2Response> operation
+              = new GetAccountingOrder2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -109,8 +109,8 @@ public class Order {
      * 
      * @return The call builder
      */
-    public ListAccountingOrdersRequestBuilder listAccountingOrders() {
-        return new ListAccountingOrdersRequestBuilder(sdkConfiguration);
+    public ListAccountingOrders2RequestBuilder listAccountingOrders2() {
+        return new ListAccountingOrders2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -120,9 +120,9 @@ public class Order {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListAccountingOrdersResponse listAccountingOrders(@Nonnull ListAccountingOrdersRequest request) {
-        RequestOperation<ListAccountingOrdersRequest, ListAccountingOrdersResponse> operation
-              = new ListAccountingOrders.Sync(sdkConfiguration, _headers);
+    public ListAccountingOrders2Response listAccountingOrders2(@Nonnull ListAccountingOrders2Request request) {
+        RequestOperation<ListAccountingOrders2Request, ListAccountingOrders2Response> operation
+              = new ListAccountingOrders2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -131,8 +131,8 @@ public class Order {
      * 
      * @return The call builder
      */
-    public PatchAccountingOrderRequestBuilder patchAccountingOrder() {
-        return new PatchAccountingOrderRequestBuilder(sdkConfiguration);
+    public PatchAccountingOrder2RequestBuilder patchAccountingOrder2() {
+        return new PatchAccountingOrder2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -142,9 +142,9 @@ public class Order {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchAccountingOrderResponse patchAccountingOrder(@Nonnull PatchAccountingOrderRequest request) {
-        RequestOperation<PatchAccountingOrderRequest, PatchAccountingOrderResponse> operation
-              = new PatchAccountingOrder.Sync(sdkConfiguration, _headers);
+    public PatchAccountingOrder2Response patchAccountingOrder2(@Nonnull PatchAccountingOrder2Request request) {
+        RequestOperation<PatchAccountingOrder2Request, PatchAccountingOrder2Response> operation
+              = new PatchAccountingOrder2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -153,8 +153,8 @@ public class Order {
      * 
      * @return The call builder
      */
-    public PatchAssessmentOrderRequestBuilder patchAssessmentOrder() {
-        return new PatchAssessmentOrderRequestBuilder(sdkConfiguration);
+    public PatchAssessmentOrder2RequestBuilder patchAssessmentOrder2() {
+        return new PatchAssessmentOrder2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -164,9 +164,9 @@ public class Order {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchAssessmentOrderResponse patchAssessmentOrder(@Nonnull PatchAssessmentOrderRequest request) {
-        RequestOperation<PatchAssessmentOrderRequest, PatchAssessmentOrderResponse> operation
-              = new PatchAssessmentOrder.Sync(sdkConfiguration, _headers);
+    public PatchAssessmentOrder2Response patchAssessmentOrder2(@Nonnull PatchAssessmentOrder2Request request) {
+        RequestOperation<PatchAssessmentOrder2Request, PatchAssessmentOrder2Response> operation
+              = new PatchAssessmentOrder2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -175,8 +175,8 @@ public class Order {
      * 
      * @return The call builder
      */
-    public RemoveAccountingOrderRequestBuilder removeAccountingOrder() {
-        return new RemoveAccountingOrderRequestBuilder(sdkConfiguration);
+    public RemoveAccountingOrder2RequestBuilder removeAccountingOrder2() {
+        return new RemoveAccountingOrder2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -186,9 +186,9 @@ public class Order {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveAccountingOrderResponse removeAccountingOrder(@Nonnull RemoveAccountingOrderRequest request) {
-        RequestOperation<RemoveAccountingOrderRequest, RemoveAccountingOrderResponse> operation
-              = new RemoveAccountingOrder.Sync(sdkConfiguration, _headers);
+    public RemoveAccountingOrder2Response removeAccountingOrder2(@Nonnull RemoveAccountingOrder2Request request) {
+        RequestOperation<RemoveAccountingOrder2Request, RemoveAccountingOrder2Response> operation
+              = new RemoveAccountingOrder2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -197,8 +197,8 @@ public class Order {
      * 
      * @return The call builder
      */
-    public UpdateAccountingOrderRequestBuilder updateAccountingOrder() {
-        return new UpdateAccountingOrderRequestBuilder(sdkConfiguration);
+    public UpdateAccountingOrder2RequestBuilder updateAccountingOrder2() {
+        return new UpdateAccountingOrder2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -208,9 +208,9 @@ public class Order {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateAccountingOrderResponse updateAccountingOrder(@Nonnull UpdateAccountingOrderRequest request) {
-        RequestOperation<UpdateAccountingOrderRequest, UpdateAccountingOrderResponse> operation
-              = new UpdateAccountingOrder.Sync(sdkConfiguration, _headers);
+    public UpdateAccountingOrder2Response updateAccountingOrder2(@Nonnull UpdateAccountingOrder2Request request) {
+        RequestOperation<UpdateAccountingOrder2Request, UpdateAccountingOrder2Response> operation
+              = new UpdateAccountingOrder2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -219,8 +219,8 @@ public class Order {
      * 
      * @return The call builder
      */
-    public UpdateAssessmentOrderRequestBuilder updateAssessmentOrder() {
-        return new UpdateAssessmentOrderRequestBuilder(sdkConfiguration);
+    public UpdateAssessmentOrder2RequestBuilder updateAssessmentOrder2() {
+        return new UpdateAssessmentOrder2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -230,9 +230,9 @@ public class Order {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateAssessmentOrderResponse updateAssessmentOrder(@Nonnull UpdateAssessmentOrderRequest request) {
-        RequestOperation<UpdateAssessmentOrderRequest, UpdateAssessmentOrderResponse> operation
-              = new UpdateAssessmentOrder.Sync(sdkConfiguration, _headers);
+    public UpdateAssessmentOrder2Response updateAssessmentOrder2(@Nonnull UpdateAssessmentOrder2Request request) {
+        RequestOperation<UpdateAssessmentOrder2Request, UpdateAssessmentOrder2Response> operation
+              = new UpdateAssessmentOrder2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

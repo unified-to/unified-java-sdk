@@ -8,7 +8,6 @@ import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.annotation.Nullable;
-import java.lang.Double;
 import java.lang.Override;
 import java.lang.String;
 import java.util.Optional;
@@ -39,7 +38,7 @@ public class AdsReportMetrics {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
-    private Double value;
+    private Value value;
 
     @JsonCreator
     public AdsReportMetrics(
@@ -47,7 +46,7 @@ public class AdsReportMetrics {
             @JsonProperty("campaign") @Nullable PropertyAdsReportMetricsCampaign campaign,
             @JsonProperty("group") @Nullable PropertyAdsReportMetricsGroup group,
             @JsonProperty("type") @Nullable AdsReportMetricsType type,
-            @JsonProperty("value") @Nullable Double value) {
+            @JsonProperty("value") @Nullable Value value) {
         this.ad = ad;
         this.campaign = campaign;
         this.group = group;
@@ -76,7 +75,7 @@ public class AdsReportMetrics {
         return Optional.ofNullable(this.type);
     }
 
-    public Optional<Double> value() {
+    public Optional<Value> value() {
         return Optional.ofNullable(this.value);
     }
 
@@ -109,7 +108,7 @@ public class AdsReportMetrics {
     }
 
 
-    public AdsReportMetrics withValue(@Nullable Double value) {
+    public AdsReportMetrics withValue(@Nullable Value value) {
         this.value = value;
         return this;
     }
@@ -160,7 +159,7 @@ public class AdsReportMetrics {
 
         private AdsReportMetricsType type;
 
-        private Double value;
+        private Value value;
 
         private Builder() {
           // force use of static builder() method
@@ -186,7 +185,7 @@ public class AdsReportMetrics {
             return this;
         }
 
-        public Builder value(@Nullable Double value) {
+        public Builder value(@Nullable Value value) {
             this.value = value;
             return this;
         }

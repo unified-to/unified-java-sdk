@@ -6,14 +6,14 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
-import to.unified.unified_java_sdk.models.operations.GetAccountingCashflowRequest;
-import to.unified.unified_java_sdk.models.operations.GetAccountingCashflowRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.GetAccountingCashflowResponse;
-import to.unified.unified_java_sdk.models.operations.ListAccountingCashflowsRequest;
-import to.unified.unified_java_sdk.models.operations.ListAccountingCashflowsRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.ListAccountingCashflowsResponse;
-import to.unified.unified_java_sdk.operations.GetAccountingCashflow;
-import to.unified.unified_java_sdk.operations.ListAccountingCashflows;
+import to.unified.unified_java_sdk.models.operations.GetAccountingCashflow2Request;
+import to.unified.unified_java_sdk.models.operations.GetAccountingCashflow2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetAccountingCashflow2Response;
+import to.unified.unified_java_sdk.models.operations.ListAccountingCashflows2Request;
+import to.unified.unified_java_sdk.models.operations.ListAccountingCashflows2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListAccountingCashflows2Response;
+import to.unified.unified_java_sdk.operations.GetAccountingCashflow2;
+import to.unified.unified_java_sdk.operations.ListAccountingCashflows2;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -41,8 +41,8 @@ public class Cashflow {
      * 
      * @return The call builder
      */
-    public GetAccountingCashflowRequestBuilder getAccountingCashflow() {
-        return new GetAccountingCashflowRequestBuilder(sdkConfiguration);
+    public GetAccountingCashflow2RequestBuilder getAccountingCashflow2() {
+        return new GetAccountingCashflow2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -52,9 +52,9 @@ public class Cashflow {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetAccountingCashflowResponse getAccountingCashflow(@Nonnull GetAccountingCashflowRequest request) {
-        RequestOperation<GetAccountingCashflowRequest, GetAccountingCashflowResponse> operation
-              = new GetAccountingCashflow.Sync(sdkConfiguration, _headers);
+    public GetAccountingCashflow2Response getAccountingCashflow2(@Nonnull GetAccountingCashflow2Request request) {
+        RequestOperation<GetAccountingCashflow2Request, GetAccountingCashflow2Response> operation
+              = new GetAccountingCashflow2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -63,8 +63,8 @@ public class Cashflow {
      * 
      * @return The call builder
      */
-    public ListAccountingCashflowsRequestBuilder listAccountingCashflows() {
-        return new ListAccountingCashflowsRequestBuilder(sdkConfiguration);
+    public ListAccountingCashflows2RequestBuilder listAccountingCashflows2() {
+        return new ListAccountingCashflows2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -74,9 +74,9 @@ public class Cashflow {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListAccountingCashflowsResponse listAccountingCashflows(@Nonnull ListAccountingCashflowsRequest request) {
-        RequestOperation<ListAccountingCashflowsRequest, ListAccountingCashflowsResponse> operation
-              = new ListAccountingCashflows.Sync(sdkConfiguration, _headers);
+    public ListAccountingCashflows2Response listAccountingCashflows2(@Nonnull ListAccountingCashflows2Request request) {
+        RequestOperation<ListAccountingCashflows2Request, ListAccountingCashflows2Response> operation
+              = new ListAccountingCashflows2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

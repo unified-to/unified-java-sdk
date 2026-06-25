@@ -7,30 +7,30 @@ import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOper
 
 import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
-import to.unified.unified_java_sdk.models.operations.CreateAccountingExpenseRequest;
-import to.unified.unified_java_sdk.models.operations.GetAccountingExpenseRequest;
-import to.unified.unified_java_sdk.models.operations.ListAccountingExpensesRequest;
-import to.unified.unified_java_sdk.models.operations.PatchAccountingExpenseRequest;
-import to.unified.unified_java_sdk.models.operations.RemoveAccountingExpenseRequest;
-import to.unified.unified_java_sdk.models.operations.UpdateAccountingExpenseRequest;
-import to.unified.unified_java_sdk.models.operations.async.CreateAccountingExpenseRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.CreateAccountingExpenseResponse;
-import to.unified.unified_java_sdk.models.operations.async.GetAccountingExpenseRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.GetAccountingExpenseResponse;
-import to.unified.unified_java_sdk.models.operations.async.ListAccountingExpensesRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.ListAccountingExpensesResponse;
-import to.unified.unified_java_sdk.models.operations.async.PatchAccountingExpenseRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.PatchAccountingExpenseResponse;
-import to.unified.unified_java_sdk.models.operations.async.RemoveAccountingExpenseRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.RemoveAccountingExpenseResponse;
-import to.unified.unified_java_sdk.models.operations.async.UpdateAccountingExpenseRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.UpdateAccountingExpenseResponse;
-import to.unified.unified_java_sdk.operations.CreateAccountingExpense;
-import to.unified.unified_java_sdk.operations.GetAccountingExpense;
-import to.unified.unified_java_sdk.operations.ListAccountingExpenses;
-import to.unified.unified_java_sdk.operations.PatchAccountingExpense;
-import to.unified.unified_java_sdk.operations.RemoveAccountingExpense;
-import to.unified.unified_java_sdk.operations.UpdateAccountingExpense;
+import to.unified.unified_java_sdk.models.operations.CreateAccountingExpense2Request;
+import to.unified.unified_java_sdk.models.operations.GetAccountingExpense2Request;
+import to.unified.unified_java_sdk.models.operations.ListAccountingExpenses2Request;
+import to.unified.unified_java_sdk.models.operations.PatchAccountingExpense2Request;
+import to.unified.unified_java_sdk.models.operations.RemoveAccountingExpense2Request;
+import to.unified.unified_java_sdk.models.operations.UpdateAccountingExpense2Request;
+import to.unified.unified_java_sdk.models.operations.async.CreateAccountingExpense2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.CreateAccountingExpense2Response;
+import to.unified.unified_java_sdk.models.operations.async.GetAccountingExpense2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetAccountingExpense2Response;
+import to.unified.unified_java_sdk.models.operations.async.ListAccountingExpenses2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListAccountingExpenses2Response;
+import to.unified.unified_java_sdk.models.operations.async.PatchAccountingExpense2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.PatchAccountingExpense2Response;
+import to.unified.unified_java_sdk.models.operations.async.RemoveAccountingExpense2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.RemoveAccountingExpense2Response;
+import to.unified.unified_java_sdk.models.operations.async.UpdateAccountingExpense2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.UpdateAccountingExpense2Response;
+import to.unified.unified_java_sdk.operations.CreateAccountingExpense2;
+import to.unified.unified_java_sdk.operations.GetAccountingExpense2;
+import to.unified.unified_java_sdk.operations.ListAccountingExpenses2;
+import to.unified.unified_java_sdk.operations.PatchAccountingExpense2;
+import to.unified.unified_java_sdk.operations.RemoveAccountingExpense2;
+import to.unified.unified_java_sdk.operations.UpdateAccountingExpense2;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -59,19 +59,19 @@ public class AsyncExpense {
      * 
      * @return The async call builder
      */
-    public CreateAccountingExpenseRequestBuilder createAccountingExpense() {
-        return new CreateAccountingExpenseRequestBuilder(sdkConfiguration);
+    public CreateAccountingExpense2RequestBuilder createAccountingExpense2() {
+        return new CreateAccountingExpense2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Create an expense
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<CreateAccountingExpenseResponse>} - The async response
+     * @return {@code CompletableFuture<CreateAccountingExpense2Response>} - The async response
      */
-    public CompletableFuture<CreateAccountingExpenseResponse> createAccountingExpense(@Nonnull CreateAccountingExpenseRequest request) {
-        AsyncRequestOperation<CreateAccountingExpenseRequest, CreateAccountingExpenseResponse> operation
-              = new CreateAccountingExpense.Async(sdkConfiguration, _headers);
+    public CompletableFuture<CreateAccountingExpense2Response> createAccountingExpense2(@Nonnull CreateAccountingExpense2Request request) {
+        AsyncRequestOperation<CreateAccountingExpense2Request, CreateAccountingExpense2Response> operation
+              = new CreateAccountingExpense2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -82,19 +82,19 @@ public class AsyncExpense {
      * 
      * @return The async call builder
      */
-    public GetAccountingExpenseRequestBuilder getAccountingExpense() {
-        return new GetAccountingExpenseRequestBuilder(sdkConfiguration);
+    public GetAccountingExpense2RequestBuilder getAccountingExpense2() {
+        return new GetAccountingExpense2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Retrieve an expense
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<GetAccountingExpenseResponse>} - The async response
+     * @return {@code CompletableFuture<GetAccountingExpense2Response>} - The async response
      */
-    public CompletableFuture<GetAccountingExpenseResponse> getAccountingExpense(@Nonnull GetAccountingExpenseRequest request) {
-        AsyncRequestOperation<GetAccountingExpenseRequest, GetAccountingExpenseResponse> operation
-              = new GetAccountingExpense.Async(sdkConfiguration, _headers);
+    public CompletableFuture<GetAccountingExpense2Response> getAccountingExpense2(@Nonnull GetAccountingExpense2Request request) {
+        AsyncRequestOperation<GetAccountingExpense2Request, GetAccountingExpense2Response> operation
+              = new GetAccountingExpense2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -105,19 +105,19 @@ public class AsyncExpense {
      * 
      * @return The async call builder
      */
-    public ListAccountingExpensesRequestBuilder listAccountingExpenses() {
-        return new ListAccountingExpensesRequestBuilder(sdkConfiguration);
+    public ListAccountingExpenses2RequestBuilder listAccountingExpenses2() {
+        return new ListAccountingExpenses2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * List all expenses
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<ListAccountingExpensesResponse>} - The async response
+     * @return {@code CompletableFuture<ListAccountingExpenses2Response>} - The async response
      */
-    public CompletableFuture<ListAccountingExpensesResponse> listAccountingExpenses(@Nonnull ListAccountingExpensesRequest request) {
-        AsyncRequestOperation<ListAccountingExpensesRequest, ListAccountingExpensesResponse> operation
-              = new ListAccountingExpenses.Async(sdkConfiguration, _headers);
+    public CompletableFuture<ListAccountingExpenses2Response> listAccountingExpenses2(@Nonnull ListAccountingExpenses2Request request) {
+        AsyncRequestOperation<ListAccountingExpenses2Request, ListAccountingExpenses2Response> operation
+              = new ListAccountingExpenses2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -128,19 +128,19 @@ public class AsyncExpense {
      * 
      * @return The async call builder
      */
-    public PatchAccountingExpenseRequestBuilder patchAccountingExpense() {
-        return new PatchAccountingExpenseRequestBuilder(sdkConfiguration);
+    public PatchAccountingExpense2RequestBuilder patchAccountingExpense2() {
+        return new PatchAccountingExpense2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update an expense
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<PatchAccountingExpenseResponse>} - The async response
+     * @return {@code CompletableFuture<PatchAccountingExpense2Response>} - The async response
      */
-    public CompletableFuture<PatchAccountingExpenseResponse> patchAccountingExpense(@Nonnull PatchAccountingExpenseRequest request) {
-        AsyncRequestOperation<PatchAccountingExpenseRequest, PatchAccountingExpenseResponse> operation
-              = new PatchAccountingExpense.Async(sdkConfiguration, _headers);
+    public CompletableFuture<PatchAccountingExpense2Response> patchAccountingExpense2(@Nonnull PatchAccountingExpense2Request request) {
+        AsyncRequestOperation<PatchAccountingExpense2Request, PatchAccountingExpense2Response> operation
+              = new PatchAccountingExpense2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -151,19 +151,19 @@ public class AsyncExpense {
      * 
      * @return The async call builder
      */
-    public RemoveAccountingExpenseRequestBuilder removeAccountingExpense() {
-        return new RemoveAccountingExpenseRequestBuilder(sdkConfiguration);
+    public RemoveAccountingExpense2RequestBuilder removeAccountingExpense2() {
+        return new RemoveAccountingExpense2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Remove an expense
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<RemoveAccountingExpenseResponse>} - The async response
+     * @return {@code CompletableFuture<RemoveAccountingExpense2Response>} - The async response
      */
-    public CompletableFuture<RemoveAccountingExpenseResponse> removeAccountingExpense(@Nonnull RemoveAccountingExpenseRequest request) {
-        AsyncRequestOperation<RemoveAccountingExpenseRequest, RemoveAccountingExpenseResponse> operation
-              = new RemoveAccountingExpense.Async(sdkConfiguration, _headers);
+    public CompletableFuture<RemoveAccountingExpense2Response> removeAccountingExpense2(@Nonnull RemoveAccountingExpense2Request request) {
+        AsyncRequestOperation<RemoveAccountingExpense2Request, RemoveAccountingExpense2Response> operation
+              = new RemoveAccountingExpense2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -174,19 +174,19 @@ public class AsyncExpense {
      * 
      * @return The async call builder
      */
-    public UpdateAccountingExpenseRequestBuilder updateAccountingExpense() {
-        return new UpdateAccountingExpenseRequestBuilder(sdkConfiguration);
+    public UpdateAccountingExpense2RequestBuilder updateAccountingExpense2() {
+        return new UpdateAccountingExpense2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update an expense
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<UpdateAccountingExpenseResponse>} - The async response
+     * @return {@code CompletableFuture<UpdateAccountingExpense2Response>} - The async response
      */
-    public CompletableFuture<UpdateAccountingExpenseResponse> updateAccountingExpense(@Nonnull UpdateAccountingExpenseRequest request) {
-        AsyncRequestOperation<UpdateAccountingExpenseRequest, UpdateAccountingExpenseResponse> operation
-              = new UpdateAccountingExpense.Async(sdkConfiguration, _headers);
+    public CompletableFuture<UpdateAccountingExpense2Response> updateAccountingExpense2(@Nonnull UpdateAccountingExpense2Request request) {
+        AsyncRequestOperation<UpdateAccountingExpense2Request, UpdateAccountingExpense2Response> operation
+              = new UpdateAccountingExpense2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

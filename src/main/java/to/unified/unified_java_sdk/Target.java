@@ -6,14 +6,14 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
-import to.unified.unified_java_sdk.models.operations.GetAdsTargetRequest;
-import to.unified.unified_java_sdk.models.operations.GetAdsTargetRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.GetAdsTargetResponse;
-import to.unified.unified_java_sdk.models.operations.ListAdsTargetsRequest;
-import to.unified.unified_java_sdk.models.operations.ListAdsTargetsRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.ListAdsTargetsResponse;
-import to.unified.unified_java_sdk.operations.GetAdsTarget;
-import to.unified.unified_java_sdk.operations.ListAdsTargets;
+import to.unified.unified_java_sdk.models.operations.GetAdsTarget2Request;
+import to.unified.unified_java_sdk.models.operations.GetAdsTarget2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetAdsTarget2Response;
+import to.unified.unified_java_sdk.models.operations.ListAdsTargets2Request;
+import to.unified.unified_java_sdk.models.operations.ListAdsTargets2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListAdsTargets2Response;
+import to.unified.unified_java_sdk.operations.GetAdsTarget2;
+import to.unified.unified_java_sdk.operations.ListAdsTargets2;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -41,8 +41,8 @@ public class Target {
      * 
      * @return The call builder
      */
-    public GetAdsTargetRequestBuilder getAdsTarget() {
-        return new GetAdsTargetRequestBuilder(sdkConfiguration);
+    public GetAdsTarget2RequestBuilder getAdsTarget2() {
+        return new GetAdsTarget2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -52,9 +52,9 @@ public class Target {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetAdsTargetResponse getAdsTarget(@Nonnull GetAdsTargetRequest request) {
-        RequestOperation<GetAdsTargetRequest, GetAdsTargetResponse> operation
-              = new GetAdsTarget.Sync(sdkConfiguration, _headers);
+    public GetAdsTarget2Response getAdsTarget2(@Nonnull GetAdsTarget2Request request) {
+        RequestOperation<GetAdsTarget2Request, GetAdsTarget2Response> operation
+              = new GetAdsTarget2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -63,8 +63,8 @@ public class Target {
      * 
      * @return The call builder
      */
-    public ListAdsTargetsRequestBuilder listAdsTargets() {
-        return new ListAdsTargetsRequestBuilder(sdkConfiguration);
+    public ListAdsTargets2RequestBuilder listAdsTargets2() {
+        return new ListAdsTargets2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -74,9 +74,9 @@ public class Target {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListAdsTargetsResponse listAdsTargets(@Nonnull ListAdsTargetsRequest request) {
-        RequestOperation<ListAdsTargetsRequest, ListAdsTargetsResponse> operation
-              = new ListAdsTargets.Sync(sdkConfiguration, _headers);
+    public ListAdsTargets2Response listAdsTargets2(@Nonnull ListAdsTargets2Request request) {
+        RequestOperation<ListAdsTargets2Request, ListAdsTargets2Response> operation
+              = new ListAdsTargets2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

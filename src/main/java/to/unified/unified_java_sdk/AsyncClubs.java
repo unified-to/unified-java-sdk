@@ -7,46 +7,46 @@ import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOper
 
 import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
-import to.unified.unified_java_sdk.models.operations.GetClubsActivityRequest;
-import to.unified.unified_java_sdk.models.operations.GetClubsEventRequest;
-import to.unified.unified_java_sdk.models.operations.GetClubsGroupRequest;
-import to.unified.unified_java_sdk.models.operations.GetClubsLocationRequest;
-import to.unified.unified_java_sdk.models.operations.GetClubsMemberRequest;
-import to.unified.unified_java_sdk.models.operations.ListClubsActivitiesRequest;
-import to.unified.unified_java_sdk.models.operations.ListClubsEventsRequest;
-import to.unified.unified_java_sdk.models.operations.ListClubsGroupsRequest;
-import to.unified.unified_java_sdk.models.operations.ListClubsLocationsRequest;
-import to.unified.unified_java_sdk.models.operations.ListClubsMembersRequest;
-import to.unified.unified_java_sdk.models.operations.async.GetClubsActivityRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.GetClubsActivityResponse;
-import to.unified.unified_java_sdk.models.operations.async.GetClubsEventRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.GetClubsEventResponse;
-import to.unified.unified_java_sdk.models.operations.async.GetClubsGroupRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.GetClubsGroupResponse;
-import to.unified.unified_java_sdk.models.operations.async.GetClubsLocationRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.GetClubsLocationResponse;
-import to.unified.unified_java_sdk.models.operations.async.GetClubsMemberRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.GetClubsMemberResponse;
-import to.unified.unified_java_sdk.models.operations.async.ListClubsActivitiesRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.ListClubsActivitiesResponse;
-import to.unified.unified_java_sdk.models.operations.async.ListClubsEventsRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.ListClubsEventsResponse;
-import to.unified.unified_java_sdk.models.operations.async.ListClubsGroupsRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.ListClubsGroupsResponse;
-import to.unified.unified_java_sdk.models.operations.async.ListClubsLocationsRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.ListClubsLocationsResponse;
-import to.unified.unified_java_sdk.models.operations.async.ListClubsMembersRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.ListClubsMembersResponse;
-import to.unified.unified_java_sdk.operations.GetClubsActivity;
-import to.unified.unified_java_sdk.operations.GetClubsEvent;
-import to.unified.unified_java_sdk.operations.GetClubsGroup;
-import to.unified.unified_java_sdk.operations.GetClubsLocation;
-import to.unified.unified_java_sdk.operations.GetClubsMember;
-import to.unified.unified_java_sdk.operations.ListClubsActivities;
-import to.unified.unified_java_sdk.operations.ListClubsEvents;
-import to.unified.unified_java_sdk.operations.ListClubsGroups;
-import to.unified.unified_java_sdk.operations.ListClubsLocations;
-import to.unified.unified_java_sdk.operations.ListClubsMembers;
+import to.unified.unified_java_sdk.models.operations.GetClubsActivity2Request;
+import to.unified.unified_java_sdk.models.operations.GetClubsEvent2Request;
+import to.unified.unified_java_sdk.models.operations.GetClubsGroup2Request;
+import to.unified.unified_java_sdk.models.operations.GetClubsLocation2Request;
+import to.unified.unified_java_sdk.models.operations.GetClubsMember2Request;
+import to.unified.unified_java_sdk.models.operations.ListClubsActivities2Request;
+import to.unified.unified_java_sdk.models.operations.ListClubsEvents2Request;
+import to.unified.unified_java_sdk.models.operations.ListClubsGroups2Request;
+import to.unified.unified_java_sdk.models.operations.ListClubsLocations2Request;
+import to.unified.unified_java_sdk.models.operations.ListClubsMembers2Request;
+import to.unified.unified_java_sdk.models.operations.async.GetClubsActivity2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetClubsActivity2Response;
+import to.unified.unified_java_sdk.models.operations.async.GetClubsEvent2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetClubsEvent2Response;
+import to.unified.unified_java_sdk.models.operations.async.GetClubsGroup2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetClubsGroup2Response;
+import to.unified.unified_java_sdk.models.operations.async.GetClubsLocation2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetClubsLocation2Response;
+import to.unified.unified_java_sdk.models.operations.async.GetClubsMember2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetClubsMember2Response;
+import to.unified.unified_java_sdk.models.operations.async.ListClubsActivities2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListClubsActivities2Response;
+import to.unified.unified_java_sdk.models.operations.async.ListClubsEvents2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListClubsEvents2Response;
+import to.unified.unified_java_sdk.models.operations.async.ListClubsGroups2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListClubsGroups2Response;
+import to.unified.unified_java_sdk.models.operations.async.ListClubsLocations2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListClubsLocations2Response;
+import to.unified.unified_java_sdk.models.operations.async.ListClubsMembers2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListClubsMembers2Response;
+import to.unified.unified_java_sdk.operations.GetClubsActivity2;
+import to.unified.unified_java_sdk.operations.GetClubsEvent2;
+import to.unified.unified_java_sdk.operations.GetClubsGroup2;
+import to.unified.unified_java_sdk.operations.GetClubsLocation2;
+import to.unified.unified_java_sdk.operations.GetClubsMember2;
+import to.unified.unified_java_sdk.operations.ListClubsActivities2;
+import to.unified.unified_java_sdk.operations.ListClubsEvents2;
+import to.unified.unified_java_sdk.operations.ListClubsGroups2;
+import to.unified.unified_java_sdk.operations.ListClubsLocations2;
+import to.unified.unified_java_sdk.operations.ListClubsMembers2;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -75,19 +75,19 @@ public class AsyncClubs {
      * 
      * @return The async call builder
      */
-    public GetClubsActivityRequestBuilder getClubsActivity() {
-        return new GetClubsActivityRequestBuilder(sdkConfiguration);
+    public GetClubsActivity2RequestBuilder getClubsActivity2() {
+        return new GetClubsActivity2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Retrieve an activity
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<GetClubsActivityResponse>} - The async response
+     * @return {@code CompletableFuture<GetClubsActivity2Response>} - The async response
      */
-    public CompletableFuture<GetClubsActivityResponse> getClubsActivity(@Nonnull GetClubsActivityRequest request) {
-        AsyncRequestOperation<GetClubsActivityRequest, GetClubsActivityResponse> operation
-              = new GetClubsActivity.Async(sdkConfiguration, _headers);
+    public CompletableFuture<GetClubsActivity2Response> getClubsActivity2(@Nonnull GetClubsActivity2Request request) {
+        AsyncRequestOperation<GetClubsActivity2Request, GetClubsActivity2Response> operation
+              = new GetClubsActivity2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -98,19 +98,19 @@ public class AsyncClubs {
      * 
      * @return The async call builder
      */
-    public GetClubsEventRequestBuilder getClubsEvent() {
-        return new GetClubsEventRequestBuilder(sdkConfiguration);
+    public GetClubsEvent2RequestBuilder getClubsEvent2() {
+        return new GetClubsEvent2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Retrieve an event
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<GetClubsEventResponse>} - The async response
+     * @return {@code CompletableFuture<GetClubsEvent2Response>} - The async response
      */
-    public CompletableFuture<GetClubsEventResponse> getClubsEvent(@Nonnull GetClubsEventRequest request) {
-        AsyncRequestOperation<GetClubsEventRequest, GetClubsEventResponse> operation
-              = new GetClubsEvent.Async(sdkConfiguration, _headers);
+    public CompletableFuture<GetClubsEvent2Response> getClubsEvent2(@Nonnull GetClubsEvent2Request request) {
+        AsyncRequestOperation<GetClubsEvent2Request, GetClubsEvent2Response> operation
+              = new GetClubsEvent2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -121,19 +121,19 @@ public class AsyncClubs {
      * 
      * @return The async call builder
      */
-    public GetClubsGroupRequestBuilder getClubsGroup() {
-        return new GetClubsGroupRequestBuilder(sdkConfiguration);
+    public GetClubsGroup2RequestBuilder getClubsGroup2() {
+        return new GetClubsGroup2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Retrieve a group
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<GetClubsGroupResponse>} - The async response
+     * @return {@code CompletableFuture<GetClubsGroup2Response>} - The async response
      */
-    public CompletableFuture<GetClubsGroupResponse> getClubsGroup(@Nonnull GetClubsGroupRequest request) {
-        AsyncRequestOperation<GetClubsGroupRequest, GetClubsGroupResponse> operation
-              = new GetClubsGroup.Async(sdkConfiguration, _headers);
+    public CompletableFuture<GetClubsGroup2Response> getClubsGroup2(@Nonnull GetClubsGroup2Request request) {
+        AsyncRequestOperation<GetClubsGroup2Request, GetClubsGroup2Response> operation
+              = new GetClubsGroup2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -144,19 +144,19 @@ public class AsyncClubs {
      * 
      * @return The async call builder
      */
-    public GetClubsLocationRequestBuilder getClubsLocation() {
-        return new GetClubsLocationRequestBuilder(sdkConfiguration);
+    public GetClubsLocation2RequestBuilder getClubsLocation2() {
+        return new GetClubsLocation2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Retrieve a location
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<GetClubsLocationResponse>} - The async response
+     * @return {@code CompletableFuture<GetClubsLocation2Response>} - The async response
      */
-    public CompletableFuture<GetClubsLocationResponse> getClubsLocation(@Nonnull GetClubsLocationRequest request) {
-        AsyncRequestOperation<GetClubsLocationRequest, GetClubsLocationResponse> operation
-              = new GetClubsLocation.Async(sdkConfiguration, _headers);
+    public CompletableFuture<GetClubsLocation2Response> getClubsLocation2(@Nonnull GetClubsLocation2Request request) {
+        AsyncRequestOperation<GetClubsLocation2Request, GetClubsLocation2Response> operation
+              = new GetClubsLocation2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -167,19 +167,19 @@ public class AsyncClubs {
      * 
      * @return The async call builder
      */
-    public GetClubsMemberRequestBuilder getClubsMember() {
-        return new GetClubsMemberRequestBuilder(sdkConfiguration);
+    public GetClubsMember2RequestBuilder getClubsMember2() {
+        return new GetClubsMember2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Retrieve a member
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<GetClubsMemberResponse>} - The async response
+     * @return {@code CompletableFuture<GetClubsMember2Response>} - The async response
      */
-    public CompletableFuture<GetClubsMemberResponse> getClubsMember(@Nonnull GetClubsMemberRequest request) {
-        AsyncRequestOperation<GetClubsMemberRequest, GetClubsMemberResponse> operation
-              = new GetClubsMember.Async(sdkConfiguration, _headers);
+    public CompletableFuture<GetClubsMember2Response> getClubsMember2(@Nonnull GetClubsMember2Request request) {
+        AsyncRequestOperation<GetClubsMember2Request, GetClubsMember2Response> operation
+              = new GetClubsMember2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -190,19 +190,19 @@ public class AsyncClubs {
      * 
      * @return The async call builder
      */
-    public ListClubsActivitiesRequestBuilder listClubsActivities() {
-        return new ListClubsActivitiesRequestBuilder(sdkConfiguration);
+    public ListClubsActivities2RequestBuilder listClubsActivities2() {
+        return new ListClubsActivities2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * List all activities
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<ListClubsActivitiesResponse>} - The async response
+     * @return {@code CompletableFuture<ListClubsActivities2Response>} - The async response
      */
-    public CompletableFuture<ListClubsActivitiesResponse> listClubsActivities(@Nonnull ListClubsActivitiesRequest request) {
-        AsyncRequestOperation<ListClubsActivitiesRequest, ListClubsActivitiesResponse> operation
-              = new ListClubsActivities.Async(sdkConfiguration, _headers);
+    public CompletableFuture<ListClubsActivities2Response> listClubsActivities2(@Nonnull ListClubsActivities2Request request) {
+        AsyncRequestOperation<ListClubsActivities2Request, ListClubsActivities2Response> operation
+              = new ListClubsActivities2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -213,19 +213,19 @@ public class AsyncClubs {
      * 
      * @return The async call builder
      */
-    public ListClubsEventsRequestBuilder listClubsEvents() {
-        return new ListClubsEventsRequestBuilder(sdkConfiguration);
+    public ListClubsEvents2RequestBuilder listClubsEvents2() {
+        return new ListClubsEvents2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * List all events
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<ListClubsEventsResponse>} - The async response
+     * @return {@code CompletableFuture<ListClubsEvents2Response>} - The async response
      */
-    public CompletableFuture<ListClubsEventsResponse> listClubsEvents(@Nonnull ListClubsEventsRequest request) {
-        AsyncRequestOperation<ListClubsEventsRequest, ListClubsEventsResponse> operation
-              = new ListClubsEvents.Async(sdkConfiguration, _headers);
+    public CompletableFuture<ListClubsEvents2Response> listClubsEvents2(@Nonnull ListClubsEvents2Request request) {
+        AsyncRequestOperation<ListClubsEvents2Request, ListClubsEvents2Response> operation
+              = new ListClubsEvents2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -236,19 +236,19 @@ public class AsyncClubs {
      * 
      * @return The async call builder
      */
-    public ListClubsGroupsRequestBuilder listClubsGroups() {
-        return new ListClubsGroupsRequestBuilder(sdkConfiguration);
+    public ListClubsGroups2RequestBuilder listClubsGroups2() {
+        return new ListClubsGroups2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * List all groups
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<ListClubsGroupsResponse>} - The async response
+     * @return {@code CompletableFuture<ListClubsGroups2Response>} - The async response
      */
-    public CompletableFuture<ListClubsGroupsResponse> listClubsGroups(@Nonnull ListClubsGroupsRequest request) {
-        AsyncRequestOperation<ListClubsGroupsRequest, ListClubsGroupsResponse> operation
-              = new ListClubsGroups.Async(sdkConfiguration, _headers);
+    public CompletableFuture<ListClubsGroups2Response> listClubsGroups2(@Nonnull ListClubsGroups2Request request) {
+        AsyncRequestOperation<ListClubsGroups2Request, ListClubsGroups2Response> operation
+              = new ListClubsGroups2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -259,19 +259,19 @@ public class AsyncClubs {
      * 
      * @return The async call builder
      */
-    public ListClubsLocationsRequestBuilder listClubsLocations() {
-        return new ListClubsLocationsRequestBuilder(sdkConfiguration);
+    public ListClubsLocations2RequestBuilder listClubsLocations2() {
+        return new ListClubsLocations2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * List all locations
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<ListClubsLocationsResponse>} - The async response
+     * @return {@code CompletableFuture<ListClubsLocations2Response>} - The async response
      */
-    public CompletableFuture<ListClubsLocationsResponse> listClubsLocations(@Nonnull ListClubsLocationsRequest request) {
-        AsyncRequestOperation<ListClubsLocationsRequest, ListClubsLocationsResponse> operation
-              = new ListClubsLocations.Async(sdkConfiguration, _headers);
+    public CompletableFuture<ListClubsLocations2Response> listClubsLocations2(@Nonnull ListClubsLocations2Request request) {
+        AsyncRequestOperation<ListClubsLocations2Request, ListClubsLocations2Response> operation
+              = new ListClubsLocations2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -282,19 +282,19 @@ public class AsyncClubs {
      * 
      * @return The async call builder
      */
-    public ListClubsMembersRequestBuilder listClubsMembers() {
-        return new ListClubsMembersRequestBuilder(sdkConfiguration);
+    public ListClubsMembers2RequestBuilder listClubsMembers2() {
+        return new ListClubsMembers2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * List all members
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<ListClubsMembersResponse>} - The async response
+     * @return {@code CompletableFuture<ListClubsMembers2Response>} - The async response
      */
-    public CompletableFuture<ListClubsMembersResponse> listClubsMembers(@Nonnull ListClubsMembersRequest request) {
-        AsyncRequestOperation<ListClubsMembersRequest, ListClubsMembersResponse> operation
-              = new ListClubsMembers.Async(sdkConfiguration, _headers);
+    public CompletableFuture<ListClubsMembers2Response> listClubsMembers2(@Nonnull ListClubsMembers2Request request) {
+        AsyncRequestOperation<ListClubsMembers2Request, ListClubsMembers2Response> operation
+              = new ListClubsMembers2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

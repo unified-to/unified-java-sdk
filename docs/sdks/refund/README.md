@@ -4,23 +4,23 @@
 
 ### Available Operations
 
-* [getPaymentRefund](#getpaymentrefund) - Retrieve a refund
-* [listPaymentRefunds](#listpaymentrefunds) - List all refunds
+* [getPaymentRefund2](#getpaymentrefund2) - Retrieve a refund
+* [listPaymentRefunds2](#listpaymentrefunds2) - List all refunds
 
-## getPaymentRefund
+## getPaymentRefund2
 
 Retrieve a refund
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="getPaymentRefund" method="get" path="/payment/{connection_id}/refund/{id}" -->
+<!-- UsageSnippet language="java" operationID="getPaymentRefund2" method="get" path="/payment/{connection_id}/refund/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.GetPaymentRefundRequest;
-import to.unified.unified_java_sdk.models.operations.GetPaymentRefundResponse;
+import to.unified.unified_java_sdk.models.operations.GetPaymentRefund2Request;
+import to.unified.unified_java_sdk.models.operations.GetPaymentRefund2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -33,12 +33,12 @@ public class Application {
                     .build())
             .build();
 
-        GetPaymentRefundRequest req = GetPaymentRefundRequest.builder()
+        GetPaymentRefund2Request req = GetPaymentRefund2Request.builder()
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        GetPaymentRefundResponse res = sdk.refund().getPaymentRefund()
+        GetPaymentRefund2Response res = sdk.refund().getPaymentRefund2()
                 .request(req)
                 .call();
 
@@ -51,13 +51,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
-| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
-| `request`                                                                     | [GetPaymentRefundRequest](../../models/operations/GetPaymentRefundRequest.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
+| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| `request`                                                                       | [GetPaymentRefund2Request](../../models/operations/GetPaymentRefund2Request.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
 
 ### Response
 
-**[GetPaymentRefundResponse](../../models/operations/GetPaymentRefundResponse.md)**
+**[GetPaymentRefund2Response](../../models/operations/GetPaymentRefund2Response.md)**
 
 ### Errors
 
@@ -65,20 +65,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## listPaymentRefunds
+## listPaymentRefunds2
 
 List all refunds
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="listPaymentRefunds" method="get" path="/payment/{connection_id}/refund" -->
+<!-- UsageSnippet language="java" operationID="listPaymentRefunds2" method="get" path="/payment/{connection_id}/refund" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.ListPaymentRefundsRequest;
-import to.unified.unified_java_sdk.models.operations.ListPaymentRefundsResponse;
+import to.unified.unified_java_sdk.models.operations.ListPaymentRefunds2Request;
+import to.unified.unified_java_sdk.models.operations.ListPaymentRefunds2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -91,11 +91,11 @@ public class Application {
                     .build())
             .build();
 
-        ListPaymentRefundsRequest req = ListPaymentRefundsRequest.builder()
+        ListPaymentRefunds2Request req = ListPaymentRefunds2Request.builder()
                 .connectionId("<id>")
                 .build();
 
-        ListPaymentRefundsResponse res = sdk.refund().listPaymentRefunds()
+        ListPaymentRefunds2Response res = sdk.refund().listPaymentRefunds2()
                 .request(req)
                 .call();
 
@@ -108,13 +108,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
-| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
-| `request`                                                                         | [ListPaymentRefundsRequest](../../models/operations/ListPaymentRefundsRequest.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
+| Parameter                                                                           | Type                                                                                | Required                                                                            | Description                                                                         |
+| ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| `request`                                                                           | [ListPaymentRefunds2Request](../../models/operations/ListPaymentRefunds2Request.md) | :heavy_check_mark:                                                                  | The request object to use for the request.                                          |
 
 ### Response
 
-**[ListPaymentRefundsResponse](../../models/operations/ListPaymentRefundsResponse.md)**
+**[ListPaymentRefunds2Response](../../models/operations/ListPaymentRefunds2Response.md)**
 
 ### Errors
 

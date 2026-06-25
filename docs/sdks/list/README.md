@@ -4,27 +4,27 @@
 
 ### Available Operations
 
-* [createMartechList](#createmartechlist) - Create a list
-* [getMartechList](#getmartechlist) - Retrieve a list
-* [listMartechLists](#listmartechlists) - List all lists
-* [patchMartechList](#patchmartechlist) - Update a list
-* [removeMartechList](#removemartechlist) - Remove a list
-* [updateMartechList](#updatemartechlist) - Update a list
+* [createMartechList2](#createmartechlist2) - Create a list
+* [getMartechList2](#getmartechlist2) - Retrieve a list
+* [listMartechLists2](#listmartechlists2) - List all lists
+* [patchMartechList2](#patchmartechlist2) - Update a list
+* [removeMartechList2](#removemartechlist2) - Remove a list
+* [updateMartechList2](#updatemartechlist2) - Update a list
 
-## createMartechList
+## createMartechList2
 
 Create a list
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createMartechList" method="post" path="/martech/{connection_id}/list" -->
+<!-- UsageSnippet language="java" operationID="createMartechList2" method="post" path="/martech/{connection_id}/list" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.CreateMartechListRequest;
-import to.unified.unified_java_sdk.models.operations.CreateMartechListResponse;
+import to.unified.unified_java_sdk.models.operations.CreateMartechList2Request;
+import to.unified.unified_java_sdk.models.operations.CreateMartechList2Response;
 import to.unified.unified_java_sdk.models.shared.MarketingList;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -38,13 +38,13 @@ public class Application {
                     .build())
             .build();
 
-        CreateMartechListRequest req = CreateMartechListRequest.builder()
+        CreateMartechList2Request req = CreateMartechList2Request.builder()
                 .marketingList(MarketingList.builder()
                     .build())
                 .connectionId("<id>")
                 .build();
 
-        CreateMartechListResponse res = sdk.list().createMartechList()
+        CreateMartechList2Response res = sdk.list().createMartechList2()
                 .request(req)
                 .call();
 
@@ -57,13 +57,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
-| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
-| `request`                                                                       | [CreateMartechListRequest](../../models/operations/CreateMartechListRequest.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
+| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
+| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| `request`                                                                         | [CreateMartechList2Request](../../models/operations/CreateMartechList2Request.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
 
 ### Response
 
-**[CreateMartechListResponse](../../models/operations/CreateMartechListResponse.md)**
+**[CreateMartechList2Response](../../models/operations/CreateMartechList2Response.md)**
 
 ### Errors
 
@@ -71,20 +71,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## getMartechList
+## getMartechList2
 
 Retrieve a list
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="getMartechList" method="get" path="/martech/{connection_id}/list/{id}" -->
+<!-- UsageSnippet language="java" operationID="getMartechList2" method="get" path="/martech/{connection_id}/list/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.GetMartechListRequest;
-import to.unified.unified_java_sdk.models.operations.GetMartechListResponse;
+import to.unified.unified_java_sdk.models.operations.GetMartechList2Request;
+import to.unified.unified_java_sdk.models.operations.GetMartechList2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -97,12 +97,12 @@ public class Application {
                     .build())
             .build();
 
-        GetMartechListRequest req = GetMartechListRequest.builder()
+        GetMartechList2Request req = GetMartechList2Request.builder()
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        GetMartechListResponse res = sdk.list().getMartechList()
+        GetMartechList2Response res = sdk.list().getMartechList2()
                 .request(req)
                 .call();
 
@@ -115,13 +115,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                 | Type                                                                      | Required                                                                  | Description                                                               |
-| ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
-| `request`                                                                 | [GetMartechListRequest](../../models/operations/GetMartechListRequest.md) | :heavy_check_mark:                                                        | The request object to use for the request.                                |
+| Parameter                                                                   | Type                                                                        | Required                                                                    | Description                                                                 |
+| --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| `request`                                                                   | [GetMartechList2Request](../../models/operations/GetMartechList2Request.md) | :heavy_check_mark:                                                          | The request object to use for the request.                                  |
 
 ### Response
 
-**[GetMartechListResponse](../../models/operations/GetMartechListResponse.md)**
+**[GetMartechList2Response](../../models/operations/GetMartechList2Response.md)**
 
 ### Errors
 
@@ -129,20 +129,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## listMartechLists
+## listMartechLists2
 
 List all lists
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="listMartechLists" method="get" path="/martech/{connection_id}/list" -->
+<!-- UsageSnippet language="java" operationID="listMartechLists2" method="get" path="/martech/{connection_id}/list" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.ListMartechListsRequest;
-import to.unified.unified_java_sdk.models.operations.ListMartechListsResponse;
+import to.unified.unified_java_sdk.models.operations.ListMartechLists2Request;
+import to.unified.unified_java_sdk.models.operations.ListMartechLists2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -155,11 +155,11 @@ public class Application {
                     .build())
             .build();
 
-        ListMartechListsRequest req = ListMartechListsRequest.builder()
+        ListMartechLists2Request req = ListMartechLists2Request.builder()
                 .connectionId("<id>")
                 .build();
 
-        ListMartechListsResponse res = sdk.list().listMartechLists()
+        ListMartechLists2Response res = sdk.list().listMartechLists2()
                 .request(req)
                 .call();
 
@@ -172,13 +172,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
-| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
-| `request`                                                                     | [ListMartechListsRequest](../../models/operations/ListMartechListsRequest.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
+| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| `request`                                                                       | [ListMartechLists2Request](../../models/operations/ListMartechLists2Request.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
 
 ### Response
 
-**[ListMartechListsResponse](../../models/operations/ListMartechListsResponse.md)**
+**[ListMartechLists2Response](../../models/operations/ListMartechLists2Response.md)**
 
 ### Errors
 
@@ -186,20 +186,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## patchMartechList
+## patchMartechList2
 
 Update a list
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchMartechList" method="patch" path="/martech/{connection_id}/list/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchMartechList2" method="patch" path="/martech/{connection_id}/list/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.PatchMartechListRequest;
-import to.unified.unified_java_sdk.models.operations.PatchMartechListResponse;
+import to.unified.unified_java_sdk.models.operations.PatchMartechList2Request;
+import to.unified.unified_java_sdk.models.operations.PatchMartechList2Response;
 import to.unified.unified_java_sdk.models.shared.MarketingList;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -213,14 +213,14 @@ public class Application {
                     .build())
             .build();
 
-        PatchMartechListRequest req = PatchMartechListRequest.builder()
+        PatchMartechList2Request req = PatchMartechList2Request.builder()
                 .marketingList(MarketingList.builder()
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        PatchMartechListResponse res = sdk.list().patchMartechList()
+        PatchMartechList2Response res = sdk.list().patchMartechList2()
                 .request(req)
                 .call();
 
@@ -233,13 +233,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
-| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
-| `request`                                                                     | [PatchMartechListRequest](../../models/operations/PatchMartechListRequest.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
+| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| `request`                                                                       | [PatchMartechList2Request](../../models/operations/PatchMartechList2Request.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
 
 ### Response
 
-**[PatchMartechListResponse](../../models/operations/PatchMartechListResponse.md)**
+**[PatchMartechList2Response](../../models/operations/PatchMartechList2Response.md)**
 
 ### Errors
 
@@ -247,20 +247,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## removeMartechList
+## removeMartechList2
 
 Remove a list
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="removeMartechList" method="delete" path="/martech/{connection_id}/list/{id}" -->
+<!-- UsageSnippet language="java" operationID="removeMartechList2" method="delete" path="/martech/{connection_id}/list/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.RemoveMartechListRequest;
-import to.unified.unified_java_sdk.models.operations.RemoveMartechListResponse;
+import to.unified.unified_java_sdk.models.operations.RemoveMartechList2Request;
+import to.unified.unified_java_sdk.models.operations.RemoveMartechList2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -273,12 +273,12 @@ public class Application {
                     .build())
             .build();
 
-        RemoveMartechListRequest req = RemoveMartechListRequest.builder()
+        RemoveMartechList2Request req = RemoveMartechList2Request.builder()
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        RemoveMartechListResponse res = sdk.list().removeMartechList()
+        RemoveMartechList2Response res = sdk.list().removeMartechList2()
                 .request(req)
                 .call();
 
@@ -289,13 +289,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
-| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
-| `request`                                                                       | [RemoveMartechListRequest](../../models/operations/RemoveMartechListRequest.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
+| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
+| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| `request`                                                                         | [RemoveMartechList2Request](../../models/operations/RemoveMartechList2Request.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
 
 ### Response
 
-**[RemoveMartechListResponse](../../models/operations/RemoveMartechListResponse.md)**
+**[RemoveMartechList2Response](../../models/operations/RemoveMartechList2Response.md)**
 
 ### Errors
 
@@ -303,20 +303,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## updateMartechList
+## updateMartechList2
 
 Update a list
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateMartechList" method="put" path="/martech/{connection_id}/list/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateMartechList2" method="put" path="/martech/{connection_id}/list/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.UpdateMartechListRequest;
-import to.unified.unified_java_sdk.models.operations.UpdateMartechListResponse;
+import to.unified.unified_java_sdk.models.operations.UpdateMartechList2Request;
+import to.unified.unified_java_sdk.models.operations.UpdateMartechList2Response;
 import to.unified.unified_java_sdk.models.shared.MarketingList;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -330,14 +330,14 @@ public class Application {
                     .build())
             .build();
 
-        UpdateMartechListRequest req = UpdateMartechListRequest.builder()
+        UpdateMartechList2Request req = UpdateMartechList2Request.builder()
                 .marketingList(MarketingList.builder()
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        UpdateMartechListResponse res = sdk.list().updateMartechList()
+        UpdateMartechList2Response res = sdk.list().updateMartechList2()
                 .request(req)
                 .call();
 
@@ -350,13 +350,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
-| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
-| `request`                                                                       | [UpdateMartechListRequest](../../models/operations/UpdateMartechListRequest.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
+| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
+| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| `request`                                                                         | [UpdateMartechList2Request](../../models/operations/UpdateMartechList2Request.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
 
 ### Response
 
-**[UpdateMartechListResponse](../../models/operations/UpdateMartechListResponse.md)**
+**[UpdateMartechList2Response](../../models/operations/UpdateMartechList2Response.md)**
 
 ### Errors
 

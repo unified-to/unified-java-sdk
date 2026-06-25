@@ -7,78 +7,78 @@ import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOper
 
 import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
-import to.unified.unified_java_sdk.models.operations.CreateKmsCommentRequest;
-import to.unified.unified_java_sdk.models.operations.CreateTaskCommentRequest;
-import to.unified.unified_java_sdk.models.operations.CreateUcCommentRequest;
-import to.unified.unified_java_sdk.models.operations.GetKmsCommentRequest;
-import to.unified.unified_java_sdk.models.operations.GetTaskCommentRequest;
-import to.unified.unified_java_sdk.models.operations.GetUcCommentRequest;
-import to.unified.unified_java_sdk.models.operations.ListKmsCommentsRequest;
-import to.unified.unified_java_sdk.models.operations.ListTaskCommentsRequest;
-import to.unified.unified_java_sdk.models.operations.ListUcCommentsRequest;
-import to.unified.unified_java_sdk.models.operations.PatchKmsCommentRequest;
-import to.unified.unified_java_sdk.models.operations.PatchTaskCommentRequest;
-import to.unified.unified_java_sdk.models.operations.PatchUcCommentRequest;
-import to.unified.unified_java_sdk.models.operations.RemoveKmsCommentRequest;
-import to.unified.unified_java_sdk.models.operations.RemoveTaskCommentRequest;
-import to.unified.unified_java_sdk.models.operations.RemoveUcCommentRequest;
-import to.unified.unified_java_sdk.models.operations.UpdateKmsCommentRequest;
-import to.unified.unified_java_sdk.models.operations.UpdateTaskCommentRequest;
-import to.unified.unified_java_sdk.models.operations.UpdateUcCommentRequest;
-import to.unified.unified_java_sdk.models.operations.async.CreateKmsCommentRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.CreateKmsCommentResponse;
-import to.unified.unified_java_sdk.models.operations.async.CreateTaskCommentRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.CreateTaskCommentResponse;
-import to.unified.unified_java_sdk.models.operations.async.CreateUcCommentRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.CreateUcCommentResponse;
-import to.unified.unified_java_sdk.models.operations.async.GetKmsCommentRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.GetKmsCommentResponse;
-import to.unified.unified_java_sdk.models.operations.async.GetTaskCommentRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.GetTaskCommentResponse;
-import to.unified.unified_java_sdk.models.operations.async.GetUcCommentRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.GetUcCommentResponse;
-import to.unified.unified_java_sdk.models.operations.async.ListKmsCommentsRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.ListKmsCommentsResponse;
-import to.unified.unified_java_sdk.models.operations.async.ListTaskCommentsRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.ListTaskCommentsResponse;
-import to.unified.unified_java_sdk.models.operations.async.ListUcCommentsRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.ListUcCommentsResponse;
-import to.unified.unified_java_sdk.models.operations.async.PatchKmsCommentRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.PatchKmsCommentResponse;
-import to.unified.unified_java_sdk.models.operations.async.PatchTaskCommentRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.PatchTaskCommentResponse;
-import to.unified.unified_java_sdk.models.operations.async.PatchUcCommentRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.PatchUcCommentResponse;
-import to.unified.unified_java_sdk.models.operations.async.RemoveKmsCommentRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.RemoveKmsCommentResponse;
-import to.unified.unified_java_sdk.models.operations.async.RemoveTaskCommentRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.RemoveTaskCommentResponse;
-import to.unified.unified_java_sdk.models.operations.async.RemoveUcCommentRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.RemoveUcCommentResponse;
-import to.unified.unified_java_sdk.models.operations.async.UpdateKmsCommentRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.UpdateKmsCommentResponse;
-import to.unified.unified_java_sdk.models.operations.async.UpdateTaskCommentRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.UpdateTaskCommentResponse;
-import to.unified.unified_java_sdk.models.operations.async.UpdateUcCommentRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.UpdateUcCommentResponse;
-import to.unified.unified_java_sdk.operations.CreateKmsComment;
-import to.unified.unified_java_sdk.operations.CreateTaskComment;
-import to.unified.unified_java_sdk.operations.CreateUcComment;
-import to.unified.unified_java_sdk.operations.GetKmsComment;
-import to.unified.unified_java_sdk.operations.GetTaskComment;
-import to.unified.unified_java_sdk.operations.GetUcComment;
-import to.unified.unified_java_sdk.operations.ListKmsComments;
-import to.unified.unified_java_sdk.operations.ListTaskComments;
-import to.unified.unified_java_sdk.operations.ListUcComments;
-import to.unified.unified_java_sdk.operations.PatchKmsComment;
-import to.unified.unified_java_sdk.operations.PatchTaskComment;
-import to.unified.unified_java_sdk.operations.PatchUcComment;
-import to.unified.unified_java_sdk.operations.RemoveKmsComment;
-import to.unified.unified_java_sdk.operations.RemoveTaskComment;
-import to.unified.unified_java_sdk.operations.RemoveUcComment;
-import to.unified.unified_java_sdk.operations.UpdateKmsComment;
-import to.unified.unified_java_sdk.operations.UpdateTaskComment;
-import to.unified.unified_java_sdk.operations.UpdateUcComment;
+import to.unified.unified_java_sdk.models.operations.CreateKmsComment2Request;
+import to.unified.unified_java_sdk.models.operations.CreateTaskComment2Request;
+import to.unified.unified_java_sdk.models.operations.CreateUcComment2Request;
+import to.unified.unified_java_sdk.models.operations.GetKmsComment2Request;
+import to.unified.unified_java_sdk.models.operations.GetTaskComment2Request;
+import to.unified.unified_java_sdk.models.operations.GetUcComment2Request;
+import to.unified.unified_java_sdk.models.operations.ListKmsComments2Request;
+import to.unified.unified_java_sdk.models.operations.ListTaskComments2Request;
+import to.unified.unified_java_sdk.models.operations.ListUcComments2Request;
+import to.unified.unified_java_sdk.models.operations.PatchKmsComment2Request;
+import to.unified.unified_java_sdk.models.operations.PatchTaskComment2Request;
+import to.unified.unified_java_sdk.models.operations.PatchUcComment2Request;
+import to.unified.unified_java_sdk.models.operations.RemoveKmsComment2Request;
+import to.unified.unified_java_sdk.models.operations.RemoveTaskComment2Request;
+import to.unified.unified_java_sdk.models.operations.RemoveUcComment2Request;
+import to.unified.unified_java_sdk.models.operations.UpdateKmsComment2Request;
+import to.unified.unified_java_sdk.models.operations.UpdateTaskComment2Request;
+import to.unified.unified_java_sdk.models.operations.UpdateUcComment2Request;
+import to.unified.unified_java_sdk.models.operations.async.CreateKmsComment2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.CreateKmsComment2Response;
+import to.unified.unified_java_sdk.models.operations.async.CreateTaskComment2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.CreateTaskComment2Response;
+import to.unified.unified_java_sdk.models.operations.async.CreateUcComment2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.CreateUcComment2Response;
+import to.unified.unified_java_sdk.models.operations.async.GetKmsComment2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetKmsComment2Response;
+import to.unified.unified_java_sdk.models.operations.async.GetTaskComment2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetTaskComment2Response;
+import to.unified.unified_java_sdk.models.operations.async.GetUcComment2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetUcComment2Response;
+import to.unified.unified_java_sdk.models.operations.async.ListKmsComments2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListKmsComments2Response;
+import to.unified.unified_java_sdk.models.operations.async.ListTaskComments2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListTaskComments2Response;
+import to.unified.unified_java_sdk.models.operations.async.ListUcComments2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListUcComments2Response;
+import to.unified.unified_java_sdk.models.operations.async.PatchKmsComment2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.PatchKmsComment2Response;
+import to.unified.unified_java_sdk.models.operations.async.PatchTaskComment2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.PatchTaskComment2Response;
+import to.unified.unified_java_sdk.models.operations.async.PatchUcComment2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.PatchUcComment2Response;
+import to.unified.unified_java_sdk.models.operations.async.RemoveKmsComment2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.RemoveKmsComment2Response;
+import to.unified.unified_java_sdk.models.operations.async.RemoveTaskComment2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.RemoveTaskComment2Response;
+import to.unified.unified_java_sdk.models.operations.async.RemoveUcComment2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.RemoveUcComment2Response;
+import to.unified.unified_java_sdk.models.operations.async.UpdateKmsComment2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.UpdateKmsComment2Response;
+import to.unified.unified_java_sdk.models.operations.async.UpdateTaskComment2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.UpdateTaskComment2Response;
+import to.unified.unified_java_sdk.models.operations.async.UpdateUcComment2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.UpdateUcComment2Response;
+import to.unified.unified_java_sdk.operations.CreateKmsComment2;
+import to.unified.unified_java_sdk.operations.CreateTaskComment2;
+import to.unified.unified_java_sdk.operations.CreateUcComment2;
+import to.unified.unified_java_sdk.operations.GetKmsComment2;
+import to.unified.unified_java_sdk.operations.GetTaskComment2;
+import to.unified.unified_java_sdk.operations.GetUcComment2;
+import to.unified.unified_java_sdk.operations.ListKmsComments2;
+import to.unified.unified_java_sdk.operations.ListTaskComments2;
+import to.unified.unified_java_sdk.operations.ListUcComments2;
+import to.unified.unified_java_sdk.operations.PatchKmsComment2;
+import to.unified.unified_java_sdk.operations.PatchTaskComment2;
+import to.unified.unified_java_sdk.operations.PatchUcComment2;
+import to.unified.unified_java_sdk.operations.RemoveKmsComment2;
+import to.unified.unified_java_sdk.operations.RemoveTaskComment2;
+import to.unified.unified_java_sdk.operations.RemoveUcComment2;
+import to.unified.unified_java_sdk.operations.UpdateKmsComment2;
+import to.unified.unified_java_sdk.operations.UpdateTaskComment2;
+import to.unified.unified_java_sdk.operations.UpdateUcComment2;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -107,42 +107,19 @@ public class AsyncComment {
      * 
      * @return The async call builder
      */
-    public CreateKmsCommentRequestBuilder createKmsComment() {
-        return new CreateKmsCommentRequestBuilder(sdkConfiguration);
+    public CreateKmsComment2RequestBuilder createKmsComment2() {
+        return new CreateKmsComment2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Create a comment
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<CreateKmsCommentResponse>} - The async response
+     * @return {@code CompletableFuture<CreateKmsComment2Response>} - The async response
      */
-    public CompletableFuture<CreateKmsCommentResponse> createKmsComment(@Nonnull CreateKmsCommentRequest request) {
-        AsyncRequestOperation<CreateKmsCommentRequest, CreateKmsCommentResponse> operation
-              = new CreateKmsComment.Async(sdkConfiguration, _headers);
-        return operation.doRequest(request)
-            .thenCompose(operation::handleResponse);
-    }
-
-
-    /**
-     * Create a comment
-     * 
-     * @return The async call builder
-     */
-    public CreateTaskCommentRequestBuilder createTaskComment() {
-        return new CreateTaskCommentRequestBuilder(sdkConfiguration);
-    }
-
-    /**
-     * Create a comment
-     * 
-     * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<CreateTaskCommentResponse>} - The async response
-     */
-    public CompletableFuture<CreateTaskCommentResponse> createTaskComment(@Nonnull CreateTaskCommentRequest request) {
-        AsyncRequestOperation<CreateTaskCommentRequest, CreateTaskCommentResponse> operation
-              = new CreateTaskComment.Async(sdkConfiguration, _headers);
+    public CompletableFuture<CreateKmsComment2Response> createKmsComment2(@Nonnull CreateKmsComment2Request request) {
+        AsyncRequestOperation<CreateKmsComment2Request, CreateKmsComment2Response> operation
+              = new CreateKmsComment2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -153,19 +130,42 @@ public class AsyncComment {
      * 
      * @return The async call builder
      */
-    public CreateUcCommentRequestBuilder createUcComment() {
-        return new CreateUcCommentRequestBuilder(sdkConfiguration);
+    public CreateTaskComment2RequestBuilder createTaskComment2() {
+        return new CreateTaskComment2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Create a comment
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<CreateUcCommentResponse>} - The async response
+     * @return {@code CompletableFuture<CreateTaskComment2Response>} - The async response
      */
-    public CompletableFuture<CreateUcCommentResponse> createUcComment(@Nonnull CreateUcCommentRequest request) {
-        AsyncRequestOperation<CreateUcCommentRequest, CreateUcCommentResponse> operation
-              = new CreateUcComment.Async(sdkConfiguration, _headers);
+    public CompletableFuture<CreateTaskComment2Response> createTaskComment2(@Nonnull CreateTaskComment2Request request) {
+        AsyncRequestOperation<CreateTaskComment2Request, CreateTaskComment2Response> operation
+              = new CreateTaskComment2.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * Create a comment
+     * 
+     * @return The async call builder
+     */
+    public CreateUcComment2RequestBuilder createUcComment2() {
+        return new CreateUcComment2RequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Create a comment
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<CreateUcComment2Response>} - The async response
+     */
+    public CompletableFuture<CreateUcComment2Response> createUcComment2(@Nonnull CreateUcComment2Request request) {
+        AsyncRequestOperation<CreateUcComment2Request, CreateUcComment2Response> operation
+              = new CreateUcComment2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -176,42 +176,19 @@ public class AsyncComment {
      * 
      * @return The async call builder
      */
-    public GetKmsCommentRequestBuilder getKmsComment() {
-        return new GetKmsCommentRequestBuilder(sdkConfiguration);
+    public GetKmsComment2RequestBuilder getKmsComment2() {
+        return new GetKmsComment2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Retrieve a comment
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<GetKmsCommentResponse>} - The async response
+     * @return {@code CompletableFuture<GetKmsComment2Response>} - The async response
      */
-    public CompletableFuture<GetKmsCommentResponse> getKmsComment(@Nonnull GetKmsCommentRequest request) {
-        AsyncRequestOperation<GetKmsCommentRequest, GetKmsCommentResponse> operation
-              = new GetKmsComment.Async(sdkConfiguration, _headers);
-        return operation.doRequest(request)
-            .thenCompose(operation::handleResponse);
-    }
-
-
-    /**
-     * Retrieve a comment
-     * 
-     * @return The async call builder
-     */
-    public GetTaskCommentRequestBuilder getTaskComment() {
-        return new GetTaskCommentRequestBuilder(sdkConfiguration);
-    }
-
-    /**
-     * Retrieve a comment
-     * 
-     * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<GetTaskCommentResponse>} - The async response
-     */
-    public CompletableFuture<GetTaskCommentResponse> getTaskComment(@Nonnull GetTaskCommentRequest request) {
-        AsyncRequestOperation<GetTaskCommentRequest, GetTaskCommentResponse> operation
-              = new GetTaskComment.Async(sdkConfiguration, _headers);
+    public CompletableFuture<GetKmsComment2Response> getKmsComment2(@Nonnull GetKmsComment2Request request) {
+        AsyncRequestOperation<GetKmsComment2Request, GetKmsComment2Response> operation
+              = new GetKmsComment2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -222,19 +199,42 @@ public class AsyncComment {
      * 
      * @return The async call builder
      */
-    public GetUcCommentRequestBuilder getUcComment() {
-        return new GetUcCommentRequestBuilder(sdkConfiguration);
+    public GetTaskComment2RequestBuilder getTaskComment2() {
+        return new GetTaskComment2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Retrieve a comment
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<GetUcCommentResponse>} - The async response
+     * @return {@code CompletableFuture<GetTaskComment2Response>} - The async response
      */
-    public CompletableFuture<GetUcCommentResponse> getUcComment(@Nonnull GetUcCommentRequest request) {
-        AsyncRequestOperation<GetUcCommentRequest, GetUcCommentResponse> operation
-              = new GetUcComment.Async(sdkConfiguration, _headers);
+    public CompletableFuture<GetTaskComment2Response> getTaskComment2(@Nonnull GetTaskComment2Request request) {
+        AsyncRequestOperation<GetTaskComment2Request, GetTaskComment2Response> operation
+              = new GetTaskComment2.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * Retrieve a comment
+     * 
+     * @return The async call builder
+     */
+    public GetUcComment2RequestBuilder getUcComment2() {
+        return new GetUcComment2RequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Retrieve a comment
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<GetUcComment2Response>} - The async response
+     */
+    public CompletableFuture<GetUcComment2Response> getUcComment2(@Nonnull GetUcComment2Request request) {
+        AsyncRequestOperation<GetUcComment2Request, GetUcComment2Response> operation
+              = new GetUcComment2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -245,42 +245,19 @@ public class AsyncComment {
      * 
      * @return The async call builder
      */
-    public ListKmsCommentsRequestBuilder listKmsComments() {
-        return new ListKmsCommentsRequestBuilder(sdkConfiguration);
+    public ListKmsComments2RequestBuilder listKmsComments2() {
+        return new ListKmsComments2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * List all comments
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<ListKmsCommentsResponse>} - The async response
+     * @return {@code CompletableFuture<ListKmsComments2Response>} - The async response
      */
-    public CompletableFuture<ListKmsCommentsResponse> listKmsComments(@Nonnull ListKmsCommentsRequest request) {
-        AsyncRequestOperation<ListKmsCommentsRequest, ListKmsCommentsResponse> operation
-              = new ListKmsComments.Async(sdkConfiguration, _headers);
-        return operation.doRequest(request)
-            .thenCompose(operation::handleResponse);
-    }
-
-
-    /**
-     * List all comments
-     * 
-     * @return The async call builder
-     */
-    public ListTaskCommentsRequestBuilder listTaskComments() {
-        return new ListTaskCommentsRequestBuilder(sdkConfiguration);
-    }
-
-    /**
-     * List all comments
-     * 
-     * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<ListTaskCommentsResponse>} - The async response
-     */
-    public CompletableFuture<ListTaskCommentsResponse> listTaskComments(@Nonnull ListTaskCommentsRequest request) {
-        AsyncRequestOperation<ListTaskCommentsRequest, ListTaskCommentsResponse> operation
-              = new ListTaskComments.Async(sdkConfiguration, _headers);
+    public CompletableFuture<ListKmsComments2Response> listKmsComments2(@Nonnull ListKmsComments2Request request) {
+        AsyncRequestOperation<ListKmsComments2Request, ListKmsComments2Response> operation
+              = new ListKmsComments2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -291,19 +268,42 @@ public class AsyncComment {
      * 
      * @return The async call builder
      */
-    public ListUcCommentsRequestBuilder listUcComments() {
-        return new ListUcCommentsRequestBuilder(sdkConfiguration);
+    public ListTaskComments2RequestBuilder listTaskComments2() {
+        return new ListTaskComments2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * List all comments
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<ListUcCommentsResponse>} - The async response
+     * @return {@code CompletableFuture<ListTaskComments2Response>} - The async response
      */
-    public CompletableFuture<ListUcCommentsResponse> listUcComments(@Nonnull ListUcCommentsRequest request) {
-        AsyncRequestOperation<ListUcCommentsRequest, ListUcCommentsResponse> operation
-              = new ListUcComments.Async(sdkConfiguration, _headers);
+    public CompletableFuture<ListTaskComments2Response> listTaskComments2(@Nonnull ListTaskComments2Request request) {
+        AsyncRequestOperation<ListTaskComments2Request, ListTaskComments2Response> operation
+              = new ListTaskComments2.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * List all comments
+     * 
+     * @return The async call builder
+     */
+    public ListUcComments2RequestBuilder listUcComments2() {
+        return new ListUcComments2RequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * List all comments
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<ListUcComments2Response>} - The async response
+     */
+    public CompletableFuture<ListUcComments2Response> listUcComments2(@Nonnull ListUcComments2Request request) {
+        AsyncRequestOperation<ListUcComments2Request, ListUcComments2Response> operation
+              = new ListUcComments2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -314,19 +314,19 @@ public class AsyncComment {
      * 
      * @return The async call builder
      */
-    public PatchKmsCommentRequestBuilder patchKmsComment() {
-        return new PatchKmsCommentRequestBuilder(sdkConfiguration);
+    public PatchKmsComment2RequestBuilder patchKmsComment2() {
+        return new PatchKmsComment2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update a comment
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<PatchKmsCommentResponse>} - The async response
+     * @return {@code CompletableFuture<PatchKmsComment2Response>} - The async response
      */
-    public CompletableFuture<PatchKmsCommentResponse> patchKmsComment(@Nonnull PatchKmsCommentRequest request) {
-        AsyncRequestOperation<PatchKmsCommentRequest, PatchKmsCommentResponse> operation
-              = new PatchKmsComment.Async(sdkConfiguration, _headers);
+    public CompletableFuture<PatchKmsComment2Response> patchKmsComment2(@Nonnull PatchKmsComment2Request request) {
+        AsyncRequestOperation<PatchKmsComment2Request, PatchKmsComment2Response> operation
+              = new PatchKmsComment2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -337,19 +337,19 @@ public class AsyncComment {
      * 
      * @return The async call builder
      */
-    public PatchTaskCommentRequestBuilder patchTaskComment() {
-        return new PatchTaskCommentRequestBuilder(sdkConfiguration);
+    public PatchTaskComment2RequestBuilder patchTaskComment2() {
+        return new PatchTaskComment2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update a comment
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<PatchTaskCommentResponse>} - The async response
+     * @return {@code CompletableFuture<PatchTaskComment2Response>} - The async response
      */
-    public CompletableFuture<PatchTaskCommentResponse> patchTaskComment(@Nonnull PatchTaskCommentRequest request) {
-        AsyncRequestOperation<PatchTaskCommentRequest, PatchTaskCommentResponse> operation
-              = new PatchTaskComment.Async(sdkConfiguration, _headers);
+    public CompletableFuture<PatchTaskComment2Response> patchTaskComment2(@Nonnull PatchTaskComment2Request request) {
+        AsyncRequestOperation<PatchTaskComment2Request, PatchTaskComment2Response> operation
+              = new PatchTaskComment2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -360,65 +360,19 @@ public class AsyncComment {
      * 
      * @return The async call builder
      */
-    public PatchUcCommentRequestBuilder patchUcComment() {
-        return new PatchUcCommentRequestBuilder(sdkConfiguration);
+    public PatchUcComment2RequestBuilder patchUcComment2() {
+        return new PatchUcComment2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update a comment
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<PatchUcCommentResponse>} - The async response
+     * @return {@code CompletableFuture<PatchUcComment2Response>} - The async response
      */
-    public CompletableFuture<PatchUcCommentResponse> patchUcComment(@Nonnull PatchUcCommentRequest request) {
-        AsyncRequestOperation<PatchUcCommentRequest, PatchUcCommentResponse> operation
-              = new PatchUcComment.Async(sdkConfiguration, _headers);
-        return operation.doRequest(request)
-            .thenCompose(operation::handleResponse);
-    }
-
-
-    /**
-     * Remove a comment
-     * 
-     * @return The async call builder
-     */
-    public RemoveKmsCommentRequestBuilder removeKmsComment() {
-        return new RemoveKmsCommentRequestBuilder(sdkConfiguration);
-    }
-
-    /**
-     * Remove a comment
-     * 
-     * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<RemoveKmsCommentResponse>} - The async response
-     */
-    public CompletableFuture<RemoveKmsCommentResponse> removeKmsComment(@Nonnull RemoveKmsCommentRequest request) {
-        AsyncRequestOperation<RemoveKmsCommentRequest, RemoveKmsCommentResponse> operation
-              = new RemoveKmsComment.Async(sdkConfiguration, _headers);
-        return operation.doRequest(request)
-            .thenCompose(operation::handleResponse);
-    }
-
-
-    /**
-     * Remove a comment
-     * 
-     * @return The async call builder
-     */
-    public RemoveTaskCommentRequestBuilder removeTaskComment() {
-        return new RemoveTaskCommentRequestBuilder(sdkConfiguration);
-    }
-
-    /**
-     * Remove a comment
-     * 
-     * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<RemoveTaskCommentResponse>} - The async response
-     */
-    public CompletableFuture<RemoveTaskCommentResponse> removeTaskComment(@Nonnull RemoveTaskCommentRequest request) {
-        AsyncRequestOperation<RemoveTaskCommentRequest, RemoveTaskCommentResponse> operation
-              = new RemoveTaskComment.Async(sdkConfiguration, _headers);
+    public CompletableFuture<PatchUcComment2Response> patchUcComment2(@Nonnull PatchUcComment2Request request) {
+        AsyncRequestOperation<PatchUcComment2Request, PatchUcComment2Response> operation
+              = new PatchUcComment2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -429,19 +383,65 @@ public class AsyncComment {
      * 
      * @return The async call builder
      */
-    public RemoveUcCommentRequestBuilder removeUcComment() {
-        return new RemoveUcCommentRequestBuilder(sdkConfiguration);
+    public RemoveKmsComment2RequestBuilder removeKmsComment2() {
+        return new RemoveKmsComment2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Remove a comment
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<RemoveUcCommentResponse>} - The async response
+     * @return {@code CompletableFuture<RemoveKmsComment2Response>} - The async response
      */
-    public CompletableFuture<RemoveUcCommentResponse> removeUcComment(@Nonnull RemoveUcCommentRequest request) {
-        AsyncRequestOperation<RemoveUcCommentRequest, RemoveUcCommentResponse> operation
-              = new RemoveUcComment.Async(sdkConfiguration, _headers);
+    public CompletableFuture<RemoveKmsComment2Response> removeKmsComment2(@Nonnull RemoveKmsComment2Request request) {
+        AsyncRequestOperation<RemoveKmsComment2Request, RemoveKmsComment2Response> operation
+              = new RemoveKmsComment2.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * Remove a comment
+     * 
+     * @return The async call builder
+     */
+    public RemoveTaskComment2RequestBuilder removeTaskComment2() {
+        return new RemoveTaskComment2RequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Remove a comment
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<RemoveTaskComment2Response>} - The async response
+     */
+    public CompletableFuture<RemoveTaskComment2Response> removeTaskComment2(@Nonnull RemoveTaskComment2Request request) {
+        AsyncRequestOperation<RemoveTaskComment2Request, RemoveTaskComment2Response> operation
+              = new RemoveTaskComment2.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * Remove a comment
+     * 
+     * @return The async call builder
+     */
+    public RemoveUcComment2RequestBuilder removeUcComment2() {
+        return new RemoveUcComment2RequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Remove a comment
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<RemoveUcComment2Response>} - The async response
+     */
+    public CompletableFuture<RemoveUcComment2Response> removeUcComment2(@Nonnull RemoveUcComment2Request request) {
+        AsyncRequestOperation<RemoveUcComment2Request, RemoveUcComment2Response> operation
+              = new RemoveUcComment2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -452,19 +452,19 @@ public class AsyncComment {
      * 
      * @return The async call builder
      */
-    public UpdateKmsCommentRequestBuilder updateKmsComment() {
-        return new UpdateKmsCommentRequestBuilder(sdkConfiguration);
+    public UpdateKmsComment2RequestBuilder updateKmsComment2() {
+        return new UpdateKmsComment2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update a comment
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<UpdateKmsCommentResponse>} - The async response
+     * @return {@code CompletableFuture<UpdateKmsComment2Response>} - The async response
      */
-    public CompletableFuture<UpdateKmsCommentResponse> updateKmsComment(@Nonnull UpdateKmsCommentRequest request) {
-        AsyncRequestOperation<UpdateKmsCommentRequest, UpdateKmsCommentResponse> operation
-              = new UpdateKmsComment.Async(sdkConfiguration, _headers);
+    public CompletableFuture<UpdateKmsComment2Response> updateKmsComment2(@Nonnull UpdateKmsComment2Request request) {
+        AsyncRequestOperation<UpdateKmsComment2Request, UpdateKmsComment2Response> operation
+              = new UpdateKmsComment2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -475,19 +475,19 @@ public class AsyncComment {
      * 
      * @return The async call builder
      */
-    public UpdateTaskCommentRequestBuilder updateTaskComment() {
-        return new UpdateTaskCommentRequestBuilder(sdkConfiguration);
+    public UpdateTaskComment2RequestBuilder updateTaskComment2() {
+        return new UpdateTaskComment2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update a comment
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<UpdateTaskCommentResponse>} - The async response
+     * @return {@code CompletableFuture<UpdateTaskComment2Response>} - The async response
      */
-    public CompletableFuture<UpdateTaskCommentResponse> updateTaskComment(@Nonnull UpdateTaskCommentRequest request) {
-        AsyncRequestOperation<UpdateTaskCommentRequest, UpdateTaskCommentResponse> operation
-              = new UpdateTaskComment.Async(sdkConfiguration, _headers);
+    public CompletableFuture<UpdateTaskComment2Response> updateTaskComment2(@Nonnull UpdateTaskComment2Request request) {
+        AsyncRequestOperation<UpdateTaskComment2Request, UpdateTaskComment2Response> operation
+              = new UpdateTaskComment2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -498,19 +498,19 @@ public class AsyncComment {
      * 
      * @return The async call builder
      */
-    public UpdateUcCommentRequestBuilder updateUcComment() {
-        return new UpdateUcCommentRequestBuilder(sdkConfiguration);
+    public UpdateUcComment2RequestBuilder updateUcComment2() {
+        return new UpdateUcComment2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update a comment
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<UpdateUcCommentResponse>} - The async response
+     * @return {@code CompletableFuture<UpdateUcComment2Response>} - The async response
      */
-    public CompletableFuture<UpdateUcCommentResponse> updateUcComment(@Nonnull UpdateUcCommentRequest request) {
-        AsyncRequestOperation<UpdateUcCommentRequest, UpdateUcCommentResponse> operation
-              = new UpdateUcComment.Async(sdkConfiguration, _headers);
+    public CompletableFuture<UpdateUcComment2Response> updateUcComment2(@Nonnull UpdateUcComment2Request request) {
+        AsyncRequestOperation<UpdateUcComment2Request, UpdateUcComment2Response> operation
+              = new UpdateUcComment2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

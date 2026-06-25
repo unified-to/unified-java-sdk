@@ -6,30 +6,30 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
-import to.unified.unified_java_sdk.models.operations.CreateHrisBankaccountRequest;
-import to.unified.unified_java_sdk.models.operations.CreateHrisBankaccountRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.CreateHrisBankaccountResponse;
-import to.unified.unified_java_sdk.models.operations.GetHrisBankaccountRequest;
-import to.unified.unified_java_sdk.models.operations.GetHrisBankaccountRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.GetHrisBankaccountResponse;
-import to.unified.unified_java_sdk.models.operations.ListHrisBankaccountsRequest;
-import to.unified.unified_java_sdk.models.operations.ListHrisBankaccountsRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.ListHrisBankaccountsResponse;
-import to.unified.unified_java_sdk.models.operations.PatchHrisBankaccountRequest;
-import to.unified.unified_java_sdk.models.operations.PatchHrisBankaccountRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.PatchHrisBankaccountResponse;
-import to.unified.unified_java_sdk.models.operations.RemoveHrisBankaccountRequest;
-import to.unified.unified_java_sdk.models.operations.RemoveHrisBankaccountRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.RemoveHrisBankaccountResponse;
-import to.unified.unified_java_sdk.models.operations.UpdateHrisBankaccountRequest;
-import to.unified.unified_java_sdk.models.operations.UpdateHrisBankaccountRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.UpdateHrisBankaccountResponse;
-import to.unified.unified_java_sdk.operations.CreateHrisBankaccount;
-import to.unified.unified_java_sdk.operations.GetHrisBankaccount;
-import to.unified.unified_java_sdk.operations.ListHrisBankaccounts;
-import to.unified.unified_java_sdk.operations.PatchHrisBankaccount;
-import to.unified.unified_java_sdk.operations.RemoveHrisBankaccount;
-import to.unified.unified_java_sdk.operations.UpdateHrisBankaccount;
+import to.unified.unified_java_sdk.models.operations.CreateHrisBankaccount2Request;
+import to.unified.unified_java_sdk.models.operations.CreateHrisBankaccount2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.CreateHrisBankaccount2Response;
+import to.unified.unified_java_sdk.models.operations.GetHrisBankaccount2Request;
+import to.unified.unified_java_sdk.models.operations.GetHrisBankaccount2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetHrisBankaccount2Response;
+import to.unified.unified_java_sdk.models.operations.ListHrisBankaccounts2Request;
+import to.unified.unified_java_sdk.models.operations.ListHrisBankaccounts2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListHrisBankaccounts2Response;
+import to.unified.unified_java_sdk.models.operations.PatchHrisBankaccount2Request;
+import to.unified.unified_java_sdk.models.operations.PatchHrisBankaccount2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.PatchHrisBankaccount2Response;
+import to.unified.unified_java_sdk.models.operations.RemoveHrisBankaccount2Request;
+import to.unified.unified_java_sdk.models.operations.RemoveHrisBankaccount2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.RemoveHrisBankaccount2Response;
+import to.unified.unified_java_sdk.models.operations.UpdateHrisBankaccount2Request;
+import to.unified.unified_java_sdk.models.operations.UpdateHrisBankaccount2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.UpdateHrisBankaccount2Response;
+import to.unified.unified_java_sdk.operations.CreateHrisBankaccount2;
+import to.unified.unified_java_sdk.operations.GetHrisBankaccount2;
+import to.unified.unified_java_sdk.operations.ListHrisBankaccounts2;
+import to.unified.unified_java_sdk.operations.PatchHrisBankaccount2;
+import to.unified.unified_java_sdk.operations.RemoveHrisBankaccount2;
+import to.unified.unified_java_sdk.operations.UpdateHrisBankaccount2;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -57,8 +57,8 @@ public class Bankaccount {
      * 
      * @return The call builder
      */
-    public CreateHrisBankaccountRequestBuilder createHrisBankaccount() {
-        return new CreateHrisBankaccountRequestBuilder(sdkConfiguration);
+    public CreateHrisBankaccount2RequestBuilder createHrisBankaccount2() {
+        return new CreateHrisBankaccount2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -68,9 +68,9 @@ public class Bankaccount {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateHrisBankaccountResponse createHrisBankaccount(@Nonnull CreateHrisBankaccountRequest request) {
-        RequestOperation<CreateHrisBankaccountRequest, CreateHrisBankaccountResponse> operation
-              = new CreateHrisBankaccount.Sync(sdkConfiguration, _headers);
+    public CreateHrisBankaccount2Response createHrisBankaccount2(@Nonnull CreateHrisBankaccount2Request request) {
+        RequestOperation<CreateHrisBankaccount2Request, CreateHrisBankaccount2Response> operation
+              = new CreateHrisBankaccount2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -79,8 +79,8 @@ public class Bankaccount {
      * 
      * @return The call builder
      */
-    public GetHrisBankaccountRequestBuilder getHrisBankaccount() {
-        return new GetHrisBankaccountRequestBuilder(sdkConfiguration);
+    public GetHrisBankaccount2RequestBuilder getHrisBankaccount2() {
+        return new GetHrisBankaccount2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -90,9 +90,9 @@ public class Bankaccount {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetHrisBankaccountResponse getHrisBankaccount(@Nonnull GetHrisBankaccountRequest request) {
-        RequestOperation<GetHrisBankaccountRequest, GetHrisBankaccountResponse> operation
-              = new GetHrisBankaccount.Sync(sdkConfiguration, _headers);
+    public GetHrisBankaccount2Response getHrisBankaccount2(@Nonnull GetHrisBankaccount2Request request) {
+        RequestOperation<GetHrisBankaccount2Request, GetHrisBankaccount2Response> operation
+              = new GetHrisBankaccount2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -101,8 +101,8 @@ public class Bankaccount {
      * 
      * @return The call builder
      */
-    public ListHrisBankaccountsRequestBuilder listHrisBankaccounts() {
-        return new ListHrisBankaccountsRequestBuilder(sdkConfiguration);
+    public ListHrisBankaccounts2RequestBuilder listHrisBankaccounts2() {
+        return new ListHrisBankaccounts2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -112,9 +112,9 @@ public class Bankaccount {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListHrisBankaccountsResponse listHrisBankaccounts(@Nonnull ListHrisBankaccountsRequest request) {
-        RequestOperation<ListHrisBankaccountsRequest, ListHrisBankaccountsResponse> operation
-              = new ListHrisBankaccounts.Sync(sdkConfiguration, _headers);
+    public ListHrisBankaccounts2Response listHrisBankaccounts2(@Nonnull ListHrisBankaccounts2Request request) {
+        RequestOperation<ListHrisBankaccounts2Request, ListHrisBankaccounts2Response> operation
+              = new ListHrisBankaccounts2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -123,8 +123,8 @@ public class Bankaccount {
      * 
      * @return The call builder
      */
-    public PatchHrisBankaccountRequestBuilder patchHrisBankaccount() {
-        return new PatchHrisBankaccountRequestBuilder(sdkConfiguration);
+    public PatchHrisBankaccount2RequestBuilder patchHrisBankaccount2() {
+        return new PatchHrisBankaccount2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -134,9 +134,9 @@ public class Bankaccount {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchHrisBankaccountResponse patchHrisBankaccount(@Nonnull PatchHrisBankaccountRequest request) {
-        RequestOperation<PatchHrisBankaccountRequest, PatchHrisBankaccountResponse> operation
-              = new PatchHrisBankaccount.Sync(sdkConfiguration, _headers);
+    public PatchHrisBankaccount2Response patchHrisBankaccount2(@Nonnull PatchHrisBankaccount2Request request) {
+        RequestOperation<PatchHrisBankaccount2Request, PatchHrisBankaccount2Response> operation
+              = new PatchHrisBankaccount2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -145,8 +145,8 @@ public class Bankaccount {
      * 
      * @return The call builder
      */
-    public RemoveHrisBankaccountRequestBuilder removeHrisBankaccount() {
-        return new RemoveHrisBankaccountRequestBuilder(sdkConfiguration);
+    public RemoveHrisBankaccount2RequestBuilder removeHrisBankaccount2() {
+        return new RemoveHrisBankaccount2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -156,9 +156,9 @@ public class Bankaccount {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveHrisBankaccountResponse removeHrisBankaccount(@Nonnull RemoveHrisBankaccountRequest request) {
-        RequestOperation<RemoveHrisBankaccountRequest, RemoveHrisBankaccountResponse> operation
-              = new RemoveHrisBankaccount.Sync(sdkConfiguration, _headers);
+    public RemoveHrisBankaccount2Response removeHrisBankaccount2(@Nonnull RemoveHrisBankaccount2Request request) {
+        RequestOperation<RemoveHrisBankaccount2Request, RemoveHrisBankaccount2Response> operation
+              = new RemoveHrisBankaccount2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -167,8 +167,8 @@ public class Bankaccount {
      * 
      * @return The call builder
      */
-    public UpdateHrisBankaccountRequestBuilder updateHrisBankaccount() {
-        return new UpdateHrisBankaccountRequestBuilder(sdkConfiguration);
+    public UpdateHrisBankaccount2RequestBuilder updateHrisBankaccount2() {
+        return new UpdateHrisBankaccount2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -178,9 +178,9 @@ public class Bankaccount {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateHrisBankaccountResponse updateHrisBankaccount(@Nonnull UpdateHrisBankaccountRequest request) {
-        RequestOperation<UpdateHrisBankaccountRequest, UpdateHrisBankaccountResponse> operation
-              = new UpdateHrisBankaccount.Sync(sdkConfiguration, _headers);
+    public UpdateHrisBankaccount2Response updateHrisBankaccount2(@Nonnull UpdateHrisBankaccount2Request request) {
+        RequestOperation<UpdateHrisBankaccount2Request, UpdateHrisBankaccount2Response> operation
+              = new UpdateHrisBankaccount2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

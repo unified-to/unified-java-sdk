@@ -1,0 +1,22 @@
+# CreateUcComment2QueryParamFields
+
+## Example Usage
+
+```java
+import to.unified.unified_java_sdk.models.operations.CreateUcComment2QueryParamFields;
+
+CreateUcComment2QueryParamFields value = CreateUcComment2QueryParamFields.ID;
+```
+
+
+## Values
+
+| Name         | Value        |
+| ------------ | ------------ |
+| `ID`         | id           |
+| `CREATED_AT` | created_at   |
+| `UPDATED_AT` | updated_at   |
+| `CONTENT`    | content      |
+| `USER_ID`    | user_id      |
+| `CALL_ID`    | call_id      |
+| `RAW`        | raw          |

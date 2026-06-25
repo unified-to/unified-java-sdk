@@ -7,62 +7,62 @@ import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOper
 
 import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
-import to.unified.unified_java_sdk.models.operations.CreateCommerceLocationRequest;
-import to.unified.unified_java_sdk.models.operations.CreateHrisLocationRequest;
-import to.unified.unified_java_sdk.models.operations.GetClubsLocationRequest;
-import to.unified.unified_java_sdk.models.operations.GetCommerceLocationRequest;
-import to.unified.unified_java_sdk.models.operations.GetHrisLocationRequest;
-import to.unified.unified_java_sdk.models.operations.ListClubsLocationsRequest;
-import to.unified.unified_java_sdk.models.operations.ListCommerceLocationsRequest;
-import to.unified.unified_java_sdk.models.operations.ListHrisLocationsRequest;
-import to.unified.unified_java_sdk.models.operations.PatchCommerceLocationRequest;
-import to.unified.unified_java_sdk.models.operations.PatchHrisLocationRequest;
-import to.unified.unified_java_sdk.models.operations.RemoveCommerceLocationRequest;
-import to.unified.unified_java_sdk.models.operations.RemoveHrisLocationRequest;
-import to.unified.unified_java_sdk.models.operations.UpdateCommerceLocationRequest;
-import to.unified.unified_java_sdk.models.operations.UpdateHrisLocationRequest;
-import to.unified.unified_java_sdk.models.operations.async.CreateCommerceLocationRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.CreateCommerceLocationResponse;
-import to.unified.unified_java_sdk.models.operations.async.CreateHrisLocationRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.CreateHrisLocationResponse;
-import to.unified.unified_java_sdk.models.operations.async.GetClubsLocationRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.GetClubsLocationResponse;
-import to.unified.unified_java_sdk.models.operations.async.GetCommerceLocationRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.GetCommerceLocationResponse;
-import to.unified.unified_java_sdk.models.operations.async.GetHrisLocationRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.GetHrisLocationResponse;
-import to.unified.unified_java_sdk.models.operations.async.ListClubsLocationsRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.ListClubsLocationsResponse;
-import to.unified.unified_java_sdk.models.operations.async.ListCommerceLocationsRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.ListCommerceLocationsResponse;
-import to.unified.unified_java_sdk.models.operations.async.ListHrisLocationsRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.ListHrisLocationsResponse;
-import to.unified.unified_java_sdk.models.operations.async.PatchCommerceLocationRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.PatchCommerceLocationResponse;
-import to.unified.unified_java_sdk.models.operations.async.PatchHrisLocationRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.PatchHrisLocationResponse;
-import to.unified.unified_java_sdk.models.operations.async.RemoveCommerceLocationRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.RemoveCommerceLocationResponse;
-import to.unified.unified_java_sdk.models.operations.async.RemoveHrisLocationRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.RemoveHrisLocationResponse;
-import to.unified.unified_java_sdk.models.operations.async.UpdateCommerceLocationRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.UpdateCommerceLocationResponse;
-import to.unified.unified_java_sdk.models.operations.async.UpdateHrisLocationRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.UpdateHrisLocationResponse;
-import to.unified.unified_java_sdk.operations.CreateCommerceLocation;
-import to.unified.unified_java_sdk.operations.CreateHrisLocation;
-import to.unified.unified_java_sdk.operations.GetClubsLocation;
-import to.unified.unified_java_sdk.operations.GetCommerceLocation;
-import to.unified.unified_java_sdk.operations.GetHrisLocation;
-import to.unified.unified_java_sdk.operations.ListClubsLocations;
-import to.unified.unified_java_sdk.operations.ListCommerceLocations;
-import to.unified.unified_java_sdk.operations.ListHrisLocations;
-import to.unified.unified_java_sdk.operations.PatchCommerceLocation;
-import to.unified.unified_java_sdk.operations.PatchHrisLocation;
-import to.unified.unified_java_sdk.operations.RemoveCommerceLocation;
-import to.unified.unified_java_sdk.operations.RemoveHrisLocation;
-import to.unified.unified_java_sdk.operations.UpdateCommerceLocation;
-import to.unified.unified_java_sdk.operations.UpdateHrisLocation;
+import to.unified.unified_java_sdk.models.operations.CreateCommerceLocation2Request;
+import to.unified.unified_java_sdk.models.operations.CreateHrisLocation2Request;
+import to.unified.unified_java_sdk.models.operations.GetClubsLocation2Request;
+import to.unified.unified_java_sdk.models.operations.GetCommerceLocation2Request;
+import to.unified.unified_java_sdk.models.operations.GetHrisLocation2Request;
+import to.unified.unified_java_sdk.models.operations.ListClubsLocations2Request;
+import to.unified.unified_java_sdk.models.operations.ListCommerceLocations2Request;
+import to.unified.unified_java_sdk.models.operations.ListHrisLocations2Request;
+import to.unified.unified_java_sdk.models.operations.PatchCommerceLocation2Request;
+import to.unified.unified_java_sdk.models.operations.PatchHrisLocation2Request;
+import to.unified.unified_java_sdk.models.operations.RemoveCommerceLocation2Request;
+import to.unified.unified_java_sdk.models.operations.RemoveHrisLocation2Request;
+import to.unified.unified_java_sdk.models.operations.UpdateCommerceLocation2Request;
+import to.unified.unified_java_sdk.models.operations.UpdateHrisLocation2Request;
+import to.unified.unified_java_sdk.models.operations.async.CreateCommerceLocation2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.CreateCommerceLocation2Response;
+import to.unified.unified_java_sdk.models.operations.async.CreateHrisLocation2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.CreateHrisLocation2Response;
+import to.unified.unified_java_sdk.models.operations.async.GetClubsLocation2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetClubsLocation2Response;
+import to.unified.unified_java_sdk.models.operations.async.GetCommerceLocation2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetCommerceLocation2Response;
+import to.unified.unified_java_sdk.models.operations.async.GetHrisLocation2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetHrisLocation2Response;
+import to.unified.unified_java_sdk.models.operations.async.ListClubsLocations2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListClubsLocations2Response;
+import to.unified.unified_java_sdk.models.operations.async.ListCommerceLocations2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListCommerceLocations2Response;
+import to.unified.unified_java_sdk.models.operations.async.ListHrisLocations2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListHrisLocations2Response;
+import to.unified.unified_java_sdk.models.operations.async.PatchCommerceLocation2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.PatchCommerceLocation2Response;
+import to.unified.unified_java_sdk.models.operations.async.PatchHrisLocation2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.PatchHrisLocation2Response;
+import to.unified.unified_java_sdk.models.operations.async.RemoveCommerceLocation2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.RemoveCommerceLocation2Response;
+import to.unified.unified_java_sdk.models.operations.async.RemoveHrisLocation2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.RemoveHrisLocation2Response;
+import to.unified.unified_java_sdk.models.operations.async.UpdateCommerceLocation2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.UpdateCommerceLocation2Response;
+import to.unified.unified_java_sdk.models.operations.async.UpdateHrisLocation2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.UpdateHrisLocation2Response;
+import to.unified.unified_java_sdk.operations.CreateCommerceLocation2;
+import to.unified.unified_java_sdk.operations.CreateHrisLocation2;
+import to.unified.unified_java_sdk.operations.GetClubsLocation2;
+import to.unified.unified_java_sdk.operations.GetCommerceLocation2;
+import to.unified.unified_java_sdk.operations.GetHrisLocation2;
+import to.unified.unified_java_sdk.operations.ListClubsLocations2;
+import to.unified.unified_java_sdk.operations.ListCommerceLocations2;
+import to.unified.unified_java_sdk.operations.ListHrisLocations2;
+import to.unified.unified_java_sdk.operations.PatchCommerceLocation2;
+import to.unified.unified_java_sdk.operations.PatchHrisLocation2;
+import to.unified.unified_java_sdk.operations.RemoveCommerceLocation2;
+import to.unified.unified_java_sdk.operations.RemoveHrisLocation2;
+import to.unified.unified_java_sdk.operations.UpdateCommerceLocation2;
+import to.unified.unified_java_sdk.operations.UpdateHrisLocation2;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -91,19 +91,19 @@ public class AsyncLocation {
      * 
      * @return The async call builder
      */
-    public CreateCommerceLocationRequestBuilder createCommerceLocation() {
-        return new CreateCommerceLocationRequestBuilder(sdkConfiguration);
+    public CreateCommerceLocation2RequestBuilder createCommerceLocation2() {
+        return new CreateCommerceLocation2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Create a location
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<CreateCommerceLocationResponse>} - The async response
+     * @return {@code CompletableFuture<CreateCommerceLocation2Response>} - The async response
      */
-    public CompletableFuture<CreateCommerceLocationResponse> createCommerceLocation(@Nonnull CreateCommerceLocationRequest request) {
-        AsyncRequestOperation<CreateCommerceLocationRequest, CreateCommerceLocationResponse> operation
-              = new CreateCommerceLocation.Async(sdkConfiguration, _headers);
+    public CompletableFuture<CreateCommerceLocation2Response> createCommerceLocation2(@Nonnull CreateCommerceLocation2Request request) {
+        AsyncRequestOperation<CreateCommerceLocation2Request, CreateCommerceLocation2Response> operation
+              = new CreateCommerceLocation2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -114,19 +114,19 @@ public class AsyncLocation {
      * 
      * @return The async call builder
      */
-    public CreateHrisLocationRequestBuilder createHrisLocation() {
-        return new CreateHrisLocationRequestBuilder(sdkConfiguration);
+    public CreateHrisLocation2RequestBuilder createHrisLocation2() {
+        return new CreateHrisLocation2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Create a location
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<CreateHrisLocationResponse>} - The async response
+     * @return {@code CompletableFuture<CreateHrisLocation2Response>} - The async response
      */
-    public CompletableFuture<CreateHrisLocationResponse> createHrisLocation(@Nonnull CreateHrisLocationRequest request) {
-        AsyncRequestOperation<CreateHrisLocationRequest, CreateHrisLocationResponse> operation
-              = new CreateHrisLocation.Async(sdkConfiguration, _headers);
+    public CompletableFuture<CreateHrisLocation2Response> createHrisLocation2(@Nonnull CreateHrisLocation2Request request) {
+        AsyncRequestOperation<CreateHrisLocation2Request, CreateHrisLocation2Response> operation
+              = new CreateHrisLocation2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -137,19 +137,19 @@ public class AsyncLocation {
      * 
      * @return The async call builder
      */
-    public GetClubsLocationRequestBuilder getClubsLocation() {
-        return new GetClubsLocationRequestBuilder(sdkConfiguration);
+    public GetClubsLocation2RequestBuilder getClubsLocation2() {
+        return new GetClubsLocation2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Retrieve a location
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<GetClubsLocationResponse>} - The async response
+     * @return {@code CompletableFuture<GetClubsLocation2Response>} - The async response
      */
-    public CompletableFuture<GetClubsLocationResponse> getClubsLocation(@Nonnull GetClubsLocationRequest request) {
-        AsyncRequestOperation<GetClubsLocationRequest, GetClubsLocationResponse> operation
-              = new GetClubsLocation.Async(sdkConfiguration, _headers);
+    public CompletableFuture<GetClubsLocation2Response> getClubsLocation2(@Nonnull GetClubsLocation2Request request) {
+        AsyncRequestOperation<GetClubsLocation2Request, GetClubsLocation2Response> operation
+              = new GetClubsLocation2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -160,19 +160,19 @@ public class AsyncLocation {
      * 
      * @return The async call builder
      */
-    public GetCommerceLocationRequestBuilder getCommerceLocation() {
-        return new GetCommerceLocationRequestBuilder(sdkConfiguration);
+    public GetCommerceLocation2RequestBuilder getCommerceLocation2() {
+        return new GetCommerceLocation2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Retrieve a location
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<GetCommerceLocationResponse>} - The async response
+     * @return {@code CompletableFuture<GetCommerceLocation2Response>} - The async response
      */
-    public CompletableFuture<GetCommerceLocationResponse> getCommerceLocation(@Nonnull GetCommerceLocationRequest request) {
-        AsyncRequestOperation<GetCommerceLocationRequest, GetCommerceLocationResponse> operation
-              = new GetCommerceLocation.Async(sdkConfiguration, _headers);
+    public CompletableFuture<GetCommerceLocation2Response> getCommerceLocation2(@Nonnull GetCommerceLocation2Request request) {
+        AsyncRequestOperation<GetCommerceLocation2Request, GetCommerceLocation2Response> operation
+              = new GetCommerceLocation2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -183,19 +183,19 @@ public class AsyncLocation {
      * 
      * @return The async call builder
      */
-    public GetHrisLocationRequestBuilder getHrisLocation() {
-        return new GetHrisLocationRequestBuilder(sdkConfiguration);
+    public GetHrisLocation2RequestBuilder getHrisLocation2() {
+        return new GetHrisLocation2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Retrieve a location
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<GetHrisLocationResponse>} - The async response
+     * @return {@code CompletableFuture<GetHrisLocation2Response>} - The async response
      */
-    public CompletableFuture<GetHrisLocationResponse> getHrisLocation(@Nonnull GetHrisLocationRequest request) {
-        AsyncRequestOperation<GetHrisLocationRequest, GetHrisLocationResponse> operation
-              = new GetHrisLocation.Async(sdkConfiguration, _headers);
+    public CompletableFuture<GetHrisLocation2Response> getHrisLocation2(@Nonnull GetHrisLocation2Request request) {
+        AsyncRequestOperation<GetHrisLocation2Request, GetHrisLocation2Response> operation
+              = new GetHrisLocation2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -206,19 +206,19 @@ public class AsyncLocation {
      * 
      * @return The async call builder
      */
-    public ListClubsLocationsRequestBuilder listClubsLocations() {
-        return new ListClubsLocationsRequestBuilder(sdkConfiguration);
+    public ListClubsLocations2RequestBuilder listClubsLocations2() {
+        return new ListClubsLocations2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * List all locations
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<ListClubsLocationsResponse>} - The async response
+     * @return {@code CompletableFuture<ListClubsLocations2Response>} - The async response
      */
-    public CompletableFuture<ListClubsLocationsResponse> listClubsLocations(@Nonnull ListClubsLocationsRequest request) {
-        AsyncRequestOperation<ListClubsLocationsRequest, ListClubsLocationsResponse> operation
-              = new ListClubsLocations.Async(sdkConfiguration, _headers);
+    public CompletableFuture<ListClubsLocations2Response> listClubsLocations2(@Nonnull ListClubsLocations2Request request) {
+        AsyncRequestOperation<ListClubsLocations2Request, ListClubsLocations2Response> operation
+              = new ListClubsLocations2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -229,19 +229,19 @@ public class AsyncLocation {
      * 
      * @return The async call builder
      */
-    public ListCommerceLocationsRequestBuilder listCommerceLocations() {
-        return new ListCommerceLocationsRequestBuilder(sdkConfiguration);
+    public ListCommerceLocations2RequestBuilder listCommerceLocations2() {
+        return new ListCommerceLocations2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * List all locations
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<ListCommerceLocationsResponse>} - The async response
+     * @return {@code CompletableFuture<ListCommerceLocations2Response>} - The async response
      */
-    public CompletableFuture<ListCommerceLocationsResponse> listCommerceLocations(@Nonnull ListCommerceLocationsRequest request) {
-        AsyncRequestOperation<ListCommerceLocationsRequest, ListCommerceLocationsResponse> operation
-              = new ListCommerceLocations.Async(sdkConfiguration, _headers);
+    public CompletableFuture<ListCommerceLocations2Response> listCommerceLocations2(@Nonnull ListCommerceLocations2Request request) {
+        AsyncRequestOperation<ListCommerceLocations2Request, ListCommerceLocations2Response> operation
+              = new ListCommerceLocations2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -252,19 +252,19 @@ public class AsyncLocation {
      * 
      * @return The async call builder
      */
-    public ListHrisLocationsRequestBuilder listHrisLocations() {
-        return new ListHrisLocationsRequestBuilder(sdkConfiguration);
+    public ListHrisLocations2RequestBuilder listHrisLocations2() {
+        return new ListHrisLocations2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * List all locations
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<ListHrisLocationsResponse>} - The async response
+     * @return {@code CompletableFuture<ListHrisLocations2Response>} - The async response
      */
-    public CompletableFuture<ListHrisLocationsResponse> listHrisLocations(@Nonnull ListHrisLocationsRequest request) {
-        AsyncRequestOperation<ListHrisLocationsRequest, ListHrisLocationsResponse> operation
-              = new ListHrisLocations.Async(sdkConfiguration, _headers);
+    public CompletableFuture<ListHrisLocations2Response> listHrisLocations2(@Nonnull ListHrisLocations2Request request) {
+        AsyncRequestOperation<ListHrisLocations2Request, ListHrisLocations2Response> operation
+              = new ListHrisLocations2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -275,19 +275,19 @@ public class AsyncLocation {
      * 
      * @return The async call builder
      */
-    public PatchCommerceLocationRequestBuilder patchCommerceLocation() {
-        return new PatchCommerceLocationRequestBuilder(sdkConfiguration);
+    public PatchCommerceLocation2RequestBuilder patchCommerceLocation2() {
+        return new PatchCommerceLocation2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update a location
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<PatchCommerceLocationResponse>} - The async response
+     * @return {@code CompletableFuture<PatchCommerceLocation2Response>} - The async response
      */
-    public CompletableFuture<PatchCommerceLocationResponse> patchCommerceLocation(@Nonnull PatchCommerceLocationRequest request) {
-        AsyncRequestOperation<PatchCommerceLocationRequest, PatchCommerceLocationResponse> operation
-              = new PatchCommerceLocation.Async(sdkConfiguration, _headers);
+    public CompletableFuture<PatchCommerceLocation2Response> patchCommerceLocation2(@Nonnull PatchCommerceLocation2Request request) {
+        AsyncRequestOperation<PatchCommerceLocation2Request, PatchCommerceLocation2Response> operation
+              = new PatchCommerceLocation2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -298,19 +298,19 @@ public class AsyncLocation {
      * 
      * @return The async call builder
      */
-    public PatchHrisLocationRequestBuilder patchHrisLocation() {
-        return new PatchHrisLocationRequestBuilder(sdkConfiguration);
+    public PatchHrisLocation2RequestBuilder patchHrisLocation2() {
+        return new PatchHrisLocation2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update a location
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<PatchHrisLocationResponse>} - The async response
+     * @return {@code CompletableFuture<PatchHrisLocation2Response>} - The async response
      */
-    public CompletableFuture<PatchHrisLocationResponse> patchHrisLocation(@Nonnull PatchHrisLocationRequest request) {
-        AsyncRequestOperation<PatchHrisLocationRequest, PatchHrisLocationResponse> operation
-              = new PatchHrisLocation.Async(sdkConfiguration, _headers);
+    public CompletableFuture<PatchHrisLocation2Response> patchHrisLocation2(@Nonnull PatchHrisLocation2Request request) {
+        AsyncRequestOperation<PatchHrisLocation2Request, PatchHrisLocation2Response> operation
+              = new PatchHrisLocation2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -321,19 +321,19 @@ public class AsyncLocation {
      * 
      * @return The async call builder
      */
-    public RemoveCommerceLocationRequestBuilder removeCommerceLocation() {
-        return new RemoveCommerceLocationRequestBuilder(sdkConfiguration);
+    public RemoveCommerceLocation2RequestBuilder removeCommerceLocation2() {
+        return new RemoveCommerceLocation2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Remove a location
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<RemoveCommerceLocationResponse>} - The async response
+     * @return {@code CompletableFuture<RemoveCommerceLocation2Response>} - The async response
      */
-    public CompletableFuture<RemoveCommerceLocationResponse> removeCommerceLocation(@Nonnull RemoveCommerceLocationRequest request) {
-        AsyncRequestOperation<RemoveCommerceLocationRequest, RemoveCommerceLocationResponse> operation
-              = new RemoveCommerceLocation.Async(sdkConfiguration, _headers);
+    public CompletableFuture<RemoveCommerceLocation2Response> removeCommerceLocation2(@Nonnull RemoveCommerceLocation2Request request) {
+        AsyncRequestOperation<RemoveCommerceLocation2Request, RemoveCommerceLocation2Response> operation
+              = new RemoveCommerceLocation2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -344,19 +344,19 @@ public class AsyncLocation {
      * 
      * @return The async call builder
      */
-    public RemoveHrisLocationRequestBuilder removeHrisLocation() {
-        return new RemoveHrisLocationRequestBuilder(sdkConfiguration);
+    public RemoveHrisLocation2RequestBuilder removeHrisLocation2() {
+        return new RemoveHrisLocation2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Remove a location
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<RemoveHrisLocationResponse>} - The async response
+     * @return {@code CompletableFuture<RemoveHrisLocation2Response>} - The async response
      */
-    public CompletableFuture<RemoveHrisLocationResponse> removeHrisLocation(@Nonnull RemoveHrisLocationRequest request) {
-        AsyncRequestOperation<RemoveHrisLocationRequest, RemoveHrisLocationResponse> operation
-              = new RemoveHrisLocation.Async(sdkConfiguration, _headers);
+    public CompletableFuture<RemoveHrisLocation2Response> removeHrisLocation2(@Nonnull RemoveHrisLocation2Request request) {
+        AsyncRequestOperation<RemoveHrisLocation2Request, RemoveHrisLocation2Response> operation
+              = new RemoveHrisLocation2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -367,19 +367,19 @@ public class AsyncLocation {
      * 
      * @return The async call builder
      */
-    public UpdateCommerceLocationRequestBuilder updateCommerceLocation() {
-        return new UpdateCommerceLocationRequestBuilder(sdkConfiguration);
+    public UpdateCommerceLocation2RequestBuilder updateCommerceLocation2() {
+        return new UpdateCommerceLocation2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update a location
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<UpdateCommerceLocationResponse>} - The async response
+     * @return {@code CompletableFuture<UpdateCommerceLocation2Response>} - The async response
      */
-    public CompletableFuture<UpdateCommerceLocationResponse> updateCommerceLocation(@Nonnull UpdateCommerceLocationRequest request) {
-        AsyncRequestOperation<UpdateCommerceLocationRequest, UpdateCommerceLocationResponse> operation
-              = new UpdateCommerceLocation.Async(sdkConfiguration, _headers);
+    public CompletableFuture<UpdateCommerceLocation2Response> updateCommerceLocation2(@Nonnull UpdateCommerceLocation2Request request) {
+        AsyncRequestOperation<UpdateCommerceLocation2Request, UpdateCommerceLocation2Response> operation
+              = new UpdateCommerceLocation2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -390,19 +390,19 @@ public class AsyncLocation {
      * 
      * @return The async call builder
      */
-    public UpdateHrisLocationRequestBuilder updateHrisLocation() {
-        return new UpdateHrisLocationRequestBuilder(sdkConfiguration);
+    public UpdateHrisLocation2RequestBuilder updateHrisLocation2() {
+        return new UpdateHrisLocation2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update a location
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<UpdateHrisLocationResponse>} - The async response
+     * @return {@code CompletableFuture<UpdateHrisLocation2Response>} - The async response
      */
-    public CompletableFuture<UpdateHrisLocationResponse> updateHrisLocation(@Nonnull UpdateHrisLocationRequest request) {
-        AsyncRequestOperation<UpdateHrisLocationRequest, UpdateHrisLocationResponse> operation
-              = new UpdateHrisLocation.Async(sdkConfiguration, _headers);
+    public CompletableFuture<UpdateHrisLocation2Response> updateHrisLocation2(@Nonnull UpdateHrisLocation2Request request) {
+        AsyncRequestOperation<UpdateHrisLocation2Request, UpdateHrisLocation2Response> operation
+              = new UpdateHrisLocation2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

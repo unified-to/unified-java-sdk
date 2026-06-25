@@ -6,54 +6,54 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
-import to.unified.unified_java_sdk.models.operations.CreateAccountingCategoryRequest;
-import to.unified.unified_java_sdk.models.operations.CreateAccountingCategoryRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.CreateAccountingCategoryResponse;
-import to.unified.unified_java_sdk.models.operations.CreateTicketingCategoryRequest;
-import to.unified.unified_java_sdk.models.operations.CreateTicketingCategoryRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.CreateTicketingCategoryResponse;
-import to.unified.unified_java_sdk.models.operations.GetAccountingCategoryRequest;
-import to.unified.unified_java_sdk.models.operations.GetAccountingCategoryRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.GetAccountingCategoryResponse;
-import to.unified.unified_java_sdk.models.operations.GetTicketingCategoryRequest;
-import to.unified.unified_java_sdk.models.operations.GetTicketingCategoryRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.GetTicketingCategoryResponse;
-import to.unified.unified_java_sdk.models.operations.ListAccountingCategoriesRequest;
-import to.unified.unified_java_sdk.models.operations.ListAccountingCategoriesRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.ListAccountingCategoriesResponse;
-import to.unified.unified_java_sdk.models.operations.ListTicketingCategoriesRequest;
-import to.unified.unified_java_sdk.models.operations.ListTicketingCategoriesRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.ListTicketingCategoriesResponse;
-import to.unified.unified_java_sdk.models.operations.PatchAccountingCategoryRequest;
-import to.unified.unified_java_sdk.models.operations.PatchAccountingCategoryRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.PatchAccountingCategoryResponse;
-import to.unified.unified_java_sdk.models.operations.PatchTicketingCategoryRequest;
-import to.unified.unified_java_sdk.models.operations.PatchTicketingCategoryRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.PatchTicketingCategoryResponse;
-import to.unified.unified_java_sdk.models.operations.RemoveAccountingCategoryRequest;
-import to.unified.unified_java_sdk.models.operations.RemoveAccountingCategoryRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.RemoveAccountingCategoryResponse;
-import to.unified.unified_java_sdk.models.operations.RemoveTicketingCategoryRequest;
-import to.unified.unified_java_sdk.models.operations.RemoveTicketingCategoryRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.RemoveTicketingCategoryResponse;
-import to.unified.unified_java_sdk.models.operations.UpdateAccountingCategoryRequest;
-import to.unified.unified_java_sdk.models.operations.UpdateAccountingCategoryRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.UpdateAccountingCategoryResponse;
-import to.unified.unified_java_sdk.models.operations.UpdateTicketingCategoryRequest;
-import to.unified.unified_java_sdk.models.operations.UpdateTicketingCategoryRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.UpdateTicketingCategoryResponse;
-import to.unified.unified_java_sdk.operations.CreateAccountingCategory;
-import to.unified.unified_java_sdk.operations.CreateTicketingCategory;
-import to.unified.unified_java_sdk.operations.GetAccountingCategory;
-import to.unified.unified_java_sdk.operations.GetTicketingCategory;
-import to.unified.unified_java_sdk.operations.ListAccountingCategories;
-import to.unified.unified_java_sdk.operations.ListTicketingCategories;
-import to.unified.unified_java_sdk.operations.PatchAccountingCategory;
-import to.unified.unified_java_sdk.operations.PatchTicketingCategory;
-import to.unified.unified_java_sdk.operations.RemoveAccountingCategory;
-import to.unified.unified_java_sdk.operations.RemoveTicketingCategory;
-import to.unified.unified_java_sdk.operations.UpdateAccountingCategory;
-import to.unified.unified_java_sdk.operations.UpdateTicketingCategory;
+import to.unified.unified_java_sdk.models.operations.CreateAccountingCategory2Request;
+import to.unified.unified_java_sdk.models.operations.CreateAccountingCategory2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.CreateAccountingCategory2Response;
+import to.unified.unified_java_sdk.models.operations.CreateTicketingCategory2Request;
+import to.unified.unified_java_sdk.models.operations.CreateTicketingCategory2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.CreateTicketingCategory2Response;
+import to.unified.unified_java_sdk.models.operations.GetAccountingCategory2Request;
+import to.unified.unified_java_sdk.models.operations.GetAccountingCategory2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetAccountingCategory2Response;
+import to.unified.unified_java_sdk.models.operations.GetTicketingCategory2Request;
+import to.unified.unified_java_sdk.models.operations.GetTicketingCategory2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetTicketingCategory2Response;
+import to.unified.unified_java_sdk.models.operations.ListAccountingCategories2Request;
+import to.unified.unified_java_sdk.models.operations.ListAccountingCategories2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListAccountingCategories2Response;
+import to.unified.unified_java_sdk.models.operations.ListTicketingCategories2Request;
+import to.unified.unified_java_sdk.models.operations.ListTicketingCategories2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListTicketingCategories2Response;
+import to.unified.unified_java_sdk.models.operations.PatchAccountingCategory2Request;
+import to.unified.unified_java_sdk.models.operations.PatchAccountingCategory2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.PatchAccountingCategory2Response;
+import to.unified.unified_java_sdk.models.operations.PatchTicketingCategory2Request;
+import to.unified.unified_java_sdk.models.operations.PatchTicketingCategory2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.PatchTicketingCategory2Response;
+import to.unified.unified_java_sdk.models.operations.RemoveAccountingCategory2Request;
+import to.unified.unified_java_sdk.models.operations.RemoveAccountingCategory2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.RemoveAccountingCategory2Response;
+import to.unified.unified_java_sdk.models.operations.RemoveTicketingCategory2Request;
+import to.unified.unified_java_sdk.models.operations.RemoveTicketingCategory2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.RemoveTicketingCategory2Response;
+import to.unified.unified_java_sdk.models.operations.UpdateAccountingCategory2Request;
+import to.unified.unified_java_sdk.models.operations.UpdateAccountingCategory2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.UpdateAccountingCategory2Response;
+import to.unified.unified_java_sdk.models.operations.UpdateTicketingCategory2Request;
+import to.unified.unified_java_sdk.models.operations.UpdateTicketingCategory2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.UpdateTicketingCategory2Response;
+import to.unified.unified_java_sdk.operations.CreateAccountingCategory2;
+import to.unified.unified_java_sdk.operations.CreateTicketingCategory2;
+import to.unified.unified_java_sdk.operations.GetAccountingCategory2;
+import to.unified.unified_java_sdk.operations.GetTicketingCategory2;
+import to.unified.unified_java_sdk.operations.ListAccountingCategories2;
+import to.unified.unified_java_sdk.operations.ListTicketingCategories2;
+import to.unified.unified_java_sdk.operations.PatchAccountingCategory2;
+import to.unified.unified_java_sdk.operations.PatchTicketingCategory2;
+import to.unified.unified_java_sdk.operations.RemoveAccountingCategory2;
+import to.unified.unified_java_sdk.operations.RemoveTicketingCategory2;
+import to.unified.unified_java_sdk.operations.UpdateAccountingCategory2;
+import to.unified.unified_java_sdk.operations.UpdateTicketingCategory2;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -81,8 +81,8 @@ public class Category {
      * 
      * @return The call builder
      */
-    public CreateAccountingCategoryRequestBuilder createAccountingCategory() {
-        return new CreateAccountingCategoryRequestBuilder(sdkConfiguration);
+    public CreateAccountingCategory2RequestBuilder createAccountingCategory2() {
+        return new CreateAccountingCategory2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -92,9 +92,9 @@ public class Category {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateAccountingCategoryResponse createAccountingCategory(@Nonnull CreateAccountingCategoryRequest request) {
-        RequestOperation<CreateAccountingCategoryRequest, CreateAccountingCategoryResponse> operation
-              = new CreateAccountingCategory.Sync(sdkConfiguration, _headers);
+    public CreateAccountingCategory2Response createAccountingCategory2(@Nonnull CreateAccountingCategory2Request request) {
+        RequestOperation<CreateAccountingCategory2Request, CreateAccountingCategory2Response> operation
+              = new CreateAccountingCategory2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -103,8 +103,8 @@ public class Category {
      * 
      * @return The call builder
      */
-    public CreateTicketingCategoryRequestBuilder createTicketingCategory() {
-        return new CreateTicketingCategoryRequestBuilder(sdkConfiguration);
+    public CreateTicketingCategory2RequestBuilder createTicketingCategory2() {
+        return new CreateTicketingCategory2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -114,9 +114,9 @@ public class Category {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateTicketingCategoryResponse createTicketingCategory(@Nonnull CreateTicketingCategoryRequest request) {
-        RequestOperation<CreateTicketingCategoryRequest, CreateTicketingCategoryResponse> operation
-              = new CreateTicketingCategory.Sync(sdkConfiguration, _headers);
+    public CreateTicketingCategory2Response createTicketingCategory2(@Nonnull CreateTicketingCategory2Request request) {
+        RequestOperation<CreateTicketingCategory2Request, CreateTicketingCategory2Response> operation
+              = new CreateTicketingCategory2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -125,30 +125,8 @@ public class Category {
      * 
      * @return The call builder
      */
-    public GetAccountingCategoryRequestBuilder getAccountingCategory() {
-        return new GetAccountingCategoryRequestBuilder(sdkConfiguration);
-    }
-
-    /**
-     * Retrieve a category
-     * 
-     * @param request The request object containing all the parameters for the API call.
-     * @return The response from the API call
-     * @throws RuntimeException subclass if the API call fails
-     */
-    public GetAccountingCategoryResponse getAccountingCategory(@Nonnull GetAccountingCategoryRequest request) {
-        RequestOperation<GetAccountingCategoryRequest, GetAccountingCategoryResponse> operation
-              = new GetAccountingCategory.Sync(sdkConfiguration, _headers);
-        return operation.handleResponse(operation.doRequest(request));
-    }
-
-    /**
-     * Retrieve a category
-     * 
-     * @return The call builder
-     */
-    public GetTicketingCategoryRequestBuilder getTicketingCategory() {
-        return new GetTicketingCategoryRequestBuilder(sdkConfiguration);
+    public GetAccountingCategory2RequestBuilder getAccountingCategory2() {
+        return new GetAccountingCategory2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -158,9 +136,31 @@ public class Category {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetTicketingCategoryResponse getTicketingCategory(@Nonnull GetTicketingCategoryRequest request) {
-        RequestOperation<GetTicketingCategoryRequest, GetTicketingCategoryResponse> operation
-              = new GetTicketingCategory.Sync(sdkConfiguration, _headers);
+    public GetAccountingCategory2Response getAccountingCategory2(@Nonnull GetAccountingCategory2Request request) {
+        RequestOperation<GetAccountingCategory2Request, GetAccountingCategory2Response> operation
+              = new GetAccountingCategory2.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Retrieve a category
+     * 
+     * @return The call builder
+     */
+    public GetTicketingCategory2RequestBuilder getTicketingCategory2() {
+        return new GetTicketingCategory2RequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Retrieve a category
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetTicketingCategory2Response getTicketingCategory2(@Nonnull GetTicketingCategory2Request request) {
+        RequestOperation<GetTicketingCategory2Request, GetTicketingCategory2Response> operation
+              = new GetTicketingCategory2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -169,8 +169,8 @@ public class Category {
      * 
      * @return The call builder
      */
-    public ListAccountingCategoriesRequestBuilder listAccountingCategories() {
-        return new ListAccountingCategoriesRequestBuilder(sdkConfiguration);
+    public ListAccountingCategories2RequestBuilder listAccountingCategories2() {
+        return new ListAccountingCategories2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -180,9 +180,9 @@ public class Category {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListAccountingCategoriesResponse listAccountingCategories(@Nonnull ListAccountingCategoriesRequest request) {
-        RequestOperation<ListAccountingCategoriesRequest, ListAccountingCategoriesResponse> operation
-              = new ListAccountingCategories.Sync(sdkConfiguration, _headers);
+    public ListAccountingCategories2Response listAccountingCategories2(@Nonnull ListAccountingCategories2Request request) {
+        RequestOperation<ListAccountingCategories2Request, ListAccountingCategories2Response> operation
+              = new ListAccountingCategories2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -191,8 +191,8 @@ public class Category {
      * 
      * @return The call builder
      */
-    public ListTicketingCategoriesRequestBuilder listTicketingCategories() {
-        return new ListTicketingCategoriesRequestBuilder(sdkConfiguration);
+    public ListTicketingCategories2RequestBuilder listTicketingCategories2() {
+        return new ListTicketingCategories2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -202,9 +202,9 @@ public class Category {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListTicketingCategoriesResponse listTicketingCategories(@Nonnull ListTicketingCategoriesRequest request) {
-        RequestOperation<ListTicketingCategoriesRequest, ListTicketingCategoriesResponse> operation
-              = new ListTicketingCategories.Sync(sdkConfiguration, _headers);
+    public ListTicketingCategories2Response listTicketingCategories2(@Nonnull ListTicketingCategories2Request request) {
+        RequestOperation<ListTicketingCategories2Request, ListTicketingCategories2Response> operation
+              = new ListTicketingCategories2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -213,30 +213,8 @@ public class Category {
      * 
      * @return The call builder
      */
-    public PatchAccountingCategoryRequestBuilder patchAccountingCategory() {
-        return new PatchAccountingCategoryRequestBuilder(sdkConfiguration);
-    }
-
-    /**
-     * Update a category
-     * 
-     * @param request The request object containing all the parameters for the API call.
-     * @return The response from the API call
-     * @throws RuntimeException subclass if the API call fails
-     */
-    public PatchAccountingCategoryResponse patchAccountingCategory(@Nonnull PatchAccountingCategoryRequest request) {
-        RequestOperation<PatchAccountingCategoryRequest, PatchAccountingCategoryResponse> operation
-              = new PatchAccountingCategory.Sync(sdkConfiguration, _headers);
-        return operation.handleResponse(operation.doRequest(request));
-    }
-
-    /**
-     * Update a category
-     * 
-     * @return The call builder
-     */
-    public PatchTicketingCategoryRequestBuilder patchTicketingCategory() {
-        return new PatchTicketingCategoryRequestBuilder(sdkConfiguration);
+    public PatchAccountingCategory2RequestBuilder patchAccountingCategory2() {
+        return new PatchAccountingCategory2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -246,31 +224,31 @@ public class Category {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchTicketingCategoryResponse patchTicketingCategory(@Nonnull PatchTicketingCategoryRequest request) {
-        RequestOperation<PatchTicketingCategoryRequest, PatchTicketingCategoryResponse> operation
-              = new PatchTicketingCategory.Sync(sdkConfiguration, _headers);
+    public PatchAccountingCategory2Response patchAccountingCategory2(@Nonnull PatchAccountingCategory2Request request) {
+        RequestOperation<PatchAccountingCategory2Request, PatchAccountingCategory2Response> operation
+              = new PatchAccountingCategory2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
     /**
-     * Remove a category
+     * Update a category
      * 
      * @return The call builder
      */
-    public RemoveAccountingCategoryRequestBuilder removeAccountingCategory() {
-        return new RemoveAccountingCategoryRequestBuilder(sdkConfiguration);
+    public PatchTicketingCategory2RequestBuilder patchTicketingCategory2() {
+        return new PatchTicketingCategory2RequestBuilder(sdkConfiguration);
     }
 
     /**
-     * Remove a category
+     * Update a category
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveAccountingCategoryResponse removeAccountingCategory(@Nonnull RemoveAccountingCategoryRequest request) {
-        RequestOperation<RemoveAccountingCategoryRequest, RemoveAccountingCategoryResponse> operation
-              = new RemoveAccountingCategory.Sync(sdkConfiguration, _headers);
+    public PatchTicketingCategory2Response patchTicketingCategory2(@Nonnull PatchTicketingCategory2Request request) {
+        RequestOperation<PatchTicketingCategory2Request, PatchTicketingCategory2Response> operation
+              = new PatchTicketingCategory2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -279,8 +257,8 @@ public class Category {
      * 
      * @return The call builder
      */
-    public RemoveTicketingCategoryRequestBuilder removeTicketingCategory() {
-        return new RemoveTicketingCategoryRequestBuilder(sdkConfiguration);
+    public RemoveAccountingCategory2RequestBuilder removeAccountingCategory2() {
+        return new RemoveAccountingCategory2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -290,9 +268,31 @@ public class Category {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveTicketingCategoryResponse removeTicketingCategory(@Nonnull RemoveTicketingCategoryRequest request) {
-        RequestOperation<RemoveTicketingCategoryRequest, RemoveTicketingCategoryResponse> operation
-              = new RemoveTicketingCategory.Sync(sdkConfiguration, _headers);
+    public RemoveAccountingCategory2Response removeAccountingCategory2(@Nonnull RemoveAccountingCategory2Request request) {
+        RequestOperation<RemoveAccountingCategory2Request, RemoveAccountingCategory2Response> operation
+              = new RemoveAccountingCategory2.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Remove a category
+     * 
+     * @return The call builder
+     */
+    public RemoveTicketingCategory2RequestBuilder removeTicketingCategory2() {
+        return new RemoveTicketingCategory2RequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Remove a category
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveTicketingCategory2Response removeTicketingCategory2(@Nonnull RemoveTicketingCategory2Request request) {
+        RequestOperation<RemoveTicketingCategory2Request, RemoveTicketingCategory2Response> operation
+              = new RemoveTicketingCategory2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -301,8 +301,8 @@ public class Category {
      * 
      * @return The call builder
      */
-    public UpdateAccountingCategoryRequestBuilder updateAccountingCategory() {
-        return new UpdateAccountingCategoryRequestBuilder(sdkConfiguration);
+    public UpdateAccountingCategory2RequestBuilder updateAccountingCategory2() {
+        return new UpdateAccountingCategory2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -312,9 +312,9 @@ public class Category {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateAccountingCategoryResponse updateAccountingCategory(@Nonnull UpdateAccountingCategoryRequest request) {
-        RequestOperation<UpdateAccountingCategoryRequest, UpdateAccountingCategoryResponse> operation
-              = new UpdateAccountingCategory.Sync(sdkConfiguration, _headers);
+    public UpdateAccountingCategory2Response updateAccountingCategory2(@Nonnull UpdateAccountingCategory2Request request) {
+        RequestOperation<UpdateAccountingCategory2Request, UpdateAccountingCategory2Response> operation
+              = new UpdateAccountingCategory2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -323,8 +323,8 @@ public class Category {
      * 
      * @return The call builder
      */
-    public UpdateTicketingCategoryRequestBuilder updateTicketingCategory() {
-        return new UpdateTicketingCategoryRequestBuilder(sdkConfiguration);
+    public UpdateTicketingCategory2RequestBuilder updateTicketingCategory2() {
+        return new UpdateTicketingCategory2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -334,9 +334,9 @@ public class Category {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateTicketingCategoryResponse updateTicketingCategory(@Nonnull UpdateTicketingCategoryRequest request) {
-        RequestOperation<UpdateTicketingCategoryRequest, UpdateTicketingCategoryResponse> operation
-              = new UpdateTicketingCategory.Sync(sdkConfiguration, _headers);
+    public UpdateTicketingCategory2Response updateTicketingCategory2(@Nonnull UpdateTicketingCategory2Request request) {
+        RequestOperation<UpdateTicketingCategory2Request, UpdateTicketingCategory2Response> operation
+              = new UpdateTicketingCategory2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

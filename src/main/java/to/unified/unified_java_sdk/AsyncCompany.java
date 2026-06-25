@@ -7,82 +7,82 @@ import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOper
 
 import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
-import to.unified.unified_java_sdk.models.operations.CreateAtsCompanyRequest;
-import to.unified.unified_java_sdk.models.operations.CreateCrmCompanyRequest;
-import to.unified.unified_java_sdk.models.operations.CreateHrisCompanyRequest;
-import to.unified.unified_java_sdk.models.operations.GetAtsCompanyRequest;
-import to.unified.unified_java_sdk.models.operations.GetCrmCompanyRequest;
-import to.unified.unified_java_sdk.models.operations.GetHrisCompanyRequest;
-import to.unified.unified_java_sdk.models.operations.ListAtsCompaniesRequest;
-import to.unified.unified_java_sdk.models.operations.ListCrmCompaniesRequest;
-import to.unified.unified_java_sdk.models.operations.ListEnrichCompaniesRequest;
-import to.unified.unified_java_sdk.models.operations.ListHrisCompaniesRequest;
-import to.unified.unified_java_sdk.models.operations.PatchAtsCompanyRequest;
-import to.unified.unified_java_sdk.models.operations.PatchCrmCompanyRequest;
-import to.unified.unified_java_sdk.models.operations.PatchHrisCompanyRequest;
-import to.unified.unified_java_sdk.models.operations.RemoveAtsCompanyRequest;
-import to.unified.unified_java_sdk.models.operations.RemoveCrmCompanyRequest;
-import to.unified.unified_java_sdk.models.operations.RemoveHrisCompanyRequest;
-import to.unified.unified_java_sdk.models.operations.UpdateAtsCompanyRequest;
-import to.unified.unified_java_sdk.models.operations.UpdateCrmCompanyRequest;
-import to.unified.unified_java_sdk.models.operations.UpdateHrisCompanyRequest;
-import to.unified.unified_java_sdk.models.operations.async.CreateAtsCompanyRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.CreateAtsCompanyResponse;
-import to.unified.unified_java_sdk.models.operations.async.CreateCrmCompanyRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.CreateCrmCompanyResponse;
-import to.unified.unified_java_sdk.models.operations.async.CreateHrisCompanyRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.CreateHrisCompanyResponse;
-import to.unified.unified_java_sdk.models.operations.async.GetAtsCompanyRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.GetAtsCompanyResponse;
-import to.unified.unified_java_sdk.models.operations.async.GetCrmCompanyRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.GetCrmCompanyResponse;
-import to.unified.unified_java_sdk.models.operations.async.GetHrisCompanyRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.GetHrisCompanyResponse;
-import to.unified.unified_java_sdk.models.operations.async.ListAtsCompaniesRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.ListAtsCompaniesResponse;
-import to.unified.unified_java_sdk.models.operations.async.ListCrmCompaniesRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.ListCrmCompaniesResponse;
-import to.unified.unified_java_sdk.models.operations.async.ListEnrichCompaniesRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.ListEnrichCompaniesResponse;
-import to.unified.unified_java_sdk.models.operations.async.ListHrisCompaniesRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.ListHrisCompaniesResponse;
-import to.unified.unified_java_sdk.models.operations.async.PatchAtsCompanyRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.PatchAtsCompanyResponse;
-import to.unified.unified_java_sdk.models.operations.async.PatchCrmCompanyRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.PatchCrmCompanyResponse;
-import to.unified.unified_java_sdk.models.operations.async.PatchHrisCompanyRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.PatchHrisCompanyResponse;
-import to.unified.unified_java_sdk.models.operations.async.RemoveAtsCompanyRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.RemoveAtsCompanyResponse;
-import to.unified.unified_java_sdk.models.operations.async.RemoveCrmCompanyRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.RemoveCrmCompanyResponse;
-import to.unified.unified_java_sdk.models.operations.async.RemoveHrisCompanyRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.RemoveHrisCompanyResponse;
-import to.unified.unified_java_sdk.models.operations.async.UpdateAtsCompanyRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.UpdateAtsCompanyResponse;
-import to.unified.unified_java_sdk.models.operations.async.UpdateCrmCompanyRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.UpdateCrmCompanyResponse;
-import to.unified.unified_java_sdk.models.operations.async.UpdateHrisCompanyRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.UpdateHrisCompanyResponse;
-import to.unified.unified_java_sdk.operations.CreateAtsCompany;
-import to.unified.unified_java_sdk.operations.CreateCrmCompany;
-import to.unified.unified_java_sdk.operations.CreateHrisCompany;
-import to.unified.unified_java_sdk.operations.GetAtsCompany;
-import to.unified.unified_java_sdk.operations.GetCrmCompany;
-import to.unified.unified_java_sdk.operations.GetHrisCompany;
-import to.unified.unified_java_sdk.operations.ListAtsCompanies;
-import to.unified.unified_java_sdk.operations.ListCrmCompanies;
-import to.unified.unified_java_sdk.operations.ListEnrichCompanies;
-import to.unified.unified_java_sdk.operations.ListHrisCompanies;
-import to.unified.unified_java_sdk.operations.PatchAtsCompany;
-import to.unified.unified_java_sdk.operations.PatchCrmCompany;
-import to.unified.unified_java_sdk.operations.PatchHrisCompany;
-import to.unified.unified_java_sdk.operations.RemoveAtsCompany;
-import to.unified.unified_java_sdk.operations.RemoveCrmCompany;
-import to.unified.unified_java_sdk.operations.RemoveHrisCompany;
-import to.unified.unified_java_sdk.operations.UpdateAtsCompany;
-import to.unified.unified_java_sdk.operations.UpdateCrmCompany;
-import to.unified.unified_java_sdk.operations.UpdateHrisCompany;
+import to.unified.unified_java_sdk.models.operations.CreateAtsCompany2Request;
+import to.unified.unified_java_sdk.models.operations.CreateCrmCompany2Request;
+import to.unified.unified_java_sdk.models.operations.CreateHrisCompany2Request;
+import to.unified.unified_java_sdk.models.operations.GetAtsCompany2Request;
+import to.unified.unified_java_sdk.models.operations.GetCrmCompany2Request;
+import to.unified.unified_java_sdk.models.operations.GetHrisCompany2Request;
+import to.unified.unified_java_sdk.models.operations.ListAtsCompanies2Request;
+import to.unified.unified_java_sdk.models.operations.ListCrmCompanies2Request;
+import to.unified.unified_java_sdk.models.operations.ListEnrichCompanies2Request;
+import to.unified.unified_java_sdk.models.operations.ListHrisCompanies2Request;
+import to.unified.unified_java_sdk.models.operations.PatchAtsCompany2Request;
+import to.unified.unified_java_sdk.models.operations.PatchCrmCompany2Request;
+import to.unified.unified_java_sdk.models.operations.PatchHrisCompany2Request;
+import to.unified.unified_java_sdk.models.operations.RemoveAtsCompany2Request;
+import to.unified.unified_java_sdk.models.operations.RemoveCrmCompany2Request;
+import to.unified.unified_java_sdk.models.operations.RemoveHrisCompany2Request;
+import to.unified.unified_java_sdk.models.operations.UpdateAtsCompany2Request;
+import to.unified.unified_java_sdk.models.operations.UpdateCrmCompany2Request;
+import to.unified.unified_java_sdk.models.operations.UpdateHrisCompany2Request;
+import to.unified.unified_java_sdk.models.operations.async.CreateAtsCompany2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.CreateAtsCompany2Response;
+import to.unified.unified_java_sdk.models.operations.async.CreateCrmCompany2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.CreateCrmCompany2Response;
+import to.unified.unified_java_sdk.models.operations.async.CreateHrisCompany2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.CreateHrisCompany2Response;
+import to.unified.unified_java_sdk.models.operations.async.GetAtsCompany2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetAtsCompany2Response;
+import to.unified.unified_java_sdk.models.operations.async.GetCrmCompany2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetCrmCompany2Response;
+import to.unified.unified_java_sdk.models.operations.async.GetHrisCompany2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetHrisCompany2Response;
+import to.unified.unified_java_sdk.models.operations.async.ListAtsCompanies2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListAtsCompanies2Response;
+import to.unified.unified_java_sdk.models.operations.async.ListCrmCompanies2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListCrmCompanies2Response;
+import to.unified.unified_java_sdk.models.operations.async.ListEnrichCompanies2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListEnrichCompanies2Response;
+import to.unified.unified_java_sdk.models.operations.async.ListHrisCompanies2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListHrisCompanies2Response;
+import to.unified.unified_java_sdk.models.operations.async.PatchAtsCompany2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.PatchAtsCompany2Response;
+import to.unified.unified_java_sdk.models.operations.async.PatchCrmCompany2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.PatchCrmCompany2Response;
+import to.unified.unified_java_sdk.models.operations.async.PatchHrisCompany2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.PatchHrisCompany2Response;
+import to.unified.unified_java_sdk.models.operations.async.RemoveAtsCompany2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.RemoveAtsCompany2Response;
+import to.unified.unified_java_sdk.models.operations.async.RemoveCrmCompany2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.RemoveCrmCompany2Response;
+import to.unified.unified_java_sdk.models.operations.async.RemoveHrisCompany2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.RemoveHrisCompany2Response;
+import to.unified.unified_java_sdk.models.operations.async.UpdateAtsCompany2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.UpdateAtsCompany2Response;
+import to.unified.unified_java_sdk.models.operations.async.UpdateCrmCompany2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.UpdateCrmCompany2Response;
+import to.unified.unified_java_sdk.models.operations.async.UpdateHrisCompany2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.UpdateHrisCompany2Response;
+import to.unified.unified_java_sdk.operations.CreateAtsCompany2;
+import to.unified.unified_java_sdk.operations.CreateCrmCompany2;
+import to.unified.unified_java_sdk.operations.CreateHrisCompany2;
+import to.unified.unified_java_sdk.operations.GetAtsCompany2;
+import to.unified.unified_java_sdk.operations.GetCrmCompany2;
+import to.unified.unified_java_sdk.operations.GetHrisCompany2;
+import to.unified.unified_java_sdk.operations.ListAtsCompanies2;
+import to.unified.unified_java_sdk.operations.ListCrmCompanies2;
+import to.unified.unified_java_sdk.operations.ListEnrichCompanies2;
+import to.unified.unified_java_sdk.operations.ListHrisCompanies2;
+import to.unified.unified_java_sdk.operations.PatchAtsCompany2;
+import to.unified.unified_java_sdk.operations.PatchCrmCompany2;
+import to.unified.unified_java_sdk.operations.PatchHrisCompany2;
+import to.unified.unified_java_sdk.operations.RemoveAtsCompany2;
+import to.unified.unified_java_sdk.operations.RemoveCrmCompany2;
+import to.unified.unified_java_sdk.operations.RemoveHrisCompany2;
+import to.unified.unified_java_sdk.operations.UpdateAtsCompany2;
+import to.unified.unified_java_sdk.operations.UpdateCrmCompany2;
+import to.unified.unified_java_sdk.operations.UpdateHrisCompany2;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -111,19 +111,19 @@ public class AsyncCompany {
      * 
      * @return The async call builder
      */
-    public CreateAtsCompanyRequestBuilder createAtsCompany() {
-        return new CreateAtsCompanyRequestBuilder(sdkConfiguration);
+    public CreateAtsCompany2RequestBuilder createAtsCompany2() {
+        return new CreateAtsCompany2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Create a company
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<CreateAtsCompanyResponse>} - The async response
+     * @return {@code CompletableFuture<CreateAtsCompany2Response>} - The async response
      */
-    public CompletableFuture<CreateAtsCompanyResponse> createAtsCompany(@Nonnull CreateAtsCompanyRequest request) {
-        AsyncRequestOperation<CreateAtsCompanyRequest, CreateAtsCompanyResponse> operation
-              = new CreateAtsCompany.Async(sdkConfiguration, _headers);
+    public CompletableFuture<CreateAtsCompany2Response> createAtsCompany2(@Nonnull CreateAtsCompany2Request request) {
+        AsyncRequestOperation<CreateAtsCompany2Request, CreateAtsCompany2Response> operation
+              = new CreateAtsCompany2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -134,19 +134,19 @@ public class AsyncCompany {
      * 
      * @return The async call builder
      */
-    public CreateCrmCompanyRequestBuilder createCrmCompany() {
-        return new CreateCrmCompanyRequestBuilder(sdkConfiguration);
+    public CreateCrmCompany2RequestBuilder createCrmCompany2() {
+        return new CreateCrmCompany2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Create a company
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<CreateCrmCompanyResponse>} - The async response
+     * @return {@code CompletableFuture<CreateCrmCompany2Response>} - The async response
      */
-    public CompletableFuture<CreateCrmCompanyResponse> createCrmCompany(@Nonnull CreateCrmCompanyRequest request) {
-        AsyncRequestOperation<CreateCrmCompanyRequest, CreateCrmCompanyResponse> operation
-              = new CreateCrmCompany.Async(sdkConfiguration, _headers);
+    public CompletableFuture<CreateCrmCompany2Response> createCrmCompany2(@Nonnull CreateCrmCompany2Request request) {
+        AsyncRequestOperation<CreateCrmCompany2Request, CreateCrmCompany2Response> operation
+              = new CreateCrmCompany2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -157,19 +157,19 @@ public class AsyncCompany {
      * 
      * @return The async call builder
      */
-    public CreateHrisCompanyRequestBuilder createHrisCompany() {
-        return new CreateHrisCompanyRequestBuilder(sdkConfiguration);
+    public CreateHrisCompany2RequestBuilder createHrisCompany2() {
+        return new CreateHrisCompany2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Create a company
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<CreateHrisCompanyResponse>} - The async response
+     * @return {@code CompletableFuture<CreateHrisCompany2Response>} - The async response
      */
-    public CompletableFuture<CreateHrisCompanyResponse> createHrisCompany(@Nonnull CreateHrisCompanyRequest request) {
-        AsyncRequestOperation<CreateHrisCompanyRequest, CreateHrisCompanyResponse> operation
-              = new CreateHrisCompany.Async(sdkConfiguration, _headers);
+    public CompletableFuture<CreateHrisCompany2Response> createHrisCompany2(@Nonnull CreateHrisCompany2Request request) {
+        AsyncRequestOperation<CreateHrisCompany2Request, CreateHrisCompany2Response> operation
+              = new CreateHrisCompany2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -180,19 +180,19 @@ public class AsyncCompany {
      * 
      * @return The async call builder
      */
-    public GetAtsCompanyRequestBuilder getAtsCompany() {
-        return new GetAtsCompanyRequestBuilder(sdkConfiguration);
+    public GetAtsCompany2RequestBuilder getAtsCompany2() {
+        return new GetAtsCompany2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Retrieve a company
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<GetAtsCompanyResponse>} - The async response
+     * @return {@code CompletableFuture<GetAtsCompany2Response>} - The async response
      */
-    public CompletableFuture<GetAtsCompanyResponse> getAtsCompany(@Nonnull GetAtsCompanyRequest request) {
-        AsyncRequestOperation<GetAtsCompanyRequest, GetAtsCompanyResponse> operation
-              = new GetAtsCompany.Async(sdkConfiguration, _headers);
+    public CompletableFuture<GetAtsCompany2Response> getAtsCompany2(@Nonnull GetAtsCompany2Request request) {
+        AsyncRequestOperation<GetAtsCompany2Request, GetAtsCompany2Response> operation
+              = new GetAtsCompany2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -203,19 +203,19 @@ public class AsyncCompany {
      * 
      * @return The async call builder
      */
-    public GetCrmCompanyRequestBuilder getCrmCompany() {
-        return new GetCrmCompanyRequestBuilder(sdkConfiguration);
+    public GetCrmCompany2RequestBuilder getCrmCompany2() {
+        return new GetCrmCompany2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Retrieve a company
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<GetCrmCompanyResponse>} - The async response
+     * @return {@code CompletableFuture<GetCrmCompany2Response>} - The async response
      */
-    public CompletableFuture<GetCrmCompanyResponse> getCrmCompany(@Nonnull GetCrmCompanyRequest request) {
-        AsyncRequestOperation<GetCrmCompanyRequest, GetCrmCompanyResponse> operation
-              = new GetCrmCompany.Async(sdkConfiguration, _headers);
+    public CompletableFuture<GetCrmCompany2Response> getCrmCompany2(@Nonnull GetCrmCompany2Request request) {
+        AsyncRequestOperation<GetCrmCompany2Request, GetCrmCompany2Response> operation
+              = new GetCrmCompany2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -226,19 +226,19 @@ public class AsyncCompany {
      * 
      * @return The async call builder
      */
-    public GetHrisCompanyRequestBuilder getHrisCompany() {
-        return new GetHrisCompanyRequestBuilder(sdkConfiguration);
+    public GetHrisCompany2RequestBuilder getHrisCompany2() {
+        return new GetHrisCompany2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Retrieve a company
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<GetHrisCompanyResponse>} - The async response
+     * @return {@code CompletableFuture<GetHrisCompany2Response>} - The async response
      */
-    public CompletableFuture<GetHrisCompanyResponse> getHrisCompany(@Nonnull GetHrisCompanyRequest request) {
-        AsyncRequestOperation<GetHrisCompanyRequest, GetHrisCompanyResponse> operation
-              = new GetHrisCompany.Async(sdkConfiguration, _headers);
+    public CompletableFuture<GetHrisCompany2Response> getHrisCompany2(@Nonnull GetHrisCompany2Request request) {
+        AsyncRequestOperation<GetHrisCompany2Request, GetHrisCompany2Response> operation
+              = new GetHrisCompany2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -249,19 +249,19 @@ public class AsyncCompany {
      * 
      * @return The async call builder
      */
-    public ListAtsCompaniesRequestBuilder listAtsCompanies() {
-        return new ListAtsCompaniesRequestBuilder(sdkConfiguration);
+    public ListAtsCompanies2RequestBuilder listAtsCompanies2() {
+        return new ListAtsCompanies2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * List all companies
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<ListAtsCompaniesResponse>} - The async response
+     * @return {@code CompletableFuture<ListAtsCompanies2Response>} - The async response
      */
-    public CompletableFuture<ListAtsCompaniesResponse> listAtsCompanies(@Nonnull ListAtsCompaniesRequest request) {
-        AsyncRequestOperation<ListAtsCompaniesRequest, ListAtsCompaniesResponse> operation
-              = new ListAtsCompanies.Async(sdkConfiguration, _headers);
+    public CompletableFuture<ListAtsCompanies2Response> listAtsCompanies2(@Nonnull ListAtsCompanies2Request request) {
+        AsyncRequestOperation<ListAtsCompanies2Request, ListAtsCompanies2Response> operation
+              = new ListAtsCompanies2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -272,19 +272,19 @@ public class AsyncCompany {
      * 
      * @return The async call builder
      */
-    public ListCrmCompaniesRequestBuilder listCrmCompanies() {
-        return new ListCrmCompaniesRequestBuilder(sdkConfiguration);
+    public ListCrmCompanies2RequestBuilder listCrmCompanies2() {
+        return new ListCrmCompanies2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * List all companies
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<ListCrmCompaniesResponse>} - The async response
+     * @return {@code CompletableFuture<ListCrmCompanies2Response>} - The async response
      */
-    public CompletableFuture<ListCrmCompaniesResponse> listCrmCompanies(@Nonnull ListCrmCompaniesRequest request) {
-        AsyncRequestOperation<ListCrmCompaniesRequest, ListCrmCompaniesResponse> operation
-              = new ListCrmCompanies.Async(sdkConfiguration, _headers);
+    public CompletableFuture<ListCrmCompanies2Response> listCrmCompanies2(@Nonnull ListCrmCompanies2Request request) {
+        AsyncRequestOperation<ListCrmCompanies2Request, ListCrmCompanies2Response> operation
+              = new ListCrmCompanies2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -295,19 +295,19 @@ public class AsyncCompany {
      * 
      * @return The async call builder
      */
-    public ListEnrichCompaniesRequestBuilder listEnrichCompanies() {
-        return new ListEnrichCompaniesRequestBuilder(sdkConfiguration);
+    public ListEnrichCompanies2RequestBuilder listEnrichCompanies2() {
+        return new ListEnrichCompanies2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Retrieve enrichment information for a company
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<ListEnrichCompaniesResponse>} - The async response
+     * @return {@code CompletableFuture<ListEnrichCompanies2Response>} - The async response
      */
-    public CompletableFuture<ListEnrichCompaniesResponse> listEnrichCompanies(@Nonnull ListEnrichCompaniesRequest request) {
-        AsyncRequestOperation<ListEnrichCompaniesRequest, ListEnrichCompaniesResponse> operation
-              = new ListEnrichCompanies.Async(sdkConfiguration, _headers);
+    public CompletableFuture<ListEnrichCompanies2Response> listEnrichCompanies2(@Nonnull ListEnrichCompanies2Request request) {
+        AsyncRequestOperation<ListEnrichCompanies2Request, ListEnrichCompanies2Response> operation
+              = new ListEnrichCompanies2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -318,19 +318,19 @@ public class AsyncCompany {
      * 
      * @return The async call builder
      */
-    public ListHrisCompaniesRequestBuilder listHrisCompanies() {
-        return new ListHrisCompaniesRequestBuilder(sdkConfiguration);
+    public ListHrisCompanies2RequestBuilder listHrisCompanies2() {
+        return new ListHrisCompanies2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * List all companies
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<ListHrisCompaniesResponse>} - The async response
+     * @return {@code CompletableFuture<ListHrisCompanies2Response>} - The async response
      */
-    public CompletableFuture<ListHrisCompaniesResponse> listHrisCompanies(@Nonnull ListHrisCompaniesRequest request) {
-        AsyncRequestOperation<ListHrisCompaniesRequest, ListHrisCompaniesResponse> operation
-              = new ListHrisCompanies.Async(sdkConfiguration, _headers);
+    public CompletableFuture<ListHrisCompanies2Response> listHrisCompanies2(@Nonnull ListHrisCompanies2Request request) {
+        AsyncRequestOperation<ListHrisCompanies2Request, ListHrisCompanies2Response> operation
+              = new ListHrisCompanies2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -341,19 +341,19 @@ public class AsyncCompany {
      * 
      * @return The async call builder
      */
-    public PatchAtsCompanyRequestBuilder patchAtsCompany() {
-        return new PatchAtsCompanyRequestBuilder(sdkConfiguration);
+    public PatchAtsCompany2RequestBuilder patchAtsCompany2() {
+        return new PatchAtsCompany2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update a company
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<PatchAtsCompanyResponse>} - The async response
+     * @return {@code CompletableFuture<PatchAtsCompany2Response>} - The async response
      */
-    public CompletableFuture<PatchAtsCompanyResponse> patchAtsCompany(@Nonnull PatchAtsCompanyRequest request) {
-        AsyncRequestOperation<PatchAtsCompanyRequest, PatchAtsCompanyResponse> operation
-              = new PatchAtsCompany.Async(sdkConfiguration, _headers);
+    public CompletableFuture<PatchAtsCompany2Response> patchAtsCompany2(@Nonnull PatchAtsCompany2Request request) {
+        AsyncRequestOperation<PatchAtsCompany2Request, PatchAtsCompany2Response> operation
+              = new PatchAtsCompany2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -364,19 +364,19 @@ public class AsyncCompany {
      * 
      * @return The async call builder
      */
-    public PatchCrmCompanyRequestBuilder patchCrmCompany() {
-        return new PatchCrmCompanyRequestBuilder(sdkConfiguration);
+    public PatchCrmCompany2RequestBuilder patchCrmCompany2() {
+        return new PatchCrmCompany2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update a company
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<PatchCrmCompanyResponse>} - The async response
+     * @return {@code CompletableFuture<PatchCrmCompany2Response>} - The async response
      */
-    public CompletableFuture<PatchCrmCompanyResponse> patchCrmCompany(@Nonnull PatchCrmCompanyRequest request) {
-        AsyncRequestOperation<PatchCrmCompanyRequest, PatchCrmCompanyResponse> operation
-              = new PatchCrmCompany.Async(sdkConfiguration, _headers);
+    public CompletableFuture<PatchCrmCompany2Response> patchCrmCompany2(@Nonnull PatchCrmCompany2Request request) {
+        AsyncRequestOperation<PatchCrmCompany2Request, PatchCrmCompany2Response> operation
+              = new PatchCrmCompany2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -387,42 +387,19 @@ public class AsyncCompany {
      * 
      * @return The async call builder
      */
-    public PatchHrisCompanyRequestBuilder patchHrisCompany() {
-        return new PatchHrisCompanyRequestBuilder(sdkConfiguration);
+    public PatchHrisCompany2RequestBuilder patchHrisCompany2() {
+        return new PatchHrisCompany2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update a company
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<PatchHrisCompanyResponse>} - The async response
+     * @return {@code CompletableFuture<PatchHrisCompany2Response>} - The async response
      */
-    public CompletableFuture<PatchHrisCompanyResponse> patchHrisCompany(@Nonnull PatchHrisCompanyRequest request) {
-        AsyncRequestOperation<PatchHrisCompanyRequest, PatchHrisCompanyResponse> operation
-              = new PatchHrisCompany.Async(sdkConfiguration, _headers);
-        return operation.doRequest(request)
-            .thenCompose(operation::handleResponse);
-    }
-
-
-    /**
-     * Remove a company
-     * 
-     * @return The async call builder
-     */
-    public RemoveAtsCompanyRequestBuilder removeAtsCompany() {
-        return new RemoveAtsCompanyRequestBuilder(sdkConfiguration);
-    }
-
-    /**
-     * Remove a company
-     * 
-     * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<RemoveAtsCompanyResponse>} - The async response
-     */
-    public CompletableFuture<RemoveAtsCompanyResponse> removeAtsCompany(@Nonnull RemoveAtsCompanyRequest request) {
-        AsyncRequestOperation<RemoveAtsCompanyRequest, RemoveAtsCompanyResponse> operation
-              = new RemoveAtsCompany.Async(sdkConfiguration, _headers);
+    public CompletableFuture<PatchHrisCompany2Response> patchHrisCompany2(@Nonnull PatchHrisCompany2Request request) {
+        AsyncRequestOperation<PatchHrisCompany2Request, PatchHrisCompany2Response> operation
+              = new PatchHrisCompany2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -433,19 +410,19 @@ public class AsyncCompany {
      * 
      * @return The async call builder
      */
-    public RemoveCrmCompanyRequestBuilder removeCrmCompany() {
-        return new RemoveCrmCompanyRequestBuilder(sdkConfiguration);
+    public RemoveAtsCompany2RequestBuilder removeAtsCompany2() {
+        return new RemoveAtsCompany2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Remove a company
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<RemoveCrmCompanyResponse>} - The async response
+     * @return {@code CompletableFuture<RemoveAtsCompany2Response>} - The async response
      */
-    public CompletableFuture<RemoveCrmCompanyResponse> removeCrmCompany(@Nonnull RemoveCrmCompanyRequest request) {
-        AsyncRequestOperation<RemoveCrmCompanyRequest, RemoveCrmCompanyResponse> operation
-              = new RemoveCrmCompany.Async(sdkConfiguration, _headers);
+    public CompletableFuture<RemoveAtsCompany2Response> removeAtsCompany2(@Nonnull RemoveAtsCompany2Request request) {
+        AsyncRequestOperation<RemoveAtsCompany2Request, RemoveAtsCompany2Response> operation
+              = new RemoveAtsCompany2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -456,19 +433,42 @@ public class AsyncCompany {
      * 
      * @return The async call builder
      */
-    public RemoveHrisCompanyRequestBuilder removeHrisCompany() {
-        return new RemoveHrisCompanyRequestBuilder(sdkConfiguration);
+    public RemoveCrmCompany2RequestBuilder removeCrmCompany2() {
+        return new RemoveCrmCompany2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Remove a company
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<RemoveHrisCompanyResponse>} - The async response
+     * @return {@code CompletableFuture<RemoveCrmCompany2Response>} - The async response
      */
-    public CompletableFuture<RemoveHrisCompanyResponse> removeHrisCompany(@Nonnull RemoveHrisCompanyRequest request) {
-        AsyncRequestOperation<RemoveHrisCompanyRequest, RemoveHrisCompanyResponse> operation
-              = new RemoveHrisCompany.Async(sdkConfiguration, _headers);
+    public CompletableFuture<RemoveCrmCompany2Response> removeCrmCompany2(@Nonnull RemoveCrmCompany2Request request) {
+        AsyncRequestOperation<RemoveCrmCompany2Request, RemoveCrmCompany2Response> operation
+              = new RemoveCrmCompany2.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * Remove a company
+     * 
+     * @return The async call builder
+     */
+    public RemoveHrisCompany2RequestBuilder removeHrisCompany2() {
+        return new RemoveHrisCompany2RequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Remove a company
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<RemoveHrisCompany2Response>} - The async response
+     */
+    public CompletableFuture<RemoveHrisCompany2Response> removeHrisCompany2(@Nonnull RemoveHrisCompany2Request request) {
+        AsyncRequestOperation<RemoveHrisCompany2Request, RemoveHrisCompany2Response> operation
+              = new RemoveHrisCompany2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -479,19 +479,19 @@ public class AsyncCompany {
      * 
      * @return The async call builder
      */
-    public UpdateAtsCompanyRequestBuilder updateAtsCompany() {
-        return new UpdateAtsCompanyRequestBuilder(sdkConfiguration);
+    public UpdateAtsCompany2RequestBuilder updateAtsCompany2() {
+        return new UpdateAtsCompany2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update a company
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<UpdateAtsCompanyResponse>} - The async response
+     * @return {@code CompletableFuture<UpdateAtsCompany2Response>} - The async response
      */
-    public CompletableFuture<UpdateAtsCompanyResponse> updateAtsCompany(@Nonnull UpdateAtsCompanyRequest request) {
-        AsyncRequestOperation<UpdateAtsCompanyRequest, UpdateAtsCompanyResponse> operation
-              = new UpdateAtsCompany.Async(sdkConfiguration, _headers);
+    public CompletableFuture<UpdateAtsCompany2Response> updateAtsCompany2(@Nonnull UpdateAtsCompany2Request request) {
+        AsyncRequestOperation<UpdateAtsCompany2Request, UpdateAtsCompany2Response> operation
+              = new UpdateAtsCompany2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -502,19 +502,19 @@ public class AsyncCompany {
      * 
      * @return The async call builder
      */
-    public UpdateCrmCompanyRequestBuilder updateCrmCompany() {
-        return new UpdateCrmCompanyRequestBuilder(sdkConfiguration);
+    public UpdateCrmCompany2RequestBuilder updateCrmCompany2() {
+        return new UpdateCrmCompany2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update a company
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<UpdateCrmCompanyResponse>} - The async response
+     * @return {@code CompletableFuture<UpdateCrmCompany2Response>} - The async response
      */
-    public CompletableFuture<UpdateCrmCompanyResponse> updateCrmCompany(@Nonnull UpdateCrmCompanyRequest request) {
-        AsyncRequestOperation<UpdateCrmCompanyRequest, UpdateCrmCompanyResponse> operation
-              = new UpdateCrmCompany.Async(sdkConfiguration, _headers);
+    public CompletableFuture<UpdateCrmCompany2Response> updateCrmCompany2(@Nonnull UpdateCrmCompany2Request request) {
+        AsyncRequestOperation<UpdateCrmCompany2Request, UpdateCrmCompany2Response> operation
+              = new UpdateCrmCompany2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -525,19 +525,19 @@ public class AsyncCompany {
      * 
      * @return The async call builder
      */
-    public UpdateHrisCompanyRequestBuilder updateHrisCompany() {
-        return new UpdateHrisCompanyRequestBuilder(sdkConfiguration);
+    public UpdateHrisCompany2RequestBuilder updateHrisCompany2() {
+        return new UpdateHrisCompany2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update a company
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<UpdateHrisCompanyResponse>} - The async response
+     * @return {@code CompletableFuture<UpdateHrisCompany2Response>} - The async response
      */
-    public CompletableFuture<UpdateHrisCompanyResponse> updateHrisCompany(@Nonnull UpdateHrisCompanyRequest request) {
-        AsyncRequestOperation<UpdateHrisCompanyRequest, UpdateHrisCompanyResponse> operation
-              = new UpdateHrisCompany.Async(sdkConfiguration, _headers);
+    public CompletableFuture<UpdateHrisCompany2Response> updateHrisCompany2(@Nonnull UpdateHrisCompany2Request request) {
+        AsyncRequestOperation<UpdateHrisCompany2Request, UpdateHrisCompany2Response> operation
+              = new UpdateHrisCompany2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

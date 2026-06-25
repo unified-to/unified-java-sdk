@@ -7,14 +7,14 @@ import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOper
 
 import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
-import to.unified.unified_java_sdk.models.operations.GetShippingTrackingRequest;
-import to.unified.unified_java_sdk.models.operations.ListShippingTrackingsRequest;
-import to.unified.unified_java_sdk.models.operations.async.GetShippingTrackingRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.GetShippingTrackingResponse;
-import to.unified.unified_java_sdk.models.operations.async.ListShippingTrackingsRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.ListShippingTrackingsResponse;
-import to.unified.unified_java_sdk.operations.GetShippingTracking;
-import to.unified.unified_java_sdk.operations.ListShippingTrackings;
+import to.unified.unified_java_sdk.models.operations.GetShippingTracking2Request;
+import to.unified.unified_java_sdk.models.operations.ListShippingTrackings2Request;
+import to.unified.unified_java_sdk.models.operations.async.GetShippingTracking2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetShippingTracking2Response;
+import to.unified.unified_java_sdk.models.operations.async.ListShippingTrackings2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListShippingTrackings2Response;
+import to.unified.unified_java_sdk.operations.GetShippingTracking2;
+import to.unified.unified_java_sdk.operations.ListShippingTrackings2;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -43,19 +43,19 @@ public class AsyncTracking {
      * 
      * @return The async call builder
      */
-    public GetShippingTrackingRequestBuilder getShippingTracking() {
-        return new GetShippingTrackingRequestBuilder(sdkConfiguration);
+    public GetShippingTracking2RequestBuilder getShippingTracking2() {
+        return new GetShippingTracking2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Retrieve a tracking
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<GetShippingTrackingResponse>} - The async response
+     * @return {@code CompletableFuture<GetShippingTracking2Response>} - The async response
      */
-    public CompletableFuture<GetShippingTrackingResponse> getShippingTracking(@Nonnull GetShippingTrackingRequest request) {
-        AsyncRequestOperation<GetShippingTrackingRequest, GetShippingTrackingResponse> operation
-              = new GetShippingTracking.Async(sdkConfiguration, _headers);
+    public CompletableFuture<GetShippingTracking2Response> getShippingTracking2(@Nonnull GetShippingTracking2Request request) {
+        AsyncRequestOperation<GetShippingTracking2Request, GetShippingTracking2Response> operation
+              = new GetShippingTracking2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -66,19 +66,19 @@ public class AsyncTracking {
      * 
      * @return The async call builder
      */
-    public ListShippingTrackingsRequestBuilder listShippingTrackings() {
-        return new ListShippingTrackingsRequestBuilder(sdkConfiguration);
+    public ListShippingTrackings2RequestBuilder listShippingTrackings2() {
+        return new ListShippingTrackings2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * List all trackings
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<ListShippingTrackingsResponse>} - The async response
+     * @return {@code CompletableFuture<ListShippingTrackings2Response>} - The async response
      */
-    public CompletableFuture<ListShippingTrackingsResponse> listShippingTrackings(@Nonnull ListShippingTrackingsRequest request) {
-        AsyncRequestOperation<ListShippingTrackingsRequest, ListShippingTrackingsResponse> operation
-              = new ListShippingTrackings.Async(sdkConfiguration, _headers);
+    public CompletableFuture<ListShippingTrackings2Response> listShippingTrackings2(@Nonnull ListShippingTrackings2Request request) {
+        AsyncRequestOperation<ListShippingTrackings2Request, ListShippingTrackings2Response> operation
+              = new ListShippingTrackings2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

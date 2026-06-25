@@ -7,14 +7,14 @@ import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOper
 
 import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
-import to.unified.unified_java_sdk.models.operations.GetAccountingProfitlossRequest;
-import to.unified.unified_java_sdk.models.operations.ListAccountingProfitlossesRequest;
-import to.unified.unified_java_sdk.models.operations.async.GetAccountingProfitlossRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.GetAccountingProfitlossResponse;
-import to.unified.unified_java_sdk.models.operations.async.ListAccountingProfitlossesRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.ListAccountingProfitlossesResponse;
-import to.unified.unified_java_sdk.operations.GetAccountingProfitloss;
-import to.unified.unified_java_sdk.operations.ListAccountingProfitlosses;
+import to.unified.unified_java_sdk.models.operations.GetAccountingProfitloss2Request;
+import to.unified.unified_java_sdk.models.operations.ListAccountingProfitlosses2Request;
+import to.unified.unified_java_sdk.models.operations.async.GetAccountingProfitloss2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetAccountingProfitloss2Response;
+import to.unified.unified_java_sdk.models.operations.async.ListAccountingProfitlosses2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListAccountingProfitlosses2Response;
+import to.unified.unified_java_sdk.operations.GetAccountingProfitloss2;
+import to.unified.unified_java_sdk.operations.ListAccountingProfitlosses2;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -43,19 +43,19 @@ public class AsyncProfitloss {
      * 
      * @return The async call builder
      */
-    public GetAccountingProfitlossRequestBuilder getAccountingProfitloss() {
-        return new GetAccountingProfitlossRequestBuilder(sdkConfiguration);
+    public GetAccountingProfitloss2RequestBuilder getAccountingProfitloss2() {
+        return new GetAccountingProfitloss2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Retrieve a profitloss
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<GetAccountingProfitlossResponse>} - The async response
+     * @return {@code CompletableFuture<GetAccountingProfitloss2Response>} - The async response
      */
-    public CompletableFuture<GetAccountingProfitlossResponse> getAccountingProfitloss(@Nonnull GetAccountingProfitlossRequest request) {
-        AsyncRequestOperation<GetAccountingProfitlossRequest, GetAccountingProfitlossResponse> operation
-              = new GetAccountingProfitloss.Async(sdkConfiguration, _headers);
+    public CompletableFuture<GetAccountingProfitloss2Response> getAccountingProfitloss2(@Nonnull GetAccountingProfitloss2Request request) {
+        AsyncRequestOperation<GetAccountingProfitloss2Request, GetAccountingProfitloss2Response> operation
+              = new GetAccountingProfitloss2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -66,19 +66,19 @@ public class AsyncProfitloss {
      * 
      * @return The async call builder
      */
-    public ListAccountingProfitlossesRequestBuilder listAccountingProfitlosses() {
-        return new ListAccountingProfitlossesRequestBuilder(sdkConfiguration);
+    public ListAccountingProfitlosses2RequestBuilder listAccountingProfitlosses2() {
+        return new ListAccountingProfitlosses2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * List all profitlosses
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<ListAccountingProfitlossesResponse>} - The async response
+     * @return {@code CompletableFuture<ListAccountingProfitlosses2Response>} - The async response
      */
-    public CompletableFuture<ListAccountingProfitlossesResponse> listAccountingProfitlosses(@Nonnull ListAccountingProfitlossesRequest request) {
-        AsyncRequestOperation<ListAccountingProfitlossesRequest, ListAccountingProfitlossesResponse> operation
-              = new ListAccountingProfitlosses.Async(sdkConfiguration, _headers);
+    public CompletableFuture<ListAccountingProfitlosses2Response> listAccountingProfitlosses2(@Nonnull ListAccountingProfitlosses2Request request) {
+        AsyncRequestOperation<ListAccountingProfitlosses2Request, ListAccountingProfitlosses2Response> operation
+              = new ListAccountingProfitlosses2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

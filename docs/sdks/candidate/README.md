@@ -4,27 +4,27 @@
 
 ### Available Operations
 
-* [createAtsCandidate](#createatscandidate) - Create a candidate
-* [getAtsCandidate](#getatscandidate) - Retrieve a candidate
-* [listAtsCandidates](#listatscandidates) - List all candidates
-* [patchAtsCandidate](#patchatscandidate) - Update a candidate
-* [removeAtsCandidate](#removeatscandidate) - Remove a candidate
-* [updateAtsCandidate](#updateatscandidate) - Update a candidate
+* [createAtsCandidate2](#createatscandidate2) - Create a candidate
+* [getAtsCandidate2](#getatscandidate2) - Retrieve a candidate
+* [listAtsCandidates2](#listatscandidates2) - List all candidates
+* [patchAtsCandidate2](#patchatscandidate2) - Update a candidate
+* [removeAtsCandidate2](#removeatscandidate2) - Remove a candidate
+* [updateAtsCandidate2](#updateatscandidate2) - Update a candidate
 
-## createAtsCandidate
+## createAtsCandidate2
 
 Create a candidate
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createAtsCandidate" method="post" path="/ats/{connection_id}/candidate" -->
+<!-- UsageSnippet language="java" operationID="createAtsCandidate2" method="post" path="/ats/{connection_id}/candidate" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.CreateAtsCandidateRequest;
-import to.unified.unified_java_sdk.models.operations.CreateAtsCandidateResponse;
+import to.unified.unified_java_sdk.models.operations.CreateAtsCandidate2Request;
+import to.unified.unified_java_sdk.models.operations.CreateAtsCandidate2Response;
 import to.unified.unified_java_sdk.models.shared.AtsCandidate;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -38,13 +38,13 @@ public class Application {
                     .build())
             .build();
 
-        CreateAtsCandidateRequest req = CreateAtsCandidateRequest.builder()
+        CreateAtsCandidate2Request req = CreateAtsCandidate2Request.builder()
                 .atsCandidate(AtsCandidate.builder()
                     .build())
                 .connectionId("<id>")
                 .build();
 
-        CreateAtsCandidateResponse res = sdk.candidate().createAtsCandidate()
+        CreateAtsCandidate2Response res = sdk.candidate().createAtsCandidate2()
                 .request(req)
                 .call();
 
@@ -57,13 +57,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
-| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
-| `request`                                                                         | [CreateAtsCandidateRequest](../../models/operations/CreateAtsCandidateRequest.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
+| Parameter                                                                           | Type                                                                                | Required                                                                            | Description                                                                         |
+| ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| `request`                                                                           | [CreateAtsCandidate2Request](../../models/operations/CreateAtsCandidate2Request.md) | :heavy_check_mark:                                                                  | The request object to use for the request.                                          |
 
 ### Response
 
-**[CreateAtsCandidateResponse](../../models/operations/CreateAtsCandidateResponse.md)**
+**[CreateAtsCandidate2Response](../../models/operations/CreateAtsCandidate2Response.md)**
 
 ### Errors
 
@@ -71,20 +71,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## getAtsCandidate
+## getAtsCandidate2
 
 Retrieve a candidate
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="getAtsCandidate" method="get" path="/ats/{connection_id}/candidate/{id}" -->
+<!-- UsageSnippet language="java" operationID="getAtsCandidate2" method="get" path="/ats/{connection_id}/candidate/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.GetAtsCandidateRequest;
-import to.unified.unified_java_sdk.models.operations.GetAtsCandidateResponse;
+import to.unified.unified_java_sdk.models.operations.GetAtsCandidate2Request;
+import to.unified.unified_java_sdk.models.operations.GetAtsCandidate2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -97,12 +97,12 @@ public class Application {
                     .build())
             .build();
 
-        GetAtsCandidateRequest req = GetAtsCandidateRequest.builder()
+        GetAtsCandidate2Request req = GetAtsCandidate2Request.builder()
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        GetAtsCandidateResponse res = sdk.candidate().getAtsCandidate()
+        GetAtsCandidate2Response res = sdk.candidate().getAtsCandidate2()
                 .request(req)
                 .call();
 
@@ -115,13 +115,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                   | Type                                                                        | Required                                                                    | Description                                                                 |
-| --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
-| `request`                                                                   | [GetAtsCandidateRequest](../../models/operations/GetAtsCandidateRequest.md) | :heavy_check_mark:                                                          | The request object to use for the request.                                  |
+| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
+| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| `request`                                                                     | [GetAtsCandidate2Request](../../models/operations/GetAtsCandidate2Request.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
 
 ### Response
 
-**[GetAtsCandidateResponse](../../models/operations/GetAtsCandidateResponse.md)**
+**[GetAtsCandidate2Response](../../models/operations/GetAtsCandidate2Response.md)**
 
 ### Errors
 
@@ -129,20 +129,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## listAtsCandidates
+## listAtsCandidates2
 
 List all candidates
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="listAtsCandidates" method="get" path="/ats/{connection_id}/candidate" -->
+<!-- UsageSnippet language="java" operationID="listAtsCandidates2" method="get" path="/ats/{connection_id}/candidate" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.ListAtsCandidatesRequest;
-import to.unified.unified_java_sdk.models.operations.ListAtsCandidatesResponse;
+import to.unified.unified_java_sdk.models.operations.ListAtsCandidates2Request;
+import to.unified.unified_java_sdk.models.operations.ListAtsCandidates2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -155,11 +155,11 @@ public class Application {
                     .build())
             .build();
 
-        ListAtsCandidatesRequest req = ListAtsCandidatesRequest.builder()
+        ListAtsCandidates2Request req = ListAtsCandidates2Request.builder()
                 .connectionId("<id>")
                 .build();
 
-        ListAtsCandidatesResponse res = sdk.candidate().listAtsCandidates()
+        ListAtsCandidates2Response res = sdk.candidate().listAtsCandidates2()
                 .request(req)
                 .call();
 
@@ -172,13 +172,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
-| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
-| `request`                                                                       | [ListAtsCandidatesRequest](../../models/operations/ListAtsCandidatesRequest.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
+| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
+| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| `request`                                                                         | [ListAtsCandidates2Request](../../models/operations/ListAtsCandidates2Request.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
 
 ### Response
 
-**[ListAtsCandidatesResponse](../../models/operations/ListAtsCandidatesResponse.md)**
+**[ListAtsCandidates2Response](../../models/operations/ListAtsCandidates2Response.md)**
 
 ### Errors
 
@@ -186,20 +186,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## patchAtsCandidate
+## patchAtsCandidate2
 
 Update a candidate
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchAtsCandidate" method="patch" path="/ats/{connection_id}/candidate/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchAtsCandidate2" method="patch" path="/ats/{connection_id}/candidate/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.PatchAtsCandidateRequest;
-import to.unified.unified_java_sdk.models.operations.PatchAtsCandidateResponse;
+import to.unified.unified_java_sdk.models.operations.PatchAtsCandidate2Request;
+import to.unified.unified_java_sdk.models.operations.PatchAtsCandidate2Response;
 import to.unified.unified_java_sdk.models.shared.AtsCandidate;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -213,14 +213,14 @@ public class Application {
                     .build())
             .build();
 
-        PatchAtsCandidateRequest req = PatchAtsCandidateRequest.builder()
+        PatchAtsCandidate2Request req = PatchAtsCandidate2Request.builder()
                 .atsCandidate(AtsCandidate.builder()
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        PatchAtsCandidateResponse res = sdk.candidate().patchAtsCandidate()
+        PatchAtsCandidate2Response res = sdk.candidate().patchAtsCandidate2()
                 .request(req)
                 .call();
 
@@ -233,13 +233,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
-| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
-| `request`                                                                       | [PatchAtsCandidateRequest](../../models/operations/PatchAtsCandidateRequest.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
+| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
+| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| `request`                                                                         | [PatchAtsCandidate2Request](../../models/operations/PatchAtsCandidate2Request.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
 
 ### Response
 
-**[PatchAtsCandidateResponse](../../models/operations/PatchAtsCandidateResponse.md)**
+**[PatchAtsCandidate2Response](../../models/operations/PatchAtsCandidate2Response.md)**
 
 ### Errors
 
@@ -247,20 +247,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## removeAtsCandidate
+## removeAtsCandidate2
 
 Remove a candidate
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="removeAtsCandidate" method="delete" path="/ats/{connection_id}/candidate/{id}" -->
+<!-- UsageSnippet language="java" operationID="removeAtsCandidate2" method="delete" path="/ats/{connection_id}/candidate/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.RemoveAtsCandidateRequest;
-import to.unified.unified_java_sdk.models.operations.RemoveAtsCandidateResponse;
+import to.unified.unified_java_sdk.models.operations.RemoveAtsCandidate2Request;
+import to.unified.unified_java_sdk.models.operations.RemoveAtsCandidate2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -273,12 +273,12 @@ public class Application {
                     .build())
             .build();
 
-        RemoveAtsCandidateRequest req = RemoveAtsCandidateRequest.builder()
+        RemoveAtsCandidate2Request req = RemoveAtsCandidate2Request.builder()
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        RemoveAtsCandidateResponse res = sdk.candidate().removeAtsCandidate()
+        RemoveAtsCandidate2Response res = sdk.candidate().removeAtsCandidate2()
                 .request(req)
                 .call();
 
@@ -289,13 +289,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
-| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
-| `request`                                                                         | [RemoveAtsCandidateRequest](../../models/operations/RemoveAtsCandidateRequest.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
+| Parameter                                                                           | Type                                                                                | Required                                                                            | Description                                                                         |
+| ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| `request`                                                                           | [RemoveAtsCandidate2Request](../../models/operations/RemoveAtsCandidate2Request.md) | :heavy_check_mark:                                                                  | The request object to use for the request.                                          |
 
 ### Response
 
-**[RemoveAtsCandidateResponse](../../models/operations/RemoveAtsCandidateResponse.md)**
+**[RemoveAtsCandidate2Response](../../models/operations/RemoveAtsCandidate2Response.md)**
 
 ### Errors
 
@@ -303,20 +303,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## updateAtsCandidate
+## updateAtsCandidate2
 
 Update a candidate
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateAtsCandidate" method="put" path="/ats/{connection_id}/candidate/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateAtsCandidate2" method="put" path="/ats/{connection_id}/candidate/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.UpdateAtsCandidateRequest;
-import to.unified.unified_java_sdk.models.operations.UpdateAtsCandidateResponse;
+import to.unified.unified_java_sdk.models.operations.UpdateAtsCandidate2Request;
+import to.unified.unified_java_sdk.models.operations.UpdateAtsCandidate2Response;
 import to.unified.unified_java_sdk.models.shared.AtsCandidate;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -330,14 +330,14 @@ public class Application {
                     .build())
             .build();
 
-        UpdateAtsCandidateRequest req = UpdateAtsCandidateRequest.builder()
+        UpdateAtsCandidate2Request req = UpdateAtsCandidate2Request.builder()
                 .atsCandidate(AtsCandidate.builder()
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        UpdateAtsCandidateResponse res = sdk.candidate().updateAtsCandidate()
+        UpdateAtsCandidate2Response res = sdk.candidate().updateAtsCandidate2()
                 .request(req)
                 .call();
 
@@ -350,13 +350,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
-| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
-| `request`                                                                         | [UpdateAtsCandidateRequest](../../models/operations/UpdateAtsCandidateRequest.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
+| Parameter                                                                           | Type                                                                                | Required                                                                            | Description                                                                         |
+| ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| `request`                                                                           | [UpdateAtsCandidate2Request](../../models/operations/UpdateAtsCandidate2Request.md) | :heavy_check_mark:                                                                  | The request object to use for the request.                                          |
 
 ### Response
 
-**[UpdateAtsCandidateResponse](../../models/operations/UpdateAtsCandidateResponse.md)**
+**[UpdateAtsCandidate2Response](../../models/operations/UpdateAtsCandidate2Response.md)**
 
 ### Errors
 

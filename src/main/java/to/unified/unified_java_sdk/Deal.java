@@ -6,30 +6,30 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
-import to.unified.unified_java_sdk.models.operations.CreateCrmDealRequest;
-import to.unified.unified_java_sdk.models.operations.CreateCrmDealRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.CreateCrmDealResponse;
-import to.unified.unified_java_sdk.models.operations.GetCrmDealRequest;
-import to.unified.unified_java_sdk.models.operations.GetCrmDealRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.GetCrmDealResponse;
-import to.unified.unified_java_sdk.models.operations.ListCrmDealsRequest;
-import to.unified.unified_java_sdk.models.operations.ListCrmDealsRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.ListCrmDealsResponse;
-import to.unified.unified_java_sdk.models.operations.PatchCrmDealRequest;
-import to.unified.unified_java_sdk.models.operations.PatchCrmDealRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.PatchCrmDealResponse;
-import to.unified.unified_java_sdk.models.operations.RemoveCrmDealRequest;
-import to.unified.unified_java_sdk.models.operations.RemoveCrmDealRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.RemoveCrmDealResponse;
-import to.unified.unified_java_sdk.models.operations.UpdateCrmDealRequest;
-import to.unified.unified_java_sdk.models.operations.UpdateCrmDealRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.UpdateCrmDealResponse;
-import to.unified.unified_java_sdk.operations.CreateCrmDeal;
-import to.unified.unified_java_sdk.operations.GetCrmDeal;
-import to.unified.unified_java_sdk.operations.ListCrmDeals;
-import to.unified.unified_java_sdk.operations.PatchCrmDeal;
-import to.unified.unified_java_sdk.operations.RemoveCrmDeal;
-import to.unified.unified_java_sdk.operations.UpdateCrmDeal;
+import to.unified.unified_java_sdk.models.operations.CreateCrmDeal2Request;
+import to.unified.unified_java_sdk.models.operations.CreateCrmDeal2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.CreateCrmDeal2Response;
+import to.unified.unified_java_sdk.models.operations.GetCrmDeal2Request;
+import to.unified.unified_java_sdk.models.operations.GetCrmDeal2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetCrmDeal2Response;
+import to.unified.unified_java_sdk.models.operations.ListCrmDeals2Request;
+import to.unified.unified_java_sdk.models.operations.ListCrmDeals2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListCrmDeals2Response;
+import to.unified.unified_java_sdk.models.operations.PatchCrmDeal2Request;
+import to.unified.unified_java_sdk.models.operations.PatchCrmDeal2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.PatchCrmDeal2Response;
+import to.unified.unified_java_sdk.models.operations.RemoveCrmDeal2Request;
+import to.unified.unified_java_sdk.models.operations.RemoveCrmDeal2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.RemoveCrmDeal2Response;
+import to.unified.unified_java_sdk.models.operations.UpdateCrmDeal2Request;
+import to.unified.unified_java_sdk.models.operations.UpdateCrmDeal2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.UpdateCrmDeal2Response;
+import to.unified.unified_java_sdk.operations.CreateCrmDeal2;
+import to.unified.unified_java_sdk.operations.GetCrmDeal2;
+import to.unified.unified_java_sdk.operations.ListCrmDeals2;
+import to.unified.unified_java_sdk.operations.PatchCrmDeal2;
+import to.unified.unified_java_sdk.operations.RemoveCrmDeal2;
+import to.unified.unified_java_sdk.operations.UpdateCrmDeal2;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -57,8 +57,8 @@ public class Deal {
      * 
      * @return The call builder
      */
-    public CreateCrmDealRequestBuilder createCrmDeal() {
-        return new CreateCrmDealRequestBuilder(sdkConfiguration);
+    public CreateCrmDeal2RequestBuilder createCrmDeal2() {
+        return new CreateCrmDeal2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -68,9 +68,9 @@ public class Deal {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateCrmDealResponse createCrmDeal(@Nonnull CreateCrmDealRequest request) {
-        RequestOperation<CreateCrmDealRequest, CreateCrmDealResponse> operation
-              = new CreateCrmDeal.Sync(sdkConfiguration, _headers);
+    public CreateCrmDeal2Response createCrmDeal2(@Nonnull CreateCrmDeal2Request request) {
+        RequestOperation<CreateCrmDeal2Request, CreateCrmDeal2Response> operation
+              = new CreateCrmDeal2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -79,8 +79,8 @@ public class Deal {
      * 
      * @return The call builder
      */
-    public GetCrmDealRequestBuilder getCrmDeal() {
-        return new GetCrmDealRequestBuilder(sdkConfiguration);
+    public GetCrmDeal2RequestBuilder getCrmDeal2() {
+        return new GetCrmDeal2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -90,9 +90,9 @@ public class Deal {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetCrmDealResponse getCrmDeal(@Nonnull GetCrmDealRequest request) {
-        RequestOperation<GetCrmDealRequest, GetCrmDealResponse> operation
-              = new GetCrmDeal.Sync(sdkConfiguration, _headers);
+    public GetCrmDeal2Response getCrmDeal2(@Nonnull GetCrmDeal2Request request) {
+        RequestOperation<GetCrmDeal2Request, GetCrmDeal2Response> operation
+              = new GetCrmDeal2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -101,8 +101,8 @@ public class Deal {
      * 
      * @return The call builder
      */
-    public ListCrmDealsRequestBuilder listCrmDeals() {
-        return new ListCrmDealsRequestBuilder(sdkConfiguration);
+    public ListCrmDeals2RequestBuilder listCrmDeals2() {
+        return new ListCrmDeals2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -112,9 +112,9 @@ public class Deal {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListCrmDealsResponse listCrmDeals(@Nonnull ListCrmDealsRequest request) {
-        RequestOperation<ListCrmDealsRequest, ListCrmDealsResponse> operation
-              = new ListCrmDeals.Sync(sdkConfiguration, _headers);
+    public ListCrmDeals2Response listCrmDeals2(@Nonnull ListCrmDeals2Request request) {
+        RequestOperation<ListCrmDeals2Request, ListCrmDeals2Response> operation
+              = new ListCrmDeals2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -123,8 +123,8 @@ public class Deal {
      * 
      * @return The call builder
      */
-    public PatchCrmDealRequestBuilder patchCrmDeal() {
-        return new PatchCrmDealRequestBuilder(sdkConfiguration);
+    public PatchCrmDeal2RequestBuilder patchCrmDeal2() {
+        return new PatchCrmDeal2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -134,9 +134,9 @@ public class Deal {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchCrmDealResponse patchCrmDeal(@Nonnull PatchCrmDealRequest request) {
-        RequestOperation<PatchCrmDealRequest, PatchCrmDealResponse> operation
-              = new PatchCrmDeal.Sync(sdkConfiguration, _headers);
+    public PatchCrmDeal2Response patchCrmDeal2(@Nonnull PatchCrmDeal2Request request) {
+        RequestOperation<PatchCrmDeal2Request, PatchCrmDeal2Response> operation
+              = new PatchCrmDeal2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -145,8 +145,8 @@ public class Deal {
      * 
      * @return The call builder
      */
-    public RemoveCrmDealRequestBuilder removeCrmDeal() {
-        return new RemoveCrmDealRequestBuilder(sdkConfiguration);
+    public RemoveCrmDeal2RequestBuilder removeCrmDeal2() {
+        return new RemoveCrmDeal2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -156,9 +156,9 @@ public class Deal {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveCrmDealResponse removeCrmDeal(@Nonnull RemoveCrmDealRequest request) {
-        RequestOperation<RemoveCrmDealRequest, RemoveCrmDealResponse> operation
-              = new RemoveCrmDeal.Sync(sdkConfiguration, _headers);
+    public RemoveCrmDeal2Response removeCrmDeal2(@Nonnull RemoveCrmDeal2Request request) {
+        RequestOperation<RemoveCrmDeal2Request, RemoveCrmDeal2Response> operation
+              = new RemoveCrmDeal2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -167,8 +167,8 @@ public class Deal {
      * 
      * @return The call builder
      */
-    public UpdateCrmDealRequestBuilder updateCrmDeal() {
-        return new UpdateCrmDealRequestBuilder(sdkConfiguration);
+    public UpdateCrmDeal2RequestBuilder updateCrmDeal2() {
+        return new UpdateCrmDeal2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -178,9 +178,9 @@ public class Deal {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateCrmDealResponse updateCrmDeal(@Nonnull UpdateCrmDealRequest request) {
-        RequestOperation<UpdateCrmDealRequest, UpdateCrmDealResponse> operation
-              = new UpdateCrmDeal.Sync(sdkConfiguration, _headers);
+    public UpdateCrmDeal2Response updateCrmDeal2(@Nonnull UpdateCrmDeal2Request request) {
+        RequestOperation<UpdateCrmDeal2Request, UpdateCrmDeal2Response> operation
+              = new UpdateCrmDeal2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

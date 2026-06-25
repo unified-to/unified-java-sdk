@@ -4,35 +4,35 @@
 
 ### Available Operations
 
-* [createSigningDocument](#createsigningdocument) - Create a document
-* [createSigningSignatory](#createsigningsignatory) - Create a signatory
-* [getSigningDocument](#getsigningdocument) - Retrieve a document
-* [getSigningSignatory](#getsigningsignatory) - Retrieve a signatory
-* [getSigningTemplate](#getsigningtemplate) - Retrieve a template
-* [listSigningDocuments](#listsigningdocuments) - List all documents
-* [listSigningSignatories](#listsigningsignatories) - List all signatories
-* [listSigningTemplates](#listsigningtemplates) - List all templates
-* [patchSigningDocument](#patchsigningdocument) - Update a document
-* [patchSigningSignatory](#patchsigningsignatory) - Update a signatory
-* [removeSigningDocument](#removesigningdocument) - Remove a document
-* [removeSigningSignatory](#removesigningsignatory) - Remove a signatory
-* [updateSigningDocument](#updatesigningdocument) - Update a document
-* [updateSigningSignatory](#updatesigningsignatory) - Update a signatory
+* [createSigningDocument2](#createsigningdocument2) - Create a document
+* [createSigningSignatory2](#createsigningsignatory2) - Create a signatory
+* [getSigningDocument2](#getsigningdocument2) - Retrieve a document
+* [getSigningSignatory2](#getsigningsignatory2) - Retrieve a signatory
+* [getSigningTemplate2](#getsigningtemplate2) - Retrieve a template
+* [listSigningDocuments2](#listsigningdocuments2) - List all documents
+* [listSigningSignatories2](#listsigningsignatories2) - List all signatories
+* [listSigningTemplates2](#listsigningtemplates2) - List all templates
+* [patchSigningDocument2](#patchsigningdocument2) - Update a document
+* [patchSigningSignatory2](#patchsigningsignatory2) - Update a signatory
+* [removeSigningDocument2](#removesigningdocument2) - Remove a document
+* [removeSigningSignatory2](#removesigningsignatory2) - Remove a signatory
+* [updateSigningDocument2](#updatesigningdocument2) - Update a document
+* [updateSigningSignatory2](#updatesigningsignatory2) - Update a signatory
 
-## createSigningDocument
+## createSigningDocument2
 
 Create a document
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createSigningDocument" method="post" path="/signing/{connection_id}/document" -->
+<!-- UsageSnippet language="java" operationID="createSigningDocument2" method="post" path="/signing/{connection_id}/document" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.CreateSigningDocumentRequest;
-import to.unified.unified_java_sdk.models.operations.CreateSigningDocumentResponse;
+import to.unified.unified_java_sdk.models.operations.CreateSigningDocument2Request;
+import to.unified.unified_java_sdk.models.operations.CreateSigningDocument2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 import to.unified.unified_java_sdk.models.shared.SigningDocument;
 
@@ -46,13 +46,13 @@ public class Application {
                     .build())
             .build();
 
-        CreateSigningDocumentRequest req = CreateSigningDocumentRequest.builder()
+        CreateSigningDocument2Request req = CreateSigningDocument2Request.builder()
                 .signingDocument(SigningDocument.builder()
                     .build())
                 .connectionId("<id>")
                 .build();
 
-        CreateSigningDocumentResponse res = sdk.signing().createSigningDocument()
+        CreateSigningDocument2Response res = sdk.signing().createSigningDocument2()
                 .request(req)
                 .call();
 
@@ -65,13 +65,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
-| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
-| `request`                                                                               | [CreateSigningDocumentRequest](../../models/operations/CreateSigningDocumentRequest.md) | :heavy_check_mark:                                                                      | The request object to use for the request.                                              |
+| Parameter                                                                                 | Type                                                                                      | Required                                                                                  | Description                                                                               |
+| ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
+| `request`                                                                                 | [CreateSigningDocument2Request](../../models/operations/CreateSigningDocument2Request.md) | :heavy_check_mark:                                                                        | The request object to use for the request.                                                |
 
 ### Response
 
-**[CreateSigningDocumentResponse](../../models/operations/CreateSigningDocumentResponse.md)**
+**[CreateSigningDocument2Response](../../models/operations/CreateSigningDocument2Response.md)**
 
 ### Errors
 
@@ -79,20 +79,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## createSigningSignatory
+## createSigningSignatory2
 
 Create a signatory
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createSigningSignatory" method="post" path="/signing/{connection_id}/signatory" -->
+<!-- UsageSnippet language="java" operationID="createSigningSignatory2" method="post" path="/signing/{connection_id}/signatory" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.CreateSigningSignatoryRequest;
-import to.unified.unified_java_sdk.models.operations.CreateSigningSignatoryResponse;
+import to.unified.unified_java_sdk.models.operations.CreateSigningSignatory2Request;
+import to.unified.unified_java_sdk.models.operations.CreateSigningSignatory2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 import to.unified.unified_java_sdk.models.shared.SigningSignatory;
 
@@ -106,13 +106,13 @@ public class Application {
                     .build())
             .build();
 
-        CreateSigningSignatoryRequest req = CreateSigningSignatoryRequest.builder()
+        CreateSigningSignatory2Request req = CreateSigningSignatory2Request.builder()
                 .signingSignatory(SigningSignatory.builder()
                     .build())
                 .connectionId("<id>")
                 .build();
 
-        CreateSigningSignatoryResponse res = sdk.signing().createSigningSignatory()
+        CreateSigningSignatory2Response res = sdk.signing().createSigningSignatory2()
                 .request(req)
                 .call();
 
@@ -125,13 +125,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                 | Type                                                                                      | Required                                                                                  | Description                                                                               |
-| ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
-| `request`                                                                                 | [CreateSigningSignatoryRequest](../../models/operations/CreateSigningSignatoryRequest.md) | :heavy_check_mark:                                                                        | The request object to use for the request.                                                |
+| Parameter                                                                                   | Type                                                                                        | Required                                                                                    | Description                                                                                 |
+| ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
+| `request`                                                                                   | [CreateSigningSignatory2Request](../../models/operations/CreateSigningSignatory2Request.md) | :heavy_check_mark:                                                                          | The request object to use for the request.                                                  |
 
 ### Response
 
-**[CreateSigningSignatoryResponse](../../models/operations/CreateSigningSignatoryResponse.md)**
+**[CreateSigningSignatory2Response](../../models/operations/CreateSigningSignatory2Response.md)**
 
 ### Errors
 
@@ -139,20 +139,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## getSigningDocument
+## getSigningDocument2
 
 Retrieve a document
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="getSigningDocument" method="get" path="/signing/{connection_id}/document/{id}" -->
+<!-- UsageSnippet language="java" operationID="getSigningDocument2" method="get" path="/signing/{connection_id}/document/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.GetSigningDocumentRequest;
-import to.unified.unified_java_sdk.models.operations.GetSigningDocumentResponse;
+import to.unified.unified_java_sdk.models.operations.GetSigningDocument2Request;
+import to.unified.unified_java_sdk.models.operations.GetSigningDocument2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -165,12 +165,12 @@ public class Application {
                     .build())
             .build();
 
-        GetSigningDocumentRequest req = GetSigningDocumentRequest.builder()
+        GetSigningDocument2Request req = GetSigningDocument2Request.builder()
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        GetSigningDocumentResponse res = sdk.signing().getSigningDocument()
+        GetSigningDocument2Response res = sdk.signing().getSigningDocument2()
                 .request(req)
                 .call();
 
@@ -183,13 +183,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
-| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
-| `request`                                                                         | [GetSigningDocumentRequest](../../models/operations/GetSigningDocumentRequest.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
+| Parameter                                                                           | Type                                                                                | Required                                                                            | Description                                                                         |
+| ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| `request`                                                                           | [GetSigningDocument2Request](../../models/operations/GetSigningDocument2Request.md) | :heavy_check_mark:                                                                  | The request object to use for the request.                                          |
 
 ### Response
 
-**[GetSigningDocumentResponse](../../models/operations/GetSigningDocumentResponse.md)**
+**[GetSigningDocument2Response](../../models/operations/GetSigningDocument2Response.md)**
 
 ### Errors
 
@@ -197,20 +197,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## getSigningSignatory
+## getSigningSignatory2
 
 Retrieve a signatory
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="getSigningSignatory" method="get" path="/signing/{connection_id}/signatory/{id}" -->
+<!-- UsageSnippet language="java" operationID="getSigningSignatory2" method="get" path="/signing/{connection_id}/signatory/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.GetSigningSignatoryRequest;
-import to.unified.unified_java_sdk.models.operations.GetSigningSignatoryResponse;
+import to.unified.unified_java_sdk.models.operations.GetSigningSignatory2Request;
+import to.unified.unified_java_sdk.models.operations.GetSigningSignatory2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -223,12 +223,12 @@ public class Application {
                     .build())
             .build();
 
-        GetSigningSignatoryRequest req = GetSigningSignatoryRequest.builder()
+        GetSigningSignatory2Request req = GetSigningSignatory2Request.builder()
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        GetSigningSignatoryResponse res = sdk.signing().getSigningSignatory()
+        GetSigningSignatory2Response res = sdk.signing().getSigningSignatory2()
                 .request(req)
                 .call();
 
@@ -241,13 +241,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                           | Type                                                                                | Required                                                                            | Description                                                                         |
-| ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
-| `request`                                                                           | [GetSigningSignatoryRequest](../../models/operations/GetSigningSignatoryRequest.md) | :heavy_check_mark:                                                                  | The request object to use for the request.                                          |
+| Parameter                                                                             | Type                                                                                  | Required                                                                              | Description                                                                           |
+| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| `request`                                                                             | [GetSigningSignatory2Request](../../models/operations/GetSigningSignatory2Request.md) | :heavy_check_mark:                                                                    | The request object to use for the request.                                            |
 
 ### Response
 
-**[GetSigningSignatoryResponse](../../models/operations/GetSigningSignatoryResponse.md)**
+**[GetSigningSignatory2Response](../../models/operations/GetSigningSignatory2Response.md)**
 
 ### Errors
 
@@ -255,20 +255,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## getSigningTemplate
+## getSigningTemplate2
 
 Retrieve a template
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="getSigningTemplate" method="get" path="/signing/{connection_id}/template/{id}" -->
+<!-- UsageSnippet language="java" operationID="getSigningTemplate2" method="get" path="/signing/{connection_id}/template/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.GetSigningTemplateRequest;
-import to.unified.unified_java_sdk.models.operations.GetSigningTemplateResponse;
+import to.unified.unified_java_sdk.models.operations.GetSigningTemplate2Request;
+import to.unified.unified_java_sdk.models.operations.GetSigningTemplate2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -281,12 +281,12 @@ public class Application {
                     .build())
             .build();
 
-        GetSigningTemplateRequest req = GetSigningTemplateRequest.builder()
+        GetSigningTemplate2Request req = GetSigningTemplate2Request.builder()
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        GetSigningTemplateResponse res = sdk.signing().getSigningTemplate()
+        GetSigningTemplate2Response res = sdk.signing().getSigningTemplate2()
                 .request(req)
                 .call();
 
@@ -299,13 +299,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
-| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
-| `request`                                                                         | [GetSigningTemplateRequest](../../models/operations/GetSigningTemplateRequest.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
+| Parameter                                                                           | Type                                                                                | Required                                                                            | Description                                                                         |
+| ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| `request`                                                                           | [GetSigningTemplate2Request](../../models/operations/GetSigningTemplate2Request.md) | :heavy_check_mark:                                                                  | The request object to use for the request.                                          |
 
 ### Response
 
-**[GetSigningTemplateResponse](../../models/operations/GetSigningTemplateResponse.md)**
+**[GetSigningTemplate2Response](../../models/operations/GetSigningTemplate2Response.md)**
 
 ### Errors
 
@@ -313,20 +313,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## listSigningDocuments
+## listSigningDocuments2
 
 List all documents
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="listSigningDocuments" method="get" path="/signing/{connection_id}/document" -->
+<!-- UsageSnippet language="java" operationID="listSigningDocuments2" method="get" path="/signing/{connection_id}/document" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.ListSigningDocumentsRequest;
-import to.unified.unified_java_sdk.models.operations.ListSigningDocumentsResponse;
+import to.unified.unified_java_sdk.models.operations.ListSigningDocuments2Request;
+import to.unified.unified_java_sdk.models.operations.ListSigningDocuments2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -339,11 +339,11 @@ public class Application {
                     .build())
             .build();
 
-        ListSigningDocumentsRequest req = ListSigningDocumentsRequest.builder()
+        ListSigningDocuments2Request req = ListSigningDocuments2Request.builder()
                 .connectionId("<id>")
                 .build();
 
-        ListSigningDocumentsResponse res = sdk.signing().listSigningDocuments()
+        ListSigningDocuments2Response res = sdk.signing().listSigningDocuments2()
                 .request(req)
                 .call();
 
@@ -356,13 +356,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                             | Type                                                                                  | Required                                                                              | Description                                                                           |
-| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
-| `request`                                                                             | [ListSigningDocumentsRequest](../../models/operations/ListSigningDocumentsRequest.md) | :heavy_check_mark:                                                                    | The request object to use for the request.                                            |
+| Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
+| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| `request`                                                                               | [ListSigningDocuments2Request](../../models/operations/ListSigningDocuments2Request.md) | :heavy_check_mark:                                                                      | The request object to use for the request.                                              |
 
 ### Response
 
-**[ListSigningDocumentsResponse](../../models/operations/ListSigningDocumentsResponse.md)**
+**[ListSigningDocuments2Response](../../models/operations/ListSigningDocuments2Response.md)**
 
 ### Errors
 
@@ -370,20 +370,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## listSigningSignatories
+## listSigningSignatories2
 
 List all signatories
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="listSigningSignatories" method="get" path="/signing/{connection_id}/signatory" -->
+<!-- UsageSnippet language="java" operationID="listSigningSignatories2" method="get" path="/signing/{connection_id}/signatory" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.ListSigningSignatoriesRequest;
-import to.unified.unified_java_sdk.models.operations.ListSigningSignatoriesResponse;
+import to.unified.unified_java_sdk.models.operations.ListSigningSignatories2Request;
+import to.unified.unified_java_sdk.models.operations.ListSigningSignatories2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -396,11 +396,11 @@ public class Application {
                     .build())
             .build();
 
-        ListSigningSignatoriesRequest req = ListSigningSignatoriesRequest.builder()
+        ListSigningSignatories2Request req = ListSigningSignatories2Request.builder()
                 .connectionId("<id>")
                 .build();
 
-        ListSigningSignatoriesResponse res = sdk.signing().listSigningSignatories()
+        ListSigningSignatories2Response res = sdk.signing().listSigningSignatories2()
                 .request(req)
                 .call();
 
@@ -413,13 +413,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                 | Type                                                                                      | Required                                                                                  | Description                                                                               |
-| ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
-| `request`                                                                                 | [ListSigningSignatoriesRequest](../../models/operations/ListSigningSignatoriesRequest.md) | :heavy_check_mark:                                                                        | The request object to use for the request.                                                |
+| Parameter                                                                                   | Type                                                                                        | Required                                                                                    | Description                                                                                 |
+| ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
+| `request`                                                                                   | [ListSigningSignatories2Request](../../models/operations/ListSigningSignatories2Request.md) | :heavy_check_mark:                                                                          | The request object to use for the request.                                                  |
 
 ### Response
 
-**[ListSigningSignatoriesResponse](../../models/operations/ListSigningSignatoriesResponse.md)**
+**[ListSigningSignatories2Response](../../models/operations/ListSigningSignatories2Response.md)**
 
 ### Errors
 
@@ -427,20 +427,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## listSigningTemplates
+## listSigningTemplates2
 
 List all templates
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="listSigningTemplates" method="get" path="/signing/{connection_id}/template" -->
+<!-- UsageSnippet language="java" operationID="listSigningTemplates2" method="get" path="/signing/{connection_id}/template" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.ListSigningTemplatesRequest;
-import to.unified.unified_java_sdk.models.operations.ListSigningTemplatesResponse;
+import to.unified.unified_java_sdk.models.operations.ListSigningTemplates2Request;
+import to.unified.unified_java_sdk.models.operations.ListSigningTemplates2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -453,11 +453,11 @@ public class Application {
                     .build())
             .build();
 
-        ListSigningTemplatesRequest req = ListSigningTemplatesRequest.builder()
+        ListSigningTemplates2Request req = ListSigningTemplates2Request.builder()
                 .connectionId("<id>")
                 .build();
 
-        ListSigningTemplatesResponse res = sdk.signing().listSigningTemplates()
+        ListSigningTemplates2Response res = sdk.signing().listSigningTemplates2()
                 .request(req)
                 .call();
 
@@ -470,13 +470,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                             | Type                                                                                  | Required                                                                              | Description                                                                           |
-| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
-| `request`                                                                             | [ListSigningTemplatesRequest](../../models/operations/ListSigningTemplatesRequest.md) | :heavy_check_mark:                                                                    | The request object to use for the request.                                            |
+| Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
+| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| `request`                                                                               | [ListSigningTemplates2Request](../../models/operations/ListSigningTemplates2Request.md) | :heavy_check_mark:                                                                      | The request object to use for the request.                                              |
 
 ### Response
 
-**[ListSigningTemplatesResponse](../../models/operations/ListSigningTemplatesResponse.md)**
+**[ListSigningTemplates2Response](../../models/operations/ListSigningTemplates2Response.md)**
 
 ### Errors
 
@@ -484,20 +484,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## patchSigningDocument
+## patchSigningDocument2
 
 Update a document
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchSigningDocument" method="patch" path="/signing/{connection_id}/document/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchSigningDocument2" method="patch" path="/signing/{connection_id}/document/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.PatchSigningDocumentRequest;
-import to.unified.unified_java_sdk.models.operations.PatchSigningDocumentResponse;
+import to.unified.unified_java_sdk.models.operations.PatchSigningDocument2Request;
+import to.unified.unified_java_sdk.models.operations.PatchSigningDocument2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 import to.unified.unified_java_sdk.models.shared.SigningDocument;
 
@@ -511,14 +511,14 @@ public class Application {
                     .build())
             .build();
 
-        PatchSigningDocumentRequest req = PatchSigningDocumentRequest.builder()
+        PatchSigningDocument2Request req = PatchSigningDocument2Request.builder()
                 .signingDocument(SigningDocument.builder()
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        PatchSigningDocumentResponse res = sdk.signing().patchSigningDocument()
+        PatchSigningDocument2Response res = sdk.signing().patchSigningDocument2()
                 .request(req)
                 .call();
 
@@ -531,13 +531,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                             | Type                                                                                  | Required                                                                              | Description                                                                           |
-| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
-| `request`                                                                             | [PatchSigningDocumentRequest](../../models/operations/PatchSigningDocumentRequest.md) | :heavy_check_mark:                                                                    | The request object to use for the request.                                            |
+| Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
+| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| `request`                                                                               | [PatchSigningDocument2Request](../../models/operations/PatchSigningDocument2Request.md) | :heavy_check_mark:                                                                      | The request object to use for the request.                                              |
 
 ### Response
 
-**[PatchSigningDocumentResponse](../../models/operations/PatchSigningDocumentResponse.md)**
+**[PatchSigningDocument2Response](../../models/operations/PatchSigningDocument2Response.md)**
 
 ### Errors
 
@@ -545,20 +545,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## patchSigningSignatory
+## patchSigningSignatory2
 
 Update a signatory
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchSigningSignatory" method="patch" path="/signing/{connection_id}/signatory/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchSigningSignatory2" method="patch" path="/signing/{connection_id}/signatory/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.PatchSigningSignatoryRequest;
-import to.unified.unified_java_sdk.models.operations.PatchSigningSignatoryResponse;
+import to.unified.unified_java_sdk.models.operations.PatchSigningSignatory2Request;
+import to.unified.unified_java_sdk.models.operations.PatchSigningSignatory2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 import to.unified.unified_java_sdk.models.shared.SigningSignatory;
 
@@ -572,14 +572,14 @@ public class Application {
                     .build())
             .build();
 
-        PatchSigningSignatoryRequest req = PatchSigningSignatoryRequest.builder()
+        PatchSigningSignatory2Request req = PatchSigningSignatory2Request.builder()
                 .signingSignatory(SigningSignatory.builder()
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        PatchSigningSignatoryResponse res = sdk.signing().patchSigningSignatory()
+        PatchSigningSignatory2Response res = sdk.signing().patchSigningSignatory2()
                 .request(req)
                 .call();
 
@@ -592,13 +592,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
-| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
-| `request`                                                                               | [PatchSigningSignatoryRequest](../../models/operations/PatchSigningSignatoryRequest.md) | :heavy_check_mark:                                                                      | The request object to use for the request.                                              |
+| Parameter                                                                                 | Type                                                                                      | Required                                                                                  | Description                                                                               |
+| ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
+| `request`                                                                                 | [PatchSigningSignatory2Request](../../models/operations/PatchSigningSignatory2Request.md) | :heavy_check_mark:                                                                        | The request object to use for the request.                                                |
 
 ### Response
 
-**[PatchSigningSignatoryResponse](../../models/operations/PatchSigningSignatoryResponse.md)**
+**[PatchSigningSignatory2Response](../../models/operations/PatchSigningSignatory2Response.md)**
 
 ### Errors
 
@@ -606,20 +606,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## removeSigningDocument
+## removeSigningDocument2
 
 Remove a document
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="removeSigningDocument" method="delete" path="/signing/{connection_id}/document/{id}" -->
+<!-- UsageSnippet language="java" operationID="removeSigningDocument2" method="delete" path="/signing/{connection_id}/document/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.RemoveSigningDocumentRequest;
-import to.unified.unified_java_sdk.models.operations.RemoveSigningDocumentResponse;
+import to.unified.unified_java_sdk.models.operations.RemoveSigningDocument2Request;
+import to.unified.unified_java_sdk.models.operations.RemoveSigningDocument2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -632,68 +632,12 @@ public class Application {
                     .build())
             .build();
 
-        RemoveSigningDocumentRequest req = RemoveSigningDocumentRequest.builder()
+        RemoveSigningDocument2Request req = RemoveSigningDocument2Request.builder()
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        RemoveSigningDocumentResponse res = sdk.signing().removeSigningDocument()
-                .request(req)
-                .call();
-
-        // handle response
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
-| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
-| `request`                                                                               | [RemoveSigningDocumentRequest](../../models/operations/RemoveSigningDocumentRequest.md) | :heavy_check_mark:                                                                      | The request object to use for the request.                                              |
-
-### Response
-
-**[RemoveSigningDocumentResponse](../../models/operations/RemoveSigningDocumentResponse.md)**
-
-### Errors
-
-| Error Type             | Status Code            | Content Type           |
-| ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
-
-## removeSigningSignatory
-
-Remove a signatory
-
-### Example Usage
-
-<!-- UsageSnippet language="java" operationID="removeSigningSignatory" method="delete" path="/signing/{connection_id}/signatory/{id}" -->
-```java
-package hello.world;
-
-import java.lang.Exception;
-import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.RemoveSigningSignatoryRequest;
-import to.unified.unified_java_sdk.models.operations.RemoveSigningSignatoryResponse;
-import to.unified.unified_java_sdk.models.shared.Security;
-
-public class Application {
-
-    public static void main(String[] args) throws Exception {
-
-        UnifiedTo sdk = UnifiedTo.builder()
-                .security(Security.builder()
-                    .jwt(System.getenv().getOrDefault("JWT", ""))
-                    .build())
-            .build();
-
-        RemoveSigningSignatoryRequest req = RemoveSigningSignatoryRequest.builder()
-                .connectionId("<id>")
-                .id("<id>")
-                .build();
-
-        RemoveSigningSignatoryResponse res = sdk.signing().removeSigningSignatory()
+        RemoveSigningDocument2Response res = sdk.signing().removeSigningDocument2()
                 .request(req)
                 .call();
 
@@ -706,11 +650,11 @@ public class Application {
 
 | Parameter                                                                                 | Type                                                                                      | Required                                                                                  | Description                                                                               |
 | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
-| `request`                                                                                 | [RemoveSigningSignatoryRequest](../../models/operations/RemoveSigningSignatoryRequest.md) | :heavy_check_mark:                                                                        | The request object to use for the request.                                                |
+| `request`                                                                                 | [RemoveSigningDocument2Request](../../models/operations/RemoveSigningDocument2Request.md) | :heavy_check_mark:                                                                        | The request object to use for the request.                                                |
 
 ### Response
 
-**[RemoveSigningSignatoryResponse](../../models/operations/RemoveSigningSignatoryResponse.md)**
+**[RemoveSigningDocument2Response](../../models/operations/RemoveSigningDocument2Response.md)**
 
 ### Errors
 
@@ -718,20 +662,76 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## updateSigningDocument
+## removeSigningSignatory2
 
-Update a document
+Remove a signatory
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateSigningDocument" method="put" path="/signing/{connection_id}/document/{id}" -->
+<!-- UsageSnippet language="java" operationID="removeSigningSignatory2" method="delete" path="/signing/{connection_id}/signatory/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.UpdateSigningDocumentRequest;
-import to.unified.unified_java_sdk.models.operations.UpdateSigningDocumentResponse;
+import to.unified.unified_java_sdk.models.operations.RemoveSigningSignatory2Request;
+import to.unified.unified_java_sdk.models.operations.RemoveSigningSignatory2Response;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        RemoveSigningSignatory2Request req = RemoveSigningSignatory2Request.builder()
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        RemoveSigningSignatory2Response res = sdk.signing().removeSigningSignatory2()
+                .request(req)
+                .call();
+
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                   | Type                                                                                        | Required                                                                                    | Description                                                                                 |
+| ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
+| `request`                                                                                   | [RemoveSigningSignatory2Request](../../models/operations/RemoveSigningSignatory2Request.md) | :heavy_check_mark:                                                                          | The request object to use for the request.                                                  |
+
+### Response
+
+**[RemoveSigningSignatory2Response](../../models/operations/RemoveSigningSignatory2Response.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## updateSigningDocument2
+
+Update a document
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="updateSigningDocument2" method="put" path="/signing/{connection_id}/document/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.UpdateSigningDocument2Request;
+import to.unified.unified_java_sdk.models.operations.UpdateSigningDocument2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 import to.unified.unified_java_sdk.models.shared.SigningDocument;
 
@@ -745,14 +745,14 @@ public class Application {
                     .build())
             .build();
 
-        UpdateSigningDocumentRequest req = UpdateSigningDocumentRequest.builder()
+        UpdateSigningDocument2Request req = UpdateSigningDocument2Request.builder()
                 .signingDocument(SigningDocument.builder()
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        UpdateSigningDocumentResponse res = sdk.signing().updateSigningDocument()
+        UpdateSigningDocument2Response res = sdk.signing().updateSigningDocument2()
                 .request(req)
                 .call();
 
@@ -765,13 +765,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
-| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
-| `request`                                                                               | [UpdateSigningDocumentRequest](../../models/operations/UpdateSigningDocumentRequest.md) | :heavy_check_mark:                                                                      | The request object to use for the request.                                              |
+| Parameter                                                                                 | Type                                                                                      | Required                                                                                  | Description                                                                               |
+| ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
+| `request`                                                                                 | [UpdateSigningDocument2Request](../../models/operations/UpdateSigningDocument2Request.md) | :heavy_check_mark:                                                                        | The request object to use for the request.                                                |
 
 ### Response
 
-**[UpdateSigningDocumentResponse](../../models/operations/UpdateSigningDocumentResponse.md)**
+**[UpdateSigningDocument2Response](../../models/operations/UpdateSigningDocument2Response.md)**
 
 ### Errors
 
@@ -779,20 +779,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## updateSigningSignatory
+## updateSigningSignatory2
 
 Update a signatory
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateSigningSignatory" method="put" path="/signing/{connection_id}/signatory/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateSigningSignatory2" method="put" path="/signing/{connection_id}/signatory/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.UpdateSigningSignatoryRequest;
-import to.unified.unified_java_sdk.models.operations.UpdateSigningSignatoryResponse;
+import to.unified.unified_java_sdk.models.operations.UpdateSigningSignatory2Request;
+import to.unified.unified_java_sdk.models.operations.UpdateSigningSignatory2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 import to.unified.unified_java_sdk.models.shared.SigningSignatory;
 
@@ -806,14 +806,14 @@ public class Application {
                     .build())
             .build();
 
-        UpdateSigningSignatoryRequest req = UpdateSigningSignatoryRequest.builder()
+        UpdateSigningSignatory2Request req = UpdateSigningSignatory2Request.builder()
                 .signingSignatory(SigningSignatory.builder()
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        UpdateSigningSignatoryResponse res = sdk.signing().updateSigningSignatory()
+        UpdateSigningSignatory2Response res = sdk.signing().updateSigningSignatory2()
                 .request(req)
                 .call();
 
@@ -826,13 +826,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                 | Type                                                                                      | Required                                                                                  | Description                                                                               |
-| ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
-| `request`                                                                                 | [UpdateSigningSignatoryRequest](../../models/operations/UpdateSigningSignatoryRequest.md) | :heavy_check_mark:                                                                        | The request object to use for the request.                                                |
+| Parameter                                                                                   | Type                                                                                        | Required                                                                                    | Description                                                                                 |
+| ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
+| `request`                                                                                   | [UpdateSigningSignatory2Request](../../models/operations/UpdateSigningSignatory2Request.md) | :heavy_check_mark:                                                                          | The request object to use for the request.                                                  |
 
 ### Response
 
-**[UpdateSigningSignatoryResponse](../../models/operations/UpdateSigningSignatoryResponse.md)**
+**[UpdateSigningSignatory2Response](../../models/operations/UpdateSigningSignatory2Response.md)**
 
 ### Errors
 

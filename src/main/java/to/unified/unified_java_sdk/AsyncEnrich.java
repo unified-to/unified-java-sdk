@@ -7,14 +7,14 @@ import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOper
 
 import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
-import to.unified.unified_java_sdk.models.operations.ListEnrichCompaniesRequest;
-import to.unified.unified_java_sdk.models.operations.ListEnrichPeopleRequest;
-import to.unified.unified_java_sdk.models.operations.async.ListEnrichCompaniesRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.ListEnrichCompaniesResponse;
-import to.unified.unified_java_sdk.models.operations.async.ListEnrichPeopleRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.ListEnrichPeopleResponse;
-import to.unified.unified_java_sdk.operations.ListEnrichCompanies;
-import to.unified.unified_java_sdk.operations.ListEnrichPeople;
+import to.unified.unified_java_sdk.models.operations.ListEnrichCompanies2Request;
+import to.unified.unified_java_sdk.models.operations.ListEnrichPeople2Request;
+import to.unified.unified_java_sdk.models.operations.async.ListEnrichCompanies2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListEnrichCompanies2Response;
+import to.unified.unified_java_sdk.models.operations.async.ListEnrichPeople2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListEnrichPeople2Response;
+import to.unified.unified_java_sdk.operations.ListEnrichCompanies2;
+import to.unified.unified_java_sdk.operations.ListEnrichPeople2;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -43,19 +43,19 @@ public class AsyncEnrich {
      * 
      * @return The async call builder
      */
-    public ListEnrichCompaniesRequestBuilder listEnrichCompanies() {
-        return new ListEnrichCompaniesRequestBuilder(sdkConfiguration);
+    public ListEnrichCompanies2RequestBuilder listEnrichCompanies2() {
+        return new ListEnrichCompanies2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Retrieve enrichment information for a company
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<ListEnrichCompaniesResponse>} - The async response
+     * @return {@code CompletableFuture<ListEnrichCompanies2Response>} - The async response
      */
-    public CompletableFuture<ListEnrichCompaniesResponse> listEnrichCompanies(@Nonnull ListEnrichCompaniesRequest request) {
-        AsyncRequestOperation<ListEnrichCompaniesRequest, ListEnrichCompaniesResponse> operation
-              = new ListEnrichCompanies.Async(sdkConfiguration, _headers);
+    public CompletableFuture<ListEnrichCompanies2Response> listEnrichCompanies2(@Nonnull ListEnrichCompanies2Request request) {
+        AsyncRequestOperation<ListEnrichCompanies2Request, ListEnrichCompanies2Response> operation
+              = new ListEnrichCompanies2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -66,19 +66,19 @@ public class AsyncEnrich {
      * 
      * @return The async call builder
      */
-    public ListEnrichPeopleRequestBuilder listEnrichPeople() {
-        return new ListEnrichPeopleRequestBuilder(sdkConfiguration);
+    public ListEnrichPeople2RequestBuilder listEnrichPeople2() {
+        return new ListEnrichPeople2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Retrieve enrichment information for a person
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<ListEnrichPeopleResponse>} - The async response
+     * @return {@code CompletableFuture<ListEnrichPeople2Response>} - The async response
      */
-    public CompletableFuture<ListEnrichPeopleResponse> listEnrichPeople(@Nonnull ListEnrichPeopleRequest request) {
-        AsyncRequestOperation<ListEnrichPeopleRequest, ListEnrichPeopleResponse> operation
-              = new ListEnrichPeople.Async(sdkConfiguration, _headers);
+    public CompletableFuture<ListEnrichPeople2Response> listEnrichPeople2(@Nonnull ListEnrichPeople2Request request) {
+        AsyncRequestOperation<ListEnrichPeople2Request, ListEnrichPeople2Response> operation
+              = new ListEnrichPeople2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

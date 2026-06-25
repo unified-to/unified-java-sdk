@@ -7,30 +7,30 @@ import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOper
 
 import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
-import to.unified.unified_java_sdk.models.operations.CreateKmsSpaceRequest;
-import to.unified.unified_java_sdk.models.operations.GetKmsSpaceRequest;
-import to.unified.unified_java_sdk.models.operations.ListKmsSpacesRequest;
-import to.unified.unified_java_sdk.models.operations.PatchKmsSpaceRequest;
-import to.unified.unified_java_sdk.models.operations.RemoveKmsSpaceRequest;
-import to.unified.unified_java_sdk.models.operations.UpdateKmsSpaceRequest;
-import to.unified.unified_java_sdk.models.operations.async.CreateKmsSpaceRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.CreateKmsSpaceResponse;
-import to.unified.unified_java_sdk.models.operations.async.GetKmsSpaceRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.GetKmsSpaceResponse;
-import to.unified.unified_java_sdk.models.operations.async.ListKmsSpacesRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.ListKmsSpacesResponse;
-import to.unified.unified_java_sdk.models.operations.async.PatchKmsSpaceRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.PatchKmsSpaceResponse;
-import to.unified.unified_java_sdk.models.operations.async.RemoveKmsSpaceRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.RemoveKmsSpaceResponse;
-import to.unified.unified_java_sdk.models.operations.async.UpdateKmsSpaceRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.UpdateKmsSpaceResponse;
-import to.unified.unified_java_sdk.operations.CreateKmsSpace;
-import to.unified.unified_java_sdk.operations.GetKmsSpace;
-import to.unified.unified_java_sdk.operations.ListKmsSpaces;
-import to.unified.unified_java_sdk.operations.PatchKmsSpace;
-import to.unified.unified_java_sdk.operations.RemoveKmsSpace;
-import to.unified.unified_java_sdk.operations.UpdateKmsSpace;
+import to.unified.unified_java_sdk.models.operations.CreateKmsSpace2Request;
+import to.unified.unified_java_sdk.models.operations.GetKmsSpace2Request;
+import to.unified.unified_java_sdk.models.operations.ListKmsSpaces2Request;
+import to.unified.unified_java_sdk.models.operations.PatchKmsSpace2Request;
+import to.unified.unified_java_sdk.models.operations.RemoveKmsSpace2Request;
+import to.unified.unified_java_sdk.models.operations.UpdateKmsSpace2Request;
+import to.unified.unified_java_sdk.models.operations.async.CreateKmsSpace2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.CreateKmsSpace2Response;
+import to.unified.unified_java_sdk.models.operations.async.GetKmsSpace2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetKmsSpace2Response;
+import to.unified.unified_java_sdk.models.operations.async.ListKmsSpaces2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListKmsSpaces2Response;
+import to.unified.unified_java_sdk.models.operations.async.PatchKmsSpace2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.PatchKmsSpace2Response;
+import to.unified.unified_java_sdk.models.operations.async.RemoveKmsSpace2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.RemoveKmsSpace2Response;
+import to.unified.unified_java_sdk.models.operations.async.UpdateKmsSpace2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.UpdateKmsSpace2Response;
+import to.unified.unified_java_sdk.operations.CreateKmsSpace2;
+import to.unified.unified_java_sdk.operations.GetKmsSpace2;
+import to.unified.unified_java_sdk.operations.ListKmsSpaces2;
+import to.unified.unified_java_sdk.operations.PatchKmsSpace2;
+import to.unified.unified_java_sdk.operations.RemoveKmsSpace2;
+import to.unified.unified_java_sdk.operations.UpdateKmsSpace2;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -59,19 +59,19 @@ public class AsyncSpace {
      * 
      * @return The async call builder
      */
-    public CreateKmsSpaceRequestBuilder createKmsSpace() {
-        return new CreateKmsSpaceRequestBuilder(sdkConfiguration);
+    public CreateKmsSpace2RequestBuilder createKmsSpace2() {
+        return new CreateKmsSpace2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Create a space
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<CreateKmsSpaceResponse>} - The async response
+     * @return {@code CompletableFuture<CreateKmsSpace2Response>} - The async response
      */
-    public CompletableFuture<CreateKmsSpaceResponse> createKmsSpace(@Nonnull CreateKmsSpaceRequest request) {
-        AsyncRequestOperation<CreateKmsSpaceRequest, CreateKmsSpaceResponse> operation
-              = new CreateKmsSpace.Async(sdkConfiguration, _headers);
+    public CompletableFuture<CreateKmsSpace2Response> createKmsSpace2(@Nonnull CreateKmsSpace2Request request) {
+        AsyncRequestOperation<CreateKmsSpace2Request, CreateKmsSpace2Response> operation
+              = new CreateKmsSpace2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -82,19 +82,19 @@ public class AsyncSpace {
      * 
      * @return The async call builder
      */
-    public GetKmsSpaceRequestBuilder getKmsSpace() {
-        return new GetKmsSpaceRequestBuilder(sdkConfiguration);
+    public GetKmsSpace2RequestBuilder getKmsSpace2() {
+        return new GetKmsSpace2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Retrieve a space
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<GetKmsSpaceResponse>} - The async response
+     * @return {@code CompletableFuture<GetKmsSpace2Response>} - The async response
      */
-    public CompletableFuture<GetKmsSpaceResponse> getKmsSpace(@Nonnull GetKmsSpaceRequest request) {
-        AsyncRequestOperation<GetKmsSpaceRequest, GetKmsSpaceResponse> operation
-              = new GetKmsSpace.Async(sdkConfiguration, _headers);
+    public CompletableFuture<GetKmsSpace2Response> getKmsSpace2(@Nonnull GetKmsSpace2Request request) {
+        AsyncRequestOperation<GetKmsSpace2Request, GetKmsSpace2Response> operation
+              = new GetKmsSpace2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -105,19 +105,19 @@ public class AsyncSpace {
      * 
      * @return The async call builder
      */
-    public ListKmsSpacesRequestBuilder listKmsSpaces() {
-        return new ListKmsSpacesRequestBuilder(sdkConfiguration);
+    public ListKmsSpaces2RequestBuilder listKmsSpaces2() {
+        return new ListKmsSpaces2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * List all spaces
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<ListKmsSpacesResponse>} - The async response
+     * @return {@code CompletableFuture<ListKmsSpaces2Response>} - The async response
      */
-    public CompletableFuture<ListKmsSpacesResponse> listKmsSpaces(@Nonnull ListKmsSpacesRequest request) {
-        AsyncRequestOperation<ListKmsSpacesRequest, ListKmsSpacesResponse> operation
-              = new ListKmsSpaces.Async(sdkConfiguration, _headers);
+    public CompletableFuture<ListKmsSpaces2Response> listKmsSpaces2(@Nonnull ListKmsSpaces2Request request) {
+        AsyncRequestOperation<ListKmsSpaces2Request, ListKmsSpaces2Response> operation
+              = new ListKmsSpaces2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -128,19 +128,19 @@ public class AsyncSpace {
      * 
      * @return The async call builder
      */
-    public PatchKmsSpaceRequestBuilder patchKmsSpace() {
-        return new PatchKmsSpaceRequestBuilder(sdkConfiguration);
+    public PatchKmsSpace2RequestBuilder patchKmsSpace2() {
+        return new PatchKmsSpace2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update a space
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<PatchKmsSpaceResponse>} - The async response
+     * @return {@code CompletableFuture<PatchKmsSpace2Response>} - The async response
      */
-    public CompletableFuture<PatchKmsSpaceResponse> patchKmsSpace(@Nonnull PatchKmsSpaceRequest request) {
-        AsyncRequestOperation<PatchKmsSpaceRequest, PatchKmsSpaceResponse> operation
-              = new PatchKmsSpace.Async(sdkConfiguration, _headers);
+    public CompletableFuture<PatchKmsSpace2Response> patchKmsSpace2(@Nonnull PatchKmsSpace2Request request) {
+        AsyncRequestOperation<PatchKmsSpace2Request, PatchKmsSpace2Response> operation
+              = new PatchKmsSpace2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -151,19 +151,19 @@ public class AsyncSpace {
      * 
      * @return The async call builder
      */
-    public RemoveKmsSpaceRequestBuilder removeKmsSpace() {
-        return new RemoveKmsSpaceRequestBuilder(sdkConfiguration);
+    public RemoveKmsSpace2RequestBuilder removeKmsSpace2() {
+        return new RemoveKmsSpace2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Remove a space
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<RemoveKmsSpaceResponse>} - The async response
+     * @return {@code CompletableFuture<RemoveKmsSpace2Response>} - The async response
      */
-    public CompletableFuture<RemoveKmsSpaceResponse> removeKmsSpace(@Nonnull RemoveKmsSpaceRequest request) {
-        AsyncRequestOperation<RemoveKmsSpaceRequest, RemoveKmsSpaceResponse> operation
-              = new RemoveKmsSpace.Async(sdkConfiguration, _headers);
+    public CompletableFuture<RemoveKmsSpace2Response> removeKmsSpace2(@Nonnull RemoveKmsSpace2Request request) {
+        AsyncRequestOperation<RemoveKmsSpace2Request, RemoveKmsSpace2Response> operation
+              = new RemoveKmsSpace2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -174,19 +174,19 @@ public class AsyncSpace {
      * 
      * @return The async call builder
      */
-    public UpdateKmsSpaceRequestBuilder updateKmsSpace() {
-        return new UpdateKmsSpaceRequestBuilder(sdkConfiguration);
+    public UpdateKmsSpace2RequestBuilder updateKmsSpace2() {
+        return new UpdateKmsSpace2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update a space
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<UpdateKmsSpaceResponse>} - The async response
+     * @return {@code CompletableFuture<UpdateKmsSpace2Response>} - The async response
      */
-    public CompletableFuture<UpdateKmsSpaceResponse> updateKmsSpace(@Nonnull UpdateKmsSpaceRequest request) {
-        AsyncRequestOperation<UpdateKmsSpaceRequest, UpdateKmsSpaceResponse> operation
-              = new UpdateKmsSpace.Async(sdkConfiguration, _headers);
+    public CompletableFuture<UpdateKmsSpace2Response> updateKmsSpace2(@Nonnull UpdateKmsSpace2Request request) {
+        AsyncRequestOperation<UpdateKmsSpace2Request, UpdateKmsSpace2Response> operation
+              = new UpdateKmsSpace2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

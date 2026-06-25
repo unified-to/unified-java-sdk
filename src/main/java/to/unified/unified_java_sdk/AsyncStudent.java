@@ -7,30 +7,30 @@ import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOper
 
 import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
-import to.unified.unified_java_sdk.models.operations.CreateLmsStudentRequest;
-import to.unified.unified_java_sdk.models.operations.GetLmsStudentRequest;
-import to.unified.unified_java_sdk.models.operations.ListLmsStudentsRequest;
-import to.unified.unified_java_sdk.models.operations.PatchLmsStudentRequest;
-import to.unified.unified_java_sdk.models.operations.RemoveLmsStudentRequest;
-import to.unified.unified_java_sdk.models.operations.UpdateLmsStudentRequest;
-import to.unified.unified_java_sdk.models.operations.async.CreateLmsStudentRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.CreateLmsStudentResponse;
-import to.unified.unified_java_sdk.models.operations.async.GetLmsStudentRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.GetLmsStudentResponse;
-import to.unified.unified_java_sdk.models.operations.async.ListLmsStudentsRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.ListLmsStudentsResponse;
-import to.unified.unified_java_sdk.models.operations.async.PatchLmsStudentRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.PatchLmsStudentResponse;
-import to.unified.unified_java_sdk.models.operations.async.RemoveLmsStudentRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.RemoveLmsStudentResponse;
-import to.unified.unified_java_sdk.models.operations.async.UpdateLmsStudentRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.UpdateLmsStudentResponse;
-import to.unified.unified_java_sdk.operations.CreateLmsStudent;
-import to.unified.unified_java_sdk.operations.GetLmsStudent;
-import to.unified.unified_java_sdk.operations.ListLmsStudents;
-import to.unified.unified_java_sdk.operations.PatchLmsStudent;
-import to.unified.unified_java_sdk.operations.RemoveLmsStudent;
-import to.unified.unified_java_sdk.operations.UpdateLmsStudent;
+import to.unified.unified_java_sdk.models.operations.CreateLmsStudent2Request;
+import to.unified.unified_java_sdk.models.operations.GetLmsStudent2Request;
+import to.unified.unified_java_sdk.models.operations.ListLmsStudents2Request;
+import to.unified.unified_java_sdk.models.operations.PatchLmsStudent2Request;
+import to.unified.unified_java_sdk.models.operations.RemoveLmsStudent2Request;
+import to.unified.unified_java_sdk.models.operations.UpdateLmsStudent2Request;
+import to.unified.unified_java_sdk.models.operations.async.CreateLmsStudent2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.CreateLmsStudent2Response;
+import to.unified.unified_java_sdk.models.operations.async.GetLmsStudent2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetLmsStudent2Response;
+import to.unified.unified_java_sdk.models.operations.async.ListLmsStudents2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListLmsStudents2Response;
+import to.unified.unified_java_sdk.models.operations.async.PatchLmsStudent2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.PatchLmsStudent2Response;
+import to.unified.unified_java_sdk.models.operations.async.RemoveLmsStudent2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.RemoveLmsStudent2Response;
+import to.unified.unified_java_sdk.models.operations.async.UpdateLmsStudent2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.UpdateLmsStudent2Response;
+import to.unified.unified_java_sdk.operations.CreateLmsStudent2;
+import to.unified.unified_java_sdk.operations.GetLmsStudent2;
+import to.unified.unified_java_sdk.operations.ListLmsStudents2;
+import to.unified.unified_java_sdk.operations.PatchLmsStudent2;
+import to.unified.unified_java_sdk.operations.RemoveLmsStudent2;
+import to.unified.unified_java_sdk.operations.UpdateLmsStudent2;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -59,19 +59,19 @@ public class AsyncStudent {
      * 
      * @return The async call builder
      */
-    public CreateLmsStudentRequestBuilder createLmsStudent() {
-        return new CreateLmsStudentRequestBuilder(sdkConfiguration);
+    public CreateLmsStudent2RequestBuilder createLmsStudent2() {
+        return new CreateLmsStudent2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Create a student
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<CreateLmsStudentResponse>} - The async response
+     * @return {@code CompletableFuture<CreateLmsStudent2Response>} - The async response
      */
-    public CompletableFuture<CreateLmsStudentResponse> createLmsStudent(@Nonnull CreateLmsStudentRequest request) {
-        AsyncRequestOperation<CreateLmsStudentRequest, CreateLmsStudentResponse> operation
-              = new CreateLmsStudent.Async(sdkConfiguration, _headers);
+    public CompletableFuture<CreateLmsStudent2Response> createLmsStudent2(@Nonnull CreateLmsStudent2Request request) {
+        AsyncRequestOperation<CreateLmsStudent2Request, CreateLmsStudent2Response> operation
+              = new CreateLmsStudent2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -82,19 +82,19 @@ public class AsyncStudent {
      * 
      * @return The async call builder
      */
-    public GetLmsStudentRequestBuilder getLmsStudent() {
-        return new GetLmsStudentRequestBuilder(sdkConfiguration);
+    public GetLmsStudent2RequestBuilder getLmsStudent2() {
+        return new GetLmsStudent2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Retrieve a student
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<GetLmsStudentResponse>} - The async response
+     * @return {@code CompletableFuture<GetLmsStudent2Response>} - The async response
      */
-    public CompletableFuture<GetLmsStudentResponse> getLmsStudent(@Nonnull GetLmsStudentRequest request) {
-        AsyncRequestOperation<GetLmsStudentRequest, GetLmsStudentResponse> operation
-              = new GetLmsStudent.Async(sdkConfiguration, _headers);
+    public CompletableFuture<GetLmsStudent2Response> getLmsStudent2(@Nonnull GetLmsStudent2Request request) {
+        AsyncRequestOperation<GetLmsStudent2Request, GetLmsStudent2Response> operation
+              = new GetLmsStudent2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -105,19 +105,19 @@ public class AsyncStudent {
      * 
      * @return The async call builder
      */
-    public ListLmsStudentsRequestBuilder listLmsStudents() {
-        return new ListLmsStudentsRequestBuilder(sdkConfiguration);
+    public ListLmsStudents2RequestBuilder listLmsStudents2() {
+        return new ListLmsStudents2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * List all students
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<ListLmsStudentsResponse>} - The async response
+     * @return {@code CompletableFuture<ListLmsStudents2Response>} - The async response
      */
-    public CompletableFuture<ListLmsStudentsResponse> listLmsStudents(@Nonnull ListLmsStudentsRequest request) {
-        AsyncRequestOperation<ListLmsStudentsRequest, ListLmsStudentsResponse> operation
-              = new ListLmsStudents.Async(sdkConfiguration, _headers);
+    public CompletableFuture<ListLmsStudents2Response> listLmsStudents2(@Nonnull ListLmsStudents2Request request) {
+        AsyncRequestOperation<ListLmsStudents2Request, ListLmsStudents2Response> operation
+              = new ListLmsStudents2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -128,19 +128,19 @@ public class AsyncStudent {
      * 
      * @return The async call builder
      */
-    public PatchLmsStudentRequestBuilder patchLmsStudent() {
-        return new PatchLmsStudentRequestBuilder(sdkConfiguration);
+    public PatchLmsStudent2RequestBuilder patchLmsStudent2() {
+        return new PatchLmsStudent2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update a student
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<PatchLmsStudentResponse>} - The async response
+     * @return {@code CompletableFuture<PatchLmsStudent2Response>} - The async response
      */
-    public CompletableFuture<PatchLmsStudentResponse> patchLmsStudent(@Nonnull PatchLmsStudentRequest request) {
-        AsyncRequestOperation<PatchLmsStudentRequest, PatchLmsStudentResponse> operation
-              = new PatchLmsStudent.Async(sdkConfiguration, _headers);
+    public CompletableFuture<PatchLmsStudent2Response> patchLmsStudent2(@Nonnull PatchLmsStudent2Request request) {
+        AsyncRequestOperation<PatchLmsStudent2Request, PatchLmsStudent2Response> operation
+              = new PatchLmsStudent2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -151,19 +151,19 @@ public class AsyncStudent {
      * 
      * @return The async call builder
      */
-    public RemoveLmsStudentRequestBuilder removeLmsStudent() {
-        return new RemoveLmsStudentRequestBuilder(sdkConfiguration);
+    public RemoveLmsStudent2RequestBuilder removeLmsStudent2() {
+        return new RemoveLmsStudent2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Remove a student
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<RemoveLmsStudentResponse>} - The async response
+     * @return {@code CompletableFuture<RemoveLmsStudent2Response>} - The async response
      */
-    public CompletableFuture<RemoveLmsStudentResponse> removeLmsStudent(@Nonnull RemoveLmsStudentRequest request) {
-        AsyncRequestOperation<RemoveLmsStudentRequest, RemoveLmsStudentResponse> operation
-              = new RemoveLmsStudent.Async(sdkConfiguration, _headers);
+    public CompletableFuture<RemoveLmsStudent2Response> removeLmsStudent2(@Nonnull RemoveLmsStudent2Request request) {
+        AsyncRequestOperation<RemoveLmsStudent2Request, RemoveLmsStudent2Response> operation
+              = new RemoveLmsStudent2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -174,19 +174,19 @@ public class AsyncStudent {
      * 
      * @return The async call builder
      */
-    public UpdateLmsStudentRequestBuilder updateLmsStudent() {
-        return new UpdateLmsStudentRequestBuilder(sdkConfiguration);
+    public UpdateLmsStudent2RequestBuilder updateLmsStudent2() {
+        return new UpdateLmsStudent2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update a student
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<UpdateLmsStudentResponse>} - The async response
+     * @return {@code CompletableFuture<UpdateLmsStudent2Response>} - The async response
      */
-    public CompletableFuture<UpdateLmsStudentResponse> updateLmsStudent(@Nonnull UpdateLmsStudentRequest request) {
-        AsyncRequestOperation<UpdateLmsStudentRequest, UpdateLmsStudentResponse> operation
-              = new UpdateLmsStudent.Async(sdkConfiguration, _headers);
+    public CompletableFuture<UpdateLmsStudent2Response> updateLmsStudent2(@Nonnull UpdateLmsStudent2Request request) {
+        AsyncRequestOperation<UpdateLmsStudent2Request, UpdateLmsStudent2Response> operation
+              = new UpdateLmsStudent2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

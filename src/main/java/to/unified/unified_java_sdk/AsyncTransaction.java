@@ -7,30 +7,30 @@ import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOper
 
 import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
-import to.unified.unified_java_sdk.models.operations.CreateAccountingTransactionRequest;
-import to.unified.unified_java_sdk.models.operations.GetAccountingTransactionRequest;
-import to.unified.unified_java_sdk.models.operations.ListAccountingTransactionsRequest;
-import to.unified.unified_java_sdk.models.operations.PatchAccountingTransactionRequest;
-import to.unified.unified_java_sdk.models.operations.RemoveAccountingTransactionRequest;
-import to.unified.unified_java_sdk.models.operations.UpdateAccountingTransactionRequest;
-import to.unified.unified_java_sdk.models.operations.async.CreateAccountingTransactionRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.CreateAccountingTransactionResponse;
-import to.unified.unified_java_sdk.models.operations.async.GetAccountingTransactionRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.GetAccountingTransactionResponse;
-import to.unified.unified_java_sdk.models.operations.async.ListAccountingTransactionsRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.ListAccountingTransactionsResponse;
-import to.unified.unified_java_sdk.models.operations.async.PatchAccountingTransactionRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.PatchAccountingTransactionResponse;
-import to.unified.unified_java_sdk.models.operations.async.RemoveAccountingTransactionRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.RemoveAccountingTransactionResponse;
-import to.unified.unified_java_sdk.models.operations.async.UpdateAccountingTransactionRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.UpdateAccountingTransactionResponse;
-import to.unified.unified_java_sdk.operations.CreateAccountingTransaction;
-import to.unified.unified_java_sdk.operations.GetAccountingTransaction;
-import to.unified.unified_java_sdk.operations.ListAccountingTransactions;
-import to.unified.unified_java_sdk.operations.PatchAccountingTransaction;
-import to.unified.unified_java_sdk.operations.RemoveAccountingTransaction;
-import to.unified.unified_java_sdk.operations.UpdateAccountingTransaction;
+import to.unified.unified_java_sdk.models.operations.CreateAccountingTransaction2Request;
+import to.unified.unified_java_sdk.models.operations.GetAccountingTransaction2Request;
+import to.unified.unified_java_sdk.models.operations.ListAccountingTransactions2Request;
+import to.unified.unified_java_sdk.models.operations.PatchAccountingTransaction2Request;
+import to.unified.unified_java_sdk.models.operations.RemoveAccountingTransaction2Request;
+import to.unified.unified_java_sdk.models.operations.UpdateAccountingTransaction2Request;
+import to.unified.unified_java_sdk.models.operations.async.CreateAccountingTransaction2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.CreateAccountingTransaction2Response;
+import to.unified.unified_java_sdk.models.operations.async.GetAccountingTransaction2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetAccountingTransaction2Response;
+import to.unified.unified_java_sdk.models.operations.async.ListAccountingTransactions2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListAccountingTransactions2Response;
+import to.unified.unified_java_sdk.models.operations.async.PatchAccountingTransaction2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.PatchAccountingTransaction2Response;
+import to.unified.unified_java_sdk.models.operations.async.RemoveAccountingTransaction2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.RemoveAccountingTransaction2Response;
+import to.unified.unified_java_sdk.models.operations.async.UpdateAccountingTransaction2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.UpdateAccountingTransaction2Response;
+import to.unified.unified_java_sdk.operations.CreateAccountingTransaction2;
+import to.unified.unified_java_sdk.operations.GetAccountingTransaction2;
+import to.unified.unified_java_sdk.operations.ListAccountingTransactions2;
+import to.unified.unified_java_sdk.operations.PatchAccountingTransaction2;
+import to.unified.unified_java_sdk.operations.RemoveAccountingTransaction2;
+import to.unified.unified_java_sdk.operations.UpdateAccountingTransaction2;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -59,19 +59,19 @@ public class AsyncTransaction {
      * 
      * @return The async call builder
      */
-    public CreateAccountingTransactionRequestBuilder createAccountingTransaction() {
-        return new CreateAccountingTransactionRequestBuilder(sdkConfiguration);
+    public CreateAccountingTransaction2RequestBuilder createAccountingTransaction2() {
+        return new CreateAccountingTransaction2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Create a transaction
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<CreateAccountingTransactionResponse>} - The async response
+     * @return {@code CompletableFuture<CreateAccountingTransaction2Response>} - The async response
      */
-    public CompletableFuture<CreateAccountingTransactionResponse> createAccountingTransaction(@Nonnull CreateAccountingTransactionRequest request) {
-        AsyncRequestOperation<CreateAccountingTransactionRequest, CreateAccountingTransactionResponse> operation
-              = new CreateAccountingTransaction.Async(sdkConfiguration, _headers);
+    public CompletableFuture<CreateAccountingTransaction2Response> createAccountingTransaction2(@Nonnull CreateAccountingTransaction2Request request) {
+        AsyncRequestOperation<CreateAccountingTransaction2Request, CreateAccountingTransaction2Response> operation
+              = new CreateAccountingTransaction2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -82,19 +82,19 @@ public class AsyncTransaction {
      * 
      * @return The async call builder
      */
-    public GetAccountingTransactionRequestBuilder getAccountingTransaction() {
-        return new GetAccountingTransactionRequestBuilder(sdkConfiguration);
+    public GetAccountingTransaction2RequestBuilder getAccountingTransaction2() {
+        return new GetAccountingTransaction2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Retrieve a transaction
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<GetAccountingTransactionResponse>} - The async response
+     * @return {@code CompletableFuture<GetAccountingTransaction2Response>} - The async response
      */
-    public CompletableFuture<GetAccountingTransactionResponse> getAccountingTransaction(@Nonnull GetAccountingTransactionRequest request) {
-        AsyncRequestOperation<GetAccountingTransactionRequest, GetAccountingTransactionResponse> operation
-              = new GetAccountingTransaction.Async(sdkConfiguration, _headers);
+    public CompletableFuture<GetAccountingTransaction2Response> getAccountingTransaction2(@Nonnull GetAccountingTransaction2Request request) {
+        AsyncRequestOperation<GetAccountingTransaction2Request, GetAccountingTransaction2Response> operation
+              = new GetAccountingTransaction2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -105,19 +105,19 @@ public class AsyncTransaction {
      * 
      * @return The async call builder
      */
-    public ListAccountingTransactionsRequestBuilder listAccountingTransactions() {
-        return new ListAccountingTransactionsRequestBuilder(sdkConfiguration);
+    public ListAccountingTransactions2RequestBuilder listAccountingTransactions2() {
+        return new ListAccountingTransactions2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * List all transactions
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<ListAccountingTransactionsResponse>} - The async response
+     * @return {@code CompletableFuture<ListAccountingTransactions2Response>} - The async response
      */
-    public CompletableFuture<ListAccountingTransactionsResponse> listAccountingTransactions(@Nonnull ListAccountingTransactionsRequest request) {
-        AsyncRequestOperation<ListAccountingTransactionsRequest, ListAccountingTransactionsResponse> operation
-              = new ListAccountingTransactions.Async(sdkConfiguration, _headers);
+    public CompletableFuture<ListAccountingTransactions2Response> listAccountingTransactions2(@Nonnull ListAccountingTransactions2Request request) {
+        AsyncRequestOperation<ListAccountingTransactions2Request, ListAccountingTransactions2Response> operation
+              = new ListAccountingTransactions2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -128,19 +128,19 @@ public class AsyncTransaction {
      * 
      * @return The async call builder
      */
-    public PatchAccountingTransactionRequestBuilder patchAccountingTransaction() {
-        return new PatchAccountingTransactionRequestBuilder(sdkConfiguration);
+    public PatchAccountingTransaction2RequestBuilder patchAccountingTransaction2() {
+        return new PatchAccountingTransaction2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update a transaction
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<PatchAccountingTransactionResponse>} - The async response
+     * @return {@code CompletableFuture<PatchAccountingTransaction2Response>} - The async response
      */
-    public CompletableFuture<PatchAccountingTransactionResponse> patchAccountingTransaction(@Nonnull PatchAccountingTransactionRequest request) {
-        AsyncRequestOperation<PatchAccountingTransactionRequest, PatchAccountingTransactionResponse> operation
-              = new PatchAccountingTransaction.Async(sdkConfiguration, _headers);
+    public CompletableFuture<PatchAccountingTransaction2Response> patchAccountingTransaction2(@Nonnull PatchAccountingTransaction2Request request) {
+        AsyncRequestOperation<PatchAccountingTransaction2Request, PatchAccountingTransaction2Response> operation
+              = new PatchAccountingTransaction2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -151,19 +151,19 @@ public class AsyncTransaction {
      * 
      * @return The async call builder
      */
-    public RemoveAccountingTransactionRequestBuilder removeAccountingTransaction() {
-        return new RemoveAccountingTransactionRequestBuilder(sdkConfiguration);
+    public RemoveAccountingTransaction2RequestBuilder removeAccountingTransaction2() {
+        return new RemoveAccountingTransaction2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Remove a transaction
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<RemoveAccountingTransactionResponse>} - The async response
+     * @return {@code CompletableFuture<RemoveAccountingTransaction2Response>} - The async response
      */
-    public CompletableFuture<RemoveAccountingTransactionResponse> removeAccountingTransaction(@Nonnull RemoveAccountingTransactionRequest request) {
-        AsyncRequestOperation<RemoveAccountingTransactionRequest, RemoveAccountingTransactionResponse> operation
-              = new RemoveAccountingTransaction.Async(sdkConfiguration, _headers);
+    public CompletableFuture<RemoveAccountingTransaction2Response> removeAccountingTransaction2(@Nonnull RemoveAccountingTransaction2Request request) {
+        AsyncRequestOperation<RemoveAccountingTransaction2Request, RemoveAccountingTransaction2Response> operation
+              = new RemoveAccountingTransaction2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -174,19 +174,19 @@ public class AsyncTransaction {
      * 
      * @return The async call builder
      */
-    public UpdateAccountingTransactionRequestBuilder updateAccountingTransaction() {
-        return new UpdateAccountingTransactionRequestBuilder(sdkConfiguration);
+    public UpdateAccountingTransaction2RequestBuilder updateAccountingTransaction2() {
+        return new UpdateAccountingTransaction2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update a transaction
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<UpdateAccountingTransactionResponse>} - The async response
+     * @return {@code CompletableFuture<UpdateAccountingTransaction2Response>} - The async response
      */
-    public CompletableFuture<UpdateAccountingTransactionResponse> updateAccountingTransaction(@Nonnull UpdateAccountingTransactionRequest request) {
-        AsyncRequestOperation<UpdateAccountingTransactionRequest, UpdateAccountingTransactionResponse> operation
-              = new UpdateAccountingTransaction.Async(sdkConfiguration, _headers);
+    public CompletableFuture<UpdateAccountingTransaction2Response> updateAccountingTransaction2(@Nonnull UpdateAccountingTransaction2Request request) {
+        AsyncRequestOperation<UpdateAccountingTransaction2Request, UpdateAccountingTransaction2Response> operation
+              = new UpdateAccountingTransaction2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

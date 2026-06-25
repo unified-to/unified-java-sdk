@@ -6,85 +6,85 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
-import to.unified.unified_java_sdk.models.operations.CreateAdsGroupRequest;
-import to.unified.unified_java_sdk.models.operations.CreateAdsGroupRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.CreateAdsGroupResponse;
-import to.unified.unified_java_sdk.models.operations.CreateHrisGroupRequest;
-import to.unified.unified_java_sdk.models.operations.CreateHrisGroupRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.CreateHrisGroupResponse;
+import to.unified.unified_java_sdk.models.operations.CreateAdsGroup2Request;
+import to.unified.unified_java_sdk.models.operations.CreateAdsGroup2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.CreateAdsGroup2Response;
+import to.unified.unified_java_sdk.models.operations.CreateHrisGroup2Request;
+import to.unified.unified_java_sdk.models.operations.CreateHrisGroup2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.CreateHrisGroup2Response;
 import to.unified.unified_java_sdk.models.operations.CreateScimGroupsRequest;
 import to.unified.unified_java_sdk.models.operations.CreateScimGroupsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateScimGroupsResponse;
-import to.unified.unified_java_sdk.models.operations.GetAdsGroupRequest;
-import to.unified.unified_java_sdk.models.operations.GetAdsGroupRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.GetAdsGroupResponse;
-import to.unified.unified_java_sdk.models.operations.GetClubsGroupRequest;
-import to.unified.unified_java_sdk.models.operations.GetClubsGroupRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.GetClubsGroupResponse;
-import to.unified.unified_java_sdk.models.operations.GetHrisGroupRequest;
-import to.unified.unified_java_sdk.models.operations.GetHrisGroupRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.GetHrisGroupResponse;
+import to.unified.unified_java_sdk.models.operations.GetAdsGroup2Request;
+import to.unified.unified_java_sdk.models.operations.GetAdsGroup2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetAdsGroup2Response;
+import to.unified.unified_java_sdk.models.operations.GetClubsGroup2Request;
+import to.unified.unified_java_sdk.models.operations.GetClubsGroup2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetClubsGroup2Response;
+import to.unified.unified_java_sdk.models.operations.GetHrisGroup2Request;
+import to.unified.unified_java_sdk.models.operations.GetHrisGroup2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetHrisGroup2Response;
 import to.unified.unified_java_sdk.models.operations.GetScimGroupsRequest;
 import to.unified.unified_java_sdk.models.operations.GetScimGroupsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.GetScimGroupsResponse;
-import to.unified.unified_java_sdk.models.operations.ListAdsGroupsRequest;
-import to.unified.unified_java_sdk.models.operations.ListAdsGroupsRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.ListAdsGroupsResponse;
-import to.unified.unified_java_sdk.models.operations.ListClubsGroupsRequest;
-import to.unified.unified_java_sdk.models.operations.ListClubsGroupsRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.ListClubsGroupsResponse;
-import to.unified.unified_java_sdk.models.operations.ListHrisGroupsRequest;
-import to.unified.unified_java_sdk.models.operations.ListHrisGroupsRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.ListHrisGroupsResponse;
+import to.unified.unified_java_sdk.models.operations.ListAdsGroups2Request;
+import to.unified.unified_java_sdk.models.operations.ListAdsGroups2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListAdsGroups2Response;
+import to.unified.unified_java_sdk.models.operations.ListClubsGroups2Request;
+import to.unified.unified_java_sdk.models.operations.ListClubsGroups2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListClubsGroups2Response;
+import to.unified.unified_java_sdk.models.operations.ListHrisGroups2Request;
+import to.unified.unified_java_sdk.models.operations.ListHrisGroups2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListHrisGroups2Response;
 import to.unified.unified_java_sdk.models.operations.ListScimGroupsRequest;
 import to.unified.unified_java_sdk.models.operations.ListScimGroupsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.ListScimGroupsResponse;
-import to.unified.unified_java_sdk.models.operations.PatchAdsGroupRequest;
-import to.unified.unified_java_sdk.models.operations.PatchAdsGroupRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.PatchAdsGroupResponse;
-import to.unified.unified_java_sdk.models.operations.PatchHrisGroupRequest;
-import to.unified.unified_java_sdk.models.operations.PatchHrisGroupRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.PatchHrisGroupResponse;
+import to.unified.unified_java_sdk.models.operations.PatchAdsGroup2Request;
+import to.unified.unified_java_sdk.models.operations.PatchAdsGroup2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.PatchAdsGroup2Response;
+import to.unified.unified_java_sdk.models.operations.PatchHrisGroup2Request;
+import to.unified.unified_java_sdk.models.operations.PatchHrisGroup2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.PatchHrisGroup2Response;
 import to.unified.unified_java_sdk.models.operations.PatchScimGroupsRequest;
 import to.unified.unified_java_sdk.models.operations.PatchScimGroupsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.PatchScimGroupsResponse;
-import to.unified.unified_java_sdk.models.operations.RemoveAdsGroupRequest;
-import to.unified.unified_java_sdk.models.operations.RemoveAdsGroupRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.RemoveAdsGroupResponse;
-import to.unified.unified_java_sdk.models.operations.RemoveHrisGroupRequest;
-import to.unified.unified_java_sdk.models.operations.RemoveHrisGroupRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.RemoveHrisGroupResponse;
+import to.unified.unified_java_sdk.models.operations.RemoveAdsGroup2Request;
+import to.unified.unified_java_sdk.models.operations.RemoveAdsGroup2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.RemoveAdsGroup2Response;
+import to.unified.unified_java_sdk.models.operations.RemoveHrisGroup2Request;
+import to.unified.unified_java_sdk.models.operations.RemoveHrisGroup2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.RemoveHrisGroup2Response;
 import to.unified.unified_java_sdk.models.operations.RemoveScimGroupsRequest;
 import to.unified.unified_java_sdk.models.operations.RemoveScimGroupsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.RemoveScimGroupsResponse;
-import to.unified.unified_java_sdk.models.operations.UpdateAdsGroupRequest;
-import to.unified.unified_java_sdk.models.operations.UpdateAdsGroupRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.UpdateAdsGroupResponse;
-import to.unified.unified_java_sdk.models.operations.UpdateHrisGroupRequest;
-import to.unified.unified_java_sdk.models.operations.UpdateHrisGroupRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.UpdateHrisGroupResponse;
+import to.unified.unified_java_sdk.models.operations.UpdateAdsGroup2Request;
+import to.unified.unified_java_sdk.models.operations.UpdateAdsGroup2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.UpdateAdsGroup2Response;
+import to.unified.unified_java_sdk.models.operations.UpdateHrisGroup2Request;
+import to.unified.unified_java_sdk.models.operations.UpdateHrisGroup2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.UpdateHrisGroup2Response;
 import to.unified.unified_java_sdk.models.operations.UpdateScimGroupsRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateScimGroupsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.UpdateScimGroupsResponse;
-import to.unified.unified_java_sdk.operations.CreateAdsGroup;
-import to.unified.unified_java_sdk.operations.CreateHrisGroup;
+import to.unified.unified_java_sdk.operations.CreateAdsGroup2;
+import to.unified.unified_java_sdk.operations.CreateHrisGroup2;
 import to.unified.unified_java_sdk.operations.CreateScimGroups;
-import to.unified.unified_java_sdk.operations.GetAdsGroup;
-import to.unified.unified_java_sdk.operations.GetClubsGroup;
-import to.unified.unified_java_sdk.operations.GetHrisGroup;
+import to.unified.unified_java_sdk.operations.GetAdsGroup2;
+import to.unified.unified_java_sdk.operations.GetClubsGroup2;
+import to.unified.unified_java_sdk.operations.GetHrisGroup2;
 import to.unified.unified_java_sdk.operations.GetScimGroups;
-import to.unified.unified_java_sdk.operations.ListAdsGroups;
-import to.unified.unified_java_sdk.operations.ListClubsGroups;
-import to.unified.unified_java_sdk.operations.ListHrisGroups;
+import to.unified.unified_java_sdk.operations.ListAdsGroups2;
+import to.unified.unified_java_sdk.operations.ListClubsGroups2;
+import to.unified.unified_java_sdk.operations.ListHrisGroups2;
 import to.unified.unified_java_sdk.operations.ListScimGroups;
-import to.unified.unified_java_sdk.operations.PatchAdsGroup;
-import to.unified.unified_java_sdk.operations.PatchHrisGroup;
+import to.unified.unified_java_sdk.operations.PatchAdsGroup2;
+import to.unified.unified_java_sdk.operations.PatchHrisGroup2;
 import to.unified.unified_java_sdk.operations.PatchScimGroups;
-import to.unified.unified_java_sdk.operations.RemoveAdsGroup;
-import to.unified.unified_java_sdk.operations.RemoveHrisGroup;
+import to.unified.unified_java_sdk.operations.RemoveAdsGroup2;
+import to.unified.unified_java_sdk.operations.RemoveHrisGroup2;
 import to.unified.unified_java_sdk.operations.RemoveScimGroups;
-import to.unified.unified_java_sdk.operations.UpdateAdsGroup;
-import to.unified.unified_java_sdk.operations.UpdateHrisGroup;
+import to.unified.unified_java_sdk.operations.UpdateAdsGroup2;
+import to.unified.unified_java_sdk.operations.UpdateHrisGroup2;
 import to.unified.unified_java_sdk.operations.UpdateScimGroups;
 import to.unified.unified_java_sdk.utils.Headers;
 
@@ -113,8 +113,8 @@ public class Group {
      * 
      * @return The call builder
      */
-    public CreateAdsGroupRequestBuilder createAdsGroup() {
-        return new CreateAdsGroupRequestBuilder(sdkConfiguration);
+    public CreateAdsGroup2RequestBuilder createAdsGroup2() {
+        return new CreateAdsGroup2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -124,9 +124,9 @@ public class Group {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateAdsGroupResponse createAdsGroup(@Nonnull CreateAdsGroupRequest request) {
-        RequestOperation<CreateAdsGroupRequest, CreateAdsGroupResponse> operation
-              = new CreateAdsGroup.Sync(sdkConfiguration, _headers);
+    public CreateAdsGroup2Response createAdsGroup2(@Nonnull CreateAdsGroup2Request request) {
+        RequestOperation<CreateAdsGroup2Request, CreateAdsGroup2Response> operation
+              = new CreateAdsGroup2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -135,8 +135,8 @@ public class Group {
      * 
      * @return The call builder
      */
-    public CreateHrisGroupRequestBuilder createHrisGroup() {
-        return new CreateHrisGroupRequestBuilder(sdkConfiguration);
+    public CreateHrisGroup2RequestBuilder createHrisGroup2() {
+        return new CreateHrisGroup2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -146,9 +146,9 @@ public class Group {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateHrisGroupResponse createHrisGroup(@Nonnull CreateHrisGroupRequest request) {
-        RequestOperation<CreateHrisGroupRequest, CreateHrisGroupResponse> operation
-              = new CreateHrisGroup.Sync(sdkConfiguration, _headers);
+    public CreateHrisGroup2Response createHrisGroup2(@Nonnull CreateHrisGroup2Request request) {
+        RequestOperation<CreateHrisGroup2Request, CreateHrisGroup2Response> operation
+              = new CreateHrisGroup2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -179,8 +179,8 @@ public class Group {
      * 
      * @return The call builder
      */
-    public GetAdsGroupRequestBuilder getAdsGroup() {
-        return new GetAdsGroupRequestBuilder(sdkConfiguration);
+    public GetAdsGroup2RequestBuilder getAdsGroup2() {
+        return new GetAdsGroup2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -190,9 +190,9 @@ public class Group {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetAdsGroupResponse getAdsGroup(@Nonnull GetAdsGroupRequest request) {
-        RequestOperation<GetAdsGroupRequest, GetAdsGroupResponse> operation
-              = new GetAdsGroup.Sync(sdkConfiguration, _headers);
+    public GetAdsGroup2Response getAdsGroup2(@Nonnull GetAdsGroup2Request request) {
+        RequestOperation<GetAdsGroup2Request, GetAdsGroup2Response> operation
+              = new GetAdsGroup2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -201,8 +201,8 @@ public class Group {
      * 
      * @return The call builder
      */
-    public GetClubsGroupRequestBuilder getClubsGroup() {
-        return new GetClubsGroupRequestBuilder(sdkConfiguration);
+    public GetClubsGroup2RequestBuilder getClubsGroup2() {
+        return new GetClubsGroup2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -212,9 +212,9 @@ public class Group {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetClubsGroupResponse getClubsGroup(@Nonnull GetClubsGroupRequest request) {
-        RequestOperation<GetClubsGroupRequest, GetClubsGroupResponse> operation
-              = new GetClubsGroup.Sync(sdkConfiguration, _headers);
+    public GetClubsGroup2Response getClubsGroup2(@Nonnull GetClubsGroup2Request request) {
+        RequestOperation<GetClubsGroup2Request, GetClubsGroup2Response> operation
+              = new GetClubsGroup2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -223,8 +223,8 @@ public class Group {
      * 
      * @return The call builder
      */
-    public GetHrisGroupRequestBuilder getHrisGroup() {
-        return new GetHrisGroupRequestBuilder(sdkConfiguration);
+    public GetHrisGroup2RequestBuilder getHrisGroup2() {
+        return new GetHrisGroup2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -234,9 +234,9 @@ public class Group {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetHrisGroupResponse getHrisGroup(@Nonnull GetHrisGroupRequest request) {
-        RequestOperation<GetHrisGroupRequest, GetHrisGroupResponse> operation
-              = new GetHrisGroup.Sync(sdkConfiguration, _headers);
+    public GetHrisGroup2Response getHrisGroup2(@Nonnull GetHrisGroup2Request request) {
+        RequestOperation<GetHrisGroup2Request, GetHrisGroup2Response> operation
+              = new GetHrisGroup2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -267,8 +267,8 @@ public class Group {
      * 
      * @return The call builder
      */
-    public ListAdsGroupsRequestBuilder listAdsGroups() {
-        return new ListAdsGroupsRequestBuilder(sdkConfiguration);
+    public ListAdsGroups2RequestBuilder listAdsGroups2() {
+        return new ListAdsGroups2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -278,9 +278,9 @@ public class Group {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListAdsGroupsResponse listAdsGroups(@Nonnull ListAdsGroupsRequest request) {
-        RequestOperation<ListAdsGroupsRequest, ListAdsGroupsResponse> operation
-              = new ListAdsGroups.Sync(sdkConfiguration, _headers);
+    public ListAdsGroups2Response listAdsGroups2(@Nonnull ListAdsGroups2Request request) {
+        RequestOperation<ListAdsGroups2Request, ListAdsGroups2Response> operation
+              = new ListAdsGroups2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -289,8 +289,8 @@ public class Group {
      * 
      * @return The call builder
      */
-    public ListClubsGroupsRequestBuilder listClubsGroups() {
-        return new ListClubsGroupsRequestBuilder(sdkConfiguration);
+    public ListClubsGroups2RequestBuilder listClubsGroups2() {
+        return new ListClubsGroups2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -300,9 +300,9 @@ public class Group {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListClubsGroupsResponse listClubsGroups(@Nonnull ListClubsGroupsRequest request) {
-        RequestOperation<ListClubsGroupsRequest, ListClubsGroupsResponse> operation
-              = new ListClubsGroups.Sync(sdkConfiguration, _headers);
+    public ListClubsGroups2Response listClubsGroups2(@Nonnull ListClubsGroups2Request request) {
+        RequestOperation<ListClubsGroups2Request, ListClubsGroups2Response> operation
+              = new ListClubsGroups2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -311,8 +311,8 @@ public class Group {
      * 
      * @return The call builder
      */
-    public ListHrisGroupsRequestBuilder listHrisGroups() {
-        return new ListHrisGroupsRequestBuilder(sdkConfiguration);
+    public ListHrisGroups2RequestBuilder listHrisGroups2() {
+        return new ListHrisGroups2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -322,9 +322,9 @@ public class Group {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListHrisGroupsResponse listHrisGroups(@Nonnull ListHrisGroupsRequest request) {
-        RequestOperation<ListHrisGroupsRequest, ListHrisGroupsResponse> operation
-              = new ListHrisGroups.Sync(sdkConfiguration, _headers);
+    public ListHrisGroups2Response listHrisGroups2(@Nonnull ListHrisGroups2Request request) {
+        RequestOperation<ListHrisGroups2Request, ListHrisGroups2Response> operation
+              = new ListHrisGroups2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -355,8 +355,8 @@ public class Group {
      * 
      * @return The call builder
      */
-    public PatchAdsGroupRequestBuilder patchAdsGroup() {
-        return new PatchAdsGroupRequestBuilder(sdkConfiguration);
+    public PatchAdsGroup2RequestBuilder patchAdsGroup2() {
+        return new PatchAdsGroup2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -366,9 +366,9 @@ public class Group {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchAdsGroupResponse patchAdsGroup(@Nonnull PatchAdsGroupRequest request) {
-        RequestOperation<PatchAdsGroupRequest, PatchAdsGroupResponse> operation
-              = new PatchAdsGroup.Sync(sdkConfiguration, _headers);
+    public PatchAdsGroup2Response patchAdsGroup2(@Nonnull PatchAdsGroup2Request request) {
+        RequestOperation<PatchAdsGroup2Request, PatchAdsGroup2Response> operation
+              = new PatchAdsGroup2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -377,8 +377,8 @@ public class Group {
      * 
      * @return The call builder
      */
-    public PatchHrisGroupRequestBuilder patchHrisGroup() {
-        return new PatchHrisGroupRequestBuilder(sdkConfiguration);
+    public PatchHrisGroup2RequestBuilder patchHrisGroup2() {
+        return new PatchHrisGroup2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -388,9 +388,9 @@ public class Group {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchHrisGroupResponse patchHrisGroup(@Nonnull PatchHrisGroupRequest request) {
-        RequestOperation<PatchHrisGroupRequest, PatchHrisGroupResponse> operation
-              = new PatchHrisGroup.Sync(sdkConfiguration, _headers);
+    public PatchHrisGroup2Response patchHrisGroup2(@Nonnull PatchHrisGroup2Request request) {
+        RequestOperation<PatchHrisGroup2Request, PatchHrisGroup2Response> operation
+              = new PatchHrisGroup2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -421,8 +421,8 @@ public class Group {
      * 
      * @return The call builder
      */
-    public RemoveAdsGroupRequestBuilder removeAdsGroup() {
-        return new RemoveAdsGroupRequestBuilder(sdkConfiguration);
+    public RemoveAdsGroup2RequestBuilder removeAdsGroup2() {
+        return new RemoveAdsGroup2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -432,9 +432,9 @@ public class Group {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveAdsGroupResponse removeAdsGroup(@Nonnull RemoveAdsGroupRequest request) {
-        RequestOperation<RemoveAdsGroupRequest, RemoveAdsGroupResponse> operation
-              = new RemoveAdsGroup.Sync(sdkConfiguration, _headers);
+    public RemoveAdsGroup2Response removeAdsGroup2(@Nonnull RemoveAdsGroup2Request request) {
+        RequestOperation<RemoveAdsGroup2Request, RemoveAdsGroup2Response> operation
+              = new RemoveAdsGroup2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -443,8 +443,8 @@ public class Group {
      * 
      * @return The call builder
      */
-    public RemoveHrisGroupRequestBuilder removeHrisGroup() {
-        return new RemoveHrisGroupRequestBuilder(sdkConfiguration);
+    public RemoveHrisGroup2RequestBuilder removeHrisGroup2() {
+        return new RemoveHrisGroup2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -454,9 +454,9 @@ public class Group {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveHrisGroupResponse removeHrisGroup(@Nonnull RemoveHrisGroupRequest request) {
-        RequestOperation<RemoveHrisGroupRequest, RemoveHrisGroupResponse> operation
-              = new RemoveHrisGroup.Sync(sdkConfiguration, _headers);
+    public RemoveHrisGroup2Response removeHrisGroup2(@Nonnull RemoveHrisGroup2Request request) {
+        RequestOperation<RemoveHrisGroup2Request, RemoveHrisGroup2Response> operation
+              = new RemoveHrisGroup2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -487,8 +487,8 @@ public class Group {
      * 
      * @return The call builder
      */
-    public UpdateAdsGroupRequestBuilder updateAdsGroup() {
-        return new UpdateAdsGroupRequestBuilder(sdkConfiguration);
+    public UpdateAdsGroup2RequestBuilder updateAdsGroup2() {
+        return new UpdateAdsGroup2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -498,9 +498,9 @@ public class Group {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateAdsGroupResponse updateAdsGroup(@Nonnull UpdateAdsGroupRequest request) {
-        RequestOperation<UpdateAdsGroupRequest, UpdateAdsGroupResponse> operation
-              = new UpdateAdsGroup.Sync(sdkConfiguration, _headers);
+    public UpdateAdsGroup2Response updateAdsGroup2(@Nonnull UpdateAdsGroup2Request request) {
+        RequestOperation<UpdateAdsGroup2Request, UpdateAdsGroup2Response> operation
+              = new UpdateAdsGroup2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -509,8 +509,8 @@ public class Group {
      * 
      * @return The call builder
      */
-    public UpdateHrisGroupRequestBuilder updateHrisGroup() {
-        return new UpdateHrisGroupRequestBuilder(sdkConfiguration);
+    public UpdateHrisGroup2RequestBuilder updateHrisGroup2() {
+        return new UpdateHrisGroup2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -520,9 +520,9 @@ public class Group {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateHrisGroupResponse updateHrisGroup(@Nonnull UpdateHrisGroupRequest request) {
-        RequestOperation<UpdateHrisGroupRequest, UpdateHrisGroupResponse> operation
-              = new UpdateHrisGroup.Sync(sdkConfiguration, _headers);
+    public UpdateHrisGroup2Response updateHrisGroup2(@Nonnull UpdateHrisGroup2Request request) {
+        RequestOperation<UpdateHrisGroup2Request, UpdateHrisGroup2Response> operation
+              = new UpdateHrisGroup2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

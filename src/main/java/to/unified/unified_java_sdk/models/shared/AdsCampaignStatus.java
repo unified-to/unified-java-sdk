@@ -24,10 +24,10 @@ public class AdsCampaignStatus {
     public static final AdsCampaignStatus ACTIVE = new AdsCampaignStatus("ACTIVE");
     public static final AdsCampaignStatus PAUSED = new AdsCampaignStatus("PAUSED");
     public static final AdsCampaignStatus ARCHIVED = new AdsCampaignStatus("ARCHIVED");
-    public static final AdsCampaignStatus PROCESSING = new AdsCampaignStatus("PROCESSING");
-    public static final AdsCampaignStatus PROCESSING_FAILED = new AdsCampaignStatus("PROCESSING_FAILED");
     public static final AdsCampaignStatus DRAFT = new AdsCampaignStatus("DRAFT");
     public static final AdsCampaignStatus SCHEDULED_FOR_DELETION = new AdsCampaignStatus("SCHEDULED_FOR_DELETION");
+    public static final AdsCampaignStatus PROCESSING = new AdsCampaignStatus("PROCESSING");
+    public static final AdsCampaignStatus PROCESSING_FAILED = new AdsCampaignStatus("PROCESSING_FAILED");
 
     // This map will grow whenever a Color gets created with a new
     // unrecognized value (a potential memory leak if the user is not
@@ -105,10 +105,10 @@ public class AdsCampaignStatus {
         map.put("ACTIVE", ACTIVE);
         map.put("PAUSED", PAUSED);
         map.put("ARCHIVED", ARCHIVED);
-        map.put("PROCESSING", PROCESSING);
-        map.put("PROCESSING_FAILED", PROCESSING_FAILED);
         map.put("DRAFT", DRAFT);
         map.put("SCHEDULED_FOR_DELETION", SCHEDULED_FOR_DELETION);
+        map.put("PROCESSING", PROCESSING);
+        map.put("PROCESSING_FAILED", PROCESSING_FAILED);
         return map;
     }
 
@@ -118,10 +118,10 @@ public class AdsCampaignStatus {
         map.put("ACTIVE", AdsCampaignStatusEnum.ACTIVE);
         map.put("PAUSED", AdsCampaignStatusEnum.PAUSED);
         map.put("ARCHIVED", AdsCampaignStatusEnum.ARCHIVED);
-        map.put("PROCESSING", AdsCampaignStatusEnum.PROCESSING);
-        map.put("PROCESSING_FAILED", AdsCampaignStatusEnum.PROCESSING_FAILED);
         map.put("DRAFT", AdsCampaignStatusEnum.DRAFT);
         map.put("SCHEDULED_FOR_DELETION", AdsCampaignStatusEnum.SCHEDULED_FOR_DELETION);
+        map.put("PROCESSING", AdsCampaignStatusEnum.PROCESSING);
+        map.put("PROCESSING_FAILED", AdsCampaignStatusEnum.PROCESSING_FAILED);
         return map;
     }
     
@@ -132,10 +132,10 @@ public class AdsCampaignStatus {
         ACTIVE("ACTIVE"),
         PAUSED("PAUSED"),
         ARCHIVED("ARCHIVED"),
-        PROCESSING("PROCESSING"),
-        PROCESSING_FAILED("PROCESSING_FAILED"),
         DRAFT("DRAFT"),
-        SCHEDULED_FOR_DELETION("SCHEDULED_FOR_DELETION"),;
+        SCHEDULED_FOR_DELETION("SCHEDULED_FOR_DELETION"),
+        PROCESSING("PROCESSING"),
+        PROCESSING_FAILED("PROCESSING_FAILED"),;
 
         private final String value;
 

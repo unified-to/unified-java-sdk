@@ -6,10 +6,10 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
-import to.unified.unified_java_sdk.models.operations.ListCommerceAvailabilitiesRequest;
-import to.unified.unified_java_sdk.models.operations.ListCommerceAvailabilitiesRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.ListCommerceAvailabilitiesResponse;
-import to.unified.unified_java_sdk.operations.ListCommerceAvailabilities;
+import to.unified.unified_java_sdk.models.operations.ListCommerceAvailabilities2Request;
+import to.unified.unified_java_sdk.models.operations.ListCommerceAvailabilities2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListCommerceAvailabilities2Response;
+import to.unified.unified_java_sdk.operations.ListCommerceAvailabilities2;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -37,8 +37,8 @@ public class Availability {
      * 
      * @return The call builder
      */
-    public ListCommerceAvailabilitiesRequestBuilder listCommerceAvailabilities() {
-        return new ListCommerceAvailabilitiesRequestBuilder(sdkConfiguration);
+    public ListCommerceAvailabilities2RequestBuilder listCommerceAvailabilities2() {
+        return new ListCommerceAvailabilities2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -48,9 +48,9 @@ public class Availability {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListCommerceAvailabilitiesResponse listCommerceAvailabilities(@Nonnull ListCommerceAvailabilitiesRequest request) {
-        RequestOperation<ListCommerceAvailabilitiesRequest, ListCommerceAvailabilitiesResponse> operation
-              = new ListCommerceAvailabilities.Sync(sdkConfiguration, _headers);
+    public ListCommerceAvailabilities2Response listCommerceAvailabilities2(@Nonnull ListCommerceAvailabilities2Request request) {
+        RequestOperation<ListCommerceAvailabilities2Request, ListCommerceAvailabilities2Response> operation
+              = new ListCommerceAvailabilities2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

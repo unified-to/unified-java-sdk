@@ -125,6 +125,21 @@ public class UnifiedTo {
     private final Target target;
 
 
+    private final Analytics analytics;
+
+
+    private final Event event;
+
+
+    private final Property property;
+
+
+    private final Session session;
+
+
+    private final Visitor visitor;
+
+
     private final Assessment assessment;
 
 
@@ -165,9 +180,6 @@ public class UnifiedTo {
 
 
     private final Busy busy;
-
-
-    private final Event event;
 
 
     private final Link link;
@@ -225,6 +237,21 @@ public class UnifiedTo {
 
 
     private final Pipeline pipeline;
+
+
+    private final Datastore datastore;
+
+
+    private final Database database;
+
+
+    private final Query query;
+
+
+    private final Record record;
+
+
+    private final Table table;
 
 
     private final Enrich enrich;
@@ -598,6 +625,31 @@ public class UnifiedTo {
     }
 
 
+    public Analytics analytics() {
+        return analytics;
+    }
+
+
+    public Event event() {
+        return event;
+    }
+
+
+    public Property property() {
+        return property;
+    }
+
+
+    public Session session() {
+        return session;
+    }
+
+
+    public Visitor visitor() {
+        return visitor;
+    }
+
+
     public Assessment assessment() {
         return assessment;
     }
@@ -665,11 +717,6 @@ public class UnifiedTo {
 
     public Busy busy() {
         return busy;
-    }
-
-
-    public Event event() {
-        return event;
     }
 
 
@@ -765,6 +812,31 @@ public class UnifiedTo {
 
     public Pipeline pipeline() {
         return pipeline;
+    }
+
+
+    public Datastore datastore() {
+        return datastore;
+    }
+
+
+    public Database database() {
+        return database;
+    }
+
+
+    public Query query() {
+        return query;
+    }
+
+
+    public Record record() {
+        return record;
+    }
+
+
+    public Table table() {
+        return table;
     }
 
 
@@ -1287,7 +1359,7 @@ public class UnifiedTo {
         return new Builder();
     }
 
-    public UnifiedTo(SDKConfiguration sdkConfiguration) {
+    private UnifiedTo(SDKConfiguration sdkConfiguration) {
         sdkConfiguration.initialize();
         this.accounting = new Accounting(sdkConfiguration);
         this.account = new Account(sdkConfiguration);
@@ -1317,6 +1389,11 @@ public class UnifiedTo {
         this.insertionorder = new Insertionorder(sdkConfiguration);
         this.promoted = new Promoted(sdkConfiguration);
         this.target = new Target(sdkConfiguration);
+        this.analytics = new Analytics(sdkConfiguration);
+        this.event = new Event(sdkConfiguration);
+        this.property = new Property(sdkConfiguration);
+        this.session = new Session(sdkConfiguration);
+        this.visitor = new Visitor(sdkConfiguration);
         this.assessment = new Assessment(sdkConfiguration);
         this.package_ = new Package(sdkConfiguration);
         this.ats = new Ats(sdkConfiguration);
@@ -1331,7 +1408,6 @@ public class UnifiedTo {
         this.scorecard = new Scorecard(sdkConfiguration);
         this.calendar = new Calendar(sdkConfiguration);
         this.busy = new Busy(sdkConfiguration);
-        this.event = new Event(sdkConfiguration);
         this.link = new Link(sdkConfiguration);
         this.recording = new Recording(sdkConfiguration);
         this.webinar = new Webinar(sdkConfiguration);
@@ -1351,6 +1427,11 @@ public class UnifiedTo {
         this.deal = new Deal(sdkConfiguration);
         this.lead = new Lead(sdkConfiguration);
         this.pipeline = new Pipeline(sdkConfiguration);
+        this.datastore = new Datastore(sdkConfiguration);
+        this.database = new Database(sdkConfiguration);
+        this.query = new Query(sdkConfiguration);
+        this.record = new Record(sdkConfiguration);
+        this.table = new Table(sdkConfiguration);
         this.enrich = new Enrich(sdkConfiguration);
         this.person = new Person(sdkConfiguration);
         this.forms = new Forms(sdkConfiguration);

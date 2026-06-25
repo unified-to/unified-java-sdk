@@ -24,10 +24,10 @@ public class PropertyAdsReportMetricsAdStatus {
     public static final PropertyAdsReportMetricsAdStatus ACTIVE = new PropertyAdsReportMetricsAdStatus("ACTIVE");
     public static final PropertyAdsReportMetricsAdStatus PAUSED = new PropertyAdsReportMetricsAdStatus("PAUSED");
     public static final PropertyAdsReportMetricsAdStatus ARCHIVED = new PropertyAdsReportMetricsAdStatus("ARCHIVED");
-    public static final PropertyAdsReportMetricsAdStatus PROCESSING = new PropertyAdsReportMetricsAdStatus("PROCESSING");
-    public static final PropertyAdsReportMetricsAdStatus PROCESSING_FAILED = new PropertyAdsReportMetricsAdStatus("PROCESSING_FAILED");
     public static final PropertyAdsReportMetricsAdStatus DRAFT = new PropertyAdsReportMetricsAdStatus("DRAFT");
     public static final PropertyAdsReportMetricsAdStatus SCHEDULED_FOR_DELETION = new PropertyAdsReportMetricsAdStatus("SCHEDULED_FOR_DELETION");
+    public static final PropertyAdsReportMetricsAdStatus PROCESSING = new PropertyAdsReportMetricsAdStatus("PROCESSING");
+    public static final PropertyAdsReportMetricsAdStatus PROCESSING_FAILED = new PropertyAdsReportMetricsAdStatus("PROCESSING_FAILED");
 
     // This map will grow whenever a Color gets created with a new
     // unrecognized value (a potential memory leak if the user is not
@@ -105,10 +105,10 @@ public class PropertyAdsReportMetricsAdStatus {
         map.put("ACTIVE", ACTIVE);
         map.put("PAUSED", PAUSED);
         map.put("ARCHIVED", ARCHIVED);
-        map.put("PROCESSING", PROCESSING);
-        map.put("PROCESSING_FAILED", PROCESSING_FAILED);
         map.put("DRAFT", DRAFT);
         map.put("SCHEDULED_FOR_DELETION", SCHEDULED_FOR_DELETION);
+        map.put("PROCESSING", PROCESSING);
+        map.put("PROCESSING_FAILED", PROCESSING_FAILED);
         return map;
     }
 
@@ -118,10 +118,10 @@ public class PropertyAdsReportMetricsAdStatus {
         map.put("ACTIVE", PropertyAdsReportMetricsAdStatusEnum.ACTIVE);
         map.put("PAUSED", PropertyAdsReportMetricsAdStatusEnum.PAUSED);
         map.put("ARCHIVED", PropertyAdsReportMetricsAdStatusEnum.ARCHIVED);
-        map.put("PROCESSING", PropertyAdsReportMetricsAdStatusEnum.PROCESSING);
-        map.put("PROCESSING_FAILED", PropertyAdsReportMetricsAdStatusEnum.PROCESSING_FAILED);
         map.put("DRAFT", PropertyAdsReportMetricsAdStatusEnum.DRAFT);
         map.put("SCHEDULED_FOR_DELETION", PropertyAdsReportMetricsAdStatusEnum.SCHEDULED_FOR_DELETION);
+        map.put("PROCESSING", PropertyAdsReportMetricsAdStatusEnum.PROCESSING);
+        map.put("PROCESSING_FAILED", PropertyAdsReportMetricsAdStatusEnum.PROCESSING_FAILED);
         return map;
     }
     
@@ -132,10 +132,10 @@ public class PropertyAdsReportMetricsAdStatus {
         ACTIVE("ACTIVE"),
         PAUSED("PAUSED"),
         ARCHIVED("ARCHIVED"),
-        PROCESSING("PROCESSING"),
-        PROCESSING_FAILED("PROCESSING_FAILED"),
         DRAFT("DRAFT"),
-        SCHEDULED_FOR_DELETION("SCHEDULED_FOR_DELETION"),;
+        SCHEDULED_FOR_DELETION("SCHEDULED_FOR_DELETION"),
+        PROCESSING("PROCESSING"),
+        PROCESSING_FAILED("PROCESSING_FAILED"),;
 
         private final String value;
 

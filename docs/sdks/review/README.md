@@ -4,27 +4,27 @@
 
 ### Available Operations
 
-* [createCommerceReview](#createcommercereview) - Create a review
-* [getCommerceReview](#getcommercereview) - Retrieve a review
-* [listCommerceReviews](#listcommercereviews) - List all reviews
-* [patchCommerceReview](#patchcommercereview) - Update a review
-* [removeCommerceReview](#removecommercereview) - Remove a review
-* [updateCommerceReview](#updatecommercereview) - Update a review
+* [createCommerceReview2](#createcommercereview2) - Create a review
+* [getCommerceReview2](#getcommercereview2) - Retrieve a review
+* [listCommerceReviews2](#listcommercereviews2) - List all reviews
+* [patchCommerceReview2](#patchcommercereview2) - Update a review
+* [removeCommerceReview2](#removecommercereview2) - Remove a review
+* [updateCommerceReview2](#updatecommercereview2) - Update a review
 
-## createCommerceReview
+## createCommerceReview2
 
 Create a review
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createCommerceReview" method="post" path="/commerce/{connection_id}/review" -->
+<!-- UsageSnippet language="java" operationID="createCommerceReview2" method="post" path="/commerce/{connection_id}/review" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.CreateCommerceReviewRequest;
-import to.unified.unified_java_sdk.models.operations.CreateCommerceReviewResponse;
+import to.unified.unified_java_sdk.models.operations.CreateCommerceReview2Request;
+import to.unified.unified_java_sdk.models.operations.CreateCommerceReview2Response;
 import to.unified.unified_java_sdk.models.shared.CommerceReview;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -38,13 +38,13 @@ public class Application {
                     .build())
             .build();
 
-        CreateCommerceReviewRequest req = CreateCommerceReviewRequest.builder()
+        CreateCommerceReview2Request req = CreateCommerceReview2Request.builder()
                 .commerceReview(CommerceReview.builder()
                     .build())
                 .connectionId("<id>")
                 .build();
 
-        CreateCommerceReviewResponse res = sdk.review().createCommerceReview()
+        CreateCommerceReview2Response res = sdk.review().createCommerceReview2()
                 .request(req)
                 .call();
 
@@ -57,13 +57,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                             | Type                                                                                  | Required                                                                              | Description                                                                           |
-| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
-| `request`                                                                             | [CreateCommerceReviewRequest](../../models/operations/CreateCommerceReviewRequest.md) | :heavy_check_mark:                                                                    | The request object to use for the request.                                            |
+| Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
+| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| `request`                                                                               | [CreateCommerceReview2Request](../../models/operations/CreateCommerceReview2Request.md) | :heavy_check_mark:                                                                      | The request object to use for the request.                                              |
 
 ### Response
 
-**[CreateCommerceReviewResponse](../../models/operations/CreateCommerceReviewResponse.md)**
+**[CreateCommerceReview2Response](../../models/operations/CreateCommerceReview2Response.md)**
 
 ### Errors
 
@@ -71,20 +71,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## getCommerceReview
+## getCommerceReview2
 
 Retrieve a review
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="getCommerceReview" method="get" path="/commerce/{connection_id}/review/{id}" -->
+<!-- UsageSnippet language="java" operationID="getCommerceReview2" method="get" path="/commerce/{connection_id}/review/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.GetCommerceReviewRequest;
-import to.unified.unified_java_sdk.models.operations.GetCommerceReviewResponse;
+import to.unified.unified_java_sdk.models.operations.GetCommerceReview2Request;
+import to.unified.unified_java_sdk.models.operations.GetCommerceReview2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -97,12 +97,12 @@ public class Application {
                     .build())
             .build();
 
-        GetCommerceReviewRequest req = GetCommerceReviewRequest.builder()
+        GetCommerceReview2Request req = GetCommerceReview2Request.builder()
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        GetCommerceReviewResponse res = sdk.review().getCommerceReview()
+        GetCommerceReview2Response res = sdk.review().getCommerceReview2()
                 .request(req)
                 .call();
 
@@ -115,13 +115,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
-| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
-| `request`                                                                       | [GetCommerceReviewRequest](../../models/operations/GetCommerceReviewRequest.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
+| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
+| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| `request`                                                                         | [GetCommerceReview2Request](../../models/operations/GetCommerceReview2Request.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
 
 ### Response
 
-**[GetCommerceReviewResponse](../../models/operations/GetCommerceReviewResponse.md)**
+**[GetCommerceReview2Response](../../models/operations/GetCommerceReview2Response.md)**
 
 ### Errors
 
@@ -129,20 +129,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## listCommerceReviews
+## listCommerceReviews2
 
 List all reviews
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="listCommerceReviews" method="get" path="/commerce/{connection_id}/review" -->
+<!-- UsageSnippet language="java" operationID="listCommerceReviews2" method="get" path="/commerce/{connection_id}/review" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.ListCommerceReviewsRequest;
-import to.unified.unified_java_sdk.models.operations.ListCommerceReviewsResponse;
+import to.unified.unified_java_sdk.models.operations.ListCommerceReviews2Request;
+import to.unified.unified_java_sdk.models.operations.ListCommerceReviews2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -155,11 +155,11 @@ public class Application {
                     .build())
             .build();
 
-        ListCommerceReviewsRequest req = ListCommerceReviewsRequest.builder()
+        ListCommerceReviews2Request req = ListCommerceReviews2Request.builder()
                 .connectionId("<id>")
                 .build();
 
-        ListCommerceReviewsResponse res = sdk.review().listCommerceReviews()
+        ListCommerceReviews2Response res = sdk.review().listCommerceReviews2()
                 .request(req)
                 .call();
 
@@ -172,13 +172,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                           | Type                                                                                | Required                                                                            | Description                                                                         |
-| ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
-| `request`                                                                           | [ListCommerceReviewsRequest](../../models/operations/ListCommerceReviewsRequest.md) | :heavy_check_mark:                                                                  | The request object to use for the request.                                          |
+| Parameter                                                                             | Type                                                                                  | Required                                                                              | Description                                                                           |
+| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| `request`                                                                             | [ListCommerceReviews2Request](../../models/operations/ListCommerceReviews2Request.md) | :heavy_check_mark:                                                                    | The request object to use for the request.                                            |
 
 ### Response
 
-**[ListCommerceReviewsResponse](../../models/operations/ListCommerceReviewsResponse.md)**
+**[ListCommerceReviews2Response](../../models/operations/ListCommerceReviews2Response.md)**
 
 ### Errors
 
@@ -186,20 +186,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## patchCommerceReview
+## patchCommerceReview2
 
 Update a review
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchCommerceReview" method="patch" path="/commerce/{connection_id}/review/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchCommerceReview2" method="patch" path="/commerce/{connection_id}/review/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.PatchCommerceReviewRequest;
-import to.unified.unified_java_sdk.models.operations.PatchCommerceReviewResponse;
+import to.unified.unified_java_sdk.models.operations.PatchCommerceReview2Request;
+import to.unified.unified_java_sdk.models.operations.PatchCommerceReview2Response;
 import to.unified.unified_java_sdk.models.shared.CommerceReview;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -213,14 +213,14 @@ public class Application {
                     .build())
             .build();
 
-        PatchCommerceReviewRequest req = PatchCommerceReviewRequest.builder()
+        PatchCommerceReview2Request req = PatchCommerceReview2Request.builder()
                 .commerceReview(CommerceReview.builder()
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        PatchCommerceReviewResponse res = sdk.review().patchCommerceReview()
+        PatchCommerceReview2Response res = sdk.review().patchCommerceReview2()
                 .request(req)
                 .call();
 
@@ -233,13 +233,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                           | Type                                                                                | Required                                                                            | Description                                                                         |
-| ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
-| `request`                                                                           | [PatchCommerceReviewRequest](../../models/operations/PatchCommerceReviewRequest.md) | :heavy_check_mark:                                                                  | The request object to use for the request.                                          |
+| Parameter                                                                             | Type                                                                                  | Required                                                                              | Description                                                                           |
+| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| `request`                                                                             | [PatchCommerceReview2Request](../../models/operations/PatchCommerceReview2Request.md) | :heavy_check_mark:                                                                    | The request object to use for the request.                                            |
 
 ### Response
 
-**[PatchCommerceReviewResponse](../../models/operations/PatchCommerceReviewResponse.md)**
+**[PatchCommerceReview2Response](../../models/operations/PatchCommerceReview2Response.md)**
 
 ### Errors
 
@@ -247,20 +247,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## removeCommerceReview
+## removeCommerceReview2
 
 Remove a review
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="removeCommerceReview" method="delete" path="/commerce/{connection_id}/review/{id}" -->
+<!-- UsageSnippet language="java" operationID="removeCommerceReview2" method="delete" path="/commerce/{connection_id}/review/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.RemoveCommerceReviewRequest;
-import to.unified.unified_java_sdk.models.operations.RemoveCommerceReviewResponse;
+import to.unified.unified_java_sdk.models.operations.RemoveCommerceReview2Request;
+import to.unified.unified_java_sdk.models.operations.RemoveCommerceReview2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -273,12 +273,12 @@ public class Application {
                     .build())
             .build();
 
-        RemoveCommerceReviewRequest req = RemoveCommerceReviewRequest.builder()
+        RemoveCommerceReview2Request req = RemoveCommerceReview2Request.builder()
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        RemoveCommerceReviewResponse res = sdk.review().removeCommerceReview()
+        RemoveCommerceReview2Response res = sdk.review().removeCommerceReview2()
                 .request(req)
                 .call();
 
@@ -289,13 +289,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                             | Type                                                                                  | Required                                                                              | Description                                                                           |
-| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
-| `request`                                                                             | [RemoveCommerceReviewRequest](../../models/operations/RemoveCommerceReviewRequest.md) | :heavy_check_mark:                                                                    | The request object to use for the request.                                            |
+| Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
+| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| `request`                                                                               | [RemoveCommerceReview2Request](../../models/operations/RemoveCommerceReview2Request.md) | :heavy_check_mark:                                                                      | The request object to use for the request.                                              |
 
 ### Response
 
-**[RemoveCommerceReviewResponse](../../models/operations/RemoveCommerceReviewResponse.md)**
+**[RemoveCommerceReview2Response](../../models/operations/RemoveCommerceReview2Response.md)**
 
 ### Errors
 
@@ -303,20 +303,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## updateCommerceReview
+## updateCommerceReview2
 
 Update a review
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateCommerceReview" method="put" path="/commerce/{connection_id}/review/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateCommerceReview2" method="put" path="/commerce/{connection_id}/review/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.UpdateCommerceReviewRequest;
-import to.unified.unified_java_sdk.models.operations.UpdateCommerceReviewResponse;
+import to.unified.unified_java_sdk.models.operations.UpdateCommerceReview2Request;
+import to.unified.unified_java_sdk.models.operations.UpdateCommerceReview2Response;
 import to.unified.unified_java_sdk.models.shared.CommerceReview;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -330,14 +330,14 @@ public class Application {
                     .build())
             .build();
 
-        UpdateCommerceReviewRequest req = UpdateCommerceReviewRequest.builder()
+        UpdateCommerceReview2Request req = UpdateCommerceReview2Request.builder()
                 .commerceReview(CommerceReview.builder()
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        UpdateCommerceReviewResponse res = sdk.review().updateCommerceReview()
+        UpdateCommerceReview2Response res = sdk.review().updateCommerceReview2()
                 .request(req)
                 .call();
 
@@ -350,13 +350,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                             | Type                                                                                  | Required                                                                              | Description                                                                           |
-| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
-| `request`                                                                             | [UpdateCommerceReviewRequest](../../models/operations/UpdateCommerceReviewRequest.md) | :heavy_check_mark:                                                                    | The request object to use for the request.                                            |
+| Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
+| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| `request`                                                                               | [UpdateCommerceReview2Request](../../models/operations/UpdateCommerceReview2Request.md) | :heavy_check_mark:                                                                      | The request object to use for the request.                                              |
 
 ### Response
 
-**[UpdateCommerceReviewResponse](../../models/operations/UpdateCommerceReviewResponse.md)**
+**[UpdateCommerceReview2Response](../../models/operations/UpdateCommerceReview2Response.md)**
 
 ### Errors
 

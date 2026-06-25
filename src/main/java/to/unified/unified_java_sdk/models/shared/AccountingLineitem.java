@@ -40,6 +40,11 @@ public class AccountingLineitem {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("fees")
+    private List<AccountingFee> fees;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     private String id;
 
@@ -124,6 +129,7 @@ public class AccountingLineitem {
             @JsonProperty("category_ids") @Nullable List<String> categoryIds,
             @JsonProperty("created_at") @Nullable OffsetDateTime createdAt,
             @JsonProperty("discount_amount") @Nullable Double discountAmount,
+            @JsonProperty("fees") @Nullable List<AccountingFee> fees,
             @JsonProperty("id") @Nullable String id,
             @JsonProperty("item_description") @Nullable String itemDescription,
             @JsonProperty("item_id") @Nullable String itemId,
@@ -144,6 +150,7 @@ public class AccountingLineitem {
         this.categoryIds = categoryIds;
         this.createdAt = createdAt;
         this.discountAmount = discountAmount;
+        this.fees = fees;
         this.id = id;
         this.itemDescription = itemDescription;
         this.itemId = itemId;
@@ -169,7 +176,7 @@ public class AccountingLineitem {
             null, null, null,
             null, null, null,
             null, null, null,
-            null, null);
+            null, null, null);
     }
 
     public Optional<String> accountId() {
@@ -186,6 +193,10 @@ public class AccountingLineitem {
 
     public Optional<Double> discountAmount() {
         return Optional.ofNullable(this.discountAmount);
+    }
+
+    public Optional<List<AccountingFee>> fees() {
+        return Optional.ofNullable(this.fees);
     }
 
     public Optional<String> id() {
@@ -277,6 +288,12 @@ public class AccountingLineitem {
 
     public AccountingLineitem withDiscountAmount(@Nullable Double discountAmount) {
         this.discountAmount = discountAmount;
+        return this;
+    }
+
+
+    public AccountingLineitem withFees(@Nullable List<AccountingFee> fees) {
+        this.fees = fees;
         return this;
     }
 
@@ -391,6 +408,7 @@ public class AccountingLineitem {
             Utils.enhancedDeepEquals(this.categoryIds, other.categoryIds) &&
             Utils.enhancedDeepEquals(this.createdAt, other.createdAt) &&
             Utils.enhancedDeepEquals(this.discountAmount, other.discountAmount) &&
+            Utils.enhancedDeepEquals(this.fees, other.fees) &&
             Utils.enhancedDeepEquals(this.id, other.id) &&
             Utils.enhancedDeepEquals(this.itemDescription, other.itemDescription) &&
             Utils.enhancedDeepEquals(this.itemId, other.itemId) &&
@@ -413,12 +431,12 @@ public class AccountingLineitem {
     public int hashCode() {
         return Utils.enhancedHash(
             accountId, categoryIds, createdAt,
-            discountAmount, id, itemDescription,
-            itemId, itemName, itemSku,
-            itemVariants, locations, notes,
-            refundAmount, refundedAt, taxAmount,
-            taxrateId, totalAmount, unitAmount,
-            unitQuantity, updatedAt);
+            discountAmount, fees, id,
+            itemDescription, itemId, itemName,
+            itemSku, itemVariants, locations,
+            notes, refundAmount, refundedAt,
+            taxAmount, taxrateId, totalAmount,
+            unitAmount, unitQuantity, updatedAt);
     }
     
     @Override
@@ -428,6 +446,7 @@ public class AccountingLineitem {
                 "categoryIds", categoryIds,
                 "createdAt", createdAt,
                 "discountAmount", discountAmount,
+                "fees", fees,
                 "id", id,
                 "itemDescription", itemDescription,
                 "itemId", itemId,
@@ -456,6 +475,8 @@ public class AccountingLineitem {
         private OffsetDateTime createdAt;
 
         private Double discountAmount;
+
+        private List<AccountingFee> fees;
 
         private String id;
 
@@ -510,6 +531,11 @@ public class AccountingLineitem {
 
         public Builder discountAmount(@Nullable Double discountAmount) {
             this.discountAmount = discountAmount;
+            return this;
+        }
+
+        public Builder fees(@Nullable List<AccountingFee> fees) {
+            this.fees = fees;
             return this;
         }
 
@@ -596,12 +622,12 @@ public class AccountingLineitem {
         public AccountingLineitem build() {
             return new AccountingLineitem(
                 accountId, categoryIds, createdAt,
-                discountAmount, id, itemDescription,
-                itemId, itemName, itemSku,
-                itemVariants, locations, notes,
-                refundAmount, refundedAt, taxAmount,
-                taxrateId, totalAmount, unitAmount,
-                unitQuantity, updatedAt);
+                discountAmount, fees, id,
+                itemDescription, itemId, itemName,
+                itemSku, itemVariants, locations,
+                notes, refundAmount, refundedAt,
+                taxAmount, taxrateId, totalAmount,
+                unitAmount, unitQuantity, updatedAt);
         }
 
     }

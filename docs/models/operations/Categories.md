@@ -37,8 +37,10 @@ Categories value = Categories.PASSTHROUGH;
 | `CALENDAR`     | calendar       |
 | `VERIFICATION` | verification   |
 | `ADS`          | ads            |
+| `ANALYTICS`    | analytics      |
 | `FORMS`        | forms          |
 | `SHIPPING`     | shipping       |
 | `ASSESSMENT`   | assessment     |
 | `SIGNING`      | signing        |
 | `CLUBS`        | clubs          |
+| `DATASTORE`    | datastore      |

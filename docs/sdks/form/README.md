@@ -4,27 +4,27 @@
 
 ### Available Operations
 
-* [createFormsForm](#createformsform) - Create a form
-* [getFormsForm](#getformsform) - Retrieve a form
-* [listFormsForms](#listformsforms) - List all forms
-* [patchFormsForm](#patchformsform) - Update a form
-* [removeFormsForm](#removeformsform) - Remove a form
-* [updateFormsForm](#updateformsform) - Update a form
+* [createFormsForm2](#createformsform2) - Create a form
+* [getFormsForm2](#getformsform2) - Retrieve a form
+* [listFormsForms2](#listformsforms2) - List all forms
+* [patchFormsForm2](#patchformsform2) - Update a form
+* [removeFormsForm2](#removeformsform2) - Remove a form
+* [updateFormsForm2](#updateformsform2) - Update a form
 
-## createFormsForm
+## createFormsForm2
 
 Create a form
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createFormsForm" method="post" path="/forms/{connection_id}/form" -->
+<!-- UsageSnippet language="java" operationID="createFormsForm2" method="post" path="/forms/{connection_id}/form" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.CreateFormsFormRequest;
-import to.unified.unified_java_sdk.models.operations.CreateFormsFormResponse;
+import to.unified.unified_java_sdk.models.operations.CreateFormsForm2Request;
+import to.unified.unified_java_sdk.models.operations.CreateFormsForm2Response;
 import to.unified.unified_java_sdk.models.shared.FormsForm;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -38,13 +38,13 @@ public class Application {
                     .build())
             .build();
 
-        CreateFormsFormRequest req = CreateFormsFormRequest.builder()
+        CreateFormsForm2Request req = CreateFormsForm2Request.builder()
                 .formsForm(FormsForm.builder()
                     .build())
                 .connectionId("<id>")
                 .build();
 
-        CreateFormsFormResponse res = sdk.form().createFormsForm()
+        CreateFormsForm2Response res = sdk.form().createFormsForm2()
                 .request(req)
                 .call();
 
@@ -57,13 +57,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                   | Type                                                                        | Required                                                                    | Description                                                                 |
-| --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
-| `request`                                                                   | [CreateFormsFormRequest](../../models/operations/CreateFormsFormRequest.md) | :heavy_check_mark:                                                          | The request object to use for the request.                                  |
+| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
+| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| `request`                                                                     | [CreateFormsForm2Request](../../models/operations/CreateFormsForm2Request.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
 
 ### Response
 
-**[CreateFormsFormResponse](../../models/operations/CreateFormsFormResponse.md)**
+**[CreateFormsForm2Response](../../models/operations/CreateFormsForm2Response.md)**
 
 ### Errors
 
@@ -71,20 +71,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## getFormsForm
+## getFormsForm2
 
 Retrieve a form
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="getFormsForm" method="get" path="/forms/{connection_id}/form/{id}" -->
+<!-- UsageSnippet language="java" operationID="getFormsForm2" method="get" path="/forms/{connection_id}/form/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.GetFormsFormRequest;
-import to.unified.unified_java_sdk.models.operations.GetFormsFormResponse;
+import to.unified.unified_java_sdk.models.operations.GetFormsForm2Request;
+import to.unified.unified_java_sdk.models.operations.GetFormsForm2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -97,12 +97,12 @@ public class Application {
                     .build())
             .build();
 
-        GetFormsFormRequest req = GetFormsFormRequest.builder()
+        GetFormsForm2Request req = GetFormsForm2Request.builder()
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        GetFormsFormResponse res = sdk.form().getFormsForm()
+        GetFormsForm2Response res = sdk.form().getFormsForm2()
                 .request(req)
                 .call();
 
@@ -115,13 +115,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                             | Type                                                                  | Required                                                              | Description                                                           |
-| --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- |
-| `request`                                                             | [GetFormsFormRequest](../../models/operations/GetFormsFormRequest.md) | :heavy_check_mark:                                                    | The request object to use for the request.                            |
+| Parameter                                                               | Type                                                                    | Required                                                                | Description                                                             |
+| ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- |
+| `request`                                                               | [GetFormsForm2Request](../../models/operations/GetFormsForm2Request.md) | :heavy_check_mark:                                                      | The request object to use for the request.                              |
 
 ### Response
 
-**[GetFormsFormResponse](../../models/operations/GetFormsFormResponse.md)**
+**[GetFormsForm2Response](../../models/operations/GetFormsForm2Response.md)**
 
 ### Errors
 
@@ -129,20 +129,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## listFormsForms
+## listFormsForms2
 
 List all forms
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="listFormsForms" method="get" path="/forms/{connection_id}/form" -->
+<!-- UsageSnippet language="java" operationID="listFormsForms2" method="get" path="/forms/{connection_id}/form" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.ListFormsFormsRequest;
-import to.unified.unified_java_sdk.models.operations.ListFormsFormsResponse;
+import to.unified.unified_java_sdk.models.operations.ListFormsForms2Request;
+import to.unified.unified_java_sdk.models.operations.ListFormsForms2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -155,11 +155,11 @@ public class Application {
                     .build())
             .build();
 
-        ListFormsFormsRequest req = ListFormsFormsRequest.builder()
+        ListFormsForms2Request req = ListFormsForms2Request.builder()
                 .connectionId("<id>")
                 .build();
 
-        ListFormsFormsResponse res = sdk.form().listFormsForms()
+        ListFormsForms2Response res = sdk.form().listFormsForms2()
                 .request(req)
                 .call();
 
@@ -172,13 +172,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                 | Type                                                                      | Required                                                                  | Description                                                               |
-| ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
-| `request`                                                                 | [ListFormsFormsRequest](../../models/operations/ListFormsFormsRequest.md) | :heavy_check_mark:                                                        | The request object to use for the request.                                |
+| Parameter                                                                   | Type                                                                        | Required                                                                    | Description                                                                 |
+| --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| `request`                                                                   | [ListFormsForms2Request](../../models/operations/ListFormsForms2Request.md) | :heavy_check_mark:                                                          | The request object to use for the request.                                  |
 
 ### Response
 
-**[ListFormsFormsResponse](../../models/operations/ListFormsFormsResponse.md)**
+**[ListFormsForms2Response](../../models/operations/ListFormsForms2Response.md)**
 
 ### Errors
 
@@ -186,20 +186,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## patchFormsForm
+## patchFormsForm2
 
 Update a form
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchFormsForm" method="patch" path="/forms/{connection_id}/form/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchFormsForm2" method="patch" path="/forms/{connection_id}/form/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.PatchFormsFormRequest;
-import to.unified.unified_java_sdk.models.operations.PatchFormsFormResponse;
+import to.unified.unified_java_sdk.models.operations.PatchFormsForm2Request;
+import to.unified.unified_java_sdk.models.operations.PatchFormsForm2Response;
 import to.unified.unified_java_sdk.models.shared.FormsForm;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -213,14 +213,14 @@ public class Application {
                     .build())
             .build();
 
-        PatchFormsFormRequest req = PatchFormsFormRequest.builder()
+        PatchFormsForm2Request req = PatchFormsForm2Request.builder()
                 .formsForm(FormsForm.builder()
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        PatchFormsFormResponse res = sdk.form().patchFormsForm()
+        PatchFormsForm2Response res = sdk.form().patchFormsForm2()
                 .request(req)
                 .call();
 
@@ -233,13 +233,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                 | Type                                                                      | Required                                                                  | Description                                                               |
-| ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
-| `request`                                                                 | [PatchFormsFormRequest](../../models/operations/PatchFormsFormRequest.md) | :heavy_check_mark:                                                        | The request object to use for the request.                                |
+| Parameter                                                                   | Type                                                                        | Required                                                                    | Description                                                                 |
+| --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| `request`                                                                   | [PatchFormsForm2Request](../../models/operations/PatchFormsForm2Request.md) | :heavy_check_mark:                                                          | The request object to use for the request.                                  |
 
 ### Response
 
-**[PatchFormsFormResponse](../../models/operations/PatchFormsFormResponse.md)**
+**[PatchFormsForm2Response](../../models/operations/PatchFormsForm2Response.md)**
 
 ### Errors
 
@@ -247,20 +247,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## removeFormsForm
+## removeFormsForm2
 
 Remove a form
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="removeFormsForm" method="delete" path="/forms/{connection_id}/form/{id}" -->
+<!-- UsageSnippet language="java" operationID="removeFormsForm2" method="delete" path="/forms/{connection_id}/form/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.RemoveFormsFormRequest;
-import to.unified.unified_java_sdk.models.operations.RemoveFormsFormResponse;
+import to.unified.unified_java_sdk.models.operations.RemoveFormsForm2Request;
+import to.unified.unified_java_sdk.models.operations.RemoveFormsForm2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -273,12 +273,12 @@ public class Application {
                     .build())
             .build();
 
-        RemoveFormsFormRequest req = RemoveFormsFormRequest.builder()
+        RemoveFormsForm2Request req = RemoveFormsForm2Request.builder()
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        RemoveFormsFormResponse res = sdk.form().removeFormsForm()
+        RemoveFormsForm2Response res = sdk.form().removeFormsForm2()
                 .request(req)
                 .call();
 
@@ -289,13 +289,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                   | Type                                                                        | Required                                                                    | Description                                                                 |
-| --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
-| `request`                                                                   | [RemoveFormsFormRequest](../../models/operations/RemoveFormsFormRequest.md) | :heavy_check_mark:                                                          | The request object to use for the request.                                  |
+| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
+| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| `request`                                                                     | [RemoveFormsForm2Request](../../models/operations/RemoveFormsForm2Request.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
 
 ### Response
 
-**[RemoveFormsFormResponse](../../models/operations/RemoveFormsFormResponse.md)**
+**[RemoveFormsForm2Response](../../models/operations/RemoveFormsForm2Response.md)**
 
 ### Errors
 
@@ -303,20 +303,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## updateFormsForm
+## updateFormsForm2
 
 Update a form
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateFormsForm" method="put" path="/forms/{connection_id}/form/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateFormsForm2" method="put" path="/forms/{connection_id}/form/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.UpdateFormsFormRequest;
-import to.unified.unified_java_sdk.models.operations.UpdateFormsFormResponse;
+import to.unified.unified_java_sdk.models.operations.UpdateFormsForm2Request;
+import to.unified.unified_java_sdk.models.operations.UpdateFormsForm2Response;
 import to.unified.unified_java_sdk.models.shared.FormsForm;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -330,14 +330,14 @@ public class Application {
                     .build())
             .build();
 
-        UpdateFormsFormRequest req = UpdateFormsFormRequest.builder()
+        UpdateFormsForm2Request req = UpdateFormsForm2Request.builder()
                 .formsForm(FormsForm.builder()
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        UpdateFormsFormResponse res = sdk.form().updateFormsForm()
+        UpdateFormsForm2Response res = sdk.form().updateFormsForm2()
                 .request(req)
                 .call();
 
@@ -350,13 +350,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                   | Type                                                                        | Required                                                                    | Description                                                                 |
-| --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
-| `request`                                                                   | [UpdateFormsFormRequest](../../models/operations/UpdateFormsFormRequest.md) | :heavy_check_mark:                                                          | The request object to use for the request.                                  |
+| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
+| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| `request`                                                                     | [UpdateFormsForm2Request](../../models/operations/UpdateFormsForm2Request.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
 
 ### Response
 
-**[UpdateFormsFormResponse](../../models/operations/UpdateFormsFormResponse.md)**
+**[UpdateFormsForm2Response](../../models/operations/UpdateFormsForm2Response.md)**
 
 ### Errors
 

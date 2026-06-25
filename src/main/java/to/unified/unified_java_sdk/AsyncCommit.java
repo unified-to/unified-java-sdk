@@ -7,30 +7,30 @@ import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOper
 
 import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
-import to.unified.unified_java_sdk.models.operations.CreateRepoCommitRequest;
-import to.unified.unified_java_sdk.models.operations.GetRepoCommitRequest;
-import to.unified.unified_java_sdk.models.operations.ListRepoCommitsRequest;
-import to.unified.unified_java_sdk.models.operations.PatchRepoCommitRequest;
-import to.unified.unified_java_sdk.models.operations.RemoveRepoCommitRequest;
-import to.unified.unified_java_sdk.models.operations.UpdateRepoCommitRequest;
-import to.unified.unified_java_sdk.models.operations.async.CreateRepoCommitRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.CreateRepoCommitResponse;
-import to.unified.unified_java_sdk.models.operations.async.GetRepoCommitRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.GetRepoCommitResponse;
-import to.unified.unified_java_sdk.models.operations.async.ListRepoCommitsRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.ListRepoCommitsResponse;
-import to.unified.unified_java_sdk.models.operations.async.PatchRepoCommitRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.PatchRepoCommitResponse;
-import to.unified.unified_java_sdk.models.operations.async.RemoveRepoCommitRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.RemoveRepoCommitResponse;
-import to.unified.unified_java_sdk.models.operations.async.UpdateRepoCommitRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.UpdateRepoCommitResponse;
-import to.unified.unified_java_sdk.operations.CreateRepoCommit;
-import to.unified.unified_java_sdk.operations.GetRepoCommit;
-import to.unified.unified_java_sdk.operations.ListRepoCommits;
-import to.unified.unified_java_sdk.operations.PatchRepoCommit;
-import to.unified.unified_java_sdk.operations.RemoveRepoCommit;
-import to.unified.unified_java_sdk.operations.UpdateRepoCommit;
+import to.unified.unified_java_sdk.models.operations.CreateRepoCommit2Request;
+import to.unified.unified_java_sdk.models.operations.GetRepoCommit2Request;
+import to.unified.unified_java_sdk.models.operations.ListRepoCommits2Request;
+import to.unified.unified_java_sdk.models.operations.PatchRepoCommit2Request;
+import to.unified.unified_java_sdk.models.operations.RemoveRepoCommit2Request;
+import to.unified.unified_java_sdk.models.operations.UpdateRepoCommit2Request;
+import to.unified.unified_java_sdk.models.operations.async.CreateRepoCommit2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.CreateRepoCommit2Response;
+import to.unified.unified_java_sdk.models.operations.async.GetRepoCommit2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetRepoCommit2Response;
+import to.unified.unified_java_sdk.models.operations.async.ListRepoCommits2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListRepoCommits2Response;
+import to.unified.unified_java_sdk.models.operations.async.PatchRepoCommit2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.PatchRepoCommit2Response;
+import to.unified.unified_java_sdk.models.operations.async.RemoveRepoCommit2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.RemoveRepoCommit2Response;
+import to.unified.unified_java_sdk.models.operations.async.UpdateRepoCommit2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.UpdateRepoCommit2Response;
+import to.unified.unified_java_sdk.operations.CreateRepoCommit2;
+import to.unified.unified_java_sdk.operations.GetRepoCommit2;
+import to.unified.unified_java_sdk.operations.ListRepoCommits2;
+import to.unified.unified_java_sdk.operations.PatchRepoCommit2;
+import to.unified.unified_java_sdk.operations.RemoveRepoCommit2;
+import to.unified.unified_java_sdk.operations.UpdateRepoCommit2;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -59,19 +59,19 @@ public class AsyncCommit {
      * 
      * @return The async call builder
      */
-    public CreateRepoCommitRequestBuilder createRepoCommit() {
-        return new CreateRepoCommitRequestBuilder(sdkConfiguration);
+    public CreateRepoCommit2RequestBuilder createRepoCommit2() {
+        return new CreateRepoCommit2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Create a commit
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<CreateRepoCommitResponse>} - The async response
+     * @return {@code CompletableFuture<CreateRepoCommit2Response>} - The async response
      */
-    public CompletableFuture<CreateRepoCommitResponse> createRepoCommit(@Nonnull CreateRepoCommitRequest request) {
-        AsyncRequestOperation<CreateRepoCommitRequest, CreateRepoCommitResponse> operation
-              = new CreateRepoCommit.Async(sdkConfiguration, _headers);
+    public CompletableFuture<CreateRepoCommit2Response> createRepoCommit2(@Nonnull CreateRepoCommit2Request request) {
+        AsyncRequestOperation<CreateRepoCommit2Request, CreateRepoCommit2Response> operation
+              = new CreateRepoCommit2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -82,19 +82,19 @@ public class AsyncCommit {
      * 
      * @return The async call builder
      */
-    public GetRepoCommitRequestBuilder getRepoCommit() {
-        return new GetRepoCommitRequestBuilder(sdkConfiguration);
+    public GetRepoCommit2RequestBuilder getRepoCommit2() {
+        return new GetRepoCommit2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Retrieve a commit
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<GetRepoCommitResponse>} - The async response
+     * @return {@code CompletableFuture<GetRepoCommit2Response>} - The async response
      */
-    public CompletableFuture<GetRepoCommitResponse> getRepoCommit(@Nonnull GetRepoCommitRequest request) {
-        AsyncRequestOperation<GetRepoCommitRequest, GetRepoCommitResponse> operation
-              = new GetRepoCommit.Async(sdkConfiguration, _headers);
+    public CompletableFuture<GetRepoCommit2Response> getRepoCommit2(@Nonnull GetRepoCommit2Request request) {
+        AsyncRequestOperation<GetRepoCommit2Request, GetRepoCommit2Response> operation
+              = new GetRepoCommit2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -105,19 +105,19 @@ public class AsyncCommit {
      * 
      * @return The async call builder
      */
-    public ListRepoCommitsRequestBuilder listRepoCommits() {
-        return new ListRepoCommitsRequestBuilder(sdkConfiguration);
+    public ListRepoCommits2RequestBuilder listRepoCommits2() {
+        return new ListRepoCommits2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * List all commits
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<ListRepoCommitsResponse>} - The async response
+     * @return {@code CompletableFuture<ListRepoCommits2Response>} - The async response
      */
-    public CompletableFuture<ListRepoCommitsResponse> listRepoCommits(@Nonnull ListRepoCommitsRequest request) {
-        AsyncRequestOperation<ListRepoCommitsRequest, ListRepoCommitsResponse> operation
-              = new ListRepoCommits.Async(sdkConfiguration, _headers);
+    public CompletableFuture<ListRepoCommits2Response> listRepoCommits2(@Nonnull ListRepoCommits2Request request) {
+        AsyncRequestOperation<ListRepoCommits2Request, ListRepoCommits2Response> operation
+              = new ListRepoCommits2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -128,19 +128,19 @@ public class AsyncCommit {
      * 
      * @return The async call builder
      */
-    public PatchRepoCommitRequestBuilder patchRepoCommit() {
-        return new PatchRepoCommitRequestBuilder(sdkConfiguration);
+    public PatchRepoCommit2RequestBuilder patchRepoCommit2() {
+        return new PatchRepoCommit2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update a commit
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<PatchRepoCommitResponse>} - The async response
+     * @return {@code CompletableFuture<PatchRepoCommit2Response>} - The async response
      */
-    public CompletableFuture<PatchRepoCommitResponse> patchRepoCommit(@Nonnull PatchRepoCommitRequest request) {
-        AsyncRequestOperation<PatchRepoCommitRequest, PatchRepoCommitResponse> operation
-              = new PatchRepoCommit.Async(sdkConfiguration, _headers);
+    public CompletableFuture<PatchRepoCommit2Response> patchRepoCommit2(@Nonnull PatchRepoCommit2Request request) {
+        AsyncRequestOperation<PatchRepoCommit2Request, PatchRepoCommit2Response> operation
+              = new PatchRepoCommit2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -151,19 +151,19 @@ public class AsyncCommit {
      * 
      * @return The async call builder
      */
-    public RemoveRepoCommitRequestBuilder removeRepoCommit() {
-        return new RemoveRepoCommitRequestBuilder(sdkConfiguration);
+    public RemoveRepoCommit2RequestBuilder removeRepoCommit2() {
+        return new RemoveRepoCommit2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Remove a commit
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<RemoveRepoCommitResponse>} - The async response
+     * @return {@code CompletableFuture<RemoveRepoCommit2Response>} - The async response
      */
-    public CompletableFuture<RemoveRepoCommitResponse> removeRepoCommit(@Nonnull RemoveRepoCommitRequest request) {
-        AsyncRequestOperation<RemoveRepoCommitRequest, RemoveRepoCommitResponse> operation
-              = new RemoveRepoCommit.Async(sdkConfiguration, _headers);
+    public CompletableFuture<RemoveRepoCommit2Response> removeRepoCommit2(@Nonnull RemoveRepoCommit2Request request) {
+        AsyncRequestOperation<RemoveRepoCommit2Request, RemoveRepoCommit2Response> operation
+              = new RemoveRepoCommit2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -174,19 +174,19 @@ public class AsyncCommit {
      * 
      * @return The async call builder
      */
-    public UpdateRepoCommitRequestBuilder updateRepoCommit() {
-        return new UpdateRepoCommitRequestBuilder(sdkConfiguration);
+    public UpdateRepoCommit2RequestBuilder updateRepoCommit2() {
+        return new UpdateRepoCommit2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update a commit
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<UpdateRepoCommitResponse>} - The async response
+     * @return {@code CompletableFuture<UpdateRepoCommit2Response>} - The async response
      */
-    public CompletableFuture<UpdateRepoCommitResponse> updateRepoCommit(@Nonnull UpdateRepoCommitRequest request) {
-        AsyncRequestOperation<UpdateRepoCommitRequest, UpdateRepoCommitResponse> operation
-              = new UpdateRepoCommit.Async(sdkConfiguration, _headers);
+    public CompletableFuture<UpdateRepoCommit2Response> updateRepoCommit2(@Nonnull UpdateRepoCommit2Request request) {
+        AsyncRequestOperation<UpdateRepoCommit2Request, UpdateRepoCommit2Response> operation
+              = new UpdateRepoCommit2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

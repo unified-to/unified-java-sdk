@@ -4,27 +4,27 @@
 
 ### Available Operations
 
-* [createHrisBenefit](#createhrisbenefit) - Create a benefit
-* [getHrisBenefit](#gethrisbenefit) - Retrieve a benefit
-* [listHrisBenefits](#listhrisbenefits) - List all benefits
-* [patchHrisBenefit](#patchhrisbenefit) - Update a benefit
-* [removeHrisBenefit](#removehrisbenefit) - Remove a benefit
-* [updateHrisBenefit](#updatehrisbenefit) - Update a benefit
+* [createHrisBenefit2](#createhrisbenefit2) - Create a benefit
+* [getHrisBenefit2](#gethrisbenefit2) - Retrieve a benefit
+* [listHrisBenefits2](#listhrisbenefits2) - List all benefits
+* [patchHrisBenefit2](#patchhrisbenefit2) - Update a benefit
+* [removeHrisBenefit2](#removehrisbenefit2) - Remove a benefit
+* [updateHrisBenefit2](#updatehrisbenefit2) - Update a benefit
 
-## createHrisBenefit
+## createHrisBenefit2
 
 Create a benefit
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createHrisBenefit" method="post" path="/hris/{connection_id}/benefit" -->
+<!-- UsageSnippet language="java" operationID="createHrisBenefit2" method="post" path="/hris/{connection_id}/benefit" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.CreateHrisBenefitRequest;
-import to.unified.unified_java_sdk.models.operations.CreateHrisBenefitResponse;
+import to.unified.unified_java_sdk.models.operations.CreateHrisBenefit2Request;
+import to.unified.unified_java_sdk.models.operations.CreateHrisBenefit2Response;
 import to.unified.unified_java_sdk.models.shared.HrisBenefit;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -38,13 +38,13 @@ public class Application {
                     .build())
             .build();
 
-        CreateHrisBenefitRequest req = CreateHrisBenefitRequest.builder()
+        CreateHrisBenefit2Request req = CreateHrisBenefit2Request.builder()
                 .hrisBenefit(HrisBenefit.builder()
                     .build())
                 .connectionId("<id>")
                 .build();
 
-        CreateHrisBenefitResponse res = sdk.benefit().createHrisBenefit()
+        CreateHrisBenefit2Response res = sdk.benefit().createHrisBenefit2()
                 .request(req)
                 .call();
 
@@ -57,13 +57,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
-| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
-| `request`                                                                       | [CreateHrisBenefitRequest](../../models/operations/CreateHrisBenefitRequest.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
+| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
+| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| `request`                                                                         | [CreateHrisBenefit2Request](../../models/operations/CreateHrisBenefit2Request.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
 
 ### Response
 
-**[CreateHrisBenefitResponse](../../models/operations/CreateHrisBenefitResponse.md)**
+**[CreateHrisBenefit2Response](../../models/operations/CreateHrisBenefit2Response.md)**
 
 ### Errors
 
@@ -71,20 +71,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## getHrisBenefit
+## getHrisBenefit2
 
 Retrieve a benefit
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="getHrisBenefit" method="get" path="/hris/{connection_id}/benefit/{id}" -->
+<!-- UsageSnippet language="java" operationID="getHrisBenefit2" method="get" path="/hris/{connection_id}/benefit/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.GetHrisBenefitRequest;
-import to.unified.unified_java_sdk.models.operations.GetHrisBenefitResponse;
+import to.unified.unified_java_sdk.models.operations.GetHrisBenefit2Request;
+import to.unified.unified_java_sdk.models.operations.GetHrisBenefit2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -97,12 +97,12 @@ public class Application {
                     .build())
             .build();
 
-        GetHrisBenefitRequest req = GetHrisBenefitRequest.builder()
+        GetHrisBenefit2Request req = GetHrisBenefit2Request.builder()
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        GetHrisBenefitResponse res = sdk.benefit().getHrisBenefit()
+        GetHrisBenefit2Response res = sdk.benefit().getHrisBenefit2()
                 .request(req)
                 .call();
 
@@ -115,13 +115,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                 | Type                                                                      | Required                                                                  | Description                                                               |
-| ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
-| `request`                                                                 | [GetHrisBenefitRequest](../../models/operations/GetHrisBenefitRequest.md) | :heavy_check_mark:                                                        | The request object to use for the request.                                |
+| Parameter                                                                   | Type                                                                        | Required                                                                    | Description                                                                 |
+| --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| `request`                                                                   | [GetHrisBenefit2Request](../../models/operations/GetHrisBenefit2Request.md) | :heavy_check_mark:                                                          | The request object to use for the request.                                  |
 
 ### Response
 
-**[GetHrisBenefitResponse](../../models/operations/GetHrisBenefitResponse.md)**
+**[GetHrisBenefit2Response](../../models/operations/GetHrisBenefit2Response.md)**
 
 ### Errors
 
@@ -129,20 +129,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## listHrisBenefits
+## listHrisBenefits2
 
 List all benefits
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="listHrisBenefits" method="get" path="/hris/{connection_id}/benefit" -->
+<!-- UsageSnippet language="java" operationID="listHrisBenefits2" method="get" path="/hris/{connection_id}/benefit" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.ListHrisBenefitsRequest;
-import to.unified.unified_java_sdk.models.operations.ListHrisBenefitsResponse;
+import to.unified.unified_java_sdk.models.operations.ListHrisBenefits2Request;
+import to.unified.unified_java_sdk.models.operations.ListHrisBenefits2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -155,11 +155,11 @@ public class Application {
                     .build())
             .build();
 
-        ListHrisBenefitsRequest req = ListHrisBenefitsRequest.builder()
+        ListHrisBenefits2Request req = ListHrisBenefits2Request.builder()
                 .connectionId("<id>")
                 .build();
 
-        ListHrisBenefitsResponse res = sdk.benefit().listHrisBenefits()
+        ListHrisBenefits2Response res = sdk.benefit().listHrisBenefits2()
                 .request(req)
                 .call();
 
@@ -172,13 +172,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
-| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
-| `request`                                                                     | [ListHrisBenefitsRequest](../../models/operations/ListHrisBenefitsRequest.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
+| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| `request`                                                                       | [ListHrisBenefits2Request](../../models/operations/ListHrisBenefits2Request.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
 
 ### Response
 
-**[ListHrisBenefitsResponse](../../models/operations/ListHrisBenefitsResponse.md)**
+**[ListHrisBenefits2Response](../../models/operations/ListHrisBenefits2Response.md)**
 
 ### Errors
 
@@ -186,20 +186,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## patchHrisBenefit
+## patchHrisBenefit2
 
 Update a benefit
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchHrisBenefit" method="patch" path="/hris/{connection_id}/benefit/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchHrisBenefit2" method="patch" path="/hris/{connection_id}/benefit/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.PatchHrisBenefitRequest;
-import to.unified.unified_java_sdk.models.operations.PatchHrisBenefitResponse;
+import to.unified.unified_java_sdk.models.operations.PatchHrisBenefit2Request;
+import to.unified.unified_java_sdk.models.operations.PatchHrisBenefit2Response;
 import to.unified.unified_java_sdk.models.shared.HrisBenefit;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -213,14 +213,14 @@ public class Application {
                     .build())
             .build();
 
-        PatchHrisBenefitRequest req = PatchHrisBenefitRequest.builder()
+        PatchHrisBenefit2Request req = PatchHrisBenefit2Request.builder()
                 .hrisBenefit(HrisBenefit.builder()
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        PatchHrisBenefitResponse res = sdk.benefit().patchHrisBenefit()
+        PatchHrisBenefit2Response res = sdk.benefit().patchHrisBenefit2()
                 .request(req)
                 .call();
 
@@ -233,13 +233,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
-| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
-| `request`                                                                     | [PatchHrisBenefitRequest](../../models/operations/PatchHrisBenefitRequest.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
+| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| `request`                                                                       | [PatchHrisBenefit2Request](../../models/operations/PatchHrisBenefit2Request.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
 
 ### Response
 
-**[PatchHrisBenefitResponse](../../models/operations/PatchHrisBenefitResponse.md)**
+**[PatchHrisBenefit2Response](../../models/operations/PatchHrisBenefit2Response.md)**
 
 ### Errors
 
@@ -247,20 +247,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## removeHrisBenefit
+## removeHrisBenefit2
 
 Remove a benefit
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="removeHrisBenefit" method="delete" path="/hris/{connection_id}/benefit/{id}" -->
+<!-- UsageSnippet language="java" operationID="removeHrisBenefit2" method="delete" path="/hris/{connection_id}/benefit/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.RemoveHrisBenefitRequest;
-import to.unified.unified_java_sdk.models.operations.RemoveHrisBenefitResponse;
+import to.unified.unified_java_sdk.models.operations.RemoveHrisBenefit2Request;
+import to.unified.unified_java_sdk.models.operations.RemoveHrisBenefit2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -273,12 +273,12 @@ public class Application {
                     .build())
             .build();
 
-        RemoveHrisBenefitRequest req = RemoveHrisBenefitRequest.builder()
+        RemoveHrisBenefit2Request req = RemoveHrisBenefit2Request.builder()
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        RemoveHrisBenefitResponse res = sdk.benefit().removeHrisBenefit()
+        RemoveHrisBenefit2Response res = sdk.benefit().removeHrisBenefit2()
                 .request(req)
                 .call();
 
@@ -289,13 +289,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
-| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
-| `request`                                                                       | [RemoveHrisBenefitRequest](../../models/operations/RemoveHrisBenefitRequest.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
+| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
+| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| `request`                                                                         | [RemoveHrisBenefit2Request](../../models/operations/RemoveHrisBenefit2Request.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
 
 ### Response
 
-**[RemoveHrisBenefitResponse](../../models/operations/RemoveHrisBenefitResponse.md)**
+**[RemoveHrisBenefit2Response](../../models/operations/RemoveHrisBenefit2Response.md)**
 
 ### Errors
 
@@ -303,20 +303,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## updateHrisBenefit
+## updateHrisBenefit2
 
 Update a benefit
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateHrisBenefit" method="put" path="/hris/{connection_id}/benefit/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateHrisBenefit2" method="put" path="/hris/{connection_id}/benefit/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.UpdateHrisBenefitRequest;
-import to.unified.unified_java_sdk.models.operations.UpdateHrisBenefitResponse;
+import to.unified.unified_java_sdk.models.operations.UpdateHrisBenefit2Request;
+import to.unified.unified_java_sdk.models.operations.UpdateHrisBenefit2Response;
 import to.unified.unified_java_sdk.models.shared.HrisBenefit;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -330,14 +330,14 @@ public class Application {
                     .build())
             .build();
 
-        UpdateHrisBenefitRequest req = UpdateHrisBenefitRequest.builder()
+        UpdateHrisBenefit2Request req = UpdateHrisBenefit2Request.builder()
                 .hrisBenefit(HrisBenefit.builder()
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        UpdateHrisBenefitResponse res = sdk.benefit().updateHrisBenefit()
+        UpdateHrisBenefit2Response res = sdk.benefit().updateHrisBenefit2()
                 .request(req)
                 .call();
 
@@ -350,13 +350,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
-| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
-| `request`                                                                       | [UpdateHrisBenefitRequest](../../models/operations/UpdateHrisBenefitRequest.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
+| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
+| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| `request`                                                                         | [UpdateHrisBenefit2Request](../../models/operations/UpdateHrisBenefit2Request.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
 
 ### Response
 
-**[UpdateHrisBenefitResponse](../../models/operations/UpdateHrisBenefitResponse.md)**
+**[UpdateHrisBenefit2Response](../../models/operations/UpdateHrisBenefit2Response.md)**
 
 ### Errors
 

@@ -6,30 +6,30 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
-import to.unified.unified_java_sdk.models.operations.CreateAtsJobRequest;
-import to.unified.unified_java_sdk.models.operations.CreateAtsJobRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.CreateAtsJobResponse;
-import to.unified.unified_java_sdk.models.operations.GetAtsJobRequest;
-import to.unified.unified_java_sdk.models.operations.GetAtsJobRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.GetAtsJobResponse;
-import to.unified.unified_java_sdk.models.operations.ListAtsJobsRequest;
-import to.unified.unified_java_sdk.models.operations.ListAtsJobsRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.ListAtsJobsResponse;
-import to.unified.unified_java_sdk.models.operations.PatchAtsJobRequest;
-import to.unified.unified_java_sdk.models.operations.PatchAtsJobRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.PatchAtsJobResponse;
-import to.unified.unified_java_sdk.models.operations.RemoveAtsJobRequest;
-import to.unified.unified_java_sdk.models.operations.RemoveAtsJobRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.RemoveAtsJobResponse;
-import to.unified.unified_java_sdk.models.operations.UpdateAtsJobRequest;
-import to.unified.unified_java_sdk.models.operations.UpdateAtsJobRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.UpdateAtsJobResponse;
-import to.unified.unified_java_sdk.operations.CreateAtsJob;
-import to.unified.unified_java_sdk.operations.GetAtsJob;
-import to.unified.unified_java_sdk.operations.ListAtsJobs;
-import to.unified.unified_java_sdk.operations.PatchAtsJob;
-import to.unified.unified_java_sdk.operations.RemoveAtsJob;
-import to.unified.unified_java_sdk.operations.UpdateAtsJob;
+import to.unified.unified_java_sdk.models.operations.CreateAtsJob2Request;
+import to.unified.unified_java_sdk.models.operations.CreateAtsJob2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.CreateAtsJob2Response;
+import to.unified.unified_java_sdk.models.operations.GetAtsJob2Request;
+import to.unified.unified_java_sdk.models.operations.GetAtsJob2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetAtsJob2Response;
+import to.unified.unified_java_sdk.models.operations.ListAtsJobs2Request;
+import to.unified.unified_java_sdk.models.operations.ListAtsJobs2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListAtsJobs2Response;
+import to.unified.unified_java_sdk.models.operations.PatchAtsJob2Request;
+import to.unified.unified_java_sdk.models.operations.PatchAtsJob2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.PatchAtsJob2Response;
+import to.unified.unified_java_sdk.models.operations.RemoveAtsJob2Request;
+import to.unified.unified_java_sdk.models.operations.RemoveAtsJob2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.RemoveAtsJob2Response;
+import to.unified.unified_java_sdk.models.operations.UpdateAtsJob2Request;
+import to.unified.unified_java_sdk.models.operations.UpdateAtsJob2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.UpdateAtsJob2Response;
+import to.unified.unified_java_sdk.operations.CreateAtsJob2;
+import to.unified.unified_java_sdk.operations.GetAtsJob2;
+import to.unified.unified_java_sdk.operations.ListAtsJobs2;
+import to.unified.unified_java_sdk.operations.PatchAtsJob2;
+import to.unified.unified_java_sdk.operations.RemoveAtsJob2;
+import to.unified.unified_java_sdk.operations.UpdateAtsJob2;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -57,8 +57,8 @@ public class Job {
      * 
      * @return The call builder
      */
-    public CreateAtsJobRequestBuilder createAtsJob() {
-        return new CreateAtsJobRequestBuilder(sdkConfiguration);
+    public CreateAtsJob2RequestBuilder createAtsJob2() {
+        return new CreateAtsJob2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -68,9 +68,9 @@ public class Job {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateAtsJobResponse createAtsJob(@Nonnull CreateAtsJobRequest request) {
-        RequestOperation<CreateAtsJobRequest, CreateAtsJobResponse> operation
-              = new CreateAtsJob.Sync(sdkConfiguration, _headers);
+    public CreateAtsJob2Response createAtsJob2(@Nonnull CreateAtsJob2Request request) {
+        RequestOperation<CreateAtsJob2Request, CreateAtsJob2Response> operation
+              = new CreateAtsJob2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -79,8 +79,8 @@ public class Job {
      * 
      * @return The call builder
      */
-    public GetAtsJobRequestBuilder getAtsJob() {
-        return new GetAtsJobRequestBuilder(sdkConfiguration);
+    public GetAtsJob2RequestBuilder getAtsJob2() {
+        return new GetAtsJob2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -90,9 +90,9 @@ public class Job {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetAtsJobResponse getAtsJob(@Nonnull GetAtsJobRequest request) {
-        RequestOperation<GetAtsJobRequest, GetAtsJobResponse> operation
-              = new GetAtsJob.Sync(sdkConfiguration, _headers);
+    public GetAtsJob2Response getAtsJob2(@Nonnull GetAtsJob2Request request) {
+        RequestOperation<GetAtsJob2Request, GetAtsJob2Response> operation
+              = new GetAtsJob2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -101,8 +101,8 @@ public class Job {
      * 
      * @return The call builder
      */
-    public ListAtsJobsRequestBuilder listAtsJobs() {
-        return new ListAtsJobsRequestBuilder(sdkConfiguration);
+    public ListAtsJobs2RequestBuilder listAtsJobs2() {
+        return new ListAtsJobs2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -112,9 +112,9 @@ public class Job {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListAtsJobsResponse listAtsJobs(@Nonnull ListAtsJobsRequest request) {
-        RequestOperation<ListAtsJobsRequest, ListAtsJobsResponse> operation
-              = new ListAtsJobs.Sync(sdkConfiguration, _headers);
+    public ListAtsJobs2Response listAtsJobs2(@Nonnull ListAtsJobs2Request request) {
+        RequestOperation<ListAtsJobs2Request, ListAtsJobs2Response> operation
+              = new ListAtsJobs2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -123,8 +123,8 @@ public class Job {
      * 
      * @return The call builder
      */
-    public PatchAtsJobRequestBuilder patchAtsJob() {
-        return new PatchAtsJobRequestBuilder(sdkConfiguration);
+    public PatchAtsJob2RequestBuilder patchAtsJob2() {
+        return new PatchAtsJob2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -134,9 +134,9 @@ public class Job {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchAtsJobResponse patchAtsJob(@Nonnull PatchAtsJobRequest request) {
-        RequestOperation<PatchAtsJobRequest, PatchAtsJobResponse> operation
-              = new PatchAtsJob.Sync(sdkConfiguration, _headers);
+    public PatchAtsJob2Response patchAtsJob2(@Nonnull PatchAtsJob2Request request) {
+        RequestOperation<PatchAtsJob2Request, PatchAtsJob2Response> operation
+              = new PatchAtsJob2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -145,8 +145,8 @@ public class Job {
      * 
      * @return The call builder
      */
-    public RemoveAtsJobRequestBuilder removeAtsJob() {
-        return new RemoveAtsJobRequestBuilder(sdkConfiguration);
+    public RemoveAtsJob2RequestBuilder removeAtsJob2() {
+        return new RemoveAtsJob2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -156,9 +156,9 @@ public class Job {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveAtsJobResponse removeAtsJob(@Nonnull RemoveAtsJobRequest request) {
-        RequestOperation<RemoveAtsJobRequest, RemoveAtsJobResponse> operation
-              = new RemoveAtsJob.Sync(sdkConfiguration, _headers);
+    public RemoveAtsJob2Response removeAtsJob2(@Nonnull RemoveAtsJob2Request request) {
+        RequestOperation<RemoveAtsJob2Request, RemoveAtsJob2Response> operation
+              = new RemoveAtsJob2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -167,8 +167,8 @@ public class Job {
      * 
      * @return The call builder
      */
-    public UpdateAtsJobRequestBuilder updateAtsJob() {
-        return new UpdateAtsJobRequestBuilder(sdkConfiguration);
+    public UpdateAtsJob2RequestBuilder updateAtsJob2() {
+        return new UpdateAtsJob2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -178,9 +178,9 @@ public class Job {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateAtsJobResponse updateAtsJob(@Nonnull UpdateAtsJobRequest request) {
-        RequestOperation<UpdateAtsJobRequest, UpdateAtsJobResponse> operation
-              = new UpdateAtsJob.Sync(sdkConfiguration, _headers);
+    public UpdateAtsJob2Response updateAtsJob2(@Nonnull UpdateAtsJob2Request request) {
+        RequestOperation<UpdateAtsJob2Request, UpdateAtsJob2Response> operation
+              = new UpdateAtsJob2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

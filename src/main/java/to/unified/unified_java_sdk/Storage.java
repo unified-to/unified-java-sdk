@@ -6,30 +6,30 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
-import to.unified.unified_java_sdk.models.operations.CreateStorageFileRequest;
-import to.unified.unified_java_sdk.models.operations.CreateStorageFileRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.CreateStorageFileResponse;
-import to.unified.unified_java_sdk.models.operations.GetStorageFileRequest;
-import to.unified.unified_java_sdk.models.operations.GetStorageFileRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.GetStorageFileResponse;
-import to.unified.unified_java_sdk.models.operations.ListStorageFilesRequest;
-import to.unified.unified_java_sdk.models.operations.ListStorageFilesRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.ListStorageFilesResponse;
-import to.unified.unified_java_sdk.models.operations.PatchStorageFileRequest;
-import to.unified.unified_java_sdk.models.operations.PatchStorageFileRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.PatchStorageFileResponse;
-import to.unified.unified_java_sdk.models.operations.RemoveStorageFileRequest;
-import to.unified.unified_java_sdk.models.operations.RemoveStorageFileRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.RemoveStorageFileResponse;
-import to.unified.unified_java_sdk.models.operations.UpdateStorageFileRequest;
-import to.unified.unified_java_sdk.models.operations.UpdateStorageFileRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.UpdateStorageFileResponse;
-import to.unified.unified_java_sdk.operations.CreateStorageFile;
-import to.unified.unified_java_sdk.operations.GetStorageFile;
-import to.unified.unified_java_sdk.operations.ListStorageFiles;
-import to.unified.unified_java_sdk.operations.PatchStorageFile;
-import to.unified.unified_java_sdk.operations.RemoveStorageFile;
-import to.unified.unified_java_sdk.operations.UpdateStorageFile;
+import to.unified.unified_java_sdk.models.operations.CreateStorageFile2Request;
+import to.unified.unified_java_sdk.models.operations.CreateStorageFile2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.CreateStorageFile2Response;
+import to.unified.unified_java_sdk.models.operations.GetStorageFile2Request;
+import to.unified.unified_java_sdk.models.operations.GetStorageFile2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetStorageFile2Response;
+import to.unified.unified_java_sdk.models.operations.ListStorageFiles2Request;
+import to.unified.unified_java_sdk.models.operations.ListStorageFiles2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListStorageFiles2Response;
+import to.unified.unified_java_sdk.models.operations.PatchStorageFile2Request;
+import to.unified.unified_java_sdk.models.operations.PatchStorageFile2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.PatchStorageFile2Response;
+import to.unified.unified_java_sdk.models.operations.RemoveStorageFile2Request;
+import to.unified.unified_java_sdk.models.operations.RemoveStorageFile2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.RemoveStorageFile2Response;
+import to.unified.unified_java_sdk.models.operations.UpdateStorageFile2Request;
+import to.unified.unified_java_sdk.models.operations.UpdateStorageFile2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.UpdateStorageFile2Response;
+import to.unified.unified_java_sdk.operations.CreateStorageFile2;
+import to.unified.unified_java_sdk.operations.GetStorageFile2;
+import to.unified.unified_java_sdk.operations.ListStorageFiles2;
+import to.unified.unified_java_sdk.operations.PatchStorageFile2;
+import to.unified.unified_java_sdk.operations.RemoveStorageFile2;
+import to.unified.unified_java_sdk.operations.UpdateStorageFile2;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -57,8 +57,8 @@ public class Storage {
      * 
      * @return The call builder
      */
-    public CreateStorageFileRequestBuilder createStorageFile() {
-        return new CreateStorageFileRequestBuilder(sdkConfiguration);
+    public CreateStorageFile2RequestBuilder createStorageFile2() {
+        return new CreateStorageFile2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -68,9 +68,9 @@ public class Storage {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateStorageFileResponse createStorageFile(@Nonnull CreateStorageFileRequest request) {
-        RequestOperation<CreateStorageFileRequest, CreateStorageFileResponse> operation
-              = new CreateStorageFile.Sync(sdkConfiguration, _headers);
+    public CreateStorageFile2Response createStorageFile2(@Nonnull CreateStorageFile2Request request) {
+        RequestOperation<CreateStorageFile2Request, CreateStorageFile2Response> operation
+              = new CreateStorageFile2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -79,8 +79,8 @@ public class Storage {
      * 
      * @return The call builder
      */
-    public GetStorageFileRequestBuilder getStorageFile() {
-        return new GetStorageFileRequestBuilder(sdkConfiguration);
+    public GetStorageFile2RequestBuilder getStorageFile2() {
+        return new GetStorageFile2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -90,9 +90,9 @@ public class Storage {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetStorageFileResponse getStorageFile(@Nonnull GetStorageFileRequest request) {
-        RequestOperation<GetStorageFileRequest, GetStorageFileResponse> operation
-              = new GetStorageFile.Sync(sdkConfiguration, _headers);
+    public GetStorageFile2Response getStorageFile2(@Nonnull GetStorageFile2Request request) {
+        RequestOperation<GetStorageFile2Request, GetStorageFile2Response> operation
+              = new GetStorageFile2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -101,8 +101,8 @@ public class Storage {
      * 
      * @return The call builder
      */
-    public ListStorageFilesRequestBuilder listStorageFiles() {
-        return new ListStorageFilesRequestBuilder(sdkConfiguration);
+    public ListStorageFiles2RequestBuilder listStorageFiles2() {
+        return new ListStorageFiles2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -112,9 +112,9 @@ public class Storage {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListStorageFilesResponse listStorageFiles(@Nonnull ListStorageFilesRequest request) {
-        RequestOperation<ListStorageFilesRequest, ListStorageFilesResponse> operation
-              = new ListStorageFiles.Sync(sdkConfiguration, _headers);
+    public ListStorageFiles2Response listStorageFiles2(@Nonnull ListStorageFiles2Request request) {
+        RequestOperation<ListStorageFiles2Request, ListStorageFiles2Response> operation
+              = new ListStorageFiles2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -123,8 +123,8 @@ public class Storage {
      * 
      * @return The call builder
      */
-    public PatchStorageFileRequestBuilder patchStorageFile() {
-        return new PatchStorageFileRequestBuilder(sdkConfiguration);
+    public PatchStorageFile2RequestBuilder patchStorageFile2() {
+        return new PatchStorageFile2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -134,9 +134,9 @@ public class Storage {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchStorageFileResponse patchStorageFile(@Nonnull PatchStorageFileRequest request) {
-        RequestOperation<PatchStorageFileRequest, PatchStorageFileResponse> operation
-              = new PatchStorageFile.Sync(sdkConfiguration, _headers);
+    public PatchStorageFile2Response patchStorageFile2(@Nonnull PatchStorageFile2Request request) {
+        RequestOperation<PatchStorageFile2Request, PatchStorageFile2Response> operation
+              = new PatchStorageFile2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -145,8 +145,8 @@ public class Storage {
      * 
      * @return The call builder
      */
-    public RemoveStorageFileRequestBuilder removeStorageFile() {
-        return new RemoveStorageFileRequestBuilder(sdkConfiguration);
+    public RemoveStorageFile2RequestBuilder removeStorageFile2() {
+        return new RemoveStorageFile2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -156,9 +156,9 @@ public class Storage {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveStorageFileResponse removeStorageFile(@Nonnull RemoveStorageFileRequest request) {
-        RequestOperation<RemoveStorageFileRequest, RemoveStorageFileResponse> operation
-              = new RemoveStorageFile.Sync(sdkConfiguration, _headers);
+    public RemoveStorageFile2Response removeStorageFile2(@Nonnull RemoveStorageFile2Request request) {
+        RequestOperation<RemoveStorageFile2Request, RemoveStorageFile2Response> operation
+              = new RemoveStorageFile2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -167,8 +167,8 @@ public class Storage {
      * 
      * @return The call builder
      */
-    public UpdateStorageFileRequestBuilder updateStorageFile() {
-        return new UpdateStorageFileRequestBuilder(sdkConfiguration);
+    public UpdateStorageFile2RequestBuilder updateStorageFile2() {
+        return new UpdateStorageFile2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -178,9 +178,9 @@ public class Storage {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateStorageFileResponse updateStorageFile(@Nonnull UpdateStorageFileRequest request) {
-        RequestOperation<UpdateStorageFileRequest, UpdateStorageFileResponse> operation
-              = new UpdateStorageFile.Sync(sdkConfiguration, _headers);
+    public UpdateStorageFile2Response updateStorageFile2(@Nonnull UpdateStorageFile2Request request) {
+        RequestOperation<UpdateStorageFile2Request, UpdateStorageFile2Response> operation
+              = new UpdateStorageFile2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

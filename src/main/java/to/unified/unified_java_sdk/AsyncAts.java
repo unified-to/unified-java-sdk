@@ -7,202 +7,202 @@ import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOper
 
 import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
-import to.unified.unified_java_sdk.models.operations.CreateAtsActivityRequest;
-import to.unified.unified_java_sdk.models.operations.CreateAtsApplicationRequest;
-import to.unified.unified_java_sdk.models.operations.CreateAtsCandidateRequest;
-import to.unified.unified_java_sdk.models.operations.CreateAtsCompanyRequest;
-import to.unified.unified_java_sdk.models.operations.CreateAtsDocumentRequest;
-import to.unified.unified_java_sdk.models.operations.CreateAtsInterviewRequest;
-import to.unified.unified_java_sdk.models.operations.CreateAtsJobRequest;
-import to.unified.unified_java_sdk.models.operations.CreateAtsScorecardRequest;
-import to.unified.unified_java_sdk.models.operations.GetAtsActivityRequest;
-import to.unified.unified_java_sdk.models.operations.GetAtsApplicationRequest;
-import to.unified.unified_java_sdk.models.operations.GetAtsCandidateRequest;
-import to.unified.unified_java_sdk.models.operations.GetAtsCompanyRequest;
-import to.unified.unified_java_sdk.models.operations.GetAtsDocumentRequest;
-import to.unified.unified_java_sdk.models.operations.GetAtsInterviewRequest;
-import to.unified.unified_java_sdk.models.operations.GetAtsJobRequest;
-import to.unified.unified_java_sdk.models.operations.GetAtsScorecardRequest;
-import to.unified.unified_java_sdk.models.operations.ListAtsActivitiesRequest;
-import to.unified.unified_java_sdk.models.operations.ListAtsApplicationsRequest;
-import to.unified.unified_java_sdk.models.operations.ListAtsApplicationstatusesRequest;
-import to.unified.unified_java_sdk.models.operations.ListAtsCandidatesRequest;
-import to.unified.unified_java_sdk.models.operations.ListAtsCompaniesRequest;
-import to.unified.unified_java_sdk.models.operations.ListAtsDocumentsRequest;
-import to.unified.unified_java_sdk.models.operations.ListAtsInterviewsRequest;
-import to.unified.unified_java_sdk.models.operations.ListAtsJobsRequest;
-import to.unified.unified_java_sdk.models.operations.ListAtsScorecardsRequest;
-import to.unified.unified_java_sdk.models.operations.PatchAtsActivityRequest;
-import to.unified.unified_java_sdk.models.operations.PatchAtsApplicationRequest;
-import to.unified.unified_java_sdk.models.operations.PatchAtsCandidateRequest;
-import to.unified.unified_java_sdk.models.operations.PatchAtsCompanyRequest;
-import to.unified.unified_java_sdk.models.operations.PatchAtsDocumentRequest;
-import to.unified.unified_java_sdk.models.operations.PatchAtsInterviewRequest;
-import to.unified.unified_java_sdk.models.operations.PatchAtsJobRequest;
-import to.unified.unified_java_sdk.models.operations.PatchAtsScorecardRequest;
-import to.unified.unified_java_sdk.models.operations.RemoveAtsActivityRequest;
-import to.unified.unified_java_sdk.models.operations.RemoveAtsApplicationRequest;
-import to.unified.unified_java_sdk.models.operations.RemoveAtsCandidateRequest;
-import to.unified.unified_java_sdk.models.operations.RemoveAtsCompanyRequest;
-import to.unified.unified_java_sdk.models.operations.RemoveAtsDocumentRequest;
-import to.unified.unified_java_sdk.models.operations.RemoveAtsInterviewRequest;
-import to.unified.unified_java_sdk.models.operations.RemoveAtsJobRequest;
-import to.unified.unified_java_sdk.models.operations.RemoveAtsScorecardRequest;
-import to.unified.unified_java_sdk.models.operations.UpdateAtsActivityRequest;
-import to.unified.unified_java_sdk.models.operations.UpdateAtsApplicationRequest;
-import to.unified.unified_java_sdk.models.operations.UpdateAtsCandidateRequest;
-import to.unified.unified_java_sdk.models.operations.UpdateAtsCompanyRequest;
-import to.unified.unified_java_sdk.models.operations.UpdateAtsDocumentRequest;
-import to.unified.unified_java_sdk.models.operations.UpdateAtsInterviewRequest;
-import to.unified.unified_java_sdk.models.operations.UpdateAtsJobRequest;
-import to.unified.unified_java_sdk.models.operations.UpdateAtsScorecardRequest;
-import to.unified.unified_java_sdk.models.operations.async.CreateAtsActivityRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.CreateAtsActivityResponse;
-import to.unified.unified_java_sdk.models.operations.async.CreateAtsApplicationRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.CreateAtsApplicationResponse;
-import to.unified.unified_java_sdk.models.operations.async.CreateAtsCandidateRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.CreateAtsCandidateResponse;
-import to.unified.unified_java_sdk.models.operations.async.CreateAtsCompanyRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.CreateAtsCompanyResponse;
-import to.unified.unified_java_sdk.models.operations.async.CreateAtsDocumentRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.CreateAtsDocumentResponse;
-import to.unified.unified_java_sdk.models.operations.async.CreateAtsInterviewRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.CreateAtsInterviewResponse;
-import to.unified.unified_java_sdk.models.operations.async.CreateAtsJobRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.CreateAtsJobResponse;
-import to.unified.unified_java_sdk.models.operations.async.CreateAtsScorecardRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.CreateAtsScorecardResponse;
-import to.unified.unified_java_sdk.models.operations.async.GetAtsActivityRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.GetAtsActivityResponse;
-import to.unified.unified_java_sdk.models.operations.async.GetAtsApplicationRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.GetAtsApplicationResponse;
-import to.unified.unified_java_sdk.models.operations.async.GetAtsCandidateRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.GetAtsCandidateResponse;
-import to.unified.unified_java_sdk.models.operations.async.GetAtsCompanyRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.GetAtsCompanyResponse;
-import to.unified.unified_java_sdk.models.operations.async.GetAtsDocumentRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.GetAtsDocumentResponse;
-import to.unified.unified_java_sdk.models.operations.async.GetAtsInterviewRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.GetAtsInterviewResponse;
-import to.unified.unified_java_sdk.models.operations.async.GetAtsJobRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.GetAtsJobResponse;
-import to.unified.unified_java_sdk.models.operations.async.GetAtsScorecardRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.GetAtsScorecardResponse;
-import to.unified.unified_java_sdk.models.operations.async.ListAtsActivitiesRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.ListAtsActivitiesResponse;
-import to.unified.unified_java_sdk.models.operations.async.ListAtsApplicationsRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.ListAtsApplicationsResponse;
-import to.unified.unified_java_sdk.models.operations.async.ListAtsApplicationstatusesRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.ListAtsApplicationstatusesResponse;
-import to.unified.unified_java_sdk.models.operations.async.ListAtsCandidatesRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.ListAtsCandidatesResponse;
-import to.unified.unified_java_sdk.models.operations.async.ListAtsCompaniesRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.ListAtsCompaniesResponse;
-import to.unified.unified_java_sdk.models.operations.async.ListAtsDocumentsRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.ListAtsDocumentsResponse;
-import to.unified.unified_java_sdk.models.operations.async.ListAtsInterviewsRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.ListAtsInterviewsResponse;
-import to.unified.unified_java_sdk.models.operations.async.ListAtsJobsRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.ListAtsJobsResponse;
-import to.unified.unified_java_sdk.models.operations.async.ListAtsScorecardsRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.ListAtsScorecardsResponse;
-import to.unified.unified_java_sdk.models.operations.async.PatchAtsActivityRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.PatchAtsActivityResponse;
-import to.unified.unified_java_sdk.models.operations.async.PatchAtsApplicationRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.PatchAtsApplicationResponse;
-import to.unified.unified_java_sdk.models.operations.async.PatchAtsCandidateRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.PatchAtsCandidateResponse;
-import to.unified.unified_java_sdk.models.operations.async.PatchAtsCompanyRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.PatchAtsCompanyResponse;
-import to.unified.unified_java_sdk.models.operations.async.PatchAtsDocumentRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.PatchAtsDocumentResponse;
-import to.unified.unified_java_sdk.models.operations.async.PatchAtsInterviewRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.PatchAtsInterviewResponse;
-import to.unified.unified_java_sdk.models.operations.async.PatchAtsJobRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.PatchAtsJobResponse;
-import to.unified.unified_java_sdk.models.operations.async.PatchAtsScorecardRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.PatchAtsScorecardResponse;
-import to.unified.unified_java_sdk.models.operations.async.RemoveAtsActivityRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.RemoveAtsActivityResponse;
-import to.unified.unified_java_sdk.models.operations.async.RemoveAtsApplicationRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.RemoveAtsApplicationResponse;
-import to.unified.unified_java_sdk.models.operations.async.RemoveAtsCandidateRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.RemoveAtsCandidateResponse;
-import to.unified.unified_java_sdk.models.operations.async.RemoveAtsCompanyRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.RemoveAtsCompanyResponse;
-import to.unified.unified_java_sdk.models.operations.async.RemoveAtsDocumentRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.RemoveAtsDocumentResponse;
-import to.unified.unified_java_sdk.models.operations.async.RemoveAtsInterviewRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.RemoveAtsInterviewResponse;
-import to.unified.unified_java_sdk.models.operations.async.RemoveAtsJobRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.RemoveAtsJobResponse;
-import to.unified.unified_java_sdk.models.operations.async.RemoveAtsScorecardRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.RemoveAtsScorecardResponse;
-import to.unified.unified_java_sdk.models.operations.async.UpdateAtsActivityRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.UpdateAtsActivityResponse;
-import to.unified.unified_java_sdk.models.operations.async.UpdateAtsApplicationRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.UpdateAtsApplicationResponse;
-import to.unified.unified_java_sdk.models.operations.async.UpdateAtsCandidateRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.UpdateAtsCandidateResponse;
-import to.unified.unified_java_sdk.models.operations.async.UpdateAtsCompanyRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.UpdateAtsCompanyResponse;
-import to.unified.unified_java_sdk.models.operations.async.UpdateAtsDocumentRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.UpdateAtsDocumentResponse;
-import to.unified.unified_java_sdk.models.operations.async.UpdateAtsInterviewRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.UpdateAtsInterviewResponse;
-import to.unified.unified_java_sdk.models.operations.async.UpdateAtsJobRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.UpdateAtsJobResponse;
-import to.unified.unified_java_sdk.models.operations.async.UpdateAtsScorecardRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.UpdateAtsScorecardResponse;
-import to.unified.unified_java_sdk.operations.CreateAtsActivity;
-import to.unified.unified_java_sdk.operations.CreateAtsApplication;
-import to.unified.unified_java_sdk.operations.CreateAtsCandidate;
-import to.unified.unified_java_sdk.operations.CreateAtsCompany;
-import to.unified.unified_java_sdk.operations.CreateAtsDocument;
-import to.unified.unified_java_sdk.operations.CreateAtsInterview;
-import to.unified.unified_java_sdk.operations.CreateAtsJob;
-import to.unified.unified_java_sdk.operations.CreateAtsScorecard;
-import to.unified.unified_java_sdk.operations.GetAtsActivity;
-import to.unified.unified_java_sdk.operations.GetAtsApplication;
-import to.unified.unified_java_sdk.operations.GetAtsCandidate;
-import to.unified.unified_java_sdk.operations.GetAtsCompany;
-import to.unified.unified_java_sdk.operations.GetAtsDocument;
-import to.unified.unified_java_sdk.operations.GetAtsInterview;
-import to.unified.unified_java_sdk.operations.GetAtsJob;
-import to.unified.unified_java_sdk.operations.GetAtsScorecard;
-import to.unified.unified_java_sdk.operations.ListAtsActivities;
-import to.unified.unified_java_sdk.operations.ListAtsApplications;
-import to.unified.unified_java_sdk.operations.ListAtsApplicationstatuses;
-import to.unified.unified_java_sdk.operations.ListAtsCandidates;
-import to.unified.unified_java_sdk.operations.ListAtsCompanies;
-import to.unified.unified_java_sdk.operations.ListAtsDocuments;
-import to.unified.unified_java_sdk.operations.ListAtsInterviews;
-import to.unified.unified_java_sdk.operations.ListAtsJobs;
-import to.unified.unified_java_sdk.operations.ListAtsScorecards;
-import to.unified.unified_java_sdk.operations.PatchAtsActivity;
-import to.unified.unified_java_sdk.operations.PatchAtsApplication;
-import to.unified.unified_java_sdk.operations.PatchAtsCandidate;
-import to.unified.unified_java_sdk.operations.PatchAtsCompany;
-import to.unified.unified_java_sdk.operations.PatchAtsDocument;
-import to.unified.unified_java_sdk.operations.PatchAtsInterview;
-import to.unified.unified_java_sdk.operations.PatchAtsJob;
-import to.unified.unified_java_sdk.operations.PatchAtsScorecard;
-import to.unified.unified_java_sdk.operations.RemoveAtsActivity;
-import to.unified.unified_java_sdk.operations.RemoveAtsApplication;
-import to.unified.unified_java_sdk.operations.RemoveAtsCandidate;
-import to.unified.unified_java_sdk.operations.RemoveAtsCompany;
-import to.unified.unified_java_sdk.operations.RemoveAtsDocument;
-import to.unified.unified_java_sdk.operations.RemoveAtsInterview;
-import to.unified.unified_java_sdk.operations.RemoveAtsJob;
-import to.unified.unified_java_sdk.operations.RemoveAtsScorecard;
-import to.unified.unified_java_sdk.operations.UpdateAtsActivity;
-import to.unified.unified_java_sdk.operations.UpdateAtsApplication;
-import to.unified.unified_java_sdk.operations.UpdateAtsCandidate;
-import to.unified.unified_java_sdk.operations.UpdateAtsCompany;
-import to.unified.unified_java_sdk.operations.UpdateAtsDocument;
-import to.unified.unified_java_sdk.operations.UpdateAtsInterview;
-import to.unified.unified_java_sdk.operations.UpdateAtsJob;
-import to.unified.unified_java_sdk.operations.UpdateAtsScorecard;
+import to.unified.unified_java_sdk.models.operations.CreateAtsActivity2Request;
+import to.unified.unified_java_sdk.models.operations.CreateAtsApplication2Request;
+import to.unified.unified_java_sdk.models.operations.CreateAtsCandidate2Request;
+import to.unified.unified_java_sdk.models.operations.CreateAtsCompany2Request;
+import to.unified.unified_java_sdk.models.operations.CreateAtsDocument2Request;
+import to.unified.unified_java_sdk.models.operations.CreateAtsInterview2Request;
+import to.unified.unified_java_sdk.models.operations.CreateAtsJob2Request;
+import to.unified.unified_java_sdk.models.operations.CreateAtsScorecard2Request;
+import to.unified.unified_java_sdk.models.operations.GetAtsActivity2Request;
+import to.unified.unified_java_sdk.models.operations.GetAtsApplication2Request;
+import to.unified.unified_java_sdk.models.operations.GetAtsCandidate2Request;
+import to.unified.unified_java_sdk.models.operations.GetAtsCompany2Request;
+import to.unified.unified_java_sdk.models.operations.GetAtsDocument2Request;
+import to.unified.unified_java_sdk.models.operations.GetAtsInterview2Request;
+import to.unified.unified_java_sdk.models.operations.GetAtsJob2Request;
+import to.unified.unified_java_sdk.models.operations.GetAtsScorecard2Request;
+import to.unified.unified_java_sdk.models.operations.ListAtsActivities2Request;
+import to.unified.unified_java_sdk.models.operations.ListAtsApplications2Request;
+import to.unified.unified_java_sdk.models.operations.ListAtsApplicationstatuses2Request;
+import to.unified.unified_java_sdk.models.operations.ListAtsCandidates2Request;
+import to.unified.unified_java_sdk.models.operations.ListAtsCompanies2Request;
+import to.unified.unified_java_sdk.models.operations.ListAtsDocuments2Request;
+import to.unified.unified_java_sdk.models.operations.ListAtsInterviews2Request;
+import to.unified.unified_java_sdk.models.operations.ListAtsJobs2Request;
+import to.unified.unified_java_sdk.models.operations.ListAtsScorecards2Request;
+import to.unified.unified_java_sdk.models.operations.PatchAtsActivity2Request;
+import to.unified.unified_java_sdk.models.operations.PatchAtsApplication2Request;
+import to.unified.unified_java_sdk.models.operations.PatchAtsCandidate2Request;
+import to.unified.unified_java_sdk.models.operations.PatchAtsCompany2Request;
+import to.unified.unified_java_sdk.models.operations.PatchAtsDocument2Request;
+import to.unified.unified_java_sdk.models.operations.PatchAtsInterview2Request;
+import to.unified.unified_java_sdk.models.operations.PatchAtsJob2Request;
+import to.unified.unified_java_sdk.models.operations.PatchAtsScorecard2Request;
+import to.unified.unified_java_sdk.models.operations.RemoveAtsActivity2Request;
+import to.unified.unified_java_sdk.models.operations.RemoveAtsApplication2Request;
+import to.unified.unified_java_sdk.models.operations.RemoveAtsCandidate2Request;
+import to.unified.unified_java_sdk.models.operations.RemoveAtsCompany2Request;
+import to.unified.unified_java_sdk.models.operations.RemoveAtsDocument2Request;
+import to.unified.unified_java_sdk.models.operations.RemoveAtsInterview2Request;
+import to.unified.unified_java_sdk.models.operations.RemoveAtsJob2Request;
+import to.unified.unified_java_sdk.models.operations.RemoveAtsScorecard2Request;
+import to.unified.unified_java_sdk.models.operations.UpdateAtsActivity2Request;
+import to.unified.unified_java_sdk.models.operations.UpdateAtsApplication2Request;
+import to.unified.unified_java_sdk.models.operations.UpdateAtsCandidate2Request;
+import to.unified.unified_java_sdk.models.operations.UpdateAtsCompany2Request;
+import to.unified.unified_java_sdk.models.operations.UpdateAtsDocument2Request;
+import to.unified.unified_java_sdk.models.operations.UpdateAtsInterview2Request;
+import to.unified.unified_java_sdk.models.operations.UpdateAtsJob2Request;
+import to.unified.unified_java_sdk.models.operations.UpdateAtsScorecard2Request;
+import to.unified.unified_java_sdk.models.operations.async.CreateAtsActivity2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.CreateAtsActivity2Response;
+import to.unified.unified_java_sdk.models.operations.async.CreateAtsApplication2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.CreateAtsApplication2Response;
+import to.unified.unified_java_sdk.models.operations.async.CreateAtsCandidate2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.CreateAtsCandidate2Response;
+import to.unified.unified_java_sdk.models.operations.async.CreateAtsCompany2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.CreateAtsCompany2Response;
+import to.unified.unified_java_sdk.models.operations.async.CreateAtsDocument2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.CreateAtsDocument2Response;
+import to.unified.unified_java_sdk.models.operations.async.CreateAtsInterview2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.CreateAtsInterview2Response;
+import to.unified.unified_java_sdk.models.operations.async.CreateAtsJob2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.CreateAtsJob2Response;
+import to.unified.unified_java_sdk.models.operations.async.CreateAtsScorecard2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.CreateAtsScorecard2Response;
+import to.unified.unified_java_sdk.models.operations.async.GetAtsActivity2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetAtsActivity2Response;
+import to.unified.unified_java_sdk.models.operations.async.GetAtsApplication2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetAtsApplication2Response;
+import to.unified.unified_java_sdk.models.operations.async.GetAtsCandidate2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetAtsCandidate2Response;
+import to.unified.unified_java_sdk.models.operations.async.GetAtsCompany2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetAtsCompany2Response;
+import to.unified.unified_java_sdk.models.operations.async.GetAtsDocument2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetAtsDocument2Response;
+import to.unified.unified_java_sdk.models.operations.async.GetAtsInterview2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetAtsInterview2Response;
+import to.unified.unified_java_sdk.models.operations.async.GetAtsJob2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetAtsJob2Response;
+import to.unified.unified_java_sdk.models.operations.async.GetAtsScorecard2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetAtsScorecard2Response;
+import to.unified.unified_java_sdk.models.operations.async.ListAtsActivities2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListAtsActivities2Response;
+import to.unified.unified_java_sdk.models.operations.async.ListAtsApplications2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListAtsApplications2Response;
+import to.unified.unified_java_sdk.models.operations.async.ListAtsApplicationstatuses2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListAtsApplicationstatuses2Response;
+import to.unified.unified_java_sdk.models.operations.async.ListAtsCandidates2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListAtsCandidates2Response;
+import to.unified.unified_java_sdk.models.operations.async.ListAtsCompanies2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListAtsCompanies2Response;
+import to.unified.unified_java_sdk.models.operations.async.ListAtsDocuments2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListAtsDocuments2Response;
+import to.unified.unified_java_sdk.models.operations.async.ListAtsInterviews2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListAtsInterviews2Response;
+import to.unified.unified_java_sdk.models.operations.async.ListAtsJobs2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListAtsJobs2Response;
+import to.unified.unified_java_sdk.models.operations.async.ListAtsScorecards2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListAtsScorecards2Response;
+import to.unified.unified_java_sdk.models.operations.async.PatchAtsActivity2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.PatchAtsActivity2Response;
+import to.unified.unified_java_sdk.models.operations.async.PatchAtsApplication2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.PatchAtsApplication2Response;
+import to.unified.unified_java_sdk.models.operations.async.PatchAtsCandidate2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.PatchAtsCandidate2Response;
+import to.unified.unified_java_sdk.models.operations.async.PatchAtsCompany2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.PatchAtsCompany2Response;
+import to.unified.unified_java_sdk.models.operations.async.PatchAtsDocument2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.PatchAtsDocument2Response;
+import to.unified.unified_java_sdk.models.operations.async.PatchAtsInterview2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.PatchAtsInterview2Response;
+import to.unified.unified_java_sdk.models.operations.async.PatchAtsJob2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.PatchAtsJob2Response;
+import to.unified.unified_java_sdk.models.operations.async.PatchAtsScorecard2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.PatchAtsScorecard2Response;
+import to.unified.unified_java_sdk.models.operations.async.RemoveAtsActivity2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.RemoveAtsActivity2Response;
+import to.unified.unified_java_sdk.models.operations.async.RemoveAtsApplication2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.RemoveAtsApplication2Response;
+import to.unified.unified_java_sdk.models.operations.async.RemoveAtsCandidate2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.RemoveAtsCandidate2Response;
+import to.unified.unified_java_sdk.models.operations.async.RemoveAtsCompany2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.RemoveAtsCompany2Response;
+import to.unified.unified_java_sdk.models.operations.async.RemoveAtsDocument2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.RemoveAtsDocument2Response;
+import to.unified.unified_java_sdk.models.operations.async.RemoveAtsInterview2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.RemoveAtsInterview2Response;
+import to.unified.unified_java_sdk.models.operations.async.RemoveAtsJob2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.RemoveAtsJob2Response;
+import to.unified.unified_java_sdk.models.operations.async.RemoveAtsScorecard2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.RemoveAtsScorecard2Response;
+import to.unified.unified_java_sdk.models.operations.async.UpdateAtsActivity2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.UpdateAtsActivity2Response;
+import to.unified.unified_java_sdk.models.operations.async.UpdateAtsApplication2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.UpdateAtsApplication2Response;
+import to.unified.unified_java_sdk.models.operations.async.UpdateAtsCandidate2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.UpdateAtsCandidate2Response;
+import to.unified.unified_java_sdk.models.operations.async.UpdateAtsCompany2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.UpdateAtsCompany2Response;
+import to.unified.unified_java_sdk.models.operations.async.UpdateAtsDocument2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.UpdateAtsDocument2Response;
+import to.unified.unified_java_sdk.models.operations.async.UpdateAtsInterview2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.UpdateAtsInterview2Response;
+import to.unified.unified_java_sdk.models.operations.async.UpdateAtsJob2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.UpdateAtsJob2Response;
+import to.unified.unified_java_sdk.models.operations.async.UpdateAtsScorecard2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.UpdateAtsScorecard2Response;
+import to.unified.unified_java_sdk.operations.CreateAtsActivity2;
+import to.unified.unified_java_sdk.operations.CreateAtsApplication2;
+import to.unified.unified_java_sdk.operations.CreateAtsCandidate2;
+import to.unified.unified_java_sdk.operations.CreateAtsCompany2;
+import to.unified.unified_java_sdk.operations.CreateAtsDocument2;
+import to.unified.unified_java_sdk.operations.CreateAtsInterview2;
+import to.unified.unified_java_sdk.operations.CreateAtsJob2;
+import to.unified.unified_java_sdk.operations.CreateAtsScorecard2;
+import to.unified.unified_java_sdk.operations.GetAtsActivity2;
+import to.unified.unified_java_sdk.operations.GetAtsApplication2;
+import to.unified.unified_java_sdk.operations.GetAtsCandidate2;
+import to.unified.unified_java_sdk.operations.GetAtsCompany2;
+import to.unified.unified_java_sdk.operations.GetAtsDocument2;
+import to.unified.unified_java_sdk.operations.GetAtsInterview2;
+import to.unified.unified_java_sdk.operations.GetAtsJob2;
+import to.unified.unified_java_sdk.operations.GetAtsScorecard2;
+import to.unified.unified_java_sdk.operations.ListAtsActivities2;
+import to.unified.unified_java_sdk.operations.ListAtsApplications2;
+import to.unified.unified_java_sdk.operations.ListAtsApplicationstatuses2;
+import to.unified.unified_java_sdk.operations.ListAtsCandidates2;
+import to.unified.unified_java_sdk.operations.ListAtsCompanies2;
+import to.unified.unified_java_sdk.operations.ListAtsDocuments2;
+import to.unified.unified_java_sdk.operations.ListAtsInterviews2;
+import to.unified.unified_java_sdk.operations.ListAtsJobs2;
+import to.unified.unified_java_sdk.operations.ListAtsScorecards2;
+import to.unified.unified_java_sdk.operations.PatchAtsActivity2;
+import to.unified.unified_java_sdk.operations.PatchAtsApplication2;
+import to.unified.unified_java_sdk.operations.PatchAtsCandidate2;
+import to.unified.unified_java_sdk.operations.PatchAtsCompany2;
+import to.unified.unified_java_sdk.operations.PatchAtsDocument2;
+import to.unified.unified_java_sdk.operations.PatchAtsInterview2;
+import to.unified.unified_java_sdk.operations.PatchAtsJob2;
+import to.unified.unified_java_sdk.operations.PatchAtsScorecard2;
+import to.unified.unified_java_sdk.operations.RemoveAtsActivity2;
+import to.unified.unified_java_sdk.operations.RemoveAtsApplication2;
+import to.unified.unified_java_sdk.operations.RemoveAtsCandidate2;
+import to.unified.unified_java_sdk.operations.RemoveAtsCompany2;
+import to.unified.unified_java_sdk.operations.RemoveAtsDocument2;
+import to.unified.unified_java_sdk.operations.RemoveAtsInterview2;
+import to.unified.unified_java_sdk.operations.RemoveAtsJob2;
+import to.unified.unified_java_sdk.operations.RemoveAtsScorecard2;
+import to.unified.unified_java_sdk.operations.UpdateAtsActivity2;
+import to.unified.unified_java_sdk.operations.UpdateAtsApplication2;
+import to.unified.unified_java_sdk.operations.UpdateAtsCandidate2;
+import to.unified.unified_java_sdk.operations.UpdateAtsCompany2;
+import to.unified.unified_java_sdk.operations.UpdateAtsDocument2;
+import to.unified.unified_java_sdk.operations.UpdateAtsInterview2;
+import to.unified.unified_java_sdk.operations.UpdateAtsJob2;
+import to.unified.unified_java_sdk.operations.UpdateAtsScorecard2;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -231,19 +231,19 @@ public class AsyncAts {
      * 
      * @return The async call builder
      */
-    public CreateAtsActivityRequestBuilder createAtsActivity() {
-        return new CreateAtsActivityRequestBuilder(sdkConfiguration);
+    public CreateAtsActivity2RequestBuilder createAtsActivity2() {
+        return new CreateAtsActivity2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Create an activity
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<CreateAtsActivityResponse>} - The async response
+     * @return {@code CompletableFuture<CreateAtsActivity2Response>} - The async response
      */
-    public CompletableFuture<CreateAtsActivityResponse> createAtsActivity(@Nonnull CreateAtsActivityRequest request) {
-        AsyncRequestOperation<CreateAtsActivityRequest, CreateAtsActivityResponse> operation
-              = new CreateAtsActivity.Async(sdkConfiguration, _headers);
+    public CompletableFuture<CreateAtsActivity2Response> createAtsActivity2(@Nonnull CreateAtsActivity2Request request) {
+        AsyncRequestOperation<CreateAtsActivity2Request, CreateAtsActivity2Response> operation
+              = new CreateAtsActivity2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -254,19 +254,19 @@ public class AsyncAts {
      * 
      * @return The async call builder
      */
-    public CreateAtsApplicationRequestBuilder createAtsApplication() {
-        return new CreateAtsApplicationRequestBuilder(sdkConfiguration);
+    public CreateAtsApplication2RequestBuilder createAtsApplication2() {
+        return new CreateAtsApplication2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Create an application
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<CreateAtsApplicationResponse>} - The async response
+     * @return {@code CompletableFuture<CreateAtsApplication2Response>} - The async response
      */
-    public CompletableFuture<CreateAtsApplicationResponse> createAtsApplication(@Nonnull CreateAtsApplicationRequest request) {
-        AsyncRequestOperation<CreateAtsApplicationRequest, CreateAtsApplicationResponse> operation
-              = new CreateAtsApplication.Async(sdkConfiguration, _headers);
+    public CompletableFuture<CreateAtsApplication2Response> createAtsApplication2(@Nonnull CreateAtsApplication2Request request) {
+        AsyncRequestOperation<CreateAtsApplication2Request, CreateAtsApplication2Response> operation
+              = new CreateAtsApplication2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -277,19 +277,19 @@ public class AsyncAts {
      * 
      * @return The async call builder
      */
-    public CreateAtsCandidateRequestBuilder createAtsCandidate() {
-        return new CreateAtsCandidateRequestBuilder(sdkConfiguration);
+    public CreateAtsCandidate2RequestBuilder createAtsCandidate2() {
+        return new CreateAtsCandidate2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Create a candidate
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<CreateAtsCandidateResponse>} - The async response
+     * @return {@code CompletableFuture<CreateAtsCandidate2Response>} - The async response
      */
-    public CompletableFuture<CreateAtsCandidateResponse> createAtsCandidate(@Nonnull CreateAtsCandidateRequest request) {
-        AsyncRequestOperation<CreateAtsCandidateRequest, CreateAtsCandidateResponse> operation
-              = new CreateAtsCandidate.Async(sdkConfiguration, _headers);
+    public CompletableFuture<CreateAtsCandidate2Response> createAtsCandidate2(@Nonnull CreateAtsCandidate2Request request) {
+        AsyncRequestOperation<CreateAtsCandidate2Request, CreateAtsCandidate2Response> operation
+              = new CreateAtsCandidate2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -300,19 +300,19 @@ public class AsyncAts {
      * 
      * @return The async call builder
      */
-    public CreateAtsCompanyRequestBuilder createAtsCompany() {
-        return new CreateAtsCompanyRequestBuilder(sdkConfiguration);
+    public CreateAtsCompany2RequestBuilder createAtsCompany2() {
+        return new CreateAtsCompany2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Create a company
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<CreateAtsCompanyResponse>} - The async response
+     * @return {@code CompletableFuture<CreateAtsCompany2Response>} - The async response
      */
-    public CompletableFuture<CreateAtsCompanyResponse> createAtsCompany(@Nonnull CreateAtsCompanyRequest request) {
-        AsyncRequestOperation<CreateAtsCompanyRequest, CreateAtsCompanyResponse> operation
-              = new CreateAtsCompany.Async(sdkConfiguration, _headers);
+    public CompletableFuture<CreateAtsCompany2Response> createAtsCompany2(@Nonnull CreateAtsCompany2Request request) {
+        AsyncRequestOperation<CreateAtsCompany2Request, CreateAtsCompany2Response> operation
+              = new CreateAtsCompany2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -323,19 +323,19 @@ public class AsyncAts {
      * 
      * @return The async call builder
      */
-    public CreateAtsDocumentRequestBuilder createAtsDocument() {
-        return new CreateAtsDocumentRequestBuilder(sdkConfiguration);
+    public CreateAtsDocument2RequestBuilder createAtsDocument2() {
+        return new CreateAtsDocument2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Create a document
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<CreateAtsDocumentResponse>} - The async response
+     * @return {@code CompletableFuture<CreateAtsDocument2Response>} - The async response
      */
-    public CompletableFuture<CreateAtsDocumentResponse> createAtsDocument(@Nonnull CreateAtsDocumentRequest request) {
-        AsyncRequestOperation<CreateAtsDocumentRequest, CreateAtsDocumentResponse> operation
-              = new CreateAtsDocument.Async(sdkConfiguration, _headers);
+    public CompletableFuture<CreateAtsDocument2Response> createAtsDocument2(@Nonnull CreateAtsDocument2Request request) {
+        AsyncRequestOperation<CreateAtsDocument2Request, CreateAtsDocument2Response> operation
+              = new CreateAtsDocument2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -346,19 +346,19 @@ public class AsyncAts {
      * 
      * @return The async call builder
      */
-    public CreateAtsInterviewRequestBuilder createAtsInterview() {
-        return new CreateAtsInterviewRequestBuilder(sdkConfiguration);
+    public CreateAtsInterview2RequestBuilder createAtsInterview2() {
+        return new CreateAtsInterview2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Create an interview
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<CreateAtsInterviewResponse>} - The async response
+     * @return {@code CompletableFuture<CreateAtsInterview2Response>} - The async response
      */
-    public CompletableFuture<CreateAtsInterviewResponse> createAtsInterview(@Nonnull CreateAtsInterviewRequest request) {
-        AsyncRequestOperation<CreateAtsInterviewRequest, CreateAtsInterviewResponse> operation
-              = new CreateAtsInterview.Async(sdkConfiguration, _headers);
+    public CompletableFuture<CreateAtsInterview2Response> createAtsInterview2(@Nonnull CreateAtsInterview2Request request) {
+        AsyncRequestOperation<CreateAtsInterview2Request, CreateAtsInterview2Response> operation
+              = new CreateAtsInterview2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -369,19 +369,19 @@ public class AsyncAts {
      * 
      * @return The async call builder
      */
-    public CreateAtsJobRequestBuilder createAtsJob() {
-        return new CreateAtsJobRequestBuilder(sdkConfiguration);
+    public CreateAtsJob2RequestBuilder createAtsJob2() {
+        return new CreateAtsJob2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Create a job
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<CreateAtsJobResponse>} - The async response
+     * @return {@code CompletableFuture<CreateAtsJob2Response>} - The async response
      */
-    public CompletableFuture<CreateAtsJobResponse> createAtsJob(@Nonnull CreateAtsJobRequest request) {
-        AsyncRequestOperation<CreateAtsJobRequest, CreateAtsJobResponse> operation
-              = new CreateAtsJob.Async(sdkConfiguration, _headers);
+    public CompletableFuture<CreateAtsJob2Response> createAtsJob2(@Nonnull CreateAtsJob2Request request) {
+        AsyncRequestOperation<CreateAtsJob2Request, CreateAtsJob2Response> operation
+              = new CreateAtsJob2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -392,19 +392,19 @@ public class AsyncAts {
      * 
      * @return The async call builder
      */
-    public CreateAtsScorecardRequestBuilder createAtsScorecard() {
-        return new CreateAtsScorecardRequestBuilder(sdkConfiguration);
+    public CreateAtsScorecard2RequestBuilder createAtsScorecard2() {
+        return new CreateAtsScorecard2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Create a scorecard
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<CreateAtsScorecardResponse>} - The async response
+     * @return {@code CompletableFuture<CreateAtsScorecard2Response>} - The async response
      */
-    public CompletableFuture<CreateAtsScorecardResponse> createAtsScorecard(@Nonnull CreateAtsScorecardRequest request) {
-        AsyncRequestOperation<CreateAtsScorecardRequest, CreateAtsScorecardResponse> operation
-              = new CreateAtsScorecard.Async(sdkConfiguration, _headers);
+    public CompletableFuture<CreateAtsScorecard2Response> createAtsScorecard2(@Nonnull CreateAtsScorecard2Request request) {
+        AsyncRequestOperation<CreateAtsScorecard2Request, CreateAtsScorecard2Response> operation
+              = new CreateAtsScorecard2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -415,19 +415,19 @@ public class AsyncAts {
      * 
      * @return The async call builder
      */
-    public GetAtsActivityRequestBuilder getAtsActivity() {
-        return new GetAtsActivityRequestBuilder(sdkConfiguration);
+    public GetAtsActivity2RequestBuilder getAtsActivity2() {
+        return new GetAtsActivity2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Retrieve an activity
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<GetAtsActivityResponse>} - The async response
+     * @return {@code CompletableFuture<GetAtsActivity2Response>} - The async response
      */
-    public CompletableFuture<GetAtsActivityResponse> getAtsActivity(@Nonnull GetAtsActivityRequest request) {
-        AsyncRequestOperation<GetAtsActivityRequest, GetAtsActivityResponse> operation
-              = new GetAtsActivity.Async(sdkConfiguration, _headers);
+    public CompletableFuture<GetAtsActivity2Response> getAtsActivity2(@Nonnull GetAtsActivity2Request request) {
+        AsyncRequestOperation<GetAtsActivity2Request, GetAtsActivity2Response> operation
+              = new GetAtsActivity2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -438,19 +438,19 @@ public class AsyncAts {
      * 
      * @return The async call builder
      */
-    public GetAtsApplicationRequestBuilder getAtsApplication() {
-        return new GetAtsApplicationRequestBuilder(sdkConfiguration);
+    public GetAtsApplication2RequestBuilder getAtsApplication2() {
+        return new GetAtsApplication2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Retrieve an application
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<GetAtsApplicationResponse>} - The async response
+     * @return {@code CompletableFuture<GetAtsApplication2Response>} - The async response
      */
-    public CompletableFuture<GetAtsApplicationResponse> getAtsApplication(@Nonnull GetAtsApplicationRequest request) {
-        AsyncRequestOperation<GetAtsApplicationRequest, GetAtsApplicationResponse> operation
-              = new GetAtsApplication.Async(sdkConfiguration, _headers);
+    public CompletableFuture<GetAtsApplication2Response> getAtsApplication2(@Nonnull GetAtsApplication2Request request) {
+        AsyncRequestOperation<GetAtsApplication2Request, GetAtsApplication2Response> operation
+              = new GetAtsApplication2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -461,19 +461,19 @@ public class AsyncAts {
      * 
      * @return The async call builder
      */
-    public GetAtsCandidateRequestBuilder getAtsCandidate() {
-        return new GetAtsCandidateRequestBuilder(sdkConfiguration);
+    public GetAtsCandidate2RequestBuilder getAtsCandidate2() {
+        return new GetAtsCandidate2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Retrieve a candidate
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<GetAtsCandidateResponse>} - The async response
+     * @return {@code CompletableFuture<GetAtsCandidate2Response>} - The async response
      */
-    public CompletableFuture<GetAtsCandidateResponse> getAtsCandidate(@Nonnull GetAtsCandidateRequest request) {
-        AsyncRequestOperation<GetAtsCandidateRequest, GetAtsCandidateResponse> operation
-              = new GetAtsCandidate.Async(sdkConfiguration, _headers);
+    public CompletableFuture<GetAtsCandidate2Response> getAtsCandidate2(@Nonnull GetAtsCandidate2Request request) {
+        AsyncRequestOperation<GetAtsCandidate2Request, GetAtsCandidate2Response> operation
+              = new GetAtsCandidate2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -484,19 +484,19 @@ public class AsyncAts {
      * 
      * @return The async call builder
      */
-    public GetAtsCompanyRequestBuilder getAtsCompany() {
-        return new GetAtsCompanyRequestBuilder(sdkConfiguration);
+    public GetAtsCompany2RequestBuilder getAtsCompany2() {
+        return new GetAtsCompany2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Retrieve a company
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<GetAtsCompanyResponse>} - The async response
+     * @return {@code CompletableFuture<GetAtsCompany2Response>} - The async response
      */
-    public CompletableFuture<GetAtsCompanyResponse> getAtsCompany(@Nonnull GetAtsCompanyRequest request) {
-        AsyncRequestOperation<GetAtsCompanyRequest, GetAtsCompanyResponse> operation
-              = new GetAtsCompany.Async(sdkConfiguration, _headers);
+    public CompletableFuture<GetAtsCompany2Response> getAtsCompany2(@Nonnull GetAtsCompany2Request request) {
+        AsyncRequestOperation<GetAtsCompany2Request, GetAtsCompany2Response> operation
+              = new GetAtsCompany2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -507,19 +507,19 @@ public class AsyncAts {
      * 
      * @return The async call builder
      */
-    public GetAtsDocumentRequestBuilder getAtsDocument() {
-        return new GetAtsDocumentRequestBuilder(sdkConfiguration);
+    public GetAtsDocument2RequestBuilder getAtsDocument2() {
+        return new GetAtsDocument2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Retrieve a document
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<GetAtsDocumentResponse>} - The async response
+     * @return {@code CompletableFuture<GetAtsDocument2Response>} - The async response
      */
-    public CompletableFuture<GetAtsDocumentResponse> getAtsDocument(@Nonnull GetAtsDocumentRequest request) {
-        AsyncRequestOperation<GetAtsDocumentRequest, GetAtsDocumentResponse> operation
-              = new GetAtsDocument.Async(sdkConfiguration, _headers);
+    public CompletableFuture<GetAtsDocument2Response> getAtsDocument2(@Nonnull GetAtsDocument2Request request) {
+        AsyncRequestOperation<GetAtsDocument2Request, GetAtsDocument2Response> operation
+              = new GetAtsDocument2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -530,19 +530,19 @@ public class AsyncAts {
      * 
      * @return The async call builder
      */
-    public GetAtsInterviewRequestBuilder getAtsInterview() {
-        return new GetAtsInterviewRequestBuilder(sdkConfiguration);
+    public GetAtsInterview2RequestBuilder getAtsInterview2() {
+        return new GetAtsInterview2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Retrieve an interview
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<GetAtsInterviewResponse>} - The async response
+     * @return {@code CompletableFuture<GetAtsInterview2Response>} - The async response
      */
-    public CompletableFuture<GetAtsInterviewResponse> getAtsInterview(@Nonnull GetAtsInterviewRequest request) {
-        AsyncRequestOperation<GetAtsInterviewRequest, GetAtsInterviewResponse> operation
-              = new GetAtsInterview.Async(sdkConfiguration, _headers);
+    public CompletableFuture<GetAtsInterview2Response> getAtsInterview2(@Nonnull GetAtsInterview2Request request) {
+        AsyncRequestOperation<GetAtsInterview2Request, GetAtsInterview2Response> operation
+              = new GetAtsInterview2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -553,19 +553,19 @@ public class AsyncAts {
      * 
      * @return The async call builder
      */
-    public GetAtsJobRequestBuilder getAtsJob() {
-        return new GetAtsJobRequestBuilder(sdkConfiguration);
+    public GetAtsJob2RequestBuilder getAtsJob2() {
+        return new GetAtsJob2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Retrieve a job
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<GetAtsJobResponse>} - The async response
+     * @return {@code CompletableFuture<GetAtsJob2Response>} - The async response
      */
-    public CompletableFuture<GetAtsJobResponse> getAtsJob(@Nonnull GetAtsJobRequest request) {
-        AsyncRequestOperation<GetAtsJobRequest, GetAtsJobResponse> operation
-              = new GetAtsJob.Async(sdkConfiguration, _headers);
+    public CompletableFuture<GetAtsJob2Response> getAtsJob2(@Nonnull GetAtsJob2Request request) {
+        AsyncRequestOperation<GetAtsJob2Request, GetAtsJob2Response> operation
+              = new GetAtsJob2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -576,19 +576,19 @@ public class AsyncAts {
      * 
      * @return The async call builder
      */
-    public GetAtsScorecardRequestBuilder getAtsScorecard() {
-        return new GetAtsScorecardRequestBuilder(sdkConfiguration);
+    public GetAtsScorecard2RequestBuilder getAtsScorecard2() {
+        return new GetAtsScorecard2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Retrieve a scorecard
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<GetAtsScorecardResponse>} - The async response
+     * @return {@code CompletableFuture<GetAtsScorecard2Response>} - The async response
      */
-    public CompletableFuture<GetAtsScorecardResponse> getAtsScorecard(@Nonnull GetAtsScorecardRequest request) {
-        AsyncRequestOperation<GetAtsScorecardRequest, GetAtsScorecardResponse> operation
-              = new GetAtsScorecard.Async(sdkConfiguration, _headers);
+    public CompletableFuture<GetAtsScorecard2Response> getAtsScorecard2(@Nonnull GetAtsScorecard2Request request) {
+        AsyncRequestOperation<GetAtsScorecard2Request, GetAtsScorecard2Response> operation
+              = new GetAtsScorecard2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -599,19 +599,19 @@ public class AsyncAts {
      * 
      * @return The async call builder
      */
-    public ListAtsActivitiesRequestBuilder listAtsActivities() {
-        return new ListAtsActivitiesRequestBuilder(sdkConfiguration);
+    public ListAtsActivities2RequestBuilder listAtsActivities2() {
+        return new ListAtsActivities2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * List all activities
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<ListAtsActivitiesResponse>} - The async response
+     * @return {@code CompletableFuture<ListAtsActivities2Response>} - The async response
      */
-    public CompletableFuture<ListAtsActivitiesResponse> listAtsActivities(@Nonnull ListAtsActivitiesRequest request) {
-        AsyncRequestOperation<ListAtsActivitiesRequest, ListAtsActivitiesResponse> operation
-              = new ListAtsActivities.Async(sdkConfiguration, _headers);
+    public CompletableFuture<ListAtsActivities2Response> listAtsActivities2(@Nonnull ListAtsActivities2Request request) {
+        AsyncRequestOperation<ListAtsActivities2Request, ListAtsActivities2Response> operation
+              = new ListAtsActivities2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -622,19 +622,19 @@ public class AsyncAts {
      * 
      * @return The async call builder
      */
-    public ListAtsApplicationsRequestBuilder listAtsApplications() {
-        return new ListAtsApplicationsRequestBuilder(sdkConfiguration);
+    public ListAtsApplications2RequestBuilder listAtsApplications2() {
+        return new ListAtsApplications2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * List all applications
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<ListAtsApplicationsResponse>} - The async response
+     * @return {@code CompletableFuture<ListAtsApplications2Response>} - The async response
      */
-    public CompletableFuture<ListAtsApplicationsResponse> listAtsApplications(@Nonnull ListAtsApplicationsRequest request) {
-        AsyncRequestOperation<ListAtsApplicationsRequest, ListAtsApplicationsResponse> operation
-              = new ListAtsApplications.Async(sdkConfiguration, _headers);
+    public CompletableFuture<ListAtsApplications2Response> listAtsApplications2(@Nonnull ListAtsApplications2Request request) {
+        AsyncRequestOperation<ListAtsApplications2Request, ListAtsApplications2Response> operation
+              = new ListAtsApplications2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -645,19 +645,19 @@ public class AsyncAts {
      * 
      * @return The async call builder
      */
-    public ListAtsApplicationstatusesRequestBuilder listAtsApplicationstatuses() {
-        return new ListAtsApplicationstatusesRequestBuilder(sdkConfiguration);
+    public ListAtsApplicationstatuses2RequestBuilder listAtsApplicationstatuses2() {
+        return new ListAtsApplicationstatuses2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * List all applicationstatuses
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<ListAtsApplicationstatusesResponse>} - The async response
+     * @return {@code CompletableFuture<ListAtsApplicationstatuses2Response>} - The async response
      */
-    public CompletableFuture<ListAtsApplicationstatusesResponse> listAtsApplicationstatuses(@Nonnull ListAtsApplicationstatusesRequest request) {
-        AsyncRequestOperation<ListAtsApplicationstatusesRequest, ListAtsApplicationstatusesResponse> operation
-              = new ListAtsApplicationstatuses.Async(sdkConfiguration, _headers);
+    public CompletableFuture<ListAtsApplicationstatuses2Response> listAtsApplicationstatuses2(@Nonnull ListAtsApplicationstatuses2Request request) {
+        AsyncRequestOperation<ListAtsApplicationstatuses2Request, ListAtsApplicationstatuses2Response> operation
+              = new ListAtsApplicationstatuses2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -668,19 +668,19 @@ public class AsyncAts {
      * 
      * @return The async call builder
      */
-    public ListAtsCandidatesRequestBuilder listAtsCandidates() {
-        return new ListAtsCandidatesRequestBuilder(sdkConfiguration);
+    public ListAtsCandidates2RequestBuilder listAtsCandidates2() {
+        return new ListAtsCandidates2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * List all candidates
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<ListAtsCandidatesResponse>} - The async response
+     * @return {@code CompletableFuture<ListAtsCandidates2Response>} - The async response
      */
-    public CompletableFuture<ListAtsCandidatesResponse> listAtsCandidates(@Nonnull ListAtsCandidatesRequest request) {
-        AsyncRequestOperation<ListAtsCandidatesRequest, ListAtsCandidatesResponse> operation
-              = new ListAtsCandidates.Async(sdkConfiguration, _headers);
+    public CompletableFuture<ListAtsCandidates2Response> listAtsCandidates2(@Nonnull ListAtsCandidates2Request request) {
+        AsyncRequestOperation<ListAtsCandidates2Request, ListAtsCandidates2Response> operation
+              = new ListAtsCandidates2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -691,19 +691,19 @@ public class AsyncAts {
      * 
      * @return The async call builder
      */
-    public ListAtsCompaniesRequestBuilder listAtsCompanies() {
-        return new ListAtsCompaniesRequestBuilder(sdkConfiguration);
+    public ListAtsCompanies2RequestBuilder listAtsCompanies2() {
+        return new ListAtsCompanies2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * List all companies
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<ListAtsCompaniesResponse>} - The async response
+     * @return {@code CompletableFuture<ListAtsCompanies2Response>} - The async response
      */
-    public CompletableFuture<ListAtsCompaniesResponse> listAtsCompanies(@Nonnull ListAtsCompaniesRequest request) {
-        AsyncRequestOperation<ListAtsCompaniesRequest, ListAtsCompaniesResponse> operation
-              = new ListAtsCompanies.Async(sdkConfiguration, _headers);
+    public CompletableFuture<ListAtsCompanies2Response> listAtsCompanies2(@Nonnull ListAtsCompanies2Request request) {
+        AsyncRequestOperation<ListAtsCompanies2Request, ListAtsCompanies2Response> operation
+              = new ListAtsCompanies2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -714,19 +714,19 @@ public class AsyncAts {
      * 
      * @return The async call builder
      */
-    public ListAtsDocumentsRequestBuilder listAtsDocuments() {
-        return new ListAtsDocumentsRequestBuilder(sdkConfiguration);
+    public ListAtsDocuments2RequestBuilder listAtsDocuments2() {
+        return new ListAtsDocuments2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * List all documents
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<ListAtsDocumentsResponse>} - The async response
+     * @return {@code CompletableFuture<ListAtsDocuments2Response>} - The async response
      */
-    public CompletableFuture<ListAtsDocumentsResponse> listAtsDocuments(@Nonnull ListAtsDocumentsRequest request) {
-        AsyncRequestOperation<ListAtsDocumentsRequest, ListAtsDocumentsResponse> operation
-              = new ListAtsDocuments.Async(sdkConfiguration, _headers);
+    public CompletableFuture<ListAtsDocuments2Response> listAtsDocuments2(@Nonnull ListAtsDocuments2Request request) {
+        AsyncRequestOperation<ListAtsDocuments2Request, ListAtsDocuments2Response> operation
+              = new ListAtsDocuments2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -737,19 +737,19 @@ public class AsyncAts {
      * 
      * @return The async call builder
      */
-    public ListAtsInterviewsRequestBuilder listAtsInterviews() {
-        return new ListAtsInterviewsRequestBuilder(sdkConfiguration);
+    public ListAtsInterviews2RequestBuilder listAtsInterviews2() {
+        return new ListAtsInterviews2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * List all interviews
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<ListAtsInterviewsResponse>} - The async response
+     * @return {@code CompletableFuture<ListAtsInterviews2Response>} - The async response
      */
-    public CompletableFuture<ListAtsInterviewsResponse> listAtsInterviews(@Nonnull ListAtsInterviewsRequest request) {
-        AsyncRequestOperation<ListAtsInterviewsRequest, ListAtsInterviewsResponse> operation
-              = new ListAtsInterviews.Async(sdkConfiguration, _headers);
+    public CompletableFuture<ListAtsInterviews2Response> listAtsInterviews2(@Nonnull ListAtsInterviews2Request request) {
+        AsyncRequestOperation<ListAtsInterviews2Request, ListAtsInterviews2Response> operation
+              = new ListAtsInterviews2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -760,19 +760,19 @@ public class AsyncAts {
      * 
      * @return The async call builder
      */
-    public ListAtsJobsRequestBuilder listAtsJobs() {
-        return new ListAtsJobsRequestBuilder(sdkConfiguration);
+    public ListAtsJobs2RequestBuilder listAtsJobs2() {
+        return new ListAtsJobs2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * List all jobs
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<ListAtsJobsResponse>} - The async response
+     * @return {@code CompletableFuture<ListAtsJobs2Response>} - The async response
      */
-    public CompletableFuture<ListAtsJobsResponse> listAtsJobs(@Nonnull ListAtsJobsRequest request) {
-        AsyncRequestOperation<ListAtsJobsRequest, ListAtsJobsResponse> operation
-              = new ListAtsJobs.Async(sdkConfiguration, _headers);
+    public CompletableFuture<ListAtsJobs2Response> listAtsJobs2(@Nonnull ListAtsJobs2Request request) {
+        AsyncRequestOperation<ListAtsJobs2Request, ListAtsJobs2Response> operation
+              = new ListAtsJobs2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -783,19 +783,19 @@ public class AsyncAts {
      * 
      * @return The async call builder
      */
-    public ListAtsScorecardsRequestBuilder listAtsScorecards() {
-        return new ListAtsScorecardsRequestBuilder(sdkConfiguration);
+    public ListAtsScorecards2RequestBuilder listAtsScorecards2() {
+        return new ListAtsScorecards2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * List all scorecards
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<ListAtsScorecardsResponse>} - The async response
+     * @return {@code CompletableFuture<ListAtsScorecards2Response>} - The async response
      */
-    public CompletableFuture<ListAtsScorecardsResponse> listAtsScorecards(@Nonnull ListAtsScorecardsRequest request) {
-        AsyncRequestOperation<ListAtsScorecardsRequest, ListAtsScorecardsResponse> operation
-              = new ListAtsScorecards.Async(sdkConfiguration, _headers);
+    public CompletableFuture<ListAtsScorecards2Response> listAtsScorecards2(@Nonnull ListAtsScorecards2Request request) {
+        AsyncRequestOperation<ListAtsScorecards2Request, ListAtsScorecards2Response> operation
+              = new ListAtsScorecards2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -806,19 +806,19 @@ public class AsyncAts {
      * 
      * @return The async call builder
      */
-    public PatchAtsActivityRequestBuilder patchAtsActivity() {
-        return new PatchAtsActivityRequestBuilder(sdkConfiguration);
+    public PatchAtsActivity2RequestBuilder patchAtsActivity2() {
+        return new PatchAtsActivity2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update an activity
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<PatchAtsActivityResponse>} - The async response
+     * @return {@code CompletableFuture<PatchAtsActivity2Response>} - The async response
      */
-    public CompletableFuture<PatchAtsActivityResponse> patchAtsActivity(@Nonnull PatchAtsActivityRequest request) {
-        AsyncRequestOperation<PatchAtsActivityRequest, PatchAtsActivityResponse> operation
-              = new PatchAtsActivity.Async(sdkConfiguration, _headers);
+    public CompletableFuture<PatchAtsActivity2Response> patchAtsActivity2(@Nonnull PatchAtsActivity2Request request) {
+        AsyncRequestOperation<PatchAtsActivity2Request, PatchAtsActivity2Response> operation
+              = new PatchAtsActivity2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -829,19 +829,19 @@ public class AsyncAts {
      * 
      * @return The async call builder
      */
-    public PatchAtsApplicationRequestBuilder patchAtsApplication() {
-        return new PatchAtsApplicationRequestBuilder(sdkConfiguration);
+    public PatchAtsApplication2RequestBuilder patchAtsApplication2() {
+        return new PatchAtsApplication2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update an application
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<PatchAtsApplicationResponse>} - The async response
+     * @return {@code CompletableFuture<PatchAtsApplication2Response>} - The async response
      */
-    public CompletableFuture<PatchAtsApplicationResponse> patchAtsApplication(@Nonnull PatchAtsApplicationRequest request) {
-        AsyncRequestOperation<PatchAtsApplicationRequest, PatchAtsApplicationResponse> operation
-              = new PatchAtsApplication.Async(sdkConfiguration, _headers);
+    public CompletableFuture<PatchAtsApplication2Response> patchAtsApplication2(@Nonnull PatchAtsApplication2Request request) {
+        AsyncRequestOperation<PatchAtsApplication2Request, PatchAtsApplication2Response> operation
+              = new PatchAtsApplication2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -852,19 +852,19 @@ public class AsyncAts {
      * 
      * @return The async call builder
      */
-    public PatchAtsCandidateRequestBuilder patchAtsCandidate() {
-        return new PatchAtsCandidateRequestBuilder(sdkConfiguration);
+    public PatchAtsCandidate2RequestBuilder patchAtsCandidate2() {
+        return new PatchAtsCandidate2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update a candidate
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<PatchAtsCandidateResponse>} - The async response
+     * @return {@code CompletableFuture<PatchAtsCandidate2Response>} - The async response
      */
-    public CompletableFuture<PatchAtsCandidateResponse> patchAtsCandidate(@Nonnull PatchAtsCandidateRequest request) {
-        AsyncRequestOperation<PatchAtsCandidateRequest, PatchAtsCandidateResponse> operation
-              = new PatchAtsCandidate.Async(sdkConfiguration, _headers);
+    public CompletableFuture<PatchAtsCandidate2Response> patchAtsCandidate2(@Nonnull PatchAtsCandidate2Request request) {
+        AsyncRequestOperation<PatchAtsCandidate2Request, PatchAtsCandidate2Response> operation
+              = new PatchAtsCandidate2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -875,19 +875,19 @@ public class AsyncAts {
      * 
      * @return The async call builder
      */
-    public PatchAtsCompanyRequestBuilder patchAtsCompany() {
-        return new PatchAtsCompanyRequestBuilder(sdkConfiguration);
+    public PatchAtsCompany2RequestBuilder patchAtsCompany2() {
+        return new PatchAtsCompany2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update a company
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<PatchAtsCompanyResponse>} - The async response
+     * @return {@code CompletableFuture<PatchAtsCompany2Response>} - The async response
      */
-    public CompletableFuture<PatchAtsCompanyResponse> patchAtsCompany(@Nonnull PatchAtsCompanyRequest request) {
-        AsyncRequestOperation<PatchAtsCompanyRequest, PatchAtsCompanyResponse> operation
-              = new PatchAtsCompany.Async(sdkConfiguration, _headers);
+    public CompletableFuture<PatchAtsCompany2Response> patchAtsCompany2(@Nonnull PatchAtsCompany2Request request) {
+        AsyncRequestOperation<PatchAtsCompany2Request, PatchAtsCompany2Response> operation
+              = new PatchAtsCompany2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -898,19 +898,19 @@ public class AsyncAts {
      * 
      * @return The async call builder
      */
-    public PatchAtsDocumentRequestBuilder patchAtsDocument() {
-        return new PatchAtsDocumentRequestBuilder(sdkConfiguration);
+    public PatchAtsDocument2RequestBuilder patchAtsDocument2() {
+        return new PatchAtsDocument2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update a document
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<PatchAtsDocumentResponse>} - The async response
+     * @return {@code CompletableFuture<PatchAtsDocument2Response>} - The async response
      */
-    public CompletableFuture<PatchAtsDocumentResponse> patchAtsDocument(@Nonnull PatchAtsDocumentRequest request) {
-        AsyncRequestOperation<PatchAtsDocumentRequest, PatchAtsDocumentResponse> operation
-              = new PatchAtsDocument.Async(sdkConfiguration, _headers);
+    public CompletableFuture<PatchAtsDocument2Response> patchAtsDocument2(@Nonnull PatchAtsDocument2Request request) {
+        AsyncRequestOperation<PatchAtsDocument2Request, PatchAtsDocument2Response> operation
+              = new PatchAtsDocument2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -921,19 +921,19 @@ public class AsyncAts {
      * 
      * @return The async call builder
      */
-    public PatchAtsInterviewRequestBuilder patchAtsInterview() {
-        return new PatchAtsInterviewRequestBuilder(sdkConfiguration);
+    public PatchAtsInterview2RequestBuilder patchAtsInterview2() {
+        return new PatchAtsInterview2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update an interview
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<PatchAtsInterviewResponse>} - The async response
+     * @return {@code CompletableFuture<PatchAtsInterview2Response>} - The async response
      */
-    public CompletableFuture<PatchAtsInterviewResponse> patchAtsInterview(@Nonnull PatchAtsInterviewRequest request) {
-        AsyncRequestOperation<PatchAtsInterviewRequest, PatchAtsInterviewResponse> operation
-              = new PatchAtsInterview.Async(sdkConfiguration, _headers);
+    public CompletableFuture<PatchAtsInterview2Response> patchAtsInterview2(@Nonnull PatchAtsInterview2Request request) {
+        AsyncRequestOperation<PatchAtsInterview2Request, PatchAtsInterview2Response> operation
+              = new PatchAtsInterview2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -944,19 +944,19 @@ public class AsyncAts {
      * 
      * @return The async call builder
      */
-    public PatchAtsJobRequestBuilder patchAtsJob() {
-        return new PatchAtsJobRequestBuilder(sdkConfiguration);
+    public PatchAtsJob2RequestBuilder patchAtsJob2() {
+        return new PatchAtsJob2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update a job
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<PatchAtsJobResponse>} - The async response
+     * @return {@code CompletableFuture<PatchAtsJob2Response>} - The async response
      */
-    public CompletableFuture<PatchAtsJobResponse> patchAtsJob(@Nonnull PatchAtsJobRequest request) {
-        AsyncRequestOperation<PatchAtsJobRequest, PatchAtsJobResponse> operation
-              = new PatchAtsJob.Async(sdkConfiguration, _headers);
+    public CompletableFuture<PatchAtsJob2Response> patchAtsJob2(@Nonnull PatchAtsJob2Request request) {
+        AsyncRequestOperation<PatchAtsJob2Request, PatchAtsJob2Response> operation
+              = new PatchAtsJob2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -967,19 +967,19 @@ public class AsyncAts {
      * 
      * @return The async call builder
      */
-    public PatchAtsScorecardRequestBuilder patchAtsScorecard() {
-        return new PatchAtsScorecardRequestBuilder(sdkConfiguration);
+    public PatchAtsScorecard2RequestBuilder patchAtsScorecard2() {
+        return new PatchAtsScorecard2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update a scorecard
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<PatchAtsScorecardResponse>} - The async response
+     * @return {@code CompletableFuture<PatchAtsScorecard2Response>} - The async response
      */
-    public CompletableFuture<PatchAtsScorecardResponse> patchAtsScorecard(@Nonnull PatchAtsScorecardRequest request) {
-        AsyncRequestOperation<PatchAtsScorecardRequest, PatchAtsScorecardResponse> operation
-              = new PatchAtsScorecard.Async(sdkConfiguration, _headers);
+    public CompletableFuture<PatchAtsScorecard2Response> patchAtsScorecard2(@Nonnull PatchAtsScorecard2Request request) {
+        AsyncRequestOperation<PatchAtsScorecard2Request, PatchAtsScorecard2Response> operation
+              = new PatchAtsScorecard2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -990,19 +990,19 @@ public class AsyncAts {
      * 
      * @return The async call builder
      */
-    public RemoveAtsActivityRequestBuilder removeAtsActivity() {
-        return new RemoveAtsActivityRequestBuilder(sdkConfiguration);
+    public RemoveAtsActivity2RequestBuilder removeAtsActivity2() {
+        return new RemoveAtsActivity2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Remove an activity
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<RemoveAtsActivityResponse>} - The async response
+     * @return {@code CompletableFuture<RemoveAtsActivity2Response>} - The async response
      */
-    public CompletableFuture<RemoveAtsActivityResponse> removeAtsActivity(@Nonnull RemoveAtsActivityRequest request) {
-        AsyncRequestOperation<RemoveAtsActivityRequest, RemoveAtsActivityResponse> operation
-              = new RemoveAtsActivity.Async(sdkConfiguration, _headers);
+    public CompletableFuture<RemoveAtsActivity2Response> removeAtsActivity2(@Nonnull RemoveAtsActivity2Request request) {
+        AsyncRequestOperation<RemoveAtsActivity2Request, RemoveAtsActivity2Response> operation
+              = new RemoveAtsActivity2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1013,19 +1013,19 @@ public class AsyncAts {
      * 
      * @return The async call builder
      */
-    public RemoveAtsApplicationRequestBuilder removeAtsApplication() {
-        return new RemoveAtsApplicationRequestBuilder(sdkConfiguration);
+    public RemoveAtsApplication2RequestBuilder removeAtsApplication2() {
+        return new RemoveAtsApplication2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Remove an application
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<RemoveAtsApplicationResponse>} - The async response
+     * @return {@code CompletableFuture<RemoveAtsApplication2Response>} - The async response
      */
-    public CompletableFuture<RemoveAtsApplicationResponse> removeAtsApplication(@Nonnull RemoveAtsApplicationRequest request) {
-        AsyncRequestOperation<RemoveAtsApplicationRequest, RemoveAtsApplicationResponse> operation
-              = new RemoveAtsApplication.Async(sdkConfiguration, _headers);
+    public CompletableFuture<RemoveAtsApplication2Response> removeAtsApplication2(@Nonnull RemoveAtsApplication2Request request) {
+        AsyncRequestOperation<RemoveAtsApplication2Request, RemoveAtsApplication2Response> operation
+              = new RemoveAtsApplication2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1036,19 +1036,19 @@ public class AsyncAts {
      * 
      * @return The async call builder
      */
-    public RemoveAtsCandidateRequestBuilder removeAtsCandidate() {
-        return new RemoveAtsCandidateRequestBuilder(sdkConfiguration);
+    public RemoveAtsCandidate2RequestBuilder removeAtsCandidate2() {
+        return new RemoveAtsCandidate2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Remove a candidate
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<RemoveAtsCandidateResponse>} - The async response
+     * @return {@code CompletableFuture<RemoveAtsCandidate2Response>} - The async response
      */
-    public CompletableFuture<RemoveAtsCandidateResponse> removeAtsCandidate(@Nonnull RemoveAtsCandidateRequest request) {
-        AsyncRequestOperation<RemoveAtsCandidateRequest, RemoveAtsCandidateResponse> operation
-              = new RemoveAtsCandidate.Async(sdkConfiguration, _headers);
+    public CompletableFuture<RemoveAtsCandidate2Response> removeAtsCandidate2(@Nonnull RemoveAtsCandidate2Request request) {
+        AsyncRequestOperation<RemoveAtsCandidate2Request, RemoveAtsCandidate2Response> operation
+              = new RemoveAtsCandidate2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1059,19 +1059,19 @@ public class AsyncAts {
      * 
      * @return The async call builder
      */
-    public RemoveAtsCompanyRequestBuilder removeAtsCompany() {
-        return new RemoveAtsCompanyRequestBuilder(sdkConfiguration);
+    public RemoveAtsCompany2RequestBuilder removeAtsCompany2() {
+        return new RemoveAtsCompany2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Remove a company
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<RemoveAtsCompanyResponse>} - The async response
+     * @return {@code CompletableFuture<RemoveAtsCompany2Response>} - The async response
      */
-    public CompletableFuture<RemoveAtsCompanyResponse> removeAtsCompany(@Nonnull RemoveAtsCompanyRequest request) {
-        AsyncRequestOperation<RemoveAtsCompanyRequest, RemoveAtsCompanyResponse> operation
-              = new RemoveAtsCompany.Async(sdkConfiguration, _headers);
+    public CompletableFuture<RemoveAtsCompany2Response> removeAtsCompany2(@Nonnull RemoveAtsCompany2Request request) {
+        AsyncRequestOperation<RemoveAtsCompany2Request, RemoveAtsCompany2Response> operation
+              = new RemoveAtsCompany2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1082,19 +1082,19 @@ public class AsyncAts {
      * 
      * @return The async call builder
      */
-    public RemoveAtsDocumentRequestBuilder removeAtsDocument() {
-        return new RemoveAtsDocumentRequestBuilder(sdkConfiguration);
+    public RemoveAtsDocument2RequestBuilder removeAtsDocument2() {
+        return new RemoveAtsDocument2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Remove a document
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<RemoveAtsDocumentResponse>} - The async response
+     * @return {@code CompletableFuture<RemoveAtsDocument2Response>} - The async response
      */
-    public CompletableFuture<RemoveAtsDocumentResponse> removeAtsDocument(@Nonnull RemoveAtsDocumentRequest request) {
-        AsyncRequestOperation<RemoveAtsDocumentRequest, RemoveAtsDocumentResponse> operation
-              = new RemoveAtsDocument.Async(sdkConfiguration, _headers);
+    public CompletableFuture<RemoveAtsDocument2Response> removeAtsDocument2(@Nonnull RemoveAtsDocument2Request request) {
+        AsyncRequestOperation<RemoveAtsDocument2Request, RemoveAtsDocument2Response> operation
+              = new RemoveAtsDocument2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1105,19 +1105,19 @@ public class AsyncAts {
      * 
      * @return The async call builder
      */
-    public RemoveAtsInterviewRequestBuilder removeAtsInterview() {
-        return new RemoveAtsInterviewRequestBuilder(sdkConfiguration);
+    public RemoveAtsInterview2RequestBuilder removeAtsInterview2() {
+        return new RemoveAtsInterview2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Remove an interview
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<RemoveAtsInterviewResponse>} - The async response
+     * @return {@code CompletableFuture<RemoveAtsInterview2Response>} - The async response
      */
-    public CompletableFuture<RemoveAtsInterviewResponse> removeAtsInterview(@Nonnull RemoveAtsInterviewRequest request) {
-        AsyncRequestOperation<RemoveAtsInterviewRequest, RemoveAtsInterviewResponse> operation
-              = new RemoveAtsInterview.Async(sdkConfiguration, _headers);
+    public CompletableFuture<RemoveAtsInterview2Response> removeAtsInterview2(@Nonnull RemoveAtsInterview2Request request) {
+        AsyncRequestOperation<RemoveAtsInterview2Request, RemoveAtsInterview2Response> operation
+              = new RemoveAtsInterview2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1128,19 +1128,19 @@ public class AsyncAts {
      * 
      * @return The async call builder
      */
-    public RemoveAtsJobRequestBuilder removeAtsJob() {
-        return new RemoveAtsJobRequestBuilder(sdkConfiguration);
+    public RemoveAtsJob2RequestBuilder removeAtsJob2() {
+        return new RemoveAtsJob2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Remove a job
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<RemoveAtsJobResponse>} - The async response
+     * @return {@code CompletableFuture<RemoveAtsJob2Response>} - The async response
      */
-    public CompletableFuture<RemoveAtsJobResponse> removeAtsJob(@Nonnull RemoveAtsJobRequest request) {
-        AsyncRequestOperation<RemoveAtsJobRequest, RemoveAtsJobResponse> operation
-              = new RemoveAtsJob.Async(sdkConfiguration, _headers);
+    public CompletableFuture<RemoveAtsJob2Response> removeAtsJob2(@Nonnull RemoveAtsJob2Request request) {
+        AsyncRequestOperation<RemoveAtsJob2Request, RemoveAtsJob2Response> operation
+              = new RemoveAtsJob2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1151,19 +1151,19 @@ public class AsyncAts {
      * 
      * @return The async call builder
      */
-    public RemoveAtsScorecardRequestBuilder removeAtsScorecard() {
-        return new RemoveAtsScorecardRequestBuilder(sdkConfiguration);
+    public RemoveAtsScorecard2RequestBuilder removeAtsScorecard2() {
+        return new RemoveAtsScorecard2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Remove a scorecard
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<RemoveAtsScorecardResponse>} - The async response
+     * @return {@code CompletableFuture<RemoveAtsScorecard2Response>} - The async response
      */
-    public CompletableFuture<RemoveAtsScorecardResponse> removeAtsScorecard(@Nonnull RemoveAtsScorecardRequest request) {
-        AsyncRequestOperation<RemoveAtsScorecardRequest, RemoveAtsScorecardResponse> operation
-              = new RemoveAtsScorecard.Async(sdkConfiguration, _headers);
+    public CompletableFuture<RemoveAtsScorecard2Response> removeAtsScorecard2(@Nonnull RemoveAtsScorecard2Request request) {
+        AsyncRequestOperation<RemoveAtsScorecard2Request, RemoveAtsScorecard2Response> operation
+              = new RemoveAtsScorecard2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1174,19 +1174,19 @@ public class AsyncAts {
      * 
      * @return The async call builder
      */
-    public UpdateAtsActivityRequestBuilder updateAtsActivity() {
-        return new UpdateAtsActivityRequestBuilder(sdkConfiguration);
+    public UpdateAtsActivity2RequestBuilder updateAtsActivity2() {
+        return new UpdateAtsActivity2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update an activity
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<UpdateAtsActivityResponse>} - The async response
+     * @return {@code CompletableFuture<UpdateAtsActivity2Response>} - The async response
      */
-    public CompletableFuture<UpdateAtsActivityResponse> updateAtsActivity(@Nonnull UpdateAtsActivityRequest request) {
-        AsyncRequestOperation<UpdateAtsActivityRequest, UpdateAtsActivityResponse> operation
-              = new UpdateAtsActivity.Async(sdkConfiguration, _headers);
+    public CompletableFuture<UpdateAtsActivity2Response> updateAtsActivity2(@Nonnull UpdateAtsActivity2Request request) {
+        AsyncRequestOperation<UpdateAtsActivity2Request, UpdateAtsActivity2Response> operation
+              = new UpdateAtsActivity2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1197,19 +1197,19 @@ public class AsyncAts {
      * 
      * @return The async call builder
      */
-    public UpdateAtsApplicationRequestBuilder updateAtsApplication() {
-        return new UpdateAtsApplicationRequestBuilder(sdkConfiguration);
+    public UpdateAtsApplication2RequestBuilder updateAtsApplication2() {
+        return new UpdateAtsApplication2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update an application
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<UpdateAtsApplicationResponse>} - The async response
+     * @return {@code CompletableFuture<UpdateAtsApplication2Response>} - The async response
      */
-    public CompletableFuture<UpdateAtsApplicationResponse> updateAtsApplication(@Nonnull UpdateAtsApplicationRequest request) {
-        AsyncRequestOperation<UpdateAtsApplicationRequest, UpdateAtsApplicationResponse> operation
-              = new UpdateAtsApplication.Async(sdkConfiguration, _headers);
+    public CompletableFuture<UpdateAtsApplication2Response> updateAtsApplication2(@Nonnull UpdateAtsApplication2Request request) {
+        AsyncRequestOperation<UpdateAtsApplication2Request, UpdateAtsApplication2Response> operation
+              = new UpdateAtsApplication2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1220,19 +1220,19 @@ public class AsyncAts {
      * 
      * @return The async call builder
      */
-    public UpdateAtsCandidateRequestBuilder updateAtsCandidate() {
-        return new UpdateAtsCandidateRequestBuilder(sdkConfiguration);
+    public UpdateAtsCandidate2RequestBuilder updateAtsCandidate2() {
+        return new UpdateAtsCandidate2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update a candidate
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<UpdateAtsCandidateResponse>} - The async response
+     * @return {@code CompletableFuture<UpdateAtsCandidate2Response>} - The async response
      */
-    public CompletableFuture<UpdateAtsCandidateResponse> updateAtsCandidate(@Nonnull UpdateAtsCandidateRequest request) {
-        AsyncRequestOperation<UpdateAtsCandidateRequest, UpdateAtsCandidateResponse> operation
-              = new UpdateAtsCandidate.Async(sdkConfiguration, _headers);
+    public CompletableFuture<UpdateAtsCandidate2Response> updateAtsCandidate2(@Nonnull UpdateAtsCandidate2Request request) {
+        AsyncRequestOperation<UpdateAtsCandidate2Request, UpdateAtsCandidate2Response> operation
+              = new UpdateAtsCandidate2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1243,19 +1243,19 @@ public class AsyncAts {
      * 
      * @return The async call builder
      */
-    public UpdateAtsCompanyRequestBuilder updateAtsCompany() {
-        return new UpdateAtsCompanyRequestBuilder(sdkConfiguration);
+    public UpdateAtsCompany2RequestBuilder updateAtsCompany2() {
+        return new UpdateAtsCompany2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update a company
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<UpdateAtsCompanyResponse>} - The async response
+     * @return {@code CompletableFuture<UpdateAtsCompany2Response>} - The async response
      */
-    public CompletableFuture<UpdateAtsCompanyResponse> updateAtsCompany(@Nonnull UpdateAtsCompanyRequest request) {
-        AsyncRequestOperation<UpdateAtsCompanyRequest, UpdateAtsCompanyResponse> operation
-              = new UpdateAtsCompany.Async(sdkConfiguration, _headers);
+    public CompletableFuture<UpdateAtsCompany2Response> updateAtsCompany2(@Nonnull UpdateAtsCompany2Request request) {
+        AsyncRequestOperation<UpdateAtsCompany2Request, UpdateAtsCompany2Response> operation
+              = new UpdateAtsCompany2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1266,19 +1266,19 @@ public class AsyncAts {
      * 
      * @return The async call builder
      */
-    public UpdateAtsDocumentRequestBuilder updateAtsDocument() {
-        return new UpdateAtsDocumentRequestBuilder(sdkConfiguration);
+    public UpdateAtsDocument2RequestBuilder updateAtsDocument2() {
+        return new UpdateAtsDocument2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update a document
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<UpdateAtsDocumentResponse>} - The async response
+     * @return {@code CompletableFuture<UpdateAtsDocument2Response>} - The async response
      */
-    public CompletableFuture<UpdateAtsDocumentResponse> updateAtsDocument(@Nonnull UpdateAtsDocumentRequest request) {
-        AsyncRequestOperation<UpdateAtsDocumentRequest, UpdateAtsDocumentResponse> operation
-              = new UpdateAtsDocument.Async(sdkConfiguration, _headers);
+    public CompletableFuture<UpdateAtsDocument2Response> updateAtsDocument2(@Nonnull UpdateAtsDocument2Request request) {
+        AsyncRequestOperation<UpdateAtsDocument2Request, UpdateAtsDocument2Response> operation
+              = new UpdateAtsDocument2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1289,19 +1289,19 @@ public class AsyncAts {
      * 
      * @return The async call builder
      */
-    public UpdateAtsInterviewRequestBuilder updateAtsInterview() {
-        return new UpdateAtsInterviewRequestBuilder(sdkConfiguration);
+    public UpdateAtsInterview2RequestBuilder updateAtsInterview2() {
+        return new UpdateAtsInterview2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update an interview
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<UpdateAtsInterviewResponse>} - The async response
+     * @return {@code CompletableFuture<UpdateAtsInterview2Response>} - The async response
      */
-    public CompletableFuture<UpdateAtsInterviewResponse> updateAtsInterview(@Nonnull UpdateAtsInterviewRequest request) {
-        AsyncRequestOperation<UpdateAtsInterviewRequest, UpdateAtsInterviewResponse> operation
-              = new UpdateAtsInterview.Async(sdkConfiguration, _headers);
+    public CompletableFuture<UpdateAtsInterview2Response> updateAtsInterview2(@Nonnull UpdateAtsInterview2Request request) {
+        AsyncRequestOperation<UpdateAtsInterview2Request, UpdateAtsInterview2Response> operation
+              = new UpdateAtsInterview2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1312,19 +1312,19 @@ public class AsyncAts {
      * 
      * @return The async call builder
      */
-    public UpdateAtsJobRequestBuilder updateAtsJob() {
-        return new UpdateAtsJobRequestBuilder(sdkConfiguration);
+    public UpdateAtsJob2RequestBuilder updateAtsJob2() {
+        return new UpdateAtsJob2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update a job
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<UpdateAtsJobResponse>} - The async response
+     * @return {@code CompletableFuture<UpdateAtsJob2Response>} - The async response
      */
-    public CompletableFuture<UpdateAtsJobResponse> updateAtsJob(@Nonnull UpdateAtsJobRequest request) {
-        AsyncRequestOperation<UpdateAtsJobRequest, UpdateAtsJobResponse> operation
-              = new UpdateAtsJob.Async(sdkConfiguration, _headers);
+    public CompletableFuture<UpdateAtsJob2Response> updateAtsJob2(@Nonnull UpdateAtsJob2Request request) {
+        AsyncRequestOperation<UpdateAtsJob2Request, UpdateAtsJob2Response> operation
+              = new UpdateAtsJob2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1335,19 +1335,19 @@ public class AsyncAts {
      * 
      * @return The async call builder
      */
-    public UpdateAtsScorecardRequestBuilder updateAtsScorecard() {
-        return new UpdateAtsScorecardRequestBuilder(sdkConfiguration);
+    public UpdateAtsScorecard2RequestBuilder updateAtsScorecard2() {
+        return new UpdateAtsScorecard2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update a scorecard
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<UpdateAtsScorecardResponse>} - The async response
+     * @return {@code CompletableFuture<UpdateAtsScorecard2Response>} - The async response
      */
-    public CompletableFuture<UpdateAtsScorecardResponse> updateAtsScorecard(@Nonnull UpdateAtsScorecardRequest request) {
-        AsyncRequestOperation<UpdateAtsScorecardRequest, UpdateAtsScorecardResponse> operation
-              = new UpdateAtsScorecard.Async(sdkConfiguration, _headers);
+    public CompletableFuture<UpdateAtsScorecard2Response> updateAtsScorecard2(@Nonnull UpdateAtsScorecard2Request request) {
+        AsyncRequestOperation<UpdateAtsScorecard2Request, UpdateAtsScorecard2Response> operation
+              = new UpdateAtsScorecard2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

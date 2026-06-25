@@ -7,30 +7,30 @@ import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOper
 
 import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
-import to.unified.unified_java_sdk.models.operations.CreateHrisTimeoffRequest;
-import to.unified.unified_java_sdk.models.operations.GetHrisTimeoffRequest;
-import to.unified.unified_java_sdk.models.operations.ListHrisTimeoffsRequest;
-import to.unified.unified_java_sdk.models.operations.PatchHrisTimeoffRequest;
-import to.unified.unified_java_sdk.models.operations.RemoveHrisTimeoffRequest;
-import to.unified.unified_java_sdk.models.operations.UpdateHrisTimeoffRequest;
-import to.unified.unified_java_sdk.models.operations.async.CreateHrisTimeoffRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.CreateHrisTimeoffResponse;
-import to.unified.unified_java_sdk.models.operations.async.GetHrisTimeoffRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.GetHrisTimeoffResponse;
-import to.unified.unified_java_sdk.models.operations.async.ListHrisTimeoffsRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.ListHrisTimeoffsResponse;
-import to.unified.unified_java_sdk.models.operations.async.PatchHrisTimeoffRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.PatchHrisTimeoffResponse;
-import to.unified.unified_java_sdk.models.operations.async.RemoveHrisTimeoffRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.RemoveHrisTimeoffResponse;
-import to.unified.unified_java_sdk.models.operations.async.UpdateHrisTimeoffRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.UpdateHrisTimeoffResponse;
-import to.unified.unified_java_sdk.operations.CreateHrisTimeoff;
-import to.unified.unified_java_sdk.operations.GetHrisTimeoff;
-import to.unified.unified_java_sdk.operations.ListHrisTimeoffs;
-import to.unified.unified_java_sdk.operations.PatchHrisTimeoff;
-import to.unified.unified_java_sdk.operations.RemoveHrisTimeoff;
-import to.unified.unified_java_sdk.operations.UpdateHrisTimeoff;
+import to.unified.unified_java_sdk.models.operations.CreateHrisTimeoff2Request;
+import to.unified.unified_java_sdk.models.operations.GetHrisTimeoff2Request;
+import to.unified.unified_java_sdk.models.operations.ListHrisTimeoffs2Request;
+import to.unified.unified_java_sdk.models.operations.PatchHrisTimeoff2Request;
+import to.unified.unified_java_sdk.models.operations.RemoveHrisTimeoff2Request;
+import to.unified.unified_java_sdk.models.operations.UpdateHrisTimeoff2Request;
+import to.unified.unified_java_sdk.models.operations.async.CreateHrisTimeoff2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.CreateHrisTimeoff2Response;
+import to.unified.unified_java_sdk.models.operations.async.GetHrisTimeoff2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetHrisTimeoff2Response;
+import to.unified.unified_java_sdk.models.operations.async.ListHrisTimeoffs2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListHrisTimeoffs2Response;
+import to.unified.unified_java_sdk.models.operations.async.PatchHrisTimeoff2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.PatchHrisTimeoff2Response;
+import to.unified.unified_java_sdk.models.operations.async.RemoveHrisTimeoff2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.RemoveHrisTimeoff2Response;
+import to.unified.unified_java_sdk.models.operations.async.UpdateHrisTimeoff2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.UpdateHrisTimeoff2Response;
+import to.unified.unified_java_sdk.operations.CreateHrisTimeoff2;
+import to.unified.unified_java_sdk.operations.GetHrisTimeoff2;
+import to.unified.unified_java_sdk.operations.ListHrisTimeoffs2;
+import to.unified.unified_java_sdk.operations.PatchHrisTimeoff2;
+import to.unified.unified_java_sdk.operations.RemoveHrisTimeoff2;
+import to.unified.unified_java_sdk.operations.UpdateHrisTimeoff2;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -59,19 +59,19 @@ public class AsyncTimeoff {
      * 
      * @return The async call builder
      */
-    public CreateHrisTimeoffRequestBuilder createHrisTimeoff() {
-        return new CreateHrisTimeoffRequestBuilder(sdkConfiguration);
+    public CreateHrisTimeoff2RequestBuilder createHrisTimeoff2() {
+        return new CreateHrisTimeoff2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Create a timeoff
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<CreateHrisTimeoffResponse>} - The async response
+     * @return {@code CompletableFuture<CreateHrisTimeoff2Response>} - The async response
      */
-    public CompletableFuture<CreateHrisTimeoffResponse> createHrisTimeoff(@Nonnull CreateHrisTimeoffRequest request) {
-        AsyncRequestOperation<CreateHrisTimeoffRequest, CreateHrisTimeoffResponse> operation
-              = new CreateHrisTimeoff.Async(sdkConfiguration, _headers);
+    public CompletableFuture<CreateHrisTimeoff2Response> createHrisTimeoff2(@Nonnull CreateHrisTimeoff2Request request) {
+        AsyncRequestOperation<CreateHrisTimeoff2Request, CreateHrisTimeoff2Response> operation
+              = new CreateHrisTimeoff2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -82,19 +82,19 @@ public class AsyncTimeoff {
      * 
      * @return The async call builder
      */
-    public GetHrisTimeoffRequestBuilder getHrisTimeoff() {
-        return new GetHrisTimeoffRequestBuilder(sdkConfiguration);
+    public GetHrisTimeoff2RequestBuilder getHrisTimeoff2() {
+        return new GetHrisTimeoff2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Retrieve a timeoff
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<GetHrisTimeoffResponse>} - The async response
+     * @return {@code CompletableFuture<GetHrisTimeoff2Response>} - The async response
      */
-    public CompletableFuture<GetHrisTimeoffResponse> getHrisTimeoff(@Nonnull GetHrisTimeoffRequest request) {
-        AsyncRequestOperation<GetHrisTimeoffRequest, GetHrisTimeoffResponse> operation
-              = new GetHrisTimeoff.Async(sdkConfiguration, _headers);
+    public CompletableFuture<GetHrisTimeoff2Response> getHrisTimeoff2(@Nonnull GetHrisTimeoff2Request request) {
+        AsyncRequestOperation<GetHrisTimeoff2Request, GetHrisTimeoff2Response> operation
+              = new GetHrisTimeoff2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -105,19 +105,19 @@ public class AsyncTimeoff {
      * 
      * @return The async call builder
      */
-    public ListHrisTimeoffsRequestBuilder listHrisTimeoffs() {
-        return new ListHrisTimeoffsRequestBuilder(sdkConfiguration);
+    public ListHrisTimeoffs2RequestBuilder listHrisTimeoffs2() {
+        return new ListHrisTimeoffs2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * List all timeoffs
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<ListHrisTimeoffsResponse>} - The async response
+     * @return {@code CompletableFuture<ListHrisTimeoffs2Response>} - The async response
      */
-    public CompletableFuture<ListHrisTimeoffsResponse> listHrisTimeoffs(@Nonnull ListHrisTimeoffsRequest request) {
-        AsyncRequestOperation<ListHrisTimeoffsRequest, ListHrisTimeoffsResponse> operation
-              = new ListHrisTimeoffs.Async(sdkConfiguration, _headers);
+    public CompletableFuture<ListHrisTimeoffs2Response> listHrisTimeoffs2(@Nonnull ListHrisTimeoffs2Request request) {
+        AsyncRequestOperation<ListHrisTimeoffs2Request, ListHrisTimeoffs2Response> operation
+              = new ListHrisTimeoffs2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -128,19 +128,19 @@ public class AsyncTimeoff {
      * 
      * @return The async call builder
      */
-    public PatchHrisTimeoffRequestBuilder patchHrisTimeoff() {
-        return new PatchHrisTimeoffRequestBuilder(sdkConfiguration);
+    public PatchHrisTimeoff2RequestBuilder patchHrisTimeoff2() {
+        return new PatchHrisTimeoff2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update a timeoff
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<PatchHrisTimeoffResponse>} - The async response
+     * @return {@code CompletableFuture<PatchHrisTimeoff2Response>} - The async response
      */
-    public CompletableFuture<PatchHrisTimeoffResponse> patchHrisTimeoff(@Nonnull PatchHrisTimeoffRequest request) {
-        AsyncRequestOperation<PatchHrisTimeoffRequest, PatchHrisTimeoffResponse> operation
-              = new PatchHrisTimeoff.Async(sdkConfiguration, _headers);
+    public CompletableFuture<PatchHrisTimeoff2Response> patchHrisTimeoff2(@Nonnull PatchHrisTimeoff2Request request) {
+        AsyncRequestOperation<PatchHrisTimeoff2Request, PatchHrisTimeoff2Response> operation
+              = new PatchHrisTimeoff2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -151,19 +151,19 @@ public class AsyncTimeoff {
      * 
      * @return The async call builder
      */
-    public RemoveHrisTimeoffRequestBuilder removeHrisTimeoff() {
-        return new RemoveHrisTimeoffRequestBuilder(sdkConfiguration);
+    public RemoveHrisTimeoff2RequestBuilder removeHrisTimeoff2() {
+        return new RemoveHrisTimeoff2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Remove a timeoff
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<RemoveHrisTimeoffResponse>} - The async response
+     * @return {@code CompletableFuture<RemoveHrisTimeoff2Response>} - The async response
      */
-    public CompletableFuture<RemoveHrisTimeoffResponse> removeHrisTimeoff(@Nonnull RemoveHrisTimeoffRequest request) {
-        AsyncRequestOperation<RemoveHrisTimeoffRequest, RemoveHrisTimeoffResponse> operation
-              = new RemoveHrisTimeoff.Async(sdkConfiguration, _headers);
+    public CompletableFuture<RemoveHrisTimeoff2Response> removeHrisTimeoff2(@Nonnull RemoveHrisTimeoff2Request request) {
+        AsyncRequestOperation<RemoveHrisTimeoff2Request, RemoveHrisTimeoff2Response> operation
+              = new RemoveHrisTimeoff2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -174,19 +174,19 @@ public class AsyncTimeoff {
      * 
      * @return The async call builder
      */
-    public UpdateHrisTimeoffRequestBuilder updateHrisTimeoff() {
-        return new UpdateHrisTimeoffRequestBuilder(sdkConfiguration);
+    public UpdateHrisTimeoff2RequestBuilder updateHrisTimeoff2() {
+        return new UpdateHrisTimeoff2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update a timeoff
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<UpdateHrisTimeoffResponse>} - The async response
+     * @return {@code CompletableFuture<UpdateHrisTimeoff2Response>} - The async response
      */
-    public CompletableFuture<UpdateHrisTimeoffResponse> updateHrisTimeoff(@Nonnull UpdateHrisTimeoffRequest request) {
-        AsyncRequestOperation<UpdateHrisTimeoffRequest, UpdateHrisTimeoffResponse> operation
-              = new UpdateHrisTimeoff.Async(sdkConfiguration, _headers);
+    public CompletableFuture<UpdateHrisTimeoff2Response> updateHrisTimeoff2(@Nonnull UpdateHrisTimeoff2Request request) {
+        AsyncRequestOperation<UpdateHrisTimeoff2Request, UpdateHrisTimeoff2Response> operation
+              = new UpdateHrisTimeoff2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

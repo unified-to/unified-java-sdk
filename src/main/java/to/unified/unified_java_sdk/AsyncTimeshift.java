@@ -7,30 +7,30 @@ import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOper
 
 import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
-import to.unified.unified_java_sdk.models.operations.CreateHrisTimeshiftRequest;
-import to.unified.unified_java_sdk.models.operations.GetHrisTimeshiftRequest;
-import to.unified.unified_java_sdk.models.operations.ListHrisTimeshiftsRequest;
-import to.unified.unified_java_sdk.models.operations.PatchHrisTimeshiftRequest;
-import to.unified.unified_java_sdk.models.operations.RemoveHrisTimeshiftRequest;
-import to.unified.unified_java_sdk.models.operations.UpdateHrisTimeshiftRequest;
-import to.unified.unified_java_sdk.models.operations.async.CreateHrisTimeshiftRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.CreateHrisTimeshiftResponse;
-import to.unified.unified_java_sdk.models.operations.async.GetHrisTimeshiftRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.GetHrisTimeshiftResponse;
-import to.unified.unified_java_sdk.models.operations.async.ListHrisTimeshiftsRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.ListHrisTimeshiftsResponse;
-import to.unified.unified_java_sdk.models.operations.async.PatchHrisTimeshiftRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.PatchHrisTimeshiftResponse;
-import to.unified.unified_java_sdk.models.operations.async.RemoveHrisTimeshiftRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.RemoveHrisTimeshiftResponse;
-import to.unified.unified_java_sdk.models.operations.async.UpdateHrisTimeshiftRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.UpdateHrisTimeshiftResponse;
-import to.unified.unified_java_sdk.operations.CreateHrisTimeshift;
-import to.unified.unified_java_sdk.operations.GetHrisTimeshift;
-import to.unified.unified_java_sdk.operations.ListHrisTimeshifts;
-import to.unified.unified_java_sdk.operations.PatchHrisTimeshift;
-import to.unified.unified_java_sdk.operations.RemoveHrisTimeshift;
-import to.unified.unified_java_sdk.operations.UpdateHrisTimeshift;
+import to.unified.unified_java_sdk.models.operations.CreateHrisTimeshift2Request;
+import to.unified.unified_java_sdk.models.operations.GetHrisTimeshift2Request;
+import to.unified.unified_java_sdk.models.operations.ListHrisTimeshifts2Request;
+import to.unified.unified_java_sdk.models.operations.PatchHrisTimeshift2Request;
+import to.unified.unified_java_sdk.models.operations.RemoveHrisTimeshift2Request;
+import to.unified.unified_java_sdk.models.operations.UpdateHrisTimeshift2Request;
+import to.unified.unified_java_sdk.models.operations.async.CreateHrisTimeshift2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.CreateHrisTimeshift2Response;
+import to.unified.unified_java_sdk.models.operations.async.GetHrisTimeshift2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetHrisTimeshift2Response;
+import to.unified.unified_java_sdk.models.operations.async.ListHrisTimeshifts2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListHrisTimeshifts2Response;
+import to.unified.unified_java_sdk.models.operations.async.PatchHrisTimeshift2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.PatchHrisTimeshift2Response;
+import to.unified.unified_java_sdk.models.operations.async.RemoveHrisTimeshift2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.RemoveHrisTimeshift2Response;
+import to.unified.unified_java_sdk.models.operations.async.UpdateHrisTimeshift2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.UpdateHrisTimeshift2Response;
+import to.unified.unified_java_sdk.operations.CreateHrisTimeshift2;
+import to.unified.unified_java_sdk.operations.GetHrisTimeshift2;
+import to.unified.unified_java_sdk.operations.ListHrisTimeshifts2;
+import to.unified.unified_java_sdk.operations.PatchHrisTimeshift2;
+import to.unified.unified_java_sdk.operations.RemoveHrisTimeshift2;
+import to.unified.unified_java_sdk.operations.UpdateHrisTimeshift2;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -59,19 +59,19 @@ public class AsyncTimeshift {
      * 
      * @return The async call builder
      */
-    public CreateHrisTimeshiftRequestBuilder createHrisTimeshift() {
-        return new CreateHrisTimeshiftRequestBuilder(sdkConfiguration);
+    public CreateHrisTimeshift2RequestBuilder createHrisTimeshift2() {
+        return new CreateHrisTimeshift2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Create a timeshift
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<CreateHrisTimeshiftResponse>} - The async response
+     * @return {@code CompletableFuture<CreateHrisTimeshift2Response>} - The async response
      */
-    public CompletableFuture<CreateHrisTimeshiftResponse> createHrisTimeshift(@Nonnull CreateHrisTimeshiftRequest request) {
-        AsyncRequestOperation<CreateHrisTimeshiftRequest, CreateHrisTimeshiftResponse> operation
-              = new CreateHrisTimeshift.Async(sdkConfiguration, _headers);
+    public CompletableFuture<CreateHrisTimeshift2Response> createHrisTimeshift2(@Nonnull CreateHrisTimeshift2Request request) {
+        AsyncRequestOperation<CreateHrisTimeshift2Request, CreateHrisTimeshift2Response> operation
+              = new CreateHrisTimeshift2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -82,19 +82,19 @@ public class AsyncTimeshift {
      * 
      * @return The async call builder
      */
-    public GetHrisTimeshiftRequestBuilder getHrisTimeshift() {
-        return new GetHrisTimeshiftRequestBuilder(sdkConfiguration);
+    public GetHrisTimeshift2RequestBuilder getHrisTimeshift2() {
+        return new GetHrisTimeshift2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Retrieve a timeshift
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<GetHrisTimeshiftResponse>} - The async response
+     * @return {@code CompletableFuture<GetHrisTimeshift2Response>} - The async response
      */
-    public CompletableFuture<GetHrisTimeshiftResponse> getHrisTimeshift(@Nonnull GetHrisTimeshiftRequest request) {
-        AsyncRequestOperation<GetHrisTimeshiftRequest, GetHrisTimeshiftResponse> operation
-              = new GetHrisTimeshift.Async(sdkConfiguration, _headers);
+    public CompletableFuture<GetHrisTimeshift2Response> getHrisTimeshift2(@Nonnull GetHrisTimeshift2Request request) {
+        AsyncRequestOperation<GetHrisTimeshift2Request, GetHrisTimeshift2Response> operation
+              = new GetHrisTimeshift2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -105,19 +105,19 @@ public class AsyncTimeshift {
      * 
      * @return The async call builder
      */
-    public ListHrisTimeshiftsRequestBuilder listHrisTimeshifts() {
-        return new ListHrisTimeshiftsRequestBuilder(sdkConfiguration);
+    public ListHrisTimeshifts2RequestBuilder listHrisTimeshifts2() {
+        return new ListHrisTimeshifts2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * List all timeshifts
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<ListHrisTimeshiftsResponse>} - The async response
+     * @return {@code CompletableFuture<ListHrisTimeshifts2Response>} - The async response
      */
-    public CompletableFuture<ListHrisTimeshiftsResponse> listHrisTimeshifts(@Nonnull ListHrisTimeshiftsRequest request) {
-        AsyncRequestOperation<ListHrisTimeshiftsRequest, ListHrisTimeshiftsResponse> operation
-              = new ListHrisTimeshifts.Async(sdkConfiguration, _headers);
+    public CompletableFuture<ListHrisTimeshifts2Response> listHrisTimeshifts2(@Nonnull ListHrisTimeshifts2Request request) {
+        AsyncRequestOperation<ListHrisTimeshifts2Request, ListHrisTimeshifts2Response> operation
+              = new ListHrisTimeshifts2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -128,19 +128,19 @@ public class AsyncTimeshift {
      * 
      * @return The async call builder
      */
-    public PatchHrisTimeshiftRequestBuilder patchHrisTimeshift() {
-        return new PatchHrisTimeshiftRequestBuilder(sdkConfiguration);
+    public PatchHrisTimeshift2RequestBuilder patchHrisTimeshift2() {
+        return new PatchHrisTimeshift2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update a timeshift
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<PatchHrisTimeshiftResponse>} - The async response
+     * @return {@code CompletableFuture<PatchHrisTimeshift2Response>} - The async response
      */
-    public CompletableFuture<PatchHrisTimeshiftResponse> patchHrisTimeshift(@Nonnull PatchHrisTimeshiftRequest request) {
-        AsyncRequestOperation<PatchHrisTimeshiftRequest, PatchHrisTimeshiftResponse> operation
-              = new PatchHrisTimeshift.Async(sdkConfiguration, _headers);
+    public CompletableFuture<PatchHrisTimeshift2Response> patchHrisTimeshift2(@Nonnull PatchHrisTimeshift2Request request) {
+        AsyncRequestOperation<PatchHrisTimeshift2Request, PatchHrisTimeshift2Response> operation
+              = new PatchHrisTimeshift2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -151,19 +151,19 @@ public class AsyncTimeshift {
      * 
      * @return The async call builder
      */
-    public RemoveHrisTimeshiftRequestBuilder removeHrisTimeshift() {
-        return new RemoveHrisTimeshiftRequestBuilder(sdkConfiguration);
+    public RemoveHrisTimeshift2RequestBuilder removeHrisTimeshift2() {
+        return new RemoveHrisTimeshift2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Remove a timeshift
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<RemoveHrisTimeshiftResponse>} - The async response
+     * @return {@code CompletableFuture<RemoveHrisTimeshift2Response>} - The async response
      */
-    public CompletableFuture<RemoveHrisTimeshiftResponse> removeHrisTimeshift(@Nonnull RemoveHrisTimeshiftRequest request) {
-        AsyncRequestOperation<RemoveHrisTimeshiftRequest, RemoveHrisTimeshiftResponse> operation
-              = new RemoveHrisTimeshift.Async(sdkConfiguration, _headers);
+    public CompletableFuture<RemoveHrisTimeshift2Response> removeHrisTimeshift2(@Nonnull RemoveHrisTimeshift2Request request) {
+        AsyncRequestOperation<RemoveHrisTimeshift2Request, RemoveHrisTimeshift2Response> operation
+              = new RemoveHrisTimeshift2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -174,19 +174,19 @@ public class AsyncTimeshift {
      * 
      * @return The async call builder
      */
-    public UpdateHrisTimeshiftRequestBuilder updateHrisTimeshift() {
-        return new UpdateHrisTimeshiftRequestBuilder(sdkConfiguration);
+    public UpdateHrisTimeshift2RequestBuilder updateHrisTimeshift2() {
+        return new UpdateHrisTimeshift2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update a timeshift
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<UpdateHrisTimeshiftResponse>} - The async response
+     * @return {@code CompletableFuture<UpdateHrisTimeshift2Response>} - The async response
      */
-    public CompletableFuture<UpdateHrisTimeshiftResponse> updateHrisTimeshift(@Nonnull UpdateHrisTimeshiftRequest request) {
-        AsyncRequestOperation<UpdateHrisTimeshiftRequest, UpdateHrisTimeshiftResponse> operation
-              = new UpdateHrisTimeshift.Async(sdkConfiguration, _headers);
+    public CompletableFuture<UpdateHrisTimeshift2Response> updateHrisTimeshift2(@Nonnull UpdateHrisTimeshift2Request request) {
+        AsyncRequestOperation<UpdateHrisTimeshift2Request, UpdateHrisTimeshift2Response> operation
+              = new UpdateHrisTimeshift2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

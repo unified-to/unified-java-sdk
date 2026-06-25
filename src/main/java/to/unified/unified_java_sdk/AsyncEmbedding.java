@@ -7,10 +7,10 @@ import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOper
 
 import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
-import to.unified.unified_java_sdk.models.operations.CreateGenaiEmbeddingRequest;
-import to.unified.unified_java_sdk.models.operations.async.CreateGenaiEmbeddingRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.CreateGenaiEmbeddingResponse;
-import to.unified.unified_java_sdk.operations.CreateGenaiEmbedding;
+import to.unified.unified_java_sdk.models.operations.CreateGenaiEmbedding2Request;
+import to.unified.unified_java_sdk.models.operations.async.CreateGenaiEmbedding2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.CreateGenaiEmbedding2Response;
+import to.unified.unified_java_sdk.operations.CreateGenaiEmbedding2;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -39,19 +39,19 @@ public class AsyncEmbedding {
      * 
      * @return The async call builder
      */
-    public CreateGenaiEmbeddingRequestBuilder createGenaiEmbedding() {
-        return new CreateGenaiEmbeddingRequestBuilder(sdkConfiguration);
+    public CreateGenaiEmbedding2RequestBuilder createGenaiEmbedding2() {
+        return new CreateGenaiEmbedding2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Create an embedding
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<CreateGenaiEmbeddingResponse>} - The async response
+     * @return {@code CompletableFuture<CreateGenaiEmbedding2Response>} - The async response
      */
-    public CompletableFuture<CreateGenaiEmbeddingResponse> createGenaiEmbedding(@Nonnull CreateGenaiEmbeddingRequest request) {
-        AsyncRequestOperation<CreateGenaiEmbeddingRequest, CreateGenaiEmbeddingResponse> operation
-              = new CreateGenaiEmbedding.Async(sdkConfiguration, _headers);
+    public CompletableFuture<CreateGenaiEmbedding2Response> createGenaiEmbedding2(@Nonnull CreateGenaiEmbedding2Request request) {
+        AsyncRequestOperation<CreateGenaiEmbedding2Request, CreateGenaiEmbedding2Response> operation
+              = new CreateGenaiEmbedding2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

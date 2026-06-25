@@ -1,0 +1,11 @@
+# AnalyticsReportMetrics
+
+
+## Fields
+
+| Field                                                                                      | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `dimension`                                                                                | [Optional\<Dimension>](../../models/shared/Dimension.md)                                   | :heavy_minus_sign:                                                                         | N/A                                                                                        |
+| `dimensionValue`                                                                           | *Optional\<String>*                                                                        | :heavy_minus_sign:                                                                         | N/A                                                                                        |
+| `type`                                                                                     | [Optional\<AnalyticsReportMetricsType>](../../models/shared/AnalyticsReportMetricsType.md) | :heavy_minus_sign:                                                                         | N/A                                                                                        |
+| `value`                                                                                    | *Optional\<Double>*                                                                        | :heavy_minus_sign:                                                                         | N/A                                                                                        |

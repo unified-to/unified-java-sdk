@@ -6,14 +6,14 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
-import to.unified.unified_java_sdk.models.operations.GetShippingCarrierRequest;
-import to.unified.unified_java_sdk.models.operations.GetShippingCarrierRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.GetShippingCarrierResponse;
-import to.unified.unified_java_sdk.models.operations.ListShippingCarriersRequest;
-import to.unified.unified_java_sdk.models.operations.ListShippingCarriersRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.ListShippingCarriersResponse;
-import to.unified.unified_java_sdk.operations.GetShippingCarrier;
-import to.unified.unified_java_sdk.operations.ListShippingCarriers;
+import to.unified.unified_java_sdk.models.operations.GetShippingCarrier2Request;
+import to.unified.unified_java_sdk.models.operations.GetShippingCarrier2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetShippingCarrier2Response;
+import to.unified.unified_java_sdk.models.operations.ListShippingCarriers2Request;
+import to.unified.unified_java_sdk.models.operations.ListShippingCarriers2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListShippingCarriers2Response;
+import to.unified.unified_java_sdk.operations.GetShippingCarrier2;
+import to.unified.unified_java_sdk.operations.ListShippingCarriers2;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -41,8 +41,8 @@ public class Carrier {
      * 
      * @return The call builder
      */
-    public GetShippingCarrierRequestBuilder getShippingCarrier() {
-        return new GetShippingCarrierRequestBuilder(sdkConfiguration);
+    public GetShippingCarrier2RequestBuilder getShippingCarrier2() {
+        return new GetShippingCarrier2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -52,9 +52,9 @@ public class Carrier {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetShippingCarrierResponse getShippingCarrier(@Nonnull GetShippingCarrierRequest request) {
-        RequestOperation<GetShippingCarrierRequest, GetShippingCarrierResponse> operation
-              = new GetShippingCarrier.Sync(sdkConfiguration, _headers);
+    public GetShippingCarrier2Response getShippingCarrier2(@Nonnull GetShippingCarrier2Request request) {
+        RequestOperation<GetShippingCarrier2Request, GetShippingCarrier2Response> operation
+              = new GetShippingCarrier2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -63,8 +63,8 @@ public class Carrier {
      * 
      * @return The call builder
      */
-    public ListShippingCarriersRequestBuilder listShippingCarriers() {
-        return new ListShippingCarriersRequestBuilder(sdkConfiguration);
+    public ListShippingCarriers2RequestBuilder listShippingCarriers2() {
+        return new ListShippingCarriers2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -74,9 +74,9 @@ public class Carrier {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListShippingCarriersResponse listShippingCarriers(@Nonnull ListShippingCarriersRequest request) {
-        RequestOperation<ListShippingCarriersRequest, ListShippingCarriersResponse> operation
-              = new ListShippingCarriers.Sync(sdkConfiguration, _headers);
+    public ListShippingCarriers2Response listShippingCarriers2(@Nonnull ListShippingCarriers2Request request) {
+        RequestOperation<ListShippingCarriers2Request, ListShippingCarriers2Response> operation
+              = new ListShippingCarriers2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

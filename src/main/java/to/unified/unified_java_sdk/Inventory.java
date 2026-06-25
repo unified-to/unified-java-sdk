@@ -6,30 +6,30 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
-import to.unified.unified_java_sdk.models.operations.CreateCommerceInventoryRequest;
-import to.unified.unified_java_sdk.models.operations.CreateCommerceInventoryRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.CreateCommerceInventoryResponse;
-import to.unified.unified_java_sdk.models.operations.GetCommerceInventoryRequest;
-import to.unified.unified_java_sdk.models.operations.GetCommerceInventoryRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.GetCommerceInventoryResponse;
-import to.unified.unified_java_sdk.models.operations.ListCommerceInventoriesRequest;
-import to.unified.unified_java_sdk.models.operations.ListCommerceInventoriesRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.ListCommerceInventoriesResponse;
-import to.unified.unified_java_sdk.models.operations.PatchCommerceInventoryRequest;
-import to.unified.unified_java_sdk.models.operations.PatchCommerceInventoryRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.PatchCommerceInventoryResponse;
-import to.unified.unified_java_sdk.models.operations.RemoveCommerceInventoryRequest;
-import to.unified.unified_java_sdk.models.operations.RemoveCommerceInventoryRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.RemoveCommerceInventoryResponse;
-import to.unified.unified_java_sdk.models.operations.UpdateCommerceInventoryRequest;
-import to.unified.unified_java_sdk.models.operations.UpdateCommerceInventoryRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.UpdateCommerceInventoryResponse;
-import to.unified.unified_java_sdk.operations.CreateCommerceInventory;
-import to.unified.unified_java_sdk.operations.GetCommerceInventory;
-import to.unified.unified_java_sdk.operations.ListCommerceInventories;
-import to.unified.unified_java_sdk.operations.PatchCommerceInventory;
-import to.unified.unified_java_sdk.operations.RemoveCommerceInventory;
-import to.unified.unified_java_sdk.operations.UpdateCommerceInventory;
+import to.unified.unified_java_sdk.models.operations.CreateCommerceInventory2Request;
+import to.unified.unified_java_sdk.models.operations.CreateCommerceInventory2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.CreateCommerceInventory2Response;
+import to.unified.unified_java_sdk.models.operations.GetCommerceInventory2Request;
+import to.unified.unified_java_sdk.models.operations.GetCommerceInventory2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetCommerceInventory2Response;
+import to.unified.unified_java_sdk.models.operations.ListCommerceInventories2Request;
+import to.unified.unified_java_sdk.models.operations.ListCommerceInventories2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListCommerceInventories2Response;
+import to.unified.unified_java_sdk.models.operations.PatchCommerceInventory2Request;
+import to.unified.unified_java_sdk.models.operations.PatchCommerceInventory2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.PatchCommerceInventory2Response;
+import to.unified.unified_java_sdk.models.operations.RemoveCommerceInventory2Request;
+import to.unified.unified_java_sdk.models.operations.RemoveCommerceInventory2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.RemoveCommerceInventory2Response;
+import to.unified.unified_java_sdk.models.operations.UpdateCommerceInventory2Request;
+import to.unified.unified_java_sdk.models.operations.UpdateCommerceInventory2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.UpdateCommerceInventory2Response;
+import to.unified.unified_java_sdk.operations.CreateCommerceInventory2;
+import to.unified.unified_java_sdk.operations.GetCommerceInventory2;
+import to.unified.unified_java_sdk.operations.ListCommerceInventories2;
+import to.unified.unified_java_sdk.operations.PatchCommerceInventory2;
+import to.unified.unified_java_sdk.operations.RemoveCommerceInventory2;
+import to.unified.unified_java_sdk.operations.UpdateCommerceInventory2;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -57,8 +57,8 @@ public class Inventory {
      * 
      * @return The call builder
      */
-    public CreateCommerceInventoryRequestBuilder createCommerceInventory() {
-        return new CreateCommerceInventoryRequestBuilder(sdkConfiguration);
+    public CreateCommerceInventory2RequestBuilder createCommerceInventory2() {
+        return new CreateCommerceInventory2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -68,9 +68,9 @@ public class Inventory {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateCommerceInventoryResponse createCommerceInventory(@Nonnull CreateCommerceInventoryRequest request) {
-        RequestOperation<CreateCommerceInventoryRequest, CreateCommerceInventoryResponse> operation
-              = new CreateCommerceInventory.Sync(sdkConfiguration, _headers);
+    public CreateCommerceInventory2Response createCommerceInventory2(@Nonnull CreateCommerceInventory2Request request) {
+        RequestOperation<CreateCommerceInventory2Request, CreateCommerceInventory2Response> operation
+              = new CreateCommerceInventory2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -79,8 +79,8 @@ public class Inventory {
      * 
      * @return The call builder
      */
-    public GetCommerceInventoryRequestBuilder getCommerceInventory() {
-        return new GetCommerceInventoryRequestBuilder(sdkConfiguration);
+    public GetCommerceInventory2RequestBuilder getCommerceInventory2() {
+        return new GetCommerceInventory2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -90,9 +90,9 @@ public class Inventory {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetCommerceInventoryResponse getCommerceInventory(@Nonnull GetCommerceInventoryRequest request) {
-        RequestOperation<GetCommerceInventoryRequest, GetCommerceInventoryResponse> operation
-              = new GetCommerceInventory.Sync(sdkConfiguration, _headers);
+    public GetCommerceInventory2Response getCommerceInventory2(@Nonnull GetCommerceInventory2Request request) {
+        RequestOperation<GetCommerceInventory2Request, GetCommerceInventory2Response> operation
+              = new GetCommerceInventory2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -101,8 +101,8 @@ public class Inventory {
      * 
      * @return The call builder
      */
-    public ListCommerceInventoriesRequestBuilder listCommerceInventories() {
-        return new ListCommerceInventoriesRequestBuilder(sdkConfiguration);
+    public ListCommerceInventories2RequestBuilder listCommerceInventories2() {
+        return new ListCommerceInventories2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -112,9 +112,9 @@ public class Inventory {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListCommerceInventoriesResponse listCommerceInventories(@Nonnull ListCommerceInventoriesRequest request) {
-        RequestOperation<ListCommerceInventoriesRequest, ListCommerceInventoriesResponse> operation
-              = new ListCommerceInventories.Sync(sdkConfiguration, _headers);
+    public ListCommerceInventories2Response listCommerceInventories2(@Nonnull ListCommerceInventories2Request request) {
+        RequestOperation<ListCommerceInventories2Request, ListCommerceInventories2Response> operation
+              = new ListCommerceInventories2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -123,8 +123,8 @@ public class Inventory {
      * 
      * @return The call builder
      */
-    public PatchCommerceInventoryRequestBuilder patchCommerceInventory() {
-        return new PatchCommerceInventoryRequestBuilder(sdkConfiguration);
+    public PatchCommerceInventory2RequestBuilder patchCommerceInventory2() {
+        return new PatchCommerceInventory2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -134,9 +134,9 @@ public class Inventory {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchCommerceInventoryResponse patchCommerceInventory(@Nonnull PatchCommerceInventoryRequest request) {
-        RequestOperation<PatchCommerceInventoryRequest, PatchCommerceInventoryResponse> operation
-              = new PatchCommerceInventory.Sync(sdkConfiguration, _headers);
+    public PatchCommerceInventory2Response patchCommerceInventory2(@Nonnull PatchCommerceInventory2Request request) {
+        RequestOperation<PatchCommerceInventory2Request, PatchCommerceInventory2Response> operation
+              = new PatchCommerceInventory2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -145,8 +145,8 @@ public class Inventory {
      * 
      * @return The call builder
      */
-    public RemoveCommerceInventoryRequestBuilder removeCommerceInventory() {
-        return new RemoveCommerceInventoryRequestBuilder(sdkConfiguration);
+    public RemoveCommerceInventory2RequestBuilder removeCommerceInventory2() {
+        return new RemoveCommerceInventory2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -156,9 +156,9 @@ public class Inventory {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveCommerceInventoryResponse removeCommerceInventory(@Nonnull RemoveCommerceInventoryRequest request) {
-        RequestOperation<RemoveCommerceInventoryRequest, RemoveCommerceInventoryResponse> operation
-              = new RemoveCommerceInventory.Sync(sdkConfiguration, _headers);
+    public RemoveCommerceInventory2Response removeCommerceInventory2(@Nonnull RemoveCommerceInventory2Request request) {
+        RequestOperation<RemoveCommerceInventory2Request, RemoveCommerceInventory2Response> operation
+              = new RemoveCommerceInventory2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -167,8 +167,8 @@ public class Inventory {
      * 
      * @return The call builder
      */
-    public UpdateCommerceInventoryRequestBuilder updateCommerceInventory() {
-        return new UpdateCommerceInventoryRequestBuilder(sdkConfiguration);
+    public UpdateCommerceInventory2RequestBuilder updateCommerceInventory2() {
+        return new UpdateCommerceInventory2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -178,9 +178,9 @@ public class Inventory {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateCommerceInventoryResponse updateCommerceInventory(@Nonnull UpdateCommerceInventoryRequest request) {
-        RequestOperation<UpdateCommerceInventoryRequest, UpdateCommerceInventoryResponse> operation
-              = new UpdateCommerceInventory.Sync(sdkConfiguration, _headers);
+    public UpdateCommerceInventory2Response updateCommerceInventory2(@Nonnull UpdateCommerceInventory2Request request) {
+        RequestOperation<UpdateCommerceInventory2Request, UpdateCommerceInventory2Response> operation
+              = new UpdateCommerceInventory2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

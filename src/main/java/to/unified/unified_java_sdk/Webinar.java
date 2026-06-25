@@ -6,30 +6,30 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
-import to.unified.unified_java_sdk.models.operations.CreateCalendarWebinarRequest;
-import to.unified.unified_java_sdk.models.operations.CreateCalendarWebinarRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.CreateCalendarWebinarResponse;
-import to.unified.unified_java_sdk.models.operations.GetCalendarWebinarRequest;
-import to.unified.unified_java_sdk.models.operations.GetCalendarWebinarRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.GetCalendarWebinarResponse;
-import to.unified.unified_java_sdk.models.operations.ListCalendarWebinarsRequest;
-import to.unified.unified_java_sdk.models.operations.ListCalendarWebinarsRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.ListCalendarWebinarsResponse;
-import to.unified.unified_java_sdk.models.operations.PatchCalendarWebinarRequest;
-import to.unified.unified_java_sdk.models.operations.PatchCalendarWebinarRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.PatchCalendarWebinarResponse;
-import to.unified.unified_java_sdk.models.operations.RemoveCalendarWebinarRequest;
-import to.unified.unified_java_sdk.models.operations.RemoveCalendarWebinarRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.RemoveCalendarWebinarResponse;
-import to.unified.unified_java_sdk.models.operations.UpdateCalendarWebinarRequest;
-import to.unified.unified_java_sdk.models.operations.UpdateCalendarWebinarRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.UpdateCalendarWebinarResponse;
-import to.unified.unified_java_sdk.operations.CreateCalendarWebinar;
-import to.unified.unified_java_sdk.operations.GetCalendarWebinar;
-import to.unified.unified_java_sdk.operations.ListCalendarWebinars;
-import to.unified.unified_java_sdk.operations.PatchCalendarWebinar;
-import to.unified.unified_java_sdk.operations.RemoveCalendarWebinar;
-import to.unified.unified_java_sdk.operations.UpdateCalendarWebinar;
+import to.unified.unified_java_sdk.models.operations.CreateCalendarWebinar2Request;
+import to.unified.unified_java_sdk.models.operations.CreateCalendarWebinar2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.CreateCalendarWebinar2Response;
+import to.unified.unified_java_sdk.models.operations.GetCalendarWebinar2Request;
+import to.unified.unified_java_sdk.models.operations.GetCalendarWebinar2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetCalendarWebinar2Response;
+import to.unified.unified_java_sdk.models.operations.ListCalendarWebinars2Request;
+import to.unified.unified_java_sdk.models.operations.ListCalendarWebinars2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListCalendarWebinars2Response;
+import to.unified.unified_java_sdk.models.operations.PatchCalendarWebinar2Request;
+import to.unified.unified_java_sdk.models.operations.PatchCalendarWebinar2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.PatchCalendarWebinar2Response;
+import to.unified.unified_java_sdk.models.operations.RemoveCalendarWebinar2Request;
+import to.unified.unified_java_sdk.models.operations.RemoveCalendarWebinar2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.RemoveCalendarWebinar2Response;
+import to.unified.unified_java_sdk.models.operations.UpdateCalendarWebinar2Request;
+import to.unified.unified_java_sdk.models.operations.UpdateCalendarWebinar2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.UpdateCalendarWebinar2Response;
+import to.unified.unified_java_sdk.operations.CreateCalendarWebinar2;
+import to.unified.unified_java_sdk.operations.GetCalendarWebinar2;
+import to.unified.unified_java_sdk.operations.ListCalendarWebinars2;
+import to.unified.unified_java_sdk.operations.PatchCalendarWebinar2;
+import to.unified.unified_java_sdk.operations.RemoveCalendarWebinar2;
+import to.unified.unified_java_sdk.operations.UpdateCalendarWebinar2;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -57,8 +57,8 @@ public class Webinar {
      * 
      * @return The call builder
      */
-    public CreateCalendarWebinarRequestBuilder createCalendarWebinar() {
-        return new CreateCalendarWebinarRequestBuilder(sdkConfiguration);
+    public CreateCalendarWebinar2RequestBuilder createCalendarWebinar2() {
+        return new CreateCalendarWebinar2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -68,9 +68,9 @@ public class Webinar {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateCalendarWebinarResponse createCalendarWebinar(@Nonnull CreateCalendarWebinarRequest request) {
-        RequestOperation<CreateCalendarWebinarRequest, CreateCalendarWebinarResponse> operation
-              = new CreateCalendarWebinar.Sync(sdkConfiguration, _headers);
+    public CreateCalendarWebinar2Response createCalendarWebinar2(@Nonnull CreateCalendarWebinar2Request request) {
+        RequestOperation<CreateCalendarWebinar2Request, CreateCalendarWebinar2Response> operation
+              = new CreateCalendarWebinar2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -79,8 +79,8 @@ public class Webinar {
      * 
      * @return The call builder
      */
-    public GetCalendarWebinarRequestBuilder getCalendarWebinar() {
-        return new GetCalendarWebinarRequestBuilder(sdkConfiguration);
+    public GetCalendarWebinar2RequestBuilder getCalendarWebinar2() {
+        return new GetCalendarWebinar2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -90,9 +90,9 @@ public class Webinar {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetCalendarWebinarResponse getCalendarWebinar(@Nonnull GetCalendarWebinarRequest request) {
-        RequestOperation<GetCalendarWebinarRequest, GetCalendarWebinarResponse> operation
-              = new GetCalendarWebinar.Sync(sdkConfiguration, _headers);
+    public GetCalendarWebinar2Response getCalendarWebinar2(@Nonnull GetCalendarWebinar2Request request) {
+        RequestOperation<GetCalendarWebinar2Request, GetCalendarWebinar2Response> operation
+              = new GetCalendarWebinar2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -101,8 +101,8 @@ public class Webinar {
      * 
      * @return The call builder
      */
-    public ListCalendarWebinarsRequestBuilder listCalendarWebinars() {
-        return new ListCalendarWebinarsRequestBuilder(sdkConfiguration);
+    public ListCalendarWebinars2RequestBuilder listCalendarWebinars2() {
+        return new ListCalendarWebinars2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -112,9 +112,9 @@ public class Webinar {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListCalendarWebinarsResponse listCalendarWebinars(@Nonnull ListCalendarWebinarsRequest request) {
-        RequestOperation<ListCalendarWebinarsRequest, ListCalendarWebinarsResponse> operation
-              = new ListCalendarWebinars.Sync(sdkConfiguration, _headers);
+    public ListCalendarWebinars2Response listCalendarWebinars2(@Nonnull ListCalendarWebinars2Request request) {
+        RequestOperation<ListCalendarWebinars2Request, ListCalendarWebinars2Response> operation
+              = new ListCalendarWebinars2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -123,8 +123,8 @@ public class Webinar {
      * 
      * @return The call builder
      */
-    public PatchCalendarWebinarRequestBuilder patchCalendarWebinar() {
-        return new PatchCalendarWebinarRequestBuilder(sdkConfiguration);
+    public PatchCalendarWebinar2RequestBuilder patchCalendarWebinar2() {
+        return new PatchCalendarWebinar2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -134,9 +134,9 @@ public class Webinar {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchCalendarWebinarResponse patchCalendarWebinar(@Nonnull PatchCalendarWebinarRequest request) {
-        RequestOperation<PatchCalendarWebinarRequest, PatchCalendarWebinarResponse> operation
-              = new PatchCalendarWebinar.Sync(sdkConfiguration, _headers);
+    public PatchCalendarWebinar2Response patchCalendarWebinar2(@Nonnull PatchCalendarWebinar2Request request) {
+        RequestOperation<PatchCalendarWebinar2Request, PatchCalendarWebinar2Response> operation
+              = new PatchCalendarWebinar2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -145,8 +145,8 @@ public class Webinar {
      * 
      * @return The call builder
      */
-    public RemoveCalendarWebinarRequestBuilder removeCalendarWebinar() {
-        return new RemoveCalendarWebinarRequestBuilder(sdkConfiguration);
+    public RemoveCalendarWebinar2RequestBuilder removeCalendarWebinar2() {
+        return new RemoveCalendarWebinar2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -156,9 +156,9 @@ public class Webinar {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveCalendarWebinarResponse removeCalendarWebinar(@Nonnull RemoveCalendarWebinarRequest request) {
-        RequestOperation<RemoveCalendarWebinarRequest, RemoveCalendarWebinarResponse> operation
-              = new RemoveCalendarWebinar.Sync(sdkConfiguration, _headers);
+    public RemoveCalendarWebinar2Response removeCalendarWebinar2(@Nonnull RemoveCalendarWebinar2Request request) {
+        RequestOperation<RemoveCalendarWebinar2Request, RemoveCalendarWebinar2Response> operation
+              = new RemoveCalendarWebinar2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -167,8 +167,8 @@ public class Webinar {
      * 
      * @return The call builder
      */
-    public UpdateCalendarWebinarRequestBuilder updateCalendarWebinar() {
-        return new UpdateCalendarWebinarRequestBuilder(sdkConfiguration);
+    public UpdateCalendarWebinar2RequestBuilder updateCalendarWebinar2() {
+        return new UpdateCalendarWebinar2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -178,9 +178,9 @@ public class Webinar {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateCalendarWebinarResponse updateCalendarWebinar(@Nonnull UpdateCalendarWebinarRequest request) {
-        RequestOperation<UpdateCalendarWebinarRequest, UpdateCalendarWebinarResponse> operation
-              = new UpdateCalendarWebinar.Sync(sdkConfiguration, _headers);
+    public UpdateCalendarWebinar2Response updateCalendarWebinar2(@Nonnull UpdateCalendarWebinar2Request request) {
+        RequestOperation<UpdateCalendarWebinar2Request, UpdateCalendarWebinar2Response> operation
+              = new UpdateCalendarWebinar2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

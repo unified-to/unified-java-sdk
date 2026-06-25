@@ -71,6 +71,11 @@ public class AtsApplication {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("original_substatus")
+    private String originalSubstatus;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
     private Map<String, Object> raw;
 
@@ -116,6 +121,7 @@ public class AtsApplication {
             @JsonProperty("metadata") @Nullable List<AtsMetadata> metadata,
             @JsonProperty("offers") @Nullable List<AtsOffer> offers,
             @JsonProperty("original_status") @Nullable String originalStatus,
+            @JsonProperty("original_substatus") @Nullable String originalSubstatus,
             @JsonProperty("raw") @Nullable Map<String, Object> raw,
             @JsonProperty("rejected_at") @Nullable OffsetDateTime rejectedAt,
             @JsonProperty("rejected_reason") @Nullable String rejectedReason,
@@ -133,6 +139,7 @@ public class AtsApplication {
         this.metadata = metadata;
         this.offers = offers;
         this.originalStatus = originalStatus;
+        this.originalSubstatus = originalSubstatus;
         this.raw = raw;
         this.rejectedAt = rejectedAt;
         this.rejectedReason = rejectedReason;
@@ -148,7 +155,7 @@ public class AtsApplication {
             null, null, null,
             null, null, null,
             null, null, null,
-            null, null);
+            null, null, null);
     }
 
     public Optional<List<AtsApplicationAnswer>> answers() {
@@ -189,6 +196,10 @@ public class AtsApplication {
 
     public Optional<String> originalStatus() {
         return Optional.ofNullable(this.originalStatus);
+    }
+
+    public Optional<String> originalSubstatus() {
+        return Optional.ofNullable(this.originalSubstatus);
     }
 
     public Optional<Map<String, Object>> raw() {
@@ -284,6 +295,12 @@ public class AtsApplication {
     }
 
 
+    public AtsApplication withOriginalSubstatus(@Nullable String originalSubstatus) {
+        this.originalSubstatus = originalSubstatus;
+        return this;
+    }
+
+
     public AtsApplication withRaw(@Nullable Map<String, Object> raw) {
         this.raw = raw;
         return this;
@@ -346,6 +363,7 @@ public class AtsApplication {
             Utils.enhancedDeepEquals(this.metadata, other.metadata) &&
             Utils.enhancedDeepEquals(this.offers, other.offers) &&
             Utils.enhancedDeepEquals(this.originalStatus, other.originalStatus) &&
+            Utils.enhancedDeepEquals(this.originalSubstatus, other.originalSubstatus) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
             Utils.enhancedDeepEquals(this.rejectedAt, other.rejectedAt) &&
             Utils.enhancedDeepEquals(this.rejectedReason, other.rejectedReason) &&
@@ -361,9 +379,9 @@ public class AtsApplication {
             answers, appliedAt, candidateId,
             createdAt, hiredAt, id,
             jobId, metadata, offers,
-            originalStatus, raw, rejectedAt,
-            rejectedReason, source, status,
-            updatedAt, userId);
+            originalStatus, originalSubstatus, raw,
+            rejectedAt, rejectedReason, source,
+            status, updatedAt, userId);
     }
     
     @Override
@@ -379,6 +397,7 @@ public class AtsApplication {
                 "metadata", metadata,
                 "offers", offers,
                 "originalStatus", originalStatus,
+                "originalSubstatus", originalSubstatus,
                 "raw", raw,
                 "rejectedAt", rejectedAt,
                 "rejectedReason", rejectedReason,
@@ -410,6 +429,8 @@ public class AtsApplication {
         private List<AtsOffer> offers;
 
         private String originalStatus;
+
+        private String originalSubstatus;
 
         private Map<String, Object> raw;
 
@@ -479,6 +500,11 @@ public class AtsApplication {
             return this;
         }
 
+        public Builder originalSubstatus(@Nullable String originalSubstatus) {
+            this.originalSubstatus = originalSubstatus;
+            return this;
+        }
+
         public Builder raw(@Nullable Map<String, Object> raw) {
             this.raw = raw;
             return this;
@@ -519,9 +545,9 @@ public class AtsApplication {
                 answers, appliedAt, candidateId,
                 createdAt, hiredAt, id,
                 jobId, metadata, offers,
-                originalStatus, raw, rejectedAt,
-                rejectedReason, source, status,
-                updatedAt, userId);
+                originalStatus, originalSubstatus, raw,
+                rejectedAt, rejectedReason, source,
+                status, updatedAt, userId);
         }
 
     }

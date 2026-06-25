@@ -4,22 +4,22 @@
 
 ### Available Operations
 
-* [listCalendarBusies](#listcalendarbusies) - List all busies
+* [listCalendarBusies2](#listcalendarbusies2) - List all busies
 
-## listCalendarBusies
+## listCalendarBusies2
 
 List all busies
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="listCalendarBusies" method="get" path="/calendar/{connection_id}/busy" -->
+<!-- UsageSnippet language="java" operationID="listCalendarBusies2" method="get" path="/calendar/{connection_id}/busy" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.ListCalendarBusiesRequest;
-import to.unified.unified_java_sdk.models.operations.ListCalendarBusiesResponse;
+import to.unified.unified_java_sdk.models.operations.ListCalendarBusies2Request;
+import to.unified.unified_java_sdk.models.operations.ListCalendarBusies2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -32,11 +32,11 @@ public class Application {
                     .build())
             .build();
 
-        ListCalendarBusiesRequest req = ListCalendarBusiesRequest.builder()
+        ListCalendarBusies2Request req = ListCalendarBusies2Request.builder()
                 .connectionId("<id>")
                 .build();
 
-        ListCalendarBusiesResponse res = sdk.busy().listCalendarBusies()
+        ListCalendarBusies2Response res = sdk.busy().listCalendarBusies2()
                 .request(req)
                 .call();
 
@@ -49,13 +49,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
-| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
-| `request`                                                                         | [ListCalendarBusiesRequest](../../models/operations/ListCalendarBusiesRequest.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
+| Parameter                                                                           | Type                                                                                | Required                                                                            | Description                                                                         |
+| ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| `request`                                                                           | [ListCalendarBusies2Request](../../models/operations/ListCalendarBusies2Request.md) | :heavy_check_mark:                                                                  | The request object to use for the request.                                          |
 
 ### Response
 
-**[ListCalendarBusiesResponse](../../models/operations/ListCalendarBusiesResponse.md)**
+**[ListCalendarBusies2Response](../../models/operations/ListCalendarBusies2Response.md)**
 
 ### Errors
 

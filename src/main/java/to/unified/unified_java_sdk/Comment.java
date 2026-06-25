@@ -6,78 +6,78 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
-import to.unified.unified_java_sdk.models.operations.CreateKmsCommentRequest;
-import to.unified.unified_java_sdk.models.operations.CreateKmsCommentRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.CreateKmsCommentResponse;
-import to.unified.unified_java_sdk.models.operations.CreateTaskCommentRequest;
-import to.unified.unified_java_sdk.models.operations.CreateTaskCommentRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.CreateTaskCommentResponse;
-import to.unified.unified_java_sdk.models.operations.CreateUcCommentRequest;
-import to.unified.unified_java_sdk.models.operations.CreateUcCommentRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.CreateUcCommentResponse;
-import to.unified.unified_java_sdk.models.operations.GetKmsCommentRequest;
-import to.unified.unified_java_sdk.models.operations.GetKmsCommentRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.GetKmsCommentResponse;
-import to.unified.unified_java_sdk.models.operations.GetTaskCommentRequest;
-import to.unified.unified_java_sdk.models.operations.GetTaskCommentRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.GetTaskCommentResponse;
-import to.unified.unified_java_sdk.models.operations.GetUcCommentRequest;
-import to.unified.unified_java_sdk.models.operations.GetUcCommentRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.GetUcCommentResponse;
-import to.unified.unified_java_sdk.models.operations.ListKmsCommentsRequest;
-import to.unified.unified_java_sdk.models.operations.ListKmsCommentsRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.ListKmsCommentsResponse;
-import to.unified.unified_java_sdk.models.operations.ListTaskCommentsRequest;
-import to.unified.unified_java_sdk.models.operations.ListTaskCommentsRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.ListTaskCommentsResponse;
-import to.unified.unified_java_sdk.models.operations.ListUcCommentsRequest;
-import to.unified.unified_java_sdk.models.operations.ListUcCommentsRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.ListUcCommentsResponse;
-import to.unified.unified_java_sdk.models.operations.PatchKmsCommentRequest;
-import to.unified.unified_java_sdk.models.operations.PatchKmsCommentRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.PatchKmsCommentResponse;
-import to.unified.unified_java_sdk.models.operations.PatchTaskCommentRequest;
-import to.unified.unified_java_sdk.models.operations.PatchTaskCommentRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.PatchTaskCommentResponse;
-import to.unified.unified_java_sdk.models.operations.PatchUcCommentRequest;
-import to.unified.unified_java_sdk.models.operations.PatchUcCommentRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.PatchUcCommentResponse;
-import to.unified.unified_java_sdk.models.operations.RemoveKmsCommentRequest;
-import to.unified.unified_java_sdk.models.operations.RemoveKmsCommentRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.RemoveKmsCommentResponse;
-import to.unified.unified_java_sdk.models.operations.RemoveTaskCommentRequest;
-import to.unified.unified_java_sdk.models.operations.RemoveTaskCommentRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.RemoveTaskCommentResponse;
-import to.unified.unified_java_sdk.models.operations.RemoveUcCommentRequest;
-import to.unified.unified_java_sdk.models.operations.RemoveUcCommentRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.RemoveUcCommentResponse;
-import to.unified.unified_java_sdk.models.operations.UpdateKmsCommentRequest;
-import to.unified.unified_java_sdk.models.operations.UpdateKmsCommentRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.UpdateKmsCommentResponse;
-import to.unified.unified_java_sdk.models.operations.UpdateTaskCommentRequest;
-import to.unified.unified_java_sdk.models.operations.UpdateTaskCommentRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.UpdateTaskCommentResponse;
-import to.unified.unified_java_sdk.models.operations.UpdateUcCommentRequest;
-import to.unified.unified_java_sdk.models.operations.UpdateUcCommentRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.UpdateUcCommentResponse;
-import to.unified.unified_java_sdk.operations.CreateKmsComment;
-import to.unified.unified_java_sdk.operations.CreateTaskComment;
-import to.unified.unified_java_sdk.operations.CreateUcComment;
-import to.unified.unified_java_sdk.operations.GetKmsComment;
-import to.unified.unified_java_sdk.operations.GetTaskComment;
-import to.unified.unified_java_sdk.operations.GetUcComment;
-import to.unified.unified_java_sdk.operations.ListKmsComments;
-import to.unified.unified_java_sdk.operations.ListTaskComments;
-import to.unified.unified_java_sdk.operations.ListUcComments;
-import to.unified.unified_java_sdk.operations.PatchKmsComment;
-import to.unified.unified_java_sdk.operations.PatchTaskComment;
-import to.unified.unified_java_sdk.operations.PatchUcComment;
-import to.unified.unified_java_sdk.operations.RemoveKmsComment;
-import to.unified.unified_java_sdk.operations.RemoveTaskComment;
-import to.unified.unified_java_sdk.operations.RemoveUcComment;
-import to.unified.unified_java_sdk.operations.UpdateKmsComment;
-import to.unified.unified_java_sdk.operations.UpdateTaskComment;
-import to.unified.unified_java_sdk.operations.UpdateUcComment;
+import to.unified.unified_java_sdk.models.operations.CreateKmsComment2Request;
+import to.unified.unified_java_sdk.models.operations.CreateKmsComment2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.CreateKmsComment2Response;
+import to.unified.unified_java_sdk.models.operations.CreateTaskComment2Request;
+import to.unified.unified_java_sdk.models.operations.CreateTaskComment2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.CreateTaskComment2Response;
+import to.unified.unified_java_sdk.models.operations.CreateUcComment2Request;
+import to.unified.unified_java_sdk.models.operations.CreateUcComment2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.CreateUcComment2Response;
+import to.unified.unified_java_sdk.models.operations.GetKmsComment2Request;
+import to.unified.unified_java_sdk.models.operations.GetKmsComment2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetKmsComment2Response;
+import to.unified.unified_java_sdk.models.operations.GetTaskComment2Request;
+import to.unified.unified_java_sdk.models.operations.GetTaskComment2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetTaskComment2Response;
+import to.unified.unified_java_sdk.models.operations.GetUcComment2Request;
+import to.unified.unified_java_sdk.models.operations.GetUcComment2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetUcComment2Response;
+import to.unified.unified_java_sdk.models.operations.ListKmsComments2Request;
+import to.unified.unified_java_sdk.models.operations.ListKmsComments2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListKmsComments2Response;
+import to.unified.unified_java_sdk.models.operations.ListTaskComments2Request;
+import to.unified.unified_java_sdk.models.operations.ListTaskComments2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListTaskComments2Response;
+import to.unified.unified_java_sdk.models.operations.ListUcComments2Request;
+import to.unified.unified_java_sdk.models.operations.ListUcComments2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListUcComments2Response;
+import to.unified.unified_java_sdk.models.operations.PatchKmsComment2Request;
+import to.unified.unified_java_sdk.models.operations.PatchKmsComment2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.PatchKmsComment2Response;
+import to.unified.unified_java_sdk.models.operations.PatchTaskComment2Request;
+import to.unified.unified_java_sdk.models.operations.PatchTaskComment2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.PatchTaskComment2Response;
+import to.unified.unified_java_sdk.models.operations.PatchUcComment2Request;
+import to.unified.unified_java_sdk.models.operations.PatchUcComment2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.PatchUcComment2Response;
+import to.unified.unified_java_sdk.models.operations.RemoveKmsComment2Request;
+import to.unified.unified_java_sdk.models.operations.RemoveKmsComment2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.RemoveKmsComment2Response;
+import to.unified.unified_java_sdk.models.operations.RemoveTaskComment2Request;
+import to.unified.unified_java_sdk.models.operations.RemoveTaskComment2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.RemoveTaskComment2Response;
+import to.unified.unified_java_sdk.models.operations.RemoveUcComment2Request;
+import to.unified.unified_java_sdk.models.operations.RemoveUcComment2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.RemoveUcComment2Response;
+import to.unified.unified_java_sdk.models.operations.UpdateKmsComment2Request;
+import to.unified.unified_java_sdk.models.operations.UpdateKmsComment2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.UpdateKmsComment2Response;
+import to.unified.unified_java_sdk.models.operations.UpdateTaskComment2Request;
+import to.unified.unified_java_sdk.models.operations.UpdateTaskComment2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.UpdateTaskComment2Response;
+import to.unified.unified_java_sdk.models.operations.UpdateUcComment2Request;
+import to.unified.unified_java_sdk.models.operations.UpdateUcComment2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.UpdateUcComment2Response;
+import to.unified.unified_java_sdk.operations.CreateKmsComment2;
+import to.unified.unified_java_sdk.operations.CreateTaskComment2;
+import to.unified.unified_java_sdk.operations.CreateUcComment2;
+import to.unified.unified_java_sdk.operations.GetKmsComment2;
+import to.unified.unified_java_sdk.operations.GetTaskComment2;
+import to.unified.unified_java_sdk.operations.GetUcComment2;
+import to.unified.unified_java_sdk.operations.ListKmsComments2;
+import to.unified.unified_java_sdk.operations.ListTaskComments2;
+import to.unified.unified_java_sdk.operations.ListUcComments2;
+import to.unified.unified_java_sdk.operations.PatchKmsComment2;
+import to.unified.unified_java_sdk.operations.PatchTaskComment2;
+import to.unified.unified_java_sdk.operations.PatchUcComment2;
+import to.unified.unified_java_sdk.operations.RemoveKmsComment2;
+import to.unified.unified_java_sdk.operations.RemoveTaskComment2;
+import to.unified.unified_java_sdk.operations.RemoveUcComment2;
+import to.unified.unified_java_sdk.operations.UpdateKmsComment2;
+import to.unified.unified_java_sdk.operations.UpdateTaskComment2;
+import to.unified.unified_java_sdk.operations.UpdateUcComment2;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -105,8 +105,8 @@ public class Comment {
      * 
      * @return The call builder
      */
-    public CreateKmsCommentRequestBuilder createKmsComment() {
-        return new CreateKmsCommentRequestBuilder(sdkConfiguration);
+    public CreateKmsComment2RequestBuilder createKmsComment2() {
+        return new CreateKmsComment2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -116,9 +116,9 @@ public class Comment {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateKmsCommentResponse createKmsComment(@Nonnull CreateKmsCommentRequest request) {
-        RequestOperation<CreateKmsCommentRequest, CreateKmsCommentResponse> operation
-              = new CreateKmsComment.Sync(sdkConfiguration, _headers);
+    public CreateKmsComment2Response createKmsComment2(@Nonnull CreateKmsComment2Request request) {
+        RequestOperation<CreateKmsComment2Request, CreateKmsComment2Response> operation
+              = new CreateKmsComment2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -127,30 +127,8 @@ public class Comment {
      * 
      * @return The call builder
      */
-    public CreateTaskCommentRequestBuilder createTaskComment() {
-        return new CreateTaskCommentRequestBuilder(sdkConfiguration);
-    }
-
-    /**
-     * Create a comment
-     * 
-     * @param request The request object containing all the parameters for the API call.
-     * @return The response from the API call
-     * @throws RuntimeException subclass if the API call fails
-     */
-    public CreateTaskCommentResponse createTaskComment(@Nonnull CreateTaskCommentRequest request) {
-        RequestOperation<CreateTaskCommentRequest, CreateTaskCommentResponse> operation
-              = new CreateTaskComment.Sync(sdkConfiguration, _headers);
-        return operation.handleResponse(operation.doRequest(request));
-    }
-
-    /**
-     * Create a comment
-     * 
-     * @return The call builder
-     */
-    public CreateUcCommentRequestBuilder createUcComment() {
-        return new CreateUcCommentRequestBuilder(sdkConfiguration);
+    public CreateTaskComment2RequestBuilder createTaskComment2() {
+        return new CreateTaskComment2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -160,31 +138,31 @@ public class Comment {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateUcCommentResponse createUcComment(@Nonnull CreateUcCommentRequest request) {
-        RequestOperation<CreateUcCommentRequest, CreateUcCommentResponse> operation
-              = new CreateUcComment.Sync(sdkConfiguration, _headers);
+    public CreateTaskComment2Response createTaskComment2(@Nonnull CreateTaskComment2Request request) {
+        RequestOperation<CreateTaskComment2Request, CreateTaskComment2Response> operation
+              = new CreateTaskComment2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
     /**
-     * Retrieve a comment
+     * Create a comment
      * 
      * @return The call builder
      */
-    public GetKmsCommentRequestBuilder getKmsComment() {
-        return new GetKmsCommentRequestBuilder(sdkConfiguration);
+    public CreateUcComment2RequestBuilder createUcComment2() {
+        return new CreateUcComment2RequestBuilder(sdkConfiguration);
     }
 
     /**
-     * Retrieve a comment
+     * Create a comment
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetKmsCommentResponse getKmsComment(@Nonnull GetKmsCommentRequest request) {
-        RequestOperation<GetKmsCommentRequest, GetKmsCommentResponse> operation
-              = new GetKmsComment.Sync(sdkConfiguration, _headers);
+    public CreateUcComment2Response createUcComment2(@Nonnull CreateUcComment2Request request) {
+        RequestOperation<CreateUcComment2Request, CreateUcComment2Response> operation
+              = new CreateUcComment2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -193,30 +171,8 @@ public class Comment {
      * 
      * @return The call builder
      */
-    public GetTaskCommentRequestBuilder getTaskComment() {
-        return new GetTaskCommentRequestBuilder(sdkConfiguration);
-    }
-
-    /**
-     * Retrieve a comment
-     * 
-     * @param request The request object containing all the parameters for the API call.
-     * @return The response from the API call
-     * @throws RuntimeException subclass if the API call fails
-     */
-    public GetTaskCommentResponse getTaskComment(@Nonnull GetTaskCommentRequest request) {
-        RequestOperation<GetTaskCommentRequest, GetTaskCommentResponse> operation
-              = new GetTaskComment.Sync(sdkConfiguration, _headers);
-        return operation.handleResponse(operation.doRequest(request));
-    }
-
-    /**
-     * Retrieve a comment
-     * 
-     * @return The call builder
-     */
-    public GetUcCommentRequestBuilder getUcComment() {
-        return new GetUcCommentRequestBuilder(sdkConfiguration);
+    public GetKmsComment2RequestBuilder getKmsComment2() {
+        return new GetKmsComment2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -226,9 +182,53 @@ public class Comment {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetUcCommentResponse getUcComment(@Nonnull GetUcCommentRequest request) {
-        RequestOperation<GetUcCommentRequest, GetUcCommentResponse> operation
-              = new GetUcComment.Sync(sdkConfiguration, _headers);
+    public GetKmsComment2Response getKmsComment2(@Nonnull GetKmsComment2Request request) {
+        RequestOperation<GetKmsComment2Request, GetKmsComment2Response> operation
+              = new GetKmsComment2.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Retrieve a comment
+     * 
+     * @return The call builder
+     */
+    public GetTaskComment2RequestBuilder getTaskComment2() {
+        return new GetTaskComment2RequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Retrieve a comment
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetTaskComment2Response getTaskComment2(@Nonnull GetTaskComment2Request request) {
+        RequestOperation<GetTaskComment2Request, GetTaskComment2Response> operation
+              = new GetTaskComment2.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Retrieve a comment
+     * 
+     * @return The call builder
+     */
+    public GetUcComment2RequestBuilder getUcComment2() {
+        return new GetUcComment2RequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Retrieve a comment
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetUcComment2Response getUcComment2(@Nonnull GetUcComment2Request request) {
+        RequestOperation<GetUcComment2Request, GetUcComment2Response> operation
+              = new GetUcComment2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -237,8 +237,8 @@ public class Comment {
      * 
      * @return The call builder
      */
-    public ListKmsCommentsRequestBuilder listKmsComments() {
-        return new ListKmsCommentsRequestBuilder(sdkConfiguration);
+    public ListKmsComments2RequestBuilder listKmsComments2() {
+        return new ListKmsComments2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -248,9 +248,9 @@ public class Comment {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListKmsCommentsResponse listKmsComments(@Nonnull ListKmsCommentsRequest request) {
-        RequestOperation<ListKmsCommentsRequest, ListKmsCommentsResponse> operation
-              = new ListKmsComments.Sync(sdkConfiguration, _headers);
+    public ListKmsComments2Response listKmsComments2(@Nonnull ListKmsComments2Request request) {
+        RequestOperation<ListKmsComments2Request, ListKmsComments2Response> operation
+              = new ListKmsComments2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -259,30 +259,8 @@ public class Comment {
      * 
      * @return The call builder
      */
-    public ListTaskCommentsRequestBuilder listTaskComments() {
-        return new ListTaskCommentsRequestBuilder(sdkConfiguration);
-    }
-
-    /**
-     * List all comments
-     * 
-     * @param request The request object containing all the parameters for the API call.
-     * @return The response from the API call
-     * @throws RuntimeException subclass if the API call fails
-     */
-    public ListTaskCommentsResponse listTaskComments(@Nonnull ListTaskCommentsRequest request) {
-        RequestOperation<ListTaskCommentsRequest, ListTaskCommentsResponse> operation
-              = new ListTaskComments.Sync(sdkConfiguration, _headers);
-        return operation.handleResponse(operation.doRequest(request));
-    }
-
-    /**
-     * List all comments
-     * 
-     * @return The call builder
-     */
-    public ListUcCommentsRequestBuilder listUcComments() {
-        return new ListUcCommentsRequestBuilder(sdkConfiguration);
+    public ListTaskComments2RequestBuilder listTaskComments2() {
+        return new ListTaskComments2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -292,9 +270,31 @@ public class Comment {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListUcCommentsResponse listUcComments(@Nonnull ListUcCommentsRequest request) {
-        RequestOperation<ListUcCommentsRequest, ListUcCommentsResponse> operation
-              = new ListUcComments.Sync(sdkConfiguration, _headers);
+    public ListTaskComments2Response listTaskComments2(@Nonnull ListTaskComments2Request request) {
+        RequestOperation<ListTaskComments2Request, ListTaskComments2Response> operation
+              = new ListTaskComments2.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * List all comments
+     * 
+     * @return The call builder
+     */
+    public ListUcComments2RequestBuilder listUcComments2() {
+        return new ListUcComments2RequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * List all comments
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListUcComments2Response listUcComments2(@Nonnull ListUcComments2Request request) {
+        RequestOperation<ListUcComments2Request, ListUcComments2Response> operation
+              = new ListUcComments2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -303,8 +303,8 @@ public class Comment {
      * 
      * @return The call builder
      */
-    public PatchKmsCommentRequestBuilder patchKmsComment() {
-        return new PatchKmsCommentRequestBuilder(sdkConfiguration);
+    public PatchKmsComment2RequestBuilder patchKmsComment2() {
+        return new PatchKmsComment2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -314,9 +314,9 @@ public class Comment {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchKmsCommentResponse patchKmsComment(@Nonnull PatchKmsCommentRequest request) {
-        RequestOperation<PatchKmsCommentRequest, PatchKmsCommentResponse> operation
-              = new PatchKmsComment.Sync(sdkConfiguration, _headers);
+    public PatchKmsComment2Response patchKmsComment2(@Nonnull PatchKmsComment2Request request) {
+        RequestOperation<PatchKmsComment2Request, PatchKmsComment2Response> operation
+              = new PatchKmsComment2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -325,30 +325,8 @@ public class Comment {
      * 
      * @return The call builder
      */
-    public PatchTaskCommentRequestBuilder patchTaskComment() {
-        return new PatchTaskCommentRequestBuilder(sdkConfiguration);
-    }
-
-    /**
-     * Update a comment
-     * 
-     * @param request The request object containing all the parameters for the API call.
-     * @return The response from the API call
-     * @throws RuntimeException subclass if the API call fails
-     */
-    public PatchTaskCommentResponse patchTaskComment(@Nonnull PatchTaskCommentRequest request) {
-        RequestOperation<PatchTaskCommentRequest, PatchTaskCommentResponse> operation
-              = new PatchTaskComment.Sync(sdkConfiguration, _headers);
-        return operation.handleResponse(operation.doRequest(request));
-    }
-
-    /**
-     * Update a comment
-     * 
-     * @return The call builder
-     */
-    public PatchUcCommentRequestBuilder patchUcComment() {
-        return new PatchUcCommentRequestBuilder(sdkConfiguration);
+    public PatchTaskComment2RequestBuilder patchTaskComment2() {
+        return new PatchTaskComment2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -358,31 +336,31 @@ public class Comment {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchUcCommentResponse patchUcComment(@Nonnull PatchUcCommentRequest request) {
-        RequestOperation<PatchUcCommentRequest, PatchUcCommentResponse> operation
-              = new PatchUcComment.Sync(sdkConfiguration, _headers);
+    public PatchTaskComment2Response patchTaskComment2(@Nonnull PatchTaskComment2Request request) {
+        RequestOperation<PatchTaskComment2Request, PatchTaskComment2Response> operation
+              = new PatchTaskComment2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
     /**
-     * Remove a comment
+     * Update a comment
      * 
      * @return The call builder
      */
-    public RemoveKmsCommentRequestBuilder removeKmsComment() {
-        return new RemoveKmsCommentRequestBuilder(sdkConfiguration);
+    public PatchUcComment2RequestBuilder patchUcComment2() {
+        return new PatchUcComment2RequestBuilder(sdkConfiguration);
     }
 
     /**
-     * Remove a comment
+     * Update a comment
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveKmsCommentResponse removeKmsComment(@Nonnull RemoveKmsCommentRequest request) {
-        RequestOperation<RemoveKmsCommentRequest, RemoveKmsCommentResponse> operation
-              = new RemoveKmsComment.Sync(sdkConfiguration, _headers);
+    public PatchUcComment2Response patchUcComment2(@Nonnull PatchUcComment2Request request) {
+        RequestOperation<PatchUcComment2Request, PatchUcComment2Response> operation
+              = new PatchUcComment2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -391,30 +369,8 @@ public class Comment {
      * 
      * @return The call builder
      */
-    public RemoveTaskCommentRequestBuilder removeTaskComment() {
-        return new RemoveTaskCommentRequestBuilder(sdkConfiguration);
-    }
-
-    /**
-     * Remove a comment
-     * 
-     * @param request The request object containing all the parameters for the API call.
-     * @return The response from the API call
-     * @throws RuntimeException subclass if the API call fails
-     */
-    public RemoveTaskCommentResponse removeTaskComment(@Nonnull RemoveTaskCommentRequest request) {
-        RequestOperation<RemoveTaskCommentRequest, RemoveTaskCommentResponse> operation
-              = new RemoveTaskComment.Sync(sdkConfiguration, _headers);
-        return operation.handleResponse(operation.doRequest(request));
-    }
-
-    /**
-     * Remove a comment
-     * 
-     * @return The call builder
-     */
-    public RemoveUcCommentRequestBuilder removeUcComment() {
-        return new RemoveUcCommentRequestBuilder(sdkConfiguration);
+    public RemoveKmsComment2RequestBuilder removeKmsComment2() {
+        return new RemoveKmsComment2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -424,9 +380,53 @@ public class Comment {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveUcCommentResponse removeUcComment(@Nonnull RemoveUcCommentRequest request) {
-        RequestOperation<RemoveUcCommentRequest, RemoveUcCommentResponse> operation
-              = new RemoveUcComment.Sync(sdkConfiguration, _headers);
+    public RemoveKmsComment2Response removeKmsComment2(@Nonnull RemoveKmsComment2Request request) {
+        RequestOperation<RemoveKmsComment2Request, RemoveKmsComment2Response> operation
+              = new RemoveKmsComment2.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Remove a comment
+     * 
+     * @return The call builder
+     */
+    public RemoveTaskComment2RequestBuilder removeTaskComment2() {
+        return new RemoveTaskComment2RequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Remove a comment
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveTaskComment2Response removeTaskComment2(@Nonnull RemoveTaskComment2Request request) {
+        RequestOperation<RemoveTaskComment2Request, RemoveTaskComment2Response> operation
+              = new RemoveTaskComment2.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Remove a comment
+     * 
+     * @return The call builder
+     */
+    public RemoveUcComment2RequestBuilder removeUcComment2() {
+        return new RemoveUcComment2RequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Remove a comment
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveUcComment2Response removeUcComment2(@Nonnull RemoveUcComment2Request request) {
+        RequestOperation<RemoveUcComment2Request, RemoveUcComment2Response> operation
+              = new RemoveUcComment2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -435,8 +435,8 @@ public class Comment {
      * 
      * @return The call builder
      */
-    public UpdateKmsCommentRequestBuilder updateKmsComment() {
-        return new UpdateKmsCommentRequestBuilder(sdkConfiguration);
+    public UpdateKmsComment2RequestBuilder updateKmsComment2() {
+        return new UpdateKmsComment2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -446,9 +446,9 @@ public class Comment {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateKmsCommentResponse updateKmsComment(@Nonnull UpdateKmsCommentRequest request) {
-        RequestOperation<UpdateKmsCommentRequest, UpdateKmsCommentResponse> operation
-              = new UpdateKmsComment.Sync(sdkConfiguration, _headers);
+    public UpdateKmsComment2Response updateKmsComment2(@Nonnull UpdateKmsComment2Request request) {
+        RequestOperation<UpdateKmsComment2Request, UpdateKmsComment2Response> operation
+              = new UpdateKmsComment2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -457,8 +457,8 @@ public class Comment {
      * 
      * @return The call builder
      */
-    public UpdateTaskCommentRequestBuilder updateTaskComment() {
-        return new UpdateTaskCommentRequestBuilder(sdkConfiguration);
+    public UpdateTaskComment2RequestBuilder updateTaskComment2() {
+        return new UpdateTaskComment2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -468,9 +468,9 @@ public class Comment {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateTaskCommentResponse updateTaskComment(@Nonnull UpdateTaskCommentRequest request) {
-        RequestOperation<UpdateTaskCommentRequest, UpdateTaskCommentResponse> operation
-              = new UpdateTaskComment.Sync(sdkConfiguration, _headers);
+    public UpdateTaskComment2Response updateTaskComment2(@Nonnull UpdateTaskComment2Request request) {
+        RequestOperation<UpdateTaskComment2Request, UpdateTaskComment2Response> operation
+              = new UpdateTaskComment2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -479,8 +479,8 @@ public class Comment {
      * 
      * @return The call builder
      */
-    public UpdateUcCommentRequestBuilder updateUcComment() {
-        return new UpdateUcCommentRequestBuilder(sdkConfiguration);
+    public UpdateUcComment2RequestBuilder updateUcComment2() {
+        return new UpdateUcComment2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -490,9 +490,9 @@ public class Comment {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateUcCommentResponse updateUcComment(@Nonnull UpdateUcCommentRequest request) {
-        RequestOperation<UpdateUcCommentRequest, UpdateUcCommentResponse> operation
-              = new UpdateUcComment.Sync(sdkConfiguration, _headers);
+    public UpdateUcComment2Response updateUcComment2(@Nonnull UpdateUcComment2Request request) {
+        RequestOperation<UpdateUcComment2Request, UpdateUcComment2Response> operation
+              = new UpdateUcComment2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

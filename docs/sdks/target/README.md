@@ -4,23 +4,23 @@
 
 ### Available Operations
 
-* [getAdsTarget](#getadstarget) - Retrieve a target
-* [listAdsTargets](#listadstargets) - List all targets
+* [getAdsTarget2](#getadstarget2) - Retrieve a target
+* [listAdsTargets2](#listadstargets2) - List all targets
 
-## getAdsTarget
+## getAdsTarget2
 
 Retrieve a target
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="getAdsTarget" method="get" path="/ads/{connection_id}/target/{id}" -->
+<!-- UsageSnippet language="java" operationID="getAdsTarget2" method="get" path="/ads/{connection_id}/target/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.GetAdsTargetRequest;
-import to.unified.unified_java_sdk.models.operations.GetAdsTargetResponse;
+import to.unified.unified_java_sdk.models.operations.GetAdsTarget2Request;
+import to.unified.unified_java_sdk.models.operations.GetAdsTarget2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -33,12 +33,12 @@ public class Application {
                     .build())
             .build();
 
-        GetAdsTargetRequest req = GetAdsTargetRequest.builder()
+        GetAdsTarget2Request req = GetAdsTarget2Request.builder()
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        GetAdsTargetResponse res = sdk.target().getAdsTarget()
+        GetAdsTarget2Response res = sdk.target().getAdsTarget2()
                 .request(req)
                 .call();
 
@@ -51,13 +51,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                             | Type                                                                  | Required                                                              | Description                                                           |
-| --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- |
-| `request`                                                             | [GetAdsTargetRequest](../../models/operations/GetAdsTargetRequest.md) | :heavy_check_mark:                                                    | The request object to use for the request.                            |
+| Parameter                                                               | Type                                                                    | Required                                                                | Description                                                             |
+| ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- |
+| `request`                                                               | [GetAdsTarget2Request](../../models/operations/GetAdsTarget2Request.md) | :heavy_check_mark:                                                      | The request object to use for the request.                              |
 
 ### Response
 
-**[GetAdsTargetResponse](../../models/operations/GetAdsTargetResponse.md)**
+**[GetAdsTarget2Response](../../models/operations/GetAdsTarget2Response.md)**
 
 ### Errors
 
@@ -65,20 +65,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## listAdsTargets
+## listAdsTargets2
 
 List all targets
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="listAdsTargets" method="get" path="/ads/{connection_id}/target" -->
+<!-- UsageSnippet language="java" operationID="listAdsTargets2" method="get" path="/ads/{connection_id}/target" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.ListAdsTargetsRequest;
-import to.unified.unified_java_sdk.models.operations.ListAdsTargetsResponse;
+import to.unified.unified_java_sdk.models.operations.ListAdsTargets2Request;
+import to.unified.unified_java_sdk.models.operations.ListAdsTargets2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -91,11 +91,11 @@ public class Application {
                     .build())
             .build();
 
-        ListAdsTargetsRequest req = ListAdsTargetsRequest.builder()
+        ListAdsTargets2Request req = ListAdsTargets2Request.builder()
                 .connectionId("<id>")
                 .build();
 
-        ListAdsTargetsResponse res = sdk.target().listAdsTargets()
+        ListAdsTargets2Response res = sdk.target().listAdsTargets2()
                 .request(req)
                 .call();
 
@@ -108,13 +108,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                 | Type                                                                      | Required                                                                  | Description                                                               |
-| ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
-| `request`                                                                 | [ListAdsTargetsRequest](../../models/operations/ListAdsTargetsRequest.md) | :heavy_check_mark:                                                        | The request object to use for the request.                                |
+| Parameter                                                                   | Type                                                                        | Required                                                                    | Description                                                                 |
+| --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| `request`                                                                   | [ListAdsTargets2Request](../../models/operations/ListAdsTargets2Request.md) | :heavy_check_mark:                                                          | The request object to use for the request.                                  |
 
 ### Response
 
-**[ListAdsTargetsResponse](../../models/operations/ListAdsTargetsResponse.md)**
+**[ListAdsTargets2Response](../../models/operations/ListAdsTargets2Response.md)**
 
 ### Errors
 

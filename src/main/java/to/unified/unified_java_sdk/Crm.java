@@ -6,150 +6,150 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
-import to.unified.unified_java_sdk.models.operations.CreateCrmCompanyRequest;
-import to.unified.unified_java_sdk.models.operations.CreateCrmCompanyRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.CreateCrmCompanyResponse;
-import to.unified.unified_java_sdk.models.operations.CreateCrmContactRequest;
-import to.unified.unified_java_sdk.models.operations.CreateCrmContactRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.CreateCrmContactResponse;
-import to.unified.unified_java_sdk.models.operations.CreateCrmDealRequest;
-import to.unified.unified_java_sdk.models.operations.CreateCrmDealRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.CreateCrmDealResponse;
-import to.unified.unified_java_sdk.models.operations.CreateCrmEventRequest;
-import to.unified.unified_java_sdk.models.operations.CreateCrmEventRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.CreateCrmEventResponse;
-import to.unified.unified_java_sdk.models.operations.CreateCrmLeadRequest;
-import to.unified.unified_java_sdk.models.operations.CreateCrmLeadRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.CreateCrmLeadResponse;
-import to.unified.unified_java_sdk.models.operations.CreateCrmPipelineRequest;
-import to.unified.unified_java_sdk.models.operations.CreateCrmPipelineRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.CreateCrmPipelineResponse;
-import to.unified.unified_java_sdk.models.operations.GetCrmCompanyRequest;
-import to.unified.unified_java_sdk.models.operations.GetCrmCompanyRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.GetCrmCompanyResponse;
-import to.unified.unified_java_sdk.models.operations.GetCrmContactRequest;
-import to.unified.unified_java_sdk.models.operations.GetCrmContactRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.GetCrmContactResponse;
-import to.unified.unified_java_sdk.models.operations.GetCrmDealRequest;
-import to.unified.unified_java_sdk.models.operations.GetCrmDealRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.GetCrmDealResponse;
-import to.unified.unified_java_sdk.models.operations.GetCrmEventRequest;
-import to.unified.unified_java_sdk.models.operations.GetCrmEventRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.GetCrmEventResponse;
-import to.unified.unified_java_sdk.models.operations.GetCrmLeadRequest;
-import to.unified.unified_java_sdk.models.operations.GetCrmLeadRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.GetCrmLeadResponse;
-import to.unified.unified_java_sdk.models.operations.GetCrmPipelineRequest;
-import to.unified.unified_java_sdk.models.operations.GetCrmPipelineRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.GetCrmPipelineResponse;
-import to.unified.unified_java_sdk.models.operations.ListCrmCompaniesRequest;
-import to.unified.unified_java_sdk.models.operations.ListCrmCompaniesRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.ListCrmCompaniesResponse;
-import to.unified.unified_java_sdk.models.operations.ListCrmContactsRequest;
-import to.unified.unified_java_sdk.models.operations.ListCrmContactsRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.ListCrmContactsResponse;
-import to.unified.unified_java_sdk.models.operations.ListCrmDealsRequest;
-import to.unified.unified_java_sdk.models.operations.ListCrmDealsRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.ListCrmDealsResponse;
-import to.unified.unified_java_sdk.models.operations.ListCrmEventsRequest;
-import to.unified.unified_java_sdk.models.operations.ListCrmEventsRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.ListCrmEventsResponse;
-import to.unified.unified_java_sdk.models.operations.ListCrmLeadsRequest;
-import to.unified.unified_java_sdk.models.operations.ListCrmLeadsRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.ListCrmLeadsResponse;
-import to.unified.unified_java_sdk.models.operations.ListCrmPipelinesRequest;
-import to.unified.unified_java_sdk.models.operations.ListCrmPipelinesRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.ListCrmPipelinesResponse;
-import to.unified.unified_java_sdk.models.operations.PatchCrmCompanyRequest;
-import to.unified.unified_java_sdk.models.operations.PatchCrmCompanyRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.PatchCrmCompanyResponse;
-import to.unified.unified_java_sdk.models.operations.PatchCrmContactRequest;
-import to.unified.unified_java_sdk.models.operations.PatchCrmContactRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.PatchCrmContactResponse;
-import to.unified.unified_java_sdk.models.operations.PatchCrmDealRequest;
-import to.unified.unified_java_sdk.models.operations.PatchCrmDealRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.PatchCrmDealResponse;
-import to.unified.unified_java_sdk.models.operations.PatchCrmEventRequest;
-import to.unified.unified_java_sdk.models.operations.PatchCrmEventRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.PatchCrmEventResponse;
-import to.unified.unified_java_sdk.models.operations.PatchCrmLeadRequest;
-import to.unified.unified_java_sdk.models.operations.PatchCrmLeadRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.PatchCrmLeadResponse;
-import to.unified.unified_java_sdk.models.operations.PatchCrmPipelineRequest;
-import to.unified.unified_java_sdk.models.operations.PatchCrmPipelineRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.PatchCrmPipelineResponse;
-import to.unified.unified_java_sdk.models.operations.RemoveCrmCompanyRequest;
-import to.unified.unified_java_sdk.models.operations.RemoveCrmCompanyRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.RemoveCrmCompanyResponse;
-import to.unified.unified_java_sdk.models.operations.RemoveCrmContactRequest;
-import to.unified.unified_java_sdk.models.operations.RemoveCrmContactRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.RemoveCrmContactResponse;
-import to.unified.unified_java_sdk.models.operations.RemoveCrmDealRequest;
-import to.unified.unified_java_sdk.models.operations.RemoveCrmDealRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.RemoveCrmDealResponse;
-import to.unified.unified_java_sdk.models.operations.RemoveCrmEventRequest;
-import to.unified.unified_java_sdk.models.operations.RemoveCrmEventRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.RemoveCrmEventResponse;
-import to.unified.unified_java_sdk.models.operations.RemoveCrmLeadRequest;
-import to.unified.unified_java_sdk.models.operations.RemoveCrmLeadRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.RemoveCrmLeadResponse;
-import to.unified.unified_java_sdk.models.operations.RemoveCrmPipelineRequest;
-import to.unified.unified_java_sdk.models.operations.RemoveCrmPipelineRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.RemoveCrmPipelineResponse;
-import to.unified.unified_java_sdk.models.operations.UpdateCrmCompanyRequest;
-import to.unified.unified_java_sdk.models.operations.UpdateCrmCompanyRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.UpdateCrmCompanyResponse;
-import to.unified.unified_java_sdk.models.operations.UpdateCrmContactRequest;
-import to.unified.unified_java_sdk.models.operations.UpdateCrmContactRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.UpdateCrmContactResponse;
-import to.unified.unified_java_sdk.models.operations.UpdateCrmDealRequest;
-import to.unified.unified_java_sdk.models.operations.UpdateCrmDealRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.UpdateCrmDealResponse;
-import to.unified.unified_java_sdk.models.operations.UpdateCrmEventRequest;
-import to.unified.unified_java_sdk.models.operations.UpdateCrmEventRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.UpdateCrmEventResponse;
-import to.unified.unified_java_sdk.models.operations.UpdateCrmLeadRequest;
-import to.unified.unified_java_sdk.models.operations.UpdateCrmLeadRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.UpdateCrmLeadResponse;
-import to.unified.unified_java_sdk.models.operations.UpdateCrmPipelineRequest;
-import to.unified.unified_java_sdk.models.operations.UpdateCrmPipelineRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.UpdateCrmPipelineResponse;
-import to.unified.unified_java_sdk.operations.CreateCrmCompany;
-import to.unified.unified_java_sdk.operations.CreateCrmContact;
-import to.unified.unified_java_sdk.operations.CreateCrmDeal;
-import to.unified.unified_java_sdk.operations.CreateCrmEvent;
-import to.unified.unified_java_sdk.operations.CreateCrmLead;
-import to.unified.unified_java_sdk.operations.CreateCrmPipeline;
-import to.unified.unified_java_sdk.operations.GetCrmCompany;
-import to.unified.unified_java_sdk.operations.GetCrmContact;
-import to.unified.unified_java_sdk.operations.GetCrmDeal;
-import to.unified.unified_java_sdk.operations.GetCrmEvent;
-import to.unified.unified_java_sdk.operations.GetCrmLead;
-import to.unified.unified_java_sdk.operations.GetCrmPipeline;
-import to.unified.unified_java_sdk.operations.ListCrmCompanies;
-import to.unified.unified_java_sdk.operations.ListCrmContacts;
-import to.unified.unified_java_sdk.operations.ListCrmDeals;
-import to.unified.unified_java_sdk.operations.ListCrmEvents;
-import to.unified.unified_java_sdk.operations.ListCrmLeads;
-import to.unified.unified_java_sdk.operations.ListCrmPipelines;
-import to.unified.unified_java_sdk.operations.PatchCrmCompany;
-import to.unified.unified_java_sdk.operations.PatchCrmContact;
-import to.unified.unified_java_sdk.operations.PatchCrmDeal;
-import to.unified.unified_java_sdk.operations.PatchCrmEvent;
-import to.unified.unified_java_sdk.operations.PatchCrmLead;
-import to.unified.unified_java_sdk.operations.PatchCrmPipeline;
-import to.unified.unified_java_sdk.operations.RemoveCrmCompany;
-import to.unified.unified_java_sdk.operations.RemoveCrmContact;
-import to.unified.unified_java_sdk.operations.RemoveCrmDeal;
-import to.unified.unified_java_sdk.operations.RemoveCrmEvent;
-import to.unified.unified_java_sdk.operations.RemoveCrmLead;
-import to.unified.unified_java_sdk.operations.RemoveCrmPipeline;
-import to.unified.unified_java_sdk.operations.UpdateCrmCompany;
-import to.unified.unified_java_sdk.operations.UpdateCrmContact;
-import to.unified.unified_java_sdk.operations.UpdateCrmDeal;
-import to.unified.unified_java_sdk.operations.UpdateCrmEvent;
-import to.unified.unified_java_sdk.operations.UpdateCrmLead;
-import to.unified.unified_java_sdk.operations.UpdateCrmPipeline;
+import to.unified.unified_java_sdk.models.operations.CreateCrmCompany2Request;
+import to.unified.unified_java_sdk.models.operations.CreateCrmCompany2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.CreateCrmCompany2Response;
+import to.unified.unified_java_sdk.models.operations.CreateCrmContact2Request;
+import to.unified.unified_java_sdk.models.operations.CreateCrmContact2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.CreateCrmContact2Response;
+import to.unified.unified_java_sdk.models.operations.CreateCrmDeal2Request;
+import to.unified.unified_java_sdk.models.operations.CreateCrmDeal2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.CreateCrmDeal2Response;
+import to.unified.unified_java_sdk.models.operations.CreateCrmEvent2Request;
+import to.unified.unified_java_sdk.models.operations.CreateCrmEvent2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.CreateCrmEvent2Response;
+import to.unified.unified_java_sdk.models.operations.CreateCrmLead2Request;
+import to.unified.unified_java_sdk.models.operations.CreateCrmLead2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.CreateCrmLead2Response;
+import to.unified.unified_java_sdk.models.operations.CreateCrmPipeline2Request;
+import to.unified.unified_java_sdk.models.operations.CreateCrmPipeline2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.CreateCrmPipeline2Response;
+import to.unified.unified_java_sdk.models.operations.GetCrmCompany2Request;
+import to.unified.unified_java_sdk.models.operations.GetCrmCompany2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetCrmCompany2Response;
+import to.unified.unified_java_sdk.models.operations.GetCrmContact2Request;
+import to.unified.unified_java_sdk.models.operations.GetCrmContact2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetCrmContact2Response;
+import to.unified.unified_java_sdk.models.operations.GetCrmDeal2Request;
+import to.unified.unified_java_sdk.models.operations.GetCrmDeal2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetCrmDeal2Response;
+import to.unified.unified_java_sdk.models.operations.GetCrmEvent2Request;
+import to.unified.unified_java_sdk.models.operations.GetCrmEvent2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetCrmEvent2Response;
+import to.unified.unified_java_sdk.models.operations.GetCrmLead2Request;
+import to.unified.unified_java_sdk.models.operations.GetCrmLead2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetCrmLead2Response;
+import to.unified.unified_java_sdk.models.operations.GetCrmPipeline2Request;
+import to.unified.unified_java_sdk.models.operations.GetCrmPipeline2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetCrmPipeline2Response;
+import to.unified.unified_java_sdk.models.operations.ListCrmCompanies2Request;
+import to.unified.unified_java_sdk.models.operations.ListCrmCompanies2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListCrmCompanies2Response;
+import to.unified.unified_java_sdk.models.operations.ListCrmContacts2Request;
+import to.unified.unified_java_sdk.models.operations.ListCrmContacts2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListCrmContacts2Response;
+import to.unified.unified_java_sdk.models.operations.ListCrmDeals2Request;
+import to.unified.unified_java_sdk.models.operations.ListCrmDeals2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListCrmDeals2Response;
+import to.unified.unified_java_sdk.models.operations.ListCrmEvents2Request;
+import to.unified.unified_java_sdk.models.operations.ListCrmEvents2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListCrmEvents2Response;
+import to.unified.unified_java_sdk.models.operations.ListCrmLeads2Request;
+import to.unified.unified_java_sdk.models.operations.ListCrmLeads2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListCrmLeads2Response;
+import to.unified.unified_java_sdk.models.operations.ListCrmPipelines2Request;
+import to.unified.unified_java_sdk.models.operations.ListCrmPipelines2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListCrmPipelines2Response;
+import to.unified.unified_java_sdk.models.operations.PatchCrmCompany2Request;
+import to.unified.unified_java_sdk.models.operations.PatchCrmCompany2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.PatchCrmCompany2Response;
+import to.unified.unified_java_sdk.models.operations.PatchCrmContact2Request;
+import to.unified.unified_java_sdk.models.operations.PatchCrmContact2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.PatchCrmContact2Response;
+import to.unified.unified_java_sdk.models.operations.PatchCrmDeal2Request;
+import to.unified.unified_java_sdk.models.operations.PatchCrmDeal2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.PatchCrmDeal2Response;
+import to.unified.unified_java_sdk.models.operations.PatchCrmEvent2Request;
+import to.unified.unified_java_sdk.models.operations.PatchCrmEvent2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.PatchCrmEvent2Response;
+import to.unified.unified_java_sdk.models.operations.PatchCrmLead2Request;
+import to.unified.unified_java_sdk.models.operations.PatchCrmLead2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.PatchCrmLead2Response;
+import to.unified.unified_java_sdk.models.operations.PatchCrmPipeline2Request;
+import to.unified.unified_java_sdk.models.operations.PatchCrmPipeline2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.PatchCrmPipeline2Response;
+import to.unified.unified_java_sdk.models.operations.RemoveCrmCompany2Request;
+import to.unified.unified_java_sdk.models.operations.RemoveCrmCompany2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.RemoveCrmCompany2Response;
+import to.unified.unified_java_sdk.models.operations.RemoveCrmContact2Request;
+import to.unified.unified_java_sdk.models.operations.RemoveCrmContact2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.RemoveCrmContact2Response;
+import to.unified.unified_java_sdk.models.operations.RemoveCrmDeal2Request;
+import to.unified.unified_java_sdk.models.operations.RemoveCrmDeal2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.RemoveCrmDeal2Response;
+import to.unified.unified_java_sdk.models.operations.RemoveCrmEvent2Request;
+import to.unified.unified_java_sdk.models.operations.RemoveCrmEvent2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.RemoveCrmEvent2Response;
+import to.unified.unified_java_sdk.models.operations.RemoveCrmLead2Request;
+import to.unified.unified_java_sdk.models.operations.RemoveCrmLead2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.RemoveCrmLead2Response;
+import to.unified.unified_java_sdk.models.operations.RemoveCrmPipeline2Request;
+import to.unified.unified_java_sdk.models.operations.RemoveCrmPipeline2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.RemoveCrmPipeline2Response;
+import to.unified.unified_java_sdk.models.operations.UpdateCrmCompany2Request;
+import to.unified.unified_java_sdk.models.operations.UpdateCrmCompany2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.UpdateCrmCompany2Response;
+import to.unified.unified_java_sdk.models.operations.UpdateCrmContact2Request;
+import to.unified.unified_java_sdk.models.operations.UpdateCrmContact2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.UpdateCrmContact2Response;
+import to.unified.unified_java_sdk.models.operations.UpdateCrmDeal2Request;
+import to.unified.unified_java_sdk.models.operations.UpdateCrmDeal2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.UpdateCrmDeal2Response;
+import to.unified.unified_java_sdk.models.operations.UpdateCrmEvent2Request;
+import to.unified.unified_java_sdk.models.operations.UpdateCrmEvent2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.UpdateCrmEvent2Response;
+import to.unified.unified_java_sdk.models.operations.UpdateCrmLead2Request;
+import to.unified.unified_java_sdk.models.operations.UpdateCrmLead2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.UpdateCrmLead2Response;
+import to.unified.unified_java_sdk.models.operations.UpdateCrmPipeline2Request;
+import to.unified.unified_java_sdk.models.operations.UpdateCrmPipeline2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.UpdateCrmPipeline2Response;
+import to.unified.unified_java_sdk.operations.CreateCrmCompany2;
+import to.unified.unified_java_sdk.operations.CreateCrmContact2;
+import to.unified.unified_java_sdk.operations.CreateCrmDeal2;
+import to.unified.unified_java_sdk.operations.CreateCrmEvent2;
+import to.unified.unified_java_sdk.operations.CreateCrmLead2;
+import to.unified.unified_java_sdk.operations.CreateCrmPipeline2;
+import to.unified.unified_java_sdk.operations.GetCrmCompany2;
+import to.unified.unified_java_sdk.operations.GetCrmContact2;
+import to.unified.unified_java_sdk.operations.GetCrmDeal2;
+import to.unified.unified_java_sdk.operations.GetCrmEvent2;
+import to.unified.unified_java_sdk.operations.GetCrmLead2;
+import to.unified.unified_java_sdk.operations.GetCrmPipeline2;
+import to.unified.unified_java_sdk.operations.ListCrmCompanies2;
+import to.unified.unified_java_sdk.operations.ListCrmContacts2;
+import to.unified.unified_java_sdk.operations.ListCrmDeals2;
+import to.unified.unified_java_sdk.operations.ListCrmEvents2;
+import to.unified.unified_java_sdk.operations.ListCrmLeads2;
+import to.unified.unified_java_sdk.operations.ListCrmPipelines2;
+import to.unified.unified_java_sdk.operations.PatchCrmCompany2;
+import to.unified.unified_java_sdk.operations.PatchCrmContact2;
+import to.unified.unified_java_sdk.operations.PatchCrmDeal2;
+import to.unified.unified_java_sdk.operations.PatchCrmEvent2;
+import to.unified.unified_java_sdk.operations.PatchCrmLead2;
+import to.unified.unified_java_sdk.operations.PatchCrmPipeline2;
+import to.unified.unified_java_sdk.operations.RemoveCrmCompany2;
+import to.unified.unified_java_sdk.operations.RemoveCrmContact2;
+import to.unified.unified_java_sdk.operations.RemoveCrmDeal2;
+import to.unified.unified_java_sdk.operations.RemoveCrmEvent2;
+import to.unified.unified_java_sdk.operations.RemoveCrmLead2;
+import to.unified.unified_java_sdk.operations.RemoveCrmPipeline2;
+import to.unified.unified_java_sdk.operations.UpdateCrmCompany2;
+import to.unified.unified_java_sdk.operations.UpdateCrmContact2;
+import to.unified.unified_java_sdk.operations.UpdateCrmDeal2;
+import to.unified.unified_java_sdk.operations.UpdateCrmEvent2;
+import to.unified.unified_java_sdk.operations.UpdateCrmLead2;
+import to.unified.unified_java_sdk.operations.UpdateCrmPipeline2;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -177,8 +177,8 @@ public class Crm {
      * 
      * @return The call builder
      */
-    public CreateCrmCompanyRequestBuilder createCrmCompany() {
-        return new CreateCrmCompanyRequestBuilder(sdkConfiguration);
+    public CreateCrmCompany2RequestBuilder createCrmCompany2() {
+        return new CreateCrmCompany2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -188,9 +188,9 @@ public class Crm {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateCrmCompanyResponse createCrmCompany(@Nonnull CreateCrmCompanyRequest request) {
-        RequestOperation<CreateCrmCompanyRequest, CreateCrmCompanyResponse> operation
-              = new CreateCrmCompany.Sync(sdkConfiguration, _headers);
+    public CreateCrmCompany2Response createCrmCompany2(@Nonnull CreateCrmCompany2Request request) {
+        RequestOperation<CreateCrmCompany2Request, CreateCrmCompany2Response> operation
+              = new CreateCrmCompany2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -199,8 +199,8 @@ public class Crm {
      * 
      * @return The call builder
      */
-    public CreateCrmContactRequestBuilder createCrmContact() {
-        return new CreateCrmContactRequestBuilder(sdkConfiguration);
+    public CreateCrmContact2RequestBuilder createCrmContact2() {
+        return new CreateCrmContact2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -210,9 +210,9 @@ public class Crm {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateCrmContactResponse createCrmContact(@Nonnull CreateCrmContactRequest request) {
-        RequestOperation<CreateCrmContactRequest, CreateCrmContactResponse> operation
-              = new CreateCrmContact.Sync(sdkConfiguration, _headers);
+    public CreateCrmContact2Response createCrmContact2(@Nonnull CreateCrmContact2Request request) {
+        RequestOperation<CreateCrmContact2Request, CreateCrmContact2Response> operation
+              = new CreateCrmContact2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -221,8 +221,8 @@ public class Crm {
      * 
      * @return The call builder
      */
-    public CreateCrmDealRequestBuilder createCrmDeal() {
-        return new CreateCrmDealRequestBuilder(sdkConfiguration);
+    public CreateCrmDeal2RequestBuilder createCrmDeal2() {
+        return new CreateCrmDeal2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -232,9 +232,9 @@ public class Crm {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateCrmDealResponse createCrmDeal(@Nonnull CreateCrmDealRequest request) {
-        RequestOperation<CreateCrmDealRequest, CreateCrmDealResponse> operation
-              = new CreateCrmDeal.Sync(sdkConfiguration, _headers);
+    public CreateCrmDeal2Response createCrmDeal2(@Nonnull CreateCrmDeal2Request request) {
+        RequestOperation<CreateCrmDeal2Request, CreateCrmDeal2Response> operation
+              = new CreateCrmDeal2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -243,8 +243,8 @@ public class Crm {
      * 
      * @return The call builder
      */
-    public CreateCrmEventRequestBuilder createCrmEvent() {
-        return new CreateCrmEventRequestBuilder(sdkConfiguration);
+    public CreateCrmEvent2RequestBuilder createCrmEvent2() {
+        return new CreateCrmEvent2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -254,9 +254,9 @@ public class Crm {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateCrmEventResponse createCrmEvent(@Nonnull CreateCrmEventRequest request) {
-        RequestOperation<CreateCrmEventRequest, CreateCrmEventResponse> operation
-              = new CreateCrmEvent.Sync(sdkConfiguration, _headers);
+    public CreateCrmEvent2Response createCrmEvent2(@Nonnull CreateCrmEvent2Request request) {
+        RequestOperation<CreateCrmEvent2Request, CreateCrmEvent2Response> operation
+              = new CreateCrmEvent2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -265,8 +265,8 @@ public class Crm {
      * 
      * @return The call builder
      */
-    public CreateCrmLeadRequestBuilder createCrmLead() {
-        return new CreateCrmLeadRequestBuilder(sdkConfiguration);
+    public CreateCrmLead2RequestBuilder createCrmLead2() {
+        return new CreateCrmLead2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -276,9 +276,9 @@ public class Crm {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateCrmLeadResponse createCrmLead(@Nonnull CreateCrmLeadRequest request) {
-        RequestOperation<CreateCrmLeadRequest, CreateCrmLeadResponse> operation
-              = new CreateCrmLead.Sync(sdkConfiguration, _headers);
+    public CreateCrmLead2Response createCrmLead2(@Nonnull CreateCrmLead2Request request) {
+        RequestOperation<CreateCrmLead2Request, CreateCrmLead2Response> operation
+              = new CreateCrmLead2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -287,8 +287,8 @@ public class Crm {
      * 
      * @return The call builder
      */
-    public CreateCrmPipelineRequestBuilder createCrmPipeline() {
-        return new CreateCrmPipelineRequestBuilder(sdkConfiguration);
+    public CreateCrmPipeline2RequestBuilder createCrmPipeline2() {
+        return new CreateCrmPipeline2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -298,9 +298,9 @@ public class Crm {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateCrmPipelineResponse createCrmPipeline(@Nonnull CreateCrmPipelineRequest request) {
-        RequestOperation<CreateCrmPipelineRequest, CreateCrmPipelineResponse> operation
-              = new CreateCrmPipeline.Sync(sdkConfiguration, _headers);
+    public CreateCrmPipeline2Response createCrmPipeline2(@Nonnull CreateCrmPipeline2Request request) {
+        RequestOperation<CreateCrmPipeline2Request, CreateCrmPipeline2Response> operation
+              = new CreateCrmPipeline2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -309,8 +309,8 @@ public class Crm {
      * 
      * @return The call builder
      */
-    public GetCrmCompanyRequestBuilder getCrmCompany() {
-        return new GetCrmCompanyRequestBuilder(sdkConfiguration);
+    public GetCrmCompany2RequestBuilder getCrmCompany2() {
+        return new GetCrmCompany2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -320,9 +320,9 @@ public class Crm {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetCrmCompanyResponse getCrmCompany(@Nonnull GetCrmCompanyRequest request) {
-        RequestOperation<GetCrmCompanyRequest, GetCrmCompanyResponse> operation
-              = new GetCrmCompany.Sync(sdkConfiguration, _headers);
+    public GetCrmCompany2Response getCrmCompany2(@Nonnull GetCrmCompany2Request request) {
+        RequestOperation<GetCrmCompany2Request, GetCrmCompany2Response> operation
+              = new GetCrmCompany2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -331,8 +331,8 @@ public class Crm {
      * 
      * @return The call builder
      */
-    public GetCrmContactRequestBuilder getCrmContact() {
-        return new GetCrmContactRequestBuilder(sdkConfiguration);
+    public GetCrmContact2RequestBuilder getCrmContact2() {
+        return new GetCrmContact2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -342,9 +342,9 @@ public class Crm {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetCrmContactResponse getCrmContact(@Nonnull GetCrmContactRequest request) {
-        RequestOperation<GetCrmContactRequest, GetCrmContactResponse> operation
-              = new GetCrmContact.Sync(sdkConfiguration, _headers);
+    public GetCrmContact2Response getCrmContact2(@Nonnull GetCrmContact2Request request) {
+        RequestOperation<GetCrmContact2Request, GetCrmContact2Response> operation
+              = new GetCrmContact2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -353,8 +353,8 @@ public class Crm {
      * 
      * @return The call builder
      */
-    public GetCrmDealRequestBuilder getCrmDeal() {
-        return new GetCrmDealRequestBuilder(sdkConfiguration);
+    public GetCrmDeal2RequestBuilder getCrmDeal2() {
+        return new GetCrmDeal2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -364,9 +364,9 @@ public class Crm {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetCrmDealResponse getCrmDeal(@Nonnull GetCrmDealRequest request) {
-        RequestOperation<GetCrmDealRequest, GetCrmDealResponse> operation
-              = new GetCrmDeal.Sync(sdkConfiguration, _headers);
+    public GetCrmDeal2Response getCrmDeal2(@Nonnull GetCrmDeal2Request request) {
+        RequestOperation<GetCrmDeal2Request, GetCrmDeal2Response> operation
+              = new GetCrmDeal2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -375,8 +375,8 @@ public class Crm {
      * 
      * @return The call builder
      */
-    public GetCrmEventRequestBuilder getCrmEvent() {
-        return new GetCrmEventRequestBuilder(sdkConfiguration);
+    public GetCrmEvent2RequestBuilder getCrmEvent2() {
+        return new GetCrmEvent2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -386,9 +386,9 @@ public class Crm {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetCrmEventResponse getCrmEvent(@Nonnull GetCrmEventRequest request) {
-        RequestOperation<GetCrmEventRequest, GetCrmEventResponse> operation
-              = new GetCrmEvent.Sync(sdkConfiguration, _headers);
+    public GetCrmEvent2Response getCrmEvent2(@Nonnull GetCrmEvent2Request request) {
+        RequestOperation<GetCrmEvent2Request, GetCrmEvent2Response> operation
+              = new GetCrmEvent2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -397,8 +397,8 @@ public class Crm {
      * 
      * @return The call builder
      */
-    public GetCrmLeadRequestBuilder getCrmLead() {
-        return new GetCrmLeadRequestBuilder(sdkConfiguration);
+    public GetCrmLead2RequestBuilder getCrmLead2() {
+        return new GetCrmLead2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -408,9 +408,9 @@ public class Crm {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetCrmLeadResponse getCrmLead(@Nonnull GetCrmLeadRequest request) {
-        RequestOperation<GetCrmLeadRequest, GetCrmLeadResponse> operation
-              = new GetCrmLead.Sync(sdkConfiguration, _headers);
+    public GetCrmLead2Response getCrmLead2(@Nonnull GetCrmLead2Request request) {
+        RequestOperation<GetCrmLead2Request, GetCrmLead2Response> operation
+              = new GetCrmLead2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -419,8 +419,8 @@ public class Crm {
      * 
      * @return The call builder
      */
-    public GetCrmPipelineRequestBuilder getCrmPipeline() {
-        return new GetCrmPipelineRequestBuilder(sdkConfiguration);
+    public GetCrmPipeline2RequestBuilder getCrmPipeline2() {
+        return new GetCrmPipeline2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -430,9 +430,9 @@ public class Crm {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetCrmPipelineResponse getCrmPipeline(@Nonnull GetCrmPipelineRequest request) {
-        RequestOperation<GetCrmPipelineRequest, GetCrmPipelineResponse> operation
-              = new GetCrmPipeline.Sync(sdkConfiguration, _headers);
+    public GetCrmPipeline2Response getCrmPipeline2(@Nonnull GetCrmPipeline2Request request) {
+        RequestOperation<GetCrmPipeline2Request, GetCrmPipeline2Response> operation
+              = new GetCrmPipeline2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -441,8 +441,8 @@ public class Crm {
      * 
      * @return The call builder
      */
-    public ListCrmCompaniesRequestBuilder listCrmCompanies() {
-        return new ListCrmCompaniesRequestBuilder(sdkConfiguration);
+    public ListCrmCompanies2RequestBuilder listCrmCompanies2() {
+        return new ListCrmCompanies2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -452,9 +452,9 @@ public class Crm {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListCrmCompaniesResponse listCrmCompanies(@Nonnull ListCrmCompaniesRequest request) {
-        RequestOperation<ListCrmCompaniesRequest, ListCrmCompaniesResponse> operation
-              = new ListCrmCompanies.Sync(sdkConfiguration, _headers);
+    public ListCrmCompanies2Response listCrmCompanies2(@Nonnull ListCrmCompanies2Request request) {
+        RequestOperation<ListCrmCompanies2Request, ListCrmCompanies2Response> operation
+              = new ListCrmCompanies2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -463,8 +463,8 @@ public class Crm {
      * 
      * @return The call builder
      */
-    public ListCrmContactsRequestBuilder listCrmContacts() {
-        return new ListCrmContactsRequestBuilder(sdkConfiguration);
+    public ListCrmContacts2RequestBuilder listCrmContacts2() {
+        return new ListCrmContacts2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -474,9 +474,9 @@ public class Crm {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListCrmContactsResponse listCrmContacts(@Nonnull ListCrmContactsRequest request) {
-        RequestOperation<ListCrmContactsRequest, ListCrmContactsResponse> operation
-              = new ListCrmContacts.Sync(sdkConfiguration, _headers);
+    public ListCrmContacts2Response listCrmContacts2(@Nonnull ListCrmContacts2Request request) {
+        RequestOperation<ListCrmContacts2Request, ListCrmContacts2Response> operation
+              = new ListCrmContacts2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -485,8 +485,8 @@ public class Crm {
      * 
      * @return The call builder
      */
-    public ListCrmDealsRequestBuilder listCrmDeals() {
-        return new ListCrmDealsRequestBuilder(sdkConfiguration);
+    public ListCrmDeals2RequestBuilder listCrmDeals2() {
+        return new ListCrmDeals2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -496,9 +496,9 @@ public class Crm {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListCrmDealsResponse listCrmDeals(@Nonnull ListCrmDealsRequest request) {
-        RequestOperation<ListCrmDealsRequest, ListCrmDealsResponse> operation
-              = new ListCrmDeals.Sync(sdkConfiguration, _headers);
+    public ListCrmDeals2Response listCrmDeals2(@Nonnull ListCrmDeals2Request request) {
+        RequestOperation<ListCrmDeals2Request, ListCrmDeals2Response> operation
+              = new ListCrmDeals2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -507,8 +507,8 @@ public class Crm {
      * 
      * @return The call builder
      */
-    public ListCrmEventsRequestBuilder listCrmEvents() {
-        return new ListCrmEventsRequestBuilder(sdkConfiguration);
+    public ListCrmEvents2RequestBuilder listCrmEvents2() {
+        return new ListCrmEvents2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -518,9 +518,9 @@ public class Crm {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListCrmEventsResponse listCrmEvents(@Nonnull ListCrmEventsRequest request) {
-        RequestOperation<ListCrmEventsRequest, ListCrmEventsResponse> operation
-              = new ListCrmEvents.Sync(sdkConfiguration, _headers);
+    public ListCrmEvents2Response listCrmEvents2(@Nonnull ListCrmEvents2Request request) {
+        RequestOperation<ListCrmEvents2Request, ListCrmEvents2Response> operation
+              = new ListCrmEvents2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -529,8 +529,8 @@ public class Crm {
      * 
      * @return The call builder
      */
-    public ListCrmLeadsRequestBuilder listCrmLeads() {
-        return new ListCrmLeadsRequestBuilder(sdkConfiguration);
+    public ListCrmLeads2RequestBuilder listCrmLeads2() {
+        return new ListCrmLeads2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -540,9 +540,9 @@ public class Crm {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListCrmLeadsResponse listCrmLeads(@Nonnull ListCrmLeadsRequest request) {
-        RequestOperation<ListCrmLeadsRequest, ListCrmLeadsResponse> operation
-              = new ListCrmLeads.Sync(sdkConfiguration, _headers);
+    public ListCrmLeads2Response listCrmLeads2(@Nonnull ListCrmLeads2Request request) {
+        RequestOperation<ListCrmLeads2Request, ListCrmLeads2Response> operation
+              = new ListCrmLeads2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -551,8 +551,8 @@ public class Crm {
      * 
      * @return The call builder
      */
-    public ListCrmPipelinesRequestBuilder listCrmPipelines() {
-        return new ListCrmPipelinesRequestBuilder(sdkConfiguration);
+    public ListCrmPipelines2RequestBuilder listCrmPipelines2() {
+        return new ListCrmPipelines2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -562,9 +562,9 @@ public class Crm {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListCrmPipelinesResponse listCrmPipelines(@Nonnull ListCrmPipelinesRequest request) {
-        RequestOperation<ListCrmPipelinesRequest, ListCrmPipelinesResponse> operation
-              = new ListCrmPipelines.Sync(sdkConfiguration, _headers);
+    public ListCrmPipelines2Response listCrmPipelines2(@Nonnull ListCrmPipelines2Request request) {
+        RequestOperation<ListCrmPipelines2Request, ListCrmPipelines2Response> operation
+              = new ListCrmPipelines2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -573,8 +573,8 @@ public class Crm {
      * 
      * @return The call builder
      */
-    public PatchCrmCompanyRequestBuilder patchCrmCompany() {
-        return new PatchCrmCompanyRequestBuilder(sdkConfiguration);
+    public PatchCrmCompany2RequestBuilder patchCrmCompany2() {
+        return new PatchCrmCompany2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -584,9 +584,9 @@ public class Crm {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchCrmCompanyResponse patchCrmCompany(@Nonnull PatchCrmCompanyRequest request) {
-        RequestOperation<PatchCrmCompanyRequest, PatchCrmCompanyResponse> operation
-              = new PatchCrmCompany.Sync(sdkConfiguration, _headers);
+    public PatchCrmCompany2Response patchCrmCompany2(@Nonnull PatchCrmCompany2Request request) {
+        RequestOperation<PatchCrmCompany2Request, PatchCrmCompany2Response> operation
+              = new PatchCrmCompany2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -595,8 +595,8 @@ public class Crm {
      * 
      * @return The call builder
      */
-    public PatchCrmContactRequestBuilder patchCrmContact() {
-        return new PatchCrmContactRequestBuilder(sdkConfiguration);
+    public PatchCrmContact2RequestBuilder patchCrmContact2() {
+        return new PatchCrmContact2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -606,9 +606,9 @@ public class Crm {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchCrmContactResponse patchCrmContact(@Nonnull PatchCrmContactRequest request) {
-        RequestOperation<PatchCrmContactRequest, PatchCrmContactResponse> operation
-              = new PatchCrmContact.Sync(sdkConfiguration, _headers);
+    public PatchCrmContact2Response patchCrmContact2(@Nonnull PatchCrmContact2Request request) {
+        RequestOperation<PatchCrmContact2Request, PatchCrmContact2Response> operation
+              = new PatchCrmContact2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -617,8 +617,8 @@ public class Crm {
      * 
      * @return The call builder
      */
-    public PatchCrmDealRequestBuilder patchCrmDeal() {
-        return new PatchCrmDealRequestBuilder(sdkConfiguration);
+    public PatchCrmDeal2RequestBuilder patchCrmDeal2() {
+        return new PatchCrmDeal2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -628,9 +628,9 @@ public class Crm {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchCrmDealResponse patchCrmDeal(@Nonnull PatchCrmDealRequest request) {
-        RequestOperation<PatchCrmDealRequest, PatchCrmDealResponse> operation
-              = new PatchCrmDeal.Sync(sdkConfiguration, _headers);
+    public PatchCrmDeal2Response patchCrmDeal2(@Nonnull PatchCrmDeal2Request request) {
+        RequestOperation<PatchCrmDeal2Request, PatchCrmDeal2Response> operation
+              = new PatchCrmDeal2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -639,8 +639,8 @@ public class Crm {
      * 
      * @return The call builder
      */
-    public PatchCrmEventRequestBuilder patchCrmEvent() {
-        return new PatchCrmEventRequestBuilder(sdkConfiguration);
+    public PatchCrmEvent2RequestBuilder patchCrmEvent2() {
+        return new PatchCrmEvent2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -650,9 +650,9 @@ public class Crm {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchCrmEventResponse patchCrmEvent(@Nonnull PatchCrmEventRequest request) {
-        RequestOperation<PatchCrmEventRequest, PatchCrmEventResponse> operation
-              = new PatchCrmEvent.Sync(sdkConfiguration, _headers);
+    public PatchCrmEvent2Response patchCrmEvent2(@Nonnull PatchCrmEvent2Request request) {
+        RequestOperation<PatchCrmEvent2Request, PatchCrmEvent2Response> operation
+              = new PatchCrmEvent2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -661,8 +661,8 @@ public class Crm {
      * 
      * @return The call builder
      */
-    public PatchCrmLeadRequestBuilder patchCrmLead() {
-        return new PatchCrmLeadRequestBuilder(sdkConfiguration);
+    public PatchCrmLead2RequestBuilder patchCrmLead2() {
+        return new PatchCrmLead2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -672,9 +672,9 @@ public class Crm {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchCrmLeadResponse patchCrmLead(@Nonnull PatchCrmLeadRequest request) {
-        RequestOperation<PatchCrmLeadRequest, PatchCrmLeadResponse> operation
-              = new PatchCrmLead.Sync(sdkConfiguration, _headers);
+    public PatchCrmLead2Response patchCrmLead2(@Nonnull PatchCrmLead2Request request) {
+        RequestOperation<PatchCrmLead2Request, PatchCrmLead2Response> operation
+              = new PatchCrmLead2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -683,8 +683,8 @@ public class Crm {
      * 
      * @return The call builder
      */
-    public PatchCrmPipelineRequestBuilder patchCrmPipeline() {
-        return new PatchCrmPipelineRequestBuilder(sdkConfiguration);
+    public PatchCrmPipeline2RequestBuilder patchCrmPipeline2() {
+        return new PatchCrmPipeline2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -694,9 +694,9 @@ public class Crm {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchCrmPipelineResponse patchCrmPipeline(@Nonnull PatchCrmPipelineRequest request) {
-        RequestOperation<PatchCrmPipelineRequest, PatchCrmPipelineResponse> operation
-              = new PatchCrmPipeline.Sync(sdkConfiguration, _headers);
+    public PatchCrmPipeline2Response patchCrmPipeline2(@Nonnull PatchCrmPipeline2Request request) {
+        RequestOperation<PatchCrmPipeline2Request, PatchCrmPipeline2Response> operation
+              = new PatchCrmPipeline2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -705,8 +705,8 @@ public class Crm {
      * 
      * @return The call builder
      */
-    public RemoveCrmCompanyRequestBuilder removeCrmCompany() {
-        return new RemoveCrmCompanyRequestBuilder(sdkConfiguration);
+    public RemoveCrmCompany2RequestBuilder removeCrmCompany2() {
+        return new RemoveCrmCompany2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -716,9 +716,9 @@ public class Crm {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveCrmCompanyResponse removeCrmCompany(@Nonnull RemoveCrmCompanyRequest request) {
-        RequestOperation<RemoveCrmCompanyRequest, RemoveCrmCompanyResponse> operation
-              = new RemoveCrmCompany.Sync(sdkConfiguration, _headers);
+    public RemoveCrmCompany2Response removeCrmCompany2(@Nonnull RemoveCrmCompany2Request request) {
+        RequestOperation<RemoveCrmCompany2Request, RemoveCrmCompany2Response> operation
+              = new RemoveCrmCompany2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -727,8 +727,8 @@ public class Crm {
      * 
      * @return The call builder
      */
-    public RemoveCrmContactRequestBuilder removeCrmContact() {
-        return new RemoveCrmContactRequestBuilder(sdkConfiguration);
+    public RemoveCrmContact2RequestBuilder removeCrmContact2() {
+        return new RemoveCrmContact2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -738,9 +738,9 @@ public class Crm {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveCrmContactResponse removeCrmContact(@Nonnull RemoveCrmContactRequest request) {
-        RequestOperation<RemoveCrmContactRequest, RemoveCrmContactResponse> operation
-              = new RemoveCrmContact.Sync(sdkConfiguration, _headers);
+    public RemoveCrmContact2Response removeCrmContact2(@Nonnull RemoveCrmContact2Request request) {
+        RequestOperation<RemoveCrmContact2Request, RemoveCrmContact2Response> operation
+              = new RemoveCrmContact2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -749,8 +749,8 @@ public class Crm {
      * 
      * @return The call builder
      */
-    public RemoveCrmDealRequestBuilder removeCrmDeal() {
-        return new RemoveCrmDealRequestBuilder(sdkConfiguration);
+    public RemoveCrmDeal2RequestBuilder removeCrmDeal2() {
+        return new RemoveCrmDeal2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -760,9 +760,9 @@ public class Crm {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveCrmDealResponse removeCrmDeal(@Nonnull RemoveCrmDealRequest request) {
-        RequestOperation<RemoveCrmDealRequest, RemoveCrmDealResponse> operation
-              = new RemoveCrmDeal.Sync(sdkConfiguration, _headers);
+    public RemoveCrmDeal2Response removeCrmDeal2(@Nonnull RemoveCrmDeal2Request request) {
+        RequestOperation<RemoveCrmDeal2Request, RemoveCrmDeal2Response> operation
+              = new RemoveCrmDeal2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -771,8 +771,8 @@ public class Crm {
      * 
      * @return The call builder
      */
-    public RemoveCrmEventRequestBuilder removeCrmEvent() {
-        return new RemoveCrmEventRequestBuilder(sdkConfiguration);
+    public RemoveCrmEvent2RequestBuilder removeCrmEvent2() {
+        return new RemoveCrmEvent2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -782,9 +782,9 @@ public class Crm {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveCrmEventResponse removeCrmEvent(@Nonnull RemoveCrmEventRequest request) {
-        RequestOperation<RemoveCrmEventRequest, RemoveCrmEventResponse> operation
-              = new RemoveCrmEvent.Sync(sdkConfiguration, _headers);
+    public RemoveCrmEvent2Response removeCrmEvent2(@Nonnull RemoveCrmEvent2Request request) {
+        RequestOperation<RemoveCrmEvent2Request, RemoveCrmEvent2Response> operation
+              = new RemoveCrmEvent2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -793,8 +793,8 @@ public class Crm {
      * 
      * @return The call builder
      */
-    public RemoveCrmLeadRequestBuilder removeCrmLead() {
-        return new RemoveCrmLeadRequestBuilder(sdkConfiguration);
+    public RemoveCrmLead2RequestBuilder removeCrmLead2() {
+        return new RemoveCrmLead2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -804,9 +804,9 @@ public class Crm {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveCrmLeadResponse removeCrmLead(@Nonnull RemoveCrmLeadRequest request) {
-        RequestOperation<RemoveCrmLeadRequest, RemoveCrmLeadResponse> operation
-              = new RemoveCrmLead.Sync(sdkConfiguration, _headers);
+    public RemoveCrmLead2Response removeCrmLead2(@Nonnull RemoveCrmLead2Request request) {
+        RequestOperation<RemoveCrmLead2Request, RemoveCrmLead2Response> operation
+              = new RemoveCrmLead2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -815,8 +815,8 @@ public class Crm {
      * 
      * @return The call builder
      */
-    public RemoveCrmPipelineRequestBuilder removeCrmPipeline() {
-        return new RemoveCrmPipelineRequestBuilder(sdkConfiguration);
+    public RemoveCrmPipeline2RequestBuilder removeCrmPipeline2() {
+        return new RemoveCrmPipeline2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -826,9 +826,9 @@ public class Crm {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveCrmPipelineResponse removeCrmPipeline(@Nonnull RemoveCrmPipelineRequest request) {
-        RequestOperation<RemoveCrmPipelineRequest, RemoveCrmPipelineResponse> operation
-              = new RemoveCrmPipeline.Sync(sdkConfiguration, _headers);
+    public RemoveCrmPipeline2Response removeCrmPipeline2(@Nonnull RemoveCrmPipeline2Request request) {
+        RequestOperation<RemoveCrmPipeline2Request, RemoveCrmPipeline2Response> operation
+              = new RemoveCrmPipeline2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -837,8 +837,8 @@ public class Crm {
      * 
      * @return The call builder
      */
-    public UpdateCrmCompanyRequestBuilder updateCrmCompany() {
-        return new UpdateCrmCompanyRequestBuilder(sdkConfiguration);
+    public UpdateCrmCompany2RequestBuilder updateCrmCompany2() {
+        return new UpdateCrmCompany2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -848,9 +848,9 @@ public class Crm {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateCrmCompanyResponse updateCrmCompany(@Nonnull UpdateCrmCompanyRequest request) {
-        RequestOperation<UpdateCrmCompanyRequest, UpdateCrmCompanyResponse> operation
-              = new UpdateCrmCompany.Sync(sdkConfiguration, _headers);
+    public UpdateCrmCompany2Response updateCrmCompany2(@Nonnull UpdateCrmCompany2Request request) {
+        RequestOperation<UpdateCrmCompany2Request, UpdateCrmCompany2Response> operation
+              = new UpdateCrmCompany2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -859,8 +859,8 @@ public class Crm {
      * 
      * @return The call builder
      */
-    public UpdateCrmContactRequestBuilder updateCrmContact() {
-        return new UpdateCrmContactRequestBuilder(sdkConfiguration);
+    public UpdateCrmContact2RequestBuilder updateCrmContact2() {
+        return new UpdateCrmContact2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -870,9 +870,9 @@ public class Crm {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateCrmContactResponse updateCrmContact(@Nonnull UpdateCrmContactRequest request) {
-        RequestOperation<UpdateCrmContactRequest, UpdateCrmContactResponse> operation
-              = new UpdateCrmContact.Sync(sdkConfiguration, _headers);
+    public UpdateCrmContact2Response updateCrmContact2(@Nonnull UpdateCrmContact2Request request) {
+        RequestOperation<UpdateCrmContact2Request, UpdateCrmContact2Response> operation
+              = new UpdateCrmContact2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -881,8 +881,8 @@ public class Crm {
      * 
      * @return The call builder
      */
-    public UpdateCrmDealRequestBuilder updateCrmDeal() {
-        return new UpdateCrmDealRequestBuilder(sdkConfiguration);
+    public UpdateCrmDeal2RequestBuilder updateCrmDeal2() {
+        return new UpdateCrmDeal2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -892,9 +892,9 @@ public class Crm {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateCrmDealResponse updateCrmDeal(@Nonnull UpdateCrmDealRequest request) {
-        RequestOperation<UpdateCrmDealRequest, UpdateCrmDealResponse> operation
-              = new UpdateCrmDeal.Sync(sdkConfiguration, _headers);
+    public UpdateCrmDeal2Response updateCrmDeal2(@Nonnull UpdateCrmDeal2Request request) {
+        RequestOperation<UpdateCrmDeal2Request, UpdateCrmDeal2Response> operation
+              = new UpdateCrmDeal2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -903,8 +903,8 @@ public class Crm {
      * 
      * @return The call builder
      */
-    public UpdateCrmEventRequestBuilder updateCrmEvent() {
-        return new UpdateCrmEventRequestBuilder(sdkConfiguration);
+    public UpdateCrmEvent2RequestBuilder updateCrmEvent2() {
+        return new UpdateCrmEvent2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -914,9 +914,9 @@ public class Crm {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateCrmEventResponse updateCrmEvent(@Nonnull UpdateCrmEventRequest request) {
-        RequestOperation<UpdateCrmEventRequest, UpdateCrmEventResponse> operation
-              = new UpdateCrmEvent.Sync(sdkConfiguration, _headers);
+    public UpdateCrmEvent2Response updateCrmEvent2(@Nonnull UpdateCrmEvent2Request request) {
+        RequestOperation<UpdateCrmEvent2Request, UpdateCrmEvent2Response> operation
+              = new UpdateCrmEvent2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -925,8 +925,8 @@ public class Crm {
      * 
      * @return The call builder
      */
-    public UpdateCrmLeadRequestBuilder updateCrmLead() {
-        return new UpdateCrmLeadRequestBuilder(sdkConfiguration);
+    public UpdateCrmLead2RequestBuilder updateCrmLead2() {
+        return new UpdateCrmLead2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -936,9 +936,9 @@ public class Crm {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateCrmLeadResponse updateCrmLead(@Nonnull UpdateCrmLeadRequest request) {
-        RequestOperation<UpdateCrmLeadRequest, UpdateCrmLeadResponse> operation
-              = new UpdateCrmLead.Sync(sdkConfiguration, _headers);
+    public UpdateCrmLead2Response updateCrmLead2(@Nonnull UpdateCrmLead2Request request) {
+        RequestOperation<UpdateCrmLead2Request, UpdateCrmLead2Response> operation
+              = new UpdateCrmLead2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -947,8 +947,8 @@ public class Crm {
      * 
      * @return The call builder
      */
-    public UpdateCrmPipelineRequestBuilder updateCrmPipeline() {
-        return new UpdateCrmPipelineRequestBuilder(sdkConfiguration);
+    public UpdateCrmPipeline2RequestBuilder updateCrmPipeline2() {
+        return new UpdateCrmPipeline2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -958,9 +958,9 @@ public class Crm {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateCrmPipelineResponse updateCrmPipeline(@Nonnull UpdateCrmPipelineRequest request) {
-        RequestOperation<UpdateCrmPipelineRequest, UpdateCrmPipelineResponse> operation
-              = new UpdateCrmPipeline.Sync(sdkConfiguration, _headers);
+    public UpdateCrmPipeline2Response updateCrmPipeline2(@Nonnull UpdateCrmPipeline2Request request) {
+        RequestOperation<UpdateCrmPipeline2Request, UpdateCrmPipeline2Response> operation
+              = new UpdateCrmPipeline2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

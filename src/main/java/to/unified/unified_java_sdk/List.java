@@ -6,30 +6,30 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
-import to.unified.unified_java_sdk.models.operations.CreateMartechListRequest;
-import to.unified.unified_java_sdk.models.operations.CreateMartechListRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.CreateMartechListResponse;
-import to.unified.unified_java_sdk.models.operations.GetMartechListRequest;
-import to.unified.unified_java_sdk.models.operations.GetMartechListRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.GetMartechListResponse;
-import to.unified.unified_java_sdk.models.operations.ListMartechListsRequest;
-import to.unified.unified_java_sdk.models.operations.ListMartechListsRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.ListMartechListsResponse;
-import to.unified.unified_java_sdk.models.operations.PatchMartechListRequest;
-import to.unified.unified_java_sdk.models.operations.PatchMartechListRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.PatchMartechListResponse;
-import to.unified.unified_java_sdk.models.operations.RemoveMartechListRequest;
-import to.unified.unified_java_sdk.models.operations.RemoveMartechListRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.RemoveMartechListResponse;
-import to.unified.unified_java_sdk.models.operations.UpdateMartechListRequest;
-import to.unified.unified_java_sdk.models.operations.UpdateMartechListRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.UpdateMartechListResponse;
-import to.unified.unified_java_sdk.operations.CreateMartechList;
-import to.unified.unified_java_sdk.operations.GetMartechList;
-import to.unified.unified_java_sdk.operations.ListMartechLists;
-import to.unified.unified_java_sdk.operations.PatchMartechList;
-import to.unified.unified_java_sdk.operations.RemoveMartechList;
-import to.unified.unified_java_sdk.operations.UpdateMartechList;
+import to.unified.unified_java_sdk.models.operations.CreateMartechList2Request;
+import to.unified.unified_java_sdk.models.operations.CreateMartechList2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.CreateMartechList2Response;
+import to.unified.unified_java_sdk.models.operations.GetMartechList2Request;
+import to.unified.unified_java_sdk.models.operations.GetMartechList2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetMartechList2Response;
+import to.unified.unified_java_sdk.models.operations.ListMartechLists2Request;
+import to.unified.unified_java_sdk.models.operations.ListMartechLists2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListMartechLists2Response;
+import to.unified.unified_java_sdk.models.operations.PatchMartechList2Request;
+import to.unified.unified_java_sdk.models.operations.PatchMartechList2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.PatchMartechList2Response;
+import to.unified.unified_java_sdk.models.operations.RemoveMartechList2Request;
+import to.unified.unified_java_sdk.models.operations.RemoveMartechList2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.RemoveMartechList2Response;
+import to.unified.unified_java_sdk.models.operations.UpdateMartechList2Request;
+import to.unified.unified_java_sdk.models.operations.UpdateMartechList2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.UpdateMartechList2Response;
+import to.unified.unified_java_sdk.operations.CreateMartechList2;
+import to.unified.unified_java_sdk.operations.GetMartechList2;
+import to.unified.unified_java_sdk.operations.ListMartechLists2;
+import to.unified.unified_java_sdk.operations.PatchMartechList2;
+import to.unified.unified_java_sdk.operations.RemoveMartechList2;
+import to.unified.unified_java_sdk.operations.UpdateMartechList2;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -57,8 +57,8 @@ public class List {
      * 
      * @return The call builder
      */
-    public CreateMartechListRequestBuilder createMartechList() {
-        return new CreateMartechListRequestBuilder(sdkConfiguration);
+    public CreateMartechList2RequestBuilder createMartechList2() {
+        return new CreateMartechList2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -68,9 +68,9 @@ public class List {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateMartechListResponse createMartechList(@Nonnull CreateMartechListRequest request) {
-        RequestOperation<CreateMartechListRequest, CreateMartechListResponse> operation
-              = new CreateMartechList.Sync(sdkConfiguration, _headers);
+    public CreateMartechList2Response createMartechList2(@Nonnull CreateMartechList2Request request) {
+        RequestOperation<CreateMartechList2Request, CreateMartechList2Response> operation
+              = new CreateMartechList2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -79,8 +79,8 @@ public class List {
      * 
      * @return The call builder
      */
-    public GetMartechListRequestBuilder getMartechList() {
-        return new GetMartechListRequestBuilder(sdkConfiguration);
+    public GetMartechList2RequestBuilder getMartechList2() {
+        return new GetMartechList2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -90,9 +90,9 @@ public class List {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetMartechListResponse getMartechList(@Nonnull GetMartechListRequest request) {
-        RequestOperation<GetMartechListRequest, GetMartechListResponse> operation
-              = new GetMartechList.Sync(sdkConfiguration, _headers);
+    public GetMartechList2Response getMartechList2(@Nonnull GetMartechList2Request request) {
+        RequestOperation<GetMartechList2Request, GetMartechList2Response> operation
+              = new GetMartechList2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -101,8 +101,8 @@ public class List {
      * 
      * @return The call builder
      */
-    public ListMartechListsRequestBuilder listMartechLists() {
-        return new ListMartechListsRequestBuilder(sdkConfiguration);
+    public ListMartechLists2RequestBuilder listMartechLists2() {
+        return new ListMartechLists2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -112,9 +112,9 @@ public class List {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListMartechListsResponse listMartechLists(@Nonnull ListMartechListsRequest request) {
-        RequestOperation<ListMartechListsRequest, ListMartechListsResponse> operation
-              = new ListMartechLists.Sync(sdkConfiguration, _headers);
+    public ListMartechLists2Response listMartechLists2(@Nonnull ListMartechLists2Request request) {
+        RequestOperation<ListMartechLists2Request, ListMartechLists2Response> operation
+              = new ListMartechLists2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -123,8 +123,8 @@ public class List {
      * 
      * @return The call builder
      */
-    public PatchMartechListRequestBuilder patchMartechList() {
-        return new PatchMartechListRequestBuilder(sdkConfiguration);
+    public PatchMartechList2RequestBuilder patchMartechList2() {
+        return new PatchMartechList2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -134,9 +134,9 @@ public class List {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchMartechListResponse patchMartechList(@Nonnull PatchMartechListRequest request) {
-        RequestOperation<PatchMartechListRequest, PatchMartechListResponse> operation
-              = new PatchMartechList.Sync(sdkConfiguration, _headers);
+    public PatchMartechList2Response patchMartechList2(@Nonnull PatchMartechList2Request request) {
+        RequestOperation<PatchMartechList2Request, PatchMartechList2Response> operation
+              = new PatchMartechList2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -145,8 +145,8 @@ public class List {
      * 
      * @return The call builder
      */
-    public RemoveMartechListRequestBuilder removeMartechList() {
-        return new RemoveMartechListRequestBuilder(sdkConfiguration);
+    public RemoveMartechList2RequestBuilder removeMartechList2() {
+        return new RemoveMartechList2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -156,9 +156,9 @@ public class List {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveMartechListResponse removeMartechList(@Nonnull RemoveMartechListRequest request) {
-        RequestOperation<RemoveMartechListRequest, RemoveMartechListResponse> operation
-              = new RemoveMartechList.Sync(sdkConfiguration, _headers);
+    public RemoveMartechList2Response removeMartechList2(@Nonnull RemoveMartechList2Request request) {
+        RequestOperation<RemoveMartechList2Request, RemoveMartechList2Response> operation
+              = new RemoveMartechList2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -167,8 +167,8 @@ public class List {
      * 
      * @return The call builder
      */
-    public UpdateMartechListRequestBuilder updateMartechList() {
-        return new UpdateMartechListRequestBuilder(sdkConfiguration);
+    public UpdateMartechList2RequestBuilder updateMartechList2() {
+        return new UpdateMartechList2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -178,9 +178,9 @@ public class List {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateMartechListResponse updateMartechList(@Nonnull UpdateMartechListRequest request) {
-        RequestOperation<UpdateMartechListRequest, UpdateMartechListResponse> operation
-              = new UpdateMartechList.Sync(sdkConfiguration, _headers);
+    public UpdateMartechList2Response updateMartechList2(@Nonnull UpdateMartechList2Request request) {
+        RequestOperation<UpdateMartechList2Request, UpdateMartechList2Response> operation
+              = new UpdateMartechList2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

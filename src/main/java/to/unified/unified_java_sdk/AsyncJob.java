@@ -7,30 +7,30 @@ import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOper
 
 import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
-import to.unified.unified_java_sdk.models.operations.CreateAtsJobRequest;
-import to.unified.unified_java_sdk.models.operations.GetAtsJobRequest;
-import to.unified.unified_java_sdk.models.operations.ListAtsJobsRequest;
-import to.unified.unified_java_sdk.models.operations.PatchAtsJobRequest;
-import to.unified.unified_java_sdk.models.operations.RemoveAtsJobRequest;
-import to.unified.unified_java_sdk.models.operations.UpdateAtsJobRequest;
-import to.unified.unified_java_sdk.models.operations.async.CreateAtsJobRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.CreateAtsJobResponse;
-import to.unified.unified_java_sdk.models.operations.async.GetAtsJobRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.GetAtsJobResponse;
-import to.unified.unified_java_sdk.models.operations.async.ListAtsJobsRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.ListAtsJobsResponse;
-import to.unified.unified_java_sdk.models.operations.async.PatchAtsJobRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.PatchAtsJobResponse;
-import to.unified.unified_java_sdk.models.operations.async.RemoveAtsJobRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.RemoveAtsJobResponse;
-import to.unified.unified_java_sdk.models.operations.async.UpdateAtsJobRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.UpdateAtsJobResponse;
-import to.unified.unified_java_sdk.operations.CreateAtsJob;
-import to.unified.unified_java_sdk.operations.GetAtsJob;
-import to.unified.unified_java_sdk.operations.ListAtsJobs;
-import to.unified.unified_java_sdk.operations.PatchAtsJob;
-import to.unified.unified_java_sdk.operations.RemoveAtsJob;
-import to.unified.unified_java_sdk.operations.UpdateAtsJob;
+import to.unified.unified_java_sdk.models.operations.CreateAtsJob2Request;
+import to.unified.unified_java_sdk.models.operations.GetAtsJob2Request;
+import to.unified.unified_java_sdk.models.operations.ListAtsJobs2Request;
+import to.unified.unified_java_sdk.models.operations.PatchAtsJob2Request;
+import to.unified.unified_java_sdk.models.operations.RemoveAtsJob2Request;
+import to.unified.unified_java_sdk.models.operations.UpdateAtsJob2Request;
+import to.unified.unified_java_sdk.models.operations.async.CreateAtsJob2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.CreateAtsJob2Response;
+import to.unified.unified_java_sdk.models.operations.async.GetAtsJob2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetAtsJob2Response;
+import to.unified.unified_java_sdk.models.operations.async.ListAtsJobs2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListAtsJobs2Response;
+import to.unified.unified_java_sdk.models.operations.async.PatchAtsJob2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.PatchAtsJob2Response;
+import to.unified.unified_java_sdk.models.operations.async.RemoveAtsJob2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.RemoveAtsJob2Response;
+import to.unified.unified_java_sdk.models.operations.async.UpdateAtsJob2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.UpdateAtsJob2Response;
+import to.unified.unified_java_sdk.operations.CreateAtsJob2;
+import to.unified.unified_java_sdk.operations.GetAtsJob2;
+import to.unified.unified_java_sdk.operations.ListAtsJobs2;
+import to.unified.unified_java_sdk.operations.PatchAtsJob2;
+import to.unified.unified_java_sdk.operations.RemoveAtsJob2;
+import to.unified.unified_java_sdk.operations.UpdateAtsJob2;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -59,19 +59,19 @@ public class AsyncJob {
      * 
      * @return The async call builder
      */
-    public CreateAtsJobRequestBuilder createAtsJob() {
-        return new CreateAtsJobRequestBuilder(sdkConfiguration);
+    public CreateAtsJob2RequestBuilder createAtsJob2() {
+        return new CreateAtsJob2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Create a job
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<CreateAtsJobResponse>} - The async response
+     * @return {@code CompletableFuture<CreateAtsJob2Response>} - The async response
      */
-    public CompletableFuture<CreateAtsJobResponse> createAtsJob(@Nonnull CreateAtsJobRequest request) {
-        AsyncRequestOperation<CreateAtsJobRequest, CreateAtsJobResponse> operation
-              = new CreateAtsJob.Async(sdkConfiguration, _headers);
+    public CompletableFuture<CreateAtsJob2Response> createAtsJob2(@Nonnull CreateAtsJob2Request request) {
+        AsyncRequestOperation<CreateAtsJob2Request, CreateAtsJob2Response> operation
+              = new CreateAtsJob2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -82,19 +82,19 @@ public class AsyncJob {
      * 
      * @return The async call builder
      */
-    public GetAtsJobRequestBuilder getAtsJob() {
-        return new GetAtsJobRequestBuilder(sdkConfiguration);
+    public GetAtsJob2RequestBuilder getAtsJob2() {
+        return new GetAtsJob2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Retrieve a job
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<GetAtsJobResponse>} - The async response
+     * @return {@code CompletableFuture<GetAtsJob2Response>} - The async response
      */
-    public CompletableFuture<GetAtsJobResponse> getAtsJob(@Nonnull GetAtsJobRequest request) {
-        AsyncRequestOperation<GetAtsJobRequest, GetAtsJobResponse> operation
-              = new GetAtsJob.Async(sdkConfiguration, _headers);
+    public CompletableFuture<GetAtsJob2Response> getAtsJob2(@Nonnull GetAtsJob2Request request) {
+        AsyncRequestOperation<GetAtsJob2Request, GetAtsJob2Response> operation
+              = new GetAtsJob2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -105,19 +105,19 @@ public class AsyncJob {
      * 
      * @return The async call builder
      */
-    public ListAtsJobsRequestBuilder listAtsJobs() {
-        return new ListAtsJobsRequestBuilder(sdkConfiguration);
+    public ListAtsJobs2RequestBuilder listAtsJobs2() {
+        return new ListAtsJobs2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * List all jobs
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<ListAtsJobsResponse>} - The async response
+     * @return {@code CompletableFuture<ListAtsJobs2Response>} - The async response
      */
-    public CompletableFuture<ListAtsJobsResponse> listAtsJobs(@Nonnull ListAtsJobsRequest request) {
-        AsyncRequestOperation<ListAtsJobsRequest, ListAtsJobsResponse> operation
-              = new ListAtsJobs.Async(sdkConfiguration, _headers);
+    public CompletableFuture<ListAtsJobs2Response> listAtsJobs2(@Nonnull ListAtsJobs2Request request) {
+        AsyncRequestOperation<ListAtsJobs2Request, ListAtsJobs2Response> operation
+              = new ListAtsJobs2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -128,19 +128,19 @@ public class AsyncJob {
      * 
      * @return The async call builder
      */
-    public PatchAtsJobRequestBuilder patchAtsJob() {
-        return new PatchAtsJobRequestBuilder(sdkConfiguration);
+    public PatchAtsJob2RequestBuilder patchAtsJob2() {
+        return new PatchAtsJob2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update a job
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<PatchAtsJobResponse>} - The async response
+     * @return {@code CompletableFuture<PatchAtsJob2Response>} - The async response
      */
-    public CompletableFuture<PatchAtsJobResponse> patchAtsJob(@Nonnull PatchAtsJobRequest request) {
-        AsyncRequestOperation<PatchAtsJobRequest, PatchAtsJobResponse> operation
-              = new PatchAtsJob.Async(sdkConfiguration, _headers);
+    public CompletableFuture<PatchAtsJob2Response> patchAtsJob2(@Nonnull PatchAtsJob2Request request) {
+        AsyncRequestOperation<PatchAtsJob2Request, PatchAtsJob2Response> operation
+              = new PatchAtsJob2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -151,19 +151,19 @@ public class AsyncJob {
      * 
      * @return The async call builder
      */
-    public RemoveAtsJobRequestBuilder removeAtsJob() {
-        return new RemoveAtsJobRequestBuilder(sdkConfiguration);
+    public RemoveAtsJob2RequestBuilder removeAtsJob2() {
+        return new RemoveAtsJob2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Remove a job
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<RemoveAtsJobResponse>} - The async response
+     * @return {@code CompletableFuture<RemoveAtsJob2Response>} - The async response
      */
-    public CompletableFuture<RemoveAtsJobResponse> removeAtsJob(@Nonnull RemoveAtsJobRequest request) {
-        AsyncRequestOperation<RemoveAtsJobRequest, RemoveAtsJobResponse> operation
-              = new RemoveAtsJob.Async(sdkConfiguration, _headers);
+    public CompletableFuture<RemoveAtsJob2Response> removeAtsJob2(@Nonnull RemoveAtsJob2Request request) {
+        AsyncRequestOperation<RemoveAtsJob2Request, RemoveAtsJob2Response> operation
+              = new RemoveAtsJob2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -174,19 +174,19 @@ public class AsyncJob {
      * 
      * @return The async call builder
      */
-    public UpdateAtsJobRequestBuilder updateAtsJob() {
-        return new UpdateAtsJobRequestBuilder(sdkConfiguration);
+    public UpdateAtsJob2RequestBuilder updateAtsJob2() {
+        return new UpdateAtsJob2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update a job
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<UpdateAtsJobResponse>} - The async response
+     * @return {@code CompletableFuture<UpdateAtsJob2Response>} - The async response
      */
-    public CompletableFuture<UpdateAtsJobResponse> updateAtsJob(@Nonnull UpdateAtsJobRequest request) {
-        AsyncRequestOperation<UpdateAtsJobRequest, UpdateAtsJobResponse> operation
-              = new UpdateAtsJob.Async(sdkConfiguration, _headers);
+    public CompletableFuture<UpdateAtsJob2Response> updateAtsJob2(@Nonnull UpdateAtsJob2Request request) {
+        AsyncRequestOperation<UpdateAtsJob2Request, UpdateAtsJob2Response> operation
+              = new UpdateAtsJob2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

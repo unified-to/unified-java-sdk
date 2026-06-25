@@ -6,78 +6,78 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
-import to.unified.unified_java_sdk.models.operations.CreateKmsCommentRequest;
-import to.unified.unified_java_sdk.models.operations.CreateKmsCommentRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.CreateKmsCommentResponse;
-import to.unified.unified_java_sdk.models.operations.CreateKmsPageRequest;
-import to.unified.unified_java_sdk.models.operations.CreateKmsPageRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.CreateKmsPageResponse;
-import to.unified.unified_java_sdk.models.operations.CreateKmsSpaceRequest;
-import to.unified.unified_java_sdk.models.operations.CreateKmsSpaceRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.CreateKmsSpaceResponse;
-import to.unified.unified_java_sdk.models.operations.GetKmsCommentRequest;
-import to.unified.unified_java_sdk.models.operations.GetKmsCommentRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.GetKmsCommentResponse;
-import to.unified.unified_java_sdk.models.operations.GetKmsPageRequest;
-import to.unified.unified_java_sdk.models.operations.GetKmsPageRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.GetKmsPageResponse;
-import to.unified.unified_java_sdk.models.operations.GetKmsSpaceRequest;
-import to.unified.unified_java_sdk.models.operations.GetKmsSpaceRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.GetKmsSpaceResponse;
-import to.unified.unified_java_sdk.models.operations.ListKmsCommentsRequest;
-import to.unified.unified_java_sdk.models.operations.ListKmsCommentsRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.ListKmsCommentsResponse;
-import to.unified.unified_java_sdk.models.operations.ListKmsPagesRequest;
-import to.unified.unified_java_sdk.models.operations.ListKmsPagesRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.ListKmsPagesResponse;
-import to.unified.unified_java_sdk.models.operations.ListKmsSpacesRequest;
-import to.unified.unified_java_sdk.models.operations.ListKmsSpacesRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.ListKmsSpacesResponse;
-import to.unified.unified_java_sdk.models.operations.PatchKmsCommentRequest;
-import to.unified.unified_java_sdk.models.operations.PatchKmsCommentRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.PatchKmsCommentResponse;
-import to.unified.unified_java_sdk.models.operations.PatchKmsPageRequest;
-import to.unified.unified_java_sdk.models.operations.PatchKmsPageRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.PatchKmsPageResponse;
-import to.unified.unified_java_sdk.models.operations.PatchKmsSpaceRequest;
-import to.unified.unified_java_sdk.models.operations.PatchKmsSpaceRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.PatchKmsSpaceResponse;
-import to.unified.unified_java_sdk.models.operations.RemoveKmsCommentRequest;
-import to.unified.unified_java_sdk.models.operations.RemoveKmsCommentRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.RemoveKmsCommentResponse;
-import to.unified.unified_java_sdk.models.operations.RemoveKmsPageRequest;
-import to.unified.unified_java_sdk.models.operations.RemoveKmsPageRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.RemoveKmsPageResponse;
-import to.unified.unified_java_sdk.models.operations.RemoveKmsSpaceRequest;
-import to.unified.unified_java_sdk.models.operations.RemoveKmsSpaceRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.RemoveKmsSpaceResponse;
-import to.unified.unified_java_sdk.models.operations.UpdateKmsCommentRequest;
-import to.unified.unified_java_sdk.models.operations.UpdateKmsCommentRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.UpdateKmsCommentResponse;
-import to.unified.unified_java_sdk.models.operations.UpdateKmsPageRequest;
-import to.unified.unified_java_sdk.models.operations.UpdateKmsPageRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.UpdateKmsPageResponse;
-import to.unified.unified_java_sdk.models.operations.UpdateKmsSpaceRequest;
-import to.unified.unified_java_sdk.models.operations.UpdateKmsSpaceRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.UpdateKmsSpaceResponse;
-import to.unified.unified_java_sdk.operations.CreateKmsComment;
-import to.unified.unified_java_sdk.operations.CreateKmsPage;
-import to.unified.unified_java_sdk.operations.CreateKmsSpace;
-import to.unified.unified_java_sdk.operations.GetKmsComment;
-import to.unified.unified_java_sdk.operations.GetKmsPage;
-import to.unified.unified_java_sdk.operations.GetKmsSpace;
-import to.unified.unified_java_sdk.operations.ListKmsComments;
-import to.unified.unified_java_sdk.operations.ListKmsPages;
-import to.unified.unified_java_sdk.operations.ListKmsSpaces;
-import to.unified.unified_java_sdk.operations.PatchKmsComment;
-import to.unified.unified_java_sdk.operations.PatchKmsPage;
-import to.unified.unified_java_sdk.operations.PatchKmsSpace;
-import to.unified.unified_java_sdk.operations.RemoveKmsComment;
-import to.unified.unified_java_sdk.operations.RemoveKmsPage;
-import to.unified.unified_java_sdk.operations.RemoveKmsSpace;
-import to.unified.unified_java_sdk.operations.UpdateKmsComment;
-import to.unified.unified_java_sdk.operations.UpdateKmsPage;
-import to.unified.unified_java_sdk.operations.UpdateKmsSpace;
+import to.unified.unified_java_sdk.models.operations.CreateKmsComment2Request;
+import to.unified.unified_java_sdk.models.operations.CreateKmsComment2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.CreateKmsComment2Response;
+import to.unified.unified_java_sdk.models.operations.CreateKmsPage2Request;
+import to.unified.unified_java_sdk.models.operations.CreateKmsPage2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.CreateKmsPage2Response;
+import to.unified.unified_java_sdk.models.operations.CreateKmsSpace2Request;
+import to.unified.unified_java_sdk.models.operations.CreateKmsSpace2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.CreateKmsSpace2Response;
+import to.unified.unified_java_sdk.models.operations.GetKmsComment2Request;
+import to.unified.unified_java_sdk.models.operations.GetKmsComment2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetKmsComment2Response;
+import to.unified.unified_java_sdk.models.operations.GetKmsPage2Request;
+import to.unified.unified_java_sdk.models.operations.GetKmsPage2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetKmsPage2Response;
+import to.unified.unified_java_sdk.models.operations.GetKmsSpace2Request;
+import to.unified.unified_java_sdk.models.operations.GetKmsSpace2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetKmsSpace2Response;
+import to.unified.unified_java_sdk.models.operations.ListKmsComments2Request;
+import to.unified.unified_java_sdk.models.operations.ListKmsComments2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListKmsComments2Response;
+import to.unified.unified_java_sdk.models.operations.ListKmsPages2Request;
+import to.unified.unified_java_sdk.models.operations.ListKmsPages2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListKmsPages2Response;
+import to.unified.unified_java_sdk.models.operations.ListKmsSpaces2Request;
+import to.unified.unified_java_sdk.models.operations.ListKmsSpaces2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListKmsSpaces2Response;
+import to.unified.unified_java_sdk.models.operations.PatchKmsComment2Request;
+import to.unified.unified_java_sdk.models.operations.PatchKmsComment2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.PatchKmsComment2Response;
+import to.unified.unified_java_sdk.models.operations.PatchKmsPage2Request;
+import to.unified.unified_java_sdk.models.operations.PatchKmsPage2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.PatchKmsPage2Response;
+import to.unified.unified_java_sdk.models.operations.PatchKmsSpace2Request;
+import to.unified.unified_java_sdk.models.operations.PatchKmsSpace2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.PatchKmsSpace2Response;
+import to.unified.unified_java_sdk.models.operations.RemoveKmsComment2Request;
+import to.unified.unified_java_sdk.models.operations.RemoveKmsComment2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.RemoveKmsComment2Response;
+import to.unified.unified_java_sdk.models.operations.RemoveKmsPage2Request;
+import to.unified.unified_java_sdk.models.operations.RemoveKmsPage2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.RemoveKmsPage2Response;
+import to.unified.unified_java_sdk.models.operations.RemoveKmsSpace2Request;
+import to.unified.unified_java_sdk.models.operations.RemoveKmsSpace2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.RemoveKmsSpace2Response;
+import to.unified.unified_java_sdk.models.operations.UpdateKmsComment2Request;
+import to.unified.unified_java_sdk.models.operations.UpdateKmsComment2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.UpdateKmsComment2Response;
+import to.unified.unified_java_sdk.models.operations.UpdateKmsPage2Request;
+import to.unified.unified_java_sdk.models.operations.UpdateKmsPage2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.UpdateKmsPage2Response;
+import to.unified.unified_java_sdk.models.operations.UpdateKmsSpace2Request;
+import to.unified.unified_java_sdk.models.operations.UpdateKmsSpace2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.UpdateKmsSpace2Response;
+import to.unified.unified_java_sdk.operations.CreateKmsComment2;
+import to.unified.unified_java_sdk.operations.CreateKmsPage2;
+import to.unified.unified_java_sdk.operations.CreateKmsSpace2;
+import to.unified.unified_java_sdk.operations.GetKmsComment2;
+import to.unified.unified_java_sdk.operations.GetKmsPage2;
+import to.unified.unified_java_sdk.operations.GetKmsSpace2;
+import to.unified.unified_java_sdk.operations.ListKmsComments2;
+import to.unified.unified_java_sdk.operations.ListKmsPages2;
+import to.unified.unified_java_sdk.operations.ListKmsSpaces2;
+import to.unified.unified_java_sdk.operations.PatchKmsComment2;
+import to.unified.unified_java_sdk.operations.PatchKmsPage2;
+import to.unified.unified_java_sdk.operations.PatchKmsSpace2;
+import to.unified.unified_java_sdk.operations.RemoveKmsComment2;
+import to.unified.unified_java_sdk.operations.RemoveKmsPage2;
+import to.unified.unified_java_sdk.operations.RemoveKmsSpace2;
+import to.unified.unified_java_sdk.operations.UpdateKmsComment2;
+import to.unified.unified_java_sdk.operations.UpdateKmsPage2;
+import to.unified.unified_java_sdk.operations.UpdateKmsSpace2;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -105,8 +105,8 @@ public class Kms {
      * 
      * @return The call builder
      */
-    public CreateKmsCommentRequestBuilder createKmsComment() {
-        return new CreateKmsCommentRequestBuilder(sdkConfiguration);
+    public CreateKmsComment2RequestBuilder createKmsComment2() {
+        return new CreateKmsComment2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -116,9 +116,9 @@ public class Kms {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateKmsCommentResponse createKmsComment(@Nonnull CreateKmsCommentRequest request) {
-        RequestOperation<CreateKmsCommentRequest, CreateKmsCommentResponse> operation
-              = new CreateKmsComment.Sync(sdkConfiguration, _headers);
+    public CreateKmsComment2Response createKmsComment2(@Nonnull CreateKmsComment2Request request) {
+        RequestOperation<CreateKmsComment2Request, CreateKmsComment2Response> operation
+              = new CreateKmsComment2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -127,8 +127,8 @@ public class Kms {
      * 
      * @return The call builder
      */
-    public CreateKmsPageRequestBuilder createKmsPage() {
-        return new CreateKmsPageRequestBuilder(sdkConfiguration);
+    public CreateKmsPage2RequestBuilder createKmsPage2() {
+        return new CreateKmsPage2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -138,9 +138,9 @@ public class Kms {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateKmsPageResponse createKmsPage(@Nonnull CreateKmsPageRequest request) {
-        RequestOperation<CreateKmsPageRequest, CreateKmsPageResponse> operation
-              = new CreateKmsPage.Sync(sdkConfiguration, _headers);
+    public CreateKmsPage2Response createKmsPage2(@Nonnull CreateKmsPage2Request request) {
+        RequestOperation<CreateKmsPage2Request, CreateKmsPage2Response> operation
+              = new CreateKmsPage2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -149,8 +149,8 @@ public class Kms {
      * 
      * @return The call builder
      */
-    public CreateKmsSpaceRequestBuilder createKmsSpace() {
-        return new CreateKmsSpaceRequestBuilder(sdkConfiguration);
+    public CreateKmsSpace2RequestBuilder createKmsSpace2() {
+        return new CreateKmsSpace2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -160,9 +160,9 @@ public class Kms {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateKmsSpaceResponse createKmsSpace(@Nonnull CreateKmsSpaceRequest request) {
-        RequestOperation<CreateKmsSpaceRequest, CreateKmsSpaceResponse> operation
-              = new CreateKmsSpace.Sync(sdkConfiguration, _headers);
+    public CreateKmsSpace2Response createKmsSpace2(@Nonnull CreateKmsSpace2Request request) {
+        RequestOperation<CreateKmsSpace2Request, CreateKmsSpace2Response> operation
+              = new CreateKmsSpace2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -171,8 +171,8 @@ public class Kms {
      * 
      * @return The call builder
      */
-    public GetKmsCommentRequestBuilder getKmsComment() {
-        return new GetKmsCommentRequestBuilder(sdkConfiguration);
+    public GetKmsComment2RequestBuilder getKmsComment2() {
+        return new GetKmsComment2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -182,9 +182,9 @@ public class Kms {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetKmsCommentResponse getKmsComment(@Nonnull GetKmsCommentRequest request) {
-        RequestOperation<GetKmsCommentRequest, GetKmsCommentResponse> operation
-              = new GetKmsComment.Sync(sdkConfiguration, _headers);
+    public GetKmsComment2Response getKmsComment2(@Nonnull GetKmsComment2Request request) {
+        RequestOperation<GetKmsComment2Request, GetKmsComment2Response> operation
+              = new GetKmsComment2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -193,8 +193,8 @@ public class Kms {
      * 
      * @return The call builder
      */
-    public GetKmsPageRequestBuilder getKmsPage() {
-        return new GetKmsPageRequestBuilder(sdkConfiguration);
+    public GetKmsPage2RequestBuilder getKmsPage2() {
+        return new GetKmsPage2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -204,9 +204,9 @@ public class Kms {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetKmsPageResponse getKmsPage(@Nonnull GetKmsPageRequest request) {
-        RequestOperation<GetKmsPageRequest, GetKmsPageResponse> operation
-              = new GetKmsPage.Sync(sdkConfiguration, _headers);
+    public GetKmsPage2Response getKmsPage2(@Nonnull GetKmsPage2Request request) {
+        RequestOperation<GetKmsPage2Request, GetKmsPage2Response> operation
+              = new GetKmsPage2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -215,8 +215,8 @@ public class Kms {
      * 
      * @return The call builder
      */
-    public GetKmsSpaceRequestBuilder getKmsSpace() {
-        return new GetKmsSpaceRequestBuilder(sdkConfiguration);
+    public GetKmsSpace2RequestBuilder getKmsSpace2() {
+        return new GetKmsSpace2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -226,9 +226,9 @@ public class Kms {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetKmsSpaceResponse getKmsSpace(@Nonnull GetKmsSpaceRequest request) {
-        RequestOperation<GetKmsSpaceRequest, GetKmsSpaceResponse> operation
-              = new GetKmsSpace.Sync(sdkConfiguration, _headers);
+    public GetKmsSpace2Response getKmsSpace2(@Nonnull GetKmsSpace2Request request) {
+        RequestOperation<GetKmsSpace2Request, GetKmsSpace2Response> operation
+              = new GetKmsSpace2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -237,8 +237,8 @@ public class Kms {
      * 
      * @return The call builder
      */
-    public ListKmsCommentsRequestBuilder listKmsComments() {
-        return new ListKmsCommentsRequestBuilder(sdkConfiguration);
+    public ListKmsComments2RequestBuilder listKmsComments2() {
+        return new ListKmsComments2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -248,9 +248,9 @@ public class Kms {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListKmsCommentsResponse listKmsComments(@Nonnull ListKmsCommentsRequest request) {
-        RequestOperation<ListKmsCommentsRequest, ListKmsCommentsResponse> operation
-              = new ListKmsComments.Sync(sdkConfiguration, _headers);
+    public ListKmsComments2Response listKmsComments2(@Nonnull ListKmsComments2Request request) {
+        RequestOperation<ListKmsComments2Request, ListKmsComments2Response> operation
+              = new ListKmsComments2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -259,8 +259,8 @@ public class Kms {
      * 
      * @return The call builder
      */
-    public ListKmsPagesRequestBuilder listKmsPages() {
-        return new ListKmsPagesRequestBuilder(sdkConfiguration);
+    public ListKmsPages2RequestBuilder listKmsPages2() {
+        return new ListKmsPages2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -270,9 +270,9 @@ public class Kms {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListKmsPagesResponse listKmsPages(@Nonnull ListKmsPagesRequest request) {
-        RequestOperation<ListKmsPagesRequest, ListKmsPagesResponse> operation
-              = new ListKmsPages.Sync(sdkConfiguration, _headers);
+    public ListKmsPages2Response listKmsPages2(@Nonnull ListKmsPages2Request request) {
+        RequestOperation<ListKmsPages2Request, ListKmsPages2Response> operation
+              = new ListKmsPages2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -281,8 +281,8 @@ public class Kms {
      * 
      * @return The call builder
      */
-    public ListKmsSpacesRequestBuilder listKmsSpaces() {
-        return new ListKmsSpacesRequestBuilder(sdkConfiguration);
+    public ListKmsSpaces2RequestBuilder listKmsSpaces2() {
+        return new ListKmsSpaces2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -292,9 +292,9 @@ public class Kms {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListKmsSpacesResponse listKmsSpaces(@Nonnull ListKmsSpacesRequest request) {
-        RequestOperation<ListKmsSpacesRequest, ListKmsSpacesResponse> operation
-              = new ListKmsSpaces.Sync(sdkConfiguration, _headers);
+    public ListKmsSpaces2Response listKmsSpaces2(@Nonnull ListKmsSpaces2Request request) {
+        RequestOperation<ListKmsSpaces2Request, ListKmsSpaces2Response> operation
+              = new ListKmsSpaces2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -303,8 +303,8 @@ public class Kms {
      * 
      * @return The call builder
      */
-    public PatchKmsCommentRequestBuilder patchKmsComment() {
-        return new PatchKmsCommentRequestBuilder(sdkConfiguration);
+    public PatchKmsComment2RequestBuilder patchKmsComment2() {
+        return new PatchKmsComment2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -314,9 +314,9 @@ public class Kms {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchKmsCommentResponse patchKmsComment(@Nonnull PatchKmsCommentRequest request) {
-        RequestOperation<PatchKmsCommentRequest, PatchKmsCommentResponse> operation
-              = new PatchKmsComment.Sync(sdkConfiguration, _headers);
+    public PatchKmsComment2Response patchKmsComment2(@Nonnull PatchKmsComment2Request request) {
+        RequestOperation<PatchKmsComment2Request, PatchKmsComment2Response> operation
+              = new PatchKmsComment2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -325,8 +325,8 @@ public class Kms {
      * 
      * @return The call builder
      */
-    public PatchKmsPageRequestBuilder patchKmsPage() {
-        return new PatchKmsPageRequestBuilder(sdkConfiguration);
+    public PatchKmsPage2RequestBuilder patchKmsPage2() {
+        return new PatchKmsPage2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -336,9 +336,9 @@ public class Kms {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchKmsPageResponse patchKmsPage(@Nonnull PatchKmsPageRequest request) {
-        RequestOperation<PatchKmsPageRequest, PatchKmsPageResponse> operation
-              = new PatchKmsPage.Sync(sdkConfiguration, _headers);
+    public PatchKmsPage2Response patchKmsPage2(@Nonnull PatchKmsPage2Request request) {
+        RequestOperation<PatchKmsPage2Request, PatchKmsPage2Response> operation
+              = new PatchKmsPage2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -347,8 +347,8 @@ public class Kms {
      * 
      * @return The call builder
      */
-    public PatchKmsSpaceRequestBuilder patchKmsSpace() {
-        return new PatchKmsSpaceRequestBuilder(sdkConfiguration);
+    public PatchKmsSpace2RequestBuilder patchKmsSpace2() {
+        return new PatchKmsSpace2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -358,9 +358,9 @@ public class Kms {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchKmsSpaceResponse patchKmsSpace(@Nonnull PatchKmsSpaceRequest request) {
-        RequestOperation<PatchKmsSpaceRequest, PatchKmsSpaceResponse> operation
-              = new PatchKmsSpace.Sync(sdkConfiguration, _headers);
+    public PatchKmsSpace2Response patchKmsSpace2(@Nonnull PatchKmsSpace2Request request) {
+        RequestOperation<PatchKmsSpace2Request, PatchKmsSpace2Response> operation
+              = new PatchKmsSpace2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -369,8 +369,8 @@ public class Kms {
      * 
      * @return The call builder
      */
-    public RemoveKmsCommentRequestBuilder removeKmsComment() {
-        return new RemoveKmsCommentRequestBuilder(sdkConfiguration);
+    public RemoveKmsComment2RequestBuilder removeKmsComment2() {
+        return new RemoveKmsComment2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -380,9 +380,9 @@ public class Kms {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveKmsCommentResponse removeKmsComment(@Nonnull RemoveKmsCommentRequest request) {
-        RequestOperation<RemoveKmsCommentRequest, RemoveKmsCommentResponse> operation
-              = new RemoveKmsComment.Sync(sdkConfiguration, _headers);
+    public RemoveKmsComment2Response removeKmsComment2(@Nonnull RemoveKmsComment2Request request) {
+        RequestOperation<RemoveKmsComment2Request, RemoveKmsComment2Response> operation
+              = new RemoveKmsComment2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -391,8 +391,8 @@ public class Kms {
      * 
      * @return The call builder
      */
-    public RemoveKmsPageRequestBuilder removeKmsPage() {
-        return new RemoveKmsPageRequestBuilder(sdkConfiguration);
+    public RemoveKmsPage2RequestBuilder removeKmsPage2() {
+        return new RemoveKmsPage2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -402,9 +402,9 @@ public class Kms {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveKmsPageResponse removeKmsPage(@Nonnull RemoveKmsPageRequest request) {
-        RequestOperation<RemoveKmsPageRequest, RemoveKmsPageResponse> operation
-              = new RemoveKmsPage.Sync(sdkConfiguration, _headers);
+    public RemoveKmsPage2Response removeKmsPage2(@Nonnull RemoveKmsPage2Request request) {
+        RequestOperation<RemoveKmsPage2Request, RemoveKmsPage2Response> operation
+              = new RemoveKmsPage2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -413,8 +413,8 @@ public class Kms {
      * 
      * @return The call builder
      */
-    public RemoveKmsSpaceRequestBuilder removeKmsSpace() {
-        return new RemoveKmsSpaceRequestBuilder(sdkConfiguration);
+    public RemoveKmsSpace2RequestBuilder removeKmsSpace2() {
+        return new RemoveKmsSpace2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -424,9 +424,9 @@ public class Kms {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveKmsSpaceResponse removeKmsSpace(@Nonnull RemoveKmsSpaceRequest request) {
-        RequestOperation<RemoveKmsSpaceRequest, RemoveKmsSpaceResponse> operation
-              = new RemoveKmsSpace.Sync(sdkConfiguration, _headers);
+    public RemoveKmsSpace2Response removeKmsSpace2(@Nonnull RemoveKmsSpace2Request request) {
+        RequestOperation<RemoveKmsSpace2Request, RemoveKmsSpace2Response> operation
+              = new RemoveKmsSpace2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -435,8 +435,8 @@ public class Kms {
      * 
      * @return The call builder
      */
-    public UpdateKmsCommentRequestBuilder updateKmsComment() {
-        return new UpdateKmsCommentRequestBuilder(sdkConfiguration);
+    public UpdateKmsComment2RequestBuilder updateKmsComment2() {
+        return new UpdateKmsComment2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -446,9 +446,9 @@ public class Kms {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateKmsCommentResponse updateKmsComment(@Nonnull UpdateKmsCommentRequest request) {
-        RequestOperation<UpdateKmsCommentRequest, UpdateKmsCommentResponse> operation
-              = new UpdateKmsComment.Sync(sdkConfiguration, _headers);
+    public UpdateKmsComment2Response updateKmsComment2(@Nonnull UpdateKmsComment2Request request) {
+        RequestOperation<UpdateKmsComment2Request, UpdateKmsComment2Response> operation
+              = new UpdateKmsComment2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -457,8 +457,8 @@ public class Kms {
      * 
      * @return The call builder
      */
-    public UpdateKmsPageRequestBuilder updateKmsPage() {
-        return new UpdateKmsPageRequestBuilder(sdkConfiguration);
+    public UpdateKmsPage2RequestBuilder updateKmsPage2() {
+        return new UpdateKmsPage2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -468,9 +468,9 @@ public class Kms {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateKmsPageResponse updateKmsPage(@Nonnull UpdateKmsPageRequest request) {
-        RequestOperation<UpdateKmsPageRequest, UpdateKmsPageResponse> operation
-              = new UpdateKmsPage.Sync(sdkConfiguration, _headers);
+    public UpdateKmsPage2Response updateKmsPage2(@Nonnull UpdateKmsPage2Request request) {
+        RequestOperation<UpdateKmsPage2Request, UpdateKmsPage2Response> operation
+              = new UpdateKmsPage2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -479,8 +479,8 @@ public class Kms {
      * 
      * @return The call builder
      */
-    public UpdateKmsSpaceRequestBuilder updateKmsSpace() {
-        return new UpdateKmsSpaceRequestBuilder(sdkConfiguration);
+    public UpdateKmsSpace2RequestBuilder updateKmsSpace2() {
+        return new UpdateKmsSpace2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -490,9 +490,9 @@ public class Kms {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateKmsSpaceResponse updateKmsSpace(@Nonnull UpdateKmsSpaceRequest request) {
-        RequestOperation<UpdateKmsSpaceRequest, UpdateKmsSpaceResponse> operation
-              = new UpdateKmsSpace.Sync(sdkConfiguration, _headers);
+    public UpdateKmsSpace2Response updateKmsSpace2(@Nonnull UpdateKmsSpace2Request request) {
+        RequestOperation<UpdateKmsSpace2Request, UpdateKmsSpace2Response> operation
+              = new UpdateKmsSpace2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

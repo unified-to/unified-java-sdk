@@ -6,86 +6,86 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
-import to.unified.unified_java_sdk.models.operations.CreateTaskCommentRequest;
-import to.unified.unified_java_sdk.models.operations.CreateTaskCommentRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.CreateTaskCommentResponse;
-import to.unified.unified_java_sdk.models.operations.CreateTaskProjectRequest;
-import to.unified.unified_java_sdk.models.operations.CreateTaskProjectRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.CreateTaskProjectResponse;
-import to.unified.unified_java_sdk.models.operations.CreateTaskTaskRequest;
-import to.unified.unified_java_sdk.models.operations.CreateTaskTaskRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.CreateTaskTaskResponse;
-import to.unified.unified_java_sdk.models.operations.GetTaskChangeRequest;
-import to.unified.unified_java_sdk.models.operations.GetTaskChangeRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.GetTaskChangeResponse;
-import to.unified.unified_java_sdk.models.operations.GetTaskCommentRequest;
-import to.unified.unified_java_sdk.models.operations.GetTaskCommentRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.GetTaskCommentResponse;
-import to.unified.unified_java_sdk.models.operations.GetTaskProjectRequest;
-import to.unified.unified_java_sdk.models.operations.GetTaskProjectRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.GetTaskProjectResponse;
-import to.unified.unified_java_sdk.models.operations.GetTaskTaskRequest;
-import to.unified.unified_java_sdk.models.operations.GetTaskTaskRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.GetTaskTaskResponse;
-import to.unified.unified_java_sdk.models.operations.ListTaskChangesRequest;
-import to.unified.unified_java_sdk.models.operations.ListTaskChangesRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.ListTaskChangesResponse;
-import to.unified.unified_java_sdk.models.operations.ListTaskCommentsRequest;
-import to.unified.unified_java_sdk.models.operations.ListTaskCommentsRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.ListTaskCommentsResponse;
-import to.unified.unified_java_sdk.models.operations.ListTaskProjectsRequest;
-import to.unified.unified_java_sdk.models.operations.ListTaskProjectsRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.ListTaskProjectsResponse;
-import to.unified.unified_java_sdk.models.operations.ListTaskTasksRequest;
-import to.unified.unified_java_sdk.models.operations.ListTaskTasksRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.ListTaskTasksResponse;
-import to.unified.unified_java_sdk.models.operations.PatchTaskCommentRequest;
-import to.unified.unified_java_sdk.models.operations.PatchTaskCommentRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.PatchTaskCommentResponse;
-import to.unified.unified_java_sdk.models.operations.PatchTaskProjectRequest;
-import to.unified.unified_java_sdk.models.operations.PatchTaskProjectRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.PatchTaskProjectResponse;
-import to.unified.unified_java_sdk.models.operations.PatchTaskTaskRequest;
-import to.unified.unified_java_sdk.models.operations.PatchTaskTaskRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.PatchTaskTaskResponse;
-import to.unified.unified_java_sdk.models.operations.RemoveTaskCommentRequest;
-import to.unified.unified_java_sdk.models.operations.RemoveTaskCommentRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.RemoveTaskCommentResponse;
-import to.unified.unified_java_sdk.models.operations.RemoveTaskProjectRequest;
-import to.unified.unified_java_sdk.models.operations.RemoveTaskProjectRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.RemoveTaskProjectResponse;
-import to.unified.unified_java_sdk.models.operations.RemoveTaskTaskRequest;
-import to.unified.unified_java_sdk.models.operations.RemoveTaskTaskRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.RemoveTaskTaskResponse;
-import to.unified.unified_java_sdk.models.operations.UpdateTaskCommentRequest;
-import to.unified.unified_java_sdk.models.operations.UpdateTaskCommentRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.UpdateTaskCommentResponse;
-import to.unified.unified_java_sdk.models.operations.UpdateTaskProjectRequest;
-import to.unified.unified_java_sdk.models.operations.UpdateTaskProjectRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.UpdateTaskProjectResponse;
-import to.unified.unified_java_sdk.models.operations.UpdateTaskTaskRequest;
-import to.unified.unified_java_sdk.models.operations.UpdateTaskTaskRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.UpdateTaskTaskResponse;
-import to.unified.unified_java_sdk.operations.CreateTaskComment;
-import to.unified.unified_java_sdk.operations.CreateTaskProject;
-import to.unified.unified_java_sdk.operations.CreateTaskTask;
-import to.unified.unified_java_sdk.operations.GetTaskChange;
-import to.unified.unified_java_sdk.operations.GetTaskComment;
-import to.unified.unified_java_sdk.operations.GetTaskProject;
-import to.unified.unified_java_sdk.operations.GetTaskTask;
-import to.unified.unified_java_sdk.operations.ListTaskChanges;
-import to.unified.unified_java_sdk.operations.ListTaskComments;
-import to.unified.unified_java_sdk.operations.ListTaskProjects;
-import to.unified.unified_java_sdk.operations.ListTaskTasks;
-import to.unified.unified_java_sdk.operations.PatchTaskComment;
-import to.unified.unified_java_sdk.operations.PatchTaskProject;
-import to.unified.unified_java_sdk.operations.PatchTaskTask;
-import to.unified.unified_java_sdk.operations.RemoveTaskComment;
-import to.unified.unified_java_sdk.operations.RemoveTaskProject;
-import to.unified.unified_java_sdk.operations.RemoveTaskTask;
-import to.unified.unified_java_sdk.operations.UpdateTaskComment;
-import to.unified.unified_java_sdk.operations.UpdateTaskProject;
-import to.unified.unified_java_sdk.operations.UpdateTaskTask;
+import to.unified.unified_java_sdk.models.operations.CreateTaskComment2Request;
+import to.unified.unified_java_sdk.models.operations.CreateTaskComment2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.CreateTaskComment2Response;
+import to.unified.unified_java_sdk.models.operations.CreateTaskProject2Request;
+import to.unified.unified_java_sdk.models.operations.CreateTaskProject2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.CreateTaskProject2Response;
+import to.unified.unified_java_sdk.models.operations.CreateTaskTask2Request;
+import to.unified.unified_java_sdk.models.operations.CreateTaskTask2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.CreateTaskTask2Response;
+import to.unified.unified_java_sdk.models.operations.GetTaskChange2Request;
+import to.unified.unified_java_sdk.models.operations.GetTaskChange2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetTaskChange2Response;
+import to.unified.unified_java_sdk.models.operations.GetTaskComment2Request;
+import to.unified.unified_java_sdk.models.operations.GetTaskComment2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetTaskComment2Response;
+import to.unified.unified_java_sdk.models.operations.GetTaskProject2Request;
+import to.unified.unified_java_sdk.models.operations.GetTaskProject2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetTaskProject2Response;
+import to.unified.unified_java_sdk.models.operations.GetTaskTask2Request;
+import to.unified.unified_java_sdk.models.operations.GetTaskTask2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetTaskTask2Response;
+import to.unified.unified_java_sdk.models.operations.ListTaskChanges2Request;
+import to.unified.unified_java_sdk.models.operations.ListTaskChanges2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListTaskChanges2Response;
+import to.unified.unified_java_sdk.models.operations.ListTaskComments2Request;
+import to.unified.unified_java_sdk.models.operations.ListTaskComments2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListTaskComments2Response;
+import to.unified.unified_java_sdk.models.operations.ListTaskProjects2Request;
+import to.unified.unified_java_sdk.models.operations.ListTaskProjects2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListTaskProjects2Response;
+import to.unified.unified_java_sdk.models.operations.ListTaskTasks2Request;
+import to.unified.unified_java_sdk.models.operations.ListTaskTasks2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListTaskTasks2Response;
+import to.unified.unified_java_sdk.models.operations.PatchTaskComment2Request;
+import to.unified.unified_java_sdk.models.operations.PatchTaskComment2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.PatchTaskComment2Response;
+import to.unified.unified_java_sdk.models.operations.PatchTaskProject2Request;
+import to.unified.unified_java_sdk.models.operations.PatchTaskProject2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.PatchTaskProject2Response;
+import to.unified.unified_java_sdk.models.operations.PatchTaskTask2Request;
+import to.unified.unified_java_sdk.models.operations.PatchTaskTask2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.PatchTaskTask2Response;
+import to.unified.unified_java_sdk.models.operations.RemoveTaskComment2Request;
+import to.unified.unified_java_sdk.models.operations.RemoveTaskComment2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.RemoveTaskComment2Response;
+import to.unified.unified_java_sdk.models.operations.RemoveTaskProject2Request;
+import to.unified.unified_java_sdk.models.operations.RemoveTaskProject2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.RemoveTaskProject2Response;
+import to.unified.unified_java_sdk.models.operations.RemoveTaskTask2Request;
+import to.unified.unified_java_sdk.models.operations.RemoveTaskTask2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.RemoveTaskTask2Response;
+import to.unified.unified_java_sdk.models.operations.UpdateTaskComment2Request;
+import to.unified.unified_java_sdk.models.operations.UpdateTaskComment2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.UpdateTaskComment2Response;
+import to.unified.unified_java_sdk.models.operations.UpdateTaskProject2Request;
+import to.unified.unified_java_sdk.models.operations.UpdateTaskProject2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.UpdateTaskProject2Response;
+import to.unified.unified_java_sdk.models.operations.UpdateTaskTask2Request;
+import to.unified.unified_java_sdk.models.operations.UpdateTaskTask2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.UpdateTaskTask2Response;
+import to.unified.unified_java_sdk.operations.CreateTaskComment2;
+import to.unified.unified_java_sdk.operations.CreateTaskProject2;
+import to.unified.unified_java_sdk.operations.CreateTaskTask2;
+import to.unified.unified_java_sdk.operations.GetTaskChange2;
+import to.unified.unified_java_sdk.operations.GetTaskComment2;
+import to.unified.unified_java_sdk.operations.GetTaskProject2;
+import to.unified.unified_java_sdk.operations.GetTaskTask2;
+import to.unified.unified_java_sdk.operations.ListTaskChanges2;
+import to.unified.unified_java_sdk.operations.ListTaskComments2;
+import to.unified.unified_java_sdk.operations.ListTaskProjects2;
+import to.unified.unified_java_sdk.operations.ListTaskTasks2;
+import to.unified.unified_java_sdk.operations.PatchTaskComment2;
+import to.unified.unified_java_sdk.operations.PatchTaskProject2;
+import to.unified.unified_java_sdk.operations.PatchTaskTask2;
+import to.unified.unified_java_sdk.operations.RemoveTaskComment2;
+import to.unified.unified_java_sdk.operations.RemoveTaskProject2;
+import to.unified.unified_java_sdk.operations.RemoveTaskTask2;
+import to.unified.unified_java_sdk.operations.UpdateTaskComment2;
+import to.unified.unified_java_sdk.operations.UpdateTaskProject2;
+import to.unified.unified_java_sdk.operations.UpdateTaskTask2;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -113,8 +113,8 @@ public class Task {
      * 
      * @return The call builder
      */
-    public CreateTaskCommentRequestBuilder createTaskComment() {
-        return new CreateTaskCommentRequestBuilder(sdkConfiguration);
+    public CreateTaskComment2RequestBuilder createTaskComment2() {
+        return new CreateTaskComment2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -124,9 +124,9 @@ public class Task {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateTaskCommentResponse createTaskComment(@Nonnull CreateTaskCommentRequest request) {
-        RequestOperation<CreateTaskCommentRequest, CreateTaskCommentResponse> operation
-              = new CreateTaskComment.Sync(sdkConfiguration, _headers);
+    public CreateTaskComment2Response createTaskComment2(@Nonnull CreateTaskComment2Request request) {
+        RequestOperation<CreateTaskComment2Request, CreateTaskComment2Response> operation
+              = new CreateTaskComment2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -135,8 +135,8 @@ public class Task {
      * 
      * @return The call builder
      */
-    public CreateTaskProjectRequestBuilder createTaskProject() {
-        return new CreateTaskProjectRequestBuilder(sdkConfiguration);
+    public CreateTaskProject2RequestBuilder createTaskProject2() {
+        return new CreateTaskProject2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -146,9 +146,9 @@ public class Task {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateTaskProjectResponse createTaskProject(@Nonnull CreateTaskProjectRequest request) {
-        RequestOperation<CreateTaskProjectRequest, CreateTaskProjectResponse> operation
-              = new CreateTaskProject.Sync(sdkConfiguration, _headers);
+    public CreateTaskProject2Response createTaskProject2(@Nonnull CreateTaskProject2Request request) {
+        RequestOperation<CreateTaskProject2Request, CreateTaskProject2Response> operation
+              = new CreateTaskProject2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -157,8 +157,8 @@ public class Task {
      * 
      * @return The call builder
      */
-    public CreateTaskTaskRequestBuilder createTaskTask() {
-        return new CreateTaskTaskRequestBuilder(sdkConfiguration);
+    public CreateTaskTask2RequestBuilder createTaskTask2() {
+        return new CreateTaskTask2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -168,9 +168,9 @@ public class Task {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateTaskTaskResponse createTaskTask(@Nonnull CreateTaskTaskRequest request) {
-        RequestOperation<CreateTaskTaskRequest, CreateTaskTaskResponse> operation
-              = new CreateTaskTask.Sync(sdkConfiguration, _headers);
+    public CreateTaskTask2Response createTaskTask2(@Nonnull CreateTaskTask2Request request) {
+        RequestOperation<CreateTaskTask2Request, CreateTaskTask2Response> operation
+              = new CreateTaskTask2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -179,8 +179,8 @@ public class Task {
      * 
      * @return The call builder
      */
-    public GetTaskChangeRequestBuilder getTaskChange() {
-        return new GetTaskChangeRequestBuilder(sdkConfiguration);
+    public GetTaskChange2RequestBuilder getTaskChange2() {
+        return new GetTaskChange2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -190,9 +190,9 @@ public class Task {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetTaskChangeResponse getTaskChange(@Nonnull GetTaskChangeRequest request) {
-        RequestOperation<GetTaskChangeRequest, GetTaskChangeResponse> operation
-              = new GetTaskChange.Sync(sdkConfiguration, _headers);
+    public GetTaskChange2Response getTaskChange2(@Nonnull GetTaskChange2Request request) {
+        RequestOperation<GetTaskChange2Request, GetTaskChange2Response> operation
+              = new GetTaskChange2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -201,8 +201,8 @@ public class Task {
      * 
      * @return The call builder
      */
-    public GetTaskCommentRequestBuilder getTaskComment() {
-        return new GetTaskCommentRequestBuilder(sdkConfiguration);
+    public GetTaskComment2RequestBuilder getTaskComment2() {
+        return new GetTaskComment2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -212,9 +212,9 @@ public class Task {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetTaskCommentResponse getTaskComment(@Nonnull GetTaskCommentRequest request) {
-        RequestOperation<GetTaskCommentRequest, GetTaskCommentResponse> operation
-              = new GetTaskComment.Sync(sdkConfiguration, _headers);
+    public GetTaskComment2Response getTaskComment2(@Nonnull GetTaskComment2Request request) {
+        RequestOperation<GetTaskComment2Request, GetTaskComment2Response> operation
+              = new GetTaskComment2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -223,8 +223,8 @@ public class Task {
      * 
      * @return The call builder
      */
-    public GetTaskProjectRequestBuilder getTaskProject() {
-        return new GetTaskProjectRequestBuilder(sdkConfiguration);
+    public GetTaskProject2RequestBuilder getTaskProject2() {
+        return new GetTaskProject2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -234,9 +234,9 @@ public class Task {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetTaskProjectResponse getTaskProject(@Nonnull GetTaskProjectRequest request) {
-        RequestOperation<GetTaskProjectRequest, GetTaskProjectResponse> operation
-              = new GetTaskProject.Sync(sdkConfiguration, _headers);
+    public GetTaskProject2Response getTaskProject2(@Nonnull GetTaskProject2Request request) {
+        RequestOperation<GetTaskProject2Request, GetTaskProject2Response> operation
+              = new GetTaskProject2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -245,8 +245,8 @@ public class Task {
      * 
      * @return The call builder
      */
-    public GetTaskTaskRequestBuilder getTaskTask() {
-        return new GetTaskTaskRequestBuilder(sdkConfiguration);
+    public GetTaskTask2RequestBuilder getTaskTask2() {
+        return new GetTaskTask2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -256,9 +256,9 @@ public class Task {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetTaskTaskResponse getTaskTask(@Nonnull GetTaskTaskRequest request) {
-        RequestOperation<GetTaskTaskRequest, GetTaskTaskResponse> operation
-              = new GetTaskTask.Sync(sdkConfiguration, _headers);
+    public GetTaskTask2Response getTaskTask2(@Nonnull GetTaskTask2Request request) {
+        RequestOperation<GetTaskTask2Request, GetTaskTask2Response> operation
+              = new GetTaskTask2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -267,8 +267,8 @@ public class Task {
      * 
      * @return The call builder
      */
-    public ListTaskChangesRequestBuilder listTaskChanges() {
-        return new ListTaskChangesRequestBuilder(sdkConfiguration);
+    public ListTaskChanges2RequestBuilder listTaskChanges2() {
+        return new ListTaskChanges2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -278,9 +278,9 @@ public class Task {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListTaskChangesResponse listTaskChanges(@Nonnull ListTaskChangesRequest request) {
-        RequestOperation<ListTaskChangesRequest, ListTaskChangesResponse> operation
-              = new ListTaskChanges.Sync(sdkConfiguration, _headers);
+    public ListTaskChanges2Response listTaskChanges2(@Nonnull ListTaskChanges2Request request) {
+        RequestOperation<ListTaskChanges2Request, ListTaskChanges2Response> operation
+              = new ListTaskChanges2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -289,8 +289,8 @@ public class Task {
      * 
      * @return The call builder
      */
-    public ListTaskCommentsRequestBuilder listTaskComments() {
-        return new ListTaskCommentsRequestBuilder(sdkConfiguration);
+    public ListTaskComments2RequestBuilder listTaskComments2() {
+        return new ListTaskComments2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -300,9 +300,9 @@ public class Task {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListTaskCommentsResponse listTaskComments(@Nonnull ListTaskCommentsRequest request) {
-        RequestOperation<ListTaskCommentsRequest, ListTaskCommentsResponse> operation
-              = new ListTaskComments.Sync(sdkConfiguration, _headers);
+    public ListTaskComments2Response listTaskComments2(@Nonnull ListTaskComments2Request request) {
+        RequestOperation<ListTaskComments2Request, ListTaskComments2Response> operation
+              = new ListTaskComments2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -311,8 +311,8 @@ public class Task {
      * 
      * @return The call builder
      */
-    public ListTaskProjectsRequestBuilder listTaskProjects() {
-        return new ListTaskProjectsRequestBuilder(sdkConfiguration);
+    public ListTaskProjects2RequestBuilder listTaskProjects2() {
+        return new ListTaskProjects2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -322,9 +322,9 @@ public class Task {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListTaskProjectsResponse listTaskProjects(@Nonnull ListTaskProjectsRequest request) {
-        RequestOperation<ListTaskProjectsRequest, ListTaskProjectsResponse> operation
-              = new ListTaskProjects.Sync(sdkConfiguration, _headers);
+    public ListTaskProjects2Response listTaskProjects2(@Nonnull ListTaskProjects2Request request) {
+        RequestOperation<ListTaskProjects2Request, ListTaskProjects2Response> operation
+              = new ListTaskProjects2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -333,8 +333,8 @@ public class Task {
      * 
      * @return The call builder
      */
-    public ListTaskTasksRequestBuilder listTaskTasks() {
-        return new ListTaskTasksRequestBuilder(sdkConfiguration);
+    public ListTaskTasks2RequestBuilder listTaskTasks2() {
+        return new ListTaskTasks2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -344,9 +344,9 @@ public class Task {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListTaskTasksResponse listTaskTasks(@Nonnull ListTaskTasksRequest request) {
-        RequestOperation<ListTaskTasksRequest, ListTaskTasksResponse> operation
-              = new ListTaskTasks.Sync(sdkConfiguration, _headers);
+    public ListTaskTasks2Response listTaskTasks2(@Nonnull ListTaskTasks2Request request) {
+        RequestOperation<ListTaskTasks2Request, ListTaskTasks2Response> operation
+              = new ListTaskTasks2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -355,8 +355,8 @@ public class Task {
      * 
      * @return The call builder
      */
-    public PatchTaskCommentRequestBuilder patchTaskComment() {
-        return new PatchTaskCommentRequestBuilder(sdkConfiguration);
+    public PatchTaskComment2RequestBuilder patchTaskComment2() {
+        return new PatchTaskComment2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -366,9 +366,9 @@ public class Task {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchTaskCommentResponse patchTaskComment(@Nonnull PatchTaskCommentRequest request) {
-        RequestOperation<PatchTaskCommentRequest, PatchTaskCommentResponse> operation
-              = new PatchTaskComment.Sync(sdkConfiguration, _headers);
+    public PatchTaskComment2Response patchTaskComment2(@Nonnull PatchTaskComment2Request request) {
+        RequestOperation<PatchTaskComment2Request, PatchTaskComment2Response> operation
+              = new PatchTaskComment2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -377,8 +377,8 @@ public class Task {
      * 
      * @return The call builder
      */
-    public PatchTaskProjectRequestBuilder patchTaskProject() {
-        return new PatchTaskProjectRequestBuilder(sdkConfiguration);
+    public PatchTaskProject2RequestBuilder patchTaskProject2() {
+        return new PatchTaskProject2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -388,9 +388,9 @@ public class Task {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchTaskProjectResponse patchTaskProject(@Nonnull PatchTaskProjectRequest request) {
-        RequestOperation<PatchTaskProjectRequest, PatchTaskProjectResponse> operation
-              = new PatchTaskProject.Sync(sdkConfiguration, _headers);
+    public PatchTaskProject2Response patchTaskProject2(@Nonnull PatchTaskProject2Request request) {
+        RequestOperation<PatchTaskProject2Request, PatchTaskProject2Response> operation
+              = new PatchTaskProject2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -399,8 +399,8 @@ public class Task {
      * 
      * @return The call builder
      */
-    public PatchTaskTaskRequestBuilder patchTaskTask() {
-        return new PatchTaskTaskRequestBuilder(sdkConfiguration);
+    public PatchTaskTask2RequestBuilder patchTaskTask2() {
+        return new PatchTaskTask2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -410,9 +410,9 @@ public class Task {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchTaskTaskResponse patchTaskTask(@Nonnull PatchTaskTaskRequest request) {
-        RequestOperation<PatchTaskTaskRequest, PatchTaskTaskResponse> operation
-              = new PatchTaskTask.Sync(sdkConfiguration, _headers);
+    public PatchTaskTask2Response patchTaskTask2(@Nonnull PatchTaskTask2Request request) {
+        RequestOperation<PatchTaskTask2Request, PatchTaskTask2Response> operation
+              = new PatchTaskTask2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -421,8 +421,8 @@ public class Task {
      * 
      * @return The call builder
      */
-    public RemoveTaskCommentRequestBuilder removeTaskComment() {
-        return new RemoveTaskCommentRequestBuilder(sdkConfiguration);
+    public RemoveTaskComment2RequestBuilder removeTaskComment2() {
+        return new RemoveTaskComment2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -432,9 +432,9 @@ public class Task {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveTaskCommentResponse removeTaskComment(@Nonnull RemoveTaskCommentRequest request) {
-        RequestOperation<RemoveTaskCommentRequest, RemoveTaskCommentResponse> operation
-              = new RemoveTaskComment.Sync(sdkConfiguration, _headers);
+    public RemoveTaskComment2Response removeTaskComment2(@Nonnull RemoveTaskComment2Request request) {
+        RequestOperation<RemoveTaskComment2Request, RemoveTaskComment2Response> operation
+              = new RemoveTaskComment2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -443,8 +443,8 @@ public class Task {
      * 
      * @return The call builder
      */
-    public RemoveTaskProjectRequestBuilder removeTaskProject() {
-        return new RemoveTaskProjectRequestBuilder(sdkConfiguration);
+    public RemoveTaskProject2RequestBuilder removeTaskProject2() {
+        return new RemoveTaskProject2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -454,9 +454,9 @@ public class Task {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveTaskProjectResponse removeTaskProject(@Nonnull RemoveTaskProjectRequest request) {
-        RequestOperation<RemoveTaskProjectRequest, RemoveTaskProjectResponse> operation
-              = new RemoveTaskProject.Sync(sdkConfiguration, _headers);
+    public RemoveTaskProject2Response removeTaskProject2(@Nonnull RemoveTaskProject2Request request) {
+        RequestOperation<RemoveTaskProject2Request, RemoveTaskProject2Response> operation
+              = new RemoveTaskProject2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -465,8 +465,8 @@ public class Task {
      * 
      * @return The call builder
      */
-    public RemoveTaskTaskRequestBuilder removeTaskTask() {
-        return new RemoveTaskTaskRequestBuilder(sdkConfiguration);
+    public RemoveTaskTask2RequestBuilder removeTaskTask2() {
+        return new RemoveTaskTask2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -476,9 +476,9 @@ public class Task {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveTaskTaskResponse removeTaskTask(@Nonnull RemoveTaskTaskRequest request) {
-        RequestOperation<RemoveTaskTaskRequest, RemoveTaskTaskResponse> operation
-              = new RemoveTaskTask.Sync(sdkConfiguration, _headers);
+    public RemoveTaskTask2Response removeTaskTask2(@Nonnull RemoveTaskTask2Request request) {
+        RequestOperation<RemoveTaskTask2Request, RemoveTaskTask2Response> operation
+              = new RemoveTaskTask2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -487,8 +487,8 @@ public class Task {
      * 
      * @return The call builder
      */
-    public UpdateTaskCommentRequestBuilder updateTaskComment() {
-        return new UpdateTaskCommentRequestBuilder(sdkConfiguration);
+    public UpdateTaskComment2RequestBuilder updateTaskComment2() {
+        return new UpdateTaskComment2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -498,9 +498,9 @@ public class Task {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateTaskCommentResponse updateTaskComment(@Nonnull UpdateTaskCommentRequest request) {
-        RequestOperation<UpdateTaskCommentRequest, UpdateTaskCommentResponse> operation
-              = new UpdateTaskComment.Sync(sdkConfiguration, _headers);
+    public UpdateTaskComment2Response updateTaskComment2(@Nonnull UpdateTaskComment2Request request) {
+        RequestOperation<UpdateTaskComment2Request, UpdateTaskComment2Response> operation
+              = new UpdateTaskComment2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -509,8 +509,8 @@ public class Task {
      * 
      * @return The call builder
      */
-    public UpdateTaskProjectRequestBuilder updateTaskProject() {
-        return new UpdateTaskProjectRequestBuilder(sdkConfiguration);
+    public UpdateTaskProject2RequestBuilder updateTaskProject2() {
+        return new UpdateTaskProject2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -520,9 +520,9 @@ public class Task {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateTaskProjectResponse updateTaskProject(@Nonnull UpdateTaskProjectRequest request) {
-        RequestOperation<UpdateTaskProjectRequest, UpdateTaskProjectResponse> operation
-              = new UpdateTaskProject.Sync(sdkConfiguration, _headers);
+    public UpdateTaskProject2Response updateTaskProject2(@Nonnull UpdateTaskProject2Request request) {
+        RequestOperation<UpdateTaskProject2Request, UpdateTaskProject2Response> operation
+              = new UpdateTaskProject2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -531,8 +531,8 @@ public class Task {
      * 
      * @return The call builder
      */
-    public UpdateTaskTaskRequestBuilder updateTaskTask() {
-        return new UpdateTaskTaskRequestBuilder(sdkConfiguration);
+    public UpdateTaskTask2RequestBuilder updateTaskTask2() {
+        return new UpdateTaskTask2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -542,9 +542,9 @@ public class Task {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateTaskTaskResponse updateTaskTask(@Nonnull UpdateTaskTaskRequest request) {
-        RequestOperation<UpdateTaskTaskRequest, UpdateTaskTaskResponse> operation
-              = new UpdateTaskTask.Sync(sdkConfiguration, _headers);
+    public UpdateTaskTask2Response updateTaskTask2(@Nonnull UpdateTaskTask2Request request) {
+        RequestOperation<UpdateTaskTask2Request, UpdateTaskTask2Response> operation
+              = new UpdateTaskTask2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

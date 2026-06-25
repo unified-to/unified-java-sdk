@@ -76,7 +76,7 @@ public class EnrichPerson {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gender")
-    private Gender gender;
+    private EnrichPersonGender gender;
 
 
     @JsonInclude(Include.NON_ABSENT)
@@ -171,7 +171,7 @@ public class EnrichPerson {
             @JsonProperty("emails") @Nullable List<EnrichEmail> emails,
             @JsonProperty("facebook_url") @Nullable String facebookUrl,
             @JsonProperty("first_name") @Nullable String firstName,
-            @JsonProperty("gender") @Nullable Gender gender,
+            @JsonProperty("gender") @Nullable EnrichPersonGender gender,
             @JsonProperty("github_url") @Nullable String githubUrl,
             @JsonProperty("github_username") @Nullable String githubUsername,
             @JsonProperty("id") @Nullable String id,
@@ -270,7 +270,7 @@ public class EnrichPerson {
         return Optional.ofNullable(this.firstName);
     }
 
-    public Optional<Gender> gender() {
+    public Optional<EnrichPersonGender> gender() {
         return Optional.ofNullable(this.gender);
     }
 
@@ -406,7 +406,7 @@ public class EnrichPerson {
     }
 
 
-    public EnrichPerson withGender(@Nullable Gender gender) {
+    public EnrichPerson withGender(@Nullable EnrichPersonGender gender) {
         this.gender = gender;
         return this;
     }
@@ -615,7 +615,7 @@ public class EnrichPerson {
 
         private String firstName;
 
-        private Gender gender;
+        private EnrichPersonGender gender;
 
         private String githubUrl;
 
@@ -704,7 +704,7 @@ public class EnrichPerson {
             return this;
         }
 
-        public Builder gender(@Nullable Gender gender) {
+        public Builder gender(@Nullable EnrichPersonGender gender) {
             this.gender = gender;
             return this;
         }

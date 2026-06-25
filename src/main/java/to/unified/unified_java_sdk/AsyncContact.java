@@ -7,78 +7,78 @@ import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOper
 
 import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
-import to.unified.unified_java_sdk.models.operations.CreateAccountingContactRequest;
-import to.unified.unified_java_sdk.models.operations.CreateCrmContactRequest;
-import to.unified.unified_java_sdk.models.operations.CreateUcContactRequest;
-import to.unified.unified_java_sdk.models.operations.GetAccountingContactRequest;
-import to.unified.unified_java_sdk.models.operations.GetCrmContactRequest;
-import to.unified.unified_java_sdk.models.operations.GetUcContactRequest;
-import to.unified.unified_java_sdk.models.operations.ListAccountingContactsRequest;
-import to.unified.unified_java_sdk.models.operations.ListCrmContactsRequest;
-import to.unified.unified_java_sdk.models.operations.ListUcContactsRequest;
-import to.unified.unified_java_sdk.models.operations.PatchAccountingContactRequest;
-import to.unified.unified_java_sdk.models.operations.PatchCrmContactRequest;
-import to.unified.unified_java_sdk.models.operations.PatchUcContactRequest;
-import to.unified.unified_java_sdk.models.operations.RemoveAccountingContactRequest;
-import to.unified.unified_java_sdk.models.operations.RemoveCrmContactRequest;
-import to.unified.unified_java_sdk.models.operations.RemoveUcContactRequest;
-import to.unified.unified_java_sdk.models.operations.UpdateAccountingContactRequest;
-import to.unified.unified_java_sdk.models.operations.UpdateCrmContactRequest;
-import to.unified.unified_java_sdk.models.operations.UpdateUcContactRequest;
-import to.unified.unified_java_sdk.models.operations.async.CreateAccountingContactRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.CreateAccountingContactResponse;
-import to.unified.unified_java_sdk.models.operations.async.CreateCrmContactRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.CreateCrmContactResponse;
-import to.unified.unified_java_sdk.models.operations.async.CreateUcContactRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.CreateUcContactResponse;
-import to.unified.unified_java_sdk.models.operations.async.GetAccountingContactRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.GetAccountingContactResponse;
-import to.unified.unified_java_sdk.models.operations.async.GetCrmContactRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.GetCrmContactResponse;
-import to.unified.unified_java_sdk.models.operations.async.GetUcContactRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.GetUcContactResponse;
-import to.unified.unified_java_sdk.models.operations.async.ListAccountingContactsRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.ListAccountingContactsResponse;
-import to.unified.unified_java_sdk.models.operations.async.ListCrmContactsRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.ListCrmContactsResponse;
-import to.unified.unified_java_sdk.models.operations.async.ListUcContactsRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.ListUcContactsResponse;
-import to.unified.unified_java_sdk.models.operations.async.PatchAccountingContactRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.PatchAccountingContactResponse;
-import to.unified.unified_java_sdk.models.operations.async.PatchCrmContactRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.PatchCrmContactResponse;
-import to.unified.unified_java_sdk.models.operations.async.PatchUcContactRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.PatchUcContactResponse;
-import to.unified.unified_java_sdk.models.operations.async.RemoveAccountingContactRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.RemoveAccountingContactResponse;
-import to.unified.unified_java_sdk.models.operations.async.RemoveCrmContactRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.RemoveCrmContactResponse;
-import to.unified.unified_java_sdk.models.operations.async.RemoveUcContactRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.RemoveUcContactResponse;
-import to.unified.unified_java_sdk.models.operations.async.UpdateAccountingContactRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.UpdateAccountingContactResponse;
-import to.unified.unified_java_sdk.models.operations.async.UpdateCrmContactRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.UpdateCrmContactResponse;
-import to.unified.unified_java_sdk.models.operations.async.UpdateUcContactRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.UpdateUcContactResponse;
-import to.unified.unified_java_sdk.operations.CreateAccountingContact;
-import to.unified.unified_java_sdk.operations.CreateCrmContact;
-import to.unified.unified_java_sdk.operations.CreateUcContact;
-import to.unified.unified_java_sdk.operations.GetAccountingContact;
-import to.unified.unified_java_sdk.operations.GetCrmContact;
-import to.unified.unified_java_sdk.operations.GetUcContact;
-import to.unified.unified_java_sdk.operations.ListAccountingContacts;
-import to.unified.unified_java_sdk.operations.ListCrmContacts;
-import to.unified.unified_java_sdk.operations.ListUcContacts;
-import to.unified.unified_java_sdk.operations.PatchAccountingContact;
-import to.unified.unified_java_sdk.operations.PatchCrmContact;
-import to.unified.unified_java_sdk.operations.PatchUcContact;
-import to.unified.unified_java_sdk.operations.RemoveAccountingContact;
-import to.unified.unified_java_sdk.operations.RemoveCrmContact;
-import to.unified.unified_java_sdk.operations.RemoveUcContact;
-import to.unified.unified_java_sdk.operations.UpdateAccountingContact;
-import to.unified.unified_java_sdk.operations.UpdateCrmContact;
-import to.unified.unified_java_sdk.operations.UpdateUcContact;
+import to.unified.unified_java_sdk.models.operations.CreateAccountingContact2Request;
+import to.unified.unified_java_sdk.models.operations.CreateCrmContact2Request;
+import to.unified.unified_java_sdk.models.operations.CreateUcContact2Request;
+import to.unified.unified_java_sdk.models.operations.GetAccountingContact2Request;
+import to.unified.unified_java_sdk.models.operations.GetCrmContact2Request;
+import to.unified.unified_java_sdk.models.operations.GetUcContact2Request;
+import to.unified.unified_java_sdk.models.operations.ListAccountingContacts2Request;
+import to.unified.unified_java_sdk.models.operations.ListCrmContacts2Request;
+import to.unified.unified_java_sdk.models.operations.ListUcContacts2Request;
+import to.unified.unified_java_sdk.models.operations.PatchAccountingContact2Request;
+import to.unified.unified_java_sdk.models.operations.PatchCrmContact2Request;
+import to.unified.unified_java_sdk.models.operations.PatchUcContact2Request;
+import to.unified.unified_java_sdk.models.operations.RemoveAccountingContact2Request;
+import to.unified.unified_java_sdk.models.operations.RemoveCrmContact2Request;
+import to.unified.unified_java_sdk.models.operations.RemoveUcContact2Request;
+import to.unified.unified_java_sdk.models.operations.UpdateAccountingContact2Request;
+import to.unified.unified_java_sdk.models.operations.UpdateCrmContact2Request;
+import to.unified.unified_java_sdk.models.operations.UpdateUcContact2Request;
+import to.unified.unified_java_sdk.models.operations.async.CreateAccountingContact2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.CreateAccountingContact2Response;
+import to.unified.unified_java_sdk.models.operations.async.CreateCrmContact2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.CreateCrmContact2Response;
+import to.unified.unified_java_sdk.models.operations.async.CreateUcContact2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.CreateUcContact2Response;
+import to.unified.unified_java_sdk.models.operations.async.GetAccountingContact2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetAccountingContact2Response;
+import to.unified.unified_java_sdk.models.operations.async.GetCrmContact2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetCrmContact2Response;
+import to.unified.unified_java_sdk.models.operations.async.GetUcContact2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetUcContact2Response;
+import to.unified.unified_java_sdk.models.operations.async.ListAccountingContacts2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListAccountingContacts2Response;
+import to.unified.unified_java_sdk.models.operations.async.ListCrmContacts2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListCrmContacts2Response;
+import to.unified.unified_java_sdk.models.operations.async.ListUcContacts2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListUcContacts2Response;
+import to.unified.unified_java_sdk.models.operations.async.PatchAccountingContact2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.PatchAccountingContact2Response;
+import to.unified.unified_java_sdk.models.operations.async.PatchCrmContact2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.PatchCrmContact2Response;
+import to.unified.unified_java_sdk.models.operations.async.PatchUcContact2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.PatchUcContact2Response;
+import to.unified.unified_java_sdk.models.operations.async.RemoveAccountingContact2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.RemoveAccountingContact2Response;
+import to.unified.unified_java_sdk.models.operations.async.RemoveCrmContact2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.RemoveCrmContact2Response;
+import to.unified.unified_java_sdk.models.operations.async.RemoveUcContact2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.RemoveUcContact2Response;
+import to.unified.unified_java_sdk.models.operations.async.UpdateAccountingContact2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.UpdateAccountingContact2Response;
+import to.unified.unified_java_sdk.models.operations.async.UpdateCrmContact2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.UpdateCrmContact2Response;
+import to.unified.unified_java_sdk.models.operations.async.UpdateUcContact2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.UpdateUcContact2Response;
+import to.unified.unified_java_sdk.operations.CreateAccountingContact2;
+import to.unified.unified_java_sdk.operations.CreateCrmContact2;
+import to.unified.unified_java_sdk.operations.CreateUcContact2;
+import to.unified.unified_java_sdk.operations.GetAccountingContact2;
+import to.unified.unified_java_sdk.operations.GetCrmContact2;
+import to.unified.unified_java_sdk.operations.GetUcContact2;
+import to.unified.unified_java_sdk.operations.ListAccountingContacts2;
+import to.unified.unified_java_sdk.operations.ListCrmContacts2;
+import to.unified.unified_java_sdk.operations.ListUcContacts2;
+import to.unified.unified_java_sdk.operations.PatchAccountingContact2;
+import to.unified.unified_java_sdk.operations.PatchCrmContact2;
+import to.unified.unified_java_sdk.operations.PatchUcContact2;
+import to.unified.unified_java_sdk.operations.RemoveAccountingContact2;
+import to.unified.unified_java_sdk.operations.RemoveCrmContact2;
+import to.unified.unified_java_sdk.operations.RemoveUcContact2;
+import to.unified.unified_java_sdk.operations.UpdateAccountingContact2;
+import to.unified.unified_java_sdk.operations.UpdateCrmContact2;
+import to.unified.unified_java_sdk.operations.UpdateUcContact2;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -107,42 +107,19 @@ public class AsyncContact {
      * 
      * @return The async call builder
      */
-    public CreateAccountingContactRequestBuilder createAccountingContact() {
-        return new CreateAccountingContactRequestBuilder(sdkConfiguration);
+    public CreateAccountingContact2RequestBuilder createAccountingContact2() {
+        return new CreateAccountingContact2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Create a contact
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<CreateAccountingContactResponse>} - The async response
+     * @return {@code CompletableFuture<CreateAccountingContact2Response>} - The async response
      */
-    public CompletableFuture<CreateAccountingContactResponse> createAccountingContact(@Nonnull CreateAccountingContactRequest request) {
-        AsyncRequestOperation<CreateAccountingContactRequest, CreateAccountingContactResponse> operation
-              = new CreateAccountingContact.Async(sdkConfiguration, _headers);
-        return operation.doRequest(request)
-            .thenCompose(operation::handleResponse);
-    }
-
-
-    /**
-     * Create a contact
-     * 
-     * @return The async call builder
-     */
-    public CreateCrmContactRequestBuilder createCrmContact() {
-        return new CreateCrmContactRequestBuilder(sdkConfiguration);
-    }
-
-    /**
-     * Create a contact
-     * 
-     * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<CreateCrmContactResponse>} - The async response
-     */
-    public CompletableFuture<CreateCrmContactResponse> createCrmContact(@Nonnull CreateCrmContactRequest request) {
-        AsyncRequestOperation<CreateCrmContactRequest, CreateCrmContactResponse> operation
-              = new CreateCrmContact.Async(sdkConfiguration, _headers);
+    public CompletableFuture<CreateAccountingContact2Response> createAccountingContact2(@Nonnull CreateAccountingContact2Request request) {
+        AsyncRequestOperation<CreateAccountingContact2Request, CreateAccountingContact2Response> operation
+              = new CreateAccountingContact2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -153,19 +130,42 @@ public class AsyncContact {
      * 
      * @return The async call builder
      */
-    public CreateUcContactRequestBuilder createUcContact() {
-        return new CreateUcContactRequestBuilder(sdkConfiguration);
+    public CreateCrmContact2RequestBuilder createCrmContact2() {
+        return new CreateCrmContact2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Create a contact
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<CreateUcContactResponse>} - The async response
+     * @return {@code CompletableFuture<CreateCrmContact2Response>} - The async response
      */
-    public CompletableFuture<CreateUcContactResponse> createUcContact(@Nonnull CreateUcContactRequest request) {
-        AsyncRequestOperation<CreateUcContactRequest, CreateUcContactResponse> operation
-              = new CreateUcContact.Async(sdkConfiguration, _headers);
+    public CompletableFuture<CreateCrmContact2Response> createCrmContact2(@Nonnull CreateCrmContact2Request request) {
+        AsyncRequestOperation<CreateCrmContact2Request, CreateCrmContact2Response> operation
+              = new CreateCrmContact2.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * Create a contact
+     * 
+     * @return The async call builder
+     */
+    public CreateUcContact2RequestBuilder createUcContact2() {
+        return new CreateUcContact2RequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Create a contact
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<CreateUcContact2Response>} - The async response
+     */
+    public CompletableFuture<CreateUcContact2Response> createUcContact2(@Nonnull CreateUcContact2Request request) {
+        AsyncRequestOperation<CreateUcContact2Request, CreateUcContact2Response> operation
+              = new CreateUcContact2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -176,42 +176,19 @@ public class AsyncContact {
      * 
      * @return The async call builder
      */
-    public GetAccountingContactRequestBuilder getAccountingContact() {
-        return new GetAccountingContactRequestBuilder(sdkConfiguration);
+    public GetAccountingContact2RequestBuilder getAccountingContact2() {
+        return new GetAccountingContact2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Retrieve a contact
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<GetAccountingContactResponse>} - The async response
+     * @return {@code CompletableFuture<GetAccountingContact2Response>} - The async response
      */
-    public CompletableFuture<GetAccountingContactResponse> getAccountingContact(@Nonnull GetAccountingContactRequest request) {
-        AsyncRequestOperation<GetAccountingContactRequest, GetAccountingContactResponse> operation
-              = new GetAccountingContact.Async(sdkConfiguration, _headers);
-        return operation.doRequest(request)
-            .thenCompose(operation::handleResponse);
-    }
-
-
-    /**
-     * Retrieve a contact
-     * 
-     * @return The async call builder
-     */
-    public GetCrmContactRequestBuilder getCrmContact() {
-        return new GetCrmContactRequestBuilder(sdkConfiguration);
-    }
-
-    /**
-     * Retrieve a contact
-     * 
-     * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<GetCrmContactResponse>} - The async response
-     */
-    public CompletableFuture<GetCrmContactResponse> getCrmContact(@Nonnull GetCrmContactRequest request) {
-        AsyncRequestOperation<GetCrmContactRequest, GetCrmContactResponse> operation
-              = new GetCrmContact.Async(sdkConfiguration, _headers);
+    public CompletableFuture<GetAccountingContact2Response> getAccountingContact2(@Nonnull GetAccountingContact2Request request) {
+        AsyncRequestOperation<GetAccountingContact2Request, GetAccountingContact2Response> operation
+              = new GetAccountingContact2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -222,19 +199,42 @@ public class AsyncContact {
      * 
      * @return The async call builder
      */
-    public GetUcContactRequestBuilder getUcContact() {
-        return new GetUcContactRequestBuilder(sdkConfiguration);
+    public GetCrmContact2RequestBuilder getCrmContact2() {
+        return new GetCrmContact2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Retrieve a contact
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<GetUcContactResponse>} - The async response
+     * @return {@code CompletableFuture<GetCrmContact2Response>} - The async response
      */
-    public CompletableFuture<GetUcContactResponse> getUcContact(@Nonnull GetUcContactRequest request) {
-        AsyncRequestOperation<GetUcContactRequest, GetUcContactResponse> operation
-              = new GetUcContact.Async(sdkConfiguration, _headers);
+    public CompletableFuture<GetCrmContact2Response> getCrmContact2(@Nonnull GetCrmContact2Request request) {
+        AsyncRequestOperation<GetCrmContact2Request, GetCrmContact2Response> operation
+              = new GetCrmContact2.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * Retrieve a contact
+     * 
+     * @return The async call builder
+     */
+    public GetUcContact2RequestBuilder getUcContact2() {
+        return new GetUcContact2RequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Retrieve a contact
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<GetUcContact2Response>} - The async response
+     */
+    public CompletableFuture<GetUcContact2Response> getUcContact2(@Nonnull GetUcContact2Request request) {
+        AsyncRequestOperation<GetUcContact2Request, GetUcContact2Response> operation
+              = new GetUcContact2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -245,42 +245,19 @@ public class AsyncContact {
      * 
      * @return The async call builder
      */
-    public ListAccountingContactsRequestBuilder listAccountingContacts() {
-        return new ListAccountingContactsRequestBuilder(sdkConfiguration);
+    public ListAccountingContacts2RequestBuilder listAccountingContacts2() {
+        return new ListAccountingContacts2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * List all contacts
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<ListAccountingContactsResponse>} - The async response
+     * @return {@code CompletableFuture<ListAccountingContacts2Response>} - The async response
      */
-    public CompletableFuture<ListAccountingContactsResponse> listAccountingContacts(@Nonnull ListAccountingContactsRequest request) {
-        AsyncRequestOperation<ListAccountingContactsRequest, ListAccountingContactsResponse> operation
-              = new ListAccountingContacts.Async(sdkConfiguration, _headers);
-        return operation.doRequest(request)
-            .thenCompose(operation::handleResponse);
-    }
-
-
-    /**
-     * List all contacts
-     * 
-     * @return The async call builder
-     */
-    public ListCrmContactsRequestBuilder listCrmContacts() {
-        return new ListCrmContactsRequestBuilder(sdkConfiguration);
-    }
-
-    /**
-     * List all contacts
-     * 
-     * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<ListCrmContactsResponse>} - The async response
-     */
-    public CompletableFuture<ListCrmContactsResponse> listCrmContacts(@Nonnull ListCrmContactsRequest request) {
-        AsyncRequestOperation<ListCrmContactsRequest, ListCrmContactsResponse> operation
-              = new ListCrmContacts.Async(sdkConfiguration, _headers);
+    public CompletableFuture<ListAccountingContacts2Response> listAccountingContacts2(@Nonnull ListAccountingContacts2Request request) {
+        AsyncRequestOperation<ListAccountingContacts2Request, ListAccountingContacts2Response> operation
+              = new ListAccountingContacts2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -291,19 +268,42 @@ public class AsyncContact {
      * 
      * @return The async call builder
      */
-    public ListUcContactsRequestBuilder listUcContacts() {
-        return new ListUcContactsRequestBuilder(sdkConfiguration);
+    public ListCrmContacts2RequestBuilder listCrmContacts2() {
+        return new ListCrmContacts2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * List all contacts
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<ListUcContactsResponse>} - The async response
+     * @return {@code CompletableFuture<ListCrmContacts2Response>} - The async response
      */
-    public CompletableFuture<ListUcContactsResponse> listUcContacts(@Nonnull ListUcContactsRequest request) {
-        AsyncRequestOperation<ListUcContactsRequest, ListUcContactsResponse> operation
-              = new ListUcContacts.Async(sdkConfiguration, _headers);
+    public CompletableFuture<ListCrmContacts2Response> listCrmContacts2(@Nonnull ListCrmContacts2Request request) {
+        AsyncRequestOperation<ListCrmContacts2Request, ListCrmContacts2Response> operation
+              = new ListCrmContacts2.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * List all contacts
+     * 
+     * @return The async call builder
+     */
+    public ListUcContacts2RequestBuilder listUcContacts2() {
+        return new ListUcContacts2RequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * List all contacts
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<ListUcContacts2Response>} - The async response
+     */
+    public CompletableFuture<ListUcContacts2Response> listUcContacts2(@Nonnull ListUcContacts2Request request) {
+        AsyncRequestOperation<ListUcContacts2Request, ListUcContacts2Response> operation
+              = new ListUcContacts2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -314,19 +314,19 @@ public class AsyncContact {
      * 
      * @return The async call builder
      */
-    public PatchAccountingContactRequestBuilder patchAccountingContact() {
-        return new PatchAccountingContactRequestBuilder(sdkConfiguration);
+    public PatchAccountingContact2RequestBuilder patchAccountingContact2() {
+        return new PatchAccountingContact2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update a contact
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<PatchAccountingContactResponse>} - The async response
+     * @return {@code CompletableFuture<PatchAccountingContact2Response>} - The async response
      */
-    public CompletableFuture<PatchAccountingContactResponse> patchAccountingContact(@Nonnull PatchAccountingContactRequest request) {
-        AsyncRequestOperation<PatchAccountingContactRequest, PatchAccountingContactResponse> operation
-              = new PatchAccountingContact.Async(sdkConfiguration, _headers);
+    public CompletableFuture<PatchAccountingContact2Response> patchAccountingContact2(@Nonnull PatchAccountingContact2Request request) {
+        AsyncRequestOperation<PatchAccountingContact2Request, PatchAccountingContact2Response> operation
+              = new PatchAccountingContact2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -337,19 +337,19 @@ public class AsyncContact {
      * 
      * @return The async call builder
      */
-    public PatchCrmContactRequestBuilder patchCrmContact() {
-        return new PatchCrmContactRequestBuilder(sdkConfiguration);
+    public PatchCrmContact2RequestBuilder patchCrmContact2() {
+        return new PatchCrmContact2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update a contact
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<PatchCrmContactResponse>} - The async response
+     * @return {@code CompletableFuture<PatchCrmContact2Response>} - The async response
      */
-    public CompletableFuture<PatchCrmContactResponse> patchCrmContact(@Nonnull PatchCrmContactRequest request) {
-        AsyncRequestOperation<PatchCrmContactRequest, PatchCrmContactResponse> operation
-              = new PatchCrmContact.Async(sdkConfiguration, _headers);
+    public CompletableFuture<PatchCrmContact2Response> patchCrmContact2(@Nonnull PatchCrmContact2Request request) {
+        AsyncRequestOperation<PatchCrmContact2Request, PatchCrmContact2Response> operation
+              = new PatchCrmContact2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -360,65 +360,19 @@ public class AsyncContact {
      * 
      * @return The async call builder
      */
-    public PatchUcContactRequestBuilder patchUcContact() {
-        return new PatchUcContactRequestBuilder(sdkConfiguration);
+    public PatchUcContact2RequestBuilder patchUcContact2() {
+        return new PatchUcContact2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update a contact
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<PatchUcContactResponse>} - The async response
+     * @return {@code CompletableFuture<PatchUcContact2Response>} - The async response
      */
-    public CompletableFuture<PatchUcContactResponse> patchUcContact(@Nonnull PatchUcContactRequest request) {
-        AsyncRequestOperation<PatchUcContactRequest, PatchUcContactResponse> operation
-              = new PatchUcContact.Async(sdkConfiguration, _headers);
-        return operation.doRequest(request)
-            .thenCompose(operation::handleResponse);
-    }
-
-
-    /**
-     * Remove a contact
-     * 
-     * @return The async call builder
-     */
-    public RemoveAccountingContactRequestBuilder removeAccountingContact() {
-        return new RemoveAccountingContactRequestBuilder(sdkConfiguration);
-    }
-
-    /**
-     * Remove a contact
-     * 
-     * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<RemoveAccountingContactResponse>} - The async response
-     */
-    public CompletableFuture<RemoveAccountingContactResponse> removeAccountingContact(@Nonnull RemoveAccountingContactRequest request) {
-        AsyncRequestOperation<RemoveAccountingContactRequest, RemoveAccountingContactResponse> operation
-              = new RemoveAccountingContact.Async(sdkConfiguration, _headers);
-        return operation.doRequest(request)
-            .thenCompose(operation::handleResponse);
-    }
-
-
-    /**
-     * Remove a contact
-     * 
-     * @return The async call builder
-     */
-    public RemoveCrmContactRequestBuilder removeCrmContact() {
-        return new RemoveCrmContactRequestBuilder(sdkConfiguration);
-    }
-
-    /**
-     * Remove a contact
-     * 
-     * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<RemoveCrmContactResponse>} - The async response
-     */
-    public CompletableFuture<RemoveCrmContactResponse> removeCrmContact(@Nonnull RemoveCrmContactRequest request) {
-        AsyncRequestOperation<RemoveCrmContactRequest, RemoveCrmContactResponse> operation
-              = new RemoveCrmContact.Async(sdkConfiguration, _headers);
+    public CompletableFuture<PatchUcContact2Response> patchUcContact2(@Nonnull PatchUcContact2Request request) {
+        AsyncRequestOperation<PatchUcContact2Request, PatchUcContact2Response> operation
+              = new PatchUcContact2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -429,19 +383,65 @@ public class AsyncContact {
      * 
      * @return The async call builder
      */
-    public RemoveUcContactRequestBuilder removeUcContact() {
-        return new RemoveUcContactRequestBuilder(sdkConfiguration);
+    public RemoveAccountingContact2RequestBuilder removeAccountingContact2() {
+        return new RemoveAccountingContact2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Remove a contact
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<RemoveUcContactResponse>} - The async response
+     * @return {@code CompletableFuture<RemoveAccountingContact2Response>} - The async response
      */
-    public CompletableFuture<RemoveUcContactResponse> removeUcContact(@Nonnull RemoveUcContactRequest request) {
-        AsyncRequestOperation<RemoveUcContactRequest, RemoveUcContactResponse> operation
-              = new RemoveUcContact.Async(sdkConfiguration, _headers);
+    public CompletableFuture<RemoveAccountingContact2Response> removeAccountingContact2(@Nonnull RemoveAccountingContact2Request request) {
+        AsyncRequestOperation<RemoveAccountingContact2Request, RemoveAccountingContact2Response> operation
+              = new RemoveAccountingContact2.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * Remove a contact
+     * 
+     * @return The async call builder
+     */
+    public RemoveCrmContact2RequestBuilder removeCrmContact2() {
+        return new RemoveCrmContact2RequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Remove a contact
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<RemoveCrmContact2Response>} - The async response
+     */
+    public CompletableFuture<RemoveCrmContact2Response> removeCrmContact2(@Nonnull RemoveCrmContact2Request request) {
+        AsyncRequestOperation<RemoveCrmContact2Request, RemoveCrmContact2Response> operation
+              = new RemoveCrmContact2.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * Remove a contact
+     * 
+     * @return The async call builder
+     */
+    public RemoveUcContact2RequestBuilder removeUcContact2() {
+        return new RemoveUcContact2RequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Remove a contact
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<RemoveUcContact2Response>} - The async response
+     */
+    public CompletableFuture<RemoveUcContact2Response> removeUcContact2(@Nonnull RemoveUcContact2Request request) {
+        AsyncRequestOperation<RemoveUcContact2Request, RemoveUcContact2Response> operation
+              = new RemoveUcContact2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -452,19 +452,19 @@ public class AsyncContact {
      * 
      * @return The async call builder
      */
-    public UpdateAccountingContactRequestBuilder updateAccountingContact() {
-        return new UpdateAccountingContactRequestBuilder(sdkConfiguration);
+    public UpdateAccountingContact2RequestBuilder updateAccountingContact2() {
+        return new UpdateAccountingContact2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update a contact
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<UpdateAccountingContactResponse>} - The async response
+     * @return {@code CompletableFuture<UpdateAccountingContact2Response>} - The async response
      */
-    public CompletableFuture<UpdateAccountingContactResponse> updateAccountingContact(@Nonnull UpdateAccountingContactRequest request) {
-        AsyncRequestOperation<UpdateAccountingContactRequest, UpdateAccountingContactResponse> operation
-              = new UpdateAccountingContact.Async(sdkConfiguration, _headers);
+    public CompletableFuture<UpdateAccountingContact2Response> updateAccountingContact2(@Nonnull UpdateAccountingContact2Request request) {
+        AsyncRequestOperation<UpdateAccountingContact2Request, UpdateAccountingContact2Response> operation
+              = new UpdateAccountingContact2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -475,19 +475,19 @@ public class AsyncContact {
      * 
      * @return The async call builder
      */
-    public UpdateCrmContactRequestBuilder updateCrmContact() {
-        return new UpdateCrmContactRequestBuilder(sdkConfiguration);
+    public UpdateCrmContact2RequestBuilder updateCrmContact2() {
+        return new UpdateCrmContact2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update a contact
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<UpdateCrmContactResponse>} - The async response
+     * @return {@code CompletableFuture<UpdateCrmContact2Response>} - The async response
      */
-    public CompletableFuture<UpdateCrmContactResponse> updateCrmContact(@Nonnull UpdateCrmContactRequest request) {
-        AsyncRequestOperation<UpdateCrmContactRequest, UpdateCrmContactResponse> operation
-              = new UpdateCrmContact.Async(sdkConfiguration, _headers);
+    public CompletableFuture<UpdateCrmContact2Response> updateCrmContact2(@Nonnull UpdateCrmContact2Request request) {
+        AsyncRequestOperation<UpdateCrmContact2Request, UpdateCrmContact2Response> operation
+              = new UpdateCrmContact2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -498,19 +498,19 @@ public class AsyncContact {
      * 
      * @return The async call builder
      */
-    public UpdateUcContactRequestBuilder updateUcContact() {
-        return new UpdateUcContactRequestBuilder(sdkConfiguration);
+    public UpdateUcContact2RequestBuilder updateUcContact2() {
+        return new UpdateUcContact2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update a contact
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<UpdateUcContactResponse>} - The async response
+     * @return {@code CompletableFuture<UpdateUcContact2Response>} - The async response
      */
-    public CompletableFuture<UpdateUcContactResponse> updateUcContact(@Nonnull UpdateUcContactRequest request) {
-        AsyncRequestOperation<UpdateUcContactRequest, UpdateUcContactResponse> operation
-              = new UpdateUcContact.Async(sdkConfiguration, _headers);
+    public CompletableFuture<UpdateUcContact2Response> updateUcContact2(@Nonnull UpdateUcContact2Request request) {
+        AsyncRequestOperation<UpdateUcContact2Request, UpdateUcContact2Response> operation
+              = new UpdateUcContact2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

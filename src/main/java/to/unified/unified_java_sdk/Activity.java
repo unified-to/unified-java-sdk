@@ -6,62 +6,62 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
-import to.unified.unified_java_sdk.models.operations.CreateAtsActivityRequest;
-import to.unified.unified_java_sdk.models.operations.CreateAtsActivityRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.CreateAtsActivityResponse;
-import to.unified.unified_java_sdk.models.operations.CreateLmsActivityRequest;
-import to.unified.unified_java_sdk.models.operations.CreateLmsActivityRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.CreateLmsActivityResponse;
-import to.unified.unified_java_sdk.models.operations.GetAtsActivityRequest;
-import to.unified.unified_java_sdk.models.operations.GetAtsActivityRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.GetAtsActivityResponse;
-import to.unified.unified_java_sdk.models.operations.GetClubsActivityRequest;
-import to.unified.unified_java_sdk.models.operations.GetClubsActivityRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.GetClubsActivityResponse;
-import to.unified.unified_java_sdk.models.operations.GetLmsActivityRequest;
-import to.unified.unified_java_sdk.models.operations.GetLmsActivityRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.GetLmsActivityResponse;
-import to.unified.unified_java_sdk.models.operations.ListAtsActivitiesRequest;
-import to.unified.unified_java_sdk.models.operations.ListAtsActivitiesRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.ListAtsActivitiesResponse;
-import to.unified.unified_java_sdk.models.operations.ListClubsActivitiesRequest;
-import to.unified.unified_java_sdk.models.operations.ListClubsActivitiesRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.ListClubsActivitiesResponse;
-import to.unified.unified_java_sdk.models.operations.ListLmsActivitiesRequest;
-import to.unified.unified_java_sdk.models.operations.ListLmsActivitiesRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.ListLmsActivitiesResponse;
-import to.unified.unified_java_sdk.models.operations.PatchAtsActivityRequest;
-import to.unified.unified_java_sdk.models.operations.PatchAtsActivityRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.PatchAtsActivityResponse;
-import to.unified.unified_java_sdk.models.operations.PatchLmsActivityRequest;
-import to.unified.unified_java_sdk.models.operations.PatchLmsActivityRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.PatchLmsActivityResponse;
-import to.unified.unified_java_sdk.models.operations.RemoveAtsActivityRequest;
-import to.unified.unified_java_sdk.models.operations.RemoveAtsActivityRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.RemoveAtsActivityResponse;
-import to.unified.unified_java_sdk.models.operations.RemoveLmsActivityRequest;
-import to.unified.unified_java_sdk.models.operations.RemoveLmsActivityRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.RemoveLmsActivityResponse;
-import to.unified.unified_java_sdk.models.operations.UpdateAtsActivityRequest;
-import to.unified.unified_java_sdk.models.operations.UpdateAtsActivityRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.UpdateAtsActivityResponse;
-import to.unified.unified_java_sdk.models.operations.UpdateLmsActivityRequest;
-import to.unified.unified_java_sdk.models.operations.UpdateLmsActivityRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.UpdateLmsActivityResponse;
-import to.unified.unified_java_sdk.operations.CreateAtsActivity;
-import to.unified.unified_java_sdk.operations.CreateLmsActivity;
-import to.unified.unified_java_sdk.operations.GetAtsActivity;
-import to.unified.unified_java_sdk.operations.GetClubsActivity;
-import to.unified.unified_java_sdk.operations.GetLmsActivity;
-import to.unified.unified_java_sdk.operations.ListAtsActivities;
-import to.unified.unified_java_sdk.operations.ListClubsActivities;
-import to.unified.unified_java_sdk.operations.ListLmsActivities;
-import to.unified.unified_java_sdk.operations.PatchAtsActivity;
-import to.unified.unified_java_sdk.operations.PatchLmsActivity;
-import to.unified.unified_java_sdk.operations.RemoveAtsActivity;
-import to.unified.unified_java_sdk.operations.RemoveLmsActivity;
-import to.unified.unified_java_sdk.operations.UpdateAtsActivity;
-import to.unified.unified_java_sdk.operations.UpdateLmsActivity;
+import to.unified.unified_java_sdk.models.operations.CreateAtsActivity2Request;
+import to.unified.unified_java_sdk.models.operations.CreateAtsActivity2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.CreateAtsActivity2Response;
+import to.unified.unified_java_sdk.models.operations.CreateLmsActivity2Request;
+import to.unified.unified_java_sdk.models.operations.CreateLmsActivity2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.CreateLmsActivity2Response;
+import to.unified.unified_java_sdk.models.operations.GetAtsActivity2Request;
+import to.unified.unified_java_sdk.models.operations.GetAtsActivity2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetAtsActivity2Response;
+import to.unified.unified_java_sdk.models.operations.GetClubsActivity2Request;
+import to.unified.unified_java_sdk.models.operations.GetClubsActivity2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetClubsActivity2Response;
+import to.unified.unified_java_sdk.models.operations.GetLmsActivity2Request;
+import to.unified.unified_java_sdk.models.operations.GetLmsActivity2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetLmsActivity2Response;
+import to.unified.unified_java_sdk.models.operations.ListAtsActivities2Request;
+import to.unified.unified_java_sdk.models.operations.ListAtsActivities2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListAtsActivities2Response;
+import to.unified.unified_java_sdk.models.operations.ListClubsActivities2Request;
+import to.unified.unified_java_sdk.models.operations.ListClubsActivities2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListClubsActivities2Response;
+import to.unified.unified_java_sdk.models.operations.ListLmsActivities2Request;
+import to.unified.unified_java_sdk.models.operations.ListLmsActivities2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListLmsActivities2Response;
+import to.unified.unified_java_sdk.models.operations.PatchAtsActivity2Request;
+import to.unified.unified_java_sdk.models.operations.PatchAtsActivity2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.PatchAtsActivity2Response;
+import to.unified.unified_java_sdk.models.operations.PatchLmsActivity2Request;
+import to.unified.unified_java_sdk.models.operations.PatchLmsActivity2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.PatchLmsActivity2Response;
+import to.unified.unified_java_sdk.models.operations.RemoveAtsActivity2Request;
+import to.unified.unified_java_sdk.models.operations.RemoveAtsActivity2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.RemoveAtsActivity2Response;
+import to.unified.unified_java_sdk.models.operations.RemoveLmsActivity2Request;
+import to.unified.unified_java_sdk.models.operations.RemoveLmsActivity2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.RemoveLmsActivity2Response;
+import to.unified.unified_java_sdk.models.operations.UpdateAtsActivity2Request;
+import to.unified.unified_java_sdk.models.operations.UpdateAtsActivity2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.UpdateAtsActivity2Response;
+import to.unified.unified_java_sdk.models.operations.UpdateLmsActivity2Request;
+import to.unified.unified_java_sdk.models.operations.UpdateLmsActivity2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.UpdateLmsActivity2Response;
+import to.unified.unified_java_sdk.operations.CreateAtsActivity2;
+import to.unified.unified_java_sdk.operations.CreateLmsActivity2;
+import to.unified.unified_java_sdk.operations.GetAtsActivity2;
+import to.unified.unified_java_sdk.operations.GetClubsActivity2;
+import to.unified.unified_java_sdk.operations.GetLmsActivity2;
+import to.unified.unified_java_sdk.operations.ListAtsActivities2;
+import to.unified.unified_java_sdk.operations.ListClubsActivities2;
+import to.unified.unified_java_sdk.operations.ListLmsActivities2;
+import to.unified.unified_java_sdk.operations.PatchAtsActivity2;
+import to.unified.unified_java_sdk.operations.PatchLmsActivity2;
+import to.unified.unified_java_sdk.operations.RemoveAtsActivity2;
+import to.unified.unified_java_sdk.operations.RemoveLmsActivity2;
+import to.unified.unified_java_sdk.operations.UpdateAtsActivity2;
+import to.unified.unified_java_sdk.operations.UpdateLmsActivity2;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -89,8 +89,8 @@ public class Activity {
      * 
      * @return The call builder
      */
-    public CreateAtsActivityRequestBuilder createAtsActivity() {
-        return new CreateAtsActivityRequestBuilder(sdkConfiguration);
+    public CreateAtsActivity2RequestBuilder createAtsActivity2() {
+        return new CreateAtsActivity2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -100,9 +100,9 @@ public class Activity {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateAtsActivityResponse createAtsActivity(@Nonnull CreateAtsActivityRequest request) {
-        RequestOperation<CreateAtsActivityRequest, CreateAtsActivityResponse> operation
-              = new CreateAtsActivity.Sync(sdkConfiguration, _headers);
+    public CreateAtsActivity2Response createAtsActivity2(@Nonnull CreateAtsActivity2Request request) {
+        RequestOperation<CreateAtsActivity2Request, CreateAtsActivity2Response> operation
+              = new CreateAtsActivity2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -111,8 +111,8 @@ public class Activity {
      * 
      * @return The call builder
      */
-    public CreateLmsActivityRequestBuilder createLmsActivity() {
-        return new CreateLmsActivityRequestBuilder(sdkConfiguration);
+    public CreateLmsActivity2RequestBuilder createLmsActivity2() {
+        return new CreateLmsActivity2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -122,9 +122,9 @@ public class Activity {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateLmsActivityResponse createLmsActivity(@Nonnull CreateLmsActivityRequest request) {
-        RequestOperation<CreateLmsActivityRequest, CreateLmsActivityResponse> operation
-              = new CreateLmsActivity.Sync(sdkConfiguration, _headers);
+    public CreateLmsActivity2Response createLmsActivity2(@Nonnull CreateLmsActivity2Request request) {
+        RequestOperation<CreateLmsActivity2Request, CreateLmsActivity2Response> operation
+              = new CreateLmsActivity2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -133,30 +133,8 @@ public class Activity {
      * 
      * @return The call builder
      */
-    public GetAtsActivityRequestBuilder getAtsActivity() {
-        return new GetAtsActivityRequestBuilder(sdkConfiguration);
-    }
-
-    /**
-     * Retrieve an activity
-     * 
-     * @param request The request object containing all the parameters for the API call.
-     * @return The response from the API call
-     * @throws RuntimeException subclass if the API call fails
-     */
-    public GetAtsActivityResponse getAtsActivity(@Nonnull GetAtsActivityRequest request) {
-        RequestOperation<GetAtsActivityRequest, GetAtsActivityResponse> operation
-              = new GetAtsActivity.Sync(sdkConfiguration, _headers);
-        return operation.handleResponse(operation.doRequest(request));
-    }
-
-    /**
-     * Retrieve an activity
-     * 
-     * @return The call builder
-     */
-    public GetClubsActivityRequestBuilder getClubsActivity() {
-        return new GetClubsActivityRequestBuilder(sdkConfiguration);
+    public GetAtsActivity2RequestBuilder getAtsActivity2() {
+        return new GetAtsActivity2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -166,9 +144,9 @@ public class Activity {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetClubsActivityResponse getClubsActivity(@Nonnull GetClubsActivityRequest request) {
-        RequestOperation<GetClubsActivityRequest, GetClubsActivityResponse> operation
-              = new GetClubsActivity.Sync(sdkConfiguration, _headers);
+    public GetAtsActivity2Response getAtsActivity2(@Nonnull GetAtsActivity2Request request) {
+        RequestOperation<GetAtsActivity2Request, GetAtsActivity2Response> operation
+              = new GetAtsActivity2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -177,8 +155,8 @@ public class Activity {
      * 
      * @return The call builder
      */
-    public GetLmsActivityRequestBuilder getLmsActivity() {
-        return new GetLmsActivityRequestBuilder(sdkConfiguration);
+    public GetClubsActivity2RequestBuilder getClubsActivity2() {
+        return new GetClubsActivity2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -188,9 +166,31 @@ public class Activity {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetLmsActivityResponse getLmsActivity(@Nonnull GetLmsActivityRequest request) {
-        RequestOperation<GetLmsActivityRequest, GetLmsActivityResponse> operation
-              = new GetLmsActivity.Sync(sdkConfiguration, _headers);
+    public GetClubsActivity2Response getClubsActivity2(@Nonnull GetClubsActivity2Request request) {
+        RequestOperation<GetClubsActivity2Request, GetClubsActivity2Response> operation
+              = new GetClubsActivity2.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Retrieve an activity
+     * 
+     * @return The call builder
+     */
+    public GetLmsActivity2RequestBuilder getLmsActivity2() {
+        return new GetLmsActivity2RequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Retrieve an activity
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetLmsActivity2Response getLmsActivity2(@Nonnull GetLmsActivity2Request request) {
+        RequestOperation<GetLmsActivity2Request, GetLmsActivity2Response> operation
+              = new GetLmsActivity2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -199,8 +199,8 @@ public class Activity {
      * 
      * @return The call builder
      */
-    public ListAtsActivitiesRequestBuilder listAtsActivities() {
-        return new ListAtsActivitiesRequestBuilder(sdkConfiguration);
+    public ListAtsActivities2RequestBuilder listAtsActivities2() {
+        return new ListAtsActivities2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -210,9 +210,9 @@ public class Activity {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListAtsActivitiesResponse listAtsActivities(@Nonnull ListAtsActivitiesRequest request) {
-        RequestOperation<ListAtsActivitiesRequest, ListAtsActivitiesResponse> operation
-              = new ListAtsActivities.Sync(sdkConfiguration, _headers);
+    public ListAtsActivities2Response listAtsActivities2(@Nonnull ListAtsActivities2Request request) {
+        RequestOperation<ListAtsActivities2Request, ListAtsActivities2Response> operation
+              = new ListAtsActivities2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -221,8 +221,8 @@ public class Activity {
      * 
      * @return The call builder
      */
-    public ListClubsActivitiesRequestBuilder listClubsActivities() {
-        return new ListClubsActivitiesRequestBuilder(sdkConfiguration);
+    public ListClubsActivities2RequestBuilder listClubsActivities2() {
+        return new ListClubsActivities2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -232,9 +232,9 @@ public class Activity {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListClubsActivitiesResponse listClubsActivities(@Nonnull ListClubsActivitiesRequest request) {
-        RequestOperation<ListClubsActivitiesRequest, ListClubsActivitiesResponse> operation
-              = new ListClubsActivities.Sync(sdkConfiguration, _headers);
+    public ListClubsActivities2Response listClubsActivities2(@Nonnull ListClubsActivities2Request request) {
+        RequestOperation<ListClubsActivities2Request, ListClubsActivities2Response> operation
+              = new ListClubsActivities2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -243,8 +243,8 @@ public class Activity {
      * 
      * @return The call builder
      */
-    public ListLmsActivitiesRequestBuilder listLmsActivities() {
-        return new ListLmsActivitiesRequestBuilder(sdkConfiguration);
+    public ListLmsActivities2RequestBuilder listLmsActivities2() {
+        return new ListLmsActivities2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -254,9 +254,9 @@ public class Activity {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListLmsActivitiesResponse listLmsActivities(@Nonnull ListLmsActivitiesRequest request) {
-        RequestOperation<ListLmsActivitiesRequest, ListLmsActivitiesResponse> operation
-              = new ListLmsActivities.Sync(sdkConfiguration, _headers);
+    public ListLmsActivities2Response listLmsActivities2(@Nonnull ListLmsActivities2Request request) {
+        RequestOperation<ListLmsActivities2Request, ListLmsActivities2Response> operation
+              = new ListLmsActivities2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -265,30 +265,8 @@ public class Activity {
      * 
      * @return The call builder
      */
-    public PatchAtsActivityRequestBuilder patchAtsActivity() {
-        return new PatchAtsActivityRequestBuilder(sdkConfiguration);
-    }
-
-    /**
-     * Update an activity
-     * 
-     * @param request The request object containing all the parameters for the API call.
-     * @return The response from the API call
-     * @throws RuntimeException subclass if the API call fails
-     */
-    public PatchAtsActivityResponse patchAtsActivity(@Nonnull PatchAtsActivityRequest request) {
-        RequestOperation<PatchAtsActivityRequest, PatchAtsActivityResponse> operation
-              = new PatchAtsActivity.Sync(sdkConfiguration, _headers);
-        return operation.handleResponse(operation.doRequest(request));
-    }
-
-    /**
-     * Update an activity
-     * 
-     * @return The call builder
-     */
-    public PatchLmsActivityRequestBuilder patchLmsActivity() {
-        return new PatchLmsActivityRequestBuilder(sdkConfiguration);
+    public PatchAtsActivity2RequestBuilder patchAtsActivity2() {
+        return new PatchAtsActivity2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -298,9 +276,31 @@ public class Activity {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchLmsActivityResponse patchLmsActivity(@Nonnull PatchLmsActivityRequest request) {
-        RequestOperation<PatchLmsActivityRequest, PatchLmsActivityResponse> operation
-              = new PatchLmsActivity.Sync(sdkConfiguration, _headers);
+    public PatchAtsActivity2Response patchAtsActivity2(@Nonnull PatchAtsActivity2Request request) {
+        RequestOperation<PatchAtsActivity2Request, PatchAtsActivity2Response> operation
+              = new PatchAtsActivity2.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Update an activity
+     * 
+     * @return The call builder
+     */
+    public PatchLmsActivity2RequestBuilder patchLmsActivity2() {
+        return new PatchLmsActivity2RequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Update an activity
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchLmsActivity2Response patchLmsActivity2(@Nonnull PatchLmsActivity2Request request) {
+        RequestOperation<PatchLmsActivity2Request, PatchLmsActivity2Response> operation
+              = new PatchLmsActivity2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -309,30 +309,8 @@ public class Activity {
      * 
      * @return The call builder
      */
-    public RemoveAtsActivityRequestBuilder removeAtsActivity() {
-        return new RemoveAtsActivityRequestBuilder(sdkConfiguration);
-    }
-
-    /**
-     * Remove an activity
-     * 
-     * @param request The request object containing all the parameters for the API call.
-     * @return The response from the API call
-     * @throws RuntimeException subclass if the API call fails
-     */
-    public RemoveAtsActivityResponse removeAtsActivity(@Nonnull RemoveAtsActivityRequest request) {
-        RequestOperation<RemoveAtsActivityRequest, RemoveAtsActivityResponse> operation
-              = new RemoveAtsActivity.Sync(sdkConfiguration, _headers);
-        return operation.handleResponse(operation.doRequest(request));
-    }
-
-    /**
-     * Remove an activity
-     * 
-     * @return The call builder
-     */
-    public RemoveLmsActivityRequestBuilder removeLmsActivity() {
-        return new RemoveLmsActivityRequestBuilder(sdkConfiguration);
+    public RemoveAtsActivity2RequestBuilder removeAtsActivity2() {
+        return new RemoveAtsActivity2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -342,9 +320,31 @@ public class Activity {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveLmsActivityResponse removeLmsActivity(@Nonnull RemoveLmsActivityRequest request) {
-        RequestOperation<RemoveLmsActivityRequest, RemoveLmsActivityResponse> operation
-              = new RemoveLmsActivity.Sync(sdkConfiguration, _headers);
+    public RemoveAtsActivity2Response removeAtsActivity2(@Nonnull RemoveAtsActivity2Request request) {
+        RequestOperation<RemoveAtsActivity2Request, RemoveAtsActivity2Response> operation
+              = new RemoveAtsActivity2.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Remove an activity
+     * 
+     * @return The call builder
+     */
+    public RemoveLmsActivity2RequestBuilder removeLmsActivity2() {
+        return new RemoveLmsActivity2RequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Remove an activity
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveLmsActivity2Response removeLmsActivity2(@Nonnull RemoveLmsActivity2Request request) {
+        RequestOperation<RemoveLmsActivity2Request, RemoveLmsActivity2Response> operation
+              = new RemoveLmsActivity2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -353,8 +353,8 @@ public class Activity {
      * 
      * @return The call builder
      */
-    public UpdateAtsActivityRequestBuilder updateAtsActivity() {
-        return new UpdateAtsActivityRequestBuilder(sdkConfiguration);
+    public UpdateAtsActivity2RequestBuilder updateAtsActivity2() {
+        return new UpdateAtsActivity2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -364,9 +364,9 @@ public class Activity {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateAtsActivityResponse updateAtsActivity(@Nonnull UpdateAtsActivityRequest request) {
-        RequestOperation<UpdateAtsActivityRequest, UpdateAtsActivityResponse> operation
-              = new UpdateAtsActivity.Sync(sdkConfiguration, _headers);
+    public UpdateAtsActivity2Response updateAtsActivity2(@Nonnull UpdateAtsActivity2Request request) {
+        RequestOperation<UpdateAtsActivity2Request, UpdateAtsActivity2Response> operation
+              = new UpdateAtsActivity2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -375,8 +375,8 @@ public class Activity {
      * 
      * @return The call builder
      */
-    public UpdateLmsActivityRequestBuilder updateLmsActivity() {
-        return new UpdateLmsActivityRequestBuilder(sdkConfiguration);
+    public UpdateLmsActivity2RequestBuilder updateLmsActivity2() {
+        return new UpdateLmsActivity2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -386,9 +386,9 @@ public class Activity {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateLmsActivityResponse updateLmsActivity(@Nonnull UpdateLmsActivityRequest request) {
-        RequestOperation<UpdateLmsActivityRequest, UpdateLmsActivityResponse> operation
-              = new UpdateLmsActivity.Sync(sdkConfiguration, _headers);
+    public UpdateLmsActivity2Response updateLmsActivity2(@Nonnull UpdateLmsActivity2Request request) {
+        RequestOperation<UpdateLmsActivity2Request, UpdateLmsActivity2Response> operation
+              = new UpdateLmsActivity2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

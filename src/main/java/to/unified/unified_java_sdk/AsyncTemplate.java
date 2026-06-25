@@ -7,14 +7,14 @@ import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOper
 
 import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
-import to.unified.unified_java_sdk.models.operations.GetSigningTemplateRequest;
-import to.unified.unified_java_sdk.models.operations.ListSigningTemplatesRequest;
-import to.unified.unified_java_sdk.models.operations.async.GetSigningTemplateRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.GetSigningTemplateResponse;
-import to.unified.unified_java_sdk.models.operations.async.ListSigningTemplatesRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.ListSigningTemplatesResponse;
-import to.unified.unified_java_sdk.operations.GetSigningTemplate;
-import to.unified.unified_java_sdk.operations.ListSigningTemplates;
+import to.unified.unified_java_sdk.models.operations.GetSigningTemplate2Request;
+import to.unified.unified_java_sdk.models.operations.ListSigningTemplates2Request;
+import to.unified.unified_java_sdk.models.operations.async.GetSigningTemplate2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetSigningTemplate2Response;
+import to.unified.unified_java_sdk.models.operations.async.ListSigningTemplates2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListSigningTemplates2Response;
+import to.unified.unified_java_sdk.operations.GetSigningTemplate2;
+import to.unified.unified_java_sdk.operations.ListSigningTemplates2;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -43,19 +43,19 @@ public class AsyncTemplate {
      * 
      * @return The async call builder
      */
-    public GetSigningTemplateRequestBuilder getSigningTemplate() {
-        return new GetSigningTemplateRequestBuilder(sdkConfiguration);
+    public GetSigningTemplate2RequestBuilder getSigningTemplate2() {
+        return new GetSigningTemplate2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Retrieve a template
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<GetSigningTemplateResponse>} - The async response
+     * @return {@code CompletableFuture<GetSigningTemplate2Response>} - The async response
      */
-    public CompletableFuture<GetSigningTemplateResponse> getSigningTemplate(@Nonnull GetSigningTemplateRequest request) {
-        AsyncRequestOperation<GetSigningTemplateRequest, GetSigningTemplateResponse> operation
-              = new GetSigningTemplate.Async(sdkConfiguration, _headers);
+    public CompletableFuture<GetSigningTemplate2Response> getSigningTemplate2(@Nonnull GetSigningTemplate2Request request) {
+        AsyncRequestOperation<GetSigningTemplate2Request, GetSigningTemplate2Response> operation
+              = new GetSigningTemplate2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -66,19 +66,19 @@ public class AsyncTemplate {
      * 
      * @return The async call builder
      */
-    public ListSigningTemplatesRequestBuilder listSigningTemplates() {
-        return new ListSigningTemplatesRequestBuilder(sdkConfiguration);
+    public ListSigningTemplates2RequestBuilder listSigningTemplates2() {
+        return new ListSigningTemplates2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * List all templates
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<ListSigningTemplatesResponse>} - The async response
+     * @return {@code CompletableFuture<ListSigningTemplates2Response>} - The async response
      */
-    public CompletableFuture<ListSigningTemplatesResponse> listSigningTemplates(@Nonnull ListSigningTemplatesRequest request) {
-        AsyncRequestOperation<ListSigningTemplatesRequest, ListSigningTemplatesResponse> operation
-              = new ListSigningTemplates.Async(sdkConfiguration, _headers);
+    public CompletableFuture<ListSigningTemplates2Response> listSigningTemplates2(@Nonnull ListSigningTemplates2Request request) {
+        AsyncRequestOperation<ListSigningTemplates2Request, ListSigningTemplates2Response> operation
+              = new ListSigningTemplates2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

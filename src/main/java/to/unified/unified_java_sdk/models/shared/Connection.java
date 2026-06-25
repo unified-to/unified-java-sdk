@@ -32,26 +32,6 @@ public class Connection {
     @JsonProperty("auth")
     private PropertyConnectionAuth auth;
 
-
-    @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("auth_aws_arn")
-    private String authAwsArn;
-
-
-    @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("auth_azure_keyvault_id")
-    private String authAzureKeyvaultId;
-
-
-    @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("auth_gcp_secret_name")
-    private String authGcpSecretName;
-
-
-    @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("auth_hashi_vault_path")
-    private String authHashiVaultPath;
-
     /**
      * The Integration categories that this connection supports
      */
@@ -129,10 +109,6 @@ public class Connection {
     @JsonCreator
     public Connection(
             @JsonProperty("auth") @Nullable PropertyConnectionAuth auth,
-            @JsonProperty("auth_aws_arn") @Nullable String authAwsArn,
-            @JsonProperty("auth_azure_keyvault_id") @Nullable String authAzureKeyvaultId,
-            @JsonProperty("auth_gcp_secret_name") @Nullable String authGcpSecretName,
-            @JsonProperty("auth_hashi_vault_path") @Nullable String authHashiVaultPath,
             @JsonProperty("categories") @Nonnull List<PropertyConnectionCategories> categories,
             @JsonProperty("created_at") @Nullable OffsetDateTime createdAt,
             @JsonProperty("environment") @Nullable String environment,
@@ -149,10 +125,6 @@ public class Connection {
             @JsonProperty("updated_at") @Nullable OffsetDateTime updatedAt,
             @JsonProperty("workspace_id") @Nullable String workspaceId) {
         this.auth = auth;
-        this.authAwsArn = authAwsArn;
-        this.authAzureKeyvaultId = authAzureKeyvaultId;
-        this.authGcpSecretName = authGcpSecretName;
-        this.authHashiVaultPath = authHashiVaultPath;
         this.categories = Optional.ofNullable(categories)
             .orElseThrow(() -> new IllegalArgumentException("categories cannot be null"));
         this.createdAt = createdAt;
@@ -178,13 +150,12 @@ public class Connection {
             @Nonnull List<PropertyConnectionCategories> categories,
             @Nonnull String integrationType,
             @Nonnull List<PropertyConnectionPermissions> permissions) {
-        this(null, null, null,
-            null, null, categories,
+        this(null, categories, null,
             null, null, null,
-            null, null, integrationType,
+            null, integrationType, null,
+            null, null, permissions,
             null, null, null,
-            permissions, null, null,
-            null, null);
+            null);
     }
 
     /**
@@ -192,22 +163,6 @@ public class Connection {
      */
     public Optional<PropertyConnectionAuth> auth() {
         return Optional.ofNullable(this.auth);
-    }
-
-    public Optional<String> authAwsArn() {
-        return Optional.ofNullable(this.authAwsArn);
-    }
-
-    public Optional<String> authAzureKeyvaultId() {
-        return Optional.ofNullable(this.authAzureKeyvaultId);
-    }
-
-    public Optional<String> authGcpSecretName() {
-        return Optional.ofNullable(this.authGcpSecretName);
-    }
-
-    public Optional<String> authHashiVaultPath() {
-        return Optional.ofNullable(this.authHashiVaultPath);
     }
 
     /**
@@ -283,30 +238,6 @@ public class Connection {
      */
     public Connection withAuth(@Nullable PropertyConnectionAuth auth) {
         this.auth = auth;
-        return this;
-    }
-
-
-    public Connection withAuthAwsArn(@Nullable String authAwsArn) {
-        this.authAwsArn = authAwsArn;
-        return this;
-    }
-
-
-    public Connection withAuthAzureKeyvaultId(@Nullable String authAzureKeyvaultId) {
-        this.authAzureKeyvaultId = authAzureKeyvaultId;
-        return this;
-    }
-
-
-    public Connection withAuthGcpSecretName(@Nullable String authGcpSecretName) {
-        this.authGcpSecretName = authGcpSecretName;
-        return this;
-    }
-
-
-    public Connection withAuthHashiVaultPath(@Nullable String authHashiVaultPath) {
-        this.authHashiVaultPath = authHashiVaultPath;
         return this;
     }
 
@@ -415,10 +346,6 @@ public class Connection {
         Connection other = (Connection) o;
         return 
             Utils.enhancedDeepEquals(this.auth, other.auth) &&
-            Utils.enhancedDeepEquals(this.authAwsArn, other.authAwsArn) &&
-            Utils.enhancedDeepEquals(this.authAzureKeyvaultId, other.authAzureKeyvaultId) &&
-            Utils.enhancedDeepEquals(this.authGcpSecretName, other.authGcpSecretName) &&
-            Utils.enhancedDeepEquals(this.authHashiVaultPath, other.authHashiVaultPath) &&
             Utils.enhancedDeepEquals(this.categories, other.categories) &&
             Utils.enhancedDeepEquals(this.createdAt, other.createdAt) &&
             Utils.enhancedDeepEquals(this.environment, other.environment) &&
@@ -439,23 +366,18 @@ public class Connection {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            auth, authAwsArn, authAzureKeyvaultId,
-            authGcpSecretName, authHashiVaultPath, categories,
-            createdAt, environment, externalXref,
-            id, integrationName, integrationType,
-            isPaused, lastHealthyAt, lastUnhealthyAt,
-            permissions, secretsmanagerId, secretsmanagerKey,
-            updatedAt, workspaceId);
+            auth, categories, createdAt,
+            environment, externalXref, id,
+            integrationName, integrationType, isPaused,
+            lastHealthyAt, lastUnhealthyAt, permissions,
+            secretsmanagerId, secretsmanagerKey, updatedAt,
+            workspaceId);
     }
     
     @Override
     public String toString() {
         return Utils.toString(Connection.class,
                 "auth", auth,
-                "authAwsArn", authAwsArn,
-                "authAzureKeyvaultId", authAzureKeyvaultId,
-                "authGcpSecretName", authGcpSecretName,
-                "authHashiVaultPath", authHashiVaultPath,
                 "categories", categories,
                 "createdAt", createdAt,
                 "environment", environment,
@@ -477,14 +399,6 @@ public class Connection {
     public final static class Builder {
 
         private PropertyConnectionAuth auth;
-
-        private String authAwsArn;
-
-        private String authAzureKeyvaultId;
-
-        private String authGcpSecretName;
-
-        private String authHashiVaultPath;
 
         private List<PropertyConnectionCategories> categories;
 
@@ -525,26 +439,6 @@ public class Connection {
          */
         public Builder auth(@Nullable PropertyConnectionAuth auth) {
             this.auth = auth;
-            return this;
-        }
-
-        public Builder authAwsArn(@Nullable String authAwsArn) {
-            this.authAwsArn = authAwsArn;
-            return this;
-        }
-
-        public Builder authAzureKeyvaultId(@Nullable String authAzureKeyvaultId) {
-            this.authAzureKeyvaultId = authAzureKeyvaultId;
-            return this;
-        }
-
-        public Builder authGcpSecretName(@Nullable String authGcpSecretName) {
-            this.authGcpSecretName = authGcpSecretName;
-            return this;
-        }
-
-        public Builder authHashiVaultPath(@Nullable String authHashiVaultPath) {
-            this.authHashiVaultPath = authHashiVaultPath;
             return this;
         }
 
@@ -628,13 +522,12 @@ public class Connection {
 
         public Connection build() {
             return new Connection(
-                auth, authAwsArn, authAzureKeyvaultId,
-                authGcpSecretName, authHashiVaultPath, categories,
-                createdAt, environment, externalXref,
-                id, integrationName, integrationType,
-                isPaused, lastHealthyAt, lastUnhealthyAt,
-                permissions, secretsmanagerId, secretsmanagerKey,
-                updatedAt, workspaceId);
+                auth, categories, createdAt,
+                environment, externalXref, id,
+                integrationName, integrationType, isPaused,
+                lastHealthyAt, lastUnhealthyAt, permissions,
+                secretsmanagerId, secretsmanagerKey, updatedAt,
+                workspaceId);
         }
 
 

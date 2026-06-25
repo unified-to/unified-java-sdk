@@ -24,10 +24,10 @@ public class AdsInsertionorderStatus {
     public static final AdsInsertionorderStatus ACTIVE = new AdsInsertionorderStatus("ACTIVE");
     public static final AdsInsertionorderStatus PAUSED = new AdsInsertionorderStatus("PAUSED");
     public static final AdsInsertionorderStatus ARCHIVED = new AdsInsertionorderStatus("ARCHIVED");
-    public static final AdsInsertionorderStatus PROCESSING = new AdsInsertionorderStatus("PROCESSING");
-    public static final AdsInsertionorderStatus PROCESSING_FAILED = new AdsInsertionorderStatus("PROCESSING_FAILED");
     public static final AdsInsertionorderStatus DRAFT = new AdsInsertionorderStatus("DRAFT");
     public static final AdsInsertionorderStatus SCHEDULED_FOR_DELETION = new AdsInsertionorderStatus("SCHEDULED_FOR_DELETION");
+    public static final AdsInsertionorderStatus PROCESSING = new AdsInsertionorderStatus("PROCESSING");
+    public static final AdsInsertionorderStatus PROCESSING_FAILED = new AdsInsertionorderStatus("PROCESSING_FAILED");
 
     // This map will grow whenever a Color gets created with a new
     // unrecognized value (a potential memory leak if the user is not
@@ -105,10 +105,10 @@ public class AdsInsertionorderStatus {
         map.put("ACTIVE", ACTIVE);
         map.put("PAUSED", PAUSED);
         map.put("ARCHIVED", ARCHIVED);
-        map.put("PROCESSING", PROCESSING);
-        map.put("PROCESSING_FAILED", PROCESSING_FAILED);
         map.put("DRAFT", DRAFT);
         map.put("SCHEDULED_FOR_DELETION", SCHEDULED_FOR_DELETION);
+        map.put("PROCESSING", PROCESSING);
+        map.put("PROCESSING_FAILED", PROCESSING_FAILED);
         return map;
     }
 
@@ -118,10 +118,10 @@ public class AdsInsertionorderStatus {
         map.put("ACTIVE", AdsInsertionorderStatusEnum.ACTIVE);
         map.put("PAUSED", AdsInsertionorderStatusEnum.PAUSED);
         map.put("ARCHIVED", AdsInsertionorderStatusEnum.ARCHIVED);
-        map.put("PROCESSING", AdsInsertionorderStatusEnum.PROCESSING);
-        map.put("PROCESSING_FAILED", AdsInsertionorderStatusEnum.PROCESSING_FAILED);
         map.put("DRAFT", AdsInsertionorderStatusEnum.DRAFT);
         map.put("SCHEDULED_FOR_DELETION", AdsInsertionorderStatusEnum.SCHEDULED_FOR_DELETION);
+        map.put("PROCESSING", AdsInsertionorderStatusEnum.PROCESSING);
+        map.put("PROCESSING_FAILED", AdsInsertionorderStatusEnum.PROCESSING_FAILED);
         return map;
     }
     
@@ -132,10 +132,10 @@ public class AdsInsertionorderStatus {
         ACTIVE("ACTIVE"),
         PAUSED("PAUSED"),
         ARCHIVED("ARCHIVED"),
-        PROCESSING("PROCESSING"),
-        PROCESSING_FAILED("PROCESSING_FAILED"),
         DRAFT("DRAFT"),
-        SCHEDULED_FOR_DELETION("SCHEDULED_FOR_DELETION"),;
+        SCHEDULED_FOR_DELETION("SCHEDULED_FOR_DELETION"),
+        PROCESSING("PROCESSING"),
+        PROCESSING_FAILED("PROCESSING_FAILED"),;
 
         private final String value;
 

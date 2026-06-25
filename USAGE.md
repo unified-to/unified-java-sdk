@@ -4,8 +4,8 @@ package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.CreateAccountingAccountRequest;
-import to.unified.unified_java_sdk.models.operations.CreateAccountingAccountResponse;
+import to.unified.unified_java_sdk.models.operations.CreateAccountingAccount2Request;
+import to.unified.unified_java_sdk.models.operations.CreateAccountingAccount2Response;
 import to.unified.unified_java_sdk.models.shared.AccountingAccount;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -19,13 +19,13 @@ public class Application {
                     .build())
             .build();
 
-        CreateAccountingAccountRequest req = CreateAccountingAccountRequest.builder()
+        CreateAccountingAccount2Request req = CreateAccountingAccount2Request.builder()
                 .accountingAccount(AccountingAccount.builder()
                     .build())
                 .connectionId("<id>")
                 .build();
 
-        CreateAccountingAccountResponse res = sdk.accounting().createAccountingAccount()
+        CreateAccountingAccount2Response res = sdk.accounting().createAccountingAccount2()
                 .request(req)
                 .call();
 

@@ -4,27 +4,27 @@
 
 ### Available Operations
 
-* [createAccountingPurchaseorder](#createaccountingpurchaseorder) - Create a purchaseorder
-* [getAccountingPurchaseorder](#getaccountingpurchaseorder) - Retrieve a purchaseorder
-* [listAccountingPurchaseorders](#listaccountingpurchaseorders) - List all purchaseorders
-* [patchAccountingPurchaseorder](#patchaccountingpurchaseorder) - Update a purchaseorder
-* [removeAccountingPurchaseorder](#removeaccountingpurchaseorder) - Remove a purchaseorder
-* [updateAccountingPurchaseorder](#updateaccountingpurchaseorder) - Update a purchaseorder
+* [createAccountingPurchaseorder2](#createaccountingpurchaseorder2) - Create a purchaseorder
+* [getAccountingPurchaseorder2](#getaccountingpurchaseorder2) - Retrieve a purchaseorder
+* [listAccountingPurchaseorders2](#listaccountingpurchaseorders2) - List all purchaseorders
+* [patchAccountingPurchaseorder2](#patchaccountingpurchaseorder2) - Update a purchaseorder
+* [removeAccountingPurchaseorder2](#removeaccountingpurchaseorder2) - Remove a purchaseorder
+* [updateAccountingPurchaseorder2](#updateaccountingpurchaseorder2) - Update a purchaseorder
 
-## createAccountingPurchaseorder
+## createAccountingPurchaseorder2
 
 Create a purchaseorder
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createAccountingPurchaseorder" method="post" path="/accounting/{connection_id}/purchaseorder" -->
+<!-- UsageSnippet language="java" operationID="createAccountingPurchaseorder2" method="post" path="/accounting/{connection_id}/purchaseorder" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.CreateAccountingPurchaseorderRequest;
-import to.unified.unified_java_sdk.models.operations.CreateAccountingPurchaseorderResponse;
+import to.unified.unified_java_sdk.models.operations.CreateAccountingPurchaseorder2Request;
+import to.unified.unified_java_sdk.models.operations.CreateAccountingPurchaseorder2Response;
 import to.unified.unified_java_sdk.models.shared.AccountingPurchaseorder;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -38,13 +38,13 @@ public class Application {
                     .build())
             .build();
 
-        CreateAccountingPurchaseorderRequest req = CreateAccountingPurchaseorderRequest.builder()
+        CreateAccountingPurchaseorder2Request req = CreateAccountingPurchaseorder2Request.builder()
                 .accountingPurchaseorder(AccountingPurchaseorder.builder()
                     .build())
                 .connectionId("<id>")
                 .build();
 
-        CreateAccountingPurchaseorderResponse res = sdk.purchaseorder().createAccountingPurchaseorder()
+        CreateAccountingPurchaseorder2Response res = sdk.purchaseorder().createAccountingPurchaseorder2()
                 .request(req)
                 .call();
 
@@ -57,13 +57,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                               | Type                                                                                                    | Required                                                                                                | Description                                                                                             |
-| ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                               | [CreateAccountingPurchaseorderRequest](../../models/operations/CreateAccountingPurchaseorderRequest.md) | :heavy_check_mark:                                                                                      | The request object to use for the request.                                                              |
+| Parameter                                                                                                 | Type                                                                                                      | Required                                                                                                  | Description                                                                                               |
+| --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                 | [CreateAccountingPurchaseorder2Request](../../models/operations/CreateAccountingPurchaseorder2Request.md) | :heavy_check_mark:                                                                                        | The request object to use for the request.                                                                |
 
 ### Response
 
-**[CreateAccountingPurchaseorderResponse](../../models/operations/CreateAccountingPurchaseorderResponse.md)**
+**[CreateAccountingPurchaseorder2Response](../../models/operations/CreateAccountingPurchaseorder2Response.md)**
 
 ### Errors
 
@@ -71,20 +71,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## getAccountingPurchaseorder
+## getAccountingPurchaseorder2
 
 Retrieve a purchaseorder
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="getAccountingPurchaseorder" method="get" path="/accounting/{connection_id}/purchaseorder/{id}" -->
+<!-- UsageSnippet language="java" operationID="getAccountingPurchaseorder2" method="get" path="/accounting/{connection_id}/purchaseorder/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.GetAccountingPurchaseorderRequest;
-import to.unified.unified_java_sdk.models.operations.GetAccountingPurchaseorderResponse;
+import to.unified.unified_java_sdk.models.operations.GetAccountingPurchaseorder2Request;
+import to.unified.unified_java_sdk.models.operations.GetAccountingPurchaseorder2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -97,12 +97,12 @@ public class Application {
                     .build())
             .build();
 
-        GetAccountingPurchaseorderRequest req = GetAccountingPurchaseorderRequest.builder()
+        GetAccountingPurchaseorder2Request req = GetAccountingPurchaseorder2Request.builder()
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        GetAccountingPurchaseorderResponse res = sdk.purchaseorder().getAccountingPurchaseorder()
+        GetAccountingPurchaseorder2Response res = sdk.purchaseorder().getAccountingPurchaseorder2()
                 .request(req)
                 .call();
 
@@ -115,13 +115,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                         | Type                                                                                              | Required                                                                                          | Description                                                                                       |
-| ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
-| `request`                                                                                         | [GetAccountingPurchaseorderRequest](../../models/operations/GetAccountingPurchaseorderRequest.md) | :heavy_check_mark:                                                                                | The request object to use for the request.                                                        |
+| Parameter                                                                                           | Type                                                                                                | Required                                                                                            | Description                                                                                         |
+| --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
+| `request`                                                                                           | [GetAccountingPurchaseorder2Request](../../models/operations/GetAccountingPurchaseorder2Request.md) | :heavy_check_mark:                                                                                  | The request object to use for the request.                                                          |
 
 ### Response
 
-**[GetAccountingPurchaseorderResponse](../../models/operations/GetAccountingPurchaseorderResponse.md)**
+**[GetAccountingPurchaseorder2Response](../../models/operations/GetAccountingPurchaseorder2Response.md)**
 
 ### Errors
 
@@ -129,20 +129,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## listAccountingPurchaseorders
+## listAccountingPurchaseorders2
 
 List all purchaseorders
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="listAccountingPurchaseorders" method="get" path="/accounting/{connection_id}/purchaseorder" -->
+<!-- UsageSnippet language="java" operationID="listAccountingPurchaseorders2" method="get" path="/accounting/{connection_id}/purchaseorder" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.ListAccountingPurchaseordersRequest;
-import to.unified.unified_java_sdk.models.operations.ListAccountingPurchaseordersResponse;
+import to.unified.unified_java_sdk.models.operations.ListAccountingPurchaseorders2Request;
+import to.unified.unified_java_sdk.models.operations.ListAccountingPurchaseorders2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -155,11 +155,11 @@ public class Application {
                     .build())
             .build();
 
-        ListAccountingPurchaseordersRequest req = ListAccountingPurchaseordersRequest.builder()
+        ListAccountingPurchaseorders2Request req = ListAccountingPurchaseorders2Request.builder()
                 .connectionId("<id>")
                 .build();
 
-        ListAccountingPurchaseordersResponse res = sdk.purchaseorder().listAccountingPurchaseorders()
+        ListAccountingPurchaseorders2Response res = sdk.purchaseorder().listAccountingPurchaseorders2()
                 .request(req)
                 .call();
 
@@ -172,13 +172,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                             | Type                                                                                                  | Required                                                                                              | Description                                                                                           |
-| ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
-| `request`                                                                                             | [ListAccountingPurchaseordersRequest](../../models/operations/ListAccountingPurchaseordersRequest.md) | :heavy_check_mark:                                                                                    | The request object to use for the request.                                                            |
+| Parameter                                                                                               | Type                                                                                                    | Required                                                                                                | Description                                                                                             |
+| ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                               | [ListAccountingPurchaseorders2Request](../../models/operations/ListAccountingPurchaseorders2Request.md) | :heavy_check_mark:                                                                                      | The request object to use for the request.                                                              |
 
 ### Response
 
-**[ListAccountingPurchaseordersResponse](../../models/operations/ListAccountingPurchaseordersResponse.md)**
+**[ListAccountingPurchaseorders2Response](../../models/operations/ListAccountingPurchaseorders2Response.md)**
 
 ### Errors
 
@@ -186,20 +186,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## patchAccountingPurchaseorder
+## patchAccountingPurchaseorder2
 
 Update a purchaseorder
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchAccountingPurchaseorder" method="patch" path="/accounting/{connection_id}/purchaseorder/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchAccountingPurchaseorder2" method="patch" path="/accounting/{connection_id}/purchaseorder/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.PatchAccountingPurchaseorderRequest;
-import to.unified.unified_java_sdk.models.operations.PatchAccountingPurchaseorderResponse;
+import to.unified.unified_java_sdk.models.operations.PatchAccountingPurchaseorder2Request;
+import to.unified.unified_java_sdk.models.operations.PatchAccountingPurchaseorder2Response;
 import to.unified.unified_java_sdk.models.shared.AccountingPurchaseorder;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -213,14 +213,14 @@ public class Application {
                     .build())
             .build();
 
-        PatchAccountingPurchaseorderRequest req = PatchAccountingPurchaseorderRequest.builder()
+        PatchAccountingPurchaseorder2Request req = PatchAccountingPurchaseorder2Request.builder()
                 .accountingPurchaseorder(AccountingPurchaseorder.builder()
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        PatchAccountingPurchaseorderResponse res = sdk.purchaseorder().patchAccountingPurchaseorder()
+        PatchAccountingPurchaseorder2Response res = sdk.purchaseorder().patchAccountingPurchaseorder2()
                 .request(req)
                 .call();
 
@@ -233,13 +233,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                             | Type                                                                                                  | Required                                                                                              | Description                                                                                           |
-| ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
-| `request`                                                                                             | [PatchAccountingPurchaseorderRequest](../../models/operations/PatchAccountingPurchaseorderRequest.md) | :heavy_check_mark:                                                                                    | The request object to use for the request.                                                            |
+| Parameter                                                                                               | Type                                                                                                    | Required                                                                                                | Description                                                                                             |
+| ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                               | [PatchAccountingPurchaseorder2Request](../../models/operations/PatchAccountingPurchaseorder2Request.md) | :heavy_check_mark:                                                                                      | The request object to use for the request.                                                              |
 
 ### Response
 
-**[PatchAccountingPurchaseorderResponse](../../models/operations/PatchAccountingPurchaseorderResponse.md)**
+**[PatchAccountingPurchaseorder2Response](../../models/operations/PatchAccountingPurchaseorder2Response.md)**
 
 ### Errors
 
@@ -247,20 +247,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## removeAccountingPurchaseorder
+## removeAccountingPurchaseorder2
 
 Remove a purchaseorder
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="removeAccountingPurchaseorder" method="delete" path="/accounting/{connection_id}/purchaseorder/{id}" -->
+<!-- UsageSnippet language="java" operationID="removeAccountingPurchaseorder2" method="delete" path="/accounting/{connection_id}/purchaseorder/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.RemoveAccountingPurchaseorderRequest;
-import to.unified.unified_java_sdk.models.operations.RemoveAccountingPurchaseorderResponse;
+import to.unified.unified_java_sdk.models.operations.RemoveAccountingPurchaseorder2Request;
+import to.unified.unified_java_sdk.models.operations.RemoveAccountingPurchaseorder2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -273,12 +273,12 @@ public class Application {
                     .build())
             .build();
 
-        RemoveAccountingPurchaseorderRequest req = RemoveAccountingPurchaseorderRequest.builder()
+        RemoveAccountingPurchaseorder2Request req = RemoveAccountingPurchaseorder2Request.builder()
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        RemoveAccountingPurchaseorderResponse res = sdk.purchaseorder().removeAccountingPurchaseorder()
+        RemoveAccountingPurchaseorder2Response res = sdk.purchaseorder().removeAccountingPurchaseorder2()
                 .request(req)
                 .call();
 
@@ -289,13 +289,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                               | Type                                                                                                    | Required                                                                                                | Description                                                                                             |
-| ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                               | [RemoveAccountingPurchaseorderRequest](../../models/operations/RemoveAccountingPurchaseorderRequest.md) | :heavy_check_mark:                                                                                      | The request object to use for the request.                                                              |
+| Parameter                                                                                                 | Type                                                                                                      | Required                                                                                                  | Description                                                                                               |
+| --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                 | [RemoveAccountingPurchaseorder2Request](../../models/operations/RemoveAccountingPurchaseorder2Request.md) | :heavy_check_mark:                                                                                        | The request object to use for the request.                                                                |
 
 ### Response
 
-**[RemoveAccountingPurchaseorderResponse](../../models/operations/RemoveAccountingPurchaseorderResponse.md)**
+**[RemoveAccountingPurchaseorder2Response](../../models/operations/RemoveAccountingPurchaseorder2Response.md)**
 
 ### Errors
 
@@ -303,20 +303,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## updateAccountingPurchaseorder
+## updateAccountingPurchaseorder2
 
 Update a purchaseorder
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateAccountingPurchaseorder" method="put" path="/accounting/{connection_id}/purchaseorder/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateAccountingPurchaseorder2" method="put" path="/accounting/{connection_id}/purchaseorder/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.UpdateAccountingPurchaseorderRequest;
-import to.unified.unified_java_sdk.models.operations.UpdateAccountingPurchaseorderResponse;
+import to.unified.unified_java_sdk.models.operations.UpdateAccountingPurchaseorder2Request;
+import to.unified.unified_java_sdk.models.operations.UpdateAccountingPurchaseorder2Response;
 import to.unified.unified_java_sdk.models.shared.AccountingPurchaseorder;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -330,14 +330,14 @@ public class Application {
                     .build())
             .build();
 
-        UpdateAccountingPurchaseorderRequest req = UpdateAccountingPurchaseorderRequest.builder()
+        UpdateAccountingPurchaseorder2Request req = UpdateAccountingPurchaseorder2Request.builder()
                 .accountingPurchaseorder(AccountingPurchaseorder.builder()
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        UpdateAccountingPurchaseorderResponse res = sdk.purchaseorder().updateAccountingPurchaseorder()
+        UpdateAccountingPurchaseorder2Response res = sdk.purchaseorder().updateAccountingPurchaseorder2()
                 .request(req)
                 .call();
 
@@ -350,13 +350,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                               | Type                                                                                                    | Required                                                                                                | Description                                                                                             |
-| ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                               | [UpdateAccountingPurchaseorderRequest](../../models/operations/UpdateAccountingPurchaseorderRequest.md) | :heavy_check_mark:                                                                                      | The request object to use for the request.                                                              |
+| Parameter                                                                                                 | Type                                                                                                      | Required                                                                                                  | Description                                                                                               |
+| --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                 | [UpdateAccountingPurchaseorder2Request](../../models/operations/UpdateAccountingPurchaseorder2Request.md) | :heavy_check_mark:                                                                                        | The request object to use for the request.                                                                |
 
 ### Response
 
-**[UpdateAccountingPurchaseorderResponse](../../models/operations/UpdateAccountingPurchaseorderResponse.md)**
+**[UpdateAccountingPurchaseorder2Response](../../models/operations/UpdateAccountingPurchaseorder2Response.md)**
 
 ### Errors
 

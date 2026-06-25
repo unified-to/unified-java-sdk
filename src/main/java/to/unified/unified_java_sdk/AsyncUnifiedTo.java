@@ -69,6 +69,16 @@ public class AsyncUnifiedTo {
 
     private final AsyncTarget target;
 
+    private final AsyncAnalytics analytics;
+
+    private final AsyncEvent event;
+
+    private final AsyncProperty property;
+
+    private final AsyncSession session;
+
+    private final AsyncVisitor visitor;
+
     private final AsyncAssessment assessment;
 
     private final AsyncPackage package_;
@@ -96,8 +106,6 @@ public class AsyncUnifiedTo {
     private final AsyncCalendar calendar;
 
     private final AsyncBusy busy;
-
-    private final AsyncEvent event;
 
     private final AsyncLink link;
 
@@ -136,6 +144,16 @@ public class AsyncUnifiedTo {
     private final AsyncLead lead;
 
     private final AsyncPipeline pipeline;
+
+    private final AsyncDatastore datastore;
+
+    private final AsyncDatabase database;
+
+    private final AsyncQuery query;
+
+    private final AsyncRecord record;
+
+    private final AsyncTable table;
 
     private final AsyncEnrich enrich;
 
@@ -403,6 +421,26 @@ public class AsyncUnifiedTo {
         return target;
     }
 
+    public AsyncAnalytics analytics() {
+        return analytics;
+    }
+
+    public AsyncEvent event() {
+        return event;
+    }
+
+    public AsyncProperty property() {
+        return property;
+    }
+
+    public AsyncSession session() {
+        return session;
+    }
+
+    public AsyncVisitor visitor() {
+        return visitor;
+    }
+
     public AsyncAssessment assessment() {
         return assessment;
     }
@@ -457,10 +495,6 @@ public class AsyncUnifiedTo {
 
     public AsyncBusy busy() {
         return busy;
-    }
-
-    public AsyncEvent event() {
-        return event;
     }
 
     public AsyncLink link() {
@@ -537,6 +571,26 @@ public class AsyncUnifiedTo {
 
     public AsyncPipeline pipeline() {
         return pipeline;
+    }
+
+    public AsyncDatastore datastore() {
+        return datastore;
+    }
+
+    public AsyncDatabase database() {
+        return database;
+    }
+
+    public AsyncQuery query() {
+        return query;
+    }
+
+    public AsyncRecord record() {
+        return record;
+    }
+
+    public AsyncTable table() {
+        return table;
     }
 
     public AsyncEnrich enrich() {
@@ -881,6 +935,11 @@ public class AsyncUnifiedTo {
         this.insertionorder = new AsyncInsertionorder(syncSDK.insertionorder(), sdkConfiguration);
         this.promoted = new AsyncPromoted(syncSDK.promoted(), sdkConfiguration);
         this.target = new AsyncTarget(syncSDK.target(), sdkConfiguration);
+        this.analytics = new AsyncAnalytics(syncSDK.analytics(), sdkConfiguration);
+        this.event = new AsyncEvent(syncSDK.event(), sdkConfiguration);
+        this.property = new AsyncProperty(syncSDK.property(), sdkConfiguration);
+        this.session = new AsyncSession(syncSDK.session(), sdkConfiguration);
+        this.visitor = new AsyncVisitor(syncSDK.visitor(), sdkConfiguration);
         this.assessment = new AsyncAssessment(syncSDK.assessment(), sdkConfiguration);
         this.package_ = new AsyncPackage(syncSDK.package_(), sdkConfiguration);
         this.ats = new AsyncAts(syncSDK.ats(), sdkConfiguration);
@@ -895,7 +954,6 @@ public class AsyncUnifiedTo {
         this.scorecard = new AsyncScorecard(syncSDK.scorecard(), sdkConfiguration);
         this.calendar = new AsyncCalendar(syncSDK.calendar(), sdkConfiguration);
         this.busy = new AsyncBusy(syncSDK.busy(), sdkConfiguration);
-        this.event = new AsyncEvent(syncSDK.event(), sdkConfiguration);
         this.link = new AsyncLink(syncSDK.link(), sdkConfiguration);
         this.recording = new AsyncRecording(syncSDK.recording(), sdkConfiguration);
         this.webinar = new AsyncWebinar(syncSDK.webinar(), sdkConfiguration);
@@ -915,6 +973,11 @@ public class AsyncUnifiedTo {
         this.deal = new AsyncDeal(syncSDK.deal(), sdkConfiguration);
         this.lead = new AsyncLead(syncSDK.lead(), sdkConfiguration);
         this.pipeline = new AsyncPipeline(syncSDK.pipeline(), sdkConfiguration);
+        this.datastore = new AsyncDatastore(syncSDK.datastore(), sdkConfiguration);
+        this.database = new AsyncDatabase(syncSDK.database(), sdkConfiguration);
+        this.query = new AsyncQuery(syncSDK.query(), sdkConfiguration);
+        this.record = new AsyncRecord(syncSDK.record(), sdkConfiguration);
+        this.table = new AsyncTable(syncSDK.table(), sdkConfiguration);
         this.enrich = new AsyncEnrich(syncSDK.enrich(), sdkConfiguration);
         this.person = new AsyncPerson(syncSDK.person(), sdkConfiguration);
         this.forms = new AsyncForms(syncSDK.forms(), sdkConfiguration);

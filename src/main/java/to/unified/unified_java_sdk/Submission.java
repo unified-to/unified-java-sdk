@@ -6,14 +6,14 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
-import to.unified.unified_java_sdk.models.operations.GetFormsSubmissionRequest;
-import to.unified.unified_java_sdk.models.operations.GetFormsSubmissionRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.GetFormsSubmissionResponse;
-import to.unified.unified_java_sdk.models.operations.ListFormsSubmissionsRequest;
-import to.unified.unified_java_sdk.models.operations.ListFormsSubmissionsRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.ListFormsSubmissionsResponse;
-import to.unified.unified_java_sdk.operations.GetFormsSubmission;
-import to.unified.unified_java_sdk.operations.ListFormsSubmissions;
+import to.unified.unified_java_sdk.models.operations.GetFormsSubmission2Request;
+import to.unified.unified_java_sdk.models.operations.GetFormsSubmission2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetFormsSubmission2Response;
+import to.unified.unified_java_sdk.models.operations.ListFormsSubmissions2Request;
+import to.unified.unified_java_sdk.models.operations.ListFormsSubmissions2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListFormsSubmissions2Response;
+import to.unified.unified_java_sdk.operations.GetFormsSubmission2;
+import to.unified.unified_java_sdk.operations.ListFormsSubmissions2;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -41,8 +41,8 @@ public class Submission {
      * 
      * @return The call builder
      */
-    public GetFormsSubmissionRequestBuilder getFormsSubmission() {
-        return new GetFormsSubmissionRequestBuilder(sdkConfiguration);
+    public GetFormsSubmission2RequestBuilder getFormsSubmission2() {
+        return new GetFormsSubmission2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -52,9 +52,9 @@ public class Submission {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetFormsSubmissionResponse getFormsSubmission(@Nonnull GetFormsSubmissionRequest request) {
-        RequestOperation<GetFormsSubmissionRequest, GetFormsSubmissionResponse> operation
-              = new GetFormsSubmission.Sync(sdkConfiguration, _headers);
+    public GetFormsSubmission2Response getFormsSubmission2(@Nonnull GetFormsSubmission2Request request) {
+        RequestOperation<GetFormsSubmission2Request, GetFormsSubmission2Response> operation
+              = new GetFormsSubmission2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -63,8 +63,8 @@ public class Submission {
      * 
      * @return The call builder
      */
-    public ListFormsSubmissionsRequestBuilder listFormsSubmissions() {
-        return new ListFormsSubmissionsRequestBuilder(sdkConfiguration);
+    public ListFormsSubmissions2RequestBuilder listFormsSubmissions2() {
+        return new ListFormsSubmissions2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -74,9 +74,9 @@ public class Submission {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListFormsSubmissionsResponse listFormsSubmissions(@Nonnull ListFormsSubmissionsRequest request) {
-        RequestOperation<ListFormsSubmissionsRequest, ListFormsSubmissionsResponse> operation
-              = new ListFormsSubmissions.Sync(sdkConfiguration, _headers);
+    public ListFormsSubmissions2Response listFormsSubmissions2(@Nonnull ListFormsSubmissions2Request request) {
+        RequestOperation<ListFormsSubmissions2Request, ListFormsSubmissions2Response> operation
+              = new ListFormsSubmissions2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

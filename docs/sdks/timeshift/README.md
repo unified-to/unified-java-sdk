@@ -4,27 +4,27 @@
 
 ### Available Operations
 
-* [createHrisTimeshift](#createhristimeshift) - Create a timeshift
-* [getHrisTimeshift](#gethristimeshift) - Retrieve a timeshift
-* [listHrisTimeshifts](#listhristimeshifts) - List all timeshifts
-* [patchHrisTimeshift](#patchhristimeshift) - Update a timeshift
-* [removeHrisTimeshift](#removehristimeshift) - Remove a timeshift
-* [updateHrisTimeshift](#updatehristimeshift) - Update a timeshift
+* [createHrisTimeshift2](#createhristimeshift2) - Create a timeshift
+* [getHrisTimeshift2](#gethristimeshift2) - Retrieve a timeshift
+* [listHrisTimeshifts2](#listhristimeshifts2) - List all timeshifts
+* [patchHrisTimeshift2](#patchhristimeshift2) - Update a timeshift
+* [removeHrisTimeshift2](#removehristimeshift2) - Remove a timeshift
+* [updateHrisTimeshift2](#updatehristimeshift2) - Update a timeshift
 
-## createHrisTimeshift
+## createHrisTimeshift2
 
 Create a timeshift
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createHrisTimeshift" method="post" path="/hris/{connection_id}/timeshift" -->
+<!-- UsageSnippet language="java" operationID="createHrisTimeshift2" method="post" path="/hris/{connection_id}/timeshift" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.CreateHrisTimeshiftRequest;
-import to.unified.unified_java_sdk.models.operations.CreateHrisTimeshiftResponse;
+import to.unified.unified_java_sdk.models.operations.CreateHrisTimeshift2Request;
+import to.unified.unified_java_sdk.models.operations.CreateHrisTimeshift2Response;
 import to.unified.unified_java_sdk.models.shared.HrisTimeshift;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -38,14 +38,14 @@ public class Application {
                     .build())
             .build();
 
-        CreateHrisTimeshiftRequest req = CreateHrisTimeshiftRequest.builder()
+        CreateHrisTimeshift2Request req = CreateHrisTimeshift2Request.builder()
                 .hrisTimeshift(HrisTimeshift.builder()
                     .employeeUserId("<id>")
                     .build())
                 .connectionId("<id>")
                 .build();
 
-        CreateHrisTimeshiftResponse res = sdk.timeshift().createHrisTimeshift()
+        CreateHrisTimeshift2Response res = sdk.timeshift().createHrisTimeshift2()
                 .request(req)
                 .call();
 
@@ -58,13 +58,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                           | Type                                                                                | Required                                                                            | Description                                                                         |
-| ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
-| `request`                                                                           | [CreateHrisTimeshiftRequest](../../models/operations/CreateHrisTimeshiftRequest.md) | :heavy_check_mark:                                                                  | The request object to use for the request.                                          |
+| Parameter                                                                             | Type                                                                                  | Required                                                                              | Description                                                                           |
+| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| `request`                                                                             | [CreateHrisTimeshift2Request](../../models/operations/CreateHrisTimeshift2Request.md) | :heavy_check_mark:                                                                    | The request object to use for the request.                                            |
 
 ### Response
 
-**[CreateHrisTimeshiftResponse](../../models/operations/CreateHrisTimeshiftResponse.md)**
+**[CreateHrisTimeshift2Response](../../models/operations/CreateHrisTimeshift2Response.md)**
 
 ### Errors
 
@@ -72,20 +72,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## getHrisTimeshift
+## getHrisTimeshift2
 
 Retrieve a timeshift
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="getHrisTimeshift" method="get" path="/hris/{connection_id}/timeshift/{id}" -->
+<!-- UsageSnippet language="java" operationID="getHrisTimeshift2" method="get" path="/hris/{connection_id}/timeshift/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.GetHrisTimeshiftRequest;
-import to.unified.unified_java_sdk.models.operations.GetHrisTimeshiftResponse;
+import to.unified.unified_java_sdk.models.operations.GetHrisTimeshift2Request;
+import to.unified.unified_java_sdk.models.operations.GetHrisTimeshift2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -98,12 +98,12 @@ public class Application {
                     .build())
             .build();
 
-        GetHrisTimeshiftRequest req = GetHrisTimeshiftRequest.builder()
+        GetHrisTimeshift2Request req = GetHrisTimeshift2Request.builder()
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        GetHrisTimeshiftResponse res = sdk.timeshift().getHrisTimeshift()
+        GetHrisTimeshift2Response res = sdk.timeshift().getHrisTimeshift2()
                 .request(req)
                 .call();
 
@@ -116,13 +116,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
-| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
-| `request`                                                                     | [GetHrisTimeshiftRequest](../../models/operations/GetHrisTimeshiftRequest.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
+| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| `request`                                                                       | [GetHrisTimeshift2Request](../../models/operations/GetHrisTimeshift2Request.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
 
 ### Response
 
-**[GetHrisTimeshiftResponse](../../models/operations/GetHrisTimeshiftResponse.md)**
+**[GetHrisTimeshift2Response](../../models/operations/GetHrisTimeshift2Response.md)**
 
 ### Errors
 
@@ -130,20 +130,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## listHrisTimeshifts
+## listHrisTimeshifts2
 
 List all timeshifts
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="listHrisTimeshifts" method="get" path="/hris/{connection_id}/timeshift" -->
+<!-- UsageSnippet language="java" operationID="listHrisTimeshifts2" method="get" path="/hris/{connection_id}/timeshift" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.ListHrisTimeshiftsRequest;
-import to.unified.unified_java_sdk.models.operations.ListHrisTimeshiftsResponse;
+import to.unified.unified_java_sdk.models.operations.ListHrisTimeshifts2Request;
+import to.unified.unified_java_sdk.models.operations.ListHrisTimeshifts2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -156,11 +156,11 @@ public class Application {
                     .build())
             .build();
 
-        ListHrisTimeshiftsRequest req = ListHrisTimeshiftsRequest.builder()
+        ListHrisTimeshifts2Request req = ListHrisTimeshifts2Request.builder()
                 .connectionId("<id>")
                 .build();
 
-        ListHrisTimeshiftsResponse res = sdk.timeshift().listHrisTimeshifts()
+        ListHrisTimeshifts2Response res = sdk.timeshift().listHrisTimeshifts2()
                 .request(req)
                 .call();
 
@@ -173,13 +173,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
-| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
-| `request`                                                                         | [ListHrisTimeshiftsRequest](../../models/operations/ListHrisTimeshiftsRequest.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
+| Parameter                                                                           | Type                                                                                | Required                                                                            | Description                                                                         |
+| ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| `request`                                                                           | [ListHrisTimeshifts2Request](../../models/operations/ListHrisTimeshifts2Request.md) | :heavy_check_mark:                                                                  | The request object to use for the request.                                          |
 
 ### Response
 
-**[ListHrisTimeshiftsResponse](../../models/operations/ListHrisTimeshiftsResponse.md)**
+**[ListHrisTimeshifts2Response](../../models/operations/ListHrisTimeshifts2Response.md)**
 
 ### Errors
 
@@ -187,20 +187,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## patchHrisTimeshift
+## patchHrisTimeshift2
 
 Update a timeshift
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchHrisTimeshift" method="patch" path="/hris/{connection_id}/timeshift/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchHrisTimeshift2" method="patch" path="/hris/{connection_id}/timeshift/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.PatchHrisTimeshiftRequest;
-import to.unified.unified_java_sdk.models.operations.PatchHrisTimeshiftResponse;
+import to.unified.unified_java_sdk.models.operations.PatchHrisTimeshift2Request;
+import to.unified.unified_java_sdk.models.operations.PatchHrisTimeshift2Response;
 import to.unified.unified_java_sdk.models.shared.HrisTimeshift;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -214,7 +214,7 @@ public class Application {
                     .build())
             .build();
 
-        PatchHrisTimeshiftRequest req = PatchHrisTimeshiftRequest.builder()
+        PatchHrisTimeshift2Request req = PatchHrisTimeshift2Request.builder()
                 .hrisTimeshift(HrisTimeshift.builder()
                     .employeeUserId("<id>")
                     .build())
@@ -222,7 +222,7 @@ public class Application {
                 .id("<id>")
                 .build();
 
-        PatchHrisTimeshiftResponse res = sdk.timeshift().patchHrisTimeshift()
+        PatchHrisTimeshift2Response res = sdk.timeshift().patchHrisTimeshift2()
                 .request(req)
                 .call();
 
@@ -235,13 +235,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
-| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
-| `request`                                                                         | [PatchHrisTimeshiftRequest](../../models/operations/PatchHrisTimeshiftRequest.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
+| Parameter                                                                           | Type                                                                                | Required                                                                            | Description                                                                         |
+| ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| `request`                                                                           | [PatchHrisTimeshift2Request](../../models/operations/PatchHrisTimeshift2Request.md) | :heavy_check_mark:                                                                  | The request object to use for the request.                                          |
 
 ### Response
 
-**[PatchHrisTimeshiftResponse](../../models/operations/PatchHrisTimeshiftResponse.md)**
+**[PatchHrisTimeshift2Response](../../models/operations/PatchHrisTimeshift2Response.md)**
 
 ### Errors
 
@@ -249,20 +249,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## removeHrisTimeshift
+## removeHrisTimeshift2
 
 Remove a timeshift
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="removeHrisTimeshift" method="delete" path="/hris/{connection_id}/timeshift/{id}" -->
+<!-- UsageSnippet language="java" operationID="removeHrisTimeshift2" method="delete" path="/hris/{connection_id}/timeshift/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.RemoveHrisTimeshiftRequest;
-import to.unified.unified_java_sdk.models.operations.RemoveHrisTimeshiftResponse;
+import to.unified.unified_java_sdk.models.operations.RemoveHrisTimeshift2Request;
+import to.unified.unified_java_sdk.models.operations.RemoveHrisTimeshift2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -275,12 +275,12 @@ public class Application {
                     .build())
             .build();
 
-        RemoveHrisTimeshiftRequest req = RemoveHrisTimeshiftRequest.builder()
+        RemoveHrisTimeshift2Request req = RemoveHrisTimeshift2Request.builder()
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        RemoveHrisTimeshiftResponse res = sdk.timeshift().removeHrisTimeshift()
+        RemoveHrisTimeshift2Response res = sdk.timeshift().removeHrisTimeshift2()
                 .request(req)
                 .call();
 
@@ -291,13 +291,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                           | Type                                                                                | Required                                                                            | Description                                                                         |
-| ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
-| `request`                                                                           | [RemoveHrisTimeshiftRequest](../../models/operations/RemoveHrisTimeshiftRequest.md) | :heavy_check_mark:                                                                  | The request object to use for the request.                                          |
+| Parameter                                                                             | Type                                                                                  | Required                                                                              | Description                                                                           |
+| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| `request`                                                                             | [RemoveHrisTimeshift2Request](../../models/operations/RemoveHrisTimeshift2Request.md) | :heavy_check_mark:                                                                    | The request object to use for the request.                                            |
 
 ### Response
 
-**[RemoveHrisTimeshiftResponse](../../models/operations/RemoveHrisTimeshiftResponse.md)**
+**[RemoveHrisTimeshift2Response](../../models/operations/RemoveHrisTimeshift2Response.md)**
 
 ### Errors
 
@@ -305,20 +305,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## updateHrisTimeshift
+## updateHrisTimeshift2
 
 Update a timeshift
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateHrisTimeshift" method="put" path="/hris/{connection_id}/timeshift/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateHrisTimeshift2" method="put" path="/hris/{connection_id}/timeshift/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.UpdateHrisTimeshiftRequest;
-import to.unified.unified_java_sdk.models.operations.UpdateHrisTimeshiftResponse;
+import to.unified.unified_java_sdk.models.operations.UpdateHrisTimeshift2Request;
+import to.unified.unified_java_sdk.models.operations.UpdateHrisTimeshift2Response;
 import to.unified.unified_java_sdk.models.shared.HrisTimeshift;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -332,7 +332,7 @@ public class Application {
                     .build())
             .build();
 
-        UpdateHrisTimeshiftRequest req = UpdateHrisTimeshiftRequest.builder()
+        UpdateHrisTimeshift2Request req = UpdateHrisTimeshift2Request.builder()
                 .hrisTimeshift(HrisTimeshift.builder()
                     .employeeUserId("<id>")
                     .build())
@@ -340,7 +340,7 @@ public class Application {
                 .id("<id>")
                 .build();
 
-        UpdateHrisTimeshiftResponse res = sdk.timeshift().updateHrisTimeshift()
+        UpdateHrisTimeshift2Response res = sdk.timeshift().updateHrisTimeshift2()
                 .request(req)
                 .call();
 
@@ -353,13 +353,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                           | Type                                                                                | Required                                                                            | Description                                                                         |
-| ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
-| `request`                                                                           | [UpdateHrisTimeshiftRequest](../../models/operations/UpdateHrisTimeshiftRequest.md) | :heavy_check_mark:                                                                  | The request object to use for the request.                                          |
+| Parameter                                                                             | Type                                                                                  | Required                                                                              | Description                                                                           |
+| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| `request`                                                                             | [UpdateHrisTimeshift2Request](../../models/operations/UpdateHrisTimeshift2Request.md) | :heavy_check_mark:                                                                    | The request object to use for the request.                                            |
 
 ### Response
 
-**[UpdateHrisTimeshiftResponse](../../models/operations/UpdateHrisTimeshiftResponse.md)**
+**[UpdateHrisTimeshift2Response](../../models/operations/UpdateHrisTimeshift2Response.md)**
 
 ### Errors
 

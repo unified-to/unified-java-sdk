@@ -7,38 +7,38 @@ import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOper
 
 import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
-import to.unified.unified_java_sdk.models.operations.CreateVerificationRequestRequest;
-import to.unified.unified_java_sdk.models.operations.GetVerificationPackageRequest;
-import to.unified.unified_java_sdk.models.operations.GetVerificationRequestRequest;
-import to.unified.unified_java_sdk.models.operations.ListVerificationPackagesRequest;
-import to.unified.unified_java_sdk.models.operations.ListVerificationRequestsRequest;
-import to.unified.unified_java_sdk.models.operations.PatchVerificationRequestRequest;
-import to.unified.unified_java_sdk.models.operations.RemoveVerificationRequestRequest;
-import to.unified.unified_java_sdk.models.operations.UpdateVerificationRequestRequest;
-import to.unified.unified_java_sdk.models.operations.async.CreateVerificationRequestRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.CreateVerificationRequestResponse;
-import to.unified.unified_java_sdk.models.operations.async.GetVerificationPackageRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.GetVerificationPackageResponse;
-import to.unified.unified_java_sdk.models.operations.async.GetVerificationRequestRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.GetVerificationRequestResponse;
-import to.unified.unified_java_sdk.models.operations.async.ListVerificationPackagesRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.ListVerificationPackagesResponse;
-import to.unified.unified_java_sdk.models.operations.async.ListVerificationRequestsRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.ListVerificationRequestsResponse;
-import to.unified.unified_java_sdk.models.operations.async.PatchVerificationRequestRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.PatchVerificationRequestResponse;
-import to.unified.unified_java_sdk.models.operations.async.RemoveVerificationRequestRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.RemoveVerificationRequestResponse;
-import to.unified.unified_java_sdk.models.operations.async.UpdateVerificationRequestRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.UpdateVerificationRequestResponse;
-import to.unified.unified_java_sdk.operations.CreateVerificationRequest;
-import to.unified.unified_java_sdk.operations.GetVerificationPackage;
-import to.unified.unified_java_sdk.operations.GetVerificationRequest;
-import to.unified.unified_java_sdk.operations.ListVerificationPackages;
-import to.unified.unified_java_sdk.operations.ListVerificationRequests;
-import to.unified.unified_java_sdk.operations.PatchVerificationRequest;
-import to.unified.unified_java_sdk.operations.RemoveVerificationRequest;
-import to.unified.unified_java_sdk.operations.UpdateVerificationRequest;
+import to.unified.unified_java_sdk.models.operations.CreateVerificationRequest2Request;
+import to.unified.unified_java_sdk.models.operations.GetVerificationPackage2Request;
+import to.unified.unified_java_sdk.models.operations.GetVerificationRequest2Request;
+import to.unified.unified_java_sdk.models.operations.ListVerificationPackages2Request;
+import to.unified.unified_java_sdk.models.operations.ListVerificationRequests2Request;
+import to.unified.unified_java_sdk.models.operations.PatchVerificationRequest2Request;
+import to.unified.unified_java_sdk.models.operations.RemoveVerificationRequest2Request;
+import to.unified.unified_java_sdk.models.operations.UpdateVerificationRequest2Request;
+import to.unified.unified_java_sdk.models.operations.async.CreateVerificationRequest2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.CreateVerificationRequest2Response;
+import to.unified.unified_java_sdk.models.operations.async.GetVerificationPackage2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetVerificationPackage2Response;
+import to.unified.unified_java_sdk.models.operations.async.GetVerificationRequest2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetVerificationRequest2Response;
+import to.unified.unified_java_sdk.models.operations.async.ListVerificationPackages2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListVerificationPackages2Response;
+import to.unified.unified_java_sdk.models.operations.async.ListVerificationRequests2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListVerificationRequests2Response;
+import to.unified.unified_java_sdk.models.operations.async.PatchVerificationRequest2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.PatchVerificationRequest2Response;
+import to.unified.unified_java_sdk.models.operations.async.RemoveVerificationRequest2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.RemoveVerificationRequest2Response;
+import to.unified.unified_java_sdk.models.operations.async.UpdateVerificationRequest2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.UpdateVerificationRequest2Response;
+import to.unified.unified_java_sdk.operations.CreateVerificationRequest2;
+import to.unified.unified_java_sdk.operations.GetVerificationPackage2;
+import to.unified.unified_java_sdk.operations.GetVerificationRequest2;
+import to.unified.unified_java_sdk.operations.ListVerificationPackages2;
+import to.unified.unified_java_sdk.operations.ListVerificationRequests2;
+import to.unified.unified_java_sdk.operations.PatchVerificationRequest2;
+import to.unified.unified_java_sdk.operations.RemoveVerificationRequest2;
+import to.unified.unified_java_sdk.operations.UpdateVerificationRequest2;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -67,19 +67,19 @@ public class AsyncVerification {
      * 
      * @return The async call builder
      */
-    public CreateVerificationRequestRequestBuilder createVerificationRequest() {
-        return new CreateVerificationRequestRequestBuilder(sdkConfiguration);
+    public CreateVerificationRequest2RequestBuilder createVerificationRequest2() {
+        return new CreateVerificationRequest2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Create a request
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<CreateVerificationRequestResponse>} - The async response
+     * @return {@code CompletableFuture<CreateVerificationRequest2Response>} - The async response
      */
-    public CompletableFuture<CreateVerificationRequestResponse> createVerificationRequest(@Nonnull CreateVerificationRequestRequest request) {
-        AsyncRequestOperation<CreateVerificationRequestRequest, CreateVerificationRequestResponse> operation
-              = new CreateVerificationRequest.Async(sdkConfiguration, _headers);
+    public CompletableFuture<CreateVerificationRequest2Response> createVerificationRequest2(@Nonnull CreateVerificationRequest2Request request) {
+        AsyncRequestOperation<CreateVerificationRequest2Request, CreateVerificationRequest2Response> operation
+              = new CreateVerificationRequest2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -90,19 +90,19 @@ public class AsyncVerification {
      * 
      * @return The async call builder
      */
-    public GetVerificationPackageRequestBuilder getVerificationPackage() {
-        return new GetVerificationPackageRequestBuilder(sdkConfiguration);
+    public GetVerificationPackage2RequestBuilder getVerificationPackage2() {
+        return new GetVerificationPackage2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Retrieve a package
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<GetVerificationPackageResponse>} - The async response
+     * @return {@code CompletableFuture<GetVerificationPackage2Response>} - The async response
      */
-    public CompletableFuture<GetVerificationPackageResponse> getVerificationPackage(@Nonnull GetVerificationPackageRequest request) {
-        AsyncRequestOperation<GetVerificationPackageRequest, GetVerificationPackageResponse> operation
-              = new GetVerificationPackage.Async(sdkConfiguration, _headers);
+    public CompletableFuture<GetVerificationPackage2Response> getVerificationPackage2(@Nonnull GetVerificationPackage2Request request) {
+        AsyncRequestOperation<GetVerificationPackage2Request, GetVerificationPackage2Response> operation
+              = new GetVerificationPackage2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -113,19 +113,19 @@ public class AsyncVerification {
      * 
      * @return The async call builder
      */
-    public GetVerificationRequestRequestBuilder getVerificationRequest() {
-        return new GetVerificationRequestRequestBuilder(sdkConfiguration);
+    public GetVerificationRequest2RequestBuilder getVerificationRequest2() {
+        return new GetVerificationRequest2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Retrieve a request
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<GetVerificationRequestResponse>} - The async response
+     * @return {@code CompletableFuture<GetVerificationRequest2Response>} - The async response
      */
-    public CompletableFuture<GetVerificationRequestResponse> getVerificationRequest(@Nonnull GetVerificationRequestRequest request) {
-        AsyncRequestOperation<GetVerificationRequestRequest, GetVerificationRequestResponse> operation
-              = new GetVerificationRequest.Async(sdkConfiguration, _headers);
+    public CompletableFuture<GetVerificationRequest2Response> getVerificationRequest2(@Nonnull GetVerificationRequest2Request request) {
+        AsyncRequestOperation<GetVerificationRequest2Request, GetVerificationRequest2Response> operation
+              = new GetVerificationRequest2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -136,19 +136,19 @@ public class AsyncVerification {
      * 
      * @return The async call builder
      */
-    public ListVerificationPackagesRequestBuilder listVerificationPackages() {
-        return new ListVerificationPackagesRequestBuilder(sdkConfiguration);
+    public ListVerificationPackages2RequestBuilder listVerificationPackages2() {
+        return new ListVerificationPackages2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * List all packages
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<ListVerificationPackagesResponse>} - The async response
+     * @return {@code CompletableFuture<ListVerificationPackages2Response>} - The async response
      */
-    public CompletableFuture<ListVerificationPackagesResponse> listVerificationPackages(@Nonnull ListVerificationPackagesRequest request) {
-        AsyncRequestOperation<ListVerificationPackagesRequest, ListVerificationPackagesResponse> operation
-              = new ListVerificationPackages.Async(sdkConfiguration, _headers);
+    public CompletableFuture<ListVerificationPackages2Response> listVerificationPackages2(@Nonnull ListVerificationPackages2Request request) {
+        AsyncRequestOperation<ListVerificationPackages2Request, ListVerificationPackages2Response> operation
+              = new ListVerificationPackages2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -159,19 +159,19 @@ public class AsyncVerification {
      * 
      * @return The async call builder
      */
-    public ListVerificationRequestsRequestBuilder listVerificationRequests() {
-        return new ListVerificationRequestsRequestBuilder(sdkConfiguration);
+    public ListVerificationRequests2RequestBuilder listVerificationRequests2() {
+        return new ListVerificationRequests2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * List all requests
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<ListVerificationRequestsResponse>} - The async response
+     * @return {@code CompletableFuture<ListVerificationRequests2Response>} - The async response
      */
-    public CompletableFuture<ListVerificationRequestsResponse> listVerificationRequests(@Nonnull ListVerificationRequestsRequest request) {
-        AsyncRequestOperation<ListVerificationRequestsRequest, ListVerificationRequestsResponse> operation
-              = new ListVerificationRequests.Async(sdkConfiguration, _headers);
+    public CompletableFuture<ListVerificationRequests2Response> listVerificationRequests2(@Nonnull ListVerificationRequests2Request request) {
+        AsyncRequestOperation<ListVerificationRequests2Request, ListVerificationRequests2Response> operation
+              = new ListVerificationRequests2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -182,19 +182,19 @@ public class AsyncVerification {
      * 
      * @return The async call builder
      */
-    public PatchVerificationRequestRequestBuilder patchVerificationRequest() {
-        return new PatchVerificationRequestRequestBuilder(sdkConfiguration);
+    public PatchVerificationRequest2RequestBuilder patchVerificationRequest2() {
+        return new PatchVerificationRequest2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update a request
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<PatchVerificationRequestResponse>} - The async response
+     * @return {@code CompletableFuture<PatchVerificationRequest2Response>} - The async response
      */
-    public CompletableFuture<PatchVerificationRequestResponse> patchVerificationRequest(@Nonnull PatchVerificationRequestRequest request) {
-        AsyncRequestOperation<PatchVerificationRequestRequest, PatchVerificationRequestResponse> operation
-              = new PatchVerificationRequest.Async(sdkConfiguration, _headers);
+    public CompletableFuture<PatchVerificationRequest2Response> patchVerificationRequest2(@Nonnull PatchVerificationRequest2Request request) {
+        AsyncRequestOperation<PatchVerificationRequest2Request, PatchVerificationRequest2Response> operation
+              = new PatchVerificationRequest2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -205,19 +205,19 @@ public class AsyncVerification {
      * 
      * @return The async call builder
      */
-    public RemoveVerificationRequestRequestBuilder removeVerificationRequest() {
-        return new RemoveVerificationRequestRequestBuilder(sdkConfiguration);
+    public RemoveVerificationRequest2RequestBuilder removeVerificationRequest2() {
+        return new RemoveVerificationRequest2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Remove a request
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<RemoveVerificationRequestResponse>} - The async response
+     * @return {@code CompletableFuture<RemoveVerificationRequest2Response>} - The async response
      */
-    public CompletableFuture<RemoveVerificationRequestResponse> removeVerificationRequest(@Nonnull RemoveVerificationRequestRequest request) {
-        AsyncRequestOperation<RemoveVerificationRequestRequest, RemoveVerificationRequestResponse> operation
-              = new RemoveVerificationRequest.Async(sdkConfiguration, _headers);
+    public CompletableFuture<RemoveVerificationRequest2Response> removeVerificationRequest2(@Nonnull RemoveVerificationRequest2Request request) {
+        AsyncRequestOperation<RemoveVerificationRequest2Request, RemoveVerificationRequest2Response> operation
+              = new RemoveVerificationRequest2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -228,19 +228,19 @@ public class AsyncVerification {
      * 
      * @return The async call builder
      */
-    public UpdateVerificationRequestRequestBuilder updateVerificationRequest() {
-        return new UpdateVerificationRequestRequestBuilder(sdkConfiguration);
+    public UpdateVerificationRequest2RequestBuilder updateVerificationRequest2() {
+        return new UpdateVerificationRequest2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update a request
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<UpdateVerificationRequestResponse>} - The async response
+     * @return {@code CompletableFuture<UpdateVerificationRequest2Response>} - The async response
      */
-    public CompletableFuture<UpdateVerificationRequestResponse> updateVerificationRequest(@Nonnull UpdateVerificationRequestRequest request) {
-        AsyncRequestOperation<UpdateVerificationRequestRequest, UpdateVerificationRequestResponse> operation
-              = new UpdateVerificationRequest.Async(sdkConfiguration, _headers);
+    public CompletableFuture<UpdateVerificationRequest2Response> updateVerificationRequest2(@Nonnull UpdateVerificationRequest2Request request) {
+        AsyncRequestOperation<UpdateVerificationRequest2Request, UpdateVerificationRequest2Response> operation
+              = new UpdateVerificationRequest2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

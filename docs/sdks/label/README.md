@@ -4,27 +4,27 @@
 
 ### Available Operations
 
-* [createShippingLabel](#createshippinglabel) - Create a label
-* [getShippingLabel](#getshippinglabel) - Retrieve a label
-* [listShippingLabels](#listshippinglabels) - List all labels
-* [patchShippingLabel](#patchshippinglabel) - Update a label
-* [removeShippingLabel](#removeshippinglabel) - Remove a label
-* [updateShippingLabel](#updateshippinglabel) - Update a label
+* [createShippingLabel2](#createshippinglabel2) - Create a label
+* [getShippingLabel2](#getshippinglabel2) - Retrieve a label
+* [listShippingLabels2](#listshippinglabels2) - List all labels
+* [patchShippingLabel2](#patchshippinglabel2) - Update a label
+* [removeShippingLabel2](#removeshippinglabel2) - Remove a label
+* [updateShippingLabel2](#updateshippinglabel2) - Update a label
 
-## createShippingLabel
+## createShippingLabel2
 
 Create a label
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createShippingLabel" method="post" path="/shipping/{connection_id}/label" -->
+<!-- UsageSnippet language="java" operationID="createShippingLabel2" method="post" path="/shipping/{connection_id}/label" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.CreateShippingLabelRequest;
-import to.unified.unified_java_sdk.models.operations.CreateShippingLabelResponse;
+import to.unified.unified_java_sdk.models.operations.CreateShippingLabel2Request;
+import to.unified.unified_java_sdk.models.operations.CreateShippingLabel2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 import to.unified.unified_java_sdk.models.shared.ShippingLabel;
 
@@ -38,13 +38,13 @@ public class Application {
                     .build())
             .build();
 
-        CreateShippingLabelRequest req = CreateShippingLabelRequest.builder()
+        CreateShippingLabel2Request req = CreateShippingLabel2Request.builder()
                 .shippingLabel(ShippingLabel.builder()
                     .build())
                 .connectionId("<id>")
                 .build();
 
-        CreateShippingLabelResponse res = sdk.label().createShippingLabel()
+        CreateShippingLabel2Response res = sdk.label().createShippingLabel2()
                 .request(req)
                 .call();
 
@@ -57,13 +57,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                           | Type                                                                                | Required                                                                            | Description                                                                         |
-| ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
-| `request`                                                                           | [CreateShippingLabelRequest](../../models/operations/CreateShippingLabelRequest.md) | :heavy_check_mark:                                                                  | The request object to use for the request.                                          |
+| Parameter                                                                             | Type                                                                                  | Required                                                                              | Description                                                                           |
+| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| `request`                                                                             | [CreateShippingLabel2Request](../../models/operations/CreateShippingLabel2Request.md) | :heavy_check_mark:                                                                    | The request object to use for the request.                                            |
 
 ### Response
 
-**[CreateShippingLabelResponse](../../models/operations/CreateShippingLabelResponse.md)**
+**[CreateShippingLabel2Response](../../models/operations/CreateShippingLabel2Response.md)**
 
 ### Errors
 
@@ -71,20 +71,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## getShippingLabel
+## getShippingLabel2
 
 Retrieve a label
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="getShippingLabel" method="get" path="/shipping/{connection_id}/label/{id}" -->
+<!-- UsageSnippet language="java" operationID="getShippingLabel2" method="get" path="/shipping/{connection_id}/label/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.GetShippingLabelRequest;
-import to.unified.unified_java_sdk.models.operations.GetShippingLabelResponse;
+import to.unified.unified_java_sdk.models.operations.GetShippingLabel2Request;
+import to.unified.unified_java_sdk.models.operations.GetShippingLabel2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -97,12 +97,12 @@ public class Application {
                     .build())
             .build();
 
-        GetShippingLabelRequest req = GetShippingLabelRequest.builder()
+        GetShippingLabel2Request req = GetShippingLabel2Request.builder()
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        GetShippingLabelResponse res = sdk.label().getShippingLabel()
+        GetShippingLabel2Response res = sdk.label().getShippingLabel2()
                 .request(req)
                 .call();
 
@@ -115,13 +115,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
-| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
-| `request`                                                                     | [GetShippingLabelRequest](../../models/operations/GetShippingLabelRequest.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
+| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| `request`                                                                       | [GetShippingLabel2Request](../../models/operations/GetShippingLabel2Request.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
 
 ### Response
 
-**[GetShippingLabelResponse](../../models/operations/GetShippingLabelResponse.md)**
+**[GetShippingLabel2Response](../../models/operations/GetShippingLabel2Response.md)**
 
 ### Errors
 
@@ -129,20 +129,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## listShippingLabels
+## listShippingLabels2
 
 List all labels
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="listShippingLabels" method="get" path="/shipping/{connection_id}/label" -->
+<!-- UsageSnippet language="java" operationID="listShippingLabels2" method="get" path="/shipping/{connection_id}/label" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.ListShippingLabelsRequest;
-import to.unified.unified_java_sdk.models.operations.ListShippingLabelsResponse;
+import to.unified.unified_java_sdk.models.operations.ListShippingLabels2Request;
+import to.unified.unified_java_sdk.models.operations.ListShippingLabels2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -155,11 +155,11 @@ public class Application {
                     .build())
             .build();
 
-        ListShippingLabelsRequest req = ListShippingLabelsRequest.builder()
+        ListShippingLabels2Request req = ListShippingLabels2Request.builder()
                 .connectionId("<id>")
                 .build();
 
-        ListShippingLabelsResponse res = sdk.label().listShippingLabels()
+        ListShippingLabels2Response res = sdk.label().listShippingLabels2()
                 .request(req)
                 .call();
 
@@ -172,13 +172,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
-| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
-| `request`                                                                         | [ListShippingLabelsRequest](../../models/operations/ListShippingLabelsRequest.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
+| Parameter                                                                           | Type                                                                                | Required                                                                            | Description                                                                         |
+| ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| `request`                                                                           | [ListShippingLabels2Request](../../models/operations/ListShippingLabels2Request.md) | :heavy_check_mark:                                                                  | The request object to use for the request.                                          |
 
 ### Response
 
-**[ListShippingLabelsResponse](../../models/operations/ListShippingLabelsResponse.md)**
+**[ListShippingLabels2Response](../../models/operations/ListShippingLabels2Response.md)**
 
 ### Errors
 
@@ -186,20 +186,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## patchShippingLabel
+## patchShippingLabel2
 
 Update a label
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchShippingLabel" method="patch" path="/shipping/{connection_id}/label/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchShippingLabel2" method="patch" path="/shipping/{connection_id}/label/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.PatchShippingLabelRequest;
-import to.unified.unified_java_sdk.models.operations.PatchShippingLabelResponse;
+import to.unified.unified_java_sdk.models.operations.PatchShippingLabel2Request;
+import to.unified.unified_java_sdk.models.operations.PatchShippingLabel2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 import to.unified.unified_java_sdk.models.shared.ShippingLabel;
 
@@ -213,14 +213,14 @@ public class Application {
                     .build())
             .build();
 
-        PatchShippingLabelRequest req = PatchShippingLabelRequest.builder()
+        PatchShippingLabel2Request req = PatchShippingLabel2Request.builder()
                 .shippingLabel(ShippingLabel.builder()
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        PatchShippingLabelResponse res = sdk.label().patchShippingLabel()
+        PatchShippingLabel2Response res = sdk.label().patchShippingLabel2()
                 .request(req)
                 .call();
 
@@ -233,13 +233,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
-| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
-| `request`                                                                         | [PatchShippingLabelRequest](../../models/operations/PatchShippingLabelRequest.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
+| Parameter                                                                           | Type                                                                                | Required                                                                            | Description                                                                         |
+| ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| `request`                                                                           | [PatchShippingLabel2Request](../../models/operations/PatchShippingLabel2Request.md) | :heavy_check_mark:                                                                  | The request object to use for the request.                                          |
 
 ### Response
 
-**[PatchShippingLabelResponse](../../models/operations/PatchShippingLabelResponse.md)**
+**[PatchShippingLabel2Response](../../models/operations/PatchShippingLabel2Response.md)**
 
 ### Errors
 
@@ -247,20 +247,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## removeShippingLabel
+## removeShippingLabel2
 
 Remove a label
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="removeShippingLabel" method="delete" path="/shipping/{connection_id}/label/{id}" -->
+<!-- UsageSnippet language="java" operationID="removeShippingLabel2" method="delete" path="/shipping/{connection_id}/label/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.RemoveShippingLabelRequest;
-import to.unified.unified_java_sdk.models.operations.RemoveShippingLabelResponse;
+import to.unified.unified_java_sdk.models.operations.RemoveShippingLabel2Request;
+import to.unified.unified_java_sdk.models.operations.RemoveShippingLabel2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -273,12 +273,12 @@ public class Application {
                     .build())
             .build();
 
-        RemoveShippingLabelRequest req = RemoveShippingLabelRequest.builder()
+        RemoveShippingLabel2Request req = RemoveShippingLabel2Request.builder()
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        RemoveShippingLabelResponse res = sdk.label().removeShippingLabel()
+        RemoveShippingLabel2Response res = sdk.label().removeShippingLabel2()
                 .request(req)
                 .call();
 
@@ -289,13 +289,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                           | Type                                                                                | Required                                                                            | Description                                                                         |
-| ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
-| `request`                                                                           | [RemoveShippingLabelRequest](../../models/operations/RemoveShippingLabelRequest.md) | :heavy_check_mark:                                                                  | The request object to use for the request.                                          |
+| Parameter                                                                             | Type                                                                                  | Required                                                                              | Description                                                                           |
+| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| `request`                                                                             | [RemoveShippingLabel2Request](../../models/operations/RemoveShippingLabel2Request.md) | :heavy_check_mark:                                                                    | The request object to use for the request.                                            |
 
 ### Response
 
-**[RemoveShippingLabelResponse](../../models/operations/RemoveShippingLabelResponse.md)**
+**[RemoveShippingLabel2Response](../../models/operations/RemoveShippingLabel2Response.md)**
 
 ### Errors
 
@@ -303,20 +303,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## updateShippingLabel
+## updateShippingLabel2
 
 Update a label
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateShippingLabel" method="put" path="/shipping/{connection_id}/label/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateShippingLabel2" method="put" path="/shipping/{connection_id}/label/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.UpdateShippingLabelRequest;
-import to.unified.unified_java_sdk.models.operations.UpdateShippingLabelResponse;
+import to.unified.unified_java_sdk.models.operations.UpdateShippingLabel2Request;
+import to.unified.unified_java_sdk.models.operations.UpdateShippingLabel2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 import to.unified.unified_java_sdk.models.shared.ShippingLabel;
 
@@ -330,14 +330,14 @@ public class Application {
                     .build())
             .build();
 
-        UpdateShippingLabelRequest req = UpdateShippingLabelRequest.builder()
+        UpdateShippingLabel2Request req = UpdateShippingLabel2Request.builder()
                 .shippingLabel(ShippingLabel.builder()
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        UpdateShippingLabelResponse res = sdk.label().updateShippingLabel()
+        UpdateShippingLabel2Response res = sdk.label().updateShippingLabel2()
                 .request(req)
                 .call();
 
@@ -350,13 +350,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                           | Type                                                                                | Required                                                                            | Description                                                                         |
-| ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
-| `request`                                                                           | [UpdateShippingLabelRequest](../../models/operations/UpdateShippingLabelRequest.md) | :heavy_check_mark:                                                                  | The request object to use for the request.                                          |
+| Parameter                                                                             | Type                                                                                  | Required                                                                              | Description                                                                           |
+| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| `request`                                                                             | [UpdateShippingLabel2Request](../../models/operations/UpdateShippingLabel2Request.md) | :heavy_check_mark:                                                                    | The request object to use for the request.                                            |
 
 ### Response
 
-**[UpdateShippingLabelResponse](../../models/operations/UpdateShippingLabelResponse.md)**
+**[UpdateShippingLabel2Response](../../models/operations/UpdateShippingLabel2Response.md)**
 
 ### Errors
 

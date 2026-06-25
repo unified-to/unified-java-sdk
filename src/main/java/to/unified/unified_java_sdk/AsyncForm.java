@@ -7,30 +7,30 @@ import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOper
 
 import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
-import to.unified.unified_java_sdk.models.operations.CreateFormsFormRequest;
-import to.unified.unified_java_sdk.models.operations.GetFormsFormRequest;
-import to.unified.unified_java_sdk.models.operations.ListFormsFormsRequest;
-import to.unified.unified_java_sdk.models.operations.PatchFormsFormRequest;
-import to.unified.unified_java_sdk.models.operations.RemoveFormsFormRequest;
-import to.unified.unified_java_sdk.models.operations.UpdateFormsFormRequest;
-import to.unified.unified_java_sdk.models.operations.async.CreateFormsFormRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.CreateFormsFormResponse;
-import to.unified.unified_java_sdk.models.operations.async.GetFormsFormRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.GetFormsFormResponse;
-import to.unified.unified_java_sdk.models.operations.async.ListFormsFormsRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.ListFormsFormsResponse;
-import to.unified.unified_java_sdk.models.operations.async.PatchFormsFormRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.PatchFormsFormResponse;
-import to.unified.unified_java_sdk.models.operations.async.RemoveFormsFormRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.RemoveFormsFormResponse;
-import to.unified.unified_java_sdk.models.operations.async.UpdateFormsFormRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.UpdateFormsFormResponse;
-import to.unified.unified_java_sdk.operations.CreateFormsForm;
-import to.unified.unified_java_sdk.operations.GetFormsForm;
-import to.unified.unified_java_sdk.operations.ListFormsForms;
-import to.unified.unified_java_sdk.operations.PatchFormsForm;
-import to.unified.unified_java_sdk.operations.RemoveFormsForm;
-import to.unified.unified_java_sdk.operations.UpdateFormsForm;
+import to.unified.unified_java_sdk.models.operations.CreateFormsForm2Request;
+import to.unified.unified_java_sdk.models.operations.GetFormsForm2Request;
+import to.unified.unified_java_sdk.models.operations.ListFormsForms2Request;
+import to.unified.unified_java_sdk.models.operations.PatchFormsForm2Request;
+import to.unified.unified_java_sdk.models.operations.RemoveFormsForm2Request;
+import to.unified.unified_java_sdk.models.operations.UpdateFormsForm2Request;
+import to.unified.unified_java_sdk.models.operations.async.CreateFormsForm2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.CreateFormsForm2Response;
+import to.unified.unified_java_sdk.models.operations.async.GetFormsForm2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetFormsForm2Response;
+import to.unified.unified_java_sdk.models.operations.async.ListFormsForms2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListFormsForms2Response;
+import to.unified.unified_java_sdk.models.operations.async.PatchFormsForm2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.PatchFormsForm2Response;
+import to.unified.unified_java_sdk.models.operations.async.RemoveFormsForm2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.RemoveFormsForm2Response;
+import to.unified.unified_java_sdk.models.operations.async.UpdateFormsForm2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.UpdateFormsForm2Response;
+import to.unified.unified_java_sdk.operations.CreateFormsForm2;
+import to.unified.unified_java_sdk.operations.GetFormsForm2;
+import to.unified.unified_java_sdk.operations.ListFormsForms2;
+import to.unified.unified_java_sdk.operations.PatchFormsForm2;
+import to.unified.unified_java_sdk.operations.RemoveFormsForm2;
+import to.unified.unified_java_sdk.operations.UpdateFormsForm2;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -59,19 +59,19 @@ public class AsyncForm {
      * 
      * @return The async call builder
      */
-    public CreateFormsFormRequestBuilder createFormsForm() {
-        return new CreateFormsFormRequestBuilder(sdkConfiguration);
+    public CreateFormsForm2RequestBuilder createFormsForm2() {
+        return new CreateFormsForm2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Create a form
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<CreateFormsFormResponse>} - The async response
+     * @return {@code CompletableFuture<CreateFormsForm2Response>} - The async response
      */
-    public CompletableFuture<CreateFormsFormResponse> createFormsForm(@Nonnull CreateFormsFormRequest request) {
-        AsyncRequestOperation<CreateFormsFormRequest, CreateFormsFormResponse> operation
-              = new CreateFormsForm.Async(sdkConfiguration, _headers);
+    public CompletableFuture<CreateFormsForm2Response> createFormsForm2(@Nonnull CreateFormsForm2Request request) {
+        AsyncRequestOperation<CreateFormsForm2Request, CreateFormsForm2Response> operation
+              = new CreateFormsForm2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -82,19 +82,19 @@ public class AsyncForm {
      * 
      * @return The async call builder
      */
-    public GetFormsFormRequestBuilder getFormsForm() {
-        return new GetFormsFormRequestBuilder(sdkConfiguration);
+    public GetFormsForm2RequestBuilder getFormsForm2() {
+        return new GetFormsForm2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Retrieve a form
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<GetFormsFormResponse>} - The async response
+     * @return {@code CompletableFuture<GetFormsForm2Response>} - The async response
      */
-    public CompletableFuture<GetFormsFormResponse> getFormsForm(@Nonnull GetFormsFormRequest request) {
-        AsyncRequestOperation<GetFormsFormRequest, GetFormsFormResponse> operation
-              = new GetFormsForm.Async(sdkConfiguration, _headers);
+    public CompletableFuture<GetFormsForm2Response> getFormsForm2(@Nonnull GetFormsForm2Request request) {
+        AsyncRequestOperation<GetFormsForm2Request, GetFormsForm2Response> operation
+              = new GetFormsForm2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -105,19 +105,19 @@ public class AsyncForm {
      * 
      * @return The async call builder
      */
-    public ListFormsFormsRequestBuilder listFormsForms() {
-        return new ListFormsFormsRequestBuilder(sdkConfiguration);
+    public ListFormsForms2RequestBuilder listFormsForms2() {
+        return new ListFormsForms2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * List all forms
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<ListFormsFormsResponse>} - The async response
+     * @return {@code CompletableFuture<ListFormsForms2Response>} - The async response
      */
-    public CompletableFuture<ListFormsFormsResponse> listFormsForms(@Nonnull ListFormsFormsRequest request) {
-        AsyncRequestOperation<ListFormsFormsRequest, ListFormsFormsResponse> operation
-              = new ListFormsForms.Async(sdkConfiguration, _headers);
+    public CompletableFuture<ListFormsForms2Response> listFormsForms2(@Nonnull ListFormsForms2Request request) {
+        AsyncRequestOperation<ListFormsForms2Request, ListFormsForms2Response> operation
+              = new ListFormsForms2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -128,19 +128,19 @@ public class AsyncForm {
      * 
      * @return The async call builder
      */
-    public PatchFormsFormRequestBuilder patchFormsForm() {
-        return new PatchFormsFormRequestBuilder(sdkConfiguration);
+    public PatchFormsForm2RequestBuilder patchFormsForm2() {
+        return new PatchFormsForm2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update a form
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<PatchFormsFormResponse>} - The async response
+     * @return {@code CompletableFuture<PatchFormsForm2Response>} - The async response
      */
-    public CompletableFuture<PatchFormsFormResponse> patchFormsForm(@Nonnull PatchFormsFormRequest request) {
-        AsyncRequestOperation<PatchFormsFormRequest, PatchFormsFormResponse> operation
-              = new PatchFormsForm.Async(sdkConfiguration, _headers);
+    public CompletableFuture<PatchFormsForm2Response> patchFormsForm2(@Nonnull PatchFormsForm2Request request) {
+        AsyncRequestOperation<PatchFormsForm2Request, PatchFormsForm2Response> operation
+              = new PatchFormsForm2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -151,19 +151,19 @@ public class AsyncForm {
      * 
      * @return The async call builder
      */
-    public RemoveFormsFormRequestBuilder removeFormsForm() {
-        return new RemoveFormsFormRequestBuilder(sdkConfiguration);
+    public RemoveFormsForm2RequestBuilder removeFormsForm2() {
+        return new RemoveFormsForm2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Remove a form
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<RemoveFormsFormResponse>} - The async response
+     * @return {@code CompletableFuture<RemoveFormsForm2Response>} - The async response
      */
-    public CompletableFuture<RemoveFormsFormResponse> removeFormsForm(@Nonnull RemoveFormsFormRequest request) {
-        AsyncRequestOperation<RemoveFormsFormRequest, RemoveFormsFormResponse> operation
-              = new RemoveFormsForm.Async(sdkConfiguration, _headers);
+    public CompletableFuture<RemoveFormsForm2Response> removeFormsForm2(@Nonnull RemoveFormsForm2Request request) {
+        AsyncRequestOperation<RemoveFormsForm2Request, RemoveFormsForm2Response> operation
+              = new RemoveFormsForm2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -174,19 +174,19 @@ public class AsyncForm {
      * 
      * @return The async call builder
      */
-    public UpdateFormsFormRequestBuilder updateFormsForm() {
-        return new UpdateFormsFormRequestBuilder(sdkConfiguration);
+    public UpdateFormsForm2RequestBuilder updateFormsForm2() {
+        return new UpdateFormsForm2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update a form
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<UpdateFormsFormResponse>} - The async response
+     * @return {@code CompletableFuture<UpdateFormsForm2Response>} - The async response
      */
-    public CompletableFuture<UpdateFormsFormResponse> updateFormsForm(@Nonnull UpdateFormsFormRequest request) {
-        AsyncRequestOperation<UpdateFormsFormRequest, UpdateFormsFormResponse> operation
-              = new UpdateFormsForm.Async(sdkConfiguration, _headers);
+    public CompletableFuture<UpdateFormsForm2Response> updateFormsForm2(@Nonnull UpdateFormsForm2Request request) {
+        AsyncRequestOperation<UpdateFormsForm2Request, UpdateFormsForm2Response> operation
+              = new UpdateFormsForm2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

@@ -44,11 +44,13 @@ public class PropertyIntegrationCategories {
     public static final PropertyIntegrationCategories CALENDAR = new PropertyIntegrationCategories("calendar");
     public static final PropertyIntegrationCategories VERIFICATION = new PropertyIntegrationCategories("verification");
     public static final PropertyIntegrationCategories ADS = new PropertyIntegrationCategories("ads");
+    public static final PropertyIntegrationCategories ANALYTICS = new PropertyIntegrationCategories("analytics");
     public static final PropertyIntegrationCategories FORMS = new PropertyIntegrationCategories("forms");
     public static final PropertyIntegrationCategories SHIPPING = new PropertyIntegrationCategories("shipping");
     public static final PropertyIntegrationCategories ASSESSMENT = new PropertyIntegrationCategories("assessment");
     public static final PropertyIntegrationCategories SIGNING = new PropertyIntegrationCategories("signing");
     public static final PropertyIntegrationCategories CLUBS = new PropertyIntegrationCategories("clubs");
+    public static final PropertyIntegrationCategories DATASTORE = new PropertyIntegrationCategories("datastore");
 
     // This map will grow whenever a Color gets created with a new
     // unrecognized value (a potential memory leak if the user is not
@@ -146,11 +148,13 @@ public class PropertyIntegrationCategories {
         map.put("calendar", CALENDAR);
         map.put("verification", VERIFICATION);
         map.put("ads", ADS);
+        map.put("analytics", ANALYTICS);
         map.put("forms", FORMS);
         map.put("shipping", SHIPPING);
         map.put("assessment", ASSESSMENT);
         map.put("signing", SIGNING);
         map.put("clubs", CLUBS);
+        map.put("datastore", DATASTORE);
         return map;
     }
 
@@ -180,11 +184,13 @@ public class PropertyIntegrationCategories {
         map.put("calendar", PropertyIntegrationCategoriesEnum.CALENDAR);
         map.put("verification", PropertyIntegrationCategoriesEnum.VERIFICATION);
         map.put("ads", PropertyIntegrationCategoriesEnum.ADS);
+        map.put("analytics", PropertyIntegrationCategoriesEnum.ANALYTICS);
         map.put("forms", PropertyIntegrationCategoriesEnum.FORMS);
         map.put("shipping", PropertyIntegrationCategoriesEnum.SHIPPING);
         map.put("assessment", PropertyIntegrationCategoriesEnum.ASSESSMENT);
         map.put("signing", PropertyIntegrationCategoriesEnum.SIGNING);
         map.put("clubs", PropertyIntegrationCategoriesEnum.CLUBS);
+        map.put("datastore", PropertyIntegrationCategoriesEnum.DATASTORE);
         return map;
     }
     
@@ -215,11 +221,13 @@ public class PropertyIntegrationCategories {
         CALENDAR("calendar"),
         VERIFICATION("verification"),
         ADS("ads"),
+        ANALYTICS("analytics"),
         FORMS("forms"),
         SHIPPING("shipping"),
         ASSESSMENT("assessment"),
         SIGNING("signing"),
-        CLUBS("clubs"),;
+        CLUBS("clubs"),
+        DATASTORE("datastore"),;
 
         private final String value;
 

@@ -7,14 +7,14 @@ import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOper
 
 import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
-import to.unified.unified_java_sdk.models.operations.GetPaymentPayoutRequest;
-import to.unified.unified_java_sdk.models.operations.ListPaymentPayoutsRequest;
-import to.unified.unified_java_sdk.models.operations.async.GetPaymentPayoutRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.GetPaymentPayoutResponse;
-import to.unified.unified_java_sdk.models.operations.async.ListPaymentPayoutsRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.ListPaymentPayoutsResponse;
-import to.unified.unified_java_sdk.operations.GetPaymentPayout;
-import to.unified.unified_java_sdk.operations.ListPaymentPayouts;
+import to.unified.unified_java_sdk.models.operations.GetPaymentPayout2Request;
+import to.unified.unified_java_sdk.models.operations.ListPaymentPayouts2Request;
+import to.unified.unified_java_sdk.models.operations.async.GetPaymentPayout2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetPaymentPayout2Response;
+import to.unified.unified_java_sdk.models.operations.async.ListPaymentPayouts2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListPaymentPayouts2Response;
+import to.unified.unified_java_sdk.operations.GetPaymentPayout2;
+import to.unified.unified_java_sdk.operations.ListPaymentPayouts2;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -43,19 +43,19 @@ public class AsyncPayout {
      * 
      * @return The async call builder
      */
-    public GetPaymentPayoutRequestBuilder getPaymentPayout() {
-        return new GetPaymentPayoutRequestBuilder(sdkConfiguration);
+    public GetPaymentPayout2RequestBuilder getPaymentPayout2() {
+        return new GetPaymentPayout2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Retrieve a payout
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<GetPaymentPayoutResponse>} - The async response
+     * @return {@code CompletableFuture<GetPaymentPayout2Response>} - The async response
      */
-    public CompletableFuture<GetPaymentPayoutResponse> getPaymentPayout(@Nonnull GetPaymentPayoutRequest request) {
-        AsyncRequestOperation<GetPaymentPayoutRequest, GetPaymentPayoutResponse> operation
-              = new GetPaymentPayout.Async(sdkConfiguration, _headers);
+    public CompletableFuture<GetPaymentPayout2Response> getPaymentPayout2(@Nonnull GetPaymentPayout2Request request) {
+        AsyncRequestOperation<GetPaymentPayout2Request, GetPaymentPayout2Response> operation
+              = new GetPaymentPayout2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -66,19 +66,19 @@ public class AsyncPayout {
      * 
      * @return The async call builder
      */
-    public ListPaymentPayoutsRequestBuilder listPaymentPayouts() {
-        return new ListPaymentPayoutsRequestBuilder(sdkConfiguration);
+    public ListPaymentPayouts2RequestBuilder listPaymentPayouts2() {
+        return new ListPaymentPayouts2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * List all payouts
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<ListPaymentPayoutsResponse>} - The async response
+     * @return {@code CompletableFuture<ListPaymentPayouts2Response>} - The async response
      */
-    public CompletableFuture<ListPaymentPayoutsResponse> listPaymentPayouts(@Nonnull ListPaymentPayoutsRequest request) {
-        AsyncRequestOperation<ListPaymentPayoutsRequest, ListPaymentPayoutsResponse> operation
-              = new ListPaymentPayouts.Async(sdkConfiguration, _headers);
+    public CompletableFuture<ListPaymentPayouts2Response> listPaymentPayouts2(@Nonnull ListPaymentPayouts2Request request) {
+        AsyncRequestOperation<ListPaymentPayouts2Request, ListPaymentPayouts2Response> operation
+              = new ListPaymentPayouts2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

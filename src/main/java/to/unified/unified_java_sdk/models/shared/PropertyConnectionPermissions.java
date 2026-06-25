@@ -246,6 +246,14 @@ public class PropertyConnectionPermissions {
     public static final PropertyConnectionPermissions ADS_INSERTIONORDER_WRITE = new PropertyConnectionPermissions("ads_insertionorder_write");
     public static final PropertyConnectionPermissions ADS_TARGET_READ = new PropertyConnectionPermissions("ads_target_read");
     public static final PropertyConnectionPermissions ADS_PROMOTED_READ = new PropertyConnectionPermissions("ads_promoted_read");
+    public static final PropertyConnectionPermissions ANALYTICS_PROPERTY_READ = new PropertyConnectionPermissions("analytics_property_read");
+    public static final PropertyConnectionPermissions ANALYTICS_PROPERTY_WRITE = new PropertyConnectionPermissions("analytics_property_write");
+    public static final PropertyConnectionPermissions ANALYTICS_EVENT_READ = new PropertyConnectionPermissions("analytics_event_read");
+    public static final PropertyConnectionPermissions ANALYTICS_EVENT_WRITE = new PropertyConnectionPermissions("analytics_event_write");
+    public static final PropertyConnectionPermissions ANALYTICS_SESSION_READ = new PropertyConnectionPermissions("analytics_session_read");
+    public static final PropertyConnectionPermissions ANALYTICS_VISITOR_READ = new PropertyConnectionPermissions("analytics_visitor_read");
+    public static final PropertyConnectionPermissions ANALYTICS_VISITOR_WRITE = new PropertyConnectionPermissions("analytics_visitor_write");
+    public static final PropertyConnectionPermissions ANALYTICS_REPORT_READ = new PropertyConnectionPermissions("analytics_report_read");
     public static final PropertyConnectionPermissions FORMS_FORM_READ = new PropertyConnectionPermissions("forms_form_read");
     public static final PropertyConnectionPermissions FORMS_FORM_WRITE = new PropertyConnectionPermissions("forms_form_write");
     public static final PropertyConnectionPermissions FORMS_SUBMISSION_READ = new PropertyConnectionPermissions("forms_submission_read");
@@ -272,6 +280,14 @@ public class PropertyConnectionPermissions {
     public static final PropertyConnectionPermissions CLUBS_LOCATION_WRITE = new PropertyConnectionPermissions("clubs_location_write");
     public static final PropertyConnectionPermissions CLUBS_EVENT_READ = new PropertyConnectionPermissions("clubs_event_read");
     public static final PropertyConnectionPermissions CLUBS_EVENT_WRITE = new PropertyConnectionPermissions("clubs_event_write");
+    public static final PropertyConnectionPermissions DATASTORE_DATABASE_READ = new PropertyConnectionPermissions("datastore_database_read");
+    public static final PropertyConnectionPermissions DATASTORE_DATABASE_WRITE = new PropertyConnectionPermissions("datastore_database_write");
+    public static final PropertyConnectionPermissions DATASTORE_TABLE_READ = new PropertyConnectionPermissions("datastore_table_read");
+    public static final PropertyConnectionPermissions DATASTORE_TABLE_WRITE = new PropertyConnectionPermissions("datastore_table_write");
+    public static final PropertyConnectionPermissions DATASTORE_RECORD_READ = new PropertyConnectionPermissions("datastore_record_read");
+    public static final PropertyConnectionPermissions DATASTORE_RECORD_WRITE = new PropertyConnectionPermissions("datastore_record_write");
+    public static final PropertyConnectionPermissions DATASTORE_QUERY_READ = new PropertyConnectionPermissions("datastore_query_read");
+    public static final PropertyConnectionPermissions DATASTORE_QUERY_WRITE = new PropertyConnectionPermissions("datastore_query_write");
 
     // This map will grow whenever a Color gets created with a new
     // unrecognized value (a potential memory leak if the user is not
@@ -571,6 +587,14 @@ public class PropertyConnectionPermissions {
         map.put("ads_insertionorder_write", ADS_INSERTIONORDER_WRITE);
         map.put("ads_target_read", ADS_TARGET_READ);
         map.put("ads_promoted_read", ADS_PROMOTED_READ);
+        map.put("analytics_property_read", ANALYTICS_PROPERTY_READ);
+        map.put("analytics_property_write", ANALYTICS_PROPERTY_WRITE);
+        map.put("analytics_event_read", ANALYTICS_EVENT_READ);
+        map.put("analytics_event_write", ANALYTICS_EVENT_WRITE);
+        map.put("analytics_session_read", ANALYTICS_SESSION_READ);
+        map.put("analytics_visitor_read", ANALYTICS_VISITOR_READ);
+        map.put("analytics_visitor_write", ANALYTICS_VISITOR_WRITE);
+        map.put("analytics_report_read", ANALYTICS_REPORT_READ);
         map.put("forms_form_read", FORMS_FORM_READ);
         map.put("forms_form_write", FORMS_FORM_WRITE);
         map.put("forms_submission_read", FORMS_SUBMISSION_READ);
@@ -597,6 +621,14 @@ public class PropertyConnectionPermissions {
         map.put("clubs_location_write", CLUBS_LOCATION_WRITE);
         map.put("clubs_event_read", CLUBS_EVENT_READ);
         map.put("clubs_event_write", CLUBS_EVENT_WRITE);
+        map.put("datastore_database_read", DATASTORE_DATABASE_READ);
+        map.put("datastore_database_write", DATASTORE_DATABASE_WRITE);
+        map.put("datastore_table_read", DATASTORE_TABLE_READ);
+        map.put("datastore_table_write", DATASTORE_TABLE_WRITE);
+        map.put("datastore_record_read", DATASTORE_RECORD_READ);
+        map.put("datastore_record_write", DATASTORE_RECORD_WRITE);
+        map.put("datastore_query_read", DATASTORE_QUERY_READ);
+        map.put("datastore_query_write", DATASTORE_QUERY_WRITE);
         return map;
     }
 
@@ -828,6 +860,14 @@ public class PropertyConnectionPermissions {
         map.put("ads_insertionorder_write", PropertyConnectionPermissionsEnum.ADS_INSERTIONORDER_WRITE);
         map.put("ads_target_read", PropertyConnectionPermissionsEnum.ADS_TARGET_READ);
         map.put("ads_promoted_read", PropertyConnectionPermissionsEnum.ADS_PROMOTED_READ);
+        map.put("analytics_property_read", PropertyConnectionPermissionsEnum.ANALYTICS_PROPERTY_READ);
+        map.put("analytics_property_write", PropertyConnectionPermissionsEnum.ANALYTICS_PROPERTY_WRITE);
+        map.put("analytics_event_read", PropertyConnectionPermissionsEnum.ANALYTICS_EVENT_READ);
+        map.put("analytics_event_write", PropertyConnectionPermissionsEnum.ANALYTICS_EVENT_WRITE);
+        map.put("analytics_session_read", PropertyConnectionPermissionsEnum.ANALYTICS_SESSION_READ);
+        map.put("analytics_visitor_read", PropertyConnectionPermissionsEnum.ANALYTICS_VISITOR_READ);
+        map.put("analytics_visitor_write", PropertyConnectionPermissionsEnum.ANALYTICS_VISITOR_WRITE);
+        map.put("analytics_report_read", PropertyConnectionPermissionsEnum.ANALYTICS_REPORT_READ);
         map.put("forms_form_read", PropertyConnectionPermissionsEnum.FORMS_FORM_READ);
         map.put("forms_form_write", PropertyConnectionPermissionsEnum.FORMS_FORM_WRITE);
         map.put("forms_submission_read", PropertyConnectionPermissionsEnum.FORMS_SUBMISSION_READ);
@@ -854,6 +894,14 @@ public class PropertyConnectionPermissions {
         map.put("clubs_location_write", PropertyConnectionPermissionsEnum.CLUBS_LOCATION_WRITE);
         map.put("clubs_event_read", PropertyConnectionPermissionsEnum.CLUBS_EVENT_READ);
         map.put("clubs_event_write", PropertyConnectionPermissionsEnum.CLUBS_EVENT_WRITE);
+        map.put("datastore_database_read", PropertyConnectionPermissionsEnum.DATASTORE_DATABASE_READ);
+        map.put("datastore_database_write", PropertyConnectionPermissionsEnum.DATASTORE_DATABASE_WRITE);
+        map.put("datastore_table_read", PropertyConnectionPermissionsEnum.DATASTORE_TABLE_READ);
+        map.put("datastore_table_write", PropertyConnectionPermissionsEnum.DATASTORE_TABLE_WRITE);
+        map.put("datastore_record_read", PropertyConnectionPermissionsEnum.DATASTORE_RECORD_READ);
+        map.put("datastore_record_write", PropertyConnectionPermissionsEnum.DATASTORE_RECORD_WRITE);
+        map.put("datastore_query_read", PropertyConnectionPermissionsEnum.DATASTORE_QUERY_READ);
+        map.put("datastore_query_write", PropertyConnectionPermissionsEnum.DATASTORE_QUERY_WRITE);
         return map;
     }
     
@@ -1086,6 +1134,14 @@ public class PropertyConnectionPermissions {
         ADS_INSERTIONORDER_WRITE("ads_insertionorder_write"),
         ADS_TARGET_READ("ads_target_read"),
         ADS_PROMOTED_READ("ads_promoted_read"),
+        ANALYTICS_PROPERTY_READ("analytics_property_read"),
+        ANALYTICS_PROPERTY_WRITE("analytics_property_write"),
+        ANALYTICS_EVENT_READ("analytics_event_read"),
+        ANALYTICS_EVENT_WRITE("analytics_event_write"),
+        ANALYTICS_SESSION_READ("analytics_session_read"),
+        ANALYTICS_VISITOR_READ("analytics_visitor_read"),
+        ANALYTICS_VISITOR_WRITE("analytics_visitor_write"),
+        ANALYTICS_REPORT_READ("analytics_report_read"),
         FORMS_FORM_READ("forms_form_read"),
         FORMS_FORM_WRITE("forms_form_write"),
         FORMS_SUBMISSION_READ("forms_submission_read"),
@@ -1111,7 +1167,15 @@ public class PropertyConnectionPermissions {
         CLUBS_LOCATION_READ("clubs_location_read"),
         CLUBS_LOCATION_WRITE("clubs_location_write"),
         CLUBS_EVENT_READ("clubs_event_read"),
-        CLUBS_EVENT_WRITE("clubs_event_write"),;
+        CLUBS_EVENT_WRITE("clubs_event_write"),
+        DATASTORE_DATABASE_READ("datastore_database_read"),
+        DATASTORE_DATABASE_WRITE("datastore_database_write"),
+        DATASTORE_TABLE_READ("datastore_table_read"),
+        DATASTORE_TABLE_WRITE("datastore_table_write"),
+        DATASTORE_RECORD_READ("datastore_record_read"),
+        DATASTORE_RECORD_WRITE("datastore_record_write"),
+        DATASTORE_QUERY_READ("datastore_query_read"),
+        DATASTORE_QUERY_WRITE("datastore_query_write"),;
 
         private final String value;
 

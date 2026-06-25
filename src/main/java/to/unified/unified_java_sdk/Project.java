@@ -6,30 +6,30 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
-import to.unified.unified_java_sdk.models.operations.CreateTaskProjectRequest;
-import to.unified.unified_java_sdk.models.operations.CreateTaskProjectRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.CreateTaskProjectResponse;
-import to.unified.unified_java_sdk.models.operations.GetTaskProjectRequest;
-import to.unified.unified_java_sdk.models.operations.GetTaskProjectRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.GetTaskProjectResponse;
-import to.unified.unified_java_sdk.models.operations.ListTaskProjectsRequest;
-import to.unified.unified_java_sdk.models.operations.ListTaskProjectsRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.ListTaskProjectsResponse;
-import to.unified.unified_java_sdk.models.operations.PatchTaskProjectRequest;
-import to.unified.unified_java_sdk.models.operations.PatchTaskProjectRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.PatchTaskProjectResponse;
-import to.unified.unified_java_sdk.models.operations.RemoveTaskProjectRequest;
-import to.unified.unified_java_sdk.models.operations.RemoveTaskProjectRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.RemoveTaskProjectResponse;
-import to.unified.unified_java_sdk.models.operations.UpdateTaskProjectRequest;
-import to.unified.unified_java_sdk.models.operations.UpdateTaskProjectRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.UpdateTaskProjectResponse;
-import to.unified.unified_java_sdk.operations.CreateTaskProject;
-import to.unified.unified_java_sdk.operations.GetTaskProject;
-import to.unified.unified_java_sdk.operations.ListTaskProjects;
-import to.unified.unified_java_sdk.operations.PatchTaskProject;
-import to.unified.unified_java_sdk.operations.RemoveTaskProject;
-import to.unified.unified_java_sdk.operations.UpdateTaskProject;
+import to.unified.unified_java_sdk.models.operations.CreateTaskProject2Request;
+import to.unified.unified_java_sdk.models.operations.CreateTaskProject2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.CreateTaskProject2Response;
+import to.unified.unified_java_sdk.models.operations.GetTaskProject2Request;
+import to.unified.unified_java_sdk.models.operations.GetTaskProject2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetTaskProject2Response;
+import to.unified.unified_java_sdk.models.operations.ListTaskProjects2Request;
+import to.unified.unified_java_sdk.models.operations.ListTaskProjects2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListTaskProjects2Response;
+import to.unified.unified_java_sdk.models.operations.PatchTaskProject2Request;
+import to.unified.unified_java_sdk.models.operations.PatchTaskProject2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.PatchTaskProject2Response;
+import to.unified.unified_java_sdk.models.operations.RemoveTaskProject2Request;
+import to.unified.unified_java_sdk.models.operations.RemoveTaskProject2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.RemoveTaskProject2Response;
+import to.unified.unified_java_sdk.models.operations.UpdateTaskProject2Request;
+import to.unified.unified_java_sdk.models.operations.UpdateTaskProject2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.UpdateTaskProject2Response;
+import to.unified.unified_java_sdk.operations.CreateTaskProject2;
+import to.unified.unified_java_sdk.operations.GetTaskProject2;
+import to.unified.unified_java_sdk.operations.ListTaskProjects2;
+import to.unified.unified_java_sdk.operations.PatchTaskProject2;
+import to.unified.unified_java_sdk.operations.RemoveTaskProject2;
+import to.unified.unified_java_sdk.operations.UpdateTaskProject2;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -57,8 +57,8 @@ public class Project {
      * 
      * @return The call builder
      */
-    public CreateTaskProjectRequestBuilder createTaskProject() {
-        return new CreateTaskProjectRequestBuilder(sdkConfiguration);
+    public CreateTaskProject2RequestBuilder createTaskProject2() {
+        return new CreateTaskProject2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -68,9 +68,9 @@ public class Project {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateTaskProjectResponse createTaskProject(@Nonnull CreateTaskProjectRequest request) {
-        RequestOperation<CreateTaskProjectRequest, CreateTaskProjectResponse> operation
-              = new CreateTaskProject.Sync(sdkConfiguration, _headers);
+    public CreateTaskProject2Response createTaskProject2(@Nonnull CreateTaskProject2Request request) {
+        RequestOperation<CreateTaskProject2Request, CreateTaskProject2Response> operation
+              = new CreateTaskProject2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -79,8 +79,8 @@ public class Project {
      * 
      * @return The call builder
      */
-    public GetTaskProjectRequestBuilder getTaskProject() {
-        return new GetTaskProjectRequestBuilder(sdkConfiguration);
+    public GetTaskProject2RequestBuilder getTaskProject2() {
+        return new GetTaskProject2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -90,9 +90,9 @@ public class Project {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetTaskProjectResponse getTaskProject(@Nonnull GetTaskProjectRequest request) {
-        RequestOperation<GetTaskProjectRequest, GetTaskProjectResponse> operation
-              = new GetTaskProject.Sync(sdkConfiguration, _headers);
+    public GetTaskProject2Response getTaskProject2(@Nonnull GetTaskProject2Request request) {
+        RequestOperation<GetTaskProject2Request, GetTaskProject2Response> operation
+              = new GetTaskProject2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -101,8 +101,8 @@ public class Project {
      * 
      * @return The call builder
      */
-    public ListTaskProjectsRequestBuilder listTaskProjects() {
-        return new ListTaskProjectsRequestBuilder(sdkConfiguration);
+    public ListTaskProjects2RequestBuilder listTaskProjects2() {
+        return new ListTaskProjects2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -112,9 +112,9 @@ public class Project {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListTaskProjectsResponse listTaskProjects(@Nonnull ListTaskProjectsRequest request) {
-        RequestOperation<ListTaskProjectsRequest, ListTaskProjectsResponse> operation
-              = new ListTaskProjects.Sync(sdkConfiguration, _headers);
+    public ListTaskProjects2Response listTaskProjects2(@Nonnull ListTaskProjects2Request request) {
+        RequestOperation<ListTaskProjects2Request, ListTaskProjects2Response> operation
+              = new ListTaskProjects2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -123,8 +123,8 @@ public class Project {
      * 
      * @return The call builder
      */
-    public PatchTaskProjectRequestBuilder patchTaskProject() {
-        return new PatchTaskProjectRequestBuilder(sdkConfiguration);
+    public PatchTaskProject2RequestBuilder patchTaskProject2() {
+        return new PatchTaskProject2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -134,9 +134,9 @@ public class Project {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchTaskProjectResponse patchTaskProject(@Nonnull PatchTaskProjectRequest request) {
-        RequestOperation<PatchTaskProjectRequest, PatchTaskProjectResponse> operation
-              = new PatchTaskProject.Sync(sdkConfiguration, _headers);
+    public PatchTaskProject2Response patchTaskProject2(@Nonnull PatchTaskProject2Request request) {
+        RequestOperation<PatchTaskProject2Request, PatchTaskProject2Response> operation
+              = new PatchTaskProject2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -145,8 +145,8 @@ public class Project {
      * 
      * @return The call builder
      */
-    public RemoveTaskProjectRequestBuilder removeTaskProject() {
-        return new RemoveTaskProjectRequestBuilder(sdkConfiguration);
+    public RemoveTaskProject2RequestBuilder removeTaskProject2() {
+        return new RemoveTaskProject2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -156,9 +156,9 @@ public class Project {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveTaskProjectResponse removeTaskProject(@Nonnull RemoveTaskProjectRequest request) {
-        RequestOperation<RemoveTaskProjectRequest, RemoveTaskProjectResponse> operation
-              = new RemoveTaskProject.Sync(sdkConfiguration, _headers);
+    public RemoveTaskProject2Response removeTaskProject2(@Nonnull RemoveTaskProject2Request request) {
+        RequestOperation<RemoveTaskProject2Request, RemoveTaskProject2Response> operation
+              = new RemoveTaskProject2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -167,8 +167,8 @@ public class Project {
      * 
      * @return The call builder
      */
-    public UpdateTaskProjectRequestBuilder updateTaskProject() {
-        return new UpdateTaskProjectRequestBuilder(sdkConfiguration);
+    public UpdateTaskProject2RequestBuilder updateTaskProject2() {
+        return new UpdateTaskProject2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -178,9 +178,9 @@ public class Project {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateTaskProjectResponse updateTaskProject(@Nonnull UpdateTaskProjectRequest request) {
-        RequestOperation<UpdateTaskProjectRequest, UpdateTaskProjectResponse> operation
-              = new UpdateTaskProject.Sync(sdkConfiguration, _headers);
+    public UpdateTaskProject2Response updateTaskProject2(@Nonnull UpdateTaskProject2Request request) {
+        RequestOperation<UpdateTaskProject2Request, UpdateTaskProject2Response> operation
+              = new UpdateTaskProject2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

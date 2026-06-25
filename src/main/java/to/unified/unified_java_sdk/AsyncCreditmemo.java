@@ -7,30 +7,30 @@ import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOper
 
 import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
-import to.unified.unified_java_sdk.models.operations.CreateAccountingCreditmemoRequest;
-import to.unified.unified_java_sdk.models.operations.GetAccountingCreditmemoRequest;
-import to.unified.unified_java_sdk.models.operations.ListAccountingCreditmemoesRequest;
-import to.unified.unified_java_sdk.models.operations.PatchAccountingCreditmemoRequest;
-import to.unified.unified_java_sdk.models.operations.RemoveAccountingCreditmemoRequest;
-import to.unified.unified_java_sdk.models.operations.UpdateAccountingCreditmemoRequest;
-import to.unified.unified_java_sdk.models.operations.async.CreateAccountingCreditmemoRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.CreateAccountingCreditmemoResponse;
-import to.unified.unified_java_sdk.models.operations.async.GetAccountingCreditmemoRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.GetAccountingCreditmemoResponse;
-import to.unified.unified_java_sdk.models.operations.async.ListAccountingCreditmemoesRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.ListAccountingCreditmemoesResponse;
-import to.unified.unified_java_sdk.models.operations.async.PatchAccountingCreditmemoRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.PatchAccountingCreditmemoResponse;
-import to.unified.unified_java_sdk.models.operations.async.RemoveAccountingCreditmemoRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.RemoveAccountingCreditmemoResponse;
-import to.unified.unified_java_sdk.models.operations.async.UpdateAccountingCreditmemoRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.UpdateAccountingCreditmemoResponse;
-import to.unified.unified_java_sdk.operations.CreateAccountingCreditmemo;
-import to.unified.unified_java_sdk.operations.GetAccountingCreditmemo;
-import to.unified.unified_java_sdk.operations.ListAccountingCreditmemoes;
-import to.unified.unified_java_sdk.operations.PatchAccountingCreditmemo;
-import to.unified.unified_java_sdk.operations.RemoveAccountingCreditmemo;
-import to.unified.unified_java_sdk.operations.UpdateAccountingCreditmemo;
+import to.unified.unified_java_sdk.models.operations.CreateAccountingCreditmemo2Request;
+import to.unified.unified_java_sdk.models.operations.GetAccountingCreditmemo2Request;
+import to.unified.unified_java_sdk.models.operations.ListAccountingCreditmemoes2Request;
+import to.unified.unified_java_sdk.models.operations.PatchAccountingCreditmemo2Request;
+import to.unified.unified_java_sdk.models.operations.RemoveAccountingCreditmemo2Request;
+import to.unified.unified_java_sdk.models.operations.UpdateAccountingCreditmemo2Request;
+import to.unified.unified_java_sdk.models.operations.async.CreateAccountingCreditmemo2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.CreateAccountingCreditmemo2Response;
+import to.unified.unified_java_sdk.models.operations.async.GetAccountingCreditmemo2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetAccountingCreditmemo2Response;
+import to.unified.unified_java_sdk.models.operations.async.ListAccountingCreditmemoes2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListAccountingCreditmemoes2Response;
+import to.unified.unified_java_sdk.models.operations.async.PatchAccountingCreditmemo2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.PatchAccountingCreditmemo2Response;
+import to.unified.unified_java_sdk.models.operations.async.RemoveAccountingCreditmemo2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.RemoveAccountingCreditmemo2Response;
+import to.unified.unified_java_sdk.models.operations.async.UpdateAccountingCreditmemo2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.UpdateAccountingCreditmemo2Response;
+import to.unified.unified_java_sdk.operations.CreateAccountingCreditmemo2;
+import to.unified.unified_java_sdk.operations.GetAccountingCreditmemo2;
+import to.unified.unified_java_sdk.operations.ListAccountingCreditmemoes2;
+import to.unified.unified_java_sdk.operations.PatchAccountingCreditmemo2;
+import to.unified.unified_java_sdk.operations.RemoveAccountingCreditmemo2;
+import to.unified.unified_java_sdk.operations.UpdateAccountingCreditmemo2;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -59,19 +59,19 @@ public class AsyncCreditmemo {
      * 
      * @return The async call builder
      */
-    public CreateAccountingCreditmemoRequestBuilder createAccountingCreditmemo() {
-        return new CreateAccountingCreditmemoRequestBuilder(sdkConfiguration);
+    public CreateAccountingCreditmemo2RequestBuilder createAccountingCreditmemo2() {
+        return new CreateAccountingCreditmemo2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Create a creditmemo
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<CreateAccountingCreditmemoResponse>} - The async response
+     * @return {@code CompletableFuture<CreateAccountingCreditmemo2Response>} - The async response
      */
-    public CompletableFuture<CreateAccountingCreditmemoResponse> createAccountingCreditmemo(@Nonnull CreateAccountingCreditmemoRequest request) {
-        AsyncRequestOperation<CreateAccountingCreditmemoRequest, CreateAccountingCreditmemoResponse> operation
-              = new CreateAccountingCreditmemo.Async(sdkConfiguration, _headers);
+    public CompletableFuture<CreateAccountingCreditmemo2Response> createAccountingCreditmemo2(@Nonnull CreateAccountingCreditmemo2Request request) {
+        AsyncRequestOperation<CreateAccountingCreditmemo2Request, CreateAccountingCreditmemo2Response> operation
+              = new CreateAccountingCreditmemo2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -82,19 +82,19 @@ public class AsyncCreditmemo {
      * 
      * @return The async call builder
      */
-    public GetAccountingCreditmemoRequestBuilder getAccountingCreditmemo() {
-        return new GetAccountingCreditmemoRequestBuilder(sdkConfiguration);
+    public GetAccountingCreditmemo2RequestBuilder getAccountingCreditmemo2() {
+        return new GetAccountingCreditmemo2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Retrieve a creditmemo
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<GetAccountingCreditmemoResponse>} - The async response
+     * @return {@code CompletableFuture<GetAccountingCreditmemo2Response>} - The async response
      */
-    public CompletableFuture<GetAccountingCreditmemoResponse> getAccountingCreditmemo(@Nonnull GetAccountingCreditmemoRequest request) {
-        AsyncRequestOperation<GetAccountingCreditmemoRequest, GetAccountingCreditmemoResponse> operation
-              = new GetAccountingCreditmemo.Async(sdkConfiguration, _headers);
+    public CompletableFuture<GetAccountingCreditmemo2Response> getAccountingCreditmemo2(@Nonnull GetAccountingCreditmemo2Request request) {
+        AsyncRequestOperation<GetAccountingCreditmemo2Request, GetAccountingCreditmemo2Response> operation
+              = new GetAccountingCreditmemo2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -105,19 +105,19 @@ public class AsyncCreditmemo {
      * 
      * @return The async call builder
      */
-    public ListAccountingCreditmemoesRequestBuilder listAccountingCreditmemoes() {
-        return new ListAccountingCreditmemoesRequestBuilder(sdkConfiguration);
+    public ListAccountingCreditmemoes2RequestBuilder listAccountingCreditmemoes2() {
+        return new ListAccountingCreditmemoes2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * List all creditmemoes
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<ListAccountingCreditmemoesResponse>} - The async response
+     * @return {@code CompletableFuture<ListAccountingCreditmemoes2Response>} - The async response
      */
-    public CompletableFuture<ListAccountingCreditmemoesResponse> listAccountingCreditmemoes(@Nonnull ListAccountingCreditmemoesRequest request) {
-        AsyncRequestOperation<ListAccountingCreditmemoesRequest, ListAccountingCreditmemoesResponse> operation
-              = new ListAccountingCreditmemoes.Async(sdkConfiguration, _headers);
+    public CompletableFuture<ListAccountingCreditmemoes2Response> listAccountingCreditmemoes2(@Nonnull ListAccountingCreditmemoes2Request request) {
+        AsyncRequestOperation<ListAccountingCreditmemoes2Request, ListAccountingCreditmemoes2Response> operation
+              = new ListAccountingCreditmemoes2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -128,19 +128,19 @@ public class AsyncCreditmemo {
      * 
      * @return The async call builder
      */
-    public PatchAccountingCreditmemoRequestBuilder patchAccountingCreditmemo() {
-        return new PatchAccountingCreditmemoRequestBuilder(sdkConfiguration);
+    public PatchAccountingCreditmemo2RequestBuilder patchAccountingCreditmemo2() {
+        return new PatchAccountingCreditmemo2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update a creditmemo
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<PatchAccountingCreditmemoResponse>} - The async response
+     * @return {@code CompletableFuture<PatchAccountingCreditmemo2Response>} - The async response
      */
-    public CompletableFuture<PatchAccountingCreditmemoResponse> patchAccountingCreditmemo(@Nonnull PatchAccountingCreditmemoRequest request) {
-        AsyncRequestOperation<PatchAccountingCreditmemoRequest, PatchAccountingCreditmemoResponse> operation
-              = new PatchAccountingCreditmemo.Async(sdkConfiguration, _headers);
+    public CompletableFuture<PatchAccountingCreditmemo2Response> patchAccountingCreditmemo2(@Nonnull PatchAccountingCreditmemo2Request request) {
+        AsyncRequestOperation<PatchAccountingCreditmemo2Request, PatchAccountingCreditmemo2Response> operation
+              = new PatchAccountingCreditmemo2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -151,19 +151,19 @@ public class AsyncCreditmemo {
      * 
      * @return The async call builder
      */
-    public RemoveAccountingCreditmemoRequestBuilder removeAccountingCreditmemo() {
-        return new RemoveAccountingCreditmemoRequestBuilder(sdkConfiguration);
+    public RemoveAccountingCreditmemo2RequestBuilder removeAccountingCreditmemo2() {
+        return new RemoveAccountingCreditmemo2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Remove a creditmemo
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<RemoveAccountingCreditmemoResponse>} - The async response
+     * @return {@code CompletableFuture<RemoveAccountingCreditmemo2Response>} - The async response
      */
-    public CompletableFuture<RemoveAccountingCreditmemoResponse> removeAccountingCreditmemo(@Nonnull RemoveAccountingCreditmemoRequest request) {
-        AsyncRequestOperation<RemoveAccountingCreditmemoRequest, RemoveAccountingCreditmemoResponse> operation
-              = new RemoveAccountingCreditmemo.Async(sdkConfiguration, _headers);
+    public CompletableFuture<RemoveAccountingCreditmemo2Response> removeAccountingCreditmemo2(@Nonnull RemoveAccountingCreditmemo2Request request) {
+        AsyncRequestOperation<RemoveAccountingCreditmemo2Request, RemoveAccountingCreditmemo2Response> operation
+              = new RemoveAccountingCreditmemo2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -174,19 +174,19 @@ public class AsyncCreditmemo {
      * 
      * @return The async call builder
      */
-    public UpdateAccountingCreditmemoRequestBuilder updateAccountingCreditmemo() {
-        return new UpdateAccountingCreditmemoRequestBuilder(sdkConfiguration);
+    public UpdateAccountingCreditmemo2RequestBuilder updateAccountingCreditmemo2() {
+        return new UpdateAccountingCreditmemo2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update a creditmemo
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<UpdateAccountingCreditmemoResponse>} - The async response
+     * @return {@code CompletableFuture<UpdateAccountingCreditmemo2Response>} - The async response
      */
-    public CompletableFuture<UpdateAccountingCreditmemoResponse> updateAccountingCreditmemo(@Nonnull UpdateAccountingCreditmemoRequest request) {
-        AsyncRequestOperation<UpdateAccountingCreditmemoRequest, UpdateAccountingCreditmemoResponse> operation
-              = new UpdateAccountingCreditmemo.Async(sdkConfiguration, _headers);
+    public CompletableFuture<UpdateAccountingCreditmemo2Response> updateAccountingCreditmemo2(@Nonnull UpdateAccountingCreditmemo2Request request) {
+        AsyncRequestOperation<UpdateAccountingCreditmemo2Request, UpdateAccountingCreditmemo2Response> operation
+              = new UpdateAccountingCreditmemo2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

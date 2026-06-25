@@ -4,27 +4,27 @@
 
 ### Available Operations
 
-* [createRepoCommit](#createrepocommit) - Create a commit
-* [getRepoCommit](#getrepocommit) - Retrieve a commit
-* [listRepoCommits](#listrepocommits) - List all commits
-* [patchRepoCommit](#patchrepocommit) - Update a commit
-* [removeRepoCommit](#removerepocommit) - Remove a commit
-* [updateRepoCommit](#updaterepocommit) - Update a commit
+* [createRepoCommit2](#createrepocommit2) - Create a commit
+* [getRepoCommit2](#getrepocommit2) - Retrieve a commit
+* [listRepoCommits2](#listrepocommits2) - List all commits
+* [patchRepoCommit2](#patchrepocommit2) - Update a commit
+* [removeRepoCommit2](#removerepocommit2) - Remove a commit
+* [updateRepoCommit2](#updaterepocommit2) - Update a commit
 
-## createRepoCommit
+## createRepoCommit2
 
 Create a commit
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createRepoCommit" method="post" path="/repo/{connection_id}/commit" -->
+<!-- UsageSnippet language="java" operationID="createRepoCommit2" method="post" path="/repo/{connection_id}/commit" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.CreateRepoCommitRequest;
-import to.unified.unified_java_sdk.models.operations.CreateRepoCommitResponse;
+import to.unified.unified_java_sdk.models.operations.CreateRepoCommit2Request;
+import to.unified.unified_java_sdk.models.operations.CreateRepoCommit2Response;
 import to.unified.unified_java_sdk.models.shared.RepoCommit;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -38,14 +38,14 @@ public class Application {
                     .build())
             .build();
 
-        CreateRepoCommitRequest req = CreateRepoCommitRequest.builder()
+        CreateRepoCommit2Request req = CreateRepoCommit2Request.builder()
                 .repoCommit(RepoCommit.builder()
                     .repoId("<id>")
                     .build())
                 .connectionId("<id>")
                 .build();
 
-        CreateRepoCommitResponse res = sdk.commit().createRepoCommit()
+        CreateRepoCommit2Response res = sdk.commit().createRepoCommit2()
                 .request(req)
                 .call();
 
@@ -58,13 +58,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
-| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
-| `request`                                                                     | [CreateRepoCommitRequest](../../models/operations/CreateRepoCommitRequest.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
+| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| `request`                                                                       | [CreateRepoCommit2Request](../../models/operations/CreateRepoCommit2Request.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
 
 ### Response
 
-**[CreateRepoCommitResponse](../../models/operations/CreateRepoCommitResponse.md)**
+**[CreateRepoCommit2Response](../../models/operations/CreateRepoCommit2Response.md)**
 
 ### Errors
 
@@ -72,20 +72,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## getRepoCommit
+## getRepoCommit2
 
 Retrieve a commit
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="getRepoCommit" method="get" path="/repo/{connection_id}/commit/{id}" -->
+<!-- UsageSnippet language="java" operationID="getRepoCommit2" method="get" path="/repo/{connection_id}/commit/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.GetRepoCommitRequest;
-import to.unified.unified_java_sdk.models.operations.GetRepoCommitResponse;
+import to.unified.unified_java_sdk.models.operations.GetRepoCommit2Request;
+import to.unified.unified_java_sdk.models.operations.GetRepoCommit2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -98,12 +98,12 @@ public class Application {
                     .build())
             .build();
 
-        GetRepoCommitRequest req = GetRepoCommitRequest.builder()
+        GetRepoCommit2Request req = GetRepoCommit2Request.builder()
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        GetRepoCommitResponse res = sdk.commit().getRepoCommit()
+        GetRepoCommit2Response res = sdk.commit().getRepoCommit2()
                 .request(req)
                 .call();
 
@@ -116,13 +116,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                               | Type                                                                    | Required                                                                | Description                                                             |
-| ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- |
-| `request`                                                               | [GetRepoCommitRequest](../../models/operations/GetRepoCommitRequest.md) | :heavy_check_mark:                                                      | The request object to use for the request.                              |
+| Parameter                                                                 | Type                                                                      | Required                                                                  | Description                                                               |
+| ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
+| `request`                                                                 | [GetRepoCommit2Request](../../models/operations/GetRepoCommit2Request.md) | :heavy_check_mark:                                                        | The request object to use for the request.                                |
 
 ### Response
 
-**[GetRepoCommitResponse](../../models/operations/GetRepoCommitResponse.md)**
+**[GetRepoCommit2Response](../../models/operations/GetRepoCommit2Response.md)**
 
 ### Errors
 
@@ -130,20 +130,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## listRepoCommits
+## listRepoCommits2
 
 List all commits
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="listRepoCommits" method="get" path="/repo/{connection_id}/commit" -->
+<!-- UsageSnippet language="java" operationID="listRepoCommits2" method="get" path="/repo/{connection_id}/commit" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.ListRepoCommitsRequest;
-import to.unified.unified_java_sdk.models.operations.ListRepoCommitsResponse;
+import to.unified.unified_java_sdk.models.operations.ListRepoCommits2Request;
+import to.unified.unified_java_sdk.models.operations.ListRepoCommits2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -156,11 +156,11 @@ public class Application {
                     .build())
             .build();
 
-        ListRepoCommitsRequest req = ListRepoCommitsRequest.builder()
+        ListRepoCommits2Request req = ListRepoCommits2Request.builder()
                 .connectionId("<id>")
                 .build();
 
-        ListRepoCommitsResponse res = sdk.commit().listRepoCommits()
+        ListRepoCommits2Response res = sdk.commit().listRepoCommits2()
                 .request(req)
                 .call();
 
@@ -173,13 +173,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                   | Type                                                                        | Required                                                                    | Description                                                                 |
-| --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
-| `request`                                                                   | [ListRepoCommitsRequest](../../models/operations/ListRepoCommitsRequest.md) | :heavy_check_mark:                                                          | The request object to use for the request.                                  |
+| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
+| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| `request`                                                                     | [ListRepoCommits2Request](../../models/operations/ListRepoCommits2Request.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
 
 ### Response
 
-**[ListRepoCommitsResponse](../../models/operations/ListRepoCommitsResponse.md)**
+**[ListRepoCommits2Response](../../models/operations/ListRepoCommits2Response.md)**
 
 ### Errors
 
@@ -187,20 +187,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## patchRepoCommit
+## patchRepoCommit2
 
 Update a commit
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchRepoCommit" method="patch" path="/repo/{connection_id}/commit/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchRepoCommit2" method="patch" path="/repo/{connection_id}/commit/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.PatchRepoCommitRequest;
-import to.unified.unified_java_sdk.models.operations.PatchRepoCommitResponse;
+import to.unified.unified_java_sdk.models.operations.PatchRepoCommit2Request;
+import to.unified.unified_java_sdk.models.operations.PatchRepoCommit2Response;
 import to.unified.unified_java_sdk.models.shared.RepoCommit;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -214,7 +214,7 @@ public class Application {
                     .build())
             .build();
 
-        PatchRepoCommitRequest req = PatchRepoCommitRequest.builder()
+        PatchRepoCommit2Request req = PatchRepoCommit2Request.builder()
                 .repoCommit(RepoCommit.builder()
                     .repoId("<id>")
                     .build())
@@ -222,7 +222,7 @@ public class Application {
                 .id("<id>")
                 .build();
 
-        PatchRepoCommitResponse res = sdk.commit().patchRepoCommit()
+        PatchRepoCommit2Response res = sdk.commit().patchRepoCommit2()
                 .request(req)
                 .call();
 
@@ -235,13 +235,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                   | Type                                                                        | Required                                                                    | Description                                                                 |
-| --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
-| `request`                                                                   | [PatchRepoCommitRequest](../../models/operations/PatchRepoCommitRequest.md) | :heavy_check_mark:                                                          | The request object to use for the request.                                  |
+| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
+| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| `request`                                                                     | [PatchRepoCommit2Request](../../models/operations/PatchRepoCommit2Request.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
 
 ### Response
 
-**[PatchRepoCommitResponse](../../models/operations/PatchRepoCommitResponse.md)**
+**[PatchRepoCommit2Response](../../models/operations/PatchRepoCommit2Response.md)**
 
 ### Errors
 
@@ -249,20 +249,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## removeRepoCommit
+## removeRepoCommit2
 
 Remove a commit
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="removeRepoCommit" method="delete" path="/repo/{connection_id}/commit/{id}" -->
+<!-- UsageSnippet language="java" operationID="removeRepoCommit2" method="delete" path="/repo/{connection_id}/commit/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.RemoveRepoCommitRequest;
-import to.unified.unified_java_sdk.models.operations.RemoveRepoCommitResponse;
+import to.unified.unified_java_sdk.models.operations.RemoveRepoCommit2Request;
+import to.unified.unified_java_sdk.models.operations.RemoveRepoCommit2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -275,12 +275,12 @@ public class Application {
                     .build())
             .build();
 
-        RemoveRepoCommitRequest req = RemoveRepoCommitRequest.builder()
+        RemoveRepoCommit2Request req = RemoveRepoCommit2Request.builder()
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        RemoveRepoCommitResponse res = sdk.commit().removeRepoCommit()
+        RemoveRepoCommit2Response res = sdk.commit().removeRepoCommit2()
                 .request(req)
                 .call();
 
@@ -291,13 +291,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
-| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
-| `request`                                                                     | [RemoveRepoCommitRequest](../../models/operations/RemoveRepoCommitRequest.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
+| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| `request`                                                                       | [RemoveRepoCommit2Request](../../models/operations/RemoveRepoCommit2Request.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
 
 ### Response
 
-**[RemoveRepoCommitResponse](../../models/operations/RemoveRepoCommitResponse.md)**
+**[RemoveRepoCommit2Response](../../models/operations/RemoveRepoCommit2Response.md)**
 
 ### Errors
 
@@ -305,20 +305,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## updateRepoCommit
+## updateRepoCommit2
 
 Update a commit
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateRepoCommit" method="put" path="/repo/{connection_id}/commit/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateRepoCommit2" method="put" path="/repo/{connection_id}/commit/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.UpdateRepoCommitRequest;
-import to.unified.unified_java_sdk.models.operations.UpdateRepoCommitResponse;
+import to.unified.unified_java_sdk.models.operations.UpdateRepoCommit2Request;
+import to.unified.unified_java_sdk.models.operations.UpdateRepoCommit2Response;
 import to.unified.unified_java_sdk.models.shared.RepoCommit;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -332,7 +332,7 @@ public class Application {
                     .build())
             .build();
 
-        UpdateRepoCommitRequest req = UpdateRepoCommitRequest.builder()
+        UpdateRepoCommit2Request req = UpdateRepoCommit2Request.builder()
                 .repoCommit(RepoCommit.builder()
                     .repoId("<id>")
                     .build())
@@ -340,7 +340,7 @@ public class Application {
                 .id("<id>")
                 .build();
 
-        UpdateRepoCommitResponse res = sdk.commit().updateRepoCommit()
+        UpdateRepoCommit2Response res = sdk.commit().updateRepoCommit2()
                 .request(req)
                 .call();
 
@@ -353,13 +353,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
-| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
-| `request`                                                                     | [UpdateRepoCommitRequest](../../models/operations/UpdateRepoCommitRequest.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
+| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| `request`                                                                       | [UpdateRepoCommit2Request](../../models/operations/UpdateRepoCommit2Request.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
 
 ### Response
 
-**[UpdateRepoCommitResponse](../../models/operations/UpdateRepoCommitResponse.md)**
+**[UpdateRepoCommit2Response](../../models/operations/UpdateRepoCommit2Response.md)**
 
 ### Errors
 

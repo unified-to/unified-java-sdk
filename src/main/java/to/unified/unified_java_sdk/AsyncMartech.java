@@ -7,82 +7,82 @@ import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOper
 
 import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
-import to.unified.unified_java_sdk.models.operations.CreateMartechCampaignRequest;
-import to.unified.unified_java_sdk.models.operations.CreateMartechListRequest;
-import to.unified.unified_java_sdk.models.operations.CreateMartechMemberRequest;
-import to.unified.unified_java_sdk.models.operations.GetMartechCampaignRequest;
-import to.unified.unified_java_sdk.models.operations.GetMartechListRequest;
-import to.unified.unified_java_sdk.models.operations.GetMartechMemberRequest;
-import to.unified.unified_java_sdk.models.operations.ListMartechCampaignsRequest;
-import to.unified.unified_java_sdk.models.operations.ListMartechListsRequest;
-import to.unified.unified_java_sdk.models.operations.ListMartechMembersRequest;
-import to.unified.unified_java_sdk.models.operations.ListMartechReportsRequest;
-import to.unified.unified_java_sdk.models.operations.PatchMartechCampaignRequest;
-import to.unified.unified_java_sdk.models.operations.PatchMartechListRequest;
-import to.unified.unified_java_sdk.models.operations.PatchMartechMemberRequest;
-import to.unified.unified_java_sdk.models.operations.RemoveMartechCampaignRequest;
-import to.unified.unified_java_sdk.models.operations.RemoveMartechListRequest;
-import to.unified.unified_java_sdk.models.operations.RemoveMartechMemberRequest;
-import to.unified.unified_java_sdk.models.operations.UpdateMartechCampaignRequest;
-import to.unified.unified_java_sdk.models.operations.UpdateMartechListRequest;
-import to.unified.unified_java_sdk.models.operations.UpdateMartechMemberRequest;
-import to.unified.unified_java_sdk.models.operations.async.CreateMartechCampaignRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.CreateMartechCampaignResponse;
-import to.unified.unified_java_sdk.models.operations.async.CreateMartechListRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.CreateMartechListResponse;
-import to.unified.unified_java_sdk.models.operations.async.CreateMartechMemberRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.CreateMartechMemberResponse;
-import to.unified.unified_java_sdk.models.operations.async.GetMartechCampaignRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.GetMartechCampaignResponse;
-import to.unified.unified_java_sdk.models.operations.async.GetMartechListRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.GetMartechListResponse;
-import to.unified.unified_java_sdk.models.operations.async.GetMartechMemberRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.GetMartechMemberResponse;
-import to.unified.unified_java_sdk.models.operations.async.ListMartechCampaignsRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.ListMartechCampaignsResponse;
-import to.unified.unified_java_sdk.models.operations.async.ListMartechListsRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.ListMartechListsResponse;
-import to.unified.unified_java_sdk.models.operations.async.ListMartechMembersRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.ListMartechMembersResponse;
-import to.unified.unified_java_sdk.models.operations.async.ListMartechReportsRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.ListMartechReportsResponse;
-import to.unified.unified_java_sdk.models.operations.async.PatchMartechCampaignRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.PatchMartechCampaignResponse;
-import to.unified.unified_java_sdk.models.operations.async.PatchMartechListRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.PatchMartechListResponse;
-import to.unified.unified_java_sdk.models.operations.async.PatchMartechMemberRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.PatchMartechMemberResponse;
-import to.unified.unified_java_sdk.models.operations.async.RemoveMartechCampaignRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.RemoveMartechCampaignResponse;
-import to.unified.unified_java_sdk.models.operations.async.RemoveMartechListRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.RemoveMartechListResponse;
-import to.unified.unified_java_sdk.models.operations.async.RemoveMartechMemberRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.RemoveMartechMemberResponse;
-import to.unified.unified_java_sdk.models.operations.async.UpdateMartechCampaignRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.UpdateMartechCampaignResponse;
-import to.unified.unified_java_sdk.models.operations.async.UpdateMartechListRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.UpdateMartechListResponse;
-import to.unified.unified_java_sdk.models.operations.async.UpdateMartechMemberRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.UpdateMartechMemberResponse;
-import to.unified.unified_java_sdk.operations.CreateMartechCampaign;
-import to.unified.unified_java_sdk.operations.CreateMartechList;
-import to.unified.unified_java_sdk.operations.CreateMartechMember;
-import to.unified.unified_java_sdk.operations.GetMartechCampaign;
-import to.unified.unified_java_sdk.operations.GetMartechList;
-import to.unified.unified_java_sdk.operations.GetMartechMember;
-import to.unified.unified_java_sdk.operations.ListMartechCampaigns;
-import to.unified.unified_java_sdk.operations.ListMartechLists;
-import to.unified.unified_java_sdk.operations.ListMartechMembers;
-import to.unified.unified_java_sdk.operations.ListMartechReports;
-import to.unified.unified_java_sdk.operations.PatchMartechCampaign;
-import to.unified.unified_java_sdk.operations.PatchMartechList;
-import to.unified.unified_java_sdk.operations.PatchMartechMember;
-import to.unified.unified_java_sdk.operations.RemoveMartechCampaign;
-import to.unified.unified_java_sdk.operations.RemoveMartechList;
-import to.unified.unified_java_sdk.operations.RemoveMartechMember;
-import to.unified.unified_java_sdk.operations.UpdateMartechCampaign;
-import to.unified.unified_java_sdk.operations.UpdateMartechList;
-import to.unified.unified_java_sdk.operations.UpdateMartechMember;
+import to.unified.unified_java_sdk.models.operations.CreateMartechCampaign2Request;
+import to.unified.unified_java_sdk.models.operations.CreateMartechList2Request;
+import to.unified.unified_java_sdk.models.operations.CreateMartechMember2Request;
+import to.unified.unified_java_sdk.models.operations.GetMartechCampaign2Request;
+import to.unified.unified_java_sdk.models.operations.GetMartechList2Request;
+import to.unified.unified_java_sdk.models.operations.GetMartechMember2Request;
+import to.unified.unified_java_sdk.models.operations.ListMartechCampaigns2Request;
+import to.unified.unified_java_sdk.models.operations.ListMartechLists2Request;
+import to.unified.unified_java_sdk.models.operations.ListMartechMembers2Request;
+import to.unified.unified_java_sdk.models.operations.ListMartechReports2Request;
+import to.unified.unified_java_sdk.models.operations.PatchMartechCampaign2Request;
+import to.unified.unified_java_sdk.models.operations.PatchMartechList2Request;
+import to.unified.unified_java_sdk.models.operations.PatchMartechMember2Request;
+import to.unified.unified_java_sdk.models.operations.RemoveMartechCampaign2Request;
+import to.unified.unified_java_sdk.models.operations.RemoveMartechList2Request;
+import to.unified.unified_java_sdk.models.operations.RemoveMartechMember2Request;
+import to.unified.unified_java_sdk.models.operations.UpdateMartechCampaign2Request;
+import to.unified.unified_java_sdk.models.operations.UpdateMartechList2Request;
+import to.unified.unified_java_sdk.models.operations.UpdateMartechMember2Request;
+import to.unified.unified_java_sdk.models.operations.async.CreateMartechCampaign2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.CreateMartechCampaign2Response;
+import to.unified.unified_java_sdk.models.operations.async.CreateMartechList2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.CreateMartechList2Response;
+import to.unified.unified_java_sdk.models.operations.async.CreateMartechMember2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.CreateMartechMember2Response;
+import to.unified.unified_java_sdk.models.operations.async.GetMartechCampaign2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetMartechCampaign2Response;
+import to.unified.unified_java_sdk.models.operations.async.GetMartechList2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetMartechList2Response;
+import to.unified.unified_java_sdk.models.operations.async.GetMartechMember2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetMartechMember2Response;
+import to.unified.unified_java_sdk.models.operations.async.ListMartechCampaigns2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListMartechCampaigns2Response;
+import to.unified.unified_java_sdk.models.operations.async.ListMartechLists2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListMartechLists2Response;
+import to.unified.unified_java_sdk.models.operations.async.ListMartechMembers2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListMartechMembers2Response;
+import to.unified.unified_java_sdk.models.operations.async.ListMartechReports2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListMartechReports2Response;
+import to.unified.unified_java_sdk.models.operations.async.PatchMartechCampaign2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.PatchMartechCampaign2Response;
+import to.unified.unified_java_sdk.models.operations.async.PatchMartechList2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.PatchMartechList2Response;
+import to.unified.unified_java_sdk.models.operations.async.PatchMartechMember2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.PatchMartechMember2Response;
+import to.unified.unified_java_sdk.models.operations.async.RemoveMartechCampaign2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.RemoveMartechCampaign2Response;
+import to.unified.unified_java_sdk.models.operations.async.RemoveMartechList2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.RemoveMartechList2Response;
+import to.unified.unified_java_sdk.models.operations.async.RemoveMartechMember2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.RemoveMartechMember2Response;
+import to.unified.unified_java_sdk.models.operations.async.UpdateMartechCampaign2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.UpdateMartechCampaign2Response;
+import to.unified.unified_java_sdk.models.operations.async.UpdateMartechList2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.UpdateMartechList2Response;
+import to.unified.unified_java_sdk.models.operations.async.UpdateMartechMember2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.UpdateMartechMember2Response;
+import to.unified.unified_java_sdk.operations.CreateMartechCampaign2;
+import to.unified.unified_java_sdk.operations.CreateMartechList2;
+import to.unified.unified_java_sdk.operations.CreateMartechMember2;
+import to.unified.unified_java_sdk.operations.GetMartechCampaign2;
+import to.unified.unified_java_sdk.operations.GetMartechList2;
+import to.unified.unified_java_sdk.operations.GetMartechMember2;
+import to.unified.unified_java_sdk.operations.ListMartechCampaigns2;
+import to.unified.unified_java_sdk.operations.ListMartechLists2;
+import to.unified.unified_java_sdk.operations.ListMartechMembers2;
+import to.unified.unified_java_sdk.operations.ListMartechReports2;
+import to.unified.unified_java_sdk.operations.PatchMartechCampaign2;
+import to.unified.unified_java_sdk.operations.PatchMartechList2;
+import to.unified.unified_java_sdk.operations.PatchMartechMember2;
+import to.unified.unified_java_sdk.operations.RemoveMartechCampaign2;
+import to.unified.unified_java_sdk.operations.RemoveMartechList2;
+import to.unified.unified_java_sdk.operations.RemoveMartechMember2;
+import to.unified.unified_java_sdk.operations.UpdateMartechCampaign2;
+import to.unified.unified_java_sdk.operations.UpdateMartechList2;
+import to.unified.unified_java_sdk.operations.UpdateMartechMember2;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -111,19 +111,19 @@ public class AsyncMartech {
      * 
      * @return The async call builder
      */
-    public CreateMartechCampaignRequestBuilder createMartechCampaign() {
-        return new CreateMartechCampaignRequestBuilder(sdkConfiguration);
+    public CreateMartechCampaign2RequestBuilder createMartechCampaign2() {
+        return new CreateMartechCampaign2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Create a campaign
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<CreateMartechCampaignResponse>} - The async response
+     * @return {@code CompletableFuture<CreateMartechCampaign2Response>} - The async response
      */
-    public CompletableFuture<CreateMartechCampaignResponse> createMartechCampaign(@Nonnull CreateMartechCampaignRequest request) {
-        AsyncRequestOperation<CreateMartechCampaignRequest, CreateMartechCampaignResponse> operation
-              = new CreateMartechCampaign.Async(sdkConfiguration, _headers);
+    public CompletableFuture<CreateMartechCampaign2Response> createMartechCampaign2(@Nonnull CreateMartechCampaign2Request request) {
+        AsyncRequestOperation<CreateMartechCampaign2Request, CreateMartechCampaign2Response> operation
+              = new CreateMartechCampaign2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -134,19 +134,19 @@ public class AsyncMartech {
      * 
      * @return The async call builder
      */
-    public CreateMartechListRequestBuilder createMartechList() {
-        return new CreateMartechListRequestBuilder(sdkConfiguration);
+    public CreateMartechList2RequestBuilder createMartechList2() {
+        return new CreateMartechList2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Create a list
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<CreateMartechListResponse>} - The async response
+     * @return {@code CompletableFuture<CreateMartechList2Response>} - The async response
      */
-    public CompletableFuture<CreateMartechListResponse> createMartechList(@Nonnull CreateMartechListRequest request) {
-        AsyncRequestOperation<CreateMartechListRequest, CreateMartechListResponse> operation
-              = new CreateMartechList.Async(sdkConfiguration, _headers);
+    public CompletableFuture<CreateMartechList2Response> createMartechList2(@Nonnull CreateMartechList2Request request) {
+        AsyncRequestOperation<CreateMartechList2Request, CreateMartechList2Response> operation
+              = new CreateMartechList2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -157,19 +157,19 @@ public class AsyncMartech {
      * 
      * @return The async call builder
      */
-    public CreateMartechMemberRequestBuilder createMartechMember() {
-        return new CreateMartechMemberRequestBuilder(sdkConfiguration);
+    public CreateMartechMember2RequestBuilder createMartechMember2() {
+        return new CreateMartechMember2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Create a member
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<CreateMartechMemberResponse>} - The async response
+     * @return {@code CompletableFuture<CreateMartechMember2Response>} - The async response
      */
-    public CompletableFuture<CreateMartechMemberResponse> createMartechMember(@Nonnull CreateMartechMemberRequest request) {
-        AsyncRequestOperation<CreateMartechMemberRequest, CreateMartechMemberResponse> operation
-              = new CreateMartechMember.Async(sdkConfiguration, _headers);
+    public CompletableFuture<CreateMartechMember2Response> createMartechMember2(@Nonnull CreateMartechMember2Request request) {
+        AsyncRequestOperation<CreateMartechMember2Request, CreateMartechMember2Response> operation
+              = new CreateMartechMember2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -180,19 +180,19 @@ public class AsyncMartech {
      * 
      * @return The async call builder
      */
-    public GetMartechCampaignRequestBuilder getMartechCampaign() {
-        return new GetMartechCampaignRequestBuilder(sdkConfiguration);
+    public GetMartechCampaign2RequestBuilder getMartechCampaign2() {
+        return new GetMartechCampaign2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Retrieve a campaign
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<GetMartechCampaignResponse>} - The async response
+     * @return {@code CompletableFuture<GetMartechCampaign2Response>} - The async response
      */
-    public CompletableFuture<GetMartechCampaignResponse> getMartechCampaign(@Nonnull GetMartechCampaignRequest request) {
-        AsyncRequestOperation<GetMartechCampaignRequest, GetMartechCampaignResponse> operation
-              = new GetMartechCampaign.Async(sdkConfiguration, _headers);
+    public CompletableFuture<GetMartechCampaign2Response> getMartechCampaign2(@Nonnull GetMartechCampaign2Request request) {
+        AsyncRequestOperation<GetMartechCampaign2Request, GetMartechCampaign2Response> operation
+              = new GetMartechCampaign2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -203,19 +203,19 @@ public class AsyncMartech {
      * 
      * @return The async call builder
      */
-    public GetMartechListRequestBuilder getMartechList() {
-        return new GetMartechListRequestBuilder(sdkConfiguration);
+    public GetMartechList2RequestBuilder getMartechList2() {
+        return new GetMartechList2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Retrieve a list
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<GetMartechListResponse>} - The async response
+     * @return {@code CompletableFuture<GetMartechList2Response>} - The async response
      */
-    public CompletableFuture<GetMartechListResponse> getMartechList(@Nonnull GetMartechListRequest request) {
-        AsyncRequestOperation<GetMartechListRequest, GetMartechListResponse> operation
-              = new GetMartechList.Async(sdkConfiguration, _headers);
+    public CompletableFuture<GetMartechList2Response> getMartechList2(@Nonnull GetMartechList2Request request) {
+        AsyncRequestOperation<GetMartechList2Request, GetMartechList2Response> operation
+              = new GetMartechList2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -226,19 +226,19 @@ public class AsyncMartech {
      * 
      * @return The async call builder
      */
-    public GetMartechMemberRequestBuilder getMartechMember() {
-        return new GetMartechMemberRequestBuilder(sdkConfiguration);
+    public GetMartechMember2RequestBuilder getMartechMember2() {
+        return new GetMartechMember2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Retrieve a member
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<GetMartechMemberResponse>} - The async response
+     * @return {@code CompletableFuture<GetMartechMember2Response>} - The async response
      */
-    public CompletableFuture<GetMartechMemberResponse> getMartechMember(@Nonnull GetMartechMemberRequest request) {
-        AsyncRequestOperation<GetMartechMemberRequest, GetMartechMemberResponse> operation
-              = new GetMartechMember.Async(sdkConfiguration, _headers);
+    public CompletableFuture<GetMartechMember2Response> getMartechMember2(@Nonnull GetMartechMember2Request request) {
+        AsyncRequestOperation<GetMartechMember2Request, GetMartechMember2Response> operation
+              = new GetMartechMember2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -249,19 +249,19 @@ public class AsyncMartech {
      * 
      * @return The async call builder
      */
-    public ListMartechCampaignsRequestBuilder listMartechCampaigns() {
-        return new ListMartechCampaignsRequestBuilder(sdkConfiguration);
+    public ListMartechCampaigns2RequestBuilder listMartechCampaigns2() {
+        return new ListMartechCampaigns2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * List all campaigns
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<ListMartechCampaignsResponse>} - The async response
+     * @return {@code CompletableFuture<ListMartechCampaigns2Response>} - The async response
      */
-    public CompletableFuture<ListMartechCampaignsResponse> listMartechCampaigns(@Nonnull ListMartechCampaignsRequest request) {
-        AsyncRequestOperation<ListMartechCampaignsRequest, ListMartechCampaignsResponse> operation
-              = new ListMartechCampaigns.Async(sdkConfiguration, _headers);
+    public CompletableFuture<ListMartechCampaigns2Response> listMartechCampaigns2(@Nonnull ListMartechCampaigns2Request request) {
+        AsyncRequestOperation<ListMartechCampaigns2Request, ListMartechCampaigns2Response> operation
+              = new ListMartechCampaigns2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -272,19 +272,19 @@ public class AsyncMartech {
      * 
      * @return The async call builder
      */
-    public ListMartechListsRequestBuilder listMartechLists() {
-        return new ListMartechListsRequestBuilder(sdkConfiguration);
+    public ListMartechLists2RequestBuilder listMartechLists2() {
+        return new ListMartechLists2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * List all lists
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<ListMartechListsResponse>} - The async response
+     * @return {@code CompletableFuture<ListMartechLists2Response>} - The async response
      */
-    public CompletableFuture<ListMartechListsResponse> listMartechLists(@Nonnull ListMartechListsRequest request) {
-        AsyncRequestOperation<ListMartechListsRequest, ListMartechListsResponse> operation
-              = new ListMartechLists.Async(sdkConfiguration, _headers);
+    public CompletableFuture<ListMartechLists2Response> listMartechLists2(@Nonnull ListMartechLists2Request request) {
+        AsyncRequestOperation<ListMartechLists2Request, ListMartechLists2Response> operation
+              = new ListMartechLists2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -295,19 +295,19 @@ public class AsyncMartech {
      * 
      * @return The async call builder
      */
-    public ListMartechMembersRequestBuilder listMartechMembers() {
-        return new ListMartechMembersRequestBuilder(sdkConfiguration);
+    public ListMartechMembers2RequestBuilder listMartechMembers2() {
+        return new ListMartechMembers2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * List all members
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<ListMartechMembersResponse>} - The async response
+     * @return {@code CompletableFuture<ListMartechMembers2Response>} - The async response
      */
-    public CompletableFuture<ListMartechMembersResponse> listMartechMembers(@Nonnull ListMartechMembersRequest request) {
-        AsyncRequestOperation<ListMartechMembersRequest, ListMartechMembersResponse> operation
-              = new ListMartechMembers.Async(sdkConfiguration, _headers);
+    public CompletableFuture<ListMartechMembers2Response> listMartechMembers2(@Nonnull ListMartechMembers2Request request) {
+        AsyncRequestOperation<ListMartechMembers2Request, ListMartechMembers2Response> operation
+              = new ListMartechMembers2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -318,19 +318,19 @@ public class AsyncMartech {
      * 
      * @return The async call builder
      */
-    public ListMartechReportsRequestBuilder listMartechReports() {
-        return new ListMartechReportsRequestBuilder(sdkConfiguration);
+    public ListMartechReports2RequestBuilder listMartechReports2() {
+        return new ListMartechReports2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * List all reports
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<ListMartechReportsResponse>} - The async response
+     * @return {@code CompletableFuture<ListMartechReports2Response>} - The async response
      */
-    public CompletableFuture<ListMartechReportsResponse> listMartechReports(@Nonnull ListMartechReportsRequest request) {
-        AsyncRequestOperation<ListMartechReportsRequest, ListMartechReportsResponse> operation
-              = new ListMartechReports.Async(sdkConfiguration, _headers);
+    public CompletableFuture<ListMartechReports2Response> listMartechReports2(@Nonnull ListMartechReports2Request request) {
+        AsyncRequestOperation<ListMartechReports2Request, ListMartechReports2Response> operation
+              = new ListMartechReports2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -341,19 +341,19 @@ public class AsyncMartech {
      * 
      * @return The async call builder
      */
-    public PatchMartechCampaignRequestBuilder patchMartechCampaign() {
-        return new PatchMartechCampaignRequestBuilder(sdkConfiguration);
+    public PatchMartechCampaign2RequestBuilder patchMartechCampaign2() {
+        return new PatchMartechCampaign2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update a campaign
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<PatchMartechCampaignResponse>} - The async response
+     * @return {@code CompletableFuture<PatchMartechCampaign2Response>} - The async response
      */
-    public CompletableFuture<PatchMartechCampaignResponse> patchMartechCampaign(@Nonnull PatchMartechCampaignRequest request) {
-        AsyncRequestOperation<PatchMartechCampaignRequest, PatchMartechCampaignResponse> operation
-              = new PatchMartechCampaign.Async(sdkConfiguration, _headers);
+    public CompletableFuture<PatchMartechCampaign2Response> patchMartechCampaign2(@Nonnull PatchMartechCampaign2Request request) {
+        AsyncRequestOperation<PatchMartechCampaign2Request, PatchMartechCampaign2Response> operation
+              = new PatchMartechCampaign2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -364,19 +364,19 @@ public class AsyncMartech {
      * 
      * @return The async call builder
      */
-    public PatchMartechListRequestBuilder patchMartechList() {
-        return new PatchMartechListRequestBuilder(sdkConfiguration);
+    public PatchMartechList2RequestBuilder patchMartechList2() {
+        return new PatchMartechList2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update a list
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<PatchMartechListResponse>} - The async response
+     * @return {@code CompletableFuture<PatchMartechList2Response>} - The async response
      */
-    public CompletableFuture<PatchMartechListResponse> patchMartechList(@Nonnull PatchMartechListRequest request) {
-        AsyncRequestOperation<PatchMartechListRequest, PatchMartechListResponse> operation
-              = new PatchMartechList.Async(sdkConfiguration, _headers);
+    public CompletableFuture<PatchMartechList2Response> patchMartechList2(@Nonnull PatchMartechList2Request request) {
+        AsyncRequestOperation<PatchMartechList2Request, PatchMartechList2Response> operation
+              = new PatchMartechList2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -387,19 +387,19 @@ public class AsyncMartech {
      * 
      * @return The async call builder
      */
-    public PatchMartechMemberRequestBuilder patchMartechMember() {
-        return new PatchMartechMemberRequestBuilder(sdkConfiguration);
+    public PatchMartechMember2RequestBuilder patchMartechMember2() {
+        return new PatchMartechMember2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update a member
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<PatchMartechMemberResponse>} - The async response
+     * @return {@code CompletableFuture<PatchMartechMember2Response>} - The async response
      */
-    public CompletableFuture<PatchMartechMemberResponse> patchMartechMember(@Nonnull PatchMartechMemberRequest request) {
-        AsyncRequestOperation<PatchMartechMemberRequest, PatchMartechMemberResponse> operation
-              = new PatchMartechMember.Async(sdkConfiguration, _headers);
+    public CompletableFuture<PatchMartechMember2Response> patchMartechMember2(@Nonnull PatchMartechMember2Request request) {
+        AsyncRequestOperation<PatchMartechMember2Request, PatchMartechMember2Response> operation
+              = new PatchMartechMember2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -410,19 +410,19 @@ public class AsyncMartech {
      * 
      * @return The async call builder
      */
-    public RemoveMartechCampaignRequestBuilder removeMartechCampaign() {
-        return new RemoveMartechCampaignRequestBuilder(sdkConfiguration);
+    public RemoveMartechCampaign2RequestBuilder removeMartechCampaign2() {
+        return new RemoveMartechCampaign2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Remove a campaign
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<RemoveMartechCampaignResponse>} - The async response
+     * @return {@code CompletableFuture<RemoveMartechCampaign2Response>} - The async response
      */
-    public CompletableFuture<RemoveMartechCampaignResponse> removeMartechCampaign(@Nonnull RemoveMartechCampaignRequest request) {
-        AsyncRequestOperation<RemoveMartechCampaignRequest, RemoveMartechCampaignResponse> operation
-              = new RemoveMartechCampaign.Async(sdkConfiguration, _headers);
+    public CompletableFuture<RemoveMartechCampaign2Response> removeMartechCampaign2(@Nonnull RemoveMartechCampaign2Request request) {
+        AsyncRequestOperation<RemoveMartechCampaign2Request, RemoveMartechCampaign2Response> operation
+              = new RemoveMartechCampaign2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -433,19 +433,19 @@ public class AsyncMartech {
      * 
      * @return The async call builder
      */
-    public RemoveMartechListRequestBuilder removeMartechList() {
-        return new RemoveMartechListRequestBuilder(sdkConfiguration);
+    public RemoveMartechList2RequestBuilder removeMartechList2() {
+        return new RemoveMartechList2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Remove a list
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<RemoveMartechListResponse>} - The async response
+     * @return {@code CompletableFuture<RemoveMartechList2Response>} - The async response
      */
-    public CompletableFuture<RemoveMartechListResponse> removeMartechList(@Nonnull RemoveMartechListRequest request) {
-        AsyncRequestOperation<RemoveMartechListRequest, RemoveMartechListResponse> operation
-              = new RemoveMartechList.Async(sdkConfiguration, _headers);
+    public CompletableFuture<RemoveMartechList2Response> removeMartechList2(@Nonnull RemoveMartechList2Request request) {
+        AsyncRequestOperation<RemoveMartechList2Request, RemoveMartechList2Response> operation
+              = new RemoveMartechList2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -456,19 +456,19 @@ public class AsyncMartech {
      * 
      * @return The async call builder
      */
-    public RemoveMartechMemberRequestBuilder removeMartechMember() {
-        return new RemoveMartechMemberRequestBuilder(sdkConfiguration);
+    public RemoveMartechMember2RequestBuilder removeMartechMember2() {
+        return new RemoveMartechMember2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Remove a member
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<RemoveMartechMemberResponse>} - The async response
+     * @return {@code CompletableFuture<RemoveMartechMember2Response>} - The async response
      */
-    public CompletableFuture<RemoveMartechMemberResponse> removeMartechMember(@Nonnull RemoveMartechMemberRequest request) {
-        AsyncRequestOperation<RemoveMartechMemberRequest, RemoveMartechMemberResponse> operation
-              = new RemoveMartechMember.Async(sdkConfiguration, _headers);
+    public CompletableFuture<RemoveMartechMember2Response> removeMartechMember2(@Nonnull RemoveMartechMember2Request request) {
+        AsyncRequestOperation<RemoveMartechMember2Request, RemoveMartechMember2Response> operation
+              = new RemoveMartechMember2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -479,19 +479,19 @@ public class AsyncMartech {
      * 
      * @return The async call builder
      */
-    public UpdateMartechCampaignRequestBuilder updateMartechCampaign() {
-        return new UpdateMartechCampaignRequestBuilder(sdkConfiguration);
+    public UpdateMartechCampaign2RequestBuilder updateMartechCampaign2() {
+        return new UpdateMartechCampaign2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update a campaign
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<UpdateMartechCampaignResponse>} - The async response
+     * @return {@code CompletableFuture<UpdateMartechCampaign2Response>} - The async response
      */
-    public CompletableFuture<UpdateMartechCampaignResponse> updateMartechCampaign(@Nonnull UpdateMartechCampaignRequest request) {
-        AsyncRequestOperation<UpdateMartechCampaignRequest, UpdateMartechCampaignResponse> operation
-              = new UpdateMartechCampaign.Async(sdkConfiguration, _headers);
+    public CompletableFuture<UpdateMartechCampaign2Response> updateMartechCampaign2(@Nonnull UpdateMartechCampaign2Request request) {
+        AsyncRequestOperation<UpdateMartechCampaign2Request, UpdateMartechCampaign2Response> operation
+              = new UpdateMartechCampaign2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -502,19 +502,19 @@ public class AsyncMartech {
      * 
      * @return The async call builder
      */
-    public UpdateMartechListRequestBuilder updateMartechList() {
-        return new UpdateMartechListRequestBuilder(sdkConfiguration);
+    public UpdateMartechList2RequestBuilder updateMartechList2() {
+        return new UpdateMartechList2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update a list
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<UpdateMartechListResponse>} - The async response
+     * @return {@code CompletableFuture<UpdateMartechList2Response>} - The async response
      */
-    public CompletableFuture<UpdateMartechListResponse> updateMartechList(@Nonnull UpdateMartechListRequest request) {
-        AsyncRequestOperation<UpdateMartechListRequest, UpdateMartechListResponse> operation
-              = new UpdateMartechList.Async(sdkConfiguration, _headers);
+    public CompletableFuture<UpdateMartechList2Response> updateMartechList2(@Nonnull UpdateMartechList2Request request) {
+        AsyncRequestOperation<UpdateMartechList2Request, UpdateMartechList2Response> operation
+              = new UpdateMartechList2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -525,19 +525,19 @@ public class AsyncMartech {
      * 
      * @return The async call builder
      */
-    public UpdateMartechMemberRequestBuilder updateMartechMember() {
-        return new UpdateMartechMemberRequestBuilder(sdkConfiguration);
+    public UpdateMartechMember2RequestBuilder updateMartechMember2() {
+        return new UpdateMartechMember2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update a member
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<UpdateMartechMemberResponse>} - The async response
+     * @return {@code CompletableFuture<UpdateMartechMember2Response>} - The async response
      */
-    public CompletableFuture<UpdateMartechMemberResponse> updateMartechMember(@Nonnull UpdateMartechMemberRequest request) {
-        AsyncRequestOperation<UpdateMartechMemberRequest, UpdateMartechMemberResponse> operation
-              = new UpdateMartechMember.Async(sdkConfiguration, _headers);
+    public CompletableFuture<UpdateMartechMember2Response> updateMartechMember2(@Nonnull UpdateMartechMember2Request request) {
+        AsyncRequestOperation<UpdateMartechMember2Request, UpdateMartechMember2Response> operation
+              = new UpdateMartechMember2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

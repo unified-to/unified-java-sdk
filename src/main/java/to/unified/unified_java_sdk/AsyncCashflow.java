@@ -7,14 +7,14 @@ import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOper
 
 import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
-import to.unified.unified_java_sdk.models.operations.GetAccountingCashflowRequest;
-import to.unified.unified_java_sdk.models.operations.ListAccountingCashflowsRequest;
-import to.unified.unified_java_sdk.models.operations.async.GetAccountingCashflowRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.GetAccountingCashflowResponse;
-import to.unified.unified_java_sdk.models.operations.async.ListAccountingCashflowsRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.ListAccountingCashflowsResponse;
-import to.unified.unified_java_sdk.operations.GetAccountingCashflow;
-import to.unified.unified_java_sdk.operations.ListAccountingCashflows;
+import to.unified.unified_java_sdk.models.operations.GetAccountingCashflow2Request;
+import to.unified.unified_java_sdk.models.operations.ListAccountingCashflows2Request;
+import to.unified.unified_java_sdk.models.operations.async.GetAccountingCashflow2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetAccountingCashflow2Response;
+import to.unified.unified_java_sdk.models.operations.async.ListAccountingCashflows2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListAccountingCashflows2Response;
+import to.unified.unified_java_sdk.operations.GetAccountingCashflow2;
+import to.unified.unified_java_sdk.operations.ListAccountingCashflows2;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -43,19 +43,19 @@ public class AsyncCashflow {
      * 
      * @return The async call builder
      */
-    public GetAccountingCashflowRequestBuilder getAccountingCashflow() {
-        return new GetAccountingCashflowRequestBuilder(sdkConfiguration);
+    public GetAccountingCashflow2RequestBuilder getAccountingCashflow2() {
+        return new GetAccountingCashflow2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Retrieve a cashflow
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<GetAccountingCashflowResponse>} - The async response
+     * @return {@code CompletableFuture<GetAccountingCashflow2Response>} - The async response
      */
-    public CompletableFuture<GetAccountingCashflowResponse> getAccountingCashflow(@Nonnull GetAccountingCashflowRequest request) {
-        AsyncRequestOperation<GetAccountingCashflowRequest, GetAccountingCashflowResponse> operation
-              = new GetAccountingCashflow.Async(sdkConfiguration, _headers);
+    public CompletableFuture<GetAccountingCashflow2Response> getAccountingCashflow2(@Nonnull GetAccountingCashflow2Request request) {
+        AsyncRequestOperation<GetAccountingCashflow2Request, GetAccountingCashflow2Response> operation
+              = new GetAccountingCashflow2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -66,19 +66,19 @@ public class AsyncCashflow {
      * 
      * @return The async call builder
      */
-    public ListAccountingCashflowsRequestBuilder listAccountingCashflows() {
-        return new ListAccountingCashflowsRequestBuilder(sdkConfiguration);
+    public ListAccountingCashflows2RequestBuilder listAccountingCashflows2() {
+        return new ListAccountingCashflows2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * List all cashflows
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<ListAccountingCashflowsResponse>} - The async response
+     * @return {@code CompletableFuture<ListAccountingCashflows2Response>} - The async response
      */
-    public CompletableFuture<ListAccountingCashflowsResponse> listAccountingCashflows(@Nonnull ListAccountingCashflowsRequest request) {
-        AsyncRequestOperation<ListAccountingCashflowsRequest, ListAccountingCashflowsResponse> operation
-              = new ListAccountingCashflows.Async(sdkConfiguration, _headers);
+    public CompletableFuture<ListAccountingCashflows2Response> listAccountingCashflows2(@Nonnull ListAccountingCashflows2Request request) {
+        AsyncRequestOperation<ListAccountingCashflows2Request, ListAccountingCashflows2Response> operation
+              = new ListAccountingCashflows2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

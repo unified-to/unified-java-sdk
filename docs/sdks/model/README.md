@@ -4,23 +4,23 @@
 
 ### Available Operations
 
-* [getGenaiModel](#getgenaimodel) - Retrieve a model
-* [listGenaiModels](#listgenaimodels) - List all models
+* [getGenaiModel2](#getgenaimodel2) - Retrieve a model
+* [listGenaiModels2](#listgenaimodels2) - List all models
 
-## getGenaiModel
+## getGenaiModel2
 
 Retrieve a model
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="getGenaiModel" method="get" path="/genai/{connection_id}/model/{id}" -->
+<!-- UsageSnippet language="java" operationID="getGenaiModel2" method="get" path="/genai/{connection_id}/model/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.GetGenaiModelRequest;
-import to.unified.unified_java_sdk.models.operations.GetGenaiModelResponse;
+import to.unified.unified_java_sdk.models.operations.GetGenaiModel2Request;
+import to.unified.unified_java_sdk.models.operations.GetGenaiModel2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -33,12 +33,12 @@ public class Application {
                     .build())
             .build();
 
-        GetGenaiModelRequest req = GetGenaiModelRequest.builder()
+        GetGenaiModel2Request req = GetGenaiModel2Request.builder()
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        GetGenaiModelResponse res = sdk.model().getGenaiModel()
+        GetGenaiModel2Response res = sdk.model().getGenaiModel2()
                 .request(req)
                 .call();
 
@@ -51,13 +51,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                               | Type                                                                    | Required                                                                | Description                                                             |
-| ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- |
-| `request`                                                               | [GetGenaiModelRequest](../../models/operations/GetGenaiModelRequest.md) | :heavy_check_mark:                                                      | The request object to use for the request.                              |
+| Parameter                                                                 | Type                                                                      | Required                                                                  | Description                                                               |
+| ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
+| `request`                                                                 | [GetGenaiModel2Request](../../models/operations/GetGenaiModel2Request.md) | :heavy_check_mark:                                                        | The request object to use for the request.                                |
 
 ### Response
 
-**[GetGenaiModelResponse](../../models/operations/GetGenaiModelResponse.md)**
+**[GetGenaiModel2Response](../../models/operations/GetGenaiModel2Response.md)**
 
 ### Errors
 
@@ -65,20 +65,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## listGenaiModels
+## listGenaiModels2
 
 List all models
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="listGenaiModels" method="get" path="/genai/{connection_id}/model" -->
+<!-- UsageSnippet language="java" operationID="listGenaiModels2" method="get" path="/genai/{connection_id}/model" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.ListGenaiModelsRequest;
-import to.unified.unified_java_sdk.models.operations.ListGenaiModelsResponse;
+import to.unified.unified_java_sdk.models.operations.ListGenaiModels2Request;
+import to.unified.unified_java_sdk.models.operations.ListGenaiModels2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -91,11 +91,11 @@ public class Application {
                     .build())
             .build();
 
-        ListGenaiModelsRequest req = ListGenaiModelsRequest.builder()
+        ListGenaiModels2Request req = ListGenaiModels2Request.builder()
                 .connectionId("<id>")
                 .build();
 
-        ListGenaiModelsResponse res = sdk.model().listGenaiModels()
+        ListGenaiModels2Response res = sdk.model().listGenaiModels2()
                 .request(req)
                 .call();
 
@@ -108,13 +108,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                   | Type                                                                        | Required                                                                    | Description                                                                 |
-| --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
-| `request`                                                                   | [ListGenaiModelsRequest](../../models/operations/ListGenaiModelsRequest.md) | :heavy_check_mark:                                                          | The request object to use for the request.                                  |
+| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
+| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| `request`                                                                     | [ListGenaiModels2Request](../../models/operations/ListGenaiModels2Request.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
 
 ### Response
 
-**[ListGenaiModelsResponse](../../models/operations/ListGenaiModelsResponse.md)**
+**[ListGenaiModels2Response](../../models/operations/ListGenaiModels2Response.md)**
 
 ### Errors
 

@@ -6,22 +6,26 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
-import to.unified.unified_java_sdk.models.operations.GetAccountingReportRequest;
-import to.unified.unified_java_sdk.models.operations.GetAccountingReportRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.GetAccountingReportResponse;
-import to.unified.unified_java_sdk.models.operations.ListAccountingReportsRequest;
-import to.unified.unified_java_sdk.models.operations.ListAccountingReportsRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.ListAccountingReportsResponse;
-import to.unified.unified_java_sdk.models.operations.ListAdsReportsRequest;
-import to.unified.unified_java_sdk.models.operations.ListAdsReportsRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.ListAdsReportsResponse;
-import to.unified.unified_java_sdk.models.operations.ListMartechReportsRequest;
-import to.unified.unified_java_sdk.models.operations.ListMartechReportsRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.ListMartechReportsResponse;
-import to.unified.unified_java_sdk.operations.GetAccountingReport;
-import to.unified.unified_java_sdk.operations.ListAccountingReports;
-import to.unified.unified_java_sdk.operations.ListAdsReports;
-import to.unified.unified_java_sdk.operations.ListMartechReports;
+import to.unified.unified_java_sdk.models.operations.GetAccountingReport2Request;
+import to.unified.unified_java_sdk.models.operations.GetAccountingReport2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetAccountingReport2Response;
+import to.unified.unified_java_sdk.models.operations.ListAccountingReports2Request;
+import to.unified.unified_java_sdk.models.operations.ListAccountingReports2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListAccountingReports2Response;
+import to.unified.unified_java_sdk.models.operations.ListAdsReports2Request;
+import to.unified.unified_java_sdk.models.operations.ListAdsReports2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListAdsReports2Response;
+import to.unified.unified_java_sdk.models.operations.ListAnalyticsReports2Request;
+import to.unified.unified_java_sdk.models.operations.ListAnalyticsReports2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListAnalyticsReports2Response;
+import to.unified.unified_java_sdk.models.operations.ListMartechReports2Request;
+import to.unified.unified_java_sdk.models.operations.ListMartechReports2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListMartechReports2Response;
+import to.unified.unified_java_sdk.operations.GetAccountingReport2;
+import to.unified.unified_java_sdk.operations.ListAccountingReports2;
+import to.unified.unified_java_sdk.operations.ListAdsReports2;
+import to.unified.unified_java_sdk.operations.ListAnalyticsReports2;
+import to.unified.unified_java_sdk.operations.ListMartechReports2;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -49,8 +53,8 @@ public class Report {
      * 
      * @return The call builder
      */
-    public GetAccountingReportRequestBuilder getAccountingReport() {
-        return new GetAccountingReportRequestBuilder(sdkConfiguration);
+    public GetAccountingReport2RequestBuilder getAccountingReport2() {
+        return new GetAccountingReport2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -60,9 +64,9 @@ public class Report {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetAccountingReportResponse getAccountingReport(@Nonnull GetAccountingReportRequest request) {
-        RequestOperation<GetAccountingReportRequest, GetAccountingReportResponse> operation
-              = new GetAccountingReport.Sync(sdkConfiguration, _headers);
+    public GetAccountingReport2Response getAccountingReport2(@Nonnull GetAccountingReport2Request request) {
+        RequestOperation<GetAccountingReport2Request, GetAccountingReport2Response> operation
+              = new GetAccountingReport2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -71,8 +75,8 @@ public class Report {
      * 
      * @return The call builder
      */
-    public ListAccountingReportsRequestBuilder listAccountingReports() {
-        return new ListAccountingReportsRequestBuilder(sdkConfiguration);
+    public ListAccountingReports2RequestBuilder listAccountingReports2() {
+        return new ListAccountingReports2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -82,9 +86,9 @@ public class Report {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListAccountingReportsResponse listAccountingReports(@Nonnull ListAccountingReportsRequest request) {
-        RequestOperation<ListAccountingReportsRequest, ListAccountingReportsResponse> operation
-              = new ListAccountingReports.Sync(sdkConfiguration, _headers);
+    public ListAccountingReports2Response listAccountingReports2(@Nonnull ListAccountingReports2Request request) {
+        RequestOperation<ListAccountingReports2Request, ListAccountingReports2Response> operation
+              = new ListAccountingReports2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -93,8 +97,8 @@ public class Report {
      * 
      * @return The call builder
      */
-    public ListAdsReportsRequestBuilder listAdsReports() {
-        return new ListAdsReportsRequestBuilder(sdkConfiguration);
+    public ListAdsReports2RequestBuilder listAdsReports2() {
+        return new ListAdsReports2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -104,9 +108,9 @@ public class Report {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListAdsReportsResponse listAdsReports(@Nonnull ListAdsReportsRequest request) {
-        RequestOperation<ListAdsReportsRequest, ListAdsReportsResponse> operation
-              = new ListAdsReports.Sync(sdkConfiguration, _headers);
+    public ListAdsReports2Response listAdsReports2(@Nonnull ListAdsReports2Request request) {
+        RequestOperation<ListAdsReports2Request, ListAdsReports2Response> operation
+              = new ListAdsReports2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -115,8 +119,8 @@ public class Report {
      * 
      * @return The call builder
      */
-    public ListMartechReportsRequestBuilder listMartechReports() {
-        return new ListMartechReportsRequestBuilder(sdkConfiguration);
+    public ListAnalyticsReports2RequestBuilder listAnalyticsReports2() {
+        return new ListAnalyticsReports2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -126,9 +130,31 @@ public class Report {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListMartechReportsResponse listMartechReports(@Nonnull ListMartechReportsRequest request) {
-        RequestOperation<ListMartechReportsRequest, ListMartechReportsResponse> operation
-              = new ListMartechReports.Sync(sdkConfiguration, _headers);
+    public ListAnalyticsReports2Response listAnalyticsReports2(@Nonnull ListAnalyticsReports2Request request) {
+        RequestOperation<ListAnalyticsReports2Request, ListAnalyticsReports2Response> operation
+              = new ListAnalyticsReports2.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * List all reports
+     * 
+     * @return The call builder
+     */
+    public ListMartechReports2RequestBuilder listMartechReports2() {
+        return new ListMartechReports2RequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * List all reports
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListMartechReports2Response listMartechReports2(@Nonnull ListMartechReports2Request request) {
+        RequestOperation<ListMartechReports2Request, ListMartechReports2Response> operation
+              = new ListMartechReports2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

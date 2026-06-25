@@ -4,27 +4,27 @@
 
 ### Available Operations
 
-* [createAdsAd](#createadsad) - Create an ad
-* [getAdsAd](#getadsad) - Retrieve an ad
-* [listAdsAds](#listadsads) - List all ads
-* [patchAdsAd](#patchadsad) - Update an ad
-* [removeAdsAd](#removeadsad) - Remove an ad
-* [updateAdsAd](#updateadsad) - Update an ad
+* [createAdsAd2](#createadsad2) - Create an ad
+* [getAdsAd2](#getadsad2) - Retrieve an ad
+* [listAdsAds2](#listadsads2) - List all ads
+* [patchAdsAd2](#patchadsad2) - Update an ad
+* [removeAdsAd2](#removeadsad2) - Remove an ad
+* [updateAdsAd2](#updateadsad2) - Update an ad
 
-## createAdsAd
+## createAdsAd2
 
 Create an ad
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createAdsAd" method="post" path="/ads/{connection_id}/ad" -->
+<!-- UsageSnippet language="java" operationID="createAdsAd2" method="post" path="/ads/{connection_id}/ad" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.CreateAdsAdRequest;
-import to.unified.unified_java_sdk.models.operations.CreateAdsAdResponse;
+import to.unified.unified_java_sdk.models.operations.CreateAdsAd2Request;
+import to.unified.unified_java_sdk.models.operations.CreateAdsAd2Response;
 import to.unified.unified_java_sdk.models.shared.AdsAd;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -38,13 +38,13 @@ public class Application {
                     .build())
             .build();
 
-        CreateAdsAdRequest req = CreateAdsAdRequest.builder()
+        CreateAdsAd2Request req = CreateAdsAd2Request.builder()
                 .adsAd(AdsAd.builder()
                     .build())
                 .connectionId("<id>")
                 .build();
 
-        CreateAdsAdResponse res = sdk.ad().createAdsAd()
+        CreateAdsAd2Response res = sdk.ad().createAdsAd2()
                 .request(req)
                 .call();
 
@@ -57,13 +57,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                           | Type                                                                | Required                                                            | Description                                                         |
-| ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- |
-| `request`                                                           | [CreateAdsAdRequest](../../models/operations/CreateAdsAdRequest.md) | :heavy_check_mark:                                                  | The request object to use for the request.                          |
+| Parameter                                                             | Type                                                                  | Required                                                              | Description                                                           |
+| --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- |
+| `request`                                                             | [CreateAdsAd2Request](../../models/operations/CreateAdsAd2Request.md) | :heavy_check_mark:                                                    | The request object to use for the request.                            |
 
 ### Response
 
-**[CreateAdsAdResponse](../../models/operations/CreateAdsAdResponse.md)**
+**[CreateAdsAd2Response](../../models/operations/CreateAdsAd2Response.md)**
 
 ### Errors
 
@@ -71,20 +71,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## getAdsAd
+## getAdsAd2
 
 Retrieve an ad
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="getAdsAd" method="get" path="/ads/{connection_id}/ad/{id}" -->
+<!-- UsageSnippet language="java" operationID="getAdsAd2" method="get" path="/ads/{connection_id}/ad/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.GetAdsAdRequest;
-import to.unified.unified_java_sdk.models.operations.GetAdsAdResponse;
+import to.unified.unified_java_sdk.models.operations.GetAdsAd2Request;
+import to.unified.unified_java_sdk.models.operations.GetAdsAd2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -97,12 +97,12 @@ public class Application {
                     .build())
             .build();
 
-        GetAdsAdRequest req = GetAdsAdRequest.builder()
+        GetAdsAd2Request req = GetAdsAd2Request.builder()
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        GetAdsAdResponse res = sdk.ad().getAdsAd()
+        GetAdsAd2Response res = sdk.ad().getAdsAd2()
                 .request(req)
                 .call();
 
@@ -115,13 +115,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                     | Type                                                          | Required                                                      | Description                                                   |
-| ------------------------------------------------------------- | ------------------------------------------------------------- | ------------------------------------------------------------- | ------------------------------------------------------------- |
-| `request`                                                     | [GetAdsAdRequest](../../models/operations/GetAdsAdRequest.md) | :heavy_check_mark:                                            | The request object to use for the request.                    |
+| Parameter                                                       | Type                                                            | Required                                                        | Description                                                     |
+| --------------------------------------------------------------- | --------------------------------------------------------------- | --------------------------------------------------------------- | --------------------------------------------------------------- |
+| `request`                                                       | [GetAdsAd2Request](../../models/operations/GetAdsAd2Request.md) | :heavy_check_mark:                                              | The request object to use for the request.                      |
 
 ### Response
 
-**[GetAdsAdResponse](../../models/operations/GetAdsAdResponse.md)**
+**[GetAdsAd2Response](../../models/operations/GetAdsAd2Response.md)**
 
 ### Errors
 
@@ -129,20 +129,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## listAdsAds
+## listAdsAds2
 
 List all ads
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="listAdsAds" method="get" path="/ads/{connection_id}/ad" -->
+<!-- UsageSnippet language="java" operationID="listAdsAds2" method="get" path="/ads/{connection_id}/ad" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.ListAdsAdsRequest;
-import to.unified.unified_java_sdk.models.operations.ListAdsAdsResponse;
+import to.unified.unified_java_sdk.models.operations.ListAdsAds2Request;
+import to.unified.unified_java_sdk.models.operations.ListAdsAds2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -155,11 +155,11 @@ public class Application {
                     .build())
             .build();
 
-        ListAdsAdsRequest req = ListAdsAdsRequest.builder()
+        ListAdsAds2Request req = ListAdsAds2Request.builder()
                 .connectionId("<id>")
                 .build();
 
-        ListAdsAdsResponse res = sdk.ad().listAdsAds()
+        ListAdsAds2Response res = sdk.ad().listAdsAds2()
                 .request(req)
                 .call();
 
@@ -172,13 +172,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                         | Type                                                              | Required                                                          | Description                                                       |
-| ----------------------------------------------------------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------- |
-| `request`                                                         | [ListAdsAdsRequest](../../models/operations/ListAdsAdsRequest.md) | :heavy_check_mark:                                                | The request object to use for the request.                        |
+| Parameter                                                           | Type                                                                | Required                                                            | Description                                                         |
+| ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- |
+| `request`                                                           | [ListAdsAds2Request](../../models/operations/ListAdsAds2Request.md) | :heavy_check_mark:                                                  | The request object to use for the request.                          |
 
 ### Response
 
-**[ListAdsAdsResponse](../../models/operations/ListAdsAdsResponse.md)**
+**[ListAdsAds2Response](../../models/operations/ListAdsAds2Response.md)**
 
 ### Errors
 
@@ -186,20 +186,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## patchAdsAd
+## patchAdsAd2
 
 Update an ad
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchAdsAd" method="patch" path="/ads/{connection_id}/ad/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchAdsAd2" method="patch" path="/ads/{connection_id}/ad/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.PatchAdsAdRequest;
-import to.unified.unified_java_sdk.models.operations.PatchAdsAdResponse;
+import to.unified.unified_java_sdk.models.operations.PatchAdsAd2Request;
+import to.unified.unified_java_sdk.models.operations.PatchAdsAd2Response;
 import to.unified.unified_java_sdk.models.shared.AdsAd;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -213,14 +213,14 @@ public class Application {
                     .build())
             .build();
 
-        PatchAdsAdRequest req = PatchAdsAdRequest.builder()
+        PatchAdsAd2Request req = PatchAdsAd2Request.builder()
                 .adsAd(AdsAd.builder()
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        PatchAdsAdResponse res = sdk.ad().patchAdsAd()
+        PatchAdsAd2Response res = sdk.ad().patchAdsAd2()
                 .request(req)
                 .call();
 
@@ -233,13 +233,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                         | Type                                                              | Required                                                          | Description                                                       |
-| ----------------------------------------------------------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------- |
-| `request`                                                         | [PatchAdsAdRequest](../../models/operations/PatchAdsAdRequest.md) | :heavy_check_mark:                                                | The request object to use for the request.                        |
+| Parameter                                                           | Type                                                                | Required                                                            | Description                                                         |
+| ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- |
+| `request`                                                           | [PatchAdsAd2Request](../../models/operations/PatchAdsAd2Request.md) | :heavy_check_mark:                                                  | The request object to use for the request.                          |
 
 ### Response
 
-**[PatchAdsAdResponse](../../models/operations/PatchAdsAdResponse.md)**
+**[PatchAdsAd2Response](../../models/operations/PatchAdsAd2Response.md)**
 
 ### Errors
 
@@ -247,20 +247,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## removeAdsAd
+## removeAdsAd2
 
 Remove an ad
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="removeAdsAd" method="delete" path="/ads/{connection_id}/ad/{id}" -->
+<!-- UsageSnippet language="java" operationID="removeAdsAd2" method="delete" path="/ads/{connection_id}/ad/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.RemoveAdsAdRequest;
-import to.unified.unified_java_sdk.models.operations.RemoveAdsAdResponse;
+import to.unified.unified_java_sdk.models.operations.RemoveAdsAd2Request;
+import to.unified.unified_java_sdk.models.operations.RemoveAdsAd2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -273,12 +273,12 @@ public class Application {
                     .build())
             .build();
 
-        RemoveAdsAdRequest req = RemoveAdsAdRequest.builder()
+        RemoveAdsAd2Request req = RemoveAdsAd2Request.builder()
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        RemoveAdsAdResponse res = sdk.ad().removeAdsAd()
+        RemoveAdsAd2Response res = sdk.ad().removeAdsAd2()
                 .request(req)
                 .call();
 
@@ -289,13 +289,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                           | Type                                                                | Required                                                            | Description                                                         |
-| ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- |
-| `request`                                                           | [RemoveAdsAdRequest](../../models/operations/RemoveAdsAdRequest.md) | :heavy_check_mark:                                                  | The request object to use for the request.                          |
+| Parameter                                                             | Type                                                                  | Required                                                              | Description                                                           |
+| --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- |
+| `request`                                                             | [RemoveAdsAd2Request](../../models/operations/RemoveAdsAd2Request.md) | :heavy_check_mark:                                                    | The request object to use for the request.                            |
 
 ### Response
 
-**[RemoveAdsAdResponse](../../models/operations/RemoveAdsAdResponse.md)**
+**[RemoveAdsAd2Response](../../models/operations/RemoveAdsAd2Response.md)**
 
 ### Errors
 
@@ -303,20 +303,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## updateAdsAd
+## updateAdsAd2
 
 Update an ad
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateAdsAd" method="put" path="/ads/{connection_id}/ad/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateAdsAd2" method="put" path="/ads/{connection_id}/ad/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.UpdateAdsAdRequest;
-import to.unified.unified_java_sdk.models.operations.UpdateAdsAdResponse;
+import to.unified.unified_java_sdk.models.operations.UpdateAdsAd2Request;
+import to.unified.unified_java_sdk.models.operations.UpdateAdsAd2Response;
 import to.unified.unified_java_sdk.models.shared.AdsAd;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -330,14 +330,14 @@ public class Application {
                     .build())
             .build();
 
-        UpdateAdsAdRequest req = UpdateAdsAdRequest.builder()
+        UpdateAdsAd2Request req = UpdateAdsAd2Request.builder()
                 .adsAd(AdsAd.builder()
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        UpdateAdsAdResponse res = sdk.ad().updateAdsAd()
+        UpdateAdsAd2Response res = sdk.ad().updateAdsAd2()
                 .request(req)
                 .call();
 
@@ -350,13 +350,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                           | Type                                                                | Required                                                            | Description                                                         |
-| ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- |
-| `request`                                                           | [UpdateAdsAdRequest](../../models/operations/UpdateAdsAdRequest.md) | :heavy_check_mark:                                                  | The request object to use for the request.                          |
+| Parameter                                                             | Type                                                                  | Required                                                              | Description                                                           |
+| --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- |
+| `request`                                                             | [UpdateAdsAd2Request](../../models/operations/UpdateAdsAd2Request.md) | :heavy_check_mark:                                                    | The request object to use for the request.                            |
 
 ### Response
 
-**[UpdateAdsAdResponse](../../models/operations/UpdateAdsAdResponse.md)**
+**[UpdateAdsAd2Response](../../models/operations/UpdateAdsAd2Response.md)**
 
 ### Errors
 

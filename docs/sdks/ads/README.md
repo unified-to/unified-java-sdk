@@ -4,62 +4,62 @@
 
 ### Available Operations
 
-* [createAdsAd](#createadsad) - Create an ad
-* [createAdsCampaign](#createadscampaign) - Create a campaign
-* [createAdsCreative](#createadscreative) - Create a creative
-* [createAdsGroup](#createadsgroup) - Create a group
-* [createAdsInsertionorder](#createadsinsertionorder) - Create an insertionorder
-* [createAdsOrganization](#createadsorganization) - Create an organization
-* [getAdsAd](#getadsad) - Retrieve an ad
-* [getAdsCampaign](#getadscampaign) - Retrieve a campaign
-* [getAdsCreative](#getadscreative) - Retrieve a creative
-* [getAdsGroup](#getadsgroup) - Retrieve a group
-* [getAdsInsertionorder](#getadsinsertionorder) - Retrieve an insertionorder
-* [getAdsOrganization](#getadsorganization) - Retrieve an organization
-* [getAdsPromoted](#getadspromoted) - Retrieve a promoted
-* [getAdsTarget](#getadstarget) - Retrieve a target
-* [listAdsAds](#listadsads) - List all ads
-* [listAdsCampaigns](#listadscampaigns) - List all campaigns
-* [listAdsCreatives](#listadscreatives) - List all creatives
-* [listAdsGroups](#listadsgroups) - List all groups
-* [listAdsInsertionorders](#listadsinsertionorders) - List all insertionorders
-* [listAdsOrganizations](#listadsorganizations) - List all organizations
-* [listAdsPromoteds](#listadspromoteds) - List all promoteds
-* [listAdsReports](#listadsreports) - List all reports
-* [listAdsTargets](#listadstargets) - List all targets
-* [patchAdsAd](#patchadsad) - Update an ad
-* [patchAdsCampaign](#patchadscampaign) - Update a campaign
-* [patchAdsCreative](#patchadscreative) - Update a creative
-* [patchAdsGroup](#patchadsgroup) - Update a group
-* [patchAdsInsertionorder](#patchadsinsertionorder) - Update an insertionorder
-* [patchAdsOrganization](#patchadsorganization) - Update an organization
-* [removeAdsAd](#removeadsad) - Remove an ad
-* [removeAdsCampaign](#removeadscampaign) - Remove a campaign
-* [removeAdsCreative](#removeadscreative) - Remove a creative
-* [removeAdsGroup](#removeadsgroup) - Remove a group
-* [removeAdsInsertionorder](#removeadsinsertionorder) - Remove an insertionorder
-* [removeAdsOrganization](#removeadsorganization) - Remove an organization
-* [updateAdsAd](#updateadsad) - Update an ad
-* [updateAdsCampaign](#updateadscampaign) - Update a campaign
-* [updateAdsCreative](#updateadscreative) - Update a creative
-* [updateAdsGroup](#updateadsgroup) - Update a group
-* [updateAdsInsertionorder](#updateadsinsertionorder) - Update an insertionorder
-* [updateAdsOrganization](#updateadsorganization) - Update an organization
+* [createAdsAd2](#createadsad2) - Create an ad
+* [createAdsCampaign2](#createadscampaign2) - Create a campaign
+* [createAdsCreative2](#createadscreative2) - Create a creative
+* [createAdsGroup2](#createadsgroup2) - Create a group
+* [createAdsInsertionorder2](#createadsinsertionorder2) - Create an insertionorder
+* [createAdsOrganization2](#createadsorganization2) - Create an organization
+* [getAdsAd2](#getadsad2) - Retrieve an ad
+* [getAdsCampaign2](#getadscampaign2) - Retrieve a campaign
+* [getAdsCreative2](#getadscreative2) - Retrieve a creative
+* [getAdsGroup2](#getadsgroup2) - Retrieve a group
+* [getAdsInsertionorder2](#getadsinsertionorder2) - Retrieve an insertionorder
+* [getAdsOrganization2](#getadsorganization2) - Retrieve an organization
+* [getAdsPromoted2](#getadspromoted2) - Retrieve a promoted
+* [getAdsTarget2](#getadstarget2) - Retrieve a target
+* [listAdsAds2](#listadsads2) - List all ads
+* [listAdsCampaigns2](#listadscampaigns2) - List all campaigns
+* [listAdsCreatives2](#listadscreatives2) - List all creatives
+* [listAdsGroups2](#listadsgroups2) - List all groups
+* [listAdsInsertionorders2](#listadsinsertionorders2) - List all insertionorders
+* [listAdsOrganizations2](#listadsorganizations2) - List all organizations
+* [listAdsPromoteds2](#listadspromoteds2) - List all promoteds
+* [listAdsReports2](#listadsreports2) - List all reports
+* [listAdsTargets2](#listadstargets2) - List all targets
+* [patchAdsAd2](#patchadsad2) - Update an ad
+* [patchAdsCampaign2](#patchadscampaign2) - Update a campaign
+* [patchAdsCreative2](#patchadscreative2) - Update a creative
+* [patchAdsGroup2](#patchadsgroup2) - Update a group
+* [patchAdsInsertionorder2](#patchadsinsertionorder2) - Update an insertionorder
+* [patchAdsOrganization2](#patchadsorganization2) - Update an organization
+* [removeAdsAd2](#removeadsad2) - Remove an ad
+* [removeAdsCampaign2](#removeadscampaign2) - Remove a campaign
+* [removeAdsCreative2](#removeadscreative2) - Remove a creative
+* [removeAdsGroup2](#removeadsgroup2) - Remove a group
+* [removeAdsInsertionorder2](#removeadsinsertionorder2) - Remove an insertionorder
+* [removeAdsOrganization2](#removeadsorganization2) - Remove an organization
+* [updateAdsAd2](#updateadsad2) - Update an ad
+* [updateAdsCampaign2](#updateadscampaign2) - Update a campaign
+* [updateAdsCreative2](#updateadscreative2) - Update a creative
+* [updateAdsGroup2](#updateadsgroup2) - Update a group
+* [updateAdsInsertionorder2](#updateadsinsertionorder2) - Update an insertionorder
+* [updateAdsOrganization2](#updateadsorganization2) - Update an organization
 
-## createAdsAd
+## createAdsAd2
 
 Create an ad
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createAdsAd" method="post" path="/ads/{connection_id}/ad" -->
+<!-- UsageSnippet language="java" operationID="createAdsAd2" method="post" path="/ads/{connection_id}/ad" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.CreateAdsAdRequest;
-import to.unified.unified_java_sdk.models.operations.CreateAdsAdResponse;
+import to.unified.unified_java_sdk.models.operations.CreateAdsAd2Request;
+import to.unified.unified_java_sdk.models.operations.CreateAdsAd2Response;
 import to.unified.unified_java_sdk.models.shared.AdsAd;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -73,13 +73,13 @@ public class Application {
                     .build())
             .build();
 
-        CreateAdsAdRequest req = CreateAdsAdRequest.builder()
+        CreateAdsAd2Request req = CreateAdsAd2Request.builder()
                 .adsAd(AdsAd.builder()
                     .build())
                 .connectionId("<id>")
                 .build();
 
-        CreateAdsAdResponse res = sdk.ads().createAdsAd()
+        CreateAdsAd2Response res = sdk.ads().createAdsAd2()
                 .request(req)
                 .call();
 
@@ -92,13 +92,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                           | Type                                                                | Required                                                            | Description                                                         |
-| ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- |
-| `request`                                                           | [CreateAdsAdRequest](../../models/operations/CreateAdsAdRequest.md) | :heavy_check_mark:                                                  | The request object to use for the request.                          |
+| Parameter                                                             | Type                                                                  | Required                                                              | Description                                                           |
+| --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- |
+| `request`                                                             | [CreateAdsAd2Request](../../models/operations/CreateAdsAd2Request.md) | :heavy_check_mark:                                                    | The request object to use for the request.                            |
 
 ### Response
 
-**[CreateAdsAdResponse](../../models/operations/CreateAdsAdResponse.md)**
+**[CreateAdsAd2Response](../../models/operations/CreateAdsAd2Response.md)**
 
 ### Errors
 
@@ -106,20 +106,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## createAdsCampaign
+## createAdsCampaign2
 
 Create a campaign
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createAdsCampaign" method="post" path="/ads/{connection_id}/campaign" -->
+<!-- UsageSnippet language="java" operationID="createAdsCampaign2" method="post" path="/ads/{connection_id}/campaign" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.CreateAdsCampaignRequest;
-import to.unified.unified_java_sdk.models.operations.CreateAdsCampaignResponse;
+import to.unified.unified_java_sdk.models.operations.CreateAdsCampaign2Request;
+import to.unified.unified_java_sdk.models.operations.CreateAdsCampaign2Response;
 import to.unified.unified_java_sdk.models.shared.AdsCampaign;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -133,13 +133,13 @@ public class Application {
                     .build())
             .build();
 
-        CreateAdsCampaignRequest req = CreateAdsCampaignRequest.builder()
+        CreateAdsCampaign2Request req = CreateAdsCampaign2Request.builder()
                 .adsCampaign(AdsCampaign.builder()
                     .build())
                 .connectionId("<id>")
                 .build();
 
-        CreateAdsCampaignResponse res = sdk.ads().createAdsCampaign()
+        CreateAdsCampaign2Response res = sdk.ads().createAdsCampaign2()
                 .request(req)
                 .call();
 
@@ -152,13 +152,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
-| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
-| `request`                                                                       | [CreateAdsCampaignRequest](../../models/operations/CreateAdsCampaignRequest.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
+| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
+| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| `request`                                                                         | [CreateAdsCampaign2Request](../../models/operations/CreateAdsCampaign2Request.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
 
 ### Response
 
-**[CreateAdsCampaignResponse](../../models/operations/CreateAdsCampaignResponse.md)**
+**[CreateAdsCampaign2Response](../../models/operations/CreateAdsCampaign2Response.md)**
 
 ### Errors
 
@@ -166,20 +166,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## createAdsCreative
+## createAdsCreative2
 
 Create a creative
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createAdsCreative" method="post" path="/ads/{connection_id}/creative" -->
+<!-- UsageSnippet language="java" operationID="createAdsCreative2" method="post" path="/ads/{connection_id}/creative" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.CreateAdsCreativeRequest;
-import to.unified.unified_java_sdk.models.operations.CreateAdsCreativeResponse;
+import to.unified.unified_java_sdk.models.operations.CreateAdsCreative2Request;
+import to.unified.unified_java_sdk.models.operations.CreateAdsCreative2Response;
 import to.unified.unified_java_sdk.models.shared.AdsCreative;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -193,13 +193,13 @@ public class Application {
                     .build())
             .build();
 
-        CreateAdsCreativeRequest req = CreateAdsCreativeRequest.builder()
+        CreateAdsCreative2Request req = CreateAdsCreative2Request.builder()
                 .adsCreative(AdsCreative.builder()
                     .build())
                 .connectionId("<id>")
                 .build();
 
-        CreateAdsCreativeResponse res = sdk.ads().createAdsCreative()
+        CreateAdsCreative2Response res = sdk.ads().createAdsCreative2()
                 .request(req)
                 .call();
 
@@ -212,13 +212,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
-| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
-| `request`                                                                       | [CreateAdsCreativeRequest](../../models/operations/CreateAdsCreativeRequest.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
+| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
+| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| `request`                                                                         | [CreateAdsCreative2Request](../../models/operations/CreateAdsCreative2Request.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
 
 ### Response
 
-**[CreateAdsCreativeResponse](../../models/operations/CreateAdsCreativeResponse.md)**
+**[CreateAdsCreative2Response](../../models/operations/CreateAdsCreative2Response.md)**
 
 ### Errors
 
@@ -226,20 +226,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## createAdsGroup
+## createAdsGroup2
 
 Create a group
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createAdsGroup" method="post" path="/ads/{connection_id}/group" -->
+<!-- UsageSnippet language="java" operationID="createAdsGroup2" method="post" path="/ads/{connection_id}/group" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.CreateAdsGroupRequest;
-import to.unified.unified_java_sdk.models.operations.CreateAdsGroupResponse;
+import to.unified.unified_java_sdk.models.operations.CreateAdsGroup2Request;
+import to.unified.unified_java_sdk.models.operations.CreateAdsGroup2Response;
 import to.unified.unified_java_sdk.models.shared.AdsGroup;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -253,13 +253,13 @@ public class Application {
                     .build())
             .build();
 
-        CreateAdsGroupRequest req = CreateAdsGroupRequest.builder()
+        CreateAdsGroup2Request req = CreateAdsGroup2Request.builder()
                 .adsGroup(AdsGroup.builder()
                     .build())
                 .connectionId("<id>")
                 .build();
 
-        CreateAdsGroupResponse res = sdk.ads().createAdsGroup()
+        CreateAdsGroup2Response res = sdk.ads().createAdsGroup2()
                 .request(req)
                 .call();
 
@@ -272,13 +272,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                 | Type                                                                      | Required                                                                  | Description                                                               |
-| ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
-| `request`                                                                 | [CreateAdsGroupRequest](../../models/operations/CreateAdsGroupRequest.md) | :heavy_check_mark:                                                        | The request object to use for the request.                                |
+| Parameter                                                                   | Type                                                                        | Required                                                                    | Description                                                                 |
+| --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| `request`                                                                   | [CreateAdsGroup2Request](../../models/operations/CreateAdsGroup2Request.md) | :heavy_check_mark:                                                          | The request object to use for the request.                                  |
 
 ### Response
 
-**[CreateAdsGroupResponse](../../models/operations/CreateAdsGroupResponse.md)**
+**[CreateAdsGroup2Response](../../models/operations/CreateAdsGroup2Response.md)**
 
 ### Errors
 
@@ -286,20 +286,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## createAdsInsertionorder
+## createAdsInsertionorder2
 
 Create an insertionorder
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createAdsInsertionorder" method="post" path="/ads/{connection_id}/insertionorder" -->
+<!-- UsageSnippet language="java" operationID="createAdsInsertionorder2" method="post" path="/ads/{connection_id}/insertionorder" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.CreateAdsInsertionorderRequest;
-import to.unified.unified_java_sdk.models.operations.CreateAdsInsertionorderResponse;
+import to.unified.unified_java_sdk.models.operations.CreateAdsInsertionorder2Request;
+import to.unified.unified_java_sdk.models.operations.CreateAdsInsertionorder2Response;
 import to.unified.unified_java_sdk.models.shared.AdsInsertionorder;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -313,13 +313,13 @@ public class Application {
                     .build())
             .build();
 
-        CreateAdsInsertionorderRequest req = CreateAdsInsertionorderRequest.builder()
+        CreateAdsInsertionorder2Request req = CreateAdsInsertionorder2Request.builder()
                 .adsInsertionorder(AdsInsertionorder.builder()
                     .build())
                 .connectionId("<id>")
                 .build();
 
-        CreateAdsInsertionorderResponse res = sdk.ads().createAdsInsertionorder()
+        CreateAdsInsertionorder2Response res = sdk.ads().createAdsInsertionorder2()
                 .request(req)
                 .call();
 
@@ -332,13 +332,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                   | Type                                                                                        | Required                                                                                    | Description                                                                                 |
-| ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
-| `request`                                                                                   | [CreateAdsInsertionorderRequest](../../models/operations/CreateAdsInsertionorderRequest.md) | :heavy_check_mark:                                                                          | The request object to use for the request.                                                  |
+| Parameter                                                                                     | Type                                                                                          | Required                                                                                      | Description                                                                                   |
+| --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
+| `request`                                                                                     | [CreateAdsInsertionorder2Request](../../models/operations/CreateAdsInsertionorder2Request.md) | :heavy_check_mark:                                                                            | The request object to use for the request.                                                    |
 
 ### Response
 
-**[CreateAdsInsertionorderResponse](../../models/operations/CreateAdsInsertionorderResponse.md)**
+**[CreateAdsInsertionorder2Response](../../models/operations/CreateAdsInsertionorder2Response.md)**
 
 ### Errors
 
@@ -346,20 +346,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## createAdsOrganization
+## createAdsOrganization2
 
 Create an organization
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createAdsOrganization" method="post" path="/ads/{connection_id}/organization" -->
+<!-- UsageSnippet language="java" operationID="createAdsOrganization2" method="post" path="/ads/{connection_id}/organization" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.CreateAdsOrganizationRequest;
-import to.unified.unified_java_sdk.models.operations.CreateAdsOrganizationResponse;
+import to.unified.unified_java_sdk.models.operations.CreateAdsOrganization2Request;
+import to.unified.unified_java_sdk.models.operations.CreateAdsOrganization2Response;
 import to.unified.unified_java_sdk.models.shared.AdsOrganization;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -373,13 +373,13 @@ public class Application {
                     .build())
             .build();
 
-        CreateAdsOrganizationRequest req = CreateAdsOrganizationRequest.builder()
+        CreateAdsOrganization2Request req = CreateAdsOrganization2Request.builder()
                 .adsOrganization(AdsOrganization.builder()
                     .build())
                 .connectionId("<id>")
                 .build();
 
-        CreateAdsOrganizationResponse res = sdk.ads().createAdsOrganization()
+        CreateAdsOrganization2Response res = sdk.ads().createAdsOrganization2()
                 .request(req)
                 .call();
 
@@ -392,13 +392,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
-| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
-| `request`                                                                               | [CreateAdsOrganizationRequest](../../models/operations/CreateAdsOrganizationRequest.md) | :heavy_check_mark:                                                                      | The request object to use for the request.                                              |
+| Parameter                                                                                 | Type                                                                                      | Required                                                                                  | Description                                                                               |
+| ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
+| `request`                                                                                 | [CreateAdsOrganization2Request](../../models/operations/CreateAdsOrganization2Request.md) | :heavy_check_mark:                                                                        | The request object to use for the request.                                                |
 
 ### Response
 
-**[CreateAdsOrganizationResponse](../../models/operations/CreateAdsOrganizationResponse.md)**
+**[CreateAdsOrganization2Response](../../models/operations/CreateAdsOrganization2Response.md)**
 
 ### Errors
 
@@ -406,20 +406,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## getAdsAd
+## getAdsAd2
 
 Retrieve an ad
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="getAdsAd" method="get" path="/ads/{connection_id}/ad/{id}" -->
+<!-- UsageSnippet language="java" operationID="getAdsAd2" method="get" path="/ads/{connection_id}/ad/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.GetAdsAdRequest;
-import to.unified.unified_java_sdk.models.operations.GetAdsAdResponse;
+import to.unified.unified_java_sdk.models.operations.GetAdsAd2Request;
+import to.unified.unified_java_sdk.models.operations.GetAdsAd2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -432,12 +432,12 @@ public class Application {
                     .build())
             .build();
 
-        GetAdsAdRequest req = GetAdsAdRequest.builder()
+        GetAdsAd2Request req = GetAdsAd2Request.builder()
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        GetAdsAdResponse res = sdk.ads().getAdsAd()
+        GetAdsAd2Response res = sdk.ads().getAdsAd2()
                 .request(req)
                 .call();
 
@@ -450,13 +450,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                     | Type                                                          | Required                                                      | Description                                                   |
-| ------------------------------------------------------------- | ------------------------------------------------------------- | ------------------------------------------------------------- | ------------------------------------------------------------- |
-| `request`                                                     | [GetAdsAdRequest](../../models/operations/GetAdsAdRequest.md) | :heavy_check_mark:                                            | The request object to use for the request.                    |
+| Parameter                                                       | Type                                                            | Required                                                        | Description                                                     |
+| --------------------------------------------------------------- | --------------------------------------------------------------- | --------------------------------------------------------------- | --------------------------------------------------------------- |
+| `request`                                                       | [GetAdsAd2Request](../../models/operations/GetAdsAd2Request.md) | :heavy_check_mark:                                              | The request object to use for the request.                      |
 
 ### Response
 
-**[GetAdsAdResponse](../../models/operations/GetAdsAdResponse.md)**
+**[GetAdsAd2Response](../../models/operations/GetAdsAd2Response.md)**
 
 ### Errors
 
@@ -464,20 +464,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## getAdsCampaign
+## getAdsCampaign2
 
 Retrieve a campaign
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="getAdsCampaign" method="get" path="/ads/{connection_id}/campaign/{id}" -->
+<!-- UsageSnippet language="java" operationID="getAdsCampaign2" method="get" path="/ads/{connection_id}/campaign/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.GetAdsCampaignRequest;
-import to.unified.unified_java_sdk.models.operations.GetAdsCampaignResponse;
+import to.unified.unified_java_sdk.models.operations.GetAdsCampaign2Request;
+import to.unified.unified_java_sdk.models.operations.GetAdsCampaign2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -490,12 +490,12 @@ public class Application {
                     .build())
             .build();
 
-        GetAdsCampaignRequest req = GetAdsCampaignRequest.builder()
+        GetAdsCampaign2Request req = GetAdsCampaign2Request.builder()
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        GetAdsCampaignResponse res = sdk.ads().getAdsCampaign()
+        GetAdsCampaign2Response res = sdk.ads().getAdsCampaign2()
                 .request(req)
                 .call();
 
@@ -508,13 +508,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                 | Type                                                                      | Required                                                                  | Description                                                               |
-| ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
-| `request`                                                                 | [GetAdsCampaignRequest](../../models/operations/GetAdsCampaignRequest.md) | :heavy_check_mark:                                                        | The request object to use for the request.                                |
+| Parameter                                                                   | Type                                                                        | Required                                                                    | Description                                                                 |
+| --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| `request`                                                                   | [GetAdsCampaign2Request](../../models/operations/GetAdsCampaign2Request.md) | :heavy_check_mark:                                                          | The request object to use for the request.                                  |
 
 ### Response
 
-**[GetAdsCampaignResponse](../../models/operations/GetAdsCampaignResponse.md)**
+**[GetAdsCampaign2Response](../../models/operations/GetAdsCampaign2Response.md)**
 
 ### Errors
 
@@ -522,20 +522,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## getAdsCreative
+## getAdsCreative2
 
 Retrieve a creative
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="getAdsCreative" method="get" path="/ads/{connection_id}/creative/{id}" -->
+<!-- UsageSnippet language="java" operationID="getAdsCreative2" method="get" path="/ads/{connection_id}/creative/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.GetAdsCreativeRequest;
-import to.unified.unified_java_sdk.models.operations.GetAdsCreativeResponse;
+import to.unified.unified_java_sdk.models.operations.GetAdsCreative2Request;
+import to.unified.unified_java_sdk.models.operations.GetAdsCreative2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -548,12 +548,12 @@ public class Application {
                     .build())
             .build();
 
-        GetAdsCreativeRequest req = GetAdsCreativeRequest.builder()
+        GetAdsCreative2Request req = GetAdsCreative2Request.builder()
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        GetAdsCreativeResponse res = sdk.ads().getAdsCreative()
+        GetAdsCreative2Response res = sdk.ads().getAdsCreative2()
                 .request(req)
                 .call();
 
@@ -566,13 +566,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                 | Type                                                                      | Required                                                                  | Description                                                               |
-| ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
-| `request`                                                                 | [GetAdsCreativeRequest](../../models/operations/GetAdsCreativeRequest.md) | :heavy_check_mark:                                                        | The request object to use for the request.                                |
+| Parameter                                                                   | Type                                                                        | Required                                                                    | Description                                                                 |
+| --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| `request`                                                                   | [GetAdsCreative2Request](../../models/operations/GetAdsCreative2Request.md) | :heavy_check_mark:                                                          | The request object to use for the request.                                  |
 
 ### Response
 
-**[GetAdsCreativeResponse](../../models/operations/GetAdsCreativeResponse.md)**
+**[GetAdsCreative2Response](../../models/operations/GetAdsCreative2Response.md)**
 
 ### Errors
 
@@ -580,20 +580,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## getAdsGroup
+## getAdsGroup2
 
 Retrieve a group
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="getAdsGroup" method="get" path="/ads/{connection_id}/group/{id}" -->
+<!-- UsageSnippet language="java" operationID="getAdsGroup2" method="get" path="/ads/{connection_id}/group/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.GetAdsGroupRequest;
-import to.unified.unified_java_sdk.models.operations.GetAdsGroupResponse;
+import to.unified.unified_java_sdk.models.operations.GetAdsGroup2Request;
+import to.unified.unified_java_sdk.models.operations.GetAdsGroup2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -606,12 +606,12 @@ public class Application {
                     .build())
             .build();
 
-        GetAdsGroupRequest req = GetAdsGroupRequest.builder()
+        GetAdsGroup2Request req = GetAdsGroup2Request.builder()
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        GetAdsGroupResponse res = sdk.ads().getAdsGroup()
+        GetAdsGroup2Response res = sdk.ads().getAdsGroup2()
                 .request(req)
                 .call();
 
@@ -624,13 +624,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                           | Type                                                                | Required                                                            | Description                                                         |
-| ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- |
-| `request`                                                           | [GetAdsGroupRequest](../../models/operations/GetAdsGroupRequest.md) | :heavy_check_mark:                                                  | The request object to use for the request.                          |
+| Parameter                                                             | Type                                                                  | Required                                                              | Description                                                           |
+| --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- |
+| `request`                                                             | [GetAdsGroup2Request](../../models/operations/GetAdsGroup2Request.md) | :heavy_check_mark:                                                    | The request object to use for the request.                            |
 
 ### Response
 
-**[GetAdsGroupResponse](../../models/operations/GetAdsGroupResponse.md)**
+**[GetAdsGroup2Response](../../models/operations/GetAdsGroup2Response.md)**
 
 ### Errors
 
@@ -638,20 +638,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## getAdsInsertionorder
+## getAdsInsertionorder2
 
 Retrieve an insertionorder
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="getAdsInsertionorder" method="get" path="/ads/{connection_id}/insertionorder/{id}" -->
+<!-- UsageSnippet language="java" operationID="getAdsInsertionorder2" method="get" path="/ads/{connection_id}/insertionorder/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.GetAdsInsertionorderRequest;
-import to.unified.unified_java_sdk.models.operations.GetAdsInsertionorderResponse;
+import to.unified.unified_java_sdk.models.operations.GetAdsInsertionorder2Request;
+import to.unified.unified_java_sdk.models.operations.GetAdsInsertionorder2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -664,12 +664,12 @@ public class Application {
                     .build())
             .build();
 
-        GetAdsInsertionorderRequest req = GetAdsInsertionorderRequest.builder()
+        GetAdsInsertionorder2Request req = GetAdsInsertionorder2Request.builder()
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        GetAdsInsertionorderResponse res = sdk.ads().getAdsInsertionorder()
+        GetAdsInsertionorder2Response res = sdk.ads().getAdsInsertionorder2()
                 .request(req)
                 .call();
 
@@ -682,13 +682,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                             | Type                                                                                  | Required                                                                              | Description                                                                           |
-| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
-| `request`                                                                             | [GetAdsInsertionorderRequest](../../models/operations/GetAdsInsertionorderRequest.md) | :heavy_check_mark:                                                                    | The request object to use for the request.                                            |
+| Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
+| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| `request`                                                                               | [GetAdsInsertionorder2Request](../../models/operations/GetAdsInsertionorder2Request.md) | :heavy_check_mark:                                                                      | The request object to use for the request.                                              |
 
 ### Response
 
-**[GetAdsInsertionorderResponse](../../models/operations/GetAdsInsertionorderResponse.md)**
+**[GetAdsInsertionorder2Response](../../models/operations/GetAdsInsertionorder2Response.md)**
 
 ### Errors
 
@@ -696,20 +696,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## getAdsOrganization
+## getAdsOrganization2
 
 Retrieve an organization
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="getAdsOrganization" method="get" path="/ads/{connection_id}/organization/{id}" -->
+<!-- UsageSnippet language="java" operationID="getAdsOrganization2" method="get" path="/ads/{connection_id}/organization/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.GetAdsOrganizationRequest;
-import to.unified.unified_java_sdk.models.operations.GetAdsOrganizationResponse;
+import to.unified.unified_java_sdk.models.operations.GetAdsOrganization2Request;
+import to.unified.unified_java_sdk.models.operations.GetAdsOrganization2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -722,12 +722,12 @@ public class Application {
                     .build())
             .build();
 
-        GetAdsOrganizationRequest req = GetAdsOrganizationRequest.builder()
+        GetAdsOrganization2Request req = GetAdsOrganization2Request.builder()
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        GetAdsOrganizationResponse res = sdk.ads().getAdsOrganization()
+        GetAdsOrganization2Response res = sdk.ads().getAdsOrganization2()
                 .request(req)
                 .call();
 
@@ -740,13 +740,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
-| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
-| `request`                                                                         | [GetAdsOrganizationRequest](../../models/operations/GetAdsOrganizationRequest.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
+| Parameter                                                                           | Type                                                                                | Required                                                                            | Description                                                                         |
+| ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| `request`                                                                           | [GetAdsOrganization2Request](../../models/operations/GetAdsOrganization2Request.md) | :heavy_check_mark:                                                                  | The request object to use for the request.                                          |
 
 ### Response
 
-**[GetAdsOrganizationResponse](../../models/operations/GetAdsOrganizationResponse.md)**
+**[GetAdsOrganization2Response](../../models/operations/GetAdsOrganization2Response.md)**
 
 ### Errors
 
@@ -754,20 +754,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## getAdsPromoted
+## getAdsPromoted2
 
 Retrieve a promoted
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="getAdsPromoted" method="get" path="/ads/{connection_id}/promoted/{id}" -->
+<!-- UsageSnippet language="java" operationID="getAdsPromoted2" method="get" path="/ads/{connection_id}/promoted/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.GetAdsPromotedRequest;
-import to.unified.unified_java_sdk.models.operations.GetAdsPromotedResponse;
+import to.unified.unified_java_sdk.models.operations.GetAdsPromoted2Request;
+import to.unified.unified_java_sdk.models.operations.GetAdsPromoted2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -780,12 +780,12 @@ public class Application {
                     .build())
             .build();
 
-        GetAdsPromotedRequest req = GetAdsPromotedRequest.builder()
+        GetAdsPromoted2Request req = GetAdsPromoted2Request.builder()
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        GetAdsPromotedResponse res = sdk.ads().getAdsPromoted()
+        GetAdsPromoted2Response res = sdk.ads().getAdsPromoted2()
                 .request(req)
                 .call();
 
@@ -798,13 +798,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                 | Type                                                                      | Required                                                                  | Description                                                               |
-| ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
-| `request`                                                                 | [GetAdsPromotedRequest](../../models/operations/GetAdsPromotedRequest.md) | :heavy_check_mark:                                                        | The request object to use for the request.                                |
+| Parameter                                                                   | Type                                                                        | Required                                                                    | Description                                                                 |
+| --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| `request`                                                                   | [GetAdsPromoted2Request](../../models/operations/GetAdsPromoted2Request.md) | :heavy_check_mark:                                                          | The request object to use for the request.                                  |
 
 ### Response
 
-**[GetAdsPromotedResponse](../../models/operations/GetAdsPromotedResponse.md)**
+**[GetAdsPromoted2Response](../../models/operations/GetAdsPromoted2Response.md)**
 
 ### Errors
 
@@ -812,20 +812,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## getAdsTarget
+## getAdsTarget2
 
 Retrieve a target
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="getAdsTarget" method="get" path="/ads/{connection_id}/target/{id}" -->
+<!-- UsageSnippet language="java" operationID="getAdsTarget2" method="get" path="/ads/{connection_id}/target/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.GetAdsTargetRequest;
-import to.unified.unified_java_sdk.models.operations.GetAdsTargetResponse;
+import to.unified.unified_java_sdk.models.operations.GetAdsTarget2Request;
+import to.unified.unified_java_sdk.models.operations.GetAdsTarget2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -838,12 +838,12 @@ public class Application {
                     .build())
             .build();
 
-        GetAdsTargetRequest req = GetAdsTargetRequest.builder()
+        GetAdsTarget2Request req = GetAdsTarget2Request.builder()
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        GetAdsTargetResponse res = sdk.ads().getAdsTarget()
+        GetAdsTarget2Response res = sdk.ads().getAdsTarget2()
                 .request(req)
                 .call();
 
@@ -856,13 +856,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                             | Type                                                                  | Required                                                              | Description                                                           |
-| --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- |
-| `request`                                                             | [GetAdsTargetRequest](../../models/operations/GetAdsTargetRequest.md) | :heavy_check_mark:                                                    | The request object to use for the request.                            |
+| Parameter                                                               | Type                                                                    | Required                                                                | Description                                                             |
+| ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- |
+| `request`                                                               | [GetAdsTarget2Request](../../models/operations/GetAdsTarget2Request.md) | :heavy_check_mark:                                                      | The request object to use for the request.                              |
 
 ### Response
 
-**[GetAdsTargetResponse](../../models/operations/GetAdsTargetResponse.md)**
+**[GetAdsTarget2Response](../../models/operations/GetAdsTarget2Response.md)**
 
 ### Errors
 
@@ -870,20 +870,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## listAdsAds
+## listAdsAds2
 
 List all ads
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="listAdsAds" method="get" path="/ads/{connection_id}/ad" -->
+<!-- UsageSnippet language="java" operationID="listAdsAds2" method="get" path="/ads/{connection_id}/ad" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.ListAdsAdsRequest;
-import to.unified.unified_java_sdk.models.operations.ListAdsAdsResponse;
+import to.unified.unified_java_sdk.models.operations.ListAdsAds2Request;
+import to.unified.unified_java_sdk.models.operations.ListAdsAds2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -896,11 +896,11 @@ public class Application {
                     .build())
             .build();
 
-        ListAdsAdsRequest req = ListAdsAdsRequest.builder()
+        ListAdsAds2Request req = ListAdsAds2Request.builder()
                 .connectionId("<id>")
                 .build();
 
-        ListAdsAdsResponse res = sdk.ads().listAdsAds()
+        ListAdsAds2Response res = sdk.ads().listAdsAds2()
                 .request(req)
                 .call();
 
@@ -913,13 +913,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                         | Type                                                              | Required                                                          | Description                                                       |
-| ----------------------------------------------------------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------- |
-| `request`                                                         | [ListAdsAdsRequest](../../models/operations/ListAdsAdsRequest.md) | :heavy_check_mark:                                                | The request object to use for the request.                        |
+| Parameter                                                           | Type                                                                | Required                                                            | Description                                                         |
+| ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- |
+| `request`                                                           | [ListAdsAds2Request](../../models/operations/ListAdsAds2Request.md) | :heavy_check_mark:                                                  | The request object to use for the request.                          |
 
 ### Response
 
-**[ListAdsAdsResponse](../../models/operations/ListAdsAdsResponse.md)**
+**[ListAdsAds2Response](../../models/operations/ListAdsAds2Response.md)**
 
 ### Errors
 
@@ -927,20 +927,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## listAdsCampaigns
+## listAdsCampaigns2
 
 List all campaigns
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="listAdsCampaigns" method="get" path="/ads/{connection_id}/campaign" -->
+<!-- UsageSnippet language="java" operationID="listAdsCampaigns2" method="get" path="/ads/{connection_id}/campaign" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.ListAdsCampaignsRequest;
-import to.unified.unified_java_sdk.models.operations.ListAdsCampaignsResponse;
+import to.unified.unified_java_sdk.models.operations.ListAdsCampaigns2Request;
+import to.unified.unified_java_sdk.models.operations.ListAdsCampaigns2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -953,11 +953,11 @@ public class Application {
                     .build())
             .build();
 
-        ListAdsCampaignsRequest req = ListAdsCampaignsRequest.builder()
+        ListAdsCampaigns2Request req = ListAdsCampaigns2Request.builder()
                 .connectionId("<id>")
                 .build();
 
-        ListAdsCampaignsResponse res = sdk.ads().listAdsCampaigns()
+        ListAdsCampaigns2Response res = sdk.ads().listAdsCampaigns2()
                 .request(req)
                 .call();
 
@@ -970,13 +970,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
-| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
-| `request`                                                                     | [ListAdsCampaignsRequest](../../models/operations/ListAdsCampaignsRequest.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
+| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| `request`                                                                       | [ListAdsCampaigns2Request](../../models/operations/ListAdsCampaigns2Request.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
 
 ### Response
 
-**[ListAdsCampaignsResponse](../../models/operations/ListAdsCampaignsResponse.md)**
+**[ListAdsCampaigns2Response](../../models/operations/ListAdsCampaigns2Response.md)**
 
 ### Errors
 
@@ -984,20 +984,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## listAdsCreatives
+## listAdsCreatives2
 
 List all creatives
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="listAdsCreatives" method="get" path="/ads/{connection_id}/creative" -->
+<!-- UsageSnippet language="java" operationID="listAdsCreatives2" method="get" path="/ads/{connection_id}/creative" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.ListAdsCreativesRequest;
-import to.unified.unified_java_sdk.models.operations.ListAdsCreativesResponse;
+import to.unified.unified_java_sdk.models.operations.ListAdsCreatives2Request;
+import to.unified.unified_java_sdk.models.operations.ListAdsCreatives2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -1010,11 +1010,11 @@ public class Application {
                     .build())
             .build();
 
-        ListAdsCreativesRequest req = ListAdsCreativesRequest.builder()
+        ListAdsCreatives2Request req = ListAdsCreatives2Request.builder()
                 .connectionId("<id>")
                 .build();
 
-        ListAdsCreativesResponse res = sdk.ads().listAdsCreatives()
+        ListAdsCreatives2Response res = sdk.ads().listAdsCreatives2()
                 .request(req)
                 .call();
 
@@ -1027,13 +1027,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
-| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
-| `request`                                                                     | [ListAdsCreativesRequest](../../models/operations/ListAdsCreativesRequest.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
+| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| `request`                                                                       | [ListAdsCreatives2Request](../../models/operations/ListAdsCreatives2Request.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
 
 ### Response
 
-**[ListAdsCreativesResponse](../../models/operations/ListAdsCreativesResponse.md)**
+**[ListAdsCreatives2Response](../../models/operations/ListAdsCreatives2Response.md)**
 
 ### Errors
 
@@ -1041,20 +1041,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## listAdsGroups
+## listAdsGroups2
 
 List all groups
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="listAdsGroups" method="get" path="/ads/{connection_id}/group" -->
+<!-- UsageSnippet language="java" operationID="listAdsGroups2" method="get" path="/ads/{connection_id}/group" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.ListAdsGroupsRequest;
-import to.unified.unified_java_sdk.models.operations.ListAdsGroupsResponse;
+import to.unified.unified_java_sdk.models.operations.ListAdsGroups2Request;
+import to.unified.unified_java_sdk.models.operations.ListAdsGroups2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -1067,11 +1067,11 @@ public class Application {
                     .build())
             .build();
 
-        ListAdsGroupsRequest req = ListAdsGroupsRequest.builder()
+        ListAdsGroups2Request req = ListAdsGroups2Request.builder()
                 .connectionId("<id>")
                 .build();
 
-        ListAdsGroupsResponse res = sdk.ads().listAdsGroups()
+        ListAdsGroups2Response res = sdk.ads().listAdsGroups2()
                 .request(req)
                 .call();
 
@@ -1084,13 +1084,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                               | Type                                                                    | Required                                                                | Description                                                             |
-| ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- |
-| `request`                                                               | [ListAdsGroupsRequest](../../models/operations/ListAdsGroupsRequest.md) | :heavy_check_mark:                                                      | The request object to use for the request.                              |
+| Parameter                                                                 | Type                                                                      | Required                                                                  | Description                                                               |
+| ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
+| `request`                                                                 | [ListAdsGroups2Request](../../models/operations/ListAdsGroups2Request.md) | :heavy_check_mark:                                                        | The request object to use for the request.                                |
 
 ### Response
 
-**[ListAdsGroupsResponse](../../models/operations/ListAdsGroupsResponse.md)**
+**[ListAdsGroups2Response](../../models/operations/ListAdsGroups2Response.md)**
 
 ### Errors
 
@@ -1098,20 +1098,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## listAdsInsertionorders
+## listAdsInsertionorders2
 
 List all insertionorders
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="listAdsInsertionorders" method="get" path="/ads/{connection_id}/insertionorder" -->
+<!-- UsageSnippet language="java" operationID="listAdsInsertionorders2" method="get" path="/ads/{connection_id}/insertionorder" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.ListAdsInsertionordersRequest;
-import to.unified.unified_java_sdk.models.operations.ListAdsInsertionordersResponse;
+import to.unified.unified_java_sdk.models.operations.ListAdsInsertionorders2Request;
+import to.unified.unified_java_sdk.models.operations.ListAdsInsertionorders2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -1124,11 +1124,11 @@ public class Application {
                     .build())
             .build();
 
-        ListAdsInsertionordersRequest req = ListAdsInsertionordersRequest.builder()
+        ListAdsInsertionorders2Request req = ListAdsInsertionorders2Request.builder()
                 .connectionId("<id>")
                 .build();
 
-        ListAdsInsertionordersResponse res = sdk.ads().listAdsInsertionorders()
+        ListAdsInsertionorders2Response res = sdk.ads().listAdsInsertionorders2()
                 .request(req)
                 .call();
 
@@ -1141,13 +1141,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                 | Type                                                                                      | Required                                                                                  | Description                                                                               |
-| ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
-| `request`                                                                                 | [ListAdsInsertionordersRequest](../../models/operations/ListAdsInsertionordersRequest.md) | :heavy_check_mark:                                                                        | The request object to use for the request.                                                |
+| Parameter                                                                                   | Type                                                                                        | Required                                                                                    | Description                                                                                 |
+| ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
+| `request`                                                                                   | [ListAdsInsertionorders2Request](../../models/operations/ListAdsInsertionorders2Request.md) | :heavy_check_mark:                                                                          | The request object to use for the request.                                                  |
 
 ### Response
 
-**[ListAdsInsertionordersResponse](../../models/operations/ListAdsInsertionordersResponse.md)**
+**[ListAdsInsertionorders2Response](../../models/operations/ListAdsInsertionorders2Response.md)**
 
 ### Errors
 
@@ -1155,20 +1155,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## listAdsOrganizations
+## listAdsOrganizations2
 
 List all organizations
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="listAdsOrganizations" method="get" path="/ads/{connection_id}/organization" -->
+<!-- UsageSnippet language="java" operationID="listAdsOrganizations2" method="get" path="/ads/{connection_id}/organization" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.ListAdsOrganizationsRequest;
-import to.unified.unified_java_sdk.models.operations.ListAdsOrganizationsResponse;
+import to.unified.unified_java_sdk.models.operations.ListAdsOrganizations2Request;
+import to.unified.unified_java_sdk.models.operations.ListAdsOrganizations2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -1181,11 +1181,11 @@ public class Application {
                     .build())
             .build();
 
-        ListAdsOrganizationsRequest req = ListAdsOrganizationsRequest.builder()
+        ListAdsOrganizations2Request req = ListAdsOrganizations2Request.builder()
                 .connectionId("<id>")
                 .build();
 
-        ListAdsOrganizationsResponse res = sdk.ads().listAdsOrganizations()
+        ListAdsOrganizations2Response res = sdk.ads().listAdsOrganizations2()
                 .request(req)
                 .call();
 
@@ -1198,13 +1198,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                             | Type                                                                                  | Required                                                                              | Description                                                                           |
-| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
-| `request`                                                                             | [ListAdsOrganizationsRequest](../../models/operations/ListAdsOrganizationsRequest.md) | :heavy_check_mark:                                                                    | The request object to use for the request.                                            |
+| Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
+| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| `request`                                                                               | [ListAdsOrganizations2Request](../../models/operations/ListAdsOrganizations2Request.md) | :heavy_check_mark:                                                                      | The request object to use for the request.                                              |
 
 ### Response
 
-**[ListAdsOrganizationsResponse](../../models/operations/ListAdsOrganizationsResponse.md)**
+**[ListAdsOrganizations2Response](../../models/operations/ListAdsOrganizations2Response.md)**
 
 ### Errors
 
@@ -1212,20 +1212,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## listAdsPromoteds
+## listAdsPromoteds2
 
 List all promoteds
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="listAdsPromoteds" method="get" path="/ads/{connection_id}/promoted" -->
+<!-- UsageSnippet language="java" operationID="listAdsPromoteds2" method="get" path="/ads/{connection_id}/promoted" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.ListAdsPromotedsRequest;
-import to.unified.unified_java_sdk.models.operations.ListAdsPromotedsResponse;
+import to.unified.unified_java_sdk.models.operations.ListAdsPromoteds2Request;
+import to.unified.unified_java_sdk.models.operations.ListAdsPromoteds2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -1238,11 +1238,11 @@ public class Application {
                     .build())
             .build();
 
-        ListAdsPromotedsRequest req = ListAdsPromotedsRequest.builder()
+        ListAdsPromoteds2Request req = ListAdsPromoteds2Request.builder()
                 .connectionId("<id>")
                 .build();
 
-        ListAdsPromotedsResponse res = sdk.ads().listAdsPromoteds()
+        ListAdsPromoteds2Response res = sdk.ads().listAdsPromoteds2()
                 .request(req)
                 .call();
 
@@ -1255,13 +1255,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
-| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
-| `request`                                                                     | [ListAdsPromotedsRequest](../../models/operations/ListAdsPromotedsRequest.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
+| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| `request`                                                                       | [ListAdsPromoteds2Request](../../models/operations/ListAdsPromoteds2Request.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
 
 ### Response
 
-**[ListAdsPromotedsResponse](../../models/operations/ListAdsPromotedsResponse.md)**
+**[ListAdsPromoteds2Response](../../models/operations/ListAdsPromoteds2Response.md)**
 
 ### Errors
 
@@ -1269,20 +1269,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## listAdsReports
+## listAdsReports2
 
 List all reports
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="listAdsReports" method="get" path="/ads/{connection_id}/report" -->
+<!-- UsageSnippet language="java" operationID="listAdsReports2" method="get" path="/ads/{connection_id}/report" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.ListAdsReportsRequest;
-import to.unified.unified_java_sdk.models.operations.ListAdsReportsResponse;
+import to.unified.unified_java_sdk.models.operations.ListAdsReports2Request;
+import to.unified.unified_java_sdk.models.operations.ListAdsReports2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -1295,11 +1295,11 @@ public class Application {
                     .build())
             .build();
 
-        ListAdsReportsRequest req = ListAdsReportsRequest.builder()
+        ListAdsReports2Request req = ListAdsReports2Request.builder()
                 .connectionId("<id>")
                 .build();
 
-        ListAdsReportsResponse res = sdk.ads().listAdsReports()
+        ListAdsReports2Response res = sdk.ads().listAdsReports2()
                 .request(req)
                 .call();
 
@@ -1312,13 +1312,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                 | Type                                                                      | Required                                                                  | Description                                                               |
-| ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
-| `request`                                                                 | [ListAdsReportsRequest](../../models/operations/ListAdsReportsRequest.md) | :heavy_check_mark:                                                        | The request object to use for the request.                                |
+| Parameter                                                                   | Type                                                                        | Required                                                                    | Description                                                                 |
+| --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| `request`                                                                   | [ListAdsReports2Request](../../models/operations/ListAdsReports2Request.md) | :heavy_check_mark:                                                          | The request object to use for the request.                                  |
 
 ### Response
 
-**[ListAdsReportsResponse](../../models/operations/ListAdsReportsResponse.md)**
+**[ListAdsReports2Response](../../models/operations/ListAdsReports2Response.md)**
 
 ### Errors
 
@@ -1326,20 +1326,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## listAdsTargets
+## listAdsTargets2
 
 List all targets
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="listAdsTargets" method="get" path="/ads/{connection_id}/target" -->
+<!-- UsageSnippet language="java" operationID="listAdsTargets2" method="get" path="/ads/{connection_id}/target" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.ListAdsTargetsRequest;
-import to.unified.unified_java_sdk.models.operations.ListAdsTargetsResponse;
+import to.unified.unified_java_sdk.models.operations.ListAdsTargets2Request;
+import to.unified.unified_java_sdk.models.operations.ListAdsTargets2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -1352,11 +1352,11 @@ public class Application {
                     .build())
             .build();
 
-        ListAdsTargetsRequest req = ListAdsTargetsRequest.builder()
+        ListAdsTargets2Request req = ListAdsTargets2Request.builder()
                 .connectionId("<id>")
                 .build();
 
-        ListAdsTargetsResponse res = sdk.ads().listAdsTargets()
+        ListAdsTargets2Response res = sdk.ads().listAdsTargets2()
                 .request(req)
                 .call();
 
@@ -1369,13 +1369,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                 | Type                                                                      | Required                                                                  | Description                                                               |
-| ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
-| `request`                                                                 | [ListAdsTargetsRequest](../../models/operations/ListAdsTargetsRequest.md) | :heavy_check_mark:                                                        | The request object to use for the request.                                |
+| Parameter                                                                   | Type                                                                        | Required                                                                    | Description                                                                 |
+| --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| `request`                                                                   | [ListAdsTargets2Request](../../models/operations/ListAdsTargets2Request.md) | :heavy_check_mark:                                                          | The request object to use for the request.                                  |
 
 ### Response
 
-**[ListAdsTargetsResponse](../../models/operations/ListAdsTargetsResponse.md)**
+**[ListAdsTargets2Response](../../models/operations/ListAdsTargets2Response.md)**
 
 ### Errors
 
@@ -1383,20 +1383,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## patchAdsAd
+## patchAdsAd2
 
 Update an ad
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchAdsAd" method="patch" path="/ads/{connection_id}/ad/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchAdsAd2" method="patch" path="/ads/{connection_id}/ad/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.PatchAdsAdRequest;
-import to.unified.unified_java_sdk.models.operations.PatchAdsAdResponse;
+import to.unified.unified_java_sdk.models.operations.PatchAdsAd2Request;
+import to.unified.unified_java_sdk.models.operations.PatchAdsAd2Response;
 import to.unified.unified_java_sdk.models.shared.AdsAd;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -1410,14 +1410,14 @@ public class Application {
                     .build())
             .build();
 
-        PatchAdsAdRequest req = PatchAdsAdRequest.builder()
+        PatchAdsAd2Request req = PatchAdsAd2Request.builder()
                 .adsAd(AdsAd.builder()
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        PatchAdsAdResponse res = sdk.ads().patchAdsAd()
+        PatchAdsAd2Response res = sdk.ads().patchAdsAd2()
                 .request(req)
                 .call();
 
@@ -1430,13 +1430,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                         | Type                                                              | Required                                                          | Description                                                       |
-| ----------------------------------------------------------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------- |
-| `request`                                                         | [PatchAdsAdRequest](../../models/operations/PatchAdsAdRequest.md) | :heavy_check_mark:                                                | The request object to use for the request.                        |
+| Parameter                                                           | Type                                                                | Required                                                            | Description                                                         |
+| ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- |
+| `request`                                                           | [PatchAdsAd2Request](../../models/operations/PatchAdsAd2Request.md) | :heavy_check_mark:                                                  | The request object to use for the request.                          |
 
 ### Response
 
-**[PatchAdsAdResponse](../../models/operations/PatchAdsAdResponse.md)**
+**[PatchAdsAd2Response](../../models/operations/PatchAdsAd2Response.md)**
 
 ### Errors
 
@@ -1444,20 +1444,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## patchAdsCampaign
+## patchAdsCampaign2
 
 Update a campaign
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchAdsCampaign" method="patch" path="/ads/{connection_id}/campaign/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchAdsCampaign2" method="patch" path="/ads/{connection_id}/campaign/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.PatchAdsCampaignRequest;
-import to.unified.unified_java_sdk.models.operations.PatchAdsCampaignResponse;
+import to.unified.unified_java_sdk.models.operations.PatchAdsCampaign2Request;
+import to.unified.unified_java_sdk.models.operations.PatchAdsCampaign2Response;
 import to.unified.unified_java_sdk.models.shared.AdsCampaign;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -1471,14 +1471,14 @@ public class Application {
                     .build())
             .build();
 
-        PatchAdsCampaignRequest req = PatchAdsCampaignRequest.builder()
+        PatchAdsCampaign2Request req = PatchAdsCampaign2Request.builder()
                 .adsCampaign(AdsCampaign.builder()
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        PatchAdsCampaignResponse res = sdk.ads().patchAdsCampaign()
+        PatchAdsCampaign2Response res = sdk.ads().patchAdsCampaign2()
                 .request(req)
                 .call();
 
@@ -1491,13 +1491,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
-| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
-| `request`                                                                     | [PatchAdsCampaignRequest](../../models/operations/PatchAdsCampaignRequest.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
+| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| `request`                                                                       | [PatchAdsCampaign2Request](../../models/operations/PatchAdsCampaign2Request.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
 
 ### Response
 
-**[PatchAdsCampaignResponse](../../models/operations/PatchAdsCampaignResponse.md)**
+**[PatchAdsCampaign2Response](../../models/operations/PatchAdsCampaign2Response.md)**
 
 ### Errors
 
@@ -1505,20 +1505,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## patchAdsCreative
+## patchAdsCreative2
 
 Update a creative
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchAdsCreative" method="patch" path="/ads/{connection_id}/creative/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchAdsCreative2" method="patch" path="/ads/{connection_id}/creative/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.PatchAdsCreativeRequest;
-import to.unified.unified_java_sdk.models.operations.PatchAdsCreativeResponse;
+import to.unified.unified_java_sdk.models.operations.PatchAdsCreative2Request;
+import to.unified.unified_java_sdk.models.operations.PatchAdsCreative2Response;
 import to.unified.unified_java_sdk.models.shared.AdsCreative;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -1532,14 +1532,14 @@ public class Application {
                     .build())
             .build();
 
-        PatchAdsCreativeRequest req = PatchAdsCreativeRequest.builder()
+        PatchAdsCreative2Request req = PatchAdsCreative2Request.builder()
                 .adsCreative(AdsCreative.builder()
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        PatchAdsCreativeResponse res = sdk.ads().patchAdsCreative()
+        PatchAdsCreative2Response res = sdk.ads().patchAdsCreative2()
                 .request(req)
                 .call();
 
@@ -1552,13 +1552,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
-| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
-| `request`                                                                     | [PatchAdsCreativeRequest](../../models/operations/PatchAdsCreativeRequest.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
+| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| `request`                                                                       | [PatchAdsCreative2Request](../../models/operations/PatchAdsCreative2Request.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
 
 ### Response
 
-**[PatchAdsCreativeResponse](../../models/operations/PatchAdsCreativeResponse.md)**
+**[PatchAdsCreative2Response](../../models/operations/PatchAdsCreative2Response.md)**
 
 ### Errors
 
@@ -1566,20 +1566,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## patchAdsGroup
+## patchAdsGroup2
 
 Update a group
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchAdsGroup" method="patch" path="/ads/{connection_id}/group/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchAdsGroup2" method="patch" path="/ads/{connection_id}/group/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.PatchAdsGroupRequest;
-import to.unified.unified_java_sdk.models.operations.PatchAdsGroupResponse;
+import to.unified.unified_java_sdk.models.operations.PatchAdsGroup2Request;
+import to.unified.unified_java_sdk.models.operations.PatchAdsGroup2Response;
 import to.unified.unified_java_sdk.models.shared.AdsGroup;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -1593,14 +1593,14 @@ public class Application {
                     .build())
             .build();
 
-        PatchAdsGroupRequest req = PatchAdsGroupRequest.builder()
+        PatchAdsGroup2Request req = PatchAdsGroup2Request.builder()
                 .adsGroup(AdsGroup.builder()
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        PatchAdsGroupResponse res = sdk.ads().patchAdsGroup()
+        PatchAdsGroup2Response res = sdk.ads().patchAdsGroup2()
                 .request(req)
                 .call();
 
@@ -1613,13 +1613,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                               | Type                                                                    | Required                                                                | Description                                                             |
-| ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- |
-| `request`                                                               | [PatchAdsGroupRequest](../../models/operations/PatchAdsGroupRequest.md) | :heavy_check_mark:                                                      | The request object to use for the request.                              |
+| Parameter                                                                 | Type                                                                      | Required                                                                  | Description                                                               |
+| ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
+| `request`                                                                 | [PatchAdsGroup2Request](../../models/operations/PatchAdsGroup2Request.md) | :heavy_check_mark:                                                        | The request object to use for the request.                                |
 
 ### Response
 
-**[PatchAdsGroupResponse](../../models/operations/PatchAdsGroupResponse.md)**
+**[PatchAdsGroup2Response](../../models/operations/PatchAdsGroup2Response.md)**
 
 ### Errors
 
@@ -1627,20 +1627,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## patchAdsInsertionorder
+## patchAdsInsertionorder2
 
 Update an insertionorder
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchAdsInsertionorder" method="patch" path="/ads/{connection_id}/insertionorder/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchAdsInsertionorder2" method="patch" path="/ads/{connection_id}/insertionorder/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.PatchAdsInsertionorderRequest;
-import to.unified.unified_java_sdk.models.operations.PatchAdsInsertionorderResponse;
+import to.unified.unified_java_sdk.models.operations.PatchAdsInsertionorder2Request;
+import to.unified.unified_java_sdk.models.operations.PatchAdsInsertionorder2Response;
 import to.unified.unified_java_sdk.models.shared.AdsInsertionorder;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -1654,19 +1654,782 @@ public class Application {
                     .build())
             .build();
 
-        PatchAdsInsertionorderRequest req = PatchAdsInsertionorderRequest.builder()
+        PatchAdsInsertionorder2Request req = PatchAdsInsertionorder2Request.builder()
                 .adsInsertionorder(AdsInsertionorder.builder()
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        PatchAdsInsertionorderResponse res = sdk.ads().patchAdsInsertionorder()
+        PatchAdsInsertionorder2Response res = sdk.ads().patchAdsInsertionorder2()
                 .request(req)
                 .call();
 
         if (res.adsInsertionorder().isPresent()) {
             System.out.println(res.adsInsertionorder().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                   | Type                                                                                        | Required                                                                                    | Description                                                                                 |
+| ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
+| `request`                                                                                   | [PatchAdsInsertionorder2Request](../../models/operations/PatchAdsInsertionorder2Request.md) | :heavy_check_mark:                                                                          | The request object to use for the request.                                                  |
+
+### Response
+
+**[PatchAdsInsertionorder2Response](../../models/operations/PatchAdsInsertionorder2Response.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## patchAdsOrganization2
+
+Update an organization
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="patchAdsOrganization2" method="patch" path="/ads/{connection_id}/organization/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.PatchAdsOrganization2Request;
+import to.unified.unified_java_sdk.models.operations.PatchAdsOrganization2Response;
+import to.unified.unified_java_sdk.models.shared.AdsOrganization;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        PatchAdsOrganization2Request req = PatchAdsOrganization2Request.builder()
+                .adsOrganization(AdsOrganization.builder()
+                    .build())
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        PatchAdsOrganization2Response res = sdk.ads().patchAdsOrganization2()
+                .request(req)
+                .call();
+
+        if (res.adsOrganization().isPresent()) {
+            System.out.println(res.adsOrganization().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
+| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| `request`                                                                               | [PatchAdsOrganization2Request](../../models/operations/PatchAdsOrganization2Request.md) | :heavy_check_mark:                                                                      | The request object to use for the request.                                              |
+
+### Response
+
+**[PatchAdsOrganization2Response](../../models/operations/PatchAdsOrganization2Response.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## removeAdsAd2
+
+Remove an ad
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="removeAdsAd2" method="delete" path="/ads/{connection_id}/ad/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.RemoveAdsAd2Request;
+import to.unified.unified_java_sdk.models.operations.RemoveAdsAd2Response;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        RemoveAdsAd2Request req = RemoveAdsAd2Request.builder()
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        RemoveAdsAd2Response res = sdk.ads().removeAdsAd2()
+                .request(req)
+                .call();
+
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                             | Type                                                                  | Required                                                              | Description                                                           |
+| --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- |
+| `request`                                                             | [RemoveAdsAd2Request](../../models/operations/RemoveAdsAd2Request.md) | :heavy_check_mark:                                                    | The request object to use for the request.                            |
+
+### Response
+
+**[RemoveAdsAd2Response](../../models/operations/RemoveAdsAd2Response.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## removeAdsCampaign2
+
+Remove a campaign
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="removeAdsCampaign2" method="delete" path="/ads/{connection_id}/campaign/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.RemoveAdsCampaign2Request;
+import to.unified.unified_java_sdk.models.operations.RemoveAdsCampaign2Response;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        RemoveAdsCampaign2Request req = RemoveAdsCampaign2Request.builder()
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        RemoveAdsCampaign2Response res = sdk.ads().removeAdsCampaign2()
+                .request(req)
+                .call();
+
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
+| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| `request`                                                                         | [RemoveAdsCampaign2Request](../../models/operations/RemoveAdsCampaign2Request.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
+
+### Response
+
+**[RemoveAdsCampaign2Response](../../models/operations/RemoveAdsCampaign2Response.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## removeAdsCreative2
+
+Remove a creative
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="removeAdsCreative2" method="delete" path="/ads/{connection_id}/creative/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.RemoveAdsCreative2Request;
+import to.unified.unified_java_sdk.models.operations.RemoveAdsCreative2Response;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        RemoveAdsCreative2Request req = RemoveAdsCreative2Request.builder()
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        RemoveAdsCreative2Response res = sdk.ads().removeAdsCreative2()
+                .request(req)
+                .call();
+
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
+| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| `request`                                                                         | [RemoveAdsCreative2Request](../../models/operations/RemoveAdsCreative2Request.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
+
+### Response
+
+**[RemoveAdsCreative2Response](../../models/operations/RemoveAdsCreative2Response.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## removeAdsGroup2
+
+Remove a group
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="removeAdsGroup2" method="delete" path="/ads/{connection_id}/group/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.RemoveAdsGroup2Request;
+import to.unified.unified_java_sdk.models.operations.RemoveAdsGroup2Response;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        RemoveAdsGroup2Request req = RemoveAdsGroup2Request.builder()
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        RemoveAdsGroup2Response res = sdk.ads().removeAdsGroup2()
+                .request(req)
+                .call();
+
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                   | Type                                                                        | Required                                                                    | Description                                                                 |
+| --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| `request`                                                                   | [RemoveAdsGroup2Request](../../models/operations/RemoveAdsGroup2Request.md) | :heavy_check_mark:                                                          | The request object to use for the request.                                  |
+
+### Response
+
+**[RemoveAdsGroup2Response](../../models/operations/RemoveAdsGroup2Response.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## removeAdsInsertionorder2
+
+Remove an insertionorder
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="removeAdsInsertionorder2" method="delete" path="/ads/{connection_id}/insertionorder/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.RemoveAdsInsertionorder2Request;
+import to.unified.unified_java_sdk.models.operations.RemoveAdsInsertionorder2Response;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        RemoveAdsInsertionorder2Request req = RemoveAdsInsertionorder2Request.builder()
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        RemoveAdsInsertionorder2Response res = sdk.ads().removeAdsInsertionorder2()
+                .request(req)
+                .call();
+
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                     | Type                                                                                          | Required                                                                                      | Description                                                                                   |
+| --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
+| `request`                                                                                     | [RemoveAdsInsertionorder2Request](../../models/operations/RemoveAdsInsertionorder2Request.md) | :heavy_check_mark:                                                                            | The request object to use for the request.                                                    |
+
+### Response
+
+**[RemoveAdsInsertionorder2Response](../../models/operations/RemoveAdsInsertionorder2Response.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## removeAdsOrganization2
+
+Remove an organization
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="removeAdsOrganization2" method="delete" path="/ads/{connection_id}/organization/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.RemoveAdsOrganization2Request;
+import to.unified.unified_java_sdk.models.operations.RemoveAdsOrganization2Response;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        RemoveAdsOrganization2Request req = RemoveAdsOrganization2Request.builder()
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        RemoveAdsOrganization2Response res = sdk.ads().removeAdsOrganization2()
+                .request(req)
+                .call();
+
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                 | Type                                                                                      | Required                                                                                  | Description                                                                               |
+| ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
+| `request`                                                                                 | [RemoveAdsOrganization2Request](../../models/operations/RemoveAdsOrganization2Request.md) | :heavy_check_mark:                                                                        | The request object to use for the request.                                                |
+
+### Response
+
+**[RemoveAdsOrganization2Response](../../models/operations/RemoveAdsOrganization2Response.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## updateAdsAd2
+
+Update an ad
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="updateAdsAd2" method="put" path="/ads/{connection_id}/ad/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.UpdateAdsAd2Request;
+import to.unified.unified_java_sdk.models.operations.UpdateAdsAd2Response;
+import to.unified.unified_java_sdk.models.shared.AdsAd;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        UpdateAdsAd2Request req = UpdateAdsAd2Request.builder()
+                .adsAd(AdsAd.builder()
+                    .build())
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        UpdateAdsAd2Response res = sdk.ads().updateAdsAd2()
+                .request(req)
+                .call();
+
+        if (res.adsAd().isPresent()) {
+            System.out.println(res.adsAd().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                             | Type                                                                  | Required                                                              | Description                                                           |
+| --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- |
+| `request`                                                             | [UpdateAdsAd2Request](../../models/operations/UpdateAdsAd2Request.md) | :heavy_check_mark:                                                    | The request object to use for the request.                            |
+
+### Response
+
+**[UpdateAdsAd2Response](../../models/operations/UpdateAdsAd2Response.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## updateAdsCampaign2
+
+Update a campaign
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="updateAdsCampaign2" method="put" path="/ads/{connection_id}/campaign/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.UpdateAdsCampaign2Request;
+import to.unified.unified_java_sdk.models.operations.UpdateAdsCampaign2Response;
+import to.unified.unified_java_sdk.models.shared.AdsCampaign;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        UpdateAdsCampaign2Request req = UpdateAdsCampaign2Request.builder()
+                .adsCampaign(AdsCampaign.builder()
+                    .build())
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        UpdateAdsCampaign2Response res = sdk.ads().updateAdsCampaign2()
+                .request(req)
+                .call();
+
+        if (res.adsCampaign().isPresent()) {
+            System.out.println(res.adsCampaign().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
+| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| `request`                                                                         | [UpdateAdsCampaign2Request](../../models/operations/UpdateAdsCampaign2Request.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
+
+### Response
+
+**[UpdateAdsCampaign2Response](../../models/operations/UpdateAdsCampaign2Response.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## updateAdsCreative2
+
+Update a creative
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="updateAdsCreative2" method="put" path="/ads/{connection_id}/creative/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.UpdateAdsCreative2Request;
+import to.unified.unified_java_sdk.models.operations.UpdateAdsCreative2Response;
+import to.unified.unified_java_sdk.models.shared.AdsCreative;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        UpdateAdsCreative2Request req = UpdateAdsCreative2Request.builder()
+                .adsCreative(AdsCreative.builder()
+                    .build())
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        UpdateAdsCreative2Response res = sdk.ads().updateAdsCreative2()
+                .request(req)
+                .call();
+
+        if (res.adsCreative().isPresent()) {
+            System.out.println(res.adsCreative().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
+| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| `request`                                                                         | [UpdateAdsCreative2Request](../../models/operations/UpdateAdsCreative2Request.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
+
+### Response
+
+**[UpdateAdsCreative2Response](../../models/operations/UpdateAdsCreative2Response.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## updateAdsGroup2
+
+Update a group
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="updateAdsGroup2" method="put" path="/ads/{connection_id}/group/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.UpdateAdsGroup2Request;
+import to.unified.unified_java_sdk.models.operations.UpdateAdsGroup2Response;
+import to.unified.unified_java_sdk.models.shared.AdsGroup;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        UpdateAdsGroup2Request req = UpdateAdsGroup2Request.builder()
+                .adsGroup(AdsGroup.builder()
+                    .build())
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        UpdateAdsGroup2Response res = sdk.ads().updateAdsGroup2()
+                .request(req)
+                .call();
+
+        if (res.adsGroup().isPresent()) {
+            System.out.println(res.adsGroup().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                   | Type                                                                        | Required                                                                    | Description                                                                 |
+| --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| `request`                                                                   | [UpdateAdsGroup2Request](../../models/operations/UpdateAdsGroup2Request.md) | :heavy_check_mark:                                                          | The request object to use for the request.                                  |
+
+### Response
+
+**[UpdateAdsGroup2Response](../../models/operations/UpdateAdsGroup2Response.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## updateAdsInsertionorder2
+
+Update an insertionorder
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="updateAdsInsertionorder2" method="put" path="/ads/{connection_id}/insertionorder/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.UpdateAdsInsertionorder2Request;
+import to.unified.unified_java_sdk.models.operations.UpdateAdsInsertionorder2Response;
+import to.unified.unified_java_sdk.models.shared.AdsInsertionorder;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        UpdateAdsInsertionorder2Request req = UpdateAdsInsertionorder2Request.builder()
+                .adsInsertionorder(AdsInsertionorder.builder()
+                    .build())
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        UpdateAdsInsertionorder2Response res = sdk.ads().updateAdsInsertionorder2()
+                .request(req)
+                .call();
+
+        if (res.adsInsertionorder().isPresent()) {
+            System.out.println(res.adsInsertionorder().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                     | Type                                                                                          | Required                                                                                      | Description                                                                                   |
+| --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
+| `request`                                                                                     | [UpdateAdsInsertionorder2Request](../../models/operations/UpdateAdsInsertionorder2Request.md) | :heavy_check_mark:                                                                            | The request object to use for the request.                                                    |
+
+### Response
+
+**[UpdateAdsInsertionorder2Response](../../models/operations/UpdateAdsInsertionorder2Response.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## updateAdsOrganization2
+
+Update an organization
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="updateAdsOrganization2" method="put" path="/ads/{connection_id}/organization/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.UpdateAdsOrganization2Request;
+import to.unified.unified_java_sdk.models.operations.UpdateAdsOrganization2Response;
+import to.unified.unified_java_sdk.models.shared.AdsOrganization;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        UpdateAdsOrganization2Request req = UpdateAdsOrganization2Request.builder()
+                .adsOrganization(AdsOrganization.builder()
+                    .build())
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        UpdateAdsOrganization2Response res = sdk.ads().updateAdsOrganization2()
+                .request(req)
+                .call();
+
+        if (res.adsOrganization().isPresent()) {
+            System.out.println(res.adsOrganization().get());
         }
     }
 }
@@ -1676,774 +2439,11 @@ public class Application {
 
 | Parameter                                                                                 | Type                                                                                      | Required                                                                                  | Description                                                                               |
 | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
-| `request`                                                                                 | [PatchAdsInsertionorderRequest](../../models/operations/PatchAdsInsertionorderRequest.md) | :heavy_check_mark:                                                                        | The request object to use for the request.                                                |
+| `request`                                                                                 | [UpdateAdsOrganization2Request](../../models/operations/UpdateAdsOrganization2Request.md) | :heavy_check_mark:                                                                        | The request object to use for the request.                                                |
 
 ### Response
 
-**[PatchAdsInsertionorderResponse](../../models/operations/PatchAdsInsertionorderResponse.md)**
-
-### Errors
-
-| Error Type             | Status Code            | Content Type           |
-| ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
-
-## patchAdsOrganization
-
-Update an organization
-
-### Example Usage
-
-<!-- UsageSnippet language="java" operationID="patchAdsOrganization" method="patch" path="/ads/{connection_id}/organization/{id}" -->
-```java
-package hello.world;
-
-import java.lang.Exception;
-import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.PatchAdsOrganizationRequest;
-import to.unified.unified_java_sdk.models.operations.PatchAdsOrganizationResponse;
-import to.unified.unified_java_sdk.models.shared.AdsOrganization;
-import to.unified.unified_java_sdk.models.shared.Security;
-
-public class Application {
-
-    public static void main(String[] args) throws Exception {
-
-        UnifiedTo sdk = UnifiedTo.builder()
-                .security(Security.builder()
-                    .jwt(System.getenv().getOrDefault("JWT", ""))
-                    .build())
-            .build();
-
-        PatchAdsOrganizationRequest req = PatchAdsOrganizationRequest.builder()
-                .adsOrganization(AdsOrganization.builder()
-                    .build())
-                .connectionId("<id>")
-                .id("<id>")
-                .build();
-
-        PatchAdsOrganizationResponse res = sdk.ads().patchAdsOrganization()
-                .request(req)
-                .call();
-
-        if (res.adsOrganization().isPresent()) {
-            System.out.println(res.adsOrganization().get());
-        }
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                             | Type                                                                                  | Required                                                                              | Description                                                                           |
-| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
-| `request`                                                                             | [PatchAdsOrganizationRequest](../../models/operations/PatchAdsOrganizationRequest.md) | :heavy_check_mark:                                                                    | The request object to use for the request.                                            |
-
-### Response
-
-**[PatchAdsOrganizationResponse](../../models/operations/PatchAdsOrganizationResponse.md)**
-
-### Errors
-
-| Error Type             | Status Code            | Content Type           |
-| ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
-
-## removeAdsAd
-
-Remove an ad
-
-### Example Usage
-
-<!-- UsageSnippet language="java" operationID="removeAdsAd" method="delete" path="/ads/{connection_id}/ad/{id}" -->
-```java
-package hello.world;
-
-import java.lang.Exception;
-import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.RemoveAdsAdRequest;
-import to.unified.unified_java_sdk.models.operations.RemoveAdsAdResponse;
-import to.unified.unified_java_sdk.models.shared.Security;
-
-public class Application {
-
-    public static void main(String[] args) throws Exception {
-
-        UnifiedTo sdk = UnifiedTo.builder()
-                .security(Security.builder()
-                    .jwt(System.getenv().getOrDefault("JWT", ""))
-                    .build())
-            .build();
-
-        RemoveAdsAdRequest req = RemoveAdsAdRequest.builder()
-                .connectionId("<id>")
-                .id("<id>")
-                .build();
-
-        RemoveAdsAdResponse res = sdk.ads().removeAdsAd()
-                .request(req)
-                .call();
-
-        // handle response
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                           | Type                                                                | Required                                                            | Description                                                         |
-| ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- |
-| `request`                                                           | [RemoveAdsAdRequest](../../models/operations/RemoveAdsAdRequest.md) | :heavy_check_mark:                                                  | The request object to use for the request.                          |
-
-### Response
-
-**[RemoveAdsAdResponse](../../models/operations/RemoveAdsAdResponse.md)**
-
-### Errors
-
-| Error Type             | Status Code            | Content Type           |
-| ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
-
-## removeAdsCampaign
-
-Remove a campaign
-
-### Example Usage
-
-<!-- UsageSnippet language="java" operationID="removeAdsCampaign" method="delete" path="/ads/{connection_id}/campaign/{id}" -->
-```java
-package hello.world;
-
-import java.lang.Exception;
-import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.RemoveAdsCampaignRequest;
-import to.unified.unified_java_sdk.models.operations.RemoveAdsCampaignResponse;
-import to.unified.unified_java_sdk.models.shared.Security;
-
-public class Application {
-
-    public static void main(String[] args) throws Exception {
-
-        UnifiedTo sdk = UnifiedTo.builder()
-                .security(Security.builder()
-                    .jwt(System.getenv().getOrDefault("JWT", ""))
-                    .build())
-            .build();
-
-        RemoveAdsCampaignRequest req = RemoveAdsCampaignRequest.builder()
-                .connectionId("<id>")
-                .id("<id>")
-                .build();
-
-        RemoveAdsCampaignResponse res = sdk.ads().removeAdsCampaign()
-                .request(req)
-                .call();
-
-        // handle response
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
-| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
-| `request`                                                                       | [RemoveAdsCampaignRequest](../../models/operations/RemoveAdsCampaignRequest.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
-
-### Response
-
-**[RemoveAdsCampaignResponse](../../models/operations/RemoveAdsCampaignResponse.md)**
-
-### Errors
-
-| Error Type             | Status Code            | Content Type           |
-| ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
-
-## removeAdsCreative
-
-Remove a creative
-
-### Example Usage
-
-<!-- UsageSnippet language="java" operationID="removeAdsCreative" method="delete" path="/ads/{connection_id}/creative/{id}" -->
-```java
-package hello.world;
-
-import java.lang.Exception;
-import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.RemoveAdsCreativeRequest;
-import to.unified.unified_java_sdk.models.operations.RemoveAdsCreativeResponse;
-import to.unified.unified_java_sdk.models.shared.Security;
-
-public class Application {
-
-    public static void main(String[] args) throws Exception {
-
-        UnifiedTo sdk = UnifiedTo.builder()
-                .security(Security.builder()
-                    .jwt(System.getenv().getOrDefault("JWT", ""))
-                    .build())
-            .build();
-
-        RemoveAdsCreativeRequest req = RemoveAdsCreativeRequest.builder()
-                .connectionId("<id>")
-                .id("<id>")
-                .build();
-
-        RemoveAdsCreativeResponse res = sdk.ads().removeAdsCreative()
-                .request(req)
-                .call();
-
-        // handle response
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
-| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
-| `request`                                                                       | [RemoveAdsCreativeRequest](../../models/operations/RemoveAdsCreativeRequest.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
-
-### Response
-
-**[RemoveAdsCreativeResponse](../../models/operations/RemoveAdsCreativeResponse.md)**
-
-### Errors
-
-| Error Type             | Status Code            | Content Type           |
-| ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
-
-## removeAdsGroup
-
-Remove a group
-
-### Example Usage
-
-<!-- UsageSnippet language="java" operationID="removeAdsGroup" method="delete" path="/ads/{connection_id}/group/{id}" -->
-```java
-package hello.world;
-
-import java.lang.Exception;
-import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.RemoveAdsGroupRequest;
-import to.unified.unified_java_sdk.models.operations.RemoveAdsGroupResponse;
-import to.unified.unified_java_sdk.models.shared.Security;
-
-public class Application {
-
-    public static void main(String[] args) throws Exception {
-
-        UnifiedTo sdk = UnifiedTo.builder()
-                .security(Security.builder()
-                    .jwt(System.getenv().getOrDefault("JWT", ""))
-                    .build())
-            .build();
-
-        RemoveAdsGroupRequest req = RemoveAdsGroupRequest.builder()
-                .connectionId("<id>")
-                .id("<id>")
-                .build();
-
-        RemoveAdsGroupResponse res = sdk.ads().removeAdsGroup()
-                .request(req)
-                .call();
-
-        // handle response
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                 | Type                                                                      | Required                                                                  | Description                                                               |
-| ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
-| `request`                                                                 | [RemoveAdsGroupRequest](../../models/operations/RemoveAdsGroupRequest.md) | :heavy_check_mark:                                                        | The request object to use for the request.                                |
-
-### Response
-
-**[RemoveAdsGroupResponse](../../models/operations/RemoveAdsGroupResponse.md)**
-
-### Errors
-
-| Error Type             | Status Code            | Content Type           |
-| ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
-
-## removeAdsInsertionorder
-
-Remove an insertionorder
-
-### Example Usage
-
-<!-- UsageSnippet language="java" operationID="removeAdsInsertionorder" method="delete" path="/ads/{connection_id}/insertionorder/{id}" -->
-```java
-package hello.world;
-
-import java.lang.Exception;
-import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.RemoveAdsInsertionorderRequest;
-import to.unified.unified_java_sdk.models.operations.RemoveAdsInsertionorderResponse;
-import to.unified.unified_java_sdk.models.shared.Security;
-
-public class Application {
-
-    public static void main(String[] args) throws Exception {
-
-        UnifiedTo sdk = UnifiedTo.builder()
-                .security(Security.builder()
-                    .jwt(System.getenv().getOrDefault("JWT", ""))
-                    .build())
-            .build();
-
-        RemoveAdsInsertionorderRequest req = RemoveAdsInsertionorderRequest.builder()
-                .connectionId("<id>")
-                .id("<id>")
-                .build();
-
-        RemoveAdsInsertionorderResponse res = sdk.ads().removeAdsInsertionorder()
-                .request(req)
-                .call();
-
-        // handle response
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                                   | Type                                                                                        | Required                                                                                    | Description                                                                                 |
-| ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
-| `request`                                                                                   | [RemoveAdsInsertionorderRequest](../../models/operations/RemoveAdsInsertionorderRequest.md) | :heavy_check_mark:                                                                          | The request object to use for the request.                                                  |
-
-### Response
-
-**[RemoveAdsInsertionorderResponse](../../models/operations/RemoveAdsInsertionorderResponse.md)**
-
-### Errors
-
-| Error Type             | Status Code            | Content Type           |
-| ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
-
-## removeAdsOrganization
-
-Remove an organization
-
-### Example Usage
-
-<!-- UsageSnippet language="java" operationID="removeAdsOrganization" method="delete" path="/ads/{connection_id}/organization/{id}" -->
-```java
-package hello.world;
-
-import java.lang.Exception;
-import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.RemoveAdsOrganizationRequest;
-import to.unified.unified_java_sdk.models.operations.RemoveAdsOrganizationResponse;
-import to.unified.unified_java_sdk.models.shared.Security;
-
-public class Application {
-
-    public static void main(String[] args) throws Exception {
-
-        UnifiedTo sdk = UnifiedTo.builder()
-                .security(Security.builder()
-                    .jwt(System.getenv().getOrDefault("JWT", ""))
-                    .build())
-            .build();
-
-        RemoveAdsOrganizationRequest req = RemoveAdsOrganizationRequest.builder()
-                .connectionId("<id>")
-                .id("<id>")
-                .build();
-
-        RemoveAdsOrganizationResponse res = sdk.ads().removeAdsOrganization()
-                .request(req)
-                .call();
-
-        // handle response
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
-| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
-| `request`                                                                               | [RemoveAdsOrganizationRequest](../../models/operations/RemoveAdsOrganizationRequest.md) | :heavy_check_mark:                                                                      | The request object to use for the request.                                              |
-
-### Response
-
-**[RemoveAdsOrganizationResponse](../../models/operations/RemoveAdsOrganizationResponse.md)**
-
-### Errors
-
-| Error Type             | Status Code            | Content Type           |
-| ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
-
-## updateAdsAd
-
-Update an ad
-
-### Example Usage
-
-<!-- UsageSnippet language="java" operationID="updateAdsAd" method="put" path="/ads/{connection_id}/ad/{id}" -->
-```java
-package hello.world;
-
-import java.lang.Exception;
-import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.UpdateAdsAdRequest;
-import to.unified.unified_java_sdk.models.operations.UpdateAdsAdResponse;
-import to.unified.unified_java_sdk.models.shared.AdsAd;
-import to.unified.unified_java_sdk.models.shared.Security;
-
-public class Application {
-
-    public static void main(String[] args) throws Exception {
-
-        UnifiedTo sdk = UnifiedTo.builder()
-                .security(Security.builder()
-                    .jwt(System.getenv().getOrDefault("JWT", ""))
-                    .build())
-            .build();
-
-        UpdateAdsAdRequest req = UpdateAdsAdRequest.builder()
-                .adsAd(AdsAd.builder()
-                    .build())
-                .connectionId("<id>")
-                .id("<id>")
-                .build();
-
-        UpdateAdsAdResponse res = sdk.ads().updateAdsAd()
-                .request(req)
-                .call();
-
-        if (res.adsAd().isPresent()) {
-            System.out.println(res.adsAd().get());
-        }
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                           | Type                                                                | Required                                                            | Description                                                         |
-| ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- |
-| `request`                                                           | [UpdateAdsAdRequest](../../models/operations/UpdateAdsAdRequest.md) | :heavy_check_mark:                                                  | The request object to use for the request.                          |
-
-### Response
-
-**[UpdateAdsAdResponse](../../models/operations/UpdateAdsAdResponse.md)**
-
-### Errors
-
-| Error Type             | Status Code            | Content Type           |
-| ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
-
-## updateAdsCampaign
-
-Update a campaign
-
-### Example Usage
-
-<!-- UsageSnippet language="java" operationID="updateAdsCampaign" method="put" path="/ads/{connection_id}/campaign/{id}" -->
-```java
-package hello.world;
-
-import java.lang.Exception;
-import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.UpdateAdsCampaignRequest;
-import to.unified.unified_java_sdk.models.operations.UpdateAdsCampaignResponse;
-import to.unified.unified_java_sdk.models.shared.AdsCampaign;
-import to.unified.unified_java_sdk.models.shared.Security;
-
-public class Application {
-
-    public static void main(String[] args) throws Exception {
-
-        UnifiedTo sdk = UnifiedTo.builder()
-                .security(Security.builder()
-                    .jwt(System.getenv().getOrDefault("JWT", ""))
-                    .build())
-            .build();
-
-        UpdateAdsCampaignRequest req = UpdateAdsCampaignRequest.builder()
-                .adsCampaign(AdsCampaign.builder()
-                    .build())
-                .connectionId("<id>")
-                .id("<id>")
-                .build();
-
-        UpdateAdsCampaignResponse res = sdk.ads().updateAdsCampaign()
-                .request(req)
-                .call();
-
-        if (res.adsCampaign().isPresent()) {
-            System.out.println(res.adsCampaign().get());
-        }
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
-| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
-| `request`                                                                       | [UpdateAdsCampaignRequest](../../models/operations/UpdateAdsCampaignRequest.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
-
-### Response
-
-**[UpdateAdsCampaignResponse](../../models/operations/UpdateAdsCampaignResponse.md)**
-
-### Errors
-
-| Error Type             | Status Code            | Content Type           |
-| ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
-
-## updateAdsCreative
-
-Update a creative
-
-### Example Usage
-
-<!-- UsageSnippet language="java" operationID="updateAdsCreative" method="put" path="/ads/{connection_id}/creative/{id}" -->
-```java
-package hello.world;
-
-import java.lang.Exception;
-import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.UpdateAdsCreativeRequest;
-import to.unified.unified_java_sdk.models.operations.UpdateAdsCreativeResponse;
-import to.unified.unified_java_sdk.models.shared.AdsCreative;
-import to.unified.unified_java_sdk.models.shared.Security;
-
-public class Application {
-
-    public static void main(String[] args) throws Exception {
-
-        UnifiedTo sdk = UnifiedTo.builder()
-                .security(Security.builder()
-                    .jwt(System.getenv().getOrDefault("JWT", ""))
-                    .build())
-            .build();
-
-        UpdateAdsCreativeRequest req = UpdateAdsCreativeRequest.builder()
-                .adsCreative(AdsCreative.builder()
-                    .build())
-                .connectionId("<id>")
-                .id("<id>")
-                .build();
-
-        UpdateAdsCreativeResponse res = sdk.ads().updateAdsCreative()
-                .request(req)
-                .call();
-
-        if (res.adsCreative().isPresent()) {
-            System.out.println(res.adsCreative().get());
-        }
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
-| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
-| `request`                                                                       | [UpdateAdsCreativeRequest](../../models/operations/UpdateAdsCreativeRequest.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
-
-### Response
-
-**[UpdateAdsCreativeResponse](../../models/operations/UpdateAdsCreativeResponse.md)**
-
-### Errors
-
-| Error Type             | Status Code            | Content Type           |
-| ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
-
-## updateAdsGroup
-
-Update a group
-
-### Example Usage
-
-<!-- UsageSnippet language="java" operationID="updateAdsGroup" method="put" path="/ads/{connection_id}/group/{id}" -->
-```java
-package hello.world;
-
-import java.lang.Exception;
-import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.UpdateAdsGroupRequest;
-import to.unified.unified_java_sdk.models.operations.UpdateAdsGroupResponse;
-import to.unified.unified_java_sdk.models.shared.AdsGroup;
-import to.unified.unified_java_sdk.models.shared.Security;
-
-public class Application {
-
-    public static void main(String[] args) throws Exception {
-
-        UnifiedTo sdk = UnifiedTo.builder()
-                .security(Security.builder()
-                    .jwt(System.getenv().getOrDefault("JWT", ""))
-                    .build())
-            .build();
-
-        UpdateAdsGroupRequest req = UpdateAdsGroupRequest.builder()
-                .adsGroup(AdsGroup.builder()
-                    .build())
-                .connectionId("<id>")
-                .id("<id>")
-                .build();
-
-        UpdateAdsGroupResponse res = sdk.ads().updateAdsGroup()
-                .request(req)
-                .call();
-
-        if (res.adsGroup().isPresent()) {
-            System.out.println(res.adsGroup().get());
-        }
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                 | Type                                                                      | Required                                                                  | Description                                                               |
-| ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
-| `request`                                                                 | [UpdateAdsGroupRequest](../../models/operations/UpdateAdsGroupRequest.md) | :heavy_check_mark:                                                        | The request object to use for the request.                                |
-
-### Response
-
-**[UpdateAdsGroupResponse](../../models/operations/UpdateAdsGroupResponse.md)**
-
-### Errors
-
-| Error Type             | Status Code            | Content Type           |
-| ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
-
-## updateAdsInsertionorder
-
-Update an insertionorder
-
-### Example Usage
-
-<!-- UsageSnippet language="java" operationID="updateAdsInsertionorder" method="put" path="/ads/{connection_id}/insertionorder/{id}" -->
-```java
-package hello.world;
-
-import java.lang.Exception;
-import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.UpdateAdsInsertionorderRequest;
-import to.unified.unified_java_sdk.models.operations.UpdateAdsInsertionorderResponse;
-import to.unified.unified_java_sdk.models.shared.AdsInsertionorder;
-import to.unified.unified_java_sdk.models.shared.Security;
-
-public class Application {
-
-    public static void main(String[] args) throws Exception {
-
-        UnifiedTo sdk = UnifiedTo.builder()
-                .security(Security.builder()
-                    .jwt(System.getenv().getOrDefault("JWT", ""))
-                    .build())
-            .build();
-
-        UpdateAdsInsertionorderRequest req = UpdateAdsInsertionorderRequest.builder()
-                .adsInsertionorder(AdsInsertionorder.builder()
-                    .build())
-                .connectionId("<id>")
-                .id("<id>")
-                .build();
-
-        UpdateAdsInsertionorderResponse res = sdk.ads().updateAdsInsertionorder()
-                .request(req)
-                .call();
-
-        if (res.adsInsertionorder().isPresent()) {
-            System.out.println(res.adsInsertionorder().get());
-        }
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                                   | Type                                                                                        | Required                                                                                    | Description                                                                                 |
-| ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
-| `request`                                                                                   | [UpdateAdsInsertionorderRequest](../../models/operations/UpdateAdsInsertionorderRequest.md) | :heavy_check_mark:                                                                          | The request object to use for the request.                                                  |
-
-### Response
-
-**[UpdateAdsInsertionorderResponse](../../models/operations/UpdateAdsInsertionorderResponse.md)**
-
-### Errors
-
-| Error Type             | Status Code            | Content Type           |
-| ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
-
-## updateAdsOrganization
-
-Update an organization
-
-### Example Usage
-
-<!-- UsageSnippet language="java" operationID="updateAdsOrganization" method="put" path="/ads/{connection_id}/organization/{id}" -->
-```java
-package hello.world;
-
-import java.lang.Exception;
-import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.UpdateAdsOrganizationRequest;
-import to.unified.unified_java_sdk.models.operations.UpdateAdsOrganizationResponse;
-import to.unified.unified_java_sdk.models.shared.AdsOrganization;
-import to.unified.unified_java_sdk.models.shared.Security;
-
-public class Application {
-
-    public static void main(String[] args) throws Exception {
-
-        UnifiedTo sdk = UnifiedTo.builder()
-                .security(Security.builder()
-                    .jwt(System.getenv().getOrDefault("JWT", ""))
-                    .build())
-            .build();
-
-        UpdateAdsOrganizationRequest req = UpdateAdsOrganizationRequest.builder()
-                .adsOrganization(AdsOrganization.builder()
-                    .build())
-                .connectionId("<id>")
-                .id("<id>")
-                .build();
-
-        UpdateAdsOrganizationResponse res = sdk.ads().updateAdsOrganization()
-                .request(req)
-                .call();
-
-        if (res.adsOrganization().isPresent()) {
-            System.out.println(res.adsOrganization().get());
-        }
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
-| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
-| `request`                                                                               | [UpdateAdsOrganizationRequest](../../models/operations/UpdateAdsOrganizationRequest.md) | :heavy_check_mark:                                                                      | The request object to use for the request.                                              |
-
-### Response
-
-**[UpdateAdsOrganizationResponse](../../models/operations/UpdateAdsOrganizationResponse.md)**
+**[UpdateAdsOrganization2Response](../../models/operations/UpdateAdsOrganization2Response.md)**
 
 ### Errors
 

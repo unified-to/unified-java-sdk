@@ -4,25 +4,26 @@
 
 ### Available Operations
 
-* [getAccountingReport](#getaccountingreport) - Retrieve a report
-* [listAccountingReports](#listaccountingreports) - List all reports
-* [listAdsReports](#listadsreports) - List all reports
-* [listMartechReports](#listmartechreports) - List all reports
+* [getAccountingReport2](#getaccountingreport2) - Retrieve a report
+* [listAccountingReports2](#listaccountingreports2) - List all reports
+* [listAdsReports2](#listadsreports2) - List all reports
+* [listAnalyticsReports2](#listanalyticsreports2) - List all reports
+* [listMartechReports2](#listmartechreports2) - List all reports
 
-## getAccountingReport
+## getAccountingReport2
 
 Retrieve a report
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="getAccountingReport" method="get" path="/accounting/{connection_id}/report/{id}" -->
+<!-- UsageSnippet language="java" operationID="getAccountingReport2" method="get" path="/accounting/{connection_id}/report/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.GetAccountingReportRequest;
-import to.unified.unified_java_sdk.models.operations.GetAccountingReportResponse;
+import to.unified.unified_java_sdk.models.operations.GetAccountingReport2Request;
+import to.unified.unified_java_sdk.models.operations.GetAccountingReport2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -35,12 +36,12 @@ public class Application {
                     .build())
             .build();
 
-        GetAccountingReportRequest req = GetAccountingReportRequest.builder()
+        GetAccountingReport2Request req = GetAccountingReport2Request.builder()
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        GetAccountingReportResponse res = sdk.report().getAccountingReport()
+        GetAccountingReport2Response res = sdk.report().getAccountingReport2()
                 .request(req)
                 .call();
 
@@ -53,13 +54,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                           | Type                                                                                | Required                                                                            | Description                                                                         |
-| ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
-| `request`                                                                           | [GetAccountingReportRequest](../../models/operations/GetAccountingReportRequest.md) | :heavy_check_mark:                                                                  | The request object to use for the request.                                          |
+| Parameter                                                                             | Type                                                                                  | Required                                                                              | Description                                                                           |
+| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| `request`                                                                             | [GetAccountingReport2Request](../../models/operations/GetAccountingReport2Request.md) | :heavy_check_mark:                                                                    | The request object to use for the request.                                            |
 
 ### Response
 
-**[GetAccountingReportResponse](../../models/operations/GetAccountingReportResponse.md)**
+**[GetAccountingReport2Response](../../models/operations/GetAccountingReport2Response.md)**
 
 ### Errors
 
@@ -67,20 +68,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## listAccountingReports
+## listAccountingReports2
 
 List all reports
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="listAccountingReports" method="get" path="/accounting/{connection_id}/report" -->
+<!-- UsageSnippet language="java" operationID="listAccountingReports2" method="get" path="/accounting/{connection_id}/report" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.ListAccountingReportsRequest;
-import to.unified.unified_java_sdk.models.operations.ListAccountingReportsResponse;
+import to.unified.unified_java_sdk.models.operations.ListAccountingReports2Request;
+import to.unified.unified_java_sdk.models.operations.ListAccountingReports2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -93,11 +94,11 @@ public class Application {
                     .build())
             .build();
 
-        ListAccountingReportsRequest req = ListAccountingReportsRequest.builder()
+        ListAccountingReports2Request req = ListAccountingReports2Request.builder()
                 .connectionId("<id>")
                 .build();
 
-        ListAccountingReportsResponse res = sdk.report().listAccountingReports()
+        ListAccountingReports2Response res = sdk.report().listAccountingReports2()
                 .request(req)
                 .call();
 
@@ -110,13 +111,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
-| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
-| `request`                                                                               | [ListAccountingReportsRequest](../../models/operations/ListAccountingReportsRequest.md) | :heavy_check_mark:                                                                      | The request object to use for the request.                                              |
+| Parameter                                                                                 | Type                                                                                      | Required                                                                                  | Description                                                                               |
+| ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
+| `request`                                                                                 | [ListAccountingReports2Request](../../models/operations/ListAccountingReports2Request.md) | :heavy_check_mark:                                                                        | The request object to use for the request.                                                |
 
 ### Response
 
-**[ListAccountingReportsResponse](../../models/operations/ListAccountingReportsResponse.md)**
+**[ListAccountingReports2Response](../../models/operations/ListAccountingReports2Response.md)**
 
 ### Errors
 
@@ -124,20 +125,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## listAdsReports
+## listAdsReports2
 
 List all reports
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="listAdsReports" method="get" path="/ads/{connection_id}/report" -->
+<!-- UsageSnippet language="java" operationID="listAdsReports2" method="get" path="/ads/{connection_id}/report" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.ListAdsReportsRequest;
-import to.unified.unified_java_sdk.models.operations.ListAdsReportsResponse;
+import to.unified.unified_java_sdk.models.operations.ListAdsReports2Request;
+import to.unified.unified_java_sdk.models.operations.ListAdsReports2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -150,11 +151,11 @@ public class Application {
                     .build())
             .build();
 
-        ListAdsReportsRequest req = ListAdsReportsRequest.builder()
+        ListAdsReports2Request req = ListAdsReports2Request.builder()
                 .connectionId("<id>")
                 .build();
 
-        ListAdsReportsResponse res = sdk.report().listAdsReports()
+        ListAdsReports2Response res = sdk.report().listAdsReports2()
                 .request(req)
                 .call();
 
@@ -167,13 +168,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                 | Type                                                                      | Required                                                                  | Description                                                               |
-| ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
-| `request`                                                                 | [ListAdsReportsRequest](../../models/operations/ListAdsReportsRequest.md) | :heavy_check_mark:                                                        | The request object to use for the request.                                |
+| Parameter                                                                   | Type                                                                        | Required                                                                    | Description                                                                 |
+| --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| `request`                                                                   | [ListAdsReports2Request](../../models/operations/ListAdsReports2Request.md) | :heavy_check_mark:                                                          | The request object to use for the request.                                  |
 
 ### Response
 
-**[ListAdsReportsResponse](../../models/operations/ListAdsReportsResponse.md)**
+**[ListAdsReports2Response](../../models/operations/ListAdsReports2Response.md)**
 
 ### Errors
 
@@ -181,20 +182,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## listMartechReports
+## listAnalyticsReports2
 
 List all reports
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="listMartechReports" method="get" path="/martech/{connection_id}/report" -->
+<!-- UsageSnippet language="java" operationID="listAnalyticsReports2" method="get" path="/analytics/{connection_id}/report" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.ListMartechReportsRequest;
-import to.unified.unified_java_sdk.models.operations.ListMartechReportsResponse;
+import to.unified.unified_java_sdk.models.operations.ListAnalyticsReports2Request;
+import to.unified.unified_java_sdk.models.operations.ListAnalyticsReports2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -207,11 +208,68 @@ public class Application {
                     .build())
             .build();
 
-        ListMartechReportsRequest req = ListMartechReportsRequest.builder()
+        ListAnalyticsReports2Request req = ListAnalyticsReports2Request.builder()
                 .connectionId("<id>")
                 .build();
 
-        ListMartechReportsResponse res = sdk.report().listMartechReports()
+        ListAnalyticsReports2Response res = sdk.report().listAnalyticsReports2()
+                .request(req)
+                .call();
+
+        if (res.analyticsReports().isPresent()) {
+            System.out.println(res.analyticsReports().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
+| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| `request`                                                                               | [ListAnalyticsReports2Request](../../models/operations/ListAnalyticsReports2Request.md) | :heavy_check_mark:                                                                      | The request object to use for the request.                                              |
+
+### Response
+
+**[ListAnalyticsReports2Response](../../models/operations/ListAnalyticsReports2Response.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## listMartechReports2
+
+List all reports
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="listMartechReports2" method="get" path="/martech/{connection_id}/report" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.ListMartechReports2Request;
+import to.unified.unified_java_sdk.models.operations.ListMartechReports2Response;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        ListMartechReports2Request req = ListMartechReports2Request.builder()
+                .connectionId("<id>")
+                .build();
+
+        ListMartechReports2Response res = sdk.report().listMartechReports2()
                 .request(req)
                 .call();
 
@@ -224,13 +282,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
-| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
-| `request`                                                                         | [ListMartechReportsRequest](../../models/operations/ListMartechReportsRequest.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
+| Parameter                                                                           | Type                                                                                | Required                                                                            | Description                                                                         |
+| ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| `request`                                                                           | [ListMartechReports2Request](../../models/operations/ListMartechReports2Request.md) | :heavy_check_mark:                                                                  | The request object to use for the request.                                          |
 
 ### Response
 
-**[ListMartechReportsResponse](../../models/operations/ListMartechReportsResponse.md)**
+**[ListMartechReports2Response](../../models/operations/ListMartechReports2Response.md)**
 
 ### Errors
 

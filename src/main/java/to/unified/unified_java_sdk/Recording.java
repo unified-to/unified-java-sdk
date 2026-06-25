@@ -6,38 +6,38 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
-import to.unified.unified_java_sdk.models.operations.CreateUcRecordingRequest;
-import to.unified.unified_java_sdk.models.operations.CreateUcRecordingRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.CreateUcRecordingResponse;
-import to.unified.unified_java_sdk.models.operations.GetCalendarRecordingRequest;
-import to.unified.unified_java_sdk.models.operations.GetCalendarRecordingRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.GetCalendarRecordingResponse;
-import to.unified.unified_java_sdk.models.operations.GetUcRecordingRequest;
-import to.unified.unified_java_sdk.models.operations.GetUcRecordingRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.GetUcRecordingResponse;
-import to.unified.unified_java_sdk.models.operations.ListCalendarRecordingsRequest;
-import to.unified.unified_java_sdk.models.operations.ListCalendarRecordingsRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.ListCalendarRecordingsResponse;
-import to.unified.unified_java_sdk.models.operations.ListUcRecordingsRequest;
-import to.unified.unified_java_sdk.models.operations.ListUcRecordingsRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.ListUcRecordingsResponse;
-import to.unified.unified_java_sdk.models.operations.PatchUcRecordingRequest;
-import to.unified.unified_java_sdk.models.operations.PatchUcRecordingRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.PatchUcRecordingResponse;
-import to.unified.unified_java_sdk.models.operations.RemoveUcRecordingRequest;
-import to.unified.unified_java_sdk.models.operations.RemoveUcRecordingRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.RemoveUcRecordingResponse;
-import to.unified.unified_java_sdk.models.operations.UpdateUcRecordingRequest;
-import to.unified.unified_java_sdk.models.operations.UpdateUcRecordingRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.UpdateUcRecordingResponse;
-import to.unified.unified_java_sdk.operations.CreateUcRecording;
-import to.unified.unified_java_sdk.operations.GetCalendarRecording;
-import to.unified.unified_java_sdk.operations.GetUcRecording;
-import to.unified.unified_java_sdk.operations.ListCalendarRecordings;
-import to.unified.unified_java_sdk.operations.ListUcRecordings;
-import to.unified.unified_java_sdk.operations.PatchUcRecording;
-import to.unified.unified_java_sdk.operations.RemoveUcRecording;
-import to.unified.unified_java_sdk.operations.UpdateUcRecording;
+import to.unified.unified_java_sdk.models.operations.CreateUcRecording2Request;
+import to.unified.unified_java_sdk.models.operations.CreateUcRecording2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.CreateUcRecording2Response;
+import to.unified.unified_java_sdk.models.operations.GetCalendarRecording2Request;
+import to.unified.unified_java_sdk.models.operations.GetCalendarRecording2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetCalendarRecording2Response;
+import to.unified.unified_java_sdk.models.operations.GetUcRecording2Request;
+import to.unified.unified_java_sdk.models.operations.GetUcRecording2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetUcRecording2Response;
+import to.unified.unified_java_sdk.models.operations.ListCalendarRecordings2Request;
+import to.unified.unified_java_sdk.models.operations.ListCalendarRecordings2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListCalendarRecordings2Response;
+import to.unified.unified_java_sdk.models.operations.ListUcRecordings2Request;
+import to.unified.unified_java_sdk.models.operations.ListUcRecordings2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListUcRecordings2Response;
+import to.unified.unified_java_sdk.models.operations.PatchUcRecording2Request;
+import to.unified.unified_java_sdk.models.operations.PatchUcRecording2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.PatchUcRecording2Response;
+import to.unified.unified_java_sdk.models.operations.RemoveUcRecording2Request;
+import to.unified.unified_java_sdk.models.operations.RemoveUcRecording2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.RemoveUcRecording2Response;
+import to.unified.unified_java_sdk.models.operations.UpdateUcRecording2Request;
+import to.unified.unified_java_sdk.models.operations.UpdateUcRecording2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.UpdateUcRecording2Response;
+import to.unified.unified_java_sdk.operations.CreateUcRecording2;
+import to.unified.unified_java_sdk.operations.GetCalendarRecording2;
+import to.unified.unified_java_sdk.operations.GetUcRecording2;
+import to.unified.unified_java_sdk.operations.ListCalendarRecordings2;
+import to.unified.unified_java_sdk.operations.ListUcRecordings2;
+import to.unified.unified_java_sdk.operations.PatchUcRecording2;
+import to.unified.unified_java_sdk.operations.RemoveUcRecording2;
+import to.unified.unified_java_sdk.operations.UpdateUcRecording2;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -65,8 +65,8 @@ public class Recording {
      * 
      * @return The call builder
      */
-    public CreateUcRecordingRequestBuilder createUcRecording() {
-        return new CreateUcRecordingRequestBuilder(sdkConfiguration);
+    public CreateUcRecording2RequestBuilder createUcRecording2() {
+        return new CreateUcRecording2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -76,9 +76,9 @@ public class Recording {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateUcRecordingResponse createUcRecording(@Nonnull CreateUcRecordingRequest request) {
-        RequestOperation<CreateUcRecordingRequest, CreateUcRecordingResponse> operation
-              = new CreateUcRecording.Sync(sdkConfiguration, _headers);
+    public CreateUcRecording2Response createUcRecording2(@Nonnull CreateUcRecording2Request request) {
+        RequestOperation<CreateUcRecording2Request, CreateUcRecording2Response> operation
+              = new CreateUcRecording2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -87,30 +87,8 @@ public class Recording {
      * 
      * @return The call builder
      */
-    public GetCalendarRecordingRequestBuilder getCalendarRecording() {
-        return new GetCalendarRecordingRequestBuilder(sdkConfiguration);
-    }
-
-    /**
-     * Retrieve a recording
-     * 
-     * @param request The request object containing all the parameters for the API call.
-     * @return The response from the API call
-     * @throws RuntimeException subclass if the API call fails
-     */
-    public GetCalendarRecordingResponse getCalendarRecording(@Nonnull GetCalendarRecordingRequest request) {
-        RequestOperation<GetCalendarRecordingRequest, GetCalendarRecordingResponse> operation
-              = new GetCalendarRecording.Sync(sdkConfiguration, _headers);
-        return operation.handleResponse(operation.doRequest(request));
-    }
-
-    /**
-     * Retrieve a recording
-     * 
-     * @return The call builder
-     */
-    public GetUcRecordingRequestBuilder getUcRecording() {
-        return new GetUcRecordingRequestBuilder(sdkConfiguration);
+    public GetCalendarRecording2RequestBuilder getCalendarRecording2() {
+        return new GetCalendarRecording2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -120,9 +98,31 @@ public class Recording {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetUcRecordingResponse getUcRecording(@Nonnull GetUcRecordingRequest request) {
-        RequestOperation<GetUcRecordingRequest, GetUcRecordingResponse> operation
-              = new GetUcRecording.Sync(sdkConfiguration, _headers);
+    public GetCalendarRecording2Response getCalendarRecording2(@Nonnull GetCalendarRecording2Request request) {
+        RequestOperation<GetCalendarRecording2Request, GetCalendarRecording2Response> operation
+              = new GetCalendarRecording2.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Retrieve a recording
+     * 
+     * @return The call builder
+     */
+    public GetUcRecording2RequestBuilder getUcRecording2() {
+        return new GetUcRecording2RequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Retrieve a recording
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetUcRecording2Response getUcRecording2(@Nonnull GetUcRecording2Request request) {
+        RequestOperation<GetUcRecording2Request, GetUcRecording2Response> operation
+              = new GetUcRecording2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -131,8 +131,8 @@ public class Recording {
      * 
      * @return The call builder
      */
-    public ListCalendarRecordingsRequestBuilder listCalendarRecordings() {
-        return new ListCalendarRecordingsRequestBuilder(sdkConfiguration);
+    public ListCalendarRecordings2RequestBuilder listCalendarRecordings2() {
+        return new ListCalendarRecordings2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -142,9 +142,9 @@ public class Recording {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListCalendarRecordingsResponse listCalendarRecordings(@Nonnull ListCalendarRecordingsRequest request) {
-        RequestOperation<ListCalendarRecordingsRequest, ListCalendarRecordingsResponse> operation
-              = new ListCalendarRecordings.Sync(sdkConfiguration, _headers);
+    public ListCalendarRecordings2Response listCalendarRecordings2(@Nonnull ListCalendarRecordings2Request request) {
+        RequestOperation<ListCalendarRecordings2Request, ListCalendarRecordings2Response> operation
+              = new ListCalendarRecordings2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -153,8 +153,8 @@ public class Recording {
      * 
      * @return The call builder
      */
-    public ListUcRecordingsRequestBuilder listUcRecordings() {
-        return new ListUcRecordingsRequestBuilder(sdkConfiguration);
+    public ListUcRecordings2RequestBuilder listUcRecordings2() {
+        return new ListUcRecordings2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -164,9 +164,9 @@ public class Recording {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListUcRecordingsResponse listUcRecordings(@Nonnull ListUcRecordingsRequest request) {
-        RequestOperation<ListUcRecordingsRequest, ListUcRecordingsResponse> operation
-              = new ListUcRecordings.Sync(sdkConfiguration, _headers);
+    public ListUcRecordings2Response listUcRecordings2(@Nonnull ListUcRecordings2Request request) {
+        RequestOperation<ListUcRecordings2Request, ListUcRecordings2Response> operation
+              = new ListUcRecordings2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -175,8 +175,8 @@ public class Recording {
      * 
      * @return The call builder
      */
-    public PatchUcRecordingRequestBuilder patchUcRecording() {
-        return new PatchUcRecordingRequestBuilder(sdkConfiguration);
+    public PatchUcRecording2RequestBuilder patchUcRecording2() {
+        return new PatchUcRecording2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -186,9 +186,9 @@ public class Recording {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchUcRecordingResponse patchUcRecording(@Nonnull PatchUcRecordingRequest request) {
-        RequestOperation<PatchUcRecordingRequest, PatchUcRecordingResponse> operation
-              = new PatchUcRecording.Sync(sdkConfiguration, _headers);
+    public PatchUcRecording2Response patchUcRecording2(@Nonnull PatchUcRecording2Request request) {
+        RequestOperation<PatchUcRecording2Request, PatchUcRecording2Response> operation
+              = new PatchUcRecording2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -197,8 +197,8 @@ public class Recording {
      * 
      * @return The call builder
      */
-    public RemoveUcRecordingRequestBuilder removeUcRecording() {
-        return new RemoveUcRecordingRequestBuilder(sdkConfiguration);
+    public RemoveUcRecording2RequestBuilder removeUcRecording2() {
+        return new RemoveUcRecording2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -208,9 +208,9 @@ public class Recording {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveUcRecordingResponse removeUcRecording(@Nonnull RemoveUcRecordingRequest request) {
-        RequestOperation<RemoveUcRecordingRequest, RemoveUcRecordingResponse> operation
-              = new RemoveUcRecording.Sync(sdkConfiguration, _headers);
+    public RemoveUcRecording2Response removeUcRecording2(@Nonnull RemoveUcRecording2Request request) {
+        RequestOperation<RemoveUcRecording2Request, RemoveUcRecording2Response> operation
+              = new RemoveUcRecording2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -219,8 +219,8 @@ public class Recording {
      * 
      * @return The call builder
      */
-    public UpdateUcRecordingRequestBuilder updateUcRecording() {
-        return new UpdateUcRecordingRequestBuilder(sdkConfiguration);
+    public UpdateUcRecording2RequestBuilder updateUcRecording2() {
+        return new UpdateUcRecording2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -230,9 +230,9 @@ public class Recording {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateUcRecordingResponse updateUcRecording(@Nonnull UpdateUcRecordingRequest request) {
-        RequestOperation<UpdateUcRecordingRequest, UpdateUcRecordingResponse> operation
-              = new UpdateUcRecording.Sync(sdkConfiguration, _headers);
+    public UpdateUcRecording2Response updateUcRecording2(@Nonnull UpdateUcRecording2Request request) {
+        RequestOperation<UpdateUcRecording2Request, UpdateUcRecording2Response> operation
+              = new UpdateUcRecording2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

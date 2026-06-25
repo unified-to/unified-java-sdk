@@ -7,85 +7,85 @@ import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOper
 
 import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
-import to.unified.unified_java_sdk.models.operations.CreateAdsGroupRequest;
-import to.unified.unified_java_sdk.models.operations.CreateHrisGroupRequest;
+import to.unified.unified_java_sdk.models.operations.CreateAdsGroup2Request;
+import to.unified.unified_java_sdk.models.operations.CreateHrisGroup2Request;
 import to.unified.unified_java_sdk.models.operations.CreateScimGroupsRequest;
-import to.unified.unified_java_sdk.models.operations.GetAdsGroupRequest;
-import to.unified.unified_java_sdk.models.operations.GetClubsGroupRequest;
-import to.unified.unified_java_sdk.models.operations.GetHrisGroupRequest;
+import to.unified.unified_java_sdk.models.operations.GetAdsGroup2Request;
+import to.unified.unified_java_sdk.models.operations.GetClubsGroup2Request;
+import to.unified.unified_java_sdk.models.operations.GetHrisGroup2Request;
 import to.unified.unified_java_sdk.models.operations.GetScimGroupsRequest;
-import to.unified.unified_java_sdk.models.operations.ListAdsGroupsRequest;
-import to.unified.unified_java_sdk.models.operations.ListClubsGroupsRequest;
-import to.unified.unified_java_sdk.models.operations.ListHrisGroupsRequest;
+import to.unified.unified_java_sdk.models.operations.ListAdsGroups2Request;
+import to.unified.unified_java_sdk.models.operations.ListClubsGroups2Request;
+import to.unified.unified_java_sdk.models.operations.ListHrisGroups2Request;
 import to.unified.unified_java_sdk.models.operations.ListScimGroupsRequest;
-import to.unified.unified_java_sdk.models.operations.PatchAdsGroupRequest;
-import to.unified.unified_java_sdk.models.operations.PatchHrisGroupRequest;
+import to.unified.unified_java_sdk.models.operations.PatchAdsGroup2Request;
+import to.unified.unified_java_sdk.models.operations.PatchHrisGroup2Request;
 import to.unified.unified_java_sdk.models.operations.PatchScimGroupsRequest;
-import to.unified.unified_java_sdk.models.operations.RemoveAdsGroupRequest;
-import to.unified.unified_java_sdk.models.operations.RemoveHrisGroupRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveAdsGroup2Request;
+import to.unified.unified_java_sdk.models.operations.RemoveHrisGroup2Request;
 import to.unified.unified_java_sdk.models.operations.RemoveScimGroupsRequest;
-import to.unified.unified_java_sdk.models.operations.UpdateAdsGroupRequest;
-import to.unified.unified_java_sdk.models.operations.UpdateHrisGroupRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateAdsGroup2Request;
+import to.unified.unified_java_sdk.models.operations.UpdateHrisGroup2Request;
 import to.unified.unified_java_sdk.models.operations.UpdateScimGroupsRequest;
-import to.unified.unified_java_sdk.models.operations.async.CreateAdsGroupRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.CreateAdsGroupResponse;
-import to.unified.unified_java_sdk.models.operations.async.CreateHrisGroupRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.CreateHrisGroupResponse;
+import to.unified.unified_java_sdk.models.operations.async.CreateAdsGroup2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.CreateAdsGroup2Response;
+import to.unified.unified_java_sdk.models.operations.async.CreateHrisGroup2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.CreateHrisGroup2Response;
 import to.unified.unified_java_sdk.models.operations.async.CreateScimGroupsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.CreateScimGroupsResponse;
-import to.unified.unified_java_sdk.models.operations.async.GetAdsGroupRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.GetAdsGroupResponse;
-import to.unified.unified_java_sdk.models.operations.async.GetClubsGroupRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.GetClubsGroupResponse;
-import to.unified.unified_java_sdk.models.operations.async.GetHrisGroupRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.GetHrisGroupResponse;
+import to.unified.unified_java_sdk.models.operations.async.GetAdsGroup2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetAdsGroup2Response;
+import to.unified.unified_java_sdk.models.operations.async.GetClubsGroup2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetClubsGroup2Response;
+import to.unified.unified_java_sdk.models.operations.async.GetHrisGroup2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetHrisGroup2Response;
 import to.unified.unified_java_sdk.models.operations.async.GetScimGroupsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.GetScimGroupsResponse;
-import to.unified.unified_java_sdk.models.operations.async.ListAdsGroupsRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.ListAdsGroupsResponse;
-import to.unified.unified_java_sdk.models.operations.async.ListClubsGroupsRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.ListClubsGroupsResponse;
-import to.unified.unified_java_sdk.models.operations.async.ListHrisGroupsRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.ListHrisGroupsResponse;
+import to.unified.unified_java_sdk.models.operations.async.ListAdsGroups2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListAdsGroups2Response;
+import to.unified.unified_java_sdk.models.operations.async.ListClubsGroups2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListClubsGroups2Response;
+import to.unified.unified_java_sdk.models.operations.async.ListHrisGroups2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListHrisGroups2Response;
 import to.unified.unified_java_sdk.models.operations.async.ListScimGroupsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.ListScimGroupsResponse;
-import to.unified.unified_java_sdk.models.operations.async.PatchAdsGroupRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.PatchAdsGroupResponse;
-import to.unified.unified_java_sdk.models.operations.async.PatchHrisGroupRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.PatchHrisGroupResponse;
+import to.unified.unified_java_sdk.models.operations.async.PatchAdsGroup2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.PatchAdsGroup2Response;
+import to.unified.unified_java_sdk.models.operations.async.PatchHrisGroup2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.PatchHrisGroup2Response;
 import to.unified.unified_java_sdk.models.operations.async.PatchScimGroupsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.PatchScimGroupsResponse;
-import to.unified.unified_java_sdk.models.operations.async.RemoveAdsGroupRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.RemoveAdsGroupResponse;
-import to.unified.unified_java_sdk.models.operations.async.RemoveHrisGroupRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.RemoveHrisGroupResponse;
+import to.unified.unified_java_sdk.models.operations.async.RemoveAdsGroup2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.RemoveAdsGroup2Response;
+import to.unified.unified_java_sdk.models.operations.async.RemoveHrisGroup2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.RemoveHrisGroup2Response;
 import to.unified.unified_java_sdk.models.operations.async.RemoveScimGroupsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.RemoveScimGroupsResponse;
-import to.unified.unified_java_sdk.models.operations.async.UpdateAdsGroupRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.UpdateAdsGroupResponse;
-import to.unified.unified_java_sdk.models.operations.async.UpdateHrisGroupRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.UpdateHrisGroupResponse;
+import to.unified.unified_java_sdk.models.operations.async.UpdateAdsGroup2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.UpdateAdsGroup2Response;
+import to.unified.unified_java_sdk.models.operations.async.UpdateHrisGroup2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.UpdateHrisGroup2Response;
 import to.unified.unified_java_sdk.models.operations.async.UpdateScimGroupsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.UpdateScimGroupsResponse;
-import to.unified.unified_java_sdk.operations.CreateAdsGroup;
-import to.unified.unified_java_sdk.operations.CreateHrisGroup;
+import to.unified.unified_java_sdk.operations.CreateAdsGroup2;
+import to.unified.unified_java_sdk.operations.CreateHrisGroup2;
 import to.unified.unified_java_sdk.operations.CreateScimGroups;
-import to.unified.unified_java_sdk.operations.GetAdsGroup;
-import to.unified.unified_java_sdk.operations.GetClubsGroup;
-import to.unified.unified_java_sdk.operations.GetHrisGroup;
+import to.unified.unified_java_sdk.operations.GetAdsGroup2;
+import to.unified.unified_java_sdk.operations.GetClubsGroup2;
+import to.unified.unified_java_sdk.operations.GetHrisGroup2;
 import to.unified.unified_java_sdk.operations.GetScimGroups;
-import to.unified.unified_java_sdk.operations.ListAdsGroups;
-import to.unified.unified_java_sdk.operations.ListClubsGroups;
-import to.unified.unified_java_sdk.operations.ListHrisGroups;
+import to.unified.unified_java_sdk.operations.ListAdsGroups2;
+import to.unified.unified_java_sdk.operations.ListClubsGroups2;
+import to.unified.unified_java_sdk.operations.ListHrisGroups2;
 import to.unified.unified_java_sdk.operations.ListScimGroups;
-import to.unified.unified_java_sdk.operations.PatchAdsGroup;
-import to.unified.unified_java_sdk.operations.PatchHrisGroup;
+import to.unified.unified_java_sdk.operations.PatchAdsGroup2;
+import to.unified.unified_java_sdk.operations.PatchHrisGroup2;
 import to.unified.unified_java_sdk.operations.PatchScimGroups;
-import to.unified.unified_java_sdk.operations.RemoveAdsGroup;
-import to.unified.unified_java_sdk.operations.RemoveHrisGroup;
+import to.unified.unified_java_sdk.operations.RemoveAdsGroup2;
+import to.unified.unified_java_sdk.operations.RemoveHrisGroup2;
 import to.unified.unified_java_sdk.operations.RemoveScimGroups;
-import to.unified.unified_java_sdk.operations.UpdateAdsGroup;
-import to.unified.unified_java_sdk.operations.UpdateHrisGroup;
+import to.unified.unified_java_sdk.operations.UpdateAdsGroup2;
+import to.unified.unified_java_sdk.operations.UpdateHrisGroup2;
 import to.unified.unified_java_sdk.operations.UpdateScimGroups;
 import to.unified.unified_java_sdk.utils.Headers;
 
@@ -115,19 +115,19 @@ public class AsyncGroup {
      * 
      * @return The async call builder
      */
-    public CreateAdsGroupRequestBuilder createAdsGroup() {
-        return new CreateAdsGroupRequestBuilder(sdkConfiguration);
+    public CreateAdsGroup2RequestBuilder createAdsGroup2() {
+        return new CreateAdsGroup2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Create a group
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<CreateAdsGroupResponse>} - The async response
+     * @return {@code CompletableFuture<CreateAdsGroup2Response>} - The async response
      */
-    public CompletableFuture<CreateAdsGroupResponse> createAdsGroup(@Nonnull CreateAdsGroupRequest request) {
-        AsyncRequestOperation<CreateAdsGroupRequest, CreateAdsGroupResponse> operation
-              = new CreateAdsGroup.Async(sdkConfiguration, _headers);
+    public CompletableFuture<CreateAdsGroup2Response> createAdsGroup2(@Nonnull CreateAdsGroup2Request request) {
+        AsyncRequestOperation<CreateAdsGroup2Request, CreateAdsGroup2Response> operation
+              = new CreateAdsGroup2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -138,19 +138,19 @@ public class AsyncGroup {
      * 
      * @return The async call builder
      */
-    public CreateHrisGroupRequestBuilder createHrisGroup() {
-        return new CreateHrisGroupRequestBuilder(sdkConfiguration);
+    public CreateHrisGroup2RequestBuilder createHrisGroup2() {
+        return new CreateHrisGroup2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Create a group
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<CreateHrisGroupResponse>} - The async response
+     * @return {@code CompletableFuture<CreateHrisGroup2Response>} - The async response
      */
-    public CompletableFuture<CreateHrisGroupResponse> createHrisGroup(@Nonnull CreateHrisGroupRequest request) {
-        AsyncRequestOperation<CreateHrisGroupRequest, CreateHrisGroupResponse> operation
-              = new CreateHrisGroup.Async(sdkConfiguration, _headers);
+    public CompletableFuture<CreateHrisGroup2Response> createHrisGroup2(@Nonnull CreateHrisGroup2Request request) {
+        AsyncRequestOperation<CreateHrisGroup2Request, CreateHrisGroup2Response> operation
+              = new CreateHrisGroup2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -184,19 +184,19 @@ public class AsyncGroup {
      * 
      * @return The async call builder
      */
-    public GetAdsGroupRequestBuilder getAdsGroup() {
-        return new GetAdsGroupRequestBuilder(sdkConfiguration);
+    public GetAdsGroup2RequestBuilder getAdsGroup2() {
+        return new GetAdsGroup2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Retrieve a group
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<GetAdsGroupResponse>} - The async response
+     * @return {@code CompletableFuture<GetAdsGroup2Response>} - The async response
      */
-    public CompletableFuture<GetAdsGroupResponse> getAdsGroup(@Nonnull GetAdsGroupRequest request) {
-        AsyncRequestOperation<GetAdsGroupRequest, GetAdsGroupResponse> operation
-              = new GetAdsGroup.Async(sdkConfiguration, _headers);
+    public CompletableFuture<GetAdsGroup2Response> getAdsGroup2(@Nonnull GetAdsGroup2Request request) {
+        AsyncRequestOperation<GetAdsGroup2Request, GetAdsGroup2Response> operation
+              = new GetAdsGroup2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -207,19 +207,19 @@ public class AsyncGroup {
      * 
      * @return The async call builder
      */
-    public GetClubsGroupRequestBuilder getClubsGroup() {
-        return new GetClubsGroupRequestBuilder(sdkConfiguration);
+    public GetClubsGroup2RequestBuilder getClubsGroup2() {
+        return new GetClubsGroup2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Retrieve a group
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<GetClubsGroupResponse>} - The async response
+     * @return {@code CompletableFuture<GetClubsGroup2Response>} - The async response
      */
-    public CompletableFuture<GetClubsGroupResponse> getClubsGroup(@Nonnull GetClubsGroupRequest request) {
-        AsyncRequestOperation<GetClubsGroupRequest, GetClubsGroupResponse> operation
-              = new GetClubsGroup.Async(sdkConfiguration, _headers);
+    public CompletableFuture<GetClubsGroup2Response> getClubsGroup2(@Nonnull GetClubsGroup2Request request) {
+        AsyncRequestOperation<GetClubsGroup2Request, GetClubsGroup2Response> operation
+              = new GetClubsGroup2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -230,19 +230,19 @@ public class AsyncGroup {
      * 
      * @return The async call builder
      */
-    public GetHrisGroupRequestBuilder getHrisGroup() {
-        return new GetHrisGroupRequestBuilder(sdkConfiguration);
+    public GetHrisGroup2RequestBuilder getHrisGroup2() {
+        return new GetHrisGroup2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Retrieve a group
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<GetHrisGroupResponse>} - The async response
+     * @return {@code CompletableFuture<GetHrisGroup2Response>} - The async response
      */
-    public CompletableFuture<GetHrisGroupResponse> getHrisGroup(@Nonnull GetHrisGroupRequest request) {
-        AsyncRequestOperation<GetHrisGroupRequest, GetHrisGroupResponse> operation
-              = new GetHrisGroup.Async(sdkConfiguration, _headers);
+    public CompletableFuture<GetHrisGroup2Response> getHrisGroup2(@Nonnull GetHrisGroup2Request request) {
+        AsyncRequestOperation<GetHrisGroup2Request, GetHrisGroup2Response> operation
+              = new GetHrisGroup2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -276,19 +276,19 @@ public class AsyncGroup {
      * 
      * @return The async call builder
      */
-    public ListAdsGroupsRequestBuilder listAdsGroups() {
-        return new ListAdsGroupsRequestBuilder(sdkConfiguration);
+    public ListAdsGroups2RequestBuilder listAdsGroups2() {
+        return new ListAdsGroups2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * List all groups
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<ListAdsGroupsResponse>} - The async response
+     * @return {@code CompletableFuture<ListAdsGroups2Response>} - The async response
      */
-    public CompletableFuture<ListAdsGroupsResponse> listAdsGroups(@Nonnull ListAdsGroupsRequest request) {
-        AsyncRequestOperation<ListAdsGroupsRequest, ListAdsGroupsResponse> operation
-              = new ListAdsGroups.Async(sdkConfiguration, _headers);
+    public CompletableFuture<ListAdsGroups2Response> listAdsGroups2(@Nonnull ListAdsGroups2Request request) {
+        AsyncRequestOperation<ListAdsGroups2Request, ListAdsGroups2Response> operation
+              = new ListAdsGroups2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -299,19 +299,19 @@ public class AsyncGroup {
      * 
      * @return The async call builder
      */
-    public ListClubsGroupsRequestBuilder listClubsGroups() {
-        return new ListClubsGroupsRequestBuilder(sdkConfiguration);
+    public ListClubsGroups2RequestBuilder listClubsGroups2() {
+        return new ListClubsGroups2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * List all groups
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<ListClubsGroupsResponse>} - The async response
+     * @return {@code CompletableFuture<ListClubsGroups2Response>} - The async response
      */
-    public CompletableFuture<ListClubsGroupsResponse> listClubsGroups(@Nonnull ListClubsGroupsRequest request) {
-        AsyncRequestOperation<ListClubsGroupsRequest, ListClubsGroupsResponse> operation
-              = new ListClubsGroups.Async(sdkConfiguration, _headers);
+    public CompletableFuture<ListClubsGroups2Response> listClubsGroups2(@Nonnull ListClubsGroups2Request request) {
+        AsyncRequestOperation<ListClubsGroups2Request, ListClubsGroups2Response> operation
+              = new ListClubsGroups2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -322,19 +322,19 @@ public class AsyncGroup {
      * 
      * @return The async call builder
      */
-    public ListHrisGroupsRequestBuilder listHrisGroups() {
-        return new ListHrisGroupsRequestBuilder(sdkConfiguration);
+    public ListHrisGroups2RequestBuilder listHrisGroups2() {
+        return new ListHrisGroups2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * List all groups
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<ListHrisGroupsResponse>} - The async response
+     * @return {@code CompletableFuture<ListHrisGroups2Response>} - The async response
      */
-    public CompletableFuture<ListHrisGroupsResponse> listHrisGroups(@Nonnull ListHrisGroupsRequest request) {
-        AsyncRequestOperation<ListHrisGroupsRequest, ListHrisGroupsResponse> operation
-              = new ListHrisGroups.Async(sdkConfiguration, _headers);
+    public CompletableFuture<ListHrisGroups2Response> listHrisGroups2(@Nonnull ListHrisGroups2Request request) {
+        AsyncRequestOperation<ListHrisGroups2Request, ListHrisGroups2Response> operation
+              = new ListHrisGroups2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -368,19 +368,19 @@ public class AsyncGroup {
      * 
      * @return The async call builder
      */
-    public PatchAdsGroupRequestBuilder patchAdsGroup() {
-        return new PatchAdsGroupRequestBuilder(sdkConfiguration);
+    public PatchAdsGroup2RequestBuilder patchAdsGroup2() {
+        return new PatchAdsGroup2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update a group
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<PatchAdsGroupResponse>} - The async response
+     * @return {@code CompletableFuture<PatchAdsGroup2Response>} - The async response
      */
-    public CompletableFuture<PatchAdsGroupResponse> patchAdsGroup(@Nonnull PatchAdsGroupRequest request) {
-        AsyncRequestOperation<PatchAdsGroupRequest, PatchAdsGroupResponse> operation
-              = new PatchAdsGroup.Async(sdkConfiguration, _headers);
+    public CompletableFuture<PatchAdsGroup2Response> patchAdsGroup2(@Nonnull PatchAdsGroup2Request request) {
+        AsyncRequestOperation<PatchAdsGroup2Request, PatchAdsGroup2Response> operation
+              = new PatchAdsGroup2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -391,19 +391,19 @@ public class AsyncGroup {
      * 
      * @return The async call builder
      */
-    public PatchHrisGroupRequestBuilder patchHrisGroup() {
-        return new PatchHrisGroupRequestBuilder(sdkConfiguration);
+    public PatchHrisGroup2RequestBuilder patchHrisGroup2() {
+        return new PatchHrisGroup2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update a group
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<PatchHrisGroupResponse>} - The async response
+     * @return {@code CompletableFuture<PatchHrisGroup2Response>} - The async response
      */
-    public CompletableFuture<PatchHrisGroupResponse> patchHrisGroup(@Nonnull PatchHrisGroupRequest request) {
-        AsyncRequestOperation<PatchHrisGroupRequest, PatchHrisGroupResponse> operation
-              = new PatchHrisGroup.Async(sdkConfiguration, _headers);
+    public CompletableFuture<PatchHrisGroup2Response> patchHrisGroup2(@Nonnull PatchHrisGroup2Request request) {
+        AsyncRequestOperation<PatchHrisGroup2Request, PatchHrisGroup2Response> operation
+              = new PatchHrisGroup2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -437,19 +437,19 @@ public class AsyncGroup {
      * 
      * @return The async call builder
      */
-    public RemoveAdsGroupRequestBuilder removeAdsGroup() {
-        return new RemoveAdsGroupRequestBuilder(sdkConfiguration);
+    public RemoveAdsGroup2RequestBuilder removeAdsGroup2() {
+        return new RemoveAdsGroup2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Remove a group
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<RemoveAdsGroupResponse>} - The async response
+     * @return {@code CompletableFuture<RemoveAdsGroup2Response>} - The async response
      */
-    public CompletableFuture<RemoveAdsGroupResponse> removeAdsGroup(@Nonnull RemoveAdsGroupRequest request) {
-        AsyncRequestOperation<RemoveAdsGroupRequest, RemoveAdsGroupResponse> operation
-              = new RemoveAdsGroup.Async(sdkConfiguration, _headers);
+    public CompletableFuture<RemoveAdsGroup2Response> removeAdsGroup2(@Nonnull RemoveAdsGroup2Request request) {
+        AsyncRequestOperation<RemoveAdsGroup2Request, RemoveAdsGroup2Response> operation
+              = new RemoveAdsGroup2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -460,19 +460,19 @@ public class AsyncGroup {
      * 
      * @return The async call builder
      */
-    public RemoveHrisGroupRequestBuilder removeHrisGroup() {
-        return new RemoveHrisGroupRequestBuilder(sdkConfiguration);
+    public RemoveHrisGroup2RequestBuilder removeHrisGroup2() {
+        return new RemoveHrisGroup2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Remove a group
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<RemoveHrisGroupResponse>} - The async response
+     * @return {@code CompletableFuture<RemoveHrisGroup2Response>} - The async response
      */
-    public CompletableFuture<RemoveHrisGroupResponse> removeHrisGroup(@Nonnull RemoveHrisGroupRequest request) {
-        AsyncRequestOperation<RemoveHrisGroupRequest, RemoveHrisGroupResponse> operation
-              = new RemoveHrisGroup.Async(sdkConfiguration, _headers);
+    public CompletableFuture<RemoveHrisGroup2Response> removeHrisGroup2(@Nonnull RemoveHrisGroup2Request request) {
+        AsyncRequestOperation<RemoveHrisGroup2Request, RemoveHrisGroup2Response> operation
+              = new RemoveHrisGroup2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -506,19 +506,19 @@ public class AsyncGroup {
      * 
      * @return The async call builder
      */
-    public UpdateAdsGroupRequestBuilder updateAdsGroup() {
-        return new UpdateAdsGroupRequestBuilder(sdkConfiguration);
+    public UpdateAdsGroup2RequestBuilder updateAdsGroup2() {
+        return new UpdateAdsGroup2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update a group
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<UpdateAdsGroupResponse>} - The async response
+     * @return {@code CompletableFuture<UpdateAdsGroup2Response>} - The async response
      */
-    public CompletableFuture<UpdateAdsGroupResponse> updateAdsGroup(@Nonnull UpdateAdsGroupRequest request) {
-        AsyncRequestOperation<UpdateAdsGroupRequest, UpdateAdsGroupResponse> operation
-              = new UpdateAdsGroup.Async(sdkConfiguration, _headers);
+    public CompletableFuture<UpdateAdsGroup2Response> updateAdsGroup2(@Nonnull UpdateAdsGroup2Request request) {
+        AsyncRequestOperation<UpdateAdsGroup2Request, UpdateAdsGroup2Response> operation
+              = new UpdateAdsGroup2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -529,19 +529,19 @@ public class AsyncGroup {
      * 
      * @return The async call builder
      */
-    public UpdateHrisGroupRequestBuilder updateHrisGroup() {
-        return new UpdateHrisGroupRequestBuilder(sdkConfiguration);
+    public UpdateHrisGroup2RequestBuilder updateHrisGroup2() {
+        return new UpdateHrisGroup2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update a group
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<UpdateHrisGroupResponse>} - The async response
+     * @return {@code CompletableFuture<UpdateHrisGroup2Response>} - The async response
      */
-    public CompletableFuture<UpdateHrisGroupResponse> updateHrisGroup(@Nonnull UpdateHrisGroupRequest request) {
-        AsyncRequestOperation<UpdateHrisGroupRequest, UpdateHrisGroupResponse> operation
-              = new UpdateHrisGroup.Async(sdkConfiguration, _headers);
+    public CompletableFuture<UpdateHrisGroup2Response> updateHrisGroup2(@Nonnull UpdateHrisGroup2Request request) {
+        AsyncRequestOperation<UpdateHrisGroup2Request, UpdateHrisGroup2Response> operation
+              = new UpdateHrisGroup2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

@@ -4,27 +4,27 @@
 
 ### Available Operations
 
-* [createAccountingJournal](#createaccountingjournal) - Create a journal
-* [getAccountingJournal](#getaccountingjournal) - Retrieve a journal
-* [listAccountingJournals](#listaccountingjournals) - List all journals
-* [patchAccountingJournal](#patchaccountingjournal) - Update a journal
-* [removeAccountingJournal](#removeaccountingjournal) - Remove a journal
-* [updateAccountingJournal](#updateaccountingjournal) - Update a journal
+* [createAccountingJournal2](#createaccountingjournal2) - Create a journal
+* [getAccountingJournal2](#getaccountingjournal2) - Retrieve a journal
+* [listAccountingJournals2](#listaccountingjournals2) - List all journals
+* [patchAccountingJournal2](#patchaccountingjournal2) - Update a journal
+* [removeAccountingJournal2](#removeaccountingjournal2) - Remove a journal
+* [updateAccountingJournal2](#updateaccountingjournal2) - Update a journal
 
-## createAccountingJournal
+## createAccountingJournal2
 
 Create a journal
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createAccountingJournal" method="post" path="/accounting/{connection_id}/journal" -->
+<!-- UsageSnippet language="java" operationID="createAccountingJournal2" method="post" path="/accounting/{connection_id}/journal" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.CreateAccountingJournalRequest;
-import to.unified.unified_java_sdk.models.operations.CreateAccountingJournalResponse;
+import to.unified.unified_java_sdk.models.operations.CreateAccountingJournal2Request;
+import to.unified.unified_java_sdk.models.operations.CreateAccountingJournal2Response;
 import to.unified.unified_java_sdk.models.shared.AccountingJournal;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -38,13 +38,13 @@ public class Application {
                     .build())
             .build();
 
-        CreateAccountingJournalRequest req = CreateAccountingJournalRequest.builder()
+        CreateAccountingJournal2Request req = CreateAccountingJournal2Request.builder()
                 .accountingJournal(AccountingJournal.builder()
                     .build())
                 .connectionId("<id>")
                 .build();
 
-        CreateAccountingJournalResponse res = sdk.journal().createAccountingJournal()
+        CreateAccountingJournal2Response res = sdk.journal().createAccountingJournal2()
                 .request(req)
                 .call();
 
@@ -57,13 +57,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                   | Type                                                                                        | Required                                                                                    | Description                                                                                 |
-| ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
-| `request`                                                                                   | [CreateAccountingJournalRequest](../../models/operations/CreateAccountingJournalRequest.md) | :heavy_check_mark:                                                                          | The request object to use for the request.                                                  |
+| Parameter                                                                                     | Type                                                                                          | Required                                                                                      | Description                                                                                   |
+| --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
+| `request`                                                                                     | [CreateAccountingJournal2Request](../../models/operations/CreateAccountingJournal2Request.md) | :heavy_check_mark:                                                                            | The request object to use for the request.                                                    |
 
 ### Response
 
-**[CreateAccountingJournalResponse](../../models/operations/CreateAccountingJournalResponse.md)**
+**[CreateAccountingJournal2Response](../../models/operations/CreateAccountingJournal2Response.md)**
 
 ### Errors
 
@@ -71,20 +71,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## getAccountingJournal
+## getAccountingJournal2
 
 Retrieve a journal
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="getAccountingJournal" method="get" path="/accounting/{connection_id}/journal/{id}" -->
+<!-- UsageSnippet language="java" operationID="getAccountingJournal2" method="get" path="/accounting/{connection_id}/journal/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.GetAccountingJournalRequest;
-import to.unified.unified_java_sdk.models.operations.GetAccountingJournalResponse;
+import to.unified.unified_java_sdk.models.operations.GetAccountingJournal2Request;
+import to.unified.unified_java_sdk.models.operations.GetAccountingJournal2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -97,12 +97,12 @@ public class Application {
                     .build())
             .build();
 
-        GetAccountingJournalRequest req = GetAccountingJournalRequest.builder()
+        GetAccountingJournal2Request req = GetAccountingJournal2Request.builder()
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        GetAccountingJournalResponse res = sdk.journal().getAccountingJournal()
+        GetAccountingJournal2Response res = sdk.journal().getAccountingJournal2()
                 .request(req)
                 .call();
 
@@ -115,13 +115,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                             | Type                                                                                  | Required                                                                              | Description                                                                           |
-| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
-| `request`                                                                             | [GetAccountingJournalRequest](../../models/operations/GetAccountingJournalRequest.md) | :heavy_check_mark:                                                                    | The request object to use for the request.                                            |
+| Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
+| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| `request`                                                                               | [GetAccountingJournal2Request](../../models/operations/GetAccountingJournal2Request.md) | :heavy_check_mark:                                                                      | The request object to use for the request.                                              |
 
 ### Response
 
-**[GetAccountingJournalResponse](../../models/operations/GetAccountingJournalResponse.md)**
+**[GetAccountingJournal2Response](../../models/operations/GetAccountingJournal2Response.md)**
 
 ### Errors
 
@@ -129,20 +129,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## listAccountingJournals
+## listAccountingJournals2
 
 List all journals
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="listAccountingJournals" method="get" path="/accounting/{connection_id}/journal" -->
+<!-- UsageSnippet language="java" operationID="listAccountingJournals2" method="get" path="/accounting/{connection_id}/journal" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.ListAccountingJournalsRequest;
-import to.unified.unified_java_sdk.models.operations.ListAccountingJournalsResponse;
+import to.unified.unified_java_sdk.models.operations.ListAccountingJournals2Request;
+import to.unified.unified_java_sdk.models.operations.ListAccountingJournals2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -155,11 +155,11 @@ public class Application {
                     .build())
             .build();
 
-        ListAccountingJournalsRequest req = ListAccountingJournalsRequest.builder()
+        ListAccountingJournals2Request req = ListAccountingJournals2Request.builder()
                 .connectionId("<id>")
                 .build();
 
-        ListAccountingJournalsResponse res = sdk.journal().listAccountingJournals()
+        ListAccountingJournals2Response res = sdk.journal().listAccountingJournals2()
                 .request(req)
                 .call();
 
@@ -172,13 +172,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                 | Type                                                                                      | Required                                                                                  | Description                                                                               |
-| ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
-| `request`                                                                                 | [ListAccountingJournalsRequest](../../models/operations/ListAccountingJournalsRequest.md) | :heavy_check_mark:                                                                        | The request object to use for the request.                                                |
+| Parameter                                                                                   | Type                                                                                        | Required                                                                                    | Description                                                                                 |
+| ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
+| `request`                                                                                   | [ListAccountingJournals2Request](../../models/operations/ListAccountingJournals2Request.md) | :heavy_check_mark:                                                                          | The request object to use for the request.                                                  |
 
 ### Response
 
-**[ListAccountingJournalsResponse](../../models/operations/ListAccountingJournalsResponse.md)**
+**[ListAccountingJournals2Response](../../models/operations/ListAccountingJournals2Response.md)**
 
 ### Errors
 
@@ -186,20 +186,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## patchAccountingJournal
+## patchAccountingJournal2
 
 Update a journal
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchAccountingJournal" method="patch" path="/accounting/{connection_id}/journal/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchAccountingJournal2" method="patch" path="/accounting/{connection_id}/journal/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.PatchAccountingJournalRequest;
-import to.unified.unified_java_sdk.models.operations.PatchAccountingJournalResponse;
+import to.unified.unified_java_sdk.models.operations.PatchAccountingJournal2Request;
+import to.unified.unified_java_sdk.models.operations.PatchAccountingJournal2Response;
 import to.unified.unified_java_sdk.models.shared.AccountingJournal;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -213,14 +213,14 @@ public class Application {
                     .build())
             .build();
 
-        PatchAccountingJournalRequest req = PatchAccountingJournalRequest.builder()
+        PatchAccountingJournal2Request req = PatchAccountingJournal2Request.builder()
                 .accountingJournal(AccountingJournal.builder()
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        PatchAccountingJournalResponse res = sdk.journal().patchAccountingJournal()
+        PatchAccountingJournal2Response res = sdk.journal().patchAccountingJournal2()
                 .request(req)
                 .call();
 
@@ -233,13 +233,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                 | Type                                                                                      | Required                                                                                  | Description                                                                               |
-| ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
-| `request`                                                                                 | [PatchAccountingJournalRequest](../../models/operations/PatchAccountingJournalRequest.md) | :heavy_check_mark:                                                                        | The request object to use for the request.                                                |
+| Parameter                                                                                   | Type                                                                                        | Required                                                                                    | Description                                                                                 |
+| ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
+| `request`                                                                                   | [PatchAccountingJournal2Request](../../models/operations/PatchAccountingJournal2Request.md) | :heavy_check_mark:                                                                          | The request object to use for the request.                                                  |
 
 ### Response
 
-**[PatchAccountingJournalResponse](../../models/operations/PatchAccountingJournalResponse.md)**
+**[PatchAccountingJournal2Response](../../models/operations/PatchAccountingJournal2Response.md)**
 
 ### Errors
 
@@ -247,20 +247,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## removeAccountingJournal
+## removeAccountingJournal2
 
 Remove a journal
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="removeAccountingJournal" method="delete" path="/accounting/{connection_id}/journal/{id}" -->
+<!-- UsageSnippet language="java" operationID="removeAccountingJournal2" method="delete" path="/accounting/{connection_id}/journal/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.RemoveAccountingJournalRequest;
-import to.unified.unified_java_sdk.models.operations.RemoveAccountingJournalResponse;
+import to.unified.unified_java_sdk.models.operations.RemoveAccountingJournal2Request;
+import to.unified.unified_java_sdk.models.operations.RemoveAccountingJournal2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -273,12 +273,12 @@ public class Application {
                     .build())
             .build();
 
-        RemoveAccountingJournalRequest req = RemoveAccountingJournalRequest.builder()
+        RemoveAccountingJournal2Request req = RemoveAccountingJournal2Request.builder()
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        RemoveAccountingJournalResponse res = sdk.journal().removeAccountingJournal()
+        RemoveAccountingJournal2Response res = sdk.journal().removeAccountingJournal2()
                 .request(req)
                 .call();
 
@@ -289,13 +289,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                   | Type                                                                                        | Required                                                                                    | Description                                                                                 |
-| ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
-| `request`                                                                                   | [RemoveAccountingJournalRequest](../../models/operations/RemoveAccountingJournalRequest.md) | :heavy_check_mark:                                                                          | The request object to use for the request.                                                  |
+| Parameter                                                                                     | Type                                                                                          | Required                                                                                      | Description                                                                                   |
+| --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
+| `request`                                                                                     | [RemoveAccountingJournal2Request](../../models/operations/RemoveAccountingJournal2Request.md) | :heavy_check_mark:                                                                            | The request object to use for the request.                                                    |
 
 ### Response
 
-**[RemoveAccountingJournalResponse](../../models/operations/RemoveAccountingJournalResponse.md)**
+**[RemoveAccountingJournal2Response](../../models/operations/RemoveAccountingJournal2Response.md)**
 
 ### Errors
 
@@ -303,20 +303,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## updateAccountingJournal
+## updateAccountingJournal2
 
 Update a journal
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateAccountingJournal" method="put" path="/accounting/{connection_id}/journal/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateAccountingJournal2" method="put" path="/accounting/{connection_id}/journal/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.UpdateAccountingJournalRequest;
-import to.unified.unified_java_sdk.models.operations.UpdateAccountingJournalResponse;
+import to.unified.unified_java_sdk.models.operations.UpdateAccountingJournal2Request;
+import to.unified.unified_java_sdk.models.operations.UpdateAccountingJournal2Response;
 import to.unified.unified_java_sdk.models.shared.AccountingJournal;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -330,14 +330,14 @@ public class Application {
                     .build())
             .build();
 
-        UpdateAccountingJournalRequest req = UpdateAccountingJournalRequest.builder()
+        UpdateAccountingJournal2Request req = UpdateAccountingJournal2Request.builder()
                 .accountingJournal(AccountingJournal.builder()
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        UpdateAccountingJournalResponse res = sdk.journal().updateAccountingJournal()
+        UpdateAccountingJournal2Response res = sdk.journal().updateAccountingJournal2()
                 .request(req)
                 .call();
 
@@ -350,13 +350,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                   | Type                                                                                        | Required                                                                                    | Description                                                                                 |
-| ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
-| `request`                                                                                   | [UpdateAccountingJournalRequest](../../models/operations/UpdateAccountingJournalRequest.md) | :heavy_check_mark:                                                                          | The request object to use for the request.                                                  |
+| Parameter                                                                                     | Type                                                                                          | Required                                                                                      | Description                                                                                   |
+| --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
+| `request`                                                                                     | [UpdateAccountingJournal2Request](../../models/operations/UpdateAccountingJournal2Request.md) | :heavy_check_mark:                                                                            | The request object to use for the request.                                                    |
 
 ### Response
 
-**[UpdateAccountingJournalResponse](../../models/operations/UpdateAccountingJournalResponse.md)**
+**[UpdateAccountingJournal2Response](../../models/operations/UpdateAccountingJournal2Response.md)**
 
 ### Errors
 

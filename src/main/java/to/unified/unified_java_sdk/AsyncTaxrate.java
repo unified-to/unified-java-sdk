@@ -7,30 +7,30 @@ import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOper
 
 import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
-import to.unified.unified_java_sdk.models.operations.CreateAccountingTaxrateRequest;
-import to.unified.unified_java_sdk.models.operations.GetAccountingTaxrateRequest;
-import to.unified.unified_java_sdk.models.operations.ListAccountingTaxratesRequest;
-import to.unified.unified_java_sdk.models.operations.PatchAccountingTaxrateRequest;
-import to.unified.unified_java_sdk.models.operations.RemoveAccountingTaxrateRequest;
-import to.unified.unified_java_sdk.models.operations.UpdateAccountingTaxrateRequest;
-import to.unified.unified_java_sdk.models.operations.async.CreateAccountingTaxrateRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.CreateAccountingTaxrateResponse;
-import to.unified.unified_java_sdk.models.operations.async.GetAccountingTaxrateRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.GetAccountingTaxrateResponse;
-import to.unified.unified_java_sdk.models.operations.async.ListAccountingTaxratesRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.ListAccountingTaxratesResponse;
-import to.unified.unified_java_sdk.models.operations.async.PatchAccountingTaxrateRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.PatchAccountingTaxrateResponse;
-import to.unified.unified_java_sdk.models.operations.async.RemoveAccountingTaxrateRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.RemoveAccountingTaxrateResponse;
-import to.unified.unified_java_sdk.models.operations.async.UpdateAccountingTaxrateRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.UpdateAccountingTaxrateResponse;
-import to.unified.unified_java_sdk.operations.CreateAccountingTaxrate;
-import to.unified.unified_java_sdk.operations.GetAccountingTaxrate;
-import to.unified.unified_java_sdk.operations.ListAccountingTaxrates;
-import to.unified.unified_java_sdk.operations.PatchAccountingTaxrate;
-import to.unified.unified_java_sdk.operations.RemoveAccountingTaxrate;
-import to.unified.unified_java_sdk.operations.UpdateAccountingTaxrate;
+import to.unified.unified_java_sdk.models.operations.CreateAccountingTaxrate2Request;
+import to.unified.unified_java_sdk.models.operations.GetAccountingTaxrate2Request;
+import to.unified.unified_java_sdk.models.operations.ListAccountingTaxrates2Request;
+import to.unified.unified_java_sdk.models.operations.PatchAccountingTaxrate2Request;
+import to.unified.unified_java_sdk.models.operations.RemoveAccountingTaxrate2Request;
+import to.unified.unified_java_sdk.models.operations.UpdateAccountingTaxrate2Request;
+import to.unified.unified_java_sdk.models.operations.async.CreateAccountingTaxrate2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.CreateAccountingTaxrate2Response;
+import to.unified.unified_java_sdk.models.operations.async.GetAccountingTaxrate2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetAccountingTaxrate2Response;
+import to.unified.unified_java_sdk.models.operations.async.ListAccountingTaxrates2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListAccountingTaxrates2Response;
+import to.unified.unified_java_sdk.models.operations.async.PatchAccountingTaxrate2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.PatchAccountingTaxrate2Response;
+import to.unified.unified_java_sdk.models.operations.async.RemoveAccountingTaxrate2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.RemoveAccountingTaxrate2Response;
+import to.unified.unified_java_sdk.models.operations.async.UpdateAccountingTaxrate2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.UpdateAccountingTaxrate2Response;
+import to.unified.unified_java_sdk.operations.CreateAccountingTaxrate2;
+import to.unified.unified_java_sdk.operations.GetAccountingTaxrate2;
+import to.unified.unified_java_sdk.operations.ListAccountingTaxrates2;
+import to.unified.unified_java_sdk.operations.PatchAccountingTaxrate2;
+import to.unified.unified_java_sdk.operations.RemoveAccountingTaxrate2;
+import to.unified.unified_java_sdk.operations.UpdateAccountingTaxrate2;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -59,19 +59,19 @@ public class AsyncTaxrate {
      * 
      * @return The async call builder
      */
-    public CreateAccountingTaxrateRequestBuilder createAccountingTaxrate() {
-        return new CreateAccountingTaxrateRequestBuilder(sdkConfiguration);
+    public CreateAccountingTaxrate2RequestBuilder createAccountingTaxrate2() {
+        return new CreateAccountingTaxrate2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Create a taxrate
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<CreateAccountingTaxrateResponse>} - The async response
+     * @return {@code CompletableFuture<CreateAccountingTaxrate2Response>} - The async response
      */
-    public CompletableFuture<CreateAccountingTaxrateResponse> createAccountingTaxrate(@Nonnull CreateAccountingTaxrateRequest request) {
-        AsyncRequestOperation<CreateAccountingTaxrateRequest, CreateAccountingTaxrateResponse> operation
-              = new CreateAccountingTaxrate.Async(sdkConfiguration, _headers);
+    public CompletableFuture<CreateAccountingTaxrate2Response> createAccountingTaxrate2(@Nonnull CreateAccountingTaxrate2Request request) {
+        AsyncRequestOperation<CreateAccountingTaxrate2Request, CreateAccountingTaxrate2Response> operation
+              = new CreateAccountingTaxrate2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -82,19 +82,19 @@ public class AsyncTaxrate {
      * 
      * @return The async call builder
      */
-    public GetAccountingTaxrateRequestBuilder getAccountingTaxrate() {
-        return new GetAccountingTaxrateRequestBuilder(sdkConfiguration);
+    public GetAccountingTaxrate2RequestBuilder getAccountingTaxrate2() {
+        return new GetAccountingTaxrate2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Retrieve a taxrate
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<GetAccountingTaxrateResponse>} - The async response
+     * @return {@code CompletableFuture<GetAccountingTaxrate2Response>} - The async response
      */
-    public CompletableFuture<GetAccountingTaxrateResponse> getAccountingTaxrate(@Nonnull GetAccountingTaxrateRequest request) {
-        AsyncRequestOperation<GetAccountingTaxrateRequest, GetAccountingTaxrateResponse> operation
-              = new GetAccountingTaxrate.Async(sdkConfiguration, _headers);
+    public CompletableFuture<GetAccountingTaxrate2Response> getAccountingTaxrate2(@Nonnull GetAccountingTaxrate2Request request) {
+        AsyncRequestOperation<GetAccountingTaxrate2Request, GetAccountingTaxrate2Response> operation
+              = new GetAccountingTaxrate2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -105,19 +105,19 @@ public class AsyncTaxrate {
      * 
      * @return The async call builder
      */
-    public ListAccountingTaxratesRequestBuilder listAccountingTaxrates() {
-        return new ListAccountingTaxratesRequestBuilder(sdkConfiguration);
+    public ListAccountingTaxrates2RequestBuilder listAccountingTaxrates2() {
+        return new ListAccountingTaxrates2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * List all taxrates
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<ListAccountingTaxratesResponse>} - The async response
+     * @return {@code CompletableFuture<ListAccountingTaxrates2Response>} - The async response
      */
-    public CompletableFuture<ListAccountingTaxratesResponse> listAccountingTaxrates(@Nonnull ListAccountingTaxratesRequest request) {
-        AsyncRequestOperation<ListAccountingTaxratesRequest, ListAccountingTaxratesResponse> operation
-              = new ListAccountingTaxrates.Async(sdkConfiguration, _headers);
+    public CompletableFuture<ListAccountingTaxrates2Response> listAccountingTaxrates2(@Nonnull ListAccountingTaxrates2Request request) {
+        AsyncRequestOperation<ListAccountingTaxrates2Request, ListAccountingTaxrates2Response> operation
+              = new ListAccountingTaxrates2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -128,19 +128,19 @@ public class AsyncTaxrate {
      * 
      * @return The async call builder
      */
-    public PatchAccountingTaxrateRequestBuilder patchAccountingTaxrate() {
-        return new PatchAccountingTaxrateRequestBuilder(sdkConfiguration);
+    public PatchAccountingTaxrate2RequestBuilder patchAccountingTaxrate2() {
+        return new PatchAccountingTaxrate2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update a taxrate
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<PatchAccountingTaxrateResponse>} - The async response
+     * @return {@code CompletableFuture<PatchAccountingTaxrate2Response>} - The async response
      */
-    public CompletableFuture<PatchAccountingTaxrateResponse> patchAccountingTaxrate(@Nonnull PatchAccountingTaxrateRequest request) {
-        AsyncRequestOperation<PatchAccountingTaxrateRequest, PatchAccountingTaxrateResponse> operation
-              = new PatchAccountingTaxrate.Async(sdkConfiguration, _headers);
+    public CompletableFuture<PatchAccountingTaxrate2Response> patchAccountingTaxrate2(@Nonnull PatchAccountingTaxrate2Request request) {
+        AsyncRequestOperation<PatchAccountingTaxrate2Request, PatchAccountingTaxrate2Response> operation
+              = new PatchAccountingTaxrate2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -151,19 +151,19 @@ public class AsyncTaxrate {
      * 
      * @return The async call builder
      */
-    public RemoveAccountingTaxrateRequestBuilder removeAccountingTaxrate() {
-        return new RemoveAccountingTaxrateRequestBuilder(sdkConfiguration);
+    public RemoveAccountingTaxrate2RequestBuilder removeAccountingTaxrate2() {
+        return new RemoveAccountingTaxrate2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Remove a taxrate
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<RemoveAccountingTaxrateResponse>} - The async response
+     * @return {@code CompletableFuture<RemoveAccountingTaxrate2Response>} - The async response
      */
-    public CompletableFuture<RemoveAccountingTaxrateResponse> removeAccountingTaxrate(@Nonnull RemoveAccountingTaxrateRequest request) {
-        AsyncRequestOperation<RemoveAccountingTaxrateRequest, RemoveAccountingTaxrateResponse> operation
-              = new RemoveAccountingTaxrate.Async(sdkConfiguration, _headers);
+    public CompletableFuture<RemoveAccountingTaxrate2Response> removeAccountingTaxrate2(@Nonnull RemoveAccountingTaxrate2Request request) {
+        AsyncRequestOperation<RemoveAccountingTaxrate2Request, RemoveAccountingTaxrate2Response> operation
+              = new RemoveAccountingTaxrate2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -174,19 +174,19 @@ public class AsyncTaxrate {
      * 
      * @return The async call builder
      */
-    public UpdateAccountingTaxrateRequestBuilder updateAccountingTaxrate() {
-        return new UpdateAccountingTaxrateRequestBuilder(sdkConfiguration);
+    public UpdateAccountingTaxrate2RequestBuilder updateAccountingTaxrate2() {
+        return new UpdateAccountingTaxrate2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update a taxrate
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<UpdateAccountingTaxrateResponse>} - The async response
+     * @return {@code CompletableFuture<UpdateAccountingTaxrate2Response>} - The async response
      */
-    public CompletableFuture<UpdateAccountingTaxrateResponse> updateAccountingTaxrate(@Nonnull UpdateAccountingTaxrateRequest request) {
-        AsyncRequestOperation<UpdateAccountingTaxrateRequest, UpdateAccountingTaxrateResponse> operation
-              = new UpdateAccountingTaxrate.Async(sdkConfiguration, _headers);
+    public CompletableFuture<UpdateAccountingTaxrate2Response> updateAccountingTaxrate2(@Nonnull UpdateAccountingTaxrate2Request request) {
+        AsyncRequestOperation<UpdateAccountingTaxrate2Request, UpdateAccountingTaxrate2Response> operation
+              = new UpdateAccountingTaxrate2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

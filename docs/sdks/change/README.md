@@ -4,23 +4,23 @@
 
 ### Available Operations
 
-* [getTaskChange](#gettaskchange) - Retrieve a change
-* [listTaskChanges](#listtaskchanges) - List all changes
+* [getTaskChange2](#gettaskchange2) - Retrieve a change
+* [listTaskChanges2](#listtaskchanges2) - List all changes
 
-## getTaskChange
+## getTaskChange2
 
 Retrieve a change
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="getTaskChange" method="get" path="/task/{connection_id}/change/{id}" -->
+<!-- UsageSnippet language="java" operationID="getTaskChange2" method="get" path="/task/{connection_id}/change/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.GetTaskChangeRequest;
-import to.unified.unified_java_sdk.models.operations.GetTaskChangeResponse;
+import to.unified.unified_java_sdk.models.operations.GetTaskChange2Request;
+import to.unified.unified_java_sdk.models.operations.GetTaskChange2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -33,12 +33,12 @@ public class Application {
                     .build())
             .build();
 
-        GetTaskChangeRequest req = GetTaskChangeRequest.builder()
+        GetTaskChange2Request req = GetTaskChange2Request.builder()
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        GetTaskChangeResponse res = sdk.change().getTaskChange()
+        GetTaskChange2Response res = sdk.change().getTaskChange2()
                 .request(req)
                 .call();
 
@@ -51,13 +51,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                               | Type                                                                    | Required                                                                | Description                                                             |
-| ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- |
-| `request`                                                               | [GetTaskChangeRequest](../../models/operations/GetTaskChangeRequest.md) | :heavy_check_mark:                                                      | The request object to use for the request.                              |
+| Parameter                                                                 | Type                                                                      | Required                                                                  | Description                                                               |
+| ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
+| `request`                                                                 | [GetTaskChange2Request](../../models/operations/GetTaskChange2Request.md) | :heavy_check_mark:                                                        | The request object to use for the request.                                |
 
 ### Response
 
-**[GetTaskChangeResponse](../../models/operations/GetTaskChangeResponse.md)**
+**[GetTaskChange2Response](../../models/operations/GetTaskChange2Response.md)**
 
 ### Errors
 
@@ -65,20 +65,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## listTaskChanges
+## listTaskChanges2
 
 List all changes
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="listTaskChanges" method="get" path="/task/{connection_id}/change" -->
+<!-- UsageSnippet language="java" operationID="listTaskChanges2" method="get" path="/task/{connection_id}/change" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.ListTaskChangesRequest;
-import to.unified.unified_java_sdk.models.operations.ListTaskChangesResponse;
+import to.unified.unified_java_sdk.models.operations.ListTaskChanges2Request;
+import to.unified.unified_java_sdk.models.operations.ListTaskChanges2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -91,11 +91,11 @@ public class Application {
                     .build())
             .build();
 
-        ListTaskChangesRequest req = ListTaskChangesRequest.builder()
+        ListTaskChanges2Request req = ListTaskChanges2Request.builder()
                 .connectionId("<id>")
                 .build();
 
-        ListTaskChangesResponse res = sdk.change().listTaskChanges()
+        ListTaskChanges2Response res = sdk.change().listTaskChanges2()
                 .request(req)
                 .call();
 
@@ -108,13 +108,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                   | Type                                                                        | Required                                                                    | Description                                                                 |
-| --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
-| `request`                                                                   | [ListTaskChangesRequest](../../models/operations/ListTaskChangesRequest.md) | :heavy_check_mark:                                                          | The request object to use for the request.                                  |
+| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
+| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| `request`                                                                     | [ListTaskChanges2Request](../../models/operations/ListTaskChanges2Request.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
 
 ### Response
 
-**[ListTaskChangesResponse](../../models/operations/ListTaskChangesResponse.md)**
+**[ListTaskChanges2Response](../../models/operations/ListTaskChanges2Response.md)**
 
 ### Errors
 

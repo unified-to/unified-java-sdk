@@ -44,11 +44,13 @@ public class PropertyConnectionCategories {
     public static final PropertyConnectionCategories CALENDAR = new PropertyConnectionCategories("calendar");
     public static final PropertyConnectionCategories VERIFICATION = new PropertyConnectionCategories("verification");
     public static final PropertyConnectionCategories ADS = new PropertyConnectionCategories("ads");
+    public static final PropertyConnectionCategories ANALYTICS = new PropertyConnectionCategories("analytics");
     public static final PropertyConnectionCategories FORMS = new PropertyConnectionCategories("forms");
     public static final PropertyConnectionCategories SHIPPING = new PropertyConnectionCategories("shipping");
     public static final PropertyConnectionCategories ASSESSMENT = new PropertyConnectionCategories("assessment");
     public static final PropertyConnectionCategories SIGNING = new PropertyConnectionCategories("signing");
     public static final PropertyConnectionCategories CLUBS = new PropertyConnectionCategories("clubs");
+    public static final PropertyConnectionCategories DATASTORE = new PropertyConnectionCategories("datastore");
 
     // This map will grow whenever a Color gets created with a new
     // unrecognized value (a potential memory leak if the user is not
@@ -146,11 +148,13 @@ public class PropertyConnectionCategories {
         map.put("calendar", CALENDAR);
         map.put("verification", VERIFICATION);
         map.put("ads", ADS);
+        map.put("analytics", ANALYTICS);
         map.put("forms", FORMS);
         map.put("shipping", SHIPPING);
         map.put("assessment", ASSESSMENT);
         map.put("signing", SIGNING);
         map.put("clubs", CLUBS);
+        map.put("datastore", DATASTORE);
         return map;
     }
 
@@ -180,11 +184,13 @@ public class PropertyConnectionCategories {
         map.put("calendar", PropertyConnectionCategoriesEnum.CALENDAR);
         map.put("verification", PropertyConnectionCategoriesEnum.VERIFICATION);
         map.put("ads", PropertyConnectionCategoriesEnum.ADS);
+        map.put("analytics", PropertyConnectionCategoriesEnum.ANALYTICS);
         map.put("forms", PropertyConnectionCategoriesEnum.FORMS);
         map.put("shipping", PropertyConnectionCategoriesEnum.SHIPPING);
         map.put("assessment", PropertyConnectionCategoriesEnum.ASSESSMENT);
         map.put("signing", PropertyConnectionCategoriesEnum.SIGNING);
         map.put("clubs", PropertyConnectionCategoriesEnum.CLUBS);
+        map.put("datastore", PropertyConnectionCategoriesEnum.DATASTORE);
         return map;
     }
     
@@ -215,11 +221,13 @@ public class PropertyConnectionCategories {
         CALENDAR("calendar"),
         VERIFICATION("verification"),
         ADS("ads"),
+        ANALYTICS("analytics"),
         FORMS("forms"),
         SHIPPING("shipping"),
         ASSESSMENT("assessment"),
         SIGNING("signing"),
-        CLUBS("clubs"),;
+        CLUBS("clubs"),
+        DATASTORE("datastore"),;
 
         private final String value;
 

@@ -6,78 +6,78 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
-import to.unified.unified_java_sdk.models.operations.CreateAccountingContactRequest;
-import to.unified.unified_java_sdk.models.operations.CreateAccountingContactRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.CreateAccountingContactResponse;
-import to.unified.unified_java_sdk.models.operations.CreateCrmContactRequest;
-import to.unified.unified_java_sdk.models.operations.CreateCrmContactRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.CreateCrmContactResponse;
-import to.unified.unified_java_sdk.models.operations.CreateUcContactRequest;
-import to.unified.unified_java_sdk.models.operations.CreateUcContactRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.CreateUcContactResponse;
-import to.unified.unified_java_sdk.models.operations.GetAccountingContactRequest;
-import to.unified.unified_java_sdk.models.operations.GetAccountingContactRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.GetAccountingContactResponse;
-import to.unified.unified_java_sdk.models.operations.GetCrmContactRequest;
-import to.unified.unified_java_sdk.models.operations.GetCrmContactRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.GetCrmContactResponse;
-import to.unified.unified_java_sdk.models.operations.GetUcContactRequest;
-import to.unified.unified_java_sdk.models.operations.GetUcContactRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.GetUcContactResponse;
-import to.unified.unified_java_sdk.models.operations.ListAccountingContactsRequest;
-import to.unified.unified_java_sdk.models.operations.ListAccountingContactsRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.ListAccountingContactsResponse;
-import to.unified.unified_java_sdk.models.operations.ListCrmContactsRequest;
-import to.unified.unified_java_sdk.models.operations.ListCrmContactsRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.ListCrmContactsResponse;
-import to.unified.unified_java_sdk.models.operations.ListUcContactsRequest;
-import to.unified.unified_java_sdk.models.operations.ListUcContactsRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.ListUcContactsResponse;
-import to.unified.unified_java_sdk.models.operations.PatchAccountingContactRequest;
-import to.unified.unified_java_sdk.models.operations.PatchAccountingContactRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.PatchAccountingContactResponse;
-import to.unified.unified_java_sdk.models.operations.PatchCrmContactRequest;
-import to.unified.unified_java_sdk.models.operations.PatchCrmContactRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.PatchCrmContactResponse;
-import to.unified.unified_java_sdk.models.operations.PatchUcContactRequest;
-import to.unified.unified_java_sdk.models.operations.PatchUcContactRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.PatchUcContactResponse;
-import to.unified.unified_java_sdk.models.operations.RemoveAccountingContactRequest;
-import to.unified.unified_java_sdk.models.operations.RemoveAccountingContactRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.RemoveAccountingContactResponse;
-import to.unified.unified_java_sdk.models.operations.RemoveCrmContactRequest;
-import to.unified.unified_java_sdk.models.operations.RemoveCrmContactRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.RemoveCrmContactResponse;
-import to.unified.unified_java_sdk.models.operations.RemoveUcContactRequest;
-import to.unified.unified_java_sdk.models.operations.RemoveUcContactRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.RemoveUcContactResponse;
-import to.unified.unified_java_sdk.models.operations.UpdateAccountingContactRequest;
-import to.unified.unified_java_sdk.models.operations.UpdateAccountingContactRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.UpdateAccountingContactResponse;
-import to.unified.unified_java_sdk.models.operations.UpdateCrmContactRequest;
-import to.unified.unified_java_sdk.models.operations.UpdateCrmContactRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.UpdateCrmContactResponse;
-import to.unified.unified_java_sdk.models.operations.UpdateUcContactRequest;
-import to.unified.unified_java_sdk.models.operations.UpdateUcContactRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.UpdateUcContactResponse;
-import to.unified.unified_java_sdk.operations.CreateAccountingContact;
-import to.unified.unified_java_sdk.operations.CreateCrmContact;
-import to.unified.unified_java_sdk.operations.CreateUcContact;
-import to.unified.unified_java_sdk.operations.GetAccountingContact;
-import to.unified.unified_java_sdk.operations.GetCrmContact;
-import to.unified.unified_java_sdk.operations.GetUcContact;
-import to.unified.unified_java_sdk.operations.ListAccountingContacts;
-import to.unified.unified_java_sdk.operations.ListCrmContacts;
-import to.unified.unified_java_sdk.operations.ListUcContacts;
-import to.unified.unified_java_sdk.operations.PatchAccountingContact;
-import to.unified.unified_java_sdk.operations.PatchCrmContact;
-import to.unified.unified_java_sdk.operations.PatchUcContact;
-import to.unified.unified_java_sdk.operations.RemoveAccountingContact;
-import to.unified.unified_java_sdk.operations.RemoveCrmContact;
-import to.unified.unified_java_sdk.operations.RemoveUcContact;
-import to.unified.unified_java_sdk.operations.UpdateAccountingContact;
-import to.unified.unified_java_sdk.operations.UpdateCrmContact;
-import to.unified.unified_java_sdk.operations.UpdateUcContact;
+import to.unified.unified_java_sdk.models.operations.CreateAccountingContact2Request;
+import to.unified.unified_java_sdk.models.operations.CreateAccountingContact2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.CreateAccountingContact2Response;
+import to.unified.unified_java_sdk.models.operations.CreateCrmContact2Request;
+import to.unified.unified_java_sdk.models.operations.CreateCrmContact2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.CreateCrmContact2Response;
+import to.unified.unified_java_sdk.models.operations.CreateUcContact2Request;
+import to.unified.unified_java_sdk.models.operations.CreateUcContact2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.CreateUcContact2Response;
+import to.unified.unified_java_sdk.models.operations.GetAccountingContact2Request;
+import to.unified.unified_java_sdk.models.operations.GetAccountingContact2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetAccountingContact2Response;
+import to.unified.unified_java_sdk.models.operations.GetCrmContact2Request;
+import to.unified.unified_java_sdk.models.operations.GetCrmContact2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetCrmContact2Response;
+import to.unified.unified_java_sdk.models.operations.GetUcContact2Request;
+import to.unified.unified_java_sdk.models.operations.GetUcContact2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetUcContact2Response;
+import to.unified.unified_java_sdk.models.operations.ListAccountingContacts2Request;
+import to.unified.unified_java_sdk.models.operations.ListAccountingContacts2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListAccountingContacts2Response;
+import to.unified.unified_java_sdk.models.operations.ListCrmContacts2Request;
+import to.unified.unified_java_sdk.models.operations.ListCrmContacts2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListCrmContacts2Response;
+import to.unified.unified_java_sdk.models.operations.ListUcContacts2Request;
+import to.unified.unified_java_sdk.models.operations.ListUcContacts2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListUcContacts2Response;
+import to.unified.unified_java_sdk.models.operations.PatchAccountingContact2Request;
+import to.unified.unified_java_sdk.models.operations.PatchAccountingContact2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.PatchAccountingContact2Response;
+import to.unified.unified_java_sdk.models.operations.PatchCrmContact2Request;
+import to.unified.unified_java_sdk.models.operations.PatchCrmContact2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.PatchCrmContact2Response;
+import to.unified.unified_java_sdk.models.operations.PatchUcContact2Request;
+import to.unified.unified_java_sdk.models.operations.PatchUcContact2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.PatchUcContact2Response;
+import to.unified.unified_java_sdk.models.operations.RemoveAccountingContact2Request;
+import to.unified.unified_java_sdk.models.operations.RemoveAccountingContact2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.RemoveAccountingContact2Response;
+import to.unified.unified_java_sdk.models.operations.RemoveCrmContact2Request;
+import to.unified.unified_java_sdk.models.operations.RemoveCrmContact2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.RemoveCrmContact2Response;
+import to.unified.unified_java_sdk.models.operations.RemoveUcContact2Request;
+import to.unified.unified_java_sdk.models.operations.RemoveUcContact2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.RemoveUcContact2Response;
+import to.unified.unified_java_sdk.models.operations.UpdateAccountingContact2Request;
+import to.unified.unified_java_sdk.models.operations.UpdateAccountingContact2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.UpdateAccountingContact2Response;
+import to.unified.unified_java_sdk.models.operations.UpdateCrmContact2Request;
+import to.unified.unified_java_sdk.models.operations.UpdateCrmContact2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.UpdateCrmContact2Response;
+import to.unified.unified_java_sdk.models.operations.UpdateUcContact2Request;
+import to.unified.unified_java_sdk.models.operations.UpdateUcContact2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.UpdateUcContact2Response;
+import to.unified.unified_java_sdk.operations.CreateAccountingContact2;
+import to.unified.unified_java_sdk.operations.CreateCrmContact2;
+import to.unified.unified_java_sdk.operations.CreateUcContact2;
+import to.unified.unified_java_sdk.operations.GetAccountingContact2;
+import to.unified.unified_java_sdk.operations.GetCrmContact2;
+import to.unified.unified_java_sdk.operations.GetUcContact2;
+import to.unified.unified_java_sdk.operations.ListAccountingContacts2;
+import to.unified.unified_java_sdk.operations.ListCrmContacts2;
+import to.unified.unified_java_sdk.operations.ListUcContacts2;
+import to.unified.unified_java_sdk.operations.PatchAccountingContact2;
+import to.unified.unified_java_sdk.operations.PatchCrmContact2;
+import to.unified.unified_java_sdk.operations.PatchUcContact2;
+import to.unified.unified_java_sdk.operations.RemoveAccountingContact2;
+import to.unified.unified_java_sdk.operations.RemoveCrmContact2;
+import to.unified.unified_java_sdk.operations.RemoveUcContact2;
+import to.unified.unified_java_sdk.operations.UpdateAccountingContact2;
+import to.unified.unified_java_sdk.operations.UpdateCrmContact2;
+import to.unified.unified_java_sdk.operations.UpdateUcContact2;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -105,8 +105,8 @@ public class Contact {
      * 
      * @return The call builder
      */
-    public CreateAccountingContactRequestBuilder createAccountingContact() {
-        return new CreateAccountingContactRequestBuilder(sdkConfiguration);
+    public CreateAccountingContact2RequestBuilder createAccountingContact2() {
+        return new CreateAccountingContact2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -116,9 +116,9 @@ public class Contact {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateAccountingContactResponse createAccountingContact(@Nonnull CreateAccountingContactRequest request) {
-        RequestOperation<CreateAccountingContactRequest, CreateAccountingContactResponse> operation
-              = new CreateAccountingContact.Sync(sdkConfiguration, _headers);
+    public CreateAccountingContact2Response createAccountingContact2(@Nonnull CreateAccountingContact2Request request) {
+        RequestOperation<CreateAccountingContact2Request, CreateAccountingContact2Response> operation
+              = new CreateAccountingContact2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -127,30 +127,8 @@ public class Contact {
      * 
      * @return The call builder
      */
-    public CreateCrmContactRequestBuilder createCrmContact() {
-        return new CreateCrmContactRequestBuilder(sdkConfiguration);
-    }
-
-    /**
-     * Create a contact
-     * 
-     * @param request The request object containing all the parameters for the API call.
-     * @return The response from the API call
-     * @throws RuntimeException subclass if the API call fails
-     */
-    public CreateCrmContactResponse createCrmContact(@Nonnull CreateCrmContactRequest request) {
-        RequestOperation<CreateCrmContactRequest, CreateCrmContactResponse> operation
-              = new CreateCrmContact.Sync(sdkConfiguration, _headers);
-        return operation.handleResponse(operation.doRequest(request));
-    }
-
-    /**
-     * Create a contact
-     * 
-     * @return The call builder
-     */
-    public CreateUcContactRequestBuilder createUcContact() {
-        return new CreateUcContactRequestBuilder(sdkConfiguration);
+    public CreateCrmContact2RequestBuilder createCrmContact2() {
+        return new CreateCrmContact2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -160,31 +138,31 @@ public class Contact {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateUcContactResponse createUcContact(@Nonnull CreateUcContactRequest request) {
-        RequestOperation<CreateUcContactRequest, CreateUcContactResponse> operation
-              = new CreateUcContact.Sync(sdkConfiguration, _headers);
+    public CreateCrmContact2Response createCrmContact2(@Nonnull CreateCrmContact2Request request) {
+        RequestOperation<CreateCrmContact2Request, CreateCrmContact2Response> operation
+              = new CreateCrmContact2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
     /**
-     * Retrieve a contact
+     * Create a contact
      * 
      * @return The call builder
      */
-    public GetAccountingContactRequestBuilder getAccountingContact() {
-        return new GetAccountingContactRequestBuilder(sdkConfiguration);
+    public CreateUcContact2RequestBuilder createUcContact2() {
+        return new CreateUcContact2RequestBuilder(sdkConfiguration);
     }
 
     /**
-     * Retrieve a contact
+     * Create a contact
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetAccountingContactResponse getAccountingContact(@Nonnull GetAccountingContactRequest request) {
-        RequestOperation<GetAccountingContactRequest, GetAccountingContactResponse> operation
-              = new GetAccountingContact.Sync(sdkConfiguration, _headers);
+    public CreateUcContact2Response createUcContact2(@Nonnull CreateUcContact2Request request) {
+        RequestOperation<CreateUcContact2Request, CreateUcContact2Response> operation
+              = new CreateUcContact2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -193,30 +171,8 @@ public class Contact {
      * 
      * @return The call builder
      */
-    public GetCrmContactRequestBuilder getCrmContact() {
-        return new GetCrmContactRequestBuilder(sdkConfiguration);
-    }
-
-    /**
-     * Retrieve a contact
-     * 
-     * @param request The request object containing all the parameters for the API call.
-     * @return The response from the API call
-     * @throws RuntimeException subclass if the API call fails
-     */
-    public GetCrmContactResponse getCrmContact(@Nonnull GetCrmContactRequest request) {
-        RequestOperation<GetCrmContactRequest, GetCrmContactResponse> operation
-              = new GetCrmContact.Sync(sdkConfiguration, _headers);
-        return operation.handleResponse(operation.doRequest(request));
-    }
-
-    /**
-     * Retrieve a contact
-     * 
-     * @return The call builder
-     */
-    public GetUcContactRequestBuilder getUcContact() {
-        return new GetUcContactRequestBuilder(sdkConfiguration);
+    public GetAccountingContact2RequestBuilder getAccountingContact2() {
+        return new GetAccountingContact2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -226,9 +182,53 @@ public class Contact {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetUcContactResponse getUcContact(@Nonnull GetUcContactRequest request) {
-        RequestOperation<GetUcContactRequest, GetUcContactResponse> operation
-              = new GetUcContact.Sync(sdkConfiguration, _headers);
+    public GetAccountingContact2Response getAccountingContact2(@Nonnull GetAccountingContact2Request request) {
+        RequestOperation<GetAccountingContact2Request, GetAccountingContact2Response> operation
+              = new GetAccountingContact2.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Retrieve a contact
+     * 
+     * @return The call builder
+     */
+    public GetCrmContact2RequestBuilder getCrmContact2() {
+        return new GetCrmContact2RequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Retrieve a contact
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetCrmContact2Response getCrmContact2(@Nonnull GetCrmContact2Request request) {
+        RequestOperation<GetCrmContact2Request, GetCrmContact2Response> operation
+              = new GetCrmContact2.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Retrieve a contact
+     * 
+     * @return The call builder
+     */
+    public GetUcContact2RequestBuilder getUcContact2() {
+        return new GetUcContact2RequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Retrieve a contact
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetUcContact2Response getUcContact2(@Nonnull GetUcContact2Request request) {
+        RequestOperation<GetUcContact2Request, GetUcContact2Response> operation
+              = new GetUcContact2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -237,8 +237,8 @@ public class Contact {
      * 
      * @return The call builder
      */
-    public ListAccountingContactsRequestBuilder listAccountingContacts() {
-        return new ListAccountingContactsRequestBuilder(sdkConfiguration);
+    public ListAccountingContacts2RequestBuilder listAccountingContacts2() {
+        return new ListAccountingContacts2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -248,9 +248,9 @@ public class Contact {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListAccountingContactsResponse listAccountingContacts(@Nonnull ListAccountingContactsRequest request) {
-        RequestOperation<ListAccountingContactsRequest, ListAccountingContactsResponse> operation
-              = new ListAccountingContacts.Sync(sdkConfiguration, _headers);
+    public ListAccountingContacts2Response listAccountingContacts2(@Nonnull ListAccountingContacts2Request request) {
+        RequestOperation<ListAccountingContacts2Request, ListAccountingContacts2Response> operation
+              = new ListAccountingContacts2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -259,30 +259,8 @@ public class Contact {
      * 
      * @return The call builder
      */
-    public ListCrmContactsRequestBuilder listCrmContacts() {
-        return new ListCrmContactsRequestBuilder(sdkConfiguration);
-    }
-
-    /**
-     * List all contacts
-     * 
-     * @param request The request object containing all the parameters for the API call.
-     * @return The response from the API call
-     * @throws RuntimeException subclass if the API call fails
-     */
-    public ListCrmContactsResponse listCrmContacts(@Nonnull ListCrmContactsRequest request) {
-        RequestOperation<ListCrmContactsRequest, ListCrmContactsResponse> operation
-              = new ListCrmContacts.Sync(sdkConfiguration, _headers);
-        return operation.handleResponse(operation.doRequest(request));
-    }
-
-    /**
-     * List all contacts
-     * 
-     * @return The call builder
-     */
-    public ListUcContactsRequestBuilder listUcContacts() {
-        return new ListUcContactsRequestBuilder(sdkConfiguration);
+    public ListCrmContacts2RequestBuilder listCrmContacts2() {
+        return new ListCrmContacts2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -292,9 +270,31 @@ public class Contact {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListUcContactsResponse listUcContacts(@Nonnull ListUcContactsRequest request) {
-        RequestOperation<ListUcContactsRequest, ListUcContactsResponse> operation
-              = new ListUcContacts.Sync(sdkConfiguration, _headers);
+    public ListCrmContacts2Response listCrmContacts2(@Nonnull ListCrmContacts2Request request) {
+        RequestOperation<ListCrmContacts2Request, ListCrmContacts2Response> operation
+              = new ListCrmContacts2.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * List all contacts
+     * 
+     * @return The call builder
+     */
+    public ListUcContacts2RequestBuilder listUcContacts2() {
+        return new ListUcContacts2RequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * List all contacts
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListUcContacts2Response listUcContacts2(@Nonnull ListUcContacts2Request request) {
+        RequestOperation<ListUcContacts2Request, ListUcContacts2Response> operation
+              = new ListUcContacts2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -303,8 +303,8 @@ public class Contact {
      * 
      * @return The call builder
      */
-    public PatchAccountingContactRequestBuilder patchAccountingContact() {
-        return new PatchAccountingContactRequestBuilder(sdkConfiguration);
+    public PatchAccountingContact2RequestBuilder patchAccountingContact2() {
+        return new PatchAccountingContact2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -314,9 +314,9 @@ public class Contact {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchAccountingContactResponse patchAccountingContact(@Nonnull PatchAccountingContactRequest request) {
-        RequestOperation<PatchAccountingContactRequest, PatchAccountingContactResponse> operation
-              = new PatchAccountingContact.Sync(sdkConfiguration, _headers);
+    public PatchAccountingContact2Response patchAccountingContact2(@Nonnull PatchAccountingContact2Request request) {
+        RequestOperation<PatchAccountingContact2Request, PatchAccountingContact2Response> operation
+              = new PatchAccountingContact2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -325,30 +325,8 @@ public class Contact {
      * 
      * @return The call builder
      */
-    public PatchCrmContactRequestBuilder patchCrmContact() {
-        return new PatchCrmContactRequestBuilder(sdkConfiguration);
-    }
-
-    /**
-     * Update a contact
-     * 
-     * @param request The request object containing all the parameters for the API call.
-     * @return The response from the API call
-     * @throws RuntimeException subclass if the API call fails
-     */
-    public PatchCrmContactResponse patchCrmContact(@Nonnull PatchCrmContactRequest request) {
-        RequestOperation<PatchCrmContactRequest, PatchCrmContactResponse> operation
-              = new PatchCrmContact.Sync(sdkConfiguration, _headers);
-        return operation.handleResponse(operation.doRequest(request));
-    }
-
-    /**
-     * Update a contact
-     * 
-     * @return The call builder
-     */
-    public PatchUcContactRequestBuilder patchUcContact() {
-        return new PatchUcContactRequestBuilder(sdkConfiguration);
+    public PatchCrmContact2RequestBuilder patchCrmContact2() {
+        return new PatchCrmContact2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -358,31 +336,31 @@ public class Contact {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchUcContactResponse patchUcContact(@Nonnull PatchUcContactRequest request) {
-        RequestOperation<PatchUcContactRequest, PatchUcContactResponse> operation
-              = new PatchUcContact.Sync(sdkConfiguration, _headers);
+    public PatchCrmContact2Response patchCrmContact2(@Nonnull PatchCrmContact2Request request) {
+        RequestOperation<PatchCrmContact2Request, PatchCrmContact2Response> operation
+              = new PatchCrmContact2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
     /**
-     * Remove a contact
+     * Update a contact
      * 
      * @return The call builder
      */
-    public RemoveAccountingContactRequestBuilder removeAccountingContact() {
-        return new RemoveAccountingContactRequestBuilder(sdkConfiguration);
+    public PatchUcContact2RequestBuilder patchUcContact2() {
+        return new PatchUcContact2RequestBuilder(sdkConfiguration);
     }
 
     /**
-     * Remove a contact
+     * Update a contact
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveAccountingContactResponse removeAccountingContact(@Nonnull RemoveAccountingContactRequest request) {
-        RequestOperation<RemoveAccountingContactRequest, RemoveAccountingContactResponse> operation
-              = new RemoveAccountingContact.Sync(sdkConfiguration, _headers);
+    public PatchUcContact2Response patchUcContact2(@Nonnull PatchUcContact2Request request) {
+        RequestOperation<PatchUcContact2Request, PatchUcContact2Response> operation
+              = new PatchUcContact2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -391,30 +369,8 @@ public class Contact {
      * 
      * @return The call builder
      */
-    public RemoveCrmContactRequestBuilder removeCrmContact() {
-        return new RemoveCrmContactRequestBuilder(sdkConfiguration);
-    }
-
-    /**
-     * Remove a contact
-     * 
-     * @param request The request object containing all the parameters for the API call.
-     * @return The response from the API call
-     * @throws RuntimeException subclass if the API call fails
-     */
-    public RemoveCrmContactResponse removeCrmContact(@Nonnull RemoveCrmContactRequest request) {
-        RequestOperation<RemoveCrmContactRequest, RemoveCrmContactResponse> operation
-              = new RemoveCrmContact.Sync(sdkConfiguration, _headers);
-        return operation.handleResponse(operation.doRequest(request));
-    }
-
-    /**
-     * Remove a contact
-     * 
-     * @return The call builder
-     */
-    public RemoveUcContactRequestBuilder removeUcContact() {
-        return new RemoveUcContactRequestBuilder(sdkConfiguration);
+    public RemoveAccountingContact2RequestBuilder removeAccountingContact2() {
+        return new RemoveAccountingContact2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -424,9 +380,53 @@ public class Contact {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveUcContactResponse removeUcContact(@Nonnull RemoveUcContactRequest request) {
-        RequestOperation<RemoveUcContactRequest, RemoveUcContactResponse> operation
-              = new RemoveUcContact.Sync(sdkConfiguration, _headers);
+    public RemoveAccountingContact2Response removeAccountingContact2(@Nonnull RemoveAccountingContact2Request request) {
+        RequestOperation<RemoveAccountingContact2Request, RemoveAccountingContact2Response> operation
+              = new RemoveAccountingContact2.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Remove a contact
+     * 
+     * @return The call builder
+     */
+    public RemoveCrmContact2RequestBuilder removeCrmContact2() {
+        return new RemoveCrmContact2RequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Remove a contact
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveCrmContact2Response removeCrmContact2(@Nonnull RemoveCrmContact2Request request) {
+        RequestOperation<RemoveCrmContact2Request, RemoveCrmContact2Response> operation
+              = new RemoveCrmContact2.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Remove a contact
+     * 
+     * @return The call builder
+     */
+    public RemoveUcContact2RequestBuilder removeUcContact2() {
+        return new RemoveUcContact2RequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Remove a contact
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveUcContact2Response removeUcContact2(@Nonnull RemoveUcContact2Request request) {
+        RequestOperation<RemoveUcContact2Request, RemoveUcContact2Response> operation
+              = new RemoveUcContact2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -435,8 +435,8 @@ public class Contact {
      * 
      * @return The call builder
      */
-    public UpdateAccountingContactRequestBuilder updateAccountingContact() {
-        return new UpdateAccountingContactRequestBuilder(sdkConfiguration);
+    public UpdateAccountingContact2RequestBuilder updateAccountingContact2() {
+        return new UpdateAccountingContact2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -446,9 +446,9 @@ public class Contact {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateAccountingContactResponse updateAccountingContact(@Nonnull UpdateAccountingContactRequest request) {
-        RequestOperation<UpdateAccountingContactRequest, UpdateAccountingContactResponse> operation
-              = new UpdateAccountingContact.Sync(sdkConfiguration, _headers);
+    public UpdateAccountingContact2Response updateAccountingContact2(@Nonnull UpdateAccountingContact2Request request) {
+        RequestOperation<UpdateAccountingContact2Request, UpdateAccountingContact2Response> operation
+              = new UpdateAccountingContact2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -457,8 +457,8 @@ public class Contact {
      * 
      * @return The call builder
      */
-    public UpdateCrmContactRequestBuilder updateCrmContact() {
-        return new UpdateCrmContactRequestBuilder(sdkConfiguration);
+    public UpdateCrmContact2RequestBuilder updateCrmContact2() {
+        return new UpdateCrmContact2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -468,9 +468,9 @@ public class Contact {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateCrmContactResponse updateCrmContact(@Nonnull UpdateCrmContactRequest request) {
-        RequestOperation<UpdateCrmContactRequest, UpdateCrmContactResponse> operation
-              = new UpdateCrmContact.Sync(sdkConfiguration, _headers);
+    public UpdateCrmContact2Response updateCrmContact2(@Nonnull UpdateCrmContact2Request request) {
+        RequestOperation<UpdateCrmContact2Request, UpdateCrmContact2Response> operation
+              = new UpdateCrmContact2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -479,8 +479,8 @@ public class Contact {
      * 
      * @return The call builder
      */
-    public UpdateUcContactRequestBuilder updateUcContact() {
-        return new UpdateUcContactRequestBuilder(sdkConfiguration);
+    public UpdateUcContact2RequestBuilder updateUcContact2() {
+        return new UpdateUcContact2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -490,9 +490,9 @@ public class Contact {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateUcContactResponse updateUcContact(@Nonnull UpdateUcContactRequest request) {
-        RequestOperation<UpdateUcContactRequest, UpdateUcContactResponse> operation
-              = new UpdateUcContact.Sync(sdkConfiguration, _headers);
+    public UpdateUcContact2Response updateUcContact2(@Nonnull UpdateUcContact2Request request) {
+        RequestOperation<UpdateUcContact2Request, UpdateUcContact2Response> operation
+              = new UpdateUcContact2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

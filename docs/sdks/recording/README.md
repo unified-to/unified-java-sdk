@@ -4,29 +4,29 @@
 
 ### Available Operations
 
-* [createUcRecording](#createucrecording) - Create a recording
-* [getCalendarRecording](#getcalendarrecording) - Retrieve a recording
-* [getUcRecording](#getucrecording) - Retrieve a recording
-* [listCalendarRecordings](#listcalendarrecordings) - List all recordings
-* [listUcRecordings](#listucrecordings) - List all recordings
-* [patchUcRecording](#patchucrecording) - Update a recording
-* [removeUcRecording](#removeucrecording) - Remove a recording
-* [updateUcRecording](#updateucrecording) - Update a recording
+* [createUcRecording2](#createucrecording2) - Create a recording
+* [getCalendarRecording2](#getcalendarrecording2) - Retrieve a recording
+* [getUcRecording2](#getucrecording2) - Retrieve a recording
+* [listCalendarRecordings2](#listcalendarrecordings2) - List all recordings
+* [listUcRecordings2](#listucrecordings2) - List all recordings
+* [patchUcRecording2](#patchucrecording2) - Update a recording
+* [removeUcRecording2](#removeucrecording2) - Remove a recording
+* [updateUcRecording2](#updateucrecording2) - Update a recording
 
-## createUcRecording
+## createUcRecording2
 
 Create a recording
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createUcRecording" method="post" path="/uc/{connection_id}/recording" -->
+<!-- UsageSnippet language="java" operationID="createUcRecording2" method="post" path="/uc/{connection_id}/recording" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.CreateUcRecordingRequest;
-import to.unified.unified_java_sdk.models.operations.CreateUcRecordingResponse;
+import to.unified.unified_java_sdk.models.operations.CreateUcRecording2Request;
+import to.unified.unified_java_sdk.models.operations.CreateUcRecording2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 import to.unified.unified_java_sdk.models.shared.UcRecording;
 
@@ -40,13 +40,13 @@ public class Application {
                     .build())
             .build();
 
-        CreateUcRecordingRequest req = CreateUcRecordingRequest.builder()
+        CreateUcRecording2Request req = CreateUcRecording2Request.builder()
                 .ucRecording(UcRecording.builder()
                     .build())
                 .connectionId("<id>")
                 .build();
 
-        CreateUcRecordingResponse res = sdk.recording().createUcRecording()
+        CreateUcRecording2Response res = sdk.recording().createUcRecording2()
                 .request(req)
                 .call();
 
@@ -59,13 +59,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
-| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
-| `request`                                                                       | [CreateUcRecordingRequest](../../models/operations/CreateUcRecordingRequest.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
+| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
+| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| `request`                                                                         | [CreateUcRecording2Request](../../models/operations/CreateUcRecording2Request.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
 
 ### Response
 
-**[CreateUcRecordingResponse](../../models/operations/CreateUcRecordingResponse.md)**
+**[CreateUcRecording2Response](../../models/operations/CreateUcRecording2Response.md)**
 
 ### Errors
 
@@ -73,20 +73,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## getCalendarRecording
+## getCalendarRecording2
 
 Retrieve a recording
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="getCalendarRecording" method="get" path="/calendar/{connection_id}/recording/{id}" -->
+<!-- UsageSnippet language="java" operationID="getCalendarRecording2" method="get" path="/calendar/{connection_id}/recording/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.GetCalendarRecordingRequest;
-import to.unified.unified_java_sdk.models.operations.GetCalendarRecordingResponse;
+import to.unified.unified_java_sdk.models.operations.GetCalendarRecording2Request;
+import to.unified.unified_java_sdk.models.operations.GetCalendarRecording2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -99,12 +99,12 @@ public class Application {
                     .build())
             .build();
 
-        GetCalendarRecordingRequest req = GetCalendarRecordingRequest.builder()
+        GetCalendarRecording2Request req = GetCalendarRecording2Request.builder()
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        GetCalendarRecordingResponse res = sdk.recording().getCalendarRecording()
+        GetCalendarRecording2Response res = sdk.recording().getCalendarRecording2()
                 .request(req)
                 .call();
 
@@ -117,13 +117,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                             | Type                                                                                  | Required                                                                              | Description                                                                           |
-| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
-| `request`                                                                             | [GetCalendarRecordingRequest](../../models/operations/GetCalendarRecordingRequest.md) | :heavy_check_mark:                                                                    | The request object to use for the request.                                            |
+| Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
+| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| `request`                                                                               | [GetCalendarRecording2Request](../../models/operations/GetCalendarRecording2Request.md) | :heavy_check_mark:                                                                      | The request object to use for the request.                                              |
 
 ### Response
 
-**[GetCalendarRecordingResponse](../../models/operations/GetCalendarRecordingResponse.md)**
+**[GetCalendarRecording2Response](../../models/operations/GetCalendarRecording2Response.md)**
 
 ### Errors
 
@@ -131,20 +131,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## getUcRecording
+## getUcRecording2
 
 Retrieve a recording
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="getUcRecording" method="get" path="/uc/{connection_id}/recording/{id}" -->
+<!-- UsageSnippet language="java" operationID="getUcRecording2" method="get" path="/uc/{connection_id}/recording/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.GetUcRecordingRequest;
-import to.unified.unified_java_sdk.models.operations.GetUcRecordingResponse;
+import to.unified.unified_java_sdk.models.operations.GetUcRecording2Request;
+import to.unified.unified_java_sdk.models.operations.GetUcRecording2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -157,12 +157,12 @@ public class Application {
                     .build())
             .build();
 
-        GetUcRecordingRequest req = GetUcRecordingRequest.builder()
+        GetUcRecording2Request req = GetUcRecording2Request.builder()
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        GetUcRecordingResponse res = sdk.recording().getUcRecording()
+        GetUcRecording2Response res = sdk.recording().getUcRecording2()
                 .request(req)
                 .call();
 
@@ -175,13 +175,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                 | Type                                                                      | Required                                                                  | Description                                                               |
-| ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
-| `request`                                                                 | [GetUcRecordingRequest](../../models/operations/GetUcRecordingRequest.md) | :heavy_check_mark:                                                        | The request object to use for the request.                                |
+| Parameter                                                                   | Type                                                                        | Required                                                                    | Description                                                                 |
+| --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| `request`                                                                   | [GetUcRecording2Request](../../models/operations/GetUcRecording2Request.md) | :heavy_check_mark:                                                          | The request object to use for the request.                                  |
 
 ### Response
 
-**[GetUcRecordingResponse](../../models/operations/GetUcRecordingResponse.md)**
+**[GetUcRecording2Response](../../models/operations/GetUcRecording2Response.md)**
 
 ### Errors
 
@@ -189,20 +189,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## listCalendarRecordings
+## listCalendarRecordings2
 
 List all recordings
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="listCalendarRecordings" method="get" path="/calendar/{connection_id}/recording" -->
+<!-- UsageSnippet language="java" operationID="listCalendarRecordings2" method="get" path="/calendar/{connection_id}/recording" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.ListCalendarRecordingsRequest;
-import to.unified.unified_java_sdk.models.operations.ListCalendarRecordingsResponse;
+import to.unified.unified_java_sdk.models.operations.ListCalendarRecordings2Request;
+import to.unified.unified_java_sdk.models.operations.ListCalendarRecordings2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -215,11 +215,11 @@ public class Application {
                     .build())
             .build();
 
-        ListCalendarRecordingsRequest req = ListCalendarRecordingsRequest.builder()
+        ListCalendarRecordings2Request req = ListCalendarRecordings2Request.builder()
                 .connectionId("<id>")
                 .build();
 
-        ListCalendarRecordingsResponse res = sdk.recording().listCalendarRecordings()
+        ListCalendarRecordings2Response res = sdk.recording().listCalendarRecordings2()
                 .request(req)
                 .call();
 
@@ -232,13 +232,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                 | Type                                                                                      | Required                                                                                  | Description                                                                               |
-| ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
-| `request`                                                                                 | [ListCalendarRecordingsRequest](../../models/operations/ListCalendarRecordingsRequest.md) | :heavy_check_mark:                                                                        | The request object to use for the request.                                                |
+| Parameter                                                                                   | Type                                                                                        | Required                                                                                    | Description                                                                                 |
+| ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
+| `request`                                                                                   | [ListCalendarRecordings2Request](../../models/operations/ListCalendarRecordings2Request.md) | :heavy_check_mark:                                                                          | The request object to use for the request.                                                  |
 
 ### Response
 
-**[ListCalendarRecordingsResponse](../../models/operations/ListCalendarRecordingsResponse.md)**
+**[ListCalendarRecordings2Response](../../models/operations/ListCalendarRecordings2Response.md)**
 
 ### Errors
 
@@ -246,20 +246,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## listUcRecordings
+## listUcRecordings2
 
 List all recordings
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="listUcRecordings" method="get" path="/uc/{connection_id}/recording" -->
+<!-- UsageSnippet language="java" operationID="listUcRecordings2" method="get" path="/uc/{connection_id}/recording" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.ListUcRecordingsRequest;
-import to.unified.unified_java_sdk.models.operations.ListUcRecordingsResponse;
+import to.unified.unified_java_sdk.models.operations.ListUcRecordings2Request;
+import to.unified.unified_java_sdk.models.operations.ListUcRecordings2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -272,11 +272,11 @@ public class Application {
                     .build())
             .build();
 
-        ListUcRecordingsRequest req = ListUcRecordingsRequest.builder()
+        ListUcRecordings2Request req = ListUcRecordings2Request.builder()
                 .connectionId("<id>")
                 .build();
 
-        ListUcRecordingsResponse res = sdk.recording().listUcRecordings()
+        ListUcRecordings2Response res = sdk.recording().listUcRecordings2()
                 .request(req)
                 .call();
 
@@ -289,13 +289,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
-| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
-| `request`                                                                     | [ListUcRecordingsRequest](../../models/operations/ListUcRecordingsRequest.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
+| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| `request`                                                                       | [ListUcRecordings2Request](../../models/operations/ListUcRecordings2Request.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
 
 ### Response
 
-**[ListUcRecordingsResponse](../../models/operations/ListUcRecordingsResponse.md)**
+**[ListUcRecordings2Response](../../models/operations/ListUcRecordings2Response.md)**
 
 ### Errors
 
@@ -303,20 +303,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## patchUcRecording
+## patchUcRecording2
 
 Update a recording
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchUcRecording" method="patch" path="/uc/{connection_id}/recording/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchUcRecording2" method="patch" path="/uc/{connection_id}/recording/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.PatchUcRecordingRequest;
-import to.unified.unified_java_sdk.models.operations.PatchUcRecordingResponse;
+import to.unified.unified_java_sdk.models.operations.PatchUcRecording2Request;
+import to.unified.unified_java_sdk.models.operations.PatchUcRecording2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 import to.unified.unified_java_sdk.models.shared.UcRecording;
 
@@ -330,14 +330,14 @@ public class Application {
                     .build())
             .build();
 
-        PatchUcRecordingRequest req = PatchUcRecordingRequest.builder()
+        PatchUcRecording2Request req = PatchUcRecording2Request.builder()
                 .ucRecording(UcRecording.builder()
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        PatchUcRecordingResponse res = sdk.recording().patchUcRecording()
+        PatchUcRecording2Response res = sdk.recording().patchUcRecording2()
                 .request(req)
                 .call();
 
@@ -350,13 +350,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
-| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
-| `request`                                                                     | [PatchUcRecordingRequest](../../models/operations/PatchUcRecordingRequest.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
+| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| `request`                                                                       | [PatchUcRecording2Request](../../models/operations/PatchUcRecording2Request.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
 
 ### Response
 
-**[PatchUcRecordingResponse](../../models/operations/PatchUcRecordingResponse.md)**
+**[PatchUcRecording2Response](../../models/operations/PatchUcRecording2Response.md)**
 
 ### Errors
 
@@ -364,20 +364,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## removeUcRecording
+## removeUcRecording2
 
 Remove a recording
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="removeUcRecording" method="delete" path="/uc/{connection_id}/recording/{id}" -->
+<!-- UsageSnippet language="java" operationID="removeUcRecording2" method="delete" path="/uc/{connection_id}/recording/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.RemoveUcRecordingRequest;
-import to.unified.unified_java_sdk.models.operations.RemoveUcRecordingResponse;
+import to.unified.unified_java_sdk.models.operations.RemoveUcRecording2Request;
+import to.unified.unified_java_sdk.models.operations.RemoveUcRecording2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -390,12 +390,12 @@ public class Application {
                     .build())
             .build();
 
-        RemoveUcRecordingRequest req = RemoveUcRecordingRequest.builder()
+        RemoveUcRecording2Request req = RemoveUcRecording2Request.builder()
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        RemoveUcRecordingResponse res = sdk.recording().removeUcRecording()
+        RemoveUcRecording2Response res = sdk.recording().removeUcRecording2()
                 .request(req)
                 .call();
 
@@ -406,13 +406,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
-| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
-| `request`                                                                       | [RemoveUcRecordingRequest](../../models/operations/RemoveUcRecordingRequest.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
+| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
+| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| `request`                                                                         | [RemoveUcRecording2Request](../../models/operations/RemoveUcRecording2Request.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
 
 ### Response
 
-**[RemoveUcRecordingResponse](../../models/operations/RemoveUcRecordingResponse.md)**
+**[RemoveUcRecording2Response](../../models/operations/RemoveUcRecording2Response.md)**
 
 ### Errors
 
@@ -420,20 +420,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## updateUcRecording
+## updateUcRecording2
 
 Update a recording
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateUcRecording" method="put" path="/uc/{connection_id}/recording/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateUcRecording2" method="put" path="/uc/{connection_id}/recording/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.UpdateUcRecordingRequest;
-import to.unified.unified_java_sdk.models.operations.UpdateUcRecordingResponse;
+import to.unified.unified_java_sdk.models.operations.UpdateUcRecording2Request;
+import to.unified.unified_java_sdk.models.operations.UpdateUcRecording2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 import to.unified.unified_java_sdk.models.shared.UcRecording;
 
@@ -447,14 +447,14 @@ public class Application {
                     .build())
             .build();
 
-        UpdateUcRecordingRequest req = UpdateUcRecordingRequest.builder()
+        UpdateUcRecording2Request req = UpdateUcRecording2Request.builder()
                 .ucRecording(UcRecording.builder()
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        UpdateUcRecordingResponse res = sdk.recording().updateUcRecording()
+        UpdateUcRecording2Response res = sdk.recording().updateUcRecording2()
                 .request(req)
                 .call();
 
@@ -467,13 +467,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
-| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
-| `request`                                                                       | [UpdateUcRecordingRequest](../../models/operations/UpdateUcRecordingRequest.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
+| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
+| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| `request`                                                                         | [UpdateUcRecording2Request](../../models/operations/UpdateUcRecording2Request.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
 
 ### Response
 
-**[UpdateUcRecordingResponse](../../models/operations/UpdateUcRecordingResponse.md)**
+**[UpdateUcRecording2Response](../../models/operations/UpdateUcRecording2Response.md)**
 
 ### Errors
 

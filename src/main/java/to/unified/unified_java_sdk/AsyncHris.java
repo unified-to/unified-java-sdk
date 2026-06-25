@@ -7,254 +7,254 @@ import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOper
 
 import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
-import to.unified.unified_java_sdk.models.operations.CreateHrisBankaccountRequest;
-import to.unified.unified_java_sdk.models.operations.CreateHrisBenefitRequest;
-import to.unified.unified_java_sdk.models.operations.CreateHrisCompanyRequest;
-import to.unified.unified_java_sdk.models.operations.CreateHrisDeductionRequest;
-import to.unified.unified_java_sdk.models.operations.CreateHrisDeviceRequest;
-import to.unified.unified_java_sdk.models.operations.CreateHrisEmployeeRequest;
-import to.unified.unified_java_sdk.models.operations.CreateHrisGroupRequest;
-import to.unified.unified_java_sdk.models.operations.CreateHrisLocationRequest;
-import to.unified.unified_java_sdk.models.operations.CreateHrisTimeoffRequest;
-import to.unified.unified_java_sdk.models.operations.CreateHrisTimeshiftRequest;
-import to.unified.unified_java_sdk.models.operations.GetHrisBankaccountRequest;
-import to.unified.unified_java_sdk.models.operations.GetHrisBenefitRequest;
-import to.unified.unified_java_sdk.models.operations.GetHrisCompanyRequest;
-import to.unified.unified_java_sdk.models.operations.GetHrisDeductionRequest;
-import to.unified.unified_java_sdk.models.operations.GetHrisDeviceRequest;
-import to.unified.unified_java_sdk.models.operations.GetHrisEmployeeRequest;
-import to.unified.unified_java_sdk.models.operations.GetHrisGroupRequest;
-import to.unified.unified_java_sdk.models.operations.GetHrisLocationRequest;
-import to.unified.unified_java_sdk.models.operations.GetHrisPayslipRequest;
-import to.unified.unified_java_sdk.models.operations.GetHrisTimeoffRequest;
-import to.unified.unified_java_sdk.models.operations.GetHrisTimeshiftRequest;
-import to.unified.unified_java_sdk.models.operations.ListHrisBankaccountsRequest;
-import to.unified.unified_java_sdk.models.operations.ListHrisBenefitsRequest;
-import to.unified.unified_java_sdk.models.operations.ListHrisCompaniesRequest;
-import to.unified.unified_java_sdk.models.operations.ListHrisDeductionsRequest;
-import to.unified.unified_java_sdk.models.operations.ListHrisDevicesRequest;
-import to.unified.unified_java_sdk.models.operations.ListHrisEmployeesRequest;
-import to.unified.unified_java_sdk.models.operations.ListHrisGroupsRequest;
-import to.unified.unified_java_sdk.models.operations.ListHrisLocationsRequest;
-import to.unified.unified_java_sdk.models.operations.ListHrisPayslipsRequest;
-import to.unified.unified_java_sdk.models.operations.ListHrisTimeoffsRequest;
-import to.unified.unified_java_sdk.models.operations.ListHrisTimeshiftsRequest;
-import to.unified.unified_java_sdk.models.operations.PatchHrisBankaccountRequest;
-import to.unified.unified_java_sdk.models.operations.PatchHrisBenefitRequest;
-import to.unified.unified_java_sdk.models.operations.PatchHrisCompanyRequest;
-import to.unified.unified_java_sdk.models.operations.PatchHrisDeductionRequest;
-import to.unified.unified_java_sdk.models.operations.PatchHrisDeviceRequest;
-import to.unified.unified_java_sdk.models.operations.PatchHrisEmployeeRequest;
-import to.unified.unified_java_sdk.models.operations.PatchHrisGroupRequest;
-import to.unified.unified_java_sdk.models.operations.PatchHrisLocationRequest;
-import to.unified.unified_java_sdk.models.operations.PatchHrisTimeoffRequest;
-import to.unified.unified_java_sdk.models.operations.PatchHrisTimeshiftRequest;
-import to.unified.unified_java_sdk.models.operations.RemoveHrisBankaccountRequest;
-import to.unified.unified_java_sdk.models.operations.RemoveHrisBenefitRequest;
-import to.unified.unified_java_sdk.models.operations.RemoveHrisCompanyRequest;
-import to.unified.unified_java_sdk.models.operations.RemoveHrisDeductionRequest;
-import to.unified.unified_java_sdk.models.operations.RemoveHrisDeviceRequest;
-import to.unified.unified_java_sdk.models.operations.RemoveHrisEmployeeRequest;
-import to.unified.unified_java_sdk.models.operations.RemoveHrisGroupRequest;
-import to.unified.unified_java_sdk.models.operations.RemoveHrisLocationRequest;
-import to.unified.unified_java_sdk.models.operations.RemoveHrisTimeoffRequest;
-import to.unified.unified_java_sdk.models.operations.RemoveHrisTimeshiftRequest;
-import to.unified.unified_java_sdk.models.operations.UpdateHrisBankaccountRequest;
-import to.unified.unified_java_sdk.models.operations.UpdateHrisBenefitRequest;
-import to.unified.unified_java_sdk.models.operations.UpdateHrisCompanyRequest;
-import to.unified.unified_java_sdk.models.operations.UpdateHrisDeductionRequest;
-import to.unified.unified_java_sdk.models.operations.UpdateHrisDeviceRequest;
-import to.unified.unified_java_sdk.models.operations.UpdateHrisEmployeeRequest;
-import to.unified.unified_java_sdk.models.operations.UpdateHrisGroupRequest;
-import to.unified.unified_java_sdk.models.operations.UpdateHrisLocationRequest;
-import to.unified.unified_java_sdk.models.operations.UpdateHrisTimeoffRequest;
-import to.unified.unified_java_sdk.models.operations.UpdateHrisTimeshiftRequest;
-import to.unified.unified_java_sdk.models.operations.async.CreateHrisBankaccountRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.CreateHrisBankaccountResponse;
-import to.unified.unified_java_sdk.models.operations.async.CreateHrisBenefitRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.CreateHrisBenefitResponse;
-import to.unified.unified_java_sdk.models.operations.async.CreateHrisCompanyRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.CreateHrisCompanyResponse;
-import to.unified.unified_java_sdk.models.operations.async.CreateHrisDeductionRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.CreateHrisDeductionResponse;
-import to.unified.unified_java_sdk.models.operations.async.CreateHrisDeviceRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.CreateHrisDeviceResponse;
-import to.unified.unified_java_sdk.models.operations.async.CreateHrisEmployeeRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.CreateHrisEmployeeResponse;
-import to.unified.unified_java_sdk.models.operations.async.CreateHrisGroupRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.CreateHrisGroupResponse;
-import to.unified.unified_java_sdk.models.operations.async.CreateHrisLocationRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.CreateHrisLocationResponse;
-import to.unified.unified_java_sdk.models.operations.async.CreateHrisTimeoffRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.CreateHrisTimeoffResponse;
-import to.unified.unified_java_sdk.models.operations.async.CreateHrisTimeshiftRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.CreateHrisTimeshiftResponse;
-import to.unified.unified_java_sdk.models.operations.async.GetHrisBankaccountRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.GetHrisBankaccountResponse;
-import to.unified.unified_java_sdk.models.operations.async.GetHrisBenefitRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.GetHrisBenefitResponse;
-import to.unified.unified_java_sdk.models.operations.async.GetHrisCompanyRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.GetHrisCompanyResponse;
-import to.unified.unified_java_sdk.models.operations.async.GetHrisDeductionRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.GetHrisDeductionResponse;
-import to.unified.unified_java_sdk.models.operations.async.GetHrisDeviceRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.GetHrisDeviceResponse;
-import to.unified.unified_java_sdk.models.operations.async.GetHrisEmployeeRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.GetHrisEmployeeResponse;
-import to.unified.unified_java_sdk.models.operations.async.GetHrisGroupRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.GetHrisGroupResponse;
-import to.unified.unified_java_sdk.models.operations.async.GetHrisLocationRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.GetHrisLocationResponse;
-import to.unified.unified_java_sdk.models.operations.async.GetHrisPayslipRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.GetHrisPayslipResponse;
-import to.unified.unified_java_sdk.models.operations.async.GetHrisTimeoffRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.GetHrisTimeoffResponse;
-import to.unified.unified_java_sdk.models.operations.async.GetHrisTimeshiftRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.GetHrisTimeshiftResponse;
-import to.unified.unified_java_sdk.models.operations.async.ListHrisBankaccountsRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.ListHrisBankaccountsResponse;
-import to.unified.unified_java_sdk.models.operations.async.ListHrisBenefitsRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.ListHrisBenefitsResponse;
-import to.unified.unified_java_sdk.models.operations.async.ListHrisCompaniesRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.ListHrisCompaniesResponse;
-import to.unified.unified_java_sdk.models.operations.async.ListHrisDeductionsRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.ListHrisDeductionsResponse;
-import to.unified.unified_java_sdk.models.operations.async.ListHrisDevicesRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.ListHrisDevicesResponse;
-import to.unified.unified_java_sdk.models.operations.async.ListHrisEmployeesRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.ListHrisEmployeesResponse;
-import to.unified.unified_java_sdk.models.operations.async.ListHrisGroupsRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.ListHrisGroupsResponse;
-import to.unified.unified_java_sdk.models.operations.async.ListHrisLocationsRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.ListHrisLocationsResponse;
-import to.unified.unified_java_sdk.models.operations.async.ListHrisPayslipsRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.ListHrisPayslipsResponse;
-import to.unified.unified_java_sdk.models.operations.async.ListHrisTimeoffsRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.ListHrisTimeoffsResponse;
-import to.unified.unified_java_sdk.models.operations.async.ListHrisTimeshiftsRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.ListHrisTimeshiftsResponse;
-import to.unified.unified_java_sdk.models.operations.async.PatchHrisBankaccountRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.PatchHrisBankaccountResponse;
-import to.unified.unified_java_sdk.models.operations.async.PatchHrisBenefitRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.PatchHrisBenefitResponse;
-import to.unified.unified_java_sdk.models.operations.async.PatchHrisCompanyRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.PatchHrisCompanyResponse;
-import to.unified.unified_java_sdk.models.operations.async.PatchHrisDeductionRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.PatchHrisDeductionResponse;
-import to.unified.unified_java_sdk.models.operations.async.PatchHrisDeviceRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.PatchHrisDeviceResponse;
-import to.unified.unified_java_sdk.models.operations.async.PatchHrisEmployeeRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.PatchHrisEmployeeResponse;
-import to.unified.unified_java_sdk.models.operations.async.PatchHrisGroupRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.PatchHrisGroupResponse;
-import to.unified.unified_java_sdk.models.operations.async.PatchHrisLocationRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.PatchHrisLocationResponse;
-import to.unified.unified_java_sdk.models.operations.async.PatchHrisTimeoffRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.PatchHrisTimeoffResponse;
-import to.unified.unified_java_sdk.models.operations.async.PatchHrisTimeshiftRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.PatchHrisTimeshiftResponse;
-import to.unified.unified_java_sdk.models.operations.async.RemoveHrisBankaccountRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.RemoveHrisBankaccountResponse;
-import to.unified.unified_java_sdk.models.operations.async.RemoveHrisBenefitRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.RemoveHrisBenefitResponse;
-import to.unified.unified_java_sdk.models.operations.async.RemoveHrisCompanyRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.RemoveHrisCompanyResponse;
-import to.unified.unified_java_sdk.models.operations.async.RemoveHrisDeductionRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.RemoveHrisDeductionResponse;
-import to.unified.unified_java_sdk.models.operations.async.RemoveHrisDeviceRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.RemoveHrisDeviceResponse;
-import to.unified.unified_java_sdk.models.operations.async.RemoveHrisEmployeeRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.RemoveHrisEmployeeResponse;
-import to.unified.unified_java_sdk.models.operations.async.RemoveHrisGroupRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.RemoveHrisGroupResponse;
-import to.unified.unified_java_sdk.models.operations.async.RemoveHrisLocationRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.RemoveHrisLocationResponse;
-import to.unified.unified_java_sdk.models.operations.async.RemoveHrisTimeoffRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.RemoveHrisTimeoffResponse;
-import to.unified.unified_java_sdk.models.operations.async.RemoveHrisTimeshiftRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.RemoveHrisTimeshiftResponse;
-import to.unified.unified_java_sdk.models.operations.async.UpdateHrisBankaccountRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.UpdateHrisBankaccountResponse;
-import to.unified.unified_java_sdk.models.operations.async.UpdateHrisBenefitRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.UpdateHrisBenefitResponse;
-import to.unified.unified_java_sdk.models.operations.async.UpdateHrisCompanyRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.UpdateHrisCompanyResponse;
-import to.unified.unified_java_sdk.models.operations.async.UpdateHrisDeductionRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.UpdateHrisDeductionResponse;
-import to.unified.unified_java_sdk.models.operations.async.UpdateHrisDeviceRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.UpdateHrisDeviceResponse;
-import to.unified.unified_java_sdk.models.operations.async.UpdateHrisEmployeeRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.UpdateHrisEmployeeResponse;
-import to.unified.unified_java_sdk.models.operations.async.UpdateHrisGroupRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.UpdateHrisGroupResponse;
-import to.unified.unified_java_sdk.models.operations.async.UpdateHrisLocationRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.UpdateHrisLocationResponse;
-import to.unified.unified_java_sdk.models.operations.async.UpdateHrisTimeoffRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.UpdateHrisTimeoffResponse;
-import to.unified.unified_java_sdk.models.operations.async.UpdateHrisTimeshiftRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.UpdateHrisTimeshiftResponse;
-import to.unified.unified_java_sdk.operations.CreateHrisBankaccount;
-import to.unified.unified_java_sdk.operations.CreateHrisBenefit;
-import to.unified.unified_java_sdk.operations.CreateHrisCompany;
-import to.unified.unified_java_sdk.operations.CreateHrisDeduction;
-import to.unified.unified_java_sdk.operations.CreateHrisDevice;
-import to.unified.unified_java_sdk.operations.CreateHrisEmployee;
-import to.unified.unified_java_sdk.operations.CreateHrisGroup;
-import to.unified.unified_java_sdk.operations.CreateHrisLocation;
-import to.unified.unified_java_sdk.operations.CreateHrisTimeoff;
-import to.unified.unified_java_sdk.operations.CreateHrisTimeshift;
-import to.unified.unified_java_sdk.operations.GetHrisBankaccount;
-import to.unified.unified_java_sdk.operations.GetHrisBenefit;
-import to.unified.unified_java_sdk.operations.GetHrisCompany;
-import to.unified.unified_java_sdk.operations.GetHrisDeduction;
-import to.unified.unified_java_sdk.operations.GetHrisDevice;
-import to.unified.unified_java_sdk.operations.GetHrisEmployee;
-import to.unified.unified_java_sdk.operations.GetHrisGroup;
-import to.unified.unified_java_sdk.operations.GetHrisLocation;
-import to.unified.unified_java_sdk.operations.GetHrisPayslip;
-import to.unified.unified_java_sdk.operations.GetHrisTimeoff;
-import to.unified.unified_java_sdk.operations.GetHrisTimeshift;
-import to.unified.unified_java_sdk.operations.ListHrisBankaccounts;
-import to.unified.unified_java_sdk.operations.ListHrisBenefits;
-import to.unified.unified_java_sdk.operations.ListHrisCompanies;
-import to.unified.unified_java_sdk.operations.ListHrisDeductions;
-import to.unified.unified_java_sdk.operations.ListHrisDevices;
-import to.unified.unified_java_sdk.operations.ListHrisEmployees;
-import to.unified.unified_java_sdk.operations.ListHrisGroups;
-import to.unified.unified_java_sdk.operations.ListHrisLocations;
-import to.unified.unified_java_sdk.operations.ListHrisPayslips;
-import to.unified.unified_java_sdk.operations.ListHrisTimeoffs;
-import to.unified.unified_java_sdk.operations.ListHrisTimeshifts;
-import to.unified.unified_java_sdk.operations.PatchHrisBankaccount;
-import to.unified.unified_java_sdk.operations.PatchHrisBenefit;
-import to.unified.unified_java_sdk.operations.PatchHrisCompany;
-import to.unified.unified_java_sdk.operations.PatchHrisDeduction;
-import to.unified.unified_java_sdk.operations.PatchHrisDevice;
-import to.unified.unified_java_sdk.operations.PatchHrisEmployee;
-import to.unified.unified_java_sdk.operations.PatchHrisGroup;
-import to.unified.unified_java_sdk.operations.PatchHrisLocation;
-import to.unified.unified_java_sdk.operations.PatchHrisTimeoff;
-import to.unified.unified_java_sdk.operations.PatchHrisTimeshift;
-import to.unified.unified_java_sdk.operations.RemoveHrisBankaccount;
-import to.unified.unified_java_sdk.operations.RemoveHrisBenefit;
-import to.unified.unified_java_sdk.operations.RemoveHrisCompany;
-import to.unified.unified_java_sdk.operations.RemoveHrisDeduction;
-import to.unified.unified_java_sdk.operations.RemoveHrisDevice;
-import to.unified.unified_java_sdk.operations.RemoveHrisEmployee;
-import to.unified.unified_java_sdk.operations.RemoveHrisGroup;
-import to.unified.unified_java_sdk.operations.RemoveHrisLocation;
-import to.unified.unified_java_sdk.operations.RemoveHrisTimeoff;
-import to.unified.unified_java_sdk.operations.RemoveHrisTimeshift;
-import to.unified.unified_java_sdk.operations.UpdateHrisBankaccount;
-import to.unified.unified_java_sdk.operations.UpdateHrisBenefit;
-import to.unified.unified_java_sdk.operations.UpdateHrisCompany;
-import to.unified.unified_java_sdk.operations.UpdateHrisDeduction;
-import to.unified.unified_java_sdk.operations.UpdateHrisDevice;
-import to.unified.unified_java_sdk.operations.UpdateHrisEmployee;
-import to.unified.unified_java_sdk.operations.UpdateHrisGroup;
-import to.unified.unified_java_sdk.operations.UpdateHrisLocation;
-import to.unified.unified_java_sdk.operations.UpdateHrisTimeoff;
-import to.unified.unified_java_sdk.operations.UpdateHrisTimeshift;
+import to.unified.unified_java_sdk.models.operations.CreateHrisBankaccount2Request;
+import to.unified.unified_java_sdk.models.operations.CreateHrisBenefit2Request;
+import to.unified.unified_java_sdk.models.operations.CreateHrisCompany2Request;
+import to.unified.unified_java_sdk.models.operations.CreateHrisDeduction2Request;
+import to.unified.unified_java_sdk.models.operations.CreateHrisDevice2Request;
+import to.unified.unified_java_sdk.models.operations.CreateHrisEmployee2Request;
+import to.unified.unified_java_sdk.models.operations.CreateHrisGroup2Request;
+import to.unified.unified_java_sdk.models.operations.CreateHrisLocation2Request;
+import to.unified.unified_java_sdk.models.operations.CreateHrisTimeoff2Request;
+import to.unified.unified_java_sdk.models.operations.CreateHrisTimeshift2Request;
+import to.unified.unified_java_sdk.models.operations.GetHrisBankaccount2Request;
+import to.unified.unified_java_sdk.models.operations.GetHrisBenefit2Request;
+import to.unified.unified_java_sdk.models.operations.GetHrisCompany2Request;
+import to.unified.unified_java_sdk.models.operations.GetHrisDeduction2Request;
+import to.unified.unified_java_sdk.models.operations.GetHrisDevice2Request;
+import to.unified.unified_java_sdk.models.operations.GetHrisEmployee2Request;
+import to.unified.unified_java_sdk.models.operations.GetHrisGroup2Request;
+import to.unified.unified_java_sdk.models.operations.GetHrisLocation2Request;
+import to.unified.unified_java_sdk.models.operations.GetHrisPayslip2Request;
+import to.unified.unified_java_sdk.models.operations.GetHrisTimeoff2Request;
+import to.unified.unified_java_sdk.models.operations.GetHrisTimeshift2Request;
+import to.unified.unified_java_sdk.models.operations.ListHrisBankaccounts2Request;
+import to.unified.unified_java_sdk.models.operations.ListHrisBenefits2Request;
+import to.unified.unified_java_sdk.models.operations.ListHrisCompanies2Request;
+import to.unified.unified_java_sdk.models.operations.ListHrisDeductions2Request;
+import to.unified.unified_java_sdk.models.operations.ListHrisDevices2Request;
+import to.unified.unified_java_sdk.models.operations.ListHrisEmployees2Request;
+import to.unified.unified_java_sdk.models.operations.ListHrisGroups2Request;
+import to.unified.unified_java_sdk.models.operations.ListHrisLocations2Request;
+import to.unified.unified_java_sdk.models.operations.ListHrisPayslips2Request;
+import to.unified.unified_java_sdk.models.operations.ListHrisTimeoffs2Request;
+import to.unified.unified_java_sdk.models.operations.ListHrisTimeshifts2Request;
+import to.unified.unified_java_sdk.models.operations.PatchHrisBankaccount2Request;
+import to.unified.unified_java_sdk.models.operations.PatchHrisBenefit2Request;
+import to.unified.unified_java_sdk.models.operations.PatchHrisCompany2Request;
+import to.unified.unified_java_sdk.models.operations.PatchHrisDeduction2Request;
+import to.unified.unified_java_sdk.models.operations.PatchHrisDevice2Request;
+import to.unified.unified_java_sdk.models.operations.PatchHrisEmployee2Request;
+import to.unified.unified_java_sdk.models.operations.PatchHrisGroup2Request;
+import to.unified.unified_java_sdk.models.operations.PatchHrisLocation2Request;
+import to.unified.unified_java_sdk.models.operations.PatchHrisTimeoff2Request;
+import to.unified.unified_java_sdk.models.operations.PatchHrisTimeshift2Request;
+import to.unified.unified_java_sdk.models.operations.RemoveHrisBankaccount2Request;
+import to.unified.unified_java_sdk.models.operations.RemoveHrisBenefit2Request;
+import to.unified.unified_java_sdk.models.operations.RemoveHrisCompany2Request;
+import to.unified.unified_java_sdk.models.operations.RemoveHrisDeduction2Request;
+import to.unified.unified_java_sdk.models.operations.RemoveHrisDevice2Request;
+import to.unified.unified_java_sdk.models.operations.RemoveHrisEmployee2Request;
+import to.unified.unified_java_sdk.models.operations.RemoveHrisGroup2Request;
+import to.unified.unified_java_sdk.models.operations.RemoveHrisLocation2Request;
+import to.unified.unified_java_sdk.models.operations.RemoveHrisTimeoff2Request;
+import to.unified.unified_java_sdk.models.operations.RemoveHrisTimeshift2Request;
+import to.unified.unified_java_sdk.models.operations.UpdateHrisBankaccount2Request;
+import to.unified.unified_java_sdk.models.operations.UpdateHrisBenefit2Request;
+import to.unified.unified_java_sdk.models.operations.UpdateHrisCompany2Request;
+import to.unified.unified_java_sdk.models.operations.UpdateHrisDeduction2Request;
+import to.unified.unified_java_sdk.models.operations.UpdateHrisDevice2Request;
+import to.unified.unified_java_sdk.models.operations.UpdateHrisEmployee2Request;
+import to.unified.unified_java_sdk.models.operations.UpdateHrisGroup2Request;
+import to.unified.unified_java_sdk.models.operations.UpdateHrisLocation2Request;
+import to.unified.unified_java_sdk.models.operations.UpdateHrisTimeoff2Request;
+import to.unified.unified_java_sdk.models.operations.UpdateHrisTimeshift2Request;
+import to.unified.unified_java_sdk.models.operations.async.CreateHrisBankaccount2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.CreateHrisBankaccount2Response;
+import to.unified.unified_java_sdk.models.operations.async.CreateHrisBenefit2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.CreateHrisBenefit2Response;
+import to.unified.unified_java_sdk.models.operations.async.CreateHrisCompany2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.CreateHrisCompany2Response;
+import to.unified.unified_java_sdk.models.operations.async.CreateHrisDeduction2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.CreateHrisDeduction2Response;
+import to.unified.unified_java_sdk.models.operations.async.CreateHrisDevice2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.CreateHrisDevice2Response;
+import to.unified.unified_java_sdk.models.operations.async.CreateHrisEmployee2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.CreateHrisEmployee2Response;
+import to.unified.unified_java_sdk.models.operations.async.CreateHrisGroup2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.CreateHrisGroup2Response;
+import to.unified.unified_java_sdk.models.operations.async.CreateHrisLocation2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.CreateHrisLocation2Response;
+import to.unified.unified_java_sdk.models.operations.async.CreateHrisTimeoff2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.CreateHrisTimeoff2Response;
+import to.unified.unified_java_sdk.models.operations.async.CreateHrisTimeshift2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.CreateHrisTimeshift2Response;
+import to.unified.unified_java_sdk.models.operations.async.GetHrisBankaccount2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetHrisBankaccount2Response;
+import to.unified.unified_java_sdk.models.operations.async.GetHrisBenefit2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetHrisBenefit2Response;
+import to.unified.unified_java_sdk.models.operations.async.GetHrisCompany2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetHrisCompany2Response;
+import to.unified.unified_java_sdk.models.operations.async.GetHrisDeduction2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetHrisDeduction2Response;
+import to.unified.unified_java_sdk.models.operations.async.GetHrisDevice2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetHrisDevice2Response;
+import to.unified.unified_java_sdk.models.operations.async.GetHrisEmployee2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetHrisEmployee2Response;
+import to.unified.unified_java_sdk.models.operations.async.GetHrisGroup2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetHrisGroup2Response;
+import to.unified.unified_java_sdk.models.operations.async.GetHrisLocation2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetHrisLocation2Response;
+import to.unified.unified_java_sdk.models.operations.async.GetHrisPayslip2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetHrisPayslip2Response;
+import to.unified.unified_java_sdk.models.operations.async.GetHrisTimeoff2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetHrisTimeoff2Response;
+import to.unified.unified_java_sdk.models.operations.async.GetHrisTimeshift2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetHrisTimeshift2Response;
+import to.unified.unified_java_sdk.models.operations.async.ListHrisBankaccounts2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListHrisBankaccounts2Response;
+import to.unified.unified_java_sdk.models.operations.async.ListHrisBenefits2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListHrisBenefits2Response;
+import to.unified.unified_java_sdk.models.operations.async.ListHrisCompanies2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListHrisCompanies2Response;
+import to.unified.unified_java_sdk.models.operations.async.ListHrisDeductions2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListHrisDeductions2Response;
+import to.unified.unified_java_sdk.models.operations.async.ListHrisDevices2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListHrisDevices2Response;
+import to.unified.unified_java_sdk.models.operations.async.ListHrisEmployees2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListHrisEmployees2Response;
+import to.unified.unified_java_sdk.models.operations.async.ListHrisGroups2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListHrisGroups2Response;
+import to.unified.unified_java_sdk.models.operations.async.ListHrisLocations2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListHrisLocations2Response;
+import to.unified.unified_java_sdk.models.operations.async.ListHrisPayslips2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListHrisPayslips2Response;
+import to.unified.unified_java_sdk.models.operations.async.ListHrisTimeoffs2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListHrisTimeoffs2Response;
+import to.unified.unified_java_sdk.models.operations.async.ListHrisTimeshifts2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListHrisTimeshifts2Response;
+import to.unified.unified_java_sdk.models.operations.async.PatchHrisBankaccount2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.PatchHrisBankaccount2Response;
+import to.unified.unified_java_sdk.models.operations.async.PatchHrisBenefit2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.PatchHrisBenefit2Response;
+import to.unified.unified_java_sdk.models.operations.async.PatchHrisCompany2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.PatchHrisCompany2Response;
+import to.unified.unified_java_sdk.models.operations.async.PatchHrisDeduction2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.PatchHrisDeduction2Response;
+import to.unified.unified_java_sdk.models.operations.async.PatchHrisDevice2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.PatchHrisDevice2Response;
+import to.unified.unified_java_sdk.models.operations.async.PatchHrisEmployee2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.PatchHrisEmployee2Response;
+import to.unified.unified_java_sdk.models.operations.async.PatchHrisGroup2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.PatchHrisGroup2Response;
+import to.unified.unified_java_sdk.models.operations.async.PatchHrisLocation2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.PatchHrisLocation2Response;
+import to.unified.unified_java_sdk.models.operations.async.PatchHrisTimeoff2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.PatchHrisTimeoff2Response;
+import to.unified.unified_java_sdk.models.operations.async.PatchHrisTimeshift2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.PatchHrisTimeshift2Response;
+import to.unified.unified_java_sdk.models.operations.async.RemoveHrisBankaccount2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.RemoveHrisBankaccount2Response;
+import to.unified.unified_java_sdk.models.operations.async.RemoveHrisBenefit2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.RemoveHrisBenefit2Response;
+import to.unified.unified_java_sdk.models.operations.async.RemoveHrisCompany2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.RemoveHrisCompany2Response;
+import to.unified.unified_java_sdk.models.operations.async.RemoveHrisDeduction2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.RemoveHrisDeduction2Response;
+import to.unified.unified_java_sdk.models.operations.async.RemoveHrisDevice2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.RemoveHrisDevice2Response;
+import to.unified.unified_java_sdk.models.operations.async.RemoveHrisEmployee2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.RemoveHrisEmployee2Response;
+import to.unified.unified_java_sdk.models.operations.async.RemoveHrisGroup2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.RemoveHrisGroup2Response;
+import to.unified.unified_java_sdk.models.operations.async.RemoveHrisLocation2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.RemoveHrisLocation2Response;
+import to.unified.unified_java_sdk.models.operations.async.RemoveHrisTimeoff2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.RemoveHrisTimeoff2Response;
+import to.unified.unified_java_sdk.models.operations.async.RemoveHrisTimeshift2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.RemoveHrisTimeshift2Response;
+import to.unified.unified_java_sdk.models.operations.async.UpdateHrisBankaccount2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.UpdateHrisBankaccount2Response;
+import to.unified.unified_java_sdk.models.operations.async.UpdateHrisBenefit2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.UpdateHrisBenefit2Response;
+import to.unified.unified_java_sdk.models.operations.async.UpdateHrisCompany2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.UpdateHrisCompany2Response;
+import to.unified.unified_java_sdk.models.operations.async.UpdateHrisDeduction2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.UpdateHrisDeduction2Response;
+import to.unified.unified_java_sdk.models.operations.async.UpdateHrisDevice2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.UpdateHrisDevice2Response;
+import to.unified.unified_java_sdk.models.operations.async.UpdateHrisEmployee2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.UpdateHrisEmployee2Response;
+import to.unified.unified_java_sdk.models.operations.async.UpdateHrisGroup2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.UpdateHrisGroup2Response;
+import to.unified.unified_java_sdk.models.operations.async.UpdateHrisLocation2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.UpdateHrisLocation2Response;
+import to.unified.unified_java_sdk.models.operations.async.UpdateHrisTimeoff2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.UpdateHrisTimeoff2Response;
+import to.unified.unified_java_sdk.models.operations.async.UpdateHrisTimeshift2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.UpdateHrisTimeshift2Response;
+import to.unified.unified_java_sdk.operations.CreateHrisBankaccount2;
+import to.unified.unified_java_sdk.operations.CreateHrisBenefit2;
+import to.unified.unified_java_sdk.operations.CreateHrisCompany2;
+import to.unified.unified_java_sdk.operations.CreateHrisDeduction2;
+import to.unified.unified_java_sdk.operations.CreateHrisDevice2;
+import to.unified.unified_java_sdk.operations.CreateHrisEmployee2;
+import to.unified.unified_java_sdk.operations.CreateHrisGroup2;
+import to.unified.unified_java_sdk.operations.CreateHrisLocation2;
+import to.unified.unified_java_sdk.operations.CreateHrisTimeoff2;
+import to.unified.unified_java_sdk.operations.CreateHrisTimeshift2;
+import to.unified.unified_java_sdk.operations.GetHrisBankaccount2;
+import to.unified.unified_java_sdk.operations.GetHrisBenefit2;
+import to.unified.unified_java_sdk.operations.GetHrisCompany2;
+import to.unified.unified_java_sdk.operations.GetHrisDeduction2;
+import to.unified.unified_java_sdk.operations.GetHrisDevice2;
+import to.unified.unified_java_sdk.operations.GetHrisEmployee2;
+import to.unified.unified_java_sdk.operations.GetHrisGroup2;
+import to.unified.unified_java_sdk.operations.GetHrisLocation2;
+import to.unified.unified_java_sdk.operations.GetHrisPayslip2;
+import to.unified.unified_java_sdk.operations.GetHrisTimeoff2;
+import to.unified.unified_java_sdk.operations.GetHrisTimeshift2;
+import to.unified.unified_java_sdk.operations.ListHrisBankaccounts2;
+import to.unified.unified_java_sdk.operations.ListHrisBenefits2;
+import to.unified.unified_java_sdk.operations.ListHrisCompanies2;
+import to.unified.unified_java_sdk.operations.ListHrisDeductions2;
+import to.unified.unified_java_sdk.operations.ListHrisDevices2;
+import to.unified.unified_java_sdk.operations.ListHrisEmployees2;
+import to.unified.unified_java_sdk.operations.ListHrisGroups2;
+import to.unified.unified_java_sdk.operations.ListHrisLocations2;
+import to.unified.unified_java_sdk.operations.ListHrisPayslips2;
+import to.unified.unified_java_sdk.operations.ListHrisTimeoffs2;
+import to.unified.unified_java_sdk.operations.ListHrisTimeshifts2;
+import to.unified.unified_java_sdk.operations.PatchHrisBankaccount2;
+import to.unified.unified_java_sdk.operations.PatchHrisBenefit2;
+import to.unified.unified_java_sdk.operations.PatchHrisCompany2;
+import to.unified.unified_java_sdk.operations.PatchHrisDeduction2;
+import to.unified.unified_java_sdk.operations.PatchHrisDevice2;
+import to.unified.unified_java_sdk.operations.PatchHrisEmployee2;
+import to.unified.unified_java_sdk.operations.PatchHrisGroup2;
+import to.unified.unified_java_sdk.operations.PatchHrisLocation2;
+import to.unified.unified_java_sdk.operations.PatchHrisTimeoff2;
+import to.unified.unified_java_sdk.operations.PatchHrisTimeshift2;
+import to.unified.unified_java_sdk.operations.RemoveHrisBankaccount2;
+import to.unified.unified_java_sdk.operations.RemoveHrisBenefit2;
+import to.unified.unified_java_sdk.operations.RemoveHrisCompany2;
+import to.unified.unified_java_sdk.operations.RemoveHrisDeduction2;
+import to.unified.unified_java_sdk.operations.RemoveHrisDevice2;
+import to.unified.unified_java_sdk.operations.RemoveHrisEmployee2;
+import to.unified.unified_java_sdk.operations.RemoveHrisGroup2;
+import to.unified.unified_java_sdk.operations.RemoveHrisLocation2;
+import to.unified.unified_java_sdk.operations.RemoveHrisTimeoff2;
+import to.unified.unified_java_sdk.operations.RemoveHrisTimeshift2;
+import to.unified.unified_java_sdk.operations.UpdateHrisBankaccount2;
+import to.unified.unified_java_sdk.operations.UpdateHrisBenefit2;
+import to.unified.unified_java_sdk.operations.UpdateHrisCompany2;
+import to.unified.unified_java_sdk.operations.UpdateHrisDeduction2;
+import to.unified.unified_java_sdk.operations.UpdateHrisDevice2;
+import to.unified.unified_java_sdk.operations.UpdateHrisEmployee2;
+import to.unified.unified_java_sdk.operations.UpdateHrisGroup2;
+import to.unified.unified_java_sdk.operations.UpdateHrisLocation2;
+import to.unified.unified_java_sdk.operations.UpdateHrisTimeoff2;
+import to.unified.unified_java_sdk.operations.UpdateHrisTimeshift2;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -283,19 +283,19 @@ public class AsyncHris {
      * 
      * @return The async call builder
      */
-    public CreateHrisBankaccountRequestBuilder createHrisBankaccount() {
-        return new CreateHrisBankaccountRequestBuilder(sdkConfiguration);
+    public CreateHrisBankaccount2RequestBuilder createHrisBankaccount2() {
+        return new CreateHrisBankaccount2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Create a bankaccount
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<CreateHrisBankaccountResponse>} - The async response
+     * @return {@code CompletableFuture<CreateHrisBankaccount2Response>} - The async response
      */
-    public CompletableFuture<CreateHrisBankaccountResponse> createHrisBankaccount(@Nonnull CreateHrisBankaccountRequest request) {
-        AsyncRequestOperation<CreateHrisBankaccountRequest, CreateHrisBankaccountResponse> operation
-              = new CreateHrisBankaccount.Async(sdkConfiguration, _headers);
+    public CompletableFuture<CreateHrisBankaccount2Response> createHrisBankaccount2(@Nonnull CreateHrisBankaccount2Request request) {
+        AsyncRequestOperation<CreateHrisBankaccount2Request, CreateHrisBankaccount2Response> operation
+              = new CreateHrisBankaccount2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -306,19 +306,19 @@ public class AsyncHris {
      * 
      * @return The async call builder
      */
-    public CreateHrisBenefitRequestBuilder createHrisBenefit() {
-        return new CreateHrisBenefitRequestBuilder(sdkConfiguration);
+    public CreateHrisBenefit2RequestBuilder createHrisBenefit2() {
+        return new CreateHrisBenefit2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Create a benefit
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<CreateHrisBenefitResponse>} - The async response
+     * @return {@code CompletableFuture<CreateHrisBenefit2Response>} - The async response
      */
-    public CompletableFuture<CreateHrisBenefitResponse> createHrisBenefit(@Nonnull CreateHrisBenefitRequest request) {
-        AsyncRequestOperation<CreateHrisBenefitRequest, CreateHrisBenefitResponse> operation
-              = new CreateHrisBenefit.Async(sdkConfiguration, _headers);
+    public CompletableFuture<CreateHrisBenefit2Response> createHrisBenefit2(@Nonnull CreateHrisBenefit2Request request) {
+        AsyncRequestOperation<CreateHrisBenefit2Request, CreateHrisBenefit2Response> operation
+              = new CreateHrisBenefit2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -329,19 +329,19 @@ public class AsyncHris {
      * 
      * @return The async call builder
      */
-    public CreateHrisCompanyRequestBuilder createHrisCompany() {
-        return new CreateHrisCompanyRequestBuilder(sdkConfiguration);
+    public CreateHrisCompany2RequestBuilder createHrisCompany2() {
+        return new CreateHrisCompany2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Create a company
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<CreateHrisCompanyResponse>} - The async response
+     * @return {@code CompletableFuture<CreateHrisCompany2Response>} - The async response
      */
-    public CompletableFuture<CreateHrisCompanyResponse> createHrisCompany(@Nonnull CreateHrisCompanyRequest request) {
-        AsyncRequestOperation<CreateHrisCompanyRequest, CreateHrisCompanyResponse> operation
-              = new CreateHrisCompany.Async(sdkConfiguration, _headers);
+    public CompletableFuture<CreateHrisCompany2Response> createHrisCompany2(@Nonnull CreateHrisCompany2Request request) {
+        AsyncRequestOperation<CreateHrisCompany2Request, CreateHrisCompany2Response> operation
+              = new CreateHrisCompany2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -352,19 +352,19 @@ public class AsyncHris {
      * 
      * @return The async call builder
      */
-    public CreateHrisDeductionRequestBuilder createHrisDeduction() {
-        return new CreateHrisDeductionRequestBuilder(sdkConfiguration);
+    public CreateHrisDeduction2RequestBuilder createHrisDeduction2() {
+        return new CreateHrisDeduction2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Create a deduction
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<CreateHrisDeductionResponse>} - The async response
+     * @return {@code CompletableFuture<CreateHrisDeduction2Response>} - The async response
      */
-    public CompletableFuture<CreateHrisDeductionResponse> createHrisDeduction(@Nonnull CreateHrisDeductionRequest request) {
-        AsyncRequestOperation<CreateHrisDeductionRequest, CreateHrisDeductionResponse> operation
-              = new CreateHrisDeduction.Async(sdkConfiguration, _headers);
+    public CompletableFuture<CreateHrisDeduction2Response> createHrisDeduction2(@Nonnull CreateHrisDeduction2Request request) {
+        AsyncRequestOperation<CreateHrisDeduction2Request, CreateHrisDeduction2Response> operation
+              = new CreateHrisDeduction2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -375,19 +375,19 @@ public class AsyncHris {
      * 
      * @return The async call builder
      */
-    public CreateHrisDeviceRequestBuilder createHrisDevice() {
-        return new CreateHrisDeviceRequestBuilder(sdkConfiguration);
+    public CreateHrisDevice2RequestBuilder createHrisDevice2() {
+        return new CreateHrisDevice2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Create a device
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<CreateHrisDeviceResponse>} - The async response
+     * @return {@code CompletableFuture<CreateHrisDevice2Response>} - The async response
      */
-    public CompletableFuture<CreateHrisDeviceResponse> createHrisDevice(@Nonnull CreateHrisDeviceRequest request) {
-        AsyncRequestOperation<CreateHrisDeviceRequest, CreateHrisDeviceResponse> operation
-              = new CreateHrisDevice.Async(sdkConfiguration, _headers);
+    public CompletableFuture<CreateHrisDevice2Response> createHrisDevice2(@Nonnull CreateHrisDevice2Request request) {
+        AsyncRequestOperation<CreateHrisDevice2Request, CreateHrisDevice2Response> operation
+              = new CreateHrisDevice2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -398,19 +398,19 @@ public class AsyncHris {
      * 
      * @return The async call builder
      */
-    public CreateHrisEmployeeRequestBuilder createHrisEmployee() {
-        return new CreateHrisEmployeeRequestBuilder(sdkConfiguration);
+    public CreateHrisEmployee2RequestBuilder createHrisEmployee2() {
+        return new CreateHrisEmployee2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Create an employee
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<CreateHrisEmployeeResponse>} - The async response
+     * @return {@code CompletableFuture<CreateHrisEmployee2Response>} - The async response
      */
-    public CompletableFuture<CreateHrisEmployeeResponse> createHrisEmployee(@Nonnull CreateHrisEmployeeRequest request) {
-        AsyncRequestOperation<CreateHrisEmployeeRequest, CreateHrisEmployeeResponse> operation
-              = new CreateHrisEmployee.Async(sdkConfiguration, _headers);
+    public CompletableFuture<CreateHrisEmployee2Response> createHrisEmployee2(@Nonnull CreateHrisEmployee2Request request) {
+        AsyncRequestOperation<CreateHrisEmployee2Request, CreateHrisEmployee2Response> operation
+              = new CreateHrisEmployee2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -421,19 +421,19 @@ public class AsyncHris {
      * 
      * @return The async call builder
      */
-    public CreateHrisGroupRequestBuilder createHrisGroup() {
-        return new CreateHrisGroupRequestBuilder(sdkConfiguration);
+    public CreateHrisGroup2RequestBuilder createHrisGroup2() {
+        return new CreateHrisGroup2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Create a group
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<CreateHrisGroupResponse>} - The async response
+     * @return {@code CompletableFuture<CreateHrisGroup2Response>} - The async response
      */
-    public CompletableFuture<CreateHrisGroupResponse> createHrisGroup(@Nonnull CreateHrisGroupRequest request) {
-        AsyncRequestOperation<CreateHrisGroupRequest, CreateHrisGroupResponse> operation
-              = new CreateHrisGroup.Async(sdkConfiguration, _headers);
+    public CompletableFuture<CreateHrisGroup2Response> createHrisGroup2(@Nonnull CreateHrisGroup2Request request) {
+        AsyncRequestOperation<CreateHrisGroup2Request, CreateHrisGroup2Response> operation
+              = new CreateHrisGroup2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -444,19 +444,19 @@ public class AsyncHris {
      * 
      * @return The async call builder
      */
-    public CreateHrisLocationRequestBuilder createHrisLocation() {
-        return new CreateHrisLocationRequestBuilder(sdkConfiguration);
+    public CreateHrisLocation2RequestBuilder createHrisLocation2() {
+        return new CreateHrisLocation2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Create a location
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<CreateHrisLocationResponse>} - The async response
+     * @return {@code CompletableFuture<CreateHrisLocation2Response>} - The async response
      */
-    public CompletableFuture<CreateHrisLocationResponse> createHrisLocation(@Nonnull CreateHrisLocationRequest request) {
-        AsyncRequestOperation<CreateHrisLocationRequest, CreateHrisLocationResponse> operation
-              = new CreateHrisLocation.Async(sdkConfiguration, _headers);
+    public CompletableFuture<CreateHrisLocation2Response> createHrisLocation2(@Nonnull CreateHrisLocation2Request request) {
+        AsyncRequestOperation<CreateHrisLocation2Request, CreateHrisLocation2Response> operation
+              = new CreateHrisLocation2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -467,19 +467,19 @@ public class AsyncHris {
      * 
      * @return The async call builder
      */
-    public CreateHrisTimeoffRequestBuilder createHrisTimeoff() {
-        return new CreateHrisTimeoffRequestBuilder(sdkConfiguration);
+    public CreateHrisTimeoff2RequestBuilder createHrisTimeoff2() {
+        return new CreateHrisTimeoff2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Create a timeoff
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<CreateHrisTimeoffResponse>} - The async response
+     * @return {@code CompletableFuture<CreateHrisTimeoff2Response>} - The async response
      */
-    public CompletableFuture<CreateHrisTimeoffResponse> createHrisTimeoff(@Nonnull CreateHrisTimeoffRequest request) {
-        AsyncRequestOperation<CreateHrisTimeoffRequest, CreateHrisTimeoffResponse> operation
-              = new CreateHrisTimeoff.Async(sdkConfiguration, _headers);
+    public CompletableFuture<CreateHrisTimeoff2Response> createHrisTimeoff2(@Nonnull CreateHrisTimeoff2Request request) {
+        AsyncRequestOperation<CreateHrisTimeoff2Request, CreateHrisTimeoff2Response> operation
+              = new CreateHrisTimeoff2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -490,19 +490,19 @@ public class AsyncHris {
      * 
      * @return The async call builder
      */
-    public CreateHrisTimeshiftRequestBuilder createHrisTimeshift() {
-        return new CreateHrisTimeshiftRequestBuilder(sdkConfiguration);
+    public CreateHrisTimeshift2RequestBuilder createHrisTimeshift2() {
+        return new CreateHrisTimeshift2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Create a timeshift
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<CreateHrisTimeshiftResponse>} - The async response
+     * @return {@code CompletableFuture<CreateHrisTimeshift2Response>} - The async response
      */
-    public CompletableFuture<CreateHrisTimeshiftResponse> createHrisTimeshift(@Nonnull CreateHrisTimeshiftRequest request) {
-        AsyncRequestOperation<CreateHrisTimeshiftRequest, CreateHrisTimeshiftResponse> operation
-              = new CreateHrisTimeshift.Async(sdkConfiguration, _headers);
+    public CompletableFuture<CreateHrisTimeshift2Response> createHrisTimeshift2(@Nonnull CreateHrisTimeshift2Request request) {
+        AsyncRequestOperation<CreateHrisTimeshift2Request, CreateHrisTimeshift2Response> operation
+              = new CreateHrisTimeshift2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -513,19 +513,19 @@ public class AsyncHris {
      * 
      * @return The async call builder
      */
-    public GetHrisBankaccountRequestBuilder getHrisBankaccount() {
-        return new GetHrisBankaccountRequestBuilder(sdkConfiguration);
+    public GetHrisBankaccount2RequestBuilder getHrisBankaccount2() {
+        return new GetHrisBankaccount2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Retrieve a bankaccount
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<GetHrisBankaccountResponse>} - The async response
+     * @return {@code CompletableFuture<GetHrisBankaccount2Response>} - The async response
      */
-    public CompletableFuture<GetHrisBankaccountResponse> getHrisBankaccount(@Nonnull GetHrisBankaccountRequest request) {
-        AsyncRequestOperation<GetHrisBankaccountRequest, GetHrisBankaccountResponse> operation
-              = new GetHrisBankaccount.Async(sdkConfiguration, _headers);
+    public CompletableFuture<GetHrisBankaccount2Response> getHrisBankaccount2(@Nonnull GetHrisBankaccount2Request request) {
+        AsyncRequestOperation<GetHrisBankaccount2Request, GetHrisBankaccount2Response> operation
+              = new GetHrisBankaccount2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -536,19 +536,19 @@ public class AsyncHris {
      * 
      * @return The async call builder
      */
-    public GetHrisBenefitRequestBuilder getHrisBenefit() {
-        return new GetHrisBenefitRequestBuilder(sdkConfiguration);
+    public GetHrisBenefit2RequestBuilder getHrisBenefit2() {
+        return new GetHrisBenefit2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Retrieve a benefit
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<GetHrisBenefitResponse>} - The async response
+     * @return {@code CompletableFuture<GetHrisBenefit2Response>} - The async response
      */
-    public CompletableFuture<GetHrisBenefitResponse> getHrisBenefit(@Nonnull GetHrisBenefitRequest request) {
-        AsyncRequestOperation<GetHrisBenefitRequest, GetHrisBenefitResponse> operation
-              = new GetHrisBenefit.Async(sdkConfiguration, _headers);
+    public CompletableFuture<GetHrisBenefit2Response> getHrisBenefit2(@Nonnull GetHrisBenefit2Request request) {
+        AsyncRequestOperation<GetHrisBenefit2Request, GetHrisBenefit2Response> operation
+              = new GetHrisBenefit2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -559,19 +559,19 @@ public class AsyncHris {
      * 
      * @return The async call builder
      */
-    public GetHrisCompanyRequestBuilder getHrisCompany() {
-        return new GetHrisCompanyRequestBuilder(sdkConfiguration);
+    public GetHrisCompany2RequestBuilder getHrisCompany2() {
+        return new GetHrisCompany2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Retrieve a company
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<GetHrisCompanyResponse>} - The async response
+     * @return {@code CompletableFuture<GetHrisCompany2Response>} - The async response
      */
-    public CompletableFuture<GetHrisCompanyResponse> getHrisCompany(@Nonnull GetHrisCompanyRequest request) {
-        AsyncRequestOperation<GetHrisCompanyRequest, GetHrisCompanyResponse> operation
-              = new GetHrisCompany.Async(sdkConfiguration, _headers);
+    public CompletableFuture<GetHrisCompany2Response> getHrisCompany2(@Nonnull GetHrisCompany2Request request) {
+        AsyncRequestOperation<GetHrisCompany2Request, GetHrisCompany2Response> operation
+              = new GetHrisCompany2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -582,19 +582,19 @@ public class AsyncHris {
      * 
      * @return The async call builder
      */
-    public GetHrisDeductionRequestBuilder getHrisDeduction() {
-        return new GetHrisDeductionRequestBuilder(sdkConfiguration);
+    public GetHrisDeduction2RequestBuilder getHrisDeduction2() {
+        return new GetHrisDeduction2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Retrieve a deduction
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<GetHrisDeductionResponse>} - The async response
+     * @return {@code CompletableFuture<GetHrisDeduction2Response>} - The async response
      */
-    public CompletableFuture<GetHrisDeductionResponse> getHrisDeduction(@Nonnull GetHrisDeductionRequest request) {
-        AsyncRequestOperation<GetHrisDeductionRequest, GetHrisDeductionResponse> operation
-              = new GetHrisDeduction.Async(sdkConfiguration, _headers);
+    public CompletableFuture<GetHrisDeduction2Response> getHrisDeduction2(@Nonnull GetHrisDeduction2Request request) {
+        AsyncRequestOperation<GetHrisDeduction2Request, GetHrisDeduction2Response> operation
+              = new GetHrisDeduction2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -605,19 +605,19 @@ public class AsyncHris {
      * 
      * @return The async call builder
      */
-    public GetHrisDeviceRequestBuilder getHrisDevice() {
-        return new GetHrisDeviceRequestBuilder(sdkConfiguration);
+    public GetHrisDevice2RequestBuilder getHrisDevice2() {
+        return new GetHrisDevice2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Retrieve a device
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<GetHrisDeviceResponse>} - The async response
+     * @return {@code CompletableFuture<GetHrisDevice2Response>} - The async response
      */
-    public CompletableFuture<GetHrisDeviceResponse> getHrisDevice(@Nonnull GetHrisDeviceRequest request) {
-        AsyncRequestOperation<GetHrisDeviceRequest, GetHrisDeviceResponse> operation
-              = new GetHrisDevice.Async(sdkConfiguration, _headers);
+    public CompletableFuture<GetHrisDevice2Response> getHrisDevice2(@Nonnull GetHrisDevice2Request request) {
+        AsyncRequestOperation<GetHrisDevice2Request, GetHrisDevice2Response> operation
+              = new GetHrisDevice2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -628,19 +628,19 @@ public class AsyncHris {
      * 
      * @return The async call builder
      */
-    public GetHrisEmployeeRequestBuilder getHrisEmployee() {
-        return new GetHrisEmployeeRequestBuilder(sdkConfiguration);
+    public GetHrisEmployee2RequestBuilder getHrisEmployee2() {
+        return new GetHrisEmployee2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Retrieve an employee
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<GetHrisEmployeeResponse>} - The async response
+     * @return {@code CompletableFuture<GetHrisEmployee2Response>} - The async response
      */
-    public CompletableFuture<GetHrisEmployeeResponse> getHrisEmployee(@Nonnull GetHrisEmployeeRequest request) {
-        AsyncRequestOperation<GetHrisEmployeeRequest, GetHrisEmployeeResponse> operation
-              = new GetHrisEmployee.Async(sdkConfiguration, _headers);
+    public CompletableFuture<GetHrisEmployee2Response> getHrisEmployee2(@Nonnull GetHrisEmployee2Request request) {
+        AsyncRequestOperation<GetHrisEmployee2Request, GetHrisEmployee2Response> operation
+              = new GetHrisEmployee2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -651,19 +651,19 @@ public class AsyncHris {
      * 
      * @return The async call builder
      */
-    public GetHrisGroupRequestBuilder getHrisGroup() {
-        return new GetHrisGroupRequestBuilder(sdkConfiguration);
+    public GetHrisGroup2RequestBuilder getHrisGroup2() {
+        return new GetHrisGroup2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Retrieve a group
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<GetHrisGroupResponse>} - The async response
+     * @return {@code CompletableFuture<GetHrisGroup2Response>} - The async response
      */
-    public CompletableFuture<GetHrisGroupResponse> getHrisGroup(@Nonnull GetHrisGroupRequest request) {
-        AsyncRequestOperation<GetHrisGroupRequest, GetHrisGroupResponse> operation
-              = new GetHrisGroup.Async(sdkConfiguration, _headers);
+    public CompletableFuture<GetHrisGroup2Response> getHrisGroup2(@Nonnull GetHrisGroup2Request request) {
+        AsyncRequestOperation<GetHrisGroup2Request, GetHrisGroup2Response> operation
+              = new GetHrisGroup2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -674,19 +674,19 @@ public class AsyncHris {
      * 
      * @return The async call builder
      */
-    public GetHrisLocationRequestBuilder getHrisLocation() {
-        return new GetHrisLocationRequestBuilder(sdkConfiguration);
+    public GetHrisLocation2RequestBuilder getHrisLocation2() {
+        return new GetHrisLocation2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Retrieve a location
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<GetHrisLocationResponse>} - The async response
+     * @return {@code CompletableFuture<GetHrisLocation2Response>} - The async response
      */
-    public CompletableFuture<GetHrisLocationResponse> getHrisLocation(@Nonnull GetHrisLocationRequest request) {
-        AsyncRequestOperation<GetHrisLocationRequest, GetHrisLocationResponse> operation
-              = new GetHrisLocation.Async(sdkConfiguration, _headers);
+    public CompletableFuture<GetHrisLocation2Response> getHrisLocation2(@Nonnull GetHrisLocation2Request request) {
+        AsyncRequestOperation<GetHrisLocation2Request, GetHrisLocation2Response> operation
+              = new GetHrisLocation2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -697,19 +697,19 @@ public class AsyncHris {
      * 
      * @return The async call builder
      */
-    public GetHrisPayslipRequestBuilder getHrisPayslip() {
-        return new GetHrisPayslipRequestBuilder(sdkConfiguration);
+    public GetHrisPayslip2RequestBuilder getHrisPayslip2() {
+        return new GetHrisPayslip2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Retrieve a payslip
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<GetHrisPayslipResponse>} - The async response
+     * @return {@code CompletableFuture<GetHrisPayslip2Response>} - The async response
      */
-    public CompletableFuture<GetHrisPayslipResponse> getHrisPayslip(@Nonnull GetHrisPayslipRequest request) {
-        AsyncRequestOperation<GetHrisPayslipRequest, GetHrisPayslipResponse> operation
-              = new GetHrisPayslip.Async(sdkConfiguration, _headers);
+    public CompletableFuture<GetHrisPayslip2Response> getHrisPayslip2(@Nonnull GetHrisPayslip2Request request) {
+        AsyncRequestOperation<GetHrisPayslip2Request, GetHrisPayslip2Response> operation
+              = new GetHrisPayslip2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -720,19 +720,19 @@ public class AsyncHris {
      * 
      * @return The async call builder
      */
-    public GetHrisTimeoffRequestBuilder getHrisTimeoff() {
-        return new GetHrisTimeoffRequestBuilder(sdkConfiguration);
+    public GetHrisTimeoff2RequestBuilder getHrisTimeoff2() {
+        return new GetHrisTimeoff2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Retrieve a timeoff
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<GetHrisTimeoffResponse>} - The async response
+     * @return {@code CompletableFuture<GetHrisTimeoff2Response>} - The async response
      */
-    public CompletableFuture<GetHrisTimeoffResponse> getHrisTimeoff(@Nonnull GetHrisTimeoffRequest request) {
-        AsyncRequestOperation<GetHrisTimeoffRequest, GetHrisTimeoffResponse> operation
-              = new GetHrisTimeoff.Async(sdkConfiguration, _headers);
+    public CompletableFuture<GetHrisTimeoff2Response> getHrisTimeoff2(@Nonnull GetHrisTimeoff2Request request) {
+        AsyncRequestOperation<GetHrisTimeoff2Request, GetHrisTimeoff2Response> operation
+              = new GetHrisTimeoff2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -743,19 +743,19 @@ public class AsyncHris {
      * 
      * @return The async call builder
      */
-    public GetHrisTimeshiftRequestBuilder getHrisTimeshift() {
-        return new GetHrisTimeshiftRequestBuilder(sdkConfiguration);
+    public GetHrisTimeshift2RequestBuilder getHrisTimeshift2() {
+        return new GetHrisTimeshift2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Retrieve a timeshift
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<GetHrisTimeshiftResponse>} - The async response
+     * @return {@code CompletableFuture<GetHrisTimeshift2Response>} - The async response
      */
-    public CompletableFuture<GetHrisTimeshiftResponse> getHrisTimeshift(@Nonnull GetHrisTimeshiftRequest request) {
-        AsyncRequestOperation<GetHrisTimeshiftRequest, GetHrisTimeshiftResponse> operation
-              = new GetHrisTimeshift.Async(sdkConfiguration, _headers);
+    public CompletableFuture<GetHrisTimeshift2Response> getHrisTimeshift2(@Nonnull GetHrisTimeshift2Request request) {
+        AsyncRequestOperation<GetHrisTimeshift2Request, GetHrisTimeshift2Response> operation
+              = new GetHrisTimeshift2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -766,19 +766,19 @@ public class AsyncHris {
      * 
      * @return The async call builder
      */
-    public ListHrisBankaccountsRequestBuilder listHrisBankaccounts() {
-        return new ListHrisBankaccountsRequestBuilder(sdkConfiguration);
+    public ListHrisBankaccounts2RequestBuilder listHrisBankaccounts2() {
+        return new ListHrisBankaccounts2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * List all bankaccounts
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<ListHrisBankaccountsResponse>} - The async response
+     * @return {@code CompletableFuture<ListHrisBankaccounts2Response>} - The async response
      */
-    public CompletableFuture<ListHrisBankaccountsResponse> listHrisBankaccounts(@Nonnull ListHrisBankaccountsRequest request) {
-        AsyncRequestOperation<ListHrisBankaccountsRequest, ListHrisBankaccountsResponse> operation
-              = new ListHrisBankaccounts.Async(sdkConfiguration, _headers);
+    public CompletableFuture<ListHrisBankaccounts2Response> listHrisBankaccounts2(@Nonnull ListHrisBankaccounts2Request request) {
+        AsyncRequestOperation<ListHrisBankaccounts2Request, ListHrisBankaccounts2Response> operation
+              = new ListHrisBankaccounts2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -789,19 +789,19 @@ public class AsyncHris {
      * 
      * @return The async call builder
      */
-    public ListHrisBenefitsRequestBuilder listHrisBenefits() {
-        return new ListHrisBenefitsRequestBuilder(sdkConfiguration);
+    public ListHrisBenefits2RequestBuilder listHrisBenefits2() {
+        return new ListHrisBenefits2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * List all benefits
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<ListHrisBenefitsResponse>} - The async response
+     * @return {@code CompletableFuture<ListHrisBenefits2Response>} - The async response
      */
-    public CompletableFuture<ListHrisBenefitsResponse> listHrisBenefits(@Nonnull ListHrisBenefitsRequest request) {
-        AsyncRequestOperation<ListHrisBenefitsRequest, ListHrisBenefitsResponse> operation
-              = new ListHrisBenefits.Async(sdkConfiguration, _headers);
+    public CompletableFuture<ListHrisBenefits2Response> listHrisBenefits2(@Nonnull ListHrisBenefits2Request request) {
+        AsyncRequestOperation<ListHrisBenefits2Request, ListHrisBenefits2Response> operation
+              = new ListHrisBenefits2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -812,19 +812,19 @@ public class AsyncHris {
      * 
      * @return The async call builder
      */
-    public ListHrisCompaniesRequestBuilder listHrisCompanies() {
-        return new ListHrisCompaniesRequestBuilder(sdkConfiguration);
+    public ListHrisCompanies2RequestBuilder listHrisCompanies2() {
+        return new ListHrisCompanies2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * List all companies
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<ListHrisCompaniesResponse>} - The async response
+     * @return {@code CompletableFuture<ListHrisCompanies2Response>} - The async response
      */
-    public CompletableFuture<ListHrisCompaniesResponse> listHrisCompanies(@Nonnull ListHrisCompaniesRequest request) {
-        AsyncRequestOperation<ListHrisCompaniesRequest, ListHrisCompaniesResponse> operation
-              = new ListHrisCompanies.Async(sdkConfiguration, _headers);
+    public CompletableFuture<ListHrisCompanies2Response> listHrisCompanies2(@Nonnull ListHrisCompanies2Request request) {
+        AsyncRequestOperation<ListHrisCompanies2Request, ListHrisCompanies2Response> operation
+              = new ListHrisCompanies2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -835,19 +835,19 @@ public class AsyncHris {
      * 
      * @return The async call builder
      */
-    public ListHrisDeductionsRequestBuilder listHrisDeductions() {
-        return new ListHrisDeductionsRequestBuilder(sdkConfiguration);
+    public ListHrisDeductions2RequestBuilder listHrisDeductions2() {
+        return new ListHrisDeductions2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * List all deductions
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<ListHrisDeductionsResponse>} - The async response
+     * @return {@code CompletableFuture<ListHrisDeductions2Response>} - The async response
      */
-    public CompletableFuture<ListHrisDeductionsResponse> listHrisDeductions(@Nonnull ListHrisDeductionsRequest request) {
-        AsyncRequestOperation<ListHrisDeductionsRequest, ListHrisDeductionsResponse> operation
-              = new ListHrisDeductions.Async(sdkConfiguration, _headers);
+    public CompletableFuture<ListHrisDeductions2Response> listHrisDeductions2(@Nonnull ListHrisDeductions2Request request) {
+        AsyncRequestOperation<ListHrisDeductions2Request, ListHrisDeductions2Response> operation
+              = new ListHrisDeductions2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -858,19 +858,19 @@ public class AsyncHris {
      * 
      * @return The async call builder
      */
-    public ListHrisDevicesRequestBuilder listHrisDevices() {
-        return new ListHrisDevicesRequestBuilder(sdkConfiguration);
+    public ListHrisDevices2RequestBuilder listHrisDevices2() {
+        return new ListHrisDevices2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * List all devices
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<ListHrisDevicesResponse>} - The async response
+     * @return {@code CompletableFuture<ListHrisDevices2Response>} - The async response
      */
-    public CompletableFuture<ListHrisDevicesResponse> listHrisDevices(@Nonnull ListHrisDevicesRequest request) {
-        AsyncRequestOperation<ListHrisDevicesRequest, ListHrisDevicesResponse> operation
-              = new ListHrisDevices.Async(sdkConfiguration, _headers);
+    public CompletableFuture<ListHrisDevices2Response> listHrisDevices2(@Nonnull ListHrisDevices2Request request) {
+        AsyncRequestOperation<ListHrisDevices2Request, ListHrisDevices2Response> operation
+              = new ListHrisDevices2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -881,19 +881,19 @@ public class AsyncHris {
      * 
      * @return The async call builder
      */
-    public ListHrisEmployeesRequestBuilder listHrisEmployees() {
-        return new ListHrisEmployeesRequestBuilder(sdkConfiguration);
+    public ListHrisEmployees2RequestBuilder listHrisEmployees2() {
+        return new ListHrisEmployees2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * List all employees
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<ListHrisEmployeesResponse>} - The async response
+     * @return {@code CompletableFuture<ListHrisEmployees2Response>} - The async response
      */
-    public CompletableFuture<ListHrisEmployeesResponse> listHrisEmployees(@Nonnull ListHrisEmployeesRequest request) {
-        AsyncRequestOperation<ListHrisEmployeesRequest, ListHrisEmployeesResponse> operation
-              = new ListHrisEmployees.Async(sdkConfiguration, _headers);
+    public CompletableFuture<ListHrisEmployees2Response> listHrisEmployees2(@Nonnull ListHrisEmployees2Request request) {
+        AsyncRequestOperation<ListHrisEmployees2Request, ListHrisEmployees2Response> operation
+              = new ListHrisEmployees2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -904,19 +904,19 @@ public class AsyncHris {
      * 
      * @return The async call builder
      */
-    public ListHrisGroupsRequestBuilder listHrisGroups() {
-        return new ListHrisGroupsRequestBuilder(sdkConfiguration);
+    public ListHrisGroups2RequestBuilder listHrisGroups2() {
+        return new ListHrisGroups2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * List all groups
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<ListHrisGroupsResponse>} - The async response
+     * @return {@code CompletableFuture<ListHrisGroups2Response>} - The async response
      */
-    public CompletableFuture<ListHrisGroupsResponse> listHrisGroups(@Nonnull ListHrisGroupsRequest request) {
-        AsyncRequestOperation<ListHrisGroupsRequest, ListHrisGroupsResponse> operation
-              = new ListHrisGroups.Async(sdkConfiguration, _headers);
+    public CompletableFuture<ListHrisGroups2Response> listHrisGroups2(@Nonnull ListHrisGroups2Request request) {
+        AsyncRequestOperation<ListHrisGroups2Request, ListHrisGroups2Response> operation
+              = new ListHrisGroups2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -927,19 +927,19 @@ public class AsyncHris {
      * 
      * @return The async call builder
      */
-    public ListHrisLocationsRequestBuilder listHrisLocations() {
-        return new ListHrisLocationsRequestBuilder(sdkConfiguration);
+    public ListHrisLocations2RequestBuilder listHrisLocations2() {
+        return new ListHrisLocations2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * List all locations
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<ListHrisLocationsResponse>} - The async response
+     * @return {@code CompletableFuture<ListHrisLocations2Response>} - The async response
      */
-    public CompletableFuture<ListHrisLocationsResponse> listHrisLocations(@Nonnull ListHrisLocationsRequest request) {
-        AsyncRequestOperation<ListHrisLocationsRequest, ListHrisLocationsResponse> operation
-              = new ListHrisLocations.Async(sdkConfiguration, _headers);
+    public CompletableFuture<ListHrisLocations2Response> listHrisLocations2(@Nonnull ListHrisLocations2Request request) {
+        AsyncRequestOperation<ListHrisLocations2Request, ListHrisLocations2Response> operation
+              = new ListHrisLocations2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -950,19 +950,19 @@ public class AsyncHris {
      * 
      * @return The async call builder
      */
-    public ListHrisPayslipsRequestBuilder listHrisPayslips() {
-        return new ListHrisPayslipsRequestBuilder(sdkConfiguration);
+    public ListHrisPayslips2RequestBuilder listHrisPayslips2() {
+        return new ListHrisPayslips2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * List all payslips
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<ListHrisPayslipsResponse>} - The async response
+     * @return {@code CompletableFuture<ListHrisPayslips2Response>} - The async response
      */
-    public CompletableFuture<ListHrisPayslipsResponse> listHrisPayslips(@Nonnull ListHrisPayslipsRequest request) {
-        AsyncRequestOperation<ListHrisPayslipsRequest, ListHrisPayslipsResponse> operation
-              = new ListHrisPayslips.Async(sdkConfiguration, _headers);
+    public CompletableFuture<ListHrisPayslips2Response> listHrisPayslips2(@Nonnull ListHrisPayslips2Request request) {
+        AsyncRequestOperation<ListHrisPayslips2Request, ListHrisPayslips2Response> operation
+              = new ListHrisPayslips2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -973,19 +973,19 @@ public class AsyncHris {
      * 
      * @return The async call builder
      */
-    public ListHrisTimeoffsRequestBuilder listHrisTimeoffs() {
-        return new ListHrisTimeoffsRequestBuilder(sdkConfiguration);
+    public ListHrisTimeoffs2RequestBuilder listHrisTimeoffs2() {
+        return new ListHrisTimeoffs2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * List all timeoffs
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<ListHrisTimeoffsResponse>} - The async response
+     * @return {@code CompletableFuture<ListHrisTimeoffs2Response>} - The async response
      */
-    public CompletableFuture<ListHrisTimeoffsResponse> listHrisTimeoffs(@Nonnull ListHrisTimeoffsRequest request) {
-        AsyncRequestOperation<ListHrisTimeoffsRequest, ListHrisTimeoffsResponse> operation
-              = new ListHrisTimeoffs.Async(sdkConfiguration, _headers);
+    public CompletableFuture<ListHrisTimeoffs2Response> listHrisTimeoffs2(@Nonnull ListHrisTimeoffs2Request request) {
+        AsyncRequestOperation<ListHrisTimeoffs2Request, ListHrisTimeoffs2Response> operation
+              = new ListHrisTimeoffs2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -996,19 +996,19 @@ public class AsyncHris {
      * 
      * @return The async call builder
      */
-    public ListHrisTimeshiftsRequestBuilder listHrisTimeshifts() {
-        return new ListHrisTimeshiftsRequestBuilder(sdkConfiguration);
+    public ListHrisTimeshifts2RequestBuilder listHrisTimeshifts2() {
+        return new ListHrisTimeshifts2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * List all timeshifts
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<ListHrisTimeshiftsResponse>} - The async response
+     * @return {@code CompletableFuture<ListHrisTimeshifts2Response>} - The async response
      */
-    public CompletableFuture<ListHrisTimeshiftsResponse> listHrisTimeshifts(@Nonnull ListHrisTimeshiftsRequest request) {
-        AsyncRequestOperation<ListHrisTimeshiftsRequest, ListHrisTimeshiftsResponse> operation
-              = new ListHrisTimeshifts.Async(sdkConfiguration, _headers);
+    public CompletableFuture<ListHrisTimeshifts2Response> listHrisTimeshifts2(@Nonnull ListHrisTimeshifts2Request request) {
+        AsyncRequestOperation<ListHrisTimeshifts2Request, ListHrisTimeshifts2Response> operation
+              = new ListHrisTimeshifts2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1019,19 +1019,19 @@ public class AsyncHris {
      * 
      * @return The async call builder
      */
-    public PatchHrisBankaccountRequestBuilder patchHrisBankaccount() {
-        return new PatchHrisBankaccountRequestBuilder(sdkConfiguration);
+    public PatchHrisBankaccount2RequestBuilder patchHrisBankaccount2() {
+        return new PatchHrisBankaccount2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update a bankaccount
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<PatchHrisBankaccountResponse>} - The async response
+     * @return {@code CompletableFuture<PatchHrisBankaccount2Response>} - The async response
      */
-    public CompletableFuture<PatchHrisBankaccountResponse> patchHrisBankaccount(@Nonnull PatchHrisBankaccountRequest request) {
-        AsyncRequestOperation<PatchHrisBankaccountRequest, PatchHrisBankaccountResponse> operation
-              = new PatchHrisBankaccount.Async(sdkConfiguration, _headers);
+    public CompletableFuture<PatchHrisBankaccount2Response> patchHrisBankaccount2(@Nonnull PatchHrisBankaccount2Request request) {
+        AsyncRequestOperation<PatchHrisBankaccount2Request, PatchHrisBankaccount2Response> operation
+              = new PatchHrisBankaccount2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1042,19 +1042,19 @@ public class AsyncHris {
      * 
      * @return The async call builder
      */
-    public PatchHrisBenefitRequestBuilder patchHrisBenefit() {
-        return new PatchHrisBenefitRequestBuilder(sdkConfiguration);
+    public PatchHrisBenefit2RequestBuilder patchHrisBenefit2() {
+        return new PatchHrisBenefit2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update a benefit
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<PatchHrisBenefitResponse>} - The async response
+     * @return {@code CompletableFuture<PatchHrisBenefit2Response>} - The async response
      */
-    public CompletableFuture<PatchHrisBenefitResponse> patchHrisBenefit(@Nonnull PatchHrisBenefitRequest request) {
-        AsyncRequestOperation<PatchHrisBenefitRequest, PatchHrisBenefitResponse> operation
-              = new PatchHrisBenefit.Async(sdkConfiguration, _headers);
+    public CompletableFuture<PatchHrisBenefit2Response> patchHrisBenefit2(@Nonnull PatchHrisBenefit2Request request) {
+        AsyncRequestOperation<PatchHrisBenefit2Request, PatchHrisBenefit2Response> operation
+              = new PatchHrisBenefit2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1065,19 +1065,19 @@ public class AsyncHris {
      * 
      * @return The async call builder
      */
-    public PatchHrisCompanyRequestBuilder patchHrisCompany() {
-        return new PatchHrisCompanyRequestBuilder(sdkConfiguration);
+    public PatchHrisCompany2RequestBuilder patchHrisCompany2() {
+        return new PatchHrisCompany2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update a company
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<PatchHrisCompanyResponse>} - The async response
+     * @return {@code CompletableFuture<PatchHrisCompany2Response>} - The async response
      */
-    public CompletableFuture<PatchHrisCompanyResponse> patchHrisCompany(@Nonnull PatchHrisCompanyRequest request) {
-        AsyncRequestOperation<PatchHrisCompanyRequest, PatchHrisCompanyResponse> operation
-              = new PatchHrisCompany.Async(sdkConfiguration, _headers);
+    public CompletableFuture<PatchHrisCompany2Response> patchHrisCompany2(@Nonnull PatchHrisCompany2Request request) {
+        AsyncRequestOperation<PatchHrisCompany2Request, PatchHrisCompany2Response> operation
+              = new PatchHrisCompany2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1088,19 +1088,19 @@ public class AsyncHris {
      * 
      * @return The async call builder
      */
-    public PatchHrisDeductionRequestBuilder patchHrisDeduction() {
-        return new PatchHrisDeductionRequestBuilder(sdkConfiguration);
+    public PatchHrisDeduction2RequestBuilder patchHrisDeduction2() {
+        return new PatchHrisDeduction2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update a deduction
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<PatchHrisDeductionResponse>} - The async response
+     * @return {@code CompletableFuture<PatchHrisDeduction2Response>} - The async response
      */
-    public CompletableFuture<PatchHrisDeductionResponse> patchHrisDeduction(@Nonnull PatchHrisDeductionRequest request) {
-        AsyncRequestOperation<PatchHrisDeductionRequest, PatchHrisDeductionResponse> operation
-              = new PatchHrisDeduction.Async(sdkConfiguration, _headers);
+    public CompletableFuture<PatchHrisDeduction2Response> patchHrisDeduction2(@Nonnull PatchHrisDeduction2Request request) {
+        AsyncRequestOperation<PatchHrisDeduction2Request, PatchHrisDeduction2Response> operation
+              = new PatchHrisDeduction2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1111,19 +1111,19 @@ public class AsyncHris {
      * 
      * @return The async call builder
      */
-    public PatchHrisDeviceRequestBuilder patchHrisDevice() {
-        return new PatchHrisDeviceRequestBuilder(sdkConfiguration);
+    public PatchHrisDevice2RequestBuilder patchHrisDevice2() {
+        return new PatchHrisDevice2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update a device
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<PatchHrisDeviceResponse>} - The async response
+     * @return {@code CompletableFuture<PatchHrisDevice2Response>} - The async response
      */
-    public CompletableFuture<PatchHrisDeviceResponse> patchHrisDevice(@Nonnull PatchHrisDeviceRequest request) {
-        AsyncRequestOperation<PatchHrisDeviceRequest, PatchHrisDeviceResponse> operation
-              = new PatchHrisDevice.Async(sdkConfiguration, _headers);
+    public CompletableFuture<PatchHrisDevice2Response> patchHrisDevice2(@Nonnull PatchHrisDevice2Request request) {
+        AsyncRequestOperation<PatchHrisDevice2Request, PatchHrisDevice2Response> operation
+              = new PatchHrisDevice2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1134,19 +1134,19 @@ public class AsyncHris {
      * 
      * @return The async call builder
      */
-    public PatchHrisEmployeeRequestBuilder patchHrisEmployee() {
-        return new PatchHrisEmployeeRequestBuilder(sdkConfiguration);
+    public PatchHrisEmployee2RequestBuilder patchHrisEmployee2() {
+        return new PatchHrisEmployee2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update an employee
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<PatchHrisEmployeeResponse>} - The async response
+     * @return {@code CompletableFuture<PatchHrisEmployee2Response>} - The async response
      */
-    public CompletableFuture<PatchHrisEmployeeResponse> patchHrisEmployee(@Nonnull PatchHrisEmployeeRequest request) {
-        AsyncRequestOperation<PatchHrisEmployeeRequest, PatchHrisEmployeeResponse> operation
-              = new PatchHrisEmployee.Async(sdkConfiguration, _headers);
+    public CompletableFuture<PatchHrisEmployee2Response> patchHrisEmployee2(@Nonnull PatchHrisEmployee2Request request) {
+        AsyncRequestOperation<PatchHrisEmployee2Request, PatchHrisEmployee2Response> operation
+              = new PatchHrisEmployee2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1157,19 +1157,19 @@ public class AsyncHris {
      * 
      * @return The async call builder
      */
-    public PatchHrisGroupRequestBuilder patchHrisGroup() {
-        return new PatchHrisGroupRequestBuilder(sdkConfiguration);
+    public PatchHrisGroup2RequestBuilder patchHrisGroup2() {
+        return new PatchHrisGroup2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update a group
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<PatchHrisGroupResponse>} - The async response
+     * @return {@code CompletableFuture<PatchHrisGroup2Response>} - The async response
      */
-    public CompletableFuture<PatchHrisGroupResponse> patchHrisGroup(@Nonnull PatchHrisGroupRequest request) {
-        AsyncRequestOperation<PatchHrisGroupRequest, PatchHrisGroupResponse> operation
-              = new PatchHrisGroup.Async(sdkConfiguration, _headers);
+    public CompletableFuture<PatchHrisGroup2Response> patchHrisGroup2(@Nonnull PatchHrisGroup2Request request) {
+        AsyncRequestOperation<PatchHrisGroup2Request, PatchHrisGroup2Response> operation
+              = new PatchHrisGroup2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1180,19 +1180,19 @@ public class AsyncHris {
      * 
      * @return The async call builder
      */
-    public PatchHrisLocationRequestBuilder patchHrisLocation() {
-        return new PatchHrisLocationRequestBuilder(sdkConfiguration);
+    public PatchHrisLocation2RequestBuilder patchHrisLocation2() {
+        return new PatchHrisLocation2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update a location
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<PatchHrisLocationResponse>} - The async response
+     * @return {@code CompletableFuture<PatchHrisLocation2Response>} - The async response
      */
-    public CompletableFuture<PatchHrisLocationResponse> patchHrisLocation(@Nonnull PatchHrisLocationRequest request) {
-        AsyncRequestOperation<PatchHrisLocationRequest, PatchHrisLocationResponse> operation
-              = new PatchHrisLocation.Async(sdkConfiguration, _headers);
+    public CompletableFuture<PatchHrisLocation2Response> patchHrisLocation2(@Nonnull PatchHrisLocation2Request request) {
+        AsyncRequestOperation<PatchHrisLocation2Request, PatchHrisLocation2Response> operation
+              = new PatchHrisLocation2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1203,19 +1203,19 @@ public class AsyncHris {
      * 
      * @return The async call builder
      */
-    public PatchHrisTimeoffRequestBuilder patchHrisTimeoff() {
-        return new PatchHrisTimeoffRequestBuilder(sdkConfiguration);
+    public PatchHrisTimeoff2RequestBuilder patchHrisTimeoff2() {
+        return new PatchHrisTimeoff2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update a timeoff
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<PatchHrisTimeoffResponse>} - The async response
+     * @return {@code CompletableFuture<PatchHrisTimeoff2Response>} - The async response
      */
-    public CompletableFuture<PatchHrisTimeoffResponse> patchHrisTimeoff(@Nonnull PatchHrisTimeoffRequest request) {
-        AsyncRequestOperation<PatchHrisTimeoffRequest, PatchHrisTimeoffResponse> operation
-              = new PatchHrisTimeoff.Async(sdkConfiguration, _headers);
+    public CompletableFuture<PatchHrisTimeoff2Response> patchHrisTimeoff2(@Nonnull PatchHrisTimeoff2Request request) {
+        AsyncRequestOperation<PatchHrisTimeoff2Request, PatchHrisTimeoff2Response> operation
+              = new PatchHrisTimeoff2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1226,19 +1226,19 @@ public class AsyncHris {
      * 
      * @return The async call builder
      */
-    public PatchHrisTimeshiftRequestBuilder patchHrisTimeshift() {
-        return new PatchHrisTimeshiftRequestBuilder(sdkConfiguration);
+    public PatchHrisTimeshift2RequestBuilder patchHrisTimeshift2() {
+        return new PatchHrisTimeshift2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update a timeshift
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<PatchHrisTimeshiftResponse>} - The async response
+     * @return {@code CompletableFuture<PatchHrisTimeshift2Response>} - The async response
      */
-    public CompletableFuture<PatchHrisTimeshiftResponse> patchHrisTimeshift(@Nonnull PatchHrisTimeshiftRequest request) {
-        AsyncRequestOperation<PatchHrisTimeshiftRequest, PatchHrisTimeshiftResponse> operation
-              = new PatchHrisTimeshift.Async(sdkConfiguration, _headers);
+    public CompletableFuture<PatchHrisTimeshift2Response> patchHrisTimeshift2(@Nonnull PatchHrisTimeshift2Request request) {
+        AsyncRequestOperation<PatchHrisTimeshift2Request, PatchHrisTimeshift2Response> operation
+              = new PatchHrisTimeshift2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1249,19 +1249,19 @@ public class AsyncHris {
      * 
      * @return The async call builder
      */
-    public RemoveHrisBankaccountRequestBuilder removeHrisBankaccount() {
-        return new RemoveHrisBankaccountRequestBuilder(sdkConfiguration);
+    public RemoveHrisBankaccount2RequestBuilder removeHrisBankaccount2() {
+        return new RemoveHrisBankaccount2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Remove a bankaccount
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<RemoveHrisBankaccountResponse>} - The async response
+     * @return {@code CompletableFuture<RemoveHrisBankaccount2Response>} - The async response
      */
-    public CompletableFuture<RemoveHrisBankaccountResponse> removeHrisBankaccount(@Nonnull RemoveHrisBankaccountRequest request) {
-        AsyncRequestOperation<RemoveHrisBankaccountRequest, RemoveHrisBankaccountResponse> operation
-              = new RemoveHrisBankaccount.Async(sdkConfiguration, _headers);
+    public CompletableFuture<RemoveHrisBankaccount2Response> removeHrisBankaccount2(@Nonnull RemoveHrisBankaccount2Request request) {
+        AsyncRequestOperation<RemoveHrisBankaccount2Request, RemoveHrisBankaccount2Response> operation
+              = new RemoveHrisBankaccount2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1272,19 +1272,19 @@ public class AsyncHris {
      * 
      * @return The async call builder
      */
-    public RemoveHrisBenefitRequestBuilder removeHrisBenefit() {
-        return new RemoveHrisBenefitRequestBuilder(sdkConfiguration);
+    public RemoveHrisBenefit2RequestBuilder removeHrisBenefit2() {
+        return new RemoveHrisBenefit2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Remove a benefit
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<RemoveHrisBenefitResponse>} - The async response
+     * @return {@code CompletableFuture<RemoveHrisBenefit2Response>} - The async response
      */
-    public CompletableFuture<RemoveHrisBenefitResponse> removeHrisBenefit(@Nonnull RemoveHrisBenefitRequest request) {
-        AsyncRequestOperation<RemoveHrisBenefitRequest, RemoveHrisBenefitResponse> operation
-              = new RemoveHrisBenefit.Async(sdkConfiguration, _headers);
+    public CompletableFuture<RemoveHrisBenefit2Response> removeHrisBenefit2(@Nonnull RemoveHrisBenefit2Request request) {
+        AsyncRequestOperation<RemoveHrisBenefit2Request, RemoveHrisBenefit2Response> operation
+              = new RemoveHrisBenefit2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1295,19 +1295,19 @@ public class AsyncHris {
      * 
      * @return The async call builder
      */
-    public RemoveHrisCompanyRequestBuilder removeHrisCompany() {
-        return new RemoveHrisCompanyRequestBuilder(sdkConfiguration);
+    public RemoveHrisCompany2RequestBuilder removeHrisCompany2() {
+        return new RemoveHrisCompany2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Remove a company
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<RemoveHrisCompanyResponse>} - The async response
+     * @return {@code CompletableFuture<RemoveHrisCompany2Response>} - The async response
      */
-    public CompletableFuture<RemoveHrisCompanyResponse> removeHrisCompany(@Nonnull RemoveHrisCompanyRequest request) {
-        AsyncRequestOperation<RemoveHrisCompanyRequest, RemoveHrisCompanyResponse> operation
-              = new RemoveHrisCompany.Async(sdkConfiguration, _headers);
+    public CompletableFuture<RemoveHrisCompany2Response> removeHrisCompany2(@Nonnull RemoveHrisCompany2Request request) {
+        AsyncRequestOperation<RemoveHrisCompany2Request, RemoveHrisCompany2Response> operation
+              = new RemoveHrisCompany2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1318,19 +1318,19 @@ public class AsyncHris {
      * 
      * @return The async call builder
      */
-    public RemoveHrisDeductionRequestBuilder removeHrisDeduction() {
-        return new RemoveHrisDeductionRequestBuilder(sdkConfiguration);
+    public RemoveHrisDeduction2RequestBuilder removeHrisDeduction2() {
+        return new RemoveHrisDeduction2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Remove a deduction
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<RemoveHrisDeductionResponse>} - The async response
+     * @return {@code CompletableFuture<RemoveHrisDeduction2Response>} - The async response
      */
-    public CompletableFuture<RemoveHrisDeductionResponse> removeHrisDeduction(@Nonnull RemoveHrisDeductionRequest request) {
-        AsyncRequestOperation<RemoveHrisDeductionRequest, RemoveHrisDeductionResponse> operation
-              = new RemoveHrisDeduction.Async(sdkConfiguration, _headers);
+    public CompletableFuture<RemoveHrisDeduction2Response> removeHrisDeduction2(@Nonnull RemoveHrisDeduction2Request request) {
+        AsyncRequestOperation<RemoveHrisDeduction2Request, RemoveHrisDeduction2Response> operation
+              = new RemoveHrisDeduction2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1341,19 +1341,19 @@ public class AsyncHris {
      * 
      * @return The async call builder
      */
-    public RemoveHrisDeviceRequestBuilder removeHrisDevice() {
-        return new RemoveHrisDeviceRequestBuilder(sdkConfiguration);
+    public RemoveHrisDevice2RequestBuilder removeHrisDevice2() {
+        return new RemoveHrisDevice2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Remove a device
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<RemoveHrisDeviceResponse>} - The async response
+     * @return {@code CompletableFuture<RemoveHrisDevice2Response>} - The async response
      */
-    public CompletableFuture<RemoveHrisDeviceResponse> removeHrisDevice(@Nonnull RemoveHrisDeviceRequest request) {
-        AsyncRequestOperation<RemoveHrisDeviceRequest, RemoveHrisDeviceResponse> operation
-              = new RemoveHrisDevice.Async(sdkConfiguration, _headers);
+    public CompletableFuture<RemoveHrisDevice2Response> removeHrisDevice2(@Nonnull RemoveHrisDevice2Request request) {
+        AsyncRequestOperation<RemoveHrisDevice2Request, RemoveHrisDevice2Response> operation
+              = new RemoveHrisDevice2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1364,19 +1364,19 @@ public class AsyncHris {
      * 
      * @return The async call builder
      */
-    public RemoveHrisEmployeeRequestBuilder removeHrisEmployee() {
-        return new RemoveHrisEmployeeRequestBuilder(sdkConfiguration);
+    public RemoveHrisEmployee2RequestBuilder removeHrisEmployee2() {
+        return new RemoveHrisEmployee2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Remove an employee
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<RemoveHrisEmployeeResponse>} - The async response
+     * @return {@code CompletableFuture<RemoveHrisEmployee2Response>} - The async response
      */
-    public CompletableFuture<RemoveHrisEmployeeResponse> removeHrisEmployee(@Nonnull RemoveHrisEmployeeRequest request) {
-        AsyncRequestOperation<RemoveHrisEmployeeRequest, RemoveHrisEmployeeResponse> operation
-              = new RemoveHrisEmployee.Async(sdkConfiguration, _headers);
+    public CompletableFuture<RemoveHrisEmployee2Response> removeHrisEmployee2(@Nonnull RemoveHrisEmployee2Request request) {
+        AsyncRequestOperation<RemoveHrisEmployee2Request, RemoveHrisEmployee2Response> operation
+              = new RemoveHrisEmployee2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1387,19 +1387,19 @@ public class AsyncHris {
      * 
      * @return The async call builder
      */
-    public RemoveHrisGroupRequestBuilder removeHrisGroup() {
-        return new RemoveHrisGroupRequestBuilder(sdkConfiguration);
+    public RemoveHrisGroup2RequestBuilder removeHrisGroup2() {
+        return new RemoveHrisGroup2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Remove a group
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<RemoveHrisGroupResponse>} - The async response
+     * @return {@code CompletableFuture<RemoveHrisGroup2Response>} - The async response
      */
-    public CompletableFuture<RemoveHrisGroupResponse> removeHrisGroup(@Nonnull RemoveHrisGroupRequest request) {
-        AsyncRequestOperation<RemoveHrisGroupRequest, RemoveHrisGroupResponse> operation
-              = new RemoveHrisGroup.Async(sdkConfiguration, _headers);
+    public CompletableFuture<RemoveHrisGroup2Response> removeHrisGroup2(@Nonnull RemoveHrisGroup2Request request) {
+        AsyncRequestOperation<RemoveHrisGroup2Request, RemoveHrisGroup2Response> operation
+              = new RemoveHrisGroup2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1410,19 +1410,19 @@ public class AsyncHris {
      * 
      * @return The async call builder
      */
-    public RemoveHrisLocationRequestBuilder removeHrisLocation() {
-        return new RemoveHrisLocationRequestBuilder(sdkConfiguration);
+    public RemoveHrisLocation2RequestBuilder removeHrisLocation2() {
+        return new RemoveHrisLocation2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Remove a location
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<RemoveHrisLocationResponse>} - The async response
+     * @return {@code CompletableFuture<RemoveHrisLocation2Response>} - The async response
      */
-    public CompletableFuture<RemoveHrisLocationResponse> removeHrisLocation(@Nonnull RemoveHrisLocationRequest request) {
-        AsyncRequestOperation<RemoveHrisLocationRequest, RemoveHrisLocationResponse> operation
-              = new RemoveHrisLocation.Async(sdkConfiguration, _headers);
+    public CompletableFuture<RemoveHrisLocation2Response> removeHrisLocation2(@Nonnull RemoveHrisLocation2Request request) {
+        AsyncRequestOperation<RemoveHrisLocation2Request, RemoveHrisLocation2Response> operation
+              = new RemoveHrisLocation2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1433,19 +1433,19 @@ public class AsyncHris {
      * 
      * @return The async call builder
      */
-    public RemoveHrisTimeoffRequestBuilder removeHrisTimeoff() {
-        return new RemoveHrisTimeoffRequestBuilder(sdkConfiguration);
+    public RemoveHrisTimeoff2RequestBuilder removeHrisTimeoff2() {
+        return new RemoveHrisTimeoff2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Remove a timeoff
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<RemoveHrisTimeoffResponse>} - The async response
+     * @return {@code CompletableFuture<RemoveHrisTimeoff2Response>} - The async response
      */
-    public CompletableFuture<RemoveHrisTimeoffResponse> removeHrisTimeoff(@Nonnull RemoveHrisTimeoffRequest request) {
-        AsyncRequestOperation<RemoveHrisTimeoffRequest, RemoveHrisTimeoffResponse> operation
-              = new RemoveHrisTimeoff.Async(sdkConfiguration, _headers);
+    public CompletableFuture<RemoveHrisTimeoff2Response> removeHrisTimeoff2(@Nonnull RemoveHrisTimeoff2Request request) {
+        AsyncRequestOperation<RemoveHrisTimeoff2Request, RemoveHrisTimeoff2Response> operation
+              = new RemoveHrisTimeoff2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1456,19 +1456,19 @@ public class AsyncHris {
      * 
      * @return The async call builder
      */
-    public RemoveHrisTimeshiftRequestBuilder removeHrisTimeshift() {
-        return new RemoveHrisTimeshiftRequestBuilder(sdkConfiguration);
+    public RemoveHrisTimeshift2RequestBuilder removeHrisTimeshift2() {
+        return new RemoveHrisTimeshift2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Remove a timeshift
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<RemoveHrisTimeshiftResponse>} - The async response
+     * @return {@code CompletableFuture<RemoveHrisTimeshift2Response>} - The async response
      */
-    public CompletableFuture<RemoveHrisTimeshiftResponse> removeHrisTimeshift(@Nonnull RemoveHrisTimeshiftRequest request) {
-        AsyncRequestOperation<RemoveHrisTimeshiftRequest, RemoveHrisTimeshiftResponse> operation
-              = new RemoveHrisTimeshift.Async(sdkConfiguration, _headers);
+    public CompletableFuture<RemoveHrisTimeshift2Response> removeHrisTimeshift2(@Nonnull RemoveHrisTimeshift2Request request) {
+        AsyncRequestOperation<RemoveHrisTimeshift2Request, RemoveHrisTimeshift2Response> operation
+              = new RemoveHrisTimeshift2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1479,19 +1479,19 @@ public class AsyncHris {
      * 
      * @return The async call builder
      */
-    public UpdateHrisBankaccountRequestBuilder updateHrisBankaccount() {
-        return new UpdateHrisBankaccountRequestBuilder(sdkConfiguration);
+    public UpdateHrisBankaccount2RequestBuilder updateHrisBankaccount2() {
+        return new UpdateHrisBankaccount2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update a bankaccount
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<UpdateHrisBankaccountResponse>} - The async response
+     * @return {@code CompletableFuture<UpdateHrisBankaccount2Response>} - The async response
      */
-    public CompletableFuture<UpdateHrisBankaccountResponse> updateHrisBankaccount(@Nonnull UpdateHrisBankaccountRequest request) {
-        AsyncRequestOperation<UpdateHrisBankaccountRequest, UpdateHrisBankaccountResponse> operation
-              = new UpdateHrisBankaccount.Async(sdkConfiguration, _headers);
+    public CompletableFuture<UpdateHrisBankaccount2Response> updateHrisBankaccount2(@Nonnull UpdateHrisBankaccount2Request request) {
+        AsyncRequestOperation<UpdateHrisBankaccount2Request, UpdateHrisBankaccount2Response> operation
+              = new UpdateHrisBankaccount2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1502,19 +1502,19 @@ public class AsyncHris {
      * 
      * @return The async call builder
      */
-    public UpdateHrisBenefitRequestBuilder updateHrisBenefit() {
-        return new UpdateHrisBenefitRequestBuilder(sdkConfiguration);
+    public UpdateHrisBenefit2RequestBuilder updateHrisBenefit2() {
+        return new UpdateHrisBenefit2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update a benefit
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<UpdateHrisBenefitResponse>} - The async response
+     * @return {@code CompletableFuture<UpdateHrisBenefit2Response>} - The async response
      */
-    public CompletableFuture<UpdateHrisBenefitResponse> updateHrisBenefit(@Nonnull UpdateHrisBenefitRequest request) {
-        AsyncRequestOperation<UpdateHrisBenefitRequest, UpdateHrisBenefitResponse> operation
-              = new UpdateHrisBenefit.Async(sdkConfiguration, _headers);
+    public CompletableFuture<UpdateHrisBenefit2Response> updateHrisBenefit2(@Nonnull UpdateHrisBenefit2Request request) {
+        AsyncRequestOperation<UpdateHrisBenefit2Request, UpdateHrisBenefit2Response> operation
+              = new UpdateHrisBenefit2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1525,19 +1525,19 @@ public class AsyncHris {
      * 
      * @return The async call builder
      */
-    public UpdateHrisCompanyRequestBuilder updateHrisCompany() {
-        return new UpdateHrisCompanyRequestBuilder(sdkConfiguration);
+    public UpdateHrisCompany2RequestBuilder updateHrisCompany2() {
+        return new UpdateHrisCompany2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update a company
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<UpdateHrisCompanyResponse>} - The async response
+     * @return {@code CompletableFuture<UpdateHrisCompany2Response>} - The async response
      */
-    public CompletableFuture<UpdateHrisCompanyResponse> updateHrisCompany(@Nonnull UpdateHrisCompanyRequest request) {
-        AsyncRequestOperation<UpdateHrisCompanyRequest, UpdateHrisCompanyResponse> operation
-              = new UpdateHrisCompany.Async(sdkConfiguration, _headers);
+    public CompletableFuture<UpdateHrisCompany2Response> updateHrisCompany2(@Nonnull UpdateHrisCompany2Request request) {
+        AsyncRequestOperation<UpdateHrisCompany2Request, UpdateHrisCompany2Response> operation
+              = new UpdateHrisCompany2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1548,19 +1548,19 @@ public class AsyncHris {
      * 
      * @return The async call builder
      */
-    public UpdateHrisDeductionRequestBuilder updateHrisDeduction() {
-        return new UpdateHrisDeductionRequestBuilder(sdkConfiguration);
+    public UpdateHrisDeduction2RequestBuilder updateHrisDeduction2() {
+        return new UpdateHrisDeduction2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update a deduction
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<UpdateHrisDeductionResponse>} - The async response
+     * @return {@code CompletableFuture<UpdateHrisDeduction2Response>} - The async response
      */
-    public CompletableFuture<UpdateHrisDeductionResponse> updateHrisDeduction(@Nonnull UpdateHrisDeductionRequest request) {
-        AsyncRequestOperation<UpdateHrisDeductionRequest, UpdateHrisDeductionResponse> operation
-              = new UpdateHrisDeduction.Async(sdkConfiguration, _headers);
+    public CompletableFuture<UpdateHrisDeduction2Response> updateHrisDeduction2(@Nonnull UpdateHrisDeduction2Request request) {
+        AsyncRequestOperation<UpdateHrisDeduction2Request, UpdateHrisDeduction2Response> operation
+              = new UpdateHrisDeduction2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1571,19 +1571,19 @@ public class AsyncHris {
      * 
      * @return The async call builder
      */
-    public UpdateHrisDeviceRequestBuilder updateHrisDevice() {
-        return new UpdateHrisDeviceRequestBuilder(sdkConfiguration);
+    public UpdateHrisDevice2RequestBuilder updateHrisDevice2() {
+        return new UpdateHrisDevice2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update a device
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<UpdateHrisDeviceResponse>} - The async response
+     * @return {@code CompletableFuture<UpdateHrisDevice2Response>} - The async response
      */
-    public CompletableFuture<UpdateHrisDeviceResponse> updateHrisDevice(@Nonnull UpdateHrisDeviceRequest request) {
-        AsyncRequestOperation<UpdateHrisDeviceRequest, UpdateHrisDeviceResponse> operation
-              = new UpdateHrisDevice.Async(sdkConfiguration, _headers);
+    public CompletableFuture<UpdateHrisDevice2Response> updateHrisDevice2(@Nonnull UpdateHrisDevice2Request request) {
+        AsyncRequestOperation<UpdateHrisDevice2Request, UpdateHrisDevice2Response> operation
+              = new UpdateHrisDevice2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1594,19 +1594,19 @@ public class AsyncHris {
      * 
      * @return The async call builder
      */
-    public UpdateHrisEmployeeRequestBuilder updateHrisEmployee() {
-        return new UpdateHrisEmployeeRequestBuilder(sdkConfiguration);
+    public UpdateHrisEmployee2RequestBuilder updateHrisEmployee2() {
+        return new UpdateHrisEmployee2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update an employee
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<UpdateHrisEmployeeResponse>} - The async response
+     * @return {@code CompletableFuture<UpdateHrisEmployee2Response>} - The async response
      */
-    public CompletableFuture<UpdateHrisEmployeeResponse> updateHrisEmployee(@Nonnull UpdateHrisEmployeeRequest request) {
-        AsyncRequestOperation<UpdateHrisEmployeeRequest, UpdateHrisEmployeeResponse> operation
-              = new UpdateHrisEmployee.Async(sdkConfiguration, _headers);
+    public CompletableFuture<UpdateHrisEmployee2Response> updateHrisEmployee2(@Nonnull UpdateHrisEmployee2Request request) {
+        AsyncRequestOperation<UpdateHrisEmployee2Request, UpdateHrisEmployee2Response> operation
+              = new UpdateHrisEmployee2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1617,19 +1617,19 @@ public class AsyncHris {
      * 
      * @return The async call builder
      */
-    public UpdateHrisGroupRequestBuilder updateHrisGroup() {
-        return new UpdateHrisGroupRequestBuilder(sdkConfiguration);
+    public UpdateHrisGroup2RequestBuilder updateHrisGroup2() {
+        return new UpdateHrisGroup2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update a group
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<UpdateHrisGroupResponse>} - The async response
+     * @return {@code CompletableFuture<UpdateHrisGroup2Response>} - The async response
      */
-    public CompletableFuture<UpdateHrisGroupResponse> updateHrisGroup(@Nonnull UpdateHrisGroupRequest request) {
-        AsyncRequestOperation<UpdateHrisGroupRequest, UpdateHrisGroupResponse> operation
-              = new UpdateHrisGroup.Async(sdkConfiguration, _headers);
+    public CompletableFuture<UpdateHrisGroup2Response> updateHrisGroup2(@Nonnull UpdateHrisGroup2Request request) {
+        AsyncRequestOperation<UpdateHrisGroup2Request, UpdateHrisGroup2Response> operation
+              = new UpdateHrisGroup2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1640,19 +1640,19 @@ public class AsyncHris {
      * 
      * @return The async call builder
      */
-    public UpdateHrisLocationRequestBuilder updateHrisLocation() {
-        return new UpdateHrisLocationRequestBuilder(sdkConfiguration);
+    public UpdateHrisLocation2RequestBuilder updateHrisLocation2() {
+        return new UpdateHrisLocation2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update a location
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<UpdateHrisLocationResponse>} - The async response
+     * @return {@code CompletableFuture<UpdateHrisLocation2Response>} - The async response
      */
-    public CompletableFuture<UpdateHrisLocationResponse> updateHrisLocation(@Nonnull UpdateHrisLocationRequest request) {
-        AsyncRequestOperation<UpdateHrisLocationRequest, UpdateHrisLocationResponse> operation
-              = new UpdateHrisLocation.Async(sdkConfiguration, _headers);
+    public CompletableFuture<UpdateHrisLocation2Response> updateHrisLocation2(@Nonnull UpdateHrisLocation2Request request) {
+        AsyncRequestOperation<UpdateHrisLocation2Request, UpdateHrisLocation2Response> operation
+              = new UpdateHrisLocation2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1663,19 +1663,19 @@ public class AsyncHris {
      * 
      * @return The async call builder
      */
-    public UpdateHrisTimeoffRequestBuilder updateHrisTimeoff() {
-        return new UpdateHrisTimeoffRequestBuilder(sdkConfiguration);
+    public UpdateHrisTimeoff2RequestBuilder updateHrisTimeoff2() {
+        return new UpdateHrisTimeoff2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update a timeoff
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<UpdateHrisTimeoffResponse>} - The async response
+     * @return {@code CompletableFuture<UpdateHrisTimeoff2Response>} - The async response
      */
-    public CompletableFuture<UpdateHrisTimeoffResponse> updateHrisTimeoff(@Nonnull UpdateHrisTimeoffRequest request) {
-        AsyncRequestOperation<UpdateHrisTimeoffRequest, UpdateHrisTimeoffResponse> operation
-              = new UpdateHrisTimeoff.Async(sdkConfiguration, _headers);
+    public CompletableFuture<UpdateHrisTimeoff2Response> updateHrisTimeoff2(@Nonnull UpdateHrisTimeoff2Request request) {
+        AsyncRequestOperation<UpdateHrisTimeoff2Request, UpdateHrisTimeoff2Response> operation
+              = new UpdateHrisTimeoff2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1686,19 +1686,19 @@ public class AsyncHris {
      * 
      * @return The async call builder
      */
-    public UpdateHrisTimeshiftRequestBuilder updateHrisTimeshift() {
-        return new UpdateHrisTimeshiftRequestBuilder(sdkConfiguration);
+    public UpdateHrisTimeshift2RequestBuilder updateHrisTimeshift2() {
+        return new UpdateHrisTimeshift2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update a timeshift
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<UpdateHrisTimeshiftResponse>} - The async response
+     * @return {@code CompletableFuture<UpdateHrisTimeshift2Response>} - The async response
      */
-    public CompletableFuture<UpdateHrisTimeshiftResponse> updateHrisTimeshift(@Nonnull UpdateHrisTimeshiftRequest request) {
-        AsyncRequestOperation<UpdateHrisTimeshiftRequest, UpdateHrisTimeshiftResponse> operation
-              = new UpdateHrisTimeshift.Async(sdkConfiguration, _headers);
+    public CompletableFuture<UpdateHrisTimeshift2Response> updateHrisTimeshift2(@Nonnull UpdateHrisTimeshift2Request request) {
+        AsyncRequestOperation<UpdateHrisTimeshift2Request, UpdateHrisTimeshift2Response> operation
+              = new UpdateHrisTimeshift2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

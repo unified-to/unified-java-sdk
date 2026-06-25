@@ -7,30 +7,30 @@ import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOper
 
 import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
-import to.unified.unified_java_sdk.models.operations.CreateAdsCreativeRequest;
-import to.unified.unified_java_sdk.models.operations.GetAdsCreativeRequest;
-import to.unified.unified_java_sdk.models.operations.ListAdsCreativesRequest;
-import to.unified.unified_java_sdk.models.operations.PatchAdsCreativeRequest;
-import to.unified.unified_java_sdk.models.operations.RemoveAdsCreativeRequest;
-import to.unified.unified_java_sdk.models.operations.UpdateAdsCreativeRequest;
-import to.unified.unified_java_sdk.models.operations.async.CreateAdsCreativeRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.CreateAdsCreativeResponse;
-import to.unified.unified_java_sdk.models.operations.async.GetAdsCreativeRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.GetAdsCreativeResponse;
-import to.unified.unified_java_sdk.models.operations.async.ListAdsCreativesRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.ListAdsCreativesResponse;
-import to.unified.unified_java_sdk.models.operations.async.PatchAdsCreativeRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.PatchAdsCreativeResponse;
-import to.unified.unified_java_sdk.models.operations.async.RemoveAdsCreativeRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.RemoveAdsCreativeResponse;
-import to.unified.unified_java_sdk.models.operations.async.UpdateAdsCreativeRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.UpdateAdsCreativeResponse;
-import to.unified.unified_java_sdk.operations.CreateAdsCreative;
-import to.unified.unified_java_sdk.operations.GetAdsCreative;
-import to.unified.unified_java_sdk.operations.ListAdsCreatives;
-import to.unified.unified_java_sdk.operations.PatchAdsCreative;
-import to.unified.unified_java_sdk.operations.RemoveAdsCreative;
-import to.unified.unified_java_sdk.operations.UpdateAdsCreative;
+import to.unified.unified_java_sdk.models.operations.CreateAdsCreative2Request;
+import to.unified.unified_java_sdk.models.operations.GetAdsCreative2Request;
+import to.unified.unified_java_sdk.models.operations.ListAdsCreatives2Request;
+import to.unified.unified_java_sdk.models.operations.PatchAdsCreative2Request;
+import to.unified.unified_java_sdk.models.operations.RemoveAdsCreative2Request;
+import to.unified.unified_java_sdk.models.operations.UpdateAdsCreative2Request;
+import to.unified.unified_java_sdk.models.operations.async.CreateAdsCreative2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.CreateAdsCreative2Response;
+import to.unified.unified_java_sdk.models.operations.async.GetAdsCreative2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetAdsCreative2Response;
+import to.unified.unified_java_sdk.models.operations.async.ListAdsCreatives2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListAdsCreatives2Response;
+import to.unified.unified_java_sdk.models.operations.async.PatchAdsCreative2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.PatchAdsCreative2Response;
+import to.unified.unified_java_sdk.models.operations.async.RemoveAdsCreative2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.RemoveAdsCreative2Response;
+import to.unified.unified_java_sdk.models.operations.async.UpdateAdsCreative2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.UpdateAdsCreative2Response;
+import to.unified.unified_java_sdk.operations.CreateAdsCreative2;
+import to.unified.unified_java_sdk.operations.GetAdsCreative2;
+import to.unified.unified_java_sdk.operations.ListAdsCreatives2;
+import to.unified.unified_java_sdk.operations.PatchAdsCreative2;
+import to.unified.unified_java_sdk.operations.RemoveAdsCreative2;
+import to.unified.unified_java_sdk.operations.UpdateAdsCreative2;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -59,19 +59,19 @@ public class AsyncCreative {
      * 
      * @return The async call builder
      */
-    public CreateAdsCreativeRequestBuilder createAdsCreative() {
-        return new CreateAdsCreativeRequestBuilder(sdkConfiguration);
+    public CreateAdsCreative2RequestBuilder createAdsCreative2() {
+        return new CreateAdsCreative2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Create a creative
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<CreateAdsCreativeResponse>} - The async response
+     * @return {@code CompletableFuture<CreateAdsCreative2Response>} - The async response
      */
-    public CompletableFuture<CreateAdsCreativeResponse> createAdsCreative(@Nonnull CreateAdsCreativeRequest request) {
-        AsyncRequestOperation<CreateAdsCreativeRequest, CreateAdsCreativeResponse> operation
-              = new CreateAdsCreative.Async(sdkConfiguration, _headers);
+    public CompletableFuture<CreateAdsCreative2Response> createAdsCreative2(@Nonnull CreateAdsCreative2Request request) {
+        AsyncRequestOperation<CreateAdsCreative2Request, CreateAdsCreative2Response> operation
+              = new CreateAdsCreative2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -82,19 +82,19 @@ public class AsyncCreative {
      * 
      * @return The async call builder
      */
-    public GetAdsCreativeRequestBuilder getAdsCreative() {
-        return new GetAdsCreativeRequestBuilder(sdkConfiguration);
+    public GetAdsCreative2RequestBuilder getAdsCreative2() {
+        return new GetAdsCreative2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Retrieve a creative
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<GetAdsCreativeResponse>} - The async response
+     * @return {@code CompletableFuture<GetAdsCreative2Response>} - The async response
      */
-    public CompletableFuture<GetAdsCreativeResponse> getAdsCreative(@Nonnull GetAdsCreativeRequest request) {
-        AsyncRequestOperation<GetAdsCreativeRequest, GetAdsCreativeResponse> operation
-              = new GetAdsCreative.Async(sdkConfiguration, _headers);
+    public CompletableFuture<GetAdsCreative2Response> getAdsCreative2(@Nonnull GetAdsCreative2Request request) {
+        AsyncRequestOperation<GetAdsCreative2Request, GetAdsCreative2Response> operation
+              = new GetAdsCreative2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -105,19 +105,19 @@ public class AsyncCreative {
      * 
      * @return The async call builder
      */
-    public ListAdsCreativesRequestBuilder listAdsCreatives() {
-        return new ListAdsCreativesRequestBuilder(sdkConfiguration);
+    public ListAdsCreatives2RequestBuilder listAdsCreatives2() {
+        return new ListAdsCreatives2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * List all creatives
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<ListAdsCreativesResponse>} - The async response
+     * @return {@code CompletableFuture<ListAdsCreatives2Response>} - The async response
      */
-    public CompletableFuture<ListAdsCreativesResponse> listAdsCreatives(@Nonnull ListAdsCreativesRequest request) {
-        AsyncRequestOperation<ListAdsCreativesRequest, ListAdsCreativesResponse> operation
-              = new ListAdsCreatives.Async(sdkConfiguration, _headers);
+    public CompletableFuture<ListAdsCreatives2Response> listAdsCreatives2(@Nonnull ListAdsCreatives2Request request) {
+        AsyncRequestOperation<ListAdsCreatives2Request, ListAdsCreatives2Response> operation
+              = new ListAdsCreatives2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -128,19 +128,19 @@ public class AsyncCreative {
      * 
      * @return The async call builder
      */
-    public PatchAdsCreativeRequestBuilder patchAdsCreative() {
-        return new PatchAdsCreativeRequestBuilder(sdkConfiguration);
+    public PatchAdsCreative2RequestBuilder patchAdsCreative2() {
+        return new PatchAdsCreative2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update a creative
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<PatchAdsCreativeResponse>} - The async response
+     * @return {@code CompletableFuture<PatchAdsCreative2Response>} - The async response
      */
-    public CompletableFuture<PatchAdsCreativeResponse> patchAdsCreative(@Nonnull PatchAdsCreativeRequest request) {
-        AsyncRequestOperation<PatchAdsCreativeRequest, PatchAdsCreativeResponse> operation
-              = new PatchAdsCreative.Async(sdkConfiguration, _headers);
+    public CompletableFuture<PatchAdsCreative2Response> patchAdsCreative2(@Nonnull PatchAdsCreative2Request request) {
+        AsyncRequestOperation<PatchAdsCreative2Request, PatchAdsCreative2Response> operation
+              = new PatchAdsCreative2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -151,19 +151,19 @@ public class AsyncCreative {
      * 
      * @return The async call builder
      */
-    public RemoveAdsCreativeRequestBuilder removeAdsCreative() {
-        return new RemoveAdsCreativeRequestBuilder(sdkConfiguration);
+    public RemoveAdsCreative2RequestBuilder removeAdsCreative2() {
+        return new RemoveAdsCreative2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Remove a creative
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<RemoveAdsCreativeResponse>} - The async response
+     * @return {@code CompletableFuture<RemoveAdsCreative2Response>} - The async response
      */
-    public CompletableFuture<RemoveAdsCreativeResponse> removeAdsCreative(@Nonnull RemoveAdsCreativeRequest request) {
-        AsyncRequestOperation<RemoveAdsCreativeRequest, RemoveAdsCreativeResponse> operation
-              = new RemoveAdsCreative.Async(sdkConfiguration, _headers);
+    public CompletableFuture<RemoveAdsCreative2Response> removeAdsCreative2(@Nonnull RemoveAdsCreative2Request request) {
+        AsyncRequestOperation<RemoveAdsCreative2Request, RemoveAdsCreative2Response> operation
+              = new RemoveAdsCreative2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -174,19 +174,19 @@ public class AsyncCreative {
      * 
      * @return The async call builder
      */
-    public UpdateAdsCreativeRequestBuilder updateAdsCreative() {
-        return new UpdateAdsCreativeRequestBuilder(sdkConfiguration);
+    public UpdateAdsCreative2RequestBuilder updateAdsCreative2() {
+        return new UpdateAdsCreative2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update a creative
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<UpdateAdsCreativeResponse>} - The async response
+     * @return {@code CompletableFuture<UpdateAdsCreative2Response>} - The async response
      */
-    public CompletableFuture<UpdateAdsCreativeResponse> updateAdsCreative(@Nonnull UpdateAdsCreativeRequest request) {
-        AsyncRequestOperation<UpdateAdsCreativeRequest, UpdateAdsCreativeResponse> operation
-              = new UpdateAdsCreative.Async(sdkConfiguration, _headers);
+    public CompletableFuture<UpdateAdsCreative2Response> updateAdsCreative2(@Nonnull UpdateAdsCreative2Request request) {
+        AsyncRequestOperation<UpdateAdsCreative2Request, UpdateAdsCreative2Response> operation
+              = new UpdateAdsCreative2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

@@ -4,40 +4,40 @@
 
 ### Available Operations
 
-* [createAtsCompany](#createatscompany) - Create a company
-* [createCrmCompany](#createcrmcompany) - Create a company
-* [createHrisCompany](#createhriscompany) - Create a company
-* [getAtsCompany](#getatscompany) - Retrieve a company
-* [getCrmCompany](#getcrmcompany) - Retrieve a company
-* [getHrisCompany](#gethriscompany) - Retrieve a company
-* [listAtsCompanies](#listatscompanies) - List all companies
-* [listCrmCompanies](#listcrmcompanies) - List all companies
-* [listEnrichCompanies](#listenrichcompanies) - Retrieve enrichment information for a company
-* [listHrisCompanies](#listhriscompanies) - List all companies
-* [patchAtsCompany](#patchatscompany) - Update a company
-* [patchCrmCompany](#patchcrmcompany) - Update a company
-* [patchHrisCompany](#patchhriscompany) - Update a company
-* [removeAtsCompany](#removeatscompany) - Remove a company
-* [removeCrmCompany](#removecrmcompany) - Remove a company
-* [removeHrisCompany](#removehriscompany) - Remove a company
-* [updateAtsCompany](#updateatscompany) - Update a company
-* [updateCrmCompany](#updatecrmcompany) - Update a company
-* [updateHrisCompany](#updatehriscompany) - Update a company
+* [createAtsCompany2](#createatscompany2) - Create a company
+* [createCrmCompany2](#createcrmcompany2) - Create a company
+* [createHrisCompany2](#createhriscompany2) - Create a company
+* [getAtsCompany2](#getatscompany2) - Retrieve a company
+* [getCrmCompany2](#getcrmcompany2) - Retrieve a company
+* [getHrisCompany2](#gethriscompany2) - Retrieve a company
+* [listAtsCompanies2](#listatscompanies2) - List all companies
+* [listCrmCompanies2](#listcrmcompanies2) - List all companies
+* [listEnrichCompanies2](#listenrichcompanies2) - Retrieve enrichment information for a company
+* [listHrisCompanies2](#listhriscompanies2) - List all companies
+* [patchAtsCompany2](#patchatscompany2) - Update a company
+* [patchCrmCompany2](#patchcrmcompany2) - Update a company
+* [patchHrisCompany2](#patchhriscompany2) - Update a company
+* [removeAtsCompany2](#removeatscompany2) - Remove a company
+* [removeCrmCompany2](#removecrmcompany2) - Remove a company
+* [removeHrisCompany2](#removehriscompany2) - Remove a company
+* [updateAtsCompany2](#updateatscompany2) - Update a company
+* [updateCrmCompany2](#updatecrmcompany2) - Update a company
+* [updateHrisCompany2](#updatehriscompany2) - Update a company
 
-## createAtsCompany
+## createAtsCompany2
 
 Create a company
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createAtsCompany" method="post" path="/ats/{connection_id}/company" -->
+<!-- UsageSnippet language="java" operationID="createAtsCompany2" method="post" path="/ats/{connection_id}/company" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.CreateAtsCompanyRequest;
-import to.unified.unified_java_sdk.models.operations.CreateAtsCompanyResponse;
+import to.unified.unified_java_sdk.models.operations.CreateAtsCompany2Request;
+import to.unified.unified_java_sdk.models.operations.CreateAtsCompany2Response;
 import to.unified.unified_java_sdk.models.shared.AtsCompany;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -51,13 +51,13 @@ public class Application {
                     .build())
             .build();
 
-        CreateAtsCompanyRequest req = CreateAtsCompanyRequest.builder()
+        CreateAtsCompany2Request req = CreateAtsCompany2Request.builder()
                 .atsCompany(AtsCompany.builder()
                     .build())
                 .connectionId("<id>")
                 .build();
 
-        CreateAtsCompanyResponse res = sdk.company().createAtsCompany()
+        CreateAtsCompany2Response res = sdk.company().createAtsCompany2()
                 .request(req)
                 .call();
 
@@ -70,13 +70,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
-| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
-| `request`                                                                     | [CreateAtsCompanyRequest](../../models/operations/CreateAtsCompanyRequest.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
+| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| `request`                                                                       | [CreateAtsCompany2Request](../../models/operations/CreateAtsCompany2Request.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
 
 ### Response
 
-**[CreateAtsCompanyResponse](../../models/operations/CreateAtsCompanyResponse.md)**
+**[CreateAtsCompany2Response](../../models/operations/CreateAtsCompany2Response.md)**
 
 ### Errors
 
@@ -84,20 +84,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## createCrmCompany
+## createCrmCompany2
 
 Create a company
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createCrmCompany" method="post" path="/crm/{connection_id}/company" -->
+<!-- UsageSnippet language="java" operationID="createCrmCompany2" method="post" path="/crm/{connection_id}/company" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.CreateCrmCompanyRequest;
-import to.unified.unified_java_sdk.models.operations.CreateCrmCompanyResponse;
+import to.unified.unified_java_sdk.models.operations.CreateCrmCompany2Request;
+import to.unified.unified_java_sdk.models.operations.CreateCrmCompany2Response;
 import to.unified.unified_java_sdk.models.shared.CrmCompany;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -111,13 +111,13 @@ public class Application {
                     .build())
             .build();
 
-        CreateCrmCompanyRequest req = CreateCrmCompanyRequest.builder()
+        CreateCrmCompany2Request req = CreateCrmCompany2Request.builder()
                 .crmCompany(CrmCompany.builder()
                     .build())
                 .connectionId("<id>")
                 .build();
 
-        CreateCrmCompanyResponse res = sdk.company().createCrmCompany()
+        CreateCrmCompany2Response res = sdk.company().createCrmCompany2()
                 .request(req)
                 .call();
 
@@ -130,13 +130,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
-| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
-| `request`                                                                     | [CreateCrmCompanyRequest](../../models/operations/CreateCrmCompanyRequest.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
+| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| `request`                                                                       | [CreateCrmCompany2Request](../../models/operations/CreateCrmCompany2Request.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
 
 ### Response
 
-**[CreateCrmCompanyResponse](../../models/operations/CreateCrmCompanyResponse.md)**
+**[CreateCrmCompany2Response](../../models/operations/CreateCrmCompany2Response.md)**
 
 ### Errors
 
@@ -144,20 +144,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## createHrisCompany
+## createHrisCompany2
 
 Create a company
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createHrisCompany" method="post" path="/hris/{connection_id}/company" -->
+<!-- UsageSnippet language="java" operationID="createHrisCompany2" method="post" path="/hris/{connection_id}/company" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.CreateHrisCompanyRequest;
-import to.unified.unified_java_sdk.models.operations.CreateHrisCompanyResponse;
+import to.unified.unified_java_sdk.models.operations.CreateHrisCompany2Request;
+import to.unified.unified_java_sdk.models.operations.CreateHrisCompany2Response;
 import to.unified.unified_java_sdk.models.shared.HrisCompany;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -171,13 +171,13 @@ public class Application {
                     .build())
             .build();
 
-        CreateHrisCompanyRequest req = CreateHrisCompanyRequest.builder()
+        CreateHrisCompany2Request req = CreateHrisCompany2Request.builder()
                 .hrisCompany(HrisCompany.builder()
                     .build())
                 .connectionId("<id>")
                 .build();
 
-        CreateHrisCompanyResponse res = sdk.company().createHrisCompany()
+        CreateHrisCompany2Response res = sdk.company().createHrisCompany2()
                 .request(req)
                 .call();
 
@@ -190,13 +190,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
-| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
-| `request`                                                                       | [CreateHrisCompanyRequest](../../models/operations/CreateHrisCompanyRequest.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
+| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
+| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| `request`                                                                         | [CreateHrisCompany2Request](../../models/operations/CreateHrisCompany2Request.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
 
 ### Response
 
-**[CreateHrisCompanyResponse](../../models/operations/CreateHrisCompanyResponse.md)**
+**[CreateHrisCompany2Response](../../models/operations/CreateHrisCompany2Response.md)**
 
 ### Errors
 
@@ -204,20 +204,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## getAtsCompany
+## getAtsCompany2
 
 Retrieve a company
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="getAtsCompany" method="get" path="/ats/{connection_id}/company/{id}" -->
+<!-- UsageSnippet language="java" operationID="getAtsCompany2" method="get" path="/ats/{connection_id}/company/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.GetAtsCompanyRequest;
-import to.unified.unified_java_sdk.models.operations.GetAtsCompanyResponse;
+import to.unified.unified_java_sdk.models.operations.GetAtsCompany2Request;
+import to.unified.unified_java_sdk.models.operations.GetAtsCompany2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -230,12 +230,12 @@ public class Application {
                     .build())
             .build();
 
-        GetAtsCompanyRequest req = GetAtsCompanyRequest.builder()
+        GetAtsCompany2Request req = GetAtsCompany2Request.builder()
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        GetAtsCompanyResponse res = sdk.company().getAtsCompany()
+        GetAtsCompany2Response res = sdk.company().getAtsCompany2()
                 .request(req)
                 .call();
 
@@ -248,13 +248,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                               | Type                                                                    | Required                                                                | Description                                                             |
-| ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- |
-| `request`                                                               | [GetAtsCompanyRequest](../../models/operations/GetAtsCompanyRequest.md) | :heavy_check_mark:                                                      | The request object to use for the request.                              |
+| Parameter                                                                 | Type                                                                      | Required                                                                  | Description                                                               |
+| ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
+| `request`                                                                 | [GetAtsCompany2Request](../../models/operations/GetAtsCompany2Request.md) | :heavy_check_mark:                                                        | The request object to use for the request.                                |
 
 ### Response
 
-**[GetAtsCompanyResponse](../../models/operations/GetAtsCompanyResponse.md)**
+**[GetAtsCompany2Response](../../models/operations/GetAtsCompany2Response.md)**
 
 ### Errors
 
@@ -262,20 +262,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## getCrmCompany
+## getCrmCompany2
 
 Retrieve a company
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="getCrmCompany" method="get" path="/crm/{connection_id}/company/{id}" -->
+<!-- UsageSnippet language="java" operationID="getCrmCompany2" method="get" path="/crm/{connection_id}/company/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.GetCrmCompanyRequest;
-import to.unified.unified_java_sdk.models.operations.GetCrmCompanyResponse;
+import to.unified.unified_java_sdk.models.operations.GetCrmCompany2Request;
+import to.unified.unified_java_sdk.models.operations.GetCrmCompany2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -288,12 +288,12 @@ public class Application {
                     .build())
             .build();
 
-        GetCrmCompanyRequest req = GetCrmCompanyRequest.builder()
+        GetCrmCompany2Request req = GetCrmCompany2Request.builder()
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        GetCrmCompanyResponse res = sdk.company().getCrmCompany()
+        GetCrmCompany2Response res = sdk.company().getCrmCompany2()
                 .request(req)
                 .call();
 
@@ -306,13 +306,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                               | Type                                                                    | Required                                                                | Description                                                             |
-| ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- |
-| `request`                                                               | [GetCrmCompanyRequest](../../models/operations/GetCrmCompanyRequest.md) | :heavy_check_mark:                                                      | The request object to use for the request.                              |
+| Parameter                                                                 | Type                                                                      | Required                                                                  | Description                                                               |
+| ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
+| `request`                                                                 | [GetCrmCompany2Request](../../models/operations/GetCrmCompany2Request.md) | :heavy_check_mark:                                                        | The request object to use for the request.                                |
 
 ### Response
 
-**[GetCrmCompanyResponse](../../models/operations/GetCrmCompanyResponse.md)**
+**[GetCrmCompany2Response](../../models/operations/GetCrmCompany2Response.md)**
 
 ### Errors
 
@@ -320,20 +320,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## getHrisCompany
+## getHrisCompany2
 
 Retrieve a company
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="getHrisCompany" method="get" path="/hris/{connection_id}/company/{id}" -->
+<!-- UsageSnippet language="java" operationID="getHrisCompany2" method="get" path="/hris/{connection_id}/company/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.GetHrisCompanyRequest;
-import to.unified.unified_java_sdk.models.operations.GetHrisCompanyResponse;
+import to.unified.unified_java_sdk.models.operations.GetHrisCompany2Request;
+import to.unified.unified_java_sdk.models.operations.GetHrisCompany2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -346,12 +346,12 @@ public class Application {
                     .build())
             .build();
 
-        GetHrisCompanyRequest req = GetHrisCompanyRequest.builder()
+        GetHrisCompany2Request req = GetHrisCompany2Request.builder()
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        GetHrisCompanyResponse res = sdk.company().getHrisCompany()
+        GetHrisCompany2Response res = sdk.company().getHrisCompany2()
                 .request(req)
                 .call();
 
@@ -364,13 +364,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                 | Type                                                                      | Required                                                                  | Description                                                               |
-| ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
-| `request`                                                                 | [GetHrisCompanyRequest](../../models/operations/GetHrisCompanyRequest.md) | :heavy_check_mark:                                                        | The request object to use for the request.                                |
+| Parameter                                                                   | Type                                                                        | Required                                                                    | Description                                                                 |
+| --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| `request`                                                                   | [GetHrisCompany2Request](../../models/operations/GetHrisCompany2Request.md) | :heavy_check_mark:                                                          | The request object to use for the request.                                  |
 
 ### Response
 
-**[GetHrisCompanyResponse](../../models/operations/GetHrisCompanyResponse.md)**
+**[GetHrisCompany2Response](../../models/operations/GetHrisCompany2Response.md)**
 
 ### Errors
 
@@ -378,20 +378,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## listAtsCompanies
+## listAtsCompanies2
 
 List all companies
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="listAtsCompanies" method="get" path="/ats/{connection_id}/company" -->
+<!-- UsageSnippet language="java" operationID="listAtsCompanies2" method="get" path="/ats/{connection_id}/company" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.ListAtsCompaniesRequest;
-import to.unified.unified_java_sdk.models.operations.ListAtsCompaniesResponse;
+import to.unified.unified_java_sdk.models.operations.ListAtsCompanies2Request;
+import to.unified.unified_java_sdk.models.operations.ListAtsCompanies2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -404,11 +404,11 @@ public class Application {
                     .build())
             .build();
 
-        ListAtsCompaniesRequest req = ListAtsCompaniesRequest.builder()
+        ListAtsCompanies2Request req = ListAtsCompanies2Request.builder()
                 .connectionId("<id>")
                 .build();
 
-        ListAtsCompaniesResponse res = sdk.company().listAtsCompanies()
+        ListAtsCompanies2Response res = sdk.company().listAtsCompanies2()
                 .request(req)
                 .call();
 
@@ -421,13 +421,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
-| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
-| `request`                                                                     | [ListAtsCompaniesRequest](../../models/operations/ListAtsCompaniesRequest.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
+| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| `request`                                                                       | [ListAtsCompanies2Request](../../models/operations/ListAtsCompanies2Request.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
 
 ### Response
 
-**[ListAtsCompaniesResponse](../../models/operations/ListAtsCompaniesResponse.md)**
+**[ListAtsCompanies2Response](../../models/operations/ListAtsCompanies2Response.md)**
 
 ### Errors
 
@@ -435,20 +435,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## listCrmCompanies
+## listCrmCompanies2
 
 List all companies
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="listCrmCompanies" method="get" path="/crm/{connection_id}/company" -->
+<!-- UsageSnippet language="java" operationID="listCrmCompanies2" method="get" path="/crm/{connection_id}/company" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.ListCrmCompaniesRequest;
-import to.unified.unified_java_sdk.models.operations.ListCrmCompaniesResponse;
+import to.unified.unified_java_sdk.models.operations.ListCrmCompanies2Request;
+import to.unified.unified_java_sdk.models.operations.ListCrmCompanies2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -461,11 +461,11 @@ public class Application {
                     .build())
             .build();
 
-        ListCrmCompaniesRequest req = ListCrmCompaniesRequest.builder()
+        ListCrmCompanies2Request req = ListCrmCompanies2Request.builder()
                 .connectionId("<id>")
                 .build();
 
-        ListCrmCompaniesResponse res = sdk.company().listCrmCompanies()
+        ListCrmCompanies2Response res = sdk.company().listCrmCompanies2()
                 .request(req)
                 .call();
 
@@ -478,13 +478,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
-| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
-| `request`                                                                     | [ListCrmCompaniesRequest](../../models/operations/ListCrmCompaniesRequest.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
+| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| `request`                                                                       | [ListCrmCompanies2Request](../../models/operations/ListCrmCompanies2Request.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
 
 ### Response
 
-**[ListCrmCompaniesResponse](../../models/operations/ListCrmCompaniesResponse.md)**
+**[ListCrmCompanies2Response](../../models/operations/ListCrmCompanies2Response.md)**
 
 ### Errors
 
@@ -492,20 +492,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## listEnrichCompanies
+## listEnrichCompanies2
 
 Retrieve enrichment information for a company
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="listEnrichCompanies" method="get" path="/enrich/{connection_id}/company" -->
+<!-- UsageSnippet language="java" operationID="listEnrichCompanies2" method="get" path="/enrich/{connection_id}/company" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.ListEnrichCompaniesRequest;
-import to.unified.unified_java_sdk.models.operations.ListEnrichCompaniesResponse;
+import to.unified.unified_java_sdk.models.operations.ListEnrichCompanies2Request;
+import to.unified.unified_java_sdk.models.operations.ListEnrichCompanies2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -518,11 +518,11 @@ public class Application {
                     .build())
             .build();
 
-        ListEnrichCompaniesRequest req = ListEnrichCompaniesRequest.builder()
+        ListEnrichCompanies2Request req = ListEnrichCompanies2Request.builder()
                 .connectionId("<id>")
                 .build();
 
-        ListEnrichCompaniesResponse res = sdk.company().listEnrichCompanies()
+        ListEnrichCompanies2Response res = sdk.company().listEnrichCompanies2()
                 .request(req)
                 .call();
 
@@ -535,13 +535,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                           | Type                                                                                | Required                                                                            | Description                                                                         |
-| ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
-| `request`                                                                           | [ListEnrichCompaniesRequest](../../models/operations/ListEnrichCompaniesRequest.md) | :heavy_check_mark:                                                                  | The request object to use for the request.                                          |
+| Parameter                                                                             | Type                                                                                  | Required                                                                              | Description                                                                           |
+| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| `request`                                                                             | [ListEnrichCompanies2Request](../../models/operations/ListEnrichCompanies2Request.md) | :heavy_check_mark:                                                                    | The request object to use for the request.                                            |
 
 ### Response
 
-**[ListEnrichCompaniesResponse](../../models/operations/ListEnrichCompaniesResponse.md)**
+**[ListEnrichCompanies2Response](../../models/operations/ListEnrichCompanies2Response.md)**
 
 ### Errors
 
@@ -549,20 +549,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## listHrisCompanies
+## listHrisCompanies2
 
 List all companies
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="listHrisCompanies" method="get" path="/hris/{connection_id}/company" -->
+<!-- UsageSnippet language="java" operationID="listHrisCompanies2" method="get" path="/hris/{connection_id}/company" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.ListHrisCompaniesRequest;
-import to.unified.unified_java_sdk.models.operations.ListHrisCompaniesResponse;
+import to.unified.unified_java_sdk.models.operations.ListHrisCompanies2Request;
+import to.unified.unified_java_sdk.models.operations.ListHrisCompanies2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -575,11 +575,11 @@ public class Application {
                     .build())
             .build();
 
-        ListHrisCompaniesRequest req = ListHrisCompaniesRequest.builder()
+        ListHrisCompanies2Request req = ListHrisCompanies2Request.builder()
                 .connectionId("<id>")
                 .build();
 
-        ListHrisCompaniesResponse res = sdk.company().listHrisCompanies()
+        ListHrisCompanies2Response res = sdk.company().listHrisCompanies2()
                 .request(req)
                 .call();
 
@@ -592,13 +592,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
-| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
-| `request`                                                                       | [ListHrisCompaniesRequest](../../models/operations/ListHrisCompaniesRequest.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
+| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
+| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| `request`                                                                         | [ListHrisCompanies2Request](../../models/operations/ListHrisCompanies2Request.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
 
 ### Response
 
-**[ListHrisCompaniesResponse](../../models/operations/ListHrisCompaniesResponse.md)**
+**[ListHrisCompanies2Response](../../models/operations/ListHrisCompanies2Response.md)**
 
 ### Errors
 
@@ -606,20 +606,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## patchAtsCompany
+## patchAtsCompany2
 
 Update a company
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchAtsCompany" method="patch" path="/ats/{connection_id}/company/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchAtsCompany2" method="patch" path="/ats/{connection_id}/company/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.PatchAtsCompanyRequest;
-import to.unified.unified_java_sdk.models.operations.PatchAtsCompanyResponse;
+import to.unified.unified_java_sdk.models.operations.PatchAtsCompany2Request;
+import to.unified.unified_java_sdk.models.operations.PatchAtsCompany2Response;
 import to.unified.unified_java_sdk.models.shared.AtsCompany;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -633,365 +633,14 @@ public class Application {
                     .build())
             .build();
 
-        PatchAtsCompanyRequest req = PatchAtsCompanyRequest.builder()
+        PatchAtsCompany2Request req = PatchAtsCompany2Request.builder()
                 .atsCompany(AtsCompany.builder()
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        PatchAtsCompanyResponse res = sdk.company().patchAtsCompany()
-                .request(req)
-                .call();
-
-        if (res.atsCompany().isPresent()) {
-            System.out.println(res.atsCompany().get());
-        }
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                   | Type                                                                        | Required                                                                    | Description                                                                 |
-| --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
-| `request`                                                                   | [PatchAtsCompanyRequest](../../models/operations/PatchAtsCompanyRequest.md) | :heavy_check_mark:                                                          | The request object to use for the request.                                  |
-
-### Response
-
-**[PatchAtsCompanyResponse](../../models/operations/PatchAtsCompanyResponse.md)**
-
-### Errors
-
-| Error Type             | Status Code            | Content Type           |
-| ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
-
-## patchCrmCompany
-
-Update a company
-
-### Example Usage
-
-<!-- UsageSnippet language="java" operationID="patchCrmCompany" method="patch" path="/crm/{connection_id}/company/{id}" -->
-```java
-package hello.world;
-
-import java.lang.Exception;
-import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.PatchCrmCompanyRequest;
-import to.unified.unified_java_sdk.models.operations.PatchCrmCompanyResponse;
-import to.unified.unified_java_sdk.models.shared.CrmCompany;
-import to.unified.unified_java_sdk.models.shared.Security;
-
-public class Application {
-
-    public static void main(String[] args) throws Exception {
-
-        UnifiedTo sdk = UnifiedTo.builder()
-                .security(Security.builder()
-                    .jwt(System.getenv().getOrDefault("JWT", ""))
-                    .build())
-            .build();
-
-        PatchCrmCompanyRequest req = PatchCrmCompanyRequest.builder()
-                .crmCompany(CrmCompany.builder()
-                    .build())
-                .connectionId("<id>")
-                .id("<id>")
-                .build();
-
-        PatchCrmCompanyResponse res = sdk.company().patchCrmCompany()
-                .request(req)
-                .call();
-
-        if (res.crmCompany().isPresent()) {
-            System.out.println(res.crmCompany().get());
-        }
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                   | Type                                                                        | Required                                                                    | Description                                                                 |
-| --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
-| `request`                                                                   | [PatchCrmCompanyRequest](../../models/operations/PatchCrmCompanyRequest.md) | :heavy_check_mark:                                                          | The request object to use for the request.                                  |
-
-### Response
-
-**[PatchCrmCompanyResponse](../../models/operations/PatchCrmCompanyResponse.md)**
-
-### Errors
-
-| Error Type             | Status Code            | Content Type           |
-| ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
-
-## patchHrisCompany
-
-Update a company
-
-### Example Usage
-
-<!-- UsageSnippet language="java" operationID="patchHrisCompany" method="patch" path="/hris/{connection_id}/company/{id}" -->
-```java
-package hello.world;
-
-import java.lang.Exception;
-import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.PatchHrisCompanyRequest;
-import to.unified.unified_java_sdk.models.operations.PatchHrisCompanyResponse;
-import to.unified.unified_java_sdk.models.shared.HrisCompany;
-import to.unified.unified_java_sdk.models.shared.Security;
-
-public class Application {
-
-    public static void main(String[] args) throws Exception {
-
-        UnifiedTo sdk = UnifiedTo.builder()
-                .security(Security.builder()
-                    .jwt(System.getenv().getOrDefault("JWT", ""))
-                    .build())
-            .build();
-
-        PatchHrisCompanyRequest req = PatchHrisCompanyRequest.builder()
-                .hrisCompany(HrisCompany.builder()
-                    .build())
-                .connectionId("<id>")
-                .id("<id>")
-                .build();
-
-        PatchHrisCompanyResponse res = sdk.company().patchHrisCompany()
-                .request(req)
-                .call();
-
-        if (res.hrisCompany().isPresent()) {
-            System.out.println(res.hrisCompany().get());
-        }
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
-| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
-| `request`                                                                     | [PatchHrisCompanyRequest](../../models/operations/PatchHrisCompanyRequest.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
-
-### Response
-
-**[PatchHrisCompanyResponse](../../models/operations/PatchHrisCompanyResponse.md)**
-
-### Errors
-
-| Error Type             | Status Code            | Content Type           |
-| ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
-
-## removeAtsCompany
-
-Remove a company
-
-### Example Usage
-
-<!-- UsageSnippet language="java" operationID="removeAtsCompany" method="delete" path="/ats/{connection_id}/company/{id}" -->
-```java
-package hello.world;
-
-import java.lang.Exception;
-import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.RemoveAtsCompanyRequest;
-import to.unified.unified_java_sdk.models.operations.RemoveAtsCompanyResponse;
-import to.unified.unified_java_sdk.models.shared.Security;
-
-public class Application {
-
-    public static void main(String[] args) throws Exception {
-
-        UnifiedTo sdk = UnifiedTo.builder()
-                .security(Security.builder()
-                    .jwt(System.getenv().getOrDefault("JWT", ""))
-                    .build())
-            .build();
-
-        RemoveAtsCompanyRequest req = RemoveAtsCompanyRequest.builder()
-                .connectionId("<id>")
-                .id("<id>")
-                .build();
-
-        RemoveAtsCompanyResponse res = sdk.company().removeAtsCompany()
-                .request(req)
-                .call();
-
-        // handle response
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
-| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
-| `request`                                                                     | [RemoveAtsCompanyRequest](../../models/operations/RemoveAtsCompanyRequest.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
-
-### Response
-
-**[RemoveAtsCompanyResponse](../../models/operations/RemoveAtsCompanyResponse.md)**
-
-### Errors
-
-| Error Type             | Status Code            | Content Type           |
-| ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
-
-## removeCrmCompany
-
-Remove a company
-
-### Example Usage
-
-<!-- UsageSnippet language="java" operationID="removeCrmCompany" method="delete" path="/crm/{connection_id}/company/{id}" -->
-```java
-package hello.world;
-
-import java.lang.Exception;
-import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.RemoveCrmCompanyRequest;
-import to.unified.unified_java_sdk.models.operations.RemoveCrmCompanyResponse;
-import to.unified.unified_java_sdk.models.shared.Security;
-
-public class Application {
-
-    public static void main(String[] args) throws Exception {
-
-        UnifiedTo sdk = UnifiedTo.builder()
-                .security(Security.builder()
-                    .jwt(System.getenv().getOrDefault("JWT", ""))
-                    .build())
-            .build();
-
-        RemoveCrmCompanyRequest req = RemoveCrmCompanyRequest.builder()
-                .connectionId("<id>")
-                .id("<id>")
-                .build();
-
-        RemoveCrmCompanyResponse res = sdk.company().removeCrmCompany()
-                .request(req)
-                .call();
-
-        // handle response
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
-| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
-| `request`                                                                     | [RemoveCrmCompanyRequest](../../models/operations/RemoveCrmCompanyRequest.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
-
-### Response
-
-**[RemoveCrmCompanyResponse](../../models/operations/RemoveCrmCompanyResponse.md)**
-
-### Errors
-
-| Error Type             | Status Code            | Content Type           |
-| ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
-
-## removeHrisCompany
-
-Remove a company
-
-### Example Usage
-
-<!-- UsageSnippet language="java" operationID="removeHrisCompany" method="delete" path="/hris/{connection_id}/company/{id}" -->
-```java
-package hello.world;
-
-import java.lang.Exception;
-import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.RemoveHrisCompanyRequest;
-import to.unified.unified_java_sdk.models.operations.RemoveHrisCompanyResponse;
-import to.unified.unified_java_sdk.models.shared.Security;
-
-public class Application {
-
-    public static void main(String[] args) throws Exception {
-
-        UnifiedTo sdk = UnifiedTo.builder()
-                .security(Security.builder()
-                    .jwt(System.getenv().getOrDefault("JWT", ""))
-                    .build())
-            .build();
-
-        RemoveHrisCompanyRequest req = RemoveHrisCompanyRequest.builder()
-                .connectionId("<id>")
-                .id("<id>")
-                .build();
-
-        RemoveHrisCompanyResponse res = sdk.company().removeHrisCompany()
-                .request(req)
-                .call();
-
-        // handle response
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
-| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
-| `request`                                                                       | [RemoveHrisCompanyRequest](../../models/operations/RemoveHrisCompanyRequest.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
-
-### Response
-
-**[RemoveHrisCompanyResponse](../../models/operations/RemoveHrisCompanyResponse.md)**
-
-### Errors
-
-| Error Type             | Status Code            | Content Type           |
-| ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
-
-## updateAtsCompany
-
-Update a company
-
-### Example Usage
-
-<!-- UsageSnippet language="java" operationID="updateAtsCompany" method="put" path="/ats/{connection_id}/company/{id}" -->
-```java
-package hello.world;
-
-import java.lang.Exception;
-import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.UpdateAtsCompanyRequest;
-import to.unified.unified_java_sdk.models.operations.UpdateAtsCompanyResponse;
-import to.unified.unified_java_sdk.models.shared.AtsCompany;
-import to.unified.unified_java_sdk.models.shared.Security;
-
-public class Application {
-
-    public static void main(String[] args) throws Exception {
-
-        UnifiedTo sdk = UnifiedTo.builder()
-                .security(Security.builder()
-                    .jwt(System.getenv().getOrDefault("JWT", ""))
-                    .build())
-            .build();
-
-        UpdateAtsCompanyRequest req = UpdateAtsCompanyRequest.builder()
-                .atsCompany(AtsCompany.builder()
-                    .build())
-                .connectionId("<id>")
-                .id("<id>")
-                .build();
-
-        UpdateAtsCompanyResponse res = sdk.company().updateAtsCompany()
+        PatchAtsCompany2Response res = sdk.company().patchAtsCompany2()
                 .request(req)
                 .call();
 
@@ -1006,11 +655,11 @@ public class Application {
 
 | Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
 | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
-| `request`                                                                     | [UpdateAtsCompanyRequest](../../models/operations/UpdateAtsCompanyRequest.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
+| `request`                                                                     | [PatchAtsCompany2Request](../../models/operations/PatchAtsCompany2Request.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
 
 ### Response
 
-**[UpdateAtsCompanyResponse](../../models/operations/UpdateAtsCompanyResponse.md)**
+**[PatchAtsCompany2Response](../../models/operations/PatchAtsCompany2Response.md)**
 
 ### Errors
 
@@ -1018,20 +667,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## updateCrmCompany
+## patchCrmCompany2
 
 Update a company
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateCrmCompany" method="put" path="/crm/{connection_id}/company/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchCrmCompany2" method="patch" path="/crm/{connection_id}/company/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.UpdateCrmCompanyRequest;
-import to.unified.unified_java_sdk.models.operations.UpdateCrmCompanyResponse;
+import to.unified.unified_java_sdk.models.operations.PatchCrmCompany2Request;
+import to.unified.unified_java_sdk.models.operations.PatchCrmCompany2Response;
 import to.unified.unified_java_sdk.models.shared.CrmCompany;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -1045,14 +694,14 @@ public class Application {
                     .build())
             .build();
 
-        UpdateCrmCompanyRequest req = UpdateCrmCompanyRequest.builder()
+        PatchCrmCompany2Request req = PatchCrmCompany2Request.builder()
                 .crmCompany(CrmCompany.builder()
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        UpdateCrmCompanyResponse res = sdk.company().updateCrmCompany()
+        PatchCrmCompany2Response res = sdk.company().patchCrmCompany2()
                 .request(req)
                 .call();
 
@@ -1067,11 +716,11 @@ public class Application {
 
 | Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
 | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
-| `request`                                                                     | [UpdateCrmCompanyRequest](../../models/operations/UpdateCrmCompanyRequest.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
+| `request`                                                                     | [PatchCrmCompany2Request](../../models/operations/PatchCrmCompany2Request.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
 
 ### Response
 
-**[UpdateCrmCompanyResponse](../../models/operations/UpdateCrmCompanyResponse.md)**
+**[PatchCrmCompany2Response](../../models/operations/PatchCrmCompany2Response.md)**
 
 ### Errors
 
@@ -1079,20 +728,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## updateHrisCompany
+## patchHrisCompany2
 
 Update a company
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateHrisCompany" method="put" path="/hris/{connection_id}/company/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchHrisCompany2" method="patch" path="/hris/{connection_id}/company/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.UpdateHrisCompanyRequest;
-import to.unified.unified_java_sdk.models.operations.UpdateHrisCompanyResponse;
+import to.unified.unified_java_sdk.models.operations.PatchHrisCompany2Request;
+import to.unified.unified_java_sdk.models.operations.PatchHrisCompany2Response;
 import to.unified.unified_java_sdk.models.shared.HrisCompany;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -1106,14 +755,14 @@ public class Application {
                     .build())
             .build();
 
-        UpdateHrisCompanyRequest req = UpdateHrisCompanyRequest.builder()
+        PatchHrisCompany2Request req = PatchHrisCompany2Request.builder()
                 .hrisCompany(HrisCompany.builder()
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        UpdateHrisCompanyResponse res = sdk.company().updateHrisCompany()
+        PatchHrisCompany2Response res = sdk.company().patchHrisCompany2()
                 .request(req)
                 .call();
 
@@ -1128,11 +777,362 @@ public class Application {
 
 | Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
 | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
-| `request`                                                                       | [UpdateHrisCompanyRequest](../../models/operations/UpdateHrisCompanyRequest.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
+| `request`                                                                       | [PatchHrisCompany2Request](../../models/operations/PatchHrisCompany2Request.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
 
 ### Response
 
-**[UpdateHrisCompanyResponse](../../models/operations/UpdateHrisCompanyResponse.md)**
+**[PatchHrisCompany2Response](../../models/operations/PatchHrisCompany2Response.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## removeAtsCompany2
+
+Remove a company
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="removeAtsCompany2" method="delete" path="/ats/{connection_id}/company/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.RemoveAtsCompany2Request;
+import to.unified.unified_java_sdk.models.operations.RemoveAtsCompany2Response;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        RemoveAtsCompany2Request req = RemoveAtsCompany2Request.builder()
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        RemoveAtsCompany2Response res = sdk.company().removeAtsCompany2()
+                .request(req)
+                .call();
+
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| `request`                                                                       | [RemoveAtsCompany2Request](../../models/operations/RemoveAtsCompany2Request.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
+
+### Response
+
+**[RemoveAtsCompany2Response](../../models/operations/RemoveAtsCompany2Response.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## removeCrmCompany2
+
+Remove a company
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="removeCrmCompany2" method="delete" path="/crm/{connection_id}/company/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.RemoveCrmCompany2Request;
+import to.unified.unified_java_sdk.models.operations.RemoveCrmCompany2Response;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        RemoveCrmCompany2Request req = RemoveCrmCompany2Request.builder()
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        RemoveCrmCompany2Response res = sdk.company().removeCrmCompany2()
+                .request(req)
+                .call();
+
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| `request`                                                                       | [RemoveCrmCompany2Request](../../models/operations/RemoveCrmCompany2Request.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
+
+### Response
+
+**[RemoveCrmCompany2Response](../../models/operations/RemoveCrmCompany2Response.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## removeHrisCompany2
+
+Remove a company
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="removeHrisCompany2" method="delete" path="/hris/{connection_id}/company/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.RemoveHrisCompany2Request;
+import to.unified.unified_java_sdk.models.operations.RemoveHrisCompany2Response;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        RemoveHrisCompany2Request req = RemoveHrisCompany2Request.builder()
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        RemoveHrisCompany2Response res = sdk.company().removeHrisCompany2()
+                .request(req)
+                .call();
+
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
+| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| `request`                                                                         | [RemoveHrisCompany2Request](../../models/operations/RemoveHrisCompany2Request.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
+
+### Response
+
+**[RemoveHrisCompany2Response](../../models/operations/RemoveHrisCompany2Response.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## updateAtsCompany2
+
+Update a company
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="updateAtsCompany2" method="put" path="/ats/{connection_id}/company/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.UpdateAtsCompany2Request;
+import to.unified.unified_java_sdk.models.operations.UpdateAtsCompany2Response;
+import to.unified.unified_java_sdk.models.shared.AtsCompany;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        UpdateAtsCompany2Request req = UpdateAtsCompany2Request.builder()
+                .atsCompany(AtsCompany.builder()
+                    .build())
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        UpdateAtsCompany2Response res = sdk.company().updateAtsCompany2()
+                .request(req)
+                .call();
+
+        if (res.atsCompany().isPresent()) {
+            System.out.println(res.atsCompany().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| `request`                                                                       | [UpdateAtsCompany2Request](../../models/operations/UpdateAtsCompany2Request.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
+
+### Response
+
+**[UpdateAtsCompany2Response](../../models/operations/UpdateAtsCompany2Response.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## updateCrmCompany2
+
+Update a company
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="updateCrmCompany2" method="put" path="/crm/{connection_id}/company/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.UpdateCrmCompany2Request;
+import to.unified.unified_java_sdk.models.operations.UpdateCrmCompany2Response;
+import to.unified.unified_java_sdk.models.shared.CrmCompany;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        UpdateCrmCompany2Request req = UpdateCrmCompany2Request.builder()
+                .crmCompany(CrmCompany.builder()
+                    .build())
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        UpdateCrmCompany2Response res = sdk.company().updateCrmCompany2()
+                .request(req)
+                .call();
+
+        if (res.crmCompany().isPresent()) {
+            System.out.println(res.crmCompany().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| `request`                                                                       | [UpdateCrmCompany2Request](../../models/operations/UpdateCrmCompany2Request.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
+
+### Response
+
+**[UpdateCrmCompany2Response](../../models/operations/UpdateCrmCompany2Response.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## updateHrisCompany2
+
+Update a company
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="updateHrisCompany2" method="put" path="/hris/{connection_id}/company/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.UpdateHrisCompany2Request;
+import to.unified.unified_java_sdk.models.operations.UpdateHrisCompany2Response;
+import to.unified.unified_java_sdk.models.shared.HrisCompany;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        UpdateHrisCompany2Request req = UpdateHrisCompany2Request.builder()
+                .hrisCompany(HrisCompany.builder()
+                    .build())
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        UpdateHrisCompany2Response res = sdk.company().updateHrisCompany2()
+                .request(req)
+                .call();
+
+        if (res.hrisCompany().isPresent()) {
+            System.out.println(res.hrisCompany().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
+| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| `request`                                                                         | [UpdateHrisCompany2Request](../../models/operations/UpdateHrisCompany2Request.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
+
+### Response
+
+**[UpdateHrisCompany2Response](../../models/operations/UpdateHrisCompany2Response.md)**
 
 ### Errors
 

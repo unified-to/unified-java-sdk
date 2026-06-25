@@ -4,41 +4,41 @@
 
 ### Available Operations
 
-* [createTaskComment](#createtaskcomment) - Create a comment
-* [createTaskProject](#createtaskproject) - Create a project
-* [createTaskTask](#createtasktask) - Create a task
-* [getTaskChange](#gettaskchange) - Retrieve a change
-* [getTaskComment](#gettaskcomment) - Retrieve a comment
-* [getTaskProject](#gettaskproject) - Retrieve a project
-* [getTaskTask](#gettasktask) - Retrieve a task
-* [listTaskChanges](#listtaskchanges) - List all changes
-* [listTaskComments](#listtaskcomments) - List all comments
-* [listTaskProjects](#listtaskprojects) - List all projects
-* [listTaskTasks](#listtasktasks) - List all tasks
-* [patchTaskComment](#patchtaskcomment) - Update a comment
-* [patchTaskProject](#patchtaskproject) - Update a project
-* [patchTaskTask](#patchtasktask) - Update a task
-* [removeTaskComment](#removetaskcomment) - Remove a comment
-* [removeTaskProject](#removetaskproject) - Remove a project
-* [removeTaskTask](#removetasktask) - Remove a task
-* [updateTaskComment](#updatetaskcomment) - Update a comment
-* [updateTaskProject](#updatetaskproject) - Update a project
-* [updateTaskTask](#updatetasktask) - Update a task
+* [createTaskComment2](#createtaskcomment2) - Create a comment
+* [createTaskProject2](#createtaskproject2) - Create a project
+* [createTaskTask2](#createtasktask2) - Create a task
+* [getTaskChange2](#gettaskchange2) - Retrieve a change
+* [getTaskComment2](#gettaskcomment2) - Retrieve a comment
+* [getTaskProject2](#gettaskproject2) - Retrieve a project
+* [getTaskTask2](#gettasktask2) - Retrieve a task
+* [listTaskChanges2](#listtaskchanges2) - List all changes
+* [listTaskComments2](#listtaskcomments2) - List all comments
+* [listTaskProjects2](#listtaskprojects2) - List all projects
+* [listTaskTasks2](#listtasktasks2) - List all tasks
+* [patchTaskComment2](#patchtaskcomment2) - Update a comment
+* [patchTaskProject2](#patchtaskproject2) - Update a project
+* [patchTaskTask2](#patchtasktask2) - Update a task
+* [removeTaskComment2](#removetaskcomment2) - Remove a comment
+* [removeTaskProject2](#removetaskproject2) - Remove a project
+* [removeTaskTask2](#removetasktask2) - Remove a task
+* [updateTaskComment2](#updatetaskcomment2) - Update a comment
+* [updateTaskProject2](#updatetaskproject2) - Update a project
+* [updateTaskTask2](#updatetasktask2) - Update a task
 
-## createTaskComment
+## createTaskComment2
 
 Create a comment
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createTaskComment" method="post" path="/task/{connection_id}/comment" -->
+<!-- UsageSnippet language="java" operationID="createTaskComment2" method="post" path="/task/{connection_id}/comment" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.CreateTaskCommentRequest;
-import to.unified.unified_java_sdk.models.operations.CreateTaskCommentResponse;
+import to.unified.unified_java_sdk.models.operations.CreateTaskComment2Request;
+import to.unified.unified_java_sdk.models.operations.CreateTaskComment2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 import to.unified.unified_java_sdk.models.shared.TaskComment;
 
@@ -52,13 +52,13 @@ public class Application {
                     .build())
             .build();
 
-        CreateTaskCommentRequest req = CreateTaskCommentRequest.builder()
+        CreateTaskComment2Request req = CreateTaskComment2Request.builder()
                 .taskComment(TaskComment.builder()
                     .build())
                 .connectionId("<id>")
                 .build();
 
-        CreateTaskCommentResponse res = sdk.task().createTaskComment()
+        CreateTaskComment2Response res = sdk.task().createTaskComment2()
                 .request(req)
                 .call();
 
@@ -71,13 +71,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
-| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
-| `request`                                                                       | [CreateTaskCommentRequest](../../models/operations/CreateTaskCommentRequest.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
+| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
+| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| `request`                                                                         | [CreateTaskComment2Request](../../models/operations/CreateTaskComment2Request.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
 
 ### Response
 
-**[CreateTaskCommentResponse](../../models/operations/CreateTaskCommentResponse.md)**
+**[CreateTaskComment2Response](../../models/operations/CreateTaskComment2Response.md)**
 
 ### Errors
 
@@ -85,20 +85,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## createTaskProject
+## createTaskProject2
 
 Create a project
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createTaskProject" method="post" path="/task/{connection_id}/project" -->
+<!-- UsageSnippet language="java" operationID="createTaskProject2" method="post" path="/task/{connection_id}/project" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.CreateTaskProjectRequest;
-import to.unified.unified_java_sdk.models.operations.CreateTaskProjectResponse;
+import to.unified.unified_java_sdk.models.operations.CreateTaskProject2Request;
+import to.unified.unified_java_sdk.models.operations.CreateTaskProject2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 import to.unified.unified_java_sdk.models.shared.TaskProject;
 
@@ -112,13 +112,13 @@ public class Application {
                     .build())
             .build();
 
-        CreateTaskProjectRequest req = CreateTaskProjectRequest.builder()
+        CreateTaskProject2Request req = CreateTaskProject2Request.builder()
                 .taskProject(TaskProject.builder()
                     .build())
                 .connectionId("<id>")
                 .build();
 
-        CreateTaskProjectResponse res = sdk.task().createTaskProject()
+        CreateTaskProject2Response res = sdk.task().createTaskProject2()
                 .request(req)
                 .call();
 
@@ -131,13 +131,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
-| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
-| `request`                                                                       | [CreateTaskProjectRequest](../../models/operations/CreateTaskProjectRequest.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
+| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
+| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| `request`                                                                         | [CreateTaskProject2Request](../../models/operations/CreateTaskProject2Request.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
 
 ### Response
 
-**[CreateTaskProjectResponse](../../models/operations/CreateTaskProjectResponse.md)**
+**[CreateTaskProject2Response](../../models/operations/CreateTaskProject2Response.md)**
 
 ### Errors
 
@@ -145,20 +145,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## createTaskTask
+## createTaskTask2
 
 Create a task
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createTaskTask" method="post" path="/task/{connection_id}/task" -->
+<!-- UsageSnippet language="java" operationID="createTaskTask2" method="post" path="/task/{connection_id}/task" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.CreateTaskTaskRequest;
-import to.unified.unified_java_sdk.models.operations.CreateTaskTaskResponse;
+import to.unified.unified_java_sdk.models.operations.CreateTaskTask2Request;
+import to.unified.unified_java_sdk.models.operations.CreateTaskTask2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 import to.unified.unified_java_sdk.models.shared.TaskTask;
 
@@ -172,13 +172,13 @@ public class Application {
                     .build())
             .build();
 
-        CreateTaskTaskRequest req = CreateTaskTaskRequest.builder()
+        CreateTaskTask2Request req = CreateTaskTask2Request.builder()
                 .taskTask(TaskTask.builder()
                     .build())
                 .connectionId("<id>")
                 .build();
 
-        CreateTaskTaskResponse res = sdk.task().createTaskTask()
+        CreateTaskTask2Response res = sdk.task().createTaskTask2()
                 .request(req)
                 .call();
 
@@ -191,13 +191,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                 | Type                                                                      | Required                                                                  | Description                                                               |
-| ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
-| `request`                                                                 | [CreateTaskTaskRequest](../../models/operations/CreateTaskTaskRequest.md) | :heavy_check_mark:                                                        | The request object to use for the request.                                |
+| Parameter                                                                   | Type                                                                        | Required                                                                    | Description                                                                 |
+| --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| `request`                                                                   | [CreateTaskTask2Request](../../models/operations/CreateTaskTask2Request.md) | :heavy_check_mark:                                                          | The request object to use for the request.                                  |
 
 ### Response
 
-**[CreateTaskTaskResponse](../../models/operations/CreateTaskTaskResponse.md)**
+**[CreateTaskTask2Response](../../models/operations/CreateTaskTask2Response.md)**
 
 ### Errors
 
@@ -205,20 +205,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## getTaskChange
+## getTaskChange2
 
 Retrieve a change
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="getTaskChange" method="get" path="/task/{connection_id}/change/{id}" -->
+<!-- UsageSnippet language="java" operationID="getTaskChange2" method="get" path="/task/{connection_id}/change/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.GetTaskChangeRequest;
-import to.unified.unified_java_sdk.models.operations.GetTaskChangeResponse;
+import to.unified.unified_java_sdk.models.operations.GetTaskChange2Request;
+import to.unified.unified_java_sdk.models.operations.GetTaskChange2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -231,12 +231,12 @@ public class Application {
                     .build())
             .build();
 
-        GetTaskChangeRequest req = GetTaskChangeRequest.builder()
+        GetTaskChange2Request req = GetTaskChange2Request.builder()
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        GetTaskChangeResponse res = sdk.task().getTaskChange()
+        GetTaskChange2Response res = sdk.task().getTaskChange2()
                 .request(req)
                 .call();
 
@@ -249,13 +249,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                               | Type                                                                    | Required                                                                | Description                                                             |
-| ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- |
-| `request`                                                               | [GetTaskChangeRequest](../../models/operations/GetTaskChangeRequest.md) | :heavy_check_mark:                                                      | The request object to use for the request.                              |
+| Parameter                                                                 | Type                                                                      | Required                                                                  | Description                                                               |
+| ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
+| `request`                                                                 | [GetTaskChange2Request](../../models/operations/GetTaskChange2Request.md) | :heavy_check_mark:                                                        | The request object to use for the request.                                |
 
 ### Response
 
-**[GetTaskChangeResponse](../../models/operations/GetTaskChangeResponse.md)**
+**[GetTaskChange2Response](../../models/operations/GetTaskChange2Response.md)**
 
 ### Errors
 
@@ -263,20 +263,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## getTaskComment
+## getTaskComment2
 
 Retrieve a comment
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="getTaskComment" method="get" path="/task/{connection_id}/comment/{id}" -->
+<!-- UsageSnippet language="java" operationID="getTaskComment2" method="get" path="/task/{connection_id}/comment/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.GetTaskCommentRequest;
-import to.unified.unified_java_sdk.models.operations.GetTaskCommentResponse;
+import to.unified.unified_java_sdk.models.operations.GetTaskComment2Request;
+import to.unified.unified_java_sdk.models.operations.GetTaskComment2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -289,12 +289,12 @@ public class Application {
                     .build())
             .build();
 
-        GetTaskCommentRequest req = GetTaskCommentRequest.builder()
+        GetTaskComment2Request req = GetTaskComment2Request.builder()
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        GetTaskCommentResponse res = sdk.task().getTaskComment()
+        GetTaskComment2Response res = sdk.task().getTaskComment2()
                 .request(req)
                 .call();
 
@@ -307,13 +307,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                 | Type                                                                      | Required                                                                  | Description                                                               |
-| ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
-| `request`                                                                 | [GetTaskCommentRequest](../../models/operations/GetTaskCommentRequest.md) | :heavy_check_mark:                                                        | The request object to use for the request.                                |
+| Parameter                                                                   | Type                                                                        | Required                                                                    | Description                                                                 |
+| --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| `request`                                                                   | [GetTaskComment2Request](../../models/operations/GetTaskComment2Request.md) | :heavy_check_mark:                                                          | The request object to use for the request.                                  |
 
 ### Response
 
-**[GetTaskCommentResponse](../../models/operations/GetTaskCommentResponse.md)**
+**[GetTaskComment2Response](../../models/operations/GetTaskComment2Response.md)**
 
 ### Errors
 
@@ -321,20 +321,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## getTaskProject
+## getTaskProject2
 
 Retrieve a project
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="getTaskProject" method="get" path="/task/{connection_id}/project/{id}" -->
+<!-- UsageSnippet language="java" operationID="getTaskProject2" method="get" path="/task/{connection_id}/project/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.GetTaskProjectRequest;
-import to.unified.unified_java_sdk.models.operations.GetTaskProjectResponse;
+import to.unified.unified_java_sdk.models.operations.GetTaskProject2Request;
+import to.unified.unified_java_sdk.models.operations.GetTaskProject2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -347,12 +347,12 @@ public class Application {
                     .build())
             .build();
 
-        GetTaskProjectRequest req = GetTaskProjectRequest.builder()
+        GetTaskProject2Request req = GetTaskProject2Request.builder()
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        GetTaskProjectResponse res = sdk.task().getTaskProject()
+        GetTaskProject2Response res = sdk.task().getTaskProject2()
                 .request(req)
                 .call();
 
@@ -365,13 +365,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                 | Type                                                                      | Required                                                                  | Description                                                               |
-| ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
-| `request`                                                                 | [GetTaskProjectRequest](../../models/operations/GetTaskProjectRequest.md) | :heavy_check_mark:                                                        | The request object to use for the request.                                |
+| Parameter                                                                   | Type                                                                        | Required                                                                    | Description                                                                 |
+| --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| `request`                                                                   | [GetTaskProject2Request](../../models/operations/GetTaskProject2Request.md) | :heavy_check_mark:                                                          | The request object to use for the request.                                  |
 
 ### Response
 
-**[GetTaskProjectResponse](../../models/operations/GetTaskProjectResponse.md)**
+**[GetTaskProject2Response](../../models/operations/GetTaskProject2Response.md)**
 
 ### Errors
 
@@ -379,20 +379,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## getTaskTask
+## getTaskTask2
 
 Retrieve a task
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="getTaskTask" method="get" path="/task/{connection_id}/task/{id}" -->
+<!-- UsageSnippet language="java" operationID="getTaskTask2" method="get" path="/task/{connection_id}/task/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.GetTaskTaskRequest;
-import to.unified.unified_java_sdk.models.operations.GetTaskTaskResponse;
+import to.unified.unified_java_sdk.models.operations.GetTaskTask2Request;
+import to.unified.unified_java_sdk.models.operations.GetTaskTask2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -405,12 +405,12 @@ public class Application {
                     .build())
             .build();
 
-        GetTaskTaskRequest req = GetTaskTaskRequest.builder()
+        GetTaskTask2Request req = GetTaskTask2Request.builder()
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        GetTaskTaskResponse res = sdk.task().getTaskTask()
+        GetTaskTask2Response res = sdk.task().getTaskTask2()
                 .request(req)
                 .call();
 
@@ -423,13 +423,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                           | Type                                                                | Required                                                            | Description                                                         |
-| ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- |
-| `request`                                                           | [GetTaskTaskRequest](../../models/operations/GetTaskTaskRequest.md) | :heavy_check_mark:                                                  | The request object to use for the request.                          |
+| Parameter                                                             | Type                                                                  | Required                                                              | Description                                                           |
+| --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- |
+| `request`                                                             | [GetTaskTask2Request](../../models/operations/GetTaskTask2Request.md) | :heavy_check_mark:                                                    | The request object to use for the request.                            |
 
 ### Response
 
-**[GetTaskTaskResponse](../../models/operations/GetTaskTaskResponse.md)**
+**[GetTaskTask2Response](../../models/operations/GetTaskTask2Response.md)**
 
 ### Errors
 
@@ -437,20 +437,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## listTaskChanges
+## listTaskChanges2
 
 List all changes
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="listTaskChanges" method="get" path="/task/{connection_id}/change" -->
+<!-- UsageSnippet language="java" operationID="listTaskChanges2" method="get" path="/task/{connection_id}/change" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.ListTaskChangesRequest;
-import to.unified.unified_java_sdk.models.operations.ListTaskChangesResponse;
+import to.unified.unified_java_sdk.models.operations.ListTaskChanges2Request;
+import to.unified.unified_java_sdk.models.operations.ListTaskChanges2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -463,11 +463,11 @@ public class Application {
                     .build())
             .build();
 
-        ListTaskChangesRequest req = ListTaskChangesRequest.builder()
+        ListTaskChanges2Request req = ListTaskChanges2Request.builder()
                 .connectionId("<id>")
                 .build();
 
-        ListTaskChangesResponse res = sdk.task().listTaskChanges()
+        ListTaskChanges2Response res = sdk.task().listTaskChanges2()
                 .request(req)
                 .call();
 
@@ -480,13 +480,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                   | Type                                                                        | Required                                                                    | Description                                                                 |
-| --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
-| `request`                                                                   | [ListTaskChangesRequest](../../models/operations/ListTaskChangesRequest.md) | :heavy_check_mark:                                                          | The request object to use for the request.                                  |
+| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
+| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| `request`                                                                     | [ListTaskChanges2Request](../../models/operations/ListTaskChanges2Request.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
 
 ### Response
 
-**[ListTaskChangesResponse](../../models/operations/ListTaskChangesResponse.md)**
+**[ListTaskChanges2Response](../../models/operations/ListTaskChanges2Response.md)**
 
 ### Errors
 
@@ -494,20 +494,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## listTaskComments
+## listTaskComments2
 
 List all comments
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="listTaskComments" method="get" path="/task/{connection_id}/comment" -->
+<!-- UsageSnippet language="java" operationID="listTaskComments2" method="get" path="/task/{connection_id}/comment" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.ListTaskCommentsRequest;
-import to.unified.unified_java_sdk.models.operations.ListTaskCommentsResponse;
+import to.unified.unified_java_sdk.models.operations.ListTaskComments2Request;
+import to.unified.unified_java_sdk.models.operations.ListTaskComments2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -520,11 +520,11 @@ public class Application {
                     .build())
             .build();
 
-        ListTaskCommentsRequest req = ListTaskCommentsRequest.builder()
+        ListTaskComments2Request req = ListTaskComments2Request.builder()
                 .connectionId("<id>")
                 .build();
 
-        ListTaskCommentsResponse res = sdk.task().listTaskComments()
+        ListTaskComments2Response res = sdk.task().listTaskComments2()
                 .request(req)
                 .call();
 
@@ -537,13 +537,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
-| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
-| `request`                                                                     | [ListTaskCommentsRequest](../../models/operations/ListTaskCommentsRequest.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
+| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| `request`                                                                       | [ListTaskComments2Request](../../models/operations/ListTaskComments2Request.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
 
 ### Response
 
-**[ListTaskCommentsResponse](../../models/operations/ListTaskCommentsResponse.md)**
+**[ListTaskComments2Response](../../models/operations/ListTaskComments2Response.md)**
 
 ### Errors
 
@@ -551,20 +551,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## listTaskProjects
+## listTaskProjects2
 
 List all projects
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="listTaskProjects" method="get" path="/task/{connection_id}/project" -->
+<!-- UsageSnippet language="java" operationID="listTaskProjects2" method="get" path="/task/{connection_id}/project" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.ListTaskProjectsRequest;
-import to.unified.unified_java_sdk.models.operations.ListTaskProjectsResponse;
+import to.unified.unified_java_sdk.models.operations.ListTaskProjects2Request;
+import to.unified.unified_java_sdk.models.operations.ListTaskProjects2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -577,11 +577,11 @@ public class Application {
                     .build())
             .build();
 
-        ListTaskProjectsRequest req = ListTaskProjectsRequest.builder()
+        ListTaskProjects2Request req = ListTaskProjects2Request.builder()
                 .connectionId("<id>")
                 .build();
 
-        ListTaskProjectsResponse res = sdk.task().listTaskProjects()
+        ListTaskProjects2Response res = sdk.task().listTaskProjects2()
                 .request(req)
                 .call();
 
@@ -594,13 +594,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
-| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
-| `request`                                                                     | [ListTaskProjectsRequest](../../models/operations/ListTaskProjectsRequest.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
+| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| `request`                                                                       | [ListTaskProjects2Request](../../models/operations/ListTaskProjects2Request.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
 
 ### Response
 
-**[ListTaskProjectsResponse](../../models/operations/ListTaskProjectsResponse.md)**
+**[ListTaskProjects2Response](../../models/operations/ListTaskProjects2Response.md)**
 
 ### Errors
 
@@ -608,20 +608,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## listTaskTasks
+## listTaskTasks2
 
 List all tasks
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="listTaskTasks" method="get" path="/task/{connection_id}/task" -->
+<!-- UsageSnippet language="java" operationID="listTaskTasks2" method="get" path="/task/{connection_id}/task" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.ListTaskTasksRequest;
-import to.unified.unified_java_sdk.models.operations.ListTaskTasksResponse;
+import to.unified.unified_java_sdk.models.operations.ListTaskTasks2Request;
+import to.unified.unified_java_sdk.models.operations.ListTaskTasks2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -634,11 +634,11 @@ public class Application {
                     .build())
             .build();
 
-        ListTaskTasksRequest req = ListTaskTasksRequest.builder()
+        ListTaskTasks2Request req = ListTaskTasks2Request.builder()
                 .connectionId("<id>")
                 .build();
 
-        ListTaskTasksResponse res = sdk.task().listTaskTasks()
+        ListTaskTasks2Response res = sdk.task().listTaskTasks2()
                 .request(req)
                 .call();
 
@@ -651,13 +651,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                               | Type                                                                    | Required                                                                | Description                                                             |
-| ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- |
-| `request`                                                               | [ListTaskTasksRequest](../../models/operations/ListTaskTasksRequest.md) | :heavy_check_mark:                                                      | The request object to use for the request.                              |
+| Parameter                                                                 | Type                                                                      | Required                                                                  | Description                                                               |
+| ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
+| `request`                                                                 | [ListTaskTasks2Request](../../models/operations/ListTaskTasks2Request.md) | :heavy_check_mark:                                                        | The request object to use for the request.                                |
 
 ### Response
 
-**[ListTaskTasksResponse](../../models/operations/ListTaskTasksResponse.md)**
+**[ListTaskTasks2Response](../../models/operations/ListTaskTasks2Response.md)**
 
 ### Errors
 
@@ -665,20 +665,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## patchTaskComment
+## patchTaskComment2
 
 Update a comment
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchTaskComment" method="patch" path="/task/{connection_id}/comment/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchTaskComment2" method="patch" path="/task/{connection_id}/comment/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.PatchTaskCommentRequest;
-import to.unified.unified_java_sdk.models.operations.PatchTaskCommentResponse;
+import to.unified.unified_java_sdk.models.operations.PatchTaskComment2Request;
+import to.unified.unified_java_sdk.models.operations.PatchTaskComment2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 import to.unified.unified_java_sdk.models.shared.TaskComment;
 
@@ -692,14 +692,14 @@ public class Application {
                     .build())
             .build();
 
-        PatchTaskCommentRequest req = PatchTaskCommentRequest.builder()
+        PatchTaskComment2Request req = PatchTaskComment2Request.builder()
                 .taskComment(TaskComment.builder()
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        PatchTaskCommentResponse res = sdk.task().patchTaskComment()
+        PatchTaskComment2Response res = sdk.task().patchTaskComment2()
                 .request(req)
                 .call();
 
@@ -712,13 +712,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
-| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
-| `request`                                                                     | [PatchTaskCommentRequest](../../models/operations/PatchTaskCommentRequest.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
+| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| `request`                                                                       | [PatchTaskComment2Request](../../models/operations/PatchTaskComment2Request.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
 
 ### Response
 
-**[PatchTaskCommentResponse](../../models/operations/PatchTaskCommentResponse.md)**
+**[PatchTaskComment2Response](../../models/operations/PatchTaskComment2Response.md)**
 
 ### Errors
 
@@ -726,20 +726,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## patchTaskProject
+## patchTaskProject2
 
 Update a project
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchTaskProject" method="patch" path="/task/{connection_id}/project/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchTaskProject2" method="patch" path="/task/{connection_id}/project/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.PatchTaskProjectRequest;
-import to.unified.unified_java_sdk.models.operations.PatchTaskProjectResponse;
+import to.unified.unified_java_sdk.models.operations.PatchTaskProject2Request;
+import to.unified.unified_java_sdk.models.operations.PatchTaskProject2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 import to.unified.unified_java_sdk.models.shared.TaskProject;
 
@@ -753,14 +753,14 @@ public class Application {
                     .build())
             .build();
 
-        PatchTaskProjectRequest req = PatchTaskProjectRequest.builder()
+        PatchTaskProject2Request req = PatchTaskProject2Request.builder()
                 .taskProject(TaskProject.builder()
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        PatchTaskProjectResponse res = sdk.task().patchTaskProject()
+        PatchTaskProject2Response res = sdk.task().patchTaskProject2()
                 .request(req)
                 .call();
 
@@ -773,13 +773,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
-| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
-| `request`                                                                     | [PatchTaskProjectRequest](../../models/operations/PatchTaskProjectRequest.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
+| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| `request`                                                                       | [PatchTaskProject2Request](../../models/operations/PatchTaskProject2Request.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
 
 ### Response
 
-**[PatchTaskProjectResponse](../../models/operations/PatchTaskProjectResponse.md)**
+**[PatchTaskProject2Response](../../models/operations/PatchTaskProject2Response.md)**
 
 ### Errors
 
@@ -787,20 +787,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## patchTaskTask
+## patchTaskTask2
 
 Update a task
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchTaskTask" method="patch" path="/task/{connection_id}/task/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchTaskTask2" method="patch" path="/task/{connection_id}/task/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.PatchTaskTaskRequest;
-import to.unified.unified_java_sdk.models.operations.PatchTaskTaskResponse;
+import to.unified.unified_java_sdk.models.operations.PatchTaskTask2Request;
+import to.unified.unified_java_sdk.models.operations.PatchTaskTask2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 import to.unified.unified_java_sdk.models.shared.TaskTask;
 
@@ -814,14 +814,14 @@ public class Application {
                     .build())
             .build();
 
-        PatchTaskTaskRequest req = PatchTaskTaskRequest.builder()
+        PatchTaskTask2Request req = PatchTaskTask2Request.builder()
                 .taskTask(TaskTask.builder()
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        PatchTaskTaskResponse res = sdk.task().patchTaskTask()
+        PatchTaskTask2Response res = sdk.task().patchTaskTask2()
                 .request(req)
                 .call();
 
@@ -834,13 +834,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                               | Type                                                                    | Required                                                                | Description                                                             |
-| ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- |
-| `request`                                                               | [PatchTaskTaskRequest](../../models/operations/PatchTaskTaskRequest.md) | :heavy_check_mark:                                                      | The request object to use for the request.                              |
+| Parameter                                                                 | Type                                                                      | Required                                                                  | Description                                                               |
+| ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
+| `request`                                                                 | [PatchTaskTask2Request](../../models/operations/PatchTaskTask2Request.md) | :heavy_check_mark:                                                        | The request object to use for the request.                                |
 
 ### Response
 
-**[PatchTaskTaskResponse](../../models/operations/PatchTaskTaskResponse.md)**
+**[PatchTaskTask2Response](../../models/operations/PatchTaskTask2Response.md)**
 
 ### Errors
 
@@ -848,20 +848,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## removeTaskComment
+## removeTaskComment2
 
 Remove a comment
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="removeTaskComment" method="delete" path="/task/{connection_id}/comment/{id}" -->
+<!-- UsageSnippet language="java" operationID="removeTaskComment2" method="delete" path="/task/{connection_id}/comment/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.RemoveTaskCommentRequest;
-import to.unified.unified_java_sdk.models.operations.RemoveTaskCommentResponse;
+import to.unified.unified_java_sdk.models.operations.RemoveTaskComment2Request;
+import to.unified.unified_java_sdk.models.operations.RemoveTaskComment2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -874,12 +874,12 @@ public class Application {
                     .build())
             .build();
 
-        RemoveTaskCommentRequest req = RemoveTaskCommentRequest.builder()
+        RemoveTaskComment2Request req = RemoveTaskComment2Request.builder()
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        RemoveTaskCommentResponse res = sdk.task().removeTaskComment()
+        RemoveTaskComment2Response res = sdk.task().removeTaskComment2()
                 .request(req)
                 .call();
 
@@ -890,13 +890,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
-| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
-| `request`                                                                       | [RemoveTaskCommentRequest](../../models/operations/RemoveTaskCommentRequest.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
+| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
+| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| `request`                                                                         | [RemoveTaskComment2Request](../../models/operations/RemoveTaskComment2Request.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
 
 ### Response
 
-**[RemoveTaskCommentResponse](../../models/operations/RemoveTaskCommentResponse.md)**
+**[RemoveTaskComment2Response](../../models/operations/RemoveTaskComment2Response.md)**
 
 ### Errors
 
@@ -904,20 +904,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## removeTaskProject
+## removeTaskProject2
 
 Remove a project
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="removeTaskProject" method="delete" path="/task/{connection_id}/project/{id}" -->
+<!-- UsageSnippet language="java" operationID="removeTaskProject2" method="delete" path="/task/{connection_id}/project/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.RemoveTaskProjectRequest;
-import to.unified.unified_java_sdk.models.operations.RemoveTaskProjectResponse;
+import to.unified.unified_java_sdk.models.operations.RemoveTaskProject2Request;
+import to.unified.unified_java_sdk.models.operations.RemoveTaskProject2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -930,12 +930,12 @@ public class Application {
                     .build())
             .build();
 
-        RemoveTaskProjectRequest req = RemoveTaskProjectRequest.builder()
+        RemoveTaskProject2Request req = RemoveTaskProject2Request.builder()
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        RemoveTaskProjectResponse res = sdk.task().removeTaskProject()
+        RemoveTaskProject2Response res = sdk.task().removeTaskProject2()
                 .request(req)
                 .call();
 
@@ -946,13 +946,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
-| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
-| `request`                                                                       | [RemoveTaskProjectRequest](../../models/operations/RemoveTaskProjectRequest.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
+| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
+| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| `request`                                                                         | [RemoveTaskProject2Request](../../models/operations/RemoveTaskProject2Request.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
 
 ### Response
 
-**[RemoveTaskProjectResponse](../../models/operations/RemoveTaskProjectResponse.md)**
+**[RemoveTaskProject2Response](../../models/operations/RemoveTaskProject2Response.md)**
 
 ### Errors
 
@@ -960,20 +960,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## removeTaskTask
+## removeTaskTask2
 
 Remove a task
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="removeTaskTask" method="delete" path="/task/{connection_id}/task/{id}" -->
+<!-- UsageSnippet language="java" operationID="removeTaskTask2" method="delete" path="/task/{connection_id}/task/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.RemoveTaskTaskRequest;
-import to.unified.unified_java_sdk.models.operations.RemoveTaskTaskResponse;
+import to.unified.unified_java_sdk.models.operations.RemoveTaskTask2Request;
+import to.unified.unified_java_sdk.models.operations.RemoveTaskTask2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -986,12 +986,12 @@ public class Application {
                     .build())
             .build();
 
-        RemoveTaskTaskRequest req = RemoveTaskTaskRequest.builder()
+        RemoveTaskTask2Request req = RemoveTaskTask2Request.builder()
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        RemoveTaskTaskResponse res = sdk.task().removeTaskTask()
+        RemoveTaskTask2Response res = sdk.task().removeTaskTask2()
                 .request(req)
                 .call();
 
@@ -1002,13 +1002,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                 | Type                                                                      | Required                                                                  | Description                                                               |
-| ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
-| `request`                                                                 | [RemoveTaskTaskRequest](../../models/operations/RemoveTaskTaskRequest.md) | :heavy_check_mark:                                                        | The request object to use for the request.                                |
+| Parameter                                                                   | Type                                                                        | Required                                                                    | Description                                                                 |
+| --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| `request`                                                                   | [RemoveTaskTask2Request](../../models/operations/RemoveTaskTask2Request.md) | :heavy_check_mark:                                                          | The request object to use for the request.                                  |
 
 ### Response
 
-**[RemoveTaskTaskResponse](../../models/operations/RemoveTaskTaskResponse.md)**
+**[RemoveTaskTask2Response](../../models/operations/RemoveTaskTask2Response.md)**
 
 ### Errors
 
@@ -1016,20 +1016,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## updateTaskComment
+## updateTaskComment2
 
 Update a comment
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateTaskComment" method="put" path="/task/{connection_id}/comment/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateTaskComment2" method="put" path="/task/{connection_id}/comment/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.UpdateTaskCommentRequest;
-import to.unified.unified_java_sdk.models.operations.UpdateTaskCommentResponse;
+import to.unified.unified_java_sdk.models.operations.UpdateTaskComment2Request;
+import to.unified.unified_java_sdk.models.operations.UpdateTaskComment2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 import to.unified.unified_java_sdk.models.shared.TaskComment;
 
@@ -1043,14 +1043,14 @@ public class Application {
                     .build())
             .build();
 
-        UpdateTaskCommentRequest req = UpdateTaskCommentRequest.builder()
+        UpdateTaskComment2Request req = UpdateTaskComment2Request.builder()
                 .taskComment(TaskComment.builder()
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        UpdateTaskCommentResponse res = sdk.task().updateTaskComment()
+        UpdateTaskComment2Response res = sdk.task().updateTaskComment2()
                 .request(req)
                 .call();
 
@@ -1063,13 +1063,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
-| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
-| `request`                                                                       | [UpdateTaskCommentRequest](../../models/operations/UpdateTaskCommentRequest.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
+| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
+| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| `request`                                                                         | [UpdateTaskComment2Request](../../models/operations/UpdateTaskComment2Request.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
 
 ### Response
 
-**[UpdateTaskCommentResponse](../../models/operations/UpdateTaskCommentResponse.md)**
+**[UpdateTaskComment2Response](../../models/operations/UpdateTaskComment2Response.md)**
 
 ### Errors
 
@@ -1077,20 +1077,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## updateTaskProject
+## updateTaskProject2
 
 Update a project
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateTaskProject" method="put" path="/task/{connection_id}/project/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateTaskProject2" method="put" path="/task/{connection_id}/project/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.UpdateTaskProjectRequest;
-import to.unified.unified_java_sdk.models.operations.UpdateTaskProjectResponse;
+import to.unified.unified_java_sdk.models.operations.UpdateTaskProject2Request;
+import to.unified.unified_java_sdk.models.operations.UpdateTaskProject2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 import to.unified.unified_java_sdk.models.shared.TaskProject;
 
@@ -1104,14 +1104,14 @@ public class Application {
                     .build())
             .build();
 
-        UpdateTaskProjectRequest req = UpdateTaskProjectRequest.builder()
+        UpdateTaskProject2Request req = UpdateTaskProject2Request.builder()
                 .taskProject(TaskProject.builder()
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        UpdateTaskProjectResponse res = sdk.task().updateTaskProject()
+        UpdateTaskProject2Response res = sdk.task().updateTaskProject2()
                 .request(req)
                 .call();
 
@@ -1124,13 +1124,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
-| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
-| `request`                                                                       | [UpdateTaskProjectRequest](../../models/operations/UpdateTaskProjectRequest.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
+| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
+| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| `request`                                                                         | [UpdateTaskProject2Request](../../models/operations/UpdateTaskProject2Request.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
 
 ### Response
 
-**[UpdateTaskProjectResponse](../../models/operations/UpdateTaskProjectResponse.md)**
+**[UpdateTaskProject2Response](../../models/operations/UpdateTaskProject2Response.md)**
 
 ### Errors
 
@@ -1138,20 +1138,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## updateTaskTask
+## updateTaskTask2
 
 Update a task
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateTaskTask" method="put" path="/task/{connection_id}/task/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateTaskTask2" method="put" path="/task/{connection_id}/task/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.UpdateTaskTaskRequest;
-import to.unified.unified_java_sdk.models.operations.UpdateTaskTaskResponse;
+import to.unified.unified_java_sdk.models.operations.UpdateTaskTask2Request;
+import to.unified.unified_java_sdk.models.operations.UpdateTaskTask2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 import to.unified.unified_java_sdk.models.shared.TaskTask;
 
@@ -1165,14 +1165,14 @@ public class Application {
                     .build())
             .build();
 
-        UpdateTaskTaskRequest req = UpdateTaskTaskRequest.builder()
+        UpdateTaskTask2Request req = UpdateTaskTask2Request.builder()
                 .taskTask(TaskTask.builder()
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        UpdateTaskTaskResponse res = sdk.task().updateTaskTask()
+        UpdateTaskTask2Response res = sdk.task().updateTaskTask2()
                 .request(req)
                 .call();
 
@@ -1185,13 +1185,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                 | Type                                                                      | Required                                                                  | Description                                                               |
-| ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
-| `request`                                                                 | [UpdateTaskTaskRequest](../../models/operations/UpdateTaskTaskRequest.md) | :heavy_check_mark:                                                        | The request object to use for the request.                                |
+| Parameter                                                                   | Type                                                                        | Required                                                                    | Description                                                                 |
+| --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| `request`                                                                   | [UpdateTaskTask2Request](../../models/operations/UpdateTaskTask2Request.md) | :heavy_check_mark:                                                          | The request object to use for the request.                                  |
 
 ### Response
 
-**[UpdateTaskTaskResponse](../../models/operations/UpdateTaskTaskResponse.md)**
+**[UpdateTaskTask2Response](../../models/operations/UpdateTaskTask2Response.md)**
 
 ### Errors
 

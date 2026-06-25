@@ -6,30 +6,30 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
-import to.unified.unified_java_sdk.models.operations.CreateAdsInsertionorderRequest;
-import to.unified.unified_java_sdk.models.operations.CreateAdsInsertionorderRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.CreateAdsInsertionorderResponse;
-import to.unified.unified_java_sdk.models.operations.GetAdsInsertionorderRequest;
-import to.unified.unified_java_sdk.models.operations.GetAdsInsertionorderRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.GetAdsInsertionorderResponse;
-import to.unified.unified_java_sdk.models.operations.ListAdsInsertionordersRequest;
-import to.unified.unified_java_sdk.models.operations.ListAdsInsertionordersRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.ListAdsInsertionordersResponse;
-import to.unified.unified_java_sdk.models.operations.PatchAdsInsertionorderRequest;
-import to.unified.unified_java_sdk.models.operations.PatchAdsInsertionorderRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.PatchAdsInsertionorderResponse;
-import to.unified.unified_java_sdk.models.operations.RemoveAdsInsertionorderRequest;
-import to.unified.unified_java_sdk.models.operations.RemoveAdsInsertionorderRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.RemoveAdsInsertionorderResponse;
-import to.unified.unified_java_sdk.models.operations.UpdateAdsInsertionorderRequest;
-import to.unified.unified_java_sdk.models.operations.UpdateAdsInsertionorderRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.UpdateAdsInsertionorderResponse;
-import to.unified.unified_java_sdk.operations.CreateAdsInsertionorder;
-import to.unified.unified_java_sdk.operations.GetAdsInsertionorder;
-import to.unified.unified_java_sdk.operations.ListAdsInsertionorders;
-import to.unified.unified_java_sdk.operations.PatchAdsInsertionorder;
-import to.unified.unified_java_sdk.operations.RemoveAdsInsertionorder;
-import to.unified.unified_java_sdk.operations.UpdateAdsInsertionorder;
+import to.unified.unified_java_sdk.models.operations.CreateAdsInsertionorder2Request;
+import to.unified.unified_java_sdk.models.operations.CreateAdsInsertionorder2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.CreateAdsInsertionorder2Response;
+import to.unified.unified_java_sdk.models.operations.GetAdsInsertionorder2Request;
+import to.unified.unified_java_sdk.models.operations.GetAdsInsertionorder2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetAdsInsertionorder2Response;
+import to.unified.unified_java_sdk.models.operations.ListAdsInsertionorders2Request;
+import to.unified.unified_java_sdk.models.operations.ListAdsInsertionorders2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListAdsInsertionorders2Response;
+import to.unified.unified_java_sdk.models.operations.PatchAdsInsertionorder2Request;
+import to.unified.unified_java_sdk.models.operations.PatchAdsInsertionorder2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.PatchAdsInsertionorder2Response;
+import to.unified.unified_java_sdk.models.operations.RemoveAdsInsertionorder2Request;
+import to.unified.unified_java_sdk.models.operations.RemoveAdsInsertionorder2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.RemoveAdsInsertionorder2Response;
+import to.unified.unified_java_sdk.models.operations.UpdateAdsInsertionorder2Request;
+import to.unified.unified_java_sdk.models.operations.UpdateAdsInsertionorder2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.UpdateAdsInsertionorder2Response;
+import to.unified.unified_java_sdk.operations.CreateAdsInsertionorder2;
+import to.unified.unified_java_sdk.operations.GetAdsInsertionorder2;
+import to.unified.unified_java_sdk.operations.ListAdsInsertionorders2;
+import to.unified.unified_java_sdk.operations.PatchAdsInsertionorder2;
+import to.unified.unified_java_sdk.operations.RemoveAdsInsertionorder2;
+import to.unified.unified_java_sdk.operations.UpdateAdsInsertionorder2;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -57,8 +57,8 @@ public class Insertionorder {
      * 
      * @return The call builder
      */
-    public CreateAdsInsertionorderRequestBuilder createAdsInsertionorder() {
-        return new CreateAdsInsertionorderRequestBuilder(sdkConfiguration);
+    public CreateAdsInsertionorder2RequestBuilder createAdsInsertionorder2() {
+        return new CreateAdsInsertionorder2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -68,9 +68,9 @@ public class Insertionorder {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateAdsInsertionorderResponse createAdsInsertionorder(@Nonnull CreateAdsInsertionorderRequest request) {
-        RequestOperation<CreateAdsInsertionorderRequest, CreateAdsInsertionorderResponse> operation
-              = new CreateAdsInsertionorder.Sync(sdkConfiguration, _headers);
+    public CreateAdsInsertionorder2Response createAdsInsertionorder2(@Nonnull CreateAdsInsertionorder2Request request) {
+        RequestOperation<CreateAdsInsertionorder2Request, CreateAdsInsertionorder2Response> operation
+              = new CreateAdsInsertionorder2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -79,8 +79,8 @@ public class Insertionorder {
      * 
      * @return The call builder
      */
-    public GetAdsInsertionorderRequestBuilder getAdsInsertionorder() {
-        return new GetAdsInsertionorderRequestBuilder(sdkConfiguration);
+    public GetAdsInsertionorder2RequestBuilder getAdsInsertionorder2() {
+        return new GetAdsInsertionorder2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -90,9 +90,9 @@ public class Insertionorder {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetAdsInsertionorderResponse getAdsInsertionorder(@Nonnull GetAdsInsertionorderRequest request) {
-        RequestOperation<GetAdsInsertionorderRequest, GetAdsInsertionorderResponse> operation
-              = new GetAdsInsertionorder.Sync(sdkConfiguration, _headers);
+    public GetAdsInsertionorder2Response getAdsInsertionorder2(@Nonnull GetAdsInsertionorder2Request request) {
+        RequestOperation<GetAdsInsertionorder2Request, GetAdsInsertionorder2Response> operation
+              = new GetAdsInsertionorder2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -101,8 +101,8 @@ public class Insertionorder {
      * 
      * @return The call builder
      */
-    public ListAdsInsertionordersRequestBuilder listAdsInsertionorders() {
-        return new ListAdsInsertionordersRequestBuilder(sdkConfiguration);
+    public ListAdsInsertionorders2RequestBuilder listAdsInsertionorders2() {
+        return new ListAdsInsertionorders2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -112,9 +112,9 @@ public class Insertionorder {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListAdsInsertionordersResponse listAdsInsertionorders(@Nonnull ListAdsInsertionordersRequest request) {
-        RequestOperation<ListAdsInsertionordersRequest, ListAdsInsertionordersResponse> operation
-              = new ListAdsInsertionorders.Sync(sdkConfiguration, _headers);
+    public ListAdsInsertionorders2Response listAdsInsertionorders2(@Nonnull ListAdsInsertionorders2Request request) {
+        RequestOperation<ListAdsInsertionorders2Request, ListAdsInsertionorders2Response> operation
+              = new ListAdsInsertionorders2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -123,8 +123,8 @@ public class Insertionorder {
      * 
      * @return The call builder
      */
-    public PatchAdsInsertionorderRequestBuilder patchAdsInsertionorder() {
-        return new PatchAdsInsertionorderRequestBuilder(sdkConfiguration);
+    public PatchAdsInsertionorder2RequestBuilder patchAdsInsertionorder2() {
+        return new PatchAdsInsertionorder2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -134,9 +134,9 @@ public class Insertionorder {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchAdsInsertionorderResponse patchAdsInsertionorder(@Nonnull PatchAdsInsertionorderRequest request) {
-        RequestOperation<PatchAdsInsertionorderRequest, PatchAdsInsertionorderResponse> operation
-              = new PatchAdsInsertionorder.Sync(sdkConfiguration, _headers);
+    public PatchAdsInsertionorder2Response patchAdsInsertionorder2(@Nonnull PatchAdsInsertionorder2Request request) {
+        RequestOperation<PatchAdsInsertionorder2Request, PatchAdsInsertionorder2Response> operation
+              = new PatchAdsInsertionorder2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -145,8 +145,8 @@ public class Insertionorder {
      * 
      * @return The call builder
      */
-    public RemoveAdsInsertionorderRequestBuilder removeAdsInsertionorder() {
-        return new RemoveAdsInsertionorderRequestBuilder(sdkConfiguration);
+    public RemoveAdsInsertionorder2RequestBuilder removeAdsInsertionorder2() {
+        return new RemoveAdsInsertionorder2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -156,9 +156,9 @@ public class Insertionorder {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveAdsInsertionorderResponse removeAdsInsertionorder(@Nonnull RemoveAdsInsertionorderRequest request) {
-        RequestOperation<RemoveAdsInsertionorderRequest, RemoveAdsInsertionorderResponse> operation
-              = new RemoveAdsInsertionorder.Sync(sdkConfiguration, _headers);
+    public RemoveAdsInsertionorder2Response removeAdsInsertionorder2(@Nonnull RemoveAdsInsertionorder2Request request) {
+        RequestOperation<RemoveAdsInsertionorder2Request, RemoveAdsInsertionorder2Response> operation
+              = new RemoveAdsInsertionorder2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -167,8 +167,8 @@ public class Insertionorder {
      * 
      * @return The call builder
      */
-    public UpdateAdsInsertionorderRequestBuilder updateAdsInsertionorder() {
-        return new UpdateAdsInsertionorderRequestBuilder(sdkConfiguration);
+    public UpdateAdsInsertionorder2RequestBuilder updateAdsInsertionorder2() {
+        return new UpdateAdsInsertionorder2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -178,9 +178,9 @@ public class Insertionorder {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateAdsInsertionorderResponse updateAdsInsertionorder(@Nonnull UpdateAdsInsertionorderRequest request) {
-        RequestOperation<UpdateAdsInsertionorderRequest, UpdateAdsInsertionorderResponse> operation
-              = new UpdateAdsInsertionorder.Sync(sdkConfiguration, _headers);
+    public UpdateAdsInsertionorder2Response updateAdsInsertionorder2(@Nonnull UpdateAdsInsertionorder2Request request) {
+        RequestOperation<UpdateAdsInsertionorder2Request, UpdateAdsInsertionorder2Response> operation
+              = new UpdateAdsInsertionorder2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

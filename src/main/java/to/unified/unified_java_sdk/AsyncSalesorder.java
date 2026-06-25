@@ -7,30 +7,30 @@ import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOper
 
 import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
-import to.unified.unified_java_sdk.models.operations.CreateAccountingSalesorderRequest;
-import to.unified.unified_java_sdk.models.operations.GetAccountingSalesorderRequest;
-import to.unified.unified_java_sdk.models.operations.ListAccountingSalesordersRequest;
-import to.unified.unified_java_sdk.models.operations.PatchAccountingSalesorderRequest;
-import to.unified.unified_java_sdk.models.operations.RemoveAccountingSalesorderRequest;
-import to.unified.unified_java_sdk.models.operations.UpdateAccountingSalesorderRequest;
-import to.unified.unified_java_sdk.models.operations.async.CreateAccountingSalesorderRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.CreateAccountingSalesorderResponse;
-import to.unified.unified_java_sdk.models.operations.async.GetAccountingSalesorderRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.GetAccountingSalesorderResponse;
-import to.unified.unified_java_sdk.models.operations.async.ListAccountingSalesordersRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.ListAccountingSalesordersResponse;
-import to.unified.unified_java_sdk.models.operations.async.PatchAccountingSalesorderRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.PatchAccountingSalesorderResponse;
-import to.unified.unified_java_sdk.models.operations.async.RemoveAccountingSalesorderRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.RemoveAccountingSalesorderResponse;
-import to.unified.unified_java_sdk.models.operations.async.UpdateAccountingSalesorderRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.UpdateAccountingSalesorderResponse;
-import to.unified.unified_java_sdk.operations.CreateAccountingSalesorder;
-import to.unified.unified_java_sdk.operations.GetAccountingSalesorder;
-import to.unified.unified_java_sdk.operations.ListAccountingSalesorders;
-import to.unified.unified_java_sdk.operations.PatchAccountingSalesorder;
-import to.unified.unified_java_sdk.operations.RemoveAccountingSalesorder;
-import to.unified.unified_java_sdk.operations.UpdateAccountingSalesorder;
+import to.unified.unified_java_sdk.models.operations.CreateAccountingSalesorder2Request;
+import to.unified.unified_java_sdk.models.operations.GetAccountingSalesorder2Request;
+import to.unified.unified_java_sdk.models.operations.ListAccountingSalesorders2Request;
+import to.unified.unified_java_sdk.models.operations.PatchAccountingSalesorder2Request;
+import to.unified.unified_java_sdk.models.operations.RemoveAccountingSalesorder2Request;
+import to.unified.unified_java_sdk.models.operations.UpdateAccountingSalesorder2Request;
+import to.unified.unified_java_sdk.models.operations.async.CreateAccountingSalesorder2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.CreateAccountingSalesorder2Response;
+import to.unified.unified_java_sdk.models.operations.async.GetAccountingSalesorder2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetAccountingSalesorder2Response;
+import to.unified.unified_java_sdk.models.operations.async.ListAccountingSalesorders2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListAccountingSalesorders2Response;
+import to.unified.unified_java_sdk.models.operations.async.PatchAccountingSalesorder2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.PatchAccountingSalesorder2Response;
+import to.unified.unified_java_sdk.models.operations.async.RemoveAccountingSalesorder2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.RemoveAccountingSalesorder2Response;
+import to.unified.unified_java_sdk.models.operations.async.UpdateAccountingSalesorder2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.UpdateAccountingSalesorder2Response;
+import to.unified.unified_java_sdk.operations.CreateAccountingSalesorder2;
+import to.unified.unified_java_sdk.operations.GetAccountingSalesorder2;
+import to.unified.unified_java_sdk.operations.ListAccountingSalesorders2;
+import to.unified.unified_java_sdk.operations.PatchAccountingSalesorder2;
+import to.unified.unified_java_sdk.operations.RemoveAccountingSalesorder2;
+import to.unified.unified_java_sdk.operations.UpdateAccountingSalesorder2;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -59,19 +59,19 @@ public class AsyncSalesorder {
      * 
      * @return The async call builder
      */
-    public CreateAccountingSalesorderRequestBuilder createAccountingSalesorder() {
-        return new CreateAccountingSalesorderRequestBuilder(sdkConfiguration);
+    public CreateAccountingSalesorder2RequestBuilder createAccountingSalesorder2() {
+        return new CreateAccountingSalesorder2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Create a salesorder
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<CreateAccountingSalesorderResponse>} - The async response
+     * @return {@code CompletableFuture<CreateAccountingSalesorder2Response>} - The async response
      */
-    public CompletableFuture<CreateAccountingSalesorderResponse> createAccountingSalesorder(@Nonnull CreateAccountingSalesorderRequest request) {
-        AsyncRequestOperation<CreateAccountingSalesorderRequest, CreateAccountingSalesorderResponse> operation
-              = new CreateAccountingSalesorder.Async(sdkConfiguration, _headers);
+    public CompletableFuture<CreateAccountingSalesorder2Response> createAccountingSalesorder2(@Nonnull CreateAccountingSalesorder2Request request) {
+        AsyncRequestOperation<CreateAccountingSalesorder2Request, CreateAccountingSalesorder2Response> operation
+              = new CreateAccountingSalesorder2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -82,19 +82,19 @@ public class AsyncSalesorder {
      * 
      * @return The async call builder
      */
-    public GetAccountingSalesorderRequestBuilder getAccountingSalesorder() {
-        return new GetAccountingSalesorderRequestBuilder(sdkConfiguration);
+    public GetAccountingSalesorder2RequestBuilder getAccountingSalesorder2() {
+        return new GetAccountingSalesorder2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Retrieve a salesorder
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<GetAccountingSalesorderResponse>} - The async response
+     * @return {@code CompletableFuture<GetAccountingSalesorder2Response>} - The async response
      */
-    public CompletableFuture<GetAccountingSalesorderResponse> getAccountingSalesorder(@Nonnull GetAccountingSalesorderRequest request) {
-        AsyncRequestOperation<GetAccountingSalesorderRequest, GetAccountingSalesorderResponse> operation
-              = new GetAccountingSalesorder.Async(sdkConfiguration, _headers);
+    public CompletableFuture<GetAccountingSalesorder2Response> getAccountingSalesorder2(@Nonnull GetAccountingSalesorder2Request request) {
+        AsyncRequestOperation<GetAccountingSalesorder2Request, GetAccountingSalesorder2Response> operation
+              = new GetAccountingSalesorder2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -105,19 +105,19 @@ public class AsyncSalesorder {
      * 
      * @return The async call builder
      */
-    public ListAccountingSalesordersRequestBuilder listAccountingSalesorders() {
-        return new ListAccountingSalesordersRequestBuilder(sdkConfiguration);
+    public ListAccountingSalesorders2RequestBuilder listAccountingSalesorders2() {
+        return new ListAccountingSalesorders2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * List all salesorders
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<ListAccountingSalesordersResponse>} - The async response
+     * @return {@code CompletableFuture<ListAccountingSalesorders2Response>} - The async response
      */
-    public CompletableFuture<ListAccountingSalesordersResponse> listAccountingSalesorders(@Nonnull ListAccountingSalesordersRequest request) {
-        AsyncRequestOperation<ListAccountingSalesordersRequest, ListAccountingSalesordersResponse> operation
-              = new ListAccountingSalesorders.Async(sdkConfiguration, _headers);
+    public CompletableFuture<ListAccountingSalesorders2Response> listAccountingSalesorders2(@Nonnull ListAccountingSalesorders2Request request) {
+        AsyncRequestOperation<ListAccountingSalesorders2Request, ListAccountingSalesorders2Response> operation
+              = new ListAccountingSalesorders2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -128,19 +128,19 @@ public class AsyncSalesorder {
      * 
      * @return The async call builder
      */
-    public PatchAccountingSalesorderRequestBuilder patchAccountingSalesorder() {
-        return new PatchAccountingSalesorderRequestBuilder(sdkConfiguration);
+    public PatchAccountingSalesorder2RequestBuilder patchAccountingSalesorder2() {
+        return new PatchAccountingSalesorder2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update a salesorder
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<PatchAccountingSalesorderResponse>} - The async response
+     * @return {@code CompletableFuture<PatchAccountingSalesorder2Response>} - The async response
      */
-    public CompletableFuture<PatchAccountingSalesorderResponse> patchAccountingSalesorder(@Nonnull PatchAccountingSalesorderRequest request) {
-        AsyncRequestOperation<PatchAccountingSalesorderRequest, PatchAccountingSalesorderResponse> operation
-              = new PatchAccountingSalesorder.Async(sdkConfiguration, _headers);
+    public CompletableFuture<PatchAccountingSalesorder2Response> patchAccountingSalesorder2(@Nonnull PatchAccountingSalesorder2Request request) {
+        AsyncRequestOperation<PatchAccountingSalesorder2Request, PatchAccountingSalesorder2Response> operation
+              = new PatchAccountingSalesorder2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -151,19 +151,19 @@ public class AsyncSalesorder {
      * 
      * @return The async call builder
      */
-    public RemoveAccountingSalesorderRequestBuilder removeAccountingSalesorder() {
-        return new RemoveAccountingSalesorderRequestBuilder(sdkConfiguration);
+    public RemoveAccountingSalesorder2RequestBuilder removeAccountingSalesorder2() {
+        return new RemoveAccountingSalesorder2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Remove a salesorder
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<RemoveAccountingSalesorderResponse>} - The async response
+     * @return {@code CompletableFuture<RemoveAccountingSalesorder2Response>} - The async response
      */
-    public CompletableFuture<RemoveAccountingSalesorderResponse> removeAccountingSalesorder(@Nonnull RemoveAccountingSalesorderRequest request) {
-        AsyncRequestOperation<RemoveAccountingSalesorderRequest, RemoveAccountingSalesorderResponse> operation
-              = new RemoveAccountingSalesorder.Async(sdkConfiguration, _headers);
+    public CompletableFuture<RemoveAccountingSalesorder2Response> removeAccountingSalesorder2(@Nonnull RemoveAccountingSalesorder2Request request) {
+        AsyncRequestOperation<RemoveAccountingSalesorder2Request, RemoveAccountingSalesorder2Response> operation
+              = new RemoveAccountingSalesorder2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -174,19 +174,19 @@ public class AsyncSalesorder {
      * 
      * @return The async call builder
      */
-    public UpdateAccountingSalesorderRequestBuilder updateAccountingSalesorder() {
-        return new UpdateAccountingSalesorderRequestBuilder(sdkConfiguration);
+    public UpdateAccountingSalesorder2RequestBuilder updateAccountingSalesorder2() {
+        return new UpdateAccountingSalesorder2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update a salesorder
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<UpdateAccountingSalesorderResponse>} - The async response
+     * @return {@code CompletableFuture<UpdateAccountingSalesorder2Response>} - The async response
      */
-    public CompletableFuture<UpdateAccountingSalesorderResponse> updateAccountingSalesorder(@Nonnull UpdateAccountingSalesorderRequest request) {
-        AsyncRequestOperation<UpdateAccountingSalesorderRequest, UpdateAccountingSalesorderResponse> operation
-              = new UpdateAccountingSalesorder.Async(sdkConfiguration, _headers);
+    public CompletableFuture<UpdateAccountingSalesorder2Response> updateAccountingSalesorder2(@Nonnull UpdateAccountingSalesorder2Request request) {
+        AsyncRequestOperation<UpdateAccountingSalesorder2Request, UpdateAccountingSalesorder2Response> operation
+              = new UpdateAccountingSalesorder2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

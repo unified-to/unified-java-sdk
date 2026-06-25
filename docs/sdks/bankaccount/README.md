@@ -4,27 +4,27 @@
 
 ### Available Operations
 
-* [createHrisBankaccount](#createhrisbankaccount) - Create a bankaccount
-* [getHrisBankaccount](#gethrisbankaccount) - Retrieve a bankaccount
-* [listHrisBankaccounts](#listhrisbankaccounts) - List all bankaccounts
-* [patchHrisBankaccount](#patchhrisbankaccount) - Update a bankaccount
-* [removeHrisBankaccount](#removehrisbankaccount) - Remove a bankaccount
-* [updateHrisBankaccount](#updatehrisbankaccount) - Update a bankaccount
+* [createHrisBankaccount2](#createhrisbankaccount2) - Create a bankaccount
+* [getHrisBankaccount2](#gethrisbankaccount2) - Retrieve a bankaccount
+* [listHrisBankaccounts2](#listhrisbankaccounts2) - List all bankaccounts
+* [patchHrisBankaccount2](#patchhrisbankaccount2) - Update a bankaccount
+* [removeHrisBankaccount2](#removehrisbankaccount2) - Remove a bankaccount
+* [updateHrisBankaccount2](#updatehrisbankaccount2) - Update a bankaccount
 
-## createHrisBankaccount
+## createHrisBankaccount2
 
 Create a bankaccount
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createHrisBankaccount" method="post" path="/hris/{connection_id}/bankaccount" -->
+<!-- UsageSnippet language="java" operationID="createHrisBankaccount2" method="post" path="/hris/{connection_id}/bankaccount" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.CreateHrisBankaccountRequest;
-import to.unified.unified_java_sdk.models.operations.CreateHrisBankaccountResponse;
+import to.unified.unified_java_sdk.models.operations.CreateHrisBankaccount2Request;
+import to.unified.unified_java_sdk.models.operations.CreateHrisBankaccount2Response;
 import to.unified.unified_java_sdk.models.shared.HrisBankaccount;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -38,13 +38,13 @@ public class Application {
                     .build())
             .build();
 
-        CreateHrisBankaccountRequest req = CreateHrisBankaccountRequest.builder()
+        CreateHrisBankaccount2Request req = CreateHrisBankaccount2Request.builder()
                 .hrisBankaccount(HrisBankaccount.builder()
                     .build())
                 .connectionId("<id>")
                 .build();
 
-        CreateHrisBankaccountResponse res = sdk.bankaccount().createHrisBankaccount()
+        CreateHrisBankaccount2Response res = sdk.bankaccount().createHrisBankaccount2()
                 .request(req)
                 .call();
 
@@ -57,13 +57,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
-| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
-| `request`                                                                               | [CreateHrisBankaccountRequest](../../models/operations/CreateHrisBankaccountRequest.md) | :heavy_check_mark:                                                                      | The request object to use for the request.                                              |
+| Parameter                                                                                 | Type                                                                                      | Required                                                                                  | Description                                                                               |
+| ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
+| `request`                                                                                 | [CreateHrisBankaccount2Request](../../models/operations/CreateHrisBankaccount2Request.md) | :heavy_check_mark:                                                                        | The request object to use for the request.                                                |
 
 ### Response
 
-**[CreateHrisBankaccountResponse](../../models/operations/CreateHrisBankaccountResponse.md)**
+**[CreateHrisBankaccount2Response](../../models/operations/CreateHrisBankaccount2Response.md)**
 
 ### Errors
 
@@ -71,20 +71,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## getHrisBankaccount
+## getHrisBankaccount2
 
 Retrieve a bankaccount
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="getHrisBankaccount" method="get" path="/hris/{connection_id}/bankaccount/{id}" -->
+<!-- UsageSnippet language="java" operationID="getHrisBankaccount2" method="get" path="/hris/{connection_id}/bankaccount/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.GetHrisBankaccountRequest;
-import to.unified.unified_java_sdk.models.operations.GetHrisBankaccountResponse;
+import to.unified.unified_java_sdk.models.operations.GetHrisBankaccount2Request;
+import to.unified.unified_java_sdk.models.operations.GetHrisBankaccount2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -97,12 +97,12 @@ public class Application {
                     .build())
             .build();
 
-        GetHrisBankaccountRequest req = GetHrisBankaccountRequest.builder()
+        GetHrisBankaccount2Request req = GetHrisBankaccount2Request.builder()
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        GetHrisBankaccountResponse res = sdk.bankaccount().getHrisBankaccount()
+        GetHrisBankaccount2Response res = sdk.bankaccount().getHrisBankaccount2()
                 .request(req)
                 .call();
 
@@ -115,13 +115,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
-| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
-| `request`                                                                         | [GetHrisBankaccountRequest](../../models/operations/GetHrisBankaccountRequest.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
+| Parameter                                                                           | Type                                                                                | Required                                                                            | Description                                                                         |
+| ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| `request`                                                                           | [GetHrisBankaccount2Request](../../models/operations/GetHrisBankaccount2Request.md) | :heavy_check_mark:                                                                  | The request object to use for the request.                                          |
 
 ### Response
 
-**[GetHrisBankaccountResponse](../../models/operations/GetHrisBankaccountResponse.md)**
+**[GetHrisBankaccount2Response](../../models/operations/GetHrisBankaccount2Response.md)**
 
 ### Errors
 
@@ -129,20 +129,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## listHrisBankaccounts
+## listHrisBankaccounts2
 
 List all bankaccounts
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="listHrisBankaccounts" method="get" path="/hris/{connection_id}/bankaccount" -->
+<!-- UsageSnippet language="java" operationID="listHrisBankaccounts2" method="get" path="/hris/{connection_id}/bankaccount" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.ListHrisBankaccountsRequest;
-import to.unified.unified_java_sdk.models.operations.ListHrisBankaccountsResponse;
+import to.unified.unified_java_sdk.models.operations.ListHrisBankaccounts2Request;
+import to.unified.unified_java_sdk.models.operations.ListHrisBankaccounts2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -155,11 +155,11 @@ public class Application {
                     .build())
             .build();
 
-        ListHrisBankaccountsRequest req = ListHrisBankaccountsRequest.builder()
+        ListHrisBankaccounts2Request req = ListHrisBankaccounts2Request.builder()
                 .connectionId("<id>")
                 .build();
 
-        ListHrisBankaccountsResponse res = sdk.bankaccount().listHrisBankaccounts()
+        ListHrisBankaccounts2Response res = sdk.bankaccount().listHrisBankaccounts2()
                 .request(req)
                 .call();
 
@@ -172,13 +172,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                             | Type                                                                                  | Required                                                                              | Description                                                                           |
-| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
-| `request`                                                                             | [ListHrisBankaccountsRequest](../../models/operations/ListHrisBankaccountsRequest.md) | :heavy_check_mark:                                                                    | The request object to use for the request.                                            |
+| Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
+| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| `request`                                                                               | [ListHrisBankaccounts2Request](../../models/operations/ListHrisBankaccounts2Request.md) | :heavy_check_mark:                                                                      | The request object to use for the request.                                              |
 
 ### Response
 
-**[ListHrisBankaccountsResponse](../../models/operations/ListHrisBankaccountsResponse.md)**
+**[ListHrisBankaccounts2Response](../../models/operations/ListHrisBankaccounts2Response.md)**
 
 ### Errors
 
@@ -186,20 +186,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## patchHrisBankaccount
+## patchHrisBankaccount2
 
 Update a bankaccount
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchHrisBankaccount" method="patch" path="/hris/{connection_id}/bankaccount/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchHrisBankaccount2" method="patch" path="/hris/{connection_id}/bankaccount/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.PatchHrisBankaccountRequest;
-import to.unified.unified_java_sdk.models.operations.PatchHrisBankaccountResponse;
+import to.unified.unified_java_sdk.models.operations.PatchHrisBankaccount2Request;
+import to.unified.unified_java_sdk.models.operations.PatchHrisBankaccount2Response;
 import to.unified.unified_java_sdk.models.shared.HrisBankaccount;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -213,14 +213,14 @@ public class Application {
                     .build())
             .build();
 
-        PatchHrisBankaccountRequest req = PatchHrisBankaccountRequest.builder()
+        PatchHrisBankaccount2Request req = PatchHrisBankaccount2Request.builder()
                 .hrisBankaccount(HrisBankaccount.builder()
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        PatchHrisBankaccountResponse res = sdk.bankaccount().patchHrisBankaccount()
+        PatchHrisBankaccount2Response res = sdk.bankaccount().patchHrisBankaccount2()
                 .request(req)
                 .call();
 
@@ -233,13 +233,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                             | Type                                                                                  | Required                                                                              | Description                                                                           |
-| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
-| `request`                                                                             | [PatchHrisBankaccountRequest](../../models/operations/PatchHrisBankaccountRequest.md) | :heavy_check_mark:                                                                    | The request object to use for the request.                                            |
+| Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
+| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| `request`                                                                               | [PatchHrisBankaccount2Request](../../models/operations/PatchHrisBankaccount2Request.md) | :heavy_check_mark:                                                                      | The request object to use for the request.                                              |
 
 ### Response
 
-**[PatchHrisBankaccountResponse](../../models/operations/PatchHrisBankaccountResponse.md)**
+**[PatchHrisBankaccount2Response](../../models/operations/PatchHrisBankaccount2Response.md)**
 
 ### Errors
 
@@ -247,20 +247,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## removeHrisBankaccount
+## removeHrisBankaccount2
 
 Remove a bankaccount
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="removeHrisBankaccount" method="delete" path="/hris/{connection_id}/bankaccount/{id}" -->
+<!-- UsageSnippet language="java" operationID="removeHrisBankaccount2" method="delete" path="/hris/{connection_id}/bankaccount/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.RemoveHrisBankaccountRequest;
-import to.unified.unified_java_sdk.models.operations.RemoveHrisBankaccountResponse;
+import to.unified.unified_java_sdk.models.operations.RemoveHrisBankaccount2Request;
+import to.unified.unified_java_sdk.models.operations.RemoveHrisBankaccount2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -273,12 +273,12 @@ public class Application {
                     .build())
             .build();
 
-        RemoveHrisBankaccountRequest req = RemoveHrisBankaccountRequest.builder()
+        RemoveHrisBankaccount2Request req = RemoveHrisBankaccount2Request.builder()
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        RemoveHrisBankaccountResponse res = sdk.bankaccount().removeHrisBankaccount()
+        RemoveHrisBankaccount2Response res = sdk.bankaccount().removeHrisBankaccount2()
                 .request(req)
                 .call();
 
@@ -289,13 +289,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
-| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
-| `request`                                                                               | [RemoveHrisBankaccountRequest](../../models/operations/RemoveHrisBankaccountRequest.md) | :heavy_check_mark:                                                                      | The request object to use for the request.                                              |
+| Parameter                                                                                 | Type                                                                                      | Required                                                                                  | Description                                                                               |
+| ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
+| `request`                                                                                 | [RemoveHrisBankaccount2Request](../../models/operations/RemoveHrisBankaccount2Request.md) | :heavy_check_mark:                                                                        | The request object to use for the request.                                                |
 
 ### Response
 
-**[RemoveHrisBankaccountResponse](../../models/operations/RemoveHrisBankaccountResponse.md)**
+**[RemoveHrisBankaccount2Response](../../models/operations/RemoveHrisBankaccount2Response.md)**
 
 ### Errors
 
@@ -303,20 +303,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## updateHrisBankaccount
+## updateHrisBankaccount2
 
 Update a bankaccount
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateHrisBankaccount" method="put" path="/hris/{connection_id}/bankaccount/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateHrisBankaccount2" method="put" path="/hris/{connection_id}/bankaccount/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.UpdateHrisBankaccountRequest;
-import to.unified.unified_java_sdk.models.operations.UpdateHrisBankaccountResponse;
+import to.unified.unified_java_sdk.models.operations.UpdateHrisBankaccount2Request;
+import to.unified.unified_java_sdk.models.operations.UpdateHrisBankaccount2Response;
 import to.unified.unified_java_sdk.models.shared.HrisBankaccount;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -330,14 +330,14 @@ public class Application {
                     .build())
             .build();
 
-        UpdateHrisBankaccountRequest req = UpdateHrisBankaccountRequest.builder()
+        UpdateHrisBankaccount2Request req = UpdateHrisBankaccount2Request.builder()
                 .hrisBankaccount(HrisBankaccount.builder()
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        UpdateHrisBankaccountResponse res = sdk.bankaccount().updateHrisBankaccount()
+        UpdateHrisBankaccount2Response res = sdk.bankaccount().updateHrisBankaccount2()
                 .request(req)
                 .call();
 
@@ -350,13 +350,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
-| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
-| `request`                                                                               | [UpdateHrisBankaccountRequest](../../models/operations/UpdateHrisBankaccountRequest.md) | :heavy_check_mark:                                                                      | The request object to use for the request.                                              |
+| Parameter                                                                                 | Type                                                                                      | Required                                                                                  | Description                                                                               |
+| ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
+| `request`                                                                                 | [UpdateHrisBankaccount2Request](../../models/operations/UpdateHrisBankaccount2Request.md) | :heavy_check_mark:                                                                        | The request object to use for the request.                                                |
 
 ### Response
 
-**[UpdateHrisBankaccountResponse](../../models/operations/UpdateHrisBankaccountResponse.md)**
+**[UpdateHrisBankaccount2Response](../../models/operations/UpdateHrisBankaccount2Response.md)**
 
 ### Errors
 

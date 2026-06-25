@@ -4,25 +4,25 @@
 
 ### Available Operations
 
-* [createGenaiEmbedding](#creategenaiembedding) - Create an embedding
-* [createGenaiPrompt](#creategenaiprompt) - Create a prompt
-* [getGenaiModel](#getgenaimodel) - Retrieve a model
-* [listGenaiModels](#listgenaimodels) - List all models
+* [createGenaiEmbedding2](#creategenaiembedding2) - Create an embedding
+* [createGenaiPrompt2](#creategenaiprompt2) - Create a prompt
+* [getGenaiModel2](#getgenaimodel2) - Retrieve a model
+* [listGenaiModels2](#listgenaimodels2) - List all models
 
-## createGenaiEmbedding
+## createGenaiEmbedding2
 
 Create an embedding
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createGenaiEmbedding" method="post" path="/genai/{connection_id}/embedding" -->
+<!-- UsageSnippet language="java" operationID="createGenaiEmbedding2" method="post" path="/genai/{connection_id}/embedding" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.CreateGenaiEmbeddingRequest;
-import to.unified.unified_java_sdk.models.operations.CreateGenaiEmbeddingResponse;
+import to.unified.unified_java_sdk.models.operations.CreateGenaiEmbedding2Request;
+import to.unified.unified_java_sdk.models.operations.CreateGenaiEmbedding2Response;
 import to.unified.unified_java_sdk.models.shared.GenaiEmbedding;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -36,13 +36,13 @@ public class Application {
                     .build())
             .build();
 
-        CreateGenaiEmbeddingRequest req = CreateGenaiEmbeddingRequest.builder()
+        CreateGenaiEmbedding2Request req = CreateGenaiEmbedding2Request.builder()
                 .genaiEmbedding(GenaiEmbedding.builder()
                     .build())
                 .connectionId("<id>")
                 .build();
 
-        CreateGenaiEmbeddingResponse res = sdk.genai().createGenaiEmbedding()
+        CreateGenaiEmbedding2Response res = sdk.genai().createGenaiEmbedding2()
                 .request(req)
                 .call();
 
@@ -55,13 +55,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                             | Type                                                                                  | Required                                                                              | Description                                                                           |
-| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
-| `request`                                                                             | [CreateGenaiEmbeddingRequest](../../models/operations/CreateGenaiEmbeddingRequest.md) | :heavy_check_mark:                                                                    | The request object to use for the request.                                            |
+| Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
+| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| `request`                                                                               | [CreateGenaiEmbedding2Request](../../models/operations/CreateGenaiEmbedding2Request.md) | :heavy_check_mark:                                                                      | The request object to use for the request.                                              |
 
 ### Response
 
-**[CreateGenaiEmbeddingResponse](../../models/operations/CreateGenaiEmbeddingResponse.md)**
+**[CreateGenaiEmbedding2Response](../../models/operations/CreateGenaiEmbedding2Response.md)**
 
 ### Errors
 
@@ -69,20 +69,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## createGenaiPrompt
+## createGenaiPrompt2
 
 Create a prompt
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createGenaiPrompt" method="post" path="/genai/{connection_id}/prompt" -->
+<!-- UsageSnippet language="java" operationID="createGenaiPrompt2" method="post" path="/genai/{connection_id}/prompt" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.CreateGenaiPromptRequest;
-import to.unified.unified_java_sdk.models.operations.CreateGenaiPromptResponse;
+import to.unified.unified_java_sdk.models.operations.CreateGenaiPrompt2Request;
+import to.unified.unified_java_sdk.models.operations.CreateGenaiPrompt2Response;
 import to.unified.unified_java_sdk.models.shared.GenaiPrompt;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -96,13 +96,13 @@ public class Application {
                     .build())
             .build();
 
-        CreateGenaiPromptRequest req = CreateGenaiPromptRequest.builder()
+        CreateGenaiPrompt2Request req = CreateGenaiPrompt2Request.builder()
                 .genaiPrompt(GenaiPrompt.builder()
                     .build())
                 .connectionId("<id>")
                 .build();
 
-        CreateGenaiPromptResponse res = sdk.genai().createGenaiPrompt()
+        CreateGenaiPrompt2Response res = sdk.genai().createGenaiPrompt2()
                 .request(req)
                 .call();
 
@@ -115,13 +115,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
-| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
-| `request`                                                                       | [CreateGenaiPromptRequest](../../models/operations/CreateGenaiPromptRequest.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
+| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
+| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| `request`                                                                         | [CreateGenaiPrompt2Request](../../models/operations/CreateGenaiPrompt2Request.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
 
 ### Response
 
-**[CreateGenaiPromptResponse](../../models/operations/CreateGenaiPromptResponse.md)**
+**[CreateGenaiPrompt2Response](../../models/operations/CreateGenaiPrompt2Response.md)**
 
 ### Errors
 
@@ -129,20 +129,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## getGenaiModel
+## getGenaiModel2
 
 Retrieve a model
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="getGenaiModel" method="get" path="/genai/{connection_id}/model/{id}" -->
+<!-- UsageSnippet language="java" operationID="getGenaiModel2" method="get" path="/genai/{connection_id}/model/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.GetGenaiModelRequest;
-import to.unified.unified_java_sdk.models.operations.GetGenaiModelResponse;
+import to.unified.unified_java_sdk.models.operations.GetGenaiModel2Request;
+import to.unified.unified_java_sdk.models.operations.GetGenaiModel2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -155,12 +155,12 @@ public class Application {
                     .build())
             .build();
 
-        GetGenaiModelRequest req = GetGenaiModelRequest.builder()
+        GetGenaiModel2Request req = GetGenaiModel2Request.builder()
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        GetGenaiModelResponse res = sdk.genai().getGenaiModel()
+        GetGenaiModel2Response res = sdk.genai().getGenaiModel2()
                 .request(req)
                 .call();
 
@@ -173,13 +173,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                               | Type                                                                    | Required                                                                | Description                                                             |
-| ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- |
-| `request`                                                               | [GetGenaiModelRequest](../../models/operations/GetGenaiModelRequest.md) | :heavy_check_mark:                                                      | The request object to use for the request.                              |
+| Parameter                                                                 | Type                                                                      | Required                                                                  | Description                                                               |
+| ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
+| `request`                                                                 | [GetGenaiModel2Request](../../models/operations/GetGenaiModel2Request.md) | :heavy_check_mark:                                                        | The request object to use for the request.                                |
 
 ### Response
 
-**[GetGenaiModelResponse](../../models/operations/GetGenaiModelResponse.md)**
+**[GetGenaiModel2Response](../../models/operations/GetGenaiModel2Response.md)**
 
 ### Errors
 
@@ -187,20 +187,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## listGenaiModels
+## listGenaiModels2
 
 List all models
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="listGenaiModels" method="get" path="/genai/{connection_id}/model" -->
+<!-- UsageSnippet language="java" operationID="listGenaiModels2" method="get" path="/genai/{connection_id}/model" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.ListGenaiModelsRequest;
-import to.unified.unified_java_sdk.models.operations.ListGenaiModelsResponse;
+import to.unified.unified_java_sdk.models.operations.ListGenaiModels2Request;
+import to.unified.unified_java_sdk.models.operations.ListGenaiModels2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -213,11 +213,11 @@ public class Application {
                     .build())
             .build();
 
-        ListGenaiModelsRequest req = ListGenaiModelsRequest.builder()
+        ListGenaiModels2Request req = ListGenaiModels2Request.builder()
                 .connectionId("<id>")
                 .build();
 
-        ListGenaiModelsResponse res = sdk.genai().listGenaiModels()
+        ListGenaiModels2Response res = sdk.genai().listGenaiModels2()
                 .request(req)
                 .call();
 
@@ -230,13 +230,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                   | Type                                                                        | Required                                                                    | Description                                                                 |
-| --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
-| `request`                                                                   | [ListGenaiModelsRequest](../../models/operations/ListGenaiModelsRequest.md) | :heavy_check_mark:                                                          | The request object to use for the request.                                  |
+| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
+| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| `request`                                                                     | [ListGenaiModels2Request](../../models/operations/ListGenaiModels2Request.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
 
 ### Response
 
-**[ListGenaiModelsResponse](../../models/operations/ListGenaiModelsResponse.md)**
+**[ListGenaiModels2Response](../../models/operations/ListGenaiModels2Response.md)**
 
 ### Errors
 

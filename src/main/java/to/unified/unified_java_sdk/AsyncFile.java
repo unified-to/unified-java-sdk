@@ -7,30 +7,30 @@ import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOper
 
 import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
-import to.unified.unified_java_sdk.models.operations.CreateStorageFileRequest;
-import to.unified.unified_java_sdk.models.operations.GetStorageFileRequest;
-import to.unified.unified_java_sdk.models.operations.ListStorageFilesRequest;
-import to.unified.unified_java_sdk.models.operations.PatchStorageFileRequest;
-import to.unified.unified_java_sdk.models.operations.RemoveStorageFileRequest;
-import to.unified.unified_java_sdk.models.operations.UpdateStorageFileRequest;
-import to.unified.unified_java_sdk.models.operations.async.CreateStorageFileRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.CreateStorageFileResponse;
-import to.unified.unified_java_sdk.models.operations.async.GetStorageFileRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.GetStorageFileResponse;
-import to.unified.unified_java_sdk.models.operations.async.ListStorageFilesRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.ListStorageFilesResponse;
-import to.unified.unified_java_sdk.models.operations.async.PatchStorageFileRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.PatchStorageFileResponse;
-import to.unified.unified_java_sdk.models.operations.async.RemoveStorageFileRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.RemoveStorageFileResponse;
-import to.unified.unified_java_sdk.models.operations.async.UpdateStorageFileRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.UpdateStorageFileResponse;
-import to.unified.unified_java_sdk.operations.CreateStorageFile;
-import to.unified.unified_java_sdk.operations.GetStorageFile;
-import to.unified.unified_java_sdk.operations.ListStorageFiles;
-import to.unified.unified_java_sdk.operations.PatchStorageFile;
-import to.unified.unified_java_sdk.operations.RemoveStorageFile;
-import to.unified.unified_java_sdk.operations.UpdateStorageFile;
+import to.unified.unified_java_sdk.models.operations.CreateStorageFile2Request;
+import to.unified.unified_java_sdk.models.operations.GetStorageFile2Request;
+import to.unified.unified_java_sdk.models.operations.ListStorageFiles2Request;
+import to.unified.unified_java_sdk.models.operations.PatchStorageFile2Request;
+import to.unified.unified_java_sdk.models.operations.RemoveStorageFile2Request;
+import to.unified.unified_java_sdk.models.operations.UpdateStorageFile2Request;
+import to.unified.unified_java_sdk.models.operations.async.CreateStorageFile2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.CreateStorageFile2Response;
+import to.unified.unified_java_sdk.models.operations.async.GetStorageFile2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetStorageFile2Response;
+import to.unified.unified_java_sdk.models.operations.async.ListStorageFiles2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListStorageFiles2Response;
+import to.unified.unified_java_sdk.models.operations.async.PatchStorageFile2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.PatchStorageFile2Response;
+import to.unified.unified_java_sdk.models.operations.async.RemoveStorageFile2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.RemoveStorageFile2Response;
+import to.unified.unified_java_sdk.models.operations.async.UpdateStorageFile2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.UpdateStorageFile2Response;
+import to.unified.unified_java_sdk.operations.CreateStorageFile2;
+import to.unified.unified_java_sdk.operations.GetStorageFile2;
+import to.unified.unified_java_sdk.operations.ListStorageFiles2;
+import to.unified.unified_java_sdk.operations.PatchStorageFile2;
+import to.unified.unified_java_sdk.operations.RemoveStorageFile2;
+import to.unified.unified_java_sdk.operations.UpdateStorageFile2;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -59,19 +59,19 @@ public class AsyncFile {
      * 
      * @return The async call builder
      */
-    public CreateStorageFileRequestBuilder createStorageFile() {
-        return new CreateStorageFileRequestBuilder(sdkConfiguration);
+    public CreateStorageFile2RequestBuilder createStorageFile2() {
+        return new CreateStorageFile2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Create a file
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<CreateStorageFileResponse>} - The async response
+     * @return {@code CompletableFuture<CreateStorageFile2Response>} - The async response
      */
-    public CompletableFuture<CreateStorageFileResponse> createStorageFile(@Nonnull CreateStorageFileRequest request) {
-        AsyncRequestOperation<CreateStorageFileRequest, CreateStorageFileResponse> operation
-              = new CreateStorageFile.Async(sdkConfiguration, _headers);
+    public CompletableFuture<CreateStorageFile2Response> createStorageFile2(@Nonnull CreateStorageFile2Request request) {
+        AsyncRequestOperation<CreateStorageFile2Request, CreateStorageFile2Response> operation
+              = new CreateStorageFile2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -82,19 +82,19 @@ public class AsyncFile {
      * 
      * @return The async call builder
      */
-    public GetStorageFileRequestBuilder getStorageFile() {
-        return new GetStorageFileRequestBuilder(sdkConfiguration);
+    public GetStorageFile2RequestBuilder getStorageFile2() {
+        return new GetStorageFile2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Retrieve a file
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<GetStorageFileResponse>} - The async response
+     * @return {@code CompletableFuture<GetStorageFile2Response>} - The async response
      */
-    public CompletableFuture<GetStorageFileResponse> getStorageFile(@Nonnull GetStorageFileRequest request) {
-        AsyncRequestOperation<GetStorageFileRequest, GetStorageFileResponse> operation
-              = new GetStorageFile.Async(sdkConfiguration, _headers);
+    public CompletableFuture<GetStorageFile2Response> getStorageFile2(@Nonnull GetStorageFile2Request request) {
+        AsyncRequestOperation<GetStorageFile2Request, GetStorageFile2Response> operation
+              = new GetStorageFile2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -105,19 +105,19 @@ public class AsyncFile {
      * 
      * @return The async call builder
      */
-    public ListStorageFilesRequestBuilder listStorageFiles() {
-        return new ListStorageFilesRequestBuilder(sdkConfiguration);
+    public ListStorageFiles2RequestBuilder listStorageFiles2() {
+        return new ListStorageFiles2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * List all files
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<ListStorageFilesResponse>} - The async response
+     * @return {@code CompletableFuture<ListStorageFiles2Response>} - The async response
      */
-    public CompletableFuture<ListStorageFilesResponse> listStorageFiles(@Nonnull ListStorageFilesRequest request) {
-        AsyncRequestOperation<ListStorageFilesRequest, ListStorageFilesResponse> operation
-              = new ListStorageFiles.Async(sdkConfiguration, _headers);
+    public CompletableFuture<ListStorageFiles2Response> listStorageFiles2(@Nonnull ListStorageFiles2Request request) {
+        AsyncRequestOperation<ListStorageFiles2Request, ListStorageFiles2Response> operation
+              = new ListStorageFiles2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -128,19 +128,19 @@ public class AsyncFile {
      * 
      * @return The async call builder
      */
-    public PatchStorageFileRequestBuilder patchStorageFile() {
-        return new PatchStorageFileRequestBuilder(sdkConfiguration);
+    public PatchStorageFile2RequestBuilder patchStorageFile2() {
+        return new PatchStorageFile2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update a file
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<PatchStorageFileResponse>} - The async response
+     * @return {@code CompletableFuture<PatchStorageFile2Response>} - The async response
      */
-    public CompletableFuture<PatchStorageFileResponse> patchStorageFile(@Nonnull PatchStorageFileRequest request) {
-        AsyncRequestOperation<PatchStorageFileRequest, PatchStorageFileResponse> operation
-              = new PatchStorageFile.Async(sdkConfiguration, _headers);
+    public CompletableFuture<PatchStorageFile2Response> patchStorageFile2(@Nonnull PatchStorageFile2Request request) {
+        AsyncRequestOperation<PatchStorageFile2Request, PatchStorageFile2Response> operation
+              = new PatchStorageFile2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -151,19 +151,19 @@ public class AsyncFile {
      * 
      * @return The async call builder
      */
-    public RemoveStorageFileRequestBuilder removeStorageFile() {
-        return new RemoveStorageFileRequestBuilder(sdkConfiguration);
+    public RemoveStorageFile2RequestBuilder removeStorageFile2() {
+        return new RemoveStorageFile2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Remove a file
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<RemoveStorageFileResponse>} - The async response
+     * @return {@code CompletableFuture<RemoveStorageFile2Response>} - The async response
      */
-    public CompletableFuture<RemoveStorageFileResponse> removeStorageFile(@Nonnull RemoveStorageFileRequest request) {
-        AsyncRequestOperation<RemoveStorageFileRequest, RemoveStorageFileResponse> operation
-              = new RemoveStorageFile.Async(sdkConfiguration, _headers);
+    public CompletableFuture<RemoveStorageFile2Response> removeStorageFile2(@Nonnull RemoveStorageFile2Request request) {
+        AsyncRequestOperation<RemoveStorageFile2Request, RemoveStorageFile2Response> operation
+              = new RemoveStorageFile2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -174,19 +174,19 @@ public class AsyncFile {
      * 
      * @return The async call builder
      */
-    public UpdateStorageFileRequestBuilder updateStorageFile() {
-        return new UpdateStorageFileRequestBuilder(sdkConfiguration);
+    public UpdateStorageFile2RequestBuilder updateStorageFile2() {
+        return new UpdateStorageFile2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update a file
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<UpdateStorageFileResponse>} - The async response
+     * @return {@code CompletableFuture<UpdateStorageFile2Response>} - The async response
      */
-    public CompletableFuture<UpdateStorageFileResponse> updateStorageFile(@Nonnull UpdateStorageFileRequest request) {
-        AsyncRequestOperation<UpdateStorageFileRequest, UpdateStorageFileResponse> operation
-              = new UpdateStorageFile.Async(sdkConfiguration, _headers);
+    public CompletableFuture<UpdateStorageFile2Response> updateStorageFile2(@Nonnull UpdateStorageFile2Request request) {
+        AsyncRequestOperation<UpdateStorageFile2Request, UpdateStorageFile2Response> operation
+              = new UpdateStorageFile2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

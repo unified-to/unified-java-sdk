@@ -4,39 +4,39 @@
 
 ### Available Operations
 
-* [createAccountingContact](#createaccountingcontact) - Create a contact
-* [createCrmContact](#createcrmcontact) - Create a contact
-* [createUcContact](#createuccontact) - Create a contact
-* [getAccountingContact](#getaccountingcontact) - Retrieve a contact
-* [getCrmContact](#getcrmcontact) - Retrieve a contact
-* [getUcContact](#getuccontact) - Retrieve a contact
-* [listAccountingContacts](#listaccountingcontacts) - List all contacts
-* [listCrmContacts](#listcrmcontacts) - List all contacts
-* [listUcContacts](#listuccontacts) - List all contacts
-* [patchAccountingContact](#patchaccountingcontact) - Update a contact
-* [patchCrmContact](#patchcrmcontact) - Update a contact
-* [patchUcContact](#patchuccontact) - Update a contact
-* [removeAccountingContact](#removeaccountingcontact) - Remove a contact
-* [removeCrmContact](#removecrmcontact) - Remove a contact
-* [removeUcContact](#removeuccontact) - Remove a contact
-* [updateAccountingContact](#updateaccountingcontact) - Update a contact
-* [updateCrmContact](#updatecrmcontact) - Update a contact
-* [updateUcContact](#updateuccontact) - Update a contact
+* [createAccountingContact2](#createaccountingcontact2) - Create a contact
+* [createCrmContact2](#createcrmcontact2) - Create a contact
+* [createUcContact2](#createuccontact2) - Create a contact
+* [getAccountingContact2](#getaccountingcontact2) - Retrieve a contact
+* [getCrmContact2](#getcrmcontact2) - Retrieve a contact
+* [getUcContact2](#getuccontact2) - Retrieve a contact
+* [listAccountingContacts2](#listaccountingcontacts2) - List all contacts
+* [listCrmContacts2](#listcrmcontacts2) - List all contacts
+* [listUcContacts2](#listuccontacts2) - List all contacts
+* [patchAccountingContact2](#patchaccountingcontact2) - Update a contact
+* [patchCrmContact2](#patchcrmcontact2) - Update a contact
+* [patchUcContact2](#patchuccontact2) - Update a contact
+* [removeAccountingContact2](#removeaccountingcontact2) - Remove a contact
+* [removeCrmContact2](#removecrmcontact2) - Remove a contact
+* [removeUcContact2](#removeuccontact2) - Remove a contact
+* [updateAccountingContact2](#updateaccountingcontact2) - Update a contact
+* [updateCrmContact2](#updatecrmcontact2) - Update a contact
+* [updateUcContact2](#updateuccontact2) - Update a contact
 
-## createAccountingContact
+## createAccountingContact2
 
 Create a contact
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createAccountingContact" method="post" path="/accounting/{connection_id}/contact" -->
+<!-- UsageSnippet language="java" operationID="createAccountingContact2" method="post" path="/accounting/{connection_id}/contact" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.CreateAccountingContactRequest;
-import to.unified.unified_java_sdk.models.operations.CreateAccountingContactResponse;
+import to.unified.unified_java_sdk.models.operations.CreateAccountingContact2Request;
+import to.unified.unified_java_sdk.models.operations.CreateAccountingContact2Response;
 import to.unified.unified_java_sdk.models.shared.AccountingContact;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -50,13 +50,13 @@ public class Application {
                     .build())
             .build();
 
-        CreateAccountingContactRequest req = CreateAccountingContactRequest.builder()
+        CreateAccountingContact2Request req = CreateAccountingContact2Request.builder()
                 .accountingContact(AccountingContact.builder()
                     .build())
                 .connectionId("<id>")
                 .build();
 
-        CreateAccountingContactResponse res = sdk.contact().createAccountingContact()
+        CreateAccountingContact2Response res = sdk.contact().createAccountingContact2()
                 .request(req)
                 .call();
 
@@ -69,13 +69,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                   | Type                                                                                        | Required                                                                                    | Description                                                                                 |
-| ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
-| `request`                                                                                   | [CreateAccountingContactRequest](../../models/operations/CreateAccountingContactRequest.md) | :heavy_check_mark:                                                                          | The request object to use for the request.                                                  |
+| Parameter                                                                                     | Type                                                                                          | Required                                                                                      | Description                                                                                   |
+| --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
+| `request`                                                                                     | [CreateAccountingContact2Request](../../models/operations/CreateAccountingContact2Request.md) | :heavy_check_mark:                                                                            | The request object to use for the request.                                                    |
 
 ### Response
 
-**[CreateAccountingContactResponse](../../models/operations/CreateAccountingContactResponse.md)**
+**[CreateAccountingContact2Response](../../models/operations/CreateAccountingContact2Response.md)**
 
 ### Errors
 
@@ -83,20 +83,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## createCrmContact
+## createCrmContact2
 
 Create a contact
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createCrmContact" method="post" path="/crm/{connection_id}/contact" -->
+<!-- UsageSnippet language="java" operationID="createCrmContact2" method="post" path="/crm/{connection_id}/contact" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.CreateCrmContactRequest;
-import to.unified.unified_java_sdk.models.operations.CreateCrmContactResponse;
+import to.unified.unified_java_sdk.models.operations.CreateCrmContact2Request;
+import to.unified.unified_java_sdk.models.operations.CreateCrmContact2Response;
 import to.unified.unified_java_sdk.models.shared.CrmContact;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -110,13 +110,13 @@ public class Application {
                     .build())
             .build();
 
-        CreateCrmContactRequest req = CreateCrmContactRequest.builder()
+        CreateCrmContact2Request req = CreateCrmContact2Request.builder()
                 .crmContact(CrmContact.builder()
                     .build())
                 .connectionId("<id>")
                 .build();
 
-        CreateCrmContactResponse res = sdk.contact().createCrmContact()
+        CreateCrmContact2Response res = sdk.contact().createCrmContact2()
                 .request(req)
                 .call();
 
@@ -129,13 +129,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
-| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
-| `request`                                                                     | [CreateCrmContactRequest](../../models/operations/CreateCrmContactRequest.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
+| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| `request`                                                                       | [CreateCrmContact2Request](../../models/operations/CreateCrmContact2Request.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
 
 ### Response
 
-**[CreateCrmContactResponse](../../models/operations/CreateCrmContactResponse.md)**
+**[CreateCrmContact2Response](../../models/operations/CreateCrmContact2Response.md)**
 
 ### Errors
 
@@ -143,20 +143,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## createUcContact
+## createUcContact2
 
 Create a contact
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createUcContact" method="post" path="/uc/{connection_id}/contact" -->
+<!-- UsageSnippet language="java" operationID="createUcContact2" method="post" path="/uc/{connection_id}/contact" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.CreateUcContactRequest;
-import to.unified.unified_java_sdk.models.operations.CreateUcContactResponse;
+import to.unified.unified_java_sdk.models.operations.CreateUcContact2Request;
+import to.unified.unified_java_sdk.models.operations.CreateUcContact2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 import to.unified.unified_java_sdk.models.shared.UcContact;
 
@@ -170,13 +170,13 @@ public class Application {
                     .build())
             .build();
 
-        CreateUcContactRequest req = CreateUcContactRequest.builder()
+        CreateUcContact2Request req = CreateUcContact2Request.builder()
                 .ucContact(UcContact.builder()
                     .build())
                 .connectionId("<id>")
                 .build();
 
-        CreateUcContactResponse res = sdk.contact().createUcContact()
+        CreateUcContact2Response res = sdk.contact().createUcContact2()
                 .request(req)
                 .call();
 
@@ -189,13 +189,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                   | Type                                                                        | Required                                                                    | Description                                                                 |
-| --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
-| `request`                                                                   | [CreateUcContactRequest](../../models/operations/CreateUcContactRequest.md) | :heavy_check_mark:                                                          | The request object to use for the request.                                  |
+| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
+| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| `request`                                                                     | [CreateUcContact2Request](../../models/operations/CreateUcContact2Request.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
 
 ### Response
 
-**[CreateUcContactResponse](../../models/operations/CreateUcContactResponse.md)**
+**[CreateUcContact2Response](../../models/operations/CreateUcContact2Response.md)**
 
 ### Errors
 
@@ -203,20 +203,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## getAccountingContact
+## getAccountingContact2
 
 Retrieve a contact
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="getAccountingContact" method="get" path="/accounting/{connection_id}/contact/{id}" -->
+<!-- UsageSnippet language="java" operationID="getAccountingContact2" method="get" path="/accounting/{connection_id}/contact/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.GetAccountingContactRequest;
-import to.unified.unified_java_sdk.models.operations.GetAccountingContactResponse;
+import to.unified.unified_java_sdk.models.operations.GetAccountingContact2Request;
+import to.unified.unified_java_sdk.models.operations.GetAccountingContact2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -229,12 +229,12 @@ public class Application {
                     .build())
             .build();
 
-        GetAccountingContactRequest req = GetAccountingContactRequest.builder()
+        GetAccountingContact2Request req = GetAccountingContact2Request.builder()
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        GetAccountingContactResponse res = sdk.contact().getAccountingContact()
+        GetAccountingContact2Response res = sdk.contact().getAccountingContact2()
                 .request(req)
                 .call();
 
@@ -247,13 +247,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                             | Type                                                                                  | Required                                                                              | Description                                                                           |
-| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
-| `request`                                                                             | [GetAccountingContactRequest](../../models/operations/GetAccountingContactRequest.md) | :heavy_check_mark:                                                                    | The request object to use for the request.                                            |
+| Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
+| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| `request`                                                                               | [GetAccountingContact2Request](../../models/operations/GetAccountingContact2Request.md) | :heavy_check_mark:                                                                      | The request object to use for the request.                                              |
 
 ### Response
 
-**[GetAccountingContactResponse](../../models/operations/GetAccountingContactResponse.md)**
+**[GetAccountingContact2Response](../../models/operations/GetAccountingContact2Response.md)**
 
 ### Errors
 
@@ -261,20 +261,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## getCrmContact
+## getCrmContact2
 
 Retrieve a contact
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="getCrmContact" method="get" path="/crm/{connection_id}/contact/{id}" -->
+<!-- UsageSnippet language="java" operationID="getCrmContact2" method="get" path="/crm/{connection_id}/contact/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.GetCrmContactRequest;
-import to.unified.unified_java_sdk.models.operations.GetCrmContactResponse;
+import to.unified.unified_java_sdk.models.operations.GetCrmContact2Request;
+import to.unified.unified_java_sdk.models.operations.GetCrmContact2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -287,12 +287,12 @@ public class Application {
                     .build())
             .build();
 
-        GetCrmContactRequest req = GetCrmContactRequest.builder()
+        GetCrmContact2Request req = GetCrmContact2Request.builder()
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        GetCrmContactResponse res = sdk.contact().getCrmContact()
+        GetCrmContact2Response res = sdk.contact().getCrmContact2()
                 .request(req)
                 .call();
 
@@ -305,13 +305,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                               | Type                                                                    | Required                                                                | Description                                                             |
-| ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- |
-| `request`                                                               | [GetCrmContactRequest](../../models/operations/GetCrmContactRequest.md) | :heavy_check_mark:                                                      | The request object to use for the request.                              |
+| Parameter                                                                 | Type                                                                      | Required                                                                  | Description                                                               |
+| ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
+| `request`                                                                 | [GetCrmContact2Request](../../models/operations/GetCrmContact2Request.md) | :heavy_check_mark:                                                        | The request object to use for the request.                                |
 
 ### Response
 
-**[GetCrmContactResponse](../../models/operations/GetCrmContactResponse.md)**
+**[GetCrmContact2Response](../../models/operations/GetCrmContact2Response.md)**
 
 ### Errors
 
@@ -319,20 +319,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## getUcContact
+## getUcContact2
 
 Retrieve a contact
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="getUcContact" method="get" path="/uc/{connection_id}/contact/{id}" -->
+<!-- UsageSnippet language="java" operationID="getUcContact2" method="get" path="/uc/{connection_id}/contact/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.GetUcContactRequest;
-import to.unified.unified_java_sdk.models.operations.GetUcContactResponse;
+import to.unified.unified_java_sdk.models.operations.GetUcContact2Request;
+import to.unified.unified_java_sdk.models.operations.GetUcContact2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -345,12 +345,12 @@ public class Application {
                     .build())
             .build();
 
-        GetUcContactRequest req = GetUcContactRequest.builder()
+        GetUcContact2Request req = GetUcContact2Request.builder()
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        GetUcContactResponse res = sdk.contact().getUcContact()
+        GetUcContact2Response res = sdk.contact().getUcContact2()
                 .request(req)
                 .call();
 
@@ -363,13 +363,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                             | Type                                                                  | Required                                                              | Description                                                           |
-| --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- |
-| `request`                                                             | [GetUcContactRequest](../../models/operations/GetUcContactRequest.md) | :heavy_check_mark:                                                    | The request object to use for the request.                            |
+| Parameter                                                               | Type                                                                    | Required                                                                | Description                                                             |
+| ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- |
+| `request`                                                               | [GetUcContact2Request](../../models/operations/GetUcContact2Request.md) | :heavy_check_mark:                                                      | The request object to use for the request.                              |
 
 ### Response
 
-**[GetUcContactResponse](../../models/operations/GetUcContactResponse.md)**
+**[GetUcContact2Response](../../models/operations/GetUcContact2Response.md)**
 
 ### Errors
 
@@ -377,20 +377,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## listAccountingContacts
+## listAccountingContacts2
 
 List all contacts
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="listAccountingContacts" method="get" path="/accounting/{connection_id}/contact" -->
+<!-- UsageSnippet language="java" operationID="listAccountingContacts2" method="get" path="/accounting/{connection_id}/contact" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.ListAccountingContactsRequest;
-import to.unified.unified_java_sdk.models.operations.ListAccountingContactsResponse;
+import to.unified.unified_java_sdk.models.operations.ListAccountingContacts2Request;
+import to.unified.unified_java_sdk.models.operations.ListAccountingContacts2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -403,11 +403,11 @@ public class Application {
                     .build())
             .build();
 
-        ListAccountingContactsRequest req = ListAccountingContactsRequest.builder()
+        ListAccountingContacts2Request req = ListAccountingContacts2Request.builder()
                 .connectionId("<id>")
                 .build();
 
-        ListAccountingContactsResponse res = sdk.contact().listAccountingContacts()
+        ListAccountingContacts2Response res = sdk.contact().listAccountingContacts2()
                 .request(req)
                 .call();
 
@@ -420,13 +420,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                 | Type                                                                                      | Required                                                                                  | Description                                                                               |
-| ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
-| `request`                                                                                 | [ListAccountingContactsRequest](../../models/operations/ListAccountingContactsRequest.md) | :heavy_check_mark:                                                                        | The request object to use for the request.                                                |
+| Parameter                                                                                   | Type                                                                                        | Required                                                                                    | Description                                                                                 |
+| ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
+| `request`                                                                                   | [ListAccountingContacts2Request](../../models/operations/ListAccountingContacts2Request.md) | :heavy_check_mark:                                                                          | The request object to use for the request.                                                  |
 
 ### Response
 
-**[ListAccountingContactsResponse](../../models/operations/ListAccountingContactsResponse.md)**
+**[ListAccountingContacts2Response](../../models/operations/ListAccountingContacts2Response.md)**
 
 ### Errors
 
@@ -434,20 +434,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## listCrmContacts
+## listCrmContacts2
 
 List all contacts
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="listCrmContacts" method="get" path="/crm/{connection_id}/contact" -->
+<!-- UsageSnippet language="java" operationID="listCrmContacts2" method="get" path="/crm/{connection_id}/contact" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.ListCrmContactsRequest;
-import to.unified.unified_java_sdk.models.operations.ListCrmContactsResponse;
+import to.unified.unified_java_sdk.models.operations.ListCrmContacts2Request;
+import to.unified.unified_java_sdk.models.operations.ListCrmContacts2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -460,11 +460,11 @@ public class Application {
                     .build())
             .build();
 
-        ListCrmContactsRequest req = ListCrmContactsRequest.builder()
+        ListCrmContacts2Request req = ListCrmContacts2Request.builder()
                 .connectionId("<id>")
                 .build();
 
-        ListCrmContactsResponse res = sdk.contact().listCrmContacts()
+        ListCrmContacts2Response res = sdk.contact().listCrmContacts2()
                 .request(req)
                 .call();
 
@@ -477,13 +477,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                   | Type                                                                        | Required                                                                    | Description                                                                 |
-| --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
-| `request`                                                                   | [ListCrmContactsRequest](../../models/operations/ListCrmContactsRequest.md) | :heavy_check_mark:                                                          | The request object to use for the request.                                  |
+| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
+| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| `request`                                                                     | [ListCrmContacts2Request](../../models/operations/ListCrmContacts2Request.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
 
 ### Response
 
-**[ListCrmContactsResponse](../../models/operations/ListCrmContactsResponse.md)**
+**[ListCrmContacts2Response](../../models/operations/ListCrmContacts2Response.md)**
 
 ### Errors
 
@@ -491,20 +491,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## listUcContacts
+## listUcContacts2
 
 List all contacts
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="listUcContacts" method="get" path="/uc/{connection_id}/contact" -->
+<!-- UsageSnippet language="java" operationID="listUcContacts2" method="get" path="/uc/{connection_id}/contact" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.ListUcContactsRequest;
-import to.unified.unified_java_sdk.models.operations.ListUcContactsResponse;
+import to.unified.unified_java_sdk.models.operations.ListUcContacts2Request;
+import to.unified.unified_java_sdk.models.operations.ListUcContacts2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -517,11 +517,11 @@ public class Application {
                     .build())
             .build();
 
-        ListUcContactsRequest req = ListUcContactsRequest.builder()
+        ListUcContacts2Request req = ListUcContacts2Request.builder()
                 .connectionId("<id>")
                 .build();
 
-        ListUcContactsResponse res = sdk.contact().listUcContacts()
+        ListUcContacts2Response res = sdk.contact().listUcContacts2()
                 .request(req)
                 .call();
 
@@ -534,13 +534,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                 | Type                                                                      | Required                                                                  | Description                                                               |
-| ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
-| `request`                                                                 | [ListUcContactsRequest](../../models/operations/ListUcContactsRequest.md) | :heavy_check_mark:                                                        | The request object to use for the request.                                |
+| Parameter                                                                   | Type                                                                        | Required                                                                    | Description                                                                 |
+| --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| `request`                                                                   | [ListUcContacts2Request](../../models/operations/ListUcContacts2Request.md) | :heavy_check_mark:                                                          | The request object to use for the request.                                  |
 
 ### Response
 
-**[ListUcContactsResponse](../../models/operations/ListUcContactsResponse.md)**
+**[ListUcContacts2Response](../../models/operations/ListUcContacts2Response.md)**
 
 ### Errors
 
@@ -548,20 +548,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## patchAccountingContact
+## patchAccountingContact2
 
 Update a contact
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchAccountingContact" method="patch" path="/accounting/{connection_id}/contact/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchAccountingContact2" method="patch" path="/accounting/{connection_id}/contact/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.PatchAccountingContactRequest;
-import to.unified.unified_java_sdk.models.operations.PatchAccountingContactResponse;
+import to.unified.unified_java_sdk.models.operations.PatchAccountingContact2Request;
+import to.unified.unified_java_sdk.models.operations.PatchAccountingContact2Response;
 import to.unified.unified_java_sdk.models.shared.AccountingContact;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -575,365 +575,14 @@ public class Application {
                     .build())
             .build();
 
-        PatchAccountingContactRequest req = PatchAccountingContactRequest.builder()
+        PatchAccountingContact2Request req = PatchAccountingContact2Request.builder()
                 .accountingContact(AccountingContact.builder()
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        PatchAccountingContactResponse res = sdk.contact().patchAccountingContact()
-                .request(req)
-                .call();
-
-        if (res.accountingContact().isPresent()) {
-            System.out.println(res.accountingContact().get());
-        }
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                                 | Type                                                                                      | Required                                                                                  | Description                                                                               |
-| ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
-| `request`                                                                                 | [PatchAccountingContactRequest](../../models/operations/PatchAccountingContactRequest.md) | :heavy_check_mark:                                                                        | The request object to use for the request.                                                |
-
-### Response
-
-**[PatchAccountingContactResponse](../../models/operations/PatchAccountingContactResponse.md)**
-
-### Errors
-
-| Error Type             | Status Code            | Content Type           |
-| ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
-
-## patchCrmContact
-
-Update a contact
-
-### Example Usage
-
-<!-- UsageSnippet language="java" operationID="patchCrmContact" method="patch" path="/crm/{connection_id}/contact/{id}" -->
-```java
-package hello.world;
-
-import java.lang.Exception;
-import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.PatchCrmContactRequest;
-import to.unified.unified_java_sdk.models.operations.PatchCrmContactResponse;
-import to.unified.unified_java_sdk.models.shared.CrmContact;
-import to.unified.unified_java_sdk.models.shared.Security;
-
-public class Application {
-
-    public static void main(String[] args) throws Exception {
-
-        UnifiedTo sdk = UnifiedTo.builder()
-                .security(Security.builder()
-                    .jwt(System.getenv().getOrDefault("JWT", ""))
-                    .build())
-            .build();
-
-        PatchCrmContactRequest req = PatchCrmContactRequest.builder()
-                .crmContact(CrmContact.builder()
-                    .build())
-                .connectionId("<id>")
-                .id("<id>")
-                .build();
-
-        PatchCrmContactResponse res = sdk.contact().patchCrmContact()
-                .request(req)
-                .call();
-
-        if (res.crmContact().isPresent()) {
-            System.out.println(res.crmContact().get());
-        }
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                   | Type                                                                        | Required                                                                    | Description                                                                 |
-| --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
-| `request`                                                                   | [PatchCrmContactRequest](../../models/operations/PatchCrmContactRequest.md) | :heavy_check_mark:                                                          | The request object to use for the request.                                  |
-
-### Response
-
-**[PatchCrmContactResponse](../../models/operations/PatchCrmContactResponse.md)**
-
-### Errors
-
-| Error Type             | Status Code            | Content Type           |
-| ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
-
-## patchUcContact
-
-Update a contact
-
-### Example Usage
-
-<!-- UsageSnippet language="java" operationID="patchUcContact" method="patch" path="/uc/{connection_id}/contact/{id}" -->
-```java
-package hello.world;
-
-import java.lang.Exception;
-import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.PatchUcContactRequest;
-import to.unified.unified_java_sdk.models.operations.PatchUcContactResponse;
-import to.unified.unified_java_sdk.models.shared.Security;
-import to.unified.unified_java_sdk.models.shared.UcContact;
-
-public class Application {
-
-    public static void main(String[] args) throws Exception {
-
-        UnifiedTo sdk = UnifiedTo.builder()
-                .security(Security.builder()
-                    .jwt(System.getenv().getOrDefault("JWT", ""))
-                    .build())
-            .build();
-
-        PatchUcContactRequest req = PatchUcContactRequest.builder()
-                .ucContact(UcContact.builder()
-                    .build())
-                .connectionId("<id>")
-                .id("<id>")
-                .build();
-
-        PatchUcContactResponse res = sdk.contact().patchUcContact()
-                .request(req)
-                .call();
-
-        if (res.ucContact().isPresent()) {
-            System.out.println(res.ucContact().get());
-        }
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                 | Type                                                                      | Required                                                                  | Description                                                               |
-| ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
-| `request`                                                                 | [PatchUcContactRequest](../../models/operations/PatchUcContactRequest.md) | :heavy_check_mark:                                                        | The request object to use for the request.                                |
-
-### Response
-
-**[PatchUcContactResponse](../../models/operations/PatchUcContactResponse.md)**
-
-### Errors
-
-| Error Type             | Status Code            | Content Type           |
-| ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
-
-## removeAccountingContact
-
-Remove a contact
-
-### Example Usage
-
-<!-- UsageSnippet language="java" operationID="removeAccountingContact" method="delete" path="/accounting/{connection_id}/contact/{id}" -->
-```java
-package hello.world;
-
-import java.lang.Exception;
-import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.RemoveAccountingContactRequest;
-import to.unified.unified_java_sdk.models.operations.RemoveAccountingContactResponse;
-import to.unified.unified_java_sdk.models.shared.Security;
-
-public class Application {
-
-    public static void main(String[] args) throws Exception {
-
-        UnifiedTo sdk = UnifiedTo.builder()
-                .security(Security.builder()
-                    .jwt(System.getenv().getOrDefault("JWT", ""))
-                    .build())
-            .build();
-
-        RemoveAccountingContactRequest req = RemoveAccountingContactRequest.builder()
-                .connectionId("<id>")
-                .id("<id>")
-                .build();
-
-        RemoveAccountingContactResponse res = sdk.contact().removeAccountingContact()
-                .request(req)
-                .call();
-
-        // handle response
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                                   | Type                                                                                        | Required                                                                                    | Description                                                                                 |
-| ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
-| `request`                                                                                   | [RemoveAccountingContactRequest](../../models/operations/RemoveAccountingContactRequest.md) | :heavy_check_mark:                                                                          | The request object to use for the request.                                                  |
-
-### Response
-
-**[RemoveAccountingContactResponse](../../models/operations/RemoveAccountingContactResponse.md)**
-
-### Errors
-
-| Error Type             | Status Code            | Content Type           |
-| ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
-
-## removeCrmContact
-
-Remove a contact
-
-### Example Usage
-
-<!-- UsageSnippet language="java" operationID="removeCrmContact" method="delete" path="/crm/{connection_id}/contact/{id}" -->
-```java
-package hello.world;
-
-import java.lang.Exception;
-import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.RemoveCrmContactRequest;
-import to.unified.unified_java_sdk.models.operations.RemoveCrmContactResponse;
-import to.unified.unified_java_sdk.models.shared.Security;
-
-public class Application {
-
-    public static void main(String[] args) throws Exception {
-
-        UnifiedTo sdk = UnifiedTo.builder()
-                .security(Security.builder()
-                    .jwt(System.getenv().getOrDefault("JWT", ""))
-                    .build())
-            .build();
-
-        RemoveCrmContactRequest req = RemoveCrmContactRequest.builder()
-                .connectionId("<id>")
-                .id("<id>")
-                .build();
-
-        RemoveCrmContactResponse res = sdk.contact().removeCrmContact()
-                .request(req)
-                .call();
-
-        // handle response
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
-| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
-| `request`                                                                     | [RemoveCrmContactRequest](../../models/operations/RemoveCrmContactRequest.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
-
-### Response
-
-**[RemoveCrmContactResponse](../../models/operations/RemoveCrmContactResponse.md)**
-
-### Errors
-
-| Error Type             | Status Code            | Content Type           |
-| ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
-
-## removeUcContact
-
-Remove a contact
-
-### Example Usage
-
-<!-- UsageSnippet language="java" operationID="removeUcContact" method="delete" path="/uc/{connection_id}/contact/{id}" -->
-```java
-package hello.world;
-
-import java.lang.Exception;
-import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.RemoveUcContactRequest;
-import to.unified.unified_java_sdk.models.operations.RemoveUcContactResponse;
-import to.unified.unified_java_sdk.models.shared.Security;
-
-public class Application {
-
-    public static void main(String[] args) throws Exception {
-
-        UnifiedTo sdk = UnifiedTo.builder()
-                .security(Security.builder()
-                    .jwt(System.getenv().getOrDefault("JWT", ""))
-                    .build())
-            .build();
-
-        RemoveUcContactRequest req = RemoveUcContactRequest.builder()
-                .connectionId("<id>")
-                .id("<id>")
-                .build();
-
-        RemoveUcContactResponse res = sdk.contact().removeUcContact()
-                .request(req)
-                .call();
-
-        // handle response
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                   | Type                                                                        | Required                                                                    | Description                                                                 |
-| --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
-| `request`                                                                   | [RemoveUcContactRequest](../../models/operations/RemoveUcContactRequest.md) | :heavy_check_mark:                                                          | The request object to use for the request.                                  |
-
-### Response
-
-**[RemoveUcContactResponse](../../models/operations/RemoveUcContactResponse.md)**
-
-### Errors
-
-| Error Type             | Status Code            | Content Type           |
-| ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
-
-## updateAccountingContact
-
-Update a contact
-
-### Example Usage
-
-<!-- UsageSnippet language="java" operationID="updateAccountingContact" method="put" path="/accounting/{connection_id}/contact/{id}" -->
-```java
-package hello.world;
-
-import java.lang.Exception;
-import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.UpdateAccountingContactRequest;
-import to.unified.unified_java_sdk.models.operations.UpdateAccountingContactResponse;
-import to.unified.unified_java_sdk.models.shared.AccountingContact;
-import to.unified.unified_java_sdk.models.shared.Security;
-
-public class Application {
-
-    public static void main(String[] args) throws Exception {
-
-        UnifiedTo sdk = UnifiedTo.builder()
-                .security(Security.builder()
-                    .jwt(System.getenv().getOrDefault("JWT", ""))
-                    .build())
-            .build();
-
-        UpdateAccountingContactRequest req = UpdateAccountingContactRequest.builder()
-                .accountingContact(AccountingContact.builder()
-                    .build())
-                .connectionId("<id>")
-                .id("<id>")
-                .build();
-
-        UpdateAccountingContactResponse res = sdk.contact().updateAccountingContact()
+        PatchAccountingContact2Response res = sdk.contact().patchAccountingContact2()
                 .request(req)
                 .call();
 
@@ -948,11 +597,11 @@ public class Application {
 
 | Parameter                                                                                   | Type                                                                                        | Required                                                                                    | Description                                                                                 |
 | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
-| `request`                                                                                   | [UpdateAccountingContactRequest](../../models/operations/UpdateAccountingContactRequest.md) | :heavy_check_mark:                                                                          | The request object to use for the request.                                                  |
+| `request`                                                                                   | [PatchAccountingContact2Request](../../models/operations/PatchAccountingContact2Request.md) | :heavy_check_mark:                                                                          | The request object to use for the request.                                                  |
 
 ### Response
 
-**[UpdateAccountingContactResponse](../../models/operations/UpdateAccountingContactResponse.md)**
+**[PatchAccountingContact2Response](../../models/operations/PatchAccountingContact2Response.md)**
 
 ### Errors
 
@@ -960,20 +609,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## updateCrmContact
+## patchCrmContact2
 
 Update a contact
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateCrmContact" method="put" path="/crm/{connection_id}/contact/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchCrmContact2" method="patch" path="/crm/{connection_id}/contact/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.UpdateCrmContactRequest;
-import to.unified.unified_java_sdk.models.operations.UpdateCrmContactResponse;
+import to.unified.unified_java_sdk.models.operations.PatchCrmContact2Request;
+import to.unified.unified_java_sdk.models.operations.PatchCrmContact2Response;
 import to.unified.unified_java_sdk.models.shared.CrmContact;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -987,14 +636,14 @@ public class Application {
                     .build())
             .build();
 
-        UpdateCrmContactRequest req = UpdateCrmContactRequest.builder()
+        PatchCrmContact2Request req = PatchCrmContact2Request.builder()
                 .crmContact(CrmContact.builder()
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        UpdateCrmContactResponse res = sdk.contact().updateCrmContact()
+        PatchCrmContact2Response res = sdk.contact().patchCrmContact2()
                 .request(req)
                 .call();
 
@@ -1009,11 +658,11 @@ public class Application {
 
 | Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
 | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
-| `request`                                                                     | [UpdateCrmContactRequest](../../models/operations/UpdateCrmContactRequest.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
+| `request`                                                                     | [PatchCrmContact2Request](../../models/operations/PatchCrmContact2Request.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
 
 ### Response
 
-**[UpdateCrmContactResponse](../../models/operations/UpdateCrmContactResponse.md)**
+**[PatchCrmContact2Response](../../models/operations/PatchCrmContact2Response.md)**
 
 ### Errors
 
@@ -1021,20 +670,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## updateUcContact
+## patchUcContact2
 
 Update a contact
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateUcContact" method="put" path="/uc/{connection_id}/contact/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchUcContact2" method="patch" path="/uc/{connection_id}/contact/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.UpdateUcContactRequest;
-import to.unified.unified_java_sdk.models.operations.UpdateUcContactResponse;
+import to.unified.unified_java_sdk.models.operations.PatchUcContact2Request;
+import to.unified.unified_java_sdk.models.operations.PatchUcContact2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 import to.unified.unified_java_sdk.models.shared.UcContact;
 
@@ -1048,14 +697,14 @@ public class Application {
                     .build())
             .build();
 
-        UpdateUcContactRequest req = UpdateUcContactRequest.builder()
+        PatchUcContact2Request req = PatchUcContact2Request.builder()
                 .ucContact(UcContact.builder()
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        UpdateUcContactResponse res = sdk.contact().updateUcContact()
+        PatchUcContact2Response res = sdk.contact().patchUcContact2()
                 .request(req)
                 .call();
 
@@ -1070,11 +719,362 @@ public class Application {
 
 | Parameter                                                                   | Type                                                                        | Required                                                                    | Description                                                                 |
 | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
-| `request`                                                                   | [UpdateUcContactRequest](../../models/operations/UpdateUcContactRequest.md) | :heavy_check_mark:                                                          | The request object to use for the request.                                  |
+| `request`                                                                   | [PatchUcContact2Request](../../models/operations/PatchUcContact2Request.md) | :heavy_check_mark:                                                          | The request object to use for the request.                                  |
 
 ### Response
 
-**[UpdateUcContactResponse](../../models/operations/UpdateUcContactResponse.md)**
+**[PatchUcContact2Response](../../models/operations/PatchUcContact2Response.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## removeAccountingContact2
+
+Remove a contact
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="removeAccountingContact2" method="delete" path="/accounting/{connection_id}/contact/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.RemoveAccountingContact2Request;
+import to.unified.unified_java_sdk.models.operations.RemoveAccountingContact2Response;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        RemoveAccountingContact2Request req = RemoveAccountingContact2Request.builder()
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        RemoveAccountingContact2Response res = sdk.contact().removeAccountingContact2()
+                .request(req)
+                .call();
+
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                     | Type                                                                                          | Required                                                                                      | Description                                                                                   |
+| --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
+| `request`                                                                                     | [RemoveAccountingContact2Request](../../models/operations/RemoveAccountingContact2Request.md) | :heavy_check_mark:                                                                            | The request object to use for the request.                                                    |
+
+### Response
+
+**[RemoveAccountingContact2Response](../../models/operations/RemoveAccountingContact2Response.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## removeCrmContact2
+
+Remove a contact
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="removeCrmContact2" method="delete" path="/crm/{connection_id}/contact/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.RemoveCrmContact2Request;
+import to.unified.unified_java_sdk.models.operations.RemoveCrmContact2Response;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        RemoveCrmContact2Request req = RemoveCrmContact2Request.builder()
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        RemoveCrmContact2Response res = sdk.contact().removeCrmContact2()
+                .request(req)
+                .call();
+
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| `request`                                                                       | [RemoveCrmContact2Request](../../models/operations/RemoveCrmContact2Request.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
+
+### Response
+
+**[RemoveCrmContact2Response](../../models/operations/RemoveCrmContact2Response.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## removeUcContact2
+
+Remove a contact
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="removeUcContact2" method="delete" path="/uc/{connection_id}/contact/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.RemoveUcContact2Request;
+import to.unified.unified_java_sdk.models.operations.RemoveUcContact2Response;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        RemoveUcContact2Request req = RemoveUcContact2Request.builder()
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        RemoveUcContact2Response res = sdk.contact().removeUcContact2()
+                .request(req)
+                .call();
+
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
+| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| `request`                                                                     | [RemoveUcContact2Request](../../models/operations/RemoveUcContact2Request.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
+
+### Response
+
+**[RemoveUcContact2Response](../../models/operations/RemoveUcContact2Response.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## updateAccountingContact2
+
+Update a contact
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="updateAccountingContact2" method="put" path="/accounting/{connection_id}/contact/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.UpdateAccountingContact2Request;
+import to.unified.unified_java_sdk.models.operations.UpdateAccountingContact2Response;
+import to.unified.unified_java_sdk.models.shared.AccountingContact;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        UpdateAccountingContact2Request req = UpdateAccountingContact2Request.builder()
+                .accountingContact(AccountingContact.builder()
+                    .build())
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        UpdateAccountingContact2Response res = sdk.contact().updateAccountingContact2()
+                .request(req)
+                .call();
+
+        if (res.accountingContact().isPresent()) {
+            System.out.println(res.accountingContact().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                     | Type                                                                                          | Required                                                                                      | Description                                                                                   |
+| --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
+| `request`                                                                                     | [UpdateAccountingContact2Request](../../models/operations/UpdateAccountingContact2Request.md) | :heavy_check_mark:                                                                            | The request object to use for the request.                                                    |
+
+### Response
+
+**[UpdateAccountingContact2Response](../../models/operations/UpdateAccountingContact2Response.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## updateCrmContact2
+
+Update a contact
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="updateCrmContact2" method="put" path="/crm/{connection_id}/contact/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.UpdateCrmContact2Request;
+import to.unified.unified_java_sdk.models.operations.UpdateCrmContact2Response;
+import to.unified.unified_java_sdk.models.shared.CrmContact;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        UpdateCrmContact2Request req = UpdateCrmContact2Request.builder()
+                .crmContact(CrmContact.builder()
+                    .build())
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        UpdateCrmContact2Response res = sdk.contact().updateCrmContact2()
+                .request(req)
+                .call();
+
+        if (res.crmContact().isPresent()) {
+            System.out.println(res.crmContact().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| `request`                                                                       | [UpdateCrmContact2Request](../../models/operations/UpdateCrmContact2Request.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
+
+### Response
+
+**[UpdateCrmContact2Response](../../models/operations/UpdateCrmContact2Response.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## updateUcContact2
+
+Update a contact
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="updateUcContact2" method="put" path="/uc/{connection_id}/contact/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.UpdateUcContact2Request;
+import to.unified.unified_java_sdk.models.operations.UpdateUcContact2Response;
+import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.UcContact;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        UpdateUcContact2Request req = UpdateUcContact2Request.builder()
+                .ucContact(UcContact.builder()
+                    .build())
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        UpdateUcContact2Response res = sdk.contact().updateUcContact2()
+                .request(req)
+                .call();
+
+        if (res.ucContact().isPresent()) {
+            System.out.println(res.ucContact().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
+| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| `request`                                                                     | [UpdateUcContact2Request](../../models/operations/UpdateUcContact2Request.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
+
+### Response
+
+**[UpdateUcContact2Response](../../models/operations/UpdateUcContact2Response.md)**
 
 ### Errors
 

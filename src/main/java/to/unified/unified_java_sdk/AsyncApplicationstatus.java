@@ -7,10 +7,10 @@ import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOper
 
 import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
-import to.unified.unified_java_sdk.models.operations.ListAtsApplicationstatusesRequest;
-import to.unified.unified_java_sdk.models.operations.async.ListAtsApplicationstatusesRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.ListAtsApplicationstatusesResponse;
-import to.unified.unified_java_sdk.operations.ListAtsApplicationstatuses;
+import to.unified.unified_java_sdk.models.operations.ListAtsApplicationstatuses2Request;
+import to.unified.unified_java_sdk.models.operations.async.ListAtsApplicationstatuses2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListAtsApplicationstatuses2Response;
+import to.unified.unified_java_sdk.operations.ListAtsApplicationstatuses2;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -39,19 +39,19 @@ public class AsyncApplicationstatus {
      * 
      * @return The async call builder
      */
-    public ListAtsApplicationstatusesRequestBuilder listAtsApplicationstatuses() {
-        return new ListAtsApplicationstatusesRequestBuilder(sdkConfiguration);
+    public ListAtsApplicationstatuses2RequestBuilder listAtsApplicationstatuses2() {
+        return new ListAtsApplicationstatuses2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * List all applicationstatuses
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<ListAtsApplicationstatusesResponse>} - The async response
+     * @return {@code CompletableFuture<ListAtsApplicationstatuses2Response>} - The async response
      */
-    public CompletableFuture<ListAtsApplicationstatusesResponse> listAtsApplicationstatuses(@Nonnull ListAtsApplicationstatusesRequest request) {
-        AsyncRequestOperation<ListAtsApplicationstatusesRequest, ListAtsApplicationstatusesResponse> operation
-              = new ListAtsApplicationstatuses.Async(sdkConfiguration, _headers);
+    public CompletableFuture<ListAtsApplicationstatuses2Response> listAtsApplicationstatuses2(@Nonnull ListAtsApplicationstatuses2Request request) {
+        AsyncRequestOperation<ListAtsApplicationstatuses2Request, ListAtsApplicationstatuses2Response> operation
+              = new ListAtsApplicationstatuses2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

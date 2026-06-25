@@ -6,30 +6,30 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
-import to.unified.unified_java_sdk.models.operations.CreateAdsCreativeRequest;
-import to.unified.unified_java_sdk.models.operations.CreateAdsCreativeRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.CreateAdsCreativeResponse;
-import to.unified.unified_java_sdk.models.operations.GetAdsCreativeRequest;
-import to.unified.unified_java_sdk.models.operations.GetAdsCreativeRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.GetAdsCreativeResponse;
-import to.unified.unified_java_sdk.models.operations.ListAdsCreativesRequest;
-import to.unified.unified_java_sdk.models.operations.ListAdsCreativesRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.ListAdsCreativesResponse;
-import to.unified.unified_java_sdk.models.operations.PatchAdsCreativeRequest;
-import to.unified.unified_java_sdk.models.operations.PatchAdsCreativeRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.PatchAdsCreativeResponse;
-import to.unified.unified_java_sdk.models.operations.RemoveAdsCreativeRequest;
-import to.unified.unified_java_sdk.models.operations.RemoveAdsCreativeRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.RemoveAdsCreativeResponse;
-import to.unified.unified_java_sdk.models.operations.UpdateAdsCreativeRequest;
-import to.unified.unified_java_sdk.models.operations.UpdateAdsCreativeRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.UpdateAdsCreativeResponse;
-import to.unified.unified_java_sdk.operations.CreateAdsCreative;
-import to.unified.unified_java_sdk.operations.GetAdsCreative;
-import to.unified.unified_java_sdk.operations.ListAdsCreatives;
-import to.unified.unified_java_sdk.operations.PatchAdsCreative;
-import to.unified.unified_java_sdk.operations.RemoveAdsCreative;
-import to.unified.unified_java_sdk.operations.UpdateAdsCreative;
+import to.unified.unified_java_sdk.models.operations.CreateAdsCreative2Request;
+import to.unified.unified_java_sdk.models.operations.CreateAdsCreative2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.CreateAdsCreative2Response;
+import to.unified.unified_java_sdk.models.operations.GetAdsCreative2Request;
+import to.unified.unified_java_sdk.models.operations.GetAdsCreative2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetAdsCreative2Response;
+import to.unified.unified_java_sdk.models.operations.ListAdsCreatives2Request;
+import to.unified.unified_java_sdk.models.operations.ListAdsCreatives2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListAdsCreatives2Response;
+import to.unified.unified_java_sdk.models.operations.PatchAdsCreative2Request;
+import to.unified.unified_java_sdk.models.operations.PatchAdsCreative2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.PatchAdsCreative2Response;
+import to.unified.unified_java_sdk.models.operations.RemoveAdsCreative2Request;
+import to.unified.unified_java_sdk.models.operations.RemoveAdsCreative2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.RemoveAdsCreative2Response;
+import to.unified.unified_java_sdk.models.operations.UpdateAdsCreative2Request;
+import to.unified.unified_java_sdk.models.operations.UpdateAdsCreative2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.UpdateAdsCreative2Response;
+import to.unified.unified_java_sdk.operations.CreateAdsCreative2;
+import to.unified.unified_java_sdk.operations.GetAdsCreative2;
+import to.unified.unified_java_sdk.operations.ListAdsCreatives2;
+import to.unified.unified_java_sdk.operations.PatchAdsCreative2;
+import to.unified.unified_java_sdk.operations.RemoveAdsCreative2;
+import to.unified.unified_java_sdk.operations.UpdateAdsCreative2;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -57,8 +57,8 @@ public class Creative {
      * 
      * @return The call builder
      */
-    public CreateAdsCreativeRequestBuilder createAdsCreative() {
-        return new CreateAdsCreativeRequestBuilder(sdkConfiguration);
+    public CreateAdsCreative2RequestBuilder createAdsCreative2() {
+        return new CreateAdsCreative2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -68,9 +68,9 @@ public class Creative {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateAdsCreativeResponse createAdsCreative(@Nonnull CreateAdsCreativeRequest request) {
-        RequestOperation<CreateAdsCreativeRequest, CreateAdsCreativeResponse> operation
-              = new CreateAdsCreative.Sync(sdkConfiguration, _headers);
+    public CreateAdsCreative2Response createAdsCreative2(@Nonnull CreateAdsCreative2Request request) {
+        RequestOperation<CreateAdsCreative2Request, CreateAdsCreative2Response> operation
+              = new CreateAdsCreative2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -79,8 +79,8 @@ public class Creative {
      * 
      * @return The call builder
      */
-    public GetAdsCreativeRequestBuilder getAdsCreative() {
-        return new GetAdsCreativeRequestBuilder(sdkConfiguration);
+    public GetAdsCreative2RequestBuilder getAdsCreative2() {
+        return new GetAdsCreative2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -90,9 +90,9 @@ public class Creative {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetAdsCreativeResponse getAdsCreative(@Nonnull GetAdsCreativeRequest request) {
-        RequestOperation<GetAdsCreativeRequest, GetAdsCreativeResponse> operation
-              = new GetAdsCreative.Sync(sdkConfiguration, _headers);
+    public GetAdsCreative2Response getAdsCreative2(@Nonnull GetAdsCreative2Request request) {
+        RequestOperation<GetAdsCreative2Request, GetAdsCreative2Response> operation
+              = new GetAdsCreative2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -101,8 +101,8 @@ public class Creative {
      * 
      * @return The call builder
      */
-    public ListAdsCreativesRequestBuilder listAdsCreatives() {
-        return new ListAdsCreativesRequestBuilder(sdkConfiguration);
+    public ListAdsCreatives2RequestBuilder listAdsCreatives2() {
+        return new ListAdsCreatives2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -112,9 +112,9 @@ public class Creative {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListAdsCreativesResponse listAdsCreatives(@Nonnull ListAdsCreativesRequest request) {
-        RequestOperation<ListAdsCreativesRequest, ListAdsCreativesResponse> operation
-              = new ListAdsCreatives.Sync(sdkConfiguration, _headers);
+    public ListAdsCreatives2Response listAdsCreatives2(@Nonnull ListAdsCreatives2Request request) {
+        RequestOperation<ListAdsCreatives2Request, ListAdsCreatives2Response> operation
+              = new ListAdsCreatives2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -123,8 +123,8 @@ public class Creative {
      * 
      * @return The call builder
      */
-    public PatchAdsCreativeRequestBuilder patchAdsCreative() {
-        return new PatchAdsCreativeRequestBuilder(sdkConfiguration);
+    public PatchAdsCreative2RequestBuilder patchAdsCreative2() {
+        return new PatchAdsCreative2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -134,9 +134,9 @@ public class Creative {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchAdsCreativeResponse patchAdsCreative(@Nonnull PatchAdsCreativeRequest request) {
-        RequestOperation<PatchAdsCreativeRequest, PatchAdsCreativeResponse> operation
-              = new PatchAdsCreative.Sync(sdkConfiguration, _headers);
+    public PatchAdsCreative2Response patchAdsCreative2(@Nonnull PatchAdsCreative2Request request) {
+        RequestOperation<PatchAdsCreative2Request, PatchAdsCreative2Response> operation
+              = new PatchAdsCreative2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -145,8 +145,8 @@ public class Creative {
      * 
      * @return The call builder
      */
-    public RemoveAdsCreativeRequestBuilder removeAdsCreative() {
-        return new RemoveAdsCreativeRequestBuilder(sdkConfiguration);
+    public RemoveAdsCreative2RequestBuilder removeAdsCreative2() {
+        return new RemoveAdsCreative2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -156,9 +156,9 @@ public class Creative {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveAdsCreativeResponse removeAdsCreative(@Nonnull RemoveAdsCreativeRequest request) {
-        RequestOperation<RemoveAdsCreativeRequest, RemoveAdsCreativeResponse> operation
-              = new RemoveAdsCreative.Sync(sdkConfiguration, _headers);
+    public RemoveAdsCreative2Response removeAdsCreative2(@Nonnull RemoveAdsCreative2Request request) {
+        RequestOperation<RemoveAdsCreative2Request, RemoveAdsCreative2Response> operation
+              = new RemoveAdsCreative2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -167,8 +167,8 @@ public class Creative {
      * 
      * @return The call builder
      */
-    public UpdateAdsCreativeRequestBuilder updateAdsCreative() {
-        return new UpdateAdsCreativeRequestBuilder(sdkConfiguration);
+    public UpdateAdsCreative2RequestBuilder updateAdsCreative2() {
+        return new UpdateAdsCreative2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -178,9 +178,9 @@ public class Creative {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateAdsCreativeResponse updateAdsCreative(@Nonnull UpdateAdsCreativeRequest request) {
-        RequestOperation<UpdateAdsCreativeRequest, UpdateAdsCreativeResponse> operation
-              = new UpdateAdsCreative.Sync(sdkConfiguration, _headers);
+    public UpdateAdsCreative2Response updateAdsCreative2(@Nonnull UpdateAdsCreative2Request request) {
+        RequestOperation<UpdateAdsCreative2Request, UpdateAdsCreative2Response> operation
+              = new UpdateAdsCreative2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

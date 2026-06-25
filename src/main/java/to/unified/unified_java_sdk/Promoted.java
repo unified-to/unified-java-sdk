@@ -6,14 +6,14 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
-import to.unified.unified_java_sdk.models.operations.GetAdsPromotedRequest;
-import to.unified.unified_java_sdk.models.operations.GetAdsPromotedRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.GetAdsPromotedResponse;
-import to.unified.unified_java_sdk.models.operations.ListAdsPromotedsRequest;
-import to.unified.unified_java_sdk.models.operations.ListAdsPromotedsRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.ListAdsPromotedsResponse;
-import to.unified.unified_java_sdk.operations.GetAdsPromoted;
-import to.unified.unified_java_sdk.operations.ListAdsPromoteds;
+import to.unified.unified_java_sdk.models.operations.GetAdsPromoted2Request;
+import to.unified.unified_java_sdk.models.operations.GetAdsPromoted2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetAdsPromoted2Response;
+import to.unified.unified_java_sdk.models.operations.ListAdsPromoteds2Request;
+import to.unified.unified_java_sdk.models.operations.ListAdsPromoteds2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListAdsPromoteds2Response;
+import to.unified.unified_java_sdk.operations.GetAdsPromoted2;
+import to.unified.unified_java_sdk.operations.ListAdsPromoteds2;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -41,8 +41,8 @@ public class Promoted {
      * 
      * @return The call builder
      */
-    public GetAdsPromotedRequestBuilder getAdsPromoted() {
-        return new GetAdsPromotedRequestBuilder(sdkConfiguration);
+    public GetAdsPromoted2RequestBuilder getAdsPromoted2() {
+        return new GetAdsPromoted2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -52,9 +52,9 @@ public class Promoted {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetAdsPromotedResponse getAdsPromoted(@Nonnull GetAdsPromotedRequest request) {
-        RequestOperation<GetAdsPromotedRequest, GetAdsPromotedResponse> operation
-              = new GetAdsPromoted.Sync(sdkConfiguration, _headers);
+    public GetAdsPromoted2Response getAdsPromoted2(@Nonnull GetAdsPromoted2Request request) {
+        RequestOperation<GetAdsPromoted2Request, GetAdsPromoted2Response> operation
+              = new GetAdsPromoted2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -63,8 +63,8 @@ public class Promoted {
      * 
      * @return The call builder
      */
-    public ListAdsPromotedsRequestBuilder listAdsPromoteds() {
-        return new ListAdsPromotedsRequestBuilder(sdkConfiguration);
+    public ListAdsPromoteds2RequestBuilder listAdsPromoteds2() {
+        return new ListAdsPromoteds2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -74,9 +74,9 @@ public class Promoted {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListAdsPromotedsResponse listAdsPromoteds(@Nonnull ListAdsPromotedsRequest request) {
-        RequestOperation<ListAdsPromotedsRequest, ListAdsPromotedsResponse> operation
-              = new ListAdsPromoteds.Sync(sdkConfiguration, _headers);
+    public ListAdsPromoteds2Response listAdsPromoteds2(@Nonnull ListAdsPromoteds2Request request) {
+        RequestOperation<ListAdsPromoteds2Request, ListAdsPromoteds2Response> operation
+              = new ListAdsPromoteds2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

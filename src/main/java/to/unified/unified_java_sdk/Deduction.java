@@ -6,30 +6,30 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
-import to.unified.unified_java_sdk.models.operations.CreateHrisDeductionRequest;
-import to.unified.unified_java_sdk.models.operations.CreateHrisDeductionRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.CreateHrisDeductionResponse;
-import to.unified.unified_java_sdk.models.operations.GetHrisDeductionRequest;
-import to.unified.unified_java_sdk.models.operations.GetHrisDeductionRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.GetHrisDeductionResponse;
-import to.unified.unified_java_sdk.models.operations.ListHrisDeductionsRequest;
-import to.unified.unified_java_sdk.models.operations.ListHrisDeductionsRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.ListHrisDeductionsResponse;
-import to.unified.unified_java_sdk.models.operations.PatchHrisDeductionRequest;
-import to.unified.unified_java_sdk.models.operations.PatchHrisDeductionRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.PatchHrisDeductionResponse;
-import to.unified.unified_java_sdk.models.operations.RemoveHrisDeductionRequest;
-import to.unified.unified_java_sdk.models.operations.RemoveHrisDeductionRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.RemoveHrisDeductionResponse;
-import to.unified.unified_java_sdk.models.operations.UpdateHrisDeductionRequest;
-import to.unified.unified_java_sdk.models.operations.UpdateHrisDeductionRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.UpdateHrisDeductionResponse;
-import to.unified.unified_java_sdk.operations.CreateHrisDeduction;
-import to.unified.unified_java_sdk.operations.GetHrisDeduction;
-import to.unified.unified_java_sdk.operations.ListHrisDeductions;
-import to.unified.unified_java_sdk.operations.PatchHrisDeduction;
-import to.unified.unified_java_sdk.operations.RemoveHrisDeduction;
-import to.unified.unified_java_sdk.operations.UpdateHrisDeduction;
+import to.unified.unified_java_sdk.models.operations.CreateHrisDeduction2Request;
+import to.unified.unified_java_sdk.models.operations.CreateHrisDeduction2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.CreateHrisDeduction2Response;
+import to.unified.unified_java_sdk.models.operations.GetHrisDeduction2Request;
+import to.unified.unified_java_sdk.models.operations.GetHrisDeduction2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetHrisDeduction2Response;
+import to.unified.unified_java_sdk.models.operations.ListHrisDeductions2Request;
+import to.unified.unified_java_sdk.models.operations.ListHrisDeductions2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListHrisDeductions2Response;
+import to.unified.unified_java_sdk.models.operations.PatchHrisDeduction2Request;
+import to.unified.unified_java_sdk.models.operations.PatchHrisDeduction2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.PatchHrisDeduction2Response;
+import to.unified.unified_java_sdk.models.operations.RemoveHrisDeduction2Request;
+import to.unified.unified_java_sdk.models.operations.RemoveHrisDeduction2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.RemoveHrisDeduction2Response;
+import to.unified.unified_java_sdk.models.operations.UpdateHrisDeduction2Request;
+import to.unified.unified_java_sdk.models.operations.UpdateHrisDeduction2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.UpdateHrisDeduction2Response;
+import to.unified.unified_java_sdk.operations.CreateHrisDeduction2;
+import to.unified.unified_java_sdk.operations.GetHrisDeduction2;
+import to.unified.unified_java_sdk.operations.ListHrisDeductions2;
+import to.unified.unified_java_sdk.operations.PatchHrisDeduction2;
+import to.unified.unified_java_sdk.operations.RemoveHrisDeduction2;
+import to.unified.unified_java_sdk.operations.UpdateHrisDeduction2;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -57,8 +57,8 @@ public class Deduction {
      * 
      * @return The call builder
      */
-    public CreateHrisDeductionRequestBuilder createHrisDeduction() {
-        return new CreateHrisDeductionRequestBuilder(sdkConfiguration);
+    public CreateHrisDeduction2RequestBuilder createHrisDeduction2() {
+        return new CreateHrisDeduction2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -68,9 +68,9 @@ public class Deduction {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateHrisDeductionResponse createHrisDeduction(@Nonnull CreateHrisDeductionRequest request) {
-        RequestOperation<CreateHrisDeductionRequest, CreateHrisDeductionResponse> operation
-              = new CreateHrisDeduction.Sync(sdkConfiguration, _headers);
+    public CreateHrisDeduction2Response createHrisDeduction2(@Nonnull CreateHrisDeduction2Request request) {
+        RequestOperation<CreateHrisDeduction2Request, CreateHrisDeduction2Response> operation
+              = new CreateHrisDeduction2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -79,8 +79,8 @@ public class Deduction {
      * 
      * @return The call builder
      */
-    public GetHrisDeductionRequestBuilder getHrisDeduction() {
-        return new GetHrisDeductionRequestBuilder(sdkConfiguration);
+    public GetHrisDeduction2RequestBuilder getHrisDeduction2() {
+        return new GetHrisDeduction2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -90,9 +90,9 @@ public class Deduction {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetHrisDeductionResponse getHrisDeduction(@Nonnull GetHrisDeductionRequest request) {
-        RequestOperation<GetHrisDeductionRequest, GetHrisDeductionResponse> operation
-              = new GetHrisDeduction.Sync(sdkConfiguration, _headers);
+    public GetHrisDeduction2Response getHrisDeduction2(@Nonnull GetHrisDeduction2Request request) {
+        RequestOperation<GetHrisDeduction2Request, GetHrisDeduction2Response> operation
+              = new GetHrisDeduction2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -101,8 +101,8 @@ public class Deduction {
      * 
      * @return The call builder
      */
-    public ListHrisDeductionsRequestBuilder listHrisDeductions() {
-        return new ListHrisDeductionsRequestBuilder(sdkConfiguration);
+    public ListHrisDeductions2RequestBuilder listHrisDeductions2() {
+        return new ListHrisDeductions2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -112,9 +112,9 @@ public class Deduction {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListHrisDeductionsResponse listHrisDeductions(@Nonnull ListHrisDeductionsRequest request) {
-        RequestOperation<ListHrisDeductionsRequest, ListHrisDeductionsResponse> operation
-              = new ListHrisDeductions.Sync(sdkConfiguration, _headers);
+    public ListHrisDeductions2Response listHrisDeductions2(@Nonnull ListHrisDeductions2Request request) {
+        RequestOperation<ListHrisDeductions2Request, ListHrisDeductions2Response> operation
+              = new ListHrisDeductions2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -123,8 +123,8 @@ public class Deduction {
      * 
      * @return The call builder
      */
-    public PatchHrisDeductionRequestBuilder patchHrisDeduction() {
-        return new PatchHrisDeductionRequestBuilder(sdkConfiguration);
+    public PatchHrisDeduction2RequestBuilder patchHrisDeduction2() {
+        return new PatchHrisDeduction2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -134,9 +134,9 @@ public class Deduction {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchHrisDeductionResponse patchHrisDeduction(@Nonnull PatchHrisDeductionRequest request) {
-        RequestOperation<PatchHrisDeductionRequest, PatchHrisDeductionResponse> operation
-              = new PatchHrisDeduction.Sync(sdkConfiguration, _headers);
+    public PatchHrisDeduction2Response patchHrisDeduction2(@Nonnull PatchHrisDeduction2Request request) {
+        RequestOperation<PatchHrisDeduction2Request, PatchHrisDeduction2Response> operation
+              = new PatchHrisDeduction2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -145,8 +145,8 @@ public class Deduction {
      * 
      * @return The call builder
      */
-    public RemoveHrisDeductionRequestBuilder removeHrisDeduction() {
-        return new RemoveHrisDeductionRequestBuilder(sdkConfiguration);
+    public RemoveHrisDeduction2RequestBuilder removeHrisDeduction2() {
+        return new RemoveHrisDeduction2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -156,9 +156,9 @@ public class Deduction {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveHrisDeductionResponse removeHrisDeduction(@Nonnull RemoveHrisDeductionRequest request) {
-        RequestOperation<RemoveHrisDeductionRequest, RemoveHrisDeductionResponse> operation
-              = new RemoveHrisDeduction.Sync(sdkConfiguration, _headers);
+    public RemoveHrisDeduction2Response removeHrisDeduction2(@Nonnull RemoveHrisDeduction2Request request) {
+        RequestOperation<RemoveHrisDeduction2Request, RemoveHrisDeduction2Response> operation
+              = new RemoveHrisDeduction2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -167,8 +167,8 @@ public class Deduction {
      * 
      * @return The call builder
      */
-    public UpdateHrisDeductionRequestBuilder updateHrisDeduction() {
-        return new UpdateHrisDeductionRequestBuilder(sdkConfiguration);
+    public UpdateHrisDeduction2RequestBuilder updateHrisDeduction2() {
+        return new UpdateHrisDeduction2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -178,9 +178,9 @@ public class Deduction {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateHrisDeductionResponse updateHrisDeduction(@Nonnull UpdateHrisDeductionRequest request) {
-        RequestOperation<UpdateHrisDeductionRequest, UpdateHrisDeductionResponse> operation
-              = new UpdateHrisDeduction.Sync(sdkConfiguration, _headers);
+    public UpdateHrisDeduction2Response updateHrisDeduction2(@Nonnull UpdateHrisDeduction2Request request) {
+        RequestOperation<UpdateHrisDeduction2Request, UpdateHrisDeduction2Response> operation
+              = new UpdateHrisDeduction2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

@@ -10,6 +10,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.annotation.Nonnull;
 import jakarta.annotation.Nullable;
 import java.lang.Boolean;
+import java.lang.Double;
 import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
@@ -44,6 +45,16 @@ public class HrisTimeoff {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private OffsetDateTime createdAt;
+
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("duration")
+    private Double duration;
+
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("duration_type")
+    private DurationType durationType;
 
 
     @JsonInclude(Include.NON_ABSENT)
@@ -101,6 +112,8 @@ public class HrisTimeoff {
             @JsonProperty("comments") @Nullable String comments,
             @JsonProperty("company_id") @Nullable String companyId,
             @JsonProperty("created_at") @Nullable OffsetDateTime createdAt,
+            @JsonProperty("duration") @Nullable Double duration,
+            @JsonProperty("duration_type") @Nullable DurationType durationType,
             @JsonProperty("end_at") @Nullable OffsetDateTime endAt,
             @JsonProperty("id") @Nullable String id,
             @JsonProperty("is_paid") @Nullable Boolean isPaid,
@@ -116,6 +129,8 @@ public class HrisTimeoff {
         this.comments = comments;
         this.companyId = companyId;
         this.createdAt = createdAt;
+        this.duration = duration;
+        this.durationType = durationType;
         this.endAt = endAt;
         this.id = id;
         this.isPaid = isPaid;
@@ -135,7 +150,8 @@ public class HrisTimeoff {
             null, null, null,
             null, null, null,
             null, null, null,
-            null, null, userId);
+            null, null, null,
+            null, userId);
     }
 
     public Optional<OffsetDateTime> approvedAt() {
@@ -156,6 +172,14 @@ public class HrisTimeoff {
 
     public Optional<OffsetDateTime> createdAt() {
         return Optional.ofNullable(this.createdAt);
+    }
+
+    public Optional<Double> duration() {
+        return Optional.ofNullable(this.duration);
+    }
+
+    public Optional<DurationType> durationType() {
+        return Optional.ofNullable(this.durationType);
     }
 
     public Optional<OffsetDateTime> endAt() {
@@ -229,6 +253,18 @@ public class HrisTimeoff {
 
     public HrisTimeoff withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
+        return this;
+    }
+
+
+    public HrisTimeoff withDuration(@Nullable Double duration) {
+        this.duration = duration;
+        return this;
+    }
+
+
+    public HrisTimeoff withDurationType(@Nullable DurationType durationType) {
+        this.durationType = durationType;
         return this;
     }
 
@@ -308,6 +344,8 @@ public class HrisTimeoff {
             Utils.enhancedDeepEquals(this.comments, other.comments) &&
             Utils.enhancedDeepEquals(this.companyId, other.companyId) &&
             Utils.enhancedDeepEquals(this.createdAt, other.createdAt) &&
+            Utils.enhancedDeepEquals(this.duration, other.duration) &&
+            Utils.enhancedDeepEquals(this.durationType, other.durationType) &&
             Utils.enhancedDeepEquals(this.endAt, other.endAt) &&
             Utils.enhancedDeepEquals(this.id, other.id) &&
             Utils.enhancedDeepEquals(this.isPaid, other.isPaid) &&
@@ -324,10 +362,11 @@ public class HrisTimeoff {
     public int hashCode() {
         return Utils.enhancedHash(
             approvedAt, approverUserId, comments,
-            companyId, createdAt, endAt,
-            id, isPaid, raw,
-            reason, startAt, status,
-            type, updatedAt, userId);
+            companyId, createdAt, duration,
+            durationType, endAt, id,
+            isPaid, raw, reason,
+            startAt, status, type,
+            updatedAt, userId);
     }
     
     @Override
@@ -338,6 +377,8 @@ public class HrisTimeoff {
                 "comments", comments,
                 "companyId", companyId,
                 "createdAt", createdAt,
+                "duration", duration,
+                "durationType", durationType,
                 "endAt", endAt,
                 "id", id,
                 "isPaid", isPaid,
@@ -362,6 +403,10 @@ public class HrisTimeoff {
         private String companyId;
 
         private OffsetDateTime createdAt;
+
+        private Double duration;
+
+        private DurationType durationType;
 
         private OffsetDateTime endAt;
 
@@ -409,6 +454,16 @@ public class HrisTimeoff {
 
         public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
+            return this;
+        }
+
+        public Builder duration(@Nullable Double duration) {
+            this.duration = duration;
+            return this;
+        }
+
+        public Builder durationType(@Nullable DurationType durationType) {
+            this.durationType = durationType;
             return this;
         }
 
@@ -465,10 +520,11 @@ public class HrisTimeoff {
         public HrisTimeoff build() {
             return new HrisTimeoff(
                 approvedAt, approverUserId, comments,
-                companyId, createdAt, endAt,
-                id, isPaid, raw,
-                reason, startAt, status,
-                type, updatedAt, userId);
+                companyId, createdAt, duration,
+                durationType, endAt, id,
+                isPaid, raw, reason,
+                startAt, status, type,
+                updatedAt, userId);
         }
 
     }

@@ -6,14 +6,14 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
-import to.unified.unified_java_sdk.models.operations.GetHrisPayslipRequest;
-import to.unified.unified_java_sdk.models.operations.GetHrisPayslipRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.GetHrisPayslipResponse;
-import to.unified.unified_java_sdk.models.operations.ListHrisPayslipsRequest;
-import to.unified.unified_java_sdk.models.operations.ListHrisPayslipsRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.ListHrisPayslipsResponse;
-import to.unified.unified_java_sdk.operations.GetHrisPayslip;
-import to.unified.unified_java_sdk.operations.ListHrisPayslips;
+import to.unified.unified_java_sdk.models.operations.GetHrisPayslip2Request;
+import to.unified.unified_java_sdk.models.operations.GetHrisPayslip2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetHrisPayslip2Response;
+import to.unified.unified_java_sdk.models.operations.ListHrisPayslips2Request;
+import to.unified.unified_java_sdk.models.operations.ListHrisPayslips2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListHrisPayslips2Response;
+import to.unified.unified_java_sdk.operations.GetHrisPayslip2;
+import to.unified.unified_java_sdk.operations.ListHrisPayslips2;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -41,8 +41,8 @@ public class Payslip {
      * 
      * @return The call builder
      */
-    public GetHrisPayslipRequestBuilder getHrisPayslip() {
-        return new GetHrisPayslipRequestBuilder(sdkConfiguration);
+    public GetHrisPayslip2RequestBuilder getHrisPayslip2() {
+        return new GetHrisPayslip2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -52,9 +52,9 @@ public class Payslip {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetHrisPayslipResponse getHrisPayslip(@Nonnull GetHrisPayslipRequest request) {
-        RequestOperation<GetHrisPayslipRequest, GetHrisPayslipResponse> operation
-              = new GetHrisPayslip.Sync(sdkConfiguration, _headers);
+    public GetHrisPayslip2Response getHrisPayslip2(@Nonnull GetHrisPayslip2Request request) {
+        RequestOperation<GetHrisPayslip2Request, GetHrisPayslip2Response> operation
+              = new GetHrisPayslip2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -63,8 +63,8 @@ public class Payslip {
      * 
      * @return The call builder
      */
-    public ListHrisPayslipsRequestBuilder listHrisPayslips() {
-        return new ListHrisPayslipsRequestBuilder(sdkConfiguration);
+    public ListHrisPayslips2RequestBuilder listHrisPayslips2() {
+        return new ListHrisPayslips2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -74,9 +74,9 @@ public class Payslip {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListHrisPayslipsResponse listHrisPayslips(@Nonnull ListHrisPayslipsRequest request) {
-        RequestOperation<ListHrisPayslipsRequest, ListHrisPayslipsResponse> operation
-              = new ListHrisPayslips.Sync(sdkConfiguration, _headers);
+    public ListHrisPayslips2Response listHrisPayslips2(@Nonnull ListHrisPayslips2Request request) {
+        RequestOperation<ListHrisPayslips2Request, ListHrisPayslips2Response> operation
+              = new ListHrisPayslips2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

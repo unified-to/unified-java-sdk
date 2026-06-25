@@ -41,6 +41,11 @@ public class UcRecording {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("contacts")
+    private List<UcContact> contacts;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private OffsetDateTime createdAt;
 
@@ -110,6 +115,7 @@ public class UcRecording {
             @JsonProperty("contact_id") @Nullable String contactId,
             @JsonProperty("contact_name") @Nullable String contactName,
             @JsonProperty("contact_phone") @Nullable String contactPhone,
+            @JsonProperty("contacts") @Nullable List<UcContact> contacts,
             @JsonProperty("created_at") @Nullable OffsetDateTime createdAt,
             @JsonProperty("end_at") @Nullable OffsetDateTime endAt,
             @JsonProperty("expires_at") @Nullable OffsetDateTime expiresAt,
@@ -127,6 +133,7 @@ public class UcRecording {
         this.contactId = contactId;
         this.contactName = contactName;
         this.contactPhone = contactPhone;
+        this.contacts = contacts;
         this.createdAt = createdAt;
         this.endAt = endAt;
         this.expiresAt = expiresAt;
@@ -148,7 +155,7 @@ public class UcRecording {
             null, null, null,
             null, null, null,
             null, null, null,
-            null, null);
+            null, null, null);
     }
 
     public Optional<String> callId() {
@@ -165,6 +172,10 @@ public class UcRecording {
 
     public Optional<String> contactPhone() {
         return Optional.ofNullable(this.contactPhone);
+    }
+
+    public Optional<List<UcContact>> contacts() {
+        return Optional.ofNullable(this.contacts);
     }
 
     public Optional<OffsetDateTime> createdAt() {
@@ -244,6 +255,12 @@ public class UcRecording {
 
     public UcRecording withContactPhone(@Nullable String contactPhone) {
         this.contactPhone = contactPhone;
+        return this;
+    }
+
+
+    public UcRecording withContacts(@Nullable List<UcContact> contacts) {
+        this.contacts = contacts;
         return this;
     }
 
@@ -340,6 +357,7 @@ public class UcRecording {
             Utils.enhancedDeepEquals(this.contactId, other.contactId) &&
             Utils.enhancedDeepEquals(this.contactName, other.contactName) &&
             Utils.enhancedDeepEquals(this.contactPhone, other.contactPhone) &&
+            Utils.enhancedDeepEquals(this.contacts, other.contacts) &&
             Utils.enhancedDeepEquals(this.createdAt, other.createdAt) &&
             Utils.enhancedDeepEquals(this.endAt, other.endAt) &&
             Utils.enhancedDeepEquals(this.expiresAt, other.expiresAt) &&
@@ -359,11 +377,11 @@ public class UcRecording {
     public int hashCode() {
         return Utils.enhancedHash(
             callId, contactId, contactName,
-            contactPhone, createdAt, endAt,
-            expiresAt, id, media,
-            raw, startAt, type,
-            updatedAt, userId, userName,
-            userPhone, webUrl);
+            contactPhone, contacts, createdAt,
+            endAt, expiresAt, id,
+            media, raw, startAt,
+            type, updatedAt, userId,
+            userName, userPhone, webUrl);
     }
     
     @Override
@@ -373,6 +391,7 @@ public class UcRecording {
                 "contactId", contactId,
                 "contactName", contactName,
                 "contactPhone", contactPhone,
+                "contacts", contacts,
                 "createdAt", createdAt,
                 "endAt", endAt,
                 "expiresAt", expiresAt,
@@ -398,6 +417,8 @@ public class UcRecording {
         private String contactName;
 
         private String contactPhone;
+
+        private List<UcContact> contacts;
 
         private OffsetDateTime createdAt;
 
@@ -446,6 +467,11 @@ public class UcRecording {
 
         public Builder contactPhone(@Nullable String contactPhone) {
             this.contactPhone = contactPhone;
+            return this;
+        }
+
+        public Builder contacts(@Nullable List<UcContact> contacts) {
+            this.contacts = contacts;
             return this;
         }
 
@@ -517,11 +543,11 @@ public class UcRecording {
         public UcRecording build() {
             return new UcRecording(
                 callId, contactId, contactName,
-                contactPhone, createdAt, endAt,
-                expiresAt, id, media,
-                raw, startAt, type,
-                updatedAt, userId, userName,
-                userPhone, webUrl);
+                contactPhone, contacts, createdAt,
+                endAt, expiresAt, id,
+                media, raw, startAt,
+                type, updatedAt, userId,
+                userName, userPhone, webUrl);
         }
 
     }

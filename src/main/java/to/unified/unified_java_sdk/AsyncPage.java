@@ -7,30 +7,30 @@ import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOper
 
 import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
-import to.unified.unified_java_sdk.models.operations.CreateKmsPageRequest;
-import to.unified.unified_java_sdk.models.operations.GetKmsPageRequest;
-import to.unified.unified_java_sdk.models.operations.ListKmsPagesRequest;
-import to.unified.unified_java_sdk.models.operations.PatchKmsPageRequest;
-import to.unified.unified_java_sdk.models.operations.RemoveKmsPageRequest;
-import to.unified.unified_java_sdk.models.operations.UpdateKmsPageRequest;
-import to.unified.unified_java_sdk.models.operations.async.CreateKmsPageRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.CreateKmsPageResponse;
-import to.unified.unified_java_sdk.models.operations.async.GetKmsPageRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.GetKmsPageResponse;
-import to.unified.unified_java_sdk.models.operations.async.ListKmsPagesRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.ListKmsPagesResponse;
-import to.unified.unified_java_sdk.models.operations.async.PatchKmsPageRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.PatchKmsPageResponse;
-import to.unified.unified_java_sdk.models.operations.async.RemoveKmsPageRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.RemoveKmsPageResponse;
-import to.unified.unified_java_sdk.models.operations.async.UpdateKmsPageRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.UpdateKmsPageResponse;
-import to.unified.unified_java_sdk.operations.CreateKmsPage;
-import to.unified.unified_java_sdk.operations.GetKmsPage;
-import to.unified.unified_java_sdk.operations.ListKmsPages;
-import to.unified.unified_java_sdk.operations.PatchKmsPage;
-import to.unified.unified_java_sdk.operations.RemoveKmsPage;
-import to.unified.unified_java_sdk.operations.UpdateKmsPage;
+import to.unified.unified_java_sdk.models.operations.CreateKmsPage2Request;
+import to.unified.unified_java_sdk.models.operations.GetKmsPage2Request;
+import to.unified.unified_java_sdk.models.operations.ListKmsPages2Request;
+import to.unified.unified_java_sdk.models.operations.PatchKmsPage2Request;
+import to.unified.unified_java_sdk.models.operations.RemoveKmsPage2Request;
+import to.unified.unified_java_sdk.models.operations.UpdateKmsPage2Request;
+import to.unified.unified_java_sdk.models.operations.async.CreateKmsPage2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.CreateKmsPage2Response;
+import to.unified.unified_java_sdk.models.operations.async.GetKmsPage2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetKmsPage2Response;
+import to.unified.unified_java_sdk.models.operations.async.ListKmsPages2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListKmsPages2Response;
+import to.unified.unified_java_sdk.models.operations.async.PatchKmsPage2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.PatchKmsPage2Response;
+import to.unified.unified_java_sdk.models.operations.async.RemoveKmsPage2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.RemoveKmsPage2Response;
+import to.unified.unified_java_sdk.models.operations.async.UpdateKmsPage2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.UpdateKmsPage2Response;
+import to.unified.unified_java_sdk.operations.CreateKmsPage2;
+import to.unified.unified_java_sdk.operations.GetKmsPage2;
+import to.unified.unified_java_sdk.operations.ListKmsPages2;
+import to.unified.unified_java_sdk.operations.PatchKmsPage2;
+import to.unified.unified_java_sdk.operations.RemoveKmsPage2;
+import to.unified.unified_java_sdk.operations.UpdateKmsPage2;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -59,19 +59,19 @@ public class AsyncPage {
      * 
      * @return The async call builder
      */
-    public CreateKmsPageRequestBuilder createKmsPage() {
-        return new CreateKmsPageRequestBuilder(sdkConfiguration);
+    public CreateKmsPage2RequestBuilder createKmsPage2() {
+        return new CreateKmsPage2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Create a page
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<CreateKmsPageResponse>} - The async response
+     * @return {@code CompletableFuture<CreateKmsPage2Response>} - The async response
      */
-    public CompletableFuture<CreateKmsPageResponse> createKmsPage(@Nonnull CreateKmsPageRequest request) {
-        AsyncRequestOperation<CreateKmsPageRequest, CreateKmsPageResponse> operation
-              = new CreateKmsPage.Async(sdkConfiguration, _headers);
+    public CompletableFuture<CreateKmsPage2Response> createKmsPage2(@Nonnull CreateKmsPage2Request request) {
+        AsyncRequestOperation<CreateKmsPage2Request, CreateKmsPage2Response> operation
+              = new CreateKmsPage2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -82,19 +82,19 @@ public class AsyncPage {
      * 
      * @return The async call builder
      */
-    public GetKmsPageRequestBuilder getKmsPage() {
-        return new GetKmsPageRequestBuilder(sdkConfiguration);
+    public GetKmsPage2RequestBuilder getKmsPage2() {
+        return new GetKmsPage2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Retrieve a page
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<GetKmsPageResponse>} - The async response
+     * @return {@code CompletableFuture<GetKmsPage2Response>} - The async response
      */
-    public CompletableFuture<GetKmsPageResponse> getKmsPage(@Nonnull GetKmsPageRequest request) {
-        AsyncRequestOperation<GetKmsPageRequest, GetKmsPageResponse> operation
-              = new GetKmsPage.Async(sdkConfiguration, _headers);
+    public CompletableFuture<GetKmsPage2Response> getKmsPage2(@Nonnull GetKmsPage2Request request) {
+        AsyncRequestOperation<GetKmsPage2Request, GetKmsPage2Response> operation
+              = new GetKmsPage2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -105,19 +105,19 @@ public class AsyncPage {
      * 
      * @return The async call builder
      */
-    public ListKmsPagesRequestBuilder listKmsPages() {
-        return new ListKmsPagesRequestBuilder(sdkConfiguration);
+    public ListKmsPages2RequestBuilder listKmsPages2() {
+        return new ListKmsPages2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * List all pages
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<ListKmsPagesResponse>} - The async response
+     * @return {@code CompletableFuture<ListKmsPages2Response>} - The async response
      */
-    public CompletableFuture<ListKmsPagesResponse> listKmsPages(@Nonnull ListKmsPagesRequest request) {
-        AsyncRequestOperation<ListKmsPagesRequest, ListKmsPagesResponse> operation
-              = new ListKmsPages.Async(sdkConfiguration, _headers);
+    public CompletableFuture<ListKmsPages2Response> listKmsPages2(@Nonnull ListKmsPages2Request request) {
+        AsyncRequestOperation<ListKmsPages2Request, ListKmsPages2Response> operation
+              = new ListKmsPages2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -128,19 +128,19 @@ public class AsyncPage {
      * 
      * @return The async call builder
      */
-    public PatchKmsPageRequestBuilder patchKmsPage() {
-        return new PatchKmsPageRequestBuilder(sdkConfiguration);
+    public PatchKmsPage2RequestBuilder patchKmsPage2() {
+        return new PatchKmsPage2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update a page
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<PatchKmsPageResponse>} - The async response
+     * @return {@code CompletableFuture<PatchKmsPage2Response>} - The async response
      */
-    public CompletableFuture<PatchKmsPageResponse> patchKmsPage(@Nonnull PatchKmsPageRequest request) {
-        AsyncRequestOperation<PatchKmsPageRequest, PatchKmsPageResponse> operation
-              = new PatchKmsPage.Async(sdkConfiguration, _headers);
+    public CompletableFuture<PatchKmsPage2Response> patchKmsPage2(@Nonnull PatchKmsPage2Request request) {
+        AsyncRequestOperation<PatchKmsPage2Request, PatchKmsPage2Response> operation
+              = new PatchKmsPage2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -151,19 +151,19 @@ public class AsyncPage {
      * 
      * @return The async call builder
      */
-    public RemoveKmsPageRequestBuilder removeKmsPage() {
-        return new RemoveKmsPageRequestBuilder(sdkConfiguration);
+    public RemoveKmsPage2RequestBuilder removeKmsPage2() {
+        return new RemoveKmsPage2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Remove a page
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<RemoveKmsPageResponse>} - The async response
+     * @return {@code CompletableFuture<RemoveKmsPage2Response>} - The async response
      */
-    public CompletableFuture<RemoveKmsPageResponse> removeKmsPage(@Nonnull RemoveKmsPageRequest request) {
-        AsyncRequestOperation<RemoveKmsPageRequest, RemoveKmsPageResponse> operation
-              = new RemoveKmsPage.Async(sdkConfiguration, _headers);
+    public CompletableFuture<RemoveKmsPage2Response> removeKmsPage2(@Nonnull RemoveKmsPage2Request request) {
+        AsyncRequestOperation<RemoveKmsPage2Request, RemoveKmsPage2Response> operation
+              = new RemoveKmsPage2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -174,19 +174,19 @@ public class AsyncPage {
      * 
      * @return The async call builder
      */
-    public UpdateKmsPageRequestBuilder updateKmsPage() {
-        return new UpdateKmsPageRequestBuilder(sdkConfiguration);
+    public UpdateKmsPage2RequestBuilder updateKmsPage2() {
+        return new UpdateKmsPage2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update a page
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<UpdateKmsPageResponse>} - The async response
+     * @return {@code CompletableFuture<UpdateKmsPage2Response>} - The async response
      */
-    public CompletableFuture<UpdateKmsPageResponse> updateKmsPage(@Nonnull UpdateKmsPageRequest request) {
-        AsyncRequestOperation<UpdateKmsPageRequest, UpdateKmsPageResponse> operation
-              = new UpdateKmsPage.Async(sdkConfiguration, _headers);
+    public CompletableFuture<UpdateKmsPage2Response> updateKmsPage2(@Nonnull UpdateKmsPage2Request request) {
+        AsyncRequestOperation<UpdateKmsPage2Request, UpdateKmsPage2Response> operation
+              = new UpdateKmsPage2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

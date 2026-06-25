@@ -6,86 +6,86 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
-import to.unified.unified_java_sdk.models.operations.CreateUcCommentRequest;
-import to.unified.unified_java_sdk.models.operations.CreateUcCommentRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.CreateUcCommentResponse;
-import to.unified.unified_java_sdk.models.operations.CreateUcContactRequest;
-import to.unified.unified_java_sdk.models.operations.CreateUcContactRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.CreateUcContactResponse;
-import to.unified.unified_java_sdk.models.operations.CreateUcRecordingRequest;
-import to.unified.unified_java_sdk.models.operations.CreateUcRecordingRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.CreateUcRecordingResponse;
-import to.unified.unified_java_sdk.models.operations.GetUcCallRequest;
-import to.unified.unified_java_sdk.models.operations.GetUcCallRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.GetUcCallResponse;
-import to.unified.unified_java_sdk.models.operations.GetUcCommentRequest;
-import to.unified.unified_java_sdk.models.operations.GetUcCommentRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.GetUcCommentResponse;
-import to.unified.unified_java_sdk.models.operations.GetUcContactRequest;
-import to.unified.unified_java_sdk.models.operations.GetUcContactRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.GetUcContactResponse;
-import to.unified.unified_java_sdk.models.operations.GetUcRecordingRequest;
-import to.unified.unified_java_sdk.models.operations.GetUcRecordingRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.GetUcRecordingResponse;
-import to.unified.unified_java_sdk.models.operations.ListUcCallsRequest;
-import to.unified.unified_java_sdk.models.operations.ListUcCallsRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.ListUcCallsResponse;
-import to.unified.unified_java_sdk.models.operations.ListUcCommentsRequest;
-import to.unified.unified_java_sdk.models.operations.ListUcCommentsRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.ListUcCommentsResponse;
-import to.unified.unified_java_sdk.models.operations.ListUcContactsRequest;
-import to.unified.unified_java_sdk.models.operations.ListUcContactsRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.ListUcContactsResponse;
-import to.unified.unified_java_sdk.models.operations.ListUcRecordingsRequest;
-import to.unified.unified_java_sdk.models.operations.ListUcRecordingsRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.ListUcRecordingsResponse;
-import to.unified.unified_java_sdk.models.operations.PatchUcCommentRequest;
-import to.unified.unified_java_sdk.models.operations.PatchUcCommentRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.PatchUcCommentResponse;
-import to.unified.unified_java_sdk.models.operations.PatchUcContactRequest;
-import to.unified.unified_java_sdk.models.operations.PatchUcContactRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.PatchUcContactResponse;
-import to.unified.unified_java_sdk.models.operations.PatchUcRecordingRequest;
-import to.unified.unified_java_sdk.models.operations.PatchUcRecordingRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.PatchUcRecordingResponse;
-import to.unified.unified_java_sdk.models.operations.RemoveUcCommentRequest;
-import to.unified.unified_java_sdk.models.operations.RemoveUcCommentRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.RemoveUcCommentResponse;
-import to.unified.unified_java_sdk.models.operations.RemoveUcContactRequest;
-import to.unified.unified_java_sdk.models.operations.RemoveUcContactRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.RemoveUcContactResponse;
-import to.unified.unified_java_sdk.models.operations.RemoveUcRecordingRequest;
-import to.unified.unified_java_sdk.models.operations.RemoveUcRecordingRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.RemoveUcRecordingResponse;
-import to.unified.unified_java_sdk.models.operations.UpdateUcCommentRequest;
-import to.unified.unified_java_sdk.models.operations.UpdateUcCommentRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.UpdateUcCommentResponse;
-import to.unified.unified_java_sdk.models.operations.UpdateUcContactRequest;
-import to.unified.unified_java_sdk.models.operations.UpdateUcContactRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.UpdateUcContactResponse;
-import to.unified.unified_java_sdk.models.operations.UpdateUcRecordingRequest;
-import to.unified.unified_java_sdk.models.operations.UpdateUcRecordingRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.UpdateUcRecordingResponse;
-import to.unified.unified_java_sdk.operations.CreateUcComment;
-import to.unified.unified_java_sdk.operations.CreateUcContact;
-import to.unified.unified_java_sdk.operations.CreateUcRecording;
-import to.unified.unified_java_sdk.operations.GetUcCall;
-import to.unified.unified_java_sdk.operations.GetUcComment;
-import to.unified.unified_java_sdk.operations.GetUcContact;
-import to.unified.unified_java_sdk.operations.GetUcRecording;
-import to.unified.unified_java_sdk.operations.ListUcCalls;
-import to.unified.unified_java_sdk.operations.ListUcComments;
-import to.unified.unified_java_sdk.operations.ListUcContacts;
-import to.unified.unified_java_sdk.operations.ListUcRecordings;
-import to.unified.unified_java_sdk.operations.PatchUcComment;
-import to.unified.unified_java_sdk.operations.PatchUcContact;
-import to.unified.unified_java_sdk.operations.PatchUcRecording;
-import to.unified.unified_java_sdk.operations.RemoveUcComment;
-import to.unified.unified_java_sdk.operations.RemoveUcContact;
-import to.unified.unified_java_sdk.operations.RemoveUcRecording;
-import to.unified.unified_java_sdk.operations.UpdateUcComment;
-import to.unified.unified_java_sdk.operations.UpdateUcContact;
-import to.unified.unified_java_sdk.operations.UpdateUcRecording;
+import to.unified.unified_java_sdk.models.operations.CreateUcComment2Request;
+import to.unified.unified_java_sdk.models.operations.CreateUcComment2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.CreateUcComment2Response;
+import to.unified.unified_java_sdk.models.operations.CreateUcContact2Request;
+import to.unified.unified_java_sdk.models.operations.CreateUcContact2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.CreateUcContact2Response;
+import to.unified.unified_java_sdk.models.operations.CreateUcRecording2Request;
+import to.unified.unified_java_sdk.models.operations.CreateUcRecording2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.CreateUcRecording2Response;
+import to.unified.unified_java_sdk.models.operations.GetUcCall2Request;
+import to.unified.unified_java_sdk.models.operations.GetUcCall2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetUcCall2Response;
+import to.unified.unified_java_sdk.models.operations.GetUcComment2Request;
+import to.unified.unified_java_sdk.models.operations.GetUcComment2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetUcComment2Response;
+import to.unified.unified_java_sdk.models.operations.GetUcContact2Request;
+import to.unified.unified_java_sdk.models.operations.GetUcContact2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetUcContact2Response;
+import to.unified.unified_java_sdk.models.operations.GetUcRecording2Request;
+import to.unified.unified_java_sdk.models.operations.GetUcRecording2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetUcRecording2Response;
+import to.unified.unified_java_sdk.models.operations.ListUcCalls2Request;
+import to.unified.unified_java_sdk.models.operations.ListUcCalls2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListUcCalls2Response;
+import to.unified.unified_java_sdk.models.operations.ListUcComments2Request;
+import to.unified.unified_java_sdk.models.operations.ListUcComments2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListUcComments2Response;
+import to.unified.unified_java_sdk.models.operations.ListUcContacts2Request;
+import to.unified.unified_java_sdk.models.operations.ListUcContacts2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListUcContacts2Response;
+import to.unified.unified_java_sdk.models.operations.ListUcRecordings2Request;
+import to.unified.unified_java_sdk.models.operations.ListUcRecordings2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListUcRecordings2Response;
+import to.unified.unified_java_sdk.models.operations.PatchUcComment2Request;
+import to.unified.unified_java_sdk.models.operations.PatchUcComment2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.PatchUcComment2Response;
+import to.unified.unified_java_sdk.models.operations.PatchUcContact2Request;
+import to.unified.unified_java_sdk.models.operations.PatchUcContact2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.PatchUcContact2Response;
+import to.unified.unified_java_sdk.models.operations.PatchUcRecording2Request;
+import to.unified.unified_java_sdk.models.operations.PatchUcRecording2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.PatchUcRecording2Response;
+import to.unified.unified_java_sdk.models.operations.RemoveUcComment2Request;
+import to.unified.unified_java_sdk.models.operations.RemoveUcComment2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.RemoveUcComment2Response;
+import to.unified.unified_java_sdk.models.operations.RemoveUcContact2Request;
+import to.unified.unified_java_sdk.models.operations.RemoveUcContact2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.RemoveUcContact2Response;
+import to.unified.unified_java_sdk.models.operations.RemoveUcRecording2Request;
+import to.unified.unified_java_sdk.models.operations.RemoveUcRecording2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.RemoveUcRecording2Response;
+import to.unified.unified_java_sdk.models.operations.UpdateUcComment2Request;
+import to.unified.unified_java_sdk.models.operations.UpdateUcComment2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.UpdateUcComment2Response;
+import to.unified.unified_java_sdk.models.operations.UpdateUcContact2Request;
+import to.unified.unified_java_sdk.models.operations.UpdateUcContact2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.UpdateUcContact2Response;
+import to.unified.unified_java_sdk.models.operations.UpdateUcRecording2Request;
+import to.unified.unified_java_sdk.models.operations.UpdateUcRecording2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.UpdateUcRecording2Response;
+import to.unified.unified_java_sdk.operations.CreateUcComment2;
+import to.unified.unified_java_sdk.operations.CreateUcContact2;
+import to.unified.unified_java_sdk.operations.CreateUcRecording2;
+import to.unified.unified_java_sdk.operations.GetUcCall2;
+import to.unified.unified_java_sdk.operations.GetUcComment2;
+import to.unified.unified_java_sdk.operations.GetUcContact2;
+import to.unified.unified_java_sdk.operations.GetUcRecording2;
+import to.unified.unified_java_sdk.operations.ListUcCalls2;
+import to.unified.unified_java_sdk.operations.ListUcComments2;
+import to.unified.unified_java_sdk.operations.ListUcContacts2;
+import to.unified.unified_java_sdk.operations.ListUcRecordings2;
+import to.unified.unified_java_sdk.operations.PatchUcComment2;
+import to.unified.unified_java_sdk.operations.PatchUcContact2;
+import to.unified.unified_java_sdk.operations.PatchUcRecording2;
+import to.unified.unified_java_sdk.operations.RemoveUcComment2;
+import to.unified.unified_java_sdk.operations.RemoveUcContact2;
+import to.unified.unified_java_sdk.operations.RemoveUcRecording2;
+import to.unified.unified_java_sdk.operations.UpdateUcComment2;
+import to.unified.unified_java_sdk.operations.UpdateUcContact2;
+import to.unified.unified_java_sdk.operations.UpdateUcRecording2;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -113,8 +113,8 @@ public class Uc {
      * 
      * @return The call builder
      */
-    public CreateUcCommentRequestBuilder createUcComment() {
-        return new CreateUcCommentRequestBuilder(sdkConfiguration);
+    public CreateUcComment2RequestBuilder createUcComment2() {
+        return new CreateUcComment2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -124,9 +124,9 @@ public class Uc {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateUcCommentResponse createUcComment(@Nonnull CreateUcCommentRequest request) {
-        RequestOperation<CreateUcCommentRequest, CreateUcCommentResponse> operation
-              = new CreateUcComment.Sync(sdkConfiguration, _headers);
+    public CreateUcComment2Response createUcComment2(@Nonnull CreateUcComment2Request request) {
+        RequestOperation<CreateUcComment2Request, CreateUcComment2Response> operation
+              = new CreateUcComment2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -135,8 +135,8 @@ public class Uc {
      * 
      * @return The call builder
      */
-    public CreateUcContactRequestBuilder createUcContact() {
-        return new CreateUcContactRequestBuilder(sdkConfiguration);
+    public CreateUcContact2RequestBuilder createUcContact2() {
+        return new CreateUcContact2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -146,9 +146,9 @@ public class Uc {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateUcContactResponse createUcContact(@Nonnull CreateUcContactRequest request) {
-        RequestOperation<CreateUcContactRequest, CreateUcContactResponse> operation
-              = new CreateUcContact.Sync(sdkConfiguration, _headers);
+    public CreateUcContact2Response createUcContact2(@Nonnull CreateUcContact2Request request) {
+        RequestOperation<CreateUcContact2Request, CreateUcContact2Response> operation
+              = new CreateUcContact2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -157,8 +157,8 @@ public class Uc {
      * 
      * @return The call builder
      */
-    public CreateUcRecordingRequestBuilder createUcRecording() {
-        return new CreateUcRecordingRequestBuilder(sdkConfiguration);
+    public CreateUcRecording2RequestBuilder createUcRecording2() {
+        return new CreateUcRecording2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -168,9 +168,9 @@ public class Uc {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateUcRecordingResponse createUcRecording(@Nonnull CreateUcRecordingRequest request) {
-        RequestOperation<CreateUcRecordingRequest, CreateUcRecordingResponse> operation
-              = new CreateUcRecording.Sync(sdkConfiguration, _headers);
+    public CreateUcRecording2Response createUcRecording2(@Nonnull CreateUcRecording2Request request) {
+        RequestOperation<CreateUcRecording2Request, CreateUcRecording2Response> operation
+              = new CreateUcRecording2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -179,8 +179,8 @@ public class Uc {
      * 
      * @return The call builder
      */
-    public GetUcCallRequestBuilder getUcCall() {
-        return new GetUcCallRequestBuilder(sdkConfiguration);
+    public GetUcCall2RequestBuilder getUcCall2() {
+        return new GetUcCall2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -190,9 +190,9 @@ public class Uc {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetUcCallResponse getUcCall(@Nonnull GetUcCallRequest request) {
-        RequestOperation<GetUcCallRequest, GetUcCallResponse> operation
-              = new GetUcCall.Sync(sdkConfiguration, _headers);
+    public GetUcCall2Response getUcCall2(@Nonnull GetUcCall2Request request) {
+        RequestOperation<GetUcCall2Request, GetUcCall2Response> operation
+              = new GetUcCall2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -201,8 +201,8 @@ public class Uc {
      * 
      * @return The call builder
      */
-    public GetUcCommentRequestBuilder getUcComment() {
-        return new GetUcCommentRequestBuilder(sdkConfiguration);
+    public GetUcComment2RequestBuilder getUcComment2() {
+        return new GetUcComment2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -212,9 +212,9 @@ public class Uc {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetUcCommentResponse getUcComment(@Nonnull GetUcCommentRequest request) {
-        RequestOperation<GetUcCommentRequest, GetUcCommentResponse> operation
-              = new GetUcComment.Sync(sdkConfiguration, _headers);
+    public GetUcComment2Response getUcComment2(@Nonnull GetUcComment2Request request) {
+        RequestOperation<GetUcComment2Request, GetUcComment2Response> operation
+              = new GetUcComment2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -223,8 +223,8 @@ public class Uc {
      * 
      * @return The call builder
      */
-    public GetUcContactRequestBuilder getUcContact() {
-        return new GetUcContactRequestBuilder(sdkConfiguration);
+    public GetUcContact2RequestBuilder getUcContact2() {
+        return new GetUcContact2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -234,9 +234,9 @@ public class Uc {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetUcContactResponse getUcContact(@Nonnull GetUcContactRequest request) {
-        RequestOperation<GetUcContactRequest, GetUcContactResponse> operation
-              = new GetUcContact.Sync(sdkConfiguration, _headers);
+    public GetUcContact2Response getUcContact2(@Nonnull GetUcContact2Request request) {
+        RequestOperation<GetUcContact2Request, GetUcContact2Response> operation
+              = new GetUcContact2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -245,8 +245,8 @@ public class Uc {
      * 
      * @return The call builder
      */
-    public GetUcRecordingRequestBuilder getUcRecording() {
-        return new GetUcRecordingRequestBuilder(sdkConfiguration);
+    public GetUcRecording2RequestBuilder getUcRecording2() {
+        return new GetUcRecording2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -256,9 +256,9 @@ public class Uc {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetUcRecordingResponse getUcRecording(@Nonnull GetUcRecordingRequest request) {
-        RequestOperation<GetUcRecordingRequest, GetUcRecordingResponse> operation
-              = new GetUcRecording.Sync(sdkConfiguration, _headers);
+    public GetUcRecording2Response getUcRecording2(@Nonnull GetUcRecording2Request request) {
+        RequestOperation<GetUcRecording2Request, GetUcRecording2Response> operation
+              = new GetUcRecording2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -267,8 +267,8 @@ public class Uc {
      * 
      * @return The call builder
      */
-    public ListUcCallsRequestBuilder listUcCalls() {
-        return new ListUcCallsRequestBuilder(sdkConfiguration);
+    public ListUcCalls2RequestBuilder listUcCalls2() {
+        return new ListUcCalls2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -278,9 +278,9 @@ public class Uc {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListUcCallsResponse listUcCalls(@Nonnull ListUcCallsRequest request) {
-        RequestOperation<ListUcCallsRequest, ListUcCallsResponse> operation
-              = new ListUcCalls.Sync(sdkConfiguration, _headers);
+    public ListUcCalls2Response listUcCalls2(@Nonnull ListUcCalls2Request request) {
+        RequestOperation<ListUcCalls2Request, ListUcCalls2Response> operation
+              = new ListUcCalls2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -289,8 +289,8 @@ public class Uc {
      * 
      * @return The call builder
      */
-    public ListUcCommentsRequestBuilder listUcComments() {
-        return new ListUcCommentsRequestBuilder(sdkConfiguration);
+    public ListUcComments2RequestBuilder listUcComments2() {
+        return new ListUcComments2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -300,9 +300,9 @@ public class Uc {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListUcCommentsResponse listUcComments(@Nonnull ListUcCommentsRequest request) {
-        RequestOperation<ListUcCommentsRequest, ListUcCommentsResponse> operation
-              = new ListUcComments.Sync(sdkConfiguration, _headers);
+    public ListUcComments2Response listUcComments2(@Nonnull ListUcComments2Request request) {
+        RequestOperation<ListUcComments2Request, ListUcComments2Response> operation
+              = new ListUcComments2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -311,8 +311,8 @@ public class Uc {
      * 
      * @return The call builder
      */
-    public ListUcContactsRequestBuilder listUcContacts() {
-        return new ListUcContactsRequestBuilder(sdkConfiguration);
+    public ListUcContacts2RequestBuilder listUcContacts2() {
+        return new ListUcContacts2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -322,9 +322,9 @@ public class Uc {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListUcContactsResponse listUcContacts(@Nonnull ListUcContactsRequest request) {
-        RequestOperation<ListUcContactsRequest, ListUcContactsResponse> operation
-              = new ListUcContacts.Sync(sdkConfiguration, _headers);
+    public ListUcContacts2Response listUcContacts2(@Nonnull ListUcContacts2Request request) {
+        RequestOperation<ListUcContacts2Request, ListUcContacts2Response> operation
+              = new ListUcContacts2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -333,8 +333,8 @@ public class Uc {
      * 
      * @return The call builder
      */
-    public ListUcRecordingsRequestBuilder listUcRecordings() {
-        return new ListUcRecordingsRequestBuilder(sdkConfiguration);
+    public ListUcRecordings2RequestBuilder listUcRecordings2() {
+        return new ListUcRecordings2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -344,9 +344,9 @@ public class Uc {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListUcRecordingsResponse listUcRecordings(@Nonnull ListUcRecordingsRequest request) {
-        RequestOperation<ListUcRecordingsRequest, ListUcRecordingsResponse> operation
-              = new ListUcRecordings.Sync(sdkConfiguration, _headers);
+    public ListUcRecordings2Response listUcRecordings2(@Nonnull ListUcRecordings2Request request) {
+        RequestOperation<ListUcRecordings2Request, ListUcRecordings2Response> operation
+              = new ListUcRecordings2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -355,8 +355,8 @@ public class Uc {
      * 
      * @return The call builder
      */
-    public PatchUcCommentRequestBuilder patchUcComment() {
-        return new PatchUcCommentRequestBuilder(sdkConfiguration);
+    public PatchUcComment2RequestBuilder patchUcComment2() {
+        return new PatchUcComment2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -366,9 +366,9 @@ public class Uc {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchUcCommentResponse patchUcComment(@Nonnull PatchUcCommentRequest request) {
-        RequestOperation<PatchUcCommentRequest, PatchUcCommentResponse> operation
-              = new PatchUcComment.Sync(sdkConfiguration, _headers);
+    public PatchUcComment2Response patchUcComment2(@Nonnull PatchUcComment2Request request) {
+        RequestOperation<PatchUcComment2Request, PatchUcComment2Response> operation
+              = new PatchUcComment2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -377,8 +377,8 @@ public class Uc {
      * 
      * @return The call builder
      */
-    public PatchUcContactRequestBuilder patchUcContact() {
-        return new PatchUcContactRequestBuilder(sdkConfiguration);
+    public PatchUcContact2RequestBuilder patchUcContact2() {
+        return new PatchUcContact2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -388,9 +388,9 @@ public class Uc {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchUcContactResponse patchUcContact(@Nonnull PatchUcContactRequest request) {
-        RequestOperation<PatchUcContactRequest, PatchUcContactResponse> operation
-              = new PatchUcContact.Sync(sdkConfiguration, _headers);
+    public PatchUcContact2Response patchUcContact2(@Nonnull PatchUcContact2Request request) {
+        RequestOperation<PatchUcContact2Request, PatchUcContact2Response> operation
+              = new PatchUcContact2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -399,8 +399,8 @@ public class Uc {
      * 
      * @return The call builder
      */
-    public PatchUcRecordingRequestBuilder patchUcRecording() {
-        return new PatchUcRecordingRequestBuilder(sdkConfiguration);
+    public PatchUcRecording2RequestBuilder patchUcRecording2() {
+        return new PatchUcRecording2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -410,9 +410,9 @@ public class Uc {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchUcRecordingResponse patchUcRecording(@Nonnull PatchUcRecordingRequest request) {
-        RequestOperation<PatchUcRecordingRequest, PatchUcRecordingResponse> operation
-              = new PatchUcRecording.Sync(sdkConfiguration, _headers);
+    public PatchUcRecording2Response patchUcRecording2(@Nonnull PatchUcRecording2Request request) {
+        RequestOperation<PatchUcRecording2Request, PatchUcRecording2Response> operation
+              = new PatchUcRecording2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -421,8 +421,8 @@ public class Uc {
      * 
      * @return The call builder
      */
-    public RemoveUcCommentRequestBuilder removeUcComment() {
-        return new RemoveUcCommentRequestBuilder(sdkConfiguration);
+    public RemoveUcComment2RequestBuilder removeUcComment2() {
+        return new RemoveUcComment2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -432,9 +432,9 @@ public class Uc {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveUcCommentResponse removeUcComment(@Nonnull RemoveUcCommentRequest request) {
-        RequestOperation<RemoveUcCommentRequest, RemoveUcCommentResponse> operation
-              = new RemoveUcComment.Sync(sdkConfiguration, _headers);
+    public RemoveUcComment2Response removeUcComment2(@Nonnull RemoveUcComment2Request request) {
+        RequestOperation<RemoveUcComment2Request, RemoveUcComment2Response> operation
+              = new RemoveUcComment2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -443,8 +443,8 @@ public class Uc {
      * 
      * @return The call builder
      */
-    public RemoveUcContactRequestBuilder removeUcContact() {
-        return new RemoveUcContactRequestBuilder(sdkConfiguration);
+    public RemoveUcContact2RequestBuilder removeUcContact2() {
+        return new RemoveUcContact2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -454,9 +454,9 @@ public class Uc {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveUcContactResponse removeUcContact(@Nonnull RemoveUcContactRequest request) {
-        RequestOperation<RemoveUcContactRequest, RemoveUcContactResponse> operation
-              = new RemoveUcContact.Sync(sdkConfiguration, _headers);
+    public RemoveUcContact2Response removeUcContact2(@Nonnull RemoveUcContact2Request request) {
+        RequestOperation<RemoveUcContact2Request, RemoveUcContact2Response> operation
+              = new RemoveUcContact2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -465,8 +465,8 @@ public class Uc {
      * 
      * @return The call builder
      */
-    public RemoveUcRecordingRequestBuilder removeUcRecording() {
-        return new RemoveUcRecordingRequestBuilder(sdkConfiguration);
+    public RemoveUcRecording2RequestBuilder removeUcRecording2() {
+        return new RemoveUcRecording2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -476,9 +476,9 @@ public class Uc {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveUcRecordingResponse removeUcRecording(@Nonnull RemoveUcRecordingRequest request) {
-        RequestOperation<RemoveUcRecordingRequest, RemoveUcRecordingResponse> operation
-              = new RemoveUcRecording.Sync(sdkConfiguration, _headers);
+    public RemoveUcRecording2Response removeUcRecording2(@Nonnull RemoveUcRecording2Request request) {
+        RequestOperation<RemoveUcRecording2Request, RemoveUcRecording2Response> operation
+              = new RemoveUcRecording2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -487,8 +487,8 @@ public class Uc {
      * 
      * @return The call builder
      */
-    public UpdateUcCommentRequestBuilder updateUcComment() {
-        return new UpdateUcCommentRequestBuilder(sdkConfiguration);
+    public UpdateUcComment2RequestBuilder updateUcComment2() {
+        return new UpdateUcComment2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -498,9 +498,9 @@ public class Uc {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateUcCommentResponse updateUcComment(@Nonnull UpdateUcCommentRequest request) {
-        RequestOperation<UpdateUcCommentRequest, UpdateUcCommentResponse> operation
-              = new UpdateUcComment.Sync(sdkConfiguration, _headers);
+    public UpdateUcComment2Response updateUcComment2(@Nonnull UpdateUcComment2Request request) {
+        RequestOperation<UpdateUcComment2Request, UpdateUcComment2Response> operation
+              = new UpdateUcComment2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -509,8 +509,8 @@ public class Uc {
      * 
      * @return The call builder
      */
-    public UpdateUcContactRequestBuilder updateUcContact() {
-        return new UpdateUcContactRequestBuilder(sdkConfiguration);
+    public UpdateUcContact2RequestBuilder updateUcContact2() {
+        return new UpdateUcContact2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -520,9 +520,9 @@ public class Uc {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateUcContactResponse updateUcContact(@Nonnull UpdateUcContactRequest request) {
-        RequestOperation<UpdateUcContactRequest, UpdateUcContactResponse> operation
-              = new UpdateUcContact.Sync(sdkConfiguration, _headers);
+    public UpdateUcContact2Response updateUcContact2(@Nonnull UpdateUcContact2Request request) {
+        RequestOperation<UpdateUcContact2Request, UpdateUcContact2Response> operation
+              = new UpdateUcContact2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -531,8 +531,8 @@ public class Uc {
      * 
      * @return The call builder
      */
-    public UpdateUcRecordingRequestBuilder updateUcRecording() {
-        return new UpdateUcRecordingRequestBuilder(sdkConfiguration);
+    public UpdateUcRecording2RequestBuilder updateUcRecording2() {
+        return new UpdateUcRecording2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -542,9 +542,9 @@ public class Uc {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateUcRecordingResponse updateUcRecording(@Nonnull UpdateUcRecordingRequest request) {
-        RequestOperation<UpdateUcRecordingRequest, UpdateUcRecordingResponse> operation
-              = new UpdateUcRecording.Sync(sdkConfiguration, _headers);
+    public UpdateUcRecording2Response updateUcRecording2(@Nonnull UpdateUcRecording2Request request) {
+        RequestOperation<UpdateUcRecording2Request, UpdateUcRecording2Response> operation
+              = new UpdateUcRecording2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

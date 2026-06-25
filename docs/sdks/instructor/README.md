@@ -4,27 +4,27 @@
 
 ### Available Operations
 
-* [createLmsInstructor](#createlmsinstructor) - Create an instructor
-* [getLmsInstructor](#getlmsinstructor) - Retrieve an instructor
-* [listLmsInstructors](#listlmsinstructors) - List all instructors
-* [patchLmsInstructor](#patchlmsinstructor) - Update an instructor
-* [removeLmsInstructor](#removelmsinstructor) - Remove an instructor
-* [updateLmsInstructor](#updatelmsinstructor) - Update an instructor
+* [createLmsInstructor2](#createlmsinstructor2) - Create an instructor
+* [getLmsInstructor2](#getlmsinstructor2) - Retrieve an instructor
+* [listLmsInstructors2](#listlmsinstructors2) - List all instructors
+* [patchLmsInstructor2](#patchlmsinstructor2) - Update an instructor
+* [removeLmsInstructor2](#removelmsinstructor2) - Remove an instructor
+* [updateLmsInstructor2](#updatelmsinstructor2) - Update an instructor
 
-## createLmsInstructor
+## createLmsInstructor2
 
 Create an instructor
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createLmsInstructor" method="post" path="/lms/{connection_id}/instructor" -->
+<!-- UsageSnippet language="java" operationID="createLmsInstructor2" method="post" path="/lms/{connection_id}/instructor" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.CreateLmsInstructorRequest;
-import to.unified.unified_java_sdk.models.operations.CreateLmsInstructorResponse;
+import to.unified.unified_java_sdk.models.operations.CreateLmsInstructor2Request;
+import to.unified.unified_java_sdk.models.operations.CreateLmsInstructor2Response;
 import to.unified.unified_java_sdk.models.shared.LmsInstructor;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -38,13 +38,13 @@ public class Application {
                     .build())
             .build();
 
-        CreateLmsInstructorRequest req = CreateLmsInstructorRequest.builder()
+        CreateLmsInstructor2Request req = CreateLmsInstructor2Request.builder()
                 .lmsInstructor(LmsInstructor.builder()
                     .build())
                 .connectionId("<id>")
                 .build();
 
-        CreateLmsInstructorResponse res = sdk.instructor().createLmsInstructor()
+        CreateLmsInstructor2Response res = sdk.instructor().createLmsInstructor2()
                 .request(req)
                 .call();
 
@@ -57,13 +57,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                           | Type                                                                                | Required                                                                            | Description                                                                         |
-| ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
-| `request`                                                                           | [CreateLmsInstructorRequest](../../models/operations/CreateLmsInstructorRequest.md) | :heavy_check_mark:                                                                  | The request object to use for the request.                                          |
+| Parameter                                                                             | Type                                                                                  | Required                                                                              | Description                                                                           |
+| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| `request`                                                                             | [CreateLmsInstructor2Request](../../models/operations/CreateLmsInstructor2Request.md) | :heavy_check_mark:                                                                    | The request object to use for the request.                                            |
 
 ### Response
 
-**[CreateLmsInstructorResponse](../../models/operations/CreateLmsInstructorResponse.md)**
+**[CreateLmsInstructor2Response](../../models/operations/CreateLmsInstructor2Response.md)**
 
 ### Errors
 
@@ -71,20 +71,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## getLmsInstructor
+## getLmsInstructor2
 
 Retrieve an instructor
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="getLmsInstructor" method="get" path="/lms/{connection_id}/instructor/{id}" -->
+<!-- UsageSnippet language="java" operationID="getLmsInstructor2" method="get" path="/lms/{connection_id}/instructor/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.GetLmsInstructorRequest;
-import to.unified.unified_java_sdk.models.operations.GetLmsInstructorResponse;
+import to.unified.unified_java_sdk.models.operations.GetLmsInstructor2Request;
+import to.unified.unified_java_sdk.models.operations.GetLmsInstructor2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -97,12 +97,12 @@ public class Application {
                     .build())
             .build();
 
-        GetLmsInstructorRequest req = GetLmsInstructorRequest.builder()
+        GetLmsInstructor2Request req = GetLmsInstructor2Request.builder()
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        GetLmsInstructorResponse res = sdk.instructor().getLmsInstructor()
+        GetLmsInstructor2Response res = sdk.instructor().getLmsInstructor2()
                 .request(req)
                 .call();
 
@@ -115,13 +115,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
-| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
-| `request`                                                                     | [GetLmsInstructorRequest](../../models/operations/GetLmsInstructorRequest.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
+| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| `request`                                                                       | [GetLmsInstructor2Request](../../models/operations/GetLmsInstructor2Request.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
 
 ### Response
 
-**[GetLmsInstructorResponse](../../models/operations/GetLmsInstructorResponse.md)**
+**[GetLmsInstructor2Response](../../models/operations/GetLmsInstructor2Response.md)**
 
 ### Errors
 
@@ -129,20 +129,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## listLmsInstructors
+## listLmsInstructors2
 
 List all instructors
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="listLmsInstructors" method="get" path="/lms/{connection_id}/instructor" -->
+<!-- UsageSnippet language="java" operationID="listLmsInstructors2" method="get" path="/lms/{connection_id}/instructor" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.ListLmsInstructorsRequest;
-import to.unified.unified_java_sdk.models.operations.ListLmsInstructorsResponse;
+import to.unified.unified_java_sdk.models.operations.ListLmsInstructors2Request;
+import to.unified.unified_java_sdk.models.operations.ListLmsInstructors2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -155,11 +155,11 @@ public class Application {
                     .build())
             .build();
 
-        ListLmsInstructorsRequest req = ListLmsInstructorsRequest.builder()
+        ListLmsInstructors2Request req = ListLmsInstructors2Request.builder()
                 .connectionId("<id>")
                 .build();
 
-        ListLmsInstructorsResponse res = sdk.instructor().listLmsInstructors()
+        ListLmsInstructors2Response res = sdk.instructor().listLmsInstructors2()
                 .request(req)
                 .call();
 
@@ -172,13 +172,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
-| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
-| `request`                                                                         | [ListLmsInstructorsRequest](../../models/operations/ListLmsInstructorsRequest.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
+| Parameter                                                                           | Type                                                                                | Required                                                                            | Description                                                                         |
+| ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| `request`                                                                           | [ListLmsInstructors2Request](../../models/operations/ListLmsInstructors2Request.md) | :heavy_check_mark:                                                                  | The request object to use for the request.                                          |
 
 ### Response
 
-**[ListLmsInstructorsResponse](../../models/operations/ListLmsInstructorsResponse.md)**
+**[ListLmsInstructors2Response](../../models/operations/ListLmsInstructors2Response.md)**
 
 ### Errors
 
@@ -186,20 +186,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## patchLmsInstructor
+## patchLmsInstructor2
 
 Update an instructor
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchLmsInstructor" method="patch" path="/lms/{connection_id}/instructor/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchLmsInstructor2" method="patch" path="/lms/{connection_id}/instructor/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.PatchLmsInstructorRequest;
-import to.unified.unified_java_sdk.models.operations.PatchLmsInstructorResponse;
+import to.unified.unified_java_sdk.models.operations.PatchLmsInstructor2Request;
+import to.unified.unified_java_sdk.models.operations.PatchLmsInstructor2Response;
 import to.unified.unified_java_sdk.models.shared.LmsInstructor;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -213,14 +213,14 @@ public class Application {
                     .build())
             .build();
 
-        PatchLmsInstructorRequest req = PatchLmsInstructorRequest.builder()
+        PatchLmsInstructor2Request req = PatchLmsInstructor2Request.builder()
                 .lmsInstructor(LmsInstructor.builder()
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        PatchLmsInstructorResponse res = sdk.instructor().patchLmsInstructor()
+        PatchLmsInstructor2Response res = sdk.instructor().patchLmsInstructor2()
                 .request(req)
                 .call();
 
@@ -233,13 +233,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
-| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
-| `request`                                                                         | [PatchLmsInstructorRequest](../../models/operations/PatchLmsInstructorRequest.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
+| Parameter                                                                           | Type                                                                                | Required                                                                            | Description                                                                         |
+| ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| `request`                                                                           | [PatchLmsInstructor2Request](../../models/operations/PatchLmsInstructor2Request.md) | :heavy_check_mark:                                                                  | The request object to use for the request.                                          |
 
 ### Response
 
-**[PatchLmsInstructorResponse](../../models/operations/PatchLmsInstructorResponse.md)**
+**[PatchLmsInstructor2Response](../../models/operations/PatchLmsInstructor2Response.md)**
 
 ### Errors
 
@@ -247,20 +247,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## removeLmsInstructor
+## removeLmsInstructor2
 
 Remove an instructor
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="removeLmsInstructor" method="delete" path="/lms/{connection_id}/instructor/{id}" -->
+<!-- UsageSnippet language="java" operationID="removeLmsInstructor2" method="delete" path="/lms/{connection_id}/instructor/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.RemoveLmsInstructorRequest;
-import to.unified.unified_java_sdk.models.operations.RemoveLmsInstructorResponse;
+import to.unified.unified_java_sdk.models.operations.RemoveLmsInstructor2Request;
+import to.unified.unified_java_sdk.models.operations.RemoveLmsInstructor2Response;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -273,12 +273,12 @@ public class Application {
                     .build())
             .build();
 
-        RemoveLmsInstructorRequest req = RemoveLmsInstructorRequest.builder()
+        RemoveLmsInstructor2Request req = RemoveLmsInstructor2Request.builder()
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        RemoveLmsInstructorResponse res = sdk.instructor().removeLmsInstructor()
+        RemoveLmsInstructor2Response res = sdk.instructor().removeLmsInstructor2()
                 .request(req)
                 .call();
 
@@ -289,13 +289,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                           | Type                                                                                | Required                                                                            | Description                                                                         |
-| ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
-| `request`                                                                           | [RemoveLmsInstructorRequest](../../models/operations/RemoveLmsInstructorRequest.md) | :heavy_check_mark:                                                                  | The request object to use for the request.                                          |
+| Parameter                                                                             | Type                                                                                  | Required                                                                              | Description                                                                           |
+| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| `request`                                                                             | [RemoveLmsInstructor2Request](../../models/operations/RemoveLmsInstructor2Request.md) | :heavy_check_mark:                                                                    | The request object to use for the request.                                            |
 
 ### Response
 
-**[RemoveLmsInstructorResponse](../../models/operations/RemoveLmsInstructorResponse.md)**
+**[RemoveLmsInstructor2Response](../../models/operations/RemoveLmsInstructor2Response.md)**
 
 ### Errors
 
@@ -303,20 +303,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## updateLmsInstructor
+## updateLmsInstructor2
 
 Update an instructor
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateLmsInstructor" method="put" path="/lms/{connection_id}/instructor/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateLmsInstructor2" method="put" path="/lms/{connection_id}/instructor/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.UpdateLmsInstructorRequest;
-import to.unified.unified_java_sdk.models.operations.UpdateLmsInstructorResponse;
+import to.unified.unified_java_sdk.models.operations.UpdateLmsInstructor2Request;
+import to.unified.unified_java_sdk.models.operations.UpdateLmsInstructor2Response;
 import to.unified.unified_java_sdk.models.shared.LmsInstructor;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -330,14 +330,14 @@ public class Application {
                     .build())
             .build();
 
-        UpdateLmsInstructorRequest req = UpdateLmsInstructorRequest.builder()
+        UpdateLmsInstructor2Request req = UpdateLmsInstructor2Request.builder()
                 .lmsInstructor(LmsInstructor.builder()
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        UpdateLmsInstructorResponse res = sdk.instructor().updateLmsInstructor()
+        UpdateLmsInstructor2Response res = sdk.instructor().updateLmsInstructor2()
                 .request(req)
                 .call();
 
@@ -350,13 +350,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                           | Type                                                                                | Required                                                                            | Description                                                                         |
-| ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
-| `request`                                                                           | [UpdateLmsInstructorRequest](../../models/operations/UpdateLmsInstructorRequest.md) | :heavy_check_mark:                                                                  | The request object to use for the request.                                          |
+| Parameter                                                                             | Type                                                                                  | Required                                                                              | Description                                                                           |
+| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| `request`                                                                             | [UpdateLmsInstructor2Request](../../models/operations/UpdateLmsInstructor2Request.md) | :heavy_check_mark:                                                                    | The request object to use for the request.                                            |
 
 ### Response
 
-**[UpdateLmsInstructorResponse](../../models/operations/UpdateLmsInstructorResponse.md)**
+**[UpdateLmsInstructor2Response](../../models/operations/UpdateLmsInstructor2Response.md)**
 
 ### Errors
 

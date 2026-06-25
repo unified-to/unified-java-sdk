@@ -6,30 +6,30 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
-import to.unified.unified_java_sdk.models.operations.CreateAccountingTransactionRequest;
-import to.unified.unified_java_sdk.models.operations.CreateAccountingTransactionRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.CreateAccountingTransactionResponse;
-import to.unified.unified_java_sdk.models.operations.GetAccountingTransactionRequest;
-import to.unified.unified_java_sdk.models.operations.GetAccountingTransactionRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.GetAccountingTransactionResponse;
-import to.unified.unified_java_sdk.models.operations.ListAccountingTransactionsRequest;
-import to.unified.unified_java_sdk.models.operations.ListAccountingTransactionsRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.ListAccountingTransactionsResponse;
-import to.unified.unified_java_sdk.models.operations.PatchAccountingTransactionRequest;
-import to.unified.unified_java_sdk.models.operations.PatchAccountingTransactionRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.PatchAccountingTransactionResponse;
-import to.unified.unified_java_sdk.models.operations.RemoveAccountingTransactionRequest;
-import to.unified.unified_java_sdk.models.operations.RemoveAccountingTransactionRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.RemoveAccountingTransactionResponse;
-import to.unified.unified_java_sdk.models.operations.UpdateAccountingTransactionRequest;
-import to.unified.unified_java_sdk.models.operations.UpdateAccountingTransactionRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.UpdateAccountingTransactionResponse;
-import to.unified.unified_java_sdk.operations.CreateAccountingTransaction;
-import to.unified.unified_java_sdk.operations.GetAccountingTransaction;
-import to.unified.unified_java_sdk.operations.ListAccountingTransactions;
-import to.unified.unified_java_sdk.operations.PatchAccountingTransaction;
-import to.unified.unified_java_sdk.operations.RemoveAccountingTransaction;
-import to.unified.unified_java_sdk.operations.UpdateAccountingTransaction;
+import to.unified.unified_java_sdk.models.operations.CreateAccountingTransaction2Request;
+import to.unified.unified_java_sdk.models.operations.CreateAccountingTransaction2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.CreateAccountingTransaction2Response;
+import to.unified.unified_java_sdk.models.operations.GetAccountingTransaction2Request;
+import to.unified.unified_java_sdk.models.operations.GetAccountingTransaction2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetAccountingTransaction2Response;
+import to.unified.unified_java_sdk.models.operations.ListAccountingTransactions2Request;
+import to.unified.unified_java_sdk.models.operations.ListAccountingTransactions2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListAccountingTransactions2Response;
+import to.unified.unified_java_sdk.models.operations.PatchAccountingTransaction2Request;
+import to.unified.unified_java_sdk.models.operations.PatchAccountingTransaction2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.PatchAccountingTransaction2Response;
+import to.unified.unified_java_sdk.models.operations.RemoveAccountingTransaction2Request;
+import to.unified.unified_java_sdk.models.operations.RemoveAccountingTransaction2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.RemoveAccountingTransaction2Response;
+import to.unified.unified_java_sdk.models.operations.UpdateAccountingTransaction2Request;
+import to.unified.unified_java_sdk.models.operations.UpdateAccountingTransaction2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.UpdateAccountingTransaction2Response;
+import to.unified.unified_java_sdk.operations.CreateAccountingTransaction2;
+import to.unified.unified_java_sdk.operations.GetAccountingTransaction2;
+import to.unified.unified_java_sdk.operations.ListAccountingTransactions2;
+import to.unified.unified_java_sdk.operations.PatchAccountingTransaction2;
+import to.unified.unified_java_sdk.operations.RemoveAccountingTransaction2;
+import to.unified.unified_java_sdk.operations.UpdateAccountingTransaction2;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -57,8 +57,8 @@ public class Transaction {
      * 
      * @return The call builder
      */
-    public CreateAccountingTransactionRequestBuilder createAccountingTransaction() {
-        return new CreateAccountingTransactionRequestBuilder(sdkConfiguration);
+    public CreateAccountingTransaction2RequestBuilder createAccountingTransaction2() {
+        return new CreateAccountingTransaction2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -68,9 +68,9 @@ public class Transaction {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateAccountingTransactionResponse createAccountingTransaction(@Nonnull CreateAccountingTransactionRequest request) {
-        RequestOperation<CreateAccountingTransactionRequest, CreateAccountingTransactionResponse> operation
-              = new CreateAccountingTransaction.Sync(sdkConfiguration, _headers);
+    public CreateAccountingTransaction2Response createAccountingTransaction2(@Nonnull CreateAccountingTransaction2Request request) {
+        RequestOperation<CreateAccountingTransaction2Request, CreateAccountingTransaction2Response> operation
+              = new CreateAccountingTransaction2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -79,8 +79,8 @@ public class Transaction {
      * 
      * @return The call builder
      */
-    public GetAccountingTransactionRequestBuilder getAccountingTransaction() {
-        return new GetAccountingTransactionRequestBuilder(sdkConfiguration);
+    public GetAccountingTransaction2RequestBuilder getAccountingTransaction2() {
+        return new GetAccountingTransaction2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -90,9 +90,9 @@ public class Transaction {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetAccountingTransactionResponse getAccountingTransaction(@Nonnull GetAccountingTransactionRequest request) {
-        RequestOperation<GetAccountingTransactionRequest, GetAccountingTransactionResponse> operation
-              = new GetAccountingTransaction.Sync(sdkConfiguration, _headers);
+    public GetAccountingTransaction2Response getAccountingTransaction2(@Nonnull GetAccountingTransaction2Request request) {
+        RequestOperation<GetAccountingTransaction2Request, GetAccountingTransaction2Response> operation
+              = new GetAccountingTransaction2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -101,8 +101,8 @@ public class Transaction {
      * 
      * @return The call builder
      */
-    public ListAccountingTransactionsRequestBuilder listAccountingTransactions() {
-        return new ListAccountingTransactionsRequestBuilder(sdkConfiguration);
+    public ListAccountingTransactions2RequestBuilder listAccountingTransactions2() {
+        return new ListAccountingTransactions2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -112,9 +112,9 @@ public class Transaction {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListAccountingTransactionsResponse listAccountingTransactions(@Nonnull ListAccountingTransactionsRequest request) {
-        RequestOperation<ListAccountingTransactionsRequest, ListAccountingTransactionsResponse> operation
-              = new ListAccountingTransactions.Sync(sdkConfiguration, _headers);
+    public ListAccountingTransactions2Response listAccountingTransactions2(@Nonnull ListAccountingTransactions2Request request) {
+        RequestOperation<ListAccountingTransactions2Request, ListAccountingTransactions2Response> operation
+              = new ListAccountingTransactions2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -123,8 +123,8 @@ public class Transaction {
      * 
      * @return The call builder
      */
-    public PatchAccountingTransactionRequestBuilder patchAccountingTransaction() {
-        return new PatchAccountingTransactionRequestBuilder(sdkConfiguration);
+    public PatchAccountingTransaction2RequestBuilder patchAccountingTransaction2() {
+        return new PatchAccountingTransaction2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -134,9 +134,9 @@ public class Transaction {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchAccountingTransactionResponse patchAccountingTransaction(@Nonnull PatchAccountingTransactionRequest request) {
-        RequestOperation<PatchAccountingTransactionRequest, PatchAccountingTransactionResponse> operation
-              = new PatchAccountingTransaction.Sync(sdkConfiguration, _headers);
+    public PatchAccountingTransaction2Response patchAccountingTransaction2(@Nonnull PatchAccountingTransaction2Request request) {
+        RequestOperation<PatchAccountingTransaction2Request, PatchAccountingTransaction2Response> operation
+              = new PatchAccountingTransaction2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -145,8 +145,8 @@ public class Transaction {
      * 
      * @return The call builder
      */
-    public RemoveAccountingTransactionRequestBuilder removeAccountingTransaction() {
-        return new RemoveAccountingTransactionRequestBuilder(sdkConfiguration);
+    public RemoveAccountingTransaction2RequestBuilder removeAccountingTransaction2() {
+        return new RemoveAccountingTransaction2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -156,9 +156,9 @@ public class Transaction {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveAccountingTransactionResponse removeAccountingTransaction(@Nonnull RemoveAccountingTransactionRequest request) {
-        RequestOperation<RemoveAccountingTransactionRequest, RemoveAccountingTransactionResponse> operation
-              = new RemoveAccountingTransaction.Sync(sdkConfiguration, _headers);
+    public RemoveAccountingTransaction2Response removeAccountingTransaction2(@Nonnull RemoveAccountingTransaction2Request request) {
+        RequestOperation<RemoveAccountingTransaction2Request, RemoveAccountingTransaction2Response> operation
+              = new RemoveAccountingTransaction2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -167,8 +167,8 @@ public class Transaction {
      * 
      * @return The call builder
      */
-    public UpdateAccountingTransactionRequestBuilder updateAccountingTransaction() {
-        return new UpdateAccountingTransactionRequestBuilder(sdkConfiguration);
+    public UpdateAccountingTransaction2RequestBuilder updateAccountingTransaction2() {
+        return new UpdateAccountingTransaction2RequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -178,9 +178,9 @@ public class Transaction {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateAccountingTransactionResponse updateAccountingTransaction(@Nonnull UpdateAccountingTransactionRequest request) {
-        RequestOperation<UpdateAccountingTransactionRequest, UpdateAccountingTransactionResponse> operation
-              = new UpdateAccountingTransaction.Sync(sdkConfiguration, _headers);
+    public UpdateAccountingTransaction2Response updateAccountingTransaction2(@Nonnull UpdateAccountingTransaction2Request request) {
+        RequestOperation<UpdateAccountingTransaction2Request, UpdateAccountingTransaction2Response> operation
+              = new UpdateAccountingTransaction2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

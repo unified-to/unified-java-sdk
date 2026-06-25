@@ -142,6 +142,11 @@ public class ObjectType {
     public static final ObjectType ADS_INSERTIONORDER = new ObjectType("ads_insertionorder");
     public static final ObjectType ADS_TARGET = new ObjectType("ads_target");
     public static final ObjectType ADS_PROMOTED = new ObjectType("ads_promoted");
+    public static final ObjectType ANALYTICS_PROPERTY = new ObjectType("analytics_property");
+    public static final ObjectType ANALYTICS_EVENT = new ObjectType("analytics_event");
+    public static final ObjectType ANALYTICS_SESSION = new ObjectType("analytics_session");
+    public static final ObjectType ANALYTICS_VISITOR = new ObjectType("analytics_visitor");
+    public static final ObjectType ANALYTICS_REPORT = new ObjectType("analytics_report");
     public static final ObjectType FORMS_FORM = new ObjectType("forms_form");
     public static final ObjectType FORMS_SUBMISSION = new ObjectType("forms_submission");
     public static final ObjectType SHIPPING_CARRIER = new ObjectType("shipping_carrier");
@@ -157,6 +162,10 @@ public class ObjectType {
     public static final ObjectType CLUBS_ACTIVITY = new ObjectType("clubs_activity");
     public static final ObjectType CLUBS_LOCATION = new ObjectType("clubs_location");
     public static final ObjectType CLUBS_EVENT = new ObjectType("clubs_event");
+    public static final ObjectType DATASTORE_DATABASE = new ObjectType("datastore_database");
+    public static final ObjectType DATASTORE_TABLE = new ObjectType("datastore_table");
+    public static final ObjectType DATASTORE_RECORD = new ObjectType("datastore_record");
+    public static final ObjectType DATASTORE_QUERY = new ObjectType("datastore_query");
 
     // This map will grow whenever a Color gets created with a new
     // unrecognized value (a potential memory leak if the user is not
@@ -352,6 +361,11 @@ public class ObjectType {
         map.put("ads_insertionorder", ADS_INSERTIONORDER);
         map.put("ads_target", ADS_TARGET);
         map.put("ads_promoted", ADS_PROMOTED);
+        map.put("analytics_property", ANALYTICS_PROPERTY);
+        map.put("analytics_event", ANALYTICS_EVENT);
+        map.put("analytics_session", ANALYTICS_SESSION);
+        map.put("analytics_visitor", ANALYTICS_VISITOR);
+        map.put("analytics_report", ANALYTICS_REPORT);
         map.put("forms_form", FORMS_FORM);
         map.put("forms_submission", FORMS_SUBMISSION);
         map.put("shipping_carrier", SHIPPING_CARRIER);
@@ -367,6 +381,10 @@ public class ObjectType {
         map.put("clubs_activity", CLUBS_ACTIVITY);
         map.put("clubs_location", CLUBS_LOCATION);
         map.put("clubs_event", CLUBS_EVENT);
+        map.put("datastore_database", DATASTORE_DATABASE);
+        map.put("datastore_table", DATASTORE_TABLE);
+        map.put("datastore_record", DATASTORE_RECORD);
+        map.put("datastore_query", DATASTORE_QUERY);
         return map;
     }
 
@@ -494,6 +512,11 @@ public class ObjectType {
         map.put("ads_insertionorder", ObjectTypeEnum.ADS_INSERTIONORDER);
         map.put("ads_target", ObjectTypeEnum.ADS_TARGET);
         map.put("ads_promoted", ObjectTypeEnum.ADS_PROMOTED);
+        map.put("analytics_property", ObjectTypeEnum.ANALYTICS_PROPERTY);
+        map.put("analytics_event", ObjectTypeEnum.ANALYTICS_EVENT);
+        map.put("analytics_session", ObjectTypeEnum.ANALYTICS_SESSION);
+        map.put("analytics_visitor", ObjectTypeEnum.ANALYTICS_VISITOR);
+        map.put("analytics_report", ObjectTypeEnum.ANALYTICS_REPORT);
         map.put("forms_form", ObjectTypeEnum.FORMS_FORM);
         map.put("forms_submission", ObjectTypeEnum.FORMS_SUBMISSION);
         map.put("shipping_carrier", ObjectTypeEnum.SHIPPING_CARRIER);
@@ -509,6 +532,10 @@ public class ObjectType {
         map.put("clubs_activity", ObjectTypeEnum.CLUBS_ACTIVITY);
         map.put("clubs_location", ObjectTypeEnum.CLUBS_LOCATION);
         map.put("clubs_event", ObjectTypeEnum.CLUBS_EVENT);
+        map.put("datastore_database", ObjectTypeEnum.DATASTORE_DATABASE);
+        map.put("datastore_table", ObjectTypeEnum.DATASTORE_TABLE);
+        map.put("datastore_record", ObjectTypeEnum.DATASTORE_RECORD);
+        map.put("datastore_query", ObjectTypeEnum.DATASTORE_QUERY);
         return map;
     }
     
@@ -637,6 +664,11 @@ public class ObjectType {
         ADS_INSERTIONORDER("ads_insertionorder"),
         ADS_TARGET("ads_target"),
         ADS_PROMOTED("ads_promoted"),
+        ANALYTICS_PROPERTY("analytics_property"),
+        ANALYTICS_EVENT("analytics_event"),
+        ANALYTICS_SESSION("analytics_session"),
+        ANALYTICS_VISITOR("analytics_visitor"),
+        ANALYTICS_REPORT("analytics_report"),
         FORMS_FORM("forms_form"),
         FORMS_SUBMISSION("forms_submission"),
         SHIPPING_CARRIER("shipping_carrier"),
@@ -651,7 +683,11 @@ public class ObjectType {
         CLUBS_MEMBER("clubs_member"),
         CLUBS_ACTIVITY("clubs_activity"),
         CLUBS_LOCATION("clubs_location"),
-        CLUBS_EVENT("clubs_event"),;
+        CLUBS_EVENT("clubs_event"),
+        DATASTORE_DATABASE("datastore_database"),
+        DATASTORE_TABLE("datastore_table"),
+        DATASTORE_RECORD("datastore_record"),
+        DATASTORE_QUERY("datastore_query"),;
 
         private final String value;
 

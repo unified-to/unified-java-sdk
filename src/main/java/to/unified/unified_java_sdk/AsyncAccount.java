@@ -7,30 +7,30 @@ import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOper
 
 import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
-import to.unified.unified_java_sdk.models.operations.CreateAccountingAccountRequest;
-import to.unified.unified_java_sdk.models.operations.GetAccountingAccountRequest;
-import to.unified.unified_java_sdk.models.operations.ListAccountingAccountsRequest;
-import to.unified.unified_java_sdk.models.operations.PatchAccountingAccountRequest;
-import to.unified.unified_java_sdk.models.operations.RemoveAccountingAccountRequest;
-import to.unified.unified_java_sdk.models.operations.UpdateAccountingAccountRequest;
-import to.unified.unified_java_sdk.models.operations.async.CreateAccountingAccountRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.CreateAccountingAccountResponse;
-import to.unified.unified_java_sdk.models.operations.async.GetAccountingAccountRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.GetAccountingAccountResponse;
-import to.unified.unified_java_sdk.models.operations.async.ListAccountingAccountsRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.ListAccountingAccountsResponse;
-import to.unified.unified_java_sdk.models.operations.async.PatchAccountingAccountRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.PatchAccountingAccountResponse;
-import to.unified.unified_java_sdk.models.operations.async.RemoveAccountingAccountRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.RemoveAccountingAccountResponse;
-import to.unified.unified_java_sdk.models.operations.async.UpdateAccountingAccountRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.UpdateAccountingAccountResponse;
-import to.unified.unified_java_sdk.operations.CreateAccountingAccount;
-import to.unified.unified_java_sdk.operations.GetAccountingAccount;
-import to.unified.unified_java_sdk.operations.ListAccountingAccounts;
-import to.unified.unified_java_sdk.operations.PatchAccountingAccount;
-import to.unified.unified_java_sdk.operations.RemoveAccountingAccount;
-import to.unified.unified_java_sdk.operations.UpdateAccountingAccount;
+import to.unified.unified_java_sdk.models.operations.CreateAccountingAccount2Request;
+import to.unified.unified_java_sdk.models.operations.GetAccountingAccount2Request;
+import to.unified.unified_java_sdk.models.operations.ListAccountingAccounts2Request;
+import to.unified.unified_java_sdk.models.operations.PatchAccountingAccount2Request;
+import to.unified.unified_java_sdk.models.operations.RemoveAccountingAccount2Request;
+import to.unified.unified_java_sdk.models.operations.UpdateAccountingAccount2Request;
+import to.unified.unified_java_sdk.models.operations.async.CreateAccountingAccount2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.CreateAccountingAccount2Response;
+import to.unified.unified_java_sdk.models.operations.async.GetAccountingAccount2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetAccountingAccount2Response;
+import to.unified.unified_java_sdk.models.operations.async.ListAccountingAccounts2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListAccountingAccounts2Response;
+import to.unified.unified_java_sdk.models.operations.async.PatchAccountingAccount2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.PatchAccountingAccount2Response;
+import to.unified.unified_java_sdk.models.operations.async.RemoveAccountingAccount2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.RemoveAccountingAccount2Response;
+import to.unified.unified_java_sdk.models.operations.async.UpdateAccountingAccount2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.UpdateAccountingAccount2Response;
+import to.unified.unified_java_sdk.operations.CreateAccountingAccount2;
+import to.unified.unified_java_sdk.operations.GetAccountingAccount2;
+import to.unified.unified_java_sdk.operations.ListAccountingAccounts2;
+import to.unified.unified_java_sdk.operations.PatchAccountingAccount2;
+import to.unified.unified_java_sdk.operations.RemoveAccountingAccount2;
+import to.unified.unified_java_sdk.operations.UpdateAccountingAccount2;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -59,19 +59,19 @@ public class AsyncAccount {
      * 
      * @return The async call builder
      */
-    public CreateAccountingAccountRequestBuilder createAccountingAccount() {
-        return new CreateAccountingAccountRequestBuilder(sdkConfiguration);
+    public CreateAccountingAccount2RequestBuilder createAccountingAccount2() {
+        return new CreateAccountingAccount2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Create an account
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<CreateAccountingAccountResponse>} - The async response
+     * @return {@code CompletableFuture<CreateAccountingAccount2Response>} - The async response
      */
-    public CompletableFuture<CreateAccountingAccountResponse> createAccountingAccount(@Nonnull CreateAccountingAccountRequest request) {
-        AsyncRequestOperation<CreateAccountingAccountRequest, CreateAccountingAccountResponse> operation
-              = new CreateAccountingAccount.Async(sdkConfiguration, _headers);
+    public CompletableFuture<CreateAccountingAccount2Response> createAccountingAccount2(@Nonnull CreateAccountingAccount2Request request) {
+        AsyncRequestOperation<CreateAccountingAccount2Request, CreateAccountingAccount2Response> operation
+              = new CreateAccountingAccount2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -82,19 +82,19 @@ public class AsyncAccount {
      * 
      * @return The async call builder
      */
-    public GetAccountingAccountRequestBuilder getAccountingAccount() {
-        return new GetAccountingAccountRequestBuilder(sdkConfiguration);
+    public GetAccountingAccount2RequestBuilder getAccountingAccount2() {
+        return new GetAccountingAccount2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Retrieve an account
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<GetAccountingAccountResponse>} - The async response
+     * @return {@code CompletableFuture<GetAccountingAccount2Response>} - The async response
      */
-    public CompletableFuture<GetAccountingAccountResponse> getAccountingAccount(@Nonnull GetAccountingAccountRequest request) {
-        AsyncRequestOperation<GetAccountingAccountRequest, GetAccountingAccountResponse> operation
-              = new GetAccountingAccount.Async(sdkConfiguration, _headers);
+    public CompletableFuture<GetAccountingAccount2Response> getAccountingAccount2(@Nonnull GetAccountingAccount2Request request) {
+        AsyncRequestOperation<GetAccountingAccount2Request, GetAccountingAccount2Response> operation
+              = new GetAccountingAccount2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -105,19 +105,19 @@ public class AsyncAccount {
      * 
      * @return The async call builder
      */
-    public ListAccountingAccountsRequestBuilder listAccountingAccounts() {
-        return new ListAccountingAccountsRequestBuilder(sdkConfiguration);
+    public ListAccountingAccounts2RequestBuilder listAccountingAccounts2() {
+        return new ListAccountingAccounts2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * List all accounts
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<ListAccountingAccountsResponse>} - The async response
+     * @return {@code CompletableFuture<ListAccountingAccounts2Response>} - The async response
      */
-    public CompletableFuture<ListAccountingAccountsResponse> listAccountingAccounts(@Nonnull ListAccountingAccountsRequest request) {
-        AsyncRequestOperation<ListAccountingAccountsRequest, ListAccountingAccountsResponse> operation
-              = new ListAccountingAccounts.Async(sdkConfiguration, _headers);
+    public CompletableFuture<ListAccountingAccounts2Response> listAccountingAccounts2(@Nonnull ListAccountingAccounts2Request request) {
+        AsyncRequestOperation<ListAccountingAccounts2Request, ListAccountingAccounts2Response> operation
+              = new ListAccountingAccounts2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -128,19 +128,19 @@ public class AsyncAccount {
      * 
      * @return The async call builder
      */
-    public PatchAccountingAccountRequestBuilder patchAccountingAccount() {
-        return new PatchAccountingAccountRequestBuilder(sdkConfiguration);
+    public PatchAccountingAccount2RequestBuilder patchAccountingAccount2() {
+        return new PatchAccountingAccount2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update an account
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<PatchAccountingAccountResponse>} - The async response
+     * @return {@code CompletableFuture<PatchAccountingAccount2Response>} - The async response
      */
-    public CompletableFuture<PatchAccountingAccountResponse> patchAccountingAccount(@Nonnull PatchAccountingAccountRequest request) {
-        AsyncRequestOperation<PatchAccountingAccountRequest, PatchAccountingAccountResponse> operation
-              = new PatchAccountingAccount.Async(sdkConfiguration, _headers);
+    public CompletableFuture<PatchAccountingAccount2Response> patchAccountingAccount2(@Nonnull PatchAccountingAccount2Request request) {
+        AsyncRequestOperation<PatchAccountingAccount2Request, PatchAccountingAccount2Response> operation
+              = new PatchAccountingAccount2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -151,19 +151,19 @@ public class AsyncAccount {
      * 
      * @return The async call builder
      */
-    public RemoveAccountingAccountRequestBuilder removeAccountingAccount() {
-        return new RemoveAccountingAccountRequestBuilder(sdkConfiguration);
+    public RemoveAccountingAccount2RequestBuilder removeAccountingAccount2() {
+        return new RemoveAccountingAccount2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Remove an account
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<RemoveAccountingAccountResponse>} - The async response
+     * @return {@code CompletableFuture<RemoveAccountingAccount2Response>} - The async response
      */
-    public CompletableFuture<RemoveAccountingAccountResponse> removeAccountingAccount(@Nonnull RemoveAccountingAccountRequest request) {
-        AsyncRequestOperation<RemoveAccountingAccountRequest, RemoveAccountingAccountResponse> operation
-              = new RemoveAccountingAccount.Async(sdkConfiguration, _headers);
+    public CompletableFuture<RemoveAccountingAccount2Response> removeAccountingAccount2(@Nonnull RemoveAccountingAccount2Request request) {
+        AsyncRequestOperation<RemoveAccountingAccount2Request, RemoveAccountingAccount2Response> operation
+              = new RemoveAccountingAccount2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -174,19 +174,19 @@ public class AsyncAccount {
      * 
      * @return The async call builder
      */
-    public UpdateAccountingAccountRequestBuilder updateAccountingAccount() {
-        return new UpdateAccountingAccountRequestBuilder(sdkConfiguration);
+    public UpdateAccountingAccount2RequestBuilder updateAccountingAccount2() {
+        return new UpdateAccountingAccount2RequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update an account
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<UpdateAccountingAccountResponse>} - The async response
+     * @return {@code CompletableFuture<UpdateAccountingAccount2Response>} - The async response
      */
-    public CompletableFuture<UpdateAccountingAccountResponse> updateAccountingAccount(@Nonnull UpdateAccountingAccountRequest request) {
-        AsyncRequestOperation<UpdateAccountingAccountRequest, UpdateAccountingAccountResponse> operation
-              = new UpdateAccountingAccount.Async(sdkConfiguration, _headers);
+    public CompletableFuture<UpdateAccountingAccount2Response> updateAccountingAccount2(@Nonnull UpdateAccountingAccount2Request request) {
+        AsyncRequestOperation<UpdateAccountingAccount2Request, UpdateAccountingAccount2Response> operation
+              = new UpdateAccountingAccount2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
