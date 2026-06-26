@@ -39,7 +39,7 @@ The samples below show how a published SDK artifact is used:
 
 Gradle:
 ```groovy
-implementation 'to.unified:unified-java-sdk:0.47.31'
+implementation 'to.unified:unified-java-sdk:0.47.32'
 ```
 
 Maven:
@@ -47,7 +47,7 @@ Maven:
 <dependency>
     <groupId>to.unified</groupId>
     <artifactId>unified-java-sdk</artifactId>
-    <version>0.47.31</version>
+    <version>0.47.32</version>
 </dependency>
 ```
 
@@ -1705,6 +1705,13 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 * [removeAtsScorecard2](docs/sdks/scorecard/README.md#removeatsscorecard2) - Remove a scorecard
 * [updateAtsScorecard2](docs/sdks/scorecard/README.md#updateatsscorecard2) - Update a scorecard
 
+### [Secretsmanager](docs/sdks/secretsmanager/README.md)
+
+* [createUnifiedWorkspaceSecretsmanager](docs/sdks/secretsmanager/README.md#createunifiedworkspacesecretsmanager) - Create secrets manager
+* [getUnifiedWorkspaceSecretsmanager](docs/sdks/secretsmanager/README.md#getunifiedworkspacesecretsmanager) - Retrieve secrets manager
+* [listUnifiedWorkspaceSecretsmanagers](docs/sdks/secretsmanager/README.md#listunifiedworkspacesecretsmanagers) - List secrets managers
+* [removeUnifiedWorkspaceSecretsmanager](docs/sdks/secretsmanager/README.md#removeunifiedworkspacesecretsmanager) - Remove secrets manager
+
 ### [Session](docs/sdks/session/README.md)
 
 * [getAnalyticsSession2](docs/sdks/session/README.md#getanalyticssession2) - Retrieve a session
@@ -1958,11 +1965,13 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 * [createUnifiedConnection](docs/sdks/unified/README.md#createunifiedconnection) - Create connection
 * [createUnifiedEnvironment](docs/sdks/unified/README.md#createunifiedenvironment) - Create new environments
 * [createUnifiedWebhook](docs/sdks/unified/README.md#createunifiedwebhook) - Create webhook subscription
+* [createUnifiedWorkspaceSecretsmanager](docs/sdks/unified/README.md#createunifiedworkspacesecretsmanager) - Create secrets manager
 * [getUnifiedApicall](docs/sdks/unified/README.md#getunifiedapicall) - Retrieve specific API Call by its ID
 * [getUnifiedConnection](docs/sdks/unified/README.md#getunifiedconnection) - Retrieve connection
 * [getUnifiedIntegrationAuth](docs/sdks/unified/README.md#getunifiedintegrationauth) - Authorize new connection
 * [getUnifiedIssue](docs/sdks/unified/README.md#getunifiedissue) - Retrieve support issue
 * [getUnifiedWebhook](docs/sdks/unified/README.md#getunifiedwebhook) - Retrieve webhook by its ID
+* [getUnifiedWorkspaceSecretsmanager](docs/sdks/unified/README.md#getunifiedworkspacesecretsmanager) - Retrieve secrets manager
 * [listUnifiedApicalls](docs/sdks/unified/README.md#listunifiedapicalls) - Returns API Calls
 * [listUnifiedConnections](docs/sdks/unified/README.md#listunifiedconnections) - List all connections
 * [listUnifiedEnvironments](docs/sdks/unified/README.md#listunifiedenvironments) - Returns all environments
@@ -1970,12 +1979,14 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 * [listUnifiedIntegrations](docs/sdks/unified/README.md#listunifiedintegrations) - Returns all integrations
 * [listUnifiedIssues](docs/sdks/unified/README.md#listunifiedissues) - List support issues
 * [listUnifiedWebhooks](docs/sdks/unified/README.md#listunifiedwebhooks) - Returns all registered webhooks
+* [listUnifiedWorkspaceSecretsmanagers](docs/sdks/unified/README.md#listunifiedworkspacesecretsmanagers) - List secrets managers
 * [patchUnifiedConnection](docs/sdks/unified/README.md#patchunifiedconnection) - Update connection
 * [patchUnifiedWebhook](docs/sdks/unified/README.md#patchunifiedwebhook) - Update webhook subscription
 * [patchUnifiedWebhookTrigger](docs/sdks/unified/README.md#patchunifiedwebhooktrigger) - Trigger webhook
 * [removeUnifiedConnection](docs/sdks/unified/README.md#removeunifiedconnection) - Remove connection
 * [removeUnifiedEnvironment](docs/sdks/unified/README.md#removeunifiedenvironment) - Remove an environment
 * [removeUnifiedWebhook](docs/sdks/unified/README.md#removeunifiedwebhook) - Remove webhook subscription
+* [removeUnifiedWorkspaceSecretsmanager](docs/sdks/unified/README.md#removeunifiedworkspacesecretsmanager) - Remove secrets manager
 * [updateUnifiedConnection](docs/sdks/unified/README.md#updateunifiedconnection) - Update connection
 * [updateUnifiedWebhook](docs/sdks/unified/README.md#updateunifiedwebhook) - Update webhook subscription
 * [updateUnifiedWebhookTrigger](docs/sdks/unified/README.md#updateunifiedwebhooktrigger) - Trigger webhook

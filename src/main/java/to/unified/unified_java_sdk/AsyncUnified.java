@@ -16,18 +16,21 @@ import to.unified.unified_java_sdk.models.operations.GetUnifiedConnectionRequest
 import to.unified.unified_java_sdk.models.operations.GetUnifiedIntegrationAuthRequest;
 import to.unified.unified_java_sdk.models.operations.GetUnifiedIssueRequest;
 import to.unified.unified_java_sdk.models.operations.GetUnifiedWebhookRequest;
+import to.unified.unified_java_sdk.models.operations.GetUnifiedWorkspaceSecretsmanagerRequest;
 import to.unified.unified_java_sdk.models.operations.ListUnifiedApicallsRequest;
 import to.unified.unified_java_sdk.models.operations.ListUnifiedConnectionsRequest;
 import to.unified.unified_java_sdk.models.operations.ListUnifiedIntegrationWorkspacesRequest;
 import to.unified.unified_java_sdk.models.operations.ListUnifiedIntegrationsRequest;
 import to.unified.unified_java_sdk.models.operations.ListUnifiedIssuesRequest;
 import to.unified.unified_java_sdk.models.operations.ListUnifiedWebhooksRequest;
+import to.unified.unified_java_sdk.models.operations.ListUnifiedWorkspaceSecretsmanagersRequest;
 import to.unified.unified_java_sdk.models.operations.PatchUnifiedConnectionRequest;
 import to.unified.unified_java_sdk.models.operations.PatchUnifiedWebhookRequest;
 import to.unified.unified_java_sdk.models.operations.PatchUnifiedWebhookTriggerRequest;
 import to.unified.unified_java_sdk.models.operations.RemoveUnifiedConnectionRequest;
 import to.unified.unified_java_sdk.models.operations.RemoveUnifiedEnvironmentRequest;
 import to.unified.unified_java_sdk.models.operations.RemoveUnifiedWebhookRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveUnifiedWorkspaceSecretsmanagerRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateUnifiedConnectionRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateUnifiedWebhookRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateUnifiedWebhookTriggerRequest;
@@ -37,6 +40,8 @@ import to.unified.unified_java_sdk.models.operations.async.CreateUnifiedEnvironm
 import to.unified.unified_java_sdk.models.operations.async.CreateUnifiedEnvironmentResponse;
 import to.unified.unified_java_sdk.models.operations.async.CreateUnifiedWebhookRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.CreateUnifiedWebhookResponse;
+import to.unified.unified_java_sdk.models.operations.async.CreateUnifiedWorkspaceSecretsmanagerRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.CreateUnifiedWorkspaceSecretsmanagerResponse;
 import to.unified.unified_java_sdk.models.operations.async.GetUnifiedApicallRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.GetUnifiedApicallResponse;
 import to.unified.unified_java_sdk.models.operations.async.GetUnifiedConnectionRequestBuilder;
@@ -47,6 +52,8 @@ import to.unified.unified_java_sdk.models.operations.async.GetUnifiedIssueReques
 import to.unified.unified_java_sdk.models.operations.async.GetUnifiedIssueResponse;
 import to.unified.unified_java_sdk.models.operations.async.GetUnifiedWebhookRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.GetUnifiedWebhookResponse;
+import to.unified.unified_java_sdk.models.operations.async.GetUnifiedWorkspaceSecretsmanagerRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetUnifiedWorkspaceSecretsmanagerResponse;
 import to.unified.unified_java_sdk.models.operations.async.ListUnifiedApicallsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.ListUnifiedApicallsResponse;
 import to.unified.unified_java_sdk.models.operations.async.ListUnifiedConnectionsRequestBuilder;
@@ -61,6 +68,8 @@ import to.unified.unified_java_sdk.models.operations.async.ListUnifiedIssuesRequ
 import to.unified.unified_java_sdk.models.operations.async.ListUnifiedIssuesResponse;
 import to.unified.unified_java_sdk.models.operations.async.ListUnifiedWebhooksRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.ListUnifiedWebhooksResponse;
+import to.unified.unified_java_sdk.models.operations.async.ListUnifiedWorkspaceSecretsmanagersRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListUnifiedWorkspaceSecretsmanagersResponse;
 import to.unified.unified_java_sdk.models.operations.async.PatchUnifiedConnectionRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.PatchUnifiedConnectionResponse;
 import to.unified.unified_java_sdk.models.operations.async.PatchUnifiedWebhookRequestBuilder;
@@ -73,6 +82,8 @@ import to.unified.unified_java_sdk.models.operations.async.RemoveUnifiedEnvironm
 import to.unified.unified_java_sdk.models.operations.async.RemoveUnifiedEnvironmentResponse;
 import to.unified.unified_java_sdk.models.operations.async.RemoveUnifiedWebhookRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.RemoveUnifiedWebhookResponse;
+import to.unified.unified_java_sdk.models.operations.async.RemoveUnifiedWorkspaceSecretsmanagerRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.RemoveUnifiedWorkspaceSecretsmanagerResponse;
 import to.unified.unified_java_sdk.models.operations.async.UpdateUnifiedConnectionRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.UpdateUnifiedConnectionResponse;
 import to.unified.unified_java_sdk.models.operations.async.UpdateUnifiedWebhookRequestBuilder;
@@ -80,14 +91,17 @@ import to.unified.unified_java_sdk.models.operations.async.UpdateUnifiedWebhookR
 import to.unified.unified_java_sdk.models.operations.async.UpdateUnifiedWebhookTriggerRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.UpdateUnifiedWebhookTriggerResponse;
 import to.unified.unified_java_sdk.models.shared.Connection;
+import to.unified.unified_java_sdk.models.shared.SecretsManager;
 import to.unified.unified_java_sdk.operations.CreateUnifiedConnection;
 import to.unified.unified_java_sdk.operations.CreateUnifiedEnvironment;
 import to.unified.unified_java_sdk.operations.CreateUnifiedWebhook;
+import to.unified.unified_java_sdk.operations.CreateUnifiedWorkspaceSecretsmanager;
 import to.unified.unified_java_sdk.operations.GetUnifiedApicall;
 import to.unified.unified_java_sdk.operations.GetUnifiedConnection;
 import to.unified.unified_java_sdk.operations.GetUnifiedIntegrationAuth;
 import to.unified.unified_java_sdk.operations.GetUnifiedIssue;
 import to.unified.unified_java_sdk.operations.GetUnifiedWebhook;
+import to.unified.unified_java_sdk.operations.GetUnifiedWorkspaceSecretsmanager;
 import to.unified.unified_java_sdk.operations.ListUnifiedApicalls;
 import to.unified.unified_java_sdk.operations.ListUnifiedConnections;
 import to.unified.unified_java_sdk.operations.ListUnifiedEnvironments;
@@ -95,12 +109,14 @@ import to.unified.unified_java_sdk.operations.ListUnifiedIntegrationWorkspaces;
 import to.unified.unified_java_sdk.operations.ListUnifiedIntegrations;
 import to.unified.unified_java_sdk.operations.ListUnifiedIssues;
 import to.unified.unified_java_sdk.operations.ListUnifiedWebhooks;
+import to.unified.unified_java_sdk.operations.ListUnifiedWorkspaceSecretsmanagers;
 import to.unified.unified_java_sdk.operations.PatchUnifiedConnection;
 import to.unified.unified_java_sdk.operations.PatchUnifiedWebhook;
 import to.unified.unified_java_sdk.operations.PatchUnifiedWebhookTrigger;
 import to.unified.unified_java_sdk.operations.RemoveUnifiedConnection;
 import to.unified.unified_java_sdk.operations.RemoveUnifiedEnvironment;
 import to.unified.unified_java_sdk.operations.RemoveUnifiedWebhook;
+import to.unified.unified_java_sdk.operations.RemoveUnifiedWorkspaceSecretsmanager;
 import to.unified.unified_java_sdk.operations.UpdateUnifiedConnection;
 import to.unified.unified_java_sdk.operations.UpdateUnifiedWebhook;
 import to.unified.unified_java_sdk.operations.UpdateUnifiedWebhookTrigger;
@@ -203,6 +219,29 @@ public class AsyncUnified {
     public CompletableFuture<CreateUnifiedWebhookResponse> createUnifiedWebhook(@Nonnull CreateUnifiedWebhookRequest request) {
         AsyncRequestOperation<CreateUnifiedWebhookRequest, CreateUnifiedWebhookResponse> operation
               = new CreateUnifiedWebhook.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * Create secrets manager
+     * 
+     * @return The async call builder
+     */
+    public CreateUnifiedWorkspaceSecretsmanagerRequestBuilder createUnifiedWorkspaceSecretsmanager() {
+        return new CreateUnifiedWorkspaceSecretsmanagerRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Create secrets manager
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<CreateUnifiedWorkspaceSecretsmanagerResponse>} - The async response
+     */
+    public CompletableFuture<CreateUnifiedWorkspaceSecretsmanagerResponse> createUnifiedWorkspaceSecretsmanager(@Nonnull SecretsManager request) {
+        AsyncRequestOperation<SecretsManager, CreateUnifiedWorkspaceSecretsmanagerResponse> operation
+              = new CreateUnifiedWorkspaceSecretsmanager.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -324,6 +363,29 @@ public class AsyncUnified {
     public CompletableFuture<GetUnifiedWebhookResponse> getUnifiedWebhook(@Nonnull GetUnifiedWebhookRequest request) {
         AsyncRequestOperation<GetUnifiedWebhookRequest, GetUnifiedWebhookResponse> operation
               = new GetUnifiedWebhook.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * Retrieve secrets manager
+     * 
+     * @return The async call builder
+     */
+    public GetUnifiedWorkspaceSecretsmanagerRequestBuilder getUnifiedWorkspaceSecretsmanager() {
+        return new GetUnifiedWorkspaceSecretsmanagerRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Retrieve secrets manager
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<GetUnifiedWorkspaceSecretsmanagerResponse>} - The async response
+     */
+    public CompletableFuture<GetUnifiedWorkspaceSecretsmanagerResponse> getUnifiedWorkspaceSecretsmanager(@Nonnull GetUnifiedWorkspaceSecretsmanagerRequest request) {
+        AsyncRequestOperation<GetUnifiedWorkspaceSecretsmanagerRequest, GetUnifiedWorkspaceSecretsmanagerResponse> operation
+              = new GetUnifiedWorkspaceSecretsmanager.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -494,6 +556,29 @@ public class AsyncUnified {
 
 
     /**
+     * List secrets managers
+     * 
+     * @return The async call builder
+     */
+    public ListUnifiedWorkspaceSecretsmanagersRequestBuilder listUnifiedWorkspaceSecretsmanagers() {
+        return new ListUnifiedWorkspaceSecretsmanagersRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * List secrets managers
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<ListUnifiedWorkspaceSecretsmanagersResponse>} - The async response
+     */
+    public CompletableFuture<ListUnifiedWorkspaceSecretsmanagersResponse> listUnifiedWorkspaceSecretsmanagers(@Nonnull ListUnifiedWorkspaceSecretsmanagersRequest request) {
+        AsyncRequestOperation<ListUnifiedWorkspaceSecretsmanagersRequest, ListUnifiedWorkspaceSecretsmanagersResponse> operation
+              = new ListUnifiedWorkspaceSecretsmanagers.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
      * Update connection
      * 
      * @return The async call builder
@@ -626,6 +711,29 @@ public class AsyncUnified {
     public CompletableFuture<RemoveUnifiedWebhookResponse> removeUnifiedWebhook(@Nonnull RemoveUnifiedWebhookRequest request) {
         AsyncRequestOperation<RemoveUnifiedWebhookRequest, RemoveUnifiedWebhookResponse> operation
               = new RemoveUnifiedWebhook.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * Remove secrets manager
+     * 
+     * @return The async call builder
+     */
+    public RemoveUnifiedWorkspaceSecretsmanagerRequestBuilder removeUnifiedWorkspaceSecretsmanager() {
+        return new RemoveUnifiedWorkspaceSecretsmanagerRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Remove secrets manager
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<RemoveUnifiedWorkspaceSecretsmanagerResponse>} - The async response
+     */
+    public CompletableFuture<RemoveUnifiedWorkspaceSecretsmanagerResponse> removeUnifiedWorkspaceSecretsmanager(@Nonnull RemoveUnifiedWorkspaceSecretsmanagerRequest request) {
+        AsyncRequestOperation<RemoveUnifiedWorkspaceSecretsmanagerRequest, RemoveUnifiedWorkspaceSecretsmanagerResponse> operation
+              = new RemoveUnifiedWorkspaceSecretsmanager.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

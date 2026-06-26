@@ -305,6 +305,8 @@ public class AsyncUnifiedTo {
 
     private final AsyncWebhook webhook;
 
+    private final AsyncSecretsmanager secretsmanager;
+
     private final AsyncVerification verification;
 
     private final AsyncRequest request;
@@ -893,6 +895,10 @@ public class AsyncUnifiedTo {
         return webhook;
     }
 
+    public AsyncSecretsmanager secretsmanager() {
+        return secretsmanager;
+    }
+
     public AsyncVerification verification() {
         return verification;
     }
@@ -1053,6 +1059,7 @@ public class AsyncUnifiedTo {
         this.login = new AsyncLogin(syncSDK.login(), sdkConfiguration);
         this.issue = new AsyncIssue(syncSDK.issue(), sdkConfiguration);
         this.webhook = new AsyncWebhook(syncSDK.webhook(), sdkConfiguration);
+        this.secretsmanager = new AsyncSecretsmanager(syncSDK.secretsmanager(), sdkConfiguration);
         this.verification = new AsyncVerification(syncSDK.verification(), sdkConfiguration);
         this.request = new AsyncRequest(syncSDK.request(), sdkConfiguration);
     }

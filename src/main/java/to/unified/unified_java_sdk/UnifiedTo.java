@@ -479,6 +479,9 @@ public class UnifiedTo {
     private final Webhook webhook;
 
 
+    private final Secretsmanager secretsmanager;
+
+
     private final Verification verification;
 
 
@@ -1215,6 +1218,11 @@ public class UnifiedTo {
     }
 
 
+    public Secretsmanager secretsmanager() {
+        return secretsmanager;
+    }
+
+
     public Verification verification() {
         return verification;
     }
@@ -1507,6 +1515,7 @@ public class UnifiedTo {
         this.login = new Login(sdkConfiguration);
         this.issue = new Issue(sdkConfiguration);
         this.webhook = new Webhook(sdkConfiguration);
+        this.secretsmanager = new Secretsmanager(sdkConfiguration);
         this.verification = new Verification(sdkConfiguration);
         this.request = new Request(sdkConfiguration);
         this.asyncSDK = new AsyncUnifiedTo(this, sdkConfiguration);
