@@ -21,11 +21,6 @@ import to.unified.unified_java_sdk.utils.Utils;
 public class TicketingTicket {
 
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("category")
-    private String category;
-
-
-    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("category_id")
     private String categoryId;
 
@@ -48,6 +43,11 @@ public class TicketingTicket {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     private String description;
+
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("due_at")
+    private OffsetDateTime dueAt;
 
 
     @JsonInclude(Include.NON_ABSENT)
@@ -106,12 +106,12 @@ public class TicketingTicket {
 
     @JsonCreator
     public TicketingTicket(
-            @JsonProperty("category") @Nullable String category,
             @JsonProperty("category_id") @Nullable String categoryId,
             @JsonProperty("closed_at") @Nullable OffsetDateTime closedAt,
             @JsonProperty("created_at") @Nullable OffsetDateTime createdAt,
             @JsonProperty("customer_id") @Nullable String customerId,
             @JsonProperty("description") @Nullable String description,
+            @JsonProperty("due_at") @Nullable OffsetDateTime dueAt,
             @JsonProperty("id") @Nullable String id,
             @JsonProperty("priority") @Nullable String priority,
             @JsonProperty("raw") @Nullable Map<String, Object> raw,
@@ -123,12 +123,12 @@ public class TicketingTicket {
             @JsonProperty("updated_at") @Nullable OffsetDateTime updatedAt,
             @JsonProperty("url") @Nullable String url,
             @JsonProperty("user_id") @Nullable String userId) {
-        this.category = category;
         this.categoryId = categoryId;
         this.closedAt = closedAt;
         this.createdAt = createdAt;
         this.customerId = customerId;
         this.description = description;
+        this.dueAt = dueAt;
         this.id = id;
         this.priority = priority;
         this.raw = raw;
@@ -151,10 +151,6 @@ public class TicketingTicket {
             null, null);
     }
 
-    public Optional<String> category() {
-        return Optional.ofNullable(this.category);
-    }
-
     public Optional<String> categoryId() {
         return Optional.ofNullable(this.categoryId);
     }
@@ -173,6 +169,10 @@ public class TicketingTicket {
 
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
+    }
+
+    public Optional<OffsetDateTime> dueAt() {
+        return Optional.ofNullable(this.dueAt);
     }
 
     public Optional<String> id() {
@@ -224,12 +224,6 @@ public class TicketingTicket {
     }
 
 
-    public TicketingTicket withCategory(@Nullable String category) {
-        this.category = category;
-        return this;
-    }
-
-
     public TicketingTicket withCategoryId(@Nullable String categoryId) {
         this.categoryId = categoryId;
         return this;
@@ -256,6 +250,12 @@ public class TicketingTicket {
 
     public TicketingTicket withDescription(@Nullable String description) {
         this.description = description;
+        return this;
+    }
+
+
+    public TicketingTicket withDueAt(@Nullable OffsetDateTime dueAt) {
+        this.dueAt = dueAt;
         return this;
     }
 
@@ -336,12 +336,12 @@ public class TicketingTicket {
         }
         TicketingTicket other = (TicketingTicket) o;
         return 
-            Utils.enhancedDeepEquals(this.category, other.category) &&
             Utils.enhancedDeepEquals(this.categoryId, other.categoryId) &&
             Utils.enhancedDeepEquals(this.closedAt, other.closedAt) &&
             Utils.enhancedDeepEquals(this.createdAt, other.createdAt) &&
             Utils.enhancedDeepEquals(this.customerId, other.customerId) &&
             Utils.enhancedDeepEquals(this.description, other.description) &&
+            Utils.enhancedDeepEquals(this.dueAt, other.dueAt) &&
             Utils.enhancedDeepEquals(this.id, other.id) &&
             Utils.enhancedDeepEquals(this.priority, other.priority) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
@@ -358,8 +358,8 @@ public class TicketingTicket {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            category, categoryId, closedAt,
-            createdAt, customerId, description,
+            categoryId, closedAt, createdAt,
+            customerId, description, dueAt,
             id, priority, raw,
             source, sourceRef, status,
             subject, tags, updatedAt,
@@ -369,12 +369,12 @@ public class TicketingTicket {
     @Override
     public String toString() {
         return Utils.toString(TicketingTicket.class,
-                "category", category,
                 "categoryId", categoryId,
                 "closedAt", closedAt,
                 "createdAt", createdAt,
                 "customerId", customerId,
                 "description", description,
+                "dueAt", dueAt,
                 "id", id,
                 "priority", priority,
                 "raw", raw,
@@ -391,8 +391,6 @@ public class TicketingTicket {
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
 
-        private String category;
-
         private String categoryId;
 
         private OffsetDateTime closedAt;
@@ -402,6 +400,8 @@ public class TicketingTicket {
         private String customerId;
 
         private String description;
+
+        private OffsetDateTime dueAt;
 
         private String id;
 
@@ -429,11 +429,6 @@ public class TicketingTicket {
           // force use of static builder() method
         }
 
-        public Builder category(@Nullable String category) {
-            this.category = category;
-            return this;
-        }
-
         public Builder categoryId(@Nullable String categoryId) {
             this.categoryId = categoryId;
             return this;
@@ -456,6 +451,11 @@ public class TicketingTicket {
 
         public Builder description(@Nullable String description) {
             this.description = description;
+            return this;
+        }
+
+        public Builder dueAt(@Nullable OffsetDateTime dueAt) {
+            this.dueAt = dueAt;
             return this;
         }
 
@@ -516,8 +516,8 @@ public class TicketingTicket {
 
         public TicketingTicket build() {
             return new TicketingTicket(
-                category, categoryId, closedAt,
-                createdAt, customerId, description,
+                categoryId, closedAt, createdAt,
+                customerId, description, dueAt,
                 id, priority, raw,
                 source, sourceRef, status,
                 subject, tags, updatedAt,

@@ -19,6 +19,7 @@ CreateMartechMember2QueryParamFields value = CreateMartechMember2QueryParamField
 | `NAME`       | name         |
 | `FIRST_NAME` | first_name   |
 | `LAST_NAME`  | last_name    |
+| `COMPANY`    | company      |
 | `EMAILS`     | emails       |
 | `LIST_IDS`   | list_ids     |
 | `TAGS`       | tags         |

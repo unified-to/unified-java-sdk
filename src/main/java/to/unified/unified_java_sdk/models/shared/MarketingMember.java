@@ -25,6 +25,11 @@ import to.unified.unified_java_sdk.utils.Utils;
 public class MarketingMember {
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("company")
+    private String company;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private OffsetDateTime createdAt;
 
@@ -86,6 +91,7 @@ public class MarketingMember {
 
     @JsonCreator
     public MarketingMember(
+            @JsonProperty("company") @Nullable String company,
             @JsonProperty("created_at") @Nullable OffsetDateTime createdAt,
             @JsonProperty("emails") @Nullable List<MarketingEmail> emails,
             @JsonProperty("first_name") @Nullable String firstName,
@@ -97,6 +103,7 @@ public class MarketingMember {
             @JsonProperty("status") @Nullable MarketingMemberStatus status,
             @JsonProperty("tags") @Nullable List<String> tags,
             @JsonProperty("updated_at") @Nullable OffsetDateTime updatedAt) {
+        this.company = company;
         this.createdAt = createdAt;
         this.emails = emails;
         this.firstName = firstName;
@@ -114,7 +121,11 @@ public class MarketingMember {
         this(null, null, null,
             null, null, null,
             null, null, null,
-            null, null);
+            null, null, null);
+    }
+
+    public Optional<String> company() {
+        return Optional.ofNullable(this.company);
     }
 
     public Optional<OffsetDateTime> createdAt() {
@@ -172,6 +183,12 @@ public class MarketingMember {
 
     public static Builder builder() {
         return new Builder();
+    }
+
+
+    public MarketingMember withCompany(@Nullable String company) {
+        this.company = company;
+        return this;
     }
 
 
@@ -260,6 +277,7 @@ public class MarketingMember {
         }
         MarketingMember other = (MarketingMember) o;
         return 
+            Utils.enhancedDeepEquals(this.company, other.company) &&
             Utils.enhancedDeepEquals(this.createdAt, other.createdAt) &&
             Utils.enhancedDeepEquals(this.emails, other.emails) &&
             Utils.enhancedDeepEquals(this.firstName, other.firstName) &&
@@ -276,15 +294,16 @@ public class MarketingMember {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            createdAt, emails, firstName,
-            id, lastName, listIds,
-            name, raw, status,
-            tags, updatedAt);
+            company, createdAt, emails,
+            firstName, id, lastName,
+            listIds, name, raw,
+            status, tags, updatedAt);
     }
     
     @Override
     public String toString() {
         return Utils.toString(MarketingMember.class,
+                "company", company,
                 "createdAt", createdAt,
                 "emails", emails,
                 "firstName", firstName,
@@ -300,6 +319,8 @@ public class MarketingMember {
 
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
+
+        private String company;
 
         private OffsetDateTime createdAt;
 
@@ -325,6 +346,11 @@ public class MarketingMember {
 
         private Builder() {
           // force use of static builder() method
+        }
+
+        public Builder company(@Nullable String company) {
+            this.company = company;
+            return this;
         }
 
         public Builder createdAt(@Nullable OffsetDateTime createdAt) {
@@ -393,10 +419,10 @@ public class MarketingMember {
 
         public MarketingMember build() {
             return new MarketingMember(
-                createdAt, emails, firstName,
-                id, lastName, listIds,
-                name, raw, status,
-                tags, updatedAt);
+                company, createdAt, emails,
+                firstName, id, lastName,
+                listIds, name, raw,
+                status, tags, updatedAt);
         }
 
     }
