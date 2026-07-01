@@ -72,6 +72,7 @@ public class ObjectType {
     public static final ObjectType CRM_EVENT = new ObjectType("crm_event");
     public static final ObjectType CRM_LEAD = new ObjectType("crm_lead");
     public static final ObjectType CRM_PIPELINE = new ObjectType("crm_pipeline");
+    public static final ObjectType CRM_PICKLIST = new ObjectType("crm_picklist");
     public static final ObjectType HRIS_EMPLOYEE = new ObjectType("hris_employee");
     public static final ObjectType HRIS_GROUP = new ObjectType("hris_group");
     public static final ObjectType HRIS_PAYSLIP = new ObjectType("hris_payslip");
@@ -291,6 +292,7 @@ public class ObjectType {
         map.put("crm_event", CRM_EVENT);
         map.put("crm_lead", CRM_LEAD);
         map.put("crm_pipeline", CRM_PIPELINE);
+        map.put("crm_picklist", CRM_PICKLIST);
         map.put("hris_employee", HRIS_EMPLOYEE);
         map.put("hris_group", HRIS_GROUP);
         map.put("hris_payslip", HRIS_PAYSLIP);
@@ -442,6 +444,7 @@ public class ObjectType {
         map.put("crm_event", ObjectTypeEnum.CRM_EVENT);
         map.put("crm_lead", ObjectTypeEnum.CRM_LEAD);
         map.put("crm_pipeline", ObjectTypeEnum.CRM_PIPELINE);
+        map.put("crm_picklist", ObjectTypeEnum.CRM_PICKLIST);
         map.put("hris_employee", ObjectTypeEnum.HRIS_EMPLOYEE);
         map.put("hris_group", ObjectTypeEnum.HRIS_GROUP);
         map.put("hris_payslip", ObjectTypeEnum.HRIS_PAYSLIP);
@@ -594,6 +597,7 @@ public class ObjectType {
         CRM_EVENT("crm_event"),
         CRM_LEAD("crm_lead"),
         CRM_PIPELINE("crm_pipeline"),
+        CRM_PICKLIST("crm_picklist"),
         HRIS_EMPLOYEE("hris_employee"),
         HRIS_GROUP("hris_group"),
         HRIS_PAYSLIP("hris_payslip"),

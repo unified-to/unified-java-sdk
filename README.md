@@ -39,7 +39,7 @@ The samples below show how a published SDK artifact is used:
 
 Gradle:
 ```groovy
-implementation 'to.unified:unified-java-sdk:0.47.33'
+implementation 'to.unified:unified-java-sdk:0.47.34'
 ```
 
 Maven:
@@ -47,7 +47,7 @@ Maven:
 <dependency>
     <groupId>to.unified</groupId>
     <artifactId>unified-java-sdk</artifactId>
-    <version>0.47.33</version>
+    <version>0.47.34</version>
 </dependency>
 ```
 
@@ -816,6 +816,7 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 * [listCrmDeals2](docs/sdks/crm/README.md#listcrmdeals2) - List all deals
 * [listCrmEvents2](docs/sdks/crm/README.md#listcrmevents2) - List all events
 * [listCrmLeads2](docs/sdks/crm/README.md#listcrmleads2) - List all leads
+* [listCrmPicklists2](docs/sdks/crm/README.md#listcrmpicklists2) - List all picklists
 * [listCrmPipelines2](docs/sdks/crm/README.md#listcrmpipelines2) - List all pipelines
 * [patchCrmCompany2](docs/sdks/crm/README.md#patchcrmcompany2) - Update a company
 * [patchCrmContact2](docs/sdks/crm/README.md#patchcrmcontact2) - Update a contact
@@ -1493,6 +1494,10 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 ### [Person](docs/sdks/person/README.md)
 
 * [listEnrichPeople2](docs/sdks/person/README.md#listenrichpeople2) - Retrieve enrichment information for a person
+
+### [Picklist](docs/sdks/picklist/README.md)
+
+* [listCrmPicklists2](docs/sdks/picklist/README.md#listcrmpicklists2) - List all picklists
 
 ### [Pipeline](docs/sdks/pipeline/README.md)
 

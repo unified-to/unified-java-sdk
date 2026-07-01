@@ -102,6 +102,8 @@ public class AdsReportMetricsType {
     public static final AdsReportMetricsType CROSS_DEVICE_CONVERSIONS = new AdsReportMetricsType("CROSS_DEVICE_CONVERSIONS");
     public static final AdsReportMetricsType ABSOLUTE_TOP_IMPRESSION_SHARE = new AdsReportMetricsType("ABSOLUTE_TOP_IMPRESSION_SHARE");
     public static final AdsReportMetricsType TOP_IMPRESSION_SHARE = new AdsReportMetricsType("TOP_IMPRESSION_SHARE");
+    public static final AdsReportMetricsType ABSOLUTE_TOP_IMPRESSION_RATE_PERCENT = new AdsReportMetricsType("ABSOLUTE_TOP_IMPRESSION_RATE_PERCENT");
+    public static final AdsReportMetricsType TOP_IMPRESSION_RATE_PERCENT = new AdsReportMetricsType("TOP_IMPRESSION_RATE_PERCENT");
     public static final AdsReportMetricsType VIDEO_FULLSCREENS = new AdsReportMetricsType("VIDEO_FULLSCREENS");
     public static final AdsReportMetricsType VIDEO_PAUSES = new AdsReportMetricsType("VIDEO_PAUSES");
     public static final AdsReportMetricsType VIDEO_MUTES = new AdsReportMetricsType("VIDEO_MUTES");
@@ -135,9 +137,6 @@ public class AdsReportMetricsType {
     public static final AdsReportMetricsType ACTIVE_VIEW_VISIBLE10_S = new AdsReportMetricsType("ACTIVE_VIEW_VISIBLE_10S");
     public static final AdsReportMetricsType NOT_MEASURABLE_IMPRESSIONS = new AdsReportMetricsType("NOT_MEASURABLE_IMPRESSIONS");
     public static final AdsReportMetricsType NOT_VIEWABLE_IMPRESSIONS = new AdsReportMetricsType("NOT_VIEWABLE_IMPRESSIONS");
-    public static final AdsReportMetricsType PUBLISHER_PLATFORM = new AdsReportMetricsType("PUBLISHER_PLATFORM");
-    public static final AdsReportMetricsType PLATFORM_POSITION = new AdsReportMetricsType("PLATFORM_POSITION");
-    public static final AdsReportMetricsType IMPRESSION_DEVICE = new AdsReportMetricsType("IMPRESSION_DEVICE");
     public static final AdsReportMetricsType ONE_DVIEW = new AdsReportMetricsType("1D_VIEW");
     public static final AdsReportMetricsType ONE_DCLICK = new AdsReportMetricsType("1D_CLICK");
     public static final AdsReportMetricsType SEVEN_DVIEW = new AdsReportMetricsType("7D_VIEW");
@@ -301,6 +300,8 @@ public class AdsReportMetricsType {
         map.put("CROSS_DEVICE_CONVERSIONS", CROSS_DEVICE_CONVERSIONS);
         map.put("ABSOLUTE_TOP_IMPRESSION_SHARE", ABSOLUTE_TOP_IMPRESSION_SHARE);
         map.put("TOP_IMPRESSION_SHARE", TOP_IMPRESSION_SHARE);
+        map.put("ABSOLUTE_TOP_IMPRESSION_RATE_PERCENT", ABSOLUTE_TOP_IMPRESSION_RATE_PERCENT);
+        map.put("TOP_IMPRESSION_RATE_PERCENT", TOP_IMPRESSION_RATE_PERCENT);
         map.put("VIDEO_FULLSCREENS", VIDEO_FULLSCREENS);
         map.put("VIDEO_PAUSES", VIDEO_PAUSES);
         map.put("VIDEO_MUTES", VIDEO_MUTES);
@@ -334,9 +335,6 @@ public class AdsReportMetricsType {
         map.put("ACTIVE_VIEW_VISIBLE_10S", ACTIVE_VIEW_VISIBLE10_S);
         map.put("NOT_MEASURABLE_IMPRESSIONS", NOT_MEASURABLE_IMPRESSIONS);
         map.put("NOT_VIEWABLE_IMPRESSIONS", NOT_VIEWABLE_IMPRESSIONS);
-        map.put("PUBLISHER_PLATFORM", PUBLISHER_PLATFORM);
-        map.put("PLATFORM_POSITION", PLATFORM_POSITION);
-        map.put("IMPRESSION_DEVICE", IMPRESSION_DEVICE);
         map.put("1D_VIEW", ONE_DVIEW);
         map.put("1D_CLICK", ONE_DCLICK);
         map.put("7D_VIEW", SEVEN_DVIEW);
@@ -432,6 +430,8 @@ public class AdsReportMetricsType {
         map.put("CROSS_DEVICE_CONVERSIONS", AdsReportMetricsTypeEnum.CROSS_DEVICE_CONVERSIONS);
         map.put("ABSOLUTE_TOP_IMPRESSION_SHARE", AdsReportMetricsTypeEnum.ABSOLUTE_TOP_IMPRESSION_SHARE);
         map.put("TOP_IMPRESSION_SHARE", AdsReportMetricsTypeEnum.TOP_IMPRESSION_SHARE);
+        map.put("ABSOLUTE_TOP_IMPRESSION_RATE_PERCENT", AdsReportMetricsTypeEnum.ABSOLUTE_TOP_IMPRESSION_RATE_PERCENT);
+        map.put("TOP_IMPRESSION_RATE_PERCENT", AdsReportMetricsTypeEnum.TOP_IMPRESSION_RATE_PERCENT);
         map.put("VIDEO_FULLSCREENS", AdsReportMetricsTypeEnum.VIDEO_FULLSCREENS);
         map.put("VIDEO_PAUSES", AdsReportMetricsTypeEnum.VIDEO_PAUSES);
         map.put("VIDEO_MUTES", AdsReportMetricsTypeEnum.VIDEO_MUTES);
@@ -465,9 +465,6 @@ public class AdsReportMetricsType {
         map.put("ACTIVE_VIEW_VISIBLE_10S", AdsReportMetricsTypeEnum.ACTIVE_VIEW_VISIBLE10_S);
         map.put("NOT_MEASURABLE_IMPRESSIONS", AdsReportMetricsTypeEnum.NOT_MEASURABLE_IMPRESSIONS);
         map.put("NOT_VIEWABLE_IMPRESSIONS", AdsReportMetricsTypeEnum.NOT_VIEWABLE_IMPRESSIONS);
-        map.put("PUBLISHER_PLATFORM", AdsReportMetricsTypeEnum.PUBLISHER_PLATFORM);
-        map.put("PLATFORM_POSITION", AdsReportMetricsTypeEnum.PLATFORM_POSITION);
-        map.put("IMPRESSION_DEVICE", AdsReportMetricsTypeEnum.IMPRESSION_DEVICE);
         map.put("1D_VIEW", AdsReportMetricsTypeEnum.ONE_DVIEW);
         map.put("1D_CLICK", AdsReportMetricsTypeEnum.ONE_DCLICK);
         map.put("7D_VIEW", AdsReportMetricsTypeEnum.SEVEN_DVIEW);
@@ -564,6 +561,8 @@ public class AdsReportMetricsType {
         CROSS_DEVICE_CONVERSIONS("CROSS_DEVICE_CONVERSIONS"),
         ABSOLUTE_TOP_IMPRESSION_SHARE("ABSOLUTE_TOP_IMPRESSION_SHARE"),
         TOP_IMPRESSION_SHARE("TOP_IMPRESSION_SHARE"),
+        ABSOLUTE_TOP_IMPRESSION_RATE_PERCENT("ABSOLUTE_TOP_IMPRESSION_RATE_PERCENT"),
+        TOP_IMPRESSION_RATE_PERCENT("TOP_IMPRESSION_RATE_PERCENT"),
         VIDEO_FULLSCREENS("VIDEO_FULLSCREENS"),
         VIDEO_PAUSES("VIDEO_PAUSES"),
         VIDEO_MUTES("VIDEO_MUTES"),
@@ -597,9 +596,6 @@ public class AdsReportMetricsType {
         ACTIVE_VIEW_VISIBLE10_S("ACTIVE_VIEW_VISIBLE_10S"),
         NOT_MEASURABLE_IMPRESSIONS("NOT_MEASURABLE_IMPRESSIONS"),
         NOT_VIEWABLE_IMPRESSIONS("NOT_VIEWABLE_IMPRESSIONS"),
-        PUBLISHER_PLATFORM("PUBLISHER_PLATFORM"),
-        PLATFORM_POSITION("PLATFORM_POSITION"),
-        IMPRESSION_DEVICE("IMPRESSION_DEVICE"),
         ONE_DVIEW("1D_VIEW"),
         ONE_DCLICK("1D_CLICK"),
         SEVEN_DVIEW("7D_VIEW"),

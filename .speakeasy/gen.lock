@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: cfc256ab-f291-4245-b909-5b9e9a6e6803
 management:
-  docChecksum: 0ab332c4c2b7f7b52bec30489a92cd2f
+  docChecksum: 0714bf8a422e154dbdfe42e827bb9c8e
   docVersion: "1.0"
-  speakeasyVersion: 1.786.1
-  generationVersion: 2.913.3
-  releaseVersion: 0.47.33
-  configChecksum: 487abfadd223253938388e94aaa04da9
+  speakeasyVersion: 1.787.0
+  generationVersion: 2.914.0
+  releaseVersion: 0.47.34
+  configChecksum: 6e20b358bde06bacabdb09ac082b87d9
   repoURL: https://github.com/unified-to/unified-java-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-java-sdk
@@ -20,7 +20,7 @@ features:
     acceptHeaders: 2.81.2
     additionalDependencies: 0.1.0
     constsAndDefaults: 0.1.3
-    core: 3.55.28
+    core: 3.55.29
     downloadStreams: 0.1.1
     globalSecurity: 2.83.4
     globalSecurityCallbacks: 0.1.0
@@ -41,7 +41,7 @@ trackedFiles:
     pristine_git_object: 7d52fcc43b4993484a23b238be2883e25a54e12f
   build.gradle:
     id: f07866736216
-    last_write_checksum: sha1:a442980e248b82f8e45bb99c14b926db91bd0e7c
+    last_write_checksum: sha1:6e2a0aac1c1070057f6029d5076a0c9407501e24
     pristine_git_object: 0a8a5bf8fcb388148901fc49a191894f17008129
   docs/models/operations/Categories.md:
     id: f937b846bfe5
@@ -1722,7 +1722,7 @@ trackedFiles:
   docs/models/operations/ListAdsReports2QueryParamFields.md:
     last_write_checksum: sha1:d5fb3acca00f97f49db8fcbe9d2c158da08fcd75
   docs/models/operations/ListAdsReports2Request.md:
-    last_write_checksum: sha1:5f46b0cbdafb127877a3e07a13b00f6c3f4aaa1e
+    last_write_checksum: sha1:980da4cedb11528a0dad21d153ed618e3bbcb1e6
   docs/models/operations/ListAdsReports2Response.md:
     last_write_checksum: sha1:5b9c1ab5bca0c0e642664ddbbda9b9ef136f8c26
   docs/models/operations/ListAdsTargets2QueryParamFields.md:
@@ -1969,6 +1969,12 @@ trackedFiles:
     last_write_checksum: sha1:fbe427b7cf3417f33ce08a29ab9d1dd66f1ed12a
   docs/models/operations/ListCrmLeads2Response.md:
     last_write_checksum: sha1:515b619adb58492ecee748cd0d5cb4467cc83d16
+  docs/models/operations/ListCrmPicklists2QueryParamFields.md:
+    last_write_checksum: sha1:2c41ec57d9ff7f05e3abbb6c7ed423d2644a6215
+  docs/models/operations/ListCrmPicklists2Request.md:
+    last_write_checksum: sha1:75b084d6ef05ddfe2124f57b22e6ffcf3d7c14d6
+  docs/models/operations/ListCrmPicklists2Response.md:
+    last_write_checksum: sha1:13500827fb06e900e8a6413a0c14c2945cd80494
   docs/models/operations/ListCrmPipelines2QueryParamFields.md:
     last_write_checksum: sha1:257c1fb20dc82900d2fd28959e9f3108e64f90de
   docs/models/operations/ListCrmPipelines2Request.md:
@@ -2076,7 +2082,7 @@ trackedFiles:
   docs/models/operations/ListHrisTimeoffs2QueryParamFields.md:
     last_write_checksum: sha1:293e4b16dbd0f9e26d8270fc209c900e04e74538
   docs/models/operations/ListHrisTimeoffs2Request.md:
-    last_write_checksum: sha1:92f18f7ee2b9bd825efadad63c33e1b57757929b
+    last_write_checksum: sha1:e3da7b1a4cd0a5123b2414728929c5deeb3dc81c
   docs/models/operations/ListHrisTimeoffs2Response.md:
     last_write_checksum: sha1:25a97d384cade3076c817315b65858d2f5eb7aa8
   docs/models/operations/ListHrisTimeshifts2QueryParamFields.md:
@@ -2164,7 +2170,7 @@ trackedFiles:
   docs/models/operations/ListMartechMembers2Response.md:
     last_write_checksum: sha1:0468545181ebc4b06f58bc730e1a0958ac135615
   docs/models/operations/ListMartechReports2QueryParamFields.md:
-    last_write_checksum: sha1:e596440f87810efa33f7711e904ee057554ccd38
+    last_write_checksum: sha1:d666ed104e7d7071c34ec54fb163682dab10b448
   docs/models/operations/ListMartechReports2Request.md:
     last_write_checksum: sha1:485d48b170411743792fc854798b31afbc8dc084
   docs/models/operations/ListMartechReports2Response.md:
@@ -4553,11 +4559,11 @@ trackedFiles:
     pristine_git_object: 0cc5329eb72d620f062420a7f2290ccdc5df3c6a
   docs/models/shared/AdsReportMetrics.md:
     id: e9ef08774736
-    last_write_checksum: sha1:af5a5a76effd7aa9880bf0c32da3ab424916a9cb
+    last_write_checksum: sha1:f28d0dba40f4c6478fe930bfba9388402843e2b3
     pristine_git_object: e9a53ce7ecbffe5f15aaed37ff3f781f22e42bc4
   docs/models/shared/AdsReportMetricsType.md:
     id: 8ca268cb0eaa
-    last_write_checksum: sha1:abe6722fa780739d4db76305bbf17584db898113
+    last_write_checksum: sha1:75a3813daeac4e52deda555922a27225378c11fe
     pristine_git_object: 1fb65cb6ab947f3bf6ec025c831f9fd3cbe5a7de
   docs/models/shared/AdsTarget.md:
     id: 2b29235f2cc8
@@ -4759,7 +4765,7 @@ trackedFiles:
     pristine_git_object: 579ae2ff3e03e2fe7d032db85fb90f9c6560bea3
   docs/models/shared/AtsMetadata.md:
     id: 7deeccf916dd
-    last_write_checksum: sha1:0cfcfa4d24d4184381ffd743a04f6befaf940ad2
+    last_write_checksum: sha1:c466214ea8ce12059454f8150b373a09bf72fecf
     pristine_git_object: 1827def402936a771174dbd11cca6b73519e01b0
   docs/models/shared/AtsMetadata1.md:
     id: 3948d5cc0f7a
@@ -4769,8 +4775,6 @@ trackedFiles:
     id: d4396dd40c7b
     last_write_checksum: sha1:baa3a2c0334d95b4bf5dacb410278b77bbb70b2f
     pristine_git_object: fa8b06e3fe664ed34664cb5cbb5a2d0ed333bac5
-  docs/models/shared/AtsMetadataValue.md:
-    last_write_checksum: sha1:e1172057481ebfa101165b9fb5bd34d5380948ba
   docs/models/shared/AtsOffer.md:
     id: e5277371b9ab
     last_write_checksum: sha1:9ac561193d831a288a5c03ef098afa8e63d200ef
@@ -5143,6 +5147,10 @@ trackedFiles:
     id: 6787ec1d8a44
     last_write_checksum: sha1:b68a002d60a001ee9f885eb1935cd81ff083cab7
     pristine_git_object: d2d1d95ff0dba220c84236be8cea3330bb76ee45
+  docs/models/shared/CrmPicklist.md:
+    last_write_checksum: sha1:81ae8c82c0572452e82e359646221d758c5e953f
+  docs/models/shared/CrmPicklistType.md:
+    last_write_checksum: sha1:30d6aacd5ac4a28ca377daa96ce1f688c13f387b
   docs/models/shared/CrmPipeline.md:
     id: 7f7a6ef41ba3
     last_write_checksum: sha1:439f201a9db1dd549721ed5f91668e551b91f3d1
@@ -6005,7 +6013,7 @@ trackedFiles:
     pristine_git_object: 43b609374f4a034095bd6ae25b10cf243d143ffd
   docs/models/shared/MarketingReport.md:
     id: eb1e619517b2
-    last_write_checksum: sha1:d4358cb487094558d45803d4604653ec8819ad07
+    last_write_checksum: sha1:8816d121e08ca42acf3036403e66ca212be6e698
     pristine_git_object: 53252559ab2b79c6f924c3542562acb2d70663d2
   docs/models/shared/MarketingReportLink.md:
     id: d2cdb79969a0
@@ -6153,7 +6161,7 @@ trackedFiles:
     pristine_git_object: bf6554b8234c86503e5249fe348af3299714d3bf
   docs/models/shared/ObjectType.md:
     id: aadea85dc693
-    last_write_checksum: sha1:7c48a2f35f7403e550aa24754996d976cccf920c
+    last_write_checksum: sha1:7919d5bd59b5b8c9cc23c1d51801ccb1994d48b5
     pristine_git_object: b267501b6394355e328aef8efc64d3bb3aa341a4
   docs/models/shared/One.md:
     id: f77064f6609b
@@ -6793,7 +6801,7 @@ trackedFiles:
     pristine_git_object: 470b4428fde8839f3a737bc7364e03b8ab82c0aa
   docs/models/shared/PropertyConnectionPermissions.md:
     id: 8349678e7060
-    last_write_checksum: sha1:e4be07a3f93992f033c0742b010951ec086b8a7a
+    last_write_checksum: sha1:43b72d7491babfea21d3f91bbdba0804aa7d399d
     pristine_git_object: 612c9aa36f6c81f1233ee5a9d557908da48d261a
   docs/models/shared/PropertyCrmCompanyAddress.md:
     id: 4967e83e2f48
@@ -7997,7 +8005,7 @@ trackedFiles:
     pristine_git_object: facdda67bc2a3361d436900d153dffdfe736b5bb
   docs/sdks/crm/README.md:
     id: 5a9b322c0746
-    last_write_checksum: sha1:8bdc278d888c2d137a077ce16d8d164fa7e89963
+    last_write_checksum: sha1:702fac0d5a6c5cb8d1c6709881133f0134d540b0
     pristine_git_object: 041a5c465e34d7a548487f8f3b0a44db47be7cad
   docs/sdks/customer/README.md:
     id: 4bbe8dbe3afa
@@ -8211,6 +8219,8 @@ trackedFiles:
     id: 70383a375a14
     last_write_checksum: sha1:bd46c1ae6cb72860c32389438442de996d8a778e
     pristine_git_object: 8cf164d7497f28833c9dae47d6e59ae374d943bc
+  docs/sdks/picklist/README.md:
+    last_write_checksum: sha1:5651d9a15fd06c6f9981c51f5b2b6a3438ca69ce
   docs/sdks/pipeline/README.md:
     id: e4ed78a43760
     last_write_checksum: sha1:fda58b75f4a4ffab5bc584660dc832fd9fbbf4bc
@@ -8409,7 +8419,7 @@ trackedFiles:
     pristine_git_object: 14fe7a9e0f20951a7e3ab2752816fbc9b8c41dd3
   gradle.properties:
     id: 2afbb999f001
-    last_write_checksum: sha1:69d5f5dbc1deffb72fbdeb8786b830869c84feae
+    last_write_checksum: sha1:eff5190253e5ccfa653ab8aeca5d151d4f5482f1
     pristine_git_object: e98f734834a572eee8169e873f8a45f9fe20f9e0
   gradle/wrapper/gradle-wrapper.jar:
     id: ec27dae6e852
@@ -8635,7 +8645,7 @@ trackedFiles:
     pristine_git_object: aee1b290936b8db8b5c6749cf69228c35e306998
   src/main/java/to/unified/unified_java_sdk/AsyncCrm.java:
     id: d74c40b5f908
-    last_write_checksum: sha1:b0a9435bf447407a8983ce6e87e3d6f4f9506b4b
+    last_write_checksum: sha1:42723129c10b8c21a0d53ba725f55dae5772600b
     pristine_git_object: 77c2c8c2f902b95e29f148d1235a38132b62dfce
   src/main/java/to/unified/unified_java_sdk/AsyncCustomer.java:
     id: e5d453543159
@@ -8849,6 +8859,8 @@ trackedFiles:
     id: d06e58f17884
     last_write_checksum: sha1:461f33a76ae9ce2a07f26c6e1858de42864ebae5
     pristine_git_object: d0e47acb2317963e3ee09997ce05d541e462a394
+  src/main/java/to/unified/unified_java_sdk/AsyncPicklist.java:
+    last_write_checksum: sha1:033bc25fb577c46c4bf80e355c0e1f829d2ba746
   src/main/java/to/unified/unified_java_sdk/AsyncPipeline.java:
     id: 57280103363c
     last_write_checksum: sha1:ed19a37b9a2f90259a8317b2f61f804eebe0bf6e
@@ -9025,7 +9037,7 @@ trackedFiles:
     pristine_git_object: c478f1d9922c3484d04234718177455677faba01
   src/main/java/to/unified/unified_java_sdk/AsyncUnifiedTo.java:
     id: f122b5de7920
-    last_write_checksum: sha1:7a116b71b99b70f62a930813d4447e6ff19b8432
+    last_write_checksum: sha1:c151a1bc52670dbb02cb5f93d69822823af9c9ec
     pristine_git_object: 47eb4703e759d71a401f67b3e22baed5d8bfcea2
   src/main/java/to/unified/unified_java_sdk/AsyncUser.java:
     id: cf1cd6c6778a
@@ -9169,7 +9181,7 @@ trackedFiles:
     pristine_git_object: c53234acb3b1a5bc1859dca865403ed737372f9b
   src/main/java/to/unified/unified_java_sdk/Crm.java:
     id: 98abbf660268
-    last_write_checksum: sha1:3266dc8c3e073cd63880cbcf9e845717524a2c44
+    last_write_checksum: sha1:53a0738df7d518cb54a91c26c4e0e342f17fd54d
     pristine_git_object: 7c08bbe7d6f6b5b44eac1199e7ed5f14564085ae
   src/main/java/to/unified/unified_java_sdk/Customer.java:
     id: e9cb15ad24a5
@@ -9383,6 +9395,8 @@ trackedFiles:
     id: e6defa607472
     last_write_checksum: sha1:a14b50ba692f8a14ada1c4def0b96fc4818854f2
     pristine_git_object: fd479f6bca43ce4cbe421ef8c5228daafdf584d8
+  src/main/java/to/unified/unified_java_sdk/Picklist.java:
+    last_write_checksum: sha1:838d9d4e54aa383ceb81296f3f5e730394778551
   src/main/java/to/unified/unified_java_sdk/Pipeline.java:
     id: c8c0eeef3aeb
     last_write_checksum: sha1:aac3353c4fb1ff8bff71a58fd40fe909e7e1dd1f
@@ -9455,7 +9469,7 @@ trackedFiles:
     pristine_git_object: 2ccb6e90f32063c290e9fa25abf9649b884b4ed0
   src/main/java/to/unified/unified_java_sdk/SDKConfiguration.java:
     id: 42279b7431fa
-    last_write_checksum: sha1:41ab5bfe56e19d37ec587e6d68eb2f882e665d5a
+    last_write_checksum: sha1:3430fc76d814be52282b7021ce9121c790bff8e5
     pristine_git_object: 17976ce665fb7cd87ed8a727359e17d32feaab3b
   src/main/java/to/unified/unified_java_sdk/Saleschannel.java:
     id: 2dca25153692
@@ -9567,7 +9581,7 @@ trackedFiles:
     pristine_git_object: 06f47d4ca31084c6cd61abe2b157eb442e0ba7f9
   src/main/java/to/unified/unified_java_sdk/UnifiedTo.java:
     id: 94ebc6554d08
-    last_write_checksum: sha1:916b9f67178d7d09a3b145159c69e4a141002697
+    last_write_checksum: sha1:bc6e246d10d67f432b323f9e4c3de2f69fde50ec
     pristine_git_object: 5575546f21eba1850235fda54e6c1b24a7e16572
   src/main/java/to/unified/unified_java_sdk/User.java:
     id: 43d862dfacba
@@ -10269,6 +10283,8 @@ trackedFiles:
     last_write_checksum: sha1:68e7bf964d84be668111cb665f4b360bc11e76e0
   src/main/java/to/unified/unified_java_sdk/models/operations//async/ListCrmLeads2RequestBuilder.java:
     last_write_checksum: sha1:6b86284dec94ebe06cd599588d53d9c0baf9a110
+  src/main/java/to/unified/unified_java_sdk/models/operations//async/ListCrmPicklists2RequestBuilder.java:
+    last_write_checksum: sha1:f47cdf505c71429c5e8ae62f309095e34dc25a67
   src/main/java/to/unified/unified_java_sdk/models/operations//async/ListCrmPipelines2RequestBuilder.java:
     last_write_checksum: sha1:94a6bbb27a2361c97b333be17c8da3dbc1135d8a
   src/main/java/to/unified/unified_java_sdk/models/operations//async/ListDatastoreDatabases2RequestBuilder.java:
@@ -13394,7 +13410,7 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/models/operations/ListAdsReports2QueryParamFields.java:
     last_write_checksum: sha1:49c7d0b59d600533d55ab2360fc825c89f993db5
   src/main/java/to/unified/unified_java_sdk/models/operations/ListAdsReports2Request.java:
-    last_write_checksum: sha1:8db2229a52fe02f70fa909e93a615cb579302f8a
+    last_write_checksum: sha1:2f3e93bd42b3a9b96f8a9f04c02403ae23a51e95
   src/main/java/to/unified/unified_java_sdk/models/operations/ListAdsReports2RequestBuilder.java:
     last_write_checksum: sha1:5a7be2a46b98a29aadcf1e0b8439c6dc45f7bd8d
   src/main/java/to/unified/unified_java_sdk/models/operations/ListAdsReports2Response.java:
@@ -13725,6 +13741,14 @@ trackedFiles:
     last_write_checksum: sha1:2f3dcd7b4677fb6492ba6b2b4551103139810aff
   src/main/java/to/unified/unified_java_sdk/models/operations/ListCrmLeads2Response.java:
     last_write_checksum: sha1:279ad438393d7047353c680eaf336e1c06920194
+  src/main/java/to/unified/unified_java_sdk/models/operations/ListCrmPicklists2QueryParamFields.java:
+    last_write_checksum: sha1:f54fa2b540d8477d0de5679af0b331a752d954cd
+  src/main/java/to/unified/unified_java_sdk/models/operations/ListCrmPicklists2Request.java:
+    last_write_checksum: sha1:eca464db3ddf2eec75d78797b694794bdf6603fa
+  src/main/java/to/unified/unified_java_sdk/models/operations/ListCrmPicklists2RequestBuilder.java:
+    last_write_checksum: sha1:d0fc92ef6a81acacd1f829dd022543d57e53ee28
+  src/main/java/to/unified/unified_java_sdk/models/operations/ListCrmPicklists2Response.java:
+    last_write_checksum: sha1:46633511257882f993549831690a4f53150600f4
   src/main/java/to/unified/unified_java_sdk/models/operations/ListCrmPipelines2QueryParamFields.java:
     last_write_checksum: sha1:8da1d375c5e4d0b71d6f4a99e3d2115a3e317b45
   src/main/java/to/unified/unified_java_sdk/models/operations/ListCrmPipelines2Request.java:
@@ -13868,7 +13892,7 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/models/operations/ListHrisTimeoffs2QueryParamFields.java:
     last_write_checksum: sha1:ad1182cf84e784d0091c689f98e925a94ca0601f
   src/main/java/to/unified/unified_java_sdk/models/operations/ListHrisTimeoffs2Request.java:
-    last_write_checksum: sha1:aa8d663a8a1b04347485d0e7e72a22cafb67dfba
+    last_write_checksum: sha1:927c4b7ca22592c646f1139a2541aa910829aeb7
   src/main/java/to/unified/unified_java_sdk/models/operations/ListHrisTimeoffs2RequestBuilder.java:
     last_write_checksum: sha1:3f6c3c935b866424193731cdc4f33d394ea0e8fd
   src/main/java/to/unified/unified_java_sdk/models/operations/ListHrisTimeoffs2Response.java:
@@ -13986,7 +14010,7 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/models/operations/ListMartechMembers2Response.java:
     last_write_checksum: sha1:83bf36e2d68823eafebf503c43e7b9cab343e2a6
   src/main/java/to/unified/unified_java_sdk/models/operations/ListMartechReports2QueryParamFields.java:
-    last_write_checksum: sha1:70c2a434ef04aebda4de928fd27425110ea7e8b6
+    last_write_checksum: sha1:64a2e398129a2a8a88d64582bc55cd629c083153
   src/main/java/to/unified/unified_java_sdk/models/operations/ListMartechReports2Request.java:
     last_write_checksum: sha1:8a1a1ba250c1f90c590b0c476031046653785bc3
   src/main/java/to/unified/unified_java_sdk/models/operations/ListMartechReports2RequestBuilder.java:
@@ -17533,6 +17557,8 @@ trackedFiles:
     last_write_checksum: sha1:ecd70b27add9e5a328205109b052b9fcb361cbbc
   src/main/java/to/unified/unified_java_sdk/models/operations/async/ListCrmLeads2Response.java:
     last_write_checksum: sha1:bc78b75cd5ba9f22ae0994991fca20d7b9250621
+  src/main/java/to/unified/unified_java_sdk/models/operations/async/ListCrmPicklists2Response.java:
+    last_write_checksum: sha1:039ac1483a97dc28e41477f7939647848d7cbb1f
   src/main/java/to/unified/unified_java_sdk/models/operations/async/ListCrmPipelines2Response.java:
     last_write_checksum: sha1:b870792903e6b9cc73cd4e72c319e1df5fefb8ff
   src/main/java/to/unified/unified_java_sdk/models/operations/async/ListDatastoreDatabases2Response.java:
@@ -18703,11 +18729,11 @@ trackedFiles:
     pristine_git_object: b92e4d1b42d3ae307c262968a329b7ea1a32f374
   src/main/java/to/unified/unified_java_sdk/models/shared/AdsReportMetrics.java:
     id: 733d7c4abfdc
-    last_write_checksum: sha1:563a77bc392cac06e63a901732c38468b675a7fa
+    last_write_checksum: sha1:1215a7fafa98a4c56ee1c48b2ced2d4e13ea37a2
     pristine_git_object: f084d6e2b2da4035b946e8ca3bf828bdbb078112
   src/main/java/to/unified/unified_java_sdk/models/shared/AdsReportMetricsType.java:
     id: abba080d2422
-    last_write_checksum: sha1:23fbb0ca19312acc352b47e38440deb6cc493a3d
+    last_write_checksum: sha1:2b1d2f444684c54dd09c6dcf2ec8d9ab15554b58
     pristine_git_object: b46f8784912c40249c860b9618ecc8c92718ec6a
   src/main/java/to/unified/unified_java_sdk/models/shared/AdsTarget.java:
     id: a38079ac4de8
@@ -18909,7 +18935,7 @@ trackedFiles:
     pristine_git_object: adfe8baf354173aa854f072ba1f8e89355b9f905
   src/main/java/to/unified/unified_java_sdk/models/shared/AtsMetadata.java:
     id: 49ec64e44918
-    last_write_checksum: sha1:65e1c52ec02b4230de50d674acedd51f71a2b49a
+    last_write_checksum: sha1:7b8d6c45f412611db73058019183e925e2e309cc
     pristine_git_object: bc730a533b39e1a92ba88735fbe9560c0d665287
   src/main/java/to/unified/unified_java_sdk/models/shared/AtsMetadata1.java:
     id: b2f613c4686c
@@ -18919,8 +18945,6 @@ trackedFiles:
     id: d1728a1e1225
     last_write_checksum: sha1:eced0e86fff6afa2da38cb80600ea5d39ad136a3
     pristine_git_object: 8554c65db59ff9f2e17aea94e5f56cb64a25424a
-  src/main/java/to/unified/unified_java_sdk/models/shared/AtsMetadataValue.java:
-    last_write_checksum: sha1:5c567ff014541d5f5cb304504561429237c76968
   src/main/java/to/unified/unified_java_sdk/models/shared/AtsOffer.java:
     id: b955c11a4523
     last_write_checksum: sha1:39682b63394f053b59ed07679cc8fe1f5ef958c2
@@ -19293,6 +19317,10 @@ trackedFiles:
     id: 80b45dac34da
     last_write_checksum: sha1:7478ed9efb8dba5164fe146a8434a8edc8c42394
     pristine_git_object: fc609f8b46ea66137692d31e5bf8d2c81ae90dac
+  src/main/java/to/unified/unified_java_sdk/models/shared/CrmPicklist.java:
+    last_write_checksum: sha1:fd4d29ce625b295f1faacfdd1ad05a42c2f5138c
+  src/main/java/to/unified/unified_java_sdk/models/shared/CrmPicklistType.java:
+    last_write_checksum: sha1:98ad83c151ff598f43925641e24b03677b61c3a8
   src/main/java/to/unified/unified_java_sdk/models/shared/CrmPipeline.java:
     id: 59fd97b31d23
     last_write_checksum: sha1:5a749674c454c79acf9ee20a9d33edf65998a129
@@ -20155,7 +20183,7 @@ trackedFiles:
     pristine_git_object: 4cb72044915e2b064bb588df733022feca6d55f1
   src/main/java/to/unified/unified_java_sdk/models/shared/MarketingReport.java:
     id: 511fbbb8f911
-    last_write_checksum: sha1:cf2529b7af1fe42d007801d74a993be68b4f3000
+    last_write_checksum: sha1:e07ebdca7c42fedcf2bb02ba88f51bdb7319a0d7
     pristine_git_object: 80ba1bb7a2e1fd775a6f1953fc22cc75f9b7d39f
   src/main/java/to/unified/unified_java_sdk/models/shared/MarketingReportLink.java:
     id: a2a716ac6a6c
@@ -20303,7 +20331,7 @@ trackedFiles:
     pristine_git_object: 797c963e18c7ea6040b13f43c4e016de7b0102d7
   src/main/java/to/unified/unified_java_sdk/models/shared/ObjectType.java:
     id: d20c4867606e
-    last_write_checksum: sha1:79ff6e4ce8c2d1368392b1943ed2691bb6415aa8
+    last_write_checksum: sha1:9818a44283e87bbb6b0250acca8b27f1941b80b0
     pristine_git_object: df14ea789abf908f34f550eb37cf9a7fd0addb9c
   src/main/java/to/unified/unified_java_sdk/models/shared/One.java:
     id: a92034029840
@@ -20943,7 +20971,7 @@ trackedFiles:
     pristine_git_object: 9d9e92c8874a1fbe812b6a11a6ad42c67fa5b8b7
   src/main/java/to/unified/unified_java_sdk/models/shared/PropertyConnectionPermissions.java:
     id: 65db75e56442
-    last_write_checksum: sha1:80963acf8ecb3e71e87e38a8c7561f54d1d39041
+    last_write_checksum: sha1:b307f57262b1f5dbdb8661be544333d8e7f2c312
     pristine_git_object: e25953325abc291976da577cc397357248cbb621
   src/main/java/to/unified/unified_java_sdk/models/shared/PropertyCrmCompanyAddress.java:
     id: 3141278ac2cc
@@ -21683,7 +21711,7 @@ trackedFiles:
     pristine_git_object: 559d5f0f8d93c7f7b144091d8bdfc5117af3ad16
   src/main/java/to/unified/unified_java_sdk/models/shared/Value.java:
     id: d954e49f7bca
-    last_write_checksum: sha1:15faf9b239c83f2f586941806df9a84e18813333
+    last_write_checksum: sha1:a33d9cb21680281533966db31a4eeb16c3b58f9e
     pristine_git_object: 0949ef8bf81ee47f673af36542aaeeed341922ee
   src/main/java/to/unified/unified_java_sdk/models/shared/VerificationAddress.java:
     id: 0c82cf9815ca
@@ -22651,6 +22679,8 @@ trackedFiles:
     last_write_checksum: sha1:d283e4da163c192704e949eaf96f8a7ca15aec44
   src/main/java/to/unified/unified_java_sdk/operations/ListCrmLeads2.java:
     last_write_checksum: sha1:bceda5b0fb8aa497d16bfb62e1c716c900c06cab
+  src/main/java/to/unified/unified_java_sdk/operations/ListCrmPicklists2.java:
+    last_write_checksum: sha1:24fabf50ebb4711db4ef9a36dd1edd4f674db96b
   src/main/java/to/unified/unified_java_sdk/operations/ListCrmPipelines2.java:
     last_write_checksum: sha1:e6fdb58460f15186e4425dc54b582c073199932d
   src/main/java/to/unified/unified_java_sdk/operations/ListDatastoreDatabases2.java:
@@ -36370,9 +36400,17 @@ examples:
       parameters:
         path:
           id: "<id>"
+  listCrmPicklists2:
+    speakeasy-default-list-crm-picklists2:
+      parameters:
+        path:
+          connection_id: "<id>"
+      responses:
+        "200":
+          application/json: [{"id": "<id>"}]
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: "## Java SDK Changes:\n* `unified-to.ticket.createTicketingTicket2()`: \n  *  `request` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `unified-to.ticketing.listTicketingTickets2()`: \n  *  `request.fields` **Changed** (Breaking ⚠️)\n  *  `response.[]` **Changed** (Breaking ⚠️)\n* `unified-to.ticket.updateTicketingTicket2()`: \n  *  `request` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `unified-to.ticket.patchTicketingTicket2()`: \n  *  `request` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `unified-to.ticket.listTicketingTickets2()`: \n  *  `request.fields` **Changed** (Breaking ⚠️)\n  *  `response.[]` **Changed** (Breaking ⚠️)\n* `unified-to.ticket.getTicketingTicket2()`: \n  *  `request.fields` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `unified-to.ticketing.updateTicketingTicket2()`: \n  *  `request` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `unified-to.ticketing.patchTicketingTicket2()`: \n  *  `request` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `unified-to.ticketing.createTicketingTicket2()`: \n  *  `request` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `unified-to.ticketing.getTicketingTicket2()`: \n  *  `request.fields` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `unified-to.martech.createMartechMember2()`: \n  *  `request` **Changed**\n  *  `response.company` **Added**\n* `unified-to.member.getMartechMember2()`: \n  *  `request.fields` **Changed**\n  *  `response.company` **Added**\n* `unified-to.martech.updateMartechMember2()`: \n  *  `request` **Changed**\n  *  `response.company` **Added**\n* `unified-to.martech.listMartechMembers2()`: \n  *  `request.fields` **Changed**\n  *  `response.[].company` **Added**\n* `unified-to.martech.getMartechMember2()`: \n  *  `request.fields` **Changed**\n  *  `response.company` **Added**\n* `unified-to.member.createMartechMember2()`: \n  *  `request` **Changed**\n  *  `response.company` **Added**\n* `unified-to.martech.patchMartechMember2()`: \n  *  `request` **Changed**\n  *  `response.company` **Added**\n* `unified-to.member.updateMartechMember2()`: \n  *  `request` **Changed**\n  *  `response.company` **Added**\n* `unified-to.member.patchMartechMember2()`: \n  *  `request` **Changed**\n  *  `response.company` **Added**\n* `unified-to.member.listMartechMembers2()`: \n  *  `request.fields` **Changed**\n  *  `response.[].company` **Added**\n"
+releaseNotes: "## Java SDK Changes:\n* `unified-to.report.listAdsReports2()`:  `response.[].metrics[]` **Changed** (Breaking ⚠️)\n* `unified-to.ads.listAdsReports2()`:  `response.[].metrics[]` **Changed** (Breaking ⚠️)\n* `unified-to.unified.patchUnifiedConnection()`: \n  *  `request.connection.permissions[].enum(crmPicklistRead)` **Added**\n  *  `response.permissions[].enum(crmPicklistRead)` **Added**\n* `unified-to.webhook.getUnifiedWebhook()`:  `response.objectType.enum(crmPicklist)` **Added**\n* `unified-to.picklist.listCrmPicklists2()`: **Added**\n* `unified-to.hris.listHrisTimeoffs2()`: \n  *  `request.type` **Added**\n* `unified-to.timeoff.listHrisTimeoffs2()`: \n  *  `request.type` **Added**\n* `unified-to.martech.listMartechReports2()`: \n  *  `request.fields` **Changed**\n  *  `response.[]` **Changed**\n* `unified-to.unified.createUnifiedConnection()`: \n  *  `request.permissions[].enum(crmPicklistRead)` **Added**\n  *  `response.permissions[].enum(crmPicklistRead)` **Added**\n* `unified-to.unified.createUnifiedWebhook()`: \n  *  `request.webhook.objectType.enum(crmPicklist)` **Added**\n  *  `response.objectType.enum(crmPicklist)` **Added**\n* `unified-to.unified.getUnifiedConnection()`:  `response.permissions[].enum(crmPicklistRead)` **Added**\n* `unified-to.unified.getUnifiedWebhook()`:  `response.objectType.enum(crmPicklist)` **Added**\n* `unified-to.unified.listUnifiedConnections()`:  `response.[].permissions[].enum(crmPicklistRead)` **Added**\n* `unified-to.unified.listUnifiedWebhooks()`:  `response.[].objectType.enum(crmPicklist)` **Added**\n* `unified-to.report.listMartechReports2()`: \n  *  `request.fields` **Changed**\n  *  `response.[]` **Changed**\n* `unified-to.crm.listCrmPicklists2()`: **Added**\n* `unified-to.connection.listUnifiedConnections()`:  `response.[].permissions[].enum(crmPicklistRead)` **Added**\n* `unified-to.unified.updateUnifiedWebhook()`: \n  *  `request.webhook.objectType.enum(crmPicklist)` **Added**\n  *  `response.objectType.enum(crmPicklist)` **Added**\n* `unified-to.connection.createUnifiedConnection()`: \n  *  `request.permissions[].enum(crmPicklistRead)` **Added**\n  *  `response.permissions[].enum(crmPicklistRead)` **Added**\n* `unified-to.connection.getUnifiedConnection()`:  `response.permissions[].enum(crmPicklistRead)` **Added**\n* `unified-to.unified.updateUnifiedConnection()`: \n  *  `request.connection.permissions[].enum(crmPicklistRead)` **Added**\n  *  `response.permissions[].enum(crmPicklistRead)` **Added**\n* `unified-to.connection.patchUnifiedConnection()`: \n  *  `request.connection.permissions[].enum(crmPicklistRead)` **Added**\n  *  `response.permissions[].enum(crmPicklistRead)` **Added**\n* `unified-to.connection.updateUnifiedConnection()`: \n  *  `request.connection.permissions[].enum(crmPicklistRead)` **Added**\n  *  `response.permissions[].enum(crmPicklistRead)` **Added**\n* `unified-to.webhook.createUnifiedWebhook()`: \n  *  `request.webhook.objectType.enum(crmPicklist)` **Added**\n  *  `response.objectType.enum(crmPicklist)` **Added**\n* `unified-to.unified.patchUnifiedWebhook()`: \n  *  `request.webhook.objectType.enum(crmPicklist)` **Added**\n  *  `response.objectType.enum(crmPicklist)` **Added**\n* `unified-to.webhook.listUnifiedWebhooks()`:  `response.[].objectType.enum(crmPicklist)` **Added**\n* `unified-to.webhook.patchUnifiedWebhook()`: \n  *  `request.webhook.objectType.enum(crmPicklist)` **Added**\n  *  `response.objectType.enum(crmPicklist)` **Added**\n* `unified-to.webhook.updateUnifiedWebhook()`: \n  *  `request.webhook.objectType.enum(crmPicklist)` **Added**\n  *  `response.objectType.enum(crmPicklist)` **Added**\n"
 generatedFiles:
   - .gitattributes
   - USAGE.md

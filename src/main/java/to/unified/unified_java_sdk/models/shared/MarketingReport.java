@@ -67,6 +67,21 @@ public class MarketingReport {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("human_open_rate")
+    private Double humanOpenRate;
+
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("human_opens_total")
+    private Double humanOpensTotal;
+
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("human_unique_opens")
+    private Double humanUniqueOpens;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     private String id;
 
@@ -158,6 +173,9 @@ public class MarketingReport {
             @JsonProperty("forwards_count") @Nullable Double forwardsCount,
             @JsonProperty("forwards_opens") @Nullable Double forwardsOpens,
             @JsonProperty("hard_bounces") @Nullable Double hardBounces,
+            @JsonProperty("human_open_rate") @Nullable Double humanOpenRate,
+            @JsonProperty("human_opens_total") @Nullable Double humanOpensTotal,
+            @JsonProperty("human_unique_opens") @Nullable Double humanUniqueOpens,
             @JsonProperty("id") @Nullable String id,
             @JsonProperty("last_click_at") @Nullable OffsetDateTime lastClickAt,
             @JsonProperty("last_open_at") @Nullable OffsetDateTime lastOpenAt,
@@ -183,6 +201,9 @@ public class MarketingReport {
         this.forwardsCount = forwardsCount;
         this.forwardsOpens = forwardsOpens;
         this.hardBounces = hardBounces;
+        this.humanOpenRate = humanOpenRate;
+        this.humanOpensTotal = humanOpensTotal;
+        this.humanUniqueOpens = humanUniqueOpens;
         this.id = id;
         this.lastClickAt = lastClickAt;
         this.lastOpenAt = lastOpenAt;
@@ -203,6 +224,7 @@ public class MarketingReport {
     
     public MarketingReport() {
         this(null, null, null,
+            null, null, null,
             null, null, null,
             null, null, null,
             null, null, null,
@@ -247,6 +269,18 @@ public class MarketingReport {
 
     public Optional<Double> hardBounces() {
         return Optional.ofNullable(this.hardBounces);
+    }
+
+    public Optional<Double> humanOpenRate() {
+        return Optional.ofNullable(this.humanOpenRate);
+    }
+
+    public Optional<Double> humanOpensTotal() {
+        return Optional.ofNullable(this.humanOpensTotal);
+    }
+
+    public Optional<Double> humanUniqueOpens() {
+        return Optional.ofNullable(this.humanUniqueOpens);
     }
 
     public Optional<String> id() {
@@ -375,6 +409,24 @@ public class MarketingReport {
     }
 
 
+    public MarketingReport withHumanOpenRate(@Nullable Double humanOpenRate) {
+        this.humanOpenRate = humanOpenRate;
+        return this;
+    }
+
+
+    public MarketingReport withHumanOpensTotal(@Nullable Double humanOpensTotal) {
+        this.humanOpensTotal = humanOpensTotal;
+        return this;
+    }
+
+
+    public MarketingReport withHumanUniqueOpens(@Nullable Double humanUniqueOpens) {
+        this.humanUniqueOpens = humanUniqueOpens;
+        return this;
+    }
+
+
     public MarketingReport withId(@Nullable String id) {
         this.id = id;
         return this;
@@ -493,6 +545,9 @@ public class MarketingReport {
             Utils.enhancedDeepEquals(this.forwardsCount, other.forwardsCount) &&
             Utils.enhancedDeepEquals(this.forwardsOpens, other.forwardsOpens) &&
             Utils.enhancedDeepEquals(this.hardBounces, other.hardBounces) &&
+            Utils.enhancedDeepEquals(this.humanOpenRate, other.humanOpenRate) &&
+            Utils.enhancedDeepEquals(this.humanOpensTotal, other.humanOpensTotal) &&
+            Utils.enhancedDeepEquals(this.humanUniqueOpens, other.humanUniqueOpens) &&
             Utils.enhancedDeepEquals(this.id, other.id) &&
             Utils.enhancedDeepEquals(this.lastClickAt, other.lastClickAt) &&
             Utils.enhancedDeepEquals(this.lastOpenAt, other.lastOpenAt) &&
@@ -517,6 +572,7 @@ public class MarketingReport {
             abuseReports, campaignId, clickRate,
             clicksTotal, emailsSent, endAt,
             forwardsCount, forwardsOpens, hardBounces,
+            humanOpenRate, humanOpensTotal, humanUniqueOpens,
             id, lastClickAt, lastOpenAt,
             links, listId, openRate,
             opensTotal, raw, sentAt,
@@ -537,6 +593,9 @@ public class MarketingReport {
                 "forwardsCount", forwardsCount,
                 "forwardsOpens", forwardsOpens,
                 "hardBounces", hardBounces,
+                "humanOpenRate", humanOpenRate,
+                "humanOpensTotal", humanOpensTotal,
+                "humanUniqueOpens", humanUniqueOpens,
                 "id", id,
                 "lastClickAt", lastClickAt,
                 "lastOpenAt", lastOpenAt,
@@ -575,6 +634,12 @@ public class MarketingReport {
         private Double forwardsOpens;
 
         private Double hardBounces;
+
+        private Double humanOpenRate;
+
+        private Double humanOpensTotal;
+
+        private Double humanUniqueOpens;
 
         private String id;
 
@@ -654,6 +719,21 @@ public class MarketingReport {
 
         public Builder hardBounces(@Nullable Double hardBounces) {
             this.hardBounces = hardBounces;
+            return this;
+        }
+
+        public Builder humanOpenRate(@Nullable Double humanOpenRate) {
+            this.humanOpenRate = humanOpenRate;
+            return this;
+        }
+
+        public Builder humanOpensTotal(@Nullable Double humanOpensTotal) {
+            this.humanOpensTotal = humanOpensTotal;
+            return this;
+        }
+
+        public Builder humanUniqueOpens(@Nullable Double humanUniqueOpens) {
+            this.humanUniqueOpens = humanUniqueOpens;
             return this;
         }
 
@@ -745,6 +825,7 @@ public class MarketingReport {
                 abuseReports, campaignId, clickRate,
                 clicksTotal, emailsSent, endAt,
                 forwardsCount, forwardsOpens, hardBounces,
+                humanOpenRate, humanOpensTotal, humanUniqueOpens,
                 id, lastClickAt, lastOpenAt,
                 links, listId, openRate,
                 opensTotal, raw, sentAt,

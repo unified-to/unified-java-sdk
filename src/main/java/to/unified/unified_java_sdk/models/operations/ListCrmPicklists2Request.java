@@ -15,13 +15,7 @@ import to.unified.unified_java_sdk.utils.SpeakeasyMetadata;
 import to.unified.unified_java_sdk.utils.Utils;
 
 
-public class ListHrisTimeoffs2Request {
-    /**
-     * The company ID to filter by (reference to HrisCompany)
-     */
-    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=company_id")
-    private String companyId;
-
+public class ListCrmPicklists2Request {
     /**
      * ID of the connection
      */
@@ -29,16 +23,10 @@ public class ListHrisTimeoffs2Request {
     private String connectionId;
 
     /**
-     * The end date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-     */
-    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=end_lt")
-    private String endLt;
-
-    /**
      * Fields to return
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
-    private List<ListHrisTimeoffs2QueryParamFields> fields;
+    private List<ListCrmPicklists2QueryParamFields> fields;
 
 
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
@@ -70,12 +58,6 @@ public class ListHrisTimeoffs2Request {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
     private String sort;
 
-    /**
-     * The start date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-     */
-    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start_gte")
-    private String startGte;
-
 
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type")
     private String type;
@@ -87,32 +69,20 @@ public class ListHrisTimeoffs2Request {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=updated_gte")
     private String updatedGte;
 
-    /**
-     * The user/employee ID to filter by (reference to HrisEmployee)
-     */
-    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=user_id")
-    private String userId;
-
     @JsonCreator
-    public ListHrisTimeoffs2Request(
-            @Nullable String companyId,
+    public ListCrmPicklists2Request(
             @Nonnull String connectionId,
-            @Nullable String endLt,
-            @Nullable List<ListHrisTimeoffs2QueryParamFields> fields,
+            @Nullable List<ListCrmPicklists2QueryParamFields> fields,
             @Nullable Double limit,
             @Nullable Double offset,
             @Nullable String order,
             @Nullable String query,
             @Nullable String raw,
             @Nullable String sort,
-            @Nullable String startGte,
             @Nullable String type,
-            @Nullable String updatedGte,
-            @Nullable String userId) {
-        this.companyId = companyId;
+            @Nullable String updatedGte) {
         this.connectionId = Optional.ofNullable(connectionId)
             .orElseThrow(() -> new IllegalArgumentException("connectionId cannot be null"));
-        this.endLt = endLt;
         this.fields = fields;
         this.limit = limit;
         this.offset = offset;
@@ -120,26 +90,16 @@ public class ListHrisTimeoffs2Request {
         this.query = query;
         this.raw = raw;
         this.sort = sort;
-        this.startGte = startGte;
         this.type = type;
         this.updatedGte = updatedGte;
-        this.userId = userId;
     }
     
-    public ListHrisTimeoffs2Request(
+    public ListCrmPicklists2Request(
             @Nonnull String connectionId) {
-        this(null, connectionId, null,
+        this(connectionId, null, null,
             null, null, null,
             null, null, null,
-            null, null, null,
-            null, null);
-    }
-
-    /**
-     * The company ID to filter by (reference to HrisCompany)
-     */
-    public Optional<String> companyId() {
-        return Optional.ofNullable(this.companyId);
+            null);
     }
 
     /**
@@ -150,16 +110,9 @@ public class ListHrisTimeoffs2Request {
     }
 
     /**
-     * The end date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-     */
-    public Optional<String> endLt() {
-        return Optional.ofNullable(this.endLt);
-    }
-
-    /**
      * Fields to return
      */
-    public Optional<List<ListHrisTimeoffs2QueryParamFields>> fields() {
+    public Optional<List<ListCrmPicklists2QueryParamFields>> fields() {
         return Optional.ofNullable(this.fields);
     }
 
@@ -195,13 +148,6 @@ public class ListHrisTimeoffs2Request {
         return Optional.ofNullable(this.sort);
     }
 
-    /**
-     * The start date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-     */
-    public Optional<String> startGte() {
-        return Optional.ofNullable(this.startGte);
-    }
-
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
@@ -214,41 +160,16 @@ public class ListHrisTimeoffs2Request {
         return Optional.ofNullable(this.updatedGte);
     }
 
-    /**
-     * The user/employee ID to filter by (reference to HrisEmployee)
-     */
-    public Optional<String> userId() {
-        return Optional.ofNullable(this.userId);
-    }
-
     public static Builder builder() {
         return new Builder();
     }
 
 
     /**
-     * The company ID to filter by (reference to HrisCompany)
-     */
-    public ListHrisTimeoffs2Request withCompanyId(@Nullable String companyId) {
-        this.companyId = companyId;
-        return this;
-    }
-
-
-    /**
      * ID of the connection
      */
-    public ListHrisTimeoffs2Request withConnectionId(@Nonnull String connectionId) {
+    public ListCrmPicklists2Request withConnectionId(@Nonnull String connectionId) {
         this.connectionId = Utils.checkNotNull(connectionId, "connectionId");
-        return this;
-    }
-
-
-    /**
-     * The end date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-     */
-    public ListHrisTimeoffs2Request withEndLt(@Nullable String endLt) {
-        this.endLt = endLt;
         return this;
     }
 
@@ -256,25 +177,25 @@ public class ListHrisTimeoffs2Request {
     /**
      * Fields to return
      */
-    public ListHrisTimeoffs2Request withFields(@Nullable List<ListHrisTimeoffs2QueryParamFields> fields) {
+    public ListCrmPicklists2Request withFields(@Nullable List<ListCrmPicklists2QueryParamFields> fields) {
         this.fields = fields;
         return this;
     }
 
 
-    public ListHrisTimeoffs2Request withLimit(@Nullable Double limit) {
+    public ListCrmPicklists2Request withLimit(@Nullable Double limit) {
         this.limit = limit;
         return this;
     }
 
 
-    public ListHrisTimeoffs2Request withOffset(@Nullable Double offset) {
+    public ListCrmPicklists2Request withOffset(@Nullable Double offset) {
         this.offset = offset;
         return this;
     }
 
 
-    public ListHrisTimeoffs2Request withOrder(@Nullable String order) {
+    public ListCrmPicklists2Request withOrder(@Nullable String order) {
         this.order = order;
         return this;
     }
@@ -283,7 +204,7 @@ public class ListHrisTimeoffs2Request {
     /**
      * Query string to search. eg. email address or name
      */
-    public ListHrisTimeoffs2Request withQuery(@Nullable String query) {
+    public ListCrmPicklists2Request withQuery(@Nullable String query) {
         this.query = query;
         return this;
     }
@@ -294,28 +215,19 @@ public class ListHrisTimeoffs2Request {
      * 
      * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
-    public ListHrisTimeoffs2Request withRaw(@Nullable String raw) {
+    public ListCrmPicklists2Request withRaw(@Nullable String raw) {
         this.raw = raw;
         return this;
     }
 
 
-    public ListHrisTimeoffs2Request withSort(@Nullable String sort) {
+    public ListCrmPicklists2Request withSort(@Nullable String sort) {
         this.sort = sort;
         return this;
     }
 
 
-    /**
-     * The start date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-     */
-    public ListHrisTimeoffs2Request withStartGte(@Nullable String startGte) {
-        this.startGte = startGte;
-        return this;
-    }
-
-
-    public ListHrisTimeoffs2Request withType(@Nullable String type) {
+    public ListCrmPicklists2Request withType(@Nullable String type) {
         this.type = type;
         return this;
     }
@@ -325,17 +237,8 @@ public class ListHrisTimeoffs2Request {
      * Return only results whose updated date is equal or greater to this value (ISO-8601 /
      * YYYY-MM-DDTHH:MM:SSZ format)
      */
-    public ListHrisTimeoffs2Request withUpdatedGte(@Nullable String updatedGte) {
+    public ListCrmPicklists2Request withUpdatedGte(@Nullable String updatedGte) {
         this.updatedGte = updatedGte;
-        return this;
-    }
-
-
-    /**
-     * The user/employee ID to filter by (reference to HrisEmployee)
-     */
-    public ListHrisTimeoffs2Request withUserId(@Nullable String userId) {
-        this.userId = userId;
         return this;
     }
 
@@ -348,11 +251,9 @@ public class ListHrisTimeoffs2Request {
         if (o == null || getClass() != o.getClass()) {
             return false;
         }
-        ListHrisTimeoffs2Request other = (ListHrisTimeoffs2Request) o;
+        ListCrmPicklists2Request other = (ListCrmPicklists2Request) o;
         return 
-            Utils.enhancedDeepEquals(this.companyId, other.companyId) &&
             Utils.enhancedDeepEquals(this.connectionId, other.connectionId) &&
-            Utils.enhancedDeepEquals(this.endLt, other.endLt) &&
             Utils.enhancedDeepEquals(this.fields, other.fields) &&
             Utils.enhancedDeepEquals(this.limit, other.limit) &&
             Utils.enhancedDeepEquals(this.offset, other.offset) &&
@@ -360,28 +261,23 @@ public class ListHrisTimeoffs2Request {
             Utils.enhancedDeepEquals(this.query, other.query) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
             Utils.enhancedDeepEquals(this.sort, other.sort) &&
-            Utils.enhancedDeepEquals(this.startGte, other.startGte) &&
             Utils.enhancedDeepEquals(this.type, other.type) &&
-            Utils.enhancedDeepEquals(this.updatedGte, other.updatedGte) &&
-            Utils.enhancedDeepEquals(this.userId, other.userId);
+            Utils.enhancedDeepEquals(this.updatedGte, other.updatedGte);
     }
     
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            companyId, connectionId, endLt,
-            fields, limit, offset,
-            order, query, raw,
-            sort, startGte, type,
-            updatedGte, userId);
+            connectionId, fields, limit,
+            offset, order, query,
+            raw, sort, type,
+            updatedGte);
     }
     
     @Override
     public String toString() {
-        return Utils.toString(ListHrisTimeoffs2Request.class,
-                "companyId", companyId,
+        return Utils.toString(ListCrmPicklists2Request.class,
                 "connectionId", connectionId,
-                "endLt", endLt,
                 "fields", fields,
                 "limit", limit,
                 "offset", offset,
@@ -389,22 +285,16 @@ public class ListHrisTimeoffs2Request {
                 "query", query,
                 "raw", raw,
                 "sort", sort,
-                "startGte", startGte,
                 "type", type,
-                "updatedGte", updatedGte,
-                "userId", userId);
+                "updatedGte", updatedGte);
     }
 
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
 
-        private String companyId;
-
         private String connectionId;
 
-        private String endLt;
-
-        private List<ListHrisTimeoffs2QueryParamFields> fields;
+        private List<ListCrmPicklists2QueryParamFields> fields;
 
         private Double limit;
 
@@ -418,24 +308,12 @@ public class ListHrisTimeoffs2Request {
 
         private String sort;
 
-        private String startGte;
-
         private String type;
 
         private String updatedGte;
 
-        private String userId;
-
         private Builder() {
           // force use of static builder() method
-        }
-
-        /**
-         * The company ID to filter by (reference to HrisCompany)
-         */
-        public Builder companyId(@Nullable String companyId) {
-            this.companyId = companyId;
-            return this;
         }
 
         /**
@@ -447,17 +325,9 @@ public class ListHrisTimeoffs2Request {
         }
 
         /**
-         * The end date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-         */
-        public Builder endLt(@Nullable String endLt) {
-            this.endLt = endLt;
-            return this;
-        }
-
-        /**
          * Fields to return
          */
-        public Builder fields(@Nullable List<ListHrisTimeoffs2QueryParamFields> fields) {
+        public Builder fields(@Nullable List<ListCrmPicklists2QueryParamFields> fields) {
             this.fields = fields;
             return this;
         }
@@ -500,14 +370,6 @@ public class ListHrisTimeoffs2Request {
             return this;
         }
 
-        /**
-         * The start date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-         */
-        public Builder startGte(@Nullable String startGte) {
-            this.startGte = startGte;
-            return this;
-        }
-
         public Builder type(@Nullable String type) {
             this.type = type;
             return this;
@@ -522,21 +384,12 @@ public class ListHrisTimeoffs2Request {
             return this;
         }
 
-        /**
-         * The user/employee ID to filter by (reference to HrisEmployee)
-         */
-        public Builder userId(@Nullable String userId) {
-            this.userId = userId;
-            return this;
-        }
-
-        public ListHrisTimeoffs2Request build() {
-            return new ListHrisTimeoffs2Request(
-                companyId, connectionId, endLt,
-                fields, limit, offset,
-                order, query, raw,
-                sort, startGte, type,
-                updatedGte, userId);
+        public ListCrmPicklists2Request build() {
+            return new ListCrmPicklists2Request(
+                connectionId, fields, limit,
+                offset, order, query,
+                raw, sort, type,
+                updatedGte);
         }
 
     }

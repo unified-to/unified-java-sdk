@@ -114,6 +114,7 @@ PropertyConnectionPermissions custom = PropertyConnectionPermissions.of("custom_
 | `CRM_LEAD_WRITE`                 | crm_lead_write                   |
 | `CRM_PIPELINE_READ`              | crm_pipeline_read                |
 | `CRM_PIPELINE_WRITE`             | crm_pipeline_write               |
+| `CRM_PICKLIST_READ`              | crm_picklist_read                |
 | `MARTECH_LIST_READ`              | martech_list_read                |
 | `MARTECH_LIST_WRITE`             | martech_list_write               |
 | `MARTECH_MEMBER_READ`            | martech_member_read              |

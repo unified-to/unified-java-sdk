@@ -236,6 +236,9 @@ public class UnifiedTo {
     private final Lead lead;
 
 
+    private final Picklist picklist;
+
+
     private final Pipeline pipeline;
 
 
@@ -810,6 +813,11 @@ public class UnifiedTo {
 
     public Lead lead() {
         return lead;
+    }
+
+
+    public Picklist picklist() {
+        return picklist;
     }
 
 
@@ -1434,6 +1442,7 @@ public class UnifiedTo {
         this.crm = new Crm(sdkConfiguration);
         this.deal = new Deal(sdkConfiguration);
         this.lead = new Lead(sdkConfiguration);
+        this.picklist = new Picklist(sdkConfiguration);
         this.pipeline = new Pipeline(sdkConfiguration);
         this.datastore = new Datastore(sdkConfiguration);
         this.database = new Database(sdkConfiguration);

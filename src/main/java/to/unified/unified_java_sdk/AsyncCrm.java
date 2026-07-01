@@ -24,6 +24,7 @@ import to.unified.unified_java_sdk.models.operations.ListCrmContacts2Request;
 import to.unified.unified_java_sdk.models.operations.ListCrmDeals2Request;
 import to.unified.unified_java_sdk.models.operations.ListCrmEvents2Request;
 import to.unified.unified_java_sdk.models.operations.ListCrmLeads2Request;
+import to.unified.unified_java_sdk.models.operations.ListCrmPicklists2Request;
 import to.unified.unified_java_sdk.models.operations.ListCrmPipelines2Request;
 import to.unified.unified_java_sdk.models.operations.PatchCrmCompany2Request;
 import to.unified.unified_java_sdk.models.operations.PatchCrmContact2Request;
@@ -77,6 +78,8 @@ import to.unified.unified_java_sdk.models.operations.async.ListCrmEvents2Request
 import to.unified.unified_java_sdk.models.operations.async.ListCrmEvents2Response;
 import to.unified.unified_java_sdk.models.operations.async.ListCrmLeads2RequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.ListCrmLeads2Response;
+import to.unified.unified_java_sdk.models.operations.async.ListCrmPicklists2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListCrmPicklists2Response;
 import to.unified.unified_java_sdk.models.operations.async.ListCrmPipelines2RequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.ListCrmPipelines2Response;
 import to.unified.unified_java_sdk.models.operations.async.PatchCrmCompany2RequestBuilder;
@@ -132,6 +135,7 @@ import to.unified.unified_java_sdk.operations.ListCrmContacts2;
 import to.unified.unified_java_sdk.operations.ListCrmDeals2;
 import to.unified.unified_java_sdk.operations.ListCrmEvents2;
 import to.unified.unified_java_sdk.operations.ListCrmLeads2;
+import to.unified.unified_java_sdk.operations.ListCrmPicklists2;
 import to.unified.unified_java_sdk.operations.ListCrmPipelines2;
 import to.unified.unified_java_sdk.operations.PatchCrmCompany2;
 import to.unified.unified_java_sdk.operations.PatchCrmContact2;
@@ -560,6 +564,29 @@ public class AsyncCrm {
     public CompletableFuture<ListCrmLeads2Response> listCrmLeads2(@Nonnull ListCrmLeads2Request request) {
         AsyncRequestOperation<ListCrmLeads2Request, ListCrmLeads2Response> operation
               = new ListCrmLeads2.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * List all picklists
+     * 
+     * @return The async call builder
+     */
+    public ListCrmPicklists2RequestBuilder listCrmPicklists2() {
+        return new ListCrmPicklists2RequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * List all picklists
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<ListCrmPicklists2Response>} - The async response
+     */
+    public CompletableFuture<ListCrmPicklists2Response> listCrmPicklists2(@Nonnull ListCrmPicklists2Request request) {
+        AsyncRequestOperation<ListCrmPicklists2Request, ListCrmPicklists2Response> operation
+              = new ListCrmPicklists2.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

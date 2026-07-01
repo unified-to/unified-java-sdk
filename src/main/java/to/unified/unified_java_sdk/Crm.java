@@ -57,6 +57,9 @@ import to.unified.unified_java_sdk.models.operations.ListCrmEvents2Response;
 import to.unified.unified_java_sdk.models.operations.ListCrmLeads2Request;
 import to.unified.unified_java_sdk.models.operations.ListCrmLeads2RequestBuilder;
 import to.unified.unified_java_sdk.models.operations.ListCrmLeads2Response;
+import to.unified.unified_java_sdk.models.operations.ListCrmPicklists2Request;
+import to.unified.unified_java_sdk.models.operations.ListCrmPicklists2RequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListCrmPicklists2Response;
 import to.unified.unified_java_sdk.models.operations.ListCrmPipelines2Request;
 import to.unified.unified_java_sdk.models.operations.ListCrmPipelines2RequestBuilder;
 import to.unified.unified_java_sdk.models.operations.ListCrmPipelines2Response;
@@ -131,6 +134,7 @@ import to.unified.unified_java_sdk.operations.ListCrmContacts2;
 import to.unified.unified_java_sdk.operations.ListCrmDeals2;
 import to.unified.unified_java_sdk.operations.ListCrmEvents2;
 import to.unified.unified_java_sdk.operations.ListCrmLeads2;
+import to.unified.unified_java_sdk.operations.ListCrmPicklists2;
 import to.unified.unified_java_sdk.operations.ListCrmPipelines2;
 import to.unified.unified_java_sdk.operations.PatchCrmCompany2;
 import to.unified.unified_java_sdk.operations.PatchCrmContact2;
@@ -543,6 +547,28 @@ public class Crm {
     public ListCrmLeads2Response listCrmLeads2(@Nonnull ListCrmLeads2Request request) {
         RequestOperation<ListCrmLeads2Request, ListCrmLeads2Response> operation
               = new ListCrmLeads2.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * List all picklists
+     * 
+     * @return The call builder
+     */
+    public ListCrmPicklists2RequestBuilder listCrmPicklists2() {
+        return new ListCrmPicklists2RequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * List all picklists
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListCrmPicklists2Response listCrmPicklists2(@Nonnull ListCrmPicklists2Request request) {
+        RequestOperation<ListCrmPicklists2Request, ListCrmPicklists2Response> operation
+              = new ListCrmPicklists2.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

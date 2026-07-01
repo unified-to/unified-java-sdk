@@ -143,6 +143,8 @@ public class AsyncUnifiedTo {
 
     private final AsyncLead lead;
 
+    private final AsyncPicklist picklist;
+
     private final AsyncPipeline pipeline;
 
     private final AsyncDatastore datastore;
@@ -571,6 +573,10 @@ public class AsyncUnifiedTo {
         return lead;
     }
 
+    public AsyncPicklist picklist() {
+        return picklist;
+    }
+
     public AsyncPipeline pipeline() {
         return pipeline;
     }
@@ -978,6 +984,7 @@ public class AsyncUnifiedTo {
         this.crm = new AsyncCrm(syncSDK.crm(), sdkConfiguration);
         this.deal = new AsyncDeal(syncSDK.deal(), sdkConfiguration);
         this.lead = new AsyncLead(syncSDK.lead(), sdkConfiguration);
+        this.picklist = new AsyncPicklist(syncSDK.picklist(), sdkConfiguration);
         this.pipeline = new AsyncPipeline(syncSDK.pipeline(), sdkConfiguration);
         this.datastore = new AsyncDatastore(syncSDK.datastore(), sdkConfiguration);
         this.database = new AsyncDatabase(syncSDK.database(), sdkConfiguration);
