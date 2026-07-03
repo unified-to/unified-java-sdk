@@ -4,27 +4,27 @@
 
 ### Available Operations
 
-* [createHrisDevice2](#createhrisdevice2) - Create a device
-* [getHrisDevice2](#gethrisdevice2) - Retrieve a device
-* [listHrisDevices2](#listhrisdevices2) - List all devices
-* [patchHrisDevice2](#patchhrisdevice2) - Update a device
-* [removeHrisDevice2](#removehrisdevice2) - Remove a device
-* [updateHrisDevice2](#updatehrisdevice2) - Update a device
+* [createHrisDevice](#createhrisdevice) - Create a device
+* [getHrisDevice](#gethrisdevice) - Retrieve a device
+* [listHrisDevices](#listhrisdevices) - List all devices
+* [patchHrisDevice](#patchhrisdevice) - Update a device
+* [removeHrisDevice](#removehrisdevice) - Remove a device
+* [updateHrisDevice](#updatehrisdevice) - Update a device
 
-## createHrisDevice2
+## createHrisDevice
 
 Create a device
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createHrisDevice2" method="post" path="/hris/{connection_id}/device" -->
+<!-- UsageSnippet language="java" operationID="createHrisDevice" method="post" path="/hris/{connection_id}/device" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.CreateHrisDevice2Request;
-import to.unified.unified_java_sdk.models.operations.CreateHrisDevice2Response;
+import to.unified.unified_java_sdk.models.operations.CreateHrisDeviceRequest;
+import to.unified.unified_java_sdk.models.operations.CreateHrisDeviceResponse;
 import to.unified.unified_java_sdk.models.shared.HrisDevice;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -38,13 +38,13 @@ public class Application {
                     .build())
             .build();
 
-        CreateHrisDevice2Request req = CreateHrisDevice2Request.builder()
+        CreateHrisDeviceRequest req = CreateHrisDeviceRequest.builder()
                 .hrisDevice(HrisDevice.builder()
                     .build())
                 .connectionId("<id>")
                 .build();
 
-        CreateHrisDevice2Response res = sdk.device().createHrisDevice2()
+        CreateHrisDeviceResponse res = sdk.device().createHrisDevice()
                 .request(req)
                 .call();
 
@@ -57,13 +57,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
-| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
-| `request`                                                                       | [CreateHrisDevice2Request](../../models/operations/CreateHrisDevice2Request.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
+| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
+| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| `request`                                                                     | [CreateHrisDeviceRequest](../../models/operations/CreateHrisDeviceRequest.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
 
 ### Response
 
-**[CreateHrisDevice2Response](../../models/operations/CreateHrisDevice2Response.md)**
+**[CreateHrisDeviceResponse](../../models/operations/CreateHrisDeviceResponse.md)**
 
 ### Errors
 
@@ -71,20 +71,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## getHrisDevice2
+## getHrisDevice
 
 Retrieve a device
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="getHrisDevice2" method="get" path="/hris/{connection_id}/device/{id}" -->
+<!-- UsageSnippet language="java" operationID="getHrisDevice" method="get" path="/hris/{connection_id}/device/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.GetHrisDevice2Request;
-import to.unified.unified_java_sdk.models.operations.GetHrisDevice2Response;
+import to.unified.unified_java_sdk.models.operations.GetHrisDeviceRequest;
+import to.unified.unified_java_sdk.models.operations.GetHrisDeviceResponse;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -97,12 +97,12 @@ public class Application {
                     .build())
             .build();
 
-        GetHrisDevice2Request req = GetHrisDevice2Request.builder()
+        GetHrisDeviceRequest req = GetHrisDeviceRequest.builder()
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        GetHrisDevice2Response res = sdk.device().getHrisDevice2()
+        GetHrisDeviceResponse res = sdk.device().getHrisDevice()
                 .request(req)
                 .call();
 
@@ -115,13 +115,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                 | Type                                                                      | Required                                                                  | Description                                                               |
-| ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
-| `request`                                                                 | [GetHrisDevice2Request](../../models/operations/GetHrisDevice2Request.md) | :heavy_check_mark:                                                        | The request object to use for the request.                                |
+| Parameter                                                               | Type                                                                    | Required                                                                | Description                                                             |
+| ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- |
+| `request`                                                               | [GetHrisDeviceRequest](../../models/operations/GetHrisDeviceRequest.md) | :heavy_check_mark:                                                      | The request object to use for the request.                              |
 
 ### Response
 
-**[GetHrisDevice2Response](../../models/operations/GetHrisDevice2Response.md)**
+**[GetHrisDeviceResponse](../../models/operations/GetHrisDeviceResponse.md)**
 
 ### Errors
 
@@ -129,20 +129,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## listHrisDevices2
+## listHrisDevices
 
 List all devices
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="listHrisDevices2" method="get" path="/hris/{connection_id}/device" -->
+<!-- UsageSnippet language="java" operationID="listHrisDevices" method="get" path="/hris/{connection_id}/device" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.ListHrisDevices2Request;
-import to.unified.unified_java_sdk.models.operations.ListHrisDevices2Response;
+import to.unified.unified_java_sdk.models.operations.ListHrisDevicesRequest;
+import to.unified.unified_java_sdk.models.operations.ListHrisDevicesResponse;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -155,11 +155,11 @@ public class Application {
                     .build())
             .build();
 
-        ListHrisDevices2Request req = ListHrisDevices2Request.builder()
+        ListHrisDevicesRequest req = ListHrisDevicesRequest.builder()
                 .connectionId("<id>")
                 .build();
 
-        ListHrisDevices2Response res = sdk.device().listHrisDevices2()
+        ListHrisDevicesResponse res = sdk.device().listHrisDevices()
                 .request(req)
                 .call();
 
@@ -172,13 +172,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
-| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
-| `request`                                                                     | [ListHrisDevices2Request](../../models/operations/ListHrisDevices2Request.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
+| Parameter                                                                   | Type                                                                        | Required                                                                    | Description                                                                 |
+| --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| `request`                                                                   | [ListHrisDevicesRequest](../../models/operations/ListHrisDevicesRequest.md) | :heavy_check_mark:                                                          | The request object to use for the request.                                  |
 
 ### Response
 
-**[ListHrisDevices2Response](../../models/operations/ListHrisDevices2Response.md)**
+**[ListHrisDevicesResponse](../../models/operations/ListHrisDevicesResponse.md)**
 
 ### Errors
 
@@ -186,20 +186,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## patchHrisDevice2
+## patchHrisDevice
 
 Update a device
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchHrisDevice2" method="patch" path="/hris/{connection_id}/device/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchHrisDevice" method="patch" path="/hris/{connection_id}/device/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.PatchHrisDevice2Request;
-import to.unified.unified_java_sdk.models.operations.PatchHrisDevice2Response;
+import to.unified.unified_java_sdk.models.operations.PatchHrisDeviceRequest;
+import to.unified.unified_java_sdk.models.operations.PatchHrisDeviceResponse;
 import to.unified.unified_java_sdk.models.shared.HrisDevice;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -213,14 +213,14 @@ public class Application {
                     .build())
             .build();
 
-        PatchHrisDevice2Request req = PatchHrisDevice2Request.builder()
+        PatchHrisDeviceRequest req = PatchHrisDeviceRequest.builder()
                 .hrisDevice(HrisDevice.builder()
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        PatchHrisDevice2Response res = sdk.device().patchHrisDevice2()
+        PatchHrisDeviceResponse res = sdk.device().patchHrisDevice()
                 .request(req)
                 .call();
 
@@ -233,13 +233,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
-| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
-| `request`                                                                     | [PatchHrisDevice2Request](../../models/operations/PatchHrisDevice2Request.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
+| Parameter                                                                   | Type                                                                        | Required                                                                    | Description                                                                 |
+| --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| `request`                                                                   | [PatchHrisDeviceRequest](../../models/operations/PatchHrisDeviceRequest.md) | :heavy_check_mark:                                                          | The request object to use for the request.                                  |
 
 ### Response
 
-**[PatchHrisDevice2Response](../../models/operations/PatchHrisDevice2Response.md)**
+**[PatchHrisDeviceResponse](../../models/operations/PatchHrisDeviceResponse.md)**
 
 ### Errors
 
@@ -247,20 +247,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## removeHrisDevice2
+## removeHrisDevice
 
 Remove a device
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="removeHrisDevice2" method="delete" path="/hris/{connection_id}/device/{id}" -->
+<!-- UsageSnippet language="java" operationID="removeHrisDevice" method="delete" path="/hris/{connection_id}/device/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.RemoveHrisDevice2Request;
-import to.unified.unified_java_sdk.models.operations.RemoveHrisDevice2Response;
+import to.unified.unified_java_sdk.models.operations.RemoveHrisDeviceRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveHrisDeviceResponse;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -273,12 +273,12 @@ public class Application {
                     .build())
             .build();
 
-        RemoveHrisDevice2Request req = RemoveHrisDevice2Request.builder()
+        RemoveHrisDeviceRequest req = RemoveHrisDeviceRequest.builder()
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        RemoveHrisDevice2Response res = sdk.device().removeHrisDevice2()
+        RemoveHrisDeviceResponse res = sdk.device().removeHrisDevice()
                 .request(req)
                 .call();
 
@@ -289,13 +289,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
-| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
-| `request`                                                                       | [RemoveHrisDevice2Request](../../models/operations/RemoveHrisDevice2Request.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
+| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
+| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| `request`                                                                     | [RemoveHrisDeviceRequest](../../models/operations/RemoveHrisDeviceRequest.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
 
 ### Response
 
-**[RemoveHrisDevice2Response](../../models/operations/RemoveHrisDevice2Response.md)**
+**[RemoveHrisDeviceResponse](../../models/operations/RemoveHrisDeviceResponse.md)**
 
 ### Errors
 
@@ -303,20 +303,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## updateHrisDevice2
+## updateHrisDevice
 
 Update a device
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateHrisDevice2" method="put" path="/hris/{connection_id}/device/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateHrisDevice" method="put" path="/hris/{connection_id}/device/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.UpdateHrisDevice2Request;
-import to.unified.unified_java_sdk.models.operations.UpdateHrisDevice2Response;
+import to.unified.unified_java_sdk.models.operations.UpdateHrisDeviceRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateHrisDeviceResponse;
 import to.unified.unified_java_sdk.models.shared.HrisDevice;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -330,14 +330,14 @@ public class Application {
                     .build())
             .build();
 
-        UpdateHrisDevice2Request req = UpdateHrisDevice2Request.builder()
+        UpdateHrisDeviceRequest req = UpdateHrisDeviceRequest.builder()
                 .hrisDevice(HrisDevice.builder()
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        UpdateHrisDevice2Response res = sdk.device().updateHrisDevice2()
+        UpdateHrisDeviceResponse res = sdk.device().updateHrisDevice()
                 .request(req)
                 .call();
 
@@ -350,13 +350,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
-| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
-| `request`                                                                       | [UpdateHrisDevice2Request](../../models/operations/UpdateHrisDevice2Request.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
+| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
+| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| `request`                                                                     | [UpdateHrisDeviceRequest](../../models/operations/UpdateHrisDeviceRequest.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
 
 ### Response
 
-**[UpdateHrisDevice2Response](../../models/operations/UpdateHrisDevice2Response.md)**
+**[UpdateHrisDeviceResponse](../../models/operations/UpdateHrisDeviceResponse.md)**
 
 ### Errors
 

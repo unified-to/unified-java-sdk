@@ -4,27 +4,27 @@
 
 ### Available Operations
 
-* [createAccountingSalesorder2](#createaccountingsalesorder2) - Create a salesorder
-* [getAccountingSalesorder2](#getaccountingsalesorder2) - Retrieve a salesorder
-* [listAccountingSalesorders2](#listaccountingsalesorders2) - List all salesorders
-* [patchAccountingSalesorder2](#patchaccountingsalesorder2) - Update a salesorder
-* [removeAccountingSalesorder2](#removeaccountingsalesorder2) - Remove a salesorder
-* [updateAccountingSalesorder2](#updateaccountingsalesorder2) - Update a salesorder
+* [createAccountingSalesorder](#createaccountingsalesorder) - Create a salesorder
+* [getAccountingSalesorder](#getaccountingsalesorder) - Retrieve a salesorder
+* [listAccountingSalesorders](#listaccountingsalesorders) - List all salesorders
+* [patchAccountingSalesorder](#patchaccountingsalesorder) - Update a salesorder
+* [removeAccountingSalesorder](#removeaccountingsalesorder) - Remove a salesorder
+* [updateAccountingSalesorder](#updateaccountingsalesorder) - Update a salesorder
 
-## createAccountingSalesorder2
+## createAccountingSalesorder
 
 Create a salesorder
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createAccountingSalesorder2" method="post" path="/accounting/{connection_id}/salesorder" -->
+<!-- UsageSnippet language="java" operationID="createAccountingSalesorder" method="post" path="/accounting/{connection_id}/salesorder" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.CreateAccountingSalesorder2Request;
-import to.unified.unified_java_sdk.models.operations.CreateAccountingSalesorder2Response;
+import to.unified.unified_java_sdk.models.operations.CreateAccountingSalesorderRequest;
+import to.unified.unified_java_sdk.models.operations.CreateAccountingSalesorderResponse;
 import to.unified.unified_java_sdk.models.shared.AccountingSalesorder;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -38,13 +38,13 @@ public class Application {
                     .build())
             .build();
 
-        CreateAccountingSalesorder2Request req = CreateAccountingSalesorder2Request.builder()
+        CreateAccountingSalesorderRequest req = CreateAccountingSalesorderRequest.builder()
                 .accountingSalesorder(AccountingSalesorder.builder()
                     .build())
                 .connectionId("<id>")
                 .build();
 
-        CreateAccountingSalesorder2Response res = sdk.salesorder().createAccountingSalesorder2()
+        CreateAccountingSalesorderResponse res = sdk.salesorder().createAccountingSalesorder()
                 .request(req)
                 .call();
 
@@ -57,13 +57,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                           | Type                                                                                                | Required                                                                                            | Description                                                                                         |
-| --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
-| `request`                                                                                           | [CreateAccountingSalesorder2Request](../../models/operations/CreateAccountingSalesorder2Request.md) | :heavy_check_mark:                                                                                  | The request object to use for the request.                                                          |
+| Parameter                                                                                         | Type                                                                                              | Required                                                                                          | Description                                                                                       |
+| ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
+| `request`                                                                                         | [CreateAccountingSalesorderRequest](../../models/operations/CreateAccountingSalesorderRequest.md) | :heavy_check_mark:                                                                                | The request object to use for the request.                                                        |
 
 ### Response
 
-**[CreateAccountingSalesorder2Response](../../models/operations/CreateAccountingSalesorder2Response.md)**
+**[CreateAccountingSalesorderResponse](../../models/operations/CreateAccountingSalesorderResponse.md)**
 
 ### Errors
 
@@ -71,20 +71,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## getAccountingSalesorder2
+## getAccountingSalesorder
 
 Retrieve a salesorder
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="getAccountingSalesorder2" method="get" path="/accounting/{connection_id}/salesorder/{id}" -->
+<!-- UsageSnippet language="java" operationID="getAccountingSalesorder" method="get" path="/accounting/{connection_id}/salesorder/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.GetAccountingSalesorder2Request;
-import to.unified.unified_java_sdk.models.operations.GetAccountingSalesorder2Response;
+import to.unified.unified_java_sdk.models.operations.GetAccountingSalesorderRequest;
+import to.unified.unified_java_sdk.models.operations.GetAccountingSalesorderResponse;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -97,12 +97,12 @@ public class Application {
                     .build())
             .build();
 
-        GetAccountingSalesorder2Request req = GetAccountingSalesorder2Request.builder()
+        GetAccountingSalesorderRequest req = GetAccountingSalesorderRequest.builder()
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        GetAccountingSalesorder2Response res = sdk.salesorder().getAccountingSalesorder2()
+        GetAccountingSalesorderResponse res = sdk.salesorder().getAccountingSalesorder()
                 .request(req)
                 .call();
 
@@ -115,13 +115,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                     | Type                                                                                          | Required                                                                                      | Description                                                                                   |
-| --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
-| `request`                                                                                     | [GetAccountingSalesorder2Request](../../models/operations/GetAccountingSalesorder2Request.md) | :heavy_check_mark:                                                                            | The request object to use for the request.                                                    |
+| Parameter                                                                                   | Type                                                                                        | Required                                                                                    | Description                                                                                 |
+| ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
+| `request`                                                                                   | [GetAccountingSalesorderRequest](../../models/operations/GetAccountingSalesorderRequest.md) | :heavy_check_mark:                                                                          | The request object to use for the request.                                                  |
 
 ### Response
 
-**[GetAccountingSalesorder2Response](../../models/operations/GetAccountingSalesorder2Response.md)**
+**[GetAccountingSalesorderResponse](../../models/operations/GetAccountingSalesorderResponse.md)**
 
 ### Errors
 
@@ -129,20 +129,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## listAccountingSalesorders2
+## listAccountingSalesorders
 
 List all salesorders
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="listAccountingSalesorders2" method="get" path="/accounting/{connection_id}/salesorder" -->
+<!-- UsageSnippet language="java" operationID="listAccountingSalesorders" method="get" path="/accounting/{connection_id}/salesorder" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.ListAccountingSalesorders2Request;
-import to.unified.unified_java_sdk.models.operations.ListAccountingSalesorders2Response;
+import to.unified.unified_java_sdk.models.operations.ListAccountingSalesordersRequest;
+import to.unified.unified_java_sdk.models.operations.ListAccountingSalesordersResponse;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -155,11 +155,11 @@ public class Application {
                     .build())
             .build();
 
-        ListAccountingSalesorders2Request req = ListAccountingSalesorders2Request.builder()
+        ListAccountingSalesordersRequest req = ListAccountingSalesordersRequest.builder()
                 .connectionId("<id>")
                 .build();
 
-        ListAccountingSalesorders2Response res = sdk.salesorder().listAccountingSalesorders2()
+        ListAccountingSalesordersResponse res = sdk.salesorder().listAccountingSalesorders()
                 .request(req)
                 .call();
 
@@ -172,13 +172,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                         | Type                                                                                              | Required                                                                                          | Description                                                                                       |
-| ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
-| `request`                                                                                         | [ListAccountingSalesorders2Request](../../models/operations/ListAccountingSalesorders2Request.md) | :heavy_check_mark:                                                                                | The request object to use for the request.                                                        |
+| Parameter                                                                                       | Type                                                                                            | Required                                                                                        | Description                                                                                     |
+| ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
+| `request`                                                                                       | [ListAccountingSalesordersRequest](../../models/operations/ListAccountingSalesordersRequest.md) | :heavy_check_mark:                                                                              | The request object to use for the request.                                                      |
 
 ### Response
 
-**[ListAccountingSalesorders2Response](../../models/operations/ListAccountingSalesorders2Response.md)**
+**[ListAccountingSalesordersResponse](../../models/operations/ListAccountingSalesordersResponse.md)**
 
 ### Errors
 
@@ -186,20 +186,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## patchAccountingSalesorder2
+## patchAccountingSalesorder
 
 Update a salesorder
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchAccountingSalesorder2" method="patch" path="/accounting/{connection_id}/salesorder/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchAccountingSalesorder" method="patch" path="/accounting/{connection_id}/salesorder/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.PatchAccountingSalesorder2Request;
-import to.unified.unified_java_sdk.models.operations.PatchAccountingSalesorder2Response;
+import to.unified.unified_java_sdk.models.operations.PatchAccountingSalesorderRequest;
+import to.unified.unified_java_sdk.models.operations.PatchAccountingSalesorderResponse;
 import to.unified.unified_java_sdk.models.shared.AccountingSalesorder;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -213,14 +213,14 @@ public class Application {
                     .build())
             .build();
 
-        PatchAccountingSalesorder2Request req = PatchAccountingSalesorder2Request.builder()
+        PatchAccountingSalesorderRequest req = PatchAccountingSalesorderRequest.builder()
                 .accountingSalesorder(AccountingSalesorder.builder()
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        PatchAccountingSalesorder2Response res = sdk.salesorder().patchAccountingSalesorder2()
+        PatchAccountingSalesorderResponse res = sdk.salesorder().patchAccountingSalesorder()
                 .request(req)
                 .call();
 
@@ -233,13 +233,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                         | Type                                                                                              | Required                                                                                          | Description                                                                                       |
-| ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
-| `request`                                                                                         | [PatchAccountingSalesorder2Request](../../models/operations/PatchAccountingSalesorder2Request.md) | :heavy_check_mark:                                                                                | The request object to use for the request.                                                        |
+| Parameter                                                                                       | Type                                                                                            | Required                                                                                        | Description                                                                                     |
+| ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
+| `request`                                                                                       | [PatchAccountingSalesorderRequest](../../models/operations/PatchAccountingSalesorderRequest.md) | :heavy_check_mark:                                                                              | The request object to use for the request.                                                      |
 
 ### Response
 
-**[PatchAccountingSalesorder2Response](../../models/operations/PatchAccountingSalesorder2Response.md)**
+**[PatchAccountingSalesorderResponse](../../models/operations/PatchAccountingSalesorderResponse.md)**
 
 ### Errors
 
@@ -247,20 +247,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## removeAccountingSalesorder2
+## removeAccountingSalesorder
 
 Remove a salesorder
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="removeAccountingSalesorder2" method="delete" path="/accounting/{connection_id}/salesorder/{id}" -->
+<!-- UsageSnippet language="java" operationID="removeAccountingSalesorder" method="delete" path="/accounting/{connection_id}/salesorder/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.RemoveAccountingSalesorder2Request;
-import to.unified.unified_java_sdk.models.operations.RemoveAccountingSalesorder2Response;
+import to.unified.unified_java_sdk.models.operations.RemoveAccountingSalesorderRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveAccountingSalesorderResponse;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -273,12 +273,12 @@ public class Application {
                     .build())
             .build();
 
-        RemoveAccountingSalesorder2Request req = RemoveAccountingSalesorder2Request.builder()
+        RemoveAccountingSalesorderRequest req = RemoveAccountingSalesorderRequest.builder()
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        RemoveAccountingSalesorder2Response res = sdk.salesorder().removeAccountingSalesorder2()
+        RemoveAccountingSalesorderResponse res = sdk.salesorder().removeAccountingSalesorder()
                 .request(req)
                 .call();
 
@@ -289,13 +289,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                           | Type                                                                                                | Required                                                                                            | Description                                                                                         |
-| --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
-| `request`                                                                                           | [RemoveAccountingSalesorder2Request](../../models/operations/RemoveAccountingSalesorder2Request.md) | :heavy_check_mark:                                                                                  | The request object to use for the request.                                                          |
+| Parameter                                                                                         | Type                                                                                              | Required                                                                                          | Description                                                                                       |
+| ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
+| `request`                                                                                         | [RemoveAccountingSalesorderRequest](../../models/operations/RemoveAccountingSalesorderRequest.md) | :heavy_check_mark:                                                                                | The request object to use for the request.                                                        |
 
 ### Response
 
-**[RemoveAccountingSalesorder2Response](../../models/operations/RemoveAccountingSalesorder2Response.md)**
+**[RemoveAccountingSalesorderResponse](../../models/operations/RemoveAccountingSalesorderResponse.md)**
 
 ### Errors
 
@@ -303,20 +303,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## updateAccountingSalesorder2
+## updateAccountingSalesorder
 
 Update a salesorder
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateAccountingSalesorder2" method="put" path="/accounting/{connection_id}/salesorder/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateAccountingSalesorder" method="put" path="/accounting/{connection_id}/salesorder/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.UpdateAccountingSalesorder2Request;
-import to.unified.unified_java_sdk.models.operations.UpdateAccountingSalesorder2Response;
+import to.unified.unified_java_sdk.models.operations.UpdateAccountingSalesorderRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateAccountingSalesorderResponse;
 import to.unified.unified_java_sdk.models.shared.AccountingSalesorder;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -330,14 +330,14 @@ public class Application {
                     .build())
             .build();
 
-        UpdateAccountingSalesorder2Request req = UpdateAccountingSalesorder2Request.builder()
+        UpdateAccountingSalesorderRequest req = UpdateAccountingSalesorderRequest.builder()
                 .accountingSalesorder(AccountingSalesorder.builder()
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        UpdateAccountingSalesorder2Response res = sdk.salesorder().updateAccountingSalesorder2()
+        UpdateAccountingSalesorderResponse res = sdk.salesorder().updateAccountingSalesorder()
                 .request(req)
                 .call();
 
@@ -350,13 +350,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                           | Type                                                                                                | Required                                                                                            | Description                                                                                         |
-| --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
-| `request`                                                                                           | [UpdateAccountingSalesorder2Request](../../models/operations/UpdateAccountingSalesorder2Request.md) | :heavy_check_mark:                                                                                  | The request object to use for the request.                                                          |
+| Parameter                                                                                         | Type                                                                                              | Required                                                                                          | Description                                                                                       |
+| ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
+| `request`                                                                                         | [UpdateAccountingSalesorderRequest](../../models/operations/UpdateAccountingSalesorderRequest.md) | :heavy_check_mark:                                                                                | The request object to use for the request.                                                        |
 
 ### Response
 
-**[UpdateAccountingSalesorder2Response](../../models/operations/UpdateAccountingSalesorder2Response.md)**
+**[UpdateAccountingSalesorderResponse](../../models/operations/UpdateAccountingSalesorderResponse.md)**
 
 ### Errors
 

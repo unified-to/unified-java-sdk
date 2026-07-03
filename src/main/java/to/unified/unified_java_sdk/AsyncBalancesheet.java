@@ -7,14 +7,14 @@ import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOper
 
 import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
-import to.unified.unified_java_sdk.models.operations.GetAccountingBalancesheet2Request;
-import to.unified.unified_java_sdk.models.operations.ListAccountingBalancesheets2Request;
-import to.unified.unified_java_sdk.models.operations.async.GetAccountingBalancesheet2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.GetAccountingBalancesheet2Response;
-import to.unified.unified_java_sdk.models.operations.async.ListAccountingBalancesheets2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.ListAccountingBalancesheets2Response;
-import to.unified.unified_java_sdk.operations.GetAccountingBalancesheet2;
-import to.unified.unified_java_sdk.operations.ListAccountingBalancesheets2;
+import to.unified.unified_java_sdk.models.operations.GetAccountingBalancesheetRequest;
+import to.unified.unified_java_sdk.models.operations.ListAccountingBalancesheetsRequest;
+import to.unified.unified_java_sdk.models.operations.async.GetAccountingBalancesheetRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetAccountingBalancesheetResponse;
+import to.unified.unified_java_sdk.models.operations.async.ListAccountingBalancesheetsRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListAccountingBalancesheetsResponse;
+import to.unified.unified_java_sdk.operations.GetAccountingBalancesheet;
+import to.unified.unified_java_sdk.operations.ListAccountingBalancesheets;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -43,19 +43,19 @@ public class AsyncBalancesheet {
      * 
      * @return The async call builder
      */
-    public GetAccountingBalancesheet2RequestBuilder getAccountingBalancesheet2() {
-        return new GetAccountingBalancesheet2RequestBuilder(sdkConfiguration);
+    public GetAccountingBalancesheetRequestBuilder getAccountingBalancesheet() {
+        return new GetAccountingBalancesheetRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Retrieve a balancesheet
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<GetAccountingBalancesheet2Response>} - The async response
+     * @return {@code CompletableFuture<GetAccountingBalancesheetResponse>} - The async response
      */
-    public CompletableFuture<GetAccountingBalancesheet2Response> getAccountingBalancesheet2(@Nonnull GetAccountingBalancesheet2Request request) {
-        AsyncRequestOperation<GetAccountingBalancesheet2Request, GetAccountingBalancesheet2Response> operation
-              = new GetAccountingBalancesheet2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<GetAccountingBalancesheetResponse> getAccountingBalancesheet(@Nonnull GetAccountingBalancesheetRequest request) {
+        AsyncRequestOperation<GetAccountingBalancesheetRequest, GetAccountingBalancesheetResponse> operation
+              = new GetAccountingBalancesheet.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -66,19 +66,19 @@ public class AsyncBalancesheet {
      * 
      * @return The async call builder
      */
-    public ListAccountingBalancesheets2RequestBuilder listAccountingBalancesheets2() {
-        return new ListAccountingBalancesheets2RequestBuilder(sdkConfiguration);
+    public ListAccountingBalancesheetsRequestBuilder listAccountingBalancesheets() {
+        return new ListAccountingBalancesheetsRequestBuilder(sdkConfiguration);
     }
 
     /**
      * List all balancesheets
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<ListAccountingBalancesheets2Response>} - The async response
+     * @return {@code CompletableFuture<ListAccountingBalancesheetsResponse>} - The async response
      */
-    public CompletableFuture<ListAccountingBalancesheets2Response> listAccountingBalancesheets2(@Nonnull ListAccountingBalancesheets2Request request) {
-        AsyncRequestOperation<ListAccountingBalancesheets2Request, ListAccountingBalancesheets2Response> operation
-              = new ListAccountingBalancesheets2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<ListAccountingBalancesheetsResponse> listAccountingBalancesheets(@Nonnull ListAccountingBalancesheetsRequest request) {
+        AsyncRequestOperation<ListAccountingBalancesheetsRequest, ListAccountingBalancesheetsResponse> operation
+              = new ListAccountingBalancesheets.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

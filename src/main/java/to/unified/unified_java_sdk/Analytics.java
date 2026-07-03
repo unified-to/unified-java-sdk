@@ -6,78 +6,78 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
-import to.unified.unified_java_sdk.models.operations.CreateAnalyticsEvent2Request;
-import to.unified.unified_java_sdk.models.operations.CreateAnalyticsEvent2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.CreateAnalyticsEvent2Response;
-import to.unified.unified_java_sdk.models.operations.CreateAnalyticsProperty2Request;
-import to.unified.unified_java_sdk.models.operations.CreateAnalyticsProperty2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.CreateAnalyticsProperty2Response;
-import to.unified.unified_java_sdk.models.operations.CreateAnalyticsVisitor2Request;
-import to.unified.unified_java_sdk.models.operations.CreateAnalyticsVisitor2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.CreateAnalyticsVisitor2Response;
-import to.unified.unified_java_sdk.models.operations.GetAnalyticsEvent2Request;
-import to.unified.unified_java_sdk.models.operations.GetAnalyticsEvent2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.GetAnalyticsEvent2Response;
-import to.unified.unified_java_sdk.models.operations.GetAnalyticsProperty2Request;
-import to.unified.unified_java_sdk.models.operations.GetAnalyticsProperty2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.GetAnalyticsProperty2Response;
-import to.unified.unified_java_sdk.models.operations.GetAnalyticsSession2Request;
-import to.unified.unified_java_sdk.models.operations.GetAnalyticsSession2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.GetAnalyticsSession2Response;
-import to.unified.unified_java_sdk.models.operations.GetAnalyticsVisitor2Request;
-import to.unified.unified_java_sdk.models.operations.GetAnalyticsVisitor2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.GetAnalyticsVisitor2Response;
-import to.unified.unified_java_sdk.models.operations.ListAnalyticsEvents2Request;
-import to.unified.unified_java_sdk.models.operations.ListAnalyticsEvents2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.ListAnalyticsEvents2Response;
-import to.unified.unified_java_sdk.models.operations.ListAnalyticsProperties2Request;
-import to.unified.unified_java_sdk.models.operations.ListAnalyticsProperties2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.ListAnalyticsProperties2Response;
-import to.unified.unified_java_sdk.models.operations.ListAnalyticsReports2Request;
-import to.unified.unified_java_sdk.models.operations.ListAnalyticsReports2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.ListAnalyticsReports2Response;
-import to.unified.unified_java_sdk.models.operations.ListAnalyticsSessions2Request;
-import to.unified.unified_java_sdk.models.operations.ListAnalyticsSessions2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.ListAnalyticsSessions2Response;
-import to.unified.unified_java_sdk.models.operations.ListAnalyticsVisitors2Request;
-import to.unified.unified_java_sdk.models.operations.ListAnalyticsVisitors2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.ListAnalyticsVisitors2Response;
-import to.unified.unified_java_sdk.models.operations.PatchAnalyticsProperty2Request;
-import to.unified.unified_java_sdk.models.operations.PatchAnalyticsProperty2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.PatchAnalyticsProperty2Response;
-import to.unified.unified_java_sdk.models.operations.PatchAnalyticsVisitor2Request;
-import to.unified.unified_java_sdk.models.operations.PatchAnalyticsVisitor2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.PatchAnalyticsVisitor2Response;
-import to.unified.unified_java_sdk.models.operations.RemoveAnalyticsProperty2Request;
-import to.unified.unified_java_sdk.models.operations.RemoveAnalyticsProperty2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.RemoveAnalyticsProperty2Response;
-import to.unified.unified_java_sdk.models.operations.RemoveAnalyticsVisitor2Request;
-import to.unified.unified_java_sdk.models.operations.RemoveAnalyticsVisitor2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.RemoveAnalyticsVisitor2Response;
-import to.unified.unified_java_sdk.models.operations.UpdateAnalyticsProperty2Request;
-import to.unified.unified_java_sdk.models.operations.UpdateAnalyticsProperty2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.UpdateAnalyticsProperty2Response;
-import to.unified.unified_java_sdk.models.operations.UpdateAnalyticsVisitor2Request;
-import to.unified.unified_java_sdk.models.operations.UpdateAnalyticsVisitor2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.UpdateAnalyticsVisitor2Response;
-import to.unified.unified_java_sdk.operations.CreateAnalyticsEvent2;
-import to.unified.unified_java_sdk.operations.CreateAnalyticsProperty2;
-import to.unified.unified_java_sdk.operations.CreateAnalyticsVisitor2;
-import to.unified.unified_java_sdk.operations.GetAnalyticsEvent2;
-import to.unified.unified_java_sdk.operations.GetAnalyticsProperty2;
-import to.unified.unified_java_sdk.operations.GetAnalyticsSession2;
-import to.unified.unified_java_sdk.operations.GetAnalyticsVisitor2;
-import to.unified.unified_java_sdk.operations.ListAnalyticsEvents2;
-import to.unified.unified_java_sdk.operations.ListAnalyticsProperties2;
-import to.unified.unified_java_sdk.operations.ListAnalyticsReports2;
-import to.unified.unified_java_sdk.operations.ListAnalyticsSessions2;
-import to.unified.unified_java_sdk.operations.ListAnalyticsVisitors2;
-import to.unified.unified_java_sdk.operations.PatchAnalyticsProperty2;
-import to.unified.unified_java_sdk.operations.PatchAnalyticsVisitor2;
-import to.unified.unified_java_sdk.operations.RemoveAnalyticsProperty2;
-import to.unified.unified_java_sdk.operations.RemoveAnalyticsVisitor2;
-import to.unified.unified_java_sdk.operations.UpdateAnalyticsProperty2;
-import to.unified.unified_java_sdk.operations.UpdateAnalyticsVisitor2;
+import to.unified.unified_java_sdk.models.operations.CreateAnalyticsEventRequest;
+import to.unified.unified_java_sdk.models.operations.CreateAnalyticsEventRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.CreateAnalyticsEventResponse;
+import to.unified.unified_java_sdk.models.operations.CreateAnalyticsPropertyRequest;
+import to.unified.unified_java_sdk.models.operations.CreateAnalyticsPropertyRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.CreateAnalyticsPropertyResponse;
+import to.unified.unified_java_sdk.models.operations.CreateAnalyticsVisitorRequest;
+import to.unified.unified_java_sdk.models.operations.CreateAnalyticsVisitorRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.CreateAnalyticsVisitorResponse;
+import to.unified.unified_java_sdk.models.operations.GetAnalyticsEventRequest;
+import to.unified.unified_java_sdk.models.operations.GetAnalyticsEventRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetAnalyticsEventResponse;
+import to.unified.unified_java_sdk.models.operations.GetAnalyticsPropertyRequest;
+import to.unified.unified_java_sdk.models.operations.GetAnalyticsPropertyRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetAnalyticsPropertyResponse;
+import to.unified.unified_java_sdk.models.operations.GetAnalyticsSessionRequest;
+import to.unified.unified_java_sdk.models.operations.GetAnalyticsSessionRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetAnalyticsSessionResponse;
+import to.unified.unified_java_sdk.models.operations.GetAnalyticsVisitorRequest;
+import to.unified.unified_java_sdk.models.operations.GetAnalyticsVisitorRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetAnalyticsVisitorResponse;
+import to.unified.unified_java_sdk.models.operations.ListAnalyticsEventsRequest;
+import to.unified.unified_java_sdk.models.operations.ListAnalyticsEventsRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListAnalyticsEventsResponse;
+import to.unified.unified_java_sdk.models.operations.ListAnalyticsPropertiesRequest;
+import to.unified.unified_java_sdk.models.operations.ListAnalyticsPropertiesRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListAnalyticsPropertiesResponse;
+import to.unified.unified_java_sdk.models.operations.ListAnalyticsReportsRequest;
+import to.unified.unified_java_sdk.models.operations.ListAnalyticsReportsRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListAnalyticsReportsResponse;
+import to.unified.unified_java_sdk.models.operations.ListAnalyticsSessionsRequest;
+import to.unified.unified_java_sdk.models.operations.ListAnalyticsSessionsRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListAnalyticsSessionsResponse;
+import to.unified.unified_java_sdk.models.operations.ListAnalyticsVisitorsRequest;
+import to.unified.unified_java_sdk.models.operations.ListAnalyticsVisitorsRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListAnalyticsVisitorsResponse;
+import to.unified.unified_java_sdk.models.operations.PatchAnalyticsPropertyRequest;
+import to.unified.unified_java_sdk.models.operations.PatchAnalyticsPropertyRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.PatchAnalyticsPropertyResponse;
+import to.unified.unified_java_sdk.models.operations.PatchAnalyticsVisitorRequest;
+import to.unified.unified_java_sdk.models.operations.PatchAnalyticsVisitorRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.PatchAnalyticsVisitorResponse;
+import to.unified.unified_java_sdk.models.operations.RemoveAnalyticsPropertyRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveAnalyticsPropertyRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.RemoveAnalyticsPropertyResponse;
+import to.unified.unified_java_sdk.models.operations.RemoveAnalyticsVisitorRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveAnalyticsVisitorRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.RemoveAnalyticsVisitorResponse;
+import to.unified.unified_java_sdk.models.operations.UpdateAnalyticsPropertyRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateAnalyticsPropertyRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.UpdateAnalyticsPropertyResponse;
+import to.unified.unified_java_sdk.models.operations.UpdateAnalyticsVisitorRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateAnalyticsVisitorRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.UpdateAnalyticsVisitorResponse;
+import to.unified.unified_java_sdk.operations.CreateAnalyticsEvent;
+import to.unified.unified_java_sdk.operations.CreateAnalyticsProperty;
+import to.unified.unified_java_sdk.operations.CreateAnalyticsVisitor;
+import to.unified.unified_java_sdk.operations.GetAnalyticsEvent;
+import to.unified.unified_java_sdk.operations.GetAnalyticsProperty;
+import to.unified.unified_java_sdk.operations.GetAnalyticsSession;
+import to.unified.unified_java_sdk.operations.GetAnalyticsVisitor;
+import to.unified.unified_java_sdk.operations.ListAnalyticsEvents;
+import to.unified.unified_java_sdk.operations.ListAnalyticsProperties;
+import to.unified.unified_java_sdk.operations.ListAnalyticsReports;
+import to.unified.unified_java_sdk.operations.ListAnalyticsSessions;
+import to.unified.unified_java_sdk.operations.ListAnalyticsVisitors;
+import to.unified.unified_java_sdk.operations.PatchAnalyticsProperty;
+import to.unified.unified_java_sdk.operations.PatchAnalyticsVisitor;
+import to.unified.unified_java_sdk.operations.RemoveAnalyticsProperty;
+import to.unified.unified_java_sdk.operations.RemoveAnalyticsVisitor;
+import to.unified.unified_java_sdk.operations.UpdateAnalyticsProperty;
+import to.unified.unified_java_sdk.operations.UpdateAnalyticsVisitor;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -105,8 +105,8 @@ public class Analytics {
      * 
      * @return The call builder
      */
-    public CreateAnalyticsEvent2RequestBuilder createAnalyticsEvent2() {
-        return new CreateAnalyticsEvent2RequestBuilder(sdkConfiguration);
+    public CreateAnalyticsEventRequestBuilder createAnalyticsEvent() {
+        return new CreateAnalyticsEventRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -116,9 +116,9 @@ public class Analytics {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateAnalyticsEvent2Response createAnalyticsEvent2(@Nonnull CreateAnalyticsEvent2Request request) {
-        RequestOperation<CreateAnalyticsEvent2Request, CreateAnalyticsEvent2Response> operation
-              = new CreateAnalyticsEvent2.Sync(sdkConfiguration, _headers);
+    public CreateAnalyticsEventResponse createAnalyticsEvent(@Nonnull CreateAnalyticsEventRequest request) {
+        RequestOperation<CreateAnalyticsEventRequest, CreateAnalyticsEventResponse> operation
+              = new CreateAnalyticsEvent.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -127,8 +127,8 @@ public class Analytics {
      * 
      * @return The call builder
      */
-    public CreateAnalyticsProperty2RequestBuilder createAnalyticsProperty2() {
-        return new CreateAnalyticsProperty2RequestBuilder(sdkConfiguration);
+    public CreateAnalyticsPropertyRequestBuilder createAnalyticsProperty() {
+        return new CreateAnalyticsPropertyRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -138,9 +138,9 @@ public class Analytics {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateAnalyticsProperty2Response createAnalyticsProperty2(@Nonnull CreateAnalyticsProperty2Request request) {
-        RequestOperation<CreateAnalyticsProperty2Request, CreateAnalyticsProperty2Response> operation
-              = new CreateAnalyticsProperty2.Sync(sdkConfiguration, _headers);
+    public CreateAnalyticsPropertyResponse createAnalyticsProperty(@Nonnull CreateAnalyticsPropertyRequest request) {
+        RequestOperation<CreateAnalyticsPropertyRequest, CreateAnalyticsPropertyResponse> operation
+              = new CreateAnalyticsProperty.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -149,8 +149,8 @@ public class Analytics {
      * 
      * @return The call builder
      */
-    public CreateAnalyticsVisitor2RequestBuilder createAnalyticsVisitor2() {
-        return new CreateAnalyticsVisitor2RequestBuilder(sdkConfiguration);
+    public CreateAnalyticsVisitorRequestBuilder createAnalyticsVisitor() {
+        return new CreateAnalyticsVisitorRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -160,9 +160,9 @@ public class Analytics {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateAnalyticsVisitor2Response createAnalyticsVisitor2(@Nonnull CreateAnalyticsVisitor2Request request) {
-        RequestOperation<CreateAnalyticsVisitor2Request, CreateAnalyticsVisitor2Response> operation
-              = new CreateAnalyticsVisitor2.Sync(sdkConfiguration, _headers);
+    public CreateAnalyticsVisitorResponse createAnalyticsVisitor(@Nonnull CreateAnalyticsVisitorRequest request) {
+        RequestOperation<CreateAnalyticsVisitorRequest, CreateAnalyticsVisitorResponse> operation
+              = new CreateAnalyticsVisitor.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -171,8 +171,8 @@ public class Analytics {
      * 
      * @return The call builder
      */
-    public GetAnalyticsEvent2RequestBuilder getAnalyticsEvent2() {
-        return new GetAnalyticsEvent2RequestBuilder(sdkConfiguration);
+    public GetAnalyticsEventRequestBuilder getAnalyticsEvent() {
+        return new GetAnalyticsEventRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -182,9 +182,9 @@ public class Analytics {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetAnalyticsEvent2Response getAnalyticsEvent2(@Nonnull GetAnalyticsEvent2Request request) {
-        RequestOperation<GetAnalyticsEvent2Request, GetAnalyticsEvent2Response> operation
-              = new GetAnalyticsEvent2.Sync(sdkConfiguration, _headers);
+    public GetAnalyticsEventResponse getAnalyticsEvent(@Nonnull GetAnalyticsEventRequest request) {
+        RequestOperation<GetAnalyticsEventRequest, GetAnalyticsEventResponse> operation
+              = new GetAnalyticsEvent.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -193,8 +193,8 @@ public class Analytics {
      * 
      * @return The call builder
      */
-    public GetAnalyticsProperty2RequestBuilder getAnalyticsProperty2() {
-        return new GetAnalyticsProperty2RequestBuilder(sdkConfiguration);
+    public GetAnalyticsPropertyRequestBuilder getAnalyticsProperty() {
+        return new GetAnalyticsPropertyRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -204,9 +204,9 @@ public class Analytics {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetAnalyticsProperty2Response getAnalyticsProperty2(@Nonnull GetAnalyticsProperty2Request request) {
-        RequestOperation<GetAnalyticsProperty2Request, GetAnalyticsProperty2Response> operation
-              = new GetAnalyticsProperty2.Sync(sdkConfiguration, _headers);
+    public GetAnalyticsPropertyResponse getAnalyticsProperty(@Nonnull GetAnalyticsPropertyRequest request) {
+        RequestOperation<GetAnalyticsPropertyRequest, GetAnalyticsPropertyResponse> operation
+              = new GetAnalyticsProperty.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -215,8 +215,8 @@ public class Analytics {
      * 
      * @return The call builder
      */
-    public GetAnalyticsSession2RequestBuilder getAnalyticsSession2() {
-        return new GetAnalyticsSession2RequestBuilder(sdkConfiguration);
+    public GetAnalyticsSessionRequestBuilder getAnalyticsSession() {
+        return new GetAnalyticsSessionRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -226,9 +226,9 @@ public class Analytics {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetAnalyticsSession2Response getAnalyticsSession2(@Nonnull GetAnalyticsSession2Request request) {
-        RequestOperation<GetAnalyticsSession2Request, GetAnalyticsSession2Response> operation
-              = new GetAnalyticsSession2.Sync(sdkConfiguration, _headers);
+    public GetAnalyticsSessionResponse getAnalyticsSession(@Nonnull GetAnalyticsSessionRequest request) {
+        RequestOperation<GetAnalyticsSessionRequest, GetAnalyticsSessionResponse> operation
+              = new GetAnalyticsSession.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -237,8 +237,8 @@ public class Analytics {
      * 
      * @return The call builder
      */
-    public GetAnalyticsVisitor2RequestBuilder getAnalyticsVisitor2() {
-        return new GetAnalyticsVisitor2RequestBuilder(sdkConfiguration);
+    public GetAnalyticsVisitorRequestBuilder getAnalyticsVisitor() {
+        return new GetAnalyticsVisitorRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -248,9 +248,9 @@ public class Analytics {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetAnalyticsVisitor2Response getAnalyticsVisitor2(@Nonnull GetAnalyticsVisitor2Request request) {
-        RequestOperation<GetAnalyticsVisitor2Request, GetAnalyticsVisitor2Response> operation
-              = new GetAnalyticsVisitor2.Sync(sdkConfiguration, _headers);
+    public GetAnalyticsVisitorResponse getAnalyticsVisitor(@Nonnull GetAnalyticsVisitorRequest request) {
+        RequestOperation<GetAnalyticsVisitorRequest, GetAnalyticsVisitorResponse> operation
+              = new GetAnalyticsVisitor.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -259,8 +259,8 @@ public class Analytics {
      * 
      * @return The call builder
      */
-    public ListAnalyticsEvents2RequestBuilder listAnalyticsEvents2() {
-        return new ListAnalyticsEvents2RequestBuilder(sdkConfiguration);
+    public ListAnalyticsEventsRequestBuilder listAnalyticsEvents() {
+        return new ListAnalyticsEventsRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -270,9 +270,9 @@ public class Analytics {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListAnalyticsEvents2Response listAnalyticsEvents2(@Nonnull ListAnalyticsEvents2Request request) {
-        RequestOperation<ListAnalyticsEvents2Request, ListAnalyticsEvents2Response> operation
-              = new ListAnalyticsEvents2.Sync(sdkConfiguration, _headers);
+    public ListAnalyticsEventsResponse listAnalyticsEvents(@Nonnull ListAnalyticsEventsRequest request) {
+        RequestOperation<ListAnalyticsEventsRequest, ListAnalyticsEventsResponse> operation
+              = new ListAnalyticsEvents.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -281,8 +281,8 @@ public class Analytics {
      * 
      * @return The call builder
      */
-    public ListAnalyticsProperties2RequestBuilder listAnalyticsProperties2() {
-        return new ListAnalyticsProperties2RequestBuilder(sdkConfiguration);
+    public ListAnalyticsPropertiesRequestBuilder listAnalyticsProperties() {
+        return new ListAnalyticsPropertiesRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -292,9 +292,9 @@ public class Analytics {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListAnalyticsProperties2Response listAnalyticsProperties2(@Nonnull ListAnalyticsProperties2Request request) {
-        RequestOperation<ListAnalyticsProperties2Request, ListAnalyticsProperties2Response> operation
-              = new ListAnalyticsProperties2.Sync(sdkConfiguration, _headers);
+    public ListAnalyticsPropertiesResponse listAnalyticsProperties(@Nonnull ListAnalyticsPropertiesRequest request) {
+        RequestOperation<ListAnalyticsPropertiesRequest, ListAnalyticsPropertiesResponse> operation
+              = new ListAnalyticsProperties.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -303,8 +303,8 @@ public class Analytics {
      * 
      * @return The call builder
      */
-    public ListAnalyticsReports2RequestBuilder listAnalyticsReports2() {
-        return new ListAnalyticsReports2RequestBuilder(sdkConfiguration);
+    public ListAnalyticsReportsRequestBuilder listAnalyticsReports() {
+        return new ListAnalyticsReportsRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -314,9 +314,9 @@ public class Analytics {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListAnalyticsReports2Response listAnalyticsReports2(@Nonnull ListAnalyticsReports2Request request) {
-        RequestOperation<ListAnalyticsReports2Request, ListAnalyticsReports2Response> operation
-              = new ListAnalyticsReports2.Sync(sdkConfiguration, _headers);
+    public ListAnalyticsReportsResponse listAnalyticsReports(@Nonnull ListAnalyticsReportsRequest request) {
+        RequestOperation<ListAnalyticsReportsRequest, ListAnalyticsReportsResponse> operation
+              = new ListAnalyticsReports.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -325,8 +325,8 @@ public class Analytics {
      * 
      * @return The call builder
      */
-    public ListAnalyticsSessions2RequestBuilder listAnalyticsSessions2() {
-        return new ListAnalyticsSessions2RequestBuilder(sdkConfiguration);
+    public ListAnalyticsSessionsRequestBuilder listAnalyticsSessions() {
+        return new ListAnalyticsSessionsRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -336,9 +336,9 @@ public class Analytics {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListAnalyticsSessions2Response listAnalyticsSessions2(@Nonnull ListAnalyticsSessions2Request request) {
-        RequestOperation<ListAnalyticsSessions2Request, ListAnalyticsSessions2Response> operation
-              = new ListAnalyticsSessions2.Sync(sdkConfiguration, _headers);
+    public ListAnalyticsSessionsResponse listAnalyticsSessions(@Nonnull ListAnalyticsSessionsRequest request) {
+        RequestOperation<ListAnalyticsSessionsRequest, ListAnalyticsSessionsResponse> operation
+              = new ListAnalyticsSessions.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -347,8 +347,8 @@ public class Analytics {
      * 
      * @return The call builder
      */
-    public ListAnalyticsVisitors2RequestBuilder listAnalyticsVisitors2() {
-        return new ListAnalyticsVisitors2RequestBuilder(sdkConfiguration);
+    public ListAnalyticsVisitorsRequestBuilder listAnalyticsVisitors() {
+        return new ListAnalyticsVisitorsRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -358,9 +358,9 @@ public class Analytics {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListAnalyticsVisitors2Response listAnalyticsVisitors2(@Nonnull ListAnalyticsVisitors2Request request) {
-        RequestOperation<ListAnalyticsVisitors2Request, ListAnalyticsVisitors2Response> operation
-              = new ListAnalyticsVisitors2.Sync(sdkConfiguration, _headers);
+    public ListAnalyticsVisitorsResponse listAnalyticsVisitors(@Nonnull ListAnalyticsVisitorsRequest request) {
+        RequestOperation<ListAnalyticsVisitorsRequest, ListAnalyticsVisitorsResponse> operation
+              = new ListAnalyticsVisitors.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -369,8 +369,8 @@ public class Analytics {
      * 
      * @return The call builder
      */
-    public PatchAnalyticsProperty2RequestBuilder patchAnalyticsProperty2() {
-        return new PatchAnalyticsProperty2RequestBuilder(sdkConfiguration);
+    public PatchAnalyticsPropertyRequestBuilder patchAnalyticsProperty() {
+        return new PatchAnalyticsPropertyRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -380,9 +380,9 @@ public class Analytics {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchAnalyticsProperty2Response patchAnalyticsProperty2(@Nonnull PatchAnalyticsProperty2Request request) {
-        RequestOperation<PatchAnalyticsProperty2Request, PatchAnalyticsProperty2Response> operation
-              = new PatchAnalyticsProperty2.Sync(sdkConfiguration, _headers);
+    public PatchAnalyticsPropertyResponse patchAnalyticsProperty(@Nonnull PatchAnalyticsPropertyRequest request) {
+        RequestOperation<PatchAnalyticsPropertyRequest, PatchAnalyticsPropertyResponse> operation
+              = new PatchAnalyticsProperty.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -391,8 +391,8 @@ public class Analytics {
      * 
      * @return The call builder
      */
-    public PatchAnalyticsVisitor2RequestBuilder patchAnalyticsVisitor2() {
-        return new PatchAnalyticsVisitor2RequestBuilder(sdkConfiguration);
+    public PatchAnalyticsVisitorRequestBuilder patchAnalyticsVisitor() {
+        return new PatchAnalyticsVisitorRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -402,9 +402,9 @@ public class Analytics {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchAnalyticsVisitor2Response patchAnalyticsVisitor2(@Nonnull PatchAnalyticsVisitor2Request request) {
-        RequestOperation<PatchAnalyticsVisitor2Request, PatchAnalyticsVisitor2Response> operation
-              = new PatchAnalyticsVisitor2.Sync(sdkConfiguration, _headers);
+    public PatchAnalyticsVisitorResponse patchAnalyticsVisitor(@Nonnull PatchAnalyticsVisitorRequest request) {
+        RequestOperation<PatchAnalyticsVisitorRequest, PatchAnalyticsVisitorResponse> operation
+              = new PatchAnalyticsVisitor.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -413,8 +413,8 @@ public class Analytics {
      * 
      * @return The call builder
      */
-    public RemoveAnalyticsProperty2RequestBuilder removeAnalyticsProperty2() {
-        return new RemoveAnalyticsProperty2RequestBuilder(sdkConfiguration);
+    public RemoveAnalyticsPropertyRequestBuilder removeAnalyticsProperty() {
+        return new RemoveAnalyticsPropertyRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -424,9 +424,9 @@ public class Analytics {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveAnalyticsProperty2Response removeAnalyticsProperty2(@Nonnull RemoveAnalyticsProperty2Request request) {
-        RequestOperation<RemoveAnalyticsProperty2Request, RemoveAnalyticsProperty2Response> operation
-              = new RemoveAnalyticsProperty2.Sync(sdkConfiguration, _headers);
+    public RemoveAnalyticsPropertyResponse removeAnalyticsProperty(@Nonnull RemoveAnalyticsPropertyRequest request) {
+        RequestOperation<RemoveAnalyticsPropertyRequest, RemoveAnalyticsPropertyResponse> operation
+              = new RemoveAnalyticsProperty.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -435,8 +435,8 @@ public class Analytics {
      * 
      * @return The call builder
      */
-    public RemoveAnalyticsVisitor2RequestBuilder removeAnalyticsVisitor2() {
-        return new RemoveAnalyticsVisitor2RequestBuilder(sdkConfiguration);
+    public RemoveAnalyticsVisitorRequestBuilder removeAnalyticsVisitor() {
+        return new RemoveAnalyticsVisitorRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -446,9 +446,9 @@ public class Analytics {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveAnalyticsVisitor2Response removeAnalyticsVisitor2(@Nonnull RemoveAnalyticsVisitor2Request request) {
-        RequestOperation<RemoveAnalyticsVisitor2Request, RemoveAnalyticsVisitor2Response> operation
-              = new RemoveAnalyticsVisitor2.Sync(sdkConfiguration, _headers);
+    public RemoveAnalyticsVisitorResponse removeAnalyticsVisitor(@Nonnull RemoveAnalyticsVisitorRequest request) {
+        RequestOperation<RemoveAnalyticsVisitorRequest, RemoveAnalyticsVisitorResponse> operation
+              = new RemoveAnalyticsVisitor.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -457,8 +457,8 @@ public class Analytics {
      * 
      * @return The call builder
      */
-    public UpdateAnalyticsProperty2RequestBuilder updateAnalyticsProperty2() {
-        return new UpdateAnalyticsProperty2RequestBuilder(sdkConfiguration);
+    public UpdateAnalyticsPropertyRequestBuilder updateAnalyticsProperty() {
+        return new UpdateAnalyticsPropertyRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -468,9 +468,9 @@ public class Analytics {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateAnalyticsProperty2Response updateAnalyticsProperty2(@Nonnull UpdateAnalyticsProperty2Request request) {
-        RequestOperation<UpdateAnalyticsProperty2Request, UpdateAnalyticsProperty2Response> operation
-              = new UpdateAnalyticsProperty2.Sync(sdkConfiguration, _headers);
+    public UpdateAnalyticsPropertyResponse updateAnalyticsProperty(@Nonnull UpdateAnalyticsPropertyRequest request) {
+        RequestOperation<UpdateAnalyticsPropertyRequest, UpdateAnalyticsPropertyResponse> operation
+              = new UpdateAnalyticsProperty.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -479,8 +479,8 @@ public class Analytics {
      * 
      * @return The call builder
      */
-    public UpdateAnalyticsVisitor2RequestBuilder updateAnalyticsVisitor2() {
-        return new UpdateAnalyticsVisitor2RequestBuilder(sdkConfiguration);
+    public UpdateAnalyticsVisitorRequestBuilder updateAnalyticsVisitor() {
+        return new UpdateAnalyticsVisitorRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -490,9 +490,9 @@ public class Analytics {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateAnalyticsVisitor2Response updateAnalyticsVisitor2(@Nonnull UpdateAnalyticsVisitor2Request request) {
-        RequestOperation<UpdateAnalyticsVisitor2Request, UpdateAnalyticsVisitor2Response> operation
-              = new UpdateAnalyticsVisitor2.Sync(sdkConfiguration, _headers);
+    public UpdateAnalyticsVisitorResponse updateAnalyticsVisitor(@Nonnull UpdateAnalyticsVisitorRequest request) {
+        RequestOperation<UpdateAnalyticsVisitorRequest, UpdateAnalyticsVisitorResponse> operation
+              = new UpdateAnalyticsVisitor.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

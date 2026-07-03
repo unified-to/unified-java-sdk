@@ -6,54 +6,54 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
-import to.unified.unified_java_sdk.models.operations.CreateCalendarLink2Request;
-import to.unified.unified_java_sdk.models.operations.CreateCalendarLink2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.CreateCalendarLink2Response;
-import to.unified.unified_java_sdk.models.operations.CreatePaymentLink2Request;
-import to.unified.unified_java_sdk.models.operations.CreatePaymentLink2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.CreatePaymentLink2Response;
-import to.unified.unified_java_sdk.models.operations.GetCalendarLink2Request;
-import to.unified.unified_java_sdk.models.operations.GetCalendarLink2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.GetCalendarLink2Response;
-import to.unified.unified_java_sdk.models.operations.GetPaymentLink2Request;
-import to.unified.unified_java_sdk.models.operations.GetPaymentLink2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.GetPaymentLink2Response;
-import to.unified.unified_java_sdk.models.operations.ListCalendarLinks2Request;
-import to.unified.unified_java_sdk.models.operations.ListCalendarLinks2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.ListCalendarLinks2Response;
-import to.unified.unified_java_sdk.models.operations.ListPaymentLinks2Request;
-import to.unified.unified_java_sdk.models.operations.ListPaymentLinks2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.ListPaymentLinks2Response;
-import to.unified.unified_java_sdk.models.operations.PatchCalendarLink2Request;
-import to.unified.unified_java_sdk.models.operations.PatchCalendarLink2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.PatchCalendarLink2Response;
-import to.unified.unified_java_sdk.models.operations.PatchPaymentLink2Request;
-import to.unified.unified_java_sdk.models.operations.PatchPaymentLink2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.PatchPaymentLink2Response;
-import to.unified.unified_java_sdk.models.operations.RemoveCalendarLink2Request;
-import to.unified.unified_java_sdk.models.operations.RemoveCalendarLink2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.RemoveCalendarLink2Response;
-import to.unified.unified_java_sdk.models.operations.RemovePaymentLink2Request;
-import to.unified.unified_java_sdk.models.operations.RemovePaymentLink2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.RemovePaymentLink2Response;
-import to.unified.unified_java_sdk.models.operations.UpdateCalendarLink2Request;
-import to.unified.unified_java_sdk.models.operations.UpdateCalendarLink2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.UpdateCalendarLink2Response;
-import to.unified.unified_java_sdk.models.operations.UpdatePaymentLink2Request;
-import to.unified.unified_java_sdk.models.operations.UpdatePaymentLink2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.UpdatePaymentLink2Response;
-import to.unified.unified_java_sdk.operations.CreateCalendarLink2;
-import to.unified.unified_java_sdk.operations.CreatePaymentLink2;
-import to.unified.unified_java_sdk.operations.GetCalendarLink2;
-import to.unified.unified_java_sdk.operations.GetPaymentLink2;
-import to.unified.unified_java_sdk.operations.ListCalendarLinks2;
-import to.unified.unified_java_sdk.operations.ListPaymentLinks2;
-import to.unified.unified_java_sdk.operations.PatchCalendarLink2;
-import to.unified.unified_java_sdk.operations.PatchPaymentLink2;
-import to.unified.unified_java_sdk.operations.RemoveCalendarLink2;
-import to.unified.unified_java_sdk.operations.RemovePaymentLink2;
-import to.unified.unified_java_sdk.operations.UpdateCalendarLink2;
-import to.unified.unified_java_sdk.operations.UpdatePaymentLink2;
+import to.unified.unified_java_sdk.models.operations.CreateCalendarLinkRequest;
+import to.unified.unified_java_sdk.models.operations.CreateCalendarLinkRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.CreateCalendarLinkResponse;
+import to.unified.unified_java_sdk.models.operations.CreatePaymentLinkRequest;
+import to.unified.unified_java_sdk.models.operations.CreatePaymentLinkRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.CreatePaymentLinkResponse;
+import to.unified.unified_java_sdk.models.operations.GetCalendarLinkRequest;
+import to.unified.unified_java_sdk.models.operations.GetCalendarLinkRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetCalendarLinkResponse;
+import to.unified.unified_java_sdk.models.operations.GetPaymentLinkRequest;
+import to.unified.unified_java_sdk.models.operations.GetPaymentLinkRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetPaymentLinkResponse;
+import to.unified.unified_java_sdk.models.operations.ListCalendarLinksRequest;
+import to.unified.unified_java_sdk.models.operations.ListCalendarLinksRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListCalendarLinksResponse;
+import to.unified.unified_java_sdk.models.operations.ListPaymentLinksRequest;
+import to.unified.unified_java_sdk.models.operations.ListPaymentLinksRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListPaymentLinksResponse;
+import to.unified.unified_java_sdk.models.operations.PatchCalendarLinkRequest;
+import to.unified.unified_java_sdk.models.operations.PatchCalendarLinkRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.PatchCalendarLinkResponse;
+import to.unified.unified_java_sdk.models.operations.PatchPaymentLinkRequest;
+import to.unified.unified_java_sdk.models.operations.PatchPaymentLinkRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.PatchPaymentLinkResponse;
+import to.unified.unified_java_sdk.models.operations.RemoveCalendarLinkRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveCalendarLinkRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.RemoveCalendarLinkResponse;
+import to.unified.unified_java_sdk.models.operations.RemovePaymentLinkRequest;
+import to.unified.unified_java_sdk.models.operations.RemovePaymentLinkRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.RemovePaymentLinkResponse;
+import to.unified.unified_java_sdk.models.operations.UpdateCalendarLinkRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateCalendarLinkRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.UpdateCalendarLinkResponse;
+import to.unified.unified_java_sdk.models.operations.UpdatePaymentLinkRequest;
+import to.unified.unified_java_sdk.models.operations.UpdatePaymentLinkRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.UpdatePaymentLinkResponse;
+import to.unified.unified_java_sdk.operations.CreateCalendarLink;
+import to.unified.unified_java_sdk.operations.CreatePaymentLink;
+import to.unified.unified_java_sdk.operations.GetCalendarLink;
+import to.unified.unified_java_sdk.operations.GetPaymentLink;
+import to.unified.unified_java_sdk.operations.ListCalendarLinks;
+import to.unified.unified_java_sdk.operations.ListPaymentLinks;
+import to.unified.unified_java_sdk.operations.PatchCalendarLink;
+import to.unified.unified_java_sdk.operations.PatchPaymentLink;
+import to.unified.unified_java_sdk.operations.RemoveCalendarLink;
+import to.unified.unified_java_sdk.operations.RemovePaymentLink;
+import to.unified.unified_java_sdk.operations.UpdateCalendarLink;
+import to.unified.unified_java_sdk.operations.UpdatePaymentLink;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -81,8 +81,8 @@ public class Link {
      * 
      * @return The call builder
      */
-    public CreateCalendarLink2RequestBuilder createCalendarLink2() {
-        return new CreateCalendarLink2RequestBuilder(sdkConfiguration);
+    public CreateCalendarLinkRequestBuilder createCalendarLink() {
+        return new CreateCalendarLinkRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -92,9 +92,9 @@ public class Link {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateCalendarLink2Response createCalendarLink2(@Nonnull CreateCalendarLink2Request request) {
-        RequestOperation<CreateCalendarLink2Request, CreateCalendarLink2Response> operation
-              = new CreateCalendarLink2.Sync(sdkConfiguration, _headers);
+    public CreateCalendarLinkResponse createCalendarLink(@Nonnull CreateCalendarLinkRequest request) {
+        RequestOperation<CreateCalendarLinkRequest, CreateCalendarLinkResponse> operation
+              = new CreateCalendarLink.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -103,8 +103,8 @@ public class Link {
      * 
      * @return The call builder
      */
-    public CreatePaymentLink2RequestBuilder createPaymentLink2() {
-        return new CreatePaymentLink2RequestBuilder(sdkConfiguration);
+    public CreatePaymentLinkRequestBuilder createPaymentLink() {
+        return new CreatePaymentLinkRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -114,9 +114,9 @@ public class Link {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreatePaymentLink2Response createPaymentLink2(@Nonnull CreatePaymentLink2Request request) {
-        RequestOperation<CreatePaymentLink2Request, CreatePaymentLink2Response> operation
-              = new CreatePaymentLink2.Sync(sdkConfiguration, _headers);
+    public CreatePaymentLinkResponse createPaymentLink(@Nonnull CreatePaymentLinkRequest request) {
+        RequestOperation<CreatePaymentLinkRequest, CreatePaymentLinkResponse> operation
+              = new CreatePaymentLink.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -125,30 +125,8 @@ public class Link {
      * 
      * @return The call builder
      */
-    public GetCalendarLink2RequestBuilder getCalendarLink2() {
-        return new GetCalendarLink2RequestBuilder(sdkConfiguration);
-    }
-
-    /**
-     * Retrieve a link
-     * 
-     * @param request The request object containing all the parameters for the API call.
-     * @return The response from the API call
-     * @throws RuntimeException subclass if the API call fails
-     */
-    public GetCalendarLink2Response getCalendarLink2(@Nonnull GetCalendarLink2Request request) {
-        RequestOperation<GetCalendarLink2Request, GetCalendarLink2Response> operation
-              = new GetCalendarLink2.Sync(sdkConfiguration, _headers);
-        return operation.handleResponse(operation.doRequest(request));
-    }
-
-    /**
-     * Retrieve a link
-     * 
-     * @return The call builder
-     */
-    public GetPaymentLink2RequestBuilder getPaymentLink2() {
-        return new GetPaymentLink2RequestBuilder(sdkConfiguration);
+    public GetCalendarLinkRequestBuilder getCalendarLink() {
+        return new GetCalendarLinkRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -158,9 +136,31 @@ public class Link {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetPaymentLink2Response getPaymentLink2(@Nonnull GetPaymentLink2Request request) {
-        RequestOperation<GetPaymentLink2Request, GetPaymentLink2Response> operation
-              = new GetPaymentLink2.Sync(sdkConfiguration, _headers);
+    public GetCalendarLinkResponse getCalendarLink(@Nonnull GetCalendarLinkRequest request) {
+        RequestOperation<GetCalendarLinkRequest, GetCalendarLinkResponse> operation
+              = new GetCalendarLink.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Retrieve a link
+     * 
+     * @return The call builder
+     */
+    public GetPaymentLinkRequestBuilder getPaymentLink() {
+        return new GetPaymentLinkRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Retrieve a link
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetPaymentLinkResponse getPaymentLink(@Nonnull GetPaymentLinkRequest request) {
+        RequestOperation<GetPaymentLinkRequest, GetPaymentLinkResponse> operation
+              = new GetPaymentLink.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -169,8 +169,8 @@ public class Link {
      * 
      * @return The call builder
      */
-    public ListCalendarLinks2RequestBuilder listCalendarLinks2() {
-        return new ListCalendarLinks2RequestBuilder(sdkConfiguration);
+    public ListCalendarLinksRequestBuilder listCalendarLinks() {
+        return new ListCalendarLinksRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -180,9 +180,9 @@ public class Link {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListCalendarLinks2Response listCalendarLinks2(@Nonnull ListCalendarLinks2Request request) {
-        RequestOperation<ListCalendarLinks2Request, ListCalendarLinks2Response> operation
-              = new ListCalendarLinks2.Sync(sdkConfiguration, _headers);
+    public ListCalendarLinksResponse listCalendarLinks(@Nonnull ListCalendarLinksRequest request) {
+        RequestOperation<ListCalendarLinksRequest, ListCalendarLinksResponse> operation
+              = new ListCalendarLinks.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -191,8 +191,8 @@ public class Link {
      * 
      * @return The call builder
      */
-    public ListPaymentLinks2RequestBuilder listPaymentLinks2() {
-        return new ListPaymentLinks2RequestBuilder(sdkConfiguration);
+    public ListPaymentLinksRequestBuilder listPaymentLinks() {
+        return new ListPaymentLinksRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -202,9 +202,9 @@ public class Link {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListPaymentLinks2Response listPaymentLinks2(@Nonnull ListPaymentLinks2Request request) {
-        RequestOperation<ListPaymentLinks2Request, ListPaymentLinks2Response> operation
-              = new ListPaymentLinks2.Sync(sdkConfiguration, _headers);
+    public ListPaymentLinksResponse listPaymentLinks(@Nonnull ListPaymentLinksRequest request) {
+        RequestOperation<ListPaymentLinksRequest, ListPaymentLinksResponse> operation
+              = new ListPaymentLinks.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -213,30 +213,8 @@ public class Link {
      * 
      * @return The call builder
      */
-    public PatchCalendarLink2RequestBuilder patchCalendarLink2() {
-        return new PatchCalendarLink2RequestBuilder(sdkConfiguration);
-    }
-
-    /**
-     * Update a link
-     * 
-     * @param request The request object containing all the parameters for the API call.
-     * @return The response from the API call
-     * @throws RuntimeException subclass if the API call fails
-     */
-    public PatchCalendarLink2Response patchCalendarLink2(@Nonnull PatchCalendarLink2Request request) {
-        RequestOperation<PatchCalendarLink2Request, PatchCalendarLink2Response> operation
-              = new PatchCalendarLink2.Sync(sdkConfiguration, _headers);
-        return operation.handleResponse(operation.doRequest(request));
-    }
-
-    /**
-     * Update a link
-     * 
-     * @return The call builder
-     */
-    public PatchPaymentLink2RequestBuilder patchPaymentLink2() {
-        return new PatchPaymentLink2RequestBuilder(sdkConfiguration);
+    public PatchCalendarLinkRequestBuilder patchCalendarLink() {
+        return new PatchCalendarLinkRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -246,31 +224,31 @@ public class Link {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchPaymentLink2Response patchPaymentLink2(@Nonnull PatchPaymentLink2Request request) {
-        RequestOperation<PatchPaymentLink2Request, PatchPaymentLink2Response> operation
-              = new PatchPaymentLink2.Sync(sdkConfiguration, _headers);
+    public PatchCalendarLinkResponse patchCalendarLink(@Nonnull PatchCalendarLinkRequest request) {
+        RequestOperation<PatchCalendarLinkRequest, PatchCalendarLinkResponse> operation
+              = new PatchCalendarLink.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
     /**
-     * Remove a link
+     * Update a link
      * 
      * @return The call builder
      */
-    public RemoveCalendarLink2RequestBuilder removeCalendarLink2() {
-        return new RemoveCalendarLink2RequestBuilder(sdkConfiguration);
+    public PatchPaymentLinkRequestBuilder patchPaymentLink() {
+        return new PatchPaymentLinkRequestBuilder(sdkConfiguration);
     }
 
     /**
-     * Remove a link
+     * Update a link
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveCalendarLink2Response removeCalendarLink2(@Nonnull RemoveCalendarLink2Request request) {
-        RequestOperation<RemoveCalendarLink2Request, RemoveCalendarLink2Response> operation
-              = new RemoveCalendarLink2.Sync(sdkConfiguration, _headers);
+    public PatchPaymentLinkResponse patchPaymentLink(@Nonnull PatchPaymentLinkRequest request) {
+        RequestOperation<PatchPaymentLinkRequest, PatchPaymentLinkResponse> operation
+              = new PatchPaymentLink.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -279,8 +257,8 @@ public class Link {
      * 
      * @return The call builder
      */
-    public RemovePaymentLink2RequestBuilder removePaymentLink2() {
-        return new RemovePaymentLink2RequestBuilder(sdkConfiguration);
+    public RemoveCalendarLinkRequestBuilder removeCalendarLink() {
+        return new RemoveCalendarLinkRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -290,9 +268,31 @@ public class Link {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemovePaymentLink2Response removePaymentLink2(@Nonnull RemovePaymentLink2Request request) {
-        RequestOperation<RemovePaymentLink2Request, RemovePaymentLink2Response> operation
-              = new RemovePaymentLink2.Sync(sdkConfiguration, _headers);
+    public RemoveCalendarLinkResponse removeCalendarLink(@Nonnull RemoveCalendarLinkRequest request) {
+        RequestOperation<RemoveCalendarLinkRequest, RemoveCalendarLinkResponse> operation
+              = new RemoveCalendarLink.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Remove a link
+     * 
+     * @return The call builder
+     */
+    public RemovePaymentLinkRequestBuilder removePaymentLink() {
+        return new RemovePaymentLinkRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Remove a link
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemovePaymentLinkResponse removePaymentLink(@Nonnull RemovePaymentLinkRequest request) {
+        RequestOperation<RemovePaymentLinkRequest, RemovePaymentLinkResponse> operation
+              = new RemovePaymentLink.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -301,8 +301,8 @@ public class Link {
      * 
      * @return The call builder
      */
-    public UpdateCalendarLink2RequestBuilder updateCalendarLink2() {
-        return new UpdateCalendarLink2RequestBuilder(sdkConfiguration);
+    public UpdateCalendarLinkRequestBuilder updateCalendarLink() {
+        return new UpdateCalendarLinkRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -312,9 +312,9 @@ public class Link {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateCalendarLink2Response updateCalendarLink2(@Nonnull UpdateCalendarLink2Request request) {
-        RequestOperation<UpdateCalendarLink2Request, UpdateCalendarLink2Response> operation
-              = new UpdateCalendarLink2.Sync(sdkConfiguration, _headers);
+    public UpdateCalendarLinkResponse updateCalendarLink(@Nonnull UpdateCalendarLinkRequest request) {
+        RequestOperation<UpdateCalendarLinkRequest, UpdateCalendarLinkResponse> operation
+              = new UpdateCalendarLink.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -323,8 +323,8 @@ public class Link {
      * 
      * @return The call builder
      */
-    public UpdatePaymentLink2RequestBuilder updatePaymentLink2() {
-        return new UpdatePaymentLink2RequestBuilder(sdkConfiguration);
+    public UpdatePaymentLinkRequestBuilder updatePaymentLink() {
+        return new UpdatePaymentLinkRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -334,9 +334,9 @@ public class Link {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdatePaymentLink2Response updatePaymentLink2(@Nonnull UpdatePaymentLink2Request request) {
-        RequestOperation<UpdatePaymentLink2Request, UpdatePaymentLink2Response> operation
-              = new UpdatePaymentLink2.Sync(sdkConfiguration, _headers);
+    public UpdatePaymentLinkResponse updatePaymentLink(@Nonnull UpdatePaymentLinkRequest request) {
+        RequestOperation<UpdatePaymentLinkRequest, UpdatePaymentLinkResponse> operation
+              = new UpdatePaymentLink.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

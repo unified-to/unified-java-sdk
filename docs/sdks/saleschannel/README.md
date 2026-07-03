@@ -4,27 +4,27 @@
 
 ### Available Operations
 
-* [createCommerceSaleschannel2](#createcommercesaleschannel2) - Create a saleschannel
-* [getCommerceSaleschannel2](#getcommercesaleschannel2) - Retrieve a saleschannel
-* [listCommerceSaleschannels2](#listcommercesaleschannels2) - List all saleschannels
-* [patchCommerceSaleschannel2](#patchcommercesaleschannel2) - Update a saleschannel
-* [removeCommerceSaleschannel2](#removecommercesaleschannel2) - Remove a saleschannel
-* [updateCommerceSaleschannel2](#updatecommercesaleschannel2) - Update a saleschannel
+* [createCommerceSaleschannel](#createcommercesaleschannel) - Create a saleschannel
+* [getCommerceSaleschannel](#getcommercesaleschannel) - Retrieve a saleschannel
+* [listCommerceSaleschannels](#listcommercesaleschannels) - List all saleschannels
+* [patchCommerceSaleschannel](#patchcommercesaleschannel) - Update a saleschannel
+* [removeCommerceSaleschannel](#removecommercesaleschannel) - Remove a saleschannel
+* [updateCommerceSaleschannel](#updatecommercesaleschannel) - Update a saleschannel
 
-## createCommerceSaleschannel2
+## createCommerceSaleschannel
 
 Create a saleschannel
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createCommerceSaleschannel2" method="post" path="/commerce/{connection_id}/saleschannel" -->
+<!-- UsageSnippet language="java" operationID="createCommerceSaleschannel" method="post" path="/commerce/{connection_id}/saleschannel" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.CreateCommerceSaleschannel2Request;
-import to.unified.unified_java_sdk.models.operations.CreateCommerceSaleschannel2Response;
+import to.unified.unified_java_sdk.models.operations.CreateCommerceSaleschannelRequest;
+import to.unified.unified_java_sdk.models.operations.CreateCommerceSaleschannelResponse;
 import to.unified.unified_java_sdk.models.shared.CommerceSaleschannel;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -38,13 +38,13 @@ public class Application {
                     .build())
             .build();
 
-        CreateCommerceSaleschannel2Request req = CreateCommerceSaleschannel2Request.builder()
+        CreateCommerceSaleschannelRequest req = CreateCommerceSaleschannelRequest.builder()
                 .commerceSaleschannel(CommerceSaleschannel.builder()
                     .build())
                 .connectionId("<id>")
                 .build();
 
-        CreateCommerceSaleschannel2Response res = sdk.saleschannel().createCommerceSaleschannel2()
+        CreateCommerceSaleschannelResponse res = sdk.saleschannel().createCommerceSaleschannel()
                 .request(req)
                 .call();
 
@@ -57,13 +57,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                           | Type                                                                                                | Required                                                                                            | Description                                                                                         |
-| --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
-| `request`                                                                                           | [CreateCommerceSaleschannel2Request](../../models/operations/CreateCommerceSaleschannel2Request.md) | :heavy_check_mark:                                                                                  | The request object to use for the request.                                                          |
+| Parameter                                                                                         | Type                                                                                              | Required                                                                                          | Description                                                                                       |
+| ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
+| `request`                                                                                         | [CreateCommerceSaleschannelRequest](../../models/operations/CreateCommerceSaleschannelRequest.md) | :heavy_check_mark:                                                                                | The request object to use for the request.                                                        |
 
 ### Response
 
-**[CreateCommerceSaleschannel2Response](../../models/operations/CreateCommerceSaleschannel2Response.md)**
+**[CreateCommerceSaleschannelResponse](../../models/operations/CreateCommerceSaleschannelResponse.md)**
 
 ### Errors
 
@@ -71,20 +71,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## getCommerceSaleschannel2
+## getCommerceSaleschannel
 
 Retrieve a saleschannel
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="getCommerceSaleschannel2" method="get" path="/commerce/{connection_id}/saleschannel/{id}" -->
+<!-- UsageSnippet language="java" operationID="getCommerceSaleschannel" method="get" path="/commerce/{connection_id}/saleschannel/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.GetCommerceSaleschannel2Request;
-import to.unified.unified_java_sdk.models.operations.GetCommerceSaleschannel2Response;
+import to.unified.unified_java_sdk.models.operations.GetCommerceSaleschannelRequest;
+import to.unified.unified_java_sdk.models.operations.GetCommerceSaleschannelResponse;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -97,12 +97,12 @@ public class Application {
                     .build())
             .build();
 
-        GetCommerceSaleschannel2Request req = GetCommerceSaleschannel2Request.builder()
+        GetCommerceSaleschannelRequest req = GetCommerceSaleschannelRequest.builder()
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        GetCommerceSaleschannel2Response res = sdk.saleschannel().getCommerceSaleschannel2()
+        GetCommerceSaleschannelResponse res = sdk.saleschannel().getCommerceSaleschannel()
                 .request(req)
                 .call();
 
@@ -115,13 +115,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                     | Type                                                                                          | Required                                                                                      | Description                                                                                   |
-| --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
-| `request`                                                                                     | [GetCommerceSaleschannel2Request](../../models/operations/GetCommerceSaleschannel2Request.md) | :heavy_check_mark:                                                                            | The request object to use for the request.                                                    |
+| Parameter                                                                                   | Type                                                                                        | Required                                                                                    | Description                                                                                 |
+| ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
+| `request`                                                                                   | [GetCommerceSaleschannelRequest](../../models/operations/GetCommerceSaleschannelRequest.md) | :heavy_check_mark:                                                                          | The request object to use for the request.                                                  |
 
 ### Response
 
-**[GetCommerceSaleschannel2Response](../../models/operations/GetCommerceSaleschannel2Response.md)**
+**[GetCommerceSaleschannelResponse](../../models/operations/GetCommerceSaleschannelResponse.md)**
 
 ### Errors
 
@@ -129,20 +129,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## listCommerceSaleschannels2
+## listCommerceSaleschannels
 
 List all saleschannels
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="listCommerceSaleschannels2" method="get" path="/commerce/{connection_id}/saleschannel" -->
+<!-- UsageSnippet language="java" operationID="listCommerceSaleschannels" method="get" path="/commerce/{connection_id}/saleschannel" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.ListCommerceSaleschannels2Request;
-import to.unified.unified_java_sdk.models.operations.ListCommerceSaleschannels2Response;
+import to.unified.unified_java_sdk.models.operations.ListCommerceSaleschannelsRequest;
+import to.unified.unified_java_sdk.models.operations.ListCommerceSaleschannelsResponse;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -155,11 +155,11 @@ public class Application {
                     .build())
             .build();
 
-        ListCommerceSaleschannels2Request req = ListCommerceSaleschannels2Request.builder()
+        ListCommerceSaleschannelsRequest req = ListCommerceSaleschannelsRequest.builder()
                 .connectionId("<id>")
                 .build();
 
-        ListCommerceSaleschannels2Response res = sdk.saleschannel().listCommerceSaleschannels2()
+        ListCommerceSaleschannelsResponse res = sdk.saleschannel().listCommerceSaleschannels()
                 .request(req)
                 .call();
 
@@ -172,13 +172,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                         | Type                                                                                              | Required                                                                                          | Description                                                                                       |
-| ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
-| `request`                                                                                         | [ListCommerceSaleschannels2Request](../../models/operations/ListCommerceSaleschannels2Request.md) | :heavy_check_mark:                                                                                | The request object to use for the request.                                                        |
+| Parameter                                                                                       | Type                                                                                            | Required                                                                                        | Description                                                                                     |
+| ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
+| `request`                                                                                       | [ListCommerceSaleschannelsRequest](../../models/operations/ListCommerceSaleschannelsRequest.md) | :heavy_check_mark:                                                                              | The request object to use for the request.                                                      |
 
 ### Response
 
-**[ListCommerceSaleschannels2Response](../../models/operations/ListCommerceSaleschannels2Response.md)**
+**[ListCommerceSaleschannelsResponse](../../models/operations/ListCommerceSaleschannelsResponse.md)**
 
 ### Errors
 
@@ -186,20 +186,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## patchCommerceSaleschannel2
+## patchCommerceSaleschannel
 
 Update a saleschannel
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchCommerceSaleschannel2" method="patch" path="/commerce/{connection_id}/saleschannel/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchCommerceSaleschannel" method="patch" path="/commerce/{connection_id}/saleschannel/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.PatchCommerceSaleschannel2Request;
-import to.unified.unified_java_sdk.models.operations.PatchCommerceSaleschannel2Response;
+import to.unified.unified_java_sdk.models.operations.PatchCommerceSaleschannelRequest;
+import to.unified.unified_java_sdk.models.operations.PatchCommerceSaleschannelResponse;
 import to.unified.unified_java_sdk.models.shared.CommerceSaleschannel;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -213,14 +213,14 @@ public class Application {
                     .build())
             .build();
 
-        PatchCommerceSaleschannel2Request req = PatchCommerceSaleschannel2Request.builder()
+        PatchCommerceSaleschannelRequest req = PatchCommerceSaleschannelRequest.builder()
                 .commerceSaleschannel(CommerceSaleschannel.builder()
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        PatchCommerceSaleschannel2Response res = sdk.saleschannel().patchCommerceSaleschannel2()
+        PatchCommerceSaleschannelResponse res = sdk.saleschannel().patchCommerceSaleschannel()
                 .request(req)
                 .call();
 
@@ -233,13 +233,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                         | Type                                                                                              | Required                                                                                          | Description                                                                                       |
-| ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
-| `request`                                                                                         | [PatchCommerceSaleschannel2Request](../../models/operations/PatchCommerceSaleschannel2Request.md) | :heavy_check_mark:                                                                                | The request object to use for the request.                                                        |
+| Parameter                                                                                       | Type                                                                                            | Required                                                                                        | Description                                                                                     |
+| ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
+| `request`                                                                                       | [PatchCommerceSaleschannelRequest](../../models/operations/PatchCommerceSaleschannelRequest.md) | :heavy_check_mark:                                                                              | The request object to use for the request.                                                      |
 
 ### Response
 
-**[PatchCommerceSaleschannel2Response](../../models/operations/PatchCommerceSaleschannel2Response.md)**
+**[PatchCommerceSaleschannelResponse](../../models/operations/PatchCommerceSaleschannelResponse.md)**
 
 ### Errors
 
@@ -247,20 +247,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## removeCommerceSaleschannel2
+## removeCommerceSaleschannel
 
 Remove a saleschannel
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="removeCommerceSaleschannel2" method="delete" path="/commerce/{connection_id}/saleschannel/{id}" -->
+<!-- UsageSnippet language="java" operationID="removeCommerceSaleschannel" method="delete" path="/commerce/{connection_id}/saleschannel/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.RemoveCommerceSaleschannel2Request;
-import to.unified.unified_java_sdk.models.operations.RemoveCommerceSaleschannel2Response;
+import to.unified.unified_java_sdk.models.operations.RemoveCommerceSaleschannelRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveCommerceSaleschannelResponse;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -273,12 +273,12 @@ public class Application {
                     .build())
             .build();
 
-        RemoveCommerceSaleschannel2Request req = RemoveCommerceSaleschannel2Request.builder()
+        RemoveCommerceSaleschannelRequest req = RemoveCommerceSaleschannelRequest.builder()
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        RemoveCommerceSaleschannel2Response res = sdk.saleschannel().removeCommerceSaleschannel2()
+        RemoveCommerceSaleschannelResponse res = sdk.saleschannel().removeCommerceSaleschannel()
                 .request(req)
                 .call();
 
@@ -289,13 +289,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                           | Type                                                                                                | Required                                                                                            | Description                                                                                         |
-| --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
-| `request`                                                                                           | [RemoveCommerceSaleschannel2Request](../../models/operations/RemoveCommerceSaleschannel2Request.md) | :heavy_check_mark:                                                                                  | The request object to use for the request.                                                          |
+| Parameter                                                                                         | Type                                                                                              | Required                                                                                          | Description                                                                                       |
+| ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
+| `request`                                                                                         | [RemoveCommerceSaleschannelRequest](../../models/operations/RemoveCommerceSaleschannelRequest.md) | :heavy_check_mark:                                                                                | The request object to use for the request.                                                        |
 
 ### Response
 
-**[RemoveCommerceSaleschannel2Response](../../models/operations/RemoveCommerceSaleschannel2Response.md)**
+**[RemoveCommerceSaleschannelResponse](../../models/operations/RemoveCommerceSaleschannelResponse.md)**
 
 ### Errors
 
@@ -303,20 +303,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## updateCommerceSaleschannel2
+## updateCommerceSaleschannel
 
 Update a saleschannel
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateCommerceSaleschannel2" method="put" path="/commerce/{connection_id}/saleschannel/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateCommerceSaleschannel" method="put" path="/commerce/{connection_id}/saleschannel/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.UpdateCommerceSaleschannel2Request;
-import to.unified.unified_java_sdk.models.operations.UpdateCommerceSaleschannel2Response;
+import to.unified.unified_java_sdk.models.operations.UpdateCommerceSaleschannelRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateCommerceSaleschannelResponse;
 import to.unified.unified_java_sdk.models.shared.CommerceSaleschannel;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -330,14 +330,14 @@ public class Application {
                     .build())
             .build();
 
-        UpdateCommerceSaleschannel2Request req = UpdateCommerceSaleschannel2Request.builder()
+        UpdateCommerceSaleschannelRequest req = UpdateCommerceSaleschannelRequest.builder()
                 .commerceSaleschannel(CommerceSaleschannel.builder()
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        UpdateCommerceSaleschannel2Response res = sdk.saleschannel().updateCommerceSaleschannel2()
+        UpdateCommerceSaleschannelResponse res = sdk.saleschannel().updateCommerceSaleschannel()
                 .request(req)
                 .call();
 
@@ -350,13 +350,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                           | Type                                                                                                | Required                                                                                            | Description                                                                                         |
-| --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
-| `request`                                                                                           | [UpdateCommerceSaleschannel2Request](../../models/operations/UpdateCommerceSaleschannel2Request.md) | :heavy_check_mark:                                                                                  | The request object to use for the request.                                                          |
+| Parameter                                                                                         | Type                                                                                              | Required                                                                                          | Description                                                                                       |
+| ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
+| `request`                                                                                         | [UpdateCommerceSaleschannelRequest](../../models/operations/UpdateCommerceSaleschannelRequest.md) | :heavy_check_mark:                                                                                | The request object to use for the request.                                                        |
 
 ### Response
 
-**[UpdateCommerceSaleschannel2Response](../../models/operations/UpdateCommerceSaleschannel2Response.md)**
+**[UpdateCommerceSaleschannelResponse](../../models/operations/UpdateCommerceSaleschannelResponse.md)**
 
 ### Errors
 

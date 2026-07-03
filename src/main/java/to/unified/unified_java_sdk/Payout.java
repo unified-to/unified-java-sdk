@@ -6,14 +6,14 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
-import to.unified.unified_java_sdk.models.operations.GetPaymentPayout2Request;
-import to.unified.unified_java_sdk.models.operations.GetPaymentPayout2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.GetPaymentPayout2Response;
-import to.unified.unified_java_sdk.models.operations.ListPaymentPayouts2Request;
-import to.unified.unified_java_sdk.models.operations.ListPaymentPayouts2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.ListPaymentPayouts2Response;
-import to.unified.unified_java_sdk.operations.GetPaymentPayout2;
-import to.unified.unified_java_sdk.operations.ListPaymentPayouts2;
+import to.unified.unified_java_sdk.models.operations.GetPaymentPayoutRequest;
+import to.unified.unified_java_sdk.models.operations.GetPaymentPayoutRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetPaymentPayoutResponse;
+import to.unified.unified_java_sdk.models.operations.ListPaymentPayoutsRequest;
+import to.unified.unified_java_sdk.models.operations.ListPaymentPayoutsRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListPaymentPayoutsResponse;
+import to.unified.unified_java_sdk.operations.GetPaymentPayout;
+import to.unified.unified_java_sdk.operations.ListPaymentPayouts;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -41,8 +41,8 @@ public class Payout {
      * 
      * @return The call builder
      */
-    public GetPaymentPayout2RequestBuilder getPaymentPayout2() {
-        return new GetPaymentPayout2RequestBuilder(sdkConfiguration);
+    public GetPaymentPayoutRequestBuilder getPaymentPayout() {
+        return new GetPaymentPayoutRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -52,9 +52,9 @@ public class Payout {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetPaymentPayout2Response getPaymentPayout2(@Nonnull GetPaymentPayout2Request request) {
-        RequestOperation<GetPaymentPayout2Request, GetPaymentPayout2Response> operation
-              = new GetPaymentPayout2.Sync(sdkConfiguration, _headers);
+    public GetPaymentPayoutResponse getPaymentPayout(@Nonnull GetPaymentPayoutRequest request) {
+        RequestOperation<GetPaymentPayoutRequest, GetPaymentPayoutResponse> operation
+              = new GetPaymentPayout.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -63,8 +63,8 @@ public class Payout {
      * 
      * @return The call builder
      */
-    public ListPaymentPayouts2RequestBuilder listPaymentPayouts2() {
-        return new ListPaymentPayouts2RequestBuilder(sdkConfiguration);
+    public ListPaymentPayoutsRequestBuilder listPaymentPayouts() {
+        return new ListPaymentPayoutsRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -74,9 +74,9 @@ public class Payout {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListPaymentPayouts2Response listPaymentPayouts2(@Nonnull ListPaymentPayouts2Request request) {
-        RequestOperation<ListPaymentPayouts2Request, ListPaymentPayouts2Response> operation
-              = new ListPaymentPayouts2.Sync(sdkConfiguration, _headers);
+    public ListPaymentPayoutsResponse listPaymentPayouts(@Nonnull ListPaymentPayoutsRequest request) {
+        RequestOperation<ListPaymentPayoutsRequest, ListPaymentPayoutsResponse> operation
+              = new ListPaymentPayouts.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

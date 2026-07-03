@@ -7,30 +7,30 @@ import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOper
 
 import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
-import to.unified.unified_java_sdk.models.operations.CreateAccountingJournal2Request;
-import to.unified.unified_java_sdk.models.operations.GetAccountingJournal2Request;
-import to.unified.unified_java_sdk.models.operations.ListAccountingJournals2Request;
-import to.unified.unified_java_sdk.models.operations.PatchAccountingJournal2Request;
-import to.unified.unified_java_sdk.models.operations.RemoveAccountingJournal2Request;
-import to.unified.unified_java_sdk.models.operations.UpdateAccountingJournal2Request;
-import to.unified.unified_java_sdk.models.operations.async.CreateAccountingJournal2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.CreateAccountingJournal2Response;
-import to.unified.unified_java_sdk.models.operations.async.GetAccountingJournal2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.GetAccountingJournal2Response;
-import to.unified.unified_java_sdk.models.operations.async.ListAccountingJournals2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.ListAccountingJournals2Response;
-import to.unified.unified_java_sdk.models.operations.async.PatchAccountingJournal2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.PatchAccountingJournal2Response;
-import to.unified.unified_java_sdk.models.operations.async.RemoveAccountingJournal2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.RemoveAccountingJournal2Response;
-import to.unified.unified_java_sdk.models.operations.async.UpdateAccountingJournal2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.UpdateAccountingJournal2Response;
-import to.unified.unified_java_sdk.operations.CreateAccountingJournal2;
-import to.unified.unified_java_sdk.operations.GetAccountingJournal2;
-import to.unified.unified_java_sdk.operations.ListAccountingJournals2;
-import to.unified.unified_java_sdk.operations.PatchAccountingJournal2;
-import to.unified.unified_java_sdk.operations.RemoveAccountingJournal2;
-import to.unified.unified_java_sdk.operations.UpdateAccountingJournal2;
+import to.unified.unified_java_sdk.models.operations.CreateAccountingJournalRequest;
+import to.unified.unified_java_sdk.models.operations.GetAccountingJournalRequest;
+import to.unified.unified_java_sdk.models.operations.ListAccountingJournalsRequest;
+import to.unified.unified_java_sdk.models.operations.PatchAccountingJournalRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveAccountingJournalRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateAccountingJournalRequest;
+import to.unified.unified_java_sdk.models.operations.async.CreateAccountingJournalRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.CreateAccountingJournalResponse;
+import to.unified.unified_java_sdk.models.operations.async.GetAccountingJournalRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetAccountingJournalResponse;
+import to.unified.unified_java_sdk.models.operations.async.ListAccountingJournalsRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListAccountingJournalsResponse;
+import to.unified.unified_java_sdk.models.operations.async.PatchAccountingJournalRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.PatchAccountingJournalResponse;
+import to.unified.unified_java_sdk.models.operations.async.RemoveAccountingJournalRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.RemoveAccountingJournalResponse;
+import to.unified.unified_java_sdk.models.operations.async.UpdateAccountingJournalRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.UpdateAccountingJournalResponse;
+import to.unified.unified_java_sdk.operations.CreateAccountingJournal;
+import to.unified.unified_java_sdk.operations.GetAccountingJournal;
+import to.unified.unified_java_sdk.operations.ListAccountingJournals;
+import to.unified.unified_java_sdk.operations.PatchAccountingJournal;
+import to.unified.unified_java_sdk.operations.RemoveAccountingJournal;
+import to.unified.unified_java_sdk.operations.UpdateAccountingJournal;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -59,19 +59,19 @@ public class AsyncJournal {
      * 
      * @return The async call builder
      */
-    public CreateAccountingJournal2RequestBuilder createAccountingJournal2() {
-        return new CreateAccountingJournal2RequestBuilder(sdkConfiguration);
+    public CreateAccountingJournalRequestBuilder createAccountingJournal() {
+        return new CreateAccountingJournalRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Create a journal
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<CreateAccountingJournal2Response>} - The async response
+     * @return {@code CompletableFuture<CreateAccountingJournalResponse>} - The async response
      */
-    public CompletableFuture<CreateAccountingJournal2Response> createAccountingJournal2(@Nonnull CreateAccountingJournal2Request request) {
-        AsyncRequestOperation<CreateAccountingJournal2Request, CreateAccountingJournal2Response> operation
-              = new CreateAccountingJournal2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<CreateAccountingJournalResponse> createAccountingJournal(@Nonnull CreateAccountingJournalRequest request) {
+        AsyncRequestOperation<CreateAccountingJournalRequest, CreateAccountingJournalResponse> operation
+              = new CreateAccountingJournal.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -82,19 +82,19 @@ public class AsyncJournal {
      * 
      * @return The async call builder
      */
-    public GetAccountingJournal2RequestBuilder getAccountingJournal2() {
-        return new GetAccountingJournal2RequestBuilder(sdkConfiguration);
+    public GetAccountingJournalRequestBuilder getAccountingJournal() {
+        return new GetAccountingJournalRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Retrieve a journal
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<GetAccountingJournal2Response>} - The async response
+     * @return {@code CompletableFuture<GetAccountingJournalResponse>} - The async response
      */
-    public CompletableFuture<GetAccountingJournal2Response> getAccountingJournal2(@Nonnull GetAccountingJournal2Request request) {
-        AsyncRequestOperation<GetAccountingJournal2Request, GetAccountingJournal2Response> operation
-              = new GetAccountingJournal2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<GetAccountingJournalResponse> getAccountingJournal(@Nonnull GetAccountingJournalRequest request) {
+        AsyncRequestOperation<GetAccountingJournalRequest, GetAccountingJournalResponse> operation
+              = new GetAccountingJournal.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -105,19 +105,19 @@ public class AsyncJournal {
      * 
      * @return The async call builder
      */
-    public ListAccountingJournals2RequestBuilder listAccountingJournals2() {
-        return new ListAccountingJournals2RequestBuilder(sdkConfiguration);
+    public ListAccountingJournalsRequestBuilder listAccountingJournals() {
+        return new ListAccountingJournalsRequestBuilder(sdkConfiguration);
     }
 
     /**
      * List all journals
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<ListAccountingJournals2Response>} - The async response
+     * @return {@code CompletableFuture<ListAccountingJournalsResponse>} - The async response
      */
-    public CompletableFuture<ListAccountingJournals2Response> listAccountingJournals2(@Nonnull ListAccountingJournals2Request request) {
-        AsyncRequestOperation<ListAccountingJournals2Request, ListAccountingJournals2Response> operation
-              = new ListAccountingJournals2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<ListAccountingJournalsResponse> listAccountingJournals(@Nonnull ListAccountingJournalsRequest request) {
+        AsyncRequestOperation<ListAccountingJournalsRequest, ListAccountingJournalsResponse> operation
+              = new ListAccountingJournals.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -128,19 +128,19 @@ public class AsyncJournal {
      * 
      * @return The async call builder
      */
-    public PatchAccountingJournal2RequestBuilder patchAccountingJournal2() {
-        return new PatchAccountingJournal2RequestBuilder(sdkConfiguration);
+    public PatchAccountingJournalRequestBuilder patchAccountingJournal() {
+        return new PatchAccountingJournalRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update a journal
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<PatchAccountingJournal2Response>} - The async response
+     * @return {@code CompletableFuture<PatchAccountingJournalResponse>} - The async response
      */
-    public CompletableFuture<PatchAccountingJournal2Response> patchAccountingJournal2(@Nonnull PatchAccountingJournal2Request request) {
-        AsyncRequestOperation<PatchAccountingJournal2Request, PatchAccountingJournal2Response> operation
-              = new PatchAccountingJournal2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<PatchAccountingJournalResponse> patchAccountingJournal(@Nonnull PatchAccountingJournalRequest request) {
+        AsyncRequestOperation<PatchAccountingJournalRequest, PatchAccountingJournalResponse> operation
+              = new PatchAccountingJournal.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -151,19 +151,19 @@ public class AsyncJournal {
      * 
      * @return The async call builder
      */
-    public RemoveAccountingJournal2RequestBuilder removeAccountingJournal2() {
-        return new RemoveAccountingJournal2RequestBuilder(sdkConfiguration);
+    public RemoveAccountingJournalRequestBuilder removeAccountingJournal() {
+        return new RemoveAccountingJournalRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Remove a journal
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<RemoveAccountingJournal2Response>} - The async response
+     * @return {@code CompletableFuture<RemoveAccountingJournalResponse>} - The async response
      */
-    public CompletableFuture<RemoveAccountingJournal2Response> removeAccountingJournal2(@Nonnull RemoveAccountingJournal2Request request) {
-        AsyncRequestOperation<RemoveAccountingJournal2Request, RemoveAccountingJournal2Response> operation
-              = new RemoveAccountingJournal2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<RemoveAccountingJournalResponse> removeAccountingJournal(@Nonnull RemoveAccountingJournalRequest request) {
+        AsyncRequestOperation<RemoveAccountingJournalRequest, RemoveAccountingJournalResponse> operation
+              = new RemoveAccountingJournal.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -174,19 +174,19 @@ public class AsyncJournal {
      * 
      * @return The async call builder
      */
-    public UpdateAccountingJournal2RequestBuilder updateAccountingJournal2() {
-        return new UpdateAccountingJournal2RequestBuilder(sdkConfiguration);
+    public UpdateAccountingJournalRequestBuilder updateAccountingJournal() {
+        return new UpdateAccountingJournalRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update a journal
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<UpdateAccountingJournal2Response>} - The async response
+     * @return {@code CompletableFuture<UpdateAccountingJournalResponse>} - The async response
      */
-    public CompletableFuture<UpdateAccountingJournal2Response> updateAccountingJournal2(@Nonnull UpdateAccountingJournal2Request request) {
-        AsyncRequestOperation<UpdateAccountingJournal2Request, UpdateAccountingJournal2Response> operation
-              = new UpdateAccountingJournal2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<UpdateAccountingJournalResponse> updateAccountingJournal(@Nonnull UpdateAccountingJournalRequest request) {
+        AsyncRequestOperation<UpdateAccountingJournalRequest, UpdateAccountingJournalResponse> operation
+              = new UpdateAccountingJournal.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

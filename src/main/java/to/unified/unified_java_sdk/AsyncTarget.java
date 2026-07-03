@@ -7,14 +7,14 @@ import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOper
 
 import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
-import to.unified.unified_java_sdk.models.operations.GetAdsTarget2Request;
-import to.unified.unified_java_sdk.models.operations.ListAdsTargets2Request;
-import to.unified.unified_java_sdk.models.operations.async.GetAdsTarget2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.GetAdsTarget2Response;
-import to.unified.unified_java_sdk.models.operations.async.ListAdsTargets2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.ListAdsTargets2Response;
-import to.unified.unified_java_sdk.operations.GetAdsTarget2;
-import to.unified.unified_java_sdk.operations.ListAdsTargets2;
+import to.unified.unified_java_sdk.models.operations.GetAdsTargetRequest;
+import to.unified.unified_java_sdk.models.operations.ListAdsTargetsRequest;
+import to.unified.unified_java_sdk.models.operations.async.GetAdsTargetRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetAdsTargetResponse;
+import to.unified.unified_java_sdk.models.operations.async.ListAdsTargetsRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListAdsTargetsResponse;
+import to.unified.unified_java_sdk.operations.GetAdsTarget;
+import to.unified.unified_java_sdk.operations.ListAdsTargets;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -43,19 +43,19 @@ public class AsyncTarget {
      * 
      * @return The async call builder
      */
-    public GetAdsTarget2RequestBuilder getAdsTarget2() {
-        return new GetAdsTarget2RequestBuilder(sdkConfiguration);
+    public GetAdsTargetRequestBuilder getAdsTarget() {
+        return new GetAdsTargetRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Retrieve a target
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<GetAdsTarget2Response>} - The async response
+     * @return {@code CompletableFuture<GetAdsTargetResponse>} - The async response
      */
-    public CompletableFuture<GetAdsTarget2Response> getAdsTarget2(@Nonnull GetAdsTarget2Request request) {
-        AsyncRequestOperation<GetAdsTarget2Request, GetAdsTarget2Response> operation
-              = new GetAdsTarget2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<GetAdsTargetResponse> getAdsTarget(@Nonnull GetAdsTargetRequest request) {
+        AsyncRequestOperation<GetAdsTargetRequest, GetAdsTargetResponse> operation
+              = new GetAdsTarget.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -66,19 +66,19 @@ public class AsyncTarget {
      * 
      * @return The async call builder
      */
-    public ListAdsTargets2RequestBuilder listAdsTargets2() {
-        return new ListAdsTargets2RequestBuilder(sdkConfiguration);
+    public ListAdsTargetsRequestBuilder listAdsTargets() {
+        return new ListAdsTargetsRequestBuilder(sdkConfiguration);
     }
 
     /**
      * List all targets
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<ListAdsTargets2Response>} - The async response
+     * @return {@code CompletableFuture<ListAdsTargetsResponse>} - The async response
      */
-    public CompletableFuture<ListAdsTargets2Response> listAdsTargets2(@Nonnull ListAdsTargets2Request request) {
-        AsyncRequestOperation<ListAdsTargets2Request, ListAdsTargets2Response> operation
-              = new ListAdsTargets2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<ListAdsTargetsResponse> listAdsTargets(@Nonnull ListAdsTargetsRequest request) {
+        AsyncRequestOperation<ListAdsTargetsRequest, ListAdsTargetsResponse> operation
+              = new ListAdsTargets.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

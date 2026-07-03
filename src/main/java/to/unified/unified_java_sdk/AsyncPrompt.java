@@ -7,10 +7,10 @@ import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOper
 
 import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
-import to.unified.unified_java_sdk.models.operations.CreateGenaiPrompt2Request;
-import to.unified.unified_java_sdk.models.operations.async.CreateGenaiPrompt2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.CreateGenaiPrompt2Response;
-import to.unified.unified_java_sdk.operations.CreateGenaiPrompt2;
+import to.unified.unified_java_sdk.models.operations.CreateGenaiPromptRequest;
+import to.unified.unified_java_sdk.models.operations.async.CreateGenaiPromptRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.CreateGenaiPromptResponse;
+import to.unified.unified_java_sdk.operations.CreateGenaiPrompt;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -39,19 +39,19 @@ public class AsyncPrompt {
      * 
      * @return The async call builder
      */
-    public CreateGenaiPrompt2RequestBuilder createGenaiPrompt2() {
-        return new CreateGenaiPrompt2RequestBuilder(sdkConfiguration);
+    public CreateGenaiPromptRequestBuilder createGenaiPrompt() {
+        return new CreateGenaiPromptRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Create a prompt
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<CreateGenaiPrompt2Response>} - The async response
+     * @return {@code CompletableFuture<CreateGenaiPromptResponse>} - The async response
      */
-    public CompletableFuture<CreateGenaiPrompt2Response> createGenaiPrompt2(@Nonnull CreateGenaiPrompt2Request request) {
-        AsyncRequestOperation<CreateGenaiPrompt2Request, CreateGenaiPrompt2Response> operation
-              = new CreateGenaiPrompt2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<CreateGenaiPromptResponse> createGenaiPrompt(@Nonnull CreateGenaiPromptRequest request) {
+        AsyncRequestOperation<CreateGenaiPromptRequest, CreateGenaiPromptResponse> operation
+              = new CreateGenaiPrompt.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

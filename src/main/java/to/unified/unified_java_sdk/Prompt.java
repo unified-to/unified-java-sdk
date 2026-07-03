@@ -6,10 +6,10 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
-import to.unified.unified_java_sdk.models.operations.CreateGenaiPrompt2Request;
-import to.unified.unified_java_sdk.models.operations.CreateGenaiPrompt2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.CreateGenaiPrompt2Response;
-import to.unified.unified_java_sdk.operations.CreateGenaiPrompt2;
+import to.unified.unified_java_sdk.models.operations.CreateGenaiPromptRequest;
+import to.unified.unified_java_sdk.models.operations.CreateGenaiPromptRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.CreateGenaiPromptResponse;
+import to.unified.unified_java_sdk.operations.CreateGenaiPrompt;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -37,8 +37,8 @@ public class Prompt {
      * 
      * @return The call builder
      */
-    public CreateGenaiPrompt2RequestBuilder createGenaiPrompt2() {
-        return new CreateGenaiPrompt2RequestBuilder(sdkConfiguration);
+    public CreateGenaiPromptRequestBuilder createGenaiPrompt() {
+        return new CreateGenaiPromptRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -48,9 +48,9 @@ public class Prompt {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateGenaiPrompt2Response createGenaiPrompt2(@Nonnull CreateGenaiPrompt2Request request) {
-        RequestOperation<CreateGenaiPrompt2Request, CreateGenaiPrompt2Response> operation
-              = new CreateGenaiPrompt2.Sync(sdkConfiguration, _headers);
+    public CreateGenaiPromptResponse createGenaiPrompt(@Nonnull CreateGenaiPromptRequest request) {
+        RequestOperation<CreateGenaiPromptRequest, CreateGenaiPromptResponse> operation
+              = new CreateGenaiPrompt.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

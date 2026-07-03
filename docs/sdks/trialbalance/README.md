@@ -4,23 +4,23 @@
 
 ### Available Operations
 
-* [getAccountingTrialbalance2](#getaccountingtrialbalance2) - Retrieve a trialbalance
-* [listAccountingTrialbalances2](#listaccountingtrialbalances2) - List all trialbalances
+* [getAccountingTrialbalance](#getaccountingtrialbalance) - Retrieve a trialbalance
+* [listAccountingTrialbalances](#listaccountingtrialbalances) - List all trialbalances
 
-## getAccountingTrialbalance2
+## getAccountingTrialbalance
 
 Retrieve a trialbalance
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="getAccountingTrialbalance2" method="get" path="/accounting/{connection_id}/trialbalance/{id}" -->
+<!-- UsageSnippet language="java" operationID="getAccountingTrialbalance" method="get" path="/accounting/{connection_id}/trialbalance/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.GetAccountingTrialbalance2Request;
-import to.unified.unified_java_sdk.models.operations.GetAccountingTrialbalance2Response;
+import to.unified.unified_java_sdk.models.operations.GetAccountingTrialbalanceRequest;
+import to.unified.unified_java_sdk.models.operations.GetAccountingTrialbalanceResponse;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -33,12 +33,12 @@ public class Application {
                     .build())
             .build();
 
-        GetAccountingTrialbalance2Request req = GetAccountingTrialbalance2Request.builder()
+        GetAccountingTrialbalanceRequest req = GetAccountingTrialbalanceRequest.builder()
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        GetAccountingTrialbalance2Response res = sdk.trialbalance().getAccountingTrialbalance2()
+        GetAccountingTrialbalanceResponse res = sdk.trialbalance().getAccountingTrialbalance()
                 .request(req)
                 .call();
 
@@ -51,13 +51,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                         | Type                                                                                              | Required                                                                                          | Description                                                                                       |
-| ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
-| `request`                                                                                         | [GetAccountingTrialbalance2Request](../../models/operations/GetAccountingTrialbalance2Request.md) | :heavy_check_mark:                                                                                | The request object to use for the request.                                                        |
+| Parameter                                                                                       | Type                                                                                            | Required                                                                                        | Description                                                                                     |
+| ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
+| `request`                                                                                       | [GetAccountingTrialbalanceRequest](../../models/operations/GetAccountingTrialbalanceRequest.md) | :heavy_check_mark:                                                                              | The request object to use for the request.                                                      |
 
 ### Response
 
-**[GetAccountingTrialbalance2Response](../../models/operations/GetAccountingTrialbalance2Response.md)**
+**[GetAccountingTrialbalanceResponse](../../models/operations/GetAccountingTrialbalanceResponse.md)**
 
 ### Errors
 
@@ -65,20 +65,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## listAccountingTrialbalances2
+## listAccountingTrialbalances
 
 List all trialbalances
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="listAccountingTrialbalances2" method="get" path="/accounting/{connection_id}/trialbalance" -->
+<!-- UsageSnippet language="java" operationID="listAccountingTrialbalances" method="get" path="/accounting/{connection_id}/trialbalance" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.ListAccountingTrialbalances2Request;
-import to.unified.unified_java_sdk.models.operations.ListAccountingTrialbalances2Response;
+import to.unified.unified_java_sdk.models.operations.ListAccountingTrialbalancesRequest;
+import to.unified.unified_java_sdk.models.operations.ListAccountingTrialbalancesResponse;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -91,11 +91,11 @@ public class Application {
                     .build())
             .build();
 
-        ListAccountingTrialbalances2Request req = ListAccountingTrialbalances2Request.builder()
+        ListAccountingTrialbalancesRequest req = ListAccountingTrialbalancesRequest.builder()
                 .connectionId("<id>")
                 .build();
 
-        ListAccountingTrialbalances2Response res = sdk.trialbalance().listAccountingTrialbalances2()
+        ListAccountingTrialbalancesResponse res = sdk.trialbalance().listAccountingTrialbalances()
                 .request(req)
                 .call();
 
@@ -108,13 +108,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                             | Type                                                                                                  | Required                                                                                              | Description                                                                                           |
-| ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
-| `request`                                                                                             | [ListAccountingTrialbalances2Request](../../models/operations/ListAccountingTrialbalances2Request.md) | :heavy_check_mark:                                                                                    | The request object to use for the request.                                                            |
+| Parameter                                                                                           | Type                                                                                                | Required                                                                                            | Description                                                                                         |
+| --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
+| `request`                                                                                           | [ListAccountingTrialbalancesRequest](../../models/operations/ListAccountingTrialbalancesRequest.md) | :heavy_check_mark:                                                                                  | The request object to use for the request.                                                          |
 
 ### Response
 
-**[ListAccountingTrialbalances2Response](../../models/operations/ListAccountingTrialbalances2Response.md)**
+**[ListAccountingTrialbalancesResponse](../../models/operations/ListAccountingTrialbalancesResponse.md)**
 
 ### Errors
 

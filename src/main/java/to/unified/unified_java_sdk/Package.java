@@ -6,38 +6,38 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
-import to.unified.unified_java_sdk.models.operations.CreateAssessmentPackage2Request;
-import to.unified.unified_java_sdk.models.operations.CreateAssessmentPackage2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.CreateAssessmentPackage2Response;
-import to.unified.unified_java_sdk.models.operations.GetAssessmentPackage2Request;
-import to.unified.unified_java_sdk.models.operations.GetAssessmentPackage2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.GetAssessmentPackage2Response;
-import to.unified.unified_java_sdk.models.operations.GetVerificationPackage2Request;
-import to.unified.unified_java_sdk.models.operations.GetVerificationPackage2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.GetVerificationPackage2Response;
-import to.unified.unified_java_sdk.models.operations.ListAssessmentPackages2Request;
-import to.unified.unified_java_sdk.models.operations.ListAssessmentPackages2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.ListAssessmentPackages2Response;
-import to.unified.unified_java_sdk.models.operations.ListVerificationPackages2Request;
-import to.unified.unified_java_sdk.models.operations.ListVerificationPackages2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.ListVerificationPackages2Response;
-import to.unified.unified_java_sdk.models.operations.PatchAssessmentPackage2Request;
-import to.unified.unified_java_sdk.models.operations.PatchAssessmentPackage2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.PatchAssessmentPackage2Response;
-import to.unified.unified_java_sdk.models.operations.RemoveAssessmentPackage2Request;
-import to.unified.unified_java_sdk.models.operations.RemoveAssessmentPackage2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.RemoveAssessmentPackage2Response;
-import to.unified.unified_java_sdk.models.operations.UpdateAssessmentPackage2Request;
-import to.unified.unified_java_sdk.models.operations.UpdateAssessmentPackage2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.UpdateAssessmentPackage2Response;
-import to.unified.unified_java_sdk.operations.CreateAssessmentPackage2;
-import to.unified.unified_java_sdk.operations.GetAssessmentPackage2;
-import to.unified.unified_java_sdk.operations.GetVerificationPackage2;
-import to.unified.unified_java_sdk.operations.ListAssessmentPackages2;
-import to.unified.unified_java_sdk.operations.ListVerificationPackages2;
-import to.unified.unified_java_sdk.operations.PatchAssessmentPackage2;
-import to.unified.unified_java_sdk.operations.RemoveAssessmentPackage2;
-import to.unified.unified_java_sdk.operations.UpdateAssessmentPackage2;
+import to.unified.unified_java_sdk.models.operations.CreateAssessmentPackageRequest;
+import to.unified.unified_java_sdk.models.operations.CreateAssessmentPackageRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.CreateAssessmentPackageResponse;
+import to.unified.unified_java_sdk.models.operations.GetAssessmentPackageRequest;
+import to.unified.unified_java_sdk.models.operations.GetAssessmentPackageRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetAssessmentPackageResponse;
+import to.unified.unified_java_sdk.models.operations.GetVerificationPackageRequest;
+import to.unified.unified_java_sdk.models.operations.GetVerificationPackageRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetVerificationPackageResponse;
+import to.unified.unified_java_sdk.models.operations.ListAssessmentPackagesRequest;
+import to.unified.unified_java_sdk.models.operations.ListAssessmentPackagesRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListAssessmentPackagesResponse;
+import to.unified.unified_java_sdk.models.operations.ListVerificationPackagesRequest;
+import to.unified.unified_java_sdk.models.operations.ListVerificationPackagesRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListVerificationPackagesResponse;
+import to.unified.unified_java_sdk.models.operations.PatchAssessmentPackageRequest;
+import to.unified.unified_java_sdk.models.operations.PatchAssessmentPackageRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.PatchAssessmentPackageResponse;
+import to.unified.unified_java_sdk.models.operations.RemoveAssessmentPackageRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveAssessmentPackageRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.RemoveAssessmentPackageResponse;
+import to.unified.unified_java_sdk.models.operations.UpdateAssessmentPackageRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateAssessmentPackageRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.UpdateAssessmentPackageResponse;
+import to.unified.unified_java_sdk.operations.CreateAssessmentPackage;
+import to.unified.unified_java_sdk.operations.GetAssessmentPackage;
+import to.unified.unified_java_sdk.operations.GetVerificationPackage;
+import to.unified.unified_java_sdk.operations.ListAssessmentPackages;
+import to.unified.unified_java_sdk.operations.ListVerificationPackages;
+import to.unified.unified_java_sdk.operations.PatchAssessmentPackage;
+import to.unified.unified_java_sdk.operations.RemoveAssessmentPackage;
+import to.unified.unified_java_sdk.operations.UpdateAssessmentPackage;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -65,8 +65,8 @@ public class Package {
      * 
      * @return The call builder
      */
-    public CreateAssessmentPackage2RequestBuilder createAssessmentPackage2() {
-        return new CreateAssessmentPackage2RequestBuilder(sdkConfiguration);
+    public CreateAssessmentPackageRequestBuilder createAssessmentPackage() {
+        return new CreateAssessmentPackageRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -76,9 +76,9 @@ public class Package {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateAssessmentPackage2Response createAssessmentPackage2(@Nonnull CreateAssessmentPackage2Request request) {
-        RequestOperation<CreateAssessmentPackage2Request, CreateAssessmentPackage2Response> operation
-              = new CreateAssessmentPackage2.Sync(sdkConfiguration, _headers);
+    public CreateAssessmentPackageResponse createAssessmentPackage(@Nonnull CreateAssessmentPackageRequest request) {
+        RequestOperation<CreateAssessmentPackageRequest, CreateAssessmentPackageResponse> operation
+              = new CreateAssessmentPackage.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -87,8 +87,8 @@ public class Package {
      * 
      * @return The call builder
      */
-    public GetAssessmentPackage2RequestBuilder getAssessmentPackage2() {
-        return new GetAssessmentPackage2RequestBuilder(sdkConfiguration);
+    public GetAssessmentPackageRequestBuilder getAssessmentPackage() {
+        return new GetAssessmentPackageRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -98,9 +98,9 @@ public class Package {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetAssessmentPackage2Response getAssessmentPackage2(@Nonnull GetAssessmentPackage2Request request) {
-        RequestOperation<GetAssessmentPackage2Request, GetAssessmentPackage2Response> operation
-              = new GetAssessmentPackage2.Sync(sdkConfiguration, _headers);
+    public GetAssessmentPackageResponse getAssessmentPackage(@Nonnull GetAssessmentPackageRequest request) {
+        RequestOperation<GetAssessmentPackageRequest, GetAssessmentPackageResponse> operation
+              = new GetAssessmentPackage.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -109,8 +109,8 @@ public class Package {
      * 
      * @return The call builder
      */
-    public GetVerificationPackage2RequestBuilder getVerificationPackage2() {
-        return new GetVerificationPackage2RequestBuilder(sdkConfiguration);
+    public GetVerificationPackageRequestBuilder getVerificationPackage() {
+        return new GetVerificationPackageRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -120,9 +120,9 @@ public class Package {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetVerificationPackage2Response getVerificationPackage2(@Nonnull GetVerificationPackage2Request request) {
-        RequestOperation<GetVerificationPackage2Request, GetVerificationPackage2Response> operation
-              = new GetVerificationPackage2.Sync(sdkConfiguration, _headers);
+    public GetVerificationPackageResponse getVerificationPackage(@Nonnull GetVerificationPackageRequest request) {
+        RequestOperation<GetVerificationPackageRequest, GetVerificationPackageResponse> operation
+              = new GetVerificationPackage.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -131,8 +131,8 @@ public class Package {
      * 
      * @return The call builder
      */
-    public ListAssessmentPackages2RequestBuilder listAssessmentPackages2() {
-        return new ListAssessmentPackages2RequestBuilder(sdkConfiguration);
+    public ListAssessmentPackagesRequestBuilder listAssessmentPackages() {
+        return new ListAssessmentPackagesRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -142,9 +142,9 @@ public class Package {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListAssessmentPackages2Response listAssessmentPackages2(@Nonnull ListAssessmentPackages2Request request) {
-        RequestOperation<ListAssessmentPackages2Request, ListAssessmentPackages2Response> operation
-              = new ListAssessmentPackages2.Sync(sdkConfiguration, _headers);
+    public ListAssessmentPackagesResponse listAssessmentPackages(@Nonnull ListAssessmentPackagesRequest request) {
+        RequestOperation<ListAssessmentPackagesRequest, ListAssessmentPackagesResponse> operation
+              = new ListAssessmentPackages.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -153,8 +153,8 @@ public class Package {
      * 
      * @return The call builder
      */
-    public ListVerificationPackages2RequestBuilder listVerificationPackages2() {
-        return new ListVerificationPackages2RequestBuilder(sdkConfiguration);
+    public ListVerificationPackagesRequestBuilder listVerificationPackages() {
+        return new ListVerificationPackagesRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -164,9 +164,9 @@ public class Package {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListVerificationPackages2Response listVerificationPackages2(@Nonnull ListVerificationPackages2Request request) {
-        RequestOperation<ListVerificationPackages2Request, ListVerificationPackages2Response> operation
-              = new ListVerificationPackages2.Sync(sdkConfiguration, _headers);
+    public ListVerificationPackagesResponse listVerificationPackages(@Nonnull ListVerificationPackagesRequest request) {
+        RequestOperation<ListVerificationPackagesRequest, ListVerificationPackagesResponse> operation
+              = new ListVerificationPackages.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -175,8 +175,8 @@ public class Package {
      * 
      * @return The call builder
      */
-    public PatchAssessmentPackage2RequestBuilder patchAssessmentPackage2() {
-        return new PatchAssessmentPackage2RequestBuilder(sdkConfiguration);
+    public PatchAssessmentPackageRequestBuilder patchAssessmentPackage() {
+        return new PatchAssessmentPackageRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -186,9 +186,9 @@ public class Package {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchAssessmentPackage2Response patchAssessmentPackage2(@Nonnull PatchAssessmentPackage2Request request) {
-        RequestOperation<PatchAssessmentPackage2Request, PatchAssessmentPackage2Response> operation
-              = new PatchAssessmentPackage2.Sync(sdkConfiguration, _headers);
+    public PatchAssessmentPackageResponse patchAssessmentPackage(@Nonnull PatchAssessmentPackageRequest request) {
+        RequestOperation<PatchAssessmentPackageRequest, PatchAssessmentPackageResponse> operation
+              = new PatchAssessmentPackage.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -197,8 +197,8 @@ public class Package {
      * 
      * @return The call builder
      */
-    public RemoveAssessmentPackage2RequestBuilder removeAssessmentPackage2() {
-        return new RemoveAssessmentPackage2RequestBuilder(sdkConfiguration);
+    public RemoveAssessmentPackageRequestBuilder removeAssessmentPackage() {
+        return new RemoveAssessmentPackageRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -208,9 +208,9 @@ public class Package {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveAssessmentPackage2Response removeAssessmentPackage2(@Nonnull RemoveAssessmentPackage2Request request) {
-        RequestOperation<RemoveAssessmentPackage2Request, RemoveAssessmentPackage2Response> operation
-              = new RemoveAssessmentPackage2.Sync(sdkConfiguration, _headers);
+    public RemoveAssessmentPackageResponse removeAssessmentPackage(@Nonnull RemoveAssessmentPackageRequest request) {
+        RequestOperation<RemoveAssessmentPackageRequest, RemoveAssessmentPackageResponse> operation
+              = new RemoveAssessmentPackage.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -219,8 +219,8 @@ public class Package {
      * 
      * @return The call builder
      */
-    public UpdateAssessmentPackage2RequestBuilder updateAssessmentPackage2() {
-        return new UpdateAssessmentPackage2RequestBuilder(sdkConfiguration);
+    public UpdateAssessmentPackageRequestBuilder updateAssessmentPackage() {
+        return new UpdateAssessmentPackageRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -230,9 +230,9 @@ public class Package {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateAssessmentPackage2Response updateAssessmentPackage2(@Nonnull UpdateAssessmentPackage2Request request) {
-        RequestOperation<UpdateAssessmentPackage2Request, UpdateAssessmentPackage2Response> operation
-              = new UpdateAssessmentPackage2.Sync(sdkConfiguration, _headers);
+    public UpdateAssessmentPackageResponse updateAssessmentPackage(@Nonnull UpdateAssessmentPackageRequest request) {
+        RequestOperation<UpdateAssessmentPackageRequest, UpdateAssessmentPackageResponse> operation
+              = new UpdateAssessmentPackage.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

@@ -4,27 +4,27 @@
 
 ### Available Operations
 
-* [createKmsPage2](#createkmspage2) - Create a page
-* [getKmsPage2](#getkmspage2) - Retrieve a page
-* [listKmsPages2](#listkmspages2) - List all pages
-* [patchKmsPage2](#patchkmspage2) - Update a page
-* [removeKmsPage2](#removekmspage2) - Remove a page
-* [updateKmsPage2](#updatekmspage2) - Update a page
+* [createKmsPage](#createkmspage) - Create a page
+* [getKmsPage](#getkmspage) - Retrieve a page
+* [listKmsPages](#listkmspages) - List all pages
+* [patchKmsPage](#patchkmspage) - Update a page
+* [removeKmsPage](#removekmspage) - Remove a page
+* [updateKmsPage](#updatekmspage) - Update a page
 
-## createKmsPage2
+## createKmsPage
 
 Create a page
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createKmsPage2" method="post" path="/kms/{connection_id}/page" -->
+<!-- UsageSnippet language="java" operationID="createKmsPage" method="post" path="/kms/{connection_id}/page" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.CreateKmsPage2Request;
-import to.unified.unified_java_sdk.models.operations.CreateKmsPage2Response;
+import to.unified.unified_java_sdk.models.operations.CreateKmsPageRequest;
+import to.unified.unified_java_sdk.models.operations.CreateKmsPageResponse;
 import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
@@ -37,14 +37,14 @@ public class Application {
                     .build())
             .build();
 
-        CreateKmsPage2Request req = CreateKmsPage2Request.builder()
+        CreateKmsPageRequest req = CreateKmsPageRequest.builder()
                 .kmsPage(KmsPage.builder()
-                    .type(KmsPageType.OTHER)
+                    .type(KmsPageType.TEXT)
                     .build())
                 .connectionId("<id>")
                 .build();
 
-        CreateKmsPage2Response res = sdk.page().createKmsPage2()
+        CreateKmsPageResponse res = sdk.page().createKmsPage()
                 .request(req)
                 .call();
 
@@ -57,13 +57,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                 | Type                                                                      | Required                                                                  | Description                                                               |
-| ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
-| `request`                                                                 | [CreateKmsPage2Request](../../models/operations/CreateKmsPage2Request.md) | :heavy_check_mark:                                                        | The request object to use for the request.                                |
+| Parameter                                                               | Type                                                                    | Required                                                                | Description                                                             |
+| ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- |
+| `request`                                                               | [CreateKmsPageRequest](../../models/operations/CreateKmsPageRequest.md) | :heavy_check_mark:                                                      | The request object to use for the request.                              |
 
 ### Response
 
-**[CreateKmsPage2Response](../../models/operations/CreateKmsPage2Response.md)**
+**[CreateKmsPageResponse](../../models/operations/CreateKmsPageResponse.md)**
 
 ### Errors
 
@@ -71,20 +71,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## getKmsPage2
+## getKmsPage
 
 Retrieve a page
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="getKmsPage2" method="get" path="/kms/{connection_id}/page/{id}" -->
+<!-- UsageSnippet language="java" operationID="getKmsPage" method="get" path="/kms/{connection_id}/page/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.GetKmsPage2Request;
-import to.unified.unified_java_sdk.models.operations.GetKmsPage2Response;
+import to.unified.unified_java_sdk.models.operations.GetKmsPageRequest;
+import to.unified.unified_java_sdk.models.operations.GetKmsPageResponse;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -97,12 +97,12 @@ public class Application {
                     .build())
             .build();
 
-        GetKmsPage2Request req = GetKmsPage2Request.builder()
+        GetKmsPageRequest req = GetKmsPageRequest.builder()
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        GetKmsPage2Response res = sdk.page().getKmsPage2()
+        GetKmsPageResponse res = sdk.page().getKmsPage()
                 .request(req)
                 .call();
 
@@ -115,13 +115,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                           | Type                                                                | Required                                                            | Description                                                         |
-| ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- |
-| `request`                                                           | [GetKmsPage2Request](../../models/operations/GetKmsPage2Request.md) | :heavy_check_mark:                                                  | The request object to use for the request.                          |
+| Parameter                                                         | Type                                                              | Required                                                          | Description                                                       |
+| ----------------------------------------------------------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------- |
+| `request`                                                         | [GetKmsPageRequest](../../models/operations/GetKmsPageRequest.md) | :heavy_check_mark:                                                | The request object to use for the request.                        |
 
 ### Response
 
-**[GetKmsPage2Response](../../models/operations/GetKmsPage2Response.md)**
+**[GetKmsPageResponse](../../models/operations/GetKmsPageResponse.md)**
 
 ### Errors
 
@@ -129,20 +129,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## listKmsPages2
+## listKmsPages
 
 List all pages
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="listKmsPages2" method="get" path="/kms/{connection_id}/page" -->
+<!-- UsageSnippet language="java" operationID="listKmsPages" method="get" path="/kms/{connection_id}/page" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.ListKmsPages2Request;
-import to.unified.unified_java_sdk.models.operations.ListKmsPages2Response;
+import to.unified.unified_java_sdk.models.operations.ListKmsPagesRequest;
+import to.unified.unified_java_sdk.models.operations.ListKmsPagesResponse;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -155,11 +155,11 @@ public class Application {
                     .build())
             .build();
 
-        ListKmsPages2Request req = ListKmsPages2Request.builder()
+        ListKmsPagesRequest req = ListKmsPagesRequest.builder()
                 .connectionId("<id>")
                 .build();
 
-        ListKmsPages2Response res = sdk.page().listKmsPages2()
+        ListKmsPagesResponse res = sdk.page().listKmsPages()
                 .request(req)
                 .call();
 
@@ -172,13 +172,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                               | Type                                                                    | Required                                                                | Description                                                             |
-| ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- |
-| `request`                                                               | [ListKmsPages2Request](../../models/operations/ListKmsPages2Request.md) | :heavy_check_mark:                                                      | The request object to use for the request.                              |
+| Parameter                                                             | Type                                                                  | Required                                                              | Description                                                           |
+| --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- |
+| `request`                                                             | [ListKmsPagesRequest](../../models/operations/ListKmsPagesRequest.md) | :heavy_check_mark:                                                    | The request object to use for the request.                            |
 
 ### Response
 
-**[ListKmsPages2Response](../../models/operations/ListKmsPages2Response.md)**
+**[ListKmsPagesResponse](../../models/operations/ListKmsPagesResponse.md)**
 
 ### Errors
 
@@ -186,20 +186,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## patchKmsPage2
+## patchKmsPage
 
 Update a page
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchKmsPage2" method="patch" path="/kms/{connection_id}/page/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchKmsPage" method="patch" path="/kms/{connection_id}/page/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.PatchKmsPage2Request;
-import to.unified.unified_java_sdk.models.operations.PatchKmsPage2Response;
+import to.unified.unified_java_sdk.models.operations.PatchKmsPageRequest;
+import to.unified.unified_java_sdk.models.operations.PatchKmsPageResponse;
 import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
@@ -212,7 +212,7 @@ public class Application {
                     .build())
             .build();
 
-        PatchKmsPage2Request req = PatchKmsPage2Request.builder()
+        PatchKmsPageRequest req = PatchKmsPageRequest.builder()
                 .kmsPage(KmsPage.builder()
                     .type(KmsPageType.OTHER)
                     .build())
@@ -220,7 +220,7 @@ public class Application {
                 .id("<id>")
                 .build();
 
-        PatchKmsPage2Response res = sdk.page().patchKmsPage2()
+        PatchKmsPageResponse res = sdk.page().patchKmsPage()
                 .request(req)
                 .call();
 
@@ -233,13 +233,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                               | Type                                                                    | Required                                                                | Description                                                             |
-| ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- |
-| `request`                                                               | [PatchKmsPage2Request](../../models/operations/PatchKmsPage2Request.md) | :heavy_check_mark:                                                      | The request object to use for the request.                              |
+| Parameter                                                             | Type                                                                  | Required                                                              | Description                                                           |
+| --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- |
+| `request`                                                             | [PatchKmsPageRequest](../../models/operations/PatchKmsPageRequest.md) | :heavy_check_mark:                                                    | The request object to use for the request.                            |
 
 ### Response
 
-**[PatchKmsPage2Response](../../models/operations/PatchKmsPage2Response.md)**
+**[PatchKmsPageResponse](../../models/operations/PatchKmsPageResponse.md)**
 
 ### Errors
 
@@ -247,20 +247,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## removeKmsPage2
+## removeKmsPage
 
 Remove a page
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="removeKmsPage2" method="delete" path="/kms/{connection_id}/page/{id}" -->
+<!-- UsageSnippet language="java" operationID="removeKmsPage" method="delete" path="/kms/{connection_id}/page/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.RemoveKmsPage2Request;
-import to.unified.unified_java_sdk.models.operations.RemoveKmsPage2Response;
+import to.unified.unified_java_sdk.models.operations.RemoveKmsPageRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveKmsPageResponse;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -273,12 +273,12 @@ public class Application {
                     .build())
             .build();
 
-        RemoveKmsPage2Request req = RemoveKmsPage2Request.builder()
+        RemoveKmsPageRequest req = RemoveKmsPageRequest.builder()
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        RemoveKmsPage2Response res = sdk.page().removeKmsPage2()
+        RemoveKmsPageResponse res = sdk.page().removeKmsPage()
                 .request(req)
                 .call();
 
@@ -289,13 +289,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                 | Type                                                                      | Required                                                                  | Description                                                               |
-| ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
-| `request`                                                                 | [RemoveKmsPage2Request](../../models/operations/RemoveKmsPage2Request.md) | :heavy_check_mark:                                                        | The request object to use for the request.                                |
+| Parameter                                                               | Type                                                                    | Required                                                                | Description                                                             |
+| ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- |
+| `request`                                                               | [RemoveKmsPageRequest](../../models/operations/RemoveKmsPageRequest.md) | :heavy_check_mark:                                                      | The request object to use for the request.                              |
 
 ### Response
 
-**[RemoveKmsPage2Response](../../models/operations/RemoveKmsPage2Response.md)**
+**[RemoveKmsPageResponse](../../models/operations/RemoveKmsPageResponse.md)**
 
 ### Errors
 
@@ -303,20 +303,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## updateKmsPage2
+## updateKmsPage
 
 Update a page
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateKmsPage2" method="put" path="/kms/{connection_id}/page/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateKmsPage" method="put" path="/kms/{connection_id}/page/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.UpdateKmsPage2Request;
-import to.unified.unified_java_sdk.models.operations.UpdateKmsPage2Response;
+import to.unified.unified_java_sdk.models.operations.UpdateKmsPageRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateKmsPageResponse;
 import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
@@ -329,15 +329,15 @@ public class Application {
                     .build())
             .build();
 
-        UpdateKmsPage2Request req = UpdateKmsPage2Request.builder()
+        UpdateKmsPageRequest req = UpdateKmsPageRequest.builder()
                 .kmsPage(KmsPage.builder()
-                    .type(KmsPageType.MARKDOWN)
+                    .type(KmsPageType.OTHER)
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        UpdateKmsPage2Response res = sdk.page().updateKmsPage2()
+        UpdateKmsPageResponse res = sdk.page().updateKmsPage()
                 .request(req)
                 .call();
 
@@ -350,13 +350,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                 | Type                                                                      | Required                                                                  | Description                                                               |
-| ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
-| `request`                                                                 | [UpdateKmsPage2Request](../../models/operations/UpdateKmsPage2Request.md) | :heavy_check_mark:                                                        | The request object to use for the request.                                |
+| Parameter                                                               | Type                                                                    | Required                                                                | Description                                                             |
+| ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- |
+| `request`                                                               | [UpdateKmsPageRequest](../../models/operations/UpdateKmsPageRequest.md) | :heavy_check_mark:                                                      | The request object to use for the request.                              |
 
 ### Response
 
-**[UpdateKmsPage2Response](../../models/operations/UpdateKmsPage2Response.md)**
+**[UpdateKmsPageResponse](../../models/operations/UpdateKmsPageResponse.md)**
 
 ### Errors
 

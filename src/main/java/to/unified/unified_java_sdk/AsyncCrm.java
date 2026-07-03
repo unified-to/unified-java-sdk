@@ -7,154 +7,154 @@ import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOper
 
 import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
-import to.unified.unified_java_sdk.models.operations.CreateCrmCompany2Request;
-import to.unified.unified_java_sdk.models.operations.CreateCrmContact2Request;
-import to.unified.unified_java_sdk.models.operations.CreateCrmDeal2Request;
-import to.unified.unified_java_sdk.models.operations.CreateCrmEvent2Request;
-import to.unified.unified_java_sdk.models.operations.CreateCrmLead2Request;
-import to.unified.unified_java_sdk.models.operations.CreateCrmPipeline2Request;
-import to.unified.unified_java_sdk.models.operations.GetCrmCompany2Request;
-import to.unified.unified_java_sdk.models.operations.GetCrmContact2Request;
-import to.unified.unified_java_sdk.models.operations.GetCrmDeal2Request;
-import to.unified.unified_java_sdk.models.operations.GetCrmEvent2Request;
-import to.unified.unified_java_sdk.models.operations.GetCrmLead2Request;
-import to.unified.unified_java_sdk.models.operations.GetCrmPipeline2Request;
-import to.unified.unified_java_sdk.models.operations.ListCrmCompanies2Request;
-import to.unified.unified_java_sdk.models.operations.ListCrmContacts2Request;
-import to.unified.unified_java_sdk.models.operations.ListCrmDeals2Request;
-import to.unified.unified_java_sdk.models.operations.ListCrmEvents2Request;
-import to.unified.unified_java_sdk.models.operations.ListCrmLeads2Request;
-import to.unified.unified_java_sdk.models.operations.ListCrmPicklists2Request;
-import to.unified.unified_java_sdk.models.operations.ListCrmPipelines2Request;
-import to.unified.unified_java_sdk.models.operations.PatchCrmCompany2Request;
-import to.unified.unified_java_sdk.models.operations.PatchCrmContact2Request;
-import to.unified.unified_java_sdk.models.operations.PatchCrmDeal2Request;
-import to.unified.unified_java_sdk.models.operations.PatchCrmEvent2Request;
-import to.unified.unified_java_sdk.models.operations.PatchCrmLead2Request;
-import to.unified.unified_java_sdk.models.operations.PatchCrmPipeline2Request;
-import to.unified.unified_java_sdk.models.operations.RemoveCrmCompany2Request;
-import to.unified.unified_java_sdk.models.operations.RemoveCrmContact2Request;
-import to.unified.unified_java_sdk.models.operations.RemoveCrmDeal2Request;
-import to.unified.unified_java_sdk.models.operations.RemoveCrmEvent2Request;
-import to.unified.unified_java_sdk.models.operations.RemoveCrmLead2Request;
-import to.unified.unified_java_sdk.models.operations.RemoveCrmPipeline2Request;
-import to.unified.unified_java_sdk.models.operations.UpdateCrmCompany2Request;
-import to.unified.unified_java_sdk.models.operations.UpdateCrmContact2Request;
-import to.unified.unified_java_sdk.models.operations.UpdateCrmDeal2Request;
-import to.unified.unified_java_sdk.models.operations.UpdateCrmEvent2Request;
-import to.unified.unified_java_sdk.models.operations.UpdateCrmLead2Request;
-import to.unified.unified_java_sdk.models.operations.UpdateCrmPipeline2Request;
-import to.unified.unified_java_sdk.models.operations.async.CreateCrmCompany2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.CreateCrmCompany2Response;
-import to.unified.unified_java_sdk.models.operations.async.CreateCrmContact2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.CreateCrmContact2Response;
-import to.unified.unified_java_sdk.models.operations.async.CreateCrmDeal2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.CreateCrmDeal2Response;
-import to.unified.unified_java_sdk.models.operations.async.CreateCrmEvent2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.CreateCrmEvent2Response;
-import to.unified.unified_java_sdk.models.operations.async.CreateCrmLead2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.CreateCrmLead2Response;
-import to.unified.unified_java_sdk.models.operations.async.CreateCrmPipeline2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.CreateCrmPipeline2Response;
-import to.unified.unified_java_sdk.models.operations.async.GetCrmCompany2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.GetCrmCompany2Response;
-import to.unified.unified_java_sdk.models.operations.async.GetCrmContact2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.GetCrmContact2Response;
-import to.unified.unified_java_sdk.models.operations.async.GetCrmDeal2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.GetCrmDeal2Response;
-import to.unified.unified_java_sdk.models.operations.async.GetCrmEvent2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.GetCrmEvent2Response;
-import to.unified.unified_java_sdk.models.operations.async.GetCrmLead2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.GetCrmLead2Response;
-import to.unified.unified_java_sdk.models.operations.async.GetCrmPipeline2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.GetCrmPipeline2Response;
-import to.unified.unified_java_sdk.models.operations.async.ListCrmCompanies2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.ListCrmCompanies2Response;
-import to.unified.unified_java_sdk.models.operations.async.ListCrmContacts2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.ListCrmContacts2Response;
-import to.unified.unified_java_sdk.models.operations.async.ListCrmDeals2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.ListCrmDeals2Response;
-import to.unified.unified_java_sdk.models.operations.async.ListCrmEvents2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.ListCrmEvents2Response;
-import to.unified.unified_java_sdk.models.operations.async.ListCrmLeads2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.ListCrmLeads2Response;
-import to.unified.unified_java_sdk.models.operations.async.ListCrmPicklists2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.ListCrmPicklists2Response;
-import to.unified.unified_java_sdk.models.operations.async.ListCrmPipelines2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.ListCrmPipelines2Response;
-import to.unified.unified_java_sdk.models.operations.async.PatchCrmCompany2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.PatchCrmCompany2Response;
-import to.unified.unified_java_sdk.models.operations.async.PatchCrmContact2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.PatchCrmContact2Response;
-import to.unified.unified_java_sdk.models.operations.async.PatchCrmDeal2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.PatchCrmDeal2Response;
-import to.unified.unified_java_sdk.models.operations.async.PatchCrmEvent2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.PatchCrmEvent2Response;
-import to.unified.unified_java_sdk.models.operations.async.PatchCrmLead2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.PatchCrmLead2Response;
-import to.unified.unified_java_sdk.models.operations.async.PatchCrmPipeline2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.PatchCrmPipeline2Response;
-import to.unified.unified_java_sdk.models.operations.async.RemoveCrmCompany2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.RemoveCrmCompany2Response;
-import to.unified.unified_java_sdk.models.operations.async.RemoveCrmContact2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.RemoveCrmContact2Response;
-import to.unified.unified_java_sdk.models.operations.async.RemoveCrmDeal2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.RemoveCrmDeal2Response;
-import to.unified.unified_java_sdk.models.operations.async.RemoveCrmEvent2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.RemoveCrmEvent2Response;
-import to.unified.unified_java_sdk.models.operations.async.RemoveCrmLead2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.RemoveCrmLead2Response;
-import to.unified.unified_java_sdk.models.operations.async.RemoveCrmPipeline2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.RemoveCrmPipeline2Response;
-import to.unified.unified_java_sdk.models.operations.async.UpdateCrmCompany2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.UpdateCrmCompany2Response;
-import to.unified.unified_java_sdk.models.operations.async.UpdateCrmContact2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.UpdateCrmContact2Response;
-import to.unified.unified_java_sdk.models.operations.async.UpdateCrmDeal2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.UpdateCrmDeal2Response;
-import to.unified.unified_java_sdk.models.operations.async.UpdateCrmEvent2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.UpdateCrmEvent2Response;
-import to.unified.unified_java_sdk.models.operations.async.UpdateCrmLead2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.UpdateCrmLead2Response;
-import to.unified.unified_java_sdk.models.operations.async.UpdateCrmPipeline2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.UpdateCrmPipeline2Response;
-import to.unified.unified_java_sdk.operations.CreateCrmCompany2;
-import to.unified.unified_java_sdk.operations.CreateCrmContact2;
-import to.unified.unified_java_sdk.operations.CreateCrmDeal2;
-import to.unified.unified_java_sdk.operations.CreateCrmEvent2;
-import to.unified.unified_java_sdk.operations.CreateCrmLead2;
-import to.unified.unified_java_sdk.operations.CreateCrmPipeline2;
-import to.unified.unified_java_sdk.operations.GetCrmCompany2;
-import to.unified.unified_java_sdk.operations.GetCrmContact2;
-import to.unified.unified_java_sdk.operations.GetCrmDeal2;
-import to.unified.unified_java_sdk.operations.GetCrmEvent2;
-import to.unified.unified_java_sdk.operations.GetCrmLead2;
-import to.unified.unified_java_sdk.operations.GetCrmPipeline2;
-import to.unified.unified_java_sdk.operations.ListCrmCompanies2;
-import to.unified.unified_java_sdk.operations.ListCrmContacts2;
-import to.unified.unified_java_sdk.operations.ListCrmDeals2;
-import to.unified.unified_java_sdk.operations.ListCrmEvents2;
-import to.unified.unified_java_sdk.operations.ListCrmLeads2;
-import to.unified.unified_java_sdk.operations.ListCrmPicklists2;
-import to.unified.unified_java_sdk.operations.ListCrmPipelines2;
-import to.unified.unified_java_sdk.operations.PatchCrmCompany2;
-import to.unified.unified_java_sdk.operations.PatchCrmContact2;
-import to.unified.unified_java_sdk.operations.PatchCrmDeal2;
-import to.unified.unified_java_sdk.operations.PatchCrmEvent2;
-import to.unified.unified_java_sdk.operations.PatchCrmLead2;
-import to.unified.unified_java_sdk.operations.PatchCrmPipeline2;
-import to.unified.unified_java_sdk.operations.RemoveCrmCompany2;
-import to.unified.unified_java_sdk.operations.RemoveCrmContact2;
-import to.unified.unified_java_sdk.operations.RemoveCrmDeal2;
-import to.unified.unified_java_sdk.operations.RemoveCrmEvent2;
-import to.unified.unified_java_sdk.operations.RemoveCrmLead2;
-import to.unified.unified_java_sdk.operations.RemoveCrmPipeline2;
-import to.unified.unified_java_sdk.operations.UpdateCrmCompany2;
-import to.unified.unified_java_sdk.operations.UpdateCrmContact2;
-import to.unified.unified_java_sdk.operations.UpdateCrmDeal2;
-import to.unified.unified_java_sdk.operations.UpdateCrmEvent2;
-import to.unified.unified_java_sdk.operations.UpdateCrmLead2;
-import to.unified.unified_java_sdk.operations.UpdateCrmPipeline2;
+import to.unified.unified_java_sdk.models.operations.CreateCrmCompanyRequest;
+import to.unified.unified_java_sdk.models.operations.CreateCrmContactRequest;
+import to.unified.unified_java_sdk.models.operations.CreateCrmDealRequest;
+import to.unified.unified_java_sdk.models.operations.CreateCrmEventRequest;
+import to.unified.unified_java_sdk.models.operations.CreateCrmLeadRequest;
+import to.unified.unified_java_sdk.models.operations.CreateCrmPipelineRequest;
+import to.unified.unified_java_sdk.models.operations.GetCrmCompanyRequest;
+import to.unified.unified_java_sdk.models.operations.GetCrmContactRequest;
+import to.unified.unified_java_sdk.models.operations.GetCrmDealRequest;
+import to.unified.unified_java_sdk.models.operations.GetCrmEventRequest;
+import to.unified.unified_java_sdk.models.operations.GetCrmLeadRequest;
+import to.unified.unified_java_sdk.models.operations.GetCrmPipelineRequest;
+import to.unified.unified_java_sdk.models.operations.ListCrmCompaniesRequest;
+import to.unified.unified_java_sdk.models.operations.ListCrmContactsRequest;
+import to.unified.unified_java_sdk.models.operations.ListCrmDealsRequest;
+import to.unified.unified_java_sdk.models.operations.ListCrmEventsRequest;
+import to.unified.unified_java_sdk.models.operations.ListCrmLeadsRequest;
+import to.unified.unified_java_sdk.models.operations.ListCrmPicklistsRequest;
+import to.unified.unified_java_sdk.models.operations.ListCrmPipelinesRequest;
+import to.unified.unified_java_sdk.models.operations.PatchCrmCompanyRequest;
+import to.unified.unified_java_sdk.models.operations.PatchCrmContactRequest;
+import to.unified.unified_java_sdk.models.operations.PatchCrmDealRequest;
+import to.unified.unified_java_sdk.models.operations.PatchCrmEventRequest;
+import to.unified.unified_java_sdk.models.operations.PatchCrmLeadRequest;
+import to.unified.unified_java_sdk.models.operations.PatchCrmPipelineRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveCrmCompanyRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveCrmContactRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveCrmDealRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveCrmEventRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveCrmLeadRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveCrmPipelineRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateCrmCompanyRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateCrmContactRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateCrmDealRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateCrmEventRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateCrmLeadRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateCrmPipelineRequest;
+import to.unified.unified_java_sdk.models.operations.async.CreateCrmCompanyRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.CreateCrmCompanyResponse;
+import to.unified.unified_java_sdk.models.operations.async.CreateCrmContactRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.CreateCrmContactResponse;
+import to.unified.unified_java_sdk.models.operations.async.CreateCrmDealRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.CreateCrmDealResponse;
+import to.unified.unified_java_sdk.models.operations.async.CreateCrmEventRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.CreateCrmEventResponse;
+import to.unified.unified_java_sdk.models.operations.async.CreateCrmLeadRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.CreateCrmLeadResponse;
+import to.unified.unified_java_sdk.models.operations.async.CreateCrmPipelineRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.CreateCrmPipelineResponse;
+import to.unified.unified_java_sdk.models.operations.async.GetCrmCompanyRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetCrmCompanyResponse;
+import to.unified.unified_java_sdk.models.operations.async.GetCrmContactRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetCrmContactResponse;
+import to.unified.unified_java_sdk.models.operations.async.GetCrmDealRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetCrmDealResponse;
+import to.unified.unified_java_sdk.models.operations.async.GetCrmEventRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetCrmEventResponse;
+import to.unified.unified_java_sdk.models.operations.async.GetCrmLeadRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetCrmLeadResponse;
+import to.unified.unified_java_sdk.models.operations.async.GetCrmPipelineRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetCrmPipelineResponse;
+import to.unified.unified_java_sdk.models.operations.async.ListCrmCompaniesRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListCrmCompaniesResponse;
+import to.unified.unified_java_sdk.models.operations.async.ListCrmContactsRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListCrmContactsResponse;
+import to.unified.unified_java_sdk.models.operations.async.ListCrmDealsRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListCrmDealsResponse;
+import to.unified.unified_java_sdk.models.operations.async.ListCrmEventsRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListCrmEventsResponse;
+import to.unified.unified_java_sdk.models.operations.async.ListCrmLeadsRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListCrmLeadsResponse;
+import to.unified.unified_java_sdk.models.operations.async.ListCrmPicklistsRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListCrmPicklistsResponse;
+import to.unified.unified_java_sdk.models.operations.async.ListCrmPipelinesRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListCrmPipelinesResponse;
+import to.unified.unified_java_sdk.models.operations.async.PatchCrmCompanyRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.PatchCrmCompanyResponse;
+import to.unified.unified_java_sdk.models.operations.async.PatchCrmContactRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.PatchCrmContactResponse;
+import to.unified.unified_java_sdk.models.operations.async.PatchCrmDealRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.PatchCrmDealResponse;
+import to.unified.unified_java_sdk.models.operations.async.PatchCrmEventRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.PatchCrmEventResponse;
+import to.unified.unified_java_sdk.models.operations.async.PatchCrmLeadRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.PatchCrmLeadResponse;
+import to.unified.unified_java_sdk.models.operations.async.PatchCrmPipelineRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.PatchCrmPipelineResponse;
+import to.unified.unified_java_sdk.models.operations.async.RemoveCrmCompanyRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.RemoveCrmCompanyResponse;
+import to.unified.unified_java_sdk.models.operations.async.RemoveCrmContactRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.RemoveCrmContactResponse;
+import to.unified.unified_java_sdk.models.operations.async.RemoveCrmDealRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.RemoveCrmDealResponse;
+import to.unified.unified_java_sdk.models.operations.async.RemoveCrmEventRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.RemoveCrmEventResponse;
+import to.unified.unified_java_sdk.models.operations.async.RemoveCrmLeadRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.RemoveCrmLeadResponse;
+import to.unified.unified_java_sdk.models.operations.async.RemoveCrmPipelineRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.RemoveCrmPipelineResponse;
+import to.unified.unified_java_sdk.models.operations.async.UpdateCrmCompanyRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.UpdateCrmCompanyResponse;
+import to.unified.unified_java_sdk.models.operations.async.UpdateCrmContactRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.UpdateCrmContactResponse;
+import to.unified.unified_java_sdk.models.operations.async.UpdateCrmDealRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.UpdateCrmDealResponse;
+import to.unified.unified_java_sdk.models.operations.async.UpdateCrmEventRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.UpdateCrmEventResponse;
+import to.unified.unified_java_sdk.models.operations.async.UpdateCrmLeadRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.UpdateCrmLeadResponse;
+import to.unified.unified_java_sdk.models.operations.async.UpdateCrmPipelineRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.UpdateCrmPipelineResponse;
+import to.unified.unified_java_sdk.operations.CreateCrmCompany;
+import to.unified.unified_java_sdk.operations.CreateCrmContact;
+import to.unified.unified_java_sdk.operations.CreateCrmDeal;
+import to.unified.unified_java_sdk.operations.CreateCrmEvent;
+import to.unified.unified_java_sdk.operations.CreateCrmLead;
+import to.unified.unified_java_sdk.operations.CreateCrmPipeline;
+import to.unified.unified_java_sdk.operations.GetCrmCompany;
+import to.unified.unified_java_sdk.operations.GetCrmContact;
+import to.unified.unified_java_sdk.operations.GetCrmDeal;
+import to.unified.unified_java_sdk.operations.GetCrmEvent;
+import to.unified.unified_java_sdk.operations.GetCrmLead;
+import to.unified.unified_java_sdk.operations.GetCrmPipeline;
+import to.unified.unified_java_sdk.operations.ListCrmCompanies;
+import to.unified.unified_java_sdk.operations.ListCrmContacts;
+import to.unified.unified_java_sdk.operations.ListCrmDeals;
+import to.unified.unified_java_sdk.operations.ListCrmEvents;
+import to.unified.unified_java_sdk.operations.ListCrmLeads;
+import to.unified.unified_java_sdk.operations.ListCrmPicklists;
+import to.unified.unified_java_sdk.operations.ListCrmPipelines;
+import to.unified.unified_java_sdk.operations.PatchCrmCompany;
+import to.unified.unified_java_sdk.operations.PatchCrmContact;
+import to.unified.unified_java_sdk.operations.PatchCrmDeal;
+import to.unified.unified_java_sdk.operations.PatchCrmEvent;
+import to.unified.unified_java_sdk.operations.PatchCrmLead;
+import to.unified.unified_java_sdk.operations.PatchCrmPipeline;
+import to.unified.unified_java_sdk.operations.RemoveCrmCompany;
+import to.unified.unified_java_sdk.operations.RemoveCrmContact;
+import to.unified.unified_java_sdk.operations.RemoveCrmDeal;
+import to.unified.unified_java_sdk.operations.RemoveCrmEvent;
+import to.unified.unified_java_sdk.operations.RemoveCrmLead;
+import to.unified.unified_java_sdk.operations.RemoveCrmPipeline;
+import to.unified.unified_java_sdk.operations.UpdateCrmCompany;
+import to.unified.unified_java_sdk.operations.UpdateCrmContact;
+import to.unified.unified_java_sdk.operations.UpdateCrmDeal;
+import to.unified.unified_java_sdk.operations.UpdateCrmEvent;
+import to.unified.unified_java_sdk.operations.UpdateCrmLead;
+import to.unified.unified_java_sdk.operations.UpdateCrmPipeline;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -183,19 +183,19 @@ public class AsyncCrm {
      * 
      * @return The async call builder
      */
-    public CreateCrmCompany2RequestBuilder createCrmCompany2() {
-        return new CreateCrmCompany2RequestBuilder(sdkConfiguration);
+    public CreateCrmCompanyRequestBuilder createCrmCompany() {
+        return new CreateCrmCompanyRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Create a company
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<CreateCrmCompany2Response>} - The async response
+     * @return {@code CompletableFuture<CreateCrmCompanyResponse>} - The async response
      */
-    public CompletableFuture<CreateCrmCompany2Response> createCrmCompany2(@Nonnull CreateCrmCompany2Request request) {
-        AsyncRequestOperation<CreateCrmCompany2Request, CreateCrmCompany2Response> operation
-              = new CreateCrmCompany2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<CreateCrmCompanyResponse> createCrmCompany(@Nonnull CreateCrmCompanyRequest request) {
+        AsyncRequestOperation<CreateCrmCompanyRequest, CreateCrmCompanyResponse> operation
+              = new CreateCrmCompany.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -206,19 +206,19 @@ public class AsyncCrm {
      * 
      * @return The async call builder
      */
-    public CreateCrmContact2RequestBuilder createCrmContact2() {
-        return new CreateCrmContact2RequestBuilder(sdkConfiguration);
+    public CreateCrmContactRequestBuilder createCrmContact() {
+        return new CreateCrmContactRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Create a contact
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<CreateCrmContact2Response>} - The async response
+     * @return {@code CompletableFuture<CreateCrmContactResponse>} - The async response
      */
-    public CompletableFuture<CreateCrmContact2Response> createCrmContact2(@Nonnull CreateCrmContact2Request request) {
-        AsyncRequestOperation<CreateCrmContact2Request, CreateCrmContact2Response> operation
-              = new CreateCrmContact2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<CreateCrmContactResponse> createCrmContact(@Nonnull CreateCrmContactRequest request) {
+        AsyncRequestOperation<CreateCrmContactRequest, CreateCrmContactResponse> operation
+              = new CreateCrmContact.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -229,19 +229,19 @@ public class AsyncCrm {
      * 
      * @return The async call builder
      */
-    public CreateCrmDeal2RequestBuilder createCrmDeal2() {
-        return new CreateCrmDeal2RequestBuilder(sdkConfiguration);
+    public CreateCrmDealRequestBuilder createCrmDeal() {
+        return new CreateCrmDealRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Create a deal
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<CreateCrmDeal2Response>} - The async response
+     * @return {@code CompletableFuture<CreateCrmDealResponse>} - The async response
      */
-    public CompletableFuture<CreateCrmDeal2Response> createCrmDeal2(@Nonnull CreateCrmDeal2Request request) {
-        AsyncRequestOperation<CreateCrmDeal2Request, CreateCrmDeal2Response> operation
-              = new CreateCrmDeal2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<CreateCrmDealResponse> createCrmDeal(@Nonnull CreateCrmDealRequest request) {
+        AsyncRequestOperation<CreateCrmDealRequest, CreateCrmDealResponse> operation
+              = new CreateCrmDeal.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -252,19 +252,19 @@ public class AsyncCrm {
      * 
      * @return The async call builder
      */
-    public CreateCrmEvent2RequestBuilder createCrmEvent2() {
-        return new CreateCrmEvent2RequestBuilder(sdkConfiguration);
+    public CreateCrmEventRequestBuilder createCrmEvent() {
+        return new CreateCrmEventRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Create an event
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<CreateCrmEvent2Response>} - The async response
+     * @return {@code CompletableFuture<CreateCrmEventResponse>} - The async response
      */
-    public CompletableFuture<CreateCrmEvent2Response> createCrmEvent2(@Nonnull CreateCrmEvent2Request request) {
-        AsyncRequestOperation<CreateCrmEvent2Request, CreateCrmEvent2Response> operation
-              = new CreateCrmEvent2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<CreateCrmEventResponse> createCrmEvent(@Nonnull CreateCrmEventRequest request) {
+        AsyncRequestOperation<CreateCrmEventRequest, CreateCrmEventResponse> operation
+              = new CreateCrmEvent.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -275,19 +275,19 @@ public class AsyncCrm {
      * 
      * @return The async call builder
      */
-    public CreateCrmLead2RequestBuilder createCrmLead2() {
-        return new CreateCrmLead2RequestBuilder(sdkConfiguration);
+    public CreateCrmLeadRequestBuilder createCrmLead() {
+        return new CreateCrmLeadRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Create a lead
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<CreateCrmLead2Response>} - The async response
+     * @return {@code CompletableFuture<CreateCrmLeadResponse>} - The async response
      */
-    public CompletableFuture<CreateCrmLead2Response> createCrmLead2(@Nonnull CreateCrmLead2Request request) {
-        AsyncRequestOperation<CreateCrmLead2Request, CreateCrmLead2Response> operation
-              = new CreateCrmLead2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<CreateCrmLeadResponse> createCrmLead(@Nonnull CreateCrmLeadRequest request) {
+        AsyncRequestOperation<CreateCrmLeadRequest, CreateCrmLeadResponse> operation
+              = new CreateCrmLead.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -298,19 +298,19 @@ public class AsyncCrm {
      * 
      * @return The async call builder
      */
-    public CreateCrmPipeline2RequestBuilder createCrmPipeline2() {
-        return new CreateCrmPipeline2RequestBuilder(sdkConfiguration);
+    public CreateCrmPipelineRequestBuilder createCrmPipeline() {
+        return new CreateCrmPipelineRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Create a pipeline
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<CreateCrmPipeline2Response>} - The async response
+     * @return {@code CompletableFuture<CreateCrmPipelineResponse>} - The async response
      */
-    public CompletableFuture<CreateCrmPipeline2Response> createCrmPipeline2(@Nonnull CreateCrmPipeline2Request request) {
-        AsyncRequestOperation<CreateCrmPipeline2Request, CreateCrmPipeline2Response> operation
-              = new CreateCrmPipeline2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<CreateCrmPipelineResponse> createCrmPipeline(@Nonnull CreateCrmPipelineRequest request) {
+        AsyncRequestOperation<CreateCrmPipelineRequest, CreateCrmPipelineResponse> operation
+              = new CreateCrmPipeline.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -321,19 +321,19 @@ public class AsyncCrm {
      * 
      * @return The async call builder
      */
-    public GetCrmCompany2RequestBuilder getCrmCompany2() {
-        return new GetCrmCompany2RequestBuilder(sdkConfiguration);
+    public GetCrmCompanyRequestBuilder getCrmCompany() {
+        return new GetCrmCompanyRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Retrieve a company
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<GetCrmCompany2Response>} - The async response
+     * @return {@code CompletableFuture<GetCrmCompanyResponse>} - The async response
      */
-    public CompletableFuture<GetCrmCompany2Response> getCrmCompany2(@Nonnull GetCrmCompany2Request request) {
-        AsyncRequestOperation<GetCrmCompany2Request, GetCrmCompany2Response> operation
-              = new GetCrmCompany2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<GetCrmCompanyResponse> getCrmCompany(@Nonnull GetCrmCompanyRequest request) {
+        AsyncRequestOperation<GetCrmCompanyRequest, GetCrmCompanyResponse> operation
+              = new GetCrmCompany.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -344,19 +344,19 @@ public class AsyncCrm {
      * 
      * @return The async call builder
      */
-    public GetCrmContact2RequestBuilder getCrmContact2() {
-        return new GetCrmContact2RequestBuilder(sdkConfiguration);
+    public GetCrmContactRequestBuilder getCrmContact() {
+        return new GetCrmContactRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Retrieve a contact
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<GetCrmContact2Response>} - The async response
+     * @return {@code CompletableFuture<GetCrmContactResponse>} - The async response
      */
-    public CompletableFuture<GetCrmContact2Response> getCrmContact2(@Nonnull GetCrmContact2Request request) {
-        AsyncRequestOperation<GetCrmContact2Request, GetCrmContact2Response> operation
-              = new GetCrmContact2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<GetCrmContactResponse> getCrmContact(@Nonnull GetCrmContactRequest request) {
+        AsyncRequestOperation<GetCrmContactRequest, GetCrmContactResponse> operation
+              = new GetCrmContact.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -367,19 +367,19 @@ public class AsyncCrm {
      * 
      * @return The async call builder
      */
-    public GetCrmDeal2RequestBuilder getCrmDeal2() {
-        return new GetCrmDeal2RequestBuilder(sdkConfiguration);
+    public GetCrmDealRequestBuilder getCrmDeal() {
+        return new GetCrmDealRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Retrieve a deal
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<GetCrmDeal2Response>} - The async response
+     * @return {@code CompletableFuture<GetCrmDealResponse>} - The async response
      */
-    public CompletableFuture<GetCrmDeal2Response> getCrmDeal2(@Nonnull GetCrmDeal2Request request) {
-        AsyncRequestOperation<GetCrmDeal2Request, GetCrmDeal2Response> operation
-              = new GetCrmDeal2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<GetCrmDealResponse> getCrmDeal(@Nonnull GetCrmDealRequest request) {
+        AsyncRequestOperation<GetCrmDealRequest, GetCrmDealResponse> operation
+              = new GetCrmDeal.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -390,19 +390,19 @@ public class AsyncCrm {
      * 
      * @return The async call builder
      */
-    public GetCrmEvent2RequestBuilder getCrmEvent2() {
-        return new GetCrmEvent2RequestBuilder(sdkConfiguration);
+    public GetCrmEventRequestBuilder getCrmEvent() {
+        return new GetCrmEventRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Retrieve an event
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<GetCrmEvent2Response>} - The async response
+     * @return {@code CompletableFuture<GetCrmEventResponse>} - The async response
      */
-    public CompletableFuture<GetCrmEvent2Response> getCrmEvent2(@Nonnull GetCrmEvent2Request request) {
-        AsyncRequestOperation<GetCrmEvent2Request, GetCrmEvent2Response> operation
-              = new GetCrmEvent2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<GetCrmEventResponse> getCrmEvent(@Nonnull GetCrmEventRequest request) {
+        AsyncRequestOperation<GetCrmEventRequest, GetCrmEventResponse> operation
+              = new GetCrmEvent.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -413,19 +413,19 @@ public class AsyncCrm {
      * 
      * @return The async call builder
      */
-    public GetCrmLead2RequestBuilder getCrmLead2() {
-        return new GetCrmLead2RequestBuilder(sdkConfiguration);
+    public GetCrmLeadRequestBuilder getCrmLead() {
+        return new GetCrmLeadRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Retrieve a lead
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<GetCrmLead2Response>} - The async response
+     * @return {@code CompletableFuture<GetCrmLeadResponse>} - The async response
      */
-    public CompletableFuture<GetCrmLead2Response> getCrmLead2(@Nonnull GetCrmLead2Request request) {
-        AsyncRequestOperation<GetCrmLead2Request, GetCrmLead2Response> operation
-              = new GetCrmLead2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<GetCrmLeadResponse> getCrmLead(@Nonnull GetCrmLeadRequest request) {
+        AsyncRequestOperation<GetCrmLeadRequest, GetCrmLeadResponse> operation
+              = new GetCrmLead.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -436,19 +436,19 @@ public class AsyncCrm {
      * 
      * @return The async call builder
      */
-    public GetCrmPipeline2RequestBuilder getCrmPipeline2() {
-        return new GetCrmPipeline2RequestBuilder(sdkConfiguration);
+    public GetCrmPipelineRequestBuilder getCrmPipeline() {
+        return new GetCrmPipelineRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Retrieve a pipeline
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<GetCrmPipeline2Response>} - The async response
+     * @return {@code CompletableFuture<GetCrmPipelineResponse>} - The async response
      */
-    public CompletableFuture<GetCrmPipeline2Response> getCrmPipeline2(@Nonnull GetCrmPipeline2Request request) {
-        AsyncRequestOperation<GetCrmPipeline2Request, GetCrmPipeline2Response> operation
-              = new GetCrmPipeline2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<GetCrmPipelineResponse> getCrmPipeline(@Nonnull GetCrmPipelineRequest request) {
+        AsyncRequestOperation<GetCrmPipelineRequest, GetCrmPipelineResponse> operation
+              = new GetCrmPipeline.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -459,19 +459,19 @@ public class AsyncCrm {
      * 
      * @return The async call builder
      */
-    public ListCrmCompanies2RequestBuilder listCrmCompanies2() {
-        return new ListCrmCompanies2RequestBuilder(sdkConfiguration);
+    public ListCrmCompaniesRequestBuilder listCrmCompanies() {
+        return new ListCrmCompaniesRequestBuilder(sdkConfiguration);
     }
 
     /**
      * List all companies
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<ListCrmCompanies2Response>} - The async response
+     * @return {@code CompletableFuture<ListCrmCompaniesResponse>} - The async response
      */
-    public CompletableFuture<ListCrmCompanies2Response> listCrmCompanies2(@Nonnull ListCrmCompanies2Request request) {
-        AsyncRequestOperation<ListCrmCompanies2Request, ListCrmCompanies2Response> operation
-              = new ListCrmCompanies2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<ListCrmCompaniesResponse> listCrmCompanies(@Nonnull ListCrmCompaniesRequest request) {
+        AsyncRequestOperation<ListCrmCompaniesRequest, ListCrmCompaniesResponse> operation
+              = new ListCrmCompanies.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -482,19 +482,19 @@ public class AsyncCrm {
      * 
      * @return The async call builder
      */
-    public ListCrmContacts2RequestBuilder listCrmContacts2() {
-        return new ListCrmContacts2RequestBuilder(sdkConfiguration);
+    public ListCrmContactsRequestBuilder listCrmContacts() {
+        return new ListCrmContactsRequestBuilder(sdkConfiguration);
     }
 
     /**
      * List all contacts
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<ListCrmContacts2Response>} - The async response
+     * @return {@code CompletableFuture<ListCrmContactsResponse>} - The async response
      */
-    public CompletableFuture<ListCrmContacts2Response> listCrmContacts2(@Nonnull ListCrmContacts2Request request) {
-        AsyncRequestOperation<ListCrmContacts2Request, ListCrmContacts2Response> operation
-              = new ListCrmContacts2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<ListCrmContactsResponse> listCrmContacts(@Nonnull ListCrmContactsRequest request) {
+        AsyncRequestOperation<ListCrmContactsRequest, ListCrmContactsResponse> operation
+              = new ListCrmContacts.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -505,19 +505,19 @@ public class AsyncCrm {
      * 
      * @return The async call builder
      */
-    public ListCrmDeals2RequestBuilder listCrmDeals2() {
-        return new ListCrmDeals2RequestBuilder(sdkConfiguration);
+    public ListCrmDealsRequestBuilder listCrmDeals() {
+        return new ListCrmDealsRequestBuilder(sdkConfiguration);
     }
 
     /**
      * List all deals
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<ListCrmDeals2Response>} - The async response
+     * @return {@code CompletableFuture<ListCrmDealsResponse>} - The async response
      */
-    public CompletableFuture<ListCrmDeals2Response> listCrmDeals2(@Nonnull ListCrmDeals2Request request) {
-        AsyncRequestOperation<ListCrmDeals2Request, ListCrmDeals2Response> operation
-              = new ListCrmDeals2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<ListCrmDealsResponse> listCrmDeals(@Nonnull ListCrmDealsRequest request) {
+        AsyncRequestOperation<ListCrmDealsRequest, ListCrmDealsResponse> operation
+              = new ListCrmDeals.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -528,19 +528,19 @@ public class AsyncCrm {
      * 
      * @return The async call builder
      */
-    public ListCrmEvents2RequestBuilder listCrmEvents2() {
-        return new ListCrmEvents2RequestBuilder(sdkConfiguration);
+    public ListCrmEventsRequestBuilder listCrmEvents() {
+        return new ListCrmEventsRequestBuilder(sdkConfiguration);
     }
 
     /**
      * List all events
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<ListCrmEvents2Response>} - The async response
+     * @return {@code CompletableFuture<ListCrmEventsResponse>} - The async response
      */
-    public CompletableFuture<ListCrmEvents2Response> listCrmEvents2(@Nonnull ListCrmEvents2Request request) {
-        AsyncRequestOperation<ListCrmEvents2Request, ListCrmEvents2Response> operation
-              = new ListCrmEvents2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<ListCrmEventsResponse> listCrmEvents(@Nonnull ListCrmEventsRequest request) {
+        AsyncRequestOperation<ListCrmEventsRequest, ListCrmEventsResponse> operation
+              = new ListCrmEvents.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -551,19 +551,19 @@ public class AsyncCrm {
      * 
      * @return The async call builder
      */
-    public ListCrmLeads2RequestBuilder listCrmLeads2() {
-        return new ListCrmLeads2RequestBuilder(sdkConfiguration);
+    public ListCrmLeadsRequestBuilder listCrmLeads() {
+        return new ListCrmLeadsRequestBuilder(sdkConfiguration);
     }
 
     /**
      * List all leads
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<ListCrmLeads2Response>} - The async response
+     * @return {@code CompletableFuture<ListCrmLeadsResponse>} - The async response
      */
-    public CompletableFuture<ListCrmLeads2Response> listCrmLeads2(@Nonnull ListCrmLeads2Request request) {
-        AsyncRequestOperation<ListCrmLeads2Request, ListCrmLeads2Response> operation
-              = new ListCrmLeads2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<ListCrmLeadsResponse> listCrmLeads(@Nonnull ListCrmLeadsRequest request) {
+        AsyncRequestOperation<ListCrmLeadsRequest, ListCrmLeadsResponse> operation
+              = new ListCrmLeads.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -574,19 +574,19 @@ public class AsyncCrm {
      * 
      * @return The async call builder
      */
-    public ListCrmPicklists2RequestBuilder listCrmPicklists2() {
-        return new ListCrmPicklists2RequestBuilder(sdkConfiguration);
+    public ListCrmPicklistsRequestBuilder listCrmPicklists() {
+        return new ListCrmPicklistsRequestBuilder(sdkConfiguration);
     }
 
     /**
      * List all picklists
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<ListCrmPicklists2Response>} - The async response
+     * @return {@code CompletableFuture<ListCrmPicklistsResponse>} - The async response
      */
-    public CompletableFuture<ListCrmPicklists2Response> listCrmPicklists2(@Nonnull ListCrmPicklists2Request request) {
-        AsyncRequestOperation<ListCrmPicklists2Request, ListCrmPicklists2Response> operation
-              = new ListCrmPicklists2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<ListCrmPicklistsResponse> listCrmPicklists(@Nonnull ListCrmPicklistsRequest request) {
+        AsyncRequestOperation<ListCrmPicklistsRequest, ListCrmPicklistsResponse> operation
+              = new ListCrmPicklists.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -597,19 +597,19 @@ public class AsyncCrm {
      * 
      * @return The async call builder
      */
-    public ListCrmPipelines2RequestBuilder listCrmPipelines2() {
-        return new ListCrmPipelines2RequestBuilder(sdkConfiguration);
+    public ListCrmPipelinesRequestBuilder listCrmPipelines() {
+        return new ListCrmPipelinesRequestBuilder(sdkConfiguration);
     }
 
     /**
      * List all pipelines
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<ListCrmPipelines2Response>} - The async response
+     * @return {@code CompletableFuture<ListCrmPipelinesResponse>} - The async response
      */
-    public CompletableFuture<ListCrmPipelines2Response> listCrmPipelines2(@Nonnull ListCrmPipelines2Request request) {
-        AsyncRequestOperation<ListCrmPipelines2Request, ListCrmPipelines2Response> operation
-              = new ListCrmPipelines2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<ListCrmPipelinesResponse> listCrmPipelines(@Nonnull ListCrmPipelinesRequest request) {
+        AsyncRequestOperation<ListCrmPipelinesRequest, ListCrmPipelinesResponse> operation
+              = new ListCrmPipelines.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -620,19 +620,19 @@ public class AsyncCrm {
      * 
      * @return The async call builder
      */
-    public PatchCrmCompany2RequestBuilder patchCrmCompany2() {
-        return new PatchCrmCompany2RequestBuilder(sdkConfiguration);
+    public PatchCrmCompanyRequestBuilder patchCrmCompany() {
+        return new PatchCrmCompanyRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update a company
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<PatchCrmCompany2Response>} - The async response
+     * @return {@code CompletableFuture<PatchCrmCompanyResponse>} - The async response
      */
-    public CompletableFuture<PatchCrmCompany2Response> patchCrmCompany2(@Nonnull PatchCrmCompany2Request request) {
-        AsyncRequestOperation<PatchCrmCompany2Request, PatchCrmCompany2Response> operation
-              = new PatchCrmCompany2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<PatchCrmCompanyResponse> patchCrmCompany(@Nonnull PatchCrmCompanyRequest request) {
+        AsyncRequestOperation<PatchCrmCompanyRequest, PatchCrmCompanyResponse> operation
+              = new PatchCrmCompany.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -643,19 +643,19 @@ public class AsyncCrm {
      * 
      * @return The async call builder
      */
-    public PatchCrmContact2RequestBuilder patchCrmContact2() {
-        return new PatchCrmContact2RequestBuilder(sdkConfiguration);
+    public PatchCrmContactRequestBuilder patchCrmContact() {
+        return new PatchCrmContactRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update a contact
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<PatchCrmContact2Response>} - The async response
+     * @return {@code CompletableFuture<PatchCrmContactResponse>} - The async response
      */
-    public CompletableFuture<PatchCrmContact2Response> patchCrmContact2(@Nonnull PatchCrmContact2Request request) {
-        AsyncRequestOperation<PatchCrmContact2Request, PatchCrmContact2Response> operation
-              = new PatchCrmContact2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<PatchCrmContactResponse> patchCrmContact(@Nonnull PatchCrmContactRequest request) {
+        AsyncRequestOperation<PatchCrmContactRequest, PatchCrmContactResponse> operation
+              = new PatchCrmContact.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -666,19 +666,19 @@ public class AsyncCrm {
      * 
      * @return The async call builder
      */
-    public PatchCrmDeal2RequestBuilder patchCrmDeal2() {
-        return new PatchCrmDeal2RequestBuilder(sdkConfiguration);
+    public PatchCrmDealRequestBuilder patchCrmDeal() {
+        return new PatchCrmDealRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update a deal
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<PatchCrmDeal2Response>} - The async response
+     * @return {@code CompletableFuture<PatchCrmDealResponse>} - The async response
      */
-    public CompletableFuture<PatchCrmDeal2Response> patchCrmDeal2(@Nonnull PatchCrmDeal2Request request) {
-        AsyncRequestOperation<PatchCrmDeal2Request, PatchCrmDeal2Response> operation
-              = new PatchCrmDeal2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<PatchCrmDealResponse> patchCrmDeal(@Nonnull PatchCrmDealRequest request) {
+        AsyncRequestOperation<PatchCrmDealRequest, PatchCrmDealResponse> operation
+              = new PatchCrmDeal.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -689,19 +689,19 @@ public class AsyncCrm {
      * 
      * @return The async call builder
      */
-    public PatchCrmEvent2RequestBuilder patchCrmEvent2() {
-        return new PatchCrmEvent2RequestBuilder(sdkConfiguration);
+    public PatchCrmEventRequestBuilder patchCrmEvent() {
+        return new PatchCrmEventRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update an event
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<PatchCrmEvent2Response>} - The async response
+     * @return {@code CompletableFuture<PatchCrmEventResponse>} - The async response
      */
-    public CompletableFuture<PatchCrmEvent2Response> patchCrmEvent2(@Nonnull PatchCrmEvent2Request request) {
-        AsyncRequestOperation<PatchCrmEvent2Request, PatchCrmEvent2Response> operation
-              = new PatchCrmEvent2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<PatchCrmEventResponse> patchCrmEvent(@Nonnull PatchCrmEventRequest request) {
+        AsyncRequestOperation<PatchCrmEventRequest, PatchCrmEventResponse> operation
+              = new PatchCrmEvent.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -712,19 +712,19 @@ public class AsyncCrm {
      * 
      * @return The async call builder
      */
-    public PatchCrmLead2RequestBuilder patchCrmLead2() {
-        return new PatchCrmLead2RequestBuilder(sdkConfiguration);
+    public PatchCrmLeadRequestBuilder patchCrmLead() {
+        return new PatchCrmLeadRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update a lead
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<PatchCrmLead2Response>} - The async response
+     * @return {@code CompletableFuture<PatchCrmLeadResponse>} - The async response
      */
-    public CompletableFuture<PatchCrmLead2Response> patchCrmLead2(@Nonnull PatchCrmLead2Request request) {
-        AsyncRequestOperation<PatchCrmLead2Request, PatchCrmLead2Response> operation
-              = new PatchCrmLead2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<PatchCrmLeadResponse> patchCrmLead(@Nonnull PatchCrmLeadRequest request) {
+        AsyncRequestOperation<PatchCrmLeadRequest, PatchCrmLeadResponse> operation
+              = new PatchCrmLead.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -735,19 +735,19 @@ public class AsyncCrm {
      * 
      * @return The async call builder
      */
-    public PatchCrmPipeline2RequestBuilder patchCrmPipeline2() {
-        return new PatchCrmPipeline2RequestBuilder(sdkConfiguration);
+    public PatchCrmPipelineRequestBuilder patchCrmPipeline() {
+        return new PatchCrmPipelineRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update a pipeline
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<PatchCrmPipeline2Response>} - The async response
+     * @return {@code CompletableFuture<PatchCrmPipelineResponse>} - The async response
      */
-    public CompletableFuture<PatchCrmPipeline2Response> patchCrmPipeline2(@Nonnull PatchCrmPipeline2Request request) {
-        AsyncRequestOperation<PatchCrmPipeline2Request, PatchCrmPipeline2Response> operation
-              = new PatchCrmPipeline2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<PatchCrmPipelineResponse> patchCrmPipeline(@Nonnull PatchCrmPipelineRequest request) {
+        AsyncRequestOperation<PatchCrmPipelineRequest, PatchCrmPipelineResponse> operation
+              = new PatchCrmPipeline.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -758,19 +758,19 @@ public class AsyncCrm {
      * 
      * @return The async call builder
      */
-    public RemoveCrmCompany2RequestBuilder removeCrmCompany2() {
-        return new RemoveCrmCompany2RequestBuilder(sdkConfiguration);
+    public RemoveCrmCompanyRequestBuilder removeCrmCompany() {
+        return new RemoveCrmCompanyRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Remove a company
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<RemoveCrmCompany2Response>} - The async response
+     * @return {@code CompletableFuture<RemoveCrmCompanyResponse>} - The async response
      */
-    public CompletableFuture<RemoveCrmCompany2Response> removeCrmCompany2(@Nonnull RemoveCrmCompany2Request request) {
-        AsyncRequestOperation<RemoveCrmCompany2Request, RemoveCrmCompany2Response> operation
-              = new RemoveCrmCompany2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<RemoveCrmCompanyResponse> removeCrmCompany(@Nonnull RemoveCrmCompanyRequest request) {
+        AsyncRequestOperation<RemoveCrmCompanyRequest, RemoveCrmCompanyResponse> operation
+              = new RemoveCrmCompany.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -781,19 +781,19 @@ public class AsyncCrm {
      * 
      * @return The async call builder
      */
-    public RemoveCrmContact2RequestBuilder removeCrmContact2() {
-        return new RemoveCrmContact2RequestBuilder(sdkConfiguration);
+    public RemoveCrmContactRequestBuilder removeCrmContact() {
+        return new RemoveCrmContactRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Remove a contact
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<RemoveCrmContact2Response>} - The async response
+     * @return {@code CompletableFuture<RemoveCrmContactResponse>} - The async response
      */
-    public CompletableFuture<RemoveCrmContact2Response> removeCrmContact2(@Nonnull RemoveCrmContact2Request request) {
-        AsyncRequestOperation<RemoveCrmContact2Request, RemoveCrmContact2Response> operation
-              = new RemoveCrmContact2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<RemoveCrmContactResponse> removeCrmContact(@Nonnull RemoveCrmContactRequest request) {
+        AsyncRequestOperation<RemoveCrmContactRequest, RemoveCrmContactResponse> operation
+              = new RemoveCrmContact.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -804,19 +804,19 @@ public class AsyncCrm {
      * 
      * @return The async call builder
      */
-    public RemoveCrmDeal2RequestBuilder removeCrmDeal2() {
-        return new RemoveCrmDeal2RequestBuilder(sdkConfiguration);
+    public RemoveCrmDealRequestBuilder removeCrmDeal() {
+        return new RemoveCrmDealRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Remove a deal
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<RemoveCrmDeal2Response>} - The async response
+     * @return {@code CompletableFuture<RemoveCrmDealResponse>} - The async response
      */
-    public CompletableFuture<RemoveCrmDeal2Response> removeCrmDeal2(@Nonnull RemoveCrmDeal2Request request) {
-        AsyncRequestOperation<RemoveCrmDeal2Request, RemoveCrmDeal2Response> operation
-              = new RemoveCrmDeal2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<RemoveCrmDealResponse> removeCrmDeal(@Nonnull RemoveCrmDealRequest request) {
+        AsyncRequestOperation<RemoveCrmDealRequest, RemoveCrmDealResponse> operation
+              = new RemoveCrmDeal.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -827,19 +827,19 @@ public class AsyncCrm {
      * 
      * @return The async call builder
      */
-    public RemoveCrmEvent2RequestBuilder removeCrmEvent2() {
-        return new RemoveCrmEvent2RequestBuilder(sdkConfiguration);
+    public RemoveCrmEventRequestBuilder removeCrmEvent() {
+        return new RemoveCrmEventRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Remove an event
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<RemoveCrmEvent2Response>} - The async response
+     * @return {@code CompletableFuture<RemoveCrmEventResponse>} - The async response
      */
-    public CompletableFuture<RemoveCrmEvent2Response> removeCrmEvent2(@Nonnull RemoveCrmEvent2Request request) {
-        AsyncRequestOperation<RemoveCrmEvent2Request, RemoveCrmEvent2Response> operation
-              = new RemoveCrmEvent2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<RemoveCrmEventResponse> removeCrmEvent(@Nonnull RemoveCrmEventRequest request) {
+        AsyncRequestOperation<RemoveCrmEventRequest, RemoveCrmEventResponse> operation
+              = new RemoveCrmEvent.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -850,19 +850,19 @@ public class AsyncCrm {
      * 
      * @return The async call builder
      */
-    public RemoveCrmLead2RequestBuilder removeCrmLead2() {
-        return new RemoveCrmLead2RequestBuilder(sdkConfiguration);
+    public RemoveCrmLeadRequestBuilder removeCrmLead() {
+        return new RemoveCrmLeadRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Remove a lead
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<RemoveCrmLead2Response>} - The async response
+     * @return {@code CompletableFuture<RemoveCrmLeadResponse>} - The async response
      */
-    public CompletableFuture<RemoveCrmLead2Response> removeCrmLead2(@Nonnull RemoveCrmLead2Request request) {
-        AsyncRequestOperation<RemoveCrmLead2Request, RemoveCrmLead2Response> operation
-              = new RemoveCrmLead2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<RemoveCrmLeadResponse> removeCrmLead(@Nonnull RemoveCrmLeadRequest request) {
+        AsyncRequestOperation<RemoveCrmLeadRequest, RemoveCrmLeadResponse> operation
+              = new RemoveCrmLead.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -873,19 +873,19 @@ public class AsyncCrm {
      * 
      * @return The async call builder
      */
-    public RemoveCrmPipeline2RequestBuilder removeCrmPipeline2() {
-        return new RemoveCrmPipeline2RequestBuilder(sdkConfiguration);
+    public RemoveCrmPipelineRequestBuilder removeCrmPipeline() {
+        return new RemoveCrmPipelineRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Remove a pipeline
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<RemoveCrmPipeline2Response>} - The async response
+     * @return {@code CompletableFuture<RemoveCrmPipelineResponse>} - The async response
      */
-    public CompletableFuture<RemoveCrmPipeline2Response> removeCrmPipeline2(@Nonnull RemoveCrmPipeline2Request request) {
-        AsyncRequestOperation<RemoveCrmPipeline2Request, RemoveCrmPipeline2Response> operation
-              = new RemoveCrmPipeline2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<RemoveCrmPipelineResponse> removeCrmPipeline(@Nonnull RemoveCrmPipelineRequest request) {
+        AsyncRequestOperation<RemoveCrmPipelineRequest, RemoveCrmPipelineResponse> operation
+              = new RemoveCrmPipeline.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -896,19 +896,19 @@ public class AsyncCrm {
      * 
      * @return The async call builder
      */
-    public UpdateCrmCompany2RequestBuilder updateCrmCompany2() {
-        return new UpdateCrmCompany2RequestBuilder(sdkConfiguration);
+    public UpdateCrmCompanyRequestBuilder updateCrmCompany() {
+        return new UpdateCrmCompanyRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update a company
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<UpdateCrmCompany2Response>} - The async response
+     * @return {@code CompletableFuture<UpdateCrmCompanyResponse>} - The async response
      */
-    public CompletableFuture<UpdateCrmCompany2Response> updateCrmCompany2(@Nonnull UpdateCrmCompany2Request request) {
-        AsyncRequestOperation<UpdateCrmCompany2Request, UpdateCrmCompany2Response> operation
-              = new UpdateCrmCompany2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<UpdateCrmCompanyResponse> updateCrmCompany(@Nonnull UpdateCrmCompanyRequest request) {
+        AsyncRequestOperation<UpdateCrmCompanyRequest, UpdateCrmCompanyResponse> operation
+              = new UpdateCrmCompany.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -919,19 +919,19 @@ public class AsyncCrm {
      * 
      * @return The async call builder
      */
-    public UpdateCrmContact2RequestBuilder updateCrmContact2() {
-        return new UpdateCrmContact2RequestBuilder(sdkConfiguration);
+    public UpdateCrmContactRequestBuilder updateCrmContact() {
+        return new UpdateCrmContactRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update a contact
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<UpdateCrmContact2Response>} - The async response
+     * @return {@code CompletableFuture<UpdateCrmContactResponse>} - The async response
      */
-    public CompletableFuture<UpdateCrmContact2Response> updateCrmContact2(@Nonnull UpdateCrmContact2Request request) {
-        AsyncRequestOperation<UpdateCrmContact2Request, UpdateCrmContact2Response> operation
-              = new UpdateCrmContact2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<UpdateCrmContactResponse> updateCrmContact(@Nonnull UpdateCrmContactRequest request) {
+        AsyncRequestOperation<UpdateCrmContactRequest, UpdateCrmContactResponse> operation
+              = new UpdateCrmContact.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -942,19 +942,19 @@ public class AsyncCrm {
      * 
      * @return The async call builder
      */
-    public UpdateCrmDeal2RequestBuilder updateCrmDeal2() {
-        return new UpdateCrmDeal2RequestBuilder(sdkConfiguration);
+    public UpdateCrmDealRequestBuilder updateCrmDeal() {
+        return new UpdateCrmDealRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update a deal
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<UpdateCrmDeal2Response>} - The async response
+     * @return {@code CompletableFuture<UpdateCrmDealResponse>} - The async response
      */
-    public CompletableFuture<UpdateCrmDeal2Response> updateCrmDeal2(@Nonnull UpdateCrmDeal2Request request) {
-        AsyncRequestOperation<UpdateCrmDeal2Request, UpdateCrmDeal2Response> operation
-              = new UpdateCrmDeal2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<UpdateCrmDealResponse> updateCrmDeal(@Nonnull UpdateCrmDealRequest request) {
+        AsyncRequestOperation<UpdateCrmDealRequest, UpdateCrmDealResponse> operation
+              = new UpdateCrmDeal.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -965,19 +965,19 @@ public class AsyncCrm {
      * 
      * @return The async call builder
      */
-    public UpdateCrmEvent2RequestBuilder updateCrmEvent2() {
-        return new UpdateCrmEvent2RequestBuilder(sdkConfiguration);
+    public UpdateCrmEventRequestBuilder updateCrmEvent() {
+        return new UpdateCrmEventRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update an event
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<UpdateCrmEvent2Response>} - The async response
+     * @return {@code CompletableFuture<UpdateCrmEventResponse>} - The async response
      */
-    public CompletableFuture<UpdateCrmEvent2Response> updateCrmEvent2(@Nonnull UpdateCrmEvent2Request request) {
-        AsyncRequestOperation<UpdateCrmEvent2Request, UpdateCrmEvent2Response> operation
-              = new UpdateCrmEvent2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<UpdateCrmEventResponse> updateCrmEvent(@Nonnull UpdateCrmEventRequest request) {
+        AsyncRequestOperation<UpdateCrmEventRequest, UpdateCrmEventResponse> operation
+              = new UpdateCrmEvent.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -988,19 +988,19 @@ public class AsyncCrm {
      * 
      * @return The async call builder
      */
-    public UpdateCrmLead2RequestBuilder updateCrmLead2() {
-        return new UpdateCrmLead2RequestBuilder(sdkConfiguration);
+    public UpdateCrmLeadRequestBuilder updateCrmLead() {
+        return new UpdateCrmLeadRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update a lead
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<UpdateCrmLead2Response>} - The async response
+     * @return {@code CompletableFuture<UpdateCrmLeadResponse>} - The async response
      */
-    public CompletableFuture<UpdateCrmLead2Response> updateCrmLead2(@Nonnull UpdateCrmLead2Request request) {
-        AsyncRequestOperation<UpdateCrmLead2Request, UpdateCrmLead2Response> operation
-              = new UpdateCrmLead2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<UpdateCrmLeadResponse> updateCrmLead(@Nonnull UpdateCrmLeadRequest request) {
+        AsyncRequestOperation<UpdateCrmLeadRequest, UpdateCrmLeadResponse> operation
+              = new UpdateCrmLead.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1011,19 +1011,19 @@ public class AsyncCrm {
      * 
      * @return The async call builder
      */
-    public UpdateCrmPipeline2RequestBuilder updateCrmPipeline2() {
-        return new UpdateCrmPipeline2RequestBuilder(sdkConfiguration);
+    public UpdateCrmPipelineRequestBuilder updateCrmPipeline() {
+        return new UpdateCrmPipelineRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update a pipeline
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<UpdateCrmPipeline2Response>} - The async response
+     * @return {@code CompletableFuture<UpdateCrmPipelineResponse>} - The async response
      */
-    public CompletableFuture<UpdateCrmPipeline2Response> updateCrmPipeline2(@Nonnull UpdateCrmPipeline2Request request) {
-        AsyncRequestOperation<UpdateCrmPipeline2Request, UpdateCrmPipeline2Response> operation
-              = new UpdateCrmPipeline2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<UpdateCrmPipelineResponse> updateCrmPipeline(@Nonnull UpdateCrmPipelineRequest request) {
+        AsyncRequestOperation<UpdateCrmPipelineRequest, UpdateCrmPipelineResponse> operation
+              = new UpdateCrmPipeline.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

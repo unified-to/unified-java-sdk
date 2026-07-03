@@ -26,6 +26,7 @@ public class ObjectType {
     public static final ObjectType ACCOUNTING_CONTACT = new ObjectType("accounting_contact");
     public static final ObjectType ACCOUNTING_INVOICE = new ObjectType("accounting_invoice");
     public static final ObjectType ACCOUNTING_BILL = new ObjectType("accounting_bill");
+    public static final ObjectType ACCOUNTING_VENDORCREDIT = new ObjectType("accounting_vendorcredit");
     public static final ObjectType ACCOUNTING_CREDITMEMO = new ObjectType("accounting_creditmemo");
     public static final ObjectType ACCOUNTING_TAXRATE = new ObjectType("accounting_taxrate");
     public static final ObjectType ACCOUNTING_ORGANIZATION = new ObjectType("accounting_organization");
@@ -246,6 +247,7 @@ public class ObjectType {
         map.put("accounting_contact", ACCOUNTING_CONTACT);
         map.put("accounting_invoice", ACCOUNTING_INVOICE);
         map.put("accounting_bill", ACCOUNTING_BILL);
+        map.put("accounting_vendorcredit", ACCOUNTING_VENDORCREDIT);
         map.put("accounting_creditmemo", ACCOUNTING_CREDITMEMO);
         map.put("accounting_taxrate", ACCOUNTING_TAXRATE);
         map.put("accounting_organization", ACCOUNTING_ORGANIZATION);
@@ -398,6 +400,7 @@ public class ObjectType {
         map.put("accounting_contact", ObjectTypeEnum.ACCOUNTING_CONTACT);
         map.put("accounting_invoice", ObjectTypeEnum.ACCOUNTING_INVOICE);
         map.put("accounting_bill", ObjectTypeEnum.ACCOUNTING_BILL);
+        map.put("accounting_vendorcredit", ObjectTypeEnum.ACCOUNTING_VENDORCREDIT);
         map.put("accounting_creditmemo", ObjectTypeEnum.ACCOUNTING_CREDITMEMO);
         map.put("accounting_taxrate", ObjectTypeEnum.ACCOUNTING_TAXRATE);
         map.put("accounting_organization", ObjectTypeEnum.ACCOUNTING_ORGANIZATION);
@@ -551,6 +554,7 @@ public class ObjectType {
         ACCOUNTING_CONTACT("accounting_contact"),
         ACCOUNTING_INVOICE("accounting_invoice"),
         ACCOUNTING_BILL("accounting_bill"),
+        ACCOUNTING_VENDORCREDIT("accounting_vendorcredit"),
         ACCOUNTING_CREDITMEMO("accounting_creditmemo"),
         ACCOUNTING_TAXRATE("accounting_taxrate"),
         ACCOUNTING_ORGANIZATION("accounting_organization"),

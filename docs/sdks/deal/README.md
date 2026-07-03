@@ -4,27 +4,27 @@
 
 ### Available Operations
 
-* [createCrmDeal2](#createcrmdeal2) - Create a deal
-* [getCrmDeal2](#getcrmdeal2) - Retrieve a deal
-* [listCrmDeals2](#listcrmdeals2) - List all deals
-* [patchCrmDeal2](#patchcrmdeal2) - Update a deal
-* [removeCrmDeal2](#removecrmdeal2) - Remove a deal
-* [updateCrmDeal2](#updatecrmdeal2) - Update a deal
+* [createCrmDeal](#createcrmdeal) - Create a deal
+* [getCrmDeal](#getcrmdeal) - Retrieve a deal
+* [listCrmDeals](#listcrmdeals) - List all deals
+* [patchCrmDeal](#patchcrmdeal) - Update a deal
+* [removeCrmDeal](#removecrmdeal) - Remove a deal
+* [updateCrmDeal](#updatecrmdeal) - Update a deal
 
-## createCrmDeal2
+## createCrmDeal
 
 Create a deal
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createCrmDeal2" method="post" path="/crm/{connection_id}/deal" -->
+<!-- UsageSnippet language="java" operationID="createCrmDeal" method="post" path="/crm/{connection_id}/deal" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.CreateCrmDeal2Request;
-import to.unified.unified_java_sdk.models.operations.CreateCrmDeal2Response;
+import to.unified.unified_java_sdk.models.operations.CreateCrmDealRequest;
+import to.unified.unified_java_sdk.models.operations.CreateCrmDealResponse;
 import to.unified.unified_java_sdk.models.shared.CrmDeal;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -38,13 +38,13 @@ public class Application {
                     .build())
             .build();
 
-        CreateCrmDeal2Request req = CreateCrmDeal2Request.builder()
+        CreateCrmDealRequest req = CreateCrmDealRequest.builder()
                 .crmDeal(CrmDeal.builder()
                     .build())
                 .connectionId("<id>")
                 .build();
 
-        CreateCrmDeal2Response res = sdk.deal().createCrmDeal2()
+        CreateCrmDealResponse res = sdk.deal().createCrmDeal()
                 .request(req)
                 .call();
 
@@ -57,13 +57,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                 | Type                                                                      | Required                                                                  | Description                                                               |
-| ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
-| `request`                                                                 | [CreateCrmDeal2Request](../../models/operations/CreateCrmDeal2Request.md) | :heavy_check_mark:                                                        | The request object to use for the request.                                |
+| Parameter                                                               | Type                                                                    | Required                                                                | Description                                                             |
+| ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- |
+| `request`                                                               | [CreateCrmDealRequest](../../models/operations/CreateCrmDealRequest.md) | :heavy_check_mark:                                                      | The request object to use for the request.                              |
 
 ### Response
 
-**[CreateCrmDeal2Response](../../models/operations/CreateCrmDeal2Response.md)**
+**[CreateCrmDealResponse](../../models/operations/CreateCrmDealResponse.md)**
 
 ### Errors
 
@@ -71,20 +71,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## getCrmDeal2
+## getCrmDeal
 
 Retrieve a deal
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="getCrmDeal2" method="get" path="/crm/{connection_id}/deal/{id}" -->
+<!-- UsageSnippet language="java" operationID="getCrmDeal" method="get" path="/crm/{connection_id}/deal/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.GetCrmDeal2Request;
-import to.unified.unified_java_sdk.models.operations.GetCrmDeal2Response;
+import to.unified.unified_java_sdk.models.operations.GetCrmDealRequest;
+import to.unified.unified_java_sdk.models.operations.GetCrmDealResponse;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -97,12 +97,12 @@ public class Application {
                     .build())
             .build();
 
-        GetCrmDeal2Request req = GetCrmDeal2Request.builder()
+        GetCrmDealRequest req = GetCrmDealRequest.builder()
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        GetCrmDeal2Response res = sdk.deal().getCrmDeal2()
+        GetCrmDealResponse res = sdk.deal().getCrmDeal()
                 .request(req)
                 .call();
 
@@ -115,13 +115,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                           | Type                                                                | Required                                                            | Description                                                         |
-| ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- |
-| `request`                                                           | [GetCrmDeal2Request](../../models/operations/GetCrmDeal2Request.md) | :heavy_check_mark:                                                  | The request object to use for the request.                          |
+| Parameter                                                         | Type                                                              | Required                                                          | Description                                                       |
+| ----------------------------------------------------------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------- |
+| `request`                                                         | [GetCrmDealRequest](../../models/operations/GetCrmDealRequest.md) | :heavy_check_mark:                                                | The request object to use for the request.                        |
 
 ### Response
 
-**[GetCrmDeal2Response](../../models/operations/GetCrmDeal2Response.md)**
+**[GetCrmDealResponse](../../models/operations/GetCrmDealResponse.md)**
 
 ### Errors
 
@@ -129,20 +129,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## listCrmDeals2
+## listCrmDeals
 
 List all deals
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="listCrmDeals2" method="get" path="/crm/{connection_id}/deal" -->
+<!-- UsageSnippet language="java" operationID="listCrmDeals" method="get" path="/crm/{connection_id}/deal" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.ListCrmDeals2Request;
-import to.unified.unified_java_sdk.models.operations.ListCrmDeals2Response;
+import to.unified.unified_java_sdk.models.operations.ListCrmDealsRequest;
+import to.unified.unified_java_sdk.models.operations.ListCrmDealsResponse;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -155,11 +155,11 @@ public class Application {
                     .build())
             .build();
 
-        ListCrmDeals2Request req = ListCrmDeals2Request.builder()
+        ListCrmDealsRequest req = ListCrmDealsRequest.builder()
                 .connectionId("<id>")
                 .build();
 
-        ListCrmDeals2Response res = sdk.deal().listCrmDeals2()
+        ListCrmDealsResponse res = sdk.deal().listCrmDeals()
                 .request(req)
                 .call();
 
@@ -172,13 +172,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                               | Type                                                                    | Required                                                                | Description                                                             |
-| ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- |
-| `request`                                                               | [ListCrmDeals2Request](../../models/operations/ListCrmDeals2Request.md) | :heavy_check_mark:                                                      | The request object to use for the request.                              |
+| Parameter                                                             | Type                                                                  | Required                                                              | Description                                                           |
+| --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- |
+| `request`                                                             | [ListCrmDealsRequest](../../models/operations/ListCrmDealsRequest.md) | :heavy_check_mark:                                                    | The request object to use for the request.                            |
 
 ### Response
 
-**[ListCrmDeals2Response](../../models/operations/ListCrmDeals2Response.md)**
+**[ListCrmDealsResponse](../../models/operations/ListCrmDealsResponse.md)**
 
 ### Errors
 
@@ -186,20 +186,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## patchCrmDeal2
+## patchCrmDeal
 
 Update a deal
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchCrmDeal2" method="patch" path="/crm/{connection_id}/deal/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchCrmDeal" method="patch" path="/crm/{connection_id}/deal/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.PatchCrmDeal2Request;
-import to.unified.unified_java_sdk.models.operations.PatchCrmDeal2Response;
+import to.unified.unified_java_sdk.models.operations.PatchCrmDealRequest;
+import to.unified.unified_java_sdk.models.operations.PatchCrmDealResponse;
 import to.unified.unified_java_sdk.models.shared.CrmDeal;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -213,14 +213,14 @@ public class Application {
                     .build())
             .build();
 
-        PatchCrmDeal2Request req = PatchCrmDeal2Request.builder()
+        PatchCrmDealRequest req = PatchCrmDealRequest.builder()
                 .crmDeal(CrmDeal.builder()
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        PatchCrmDeal2Response res = sdk.deal().patchCrmDeal2()
+        PatchCrmDealResponse res = sdk.deal().patchCrmDeal()
                 .request(req)
                 .call();
 
@@ -233,13 +233,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                               | Type                                                                    | Required                                                                | Description                                                             |
-| ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- |
-| `request`                                                               | [PatchCrmDeal2Request](../../models/operations/PatchCrmDeal2Request.md) | :heavy_check_mark:                                                      | The request object to use for the request.                              |
+| Parameter                                                             | Type                                                                  | Required                                                              | Description                                                           |
+| --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- |
+| `request`                                                             | [PatchCrmDealRequest](../../models/operations/PatchCrmDealRequest.md) | :heavy_check_mark:                                                    | The request object to use for the request.                            |
 
 ### Response
 
-**[PatchCrmDeal2Response](../../models/operations/PatchCrmDeal2Response.md)**
+**[PatchCrmDealResponse](../../models/operations/PatchCrmDealResponse.md)**
 
 ### Errors
 
@@ -247,20 +247,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## removeCrmDeal2
+## removeCrmDeal
 
 Remove a deal
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="removeCrmDeal2" method="delete" path="/crm/{connection_id}/deal/{id}" -->
+<!-- UsageSnippet language="java" operationID="removeCrmDeal" method="delete" path="/crm/{connection_id}/deal/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.RemoveCrmDeal2Request;
-import to.unified.unified_java_sdk.models.operations.RemoveCrmDeal2Response;
+import to.unified.unified_java_sdk.models.operations.RemoveCrmDealRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveCrmDealResponse;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -273,12 +273,12 @@ public class Application {
                     .build())
             .build();
 
-        RemoveCrmDeal2Request req = RemoveCrmDeal2Request.builder()
+        RemoveCrmDealRequest req = RemoveCrmDealRequest.builder()
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        RemoveCrmDeal2Response res = sdk.deal().removeCrmDeal2()
+        RemoveCrmDealResponse res = sdk.deal().removeCrmDeal()
                 .request(req)
                 .call();
 
@@ -289,13 +289,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                 | Type                                                                      | Required                                                                  | Description                                                               |
-| ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
-| `request`                                                                 | [RemoveCrmDeal2Request](../../models/operations/RemoveCrmDeal2Request.md) | :heavy_check_mark:                                                        | The request object to use for the request.                                |
+| Parameter                                                               | Type                                                                    | Required                                                                | Description                                                             |
+| ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- |
+| `request`                                                               | [RemoveCrmDealRequest](../../models/operations/RemoveCrmDealRequest.md) | :heavy_check_mark:                                                      | The request object to use for the request.                              |
 
 ### Response
 
-**[RemoveCrmDeal2Response](../../models/operations/RemoveCrmDeal2Response.md)**
+**[RemoveCrmDealResponse](../../models/operations/RemoveCrmDealResponse.md)**
 
 ### Errors
 
@@ -303,20 +303,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## updateCrmDeal2
+## updateCrmDeal
 
 Update a deal
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateCrmDeal2" method="put" path="/crm/{connection_id}/deal/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateCrmDeal" method="put" path="/crm/{connection_id}/deal/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.UpdateCrmDeal2Request;
-import to.unified.unified_java_sdk.models.operations.UpdateCrmDeal2Response;
+import to.unified.unified_java_sdk.models.operations.UpdateCrmDealRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateCrmDealResponse;
 import to.unified.unified_java_sdk.models.shared.CrmDeal;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -330,14 +330,14 @@ public class Application {
                     .build())
             .build();
 
-        UpdateCrmDeal2Request req = UpdateCrmDeal2Request.builder()
+        UpdateCrmDealRequest req = UpdateCrmDealRequest.builder()
                 .crmDeal(CrmDeal.builder()
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        UpdateCrmDeal2Response res = sdk.deal().updateCrmDeal2()
+        UpdateCrmDealResponse res = sdk.deal().updateCrmDeal()
                 .request(req)
                 .call();
 
@@ -350,13 +350,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                 | Type                                                                      | Required                                                                  | Description                                                               |
-| ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
-| `request`                                                                 | [UpdateCrmDeal2Request](../../models/operations/UpdateCrmDeal2Request.md) | :heavy_check_mark:                                                        | The request object to use for the request.                                |
+| Parameter                                                               | Type                                                                    | Required                                                                | Description                                                             |
+| ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- |
+| `request`                                                               | [UpdateCrmDealRequest](../../models/operations/UpdateCrmDealRequest.md) | :heavy_check_mark:                                                      | The request object to use for the request.                              |
 
 ### Response
 
-**[UpdateCrmDeal2Response](../../models/operations/UpdateCrmDeal2Response.md)**
+**[UpdateCrmDealResponse](../../models/operations/UpdateCrmDealResponse.md)**
 
 ### Errors
 

@@ -7,30 +7,30 @@ import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOper
 
 import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
-import to.unified.unified_java_sdk.models.operations.CreateHrisBankaccount2Request;
-import to.unified.unified_java_sdk.models.operations.GetHrisBankaccount2Request;
-import to.unified.unified_java_sdk.models.operations.ListHrisBankaccounts2Request;
-import to.unified.unified_java_sdk.models.operations.PatchHrisBankaccount2Request;
-import to.unified.unified_java_sdk.models.operations.RemoveHrisBankaccount2Request;
-import to.unified.unified_java_sdk.models.operations.UpdateHrisBankaccount2Request;
-import to.unified.unified_java_sdk.models.operations.async.CreateHrisBankaccount2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.CreateHrisBankaccount2Response;
-import to.unified.unified_java_sdk.models.operations.async.GetHrisBankaccount2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.GetHrisBankaccount2Response;
-import to.unified.unified_java_sdk.models.operations.async.ListHrisBankaccounts2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.ListHrisBankaccounts2Response;
-import to.unified.unified_java_sdk.models.operations.async.PatchHrisBankaccount2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.PatchHrisBankaccount2Response;
-import to.unified.unified_java_sdk.models.operations.async.RemoveHrisBankaccount2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.RemoveHrisBankaccount2Response;
-import to.unified.unified_java_sdk.models.operations.async.UpdateHrisBankaccount2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.UpdateHrisBankaccount2Response;
-import to.unified.unified_java_sdk.operations.CreateHrisBankaccount2;
-import to.unified.unified_java_sdk.operations.GetHrisBankaccount2;
-import to.unified.unified_java_sdk.operations.ListHrisBankaccounts2;
-import to.unified.unified_java_sdk.operations.PatchHrisBankaccount2;
-import to.unified.unified_java_sdk.operations.RemoveHrisBankaccount2;
-import to.unified.unified_java_sdk.operations.UpdateHrisBankaccount2;
+import to.unified.unified_java_sdk.models.operations.CreateHrisBankaccountRequest;
+import to.unified.unified_java_sdk.models.operations.GetHrisBankaccountRequest;
+import to.unified.unified_java_sdk.models.operations.ListHrisBankaccountsRequest;
+import to.unified.unified_java_sdk.models.operations.PatchHrisBankaccountRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveHrisBankaccountRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateHrisBankaccountRequest;
+import to.unified.unified_java_sdk.models.operations.async.CreateHrisBankaccountRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.CreateHrisBankaccountResponse;
+import to.unified.unified_java_sdk.models.operations.async.GetHrisBankaccountRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetHrisBankaccountResponse;
+import to.unified.unified_java_sdk.models.operations.async.ListHrisBankaccountsRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListHrisBankaccountsResponse;
+import to.unified.unified_java_sdk.models.operations.async.PatchHrisBankaccountRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.PatchHrisBankaccountResponse;
+import to.unified.unified_java_sdk.models.operations.async.RemoveHrisBankaccountRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.RemoveHrisBankaccountResponse;
+import to.unified.unified_java_sdk.models.operations.async.UpdateHrisBankaccountRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.UpdateHrisBankaccountResponse;
+import to.unified.unified_java_sdk.operations.CreateHrisBankaccount;
+import to.unified.unified_java_sdk.operations.GetHrisBankaccount;
+import to.unified.unified_java_sdk.operations.ListHrisBankaccounts;
+import to.unified.unified_java_sdk.operations.PatchHrisBankaccount;
+import to.unified.unified_java_sdk.operations.RemoveHrisBankaccount;
+import to.unified.unified_java_sdk.operations.UpdateHrisBankaccount;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -59,19 +59,19 @@ public class AsyncBankaccount {
      * 
      * @return The async call builder
      */
-    public CreateHrisBankaccount2RequestBuilder createHrisBankaccount2() {
-        return new CreateHrisBankaccount2RequestBuilder(sdkConfiguration);
+    public CreateHrisBankaccountRequestBuilder createHrisBankaccount() {
+        return new CreateHrisBankaccountRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Create a bankaccount
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<CreateHrisBankaccount2Response>} - The async response
+     * @return {@code CompletableFuture<CreateHrisBankaccountResponse>} - The async response
      */
-    public CompletableFuture<CreateHrisBankaccount2Response> createHrisBankaccount2(@Nonnull CreateHrisBankaccount2Request request) {
-        AsyncRequestOperation<CreateHrisBankaccount2Request, CreateHrisBankaccount2Response> operation
-              = new CreateHrisBankaccount2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<CreateHrisBankaccountResponse> createHrisBankaccount(@Nonnull CreateHrisBankaccountRequest request) {
+        AsyncRequestOperation<CreateHrisBankaccountRequest, CreateHrisBankaccountResponse> operation
+              = new CreateHrisBankaccount.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -82,19 +82,19 @@ public class AsyncBankaccount {
      * 
      * @return The async call builder
      */
-    public GetHrisBankaccount2RequestBuilder getHrisBankaccount2() {
-        return new GetHrisBankaccount2RequestBuilder(sdkConfiguration);
+    public GetHrisBankaccountRequestBuilder getHrisBankaccount() {
+        return new GetHrisBankaccountRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Retrieve a bankaccount
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<GetHrisBankaccount2Response>} - The async response
+     * @return {@code CompletableFuture<GetHrisBankaccountResponse>} - The async response
      */
-    public CompletableFuture<GetHrisBankaccount2Response> getHrisBankaccount2(@Nonnull GetHrisBankaccount2Request request) {
-        AsyncRequestOperation<GetHrisBankaccount2Request, GetHrisBankaccount2Response> operation
-              = new GetHrisBankaccount2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<GetHrisBankaccountResponse> getHrisBankaccount(@Nonnull GetHrisBankaccountRequest request) {
+        AsyncRequestOperation<GetHrisBankaccountRequest, GetHrisBankaccountResponse> operation
+              = new GetHrisBankaccount.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -105,19 +105,19 @@ public class AsyncBankaccount {
      * 
      * @return The async call builder
      */
-    public ListHrisBankaccounts2RequestBuilder listHrisBankaccounts2() {
-        return new ListHrisBankaccounts2RequestBuilder(sdkConfiguration);
+    public ListHrisBankaccountsRequestBuilder listHrisBankaccounts() {
+        return new ListHrisBankaccountsRequestBuilder(sdkConfiguration);
     }
 
     /**
      * List all bankaccounts
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<ListHrisBankaccounts2Response>} - The async response
+     * @return {@code CompletableFuture<ListHrisBankaccountsResponse>} - The async response
      */
-    public CompletableFuture<ListHrisBankaccounts2Response> listHrisBankaccounts2(@Nonnull ListHrisBankaccounts2Request request) {
-        AsyncRequestOperation<ListHrisBankaccounts2Request, ListHrisBankaccounts2Response> operation
-              = new ListHrisBankaccounts2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<ListHrisBankaccountsResponse> listHrisBankaccounts(@Nonnull ListHrisBankaccountsRequest request) {
+        AsyncRequestOperation<ListHrisBankaccountsRequest, ListHrisBankaccountsResponse> operation
+              = new ListHrisBankaccounts.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -128,19 +128,19 @@ public class AsyncBankaccount {
      * 
      * @return The async call builder
      */
-    public PatchHrisBankaccount2RequestBuilder patchHrisBankaccount2() {
-        return new PatchHrisBankaccount2RequestBuilder(sdkConfiguration);
+    public PatchHrisBankaccountRequestBuilder patchHrisBankaccount() {
+        return new PatchHrisBankaccountRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update a bankaccount
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<PatchHrisBankaccount2Response>} - The async response
+     * @return {@code CompletableFuture<PatchHrisBankaccountResponse>} - The async response
      */
-    public CompletableFuture<PatchHrisBankaccount2Response> patchHrisBankaccount2(@Nonnull PatchHrisBankaccount2Request request) {
-        AsyncRequestOperation<PatchHrisBankaccount2Request, PatchHrisBankaccount2Response> operation
-              = new PatchHrisBankaccount2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<PatchHrisBankaccountResponse> patchHrisBankaccount(@Nonnull PatchHrisBankaccountRequest request) {
+        AsyncRequestOperation<PatchHrisBankaccountRequest, PatchHrisBankaccountResponse> operation
+              = new PatchHrisBankaccount.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -151,19 +151,19 @@ public class AsyncBankaccount {
      * 
      * @return The async call builder
      */
-    public RemoveHrisBankaccount2RequestBuilder removeHrisBankaccount2() {
-        return new RemoveHrisBankaccount2RequestBuilder(sdkConfiguration);
+    public RemoveHrisBankaccountRequestBuilder removeHrisBankaccount() {
+        return new RemoveHrisBankaccountRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Remove a bankaccount
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<RemoveHrisBankaccount2Response>} - The async response
+     * @return {@code CompletableFuture<RemoveHrisBankaccountResponse>} - The async response
      */
-    public CompletableFuture<RemoveHrisBankaccount2Response> removeHrisBankaccount2(@Nonnull RemoveHrisBankaccount2Request request) {
-        AsyncRequestOperation<RemoveHrisBankaccount2Request, RemoveHrisBankaccount2Response> operation
-              = new RemoveHrisBankaccount2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<RemoveHrisBankaccountResponse> removeHrisBankaccount(@Nonnull RemoveHrisBankaccountRequest request) {
+        AsyncRequestOperation<RemoveHrisBankaccountRequest, RemoveHrisBankaccountResponse> operation
+              = new RemoveHrisBankaccount.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -174,19 +174,19 @@ public class AsyncBankaccount {
      * 
      * @return The async call builder
      */
-    public UpdateHrisBankaccount2RequestBuilder updateHrisBankaccount2() {
-        return new UpdateHrisBankaccount2RequestBuilder(sdkConfiguration);
+    public UpdateHrisBankaccountRequestBuilder updateHrisBankaccount() {
+        return new UpdateHrisBankaccountRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update a bankaccount
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<UpdateHrisBankaccount2Response>} - The async response
+     * @return {@code CompletableFuture<UpdateHrisBankaccountResponse>} - The async response
      */
-    public CompletableFuture<UpdateHrisBankaccount2Response> updateHrisBankaccount2(@Nonnull UpdateHrisBankaccount2Request request) {
-        AsyncRequestOperation<UpdateHrisBankaccount2Request, UpdateHrisBankaccount2Response> operation
-              = new UpdateHrisBankaccount2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<UpdateHrisBankaccountResponse> updateHrisBankaccount(@Nonnull UpdateHrisBankaccountRequest request) {
+        AsyncRequestOperation<UpdateHrisBankaccountRequest, UpdateHrisBankaccountResponse> operation
+              = new UpdateHrisBankaccount.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

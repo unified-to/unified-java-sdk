@@ -101,6 +101,9 @@ public class UnifiedTo {
     private final Trialbalance trialbalance;
 
 
+    private final Vendorcredit vendorcredit;
+
+
     private final Ads ads;
 
 
@@ -588,6 +591,11 @@ public class UnifiedTo {
 
     public Trialbalance trialbalance() {
         return trialbalance;
+    }
+
+
+    public Vendorcredit vendorcredit() {
+        return vendorcredit;
     }
 
 
@@ -1397,6 +1405,7 @@ public class UnifiedTo {
         this.taxrate = new Taxrate(sdkConfiguration);
         this.transaction = new Transaction(sdkConfiguration);
         this.trialbalance = new Trialbalance(sdkConfiguration);
+        this.vendorcredit = new Vendorcredit(sdkConfiguration);
         this.ads = new Ads(sdkConfiguration);
         this.ad = new Ad(sdkConfiguration);
         this.campaign = new Campaign(sdkConfiguration);

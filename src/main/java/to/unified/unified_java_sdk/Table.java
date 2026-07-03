@@ -6,30 +6,30 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
-import to.unified.unified_java_sdk.models.operations.CreateDatastoreTable2Request;
-import to.unified.unified_java_sdk.models.operations.CreateDatastoreTable2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.CreateDatastoreTable2Response;
-import to.unified.unified_java_sdk.models.operations.GetDatastoreTable2Request;
-import to.unified.unified_java_sdk.models.operations.GetDatastoreTable2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.GetDatastoreTable2Response;
-import to.unified.unified_java_sdk.models.operations.ListDatastoreTables2Request;
-import to.unified.unified_java_sdk.models.operations.ListDatastoreTables2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.ListDatastoreTables2Response;
-import to.unified.unified_java_sdk.models.operations.PatchDatastoreTable2Request;
-import to.unified.unified_java_sdk.models.operations.PatchDatastoreTable2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.PatchDatastoreTable2Response;
-import to.unified.unified_java_sdk.models.operations.RemoveDatastoreTable2Request;
-import to.unified.unified_java_sdk.models.operations.RemoveDatastoreTable2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.RemoveDatastoreTable2Response;
-import to.unified.unified_java_sdk.models.operations.UpdateDatastoreTable2Request;
-import to.unified.unified_java_sdk.models.operations.UpdateDatastoreTable2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.UpdateDatastoreTable2Response;
-import to.unified.unified_java_sdk.operations.CreateDatastoreTable2;
-import to.unified.unified_java_sdk.operations.GetDatastoreTable2;
-import to.unified.unified_java_sdk.operations.ListDatastoreTables2;
-import to.unified.unified_java_sdk.operations.PatchDatastoreTable2;
-import to.unified.unified_java_sdk.operations.RemoveDatastoreTable2;
-import to.unified.unified_java_sdk.operations.UpdateDatastoreTable2;
+import to.unified.unified_java_sdk.models.operations.CreateDatastoreTableRequest;
+import to.unified.unified_java_sdk.models.operations.CreateDatastoreTableRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.CreateDatastoreTableResponse;
+import to.unified.unified_java_sdk.models.operations.GetDatastoreTableRequest;
+import to.unified.unified_java_sdk.models.operations.GetDatastoreTableRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetDatastoreTableResponse;
+import to.unified.unified_java_sdk.models.operations.ListDatastoreTablesRequest;
+import to.unified.unified_java_sdk.models.operations.ListDatastoreTablesRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListDatastoreTablesResponse;
+import to.unified.unified_java_sdk.models.operations.PatchDatastoreTableRequest;
+import to.unified.unified_java_sdk.models.operations.PatchDatastoreTableRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.PatchDatastoreTableResponse;
+import to.unified.unified_java_sdk.models.operations.RemoveDatastoreTableRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveDatastoreTableRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.RemoveDatastoreTableResponse;
+import to.unified.unified_java_sdk.models.operations.UpdateDatastoreTableRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateDatastoreTableRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.UpdateDatastoreTableResponse;
+import to.unified.unified_java_sdk.operations.CreateDatastoreTable;
+import to.unified.unified_java_sdk.operations.GetDatastoreTable;
+import to.unified.unified_java_sdk.operations.ListDatastoreTables;
+import to.unified.unified_java_sdk.operations.PatchDatastoreTable;
+import to.unified.unified_java_sdk.operations.RemoveDatastoreTable;
+import to.unified.unified_java_sdk.operations.UpdateDatastoreTable;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -57,8 +57,8 @@ public class Table {
      * 
      * @return The call builder
      */
-    public CreateDatastoreTable2RequestBuilder createDatastoreTable2() {
-        return new CreateDatastoreTable2RequestBuilder(sdkConfiguration);
+    public CreateDatastoreTableRequestBuilder createDatastoreTable() {
+        return new CreateDatastoreTableRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -68,9 +68,9 @@ public class Table {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateDatastoreTable2Response createDatastoreTable2(@Nonnull CreateDatastoreTable2Request request) {
-        RequestOperation<CreateDatastoreTable2Request, CreateDatastoreTable2Response> operation
-              = new CreateDatastoreTable2.Sync(sdkConfiguration, _headers);
+    public CreateDatastoreTableResponse createDatastoreTable(@Nonnull CreateDatastoreTableRequest request) {
+        RequestOperation<CreateDatastoreTableRequest, CreateDatastoreTableResponse> operation
+              = new CreateDatastoreTable.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -79,8 +79,8 @@ public class Table {
      * 
      * @return The call builder
      */
-    public GetDatastoreTable2RequestBuilder getDatastoreTable2() {
-        return new GetDatastoreTable2RequestBuilder(sdkConfiguration);
+    public GetDatastoreTableRequestBuilder getDatastoreTable() {
+        return new GetDatastoreTableRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -90,9 +90,9 @@ public class Table {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetDatastoreTable2Response getDatastoreTable2(@Nonnull GetDatastoreTable2Request request) {
-        RequestOperation<GetDatastoreTable2Request, GetDatastoreTable2Response> operation
-              = new GetDatastoreTable2.Sync(sdkConfiguration, _headers);
+    public GetDatastoreTableResponse getDatastoreTable(@Nonnull GetDatastoreTableRequest request) {
+        RequestOperation<GetDatastoreTableRequest, GetDatastoreTableResponse> operation
+              = new GetDatastoreTable.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -101,8 +101,8 @@ public class Table {
      * 
      * @return The call builder
      */
-    public ListDatastoreTables2RequestBuilder listDatastoreTables2() {
-        return new ListDatastoreTables2RequestBuilder(sdkConfiguration);
+    public ListDatastoreTablesRequestBuilder listDatastoreTables() {
+        return new ListDatastoreTablesRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -112,9 +112,9 @@ public class Table {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListDatastoreTables2Response listDatastoreTables2(@Nonnull ListDatastoreTables2Request request) {
-        RequestOperation<ListDatastoreTables2Request, ListDatastoreTables2Response> operation
-              = new ListDatastoreTables2.Sync(sdkConfiguration, _headers);
+    public ListDatastoreTablesResponse listDatastoreTables(@Nonnull ListDatastoreTablesRequest request) {
+        RequestOperation<ListDatastoreTablesRequest, ListDatastoreTablesResponse> operation
+              = new ListDatastoreTables.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -123,8 +123,8 @@ public class Table {
      * 
      * @return The call builder
      */
-    public PatchDatastoreTable2RequestBuilder patchDatastoreTable2() {
-        return new PatchDatastoreTable2RequestBuilder(sdkConfiguration);
+    public PatchDatastoreTableRequestBuilder patchDatastoreTable() {
+        return new PatchDatastoreTableRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -134,9 +134,9 @@ public class Table {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchDatastoreTable2Response patchDatastoreTable2(@Nonnull PatchDatastoreTable2Request request) {
-        RequestOperation<PatchDatastoreTable2Request, PatchDatastoreTable2Response> operation
-              = new PatchDatastoreTable2.Sync(sdkConfiguration, _headers);
+    public PatchDatastoreTableResponse patchDatastoreTable(@Nonnull PatchDatastoreTableRequest request) {
+        RequestOperation<PatchDatastoreTableRequest, PatchDatastoreTableResponse> operation
+              = new PatchDatastoreTable.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -145,8 +145,8 @@ public class Table {
      * 
      * @return The call builder
      */
-    public RemoveDatastoreTable2RequestBuilder removeDatastoreTable2() {
-        return new RemoveDatastoreTable2RequestBuilder(sdkConfiguration);
+    public RemoveDatastoreTableRequestBuilder removeDatastoreTable() {
+        return new RemoveDatastoreTableRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -156,9 +156,9 @@ public class Table {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveDatastoreTable2Response removeDatastoreTable2(@Nonnull RemoveDatastoreTable2Request request) {
-        RequestOperation<RemoveDatastoreTable2Request, RemoveDatastoreTable2Response> operation
-              = new RemoveDatastoreTable2.Sync(sdkConfiguration, _headers);
+    public RemoveDatastoreTableResponse removeDatastoreTable(@Nonnull RemoveDatastoreTableRequest request) {
+        RequestOperation<RemoveDatastoreTableRequest, RemoveDatastoreTableResponse> operation
+              = new RemoveDatastoreTable.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -167,8 +167,8 @@ public class Table {
      * 
      * @return The call builder
      */
-    public UpdateDatastoreTable2RequestBuilder updateDatastoreTable2() {
-        return new UpdateDatastoreTable2RequestBuilder(sdkConfiguration);
+    public UpdateDatastoreTableRequestBuilder updateDatastoreTable() {
+        return new UpdateDatastoreTableRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -178,9 +178,9 @@ public class Table {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateDatastoreTable2Response updateDatastoreTable2(@Nonnull UpdateDatastoreTable2Request request) {
-        RequestOperation<UpdateDatastoreTable2Request, UpdateDatastoreTable2Response> operation
-              = new UpdateDatastoreTable2.Sync(sdkConfiguration, _headers);
+    public UpdateDatastoreTableResponse updateDatastoreTable(@Nonnull UpdateDatastoreTableRequest request) {
+        RequestOperation<UpdateDatastoreTableRequest, UpdateDatastoreTableResponse> operation
+              = new UpdateDatastoreTable.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

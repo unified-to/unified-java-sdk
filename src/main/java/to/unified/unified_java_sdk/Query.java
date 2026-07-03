@@ -6,10 +6,10 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
-import to.unified.unified_java_sdk.models.operations.CreateDatastoreQuery2Request;
-import to.unified.unified_java_sdk.models.operations.CreateDatastoreQuery2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.CreateDatastoreQuery2Response;
-import to.unified.unified_java_sdk.operations.CreateDatastoreQuery2;
+import to.unified.unified_java_sdk.models.operations.CreateDatastoreQueryRequest;
+import to.unified.unified_java_sdk.models.operations.CreateDatastoreQueryRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.CreateDatastoreQueryResponse;
+import to.unified.unified_java_sdk.operations.CreateDatastoreQuery;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -37,8 +37,8 @@ public class Query {
      * 
      * @return The call builder
      */
-    public CreateDatastoreQuery2RequestBuilder createDatastoreQuery2() {
-        return new CreateDatastoreQuery2RequestBuilder(sdkConfiguration);
+    public CreateDatastoreQueryRequestBuilder createDatastoreQuery() {
+        return new CreateDatastoreQueryRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -48,9 +48,9 @@ public class Query {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateDatastoreQuery2Response createDatastoreQuery2(@Nonnull CreateDatastoreQuery2Request request) {
-        RequestOperation<CreateDatastoreQuery2Request, CreateDatastoreQuery2Response> operation
-              = new CreateDatastoreQuery2.Sync(sdkConfiguration, _headers);
+    public CreateDatastoreQueryResponse createDatastoreQuery(@Nonnull CreateDatastoreQueryRequest request) {
+        RequestOperation<CreateDatastoreQueryRequest, CreateDatastoreQueryResponse> operation
+              = new CreateDatastoreQuery.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

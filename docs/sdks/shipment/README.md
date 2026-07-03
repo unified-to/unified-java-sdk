@@ -4,27 +4,27 @@
 
 ### Available Operations
 
-* [createShippingShipment2](#createshippingshipment2) - Create a shipment
-* [getShippingShipment2](#getshippingshipment2) - Retrieve a shipment
-* [listShippingShipments2](#listshippingshipments2) - List all shipments
-* [patchShippingShipment2](#patchshippingshipment2) - Update a shipment
-* [removeShippingShipment2](#removeshippingshipment2) - Remove a shipment
-* [updateShippingShipment2](#updateshippingshipment2) - Update a shipment
+* [createShippingShipment](#createshippingshipment) - Create a shipment
+* [getShippingShipment](#getshippingshipment) - Retrieve a shipment
+* [listShippingShipments](#listshippingshipments) - List all shipments
+* [patchShippingShipment](#patchshippingshipment) - Update a shipment
+* [removeShippingShipment](#removeshippingshipment) - Remove a shipment
+* [updateShippingShipment](#updateshippingshipment) - Update a shipment
 
-## createShippingShipment2
+## createShippingShipment
 
 Create a shipment
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createShippingShipment2" method="post" path="/shipping/{connection_id}/shipment" -->
+<!-- UsageSnippet language="java" operationID="createShippingShipment" method="post" path="/shipping/{connection_id}/shipment" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.CreateShippingShipment2Request;
-import to.unified.unified_java_sdk.models.operations.CreateShippingShipment2Response;
+import to.unified.unified_java_sdk.models.operations.CreateShippingShipmentRequest;
+import to.unified.unified_java_sdk.models.operations.CreateShippingShipmentResponse;
 import to.unified.unified_java_sdk.models.shared.Security;
 import to.unified.unified_java_sdk.models.shared.ShippingShipment;
 
@@ -38,13 +38,13 @@ public class Application {
                     .build())
             .build();
 
-        CreateShippingShipment2Request req = CreateShippingShipment2Request.builder()
+        CreateShippingShipmentRequest req = CreateShippingShipmentRequest.builder()
                 .shippingShipment(ShippingShipment.builder()
                     .build())
                 .connectionId("<id>")
                 .build();
 
-        CreateShippingShipment2Response res = sdk.shipment().createShippingShipment2()
+        CreateShippingShipmentResponse res = sdk.shipment().createShippingShipment()
                 .request(req)
                 .call();
 
@@ -57,13 +57,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                   | Type                                                                                        | Required                                                                                    | Description                                                                                 |
-| ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
-| `request`                                                                                   | [CreateShippingShipment2Request](../../models/operations/CreateShippingShipment2Request.md) | :heavy_check_mark:                                                                          | The request object to use for the request.                                                  |
+| Parameter                                                                                 | Type                                                                                      | Required                                                                                  | Description                                                                               |
+| ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
+| `request`                                                                                 | [CreateShippingShipmentRequest](../../models/operations/CreateShippingShipmentRequest.md) | :heavy_check_mark:                                                                        | The request object to use for the request.                                                |
 
 ### Response
 
-**[CreateShippingShipment2Response](../../models/operations/CreateShippingShipment2Response.md)**
+**[CreateShippingShipmentResponse](../../models/operations/CreateShippingShipmentResponse.md)**
 
 ### Errors
 
@@ -71,20 +71,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## getShippingShipment2
+## getShippingShipment
 
 Retrieve a shipment
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="getShippingShipment2" method="get" path="/shipping/{connection_id}/shipment/{id}" -->
+<!-- UsageSnippet language="java" operationID="getShippingShipment" method="get" path="/shipping/{connection_id}/shipment/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.GetShippingShipment2Request;
-import to.unified.unified_java_sdk.models.operations.GetShippingShipment2Response;
+import to.unified.unified_java_sdk.models.operations.GetShippingShipmentRequest;
+import to.unified.unified_java_sdk.models.operations.GetShippingShipmentResponse;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -97,12 +97,12 @@ public class Application {
                     .build())
             .build();
 
-        GetShippingShipment2Request req = GetShippingShipment2Request.builder()
+        GetShippingShipmentRequest req = GetShippingShipmentRequest.builder()
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        GetShippingShipment2Response res = sdk.shipment().getShippingShipment2()
+        GetShippingShipmentResponse res = sdk.shipment().getShippingShipment()
                 .request(req)
                 .call();
 
@@ -115,13 +115,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                             | Type                                                                                  | Required                                                                              | Description                                                                           |
-| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
-| `request`                                                                             | [GetShippingShipment2Request](../../models/operations/GetShippingShipment2Request.md) | :heavy_check_mark:                                                                    | The request object to use for the request.                                            |
+| Parameter                                                                           | Type                                                                                | Required                                                                            | Description                                                                         |
+| ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| `request`                                                                           | [GetShippingShipmentRequest](../../models/operations/GetShippingShipmentRequest.md) | :heavy_check_mark:                                                                  | The request object to use for the request.                                          |
 
 ### Response
 
-**[GetShippingShipment2Response](../../models/operations/GetShippingShipment2Response.md)**
+**[GetShippingShipmentResponse](../../models/operations/GetShippingShipmentResponse.md)**
 
 ### Errors
 
@@ -129,20 +129,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## listShippingShipments2
+## listShippingShipments
 
 List all shipments
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="listShippingShipments2" method="get" path="/shipping/{connection_id}/shipment" -->
+<!-- UsageSnippet language="java" operationID="listShippingShipments" method="get" path="/shipping/{connection_id}/shipment" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.ListShippingShipments2Request;
-import to.unified.unified_java_sdk.models.operations.ListShippingShipments2Response;
+import to.unified.unified_java_sdk.models.operations.ListShippingShipmentsRequest;
+import to.unified.unified_java_sdk.models.operations.ListShippingShipmentsResponse;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -155,11 +155,11 @@ public class Application {
                     .build())
             .build();
 
-        ListShippingShipments2Request req = ListShippingShipments2Request.builder()
+        ListShippingShipmentsRequest req = ListShippingShipmentsRequest.builder()
                 .connectionId("<id>")
                 .build();
 
-        ListShippingShipments2Response res = sdk.shipment().listShippingShipments2()
+        ListShippingShipmentsResponse res = sdk.shipment().listShippingShipments()
                 .request(req)
                 .call();
 
@@ -172,13 +172,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                 | Type                                                                                      | Required                                                                                  | Description                                                                               |
-| ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
-| `request`                                                                                 | [ListShippingShipments2Request](../../models/operations/ListShippingShipments2Request.md) | :heavy_check_mark:                                                                        | The request object to use for the request.                                                |
+| Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
+| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| `request`                                                                               | [ListShippingShipmentsRequest](../../models/operations/ListShippingShipmentsRequest.md) | :heavy_check_mark:                                                                      | The request object to use for the request.                                              |
 
 ### Response
 
-**[ListShippingShipments2Response](../../models/operations/ListShippingShipments2Response.md)**
+**[ListShippingShipmentsResponse](../../models/operations/ListShippingShipmentsResponse.md)**
 
 ### Errors
 
@@ -186,20 +186,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## patchShippingShipment2
+## patchShippingShipment
 
 Update a shipment
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchShippingShipment2" method="patch" path="/shipping/{connection_id}/shipment/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchShippingShipment" method="patch" path="/shipping/{connection_id}/shipment/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.PatchShippingShipment2Request;
-import to.unified.unified_java_sdk.models.operations.PatchShippingShipment2Response;
+import to.unified.unified_java_sdk.models.operations.PatchShippingShipmentRequest;
+import to.unified.unified_java_sdk.models.operations.PatchShippingShipmentResponse;
 import to.unified.unified_java_sdk.models.shared.Security;
 import to.unified.unified_java_sdk.models.shared.ShippingShipment;
 
@@ -213,14 +213,14 @@ public class Application {
                     .build())
             .build();
 
-        PatchShippingShipment2Request req = PatchShippingShipment2Request.builder()
+        PatchShippingShipmentRequest req = PatchShippingShipmentRequest.builder()
                 .shippingShipment(ShippingShipment.builder()
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        PatchShippingShipment2Response res = sdk.shipment().patchShippingShipment2()
+        PatchShippingShipmentResponse res = sdk.shipment().patchShippingShipment()
                 .request(req)
                 .call();
 
@@ -233,13 +233,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                 | Type                                                                                      | Required                                                                                  | Description                                                                               |
-| ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
-| `request`                                                                                 | [PatchShippingShipment2Request](../../models/operations/PatchShippingShipment2Request.md) | :heavy_check_mark:                                                                        | The request object to use for the request.                                                |
+| Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
+| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| `request`                                                                               | [PatchShippingShipmentRequest](../../models/operations/PatchShippingShipmentRequest.md) | :heavy_check_mark:                                                                      | The request object to use for the request.                                              |
 
 ### Response
 
-**[PatchShippingShipment2Response](../../models/operations/PatchShippingShipment2Response.md)**
+**[PatchShippingShipmentResponse](../../models/operations/PatchShippingShipmentResponse.md)**
 
 ### Errors
 
@@ -247,20 +247,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## removeShippingShipment2
+## removeShippingShipment
 
 Remove a shipment
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="removeShippingShipment2" method="delete" path="/shipping/{connection_id}/shipment/{id}" -->
+<!-- UsageSnippet language="java" operationID="removeShippingShipment" method="delete" path="/shipping/{connection_id}/shipment/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.RemoveShippingShipment2Request;
-import to.unified.unified_java_sdk.models.operations.RemoveShippingShipment2Response;
+import to.unified.unified_java_sdk.models.operations.RemoveShippingShipmentRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveShippingShipmentResponse;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -273,12 +273,12 @@ public class Application {
                     .build())
             .build();
 
-        RemoveShippingShipment2Request req = RemoveShippingShipment2Request.builder()
+        RemoveShippingShipmentRequest req = RemoveShippingShipmentRequest.builder()
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        RemoveShippingShipment2Response res = sdk.shipment().removeShippingShipment2()
+        RemoveShippingShipmentResponse res = sdk.shipment().removeShippingShipment()
                 .request(req)
                 .call();
 
@@ -289,13 +289,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                   | Type                                                                                        | Required                                                                                    | Description                                                                                 |
-| ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
-| `request`                                                                                   | [RemoveShippingShipment2Request](../../models/operations/RemoveShippingShipment2Request.md) | :heavy_check_mark:                                                                          | The request object to use for the request.                                                  |
+| Parameter                                                                                 | Type                                                                                      | Required                                                                                  | Description                                                                               |
+| ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
+| `request`                                                                                 | [RemoveShippingShipmentRequest](../../models/operations/RemoveShippingShipmentRequest.md) | :heavy_check_mark:                                                                        | The request object to use for the request.                                                |
 
 ### Response
 
-**[RemoveShippingShipment2Response](../../models/operations/RemoveShippingShipment2Response.md)**
+**[RemoveShippingShipmentResponse](../../models/operations/RemoveShippingShipmentResponse.md)**
 
 ### Errors
 
@@ -303,20 +303,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## updateShippingShipment2
+## updateShippingShipment
 
 Update a shipment
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateShippingShipment2" method="put" path="/shipping/{connection_id}/shipment/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateShippingShipment" method="put" path="/shipping/{connection_id}/shipment/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.UpdateShippingShipment2Request;
-import to.unified.unified_java_sdk.models.operations.UpdateShippingShipment2Response;
+import to.unified.unified_java_sdk.models.operations.UpdateShippingShipmentRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateShippingShipmentResponse;
 import to.unified.unified_java_sdk.models.shared.Security;
 import to.unified.unified_java_sdk.models.shared.ShippingShipment;
 
@@ -330,14 +330,14 @@ public class Application {
                     .build())
             .build();
 
-        UpdateShippingShipment2Request req = UpdateShippingShipment2Request.builder()
+        UpdateShippingShipmentRequest req = UpdateShippingShipmentRequest.builder()
                 .shippingShipment(ShippingShipment.builder()
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        UpdateShippingShipment2Response res = sdk.shipment().updateShippingShipment2()
+        UpdateShippingShipmentResponse res = sdk.shipment().updateShippingShipment()
                 .request(req)
                 .call();
 
@@ -350,13 +350,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                   | Type                                                                                        | Required                                                                                    | Description                                                                                 |
-| ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
-| `request`                                                                                   | [UpdateShippingShipment2Request](../../models/operations/UpdateShippingShipment2Request.md) | :heavy_check_mark:                                                                          | The request object to use for the request.                                                  |
+| Parameter                                                                                 | Type                                                                                      | Required                                                                                  | Description                                                                               |
+| ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
+| `request`                                                                                 | [UpdateShippingShipmentRequest](../../models/operations/UpdateShippingShipmentRequest.md) | :heavy_check_mark:                                                                        | The request object to use for the request.                                                |
 
 ### Response
 
-**[UpdateShippingShipment2Response](../../models/operations/UpdateShippingShipment2Response.md)**
+**[UpdateShippingShipmentResponse](../../models/operations/UpdateShippingShipmentResponse.md)**
 
 ### Errors
 

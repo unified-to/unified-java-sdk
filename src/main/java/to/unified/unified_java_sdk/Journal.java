@@ -6,30 +6,30 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
-import to.unified.unified_java_sdk.models.operations.CreateAccountingJournal2Request;
-import to.unified.unified_java_sdk.models.operations.CreateAccountingJournal2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.CreateAccountingJournal2Response;
-import to.unified.unified_java_sdk.models.operations.GetAccountingJournal2Request;
-import to.unified.unified_java_sdk.models.operations.GetAccountingJournal2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.GetAccountingJournal2Response;
-import to.unified.unified_java_sdk.models.operations.ListAccountingJournals2Request;
-import to.unified.unified_java_sdk.models.operations.ListAccountingJournals2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.ListAccountingJournals2Response;
-import to.unified.unified_java_sdk.models.operations.PatchAccountingJournal2Request;
-import to.unified.unified_java_sdk.models.operations.PatchAccountingJournal2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.PatchAccountingJournal2Response;
-import to.unified.unified_java_sdk.models.operations.RemoveAccountingJournal2Request;
-import to.unified.unified_java_sdk.models.operations.RemoveAccountingJournal2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.RemoveAccountingJournal2Response;
-import to.unified.unified_java_sdk.models.operations.UpdateAccountingJournal2Request;
-import to.unified.unified_java_sdk.models.operations.UpdateAccountingJournal2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.UpdateAccountingJournal2Response;
-import to.unified.unified_java_sdk.operations.CreateAccountingJournal2;
-import to.unified.unified_java_sdk.operations.GetAccountingJournal2;
-import to.unified.unified_java_sdk.operations.ListAccountingJournals2;
-import to.unified.unified_java_sdk.operations.PatchAccountingJournal2;
-import to.unified.unified_java_sdk.operations.RemoveAccountingJournal2;
-import to.unified.unified_java_sdk.operations.UpdateAccountingJournal2;
+import to.unified.unified_java_sdk.models.operations.CreateAccountingJournalRequest;
+import to.unified.unified_java_sdk.models.operations.CreateAccountingJournalRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.CreateAccountingJournalResponse;
+import to.unified.unified_java_sdk.models.operations.GetAccountingJournalRequest;
+import to.unified.unified_java_sdk.models.operations.GetAccountingJournalRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetAccountingJournalResponse;
+import to.unified.unified_java_sdk.models.operations.ListAccountingJournalsRequest;
+import to.unified.unified_java_sdk.models.operations.ListAccountingJournalsRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListAccountingJournalsResponse;
+import to.unified.unified_java_sdk.models.operations.PatchAccountingJournalRequest;
+import to.unified.unified_java_sdk.models.operations.PatchAccountingJournalRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.PatchAccountingJournalResponse;
+import to.unified.unified_java_sdk.models.operations.RemoveAccountingJournalRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveAccountingJournalRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.RemoveAccountingJournalResponse;
+import to.unified.unified_java_sdk.models.operations.UpdateAccountingJournalRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateAccountingJournalRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.UpdateAccountingJournalResponse;
+import to.unified.unified_java_sdk.operations.CreateAccountingJournal;
+import to.unified.unified_java_sdk.operations.GetAccountingJournal;
+import to.unified.unified_java_sdk.operations.ListAccountingJournals;
+import to.unified.unified_java_sdk.operations.PatchAccountingJournal;
+import to.unified.unified_java_sdk.operations.RemoveAccountingJournal;
+import to.unified.unified_java_sdk.operations.UpdateAccountingJournal;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -57,8 +57,8 @@ public class Journal {
      * 
      * @return The call builder
      */
-    public CreateAccountingJournal2RequestBuilder createAccountingJournal2() {
-        return new CreateAccountingJournal2RequestBuilder(sdkConfiguration);
+    public CreateAccountingJournalRequestBuilder createAccountingJournal() {
+        return new CreateAccountingJournalRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -68,9 +68,9 @@ public class Journal {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateAccountingJournal2Response createAccountingJournal2(@Nonnull CreateAccountingJournal2Request request) {
-        RequestOperation<CreateAccountingJournal2Request, CreateAccountingJournal2Response> operation
-              = new CreateAccountingJournal2.Sync(sdkConfiguration, _headers);
+    public CreateAccountingJournalResponse createAccountingJournal(@Nonnull CreateAccountingJournalRequest request) {
+        RequestOperation<CreateAccountingJournalRequest, CreateAccountingJournalResponse> operation
+              = new CreateAccountingJournal.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -79,8 +79,8 @@ public class Journal {
      * 
      * @return The call builder
      */
-    public GetAccountingJournal2RequestBuilder getAccountingJournal2() {
-        return new GetAccountingJournal2RequestBuilder(sdkConfiguration);
+    public GetAccountingJournalRequestBuilder getAccountingJournal() {
+        return new GetAccountingJournalRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -90,9 +90,9 @@ public class Journal {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetAccountingJournal2Response getAccountingJournal2(@Nonnull GetAccountingJournal2Request request) {
-        RequestOperation<GetAccountingJournal2Request, GetAccountingJournal2Response> operation
-              = new GetAccountingJournal2.Sync(sdkConfiguration, _headers);
+    public GetAccountingJournalResponse getAccountingJournal(@Nonnull GetAccountingJournalRequest request) {
+        RequestOperation<GetAccountingJournalRequest, GetAccountingJournalResponse> operation
+              = new GetAccountingJournal.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -101,8 +101,8 @@ public class Journal {
      * 
      * @return The call builder
      */
-    public ListAccountingJournals2RequestBuilder listAccountingJournals2() {
-        return new ListAccountingJournals2RequestBuilder(sdkConfiguration);
+    public ListAccountingJournalsRequestBuilder listAccountingJournals() {
+        return new ListAccountingJournalsRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -112,9 +112,9 @@ public class Journal {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListAccountingJournals2Response listAccountingJournals2(@Nonnull ListAccountingJournals2Request request) {
-        RequestOperation<ListAccountingJournals2Request, ListAccountingJournals2Response> operation
-              = new ListAccountingJournals2.Sync(sdkConfiguration, _headers);
+    public ListAccountingJournalsResponse listAccountingJournals(@Nonnull ListAccountingJournalsRequest request) {
+        RequestOperation<ListAccountingJournalsRequest, ListAccountingJournalsResponse> operation
+              = new ListAccountingJournals.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -123,8 +123,8 @@ public class Journal {
      * 
      * @return The call builder
      */
-    public PatchAccountingJournal2RequestBuilder patchAccountingJournal2() {
-        return new PatchAccountingJournal2RequestBuilder(sdkConfiguration);
+    public PatchAccountingJournalRequestBuilder patchAccountingJournal() {
+        return new PatchAccountingJournalRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -134,9 +134,9 @@ public class Journal {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchAccountingJournal2Response patchAccountingJournal2(@Nonnull PatchAccountingJournal2Request request) {
-        RequestOperation<PatchAccountingJournal2Request, PatchAccountingJournal2Response> operation
-              = new PatchAccountingJournal2.Sync(sdkConfiguration, _headers);
+    public PatchAccountingJournalResponse patchAccountingJournal(@Nonnull PatchAccountingJournalRequest request) {
+        RequestOperation<PatchAccountingJournalRequest, PatchAccountingJournalResponse> operation
+              = new PatchAccountingJournal.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -145,8 +145,8 @@ public class Journal {
      * 
      * @return The call builder
      */
-    public RemoveAccountingJournal2RequestBuilder removeAccountingJournal2() {
-        return new RemoveAccountingJournal2RequestBuilder(sdkConfiguration);
+    public RemoveAccountingJournalRequestBuilder removeAccountingJournal() {
+        return new RemoveAccountingJournalRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -156,9 +156,9 @@ public class Journal {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveAccountingJournal2Response removeAccountingJournal2(@Nonnull RemoveAccountingJournal2Request request) {
-        RequestOperation<RemoveAccountingJournal2Request, RemoveAccountingJournal2Response> operation
-              = new RemoveAccountingJournal2.Sync(sdkConfiguration, _headers);
+    public RemoveAccountingJournalResponse removeAccountingJournal(@Nonnull RemoveAccountingJournalRequest request) {
+        RequestOperation<RemoveAccountingJournalRequest, RemoveAccountingJournalResponse> operation
+              = new RemoveAccountingJournal.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -167,8 +167,8 @@ public class Journal {
      * 
      * @return The call builder
      */
-    public UpdateAccountingJournal2RequestBuilder updateAccountingJournal2() {
-        return new UpdateAccountingJournal2RequestBuilder(sdkConfiguration);
+    public UpdateAccountingJournalRequestBuilder updateAccountingJournal() {
+        return new UpdateAccountingJournalRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -178,9 +178,9 @@ public class Journal {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateAccountingJournal2Response updateAccountingJournal2(@Nonnull UpdateAccountingJournal2Request request) {
-        RequestOperation<UpdateAccountingJournal2Request, UpdateAccountingJournal2Response> operation
-              = new UpdateAccountingJournal2.Sync(sdkConfiguration, _headers);
+    public UpdateAccountingJournalResponse updateAccountingJournal(@Nonnull UpdateAccountingJournalRequest request) {
+        RequestOperation<UpdateAccountingJournalRequest, UpdateAccountingJournalResponse> operation
+              = new UpdateAccountingJournal.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

@@ -6,38 +6,38 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
-import to.unified.unified_java_sdk.models.operations.CreateVerificationRequest2Request;
-import to.unified.unified_java_sdk.models.operations.CreateVerificationRequest2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.CreateVerificationRequest2Response;
-import to.unified.unified_java_sdk.models.operations.GetVerificationPackage2Request;
-import to.unified.unified_java_sdk.models.operations.GetVerificationPackage2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.GetVerificationPackage2Response;
-import to.unified.unified_java_sdk.models.operations.GetVerificationRequest2Request;
-import to.unified.unified_java_sdk.models.operations.GetVerificationRequest2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.GetVerificationRequest2Response;
-import to.unified.unified_java_sdk.models.operations.ListVerificationPackages2Request;
-import to.unified.unified_java_sdk.models.operations.ListVerificationPackages2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.ListVerificationPackages2Response;
-import to.unified.unified_java_sdk.models.operations.ListVerificationRequests2Request;
-import to.unified.unified_java_sdk.models.operations.ListVerificationRequests2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.ListVerificationRequests2Response;
-import to.unified.unified_java_sdk.models.operations.PatchVerificationRequest2Request;
-import to.unified.unified_java_sdk.models.operations.PatchVerificationRequest2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.PatchVerificationRequest2Response;
-import to.unified.unified_java_sdk.models.operations.RemoveVerificationRequest2Request;
-import to.unified.unified_java_sdk.models.operations.RemoveVerificationRequest2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.RemoveVerificationRequest2Response;
-import to.unified.unified_java_sdk.models.operations.UpdateVerificationRequest2Request;
-import to.unified.unified_java_sdk.models.operations.UpdateVerificationRequest2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.UpdateVerificationRequest2Response;
-import to.unified.unified_java_sdk.operations.CreateVerificationRequest2;
-import to.unified.unified_java_sdk.operations.GetVerificationPackage2;
-import to.unified.unified_java_sdk.operations.GetVerificationRequest2;
-import to.unified.unified_java_sdk.operations.ListVerificationPackages2;
-import to.unified.unified_java_sdk.operations.ListVerificationRequests2;
-import to.unified.unified_java_sdk.operations.PatchVerificationRequest2;
-import to.unified.unified_java_sdk.operations.RemoveVerificationRequest2;
-import to.unified.unified_java_sdk.operations.UpdateVerificationRequest2;
+import to.unified.unified_java_sdk.models.operations.CreateVerificationRequestRequest;
+import to.unified.unified_java_sdk.models.operations.CreateVerificationRequestRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.CreateVerificationRequestResponse;
+import to.unified.unified_java_sdk.models.operations.GetVerificationPackageRequest;
+import to.unified.unified_java_sdk.models.operations.GetVerificationPackageRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetVerificationPackageResponse;
+import to.unified.unified_java_sdk.models.operations.GetVerificationRequestRequest;
+import to.unified.unified_java_sdk.models.operations.GetVerificationRequestRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetVerificationRequestResponse;
+import to.unified.unified_java_sdk.models.operations.ListVerificationPackagesRequest;
+import to.unified.unified_java_sdk.models.operations.ListVerificationPackagesRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListVerificationPackagesResponse;
+import to.unified.unified_java_sdk.models.operations.ListVerificationRequestsRequest;
+import to.unified.unified_java_sdk.models.operations.ListVerificationRequestsRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListVerificationRequestsResponse;
+import to.unified.unified_java_sdk.models.operations.PatchVerificationRequestRequest;
+import to.unified.unified_java_sdk.models.operations.PatchVerificationRequestRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.PatchVerificationRequestResponse;
+import to.unified.unified_java_sdk.models.operations.RemoveVerificationRequestRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveVerificationRequestRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.RemoveVerificationRequestResponse;
+import to.unified.unified_java_sdk.models.operations.UpdateVerificationRequestRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateVerificationRequestRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.UpdateVerificationRequestResponse;
+import to.unified.unified_java_sdk.operations.CreateVerificationRequest;
+import to.unified.unified_java_sdk.operations.GetVerificationPackage;
+import to.unified.unified_java_sdk.operations.GetVerificationRequest;
+import to.unified.unified_java_sdk.operations.ListVerificationPackages;
+import to.unified.unified_java_sdk.operations.ListVerificationRequests;
+import to.unified.unified_java_sdk.operations.PatchVerificationRequest;
+import to.unified.unified_java_sdk.operations.RemoveVerificationRequest;
+import to.unified.unified_java_sdk.operations.UpdateVerificationRequest;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -65,8 +65,8 @@ public class Verification {
      * 
      * @return The call builder
      */
-    public CreateVerificationRequest2RequestBuilder createVerificationRequest2() {
-        return new CreateVerificationRequest2RequestBuilder(sdkConfiguration);
+    public CreateVerificationRequestRequestBuilder createVerificationRequest() {
+        return new CreateVerificationRequestRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -76,9 +76,9 @@ public class Verification {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateVerificationRequest2Response createVerificationRequest2(@Nonnull CreateVerificationRequest2Request request) {
-        RequestOperation<CreateVerificationRequest2Request, CreateVerificationRequest2Response> operation
-              = new CreateVerificationRequest2.Sync(sdkConfiguration, _headers);
+    public CreateVerificationRequestResponse createVerificationRequest(@Nonnull CreateVerificationRequestRequest request) {
+        RequestOperation<CreateVerificationRequestRequest, CreateVerificationRequestResponse> operation
+              = new CreateVerificationRequest.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -87,8 +87,8 @@ public class Verification {
      * 
      * @return The call builder
      */
-    public GetVerificationPackage2RequestBuilder getVerificationPackage2() {
-        return new GetVerificationPackage2RequestBuilder(sdkConfiguration);
+    public GetVerificationPackageRequestBuilder getVerificationPackage() {
+        return new GetVerificationPackageRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -98,9 +98,9 @@ public class Verification {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetVerificationPackage2Response getVerificationPackage2(@Nonnull GetVerificationPackage2Request request) {
-        RequestOperation<GetVerificationPackage2Request, GetVerificationPackage2Response> operation
-              = new GetVerificationPackage2.Sync(sdkConfiguration, _headers);
+    public GetVerificationPackageResponse getVerificationPackage(@Nonnull GetVerificationPackageRequest request) {
+        RequestOperation<GetVerificationPackageRequest, GetVerificationPackageResponse> operation
+              = new GetVerificationPackage.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -109,8 +109,8 @@ public class Verification {
      * 
      * @return The call builder
      */
-    public GetVerificationRequest2RequestBuilder getVerificationRequest2() {
-        return new GetVerificationRequest2RequestBuilder(sdkConfiguration);
+    public GetVerificationRequestRequestBuilder getVerificationRequest() {
+        return new GetVerificationRequestRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -120,9 +120,9 @@ public class Verification {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetVerificationRequest2Response getVerificationRequest2(@Nonnull GetVerificationRequest2Request request) {
-        RequestOperation<GetVerificationRequest2Request, GetVerificationRequest2Response> operation
-              = new GetVerificationRequest2.Sync(sdkConfiguration, _headers);
+    public GetVerificationRequestResponse getVerificationRequest(@Nonnull GetVerificationRequestRequest request) {
+        RequestOperation<GetVerificationRequestRequest, GetVerificationRequestResponse> operation
+              = new GetVerificationRequest.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -131,8 +131,8 @@ public class Verification {
      * 
      * @return The call builder
      */
-    public ListVerificationPackages2RequestBuilder listVerificationPackages2() {
-        return new ListVerificationPackages2RequestBuilder(sdkConfiguration);
+    public ListVerificationPackagesRequestBuilder listVerificationPackages() {
+        return new ListVerificationPackagesRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -142,9 +142,9 @@ public class Verification {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListVerificationPackages2Response listVerificationPackages2(@Nonnull ListVerificationPackages2Request request) {
-        RequestOperation<ListVerificationPackages2Request, ListVerificationPackages2Response> operation
-              = new ListVerificationPackages2.Sync(sdkConfiguration, _headers);
+    public ListVerificationPackagesResponse listVerificationPackages(@Nonnull ListVerificationPackagesRequest request) {
+        RequestOperation<ListVerificationPackagesRequest, ListVerificationPackagesResponse> operation
+              = new ListVerificationPackages.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -153,8 +153,8 @@ public class Verification {
      * 
      * @return The call builder
      */
-    public ListVerificationRequests2RequestBuilder listVerificationRequests2() {
-        return new ListVerificationRequests2RequestBuilder(sdkConfiguration);
+    public ListVerificationRequestsRequestBuilder listVerificationRequests() {
+        return new ListVerificationRequestsRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -164,9 +164,9 @@ public class Verification {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListVerificationRequests2Response listVerificationRequests2(@Nonnull ListVerificationRequests2Request request) {
-        RequestOperation<ListVerificationRequests2Request, ListVerificationRequests2Response> operation
-              = new ListVerificationRequests2.Sync(sdkConfiguration, _headers);
+    public ListVerificationRequestsResponse listVerificationRequests(@Nonnull ListVerificationRequestsRequest request) {
+        RequestOperation<ListVerificationRequestsRequest, ListVerificationRequestsResponse> operation
+              = new ListVerificationRequests.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -175,8 +175,8 @@ public class Verification {
      * 
      * @return The call builder
      */
-    public PatchVerificationRequest2RequestBuilder patchVerificationRequest2() {
-        return new PatchVerificationRequest2RequestBuilder(sdkConfiguration);
+    public PatchVerificationRequestRequestBuilder patchVerificationRequest() {
+        return new PatchVerificationRequestRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -186,9 +186,9 @@ public class Verification {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchVerificationRequest2Response patchVerificationRequest2(@Nonnull PatchVerificationRequest2Request request) {
-        RequestOperation<PatchVerificationRequest2Request, PatchVerificationRequest2Response> operation
-              = new PatchVerificationRequest2.Sync(sdkConfiguration, _headers);
+    public PatchVerificationRequestResponse patchVerificationRequest(@Nonnull PatchVerificationRequestRequest request) {
+        RequestOperation<PatchVerificationRequestRequest, PatchVerificationRequestResponse> operation
+              = new PatchVerificationRequest.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -197,8 +197,8 @@ public class Verification {
      * 
      * @return The call builder
      */
-    public RemoveVerificationRequest2RequestBuilder removeVerificationRequest2() {
-        return new RemoveVerificationRequest2RequestBuilder(sdkConfiguration);
+    public RemoveVerificationRequestRequestBuilder removeVerificationRequest() {
+        return new RemoveVerificationRequestRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -208,9 +208,9 @@ public class Verification {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveVerificationRequest2Response removeVerificationRequest2(@Nonnull RemoveVerificationRequest2Request request) {
-        RequestOperation<RemoveVerificationRequest2Request, RemoveVerificationRequest2Response> operation
-              = new RemoveVerificationRequest2.Sync(sdkConfiguration, _headers);
+    public RemoveVerificationRequestResponse removeVerificationRequest(@Nonnull RemoveVerificationRequestRequest request) {
+        RequestOperation<RemoveVerificationRequestRequest, RemoveVerificationRequestResponse> operation
+              = new RemoveVerificationRequest.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -219,8 +219,8 @@ public class Verification {
      * 
      * @return The call builder
      */
-    public UpdateVerificationRequest2RequestBuilder updateVerificationRequest2() {
-        return new UpdateVerificationRequest2RequestBuilder(sdkConfiguration);
+    public UpdateVerificationRequestRequestBuilder updateVerificationRequest() {
+        return new UpdateVerificationRequestRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -230,9 +230,9 @@ public class Verification {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateVerificationRequest2Response updateVerificationRequest2(@Nonnull UpdateVerificationRequest2Request request) {
-        RequestOperation<UpdateVerificationRequest2Request, UpdateVerificationRequest2Response> operation
-              = new UpdateVerificationRequest2.Sync(sdkConfiguration, _headers);
+    public UpdateVerificationRequestResponse updateVerificationRequest(@Nonnull UpdateVerificationRequestRequest request) {
+        RequestOperation<UpdateVerificationRequestRequest, UpdateVerificationRequestResponse> operation
+              = new UpdateVerificationRequest.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

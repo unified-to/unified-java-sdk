@@ -6,30 +6,30 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
-import to.unified.unified_java_sdk.models.operations.CreateSigningSignatory2Request;
-import to.unified.unified_java_sdk.models.operations.CreateSigningSignatory2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.CreateSigningSignatory2Response;
-import to.unified.unified_java_sdk.models.operations.GetSigningSignatory2Request;
-import to.unified.unified_java_sdk.models.operations.GetSigningSignatory2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.GetSigningSignatory2Response;
-import to.unified.unified_java_sdk.models.operations.ListSigningSignatories2Request;
-import to.unified.unified_java_sdk.models.operations.ListSigningSignatories2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.ListSigningSignatories2Response;
-import to.unified.unified_java_sdk.models.operations.PatchSigningSignatory2Request;
-import to.unified.unified_java_sdk.models.operations.PatchSigningSignatory2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.PatchSigningSignatory2Response;
-import to.unified.unified_java_sdk.models.operations.RemoveSigningSignatory2Request;
-import to.unified.unified_java_sdk.models.operations.RemoveSigningSignatory2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.RemoveSigningSignatory2Response;
-import to.unified.unified_java_sdk.models.operations.UpdateSigningSignatory2Request;
-import to.unified.unified_java_sdk.models.operations.UpdateSigningSignatory2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.UpdateSigningSignatory2Response;
-import to.unified.unified_java_sdk.operations.CreateSigningSignatory2;
-import to.unified.unified_java_sdk.operations.GetSigningSignatory2;
-import to.unified.unified_java_sdk.operations.ListSigningSignatories2;
-import to.unified.unified_java_sdk.operations.PatchSigningSignatory2;
-import to.unified.unified_java_sdk.operations.RemoveSigningSignatory2;
-import to.unified.unified_java_sdk.operations.UpdateSigningSignatory2;
+import to.unified.unified_java_sdk.models.operations.CreateSigningSignatoryRequest;
+import to.unified.unified_java_sdk.models.operations.CreateSigningSignatoryRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.CreateSigningSignatoryResponse;
+import to.unified.unified_java_sdk.models.operations.GetSigningSignatoryRequest;
+import to.unified.unified_java_sdk.models.operations.GetSigningSignatoryRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetSigningSignatoryResponse;
+import to.unified.unified_java_sdk.models.operations.ListSigningSignatoriesRequest;
+import to.unified.unified_java_sdk.models.operations.ListSigningSignatoriesRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListSigningSignatoriesResponse;
+import to.unified.unified_java_sdk.models.operations.PatchSigningSignatoryRequest;
+import to.unified.unified_java_sdk.models.operations.PatchSigningSignatoryRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.PatchSigningSignatoryResponse;
+import to.unified.unified_java_sdk.models.operations.RemoveSigningSignatoryRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveSigningSignatoryRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.RemoveSigningSignatoryResponse;
+import to.unified.unified_java_sdk.models.operations.UpdateSigningSignatoryRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateSigningSignatoryRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.UpdateSigningSignatoryResponse;
+import to.unified.unified_java_sdk.operations.CreateSigningSignatory;
+import to.unified.unified_java_sdk.operations.GetSigningSignatory;
+import to.unified.unified_java_sdk.operations.ListSigningSignatories;
+import to.unified.unified_java_sdk.operations.PatchSigningSignatory;
+import to.unified.unified_java_sdk.operations.RemoveSigningSignatory;
+import to.unified.unified_java_sdk.operations.UpdateSigningSignatory;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -57,8 +57,8 @@ public class Signatory {
      * 
      * @return The call builder
      */
-    public CreateSigningSignatory2RequestBuilder createSigningSignatory2() {
-        return new CreateSigningSignatory2RequestBuilder(sdkConfiguration);
+    public CreateSigningSignatoryRequestBuilder createSigningSignatory() {
+        return new CreateSigningSignatoryRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -68,9 +68,9 @@ public class Signatory {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateSigningSignatory2Response createSigningSignatory2(@Nonnull CreateSigningSignatory2Request request) {
-        RequestOperation<CreateSigningSignatory2Request, CreateSigningSignatory2Response> operation
-              = new CreateSigningSignatory2.Sync(sdkConfiguration, _headers);
+    public CreateSigningSignatoryResponse createSigningSignatory(@Nonnull CreateSigningSignatoryRequest request) {
+        RequestOperation<CreateSigningSignatoryRequest, CreateSigningSignatoryResponse> operation
+              = new CreateSigningSignatory.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -79,8 +79,8 @@ public class Signatory {
      * 
      * @return The call builder
      */
-    public GetSigningSignatory2RequestBuilder getSigningSignatory2() {
-        return new GetSigningSignatory2RequestBuilder(sdkConfiguration);
+    public GetSigningSignatoryRequestBuilder getSigningSignatory() {
+        return new GetSigningSignatoryRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -90,9 +90,9 @@ public class Signatory {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetSigningSignatory2Response getSigningSignatory2(@Nonnull GetSigningSignatory2Request request) {
-        RequestOperation<GetSigningSignatory2Request, GetSigningSignatory2Response> operation
-              = new GetSigningSignatory2.Sync(sdkConfiguration, _headers);
+    public GetSigningSignatoryResponse getSigningSignatory(@Nonnull GetSigningSignatoryRequest request) {
+        RequestOperation<GetSigningSignatoryRequest, GetSigningSignatoryResponse> operation
+              = new GetSigningSignatory.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -101,8 +101,8 @@ public class Signatory {
      * 
      * @return The call builder
      */
-    public ListSigningSignatories2RequestBuilder listSigningSignatories2() {
-        return new ListSigningSignatories2RequestBuilder(sdkConfiguration);
+    public ListSigningSignatoriesRequestBuilder listSigningSignatories() {
+        return new ListSigningSignatoriesRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -112,9 +112,9 @@ public class Signatory {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListSigningSignatories2Response listSigningSignatories2(@Nonnull ListSigningSignatories2Request request) {
-        RequestOperation<ListSigningSignatories2Request, ListSigningSignatories2Response> operation
-              = new ListSigningSignatories2.Sync(sdkConfiguration, _headers);
+    public ListSigningSignatoriesResponse listSigningSignatories(@Nonnull ListSigningSignatoriesRequest request) {
+        RequestOperation<ListSigningSignatoriesRequest, ListSigningSignatoriesResponse> operation
+              = new ListSigningSignatories.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -123,8 +123,8 @@ public class Signatory {
      * 
      * @return The call builder
      */
-    public PatchSigningSignatory2RequestBuilder patchSigningSignatory2() {
-        return new PatchSigningSignatory2RequestBuilder(sdkConfiguration);
+    public PatchSigningSignatoryRequestBuilder patchSigningSignatory() {
+        return new PatchSigningSignatoryRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -134,9 +134,9 @@ public class Signatory {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchSigningSignatory2Response patchSigningSignatory2(@Nonnull PatchSigningSignatory2Request request) {
-        RequestOperation<PatchSigningSignatory2Request, PatchSigningSignatory2Response> operation
-              = new PatchSigningSignatory2.Sync(sdkConfiguration, _headers);
+    public PatchSigningSignatoryResponse patchSigningSignatory(@Nonnull PatchSigningSignatoryRequest request) {
+        RequestOperation<PatchSigningSignatoryRequest, PatchSigningSignatoryResponse> operation
+              = new PatchSigningSignatory.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -145,8 +145,8 @@ public class Signatory {
      * 
      * @return The call builder
      */
-    public RemoveSigningSignatory2RequestBuilder removeSigningSignatory2() {
-        return new RemoveSigningSignatory2RequestBuilder(sdkConfiguration);
+    public RemoveSigningSignatoryRequestBuilder removeSigningSignatory() {
+        return new RemoveSigningSignatoryRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -156,9 +156,9 @@ public class Signatory {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveSigningSignatory2Response removeSigningSignatory2(@Nonnull RemoveSigningSignatory2Request request) {
-        RequestOperation<RemoveSigningSignatory2Request, RemoveSigningSignatory2Response> operation
-              = new RemoveSigningSignatory2.Sync(sdkConfiguration, _headers);
+    public RemoveSigningSignatoryResponse removeSigningSignatory(@Nonnull RemoveSigningSignatoryRequest request) {
+        RequestOperation<RemoveSigningSignatoryRequest, RemoveSigningSignatoryResponse> operation
+              = new RemoveSigningSignatory.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -167,8 +167,8 @@ public class Signatory {
      * 
      * @return The call builder
      */
-    public UpdateSigningSignatory2RequestBuilder updateSigningSignatory2() {
-        return new UpdateSigningSignatory2RequestBuilder(sdkConfiguration);
+    public UpdateSigningSignatoryRequestBuilder updateSigningSignatory() {
+        return new UpdateSigningSignatoryRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -178,9 +178,9 @@ public class Signatory {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateSigningSignatory2Response updateSigningSignatory2(@Nonnull UpdateSigningSignatory2Request request) {
-        RequestOperation<UpdateSigningSignatory2Request, UpdateSigningSignatory2Response> operation
-              = new UpdateSigningSignatory2.Sync(sdkConfiguration, _headers);
+    public UpdateSigningSignatoryResponse updateSigningSignatory(@Nonnull UpdateSigningSignatoryRequest request) {
+        RequestOperation<UpdateSigningSignatoryRequest, UpdateSigningSignatoryResponse> operation
+              = new UpdateSigningSignatory.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

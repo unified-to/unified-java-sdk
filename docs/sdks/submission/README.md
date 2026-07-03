@@ -4,23 +4,23 @@
 
 ### Available Operations
 
-* [getFormsSubmission2](#getformssubmission2) - Retrieve a submission
-* [listFormsSubmissions2](#listformssubmissions2) - List all submissions
+* [getFormsSubmission](#getformssubmission) - Retrieve a submission
+* [listFormsSubmissions](#listformssubmissions) - List all submissions
 
-## getFormsSubmission2
+## getFormsSubmission
 
 Retrieve a submission
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="getFormsSubmission2" method="get" path="/forms/{connection_id}/submission/{id}" -->
+<!-- UsageSnippet language="java" operationID="getFormsSubmission" method="get" path="/forms/{connection_id}/submission/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.GetFormsSubmission2Request;
-import to.unified.unified_java_sdk.models.operations.GetFormsSubmission2Response;
+import to.unified.unified_java_sdk.models.operations.GetFormsSubmissionRequest;
+import to.unified.unified_java_sdk.models.operations.GetFormsSubmissionResponse;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -33,12 +33,12 @@ public class Application {
                     .build())
             .build();
 
-        GetFormsSubmission2Request req = GetFormsSubmission2Request.builder()
+        GetFormsSubmissionRequest req = GetFormsSubmissionRequest.builder()
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        GetFormsSubmission2Response res = sdk.submission().getFormsSubmission2()
+        GetFormsSubmissionResponse res = sdk.submission().getFormsSubmission()
                 .request(req)
                 .call();
 
@@ -51,13 +51,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                           | Type                                                                                | Required                                                                            | Description                                                                         |
-| ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
-| `request`                                                                           | [GetFormsSubmission2Request](../../models/operations/GetFormsSubmission2Request.md) | :heavy_check_mark:                                                                  | The request object to use for the request.                                          |
+| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
+| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| `request`                                                                         | [GetFormsSubmissionRequest](../../models/operations/GetFormsSubmissionRequest.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
 
 ### Response
 
-**[GetFormsSubmission2Response](../../models/operations/GetFormsSubmission2Response.md)**
+**[GetFormsSubmissionResponse](../../models/operations/GetFormsSubmissionResponse.md)**
 
 ### Errors
 
@@ -65,20 +65,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## listFormsSubmissions2
+## listFormsSubmissions
 
 List all submissions
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="listFormsSubmissions2" method="get" path="/forms/{connection_id}/submission" -->
+<!-- UsageSnippet language="java" operationID="listFormsSubmissions" method="get" path="/forms/{connection_id}/submission" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.ListFormsSubmissions2Request;
-import to.unified.unified_java_sdk.models.operations.ListFormsSubmissions2Response;
+import to.unified.unified_java_sdk.models.operations.ListFormsSubmissionsRequest;
+import to.unified.unified_java_sdk.models.operations.ListFormsSubmissionsResponse;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -91,11 +91,11 @@ public class Application {
                     .build())
             .build();
 
-        ListFormsSubmissions2Request req = ListFormsSubmissions2Request.builder()
+        ListFormsSubmissionsRequest req = ListFormsSubmissionsRequest.builder()
                 .connectionId("<id>")
                 .build();
 
-        ListFormsSubmissions2Response res = sdk.submission().listFormsSubmissions2()
+        ListFormsSubmissionsResponse res = sdk.submission().listFormsSubmissions()
                 .request(req)
                 .call();
 
@@ -108,13 +108,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
-| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
-| `request`                                                                               | [ListFormsSubmissions2Request](../../models/operations/ListFormsSubmissions2Request.md) | :heavy_check_mark:                                                                      | The request object to use for the request.                                              |
+| Parameter                                                                             | Type                                                                                  | Required                                                                              | Description                                                                           |
+| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| `request`                                                                             | [ListFormsSubmissionsRequest](../../models/operations/ListFormsSubmissionsRequest.md) | :heavy_check_mark:                                                                    | The request object to use for the request.                                            |
 
 ### Response
 
-**[ListFormsSubmissions2Response](../../models/operations/ListFormsSubmissions2Response.md)**
+**[ListFormsSubmissionsResponse](../../models/operations/ListFormsSubmissionsResponse.md)**
 
 ### Errors
 

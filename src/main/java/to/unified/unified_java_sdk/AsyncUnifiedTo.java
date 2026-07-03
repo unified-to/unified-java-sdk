@@ -53,6 +53,8 @@ public class AsyncUnifiedTo {
 
     private final AsyncTrialbalance trialbalance;
 
+    private final AsyncVendorcredit vendorcredit;
+
     private final AsyncAds ads;
 
     private final AsyncAd ad;
@@ -391,6 +393,10 @@ public class AsyncUnifiedTo {
 
     public AsyncTrialbalance trialbalance() {
         return trialbalance;
+    }
+
+    public AsyncVendorcredit vendorcredit() {
+        return vendorcredit;
     }
 
     public AsyncAds ads() {
@@ -939,6 +945,7 @@ public class AsyncUnifiedTo {
         this.taxrate = new AsyncTaxrate(syncSDK.taxrate(), sdkConfiguration);
         this.transaction = new AsyncTransaction(syncSDK.transaction(), sdkConfiguration);
         this.trialbalance = new AsyncTrialbalance(syncSDK.trialbalance(), sdkConfiguration);
+        this.vendorcredit = new AsyncVendorcredit(syncSDK.vendorcredit(), sdkConfiguration);
         this.ads = new AsyncAds(syncSDK.ads(), sdkConfiguration);
         this.ad = new AsyncAd(syncSDK.ad(), sdkConfiguration);
         this.campaign = new AsyncCampaign(syncSDK.campaign(), sdkConfiguration);

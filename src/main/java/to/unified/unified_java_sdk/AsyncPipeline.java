@@ -7,30 +7,30 @@ import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOper
 
 import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
-import to.unified.unified_java_sdk.models.operations.CreateCrmPipeline2Request;
-import to.unified.unified_java_sdk.models.operations.GetCrmPipeline2Request;
-import to.unified.unified_java_sdk.models.operations.ListCrmPipelines2Request;
-import to.unified.unified_java_sdk.models.operations.PatchCrmPipeline2Request;
-import to.unified.unified_java_sdk.models.operations.RemoveCrmPipeline2Request;
-import to.unified.unified_java_sdk.models.operations.UpdateCrmPipeline2Request;
-import to.unified.unified_java_sdk.models.operations.async.CreateCrmPipeline2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.CreateCrmPipeline2Response;
-import to.unified.unified_java_sdk.models.operations.async.GetCrmPipeline2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.GetCrmPipeline2Response;
-import to.unified.unified_java_sdk.models.operations.async.ListCrmPipelines2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.ListCrmPipelines2Response;
-import to.unified.unified_java_sdk.models.operations.async.PatchCrmPipeline2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.PatchCrmPipeline2Response;
-import to.unified.unified_java_sdk.models.operations.async.RemoveCrmPipeline2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.RemoveCrmPipeline2Response;
-import to.unified.unified_java_sdk.models.operations.async.UpdateCrmPipeline2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.UpdateCrmPipeline2Response;
-import to.unified.unified_java_sdk.operations.CreateCrmPipeline2;
-import to.unified.unified_java_sdk.operations.GetCrmPipeline2;
-import to.unified.unified_java_sdk.operations.ListCrmPipelines2;
-import to.unified.unified_java_sdk.operations.PatchCrmPipeline2;
-import to.unified.unified_java_sdk.operations.RemoveCrmPipeline2;
-import to.unified.unified_java_sdk.operations.UpdateCrmPipeline2;
+import to.unified.unified_java_sdk.models.operations.CreateCrmPipelineRequest;
+import to.unified.unified_java_sdk.models.operations.GetCrmPipelineRequest;
+import to.unified.unified_java_sdk.models.operations.ListCrmPipelinesRequest;
+import to.unified.unified_java_sdk.models.operations.PatchCrmPipelineRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveCrmPipelineRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateCrmPipelineRequest;
+import to.unified.unified_java_sdk.models.operations.async.CreateCrmPipelineRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.CreateCrmPipelineResponse;
+import to.unified.unified_java_sdk.models.operations.async.GetCrmPipelineRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetCrmPipelineResponse;
+import to.unified.unified_java_sdk.models.operations.async.ListCrmPipelinesRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListCrmPipelinesResponse;
+import to.unified.unified_java_sdk.models.operations.async.PatchCrmPipelineRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.PatchCrmPipelineResponse;
+import to.unified.unified_java_sdk.models.operations.async.RemoveCrmPipelineRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.RemoveCrmPipelineResponse;
+import to.unified.unified_java_sdk.models.operations.async.UpdateCrmPipelineRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.UpdateCrmPipelineResponse;
+import to.unified.unified_java_sdk.operations.CreateCrmPipeline;
+import to.unified.unified_java_sdk.operations.GetCrmPipeline;
+import to.unified.unified_java_sdk.operations.ListCrmPipelines;
+import to.unified.unified_java_sdk.operations.PatchCrmPipeline;
+import to.unified.unified_java_sdk.operations.RemoveCrmPipeline;
+import to.unified.unified_java_sdk.operations.UpdateCrmPipeline;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -59,19 +59,19 @@ public class AsyncPipeline {
      * 
      * @return The async call builder
      */
-    public CreateCrmPipeline2RequestBuilder createCrmPipeline2() {
-        return new CreateCrmPipeline2RequestBuilder(sdkConfiguration);
+    public CreateCrmPipelineRequestBuilder createCrmPipeline() {
+        return new CreateCrmPipelineRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Create a pipeline
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<CreateCrmPipeline2Response>} - The async response
+     * @return {@code CompletableFuture<CreateCrmPipelineResponse>} - The async response
      */
-    public CompletableFuture<CreateCrmPipeline2Response> createCrmPipeline2(@Nonnull CreateCrmPipeline2Request request) {
-        AsyncRequestOperation<CreateCrmPipeline2Request, CreateCrmPipeline2Response> operation
-              = new CreateCrmPipeline2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<CreateCrmPipelineResponse> createCrmPipeline(@Nonnull CreateCrmPipelineRequest request) {
+        AsyncRequestOperation<CreateCrmPipelineRequest, CreateCrmPipelineResponse> operation
+              = new CreateCrmPipeline.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -82,19 +82,19 @@ public class AsyncPipeline {
      * 
      * @return The async call builder
      */
-    public GetCrmPipeline2RequestBuilder getCrmPipeline2() {
-        return new GetCrmPipeline2RequestBuilder(sdkConfiguration);
+    public GetCrmPipelineRequestBuilder getCrmPipeline() {
+        return new GetCrmPipelineRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Retrieve a pipeline
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<GetCrmPipeline2Response>} - The async response
+     * @return {@code CompletableFuture<GetCrmPipelineResponse>} - The async response
      */
-    public CompletableFuture<GetCrmPipeline2Response> getCrmPipeline2(@Nonnull GetCrmPipeline2Request request) {
-        AsyncRequestOperation<GetCrmPipeline2Request, GetCrmPipeline2Response> operation
-              = new GetCrmPipeline2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<GetCrmPipelineResponse> getCrmPipeline(@Nonnull GetCrmPipelineRequest request) {
+        AsyncRequestOperation<GetCrmPipelineRequest, GetCrmPipelineResponse> operation
+              = new GetCrmPipeline.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -105,19 +105,19 @@ public class AsyncPipeline {
      * 
      * @return The async call builder
      */
-    public ListCrmPipelines2RequestBuilder listCrmPipelines2() {
-        return new ListCrmPipelines2RequestBuilder(sdkConfiguration);
+    public ListCrmPipelinesRequestBuilder listCrmPipelines() {
+        return new ListCrmPipelinesRequestBuilder(sdkConfiguration);
     }
 
     /**
      * List all pipelines
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<ListCrmPipelines2Response>} - The async response
+     * @return {@code CompletableFuture<ListCrmPipelinesResponse>} - The async response
      */
-    public CompletableFuture<ListCrmPipelines2Response> listCrmPipelines2(@Nonnull ListCrmPipelines2Request request) {
-        AsyncRequestOperation<ListCrmPipelines2Request, ListCrmPipelines2Response> operation
-              = new ListCrmPipelines2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<ListCrmPipelinesResponse> listCrmPipelines(@Nonnull ListCrmPipelinesRequest request) {
+        AsyncRequestOperation<ListCrmPipelinesRequest, ListCrmPipelinesResponse> operation
+              = new ListCrmPipelines.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -128,19 +128,19 @@ public class AsyncPipeline {
      * 
      * @return The async call builder
      */
-    public PatchCrmPipeline2RequestBuilder patchCrmPipeline2() {
-        return new PatchCrmPipeline2RequestBuilder(sdkConfiguration);
+    public PatchCrmPipelineRequestBuilder patchCrmPipeline() {
+        return new PatchCrmPipelineRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update a pipeline
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<PatchCrmPipeline2Response>} - The async response
+     * @return {@code CompletableFuture<PatchCrmPipelineResponse>} - The async response
      */
-    public CompletableFuture<PatchCrmPipeline2Response> patchCrmPipeline2(@Nonnull PatchCrmPipeline2Request request) {
-        AsyncRequestOperation<PatchCrmPipeline2Request, PatchCrmPipeline2Response> operation
-              = new PatchCrmPipeline2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<PatchCrmPipelineResponse> patchCrmPipeline(@Nonnull PatchCrmPipelineRequest request) {
+        AsyncRequestOperation<PatchCrmPipelineRequest, PatchCrmPipelineResponse> operation
+              = new PatchCrmPipeline.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -151,19 +151,19 @@ public class AsyncPipeline {
      * 
      * @return The async call builder
      */
-    public RemoveCrmPipeline2RequestBuilder removeCrmPipeline2() {
-        return new RemoveCrmPipeline2RequestBuilder(sdkConfiguration);
+    public RemoveCrmPipelineRequestBuilder removeCrmPipeline() {
+        return new RemoveCrmPipelineRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Remove a pipeline
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<RemoveCrmPipeline2Response>} - The async response
+     * @return {@code CompletableFuture<RemoveCrmPipelineResponse>} - The async response
      */
-    public CompletableFuture<RemoveCrmPipeline2Response> removeCrmPipeline2(@Nonnull RemoveCrmPipeline2Request request) {
-        AsyncRequestOperation<RemoveCrmPipeline2Request, RemoveCrmPipeline2Response> operation
-              = new RemoveCrmPipeline2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<RemoveCrmPipelineResponse> removeCrmPipeline(@Nonnull RemoveCrmPipelineRequest request) {
+        AsyncRequestOperation<RemoveCrmPipelineRequest, RemoveCrmPipelineResponse> operation
+              = new RemoveCrmPipeline.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -174,19 +174,19 @@ public class AsyncPipeline {
      * 
      * @return The async call builder
      */
-    public UpdateCrmPipeline2RequestBuilder updateCrmPipeline2() {
-        return new UpdateCrmPipeline2RequestBuilder(sdkConfiguration);
+    public UpdateCrmPipelineRequestBuilder updateCrmPipeline() {
+        return new UpdateCrmPipelineRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update a pipeline
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<UpdateCrmPipeline2Response>} - The async response
+     * @return {@code CompletableFuture<UpdateCrmPipelineResponse>} - The async response
      */
-    public CompletableFuture<UpdateCrmPipeline2Response> updateCrmPipeline2(@Nonnull UpdateCrmPipeline2Request request) {
-        AsyncRequestOperation<UpdateCrmPipeline2Request, UpdateCrmPipeline2Response> operation
-              = new UpdateCrmPipeline2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<UpdateCrmPipelineResponse> updateCrmPipeline(@Nonnull UpdateCrmPipelineRequest request) {
+        AsyncRequestOperation<UpdateCrmPipelineRequest, UpdateCrmPipelineResponse> operation
+              = new UpdateCrmPipeline.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

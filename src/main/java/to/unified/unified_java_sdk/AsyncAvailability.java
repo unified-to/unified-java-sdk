@@ -7,10 +7,10 @@ import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOper
 
 import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
-import to.unified.unified_java_sdk.models.operations.ListCommerceAvailabilities2Request;
-import to.unified.unified_java_sdk.models.operations.async.ListCommerceAvailabilities2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.ListCommerceAvailabilities2Response;
-import to.unified.unified_java_sdk.operations.ListCommerceAvailabilities2;
+import to.unified.unified_java_sdk.models.operations.ListCommerceAvailabilitiesRequest;
+import to.unified.unified_java_sdk.models.operations.async.ListCommerceAvailabilitiesRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListCommerceAvailabilitiesResponse;
+import to.unified.unified_java_sdk.operations.ListCommerceAvailabilities;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -39,19 +39,19 @@ public class AsyncAvailability {
      * 
      * @return The async call builder
      */
-    public ListCommerceAvailabilities2RequestBuilder listCommerceAvailabilities2() {
-        return new ListCommerceAvailabilities2RequestBuilder(sdkConfiguration);
+    public ListCommerceAvailabilitiesRequestBuilder listCommerceAvailabilities() {
+        return new ListCommerceAvailabilitiesRequestBuilder(sdkConfiguration);
     }
 
     /**
      * List all availabilities
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<ListCommerceAvailabilities2Response>} - The async response
+     * @return {@code CompletableFuture<ListCommerceAvailabilitiesResponse>} - The async response
      */
-    public CompletableFuture<ListCommerceAvailabilities2Response> listCommerceAvailabilities2(@Nonnull ListCommerceAvailabilities2Request request) {
-        AsyncRequestOperation<ListCommerceAvailabilities2Request, ListCommerceAvailabilities2Response> operation
-              = new ListCommerceAvailabilities2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<ListCommerceAvailabilitiesResponse> listCommerceAvailabilities(@Nonnull ListCommerceAvailabilitiesRequest request) {
+        AsyncRequestOperation<ListCommerceAvailabilitiesRequest, ListCommerceAvailabilitiesResponse> operation
+              = new ListCommerceAvailabilities.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

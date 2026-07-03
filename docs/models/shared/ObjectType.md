@@ -22,6 +22,7 @@ ObjectType custom = ObjectType.of("custom_value");
 | `ACCOUNTING_CONTACT`       | accounting_contact         |
 | `ACCOUNTING_INVOICE`       | accounting_invoice         |
 | `ACCOUNTING_BILL`          | accounting_bill            |
+| `ACCOUNTING_VENDORCREDIT`  | accounting_vendorcredit    |
 | `ACCOUNTING_CREDITMEMO`    | accounting_creditmemo      |
 | `ACCOUNTING_TAXRATE`       | accounting_taxrate         |
 | `ACCOUNTING_ORGANIZATION`  | accounting_organization    |

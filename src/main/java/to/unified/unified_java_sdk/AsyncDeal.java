@@ -7,30 +7,30 @@ import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOper
 
 import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
-import to.unified.unified_java_sdk.models.operations.CreateCrmDeal2Request;
-import to.unified.unified_java_sdk.models.operations.GetCrmDeal2Request;
-import to.unified.unified_java_sdk.models.operations.ListCrmDeals2Request;
-import to.unified.unified_java_sdk.models.operations.PatchCrmDeal2Request;
-import to.unified.unified_java_sdk.models.operations.RemoveCrmDeal2Request;
-import to.unified.unified_java_sdk.models.operations.UpdateCrmDeal2Request;
-import to.unified.unified_java_sdk.models.operations.async.CreateCrmDeal2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.CreateCrmDeal2Response;
-import to.unified.unified_java_sdk.models.operations.async.GetCrmDeal2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.GetCrmDeal2Response;
-import to.unified.unified_java_sdk.models.operations.async.ListCrmDeals2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.ListCrmDeals2Response;
-import to.unified.unified_java_sdk.models.operations.async.PatchCrmDeal2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.PatchCrmDeal2Response;
-import to.unified.unified_java_sdk.models.operations.async.RemoveCrmDeal2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.RemoveCrmDeal2Response;
-import to.unified.unified_java_sdk.models.operations.async.UpdateCrmDeal2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.UpdateCrmDeal2Response;
-import to.unified.unified_java_sdk.operations.CreateCrmDeal2;
-import to.unified.unified_java_sdk.operations.GetCrmDeal2;
-import to.unified.unified_java_sdk.operations.ListCrmDeals2;
-import to.unified.unified_java_sdk.operations.PatchCrmDeal2;
-import to.unified.unified_java_sdk.operations.RemoveCrmDeal2;
-import to.unified.unified_java_sdk.operations.UpdateCrmDeal2;
+import to.unified.unified_java_sdk.models.operations.CreateCrmDealRequest;
+import to.unified.unified_java_sdk.models.operations.GetCrmDealRequest;
+import to.unified.unified_java_sdk.models.operations.ListCrmDealsRequest;
+import to.unified.unified_java_sdk.models.operations.PatchCrmDealRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveCrmDealRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateCrmDealRequest;
+import to.unified.unified_java_sdk.models.operations.async.CreateCrmDealRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.CreateCrmDealResponse;
+import to.unified.unified_java_sdk.models.operations.async.GetCrmDealRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetCrmDealResponse;
+import to.unified.unified_java_sdk.models.operations.async.ListCrmDealsRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListCrmDealsResponse;
+import to.unified.unified_java_sdk.models.operations.async.PatchCrmDealRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.PatchCrmDealResponse;
+import to.unified.unified_java_sdk.models.operations.async.RemoveCrmDealRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.RemoveCrmDealResponse;
+import to.unified.unified_java_sdk.models.operations.async.UpdateCrmDealRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.UpdateCrmDealResponse;
+import to.unified.unified_java_sdk.operations.CreateCrmDeal;
+import to.unified.unified_java_sdk.operations.GetCrmDeal;
+import to.unified.unified_java_sdk.operations.ListCrmDeals;
+import to.unified.unified_java_sdk.operations.PatchCrmDeal;
+import to.unified.unified_java_sdk.operations.RemoveCrmDeal;
+import to.unified.unified_java_sdk.operations.UpdateCrmDeal;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -59,19 +59,19 @@ public class AsyncDeal {
      * 
      * @return The async call builder
      */
-    public CreateCrmDeal2RequestBuilder createCrmDeal2() {
-        return new CreateCrmDeal2RequestBuilder(sdkConfiguration);
+    public CreateCrmDealRequestBuilder createCrmDeal() {
+        return new CreateCrmDealRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Create a deal
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<CreateCrmDeal2Response>} - The async response
+     * @return {@code CompletableFuture<CreateCrmDealResponse>} - The async response
      */
-    public CompletableFuture<CreateCrmDeal2Response> createCrmDeal2(@Nonnull CreateCrmDeal2Request request) {
-        AsyncRequestOperation<CreateCrmDeal2Request, CreateCrmDeal2Response> operation
-              = new CreateCrmDeal2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<CreateCrmDealResponse> createCrmDeal(@Nonnull CreateCrmDealRequest request) {
+        AsyncRequestOperation<CreateCrmDealRequest, CreateCrmDealResponse> operation
+              = new CreateCrmDeal.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -82,19 +82,19 @@ public class AsyncDeal {
      * 
      * @return The async call builder
      */
-    public GetCrmDeal2RequestBuilder getCrmDeal2() {
-        return new GetCrmDeal2RequestBuilder(sdkConfiguration);
+    public GetCrmDealRequestBuilder getCrmDeal() {
+        return new GetCrmDealRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Retrieve a deal
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<GetCrmDeal2Response>} - The async response
+     * @return {@code CompletableFuture<GetCrmDealResponse>} - The async response
      */
-    public CompletableFuture<GetCrmDeal2Response> getCrmDeal2(@Nonnull GetCrmDeal2Request request) {
-        AsyncRequestOperation<GetCrmDeal2Request, GetCrmDeal2Response> operation
-              = new GetCrmDeal2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<GetCrmDealResponse> getCrmDeal(@Nonnull GetCrmDealRequest request) {
+        AsyncRequestOperation<GetCrmDealRequest, GetCrmDealResponse> operation
+              = new GetCrmDeal.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -105,19 +105,19 @@ public class AsyncDeal {
      * 
      * @return The async call builder
      */
-    public ListCrmDeals2RequestBuilder listCrmDeals2() {
-        return new ListCrmDeals2RequestBuilder(sdkConfiguration);
+    public ListCrmDealsRequestBuilder listCrmDeals() {
+        return new ListCrmDealsRequestBuilder(sdkConfiguration);
     }
 
     /**
      * List all deals
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<ListCrmDeals2Response>} - The async response
+     * @return {@code CompletableFuture<ListCrmDealsResponse>} - The async response
      */
-    public CompletableFuture<ListCrmDeals2Response> listCrmDeals2(@Nonnull ListCrmDeals2Request request) {
-        AsyncRequestOperation<ListCrmDeals2Request, ListCrmDeals2Response> operation
-              = new ListCrmDeals2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<ListCrmDealsResponse> listCrmDeals(@Nonnull ListCrmDealsRequest request) {
+        AsyncRequestOperation<ListCrmDealsRequest, ListCrmDealsResponse> operation
+              = new ListCrmDeals.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -128,19 +128,19 @@ public class AsyncDeal {
      * 
      * @return The async call builder
      */
-    public PatchCrmDeal2RequestBuilder patchCrmDeal2() {
-        return new PatchCrmDeal2RequestBuilder(sdkConfiguration);
+    public PatchCrmDealRequestBuilder patchCrmDeal() {
+        return new PatchCrmDealRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update a deal
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<PatchCrmDeal2Response>} - The async response
+     * @return {@code CompletableFuture<PatchCrmDealResponse>} - The async response
      */
-    public CompletableFuture<PatchCrmDeal2Response> patchCrmDeal2(@Nonnull PatchCrmDeal2Request request) {
-        AsyncRequestOperation<PatchCrmDeal2Request, PatchCrmDeal2Response> operation
-              = new PatchCrmDeal2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<PatchCrmDealResponse> patchCrmDeal(@Nonnull PatchCrmDealRequest request) {
+        AsyncRequestOperation<PatchCrmDealRequest, PatchCrmDealResponse> operation
+              = new PatchCrmDeal.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -151,19 +151,19 @@ public class AsyncDeal {
      * 
      * @return The async call builder
      */
-    public RemoveCrmDeal2RequestBuilder removeCrmDeal2() {
-        return new RemoveCrmDeal2RequestBuilder(sdkConfiguration);
+    public RemoveCrmDealRequestBuilder removeCrmDeal() {
+        return new RemoveCrmDealRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Remove a deal
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<RemoveCrmDeal2Response>} - The async response
+     * @return {@code CompletableFuture<RemoveCrmDealResponse>} - The async response
      */
-    public CompletableFuture<RemoveCrmDeal2Response> removeCrmDeal2(@Nonnull RemoveCrmDeal2Request request) {
-        AsyncRequestOperation<RemoveCrmDeal2Request, RemoveCrmDeal2Response> operation
-              = new RemoveCrmDeal2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<RemoveCrmDealResponse> removeCrmDeal(@Nonnull RemoveCrmDealRequest request) {
+        AsyncRequestOperation<RemoveCrmDealRequest, RemoveCrmDealResponse> operation
+              = new RemoveCrmDeal.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -174,19 +174,19 @@ public class AsyncDeal {
      * 
      * @return The async call builder
      */
-    public UpdateCrmDeal2RequestBuilder updateCrmDeal2() {
-        return new UpdateCrmDeal2RequestBuilder(sdkConfiguration);
+    public UpdateCrmDealRequestBuilder updateCrmDeal() {
+        return new UpdateCrmDealRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update a deal
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<UpdateCrmDeal2Response>} - The async response
+     * @return {@code CompletableFuture<UpdateCrmDealResponse>} - The async response
      */
-    public CompletableFuture<UpdateCrmDeal2Response> updateCrmDeal2(@Nonnull UpdateCrmDeal2Request request) {
-        AsyncRequestOperation<UpdateCrmDeal2Request, UpdateCrmDeal2Response> operation
-              = new UpdateCrmDeal2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<UpdateCrmDealResponse> updateCrmDeal(@Nonnull UpdateCrmDealRequest request) {
+        AsyncRequestOperation<UpdateCrmDealRequest, UpdateCrmDealResponse> operation
+              = new UpdateCrmDeal.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

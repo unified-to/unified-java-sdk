@@ -6,14 +6,14 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
-import to.unified.unified_java_sdk.models.operations.GetAnalyticsSession2Request;
-import to.unified.unified_java_sdk.models.operations.GetAnalyticsSession2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.GetAnalyticsSession2Response;
-import to.unified.unified_java_sdk.models.operations.ListAnalyticsSessions2Request;
-import to.unified.unified_java_sdk.models.operations.ListAnalyticsSessions2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.ListAnalyticsSessions2Response;
-import to.unified.unified_java_sdk.operations.GetAnalyticsSession2;
-import to.unified.unified_java_sdk.operations.ListAnalyticsSessions2;
+import to.unified.unified_java_sdk.models.operations.GetAnalyticsSessionRequest;
+import to.unified.unified_java_sdk.models.operations.GetAnalyticsSessionRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetAnalyticsSessionResponse;
+import to.unified.unified_java_sdk.models.operations.ListAnalyticsSessionsRequest;
+import to.unified.unified_java_sdk.models.operations.ListAnalyticsSessionsRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListAnalyticsSessionsResponse;
+import to.unified.unified_java_sdk.operations.GetAnalyticsSession;
+import to.unified.unified_java_sdk.operations.ListAnalyticsSessions;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -41,8 +41,8 @@ public class Session {
      * 
      * @return The call builder
      */
-    public GetAnalyticsSession2RequestBuilder getAnalyticsSession2() {
-        return new GetAnalyticsSession2RequestBuilder(sdkConfiguration);
+    public GetAnalyticsSessionRequestBuilder getAnalyticsSession() {
+        return new GetAnalyticsSessionRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -52,9 +52,9 @@ public class Session {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetAnalyticsSession2Response getAnalyticsSession2(@Nonnull GetAnalyticsSession2Request request) {
-        RequestOperation<GetAnalyticsSession2Request, GetAnalyticsSession2Response> operation
-              = new GetAnalyticsSession2.Sync(sdkConfiguration, _headers);
+    public GetAnalyticsSessionResponse getAnalyticsSession(@Nonnull GetAnalyticsSessionRequest request) {
+        RequestOperation<GetAnalyticsSessionRequest, GetAnalyticsSessionResponse> operation
+              = new GetAnalyticsSession.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -63,8 +63,8 @@ public class Session {
      * 
      * @return The call builder
      */
-    public ListAnalyticsSessions2RequestBuilder listAnalyticsSessions2() {
-        return new ListAnalyticsSessions2RequestBuilder(sdkConfiguration);
+    public ListAnalyticsSessionsRequestBuilder listAnalyticsSessions() {
+        return new ListAnalyticsSessionsRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -74,9 +74,9 @@ public class Session {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListAnalyticsSessions2Response listAnalyticsSessions2(@Nonnull ListAnalyticsSessions2Request request) {
-        RequestOperation<ListAnalyticsSessions2Request, ListAnalyticsSessions2Response> operation
-              = new ListAnalyticsSessions2.Sync(sdkConfiguration, _headers);
+    public ListAnalyticsSessionsResponse listAnalyticsSessions(@Nonnull ListAnalyticsSessionsRequest request) {
+        RequestOperation<ListAnalyticsSessionsRequest, ListAnalyticsSessionsResponse> operation
+              = new ListAnalyticsSessions.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

@@ -6,82 +6,82 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
-import to.unified.unified_java_sdk.models.operations.CreateAnalyticsEvent2Request;
-import to.unified.unified_java_sdk.models.operations.CreateAnalyticsEvent2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.CreateAnalyticsEvent2Response;
-import to.unified.unified_java_sdk.models.operations.CreateCalendarEvent2Request;
-import to.unified.unified_java_sdk.models.operations.CreateCalendarEvent2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.CreateCalendarEvent2Response;
-import to.unified.unified_java_sdk.models.operations.CreateCrmEvent2Request;
-import to.unified.unified_java_sdk.models.operations.CreateCrmEvent2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.CreateCrmEvent2Response;
-import to.unified.unified_java_sdk.models.operations.GetAnalyticsEvent2Request;
-import to.unified.unified_java_sdk.models.operations.GetAnalyticsEvent2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.GetAnalyticsEvent2Response;
-import to.unified.unified_java_sdk.models.operations.GetCalendarEvent2Request;
-import to.unified.unified_java_sdk.models.operations.GetCalendarEvent2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.GetCalendarEvent2Response;
-import to.unified.unified_java_sdk.models.operations.GetClubsEvent2Request;
-import to.unified.unified_java_sdk.models.operations.GetClubsEvent2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.GetClubsEvent2Response;
-import to.unified.unified_java_sdk.models.operations.GetCrmEvent2Request;
-import to.unified.unified_java_sdk.models.operations.GetCrmEvent2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.GetCrmEvent2Response;
-import to.unified.unified_java_sdk.models.operations.ListAnalyticsEvents2Request;
-import to.unified.unified_java_sdk.models.operations.ListAnalyticsEvents2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.ListAnalyticsEvents2Response;
-import to.unified.unified_java_sdk.models.operations.ListCalendarEvents2Request;
-import to.unified.unified_java_sdk.models.operations.ListCalendarEvents2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.ListCalendarEvents2Response;
-import to.unified.unified_java_sdk.models.operations.ListClubsEvents2Request;
-import to.unified.unified_java_sdk.models.operations.ListClubsEvents2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.ListClubsEvents2Response;
-import to.unified.unified_java_sdk.models.operations.ListCrmEvents2Request;
-import to.unified.unified_java_sdk.models.operations.ListCrmEvents2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.ListCrmEvents2Response;
-import to.unified.unified_java_sdk.models.operations.PatchCalendarEvent2Request;
-import to.unified.unified_java_sdk.models.operations.PatchCalendarEvent2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.PatchCalendarEvent2Response;
-import to.unified.unified_java_sdk.models.operations.PatchCrmEvent2Request;
-import to.unified.unified_java_sdk.models.operations.PatchCrmEvent2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.PatchCrmEvent2Response;
-import to.unified.unified_java_sdk.models.operations.PatchMessagingEvent2Request;
-import to.unified.unified_java_sdk.models.operations.PatchMessagingEvent2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.PatchMessagingEvent2Response;
-import to.unified.unified_java_sdk.models.operations.RemoveCalendarEvent2Request;
-import to.unified.unified_java_sdk.models.operations.RemoveCalendarEvent2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.RemoveCalendarEvent2Response;
-import to.unified.unified_java_sdk.models.operations.RemoveCrmEvent2Request;
-import to.unified.unified_java_sdk.models.operations.RemoveCrmEvent2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.RemoveCrmEvent2Response;
-import to.unified.unified_java_sdk.models.operations.UpdateCalendarEvent2Request;
-import to.unified.unified_java_sdk.models.operations.UpdateCalendarEvent2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.UpdateCalendarEvent2Response;
-import to.unified.unified_java_sdk.models.operations.UpdateCrmEvent2Request;
-import to.unified.unified_java_sdk.models.operations.UpdateCrmEvent2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.UpdateCrmEvent2Response;
-import to.unified.unified_java_sdk.models.operations.UpdateMessagingEvent2Request;
-import to.unified.unified_java_sdk.models.operations.UpdateMessagingEvent2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.UpdateMessagingEvent2Response;
-import to.unified.unified_java_sdk.operations.CreateAnalyticsEvent2;
-import to.unified.unified_java_sdk.operations.CreateCalendarEvent2;
-import to.unified.unified_java_sdk.operations.CreateCrmEvent2;
-import to.unified.unified_java_sdk.operations.GetAnalyticsEvent2;
-import to.unified.unified_java_sdk.operations.GetCalendarEvent2;
-import to.unified.unified_java_sdk.operations.GetClubsEvent2;
-import to.unified.unified_java_sdk.operations.GetCrmEvent2;
-import to.unified.unified_java_sdk.operations.ListAnalyticsEvents2;
-import to.unified.unified_java_sdk.operations.ListCalendarEvents2;
-import to.unified.unified_java_sdk.operations.ListClubsEvents2;
-import to.unified.unified_java_sdk.operations.ListCrmEvents2;
-import to.unified.unified_java_sdk.operations.PatchCalendarEvent2;
-import to.unified.unified_java_sdk.operations.PatchCrmEvent2;
-import to.unified.unified_java_sdk.operations.PatchMessagingEvent2;
-import to.unified.unified_java_sdk.operations.RemoveCalendarEvent2;
-import to.unified.unified_java_sdk.operations.RemoveCrmEvent2;
-import to.unified.unified_java_sdk.operations.UpdateCalendarEvent2;
-import to.unified.unified_java_sdk.operations.UpdateCrmEvent2;
-import to.unified.unified_java_sdk.operations.UpdateMessagingEvent2;
+import to.unified.unified_java_sdk.models.operations.CreateAnalyticsEventRequest;
+import to.unified.unified_java_sdk.models.operations.CreateAnalyticsEventRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.CreateAnalyticsEventResponse;
+import to.unified.unified_java_sdk.models.operations.CreateCalendarEventRequest;
+import to.unified.unified_java_sdk.models.operations.CreateCalendarEventRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.CreateCalendarEventResponse;
+import to.unified.unified_java_sdk.models.operations.CreateCrmEventRequest;
+import to.unified.unified_java_sdk.models.operations.CreateCrmEventRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.CreateCrmEventResponse;
+import to.unified.unified_java_sdk.models.operations.GetAnalyticsEventRequest;
+import to.unified.unified_java_sdk.models.operations.GetAnalyticsEventRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetAnalyticsEventResponse;
+import to.unified.unified_java_sdk.models.operations.GetCalendarEventRequest;
+import to.unified.unified_java_sdk.models.operations.GetCalendarEventRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetCalendarEventResponse;
+import to.unified.unified_java_sdk.models.operations.GetClubsEventRequest;
+import to.unified.unified_java_sdk.models.operations.GetClubsEventRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetClubsEventResponse;
+import to.unified.unified_java_sdk.models.operations.GetCrmEventRequest;
+import to.unified.unified_java_sdk.models.operations.GetCrmEventRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetCrmEventResponse;
+import to.unified.unified_java_sdk.models.operations.ListAnalyticsEventsRequest;
+import to.unified.unified_java_sdk.models.operations.ListAnalyticsEventsRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListAnalyticsEventsResponse;
+import to.unified.unified_java_sdk.models.operations.ListCalendarEventsRequest;
+import to.unified.unified_java_sdk.models.operations.ListCalendarEventsRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListCalendarEventsResponse;
+import to.unified.unified_java_sdk.models.operations.ListClubsEventsRequest;
+import to.unified.unified_java_sdk.models.operations.ListClubsEventsRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListClubsEventsResponse;
+import to.unified.unified_java_sdk.models.operations.ListCrmEventsRequest;
+import to.unified.unified_java_sdk.models.operations.ListCrmEventsRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListCrmEventsResponse;
+import to.unified.unified_java_sdk.models.operations.PatchCalendarEventRequest;
+import to.unified.unified_java_sdk.models.operations.PatchCalendarEventRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.PatchCalendarEventResponse;
+import to.unified.unified_java_sdk.models.operations.PatchCrmEventRequest;
+import to.unified.unified_java_sdk.models.operations.PatchCrmEventRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.PatchCrmEventResponse;
+import to.unified.unified_java_sdk.models.operations.PatchMessagingEventRequest;
+import to.unified.unified_java_sdk.models.operations.PatchMessagingEventRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.PatchMessagingEventResponse;
+import to.unified.unified_java_sdk.models.operations.RemoveCalendarEventRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveCalendarEventRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.RemoveCalendarEventResponse;
+import to.unified.unified_java_sdk.models.operations.RemoveCrmEventRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveCrmEventRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.RemoveCrmEventResponse;
+import to.unified.unified_java_sdk.models.operations.UpdateCalendarEventRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateCalendarEventRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.UpdateCalendarEventResponse;
+import to.unified.unified_java_sdk.models.operations.UpdateCrmEventRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateCrmEventRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.UpdateCrmEventResponse;
+import to.unified.unified_java_sdk.models.operations.UpdateMessagingEventRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateMessagingEventRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.UpdateMessagingEventResponse;
+import to.unified.unified_java_sdk.operations.CreateAnalyticsEvent;
+import to.unified.unified_java_sdk.operations.CreateCalendarEvent;
+import to.unified.unified_java_sdk.operations.CreateCrmEvent;
+import to.unified.unified_java_sdk.operations.GetAnalyticsEvent;
+import to.unified.unified_java_sdk.operations.GetCalendarEvent;
+import to.unified.unified_java_sdk.operations.GetClubsEvent;
+import to.unified.unified_java_sdk.operations.GetCrmEvent;
+import to.unified.unified_java_sdk.operations.ListAnalyticsEvents;
+import to.unified.unified_java_sdk.operations.ListCalendarEvents;
+import to.unified.unified_java_sdk.operations.ListClubsEvents;
+import to.unified.unified_java_sdk.operations.ListCrmEvents;
+import to.unified.unified_java_sdk.operations.PatchCalendarEvent;
+import to.unified.unified_java_sdk.operations.PatchCrmEvent;
+import to.unified.unified_java_sdk.operations.PatchMessagingEvent;
+import to.unified.unified_java_sdk.operations.RemoveCalendarEvent;
+import to.unified.unified_java_sdk.operations.RemoveCrmEvent;
+import to.unified.unified_java_sdk.operations.UpdateCalendarEvent;
+import to.unified.unified_java_sdk.operations.UpdateCrmEvent;
+import to.unified.unified_java_sdk.operations.UpdateMessagingEvent;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -109,8 +109,8 @@ public class Event {
      * 
      * @return The call builder
      */
-    public CreateAnalyticsEvent2RequestBuilder createAnalyticsEvent2() {
-        return new CreateAnalyticsEvent2RequestBuilder(sdkConfiguration);
+    public CreateAnalyticsEventRequestBuilder createAnalyticsEvent() {
+        return new CreateAnalyticsEventRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -120,9 +120,9 @@ public class Event {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateAnalyticsEvent2Response createAnalyticsEvent2(@Nonnull CreateAnalyticsEvent2Request request) {
-        RequestOperation<CreateAnalyticsEvent2Request, CreateAnalyticsEvent2Response> operation
-              = new CreateAnalyticsEvent2.Sync(sdkConfiguration, _headers);
+    public CreateAnalyticsEventResponse createAnalyticsEvent(@Nonnull CreateAnalyticsEventRequest request) {
+        RequestOperation<CreateAnalyticsEventRequest, CreateAnalyticsEventResponse> operation
+              = new CreateAnalyticsEvent.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -131,30 +131,8 @@ public class Event {
      * 
      * @return The call builder
      */
-    public CreateCalendarEvent2RequestBuilder createCalendarEvent2() {
-        return new CreateCalendarEvent2RequestBuilder(sdkConfiguration);
-    }
-
-    /**
-     * Create an event
-     * 
-     * @param request The request object containing all the parameters for the API call.
-     * @return The response from the API call
-     * @throws RuntimeException subclass if the API call fails
-     */
-    public CreateCalendarEvent2Response createCalendarEvent2(@Nonnull CreateCalendarEvent2Request request) {
-        RequestOperation<CreateCalendarEvent2Request, CreateCalendarEvent2Response> operation
-              = new CreateCalendarEvent2.Sync(sdkConfiguration, _headers);
-        return operation.handleResponse(operation.doRequest(request));
-    }
-
-    /**
-     * Create an event
-     * 
-     * @return The call builder
-     */
-    public CreateCrmEvent2RequestBuilder createCrmEvent2() {
-        return new CreateCrmEvent2RequestBuilder(sdkConfiguration);
+    public CreateCalendarEventRequestBuilder createCalendarEvent() {
+        return new CreateCalendarEventRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -164,31 +142,31 @@ public class Event {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateCrmEvent2Response createCrmEvent2(@Nonnull CreateCrmEvent2Request request) {
-        RequestOperation<CreateCrmEvent2Request, CreateCrmEvent2Response> operation
-              = new CreateCrmEvent2.Sync(sdkConfiguration, _headers);
+    public CreateCalendarEventResponse createCalendarEvent(@Nonnull CreateCalendarEventRequest request) {
+        RequestOperation<CreateCalendarEventRequest, CreateCalendarEventResponse> operation
+              = new CreateCalendarEvent.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
     /**
-     * Retrieve an event
+     * Create an event
      * 
      * @return The call builder
      */
-    public GetAnalyticsEvent2RequestBuilder getAnalyticsEvent2() {
-        return new GetAnalyticsEvent2RequestBuilder(sdkConfiguration);
+    public CreateCrmEventRequestBuilder createCrmEvent() {
+        return new CreateCrmEventRequestBuilder(sdkConfiguration);
     }
 
     /**
-     * Retrieve an event
+     * Create an event
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetAnalyticsEvent2Response getAnalyticsEvent2(@Nonnull GetAnalyticsEvent2Request request) {
-        RequestOperation<GetAnalyticsEvent2Request, GetAnalyticsEvent2Response> operation
-              = new GetAnalyticsEvent2.Sync(sdkConfiguration, _headers);
+    public CreateCrmEventResponse createCrmEvent(@Nonnull CreateCrmEventRequest request) {
+        RequestOperation<CreateCrmEventRequest, CreateCrmEventResponse> operation
+              = new CreateCrmEvent.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -197,30 +175,8 @@ public class Event {
      * 
      * @return The call builder
      */
-    public GetCalendarEvent2RequestBuilder getCalendarEvent2() {
-        return new GetCalendarEvent2RequestBuilder(sdkConfiguration);
-    }
-
-    /**
-     * Retrieve an event
-     * 
-     * @param request The request object containing all the parameters for the API call.
-     * @return The response from the API call
-     * @throws RuntimeException subclass if the API call fails
-     */
-    public GetCalendarEvent2Response getCalendarEvent2(@Nonnull GetCalendarEvent2Request request) {
-        RequestOperation<GetCalendarEvent2Request, GetCalendarEvent2Response> operation
-              = new GetCalendarEvent2.Sync(sdkConfiguration, _headers);
-        return operation.handleResponse(operation.doRequest(request));
-    }
-
-    /**
-     * Retrieve an event
-     * 
-     * @return The call builder
-     */
-    public GetClubsEvent2RequestBuilder getClubsEvent2() {
-        return new GetClubsEvent2RequestBuilder(sdkConfiguration);
+    public GetAnalyticsEventRequestBuilder getAnalyticsEvent() {
+        return new GetAnalyticsEventRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -230,9 +186,9 @@ public class Event {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetClubsEvent2Response getClubsEvent2(@Nonnull GetClubsEvent2Request request) {
-        RequestOperation<GetClubsEvent2Request, GetClubsEvent2Response> operation
-              = new GetClubsEvent2.Sync(sdkConfiguration, _headers);
+    public GetAnalyticsEventResponse getAnalyticsEvent(@Nonnull GetAnalyticsEventRequest request) {
+        RequestOperation<GetAnalyticsEventRequest, GetAnalyticsEventResponse> operation
+              = new GetAnalyticsEvent.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -241,8 +197,8 @@ public class Event {
      * 
      * @return The call builder
      */
-    public GetCrmEvent2RequestBuilder getCrmEvent2() {
-        return new GetCrmEvent2RequestBuilder(sdkConfiguration);
+    public GetCalendarEventRequestBuilder getCalendarEvent() {
+        return new GetCalendarEventRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -252,9 +208,53 @@ public class Event {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetCrmEvent2Response getCrmEvent2(@Nonnull GetCrmEvent2Request request) {
-        RequestOperation<GetCrmEvent2Request, GetCrmEvent2Response> operation
-              = new GetCrmEvent2.Sync(sdkConfiguration, _headers);
+    public GetCalendarEventResponse getCalendarEvent(@Nonnull GetCalendarEventRequest request) {
+        RequestOperation<GetCalendarEventRequest, GetCalendarEventResponse> operation
+              = new GetCalendarEvent.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Retrieve an event
+     * 
+     * @return The call builder
+     */
+    public GetClubsEventRequestBuilder getClubsEvent() {
+        return new GetClubsEventRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Retrieve an event
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetClubsEventResponse getClubsEvent(@Nonnull GetClubsEventRequest request) {
+        RequestOperation<GetClubsEventRequest, GetClubsEventResponse> operation
+              = new GetClubsEvent.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Retrieve an event
+     * 
+     * @return The call builder
+     */
+    public GetCrmEventRequestBuilder getCrmEvent() {
+        return new GetCrmEventRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Retrieve an event
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetCrmEventResponse getCrmEvent(@Nonnull GetCrmEventRequest request) {
+        RequestOperation<GetCrmEventRequest, GetCrmEventResponse> operation
+              = new GetCrmEvent.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -263,8 +263,8 @@ public class Event {
      * 
      * @return The call builder
      */
-    public ListAnalyticsEvents2RequestBuilder listAnalyticsEvents2() {
-        return new ListAnalyticsEvents2RequestBuilder(sdkConfiguration);
+    public ListAnalyticsEventsRequestBuilder listAnalyticsEvents() {
+        return new ListAnalyticsEventsRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -274,9 +274,9 @@ public class Event {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListAnalyticsEvents2Response listAnalyticsEvents2(@Nonnull ListAnalyticsEvents2Request request) {
-        RequestOperation<ListAnalyticsEvents2Request, ListAnalyticsEvents2Response> operation
-              = new ListAnalyticsEvents2.Sync(sdkConfiguration, _headers);
+    public ListAnalyticsEventsResponse listAnalyticsEvents(@Nonnull ListAnalyticsEventsRequest request) {
+        RequestOperation<ListAnalyticsEventsRequest, ListAnalyticsEventsResponse> operation
+              = new ListAnalyticsEvents.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -285,8 +285,8 @@ public class Event {
      * 
      * @return The call builder
      */
-    public ListCalendarEvents2RequestBuilder listCalendarEvents2() {
-        return new ListCalendarEvents2RequestBuilder(sdkConfiguration);
+    public ListCalendarEventsRequestBuilder listCalendarEvents() {
+        return new ListCalendarEventsRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -296,9 +296,9 @@ public class Event {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListCalendarEvents2Response listCalendarEvents2(@Nonnull ListCalendarEvents2Request request) {
-        RequestOperation<ListCalendarEvents2Request, ListCalendarEvents2Response> operation
-              = new ListCalendarEvents2.Sync(sdkConfiguration, _headers);
+    public ListCalendarEventsResponse listCalendarEvents(@Nonnull ListCalendarEventsRequest request) {
+        RequestOperation<ListCalendarEventsRequest, ListCalendarEventsResponse> operation
+              = new ListCalendarEvents.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -307,8 +307,8 @@ public class Event {
      * 
      * @return The call builder
      */
-    public ListClubsEvents2RequestBuilder listClubsEvents2() {
-        return new ListClubsEvents2RequestBuilder(sdkConfiguration);
+    public ListClubsEventsRequestBuilder listClubsEvents() {
+        return new ListClubsEventsRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -318,9 +318,9 @@ public class Event {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListClubsEvents2Response listClubsEvents2(@Nonnull ListClubsEvents2Request request) {
-        RequestOperation<ListClubsEvents2Request, ListClubsEvents2Response> operation
-              = new ListClubsEvents2.Sync(sdkConfiguration, _headers);
+    public ListClubsEventsResponse listClubsEvents(@Nonnull ListClubsEventsRequest request) {
+        RequestOperation<ListClubsEventsRequest, ListClubsEventsResponse> operation
+              = new ListClubsEvents.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -329,8 +329,8 @@ public class Event {
      * 
      * @return The call builder
      */
-    public ListCrmEvents2RequestBuilder listCrmEvents2() {
-        return new ListCrmEvents2RequestBuilder(sdkConfiguration);
+    public ListCrmEventsRequestBuilder listCrmEvents() {
+        return new ListCrmEventsRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -340,9 +340,9 @@ public class Event {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListCrmEvents2Response listCrmEvents2(@Nonnull ListCrmEvents2Request request) {
-        RequestOperation<ListCrmEvents2Request, ListCrmEvents2Response> operation
-              = new ListCrmEvents2.Sync(sdkConfiguration, _headers);
+    public ListCrmEventsResponse listCrmEvents(@Nonnull ListCrmEventsRequest request) {
+        RequestOperation<ListCrmEventsRequest, ListCrmEventsResponse> operation
+              = new ListCrmEvents.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -351,52 +351,8 @@ public class Event {
      * 
      * @return The call builder
      */
-    public PatchCalendarEvent2RequestBuilder patchCalendarEvent2() {
-        return new PatchCalendarEvent2RequestBuilder(sdkConfiguration);
-    }
-
-    /**
-     * Update an event
-     * 
-     * @param request The request object containing all the parameters for the API call.
-     * @return The response from the API call
-     * @throws RuntimeException subclass if the API call fails
-     */
-    public PatchCalendarEvent2Response patchCalendarEvent2(@Nonnull PatchCalendarEvent2Request request) {
-        RequestOperation<PatchCalendarEvent2Request, PatchCalendarEvent2Response> operation
-              = new PatchCalendarEvent2.Sync(sdkConfiguration, _headers);
-        return operation.handleResponse(operation.doRequest(request));
-    }
-
-    /**
-     * Update an event
-     * 
-     * @return The call builder
-     */
-    public PatchCrmEvent2RequestBuilder patchCrmEvent2() {
-        return new PatchCrmEvent2RequestBuilder(sdkConfiguration);
-    }
-
-    /**
-     * Update an event
-     * 
-     * @param request The request object containing all the parameters for the API call.
-     * @return The response from the API call
-     * @throws RuntimeException subclass if the API call fails
-     */
-    public PatchCrmEvent2Response patchCrmEvent2(@Nonnull PatchCrmEvent2Request request) {
-        RequestOperation<PatchCrmEvent2Request, PatchCrmEvent2Response> operation
-              = new PatchCrmEvent2.Sync(sdkConfiguration, _headers);
-        return operation.handleResponse(operation.doRequest(request));
-    }
-
-    /**
-     * Update an event
-     * 
-     * @return The call builder
-     */
-    public PatchMessagingEvent2RequestBuilder patchMessagingEvent2() {
-        return new PatchMessagingEvent2RequestBuilder(sdkConfiguration);
+    public PatchCalendarEventRequestBuilder patchCalendarEvent() {
+        return new PatchCalendarEventRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -406,9 +362,53 @@ public class Event {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchMessagingEvent2Response patchMessagingEvent2(@Nonnull PatchMessagingEvent2Request request) {
-        RequestOperation<PatchMessagingEvent2Request, PatchMessagingEvent2Response> operation
-              = new PatchMessagingEvent2.Sync(sdkConfiguration, _headers);
+    public PatchCalendarEventResponse patchCalendarEvent(@Nonnull PatchCalendarEventRequest request) {
+        RequestOperation<PatchCalendarEventRequest, PatchCalendarEventResponse> operation
+              = new PatchCalendarEvent.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Update an event
+     * 
+     * @return The call builder
+     */
+    public PatchCrmEventRequestBuilder patchCrmEvent() {
+        return new PatchCrmEventRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Update an event
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchCrmEventResponse patchCrmEvent(@Nonnull PatchCrmEventRequest request) {
+        RequestOperation<PatchCrmEventRequest, PatchCrmEventResponse> operation
+              = new PatchCrmEvent.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Update an event
+     * 
+     * @return The call builder
+     */
+    public PatchMessagingEventRequestBuilder patchMessagingEvent() {
+        return new PatchMessagingEventRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Update an event
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchMessagingEventResponse patchMessagingEvent(@Nonnull PatchMessagingEventRequest request) {
+        RequestOperation<PatchMessagingEventRequest, PatchMessagingEventResponse> operation
+              = new PatchMessagingEvent.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -417,30 +417,8 @@ public class Event {
      * 
      * @return The call builder
      */
-    public RemoveCalendarEvent2RequestBuilder removeCalendarEvent2() {
-        return new RemoveCalendarEvent2RequestBuilder(sdkConfiguration);
-    }
-
-    /**
-     * Remove an event
-     * 
-     * @param request The request object containing all the parameters for the API call.
-     * @return The response from the API call
-     * @throws RuntimeException subclass if the API call fails
-     */
-    public RemoveCalendarEvent2Response removeCalendarEvent2(@Nonnull RemoveCalendarEvent2Request request) {
-        RequestOperation<RemoveCalendarEvent2Request, RemoveCalendarEvent2Response> operation
-              = new RemoveCalendarEvent2.Sync(sdkConfiguration, _headers);
-        return operation.handleResponse(operation.doRequest(request));
-    }
-
-    /**
-     * Remove an event
-     * 
-     * @return The call builder
-     */
-    public RemoveCrmEvent2RequestBuilder removeCrmEvent2() {
-        return new RemoveCrmEvent2RequestBuilder(sdkConfiguration);
+    public RemoveCalendarEventRequestBuilder removeCalendarEvent() {
+        return new RemoveCalendarEventRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -450,9 +428,31 @@ public class Event {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveCrmEvent2Response removeCrmEvent2(@Nonnull RemoveCrmEvent2Request request) {
-        RequestOperation<RemoveCrmEvent2Request, RemoveCrmEvent2Response> operation
-              = new RemoveCrmEvent2.Sync(sdkConfiguration, _headers);
+    public RemoveCalendarEventResponse removeCalendarEvent(@Nonnull RemoveCalendarEventRequest request) {
+        RequestOperation<RemoveCalendarEventRequest, RemoveCalendarEventResponse> operation
+              = new RemoveCalendarEvent.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Remove an event
+     * 
+     * @return The call builder
+     */
+    public RemoveCrmEventRequestBuilder removeCrmEvent() {
+        return new RemoveCrmEventRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Remove an event
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveCrmEventResponse removeCrmEvent(@Nonnull RemoveCrmEventRequest request) {
+        RequestOperation<RemoveCrmEventRequest, RemoveCrmEventResponse> operation
+              = new RemoveCrmEvent.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -461,8 +461,8 @@ public class Event {
      * 
      * @return The call builder
      */
-    public UpdateCalendarEvent2RequestBuilder updateCalendarEvent2() {
-        return new UpdateCalendarEvent2RequestBuilder(sdkConfiguration);
+    public UpdateCalendarEventRequestBuilder updateCalendarEvent() {
+        return new UpdateCalendarEventRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -472,9 +472,9 @@ public class Event {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateCalendarEvent2Response updateCalendarEvent2(@Nonnull UpdateCalendarEvent2Request request) {
-        RequestOperation<UpdateCalendarEvent2Request, UpdateCalendarEvent2Response> operation
-              = new UpdateCalendarEvent2.Sync(sdkConfiguration, _headers);
+    public UpdateCalendarEventResponse updateCalendarEvent(@Nonnull UpdateCalendarEventRequest request) {
+        RequestOperation<UpdateCalendarEventRequest, UpdateCalendarEventResponse> operation
+              = new UpdateCalendarEvent.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -483,8 +483,8 @@ public class Event {
      * 
      * @return The call builder
      */
-    public UpdateCrmEvent2RequestBuilder updateCrmEvent2() {
-        return new UpdateCrmEvent2RequestBuilder(sdkConfiguration);
+    public UpdateCrmEventRequestBuilder updateCrmEvent() {
+        return new UpdateCrmEventRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -494,9 +494,9 @@ public class Event {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateCrmEvent2Response updateCrmEvent2(@Nonnull UpdateCrmEvent2Request request) {
-        RequestOperation<UpdateCrmEvent2Request, UpdateCrmEvent2Response> operation
-              = new UpdateCrmEvent2.Sync(sdkConfiguration, _headers);
+    public UpdateCrmEventResponse updateCrmEvent(@Nonnull UpdateCrmEventRequest request) {
+        RequestOperation<UpdateCrmEventRequest, UpdateCrmEventResponse> operation
+              = new UpdateCrmEvent.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -505,8 +505,8 @@ public class Event {
      * 
      * @return The call builder
      */
-    public UpdateMessagingEvent2RequestBuilder updateMessagingEvent2() {
-        return new UpdateMessagingEvent2RequestBuilder(sdkConfiguration);
+    public UpdateMessagingEventRequestBuilder updateMessagingEvent() {
+        return new UpdateMessagingEventRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -516,9 +516,9 @@ public class Event {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateMessagingEvent2Response updateMessagingEvent2(@Nonnull UpdateMessagingEvent2Request request) {
-        RequestOperation<UpdateMessagingEvent2Request, UpdateMessagingEvent2Response> operation
-              = new UpdateMessagingEvent2.Sync(sdkConfiguration, _headers);
+    public UpdateMessagingEventResponse updateMessagingEvent(@Nonnull UpdateMessagingEventRequest request) {
+        RequestOperation<UpdateMessagingEventRequest, UpdateMessagingEventResponse> operation
+              = new UpdateMessagingEvent.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

@@ -6,10 +6,10 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
-import to.unified.unified_java_sdk.models.operations.ListAtsApplicationstatuses2Request;
-import to.unified.unified_java_sdk.models.operations.ListAtsApplicationstatuses2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.ListAtsApplicationstatuses2Response;
-import to.unified.unified_java_sdk.operations.ListAtsApplicationstatuses2;
+import to.unified.unified_java_sdk.models.operations.ListAtsApplicationstatusesRequest;
+import to.unified.unified_java_sdk.models.operations.ListAtsApplicationstatusesRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListAtsApplicationstatusesResponse;
+import to.unified.unified_java_sdk.operations.ListAtsApplicationstatuses;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -37,8 +37,8 @@ public class Applicationstatus {
      * 
      * @return The call builder
      */
-    public ListAtsApplicationstatuses2RequestBuilder listAtsApplicationstatuses2() {
-        return new ListAtsApplicationstatuses2RequestBuilder(sdkConfiguration);
+    public ListAtsApplicationstatusesRequestBuilder listAtsApplicationstatuses() {
+        return new ListAtsApplicationstatusesRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -48,9 +48,9 @@ public class Applicationstatus {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListAtsApplicationstatuses2Response listAtsApplicationstatuses2(@Nonnull ListAtsApplicationstatuses2Request request) {
-        RequestOperation<ListAtsApplicationstatuses2Request, ListAtsApplicationstatuses2Response> operation
-              = new ListAtsApplicationstatuses2.Sync(sdkConfiguration, _headers);
+    public ListAtsApplicationstatusesResponse listAtsApplicationstatuses(@Nonnull ListAtsApplicationstatusesRequest request) {
+        RequestOperation<ListAtsApplicationstatusesRequest, ListAtsApplicationstatusesResponse> operation
+              = new ListAtsApplicationstatuses.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

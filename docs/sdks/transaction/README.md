@@ -4,27 +4,27 @@
 
 ### Available Operations
 
-* [createAccountingTransaction2](#createaccountingtransaction2) - Create a transaction
-* [getAccountingTransaction2](#getaccountingtransaction2) - Retrieve a transaction
-* [listAccountingTransactions2](#listaccountingtransactions2) - List all transactions
-* [patchAccountingTransaction2](#patchaccountingtransaction2) - Update a transaction
-* [removeAccountingTransaction2](#removeaccountingtransaction2) - Remove a transaction
-* [updateAccountingTransaction2](#updateaccountingtransaction2) - Update a transaction
+* [createAccountingTransaction](#createaccountingtransaction) - Create a transaction
+* [getAccountingTransaction](#getaccountingtransaction) - Retrieve a transaction
+* [listAccountingTransactions](#listaccountingtransactions) - List all transactions
+* [patchAccountingTransaction](#patchaccountingtransaction) - Update a transaction
+* [removeAccountingTransaction](#removeaccountingtransaction) - Remove a transaction
+* [updateAccountingTransaction](#updateaccountingtransaction) - Update a transaction
 
-## createAccountingTransaction2
+## createAccountingTransaction
 
 Create a transaction
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createAccountingTransaction2" method="post" path="/accounting/{connection_id}/transaction" -->
+<!-- UsageSnippet language="java" operationID="createAccountingTransaction" method="post" path="/accounting/{connection_id}/transaction" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.CreateAccountingTransaction2Request;
-import to.unified.unified_java_sdk.models.operations.CreateAccountingTransaction2Response;
+import to.unified.unified_java_sdk.models.operations.CreateAccountingTransactionRequest;
+import to.unified.unified_java_sdk.models.operations.CreateAccountingTransactionResponse;
 import to.unified.unified_java_sdk.models.shared.AccountingTransaction;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -38,13 +38,13 @@ public class Application {
                     .build())
             .build();
 
-        CreateAccountingTransaction2Request req = CreateAccountingTransaction2Request.builder()
+        CreateAccountingTransactionRequest req = CreateAccountingTransactionRequest.builder()
                 .accountingTransaction(AccountingTransaction.builder()
                     .build())
                 .connectionId("<id>")
                 .build();
 
-        CreateAccountingTransaction2Response res = sdk.transaction().createAccountingTransaction2()
+        CreateAccountingTransactionResponse res = sdk.transaction().createAccountingTransaction()
                 .request(req)
                 .call();
 
@@ -57,13 +57,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                             | Type                                                                                                  | Required                                                                                              | Description                                                                                           |
-| ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
-| `request`                                                                                             | [CreateAccountingTransaction2Request](../../models/operations/CreateAccountingTransaction2Request.md) | :heavy_check_mark:                                                                                    | The request object to use for the request.                                                            |
+| Parameter                                                                                           | Type                                                                                                | Required                                                                                            | Description                                                                                         |
+| --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
+| `request`                                                                                           | [CreateAccountingTransactionRequest](../../models/operations/CreateAccountingTransactionRequest.md) | :heavy_check_mark:                                                                                  | The request object to use for the request.                                                          |
 
 ### Response
 
-**[CreateAccountingTransaction2Response](../../models/operations/CreateAccountingTransaction2Response.md)**
+**[CreateAccountingTransactionResponse](../../models/operations/CreateAccountingTransactionResponse.md)**
 
 ### Errors
 
@@ -71,20 +71,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## getAccountingTransaction2
+## getAccountingTransaction
 
 Retrieve a transaction
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="getAccountingTransaction2" method="get" path="/accounting/{connection_id}/transaction/{id}" -->
+<!-- UsageSnippet language="java" operationID="getAccountingTransaction" method="get" path="/accounting/{connection_id}/transaction/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.GetAccountingTransaction2Request;
-import to.unified.unified_java_sdk.models.operations.GetAccountingTransaction2Response;
+import to.unified.unified_java_sdk.models.operations.GetAccountingTransactionRequest;
+import to.unified.unified_java_sdk.models.operations.GetAccountingTransactionResponse;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -97,12 +97,12 @@ public class Application {
                     .build())
             .build();
 
-        GetAccountingTransaction2Request req = GetAccountingTransaction2Request.builder()
+        GetAccountingTransactionRequest req = GetAccountingTransactionRequest.builder()
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        GetAccountingTransaction2Response res = sdk.transaction().getAccountingTransaction2()
+        GetAccountingTransactionResponse res = sdk.transaction().getAccountingTransaction()
                 .request(req)
                 .call();
 
@@ -115,13 +115,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                       | Type                                                                                            | Required                                                                                        | Description                                                                                     |
-| ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
-| `request`                                                                                       | [GetAccountingTransaction2Request](../../models/operations/GetAccountingTransaction2Request.md) | :heavy_check_mark:                                                                              | The request object to use for the request.                                                      |
+| Parameter                                                                                     | Type                                                                                          | Required                                                                                      | Description                                                                                   |
+| --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
+| `request`                                                                                     | [GetAccountingTransactionRequest](../../models/operations/GetAccountingTransactionRequest.md) | :heavy_check_mark:                                                                            | The request object to use for the request.                                                    |
 
 ### Response
 
-**[GetAccountingTransaction2Response](../../models/operations/GetAccountingTransaction2Response.md)**
+**[GetAccountingTransactionResponse](../../models/operations/GetAccountingTransactionResponse.md)**
 
 ### Errors
 
@@ -129,20 +129,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## listAccountingTransactions2
+## listAccountingTransactions
 
 List all transactions
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="listAccountingTransactions2" method="get" path="/accounting/{connection_id}/transaction" -->
+<!-- UsageSnippet language="java" operationID="listAccountingTransactions" method="get" path="/accounting/{connection_id}/transaction" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.ListAccountingTransactions2Request;
-import to.unified.unified_java_sdk.models.operations.ListAccountingTransactions2Response;
+import to.unified.unified_java_sdk.models.operations.ListAccountingTransactionsRequest;
+import to.unified.unified_java_sdk.models.operations.ListAccountingTransactionsResponse;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -155,11 +155,11 @@ public class Application {
                     .build())
             .build();
 
-        ListAccountingTransactions2Request req = ListAccountingTransactions2Request.builder()
+        ListAccountingTransactionsRequest req = ListAccountingTransactionsRequest.builder()
                 .connectionId("<id>")
                 .build();
 
-        ListAccountingTransactions2Response res = sdk.transaction().listAccountingTransactions2()
+        ListAccountingTransactionsResponse res = sdk.transaction().listAccountingTransactions()
                 .request(req)
                 .call();
 
@@ -172,13 +172,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                           | Type                                                                                                | Required                                                                                            | Description                                                                                         |
-| --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
-| `request`                                                                                           | [ListAccountingTransactions2Request](../../models/operations/ListAccountingTransactions2Request.md) | :heavy_check_mark:                                                                                  | The request object to use for the request.                                                          |
+| Parameter                                                                                         | Type                                                                                              | Required                                                                                          | Description                                                                                       |
+| ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
+| `request`                                                                                         | [ListAccountingTransactionsRequest](../../models/operations/ListAccountingTransactionsRequest.md) | :heavy_check_mark:                                                                                | The request object to use for the request.                                                        |
 
 ### Response
 
-**[ListAccountingTransactions2Response](../../models/operations/ListAccountingTransactions2Response.md)**
+**[ListAccountingTransactionsResponse](../../models/operations/ListAccountingTransactionsResponse.md)**
 
 ### Errors
 
@@ -186,20 +186,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## patchAccountingTransaction2
+## patchAccountingTransaction
 
 Update a transaction
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchAccountingTransaction2" method="patch" path="/accounting/{connection_id}/transaction/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchAccountingTransaction" method="patch" path="/accounting/{connection_id}/transaction/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.PatchAccountingTransaction2Request;
-import to.unified.unified_java_sdk.models.operations.PatchAccountingTransaction2Response;
+import to.unified.unified_java_sdk.models.operations.PatchAccountingTransactionRequest;
+import to.unified.unified_java_sdk.models.operations.PatchAccountingTransactionResponse;
 import to.unified.unified_java_sdk.models.shared.AccountingTransaction;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -213,14 +213,14 @@ public class Application {
                     .build())
             .build();
 
-        PatchAccountingTransaction2Request req = PatchAccountingTransaction2Request.builder()
+        PatchAccountingTransactionRequest req = PatchAccountingTransactionRequest.builder()
                 .accountingTransaction(AccountingTransaction.builder()
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        PatchAccountingTransaction2Response res = sdk.transaction().patchAccountingTransaction2()
+        PatchAccountingTransactionResponse res = sdk.transaction().patchAccountingTransaction()
                 .request(req)
                 .call();
 
@@ -233,13 +233,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                           | Type                                                                                                | Required                                                                                            | Description                                                                                         |
-| --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
-| `request`                                                                                           | [PatchAccountingTransaction2Request](../../models/operations/PatchAccountingTransaction2Request.md) | :heavy_check_mark:                                                                                  | The request object to use for the request.                                                          |
+| Parameter                                                                                         | Type                                                                                              | Required                                                                                          | Description                                                                                       |
+| ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
+| `request`                                                                                         | [PatchAccountingTransactionRequest](../../models/operations/PatchAccountingTransactionRequest.md) | :heavy_check_mark:                                                                                | The request object to use for the request.                                                        |
 
 ### Response
 
-**[PatchAccountingTransaction2Response](../../models/operations/PatchAccountingTransaction2Response.md)**
+**[PatchAccountingTransactionResponse](../../models/operations/PatchAccountingTransactionResponse.md)**
 
 ### Errors
 
@@ -247,20 +247,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## removeAccountingTransaction2
+## removeAccountingTransaction
 
 Remove a transaction
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="removeAccountingTransaction2" method="delete" path="/accounting/{connection_id}/transaction/{id}" -->
+<!-- UsageSnippet language="java" operationID="removeAccountingTransaction" method="delete" path="/accounting/{connection_id}/transaction/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.RemoveAccountingTransaction2Request;
-import to.unified.unified_java_sdk.models.operations.RemoveAccountingTransaction2Response;
+import to.unified.unified_java_sdk.models.operations.RemoveAccountingTransactionRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveAccountingTransactionResponse;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -273,12 +273,12 @@ public class Application {
                     .build())
             .build();
 
-        RemoveAccountingTransaction2Request req = RemoveAccountingTransaction2Request.builder()
+        RemoveAccountingTransactionRequest req = RemoveAccountingTransactionRequest.builder()
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        RemoveAccountingTransaction2Response res = sdk.transaction().removeAccountingTransaction2()
+        RemoveAccountingTransactionResponse res = sdk.transaction().removeAccountingTransaction()
                 .request(req)
                 .call();
 
@@ -289,13 +289,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                             | Type                                                                                                  | Required                                                                                              | Description                                                                                           |
-| ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
-| `request`                                                                                             | [RemoveAccountingTransaction2Request](../../models/operations/RemoveAccountingTransaction2Request.md) | :heavy_check_mark:                                                                                    | The request object to use for the request.                                                            |
+| Parameter                                                                                           | Type                                                                                                | Required                                                                                            | Description                                                                                         |
+| --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
+| `request`                                                                                           | [RemoveAccountingTransactionRequest](../../models/operations/RemoveAccountingTransactionRequest.md) | :heavy_check_mark:                                                                                  | The request object to use for the request.                                                          |
 
 ### Response
 
-**[RemoveAccountingTransaction2Response](../../models/operations/RemoveAccountingTransaction2Response.md)**
+**[RemoveAccountingTransactionResponse](../../models/operations/RemoveAccountingTransactionResponse.md)**
 
 ### Errors
 
@@ -303,20 +303,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## updateAccountingTransaction2
+## updateAccountingTransaction
 
 Update a transaction
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateAccountingTransaction2" method="put" path="/accounting/{connection_id}/transaction/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateAccountingTransaction" method="put" path="/accounting/{connection_id}/transaction/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.UpdateAccountingTransaction2Request;
-import to.unified.unified_java_sdk.models.operations.UpdateAccountingTransaction2Response;
+import to.unified.unified_java_sdk.models.operations.UpdateAccountingTransactionRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateAccountingTransactionResponse;
 import to.unified.unified_java_sdk.models.shared.AccountingTransaction;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -330,14 +330,14 @@ public class Application {
                     .build())
             .build();
 
-        UpdateAccountingTransaction2Request req = UpdateAccountingTransaction2Request.builder()
+        UpdateAccountingTransactionRequest req = UpdateAccountingTransactionRequest.builder()
                 .accountingTransaction(AccountingTransaction.builder()
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        UpdateAccountingTransaction2Response res = sdk.transaction().updateAccountingTransaction2()
+        UpdateAccountingTransactionResponse res = sdk.transaction().updateAccountingTransaction()
                 .request(req)
                 .call();
 
@@ -350,13 +350,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                             | Type                                                                                                  | Required                                                                                              | Description                                                                                           |
-| ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
-| `request`                                                                                             | [UpdateAccountingTransaction2Request](../../models/operations/UpdateAccountingTransaction2Request.md) | :heavy_check_mark:                                                                                    | The request object to use for the request.                                                            |
+| Parameter                                                                                           | Type                                                                                                | Required                                                                                            | Description                                                                                         |
+| --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
+| `request`                                                                                           | [UpdateAccountingTransactionRequest](../../models/operations/UpdateAccountingTransactionRequest.md) | :heavy_check_mark:                                                                                  | The request object to use for the request.                                                          |
 
 ### Response
 
-**[UpdateAccountingTransaction2Response](../../models/operations/UpdateAccountingTransaction2Response.md)**
+**[UpdateAccountingTransactionResponse](../../models/operations/UpdateAccountingTransactionResponse.md)**
 
 ### Errors
 

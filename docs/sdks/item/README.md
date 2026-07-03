@@ -4,27 +4,27 @@
 
 ### Available Operations
 
-* [createCommerceItem2](#createcommerceitem2) - Create an item
-* [getCommerceItem2](#getcommerceitem2) - Retrieve an item
-* [listCommerceItems2](#listcommerceitems2) - List all items
-* [patchCommerceItem2](#patchcommerceitem2) - Update an item
-* [removeCommerceItem2](#removecommerceitem2) - Remove an item
-* [updateCommerceItem2](#updatecommerceitem2) - Update an item
+* [createCommerceItem](#createcommerceitem) - Create an item
+* [getCommerceItem](#getcommerceitem) - Retrieve an item
+* [listCommerceItems](#listcommerceitems) - List all items
+* [patchCommerceItem](#patchcommerceitem) - Update an item
+* [removeCommerceItem](#removecommerceitem) - Remove an item
+* [updateCommerceItem](#updatecommerceitem) - Update an item
 
-## createCommerceItem2
+## createCommerceItem
 
 Create an item
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createCommerceItem2" method="post" path="/commerce/{connection_id}/item" -->
+<!-- UsageSnippet language="java" operationID="createCommerceItem" method="post" path="/commerce/{connection_id}/item" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.CreateCommerceItem2Request;
-import to.unified.unified_java_sdk.models.operations.CreateCommerceItem2Response;
+import to.unified.unified_java_sdk.models.operations.CreateCommerceItemRequest;
+import to.unified.unified_java_sdk.models.operations.CreateCommerceItemResponse;
 import to.unified.unified_java_sdk.models.shared.CommerceItem;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -38,13 +38,13 @@ public class Application {
                     .build())
             .build();
 
-        CreateCommerceItem2Request req = CreateCommerceItem2Request.builder()
+        CreateCommerceItemRequest req = CreateCommerceItemRequest.builder()
                 .commerceItem(CommerceItem.builder()
                     .build())
                 .connectionId("<id>")
                 .build();
 
-        CreateCommerceItem2Response res = sdk.item().createCommerceItem2()
+        CreateCommerceItemResponse res = sdk.item().createCommerceItem()
                 .request(req)
                 .call();
 
@@ -57,13 +57,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                           | Type                                                                                | Required                                                                            | Description                                                                         |
-| ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
-| `request`                                                                           | [CreateCommerceItem2Request](../../models/operations/CreateCommerceItem2Request.md) | :heavy_check_mark:                                                                  | The request object to use for the request.                                          |
+| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
+| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| `request`                                                                         | [CreateCommerceItemRequest](../../models/operations/CreateCommerceItemRequest.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
 
 ### Response
 
-**[CreateCommerceItem2Response](../../models/operations/CreateCommerceItem2Response.md)**
+**[CreateCommerceItemResponse](../../models/operations/CreateCommerceItemResponse.md)**
 
 ### Errors
 
@@ -71,20 +71,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## getCommerceItem2
+## getCommerceItem
 
 Retrieve an item
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="getCommerceItem2" method="get" path="/commerce/{connection_id}/item/{id}" -->
+<!-- UsageSnippet language="java" operationID="getCommerceItem" method="get" path="/commerce/{connection_id}/item/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.GetCommerceItem2Request;
-import to.unified.unified_java_sdk.models.operations.GetCommerceItem2Response;
+import to.unified.unified_java_sdk.models.operations.GetCommerceItemRequest;
+import to.unified.unified_java_sdk.models.operations.GetCommerceItemResponse;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -97,12 +97,12 @@ public class Application {
                     .build())
             .build();
 
-        GetCommerceItem2Request req = GetCommerceItem2Request.builder()
+        GetCommerceItemRequest req = GetCommerceItemRequest.builder()
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        GetCommerceItem2Response res = sdk.item().getCommerceItem2()
+        GetCommerceItemResponse res = sdk.item().getCommerceItem()
                 .request(req)
                 .call();
 
@@ -115,13 +115,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
-| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
-| `request`                                                                     | [GetCommerceItem2Request](../../models/operations/GetCommerceItem2Request.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
+| Parameter                                                                   | Type                                                                        | Required                                                                    | Description                                                                 |
+| --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| `request`                                                                   | [GetCommerceItemRequest](../../models/operations/GetCommerceItemRequest.md) | :heavy_check_mark:                                                          | The request object to use for the request.                                  |
 
 ### Response
 
-**[GetCommerceItem2Response](../../models/operations/GetCommerceItem2Response.md)**
+**[GetCommerceItemResponse](../../models/operations/GetCommerceItemResponse.md)**
 
 ### Errors
 
@@ -129,20 +129,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## listCommerceItems2
+## listCommerceItems
 
 List all items
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="listCommerceItems2" method="get" path="/commerce/{connection_id}/item" -->
+<!-- UsageSnippet language="java" operationID="listCommerceItems" method="get" path="/commerce/{connection_id}/item" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.ListCommerceItems2Request;
-import to.unified.unified_java_sdk.models.operations.ListCommerceItems2Response;
+import to.unified.unified_java_sdk.models.operations.ListCommerceItemsRequest;
+import to.unified.unified_java_sdk.models.operations.ListCommerceItemsResponse;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -155,11 +155,11 @@ public class Application {
                     .build())
             .build();
 
-        ListCommerceItems2Request req = ListCommerceItems2Request.builder()
+        ListCommerceItemsRequest req = ListCommerceItemsRequest.builder()
                 .connectionId("<id>")
                 .build();
 
-        ListCommerceItems2Response res = sdk.item().listCommerceItems2()
+        ListCommerceItemsResponse res = sdk.item().listCommerceItems()
                 .request(req)
                 .call();
 
@@ -172,13 +172,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
-| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
-| `request`                                                                         | [ListCommerceItems2Request](../../models/operations/ListCommerceItems2Request.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
+| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| `request`                                                                       | [ListCommerceItemsRequest](../../models/operations/ListCommerceItemsRequest.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
 
 ### Response
 
-**[ListCommerceItems2Response](../../models/operations/ListCommerceItems2Response.md)**
+**[ListCommerceItemsResponse](../../models/operations/ListCommerceItemsResponse.md)**
 
 ### Errors
 
@@ -186,20 +186,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## patchCommerceItem2
+## patchCommerceItem
 
 Update an item
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchCommerceItem2" method="patch" path="/commerce/{connection_id}/item/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchCommerceItem" method="patch" path="/commerce/{connection_id}/item/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.PatchCommerceItem2Request;
-import to.unified.unified_java_sdk.models.operations.PatchCommerceItem2Response;
+import to.unified.unified_java_sdk.models.operations.PatchCommerceItemRequest;
+import to.unified.unified_java_sdk.models.operations.PatchCommerceItemResponse;
 import to.unified.unified_java_sdk.models.shared.CommerceItem;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -213,14 +213,14 @@ public class Application {
                     .build())
             .build();
 
-        PatchCommerceItem2Request req = PatchCommerceItem2Request.builder()
+        PatchCommerceItemRequest req = PatchCommerceItemRequest.builder()
                 .commerceItem(CommerceItem.builder()
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        PatchCommerceItem2Response res = sdk.item().patchCommerceItem2()
+        PatchCommerceItemResponse res = sdk.item().patchCommerceItem()
                 .request(req)
                 .call();
 
@@ -233,13 +233,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
-| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
-| `request`                                                                         | [PatchCommerceItem2Request](../../models/operations/PatchCommerceItem2Request.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
+| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| `request`                                                                       | [PatchCommerceItemRequest](../../models/operations/PatchCommerceItemRequest.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
 
 ### Response
 
-**[PatchCommerceItem2Response](../../models/operations/PatchCommerceItem2Response.md)**
+**[PatchCommerceItemResponse](../../models/operations/PatchCommerceItemResponse.md)**
 
 ### Errors
 
@@ -247,20 +247,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## removeCommerceItem2
+## removeCommerceItem
 
 Remove an item
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="removeCommerceItem2" method="delete" path="/commerce/{connection_id}/item/{id}" -->
+<!-- UsageSnippet language="java" operationID="removeCommerceItem" method="delete" path="/commerce/{connection_id}/item/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.RemoveCommerceItem2Request;
-import to.unified.unified_java_sdk.models.operations.RemoveCommerceItem2Response;
+import to.unified.unified_java_sdk.models.operations.RemoveCommerceItemRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveCommerceItemResponse;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -273,12 +273,12 @@ public class Application {
                     .build())
             .build();
 
-        RemoveCommerceItem2Request req = RemoveCommerceItem2Request.builder()
+        RemoveCommerceItemRequest req = RemoveCommerceItemRequest.builder()
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        RemoveCommerceItem2Response res = sdk.item().removeCommerceItem2()
+        RemoveCommerceItemResponse res = sdk.item().removeCommerceItem()
                 .request(req)
                 .call();
 
@@ -289,13 +289,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                           | Type                                                                                | Required                                                                            | Description                                                                         |
-| ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
-| `request`                                                                           | [RemoveCommerceItem2Request](../../models/operations/RemoveCommerceItem2Request.md) | :heavy_check_mark:                                                                  | The request object to use for the request.                                          |
+| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
+| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| `request`                                                                         | [RemoveCommerceItemRequest](../../models/operations/RemoveCommerceItemRequest.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
 
 ### Response
 
-**[RemoveCommerceItem2Response](../../models/operations/RemoveCommerceItem2Response.md)**
+**[RemoveCommerceItemResponse](../../models/operations/RemoveCommerceItemResponse.md)**
 
 ### Errors
 
@@ -303,20 +303,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## updateCommerceItem2
+## updateCommerceItem
 
 Update an item
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateCommerceItem2" method="put" path="/commerce/{connection_id}/item/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateCommerceItem" method="put" path="/commerce/{connection_id}/item/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.UpdateCommerceItem2Request;
-import to.unified.unified_java_sdk.models.operations.UpdateCommerceItem2Response;
+import to.unified.unified_java_sdk.models.operations.UpdateCommerceItemRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateCommerceItemResponse;
 import to.unified.unified_java_sdk.models.shared.CommerceItem;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -330,14 +330,14 @@ public class Application {
                     .build())
             .build();
 
-        UpdateCommerceItem2Request req = UpdateCommerceItem2Request.builder()
+        UpdateCommerceItemRequest req = UpdateCommerceItemRequest.builder()
                 .commerceItem(CommerceItem.builder()
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        UpdateCommerceItem2Response res = sdk.item().updateCommerceItem2()
+        UpdateCommerceItemResponse res = sdk.item().updateCommerceItem()
                 .request(req)
                 .call();
 
@@ -350,13 +350,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                           | Type                                                                                | Required                                                                            | Description                                                                         |
-| ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
-| `request`                                                                           | [UpdateCommerceItem2Request](../../models/operations/UpdateCommerceItem2Request.md) | :heavy_check_mark:                                                                  | The request object to use for the request.                                          |
+| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
+| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| `request`                                                                         | [UpdateCommerceItemRequest](../../models/operations/UpdateCommerceItemRequest.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
 
 ### Response
 
-**[UpdateCommerceItem2Response](../../models/operations/UpdateCommerceItem2Response.md)**
+**[UpdateCommerceItemResponse](../../models/operations/UpdateCommerceItemResponse.md)**
 
 ### Errors
 

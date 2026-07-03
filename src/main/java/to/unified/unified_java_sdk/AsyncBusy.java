@@ -7,10 +7,10 @@ import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOper
 
 import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
-import to.unified.unified_java_sdk.models.operations.ListCalendarBusies2Request;
-import to.unified.unified_java_sdk.models.operations.async.ListCalendarBusies2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.ListCalendarBusies2Response;
-import to.unified.unified_java_sdk.operations.ListCalendarBusies2;
+import to.unified.unified_java_sdk.models.operations.ListCalendarBusiesRequest;
+import to.unified.unified_java_sdk.models.operations.async.ListCalendarBusiesRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListCalendarBusiesResponse;
+import to.unified.unified_java_sdk.operations.ListCalendarBusies;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -39,19 +39,19 @@ public class AsyncBusy {
      * 
      * @return The async call builder
      */
-    public ListCalendarBusies2RequestBuilder listCalendarBusies2() {
-        return new ListCalendarBusies2RequestBuilder(sdkConfiguration);
+    public ListCalendarBusiesRequestBuilder listCalendarBusies() {
+        return new ListCalendarBusiesRequestBuilder(sdkConfiguration);
     }
 
     /**
      * List all busies
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<ListCalendarBusies2Response>} - The async response
+     * @return {@code CompletableFuture<ListCalendarBusiesResponse>} - The async response
      */
-    public CompletableFuture<ListCalendarBusies2Response> listCalendarBusies2(@Nonnull ListCalendarBusies2Request request) {
-        AsyncRequestOperation<ListCalendarBusies2Request, ListCalendarBusies2Response> operation
-              = new ListCalendarBusies2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<ListCalendarBusiesResponse> listCalendarBusies(@Nonnull ListCalendarBusiesRequest request) {
+        AsyncRequestOperation<ListCalendarBusiesRequest, ListCalendarBusiesResponse> operation
+              = new ListCalendarBusies.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

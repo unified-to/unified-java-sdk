@@ -6,14 +6,14 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
-import to.unified.unified_java_sdk.models.operations.GetMessagingChannel2Request;
-import to.unified.unified_java_sdk.models.operations.GetMessagingChannel2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.GetMessagingChannel2Response;
-import to.unified.unified_java_sdk.models.operations.ListMessagingChannels2Request;
-import to.unified.unified_java_sdk.models.operations.ListMessagingChannels2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.ListMessagingChannels2Response;
-import to.unified.unified_java_sdk.operations.GetMessagingChannel2;
-import to.unified.unified_java_sdk.operations.ListMessagingChannels2;
+import to.unified.unified_java_sdk.models.operations.GetMessagingChannelRequest;
+import to.unified.unified_java_sdk.models.operations.GetMessagingChannelRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetMessagingChannelResponse;
+import to.unified.unified_java_sdk.models.operations.ListMessagingChannelsRequest;
+import to.unified.unified_java_sdk.models.operations.ListMessagingChannelsRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListMessagingChannelsResponse;
+import to.unified.unified_java_sdk.operations.GetMessagingChannel;
+import to.unified.unified_java_sdk.operations.ListMessagingChannels;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -41,8 +41,8 @@ public class Channel {
      * 
      * @return The call builder
      */
-    public GetMessagingChannel2RequestBuilder getMessagingChannel2() {
-        return new GetMessagingChannel2RequestBuilder(sdkConfiguration);
+    public GetMessagingChannelRequestBuilder getMessagingChannel() {
+        return new GetMessagingChannelRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -52,9 +52,9 @@ public class Channel {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetMessagingChannel2Response getMessagingChannel2(@Nonnull GetMessagingChannel2Request request) {
-        RequestOperation<GetMessagingChannel2Request, GetMessagingChannel2Response> operation
-              = new GetMessagingChannel2.Sync(sdkConfiguration, _headers);
+    public GetMessagingChannelResponse getMessagingChannel(@Nonnull GetMessagingChannelRequest request) {
+        RequestOperation<GetMessagingChannelRequest, GetMessagingChannelResponse> operation
+              = new GetMessagingChannel.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -63,8 +63,8 @@ public class Channel {
      * 
      * @return The call builder
      */
-    public ListMessagingChannels2RequestBuilder listMessagingChannels2() {
-        return new ListMessagingChannels2RequestBuilder(sdkConfiguration);
+    public ListMessagingChannelsRequestBuilder listMessagingChannels() {
+        return new ListMessagingChannelsRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -74,9 +74,9 @@ public class Channel {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListMessagingChannels2Response listMessagingChannels2(@Nonnull ListMessagingChannels2Request request) {
-        RequestOperation<ListMessagingChannels2Request, ListMessagingChannels2Response> operation
-              = new ListMessagingChannels2.Sync(sdkConfiguration, _headers);
+    public ListMessagingChannelsResponse listMessagingChannels(@Nonnull ListMessagingChannelsRequest request) {
+        RequestOperation<ListMessagingChannelsRequest, ListMessagingChannelsResponse> operation
+              = new ListMessagingChannels.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

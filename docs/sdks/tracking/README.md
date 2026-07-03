@@ -4,23 +4,23 @@
 
 ### Available Operations
 
-* [getShippingTracking2](#getshippingtracking2) - Retrieve a tracking
-* [listShippingTrackings2](#listshippingtrackings2) - List all trackings
+* [getShippingTracking](#getshippingtracking) - Retrieve a tracking
+* [listShippingTrackings](#listshippingtrackings) - List all trackings
 
-## getShippingTracking2
+## getShippingTracking
 
 Retrieve a tracking
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="getShippingTracking2" method="get" path="/shipping/{connection_id}/tracking/{id}" -->
+<!-- UsageSnippet language="java" operationID="getShippingTracking" method="get" path="/shipping/{connection_id}/tracking/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.GetShippingTracking2Request;
-import to.unified.unified_java_sdk.models.operations.GetShippingTracking2Response;
+import to.unified.unified_java_sdk.models.operations.GetShippingTrackingRequest;
+import to.unified.unified_java_sdk.models.operations.GetShippingTrackingResponse;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -33,12 +33,12 @@ public class Application {
                     .build())
             .build();
 
-        GetShippingTracking2Request req = GetShippingTracking2Request.builder()
+        GetShippingTrackingRequest req = GetShippingTrackingRequest.builder()
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        GetShippingTracking2Response res = sdk.tracking().getShippingTracking2()
+        GetShippingTrackingResponse res = sdk.tracking().getShippingTracking()
                 .request(req)
                 .call();
 
@@ -51,13 +51,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                             | Type                                                                                  | Required                                                                              | Description                                                                           |
-| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
-| `request`                                                                             | [GetShippingTracking2Request](../../models/operations/GetShippingTracking2Request.md) | :heavy_check_mark:                                                                    | The request object to use for the request.                                            |
+| Parameter                                                                           | Type                                                                                | Required                                                                            | Description                                                                         |
+| ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| `request`                                                                           | [GetShippingTrackingRequest](../../models/operations/GetShippingTrackingRequest.md) | :heavy_check_mark:                                                                  | The request object to use for the request.                                          |
 
 ### Response
 
-**[GetShippingTracking2Response](../../models/operations/GetShippingTracking2Response.md)**
+**[GetShippingTrackingResponse](../../models/operations/GetShippingTrackingResponse.md)**
 
 ### Errors
 
@@ -65,20 +65,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## listShippingTrackings2
+## listShippingTrackings
 
 List all trackings
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="listShippingTrackings2" method="get" path="/shipping/{connection_id}/tracking" -->
+<!-- UsageSnippet language="java" operationID="listShippingTrackings" method="get" path="/shipping/{connection_id}/tracking" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.ListShippingTrackings2Request;
-import to.unified.unified_java_sdk.models.operations.ListShippingTrackings2Response;
+import to.unified.unified_java_sdk.models.operations.ListShippingTrackingsRequest;
+import to.unified.unified_java_sdk.models.operations.ListShippingTrackingsResponse;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -91,11 +91,11 @@ public class Application {
                     .build())
             .build();
 
-        ListShippingTrackings2Request req = ListShippingTrackings2Request.builder()
+        ListShippingTrackingsRequest req = ListShippingTrackingsRequest.builder()
                 .connectionId("<id>")
                 .build();
 
-        ListShippingTrackings2Response res = sdk.tracking().listShippingTrackings2()
+        ListShippingTrackingsResponse res = sdk.tracking().listShippingTrackings()
                 .request(req)
                 .call();
 
@@ -108,13 +108,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                 | Type                                                                                      | Required                                                                                  | Description                                                                               |
-| ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
-| `request`                                                                                 | [ListShippingTrackings2Request](../../models/operations/ListShippingTrackings2Request.md) | :heavy_check_mark:                                                                        | The request object to use for the request.                                                |
+| Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
+| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| `request`                                                                               | [ListShippingTrackingsRequest](../../models/operations/ListShippingTrackingsRequest.md) | :heavy_check_mark:                                                                      | The request object to use for the request.                                              |
 
 ### Response
 
-**[ListShippingTrackings2Response](../../models/operations/ListShippingTrackings2Response.md)**
+**[ListShippingTrackingsResponse](../../models/operations/ListShippingTrackingsResponse.md)**
 
 ### Errors
 

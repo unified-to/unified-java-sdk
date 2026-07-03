@@ -6,30 +6,30 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
-import to.unified.unified_java_sdk.models.operations.CreateCommerceItem2Request;
-import to.unified.unified_java_sdk.models.operations.CreateCommerceItem2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.CreateCommerceItem2Response;
-import to.unified.unified_java_sdk.models.operations.GetCommerceItem2Request;
-import to.unified.unified_java_sdk.models.operations.GetCommerceItem2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.GetCommerceItem2Response;
-import to.unified.unified_java_sdk.models.operations.ListCommerceItems2Request;
-import to.unified.unified_java_sdk.models.operations.ListCommerceItems2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.ListCommerceItems2Response;
-import to.unified.unified_java_sdk.models.operations.PatchCommerceItem2Request;
-import to.unified.unified_java_sdk.models.operations.PatchCommerceItem2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.PatchCommerceItem2Response;
-import to.unified.unified_java_sdk.models.operations.RemoveCommerceItem2Request;
-import to.unified.unified_java_sdk.models.operations.RemoveCommerceItem2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.RemoveCommerceItem2Response;
-import to.unified.unified_java_sdk.models.operations.UpdateCommerceItem2Request;
-import to.unified.unified_java_sdk.models.operations.UpdateCommerceItem2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.UpdateCommerceItem2Response;
-import to.unified.unified_java_sdk.operations.CreateCommerceItem2;
-import to.unified.unified_java_sdk.operations.GetCommerceItem2;
-import to.unified.unified_java_sdk.operations.ListCommerceItems2;
-import to.unified.unified_java_sdk.operations.PatchCommerceItem2;
-import to.unified.unified_java_sdk.operations.RemoveCommerceItem2;
-import to.unified.unified_java_sdk.operations.UpdateCommerceItem2;
+import to.unified.unified_java_sdk.models.operations.CreateCommerceItemRequest;
+import to.unified.unified_java_sdk.models.operations.CreateCommerceItemRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.CreateCommerceItemResponse;
+import to.unified.unified_java_sdk.models.operations.GetCommerceItemRequest;
+import to.unified.unified_java_sdk.models.operations.GetCommerceItemRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetCommerceItemResponse;
+import to.unified.unified_java_sdk.models.operations.ListCommerceItemsRequest;
+import to.unified.unified_java_sdk.models.operations.ListCommerceItemsRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListCommerceItemsResponse;
+import to.unified.unified_java_sdk.models.operations.PatchCommerceItemRequest;
+import to.unified.unified_java_sdk.models.operations.PatchCommerceItemRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.PatchCommerceItemResponse;
+import to.unified.unified_java_sdk.models.operations.RemoveCommerceItemRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveCommerceItemRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.RemoveCommerceItemResponse;
+import to.unified.unified_java_sdk.models.operations.UpdateCommerceItemRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateCommerceItemRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.UpdateCommerceItemResponse;
+import to.unified.unified_java_sdk.operations.CreateCommerceItem;
+import to.unified.unified_java_sdk.operations.GetCommerceItem;
+import to.unified.unified_java_sdk.operations.ListCommerceItems;
+import to.unified.unified_java_sdk.operations.PatchCommerceItem;
+import to.unified.unified_java_sdk.operations.RemoveCommerceItem;
+import to.unified.unified_java_sdk.operations.UpdateCommerceItem;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -57,8 +57,8 @@ public class Item {
      * 
      * @return The call builder
      */
-    public CreateCommerceItem2RequestBuilder createCommerceItem2() {
-        return new CreateCommerceItem2RequestBuilder(sdkConfiguration);
+    public CreateCommerceItemRequestBuilder createCommerceItem() {
+        return new CreateCommerceItemRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -68,9 +68,9 @@ public class Item {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateCommerceItem2Response createCommerceItem2(@Nonnull CreateCommerceItem2Request request) {
-        RequestOperation<CreateCommerceItem2Request, CreateCommerceItem2Response> operation
-              = new CreateCommerceItem2.Sync(sdkConfiguration, _headers);
+    public CreateCommerceItemResponse createCommerceItem(@Nonnull CreateCommerceItemRequest request) {
+        RequestOperation<CreateCommerceItemRequest, CreateCommerceItemResponse> operation
+              = new CreateCommerceItem.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -79,8 +79,8 @@ public class Item {
      * 
      * @return The call builder
      */
-    public GetCommerceItem2RequestBuilder getCommerceItem2() {
-        return new GetCommerceItem2RequestBuilder(sdkConfiguration);
+    public GetCommerceItemRequestBuilder getCommerceItem() {
+        return new GetCommerceItemRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -90,9 +90,9 @@ public class Item {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetCommerceItem2Response getCommerceItem2(@Nonnull GetCommerceItem2Request request) {
-        RequestOperation<GetCommerceItem2Request, GetCommerceItem2Response> operation
-              = new GetCommerceItem2.Sync(sdkConfiguration, _headers);
+    public GetCommerceItemResponse getCommerceItem(@Nonnull GetCommerceItemRequest request) {
+        RequestOperation<GetCommerceItemRequest, GetCommerceItemResponse> operation
+              = new GetCommerceItem.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -101,8 +101,8 @@ public class Item {
      * 
      * @return The call builder
      */
-    public ListCommerceItems2RequestBuilder listCommerceItems2() {
-        return new ListCommerceItems2RequestBuilder(sdkConfiguration);
+    public ListCommerceItemsRequestBuilder listCommerceItems() {
+        return new ListCommerceItemsRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -112,9 +112,9 @@ public class Item {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListCommerceItems2Response listCommerceItems2(@Nonnull ListCommerceItems2Request request) {
-        RequestOperation<ListCommerceItems2Request, ListCommerceItems2Response> operation
-              = new ListCommerceItems2.Sync(sdkConfiguration, _headers);
+    public ListCommerceItemsResponse listCommerceItems(@Nonnull ListCommerceItemsRequest request) {
+        RequestOperation<ListCommerceItemsRequest, ListCommerceItemsResponse> operation
+              = new ListCommerceItems.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -123,8 +123,8 @@ public class Item {
      * 
      * @return The call builder
      */
-    public PatchCommerceItem2RequestBuilder patchCommerceItem2() {
-        return new PatchCommerceItem2RequestBuilder(sdkConfiguration);
+    public PatchCommerceItemRequestBuilder patchCommerceItem() {
+        return new PatchCommerceItemRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -134,9 +134,9 @@ public class Item {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchCommerceItem2Response patchCommerceItem2(@Nonnull PatchCommerceItem2Request request) {
-        RequestOperation<PatchCommerceItem2Request, PatchCommerceItem2Response> operation
-              = new PatchCommerceItem2.Sync(sdkConfiguration, _headers);
+    public PatchCommerceItemResponse patchCommerceItem(@Nonnull PatchCommerceItemRequest request) {
+        RequestOperation<PatchCommerceItemRequest, PatchCommerceItemResponse> operation
+              = new PatchCommerceItem.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -145,8 +145,8 @@ public class Item {
      * 
      * @return The call builder
      */
-    public RemoveCommerceItem2RequestBuilder removeCommerceItem2() {
-        return new RemoveCommerceItem2RequestBuilder(sdkConfiguration);
+    public RemoveCommerceItemRequestBuilder removeCommerceItem() {
+        return new RemoveCommerceItemRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -156,9 +156,9 @@ public class Item {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveCommerceItem2Response removeCommerceItem2(@Nonnull RemoveCommerceItem2Request request) {
-        RequestOperation<RemoveCommerceItem2Request, RemoveCommerceItem2Response> operation
-              = new RemoveCommerceItem2.Sync(sdkConfiguration, _headers);
+    public RemoveCommerceItemResponse removeCommerceItem(@Nonnull RemoveCommerceItemRequest request) {
+        RequestOperation<RemoveCommerceItemRequest, RemoveCommerceItemResponse> operation
+              = new RemoveCommerceItem.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -167,8 +167,8 @@ public class Item {
      * 
      * @return The call builder
      */
-    public UpdateCommerceItem2RequestBuilder updateCommerceItem2() {
-        return new UpdateCommerceItem2RequestBuilder(sdkConfiguration);
+    public UpdateCommerceItemRequestBuilder updateCommerceItem() {
+        return new UpdateCommerceItemRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -178,9 +178,9 @@ public class Item {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateCommerceItem2Response updateCommerceItem2(@Nonnull UpdateCommerceItem2Request request) {
-        RequestOperation<UpdateCommerceItem2Request, UpdateCommerceItem2Response> operation
-              = new UpdateCommerceItem2.Sync(sdkConfiguration, _headers);
+    public UpdateCommerceItemResponse updateCommerceItem(@Nonnull UpdateCommerceItemRequest request) {
+        RequestOperation<UpdateCommerceItemRequest, UpdateCommerceItemResponse> operation
+              = new UpdateCommerceItem.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

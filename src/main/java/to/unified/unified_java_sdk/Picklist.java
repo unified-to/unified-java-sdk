@@ -6,10 +6,10 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
-import to.unified.unified_java_sdk.models.operations.ListCrmPicklists2Request;
-import to.unified.unified_java_sdk.models.operations.ListCrmPicklists2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.ListCrmPicklists2Response;
-import to.unified.unified_java_sdk.operations.ListCrmPicklists2;
+import to.unified.unified_java_sdk.models.operations.ListCrmPicklistsRequest;
+import to.unified.unified_java_sdk.models.operations.ListCrmPicklistsRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListCrmPicklistsResponse;
+import to.unified.unified_java_sdk.operations.ListCrmPicklists;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -37,8 +37,8 @@ public class Picklist {
      * 
      * @return The call builder
      */
-    public ListCrmPicklists2RequestBuilder listCrmPicklists2() {
-        return new ListCrmPicklists2RequestBuilder(sdkConfiguration);
+    public ListCrmPicklistsRequestBuilder listCrmPicklists() {
+        return new ListCrmPicklistsRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -48,9 +48,9 @@ public class Picklist {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListCrmPicklists2Response listCrmPicklists2(@Nonnull ListCrmPicklists2Request request) {
-        RequestOperation<ListCrmPicklists2Request, ListCrmPicklists2Response> operation
-              = new ListCrmPicklists2.Sync(sdkConfiguration, _headers);
+    public ListCrmPicklistsResponse listCrmPicklists(@Nonnull ListCrmPicklistsRequest request) {
+        RequestOperation<ListCrmPicklistsRequest, ListCrmPicklistsResponse> operation
+              = new ListCrmPicklists.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

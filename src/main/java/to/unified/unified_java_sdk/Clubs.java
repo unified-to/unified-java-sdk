@@ -6,46 +6,46 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
-import to.unified.unified_java_sdk.models.operations.GetClubsActivity2Request;
-import to.unified.unified_java_sdk.models.operations.GetClubsActivity2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.GetClubsActivity2Response;
-import to.unified.unified_java_sdk.models.operations.GetClubsEvent2Request;
-import to.unified.unified_java_sdk.models.operations.GetClubsEvent2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.GetClubsEvent2Response;
-import to.unified.unified_java_sdk.models.operations.GetClubsGroup2Request;
-import to.unified.unified_java_sdk.models.operations.GetClubsGroup2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.GetClubsGroup2Response;
-import to.unified.unified_java_sdk.models.operations.GetClubsLocation2Request;
-import to.unified.unified_java_sdk.models.operations.GetClubsLocation2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.GetClubsLocation2Response;
-import to.unified.unified_java_sdk.models.operations.GetClubsMember2Request;
-import to.unified.unified_java_sdk.models.operations.GetClubsMember2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.GetClubsMember2Response;
-import to.unified.unified_java_sdk.models.operations.ListClubsActivities2Request;
-import to.unified.unified_java_sdk.models.operations.ListClubsActivities2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.ListClubsActivities2Response;
-import to.unified.unified_java_sdk.models.operations.ListClubsEvents2Request;
-import to.unified.unified_java_sdk.models.operations.ListClubsEvents2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.ListClubsEvents2Response;
-import to.unified.unified_java_sdk.models.operations.ListClubsGroups2Request;
-import to.unified.unified_java_sdk.models.operations.ListClubsGroups2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.ListClubsGroups2Response;
-import to.unified.unified_java_sdk.models.operations.ListClubsLocations2Request;
-import to.unified.unified_java_sdk.models.operations.ListClubsLocations2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.ListClubsLocations2Response;
-import to.unified.unified_java_sdk.models.operations.ListClubsMembers2Request;
-import to.unified.unified_java_sdk.models.operations.ListClubsMembers2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.ListClubsMembers2Response;
-import to.unified.unified_java_sdk.operations.GetClubsActivity2;
-import to.unified.unified_java_sdk.operations.GetClubsEvent2;
-import to.unified.unified_java_sdk.operations.GetClubsGroup2;
-import to.unified.unified_java_sdk.operations.GetClubsLocation2;
-import to.unified.unified_java_sdk.operations.GetClubsMember2;
-import to.unified.unified_java_sdk.operations.ListClubsActivities2;
-import to.unified.unified_java_sdk.operations.ListClubsEvents2;
-import to.unified.unified_java_sdk.operations.ListClubsGroups2;
-import to.unified.unified_java_sdk.operations.ListClubsLocations2;
-import to.unified.unified_java_sdk.operations.ListClubsMembers2;
+import to.unified.unified_java_sdk.models.operations.GetClubsActivityRequest;
+import to.unified.unified_java_sdk.models.operations.GetClubsActivityRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetClubsActivityResponse;
+import to.unified.unified_java_sdk.models.operations.GetClubsEventRequest;
+import to.unified.unified_java_sdk.models.operations.GetClubsEventRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetClubsEventResponse;
+import to.unified.unified_java_sdk.models.operations.GetClubsGroupRequest;
+import to.unified.unified_java_sdk.models.operations.GetClubsGroupRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetClubsGroupResponse;
+import to.unified.unified_java_sdk.models.operations.GetClubsLocationRequest;
+import to.unified.unified_java_sdk.models.operations.GetClubsLocationRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetClubsLocationResponse;
+import to.unified.unified_java_sdk.models.operations.GetClubsMemberRequest;
+import to.unified.unified_java_sdk.models.operations.GetClubsMemberRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetClubsMemberResponse;
+import to.unified.unified_java_sdk.models.operations.ListClubsActivitiesRequest;
+import to.unified.unified_java_sdk.models.operations.ListClubsActivitiesRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListClubsActivitiesResponse;
+import to.unified.unified_java_sdk.models.operations.ListClubsEventsRequest;
+import to.unified.unified_java_sdk.models.operations.ListClubsEventsRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListClubsEventsResponse;
+import to.unified.unified_java_sdk.models.operations.ListClubsGroupsRequest;
+import to.unified.unified_java_sdk.models.operations.ListClubsGroupsRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListClubsGroupsResponse;
+import to.unified.unified_java_sdk.models.operations.ListClubsLocationsRequest;
+import to.unified.unified_java_sdk.models.operations.ListClubsLocationsRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListClubsLocationsResponse;
+import to.unified.unified_java_sdk.models.operations.ListClubsMembersRequest;
+import to.unified.unified_java_sdk.models.operations.ListClubsMembersRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListClubsMembersResponse;
+import to.unified.unified_java_sdk.operations.GetClubsActivity;
+import to.unified.unified_java_sdk.operations.GetClubsEvent;
+import to.unified.unified_java_sdk.operations.GetClubsGroup;
+import to.unified.unified_java_sdk.operations.GetClubsLocation;
+import to.unified.unified_java_sdk.operations.GetClubsMember;
+import to.unified.unified_java_sdk.operations.ListClubsActivities;
+import to.unified.unified_java_sdk.operations.ListClubsEvents;
+import to.unified.unified_java_sdk.operations.ListClubsGroups;
+import to.unified.unified_java_sdk.operations.ListClubsLocations;
+import to.unified.unified_java_sdk.operations.ListClubsMembers;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -73,8 +73,8 @@ public class Clubs {
      * 
      * @return The call builder
      */
-    public GetClubsActivity2RequestBuilder getClubsActivity2() {
-        return new GetClubsActivity2RequestBuilder(sdkConfiguration);
+    public GetClubsActivityRequestBuilder getClubsActivity() {
+        return new GetClubsActivityRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -84,9 +84,9 @@ public class Clubs {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetClubsActivity2Response getClubsActivity2(@Nonnull GetClubsActivity2Request request) {
-        RequestOperation<GetClubsActivity2Request, GetClubsActivity2Response> operation
-              = new GetClubsActivity2.Sync(sdkConfiguration, _headers);
+    public GetClubsActivityResponse getClubsActivity(@Nonnull GetClubsActivityRequest request) {
+        RequestOperation<GetClubsActivityRequest, GetClubsActivityResponse> operation
+              = new GetClubsActivity.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -95,8 +95,8 @@ public class Clubs {
      * 
      * @return The call builder
      */
-    public GetClubsEvent2RequestBuilder getClubsEvent2() {
-        return new GetClubsEvent2RequestBuilder(sdkConfiguration);
+    public GetClubsEventRequestBuilder getClubsEvent() {
+        return new GetClubsEventRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -106,9 +106,9 @@ public class Clubs {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetClubsEvent2Response getClubsEvent2(@Nonnull GetClubsEvent2Request request) {
-        RequestOperation<GetClubsEvent2Request, GetClubsEvent2Response> operation
-              = new GetClubsEvent2.Sync(sdkConfiguration, _headers);
+    public GetClubsEventResponse getClubsEvent(@Nonnull GetClubsEventRequest request) {
+        RequestOperation<GetClubsEventRequest, GetClubsEventResponse> operation
+              = new GetClubsEvent.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -117,8 +117,8 @@ public class Clubs {
      * 
      * @return The call builder
      */
-    public GetClubsGroup2RequestBuilder getClubsGroup2() {
-        return new GetClubsGroup2RequestBuilder(sdkConfiguration);
+    public GetClubsGroupRequestBuilder getClubsGroup() {
+        return new GetClubsGroupRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -128,9 +128,9 @@ public class Clubs {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetClubsGroup2Response getClubsGroup2(@Nonnull GetClubsGroup2Request request) {
-        RequestOperation<GetClubsGroup2Request, GetClubsGroup2Response> operation
-              = new GetClubsGroup2.Sync(sdkConfiguration, _headers);
+    public GetClubsGroupResponse getClubsGroup(@Nonnull GetClubsGroupRequest request) {
+        RequestOperation<GetClubsGroupRequest, GetClubsGroupResponse> operation
+              = new GetClubsGroup.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -139,8 +139,8 @@ public class Clubs {
      * 
      * @return The call builder
      */
-    public GetClubsLocation2RequestBuilder getClubsLocation2() {
-        return new GetClubsLocation2RequestBuilder(sdkConfiguration);
+    public GetClubsLocationRequestBuilder getClubsLocation() {
+        return new GetClubsLocationRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -150,9 +150,9 @@ public class Clubs {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetClubsLocation2Response getClubsLocation2(@Nonnull GetClubsLocation2Request request) {
-        RequestOperation<GetClubsLocation2Request, GetClubsLocation2Response> operation
-              = new GetClubsLocation2.Sync(sdkConfiguration, _headers);
+    public GetClubsLocationResponse getClubsLocation(@Nonnull GetClubsLocationRequest request) {
+        RequestOperation<GetClubsLocationRequest, GetClubsLocationResponse> operation
+              = new GetClubsLocation.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -161,8 +161,8 @@ public class Clubs {
      * 
      * @return The call builder
      */
-    public GetClubsMember2RequestBuilder getClubsMember2() {
-        return new GetClubsMember2RequestBuilder(sdkConfiguration);
+    public GetClubsMemberRequestBuilder getClubsMember() {
+        return new GetClubsMemberRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -172,9 +172,9 @@ public class Clubs {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetClubsMember2Response getClubsMember2(@Nonnull GetClubsMember2Request request) {
-        RequestOperation<GetClubsMember2Request, GetClubsMember2Response> operation
-              = new GetClubsMember2.Sync(sdkConfiguration, _headers);
+    public GetClubsMemberResponse getClubsMember(@Nonnull GetClubsMemberRequest request) {
+        RequestOperation<GetClubsMemberRequest, GetClubsMemberResponse> operation
+              = new GetClubsMember.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -183,8 +183,8 @@ public class Clubs {
      * 
      * @return The call builder
      */
-    public ListClubsActivities2RequestBuilder listClubsActivities2() {
-        return new ListClubsActivities2RequestBuilder(sdkConfiguration);
+    public ListClubsActivitiesRequestBuilder listClubsActivities() {
+        return new ListClubsActivitiesRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -194,9 +194,9 @@ public class Clubs {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListClubsActivities2Response listClubsActivities2(@Nonnull ListClubsActivities2Request request) {
-        RequestOperation<ListClubsActivities2Request, ListClubsActivities2Response> operation
-              = new ListClubsActivities2.Sync(sdkConfiguration, _headers);
+    public ListClubsActivitiesResponse listClubsActivities(@Nonnull ListClubsActivitiesRequest request) {
+        RequestOperation<ListClubsActivitiesRequest, ListClubsActivitiesResponse> operation
+              = new ListClubsActivities.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -205,8 +205,8 @@ public class Clubs {
      * 
      * @return The call builder
      */
-    public ListClubsEvents2RequestBuilder listClubsEvents2() {
-        return new ListClubsEvents2RequestBuilder(sdkConfiguration);
+    public ListClubsEventsRequestBuilder listClubsEvents() {
+        return new ListClubsEventsRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -216,9 +216,9 @@ public class Clubs {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListClubsEvents2Response listClubsEvents2(@Nonnull ListClubsEvents2Request request) {
-        RequestOperation<ListClubsEvents2Request, ListClubsEvents2Response> operation
-              = new ListClubsEvents2.Sync(sdkConfiguration, _headers);
+    public ListClubsEventsResponse listClubsEvents(@Nonnull ListClubsEventsRequest request) {
+        RequestOperation<ListClubsEventsRequest, ListClubsEventsResponse> operation
+              = new ListClubsEvents.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -227,8 +227,8 @@ public class Clubs {
      * 
      * @return The call builder
      */
-    public ListClubsGroups2RequestBuilder listClubsGroups2() {
-        return new ListClubsGroups2RequestBuilder(sdkConfiguration);
+    public ListClubsGroupsRequestBuilder listClubsGroups() {
+        return new ListClubsGroupsRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -238,9 +238,9 @@ public class Clubs {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListClubsGroups2Response listClubsGroups2(@Nonnull ListClubsGroups2Request request) {
-        RequestOperation<ListClubsGroups2Request, ListClubsGroups2Response> operation
-              = new ListClubsGroups2.Sync(sdkConfiguration, _headers);
+    public ListClubsGroupsResponse listClubsGroups(@Nonnull ListClubsGroupsRequest request) {
+        RequestOperation<ListClubsGroupsRequest, ListClubsGroupsResponse> operation
+              = new ListClubsGroups.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -249,8 +249,8 @@ public class Clubs {
      * 
      * @return The call builder
      */
-    public ListClubsLocations2RequestBuilder listClubsLocations2() {
-        return new ListClubsLocations2RequestBuilder(sdkConfiguration);
+    public ListClubsLocationsRequestBuilder listClubsLocations() {
+        return new ListClubsLocationsRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -260,9 +260,9 @@ public class Clubs {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListClubsLocations2Response listClubsLocations2(@Nonnull ListClubsLocations2Request request) {
-        RequestOperation<ListClubsLocations2Request, ListClubsLocations2Response> operation
-              = new ListClubsLocations2.Sync(sdkConfiguration, _headers);
+    public ListClubsLocationsResponse listClubsLocations(@Nonnull ListClubsLocationsRequest request) {
+        RequestOperation<ListClubsLocationsRequest, ListClubsLocationsResponse> operation
+              = new ListClubsLocations.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -271,8 +271,8 @@ public class Clubs {
      * 
      * @return The call builder
      */
-    public ListClubsMembers2RequestBuilder listClubsMembers2() {
-        return new ListClubsMembers2RequestBuilder(sdkConfiguration);
+    public ListClubsMembersRequestBuilder listClubsMembers() {
+        return new ListClubsMembersRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -282,9 +282,9 @@ public class Clubs {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListClubsMembers2Response listClubsMembers2(@Nonnull ListClubsMembers2Request request) {
-        RequestOperation<ListClubsMembers2Request, ListClubsMembers2Response> operation
-              = new ListClubsMembers2.Sync(sdkConfiguration, _headers);
+    public ListClubsMembersResponse listClubsMembers(@Nonnull ListClubsMembersRequest request) {
+        RequestOperation<ListClubsMembersRequest, ListClubsMembersResponse> operation
+              = new ListClubsMembers.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

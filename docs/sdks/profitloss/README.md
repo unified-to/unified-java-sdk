@@ -4,23 +4,23 @@
 
 ### Available Operations
 
-* [getAccountingProfitloss2](#getaccountingprofitloss2) - Retrieve a profitloss
-* [listAccountingProfitlosses2](#listaccountingprofitlosses2) - List all profitlosses
+* [getAccountingProfitloss](#getaccountingprofitloss) - Retrieve a profitloss
+* [listAccountingProfitlosses](#listaccountingprofitlosses) - List all profitlosses
 
-## getAccountingProfitloss2
+## getAccountingProfitloss
 
 Retrieve a profitloss
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="getAccountingProfitloss2" method="get" path="/accounting/{connection_id}/profitloss/{id}" -->
+<!-- UsageSnippet language="java" operationID="getAccountingProfitloss" method="get" path="/accounting/{connection_id}/profitloss/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.GetAccountingProfitloss2Request;
-import to.unified.unified_java_sdk.models.operations.GetAccountingProfitloss2Response;
+import to.unified.unified_java_sdk.models.operations.GetAccountingProfitlossRequest;
+import to.unified.unified_java_sdk.models.operations.GetAccountingProfitlossResponse;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -33,12 +33,12 @@ public class Application {
                     .build())
             .build();
 
-        GetAccountingProfitloss2Request req = GetAccountingProfitloss2Request.builder()
+        GetAccountingProfitlossRequest req = GetAccountingProfitlossRequest.builder()
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        GetAccountingProfitloss2Response res = sdk.profitloss().getAccountingProfitloss2()
+        GetAccountingProfitlossResponse res = sdk.profitloss().getAccountingProfitloss()
                 .request(req)
                 .call();
 
@@ -51,13 +51,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                     | Type                                                                                          | Required                                                                                      | Description                                                                                   |
-| --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
-| `request`                                                                                     | [GetAccountingProfitloss2Request](../../models/operations/GetAccountingProfitloss2Request.md) | :heavy_check_mark:                                                                            | The request object to use for the request.                                                    |
+| Parameter                                                                                   | Type                                                                                        | Required                                                                                    | Description                                                                                 |
+| ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
+| `request`                                                                                   | [GetAccountingProfitlossRequest](../../models/operations/GetAccountingProfitlossRequest.md) | :heavy_check_mark:                                                                          | The request object to use for the request.                                                  |
 
 ### Response
 
-**[GetAccountingProfitloss2Response](../../models/operations/GetAccountingProfitloss2Response.md)**
+**[GetAccountingProfitlossResponse](../../models/operations/GetAccountingProfitlossResponse.md)**
 
 ### Errors
 
@@ -65,20 +65,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## listAccountingProfitlosses2
+## listAccountingProfitlosses
 
 List all profitlosses
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="listAccountingProfitlosses2" method="get" path="/accounting/{connection_id}/profitloss" -->
+<!-- UsageSnippet language="java" operationID="listAccountingProfitlosses" method="get" path="/accounting/{connection_id}/profitloss" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.ListAccountingProfitlosses2Request;
-import to.unified.unified_java_sdk.models.operations.ListAccountingProfitlosses2Response;
+import to.unified.unified_java_sdk.models.operations.ListAccountingProfitlossesRequest;
+import to.unified.unified_java_sdk.models.operations.ListAccountingProfitlossesResponse;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -91,11 +91,11 @@ public class Application {
                     .build())
             .build();
 
-        ListAccountingProfitlosses2Request req = ListAccountingProfitlosses2Request.builder()
+        ListAccountingProfitlossesRequest req = ListAccountingProfitlossesRequest.builder()
                 .connectionId("<id>")
                 .build();
 
-        ListAccountingProfitlosses2Response res = sdk.profitloss().listAccountingProfitlosses2()
+        ListAccountingProfitlossesResponse res = sdk.profitloss().listAccountingProfitlosses()
                 .request(req)
                 .call();
 
@@ -108,13 +108,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                           | Type                                                                                                | Required                                                                                            | Description                                                                                         |
-| --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
-| `request`                                                                                           | [ListAccountingProfitlosses2Request](../../models/operations/ListAccountingProfitlosses2Request.md) | :heavy_check_mark:                                                                                  | The request object to use for the request.                                                          |
+| Parameter                                                                                         | Type                                                                                              | Required                                                                                          | Description                                                                                       |
+| ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
+| `request`                                                                                         | [ListAccountingProfitlossesRequest](../../models/operations/ListAccountingProfitlossesRequest.md) | :heavy_check_mark:                                                                                | The request object to use for the request.                                                        |
 
 ### Response
 
-**[ListAccountingProfitlosses2Response](../../models/operations/ListAccountingProfitlosses2Response.md)**
+**[ListAccountingProfitlossesResponse](../../models/operations/ListAccountingProfitlossesResponse.md)**
 
 ### Errors
 

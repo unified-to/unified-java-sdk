@@ -7,30 +7,30 @@ import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOper
 
 import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
-import to.unified.unified_java_sdk.models.operations.CreateTicketingTicket2Request;
-import to.unified.unified_java_sdk.models.operations.GetTicketingTicket2Request;
-import to.unified.unified_java_sdk.models.operations.ListTicketingTickets2Request;
-import to.unified.unified_java_sdk.models.operations.PatchTicketingTicket2Request;
-import to.unified.unified_java_sdk.models.operations.RemoveTicketingTicket2Request;
-import to.unified.unified_java_sdk.models.operations.UpdateTicketingTicket2Request;
-import to.unified.unified_java_sdk.models.operations.async.CreateTicketingTicket2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.CreateTicketingTicket2Response;
-import to.unified.unified_java_sdk.models.operations.async.GetTicketingTicket2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.GetTicketingTicket2Response;
-import to.unified.unified_java_sdk.models.operations.async.ListTicketingTickets2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.ListTicketingTickets2Response;
-import to.unified.unified_java_sdk.models.operations.async.PatchTicketingTicket2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.PatchTicketingTicket2Response;
-import to.unified.unified_java_sdk.models.operations.async.RemoveTicketingTicket2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.RemoveTicketingTicket2Response;
-import to.unified.unified_java_sdk.models.operations.async.UpdateTicketingTicket2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.UpdateTicketingTicket2Response;
-import to.unified.unified_java_sdk.operations.CreateTicketingTicket2;
-import to.unified.unified_java_sdk.operations.GetTicketingTicket2;
-import to.unified.unified_java_sdk.operations.ListTicketingTickets2;
-import to.unified.unified_java_sdk.operations.PatchTicketingTicket2;
-import to.unified.unified_java_sdk.operations.RemoveTicketingTicket2;
-import to.unified.unified_java_sdk.operations.UpdateTicketingTicket2;
+import to.unified.unified_java_sdk.models.operations.CreateTicketingTicketRequest;
+import to.unified.unified_java_sdk.models.operations.GetTicketingTicketRequest;
+import to.unified.unified_java_sdk.models.operations.ListTicketingTicketsRequest;
+import to.unified.unified_java_sdk.models.operations.PatchTicketingTicketRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveTicketingTicketRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateTicketingTicketRequest;
+import to.unified.unified_java_sdk.models.operations.async.CreateTicketingTicketRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.CreateTicketingTicketResponse;
+import to.unified.unified_java_sdk.models.operations.async.GetTicketingTicketRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetTicketingTicketResponse;
+import to.unified.unified_java_sdk.models.operations.async.ListTicketingTicketsRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListTicketingTicketsResponse;
+import to.unified.unified_java_sdk.models.operations.async.PatchTicketingTicketRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.PatchTicketingTicketResponse;
+import to.unified.unified_java_sdk.models.operations.async.RemoveTicketingTicketRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.RemoveTicketingTicketResponse;
+import to.unified.unified_java_sdk.models.operations.async.UpdateTicketingTicketRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.UpdateTicketingTicketResponse;
+import to.unified.unified_java_sdk.operations.CreateTicketingTicket;
+import to.unified.unified_java_sdk.operations.GetTicketingTicket;
+import to.unified.unified_java_sdk.operations.ListTicketingTickets;
+import to.unified.unified_java_sdk.operations.PatchTicketingTicket;
+import to.unified.unified_java_sdk.operations.RemoveTicketingTicket;
+import to.unified.unified_java_sdk.operations.UpdateTicketingTicket;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -59,19 +59,19 @@ public class AsyncTicket {
      * 
      * @return The async call builder
      */
-    public CreateTicketingTicket2RequestBuilder createTicketingTicket2() {
-        return new CreateTicketingTicket2RequestBuilder(sdkConfiguration);
+    public CreateTicketingTicketRequestBuilder createTicketingTicket() {
+        return new CreateTicketingTicketRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Create a ticket
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<CreateTicketingTicket2Response>} - The async response
+     * @return {@code CompletableFuture<CreateTicketingTicketResponse>} - The async response
      */
-    public CompletableFuture<CreateTicketingTicket2Response> createTicketingTicket2(@Nonnull CreateTicketingTicket2Request request) {
-        AsyncRequestOperation<CreateTicketingTicket2Request, CreateTicketingTicket2Response> operation
-              = new CreateTicketingTicket2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<CreateTicketingTicketResponse> createTicketingTicket(@Nonnull CreateTicketingTicketRequest request) {
+        AsyncRequestOperation<CreateTicketingTicketRequest, CreateTicketingTicketResponse> operation
+              = new CreateTicketingTicket.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -82,19 +82,19 @@ public class AsyncTicket {
      * 
      * @return The async call builder
      */
-    public GetTicketingTicket2RequestBuilder getTicketingTicket2() {
-        return new GetTicketingTicket2RequestBuilder(sdkConfiguration);
+    public GetTicketingTicketRequestBuilder getTicketingTicket() {
+        return new GetTicketingTicketRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Retrieve a ticket
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<GetTicketingTicket2Response>} - The async response
+     * @return {@code CompletableFuture<GetTicketingTicketResponse>} - The async response
      */
-    public CompletableFuture<GetTicketingTicket2Response> getTicketingTicket2(@Nonnull GetTicketingTicket2Request request) {
-        AsyncRequestOperation<GetTicketingTicket2Request, GetTicketingTicket2Response> operation
-              = new GetTicketingTicket2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<GetTicketingTicketResponse> getTicketingTicket(@Nonnull GetTicketingTicketRequest request) {
+        AsyncRequestOperation<GetTicketingTicketRequest, GetTicketingTicketResponse> operation
+              = new GetTicketingTicket.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -105,19 +105,19 @@ public class AsyncTicket {
      * 
      * @return The async call builder
      */
-    public ListTicketingTickets2RequestBuilder listTicketingTickets2() {
-        return new ListTicketingTickets2RequestBuilder(sdkConfiguration);
+    public ListTicketingTicketsRequestBuilder listTicketingTickets() {
+        return new ListTicketingTicketsRequestBuilder(sdkConfiguration);
     }
 
     /**
      * List all tickets
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<ListTicketingTickets2Response>} - The async response
+     * @return {@code CompletableFuture<ListTicketingTicketsResponse>} - The async response
      */
-    public CompletableFuture<ListTicketingTickets2Response> listTicketingTickets2(@Nonnull ListTicketingTickets2Request request) {
-        AsyncRequestOperation<ListTicketingTickets2Request, ListTicketingTickets2Response> operation
-              = new ListTicketingTickets2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<ListTicketingTicketsResponse> listTicketingTickets(@Nonnull ListTicketingTicketsRequest request) {
+        AsyncRequestOperation<ListTicketingTicketsRequest, ListTicketingTicketsResponse> operation
+              = new ListTicketingTickets.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -128,19 +128,19 @@ public class AsyncTicket {
      * 
      * @return The async call builder
      */
-    public PatchTicketingTicket2RequestBuilder patchTicketingTicket2() {
-        return new PatchTicketingTicket2RequestBuilder(sdkConfiguration);
+    public PatchTicketingTicketRequestBuilder patchTicketingTicket() {
+        return new PatchTicketingTicketRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update a ticket
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<PatchTicketingTicket2Response>} - The async response
+     * @return {@code CompletableFuture<PatchTicketingTicketResponse>} - The async response
      */
-    public CompletableFuture<PatchTicketingTicket2Response> patchTicketingTicket2(@Nonnull PatchTicketingTicket2Request request) {
-        AsyncRequestOperation<PatchTicketingTicket2Request, PatchTicketingTicket2Response> operation
-              = new PatchTicketingTicket2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<PatchTicketingTicketResponse> patchTicketingTicket(@Nonnull PatchTicketingTicketRequest request) {
+        AsyncRequestOperation<PatchTicketingTicketRequest, PatchTicketingTicketResponse> operation
+              = new PatchTicketingTicket.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -151,19 +151,19 @@ public class AsyncTicket {
      * 
      * @return The async call builder
      */
-    public RemoveTicketingTicket2RequestBuilder removeTicketingTicket2() {
-        return new RemoveTicketingTicket2RequestBuilder(sdkConfiguration);
+    public RemoveTicketingTicketRequestBuilder removeTicketingTicket() {
+        return new RemoveTicketingTicketRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Remove a ticket
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<RemoveTicketingTicket2Response>} - The async response
+     * @return {@code CompletableFuture<RemoveTicketingTicketResponse>} - The async response
      */
-    public CompletableFuture<RemoveTicketingTicket2Response> removeTicketingTicket2(@Nonnull RemoveTicketingTicket2Request request) {
-        AsyncRequestOperation<RemoveTicketingTicket2Request, RemoveTicketingTicket2Response> operation
-              = new RemoveTicketingTicket2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<RemoveTicketingTicketResponse> removeTicketingTicket(@Nonnull RemoveTicketingTicketRequest request) {
+        AsyncRequestOperation<RemoveTicketingTicketRequest, RemoveTicketingTicketResponse> operation
+              = new RemoveTicketingTicket.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -174,19 +174,19 @@ public class AsyncTicket {
      * 
      * @return The async call builder
      */
-    public UpdateTicketingTicket2RequestBuilder updateTicketingTicket2() {
-        return new UpdateTicketingTicket2RequestBuilder(sdkConfiguration);
+    public UpdateTicketingTicketRequestBuilder updateTicketingTicket() {
+        return new UpdateTicketingTicketRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update a ticket
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<UpdateTicketingTicket2Response>} - The async response
+     * @return {@code CompletableFuture<UpdateTicketingTicketResponse>} - The async response
      */
-    public CompletableFuture<UpdateTicketingTicket2Response> updateTicketingTicket2(@Nonnull UpdateTicketingTicket2Request request) {
-        AsyncRequestOperation<UpdateTicketingTicket2Request, UpdateTicketingTicket2Response> operation
-              = new UpdateTicketingTicket2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<UpdateTicketingTicketResponse> updateTicketingTicket(@Nonnull UpdateTicketingTicketRequest request) {
+        AsyncRequestOperation<UpdateTicketingTicketRequest, UpdateTicketingTicketResponse> operation
+              = new UpdateTicketingTicket.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

@@ -6,62 +6,62 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
-import to.unified.unified_java_sdk.models.operations.CreateCommerceLocation2Request;
-import to.unified.unified_java_sdk.models.operations.CreateCommerceLocation2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.CreateCommerceLocation2Response;
-import to.unified.unified_java_sdk.models.operations.CreateHrisLocation2Request;
-import to.unified.unified_java_sdk.models.operations.CreateHrisLocation2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.CreateHrisLocation2Response;
-import to.unified.unified_java_sdk.models.operations.GetClubsLocation2Request;
-import to.unified.unified_java_sdk.models.operations.GetClubsLocation2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.GetClubsLocation2Response;
-import to.unified.unified_java_sdk.models.operations.GetCommerceLocation2Request;
-import to.unified.unified_java_sdk.models.operations.GetCommerceLocation2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.GetCommerceLocation2Response;
-import to.unified.unified_java_sdk.models.operations.GetHrisLocation2Request;
-import to.unified.unified_java_sdk.models.operations.GetHrisLocation2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.GetHrisLocation2Response;
-import to.unified.unified_java_sdk.models.operations.ListClubsLocations2Request;
-import to.unified.unified_java_sdk.models.operations.ListClubsLocations2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.ListClubsLocations2Response;
-import to.unified.unified_java_sdk.models.operations.ListCommerceLocations2Request;
-import to.unified.unified_java_sdk.models.operations.ListCommerceLocations2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.ListCommerceLocations2Response;
-import to.unified.unified_java_sdk.models.operations.ListHrisLocations2Request;
-import to.unified.unified_java_sdk.models.operations.ListHrisLocations2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.ListHrisLocations2Response;
-import to.unified.unified_java_sdk.models.operations.PatchCommerceLocation2Request;
-import to.unified.unified_java_sdk.models.operations.PatchCommerceLocation2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.PatchCommerceLocation2Response;
-import to.unified.unified_java_sdk.models.operations.PatchHrisLocation2Request;
-import to.unified.unified_java_sdk.models.operations.PatchHrisLocation2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.PatchHrisLocation2Response;
-import to.unified.unified_java_sdk.models.operations.RemoveCommerceLocation2Request;
-import to.unified.unified_java_sdk.models.operations.RemoveCommerceLocation2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.RemoveCommerceLocation2Response;
-import to.unified.unified_java_sdk.models.operations.RemoveHrisLocation2Request;
-import to.unified.unified_java_sdk.models.operations.RemoveHrisLocation2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.RemoveHrisLocation2Response;
-import to.unified.unified_java_sdk.models.operations.UpdateCommerceLocation2Request;
-import to.unified.unified_java_sdk.models.operations.UpdateCommerceLocation2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.UpdateCommerceLocation2Response;
-import to.unified.unified_java_sdk.models.operations.UpdateHrisLocation2Request;
-import to.unified.unified_java_sdk.models.operations.UpdateHrisLocation2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.UpdateHrisLocation2Response;
-import to.unified.unified_java_sdk.operations.CreateCommerceLocation2;
-import to.unified.unified_java_sdk.operations.CreateHrisLocation2;
-import to.unified.unified_java_sdk.operations.GetClubsLocation2;
-import to.unified.unified_java_sdk.operations.GetCommerceLocation2;
-import to.unified.unified_java_sdk.operations.GetHrisLocation2;
-import to.unified.unified_java_sdk.operations.ListClubsLocations2;
-import to.unified.unified_java_sdk.operations.ListCommerceLocations2;
-import to.unified.unified_java_sdk.operations.ListHrisLocations2;
-import to.unified.unified_java_sdk.operations.PatchCommerceLocation2;
-import to.unified.unified_java_sdk.operations.PatchHrisLocation2;
-import to.unified.unified_java_sdk.operations.RemoveCommerceLocation2;
-import to.unified.unified_java_sdk.operations.RemoveHrisLocation2;
-import to.unified.unified_java_sdk.operations.UpdateCommerceLocation2;
-import to.unified.unified_java_sdk.operations.UpdateHrisLocation2;
+import to.unified.unified_java_sdk.models.operations.CreateCommerceLocationRequest;
+import to.unified.unified_java_sdk.models.operations.CreateCommerceLocationRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.CreateCommerceLocationResponse;
+import to.unified.unified_java_sdk.models.operations.CreateHrisLocationRequest;
+import to.unified.unified_java_sdk.models.operations.CreateHrisLocationRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.CreateHrisLocationResponse;
+import to.unified.unified_java_sdk.models.operations.GetClubsLocationRequest;
+import to.unified.unified_java_sdk.models.operations.GetClubsLocationRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetClubsLocationResponse;
+import to.unified.unified_java_sdk.models.operations.GetCommerceLocationRequest;
+import to.unified.unified_java_sdk.models.operations.GetCommerceLocationRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetCommerceLocationResponse;
+import to.unified.unified_java_sdk.models.operations.GetHrisLocationRequest;
+import to.unified.unified_java_sdk.models.operations.GetHrisLocationRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetHrisLocationResponse;
+import to.unified.unified_java_sdk.models.operations.ListClubsLocationsRequest;
+import to.unified.unified_java_sdk.models.operations.ListClubsLocationsRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListClubsLocationsResponse;
+import to.unified.unified_java_sdk.models.operations.ListCommerceLocationsRequest;
+import to.unified.unified_java_sdk.models.operations.ListCommerceLocationsRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListCommerceLocationsResponse;
+import to.unified.unified_java_sdk.models.operations.ListHrisLocationsRequest;
+import to.unified.unified_java_sdk.models.operations.ListHrisLocationsRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListHrisLocationsResponse;
+import to.unified.unified_java_sdk.models.operations.PatchCommerceLocationRequest;
+import to.unified.unified_java_sdk.models.operations.PatchCommerceLocationRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.PatchCommerceLocationResponse;
+import to.unified.unified_java_sdk.models.operations.PatchHrisLocationRequest;
+import to.unified.unified_java_sdk.models.operations.PatchHrisLocationRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.PatchHrisLocationResponse;
+import to.unified.unified_java_sdk.models.operations.RemoveCommerceLocationRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveCommerceLocationRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.RemoveCommerceLocationResponse;
+import to.unified.unified_java_sdk.models.operations.RemoveHrisLocationRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveHrisLocationRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.RemoveHrisLocationResponse;
+import to.unified.unified_java_sdk.models.operations.UpdateCommerceLocationRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateCommerceLocationRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.UpdateCommerceLocationResponse;
+import to.unified.unified_java_sdk.models.operations.UpdateHrisLocationRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateHrisLocationRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.UpdateHrisLocationResponse;
+import to.unified.unified_java_sdk.operations.CreateCommerceLocation;
+import to.unified.unified_java_sdk.operations.CreateHrisLocation;
+import to.unified.unified_java_sdk.operations.GetClubsLocation;
+import to.unified.unified_java_sdk.operations.GetCommerceLocation;
+import to.unified.unified_java_sdk.operations.GetHrisLocation;
+import to.unified.unified_java_sdk.operations.ListClubsLocations;
+import to.unified.unified_java_sdk.operations.ListCommerceLocations;
+import to.unified.unified_java_sdk.operations.ListHrisLocations;
+import to.unified.unified_java_sdk.operations.PatchCommerceLocation;
+import to.unified.unified_java_sdk.operations.PatchHrisLocation;
+import to.unified.unified_java_sdk.operations.RemoveCommerceLocation;
+import to.unified.unified_java_sdk.operations.RemoveHrisLocation;
+import to.unified.unified_java_sdk.operations.UpdateCommerceLocation;
+import to.unified.unified_java_sdk.operations.UpdateHrisLocation;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -89,8 +89,8 @@ public class Location {
      * 
      * @return The call builder
      */
-    public CreateCommerceLocation2RequestBuilder createCommerceLocation2() {
-        return new CreateCommerceLocation2RequestBuilder(sdkConfiguration);
+    public CreateCommerceLocationRequestBuilder createCommerceLocation() {
+        return new CreateCommerceLocationRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -100,9 +100,9 @@ public class Location {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateCommerceLocation2Response createCommerceLocation2(@Nonnull CreateCommerceLocation2Request request) {
-        RequestOperation<CreateCommerceLocation2Request, CreateCommerceLocation2Response> operation
-              = new CreateCommerceLocation2.Sync(sdkConfiguration, _headers);
+    public CreateCommerceLocationResponse createCommerceLocation(@Nonnull CreateCommerceLocationRequest request) {
+        RequestOperation<CreateCommerceLocationRequest, CreateCommerceLocationResponse> operation
+              = new CreateCommerceLocation.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -111,8 +111,8 @@ public class Location {
      * 
      * @return The call builder
      */
-    public CreateHrisLocation2RequestBuilder createHrisLocation2() {
-        return new CreateHrisLocation2RequestBuilder(sdkConfiguration);
+    public CreateHrisLocationRequestBuilder createHrisLocation() {
+        return new CreateHrisLocationRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -122,9 +122,9 @@ public class Location {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateHrisLocation2Response createHrisLocation2(@Nonnull CreateHrisLocation2Request request) {
-        RequestOperation<CreateHrisLocation2Request, CreateHrisLocation2Response> operation
-              = new CreateHrisLocation2.Sync(sdkConfiguration, _headers);
+    public CreateHrisLocationResponse createHrisLocation(@Nonnull CreateHrisLocationRequest request) {
+        RequestOperation<CreateHrisLocationRequest, CreateHrisLocationResponse> operation
+              = new CreateHrisLocation.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -133,30 +133,8 @@ public class Location {
      * 
      * @return The call builder
      */
-    public GetClubsLocation2RequestBuilder getClubsLocation2() {
-        return new GetClubsLocation2RequestBuilder(sdkConfiguration);
-    }
-
-    /**
-     * Retrieve a location
-     * 
-     * @param request The request object containing all the parameters for the API call.
-     * @return The response from the API call
-     * @throws RuntimeException subclass if the API call fails
-     */
-    public GetClubsLocation2Response getClubsLocation2(@Nonnull GetClubsLocation2Request request) {
-        RequestOperation<GetClubsLocation2Request, GetClubsLocation2Response> operation
-              = new GetClubsLocation2.Sync(sdkConfiguration, _headers);
-        return operation.handleResponse(operation.doRequest(request));
-    }
-
-    /**
-     * Retrieve a location
-     * 
-     * @return The call builder
-     */
-    public GetCommerceLocation2RequestBuilder getCommerceLocation2() {
-        return new GetCommerceLocation2RequestBuilder(sdkConfiguration);
+    public GetClubsLocationRequestBuilder getClubsLocation() {
+        return new GetClubsLocationRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -166,9 +144,9 @@ public class Location {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetCommerceLocation2Response getCommerceLocation2(@Nonnull GetCommerceLocation2Request request) {
-        RequestOperation<GetCommerceLocation2Request, GetCommerceLocation2Response> operation
-              = new GetCommerceLocation2.Sync(sdkConfiguration, _headers);
+    public GetClubsLocationResponse getClubsLocation(@Nonnull GetClubsLocationRequest request) {
+        RequestOperation<GetClubsLocationRequest, GetClubsLocationResponse> operation
+              = new GetClubsLocation.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -177,8 +155,8 @@ public class Location {
      * 
      * @return The call builder
      */
-    public GetHrisLocation2RequestBuilder getHrisLocation2() {
-        return new GetHrisLocation2RequestBuilder(sdkConfiguration);
+    public GetCommerceLocationRequestBuilder getCommerceLocation() {
+        return new GetCommerceLocationRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -188,9 +166,31 @@ public class Location {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetHrisLocation2Response getHrisLocation2(@Nonnull GetHrisLocation2Request request) {
-        RequestOperation<GetHrisLocation2Request, GetHrisLocation2Response> operation
-              = new GetHrisLocation2.Sync(sdkConfiguration, _headers);
+    public GetCommerceLocationResponse getCommerceLocation(@Nonnull GetCommerceLocationRequest request) {
+        RequestOperation<GetCommerceLocationRequest, GetCommerceLocationResponse> operation
+              = new GetCommerceLocation.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Retrieve a location
+     * 
+     * @return The call builder
+     */
+    public GetHrisLocationRequestBuilder getHrisLocation() {
+        return new GetHrisLocationRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Retrieve a location
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetHrisLocationResponse getHrisLocation(@Nonnull GetHrisLocationRequest request) {
+        RequestOperation<GetHrisLocationRequest, GetHrisLocationResponse> operation
+              = new GetHrisLocation.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -199,8 +199,8 @@ public class Location {
      * 
      * @return The call builder
      */
-    public ListClubsLocations2RequestBuilder listClubsLocations2() {
-        return new ListClubsLocations2RequestBuilder(sdkConfiguration);
+    public ListClubsLocationsRequestBuilder listClubsLocations() {
+        return new ListClubsLocationsRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -210,9 +210,9 @@ public class Location {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListClubsLocations2Response listClubsLocations2(@Nonnull ListClubsLocations2Request request) {
-        RequestOperation<ListClubsLocations2Request, ListClubsLocations2Response> operation
-              = new ListClubsLocations2.Sync(sdkConfiguration, _headers);
+    public ListClubsLocationsResponse listClubsLocations(@Nonnull ListClubsLocationsRequest request) {
+        RequestOperation<ListClubsLocationsRequest, ListClubsLocationsResponse> operation
+              = new ListClubsLocations.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -221,8 +221,8 @@ public class Location {
      * 
      * @return The call builder
      */
-    public ListCommerceLocations2RequestBuilder listCommerceLocations2() {
-        return new ListCommerceLocations2RequestBuilder(sdkConfiguration);
+    public ListCommerceLocationsRequestBuilder listCommerceLocations() {
+        return new ListCommerceLocationsRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -232,9 +232,9 @@ public class Location {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListCommerceLocations2Response listCommerceLocations2(@Nonnull ListCommerceLocations2Request request) {
-        RequestOperation<ListCommerceLocations2Request, ListCommerceLocations2Response> operation
-              = new ListCommerceLocations2.Sync(sdkConfiguration, _headers);
+    public ListCommerceLocationsResponse listCommerceLocations(@Nonnull ListCommerceLocationsRequest request) {
+        RequestOperation<ListCommerceLocationsRequest, ListCommerceLocationsResponse> operation
+              = new ListCommerceLocations.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -243,8 +243,8 @@ public class Location {
      * 
      * @return The call builder
      */
-    public ListHrisLocations2RequestBuilder listHrisLocations2() {
-        return new ListHrisLocations2RequestBuilder(sdkConfiguration);
+    public ListHrisLocationsRequestBuilder listHrisLocations() {
+        return new ListHrisLocationsRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -254,9 +254,9 @@ public class Location {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListHrisLocations2Response listHrisLocations2(@Nonnull ListHrisLocations2Request request) {
-        RequestOperation<ListHrisLocations2Request, ListHrisLocations2Response> operation
-              = new ListHrisLocations2.Sync(sdkConfiguration, _headers);
+    public ListHrisLocationsResponse listHrisLocations(@Nonnull ListHrisLocationsRequest request) {
+        RequestOperation<ListHrisLocationsRequest, ListHrisLocationsResponse> operation
+              = new ListHrisLocations.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -265,30 +265,8 @@ public class Location {
      * 
      * @return The call builder
      */
-    public PatchCommerceLocation2RequestBuilder patchCommerceLocation2() {
-        return new PatchCommerceLocation2RequestBuilder(sdkConfiguration);
-    }
-
-    /**
-     * Update a location
-     * 
-     * @param request The request object containing all the parameters for the API call.
-     * @return The response from the API call
-     * @throws RuntimeException subclass if the API call fails
-     */
-    public PatchCommerceLocation2Response patchCommerceLocation2(@Nonnull PatchCommerceLocation2Request request) {
-        RequestOperation<PatchCommerceLocation2Request, PatchCommerceLocation2Response> operation
-              = new PatchCommerceLocation2.Sync(sdkConfiguration, _headers);
-        return operation.handleResponse(operation.doRequest(request));
-    }
-
-    /**
-     * Update a location
-     * 
-     * @return The call builder
-     */
-    public PatchHrisLocation2RequestBuilder patchHrisLocation2() {
-        return new PatchHrisLocation2RequestBuilder(sdkConfiguration);
+    public PatchCommerceLocationRequestBuilder patchCommerceLocation() {
+        return new PatchCommerceLocationRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -298,9 +276,31 @@ public class Location {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchHrisLocation2Response patchHrisLocation2(@Nonnull PatchHrisLocation2Request request) {
-        RequestOperation<PatchHrisLocation2Request, PatchHrisLocation2Response> operation
-              = new PatchHrisLocation2.Sync(sdkConfiguration, _headers);
+    public PatchCommerceLocationResponse patchCommerceLocation(@Nonnull PatchCommerceLocationRequest request) {
+        RequestOperation<PatchCommerceLocationRequest, PatchCommerceLocationResponse> operation
+              = new PatchCommerceLocation.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Update a location
+     * 
+     * @return The call builder
+     */
+    public PatchHrisLocationRequestBuilder patchHrisLocation() {
+        return new PatchHrisLocationRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Update a location
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchHrisLocationResponse patchHrisLocation(@Nonnull PatchHrisLocationRequest request) {
+        RequestOperation<PatchHrisLocationRequest, PatchHrisLocationResponse> operation
+              = new PatchHrisLocation.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -309,30 +309,8 @@ public class Location {
      * 
      * @return The call builder
      */
-    public RemoveCommerceLocation2RequestBuilder removeCommerceLocation2() {
-        return new RemoveCommerceLocation2RequestBuilder(sdkConfiguration);
-    }
-
-    /**
-     * Remove a location
-     * 
-     * @param request The request object containing all the parameters for the API call.
-     * @return The response from the API call
-     * @throws RuntimeException subclass if the API call fails
-     */
-    public RemoveCommerceLocation2Response removeCommerceLocation2(@Nonnull RemoveCommerceLocation2Request request) {
-        RequestOperation<RemoveCommerceLocation2Request, RemoveCommerceLocation2Response> operation
-              = new RemoveCommerceLocation2.Sync(sdkConfiguration, _headers);
-        return operation.handleResponse(operation.doRequest(request));
-    }
-
-    /**
-     * Remove a location
-     * 
-     * @return The call builder
-     */
-    public RemoveHrisLocation2RequestBuilder removeHrisLocation2() {
-        return new RemoveHrisLocation2RequestBuilder(sdkConfiguration);
+    public RemoveCommerceLocationRequestBuilder removeCommerceLocation() {
+        return new RemoveCommerceLocationRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -342,9 +320,31 @@ public class Location {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveHrisLocation2Response removeHrisLocation2(@Nonnull RemoveHrisLocation2Request request) {
-        RequestOperation<RemoveHrisLocation2Request, RemoveHrisLocation2Response> operation
-              = new RemoveHrisLocation2.Sync(sdkConfiguration, _headers);
+    public RemoveCommerceLocationResponse removeCommerceLocation(@Nonnull RemoveCommerceLocationRequest request) {
+        RequestOperation<RemoveCommerceLocationRequest, RemoveCommerceLocationResponse> operation
+              = new RemoveCommerceLocation.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Remove a location
+     * 
+     * @return The call builder
+     */
+    public RemoveHrisLocationRequestBuilder removeHrisLocation() {
+        return new RemoveHrisLocationRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Remove a location
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveHrisLocationResponse removeHrisLocation(@Nonnull RemoveHrisLocationRequest request) {
+        RequestOperation<RemoveHrisLocationRequest, RemoveHrisLocationResponse> operation
+              = new RemoveHrisLocation.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -353,8 +353,8 @@ public class Location {
      * 
      * @return The call builder
      */
-    public UpdateCommerceLocation2RequestBuilder updateCommerceLocation2() {
-        return new UpdateCommerceLocation2RequestBuilder(sdkConfiguration);
+    public UpdateCommerceLocationRequestBuilder updateCommerceLocation() {
+        return new UpdateCommerceLocationRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -364,9 +364,9 @@ public class Location {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateCommerceLocation2Response updateCommerceLocation2(@Nonnull UpdateCommerceLocation2Request request) {
-        RequestOperation<UpdateCommerceLocation2Request, UpdateCommerceLocation2Response> operation
-              = new UpdateCommerceLocation2.Sync(sdkConfiguration, _headers);
+    public UpdateCommerceLocationResponse updateCommerceLocation(@Nonnull UpdateCommerceLocationRequest request) {
+        RequestOperation<UpdateCommerceLocationRequest, UpdateCommerceLocationResponse> operation
+              = new UpdateCommerceLocation.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -375,8 +375,8 @@ public class Location {
      * 
      * @return The call builder
      */
-    public UpdateHrisLocation2RequestBuilder updateHrisLocation2() {
-        return new UpdateHrisLocation2RequestBuilder(sdkConfiguration);
+    public UpdateHrisLocationRequestBuilder updateHrisLocation() {
+        return new UpdateHrisLocationRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -386,9 +386,9 @@ public class Location {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateHrisLocation2Response updateHrisLocation2(@Nonnull UpdateHrisLocation2Request request) {
-        RequestOperation<UpdateHrisLocation2Request, UpdateHrisLocation2Response> operation
-              = new UpdateHrisLocation2.Sync(sdkConfiguration, _headers);
+    public UpdateHrisLocationResponse updateHrisLocation(@Nonnull UpdateHrisLocationRequest request) {
+        RequestOperation<UpdateHrisLocationRequest, UpdateHrisLocationResponse> operation
+              = new UpdateHrisLocation.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

@@ -4,27 +4,27 @@
 
 ### Available Operations
 
-* [createRepoPullrequest2](#createrepopullrequest2) - Create a pullrequest
-* [getRepoPullrequest2](#getrepopullrequest2) - Retrieve a pullrequest
-* [listRepoPullrequests2](#listrepopullrequests2) - List all pullrequests
-* [patchRepoPullrequest2](#patchrepopullrequest2) - Update a pullrequest
-* [removeRepoPullrequest2](#removerepopullrequest2) - Remove a pullrequest
-* [updateRepoPullrequest2](#updaterepopullrequest2) - Update a pullrequest
+* [createRepoPullrequest](#createrepopullrequest) - Create a pullrequest
+* [getRepoPullrequest](#getrepopullrequest) - Retrieve a pullrequest
+* [listRepoPullrequests](#listrepopullrequests) - List all pullrequests
+* [patchRepoPullrequest](#patchrepopullrequest) - Update a pullrequest
+* [removeRepoPullrequest](#removerepopullrequest) - Remove a pullrequest
+* [updateRepoPullrequest](#updaterepopullrequest) - Update a pullrequest
 
-## createRepoPullrequest2
+## createRepoPullrequest
 
 Create a pullrequest
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createRepoPullrequest2" method="post" path="/repo/{connection_id}/pullrequest" -->
+<!-- UsageSnippet language="java" operationID="createRepoPullrequest" method="post" path="/repo/{connection_id}/pullrequest" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.CreateRepoPullrequest2Request;
-import to.unified.unified_java_sdk.models.operations.CreateRepoPullrequest2Response;
+import to.unified.unified_java_sdk.models.operations.CreateRepoPullrequestRequest;
+import to.unified.unified_java_sdk.models.operations.CreateRepoPullrequestResponse;
 import to.unified.unified_java_sdk.models.shared.RepoPullrequest;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -38,13 +38,13 @@ public class Application {
                     .build())
             .build();
 
-        CreateRepoPullrequest2Request req = CreateRepoPullrequest2Request.builder()
+        CreateRepoPullrequestRequest req = CreateRepoPullrequestRequest.builder()
                 .repoPullrequest(RepoPullrequest.builder()
                     .build())
                 .connectionId("<id>")
                 .build();
 
-        CreateRepoPullrequest2Response res = sdk.pullrequest().createRepoPullrequest2()
+        CreateRepoPullrequestResponse res = sdk.pullrequest().createRepoPullrequest()
                 .request(req)
                 .call();
 
@@ -57,13 +57,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                 | Type                                                                                      | Required                                                                                  | Description                                                                               |
-| ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
-| `request`                                                                                 | [CreateRepoPullrequest2Request](../../models/operations/CreateRepoPullrequest2Request.md) | :heavy_check_mark:                                                                        | The request object to use for the request.                                                |
+| Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
+| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| `request`                                                                               | [CreateRepoPullrequestRequest](../../models/operations/CreateRepoPullrequestRequest.md) | :heavy_check_mark:                                                                      | The request object to use for the request.                                              |
 
 ### Response
 
-**[CreateRepoPullrequest2Response](../../models/operations/CreateRepoPullrequest2Response.md)**
+**[CreateRepoPullrequestResponse](../../models/operations/CreateRepoPullrequestResponse.md)**
 
 ### Errors
 
@@ -71,20 +71,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## getRepoPullrequest2
+## getRepoPullrequest
 
 Retrieve a pullrequest
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="getRepoPullrequest2" method="get" path="/repo/{connection_id}/pullrequest/{id}" -->
+<!-- UsageSnippet language="java" operationID="getRepoPullrequest" method="get" path="/repo/{connection_id}/pullrequest/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.GetRepoPullrequest2Request;
-import to.unified.unified_java_sdk.models.operations.GetRepoPullrequest2Response;
+import to.unified.unified_java_sdk.models.operations.GetRepoPullrequestRequest;
+import to.unified.unified_java_sdk.models.operations.GetRepoPullrequestResponse;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -97,12 +97,12 @@ public class Application {
                     .build())
             .build();
 
-        GetRepoPullrequest2Request req = GetRepoPullrequest2Request.builder()
+        GetRepoPullrequestRequest req = GetRepoPullrequestRequest.builder()
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        GetRepoPullrequest2Response res = sdk.pullrequest().getRepoPullrequest2()
+        GetRepoPullrequestResponse res = sdk.pullrequest().getRepoPullrequest()
                 .request(req)
                 .call();
 
@@ -115,13 +115,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                           | Type                                                                                | Required                                                                            | Description                                                                         |
-| ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
-| `request`                                                                           | [GetRepoPullrequest2Request](../../models/operations/GetRepoPullrequest2Request.md) | :heavy_check_mark:                                                                  | The request object to use for the request.                                          |
+| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
+| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| `request`                                                                         | [GetRepoPullrequestRequest](../../models/operations/GetRepoPullrequestRequest.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
 
 ### Response
 
-**[GetRepoPullrequest2Response](../../models/operations/GetRepoPullrequest2Response.md)**
+**[GetRepoPullrequestResponse](../../models/operations/GetRepoPullrequestResponse.md)**
 
 ### Errors
 
@@ -129,20 +129,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## listRepoPullrequests2
+## listRepoPullrequests
 
 List all pullrequests
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="listRepoPullrequests2" method="get" path="/repo/{connection_id}/pullrequest" -->
+<!-- UsageSnippet language="java" operationID="listRepoPullrequests" method="get" path="/repo/{connection_id}/pullrequest" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.ListRepoPullrequests2Request;
-import to.unified.unified_java_sdk.models.operations.ListRepoPullrequests2Response;
+import to.unified.unified_java_sdk.models.operations.ListRepoPullrequestsRequest;
+import to.unified.unified_java_sdk.models.operations.ListRepoPullrequestsResponse;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -155,11 +155,11 @@ public class Application {
                     .build())
             .build();
 
-        ListRepoPullrequests2Request req = ListRepoPullrequests2Request.builder()
+        ListRepoPullrequestsRequest req = ListRepoPullrequestsRequest.builder()
                 .connectionId("<id>")
                 .build();
 
-        ListRepoPullrequests2Response res = sdk.pullrequest().listRepoPullrequests2()
+        ListRepoPullrequestsResponse res = sdk.pullrequest().listRepoPullrequests()
                 .request(req)
                 .call();
 
@@ -172,13 +172,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
-| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
-| `request`                                                                               | [ListRepoPullrequests2Request](../../models/operations/ListRepoPullrequests2Request.md) | :heavy_check_mark:                                                                      | The request object to use for the request.                                              |
+| Parameter                                                                             | Type                                                                                  | Required                                                                              | Description                                                                           |
+| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| `request`                                                                             | [ListRepoPullrequestsRequest](../../models/operations/ListRepoPullrequestsRequest.md) | :heavy_check_mark:                                                                    | The request object to use for the request.                                            |
 
 ### Response
 
-**[ListRepoPullrequests2Response](../../models/operations/ListRepoPullrequests2Response.md)**
+**[ListRepoPullrequestsResponse](../../models/operations/ListRepoPullrequestsResponse.md)**
 
 ### Errors
 
@@ -186,20 +186,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## patchRepoPullrequest2
+## patchRepoPullrequest
 
 Update a pullrequest
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchRepoPullrequest2" method="patch" path="/repo/{connection_id}/pullrequest/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchRepoPullrequest" method="patch" path="/repo/{connection_id}/pullrequest/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.PatchRepoPullrequest2Request;
-import to.unified.unified_java_sdk.models.operations.PatchRepoPullrequest2Response;
+import to.unified.unified_java_sdk.models.operations.PatchRepoPullrequestRequest;
+import to.unified.unified_java_sdk.models.operations.PatchRepoPullrequestResponse;
 import to.unified.unified_java_sdk.models.shared.RepoPullrequest;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -213,14 +213,14 @@ public class Application {
                     .build())
             .build();
 
-        PatchRepoPullrequest2Request req = PatchRepoPullrequest2Request.builder()
+        PatchRepoPullrequestRequest req = PatchRepoPullrequestRequest.builder()
                 .repoPullrequest(RepoPullrequest.builder()
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        PatchRepoPullrequest2Response res = sdk.pullrequest().patchRepoPullrequest2()
+        PatchRepoPullrequestResponse res = sdk.pullrequest().patchRepoPullrequest()
                 .request(req)
                 .call();
 
@@ -233,13 +233,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
-| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
-| `request`                                                                               | [PatchRepoPullrequest2Request](../../models/operations/PatchRepoPullrequest2Request.md) | :heavy_check_mark:                                                                      | The request object to use for the request.                                              |
+| Parameter                                                                             | Type                                                                                  | Required                                                                              | Description                                                                           |
+| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| `request`                                                                             | [PatchRepoPullrequestRequest](../../models/operations/PatchRepoPullrequestRequest.md) | :heavy_check_mark:                                                                    | The request object to use for the request.                                            |
 
 ### Response
 
-**[PatchRepoPullrequest2Response](../../models/operations/PatchRepoPullrequest2Response.md)**
+**[PatchRepoPullrequestResponse](../../models/operations/PatchRepoPullrequestResponse.md)**
 
 ### Errors
 
@@ -247,20 +247,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## removeRepoPullrequest2
+## removeRepoPullrequest
 
 Remove a pullrequest
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="removeRepoPullrequest2" method="delete" path="/repo/{connection_id}/pullrequest/{id}" -->
+<!-- UsageSnippet language="java" operationID="removeRepoPullrequest" method="delete" path="/repo/{connection_id}/pullrequest/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.RemoveRepoPullrequest2Request;
-import to.unified.unified_java_sdk.models.operations.RemoveRepoPullrequest2Response;
+import to.unified.unified_java_sdk.models.operations.RemoveRepoPullrequestRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveRepoPullrequestResponse;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -273,12 +273,12 @@ public class Application {
                     .build())
             .build();
 
-        RemoveRepoPullrequest2Request req = RemoveRepoPullrequest2Request.builder()
+        RemoveRepoPullrequestRequest req = RemoveRepoPullrequestRequest.builder()
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        RemoveRepoPullrequest2Response res = sdk.pullrequest().removeRepoPullrequest2()
+        RemoveRepoPullrequestResponse res = sdk.pullrequest().removeRepoPullrequest()
                 .request(req)
                 .call();
 
@@ -289,13 +289,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                 | Type                                                                                      | Required                                                                                  | Description                                                                               |
-| ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
-| `request`                                                                                 | [RemoveRepoPullrequest2Request](../../models/operations/RemoveRepoPullrequest2Request.md) | :heavy_check_mark:                                                                        | The request object to use for the request.                                                |
+| Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
+| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| `request`                                                                               | [RemoveRepoPullrequestRequest](../../models/operations/RemoveRepoPullrequestRequest.md) | :heavy_check_mark:                                                                      | The request object to use for the request.                                              |
 
 ### Response
 
-**[RemoveRepoPullrequest2Response](../../models/operations/RemoveRepoPullrequest2Response.md)**
+**[RemoveRepoPullrequestResponse](../../models/operations/RemoveRepoPullrequestResponse.md)**
 
 ### Errors
 
@@ -303,20 +303,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## updateRepoPullrequest2
+## updateRepoPullrequest
 
 Update a pullrequest
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateRepoPullrequest2" method="put" path="/repo/{connection_id}/pullrequest/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateRepoPullrequest" method="put" path="/repo/{connection_id}/pullrequest/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.UpdateRepoPullrequest2Request;
-import to.unified.unified_java_sdk.models.operations.UpdateRepoPullrequest2Response;
+import to.unified.unified_java_sdk.models.operations.UpdateRepoPullrequestRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateRepoPullrequestResponse;
 import to.unified.unified_java_sdk.models.shared.RepoPullrequest;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -330,14 +330,14 @@ public class Application {
                     .build())
             .build();
 
-        UpdateRepoPullrequest2Request req = UpdateRepoPullrequest2Request.builder()
+        UpdateRepoPullrequestRequest req = UpdateRepoPullrequestRequest.builder()
                 .repoPullrequest(RepoPullrequest.builder()
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        UpdateRepoPullrequest2Response res = sdk.pullrequest().updateRepoPullrequest2()
+        UpdateRepoPullrequestResponse res = sdk.pullrequest().updateRepoPullrequest()
                 .request(req)
                 .call();
 
@@ -350,13 +350,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                 | Type                                                                                      | Required                                                                                  | Description                                                                               |
-| ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
-| `request`                                                                                 | [UpdateRepoPullrequest2Request](../../models/operations/UpdateRepoPullrequest2Request.md) | :heavy_check_mark:                                                                        | The request object to use for the request.                                                |
+| Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
+| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| `request`                                                                               | [UpdateRepoPullrequestRequest](../../models/operations/UpdateRepoPullrequestRequest.md) | :heavy_check_mark:                                                                      | The request object to use for the request.                                              |
 
 ### Response
 
-**[UpdateRepoPullrequest2Response](../../models/operations/UpdateRepoPullrequest2Response.md)**
+**[UpdateRepoPullrequestResponse](../../models/operations/UpdateRepoPullrequestResponse.md)**
 
 ### Errors
 

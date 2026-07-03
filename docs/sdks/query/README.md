@@ -4,22 +4,22 @@
 
 ### Available Operations
 
-* [createDatastoreQuery2](#createdatastorequery2) - Create a query
+* [createDatastoreQuery](#createdatastorequery) - Create a query
 
-## createDatastoreQuery2
+## createDatastoreQuery
 
 Create a query
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createDatastoreQuery2" method="post" path="/datastore/{connection_id}/query" -->
+<!-- UsageSnippet language="java" operationID="createDatastoreQuery" method="post" path="/datastore/{connection_id}/query" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.CreateDatastoreQuery2Request;
-import to.unified.unified_java_sdk.models.operations.CreateDatastoreQuery2Response;
+import to.unified.unified_java_sdk.models.operations.CreateDatastoreQueryRequest;
+import to.unified.unified_java_sdk.models.operations.CreateDatastoreQueryResponse;
 import to.unified.unified_java_sdk.models.shared.DatastoreQuery;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -33,13 +33,13 @@ public class Application {
                     .build())
             .build();
 
-        CreateDatastoreQuery2Request req = CreateDatastoreQuery2Request.builder()
+        CreateDatastoreQueryRequest req = CreateDatastoreQueryRequest.builder()
                 .datastoreQuery(DatastoreQuery.builder()
                     .build())
                 .connectionId("<id>")
                 .build();
 
-        CreateDatastoreQuery2Response res = sdk.query().createDatastoreQuery2()
+        CreateDatastoreQueryResponse res = sdk.query().createDatastoreQuery()
                 .request(req)
                 .call();
 
@@ -52,13 +52,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
-| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
-| `request`                                                                               | [CreateDatastoreQuery2Request](../../models/operations/CreateDatastoreQuery2Request.md) | :heavy_check_mark:                                                                      | The request object to use for the request.                                              |
+| Parameter                                                                             | Type                                                                                  | Required                                                                              | Description                                                                           |
+| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| `request`                                                                             | [CreateDatastoreQueryRequest](../../models/operations/CreateDatastoreQueryRequest.md) | :heavy_check_mark:                                                                    | The request object to use for the request.                                            |
 
 ### Response
 
-**[CreateDatastoreQuery2Response](../../models/operations/CreateDatastoreQuery2Response.md)**
+**[CreateDatastoreQueryResponse](../../models/operations/CreateDatastoreQueryResponse.md)**
 
 ### Errors
 

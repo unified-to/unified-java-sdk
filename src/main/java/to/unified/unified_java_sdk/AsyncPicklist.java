@@ -7,10 +7,10 @@ import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOper
 
 import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
-import to.unified.unified_java_sdk.models.operations.ListCrmPicklists2Request;
-import to.unified.unified_java_sdk.models.operations.async.ListCrmPicklists2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.ListCrmPicklists2Response;
-import to.unified.unified_java_sdk.operations.ListCrmPicklists2;
+import to.unified.unified_java_sdk.models.operations.ListCrmPicklistsRequest;
+import to.unified.unified_java_sdk.models.operations.async.ListCrmPicklistsRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListCrmPicklistsResponse;
+import to.unified.unified_java_sdk.operations.ListCrmPicklists;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -39,19 +39,19 @@ public class AsyncPicklist {
      * 
      * @return The async call builder
      */
-    public ListCrmPicklists2RequestBuilder listCrmPicklists2() {
-        return new ListCrmPicklists2RequestBuilder(sdkConfiguration);
+    public ListCrmPicklistsRequestBuilder listCrmPicklists() {
+        return new ListCrmPicklistsRequestBuilder(sdkConfiguration);
     }
 
     /**
      * List all picklists
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<ListCrmPicklists2Response>} - The async response
+     * @return {@code CompletableFuture<ListCrmPicklistsResponse>} - The async response
      */
-    public CompletableFuture<ListCrmPicklists2Response> listCrmPicklists2(@Nonnull ListCrmPicklists2Request request) {
-        AsyncRequestOperation<ListCrmPicklists2Request, ListCrmPicklists2Response> operation
-              = new ListCrmPicklists2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<ListCrmPicklistsResponse> listCrmPicklists(@Nonnull ListCrmPicklistsRequest request) {
+        AsyncRequestOperation<ListCrmPicklistsRequest, ListCrmPicklistsResponse> operation
+              = new ListCrmPicklists.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

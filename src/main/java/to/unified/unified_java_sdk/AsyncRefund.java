@@ -7,14 +7,14 @@ import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOper
 
 import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
-import to.unified.unified_java_sdk.models.operations.GetPaymentRefund2Request;
-import to.unified.unified_java_sdk.models.operations.ListPaymentRefunds2Request;
-import to.unified.unified_java_sdk.models.operations.async.GetPaymentRefund2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.GetPaymentRefund2Response;
-import to.unified.unified_java_sdk.models.operations.async.ListPaymentRefunds2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.ListPaymentRefunds2Response;
-import to.unified.unified_java_sdk.operations.GetPaymentRefund2;
-import to.unified.unified_java_sdk.operations.ListPaymentRefunds2;
+import to.unified.unified_java_sdk.models.operations.GetPaymentRefundRequest;
+import to.unified.unified_java_sdk.models.operations.ListPaymentRefundsRequest;
+import to.unified.unified_java_sdk.models.operations.async.GetPaymentRefundRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetPaymentRefundResponse;
+import to.unified.unified_java_sdk.models.operations.async.ListPaymentRefundsRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListPaymentRefundsResponse;
+import to.unified.unified_java_sdk.operations.GetPaymentRefund;
+import to.unified.unified_java_sdk.operations.ListPaymentRefunds;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -43,19 +43,19 @@ public class AsyncRefund {
      * 
      * @return The async call builder
      */
-    public GetPaymentRefund2RequestBuilder getPaymentRefund2() {
-        return new GetPaymentRefund2RequestBuilder(sdkConfiguration);
+    public GetPaymentRefundRequestBuilder getPaymentRefund() {
+        return new GetPaymentRefundRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Retrieve a refund
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<GetPaymentRefund2Response>} - The async response
+     * @return {@code CompletableFuture<GetPaymentRefundResponse>} - The async response
      */
-    public CompletableFuture<GetPaymentRefund2Response> getPaymentRefund2(@Nonnull GetPaymentRefund2Request request) {
-        AsyncRequestOperation<GetPaymentRefund2Request, GetPaymentRefund2Response> operation
-              = new GetPaymentRefund2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<GetPaymentRefundResponse> getPaymentRefund(@Nonnull GetPaymentRefundRequest request) {
+        AsyncRequestOperation<GetPaymentRefundRequest, GetPaymentRefundResponse> operation
+              = new GetPaymentRefund.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -66,19 +66,19 @@ public class AsyncRefund {
      * 
      * @return The async call builder
      */
-    public ListPaymentRefunds2RequestBuilder listPaymentRefunds2() {
-        return new ListPaymentRefunds2RequestBuilder(sdkConfiguration);
+    public ListPaymentRefundsRequestBuilder listPaymentRefunds() {
+        return new ListPaymentRefundsRequestBuilder(sdkConfiguration);
     }
 
     /**
      * List all refunds
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<ListPaymentRefunds2Response>} - The async response
+     * @return {@code CompletableFuture<ListPaymentRefundsResponse>} - The async response
      */
-    public CompletableFuture<ListPaymentRefunds2Response> listPaymentRefunds2(@Nonnull ListPaymentRefunds2Request request) {
-        AsyncRequestOperation<ListPaymentRefunds2Request, ListPaymentRefunds2Response> operation
-              = new ListPaymentRefunds2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<ListPaymentRefundsResponse> listPaymentRefunds(@Nonnull ListPaymentRefundsRequest request) {
+        AsyncRequestOperation<ListPaymentRefundsRequest, ListPaymentRefundsResponse> operation
+              = new ListPaymentRefunds.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

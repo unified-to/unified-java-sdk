@@ -6,30 +6,30 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
-import to.unified.unified_java_sdk.models.operations.CreateAtsCandidate2Request;
-import to.unified.unified_java_sdk.models.operations.CreateAtsCandidate2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.CreateAtsCandidate2Response;
-import to.unified.unified_java_sdk.models.operations.GetAtsCandidate2Request;
-import to.unified.unified_java_sdk.models.operations.GetAtsCandidate2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.GetAtsCandidate2Response;
-import to.unified.unified_java_sdk.models.operations.ListAtsCandidates2Request;
-import to.unified.unified_java_sdk.models.operations.ListAtsCandidates2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.ListAtsCandidates2Response;
-import to.unified.unified_java_sdk.models.operations.PatchAtsCandidate2Request;
-import to.unified.unified_java_sdk.models.operations.PatchAtsCandidate2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.PatchAtsCandidate2Response;
-import to.unified.unified_java_sdk.models.operations.RemoveAtsCandidate2Request;
-import to.unified.unified_java_sdk.models.operations.RemoveAtsCandidate2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.RemoveAtsCandidate2Response;
-import to.unified.unified_java_sdk.models.operations.UpdateAtsCandidate2Request;
-import to.unified.unified_java_sdk.models.operations.UpdateAtsCandidate2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.UpdateAtsCandidate2Response;
-import to.unified.unified_java_sdk.operations.CreateAtsCandidate2;
-import to.unified.unified_java_sdk.operations.GetAtsCandidate2;
-import to.unified.unified_java_sdk.operations.ListAtsCandidates2;
-import to.unified.unified_java_sdk.operations.PatchAtsCandidate2;
-import to.unified.unified_java_sdk.operations.RemoveAtsCandidate2;
-import to.unified.unified_java_sdk.operations.UpdateAtsCandidate2;
+import to.unified.unified_java_sdk.models.operations.CreateAtsCandidateRequest;
+import to.unified.unified_java_sdk.models.operations.CreateAtsCandidateRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.CreateAtsCandidateResponse;
+import to.unified.unified_java_sdk.models.operations.GetAtsCandidateRequest;
+import to.unified.unified_java_sdk.models.operations.GetAtsCandidateRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetAtsCandidateResponse;
+import to.unified.unified_java_sdk.models.operations.ListAtsCandidatesRequest;
+import to.unified.unified_java_sdk.models.operations.ListAtsCandidatesRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListAtsCandidatesResponse;
+import to.unified.unified_java_sdk.models.operations.PatchAtsCandidateRequest;
+import to.unified.unified_java_sdk.models.operations.PatchAtsCandidateRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.PatchAtsCandidateResponse;
+import to.unified.unified_java_sdk.models.operations.RemoveAtsCandidateRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveAtsCandidateRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.RemoveAtsCandidateResponse;
+import to.unified.unified_java_sdk.models.operations.UpdateAtsCandidateRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateAtsCandidateRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.UpdateAtsCandidateResponse;
+import to.unified.unified_java_sdk.operations.CreateAtsCandidate;
+import to.unified.unified_java_sdk.operations.GetAtsCandidate;
+import to.unified.unified_java_sdk.operations.ListAtsCandidates;
+import to.unified.unified_java_sdk.operations.PatchAtsCandidate;
+import to.unified.unified_java_sdk.operations.RemoveAtsCandidate;
+import to.unified.unified_java_sdk.operations.UpdateAtsCandidate;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -57,8 +57,8 @@ public class Candidate {
      * 
      * @return The call builder
      */
-    public CreateAtsCandidate2RequestBuilder createAtsCandidate2() {
-        return new CreateAtsCandidate2RequestBuilder(sdkConfiguration);
+    public CreateAtsCandidateRequestBuilder createAtsCandidate() {
+        return new CreateAtsCandidateRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -68,9 +68,9 @@ public class Candidate {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateAtsCandidate2Response createAtsCandidate2(@Nonnull CreateAtsCandidate2Request request) {
-        RequestOperation<CreateAtsCandidate2Request, CreateAtsCandidate2Response> operation
-              = new CreateAtsCandidate2.Sync(sdkConfiguration, _headers);
+    public CreateAtsCandidateResponse createAtsCandidate(@Nonnull CreateAtsCandidateRequest request) {
+        RequestOperation<CreateAtsCandidateRequest, CreateAtsCandidateResponse> operation
+              = new CreateAtsCandidate.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -79,8 +79,8 @@ public class Candidate {
      * 
      * @return The call builder
      */
-    public GetAtsCandidate2RequestBuilder getAtsCandidate2() {
-        return new GetAtsCandidate2RequestBuilder(sdkConfiguration);
+    public GetAtsCandidateRequestBuilder getAtsCandidate() {
+        return new GetAtsCandidateRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -90,9 +90,9 @@ public class Candidate {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetAtsCandidate2Response getAtsCandidate2(@Nonnull GetAtsCandidate2Request request) {
-        RequestOperation<GetAtsCandidate2Request, GetAtsCandidate2Response> operation
-              = new GetAtsCandidate2.Sync(sdkConfiguration, _headers);
+    public GetAtsCandidateResponse getAtsCandidate(@Nonnull GetAtsCandidateRequest request) {
+        RequestOperation<GetAtsCandidateRequest, GetAtsCandidateResponse> operation
+              = new GetAtsCandidate.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -101,8 +101,8 @@ public class Candidate {
      * 
      * @return The call builder
      */
-    public ListAtsCandidates2RequestBuilder listAtsCandidates2() {
-        return new ListAtsCandidates2RequestBuilder(sdkConfiguration);
+    public ListAtsCandidatesRequestBuilder listAtsCandidates() {
+        return new ListAtsCandidatesRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -112,9 +112,9 @@ public class Candidate {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListAtsCandidates2Response listAtsCandidates2(@Nonnull ListAtsCandidates2Request request) {
-        RequestOperation<ListAtsCandidates2Request, ListAtsCandidates2Response> operation
-              = new ListAtsCandidates2.Sync(sdkConfiguration, _headers);
+    public ListAtsCandidatesResponse listAtsCandidates(@Nonnull ListAtsCandidatesRequest request) {
+        RequestOperation<ListAtsCandidatesRequest, ListAtsCandidatesResponse> operation
+              = new ListAtsCandidates.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -123,8 +123,8 @@ public class Candidate {
      * 
      * @return The call builder
      */
-    public PatchAtsCandidate2RequestBuilder patchAtsCandidate2() {
-        return new PatchAtsCandidate2RequestBuilder(sdkConfiguration);
+    public PatchAtsCandidateRequestBuilder patchAtsCandidate() {
+        return new PatchAtsCandidateRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -134,9 +134,9 @@ public class Candidate {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchAtsCandidate2Response patchAtsCandidate2(@Nonnull PatchAtsCandidate2Request request) {
-        RequestOperation<PatchAtsCandidate2Request, PatchAtsCandidate2Response> operation
-              = new PatchAtsCandidate2.Sync(sdkConfiguration, _headers);
+    public PatchAtsCandidateResponse patchAtsCandidate(@Nonnull PatchAtsCandidateRequest request) {
+        RequestOperation<PatchAtsCandidateRequest, PatchAtsCandidateResponse> operation
+              = new PatchAtsCandidate.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -145,8 +145,8 @@ public class Candidate {
      * 
      * @return The call builder
      */
-    public RemoveAtsCandidate2RequestBuilder removeAtsCandidate2() {
-        return new RemoveAtsCandidate2RequestBuilder(sdkConfiguration);
+    public RemoveAtsCandidateRequestBuilder removeAtsCandidate() {
+        return new RemoveAtsCandidateRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -156,9 +156,9 @@ public class Candidate {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveAtsCandidate2Response removeAtsCandidate2(@Nonnull RemoveAtsCandidate2Request request) {
-        RequestOperation<RemoveAtsCandidate2Request, RemoveAtsCandidate2Response> operation
-              = new RemoveAtsCandidate2.Sync(sdkConfiguration, _headers);
+    public RemoveAtsCandidateResponse removeAtsCandidate(@Nonnull RemoveAtsCandidateRequest request) {
+        RequestOperation<RemoveAtsCandidateRequest, RemoveAtsCandidateResponse> operation
+              = new RemoveAtsCandidate.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -167,8 +167,8 @@ public class Candidate {
      * 
      * @return The call builder
      */
-    public UpdateAtsCandidate2RequestBuilder updateAtsCandidate2() {
-        return new UpdateAtsCandidate2RequestBuilder(sdkConfiguration);
+    public UpdateAtsCandidateRequestBuilder updateAtsCandidate() {
+        return new UpdateAtsCandidateRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -178,9 +178,9 @@ public class Candidate {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateAtsCandidate2Response updateAtsCandidate2(@Nonnull UpdateAtsCandidate2Request request) {
-        RequestOperation<UpdateAtsCandidate2Request, UpdateAtsCandidate2Response> operation
-              = new UpdateAtsCandidate2.Sync(sdkConfiguration, _headers);
+    public UpdateAtsCandidateResponse updateAtsCandidate(@Nonnull UpdateAtsCandidateRequest request) {
+        RequestOperation<UpdateAtsCandidateRequest, UpdateAtsCandidateResponse> operation
+              = new UpdateAtsCandidate.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

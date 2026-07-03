@@ -7,14 +7,14 @@ import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOper
 
 import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
-import to.unified.unified_java_sdk.models.operations.GetHrisPayslip2Request;
-import to.unified.unified_java_sdk.models.operations.ListHrisPayslips2Request;
-import to.unified.unified_java_sdk.models.operations.async.GetHrisPayslip2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.GetHrisPayslip2Response;
-import to.unified.unified_java_sdk.models.operations.async.ListHrisPayslips2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.ListHrisPayslips2Response;
-import to.unified.unified_java_sdk.operations.GetHrisPayslip2;
-import to.unified.unified_java_sdk.operations.ListHrisPayslips2;
+import to.unified.unified_java_sdk.models.operations.GetHrisPayslipRequest;
+import to.unified.unified_java_sdk.models.operations.ListHrisPayslipsRequest;
+import to.unified.unified_java_sdk.models.operations.async.GetHrisPayslipRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetHrisPayslipResponse;
+import to.unified.unified_java_sdk.models.operations.async.ListHrisPayslipsRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListHrisPayslipsResponse;
+import to.unified.unified_java_sdk.operations.GetHrisPayslip;
+import to.unified.unified_java_sdk.operations.ListHrisPayslips;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -43,19 +43,19 @@ public class AsyncPayslip {
      * 
      * @return The async call builder
      */
-    public GetHrisPayslip2RequestBuilder getHrisPayslip2() {
-        return new GetHrisPayslip2RequestBuilder(sdkConfiguration);
+    public GetHrisPayslipRequestBuilder getHrisPayslip() {
+        return new GetHrisPayslipRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Retrieve a payslip
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<GetHrisPayslip2Response>} - The async response
+     * @return {@code CompletableFuture<GetHrisPayslipResponse>} - The async response
      */
-    public CompletableFuture<GetHrisPayslip2Response> getHrisPayslip2(@Nonnull GetHrisPayslip2Request request) {
-        AsyncRequestOperation<GetHrisPayslip2Request, GetHrisPayslip2Response> operation
-              = new GetHrisPayslip2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<GetHrisPayslipResponse> getHrisPayslip(@Nonnull GetHrisPayslipRequest request) {
+        AsyncRequestOperation<GetHrisPayslipRequest, GetHrisPayslipResponse> operation
+              = new GetHrisPayslip.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -66,19 +66,19 @@ public class AsyncPayslip {
      * 
      * @return The async call builder
      */
-    public ListHrisPayslips2RequestBuilder listHrisPayslips2() {
-        return new ListHrisPayslips2RequestBuilder(sdkConfiguration);
+    public ListHrisPayslipsRequestBuilder listHrisPayslips() {
+        return new ListHrisPayslipsRequestBuilder(sdkConfiguration);
     }
 
     /**
      * List all payslips
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<ListHrisPayslips2Response>} - The async response
+     * @return {@code CompletableFuture<ListHrisPayslipsResponse>} - The async response
      */
-    public CompletableFuture<ListHrisPayslips2Response> listHrisPayslips2(@Nonnull ListHrisPayslips2Request request) {
-        AsyncRequestOperation<ListHrisPayslips2Request, ListHrisPayslips2Response> operation
-              = new ListHrisPayslips2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<ListHrisPayslipsResponse> listHrisPayslips(@Nonnull ListHrisPayslipsRequest request) {
+        AsyncRequestOperation<ListHrisPayslipsRequest, ListHrisPayslipsResponse> operation
+              = new ListHrisPayslips.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

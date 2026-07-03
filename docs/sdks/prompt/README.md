@@ -4,22 +4,22 @@
 
 ### Available Operations
 
-* [createGenaiPrompt2](#creategenaiprompt2) - Create a prompt
+* [createGenaiPrompt](#creategenaiprompt) - Create a prompt
 
-## createGenaiPrompt2
+## createGenaiPrompt
 
 Create a prompt
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createGenaiPrompt2" method="post" path="/genai/{connection_id}/prompt" -->
+<!-- UsageSnippet language="java" operationID="createGenaiPrompt" method="post" path="/genai/{connection_id}/prompt" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.CreateGenaiPrompt2Request;
-import to.unified.unified_java_sdk.models.operations.CreateGenaiPrompt2Response;
+import to.unified.unified_java_sdk.models.operations.CreateGenaiPromptRequest;
+import to.unified.unified_java_sdk.models.operations.CreateGenaiPromptResponse;
 import to.unified.unified_java_sdk.models.shared.GenaiPrompt;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -33,13 +33,13 @@ public class Application {
                     .build())
             .build();
 
-        CreateGenaiPrompt2Request req = CreateGenaiPrompt2Request.builder()
+        CreateGenaiPromptRequest req = CreateGenaiPromptRequest.builder()
                 .genaiPrompt(GenaiPrompt.builder()
                     .build())
                 .connectionId("<id>")
                 .build();
 
-        CreateGenaiPrompt2Response res = sdk.prompt().createGenaiPrompt2()
+        CreateGenaiPromptResponse res = sdk.prompt().createGenaiPrompt()
                 .request(req)
                 .call();
 
@@ -52,13 +52,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
-| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
-| `request`                                                                         | [CreateGenaiPrompt2Request](../../models/operations/CreateGenaiPrompt2Request.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
+| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| `request`                                                                       | [CreateGenaiPromptRequest](../../models/operations/CreateGenaiPromptRequest.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
 
 ### Response
 
-**[CreateGenaiPrompt2Response](../../models/operations/CreateGenaiPrompt2Response.md)**
+**[CreateGenaiPromptResponse](../../models/operations/CreateGenaiPromptResponse.md)**
 
 ### Errors
 

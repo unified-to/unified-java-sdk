@@ -4,27 +4,27 @@
 
 ### Available Operations
 
-* [createAtsJob2](#createatsjob2) - Create a job
-* [getAtsJob2](#getatsjob2) - Retrieve a job
-* [listAtsJobs2](#listatsjobs2) - List all jobs
-* [patchAtsJob2](#patchatsjob2) - Update a job
-* [removeAtsJob2](#removeatsjob2) - Remove a job
-* [updateAtsJob2](#updateatsjob2) - Update a job
+* [createAtsJob](#createatsjob) - Create a job
+* [getAtsJob](#getatsjob) - Retrieve a job
+* [listAtsJobs](#listatsjobs) - List all jobs
+* [patchAtsJob](#patchatsjob) - Update a job
+* [removeAtsJob](#removeatsjob) - Remove a job
+* [updateAtsJob](#updateatsjob) - Update a job
 
-## createAtsJob2
+## createAtsJob
 
 Create a job
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createAtsJob2" method="post" path="/ats/{connection_id}/job" -->
+<!-- UsageSnippet language="java" operationID="createAtsJob" method="post" path="/ats/{connection_id}/job" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.CreateAtsJob2Request;
-import to.unified.unified_java_sdk.models.operations.CreateAtsJob2Response;
+import to.unified.unified_java_sdk.models.operations.CreateAtsJobRequest;
+import to.unified.unified_java_sdk.models.operations.CreateAtsJobResponse;
 import to.unified.unified_java_sdk.models.shared.AtsJob;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -38,13 +38,13 @@ public class Application {
                     .build())
             .build();
 
-        CreateAtsJob2Request req = CreateAtsJob2Request.builder()
+        CreateAtsJobRequest req = CreateAtsJobRequest.builder()
                 .atsJob(AtsJob.builder()
                     .build())
                 .connectionId("<id>")
                 .build();
 
-        CreateAtsJob2Response res = sdk.job().createAtsJob2()
+        CreateAtsJobResponse res = sdk.job().createAtsJob()
                 .request(req)
                 .call();
 
@@ -57,13 +57,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                               | Type                                                                    | Required                                                                | Description                                                             |
-| ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- |
-| `request`                                                               | [CreateAtsJob2Request](../../models/operations/CreateAtsJob2Request.md) | :heavy_check_mark:                                                      | The request object to use for the request.                              |
+| Parameter                                                             | Type                                                                  | Required                                                              | Description                                                           |
+| --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- |
+| `request`                                                             | [CreateAtsJobRequest](../../models/operations/CreateAtsJobRequest.md) | :heavy_check_mark:                                                    | The request object to use for the request.                            |
 
 ### Response
 
-**[CreateAtsJob2Response](../../models/operations/CreateAtsJob2Response.md)**
+**[CreateAtsJobResponse](../../models/operations/CreateAtsJobResponse.md)**
 
 ### Errors
 
@@ -71,20 +71,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## getAtsJob2
+## getAtsJob
 
 Retrieve a job
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="getAtsJob2" method="get" path="/ats/{connection_id}/job/{id}" -->
+<!-- UsageSnippet language="java" operationID="getAtsJob" method="get" path="/ats/{connection_id}/job/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.GetAtsJob2Request;
-import to.unified.unified_java_sdk.models.operations.GetAtsJob2Response;
+import to.unified.unified_java_sdk.models.operations.GetAtsJobRequest;
+import to.unified.unified_java_sdk.models.operations.GetAtsJobResponse;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -97,12 +97,12 @@ public class Application {
                     .build())
             .build();
 
-        GetAtsJob2Request req = GetAtsJob2Request.builder()
+        GetAtsJobRequest req = GetAtsJobRequest.builder()
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        GetAtsJob2Response res = sdk.job().getAtsJob2()
+        GetAtsJobResponse res = sdk.job().getAtsJob()
                 .request(req)
                 .call();
 
@@ -115,13 +115,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                         | Type                                                              | Required                                                          | Description                                                       |
-| ----------------------------------------------------------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------- |
-| `request`                                                         | [GetAtsJob2Request](../../models/operations/GetAtsJob2Request.md) | :heavy_check_mark:                                                | The request object to use for the request.                        |
+| Parameter                                                       | Type                                                            | Required                                                        | Description                                                     |
+| --------------------------------------------------------------- | --------------------------------------------------------------- | --------------------------------------------------------------- | --------------------------------------------------------------- |
+| `request`                                                       | [GetAtsJobRequest](../../models/operations/GetAtsJobRequest.md) | :heavy_check_mark:                                              | The request object to use for the request.                      |
 
 ### Response
 
-**[GetAtsJob2Response](../../models/operations/GetAtsJob2Response.md)**
+**[GetAtsJobResponse](../../models/operations/GetAtsJobResponse.md)**
 
 ### Errors
 
@@ -129,20 +129,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## listAtsJobs2
+## listAtsJobs
 
 List all jobs
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="listAtsJobs2" method="get" path="/ats/{connection_id}/job" -->
+<!-- UsageSnippet language="java" operationID="listAtsJobs" method="get" path="/ats/{connection_id}/job" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.ListAtsJobs2Request;
-import to.unified.unified_java_sdk.models.operations.ListAtsJobs2Response;
+import to.unified.unified_java_sdk.models.operations.ListAtsJobsRequest;
+import to.unified.unified_java_sdk.models.operations.ListAtsJobsResponse;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -155,11 +155,11 @@ public class Application {
                     .build())
             .build();
 
-        ListAtsJobs2Request req = ListAtsJobs2Request.builder()
+        ListAtsJobsRequest req = ListAtsJobsRequest.builder()
                 .connectionId("<id>")
                 .build();
 
-        ListAtsJobs2Response res = sdk.job().listAtsJobs2()
+        ListAtsJobsResponse res = sdk.job().listAtsJobs()
                 .request(req)
                 .call();
 
@@ -172,13 +172,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                             | Type                                                                  | Required                                                              | Description                                                           |
-| --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- |
-| `request`                                                             | [ListAtsJobs2Request](../../models/operations/ListAtsJobs2Request.md) | :heavy_check_mark:                                                    | The request object to use for the request.                            |
+| Parameter                                                           | Type                                                                | Required                                                            | Description                                                         |
+| ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- |
+| `request`                                                           | [ListAtsJobsRequest](../../models/operations/ListAtsJobsRequest.md) | :heavy_check_mark:                                                  | The request object to use for the request.                          |
 
 ### Response
 
-**[ListAtsJobs2Response](../../models/operations/ListAtsJobs2Response.md)**
+**[ListAtsJobsResponse](../../models/operations/ListAtsJobsResponse.md)**
 
 ### Errors
 
@@ -186,20 +186,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## patchAtsJob2
+## patchAtsJob
 
 Update a job
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchAtsJob2" method="patch" path="/ats/{connection_id}/job/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchAtsJob" method="patch" path="/ats/{connection_id}/job/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.PatchAtsJob2Request;
-import to.unified.unified_java_sdk.models.operations.PatchAtsJob2Response;
+import to.unified.unified_java_sdk.models.operations.PatchAtsJobRequest;
+import to.unified.unified_java_sdk.models.operations.PatchAtsJobResponse;
 import to.unified.unified_java_sdk.models.shared.AtsJob;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -213,14 +213,14 @@ public class Application {
                     .build())
             .build();
 
-        PatchAtsJob2Request req = PatchAtsJob2Request.builder()
+        PatchAtsJobRequest req = PatchAtsJobRequest.builder()
                 .atsJob(AtsJob.builder()
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        PatchAtsJob2Response res = sdk.job().patchAtsJob2()
+        PatchAtsJobResponse res = sdk.job().patchAtsJob()
                 .request(req)
                 .call();
 
@@ -233,13 +233,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                             | Type                                                                  | Required                                                              | Description                                                           |
-| --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- |
-| `request`                                                             | [PatchAtsJob2Request](../../models/operations/PatchAtsJob2Request.md) | :heavy_check_mark:                                                    | The request object to use for the request.                            |
+| Parameter                                                           | Type                                                                | Required                                                            | Description                                                         |
+| ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- |
+| `request`                                                           | [PatchAtsJobRequest](../../models/operations/PatchAtsJobRequest.md) | :heavy_check_mark:                                                  | The request object to use for the request.                          |
 
 ### Response
 
-**[PatchAtsJob2Response](../../models/operations/PatchAtsJob2Response.md)**
+**[PatchAtsJobResponse](../../models/operations/PatchAtsJobResponse.md)**
 
 ### Errors
 
@@ -247,20 +247,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## removeAtsJob2
+## removeAtsJob
 
 Remove a job
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="removeAtsJob2" method="delete" path="/ats/{connection_id}/job/{id}" -->
+<!-- UsageSnippet language="java" operationID="removeAtsJob" method="delete" path="/ats/{connection_id}/job/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.RemoveAtsJob2Request;
-import to.unified.unified_java_sdk.models.operations.RemoveAtsJob2Response;
+import to.unified.unified_java_sdk.models.operations.RemoveAtsJobRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveAtsJobResponse;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -273,12 +273,12 @@ public class Application {
                     .build())
             .build();
 
-        RemoveAtsJob2Request req = RemoveAtsJob2Request.builder()
+        RemoveAtsJobRequest req = RemoveAtsJobRequest.builder()
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        RemoveAtsJob2Response res = sdk.job().removeAtsJob2()
+        RemoveAtsJobResponse res = sdk.job().removeAtsJob()
                 .request(req)
                 .call();
 
@@ -289,13 +289,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                               | Type                                                                    | Required                                                                | Description                                                             |
-| ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- |
-| `request`                                                               | [RemoveAtsJob2Request](../../models/operations/RemoveAtsJob2Request.md) | :heavy_check_mark:                                                      | The request object to use for the request.                              |
+| Parameter                                                             | Type                                                                  | Required                                                              | Description                                                           |
+| --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- |
+| `request`                                                             | [RemoveAtsJobRequest](../../models/operations/RemoveAtsJobRequest.md) | :heavy_check_mark:                                                    | The request object to use for the request.                            |
 
 ### Response
 
-**[RemoveAtsJob2Response](../../models/operations/RemoveAtsJob2Response.md)**
+**[RemoveAtsJobResponse](../../models/operations/RemoveAtsJobResponse.md)**
 
 ### Errors
 
@@ -303,20 +303,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## updateAtsJob2
+## updateAtsJob
 
 Update a job
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateAtsJob2" method="put" path="/ats/{connection_id}/job/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateAtsJob" method="put" path="/ats/{connection_id}/job/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.UpdateAtsJob2Request;
-import to.unified.unified_java_sdk.models.operations.UpdateAtsJob2Response;
+import to.unified.unified_java_sdk.models.operations.UpdateAtsJobRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateAtsJobResponse;
 import to.unified.unified_java_sdk.models.shared.AtsJob;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -330,14 +330,14 @@ public class Application {
                     .build())
             .build();
 
-        UpdateAtsJob2Request req = UpdateAtsJob2Request.builder()
+        UpdateAtsJobRequest req = UpdateAtsJobRequest.builder()
                 .atsJob(AtsJob.builder()
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        UpdateAtsJob2Response res = sdk.job().updateAtsJob2()
+        UpdateAtsJobResponse res = sdk.job().updateAtsJob()
                 .request(req)
                 .call();
 
@@ -350,13 +350,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                               | Type                                                                    | Required                                                                | Description                                                             |
-| ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- |
-| `request`                                                               | [UpdateAtsJob2Request](../../models/operations/UpdateAtsJob2Request.md) | :heavy_check_mark:                                                      | The request object to use for the request.                              |
+| Parameter                                                             | Type                                                                  | Required                                                              | Description                                                           |
+| --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- |
+| `request`                                                             | [UpdateAtsJobRequest](../../models/operations/UpdateAtsJobRequest.md) | :heavy_check_mark:                                                    | The request object to use for the request.                            |
 
 ### Response
 
-**[UpdateAtsJob2Response](../../models/operations/UpdateAtsJob2Response.md)**
+**[UpdateAtsJobResponse](../../models/operations/UpdateAtsJobResponse.md)**
 
 ### Errors
 

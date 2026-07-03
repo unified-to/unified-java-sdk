@@ -6,54 +6,54 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
-import to.unified.unified_java_sdk.models.operations.CreateAdsCampaign2Request;
-import to.unified.unified_java_sdk.models.operations.CreateAdsCampaign2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.CreateAdsCampaign2Response;
-import to.unified.unified_java_sdk.models.operations.CreateMartechCampaign2Request;
-import to.unified.unified_java_sdk.models.operations.CreateMartechCampaign2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.CreateMartechCampaign2Response;
-import to.unified.unified_java_sdk.models.operations.GetAdsCampaign2Request;
-import to.unified.unified_java_sdk.models.operations.GetAdsCampaign2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.GetAdsCampaign2Response;
-import to.unified.unified_java_sdk.models.operations.GetMartechCampaign2Request;
-import to.unified.unified_java_sdk.models.operations.GetMartechCampaign2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.GetMartechCampaign2Response;
-import to.unified.unified_java_sdk.models.operations.ListAdsCampaigns2Request;
-import to.unified.unified_java_sdk.models.operations.ListAdsCampaigns2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.ListAdsCampaigns2Response;
-import to.unified.unified_java_sdk.models.operations.ListMartechCampaigns2Request;
-import to.unified.unified_java_sdk.models.operations.ListMartechCampaigns2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.ListMartechCampaigns2Response;
-import to.unified.unified_java_sdk.models.operations.PatchAdsCampaign2Request;
-import to.unified.unified_java_sdk.models.operations.PatchAdsCampaign2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.PatchAdsCampaign2Response;
-import to.unified.unified_java_sdk.models.operations.PatchMartechCampaign2Request;
-import to.unified.unified_java_sdk.models.operations.PatchMartechCampaign2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.PatchMartechCampaign2Response;
-import to.unified.unified_java_sdk.models.operations.RemoveAdsCampaign2Request;
-import to.unified.unified_java_sdk.models.operations.RemoveAdsCampaign2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.RemoveAdsCampaign2Response;
-import to.unified.unified_java_sdk.models.operations.RemoveMartechCampaign2Request;
-import to.unified.unified_java_sdk.models.operations.RemoveMartechCampaign2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.RemoveMartechCampaign2Response;
-import to.unified.unified_java_sdk.models.operations.UpdateAdsCampaign2Request;
-import to.unified.unified_java_sdk.models.operations.UpdateAdsCampaign2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.UpdateAdsCampaign2Response;
-import to.unified.unified_java_sdk.models.operations.UpdateMartechCampaign2Request;
-import to.unified.unified_java_sdk.models.operations.UpdateMartechCampaign2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.UpdateMartechCampaign2Response;
-import to.unified.unified_java_sdk.operations.CreateAdsCampaign2;
-import to.unified.unified_java_sdk.operations.CreateMartechCampaign2;
-import to.unified.unified_java_sdk.operations.GetAdsCampaign2;
-import to.unified.unified_java_sdk.operations.GetMartechCampaign2;
-import to.unified.unified_java_sdk.operations.ListAdsCampaigns2;
-import to.unified.unified_java_sdk.operations.ListMartechCampaigns2;
-import to.unified.unified_java_sdk.operations.PatchAdsCampaign2;
-import to.unified.unified_java_sdk.operations.PatchMartechCampaign2;
-import to.unified.unified_java_sdk.operations.RemoveAdsCampaign2;
-import to.unified.unified_java_sdk.operations.RemoveMartechCampaign2;
-import to.unified.unified_java_sdk.operations.UpdateAdsCampaign2;
-import to.unified.unified_java_sdk.operations.UpdateMartechCampaign2;
+import to.unified.unified_java_sdk.models.operations.CreateAdsCampaignRequest;
+import to.unified.unified_java_sdk.models.operations.CreateAdsCampaignRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.CreateAdsCampaignResponse;
+import to.unified.unified_java_sdk.models.operations.CreateMartechCampaignRequest;
+import to.unified.unified_java_sdk.models.operations.CreateMartechCampaignRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.CreateMartechCampaignResponse;
+import to.unified.unified_java_sdk.models.operations.GetAdsCampaignRequest;
+import to.unified.unified_java_sdk.models.operations.GetAdsCampaignRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetAdsCampaignResponse;
+import to.unified.unified_java_sdk.models.operations.GetMartechCampaignRequest;
+import to.unified.unified_java_sdk.models.operations.GetMartechCampaignRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetMartechCampaignResponse;
+import to.unified.unified_java_sdk.models.operations.ListAdsCampaignsRequest;
+import to.unified.unified_java_sdk.models.operations.ListAdsCampaignsRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListAdsCampaignsResponse;
+import to.unified.unified_java_sdk.models.operations.ListMartechCampaignsRequest;
+import to.unified.unified_java_sdk.models.operations.ListMartechCampaignsRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListMartechCampaignsResponse;
+import to.unified.unified_java_sdk.models.operations.PatchAdsCampaignRequest;
+import to.unified.unified_java_sdk.models.operations.PatchAdsCampaignRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.PatchAdsCampaignResponse;
+import to.unified.unified_java_sdk.models.operations.PatchMartechCampaignRequest;
+import to.unified.unified_java_sdk.models.operations.PatchMartechCampaignRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.PatchMartechCampaignResponse;
+import to.unified.unified_java_sdk.models.operations.RemoveAdsCampaignRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveAdsCampaignRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.RemoveAdsCampaignResponse;
+import to.unified.unified_java_sdk.models.operations.RemoveMartechCampaignRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveMartechCampaignRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.RemoveMartechCampaignResponse;
+import to.unified.unified_java_sdk.models.operations.UpdateAdsCampaignRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateAdsCampaignRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.UpdateAdsCampaignResponse;
+import to.unified.unified_java_sdk.models.operations.UpdateMartechCampaignRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateMartechCampaignRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.UpdateMartechCampaignResponse;
+import to.unified.unified_java_sdk.operations.CreateAdsCampaign;
+import to.unified.unified_java_sdk.operations.CreateMartechCampaign;
+import to.unified.unified_java_sdk.operations.GetAdsCampaign;
+import to.unified.unified_java_sdk.operations.GetMartechCampaign;
+import to.unified.unified_java_sdk.operations.ListAdsCampaigns;
+import to.unified.unified_java_sdk.operations.ListMartechCampaigns;
+import to.unified.unified_java_sdk.operations.PatchAdsCampaign;
+import to.unified.unified_java_sdk.operations.PatchMartechCampaign;
+import to.unified.unified_java_sdk.operations.RemoveAdsCampaign;
+import to.unified.unified_java_sdk.operations.RemoveMartechCampaign;
+import to.unified.unified_java_sdk.operations.UpdateAdsCampaign;
+import to.unified.unified_java_sdk.operations.UpdateMartechCampaign;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -81,8 +81,8 @@ public class Campaign {
      * 
      * @return The call builder
      */
-    public CreateAdsCampaign2RequestBuilder createAdsCampaign2() {
-        return new CreateAdsCampaign2RequestBuilder(sdkConfiguration);
+    public CreateAdsCampaignRequestBuilder createAdsCampaign() {
+        return new CreateAdsCampaignRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -92,9 +92,9 @@ public class Campaign {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateAdsCampaign2Response createAdsCampaign2(@Nonnull CreateAdsCampaign2Request request) {
-        RequestOperation<CreateAdsCampaign2Request, CreateAdsCampaign2Response> operation
-              = new CreateAdsCampaign2.Sync(sdkConfiguration, _headers);
+    public CreateAdsCampaignResponse createAdsCampaign(@Nonnull CreateAdsCampaignRequest request) {
+        RequestOperation<CreateAdsCampaignRequest, CreateAdsCampaignResponse> operation
+              = new CreateAdsCampaign.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -103,8 +103,8 @@ public class Campaign {
      * 
      * @return The call builder
      */
-    public CreateMartechCampaign2RequestBuilder createMartechCampaign2() {
-        return new CreateMartechCampaign2RequestBuilder(sdkConfiguration);
+    public CreateMartechCampaignRequestBuilder createMartechCampaign() {
+        return new CreateMartechCampaignRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -114,9 +114,9 @@ public class Campaign {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateMartechCampaign2Response createMartechCampaign2(@Nonnull CreateMartechCampaign2Request request) {
-        RequestOperation<CreateMartechCampaign2Request, CreateMartechCampaign2Response> operation
-              = new CreateMartechCampaign2.Sync(sdkConfiguration, _headers);
+    public CreateMartechCampaignResponse createMartechCampaign(@Nonnull CreateMartechCampaignRequest request) {
+        RequestOperation<CreateMartechCampaignRequest, CreateMartechCampaignResponse> operation
+              = new CreateMartechCampaign.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -125,30 +125,8 @@ public class Campaign {
      * 
      * @return The call builder
      */
-    public GetAdsCampaign2RequestBuilder getAdsCampaign2() {
-        return new GetAdsCampaign2RequestBuilder(sdkConfiguration);
-    }
-
-    /**
-     * Retrieve a campaign
-     * 
-     * @param request The request object containing all the parameters for the API call.
-     * @return The response from the API call
-     * @throws RuntimeException subclass if the API call fails
-     */
-    public GetAdsCampaign2Response getAdsCampaign2(@Nonnull GetAdsCampaign2Request request) {
-        RequestOperation<GetAdsCampaign2Request, GetAdsCampaign2Response> operation
-              = new GetAdsCampaign2.Sync(sdkConfiguration, _headers);
-        return operation.handleResponse(operation.doRequest(request));
-    }
-
-    /**
-     * Retrieve a campaign
-     * 
-     * @return The call builder
-     */
-    public GetMartechCampaign2RequestBuilder getMartechCampaign2() {
-        return new GetMartechCampaign2RequestBuilder(sdkConfiguration);
+    public GetAdsCampaignRequestBuilder getAdsCampaign() {
+        return new GetAdsCampaignRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -158,9 +136,31 @@ public class Campaign {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetMartechCampaign2Response getMartechCampaign2(@Nonnull GetMartechCampaign2Request request) {
-        RequestOperation<GetMartechCampaign2Request, GetMartechCampaign2Response> operation
-              = new GetMartechCampaign2.Sync(sdkConfiguration, _headers);
+    public GetAdsCampaignResponse getAdsCampaign(@Nonnull GetAdsCampaignRequest request) {
+        RequestOperation<GetAdsCampaignRequest, GetAdsCampaignResponse> operation
+              = new GetAdsCampaign.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Retrieve a campaign
+     * 
+     * @return The call builder
+     */
+    public GetMartechCampaignRequestBuilder getMartechCampaign() {
+        return new GetMartechCampaignRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Retrieve a campaign
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetMartechCampaignResponse getMartechCampaign(@Nonnull GetMartechCampaignRequest request) {
+        RequestOperation<GetMartechCampaignRequest, GetMartechCampaignResponse> operation
+              = new GetMartechCampaign.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -169,8 +169,8 @@ public class Campaign {
      * 
      * @return The call builder
      */
-    public ListAdsCampaigns2RequestBuilder listAdsCampaigns2() {
-        return new ListAdsCampaigns2RequestBuilder(sdkConfiguration);
+    public ListAdsCampaignsRequestBuilder listAdsCampaigns() {
+        return new ListAdsCampaignsRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -180,9 +180,9 @@ public class Campaign {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListAdsCampaigns2Response listAdsCampaigns2(@Nonnull ListAdsCampaigns2Request request) {
-        RequestOperation<ListAdsCampaigns2Request, ListAdsCampaigns2Response> operation
-              = new ListAdsCampaigns2.Sync(sdkConfiguration, _headers);
+    public ListAdsCampaignsResponse listAdsCampaigns(@Nonnull ListAdsCampaignsRequest request) {
+        RequestOperation<ListAdsCampaignsRequest, ListAdsCampaignsResponse> operation
+              = new ListAdsCampaigns.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -191,8 +191,8 @@ public class Campaign {
      * 
      * @return The call builder
      */
-    public ListMartechCampaigns2RequestBuilder listMartechCampaigns2() {
-        return new ListMartechCampaigns2RequestBuilder(sdkConfiguration);
+    public ListMartechCampaignsRequestBuilder listMartechCampaigns() {
+        return new ListMartechCampaignsRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -202,9 +202,9 @@ public class Campaign {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListMartechCampaigns2Response listMartechCampaigns2(@Nonnull ListMartechCampaigns2Request request) {
-        RequestOperation<ListMartechCampaigns2Request, ListMartechCampaigns2Response> operation
-              = new ListMartechCampaigns2.Sync(sdkConfiguration, _headers);
+    public ListMartechCampaignsResponse listMartechCampaigns(@Nonnull ListMartechCampaignsRequest request) {
+        RequestOperation<ListMartechCampaignsRequest, ListMartechCampaignsResponse> operation
+              = new ListMartechCampaigns.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -213,30 +213,8 @@ public class Campaign {
      * 
      * @return The call builder
      */
-    public PatchAdsCampaign2RequestBuilder patchAdsCampaign2() {
-        return new PatchAdsCampaign2RequestBuilder(sdkConfiguration);
-    }
-
-    /**
-     * Update a campaign
-     * 
-     * @param request The request object containing all the parameters for the API call.
-     * @return The response from the API call
-     * @throws RuntimeException subclass if the API call fails
-     */
-    public PatchAdsCampaign2Response patchAdsCampaign2(@Nonnull PatchAdsCampaign2Request request) {
-        RequestOperation<PatchAdsCampaign2Request, PatchAdsCampaign2Response> operation
-              = new PatchAdsCampaign2.Sync(sdkConfiguration, _headers);
-        return operation.handleResponse(operation.doRequest(request));
-    }
-
-    /**
-     * Update a campaign
-     * 
-     * @return The call builder
-     */
-    public PatchMartechCampaign2RequestBuilder patchMartechCampaign2() {
-        return new PatchMartechCampaign2RequestBuilder(sdkConfiguration);
+    public PatchAdsCampaignRequestBuilder patchAdsCampaign() {
+        return new PatchAdsCampaignRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -246,31 +224,31 @@ public class Campaign {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchMartechCampaign2Response patchMartechCampaign2(@Nonnull PatchMartechCampaign2Request request) {
-        RequestOperation<PatchMartechCampaign2Request, PatchMartechCampaign2Response> operation
-              = new PatchMartechCampaign2.Sync(sdkConfiguration, _headers);
+    public PatchAdsCampaignResponse patchAdsCampaign(@Nonnull PatchAdsCampaignRequest request) {
+        RequestOperation<PatchAdsCampaignRequest, PatchAdsCampaignResponse> operation
+              = new PatchAdsCampaign.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
     /**
-     * Remove a campaign
+     * Update a campaign
      * 
      * @return The call builder
      */
-    public RemoveAdsCampaign2RequestBuilder removeAdsCampaign2() {
-        return new RemoveAdsCampaign2RequestBuilder(sdkConfiguration);
+    public PatchMartechCampaignRequestBuilder patchMartechCampaign() {
+        return new PatchMartechCampaignRequestBuilder(sdkConfiguration);
     }
 
     /**
-     * Remove a campaign
+     * Update a campaign
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveAdsCampaign2Response removeAdsCampaign2(@Nonnull RemoveAdsCampaign2Request request) {
-        RequestOperation<RemoveAdsCampaign2Request, RemoveAdsCampaign2Response> operation
-              = new RemoveAdsCampaign2.Sync(sdkConfiguration, _headers);
+    public PatchMartechCampaignResponse patchMartechCampaign(@Nonnull PatchMartechCampaignRequest request) {
+        RequestOperation<PatchMartechCampaignRequest, PatchMartechCampaignResponse> operation
+              = new PatchMartechCampaign.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -279,8 +257,8 @@ public class Campaign {
      * 
      * @return The call builder
      */
-    public RemoveMartechCampaign2RequestBuilder removeMartechCampaign2() {
-        return new RemoveMartechCampaign2RequestBuilder(sdkConfiguration);
+    public RemoveAdsCampaignRequestBuilder removeAdsCampaign() {
+        return new RemoveAdsCampaignRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -290,9 +268,31 @@ public class Campaign {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveMartechCampaign2Response removeMartechCampaign2(@Nonnull RemoveMartechCampaign2Request request) {
-        RequestOperation<RemoveMartechCampaign2Request, RemoveMartechCampaign2Response> operation
-              = new RemoveMartechCampaign2.Sync(sdkConfiguration, _headers);
+    public RemoveAdsCampaignResponse removeAdsCampaign(@Nonnull RemoveAdsCampaignRequest request) {
+        RequestOperation<RemoveAdsCampaignRequest, RemoveAdsCampaignResponse> operation
+              = new RemoveAdsCampaign.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Remove a campaign
+     * 
+     * @return The call builder
+     */
+    public RemoveMartechCampaignRequestBuilder removeMartechCampaign() {
+        return new RemoveMartechCampaignRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Remove a campaign
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveMartechCampaignResponse removeMartechCampaign(@Nonnull RemoveMartechCampaignRequest request) {
+        RequestOperation<RemoveMartechCampaignRequest, RemoveMartechCampaignResponse> operation
+              = new RemoveMartechCampaign.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -301,8 +301,8 @@ public class Campaign {
      * 
      * @return The call builder
      */
-    public UpdateAdsCampaign2RequestBuilder updateAdsCampaign2() {
-        return new UpdateAdsCampaign2RequestBuilder(sdkConfiguration);
+    public UpdateAdsCampaignRequestBuilder updateAdsCampaign() {
+        return new UpdateAdsCampaignRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -312,9 +312,9 @@ public class Campaign {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateAdsCampaign2Response updateAdsCampaign2(@Nonnull UpdateAdsCampaign2Request request) {
-        RequestOperation<UpdateAdsCampaign2Request, UpdateAdsCampaign2Response> operation
-              = new UpdateAdsCampaign2.Sync(sdkConfiguration, _headers);
+    public UpdateAdsCampaignResponse updateAdsCampaign(@Nonnull UpdateAdsCampaignRequest request) {
+        RequestOperation<UpdateAdsCampaignRequest, UpdateAdsCampaignResponse> operation
+              = new UpdateAdsCampaign.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -323,8 +323,8 @@ public class Campaign {
      * 
      * @return The call builder
      */
-    public UpdateMartechCampaign2RequestBuilder updateMartechCampaign2() {
-        return new UpdateMartechCampaign2RequestBuilder(sdkConfiguration);
+    public UpdateMartechCampaignRequestBuilder updateMartechCampaign() {
+        return new UpdateMartechCampaignRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -334,9 +334,9 @@ public class Campaign {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateMartechCampaign2Response updateMartechCampaign2(@Nonnull UpdateMartechCampaign2Request request) {
-        RequestOperation<UpdateMartechCampaign2Request, UpdateMartechCampaign2Response> operation
-              = new UpdateMartechCampaign2.Sync(sdkConfiguration, _headers);
+    public UpdateMartechCampaignResponse updateMartechCampaign(@Nonnull UpdateMartechCampaignRequest request) {
+        RequestOperation<UpdateMartechCampaignRequest, UpdateMartechCampaignResponse> operation
+              = new UpdateMartechCampaign.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

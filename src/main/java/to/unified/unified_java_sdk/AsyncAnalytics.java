@@ -7,78 +7,78 @@ import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOper
 
 import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
-import to.unified.unified_java_sdk.models.operations.CreateAnalyticsEvent2Request;
-import to.unified.unified_java_sdk.models.operations.CreateAnalyticsProperty2Request;
-import to.unified.unified_java_sdk.models.operations.CreateAnalyticsVisitor2Request;
-import to.unified.unified_java_sdk.models.operations.GetAnalyticsEvent2Request;
-import to.unified.unified_java_sdk.models.operations.GetAnalyticsProperty2Request;
-import to.unified.unified_java_sdk.models.operations.GetAnalyticsSession2Request;
-import to.unified.unified_java_sdk.models.operations.GetAnalyticsVisitor2Request;
-import to.unified.unified_java_sdk.models.operations.ListAnalyticsEvents2Request;
-import to.unified.unified_java_sdk.models.operations.ListAnalyticsProperties2Request;
-import to.unified.unified_java_sdk.models.operations.ListAnalyticsReports2Request;
-import to.unified.unified_java_sdk.models.operations.ListAnalyticsSessions2Request;
-import to.unified.unified_java_sdk.models.operations.ListAnalyticsVisitors2Request;
-import to.unified.unified_java_sdk.models.operations.PatchAnalyticsProperty2Request;
-import to.unified.unified_java_sdk.models.operations.PatchAnalyticsVisitor2Request;
-import to.unified.unified_java_sdk.models.operations.RemoveAnalyticsProperty2Request;
-import to.unified.unified_java_sdk.models.operations.RemoveAnalyticsVisitor2Request;
-import to.unified.unified_java_sdk.models.operations.UpdateAnalyticsProperty2Request;
-import to.unified.unified_java_sdk.models.operations.UpdateAnalyticsVisitor2Request;
-import to.unified.unified_java_sdk.models.operations.async.CreateAnalyticsEvent2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.CreateAnalyticsEvent2Response;
-import to.unified.unified_java_sdk.models.operations.async.CreateAnalyticsProperty2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.CreateAnalyticsProperty2Response;
-import to.unified.unified_java_sdk.models.operations.async.CreateAnalyticsVisitor2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.CreateAnalyticsVisitor2Response;
-import to.unified.unified_java_sdk.models.operations.async.GetAnalyticsEvent2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.GetAnalyticsEvent2Response;
-import to.unified.unified_java_sdk.models.operations.async.GetAnalyticsProperty2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.GetAnalyticsProperty2Response;
-import to.unified.unified_java_sdk.models.operations.async.GetAnalyticsSession2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.GetAnalyticsSession2Response;
-import to.unified.unified_java_sdk.models.operations.async.GetAnalyticsVisitor2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.GetAnalyticsVisitor2Response;
-import to.unified.unified_java_sdk.models.operations.async.ListAnalyticsEvents2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.ListAnalyticsEvents2Response;
-import to.unified.unified_java_sdk.models.operations.async.ListAnalyticsProperties2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.ListAnalyticsProperties2Response;
-import to.unified.unified_java_sdk.models.operations.async.ListAnalyticsReports2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.ListAnalyticsReports2Response;
-import to.unified.unified_java_sdk.models.operations.async.ListAnalyticsSessions2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.ListAnalyticsSessions2Response;
-import to.unified.unified_java_sdk.models.operations.async.ListAnalyticsVisitors2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.ListAnalyticsVisitors2Response;
-import to.unified.unified_java_sdk.models.operations.async.PatchAnalyticsProperty2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.PatchAnalyticsProperty2Response;
-import to.unified.unified_java_sdk.models.operations.async.PatchAnalyticsVisitor2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.PatchAnalyticsVisitor2Response;
-import to.unified.unified_java_sdk.models.operations.async.RemoveAnalyticsProperty2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.RemoveAnalyticsProperty2Response;
-import to.unified.unified_java_sdk.models.operations.async.RemoveAnalyticsVisitor2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.RemoveAnalyticsVisitor2Response;
-import to.unified.unified_java_sdk.models.operations.async.UpdateAnalyticsProperty2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.UpdateAnalyticsProperty2Response;
-import to.unified.unified_java_sdk.models.operations.async.UpdateAnalyticsVisitor2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.UpdateAnalyticsVisitor2Response;
-import to.unified.unified_java_sdk.operations.CreateAnalyticsEvent2;
-import to.unified.unified_java_sdk.operations.CreateAnalyticsProperty2;
-import to.unified.unified_java_sdk.operations.CreateAnalyticsVisitor2;
-import to.unified.unified_java_sdk.operations.GetAnalyticsEvent2;
-import to.unified.unified_java_sdk.operations.GetAnalyticsProperty2;
-import to.unified.unified_java_sdk.operations.GetAnalyticsSession2;
-import to.unified.unified_java_sdk.operations.GetAnalyticsVisitor2;
-import to.unified.unified_java_sdk.operations.ListAnalyticsEvents2;
-import to.unified.unified_java_sdk.operations.ListAnalyticsProperties2;
-import to.unified.unified_java_sdk.operations.ListAnalyticsReports2;
-import to.unified.unified_java_sdk.operations.ListAnalyticsSessions2;
-import to.unified.unified_java_sdk.operations.ListAnalyticsVisitors2;
-import to.unified.unified_java_sdk.operations.PatchAnalyticsProperty2;
-import to.unified.unified_java_sdk.operations.PatchAnalyticsVisitor2;
-import to.unified.unified_java_sdk.operations.RemoveAnalyticsProperty2;
-import to.unified.unified_java_sdk.operations.RemoveAnalyticsVisitor2;
-import to.unified.unified_java_sdk.operations.UpdateAnalyticsProperty2;
-import to.unified.unified_java_sdk.operations.UpdateAnalyticsVisitor2;
+import to.unified.unified_java_sdk.models.operations.CreateAnalyticsEventRequest;
+import to.unified.unified_java_sdk.models.operations.CreateAnalyticsPropertyRequest;
+import to.unified.unified_java_sdk.models.operations.CreateAnalyticsVisitorRequest;
+import to.unified.unified_java_sdk.models.operations.GetAnalyticsEventRequest;
+import to.unified.unified_java_sdk.models.operations.GetAnalyticsPropertyRequest;
+import to.unified.unified_java_sdk.models.operations.GetAnalyticsSessionRequest;
+import to.unified.unified_java_sdk.models.operations.GetAnalyticsVisitorRequest;
+import to.unified.unified_java_sdk.models.operations.ListAnalyticsEventsRequest;
+import to.unified.unified_java_sdk.models.operations.ListAnalyticsPropertiesRequest;
+import to.unified.unified_java_sdk.models.operations.ListAnalyticsReportsRequest;
+import to.unified.unified_java_sdk.models.operations.ListAnalyticsSessionsRequest;
+import to.unified.unified_java_sdk.models.operations.ListAnalyticsVisitorsRequest;
+import to.unified.unified_java_sdk.models.operations.PatchAnalyticsPropertyRequest;
+import to.unified.unified_java_sdk.models.operations.PatchAnalyticsVisitorRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveAnalyticsPropertyRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveAnalyticsVisitorRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateAnalyticsPropertyRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateAnalyticsVisitorRequest;
+import to.unified.unified_java_sdk.models.operations.async.CreateAnalyticsEventRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.CreateAnalyticsEventResponse;
+import to.unified.unified_java_sdk.models.operations.async.CreateAnalyticsPropertyRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.CreateAnalyticsPropertyResponse;
+import to.unified.unified_java_sdk.models.operations.async.CreateAnalyticsVisitorRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.CreateAnalyticsVisitorResponse;
+import to.unified.unified_java_sdk.models.operations.async.GetAnalyticsEventRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetAnalyticsEventResponse;
+import to.unified.unified_java_sdk.models.operations.async.GetAnalyticsPropertyRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetAnalyticsPropertyResponse;
+import to.unified.unified_java_sdk.models.operations.async.GetAnalyticsSessionRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetAnalyticsSessionResponse;
+import to.unified.unified_java_sdk.models.operations.async.GetAnalyticsVisitorRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetAnalyticsVisitorResponse;
+import to.unified.unified_java_sdk.models.operations.async.ListAnalyticsEventsRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListAnalyticsEventsResponse;
+import to.unified.unified_java_sdk.models.operations.async.ListAnalyticsPropertiesRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListAnalyticsPropertiesResponse;
+import to.unified.unified_java_sdk.models.operations.async.ListAnalyticsReportsRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListAnalyticsReportsResponse;
+import to.unified.unified_java_sdk.models.operations.async.ListAnalyticsSessionsRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListAnalyticsSessionsResponse;
+import to.unified.unified_java_sdk.models.operations.async.ListAnalyticsVisitorsRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListAnalyticsVisitorsResponse;
+import to.unified.unified_java_sdk.models.operations.async.PatchAnalyticsPropertyRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.PatchAnalyticsPropertyResponse;
+import to.unified.unified_java_sdk.models.operations.async.PatchAnalyticsVisitorRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.PatchAnalyticsVisitorResponse;
+import to.unified.unified_java_sdk.models.operations.async.RemoveAnalyticsPropertyRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.RemoveAnalyticsPropertyResponse;
+import to.unified.unified_java_sdk.models.operations.async.RemoveAnalyticsVisitorRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.RemoveAnalyticsVisitorResponse;
+import to.unified.unified_java_sdk.models.operations.async.UpdateAnalyticsPropertyRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.UpdateAnalyticsPropertyResponse;
+import to.unified.unified_java_sdk.models.operations.async.UpdateAnalyticsVisitorRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.UpdateAnalyticsVisitorResponse;
+import to.unified.unified_java_sdk.operations.CreateAnalyticsEvent;
+import to.unified.unified_java_sdk.operations.CreateAnalyticsProperty;
+import to.unified.unified_java_sdk.operations.CreateAnalyticsVisitor;
+import to.unified.unified_java_sdk.operations.GetAnalyticsEvent;
+import to.unified.unified_java_sdk.operations.GetAnalyticsProperty;
+import to.unified.unified_java_sdk.operations.GetAnalyticsSession;
+import to.unified.unified_java_sdk.operations.GetAnalyticsVisitor;
+import to.unified.unified_java_sdk.operations.ListAnalyticsEvents;
+import to.unified.unified_java_sdk.operations.ListAnalyticsProperties;
+import to.unified.unified_java_sdk.operations.ListAnalyticsReports;
+import to.unified.unified_java_sdk.operations.ListAnalyticsSessions;
+import to.unified.unified_java_sdk.operations.ListAnalyticsVisitors;
+import to.unified.unified_java_sdk.operations.PatchAnalyticsProperty;
+import to.unified.unified_java_sdk.operations.PatchAnalyticsVisitor;
+import to.unified.unified_java_sdk.operations.RemoveAnalyticsProperty;
+import to.unified.unified_java_sdk.operations.RemoveAnalyticsVisitor;
+import to.unified.unified_java_sdk.operations.UpdateAnalyticsProperty;
+import to.unified.unified_java_sdk.operations.UpdateAnalyticsVisitor;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -107,19 +107,19 @@ public class AsyncAnalytics {
      * 
      * @return The async call builder
      */
-    public CreateAnalyticsEvent2RequestBuilder createAnalyticsEvent2() {
-        return new CreateAnalyticsEvent2RequestBuilder(sdkConfiguration);
+    public CreateAnalyticsEventRequestBuilder createAnalyticsEvent() {
+        return new CreateAnalyticsEventRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Create an event
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<CreateAnalyticsEvent2Response>} - The async response
+     * @return {@code CompletableFuture<CreateAnalyticsEventResponse>} - The async response
      */
-    public CompletableFuture<CreateAnalyticsEvent2Response> createAnalyticsEvent2(@Nonnull CreateAnalyticsEvent2Request request) {
-        AsyncRequestOperation<CreateAnalyticsEvent2Request, CreateAnalyticsEvent2Response> operation
-              = new CreateAnalyticsEvent2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<CreateAnalyticsEventResponse> createAnalyticsEvent(@Nonnull CreateAnalyticsEventRequest request) {
+        AsyncRequestOperation<CreateAnalyticsEventRequest, CreateAnalyticsEventResponse> operation
+              = new CreateAnalyticsEvent.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -130,19 +130,19 @@ public class AsyncAnalytics {
      * 
      * @return The async call builder
      */
-    public CreateAnalyticsProperty2RequestBuilder createAnalyticsProperty2() {
-        return new CreateAnalyticsProperty2RequestBuilder(sdkConfiguration);
+    public CreateAnalyticsPropertyRequestBuilder createAnalyticsProperty() {
+        return new CreateAnalyticsPropertyRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Create a property
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<CreateAnalyticsProperty2Response>} - The async response
+     * @return {@code CompletableFuture<CreateAnalyticsPropertyResponse>} - The async response
      */
-    public CompletableFuture<CreateAnalyticsProperty2Response> createAnalyticsProperty2(@Nonnull CreateAnalyticsProperty2Request request) {
-        AsyncRequestOperation<CreateAnalyticsProperty2Request, CreateAnalyticsProperty2Response> operation
-              = new CreateAnalyticsProperty2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<CreateAnalyticsPropertyResponse> createAnalyticsProperty(@Nonnull CreateAnalyticsPropertyRequest request) {
+        AsyncRequestOperation<CreateAnalyticsPropertyRequest, CreateAnalyticsPropertyResponse> operation
+              = new CreateAnalyticsProperty.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -153,19 +153,19 @@ public class AsyncAnalytics {
      * 
      * @return The async call builder
      */
-    public CreateAnalyticsVisitor2RequestBuilder createAnalyticsVisitor2() {
-        return new CreateAnalyticsVisitor2RequestBuilder(sdkConfiguration);
+    public CreateAnalyticsVisitorRequestBuilder createAnalyticsVisitor() {
+        return new CreateAnalyticsVisitorRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Create a visitor
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<CreateAnalyticsVisitor2Response>} - The async response
+     * @return {@code CompletableFuture<CreateAnalyticsVisitorResponse>} - The async response
      */
-    public CompletableFuture<CreateAnalyticsVisitor2Response> createAnalyticsVisitor2(@Nonnull CreateAnalyticsVisitor2Request request) {
-        AsyncRequestOperation<CreateAnalyticsVisitor2Request, CreateAnalyticsVisitor2Response> operation
-              = new CreateAnalyticsVisitor2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<CreateAnalyticsVisitorResponse> createAnalyticsVisitor(@Nonnull CreateAnalyticsVisitorRequest request) {
+        AsyncRequestOperation<CreateAnalyticsVisitorRequest, CreateAnalyticsVisitorResponse> operation
+              = new CreateAnalyticsVisitor.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -176,19 +176,19 @@ public class AsyncAnalytics {
      * 
      * @return The async call builder
      */
-    public GetAnalyticsEvent2RequestBuilder getAnalyticsEvent2() {
-        return new GetAnalyticsEvent2RequestBuilder(sdkConfiguration);
+    public GetAnalyticsEventRequestBuilder getAnalyticsEvent() {
+        return new GetAnalyticsEventRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Retrieve an event
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<GetAnalyticsEvent2Response>} - The async response
+     * @return {@code CompletableFuture<GetAnalyticsEventResponse>} - The async response
      */
-    public CompletableFuture<GetAnalyticsEvent2Response> getAnalyticsEvent2(@Nonnull GetAnalyticsEvent2Request request) {
-        AsyncRequestOperation<GetAnalyticsEvent2Request, GetAnalyticsEvent2Response> operation
-              = new GetAnalyticsEvent2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<GetAnalyticsEventResponse> getAnalyticsEvent(@Nonnull GetAnalyticsEventRequest request) {
+        AsyncRequestOperation<GetAnalyticsEventRequest, GetAnalyticsEventResponse> operation
+              = new GetAnalyticsEvent.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -199,19 +199,19 @@ public class AsyncAnalytics {
      * 
      * @return The async call builder
      */
-    public GetAnalyticsProperty2RequestBuilder getAnalyticsProperty2() {
-        return new GetAnalyticsProperty2RequestBuilder(sdkConfiguration);
+    public GetAnalyticsPropertyRequestBuilder getAnalyticsProperty() {
+        return new GetAnalyticsPropertyRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Retrieve a property
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<GetAnalyticsProperty2Response>} - The async response
+     * @return {@code CompletableFuture<GetAnalyticsPropertyResponse>} - The async response
      */
-    public CompletableFuture<GetAnalyticsProperty2Response> getAnalyticsProperty2(@Nonnull GetAnalyticsProperty2Request request) {
-        AsyncRequestOperation<GetAnalyticsProperty2Request, GetAnalyticsProperty2Response> operation
-              = new GetAnalyticsProperty2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<GetAnalyticsPropertyResponse> getAnalyticsProperty(@Nonnull GetAnalyticsPropertyRequest request) {
+        AsyncRequestOperation<GetAnalyticsPropertyRequest, GetAnalyticsPropertyResponse> operation
+              = new GetAnalyticsProperty.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -222,19 +222,19 @@ public class AsyncAnalytics {
      * 
      * @return The async call builder
      */
-    public GetAnalyticsSession2RequestBuilder getAnalyticsSession2() {
-        return new GetAnalyticsSession2RequestBuilder(sdkConfiguration);
+    public GetAnalyticsSessionRequestBuilder getAnalyticsSession() {
+        return new GetAnalyticsSessionRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Retrieve a session
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<GetAnalyticsSession2Response>} - The async response
+     * @return {@code CompletableFuture<GetAnalyticsSessionResponse>} - The async response
      */
-    public CompletableFuture<GetAnalyticsSession2Response> getAnalyticsSession2(@Nonnull GetAnalyticsSession2Request request) {
-        AsyncRequestOperation<GetAnalyticsSession2Request, GetAnalyticsSession2Response> operation
-              = new GetAnalyticsSession2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<GetAnalyticsSessionResponse> getAnalyticsSession(@Nonnull GetAnalyticsSessionRequest request) {
+        AsyncRequestOperation<GetAnalyticsSessionRequest, GetAnalyticsSessionResponse> operation
+              = new GetAnalyticsSession.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -245,19 +245,19 @@ public class AsyncAnalytics {
      * 
      * @return The async call builder
      */
-    public GetAnalyticsVisitor2RequestBuilder getAnalyticsVisitor2() {
-        return new GetAnalyticsVisitor2RequestBuilder(sdkConfiguration);
+    public GetAnalyticsVisitorRequestBuilder getAnalyticsVisitor() {
+        return new GetAnalyticsVisitorRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Retrieve a visitor
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<GetAnalyticsVisitor2Response>} - The async response
+     * @return {@code CompletableFuture<GetAnalyticsVisitorResponse>} - The async response
      */
-    public CompletableFuture<GetAnalyticsVisitor2Response> getAnalyticsVisitor2(@Nonnull GetAnalyticsVisitor2Request request) {
-        AsyncRequestOperation<GetAnalyticsVisitor2Request, GetAnalyticsVisitor2Response> operation
-              = new GetAnalyticsVisitor2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<GetAnalyticsVisitorResponse> getAnalyticsVisitor(@Nonnull GetAnalyticsVisitorRequest request) {
+        AsyncRequestOperation<GetAnalyticsVisitorRequest, GetAnalyticsVisitorResponse> operation
+              = new GetAnalyticsVisitor.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -268,19 +268,19 @@ public class AsyncAnalytics {
      * 
      * @return The async call builder
      */
-    public ListAnalyticsEvents2RequestBuilder listAnalyticsEvents2() {
-        return new ListAnalyticsEvents2RequestBuilder(sdkConfiguration);
+    public ListAnalyticsEventsRequestBuilder listAnalyticsEvents() {
+        return new ListAnalyticsEventsRequestBuilder(sdkConfiguration);
     }
 
     /**
      * List all events
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<ListAnalyticsEvents2Response>} - The async response
+     * @return {@code CompletableFuture<ListAnalyticsEventsResponse>} - The async response
      */
-    public CompletableFuture<ListAnalyticsEvents2Response> listAnalyticsEvents2(@Nonnull ListAnalyticsEvents2Request request) {
-        AsyncRequestOperation<ListAnalyticsEvents2Request, ListAnalyticsEvents2Response> operation
-              = new ListAnalyticsEvents2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<ListAnalyticsEventsResponse> listAnalyticsEvents(@Nonnull ListAnalyticsEventsRequest request) {
+        AsyncRequestOperation<ListAnalyticsEventsRequest, ListAnalyticsEventsResponse> operation
+              = new ListAnalyticsEvents.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -291,19 +291,19 @@ public class AsyncAnalytics {
      * 
      * @return The async call builder
      */
-    public ListAnalyticsProperties2RequestBuilder listAnalyticsProperties2() {
-        return new ListAnalyticsProperties2RequestBuilder(sdkConfiguration);
+    public ListAnalyticsPropertiesRequestBuilder listAnalyticsProperties() {
+        return new ListAnalyticsPropertiesRequestBuilder(sdkConfiguration);
     }
 
     /**
      * List all properties
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<ListAnalyticsProperties2Response>} - The async response
+     * @return {@code CompletableFuture<ListAnalyticsPropertiesResponse>} - The async response
      */
-    public CompletableFuture<ListAnalyticsProperties2Response> listAnalyticsProperties2(@Nonnull ListAnalyticsProperties2Request request) {
-        AsyncRequestOperation<ListAnalyticsProperties2Request, ListAnalyticsProperties2Response> operation
-              = new ListAnalyticsProperties2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<ListAnalyticsPropertiesResponse> listAnalyticsProperties(@Nonnull ListAnalyticsPropertiesRequest request) {
+        AsyncRequestOperation<ListAnalyticsPropertiesRequest, ListAnalyticsPropertiesResponse> operation
+              = new ListAnalyticsProperties.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -314,19 +314,19 @@ public class AsyncAnalytics {
      * 
      * @return The async call builder
      */
-    public ListAnalyticsReports2RequestBuilder listAnalyticsReports2() {
-        return new ListAnalyticsReports2RequestBuilder(sdkConfiguration);
+    public ListAnalyticsReportsRequestBuilder listAnalyticsReports() {
+        return new ListAnalyticsReportsRequestBuilder(sdkConfiguration);
     }
 
     /**
      * List all reports
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<ListAnalyticsReports2Response>} - The async response
+     * @return {@code CompletableFuture<ListAnalyticsReportsResponse>} - The async response
      */
-    public CompletableFuture<ListAnalyticsReports2Response> listAnalyticsReports2(@Nonnull ListAnalyticsReports2Request request) {
-        AsyncRequestOperation<ListAnalyticsReports2Request, ListAnalyticsReports2Response> operation
-              = new ListAnalyticsReports2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<ListAnalyticsReportsResponse> listAnalyticsReports(@Nonnull ListAnalyticsReportsRequest request) {
+        AsyncRequestOperation<ListAnalyticsReportsRequest, ListAnalyticsReportsResponse> operation
+              = new ListAnalyticsReports.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -337,19 +337,19 @@ public class AsyncAnalytics {
      * 
      * @return The async call builder
      */
-    public ListAnalyticsSessions2RequestBuilder listAnalyticsSessions2() {
-        return new ListAnalyticsSessions2RequestBuilder(sdkConfiguration);
+    public ListAnalyticsSessionsRequestBuilder listAnalyticsSessions() {
+        return new ListAnalyticsSessionsRequestBuilder(sdkConfiguration);
     }
 
     /**
      * List all sessions
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<ListAnalyticsSessions2Response>} - The async response
+     * @return {@code CompletableFuture<ListAnalyticsSessionsResponse>} - The async response
      */
-    public CompletableFuture<ListAnalyticsSessions2Response> listAnalyticsSessions2(@Nonnull ListAnalyticsSessions2Request request) {
-        AsyncRequestOperation<ListAnalyticsSessions2Request, ListAnalyticsSessions2Response> operation
-              = new ListAnalyticsSessions2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<ListAnalyticsSessionsResponse> listAnalyticsSessions(@Nonnull ListAnalyticsSessionsRequest request) {
+        AsyncRequestOperation<ListAnalyticsSessionsRequest, ListAnalyticsSessionsResponse> operation
+              = new ListAnalyticsSessions.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -360,19 +360,19 @@ public class AsyncAnalytics {
      * 
      * @return The async call builder
      */
-    public ListAnalyticsVisitors2RequestBuilder listAnalyticsVisitors2() {
-        return new ListAnalyticsVisitors2RequestBuilder(sdkConfiguration);
+    public ListAnalyticsVisitorsRequestBuilder listAnalyticsVisitors() {
+        return new ListAnalyticsVisitorsRequestBuilder(sdkConfiguration);
     }
 
     /**
      * List all visitors
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<ListAnalyticsVisitors2Response>} - The async response
+     * @return {@code CompletableFuture<ListAnalyticsVisitorsResponse>} - The async response
      */
-    public CompletableFuture<ListAnalyticsVisitors2Response> listAnalyticsVisitors2(@Nonnull ListAnalyticsVisitors2Request request) {
-        AsyncRequestOperation<ListAnalyticsVisitors2Request, ListAnalyticsVisitors2Response> operation
-              = new ListAnalyticsVisitors2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<ListAnalyticsVisitorsResponse> listAnalyticsVisitors(@Nonnull ListAnalyticsVisitorsRequest request) {
+        AsyncRequestOperation<ListAnalyticsVisitorsRequest, ListAnalyticsVisitorsResponse> operation
+              = new ListAnalyticsVisitors.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -383,19 +383,19 @@ public class AsyncAnalytics {
      * 
      * @return The async call builder
      */
-    public PatchAnalyticsProperty2RequestBuilder patchAnalyticsProperty2() {
-        return new PatchAnalyticsProperty2RequestBuilder(sdkConfiguration);
+    public PatchAnalyticsPropertyRequestBuilder patchAnalyticsProperty() {
+        return new PatchAnalyticsPropertyRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update a property
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<PatchAnalyticsProperty2Response>} - The async response
+     * @return {@code CompletableFuture<PatchAnalyticsPropertyResponse>} - The async response
      */
-    public CompletableFuture<PatchAnalyticsProperty2Response> patchAnalyticsProperty2(@Nonnull PatchAnalyticsProperty2Request request) {
-        AsyncRequestOperation<PatchAnalyticsProperty2Request, PatchAnalyticsProperty2Response> operation
-              = new PatchAnalyticsProperty2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<PatchAnalyticsPropertyResponse> patchAnalyticsProperty(@Nonnull PatchAnalyticsPropertyRequest request) {
+        AsyncRequestOperation<PatchAnalyticsPropertyRequest, PatchAnalyticsPropertyResponse> operation
+              = new PatchAnalyticsProperty.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -406,19 +406,19 @@ public class AsyncAnalytics {
      * 
      * @return The async call builder
      */
-    public PatchAnalyticsVisitor2RequestBuilder patchAnalyticsVisitor2() {
-        return new PatchAnalyticsVisitor2RequestBuilder(sdkConfiguration);
+    public PatchAnalyticsVisitorRequestBuilder patchAnalyticsVisitor() {
+        return new PatchAnalyticsVisitorRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update a visitor
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<PatchAnalyticsVisitor2Response>} - The async response
+     * @return {@code CompletableFuture<PatchAnalyticsVisitorResponse>} - The async response
      */
-    public CompletableFuture<PatchAnalyticsVisitor2Response> patchAnalyticsVisitor2(@Nonnull PatchAnalyticsVisitor2Request request) {
-        AsyncRequestOperation<PatchAnalyticsVisitor2Request, PatchAnalyticsVisitor2Response> operation
-              = new PatchAnalyticsVisitor2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<PatchAnalyticsVisitorResponse> patchAnalyticsVisitor(@Nonnull PatchAnalyticsVisitorRequest request) {
+        AsyncRequestOperation<PatchAnalyticsVisitorRequest, PatchAnalyticsVisitorResponse> operation
+              = new PatchAnalyticsVisitor.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -429,19 +429,19 @@ public class AsyncAnalytics {
      * 
      * @return The async call builder
      */
-    public RemoveAnalyticsProperty2RequestBuilder removeAnalyticsProperty2() {
-        return new RemoveAnalyticsProperty2RequestBuilder(sdkConfiguration);
+    public RemoveAnalyticsPropertyRequestBuilder removeAnalyticsProperty() {
+        return new RemoveAnalyticsPropertyRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Remove a property
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<RemoveAnalyticsProperty2Response>} - The async response
+     * @return {@code CompletableFuture<RemoveAnalyticsPropertyResponse>} - The async response
      */
-    public CompletableFuture<RemoveAnalyticsProperty2Response> removeAnalyticsProperty2(@Nonnull RemoveAnalyticsProperty2Request request) {
-        AsyncRequestOperation<RemoveAnalyticsProperty2Request, RemoveAnalyticsProperty2Response> operation
-              = new RemoveAnalyticsProperty2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<RemoveAnalyticsPropertyResponse> removeAnalyticsProperty(@Nonnull RemoveAnalyticsPropertyRequest request) {
+        AsyncRequestOperation<RemoveAnalyticsPropertyRequest, RemoveAnalyticsPropertyResponse> operation
+              = new RemoveAnalyticsProperty.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -452,19 +452,19 @@ public class AsyncAnalytics {
      * 
      * @return The async call builder
      */
-    public RemoveAnalyticsVisitor2RequestBuilder removeAnalyticsVisitor2() {
-        return new RemoveAnalyticsVisitor2RequestBuilder(sdkConfiguration);
+    public RemoveAnalyticsVisitorRequestBuilder removeAnalyticsVisitor() {
+        return new RemoveAnalyticsVisitorRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Remove a visitor
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<RemoveAnalyticsVisitor2Response>} - The async response
+     * @return {@code CompletableFuture<RemoveAnalyticsVisitorResponse>} - The async response
      */
-    public CompletableFuture<RemoveAnalyticsVisitor2Response> removeAnalyticsVisitor2(@Nonnull RemoveAnalyticsVisitor2Request request) {
-        AsyncRequestOperation<RemoveAnalyticsVisitor2Request, RemoveAnalyticsVisitor2Response> operation
-              = new RemoveAnalyticsVisitor2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<RemoveAnalyticsVisitorResponse> removeAnalyticsVisitor(@Nonnull RemoveAnalyticsVisitorRequest request) {
+        AsyncRequestOperation<RemoveAnalyticsVisitorRequest, RemoveAnalyticsVisitorResponse> operation
+              = new RemoveAnalyticsVisitor.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -475,19 +475,19 @@ public class AsyncAnalytics {
      * 
      * @return The async call builder
      */
-    public UpdateAnalyticsProperty2RequestBuilder updateAnalyticsProperty2() {
-        return new UpdateAnalyticsProperty2RequestBuilder(sdkConfiguration);
+    public UpdateAnalyticsPropertyRequestBuilder updateAnalyticsProperty() {
+        return new UpdateAnalyticsPropertyRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update a property
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<UpdateAnalyticsProperty2Response>} - The async response
+     * @return {@code CompletableFuture<UpdateAnalyticsPropertyResponse>} - The async response
      */
-    public CompletableFuture<UpdateAnalyticsProperty2Response> updateAnalyticsProperty2(@Nonnull UpdateAnalyticsProperty2Request request) {
-        AsyncRequestOperation<UpdateAnalyticsProperty2Request, UpdateAnalyticsProperty2Response> operation
-              = new UpdateAnalyticsProperty2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<UpdateAnalyticsPropertyResponse> updateAnalyticsProperty(@Nonnull UpdateAnalyticsPropertyRequest request) {
+        AsyncRequestOperation<UpdateAnalyticsPropertyRequest, UpdateAnalyticsPropertyResponse> operation
+              = new UpdateAnalyticsProperty.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -498,19 +498,19 @@ public class AsyncAnalytics {
      * 
      * @return The async call builder
      */
-    public UpdateAnalyticsVisitor2RequestBuilder updateAnalyticsVisitor2() {
-        return new UpdateAnalyticsVisitor2RequestBuilder(sdkConfiguration);
+    public UpdateAnalyticsVisitorRequestBuilder updateAnalyticsVisitor() {
+        return new UpdateAnalyticsVisitorRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update a visitor
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<UpdateAnalyticsVisitor2Response>} - The async response
+     * @return {@code CompletableFuture<UpdateAnalyticsVisitorResponse>} - The async response
      */
-    public CompletableFuture<UpdateAnalyticsVisitor2Response> updateAnalyticsVisitor2(@Nonnull UpdateAnalyticsVisitor2Request request) {
-        AsyncRequestOperation<UpdateAnalyticsVisitor2Request, UpdateAnalyticsVisitor2Response> operation
-              = new UpdateAnalyticsVisitor2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<UpdateAnalyticsVisitorResponse> updateAnalyticsVisitor(@Nonnull UpdateAnalyticsVisitorRequest request) {
+        AsyncRequestOperation<UpdateAnalyticsVisitorRequest, UpdateAnalyticsVisitorResponse> operation
+              = new UpdateAnalyticsVisitor.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

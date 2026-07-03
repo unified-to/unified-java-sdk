@@ -7,10 +7,10 @@ import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOper
 
 import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
-import to.unified.unified_java_sdk.models.operations.CreateShippingRate2Request;
-import to.unified.unified_java_sdk.models.operations.async.CreateShippingRate2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.CreateShippingRate2Response;
-import to.unified.unified_java_sdk.operations.CreateShippingRate2;
+import to.unified.unified_java_sdk.models.operations.CreateShippingRateRequest;
+import to.unified.unified_java_sdk.models.operations.async.CreateShippingRateRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.CreateShippingRateResponse;
+import to.unified.unified_java_sdk.operations.CreateShippingRate;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -39,19 +39,19 @@ public class AsyncRate {
      * 
      * @return The async call builder
      */
-    public CreateShippingRate2RequestBuilder createShippingRate2() {
-        return new CreateShippingRate2RequestBuilder(sdkConfiguration);
+    public CreateShippingRateRequestBuilder createShippingRate() {
+        return new CreateShippingRateRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Create a rate
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<CreateShippingRate2Response>} - The async response
+     * @return {@code CompletableFuture<CreateShippingRateResponse>} - The async response
      */
-    public CompletableFuture<CreateShippingRate2Response> createShippingRate2(@Nonnull CreateShippingRate2Request request) {
-        AsyncRequestOperation<CreateShippingRate2Request, CreateShippingRate2Response> operation
-              = new CreateShippingRate2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<CreateShippingRateResponse> createShippingRate(@Nonnull CreateShippingRateRequest request) {
+        AsyncRequestOperation<CreateShippingRateRequest, CreateShippingRateResponse> operation
+              = new CreateShippingRate.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

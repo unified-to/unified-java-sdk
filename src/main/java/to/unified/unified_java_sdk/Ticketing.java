@@ -6,102 +6,102 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
-import to.unified.unified_java_sdk.models.operations.CreateTicketingCategory2Request;
-import to.unified.unified_java_sdk.models.operations.CreateTicketingCategory2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.CreateTicketingCategory2Response;
-import to.unified.unified_java_sdk.models.operations.CreateTicketingCustomer2Request;
-import to.unified.unified_java_sdk.models.operations.CreateTicketingCustomer2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.CreateTicketingCustomer2Response;
-import to.unified.unified_java_sdk.models.operations.CreateTicketingNote2Request;
-import to.unified.unified_java_sdk.models.operations.CreateTicketingNote2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.CreateTicketingNote2Response;
-import to.unified.unified_java_sdk.models.operations.CreateTicketingTicket2Request;
-import to.unified.unified_java_sdk.models.operations.CreateTicketingTicket2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.CreateTicketingTicket2Response;
-import to.unified.unified_java_sdk.models.operations.GetTicketingCategory2Request;
-import to.unified.unified_java_sdk.models.operations.GetTicketingCategory2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.GetTicketingCategory2Response;
-import to.unified.unified_java_sdk.models.operations.GetTicketingCustomer2Request;
-import to.unified.unified_java_sdk.models.operations.GetTicketingCustomer2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.GetTicketingCustomer2Response;
-import to.unified.unified_java_sdk.models.operations.GetTicketingNote2Request;
-import to.unified.unified_java_sdk.models.operations.GetTicketingNote2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.GetTicketingNote2Response;
-import to.unified.unified_java_sdk.models.operations.GetTicketingTicket2Request;
-import to.unified.unified_java_sdk.models.operations.GetTicketingTicket2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.GetTicketingTicket2Response;
-import to.unified.unified_java_sdk.models.operations.ListTicketingCategories2Request;
-import to.unified.unified_java_sdk.models.operations.ListTicketingCategories2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.ListTicketingCategories2Response;
-import to.unified.unified_java_sdk.models.operations.ListTicketingCustomers2Request;
-import to.unified.unified_java_sdk.models.operations.ListTicketingCustomers2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.ListTicketingCustomers2Response;
-import to.unified.unified_java_sdk.models.operations.ListTicketingNotes2Request;
-import to.unified.unified_java_sdk.models.operations.ListTicketingNotes2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.ListTicketingNotes2Response;
-import to.unified.unified_java_sdk.models.operations.ListTicketingTickets2Request;
-import to.unified.unified_java_sdk.models.operations.ListTicketingTickets2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.ListTicketingTickets2Response;
-import to.unified.unified_java_sdk.models.operations.PatchTicketingCategory2Request;
-import to.unified.unified_java_sdk.models.operations.PatchTicketingCategory2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.PatchTicketingCategory2Response;
-import to.unified.unified_java_sdk.models.operations.PatchTicketingCustomer2Request;
-import to.unified.unified_java_sdk.models.operations.PatchTicketingCustomer2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.PatchTicketingCustomer2Response;
-import to.unified.unified_java_sdk.models.operations.PatchTicketingNote2Request;
-import to.unified.unified_java_sdk.models.operations.PatchTicketingNote2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.PatchTicketingNote2Response;
-import to.unified.unified_java_sdk.models.operations.PatchTicketingTicket2Request;
-import to.unified.unified_java_sdk.models.operations.PatchTicketingTicket2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.PatchTicketingTicket2Response;
-import to.unified.unified_java_sdk.models.operations.RemoveTicketingCategory2Request;
-import to.unified.unified_java_sdk.models.operations.RemoveTicketingCategory2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.RemoveTicketingCategory2Response;
-import to.unified.unified_java_sdk.models.operations.RemoveTicketingCustomer2Request;
-import to.unified.unified_java_sdk.models.operations.RemoveTicketingCustomer2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.RemoveTicketingCustomer2Response;
-import to.unified.unified_java_sdk.models.operations.RemoveTicketingNote2Request;
-import to.unified.unified_java_sdk.models.operations.RemoveTicketingNote2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.RemoveTicketingNote2Response;
-import to.unified.unified_java_sdk.models.operations.RemoveTicketingTicket2Request;
-import to.unified.unified_java_sdk.models.operations.RemoveTicketingTicket2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.RemoveTicketingTicket2Response;
-import to.unified.unified_java_sdk.models.operations.UpdateTicketingCategory2Request;
-import to.unified.unified_java_sdk.models.operations.UpdateTicketingCategory2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.UpdateTicketingCategory2Response;
-import to.unified.unified_java_sdk.models.operations.UpdateTicketingCustomer2Request;
-import to.unified.unified_java_sdk.models.operations.UpdateTicketingCustomer2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.UpdateTicketingCustomer2Response;
-import to.unified.unified_java_sdk.models.operations.UpdateTicketingNote2Request;
-import to.unified.unified_java_sdk.models.operations.UpdateTicketingNote2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.UpdateTicketingNote2Response;
-import to.unified.unified_java_sdk.models.operations.UpdateTicketingTicket2Request;
-import to.unified.unified_java_sdk.models.operations.UpdateTicketingTicket2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.UpdateTicketingTicket2Response;
-import to.unified.unified_java_sdk.operations.CreateTicketingCategory2;
-import to.unified.unified_java_sdk.operations.CreateTicketingCustomer2;
-import to.unified.unified_java_sdk.operations.CreateTicketingNote2;
-import to.unified.unified_java_sdk.operations.CreateTicketingTicket2;
-import to.unified.unified_java_sdk.operations.GetTicketingCategory2;
-import to.unified.unified_java_sdk.operations.GetTicketingCustomer2;
-import to.unified.unified_java_sdk.operations.GetTicketingNote2;
-import to.unified.unified_java_sdk.operations.GetTicketingTicket2;
-import to.unified.unified_java_sdk.operations.ListTicketingCategories2;
-import to.unified.unified_java_sdk.operations.ListTicketingCustomers2;
-import to.unified.unified_java_sdk.operations.ListTicketingNotes2;
-import to.unified.unified_java_sdk.operations.ListTicketingTickets2;
-import to.unified.unified_java_sdk.operations.PatchTicketingCategory2;
-import to.unified.unified_java_sdk.operations.PatchTicketingCustomer2;
-import to.unified.unified_java_sdk.operations.PatchTicketingNote2;
-import to.unified.unified_java_sdk.operations.PatchTicketingTicket2;
-import to.unified.unified_java_sdk.operations.RemoveTicketingCategory2;
-import to.unified.unified_java_sdk.operations.RemoveTicketingCustomer2;
-import to.unified.unified_java_sdk.operations.RemoveTicketingNote2;
-import to.unified.unified_java_sdk.operations.RemoveTicketingTicket2;
-import to.unified.unified_java_sdk.operations.UpdateTicketingCategory2;
-import to.unified.unified_java_sdk.operations.UpdateTicketingCustomer2;
-import to.unified.unified_java_sdk.operations.UpdateTicketingNote2;
-import to.unified.unified_java_sdk.operations.UpdateTicketingTicket2;
+import to.unified.unified_java_sdk.models.operations.CreateTicketingCategoryRequest;
+import to.unified.unified_java_sdk.models.operations.CreateTicketingCategoryRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.CreateTicketingCategoryResponse;
+import to.unified.unified_java_sdk.models.operations.CreateTicketingCustomerRequest;
+import to.unified.unified_java_sdk.models.operations.CreateTicketingCustomerRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.CreateTicketingCustomerResponse;
+import to.unified.unified_java_sdk.models.operations.CreateTicketingNoteRequest;
+import to.unified.unified_java_sdk.models.operations.CreateTicketingNoteRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.CreateTicketingNoteResponse;
+import to.unified.unified_java_sdk.models.operations.CreateTicketingTicketRequest;
+import to.unified.unified_java_sdk.models.operations.CreateTicketingTicketRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.CreateTicketingTicketResponse;
+import to.unified.unified_java_sdk.models.operations.GetTicketingCategoryRequest;
+import to.unified.unified_java_sdk.models.operations.GetTicketingCategoryRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetTicketingCategoryResponse;
+import to.unified.unified_java_sdk.models.operations.GetTicketingCustomerRequest;
+import to.unified.unified_java_sdk.models.operations.GetTicketingCustomerRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetTicketingCustomerResponse;
+import to.unified.unified_java_sdk.models.operations.GetTicketingNoteRequest;
+import to.unified.unified_java_sdk.models.operations.GetTicketingNoteRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetTicketingNoteResponse;
+import to.unified.unified_java_sdk.models.operations.GetTicketingTicketRequest;
+import to.unified.unified_java_sdk.models.operations.GetTicketingTicketRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetTicketingTicketResponse;
+import to.unified.unified_java_sdk.models.operations.ListTicketingCategoriesRequest;
+import to.unified.unified_java_sdk.models.operations.ListTicketingCategoriesRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListTicketingCategoriesResponse;
+import to.unified.unified_java_sdk.models.operations.ListTicketingCustomersRequest;
+import to.unified.unified_java_sdk.models.operations.ListTicketingCustomersRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListTicketingCustomersResponse;
+import to.unified.unified_java_sdk.models.operations.ListTicketingNotesRequest;
+import to.unified.unified_java_sdk.models.operations.ListTicketingNotesRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListTicketingNotesResponse;
+import to.unified.unified_java_sdk.models.operations.ListTicketingTicketsRequest;
+import to.unified.unified_java_sdk.models.operations.ListTicketingTicketsRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListTicketingTicketsResponse;
+import to.unified.unified_java_sdk.models.operations.PatchTicketingCategoryRequest;
+import to.unified.unified_java_sdk.models.operations.PatchTicketingCategoryRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.PatchTicketingCategoryResponse;
+import to.unified.unified_java_sdk.models.operations.PatchTicketingCustomerRequest;
+import to.unified.unified_java_sdk.models.operations.PatchTicketingCustomerRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.PatchTicketingCustomerResponse;
+import to.unified.unified_java_sdk.models.operations.PatchTicketingNoteRequest;
+import to.unified.unified_java_sdk.models.operations.PatchTicketingNoteRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.PatchTicketingNoteResponse;
+import to.unified.unified_java_sdk.models.operations.PatchTicketingTicketRequest;
+import to.unified.unified_java_sdk.models.operations.PatchTicketingTicketRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.PatchTicketingTicketResponse;
+import to.unified.unified_java_sdk.models.operations.RemoveTicketingCategoryRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveTicketingCategoryRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.RemoveTicketingCategoryResponse;
+import to.unified.unified_java_sdk.models.operations.RemoveTicketingCustomerRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveTicketingCustomerRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.RemoveTicketingCustomerResponse;
+import to.unified.unified_java_sdk.models.operations.RemoveTicketingNoteRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveTicketingNoteRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.RemoveTicketingNoteResponse;
+import to.unified.unified_java_sdk.models.operations.RemoveTicketingTicketRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveTicketingTicketRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.RemoveTicketingTicketResponse;
+import to.unified.unified_java_sdk.models.operations.UpdateTicketingCategoryRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateTicketingCategoryRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.UpdateTicketingCategoryResponse;
+import to.unified.unified_java_sdk.models.operations.UpdateTicketingCustomerRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateTicketingCustomerRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.UpdateTicketingCustomerResponse;
+import to.unified.unified_java_sdk.models.operations.UpdateTicketingNoteRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateTicketingNoteRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.UpdateTicketingNoteResponse;
+import to.unified.unified_java_sdk.models.operations.UpdateTicketingTicketRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateTicketingTicketRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.UpdateTicketingTicketResponse;
+import to.unified.unified_java_sdk.operations.CreateTicketingCategory;
+import to.unified.unified_java_sdk.operations.CreateTicketingCustomer;
+import to.unified.unified_java_sdk.operations.CreateTicketingNote;
+import to.unified.unified_java_sdk.operations.CreateTicketingTicket;
+import to.unified.unified_java_sdk.operations.GetTicketingCategory;
+import to.unified.unified_java_sdk.operations.GetTicketingCustomer;
+import to.unified.unified_java_sdk.operations.GetTicketingNote;
+import to.unified.unified_java_sdk.operations.GetTicketingTicket;
+import to.unified.unified_java_sdk.operations.ListTicketingCategories;
+import to.unified.unified_java_sdk.operations.ListTicketingCustomers;
+import to.unified.unified_java_sdk.operations.ListTicketingNotes;
+import to.unified.unified_java_sdk.operations.ListTicketingTickets;
+import to.unified.unified_java_sdk.operations.PatchTicketingCategory;
+import to.unified.unified_java_sdk.operations.PatchTicketingCustomer;
+import to.unified.unified_java_sdk.operations.PatchTicketingNote;
+import to.unified.unified_java_sdk.operations.PatchTicketingTicket;
+import to.unified.unified_java_sdk.operations.RemoveTicketingCategory;
+import to.unified.unified_java_sdk.operations.RemoveTicketingCustomer;
+import to.unified.unified_java_sdk.operations.RemoveTicketingNote;
+import to.unified.unified_java_sdk.operations.RemoveTicketingTicket;
+import to.unified.unified_java_sdk.operations.UpdateTicketingCategory;
+import to.unified.unified_java_sdk.operations.UpdateTicketingCustomer;
+import to.unified.unified_java_sdk.operations.UpdateTicketingNote;
+import to.unified.unified_java_sdk.operations.UpdateTicketingTicket;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -129,8 +129,8 @@ public class Ticketing {
      * 
      * @return The call builder
      */
-    public CreateTicketingCategory2RequestBuilder createTicketingCategory2() {
-        return new CreateTicketingCategory2RequestBuilder(sdkConfiguration);
+    public CreateTicketingCategoryRequestBuilder createTicketingCategory() {
+        return new CreateTicketingCategoryRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -140,9 +140,9 @@ public class Ticketing {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateTicketingCategory2Response createTicketingCategory2(@Nonnull CreateTicketingCategory2Request request) {
-        RequestOperation<CreateTicketingCategory2Request, CreateTicketingCategory2Response> operation
-              = new CreateTicketingCategory2.Sync(sdkConfiguration, _headers);
+    public CreateTicketingCategoryResponse createTicketingCategory(@Nonnull CreateTicketingCategoryRequest request) {
+        RequestOperation<CreateTicketingCategoryRequest, CreateTicketingCategoryResponse> operation
+              = new CreateTicketingCategory.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -151,8 +151,8 @@ public class Ticketing {
      * 
      * @return The call builder
      */
-    public CreateTicketingCustomer2RequestBuilder createTicketingCustomer2() {
-        return new CreateTicketingCustomer2RequestBuilder(sdkConfiguration);
+    public CreateTicketingCustomerRequestBuilder createTicketingCustomer() {
+        return new CreateTicketingCustomerRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -162,9 +162,9 @@ public class Ticketing {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateTicketingCustomer2Response createTicketingCustomer2(@Nonnull CreateTicketingCustomer2Request request) {
-        RequestOperation<CreateTicketingCustomer2Request, CreateTicketingCustomer2Response> operation
-              = new CreateTicketingCustomer2.Sync(sdkConfiguration, _headers);
+    public CreateTicketingCustomerResponse createTicketingCustomer(@Nonnull CreateTicketingCustomerRequest request) {
+        RequestOperation<CreateTicketingCustomerRequest, CreateTicketingCustomerResponse> operation
+              = new CreateTicketingCustomer.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -173,8 +173,8 @@ public class Ticketing {
      * 
      * @return The call builder
      */
-    public CreateTicketingNote2RequestBuilder createTicketingNote2() {
-        return new CreateTicketingNote2RequestBuilder(sdkConfiguration);
+    public CreateTicketingNoteRequestBuilder createTicketingNote() {
+        return new CreateTicketingNoteRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -184,9 +184,9 @@ public class Ticketing {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateTicketingNote2Response createTicketingNote2(@Nonnull CreateTicketingNote2Request request) {
-        RequestOperation<CreateTicketingNote2Request, CreateTicketingNote2Response> operation
-              = new CreateTicketingNote2.Sync(sdkConfiguration, _headers);
+    public CreateTicketingNoteResponse createTicketingNote(@Nonnull CreateTicketingNoteRequest request) {
+        RequestOperation<CreateTicketingNoteRequest, CreateTicketingNoteResponse> operation
+              = new CreateTicketingNote.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -195,8 +195,8 @@ public class Ticketing {
      * 
      * @return The call builder
      */
-    public CreateTicketingTicket2RequestBuilder createTicketingTicket2() {
-        return new CreateTicketingTicket2RequestBuilder(sdkConfiguration);
+    public CreateTicketingTicketRequestBuilder createTicketingTicket() {
+        return new CreateTicketingTicketRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -206,9 +206,9 @@ public class Ticketing {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateTicketingTicket2Response createTicketingTicket2(@Nonnull CreateTicketingTicket2Request request) {
-        RequestOperation<CreateTicketingTicket2Request, CreateTicketingTicket2Response> operation
-              = new CreateTicketingTicket2.Sync(sdkConfiguration, _headers);
+    public CreateTicketingTicketResponse createTicketingTicket(@Nonnull CreateTicketingTicketRequest request) {
+        RequestOperation<CreateTicketingTicketRequest, CreateTicketingTicketResponse> operation
+              = new CreateTicketingTicket.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -217,8 +217,8 @@ public class Ticketing {
      * 
      * @return The call builder
      */
-    public GetTicketingCategory2RequestBuilder getTicketingCategory2() {
-        return new GetTicketingCategory2RequestBuilder(sdkConfiguration);
+    public GetTicketingCategoryRequestBuilder getTicketingCategory() {
+        return new GetTicketingCategoryRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -228,9 +228,9 @@ public class Ticketing {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetTicketingCategory2Response getTicketingCategory2(@Nonnull GetTicketingCategory2Request request) {
-        RequestOperation<GetTicketingCategory2Request, GetTicketingCategory2Response> operation
-              = new GetTicketingCategory2.Sync(sdkConfiguration, _headers);
+    public GetTicketingCategoryResponse getTicketingCategory(@Nonnull GetTicketingCategoryRequest request) {
+        RequestOperation<GetTicketingCategoryRequest, GetTicketingCategoryResponse> operation
+              = new GetTicketingCategory.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -239,8 +239,8 @@ public class Ticketing {
      * 
      * @return The call builder
      */
-    public GetTicketingCustomer2RequestBuilder getTicketingCustomer2() {
-        return new GetTicketingCustomer2RequestBuilder(sdkConfiguration);
+    public GetTicketingCustomerRequestBuilder getTicketingCustomer() {
+        return new GetTicketingCustomerRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -250,9 +250,9 @@ public class Ticketing {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetTicketingCustomer2Response getTicketingCustomer2(@Nonnull GetTicketingCustomer2Request request) {
-        RequestOperation<GetTicketingCustomer2Request, GetTicketingCustomer2Response> operation
-              = new GetTicketingCustomer2.Sync(sdkConfiguration, _headers);
+    public GetTicketingCustomerResponse getTicketingCustomer(@Nonnull GetTicketingCustomerRequest request) {
+        RequestOperation<GetTicketingCustomerRequest, GetTicketingCustomerResponse> operation
+              = new GetTicketingCustomer.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -261,8 +261,8 @@ public class Ticketing {
      * 
      * @return The call builder
      */
-    public GetTicketingNote2RequestBuilder getTicketingNote2() {
-        return new GetTicketingNote2RequestBuilder(sdkConfiguration);
+    public GetTicketingNoteRequestBuilder getTicketingNote() {
+        return new GetTicketingNoteRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -272,9 +272,9 @@ public class Ticketing {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetTicketingNote2Response getTicketingNote2(@Nonnull GetTicketingNote2Request request) {
-        RequestOperation<GetTicketingNote2Request, GetTicketingNote2Response> operation
-              = new GetTicketingNote2.Sync(sdkConfiguration, _headers);
+    public GetTicketingNoteResponse getTicketingNote(@Nonnull GetTicketingNoteRequest request) {
+        RequestOperation<GetTicketingNoteRequest, GetTicketingNoteResponse> operation
+              = new GetTicketingNote.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -283,8 +283,8 @@ public class Ticketing {
      * 
      * @return The call builder
      */
-    public GetTicketingTicket2RequestBuilder getTicketingTicket2() {
-        return new GetTicketingTicket2RequestBuilder(sdkConfiguration);
+    public GetTicketingTicketRequestBuilder getTicketingTicket() {
+        return new GetTicketingTicketRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -294,9 +294,9 @@ public class Ticketing {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetTicketingTicket2Response getTicketingTicket2(@Nonnull GetTicketingTicket2Request request) {
-        RequestOperation<GetTicketingTicket2Request, GetTicketingTicket2Response> operation
-              = new GetTicketingTicket2.Sync(sdkConfiguration, _headers);
+    public GetTicketingTicketResponse getTicketingTicket(@Nonnull GetTicketingTicketRequest request) {
+        RequestOperation<GetTicketingTicketRequest, GetTicketingTicketResponse> operation
+              = new GetTicketingTicket.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -305,8 +305,8 @@ public class Ticketing {
      * 
      * @return The call builder
      */
-    public ListTicketingCategories2RequestBuilder listTicketingCategories2() {
-        return new ListTicketingCategories2RequestBuilder(sdkConfiguration);
+    public ListTicketingCategoriesRequestBuilder listTicketingCategories() {
+        return new ListTicketingCategoriesRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -316,9 +316,9 @@ public class Ticketing {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListTicketingCategories2Response listTicketingCategories2(@Nonnull ListTicketingCategories2Request request) {
-        RequestOperation<ListTicketingCategories2Request, ListTicketingCategories2Response> operation
-              = new ListTicketingCategories2.Sync(sdkConfiguration, _headers);
+    public ListTicketingCategoriesResponse listTicketingCategories(@Nonnull ListTicketingCategoriesRequest request) {
+        RequestOperation<ListTicketingCategoriesRequest, ListTicketingCategoriesResponse> operation
+              = new ListTicketingCategories.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -327,8 +327,8 @@ public class Ticketing {
      * 
      * @return The call builder
      */
-    public ListTicketingCustomers2RequestBuilder listTicketingCustomers2() {
-        return new ListTicketingCustomers2RequestBuilder(sdkConfiguration);
+    public ListTicketingCustomersRequestBuilder listTicketingCustomers() {
+        return new ListTicketingCustomersRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -338,9 +338,9 @@ public class Ticketing {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListTicketingCustomers2Response listTicketingCustomers2(@Nonnull ListTicketingCustomers2Request request) {
-        RequestOperation<ListTicketingCustomers2Request, ListTicketingCustomers2Response> operation
-              = new ListTicketingCustomers2.Sync(sdkConfiguration, _headers);
+    public ListTicketingCustomersResponse listTicketingCustomers(@Nonnull ListTicketingCustomersRequest request) {
+        RequestOperation<ListTicketingCustomersRequest, ListTicketingCustomersResponse> operation
+              = new ListTicketingCustomers.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -349,8 +349,8 @@ public class Ticketing {
      * 
      * @return The call builder
      */
-    public ListTicketingNotes2RequestBuilder listTicketingNotes2() {
-        return new ListTicketingNotes2RequestBuilder(sdkConfiguration);
+    public ListTicketingNotesRequestBuilder listTicketingNotes() {
+        return new ListTicketingNotesRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -360,9 +360,9 @@ public class Ticketing {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListTicketingNotes2Response listTicketingNotes2(@Nonnull ListTicketingNotes2Request request) {
-        RequestOperation<ListTicketingNotes2Request, ListTicketingNotes2Response> operation
-              = new ListTicketingNotes2.Sync(sdkConfiguration, _headers);
+    public ListTicketingNotesResponse listTicketingNotes(@Nonnull ListTicketingNotesRequest request) {
+        RequestOperation<ListTicketingNotesRequest, ListTicketingNotesResponse> operation
+              = new ListTicketingNotes.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -371,8 +371,8 @@ public class Ticketing {
      * 
      * @return The call builder
      */
-    public ListTicketingTickets2RequestBuilder listTicketingTickets2() {
-        return new ListTicketingTickets2RequestBuilder(sdkConfiguration);
+    public ListTicketingTicketsRequestBuilder listTicketingTickets() {
+        return new ListTicketingTicketsRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -382,9 +382,9 @@ public class Ticketing {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListTicketingTickets2Response listTicketingTickets2(@Nonnull ListTicketingTickets2Request request) {
-        RequestOperation<ListTicketingTickets2Request, ListTicketingTickets2Response> operation
-              = new ListTicketingTickets2.Sync(sdkConfiguration, _headers);
+    public ListTicketingTicketsResponse listTicketingTickets(@Nonnull ListTicketingTicketsRequest request) {
+        RequestOperation<ListTicketingTicketsRequest, ListTicketingTicketsResponse> operation
+              = new ListTicketingTickets.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -393,8 +393,8 @@ public class Ticketing {
      * 
      * @return The call builder
      */
-    public PatchTicketingCategory2RequestBuilder patchTicketingCategory2() {
-        return new PatchTicketingCategory2RequestBuilder(sdkConfiguration);
+    public PatchTicketingCategoryRequestBuilder patchTicketingCategory() {
+        return new PatchTicketingCategoryRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -404,9 +404,9 @@ public class Ticketing {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchTicketingCategory2Response patchTicketingCategory2(@Nonnull PatchTicketingCategory2Request request) {
-        RequestOperation<PatchTicketingCategory2Request, PatchTicketingCategory2Response> operation
-              = new PatchTicketingCategory2.Sync(sdkConfiguration, _headers);
+    public PatchTicketingCategoryResponse patchTicketingCategory(@Nonnull PatchTicketingCategoryRequest request) {
+        RequestOperation<PatchTicketingCategoryRequest, PatchTicketingCategoryResponse> operation
+              = new PatchTicketingCategory.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -415,8 +415,8 @@ public class Ticketing {
      * 
      * @return The call builder
      */
-    public PatchTicketingCustomer2RequestBuilder patchTicketingCustomer2() {
-        return new PatchTicketingCustomer2RequestBuilder(sdkConfiguration);
+    public PatchTicketingCustomerRequestBuilder patchTicketingCustomer() {
+        return new PatchTicketingCustomerRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -426,9 +426,9 @@ public class Ticketing {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchTicketingCustomer2Response patchTicketingCustomer2(@Nonnull PatchTicketingCustomer2Request request) {
-        RequestOperation<PatchTicketingCustomer2Request, PatchTicketingCustomer2Response> operation
-              = new PatchTicketingCustomer2.Sync(sdkConfiguration, _headers);
+    public PatchTicketingCustomerResponse patchTicketingCustomer(@Nonnull PatchTicketingCustomerRequest request) {
+        RequestOperation<PatchTicketingCustomerRequest, PatchTicketingCustomerResponse> operation
+              = new PatchTicketingCustomer.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -437,8 +437,8 @@ public class Ticketing {
      * 
      * @return The call builder
      */
-    public PatchTicketingNote2RequestBuilder patchTicketingNote2() {
-        return new PatchTicketingNote2RequestBuilder(sdkConfiguration);
+    public PatchTicketingNoteRequestBuilder patchTicketingNote() {
+        return new PatchTicketingNoteRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -448,9 +448,9 @@ public class Ticketing {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchTicketingNote2Response patchTicketingNote2(@Nonnull PatchTicketingNote2Request request) {
-        RequestOperation<PatchTicketingNote2Request, PatchTicketingNote2Response> operation
-              = new PatchTicketingNote2.Sync(sdkConfiguration, _headers);
+    public PatchTicketingNoteResponse patchTicketingNote(@Nonnull PatchTicketingNoteRequest request) {
+        RequestOperation<PatchTicketingNoteRequest, PatchTicketingNoteResponse> operation
+              = new PatchTicketingNote.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -459,8 +459,8 @@ public class Ticketing {
      * 
      * @return The call builder
      */
-    public PatchTicketingTicket2RequestBuilder patchTicketingTicket2() {
-        return new PatchTicketingTicket2RequestBuilder(sdkConfiguration);
+    public PatchTicketingTicketRequestBuilder patchTicketingTicket() {
+        return new PatchTicketingTicketRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -470,9 +470,9 @@ public class Ticketing {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchTicketingTicket2Response patchTicketingTicket2(@Nonnull PatchTicketingTicket2Request request) {
-        RequestOperation<PatchTicketingTicket2Request, PatchTicketingTicket2Response> operation
-              = new PatchTicketingTicket2.Sync(sdkConfiguration, _headers);
+    public PatchTicketingTicketResponse patchTicketingTicket(@Nonnull PatchTicketingTicketRequest request) {
+        RequestOperation<PatchTicketingTicketRequest, PatchTicketingTicketResponse> operation
+              = new PatchTicketingTicket.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -481,8 +481,8 @@ public class Ticketing {
      * 
      * @return The call builder
      */
-    public RemoveTicketingCategory2RequestBuilder removeTicketingCategory2() {
-        return new RemoveTicketingCategory2RequestBuilder(sdkConfiguration);
+    public RemoveTicketingCategoryRequestBuilder removeTicketingCategory() {
+        return new RemoveTicketingCategoryRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -492,9 +492,9 @@ public class Ticketing {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveTicketingCategory2Response removeTicketingCategory2(@Nonnull RemoveTicketingCategory2Request request) {
-        RequestOperation<RemoveTicketingCategory2Request, RemoveTicketingCategory2Response> operation
-              = new RemoveTicketingCategory2.Sync(sdkConfiguration, _headers);
+    public RemoveTicketingCategoryResponse removeTicketingCategory(@Nonnull RemoveTicketingCategoryRequest request) {
+        RequestOperation<RemoveTicketingCategoryRequest, RemoveTicketingCategoryResponse> operation
+              = new RemoveTicketingCategory.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -503,8 +503,8 @@ public class Ticketing {
      * 
      * @return The call builder
      */
-    public RemoveTicketingCustomer2RequestBuilder removeTicketingCustomer2() {
-        return new RemoveTicketingCustomer2RequestBuilder(sdkConfiguration);
+    public RemoveTicketingCustomerRequestBuilder removeTicketingCustomer() {
+        return new RemoveTicketingCustomerRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -514,9 +514,9 @@ public class Ticketing {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveTicketingCustomer2Response removeTicketingCustomer2(@Nonnull RemoveTicketingCustomer2Request request) {
-        RequestOperation<RemoveTicketingCustomer2Request, RemoveTicketingCustomer2Response> operation
-              = new RemoveTicketingCustomer2.Sync(sdkConfiguration, _headers);
+    public RemoveTicketingCustomerResponse removeTicketingCustomer(@Nonnull RemoveTicketingCustomerRequest request) {
+        RequestOperation<RemoveTicketingCustomerRequest, RemoveTicketingCustomerResponse> operation
+              = new RemoveTicketingCustomer.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -525,8 +525,8 @@ public class Ticketing {
      * 
      * @return The call builder
      */
-    public RemoveTicketingNote2RequestBuilder removeTicketingNote2() {
-        return new RemoveTicketingNote2RequestBuilder(sdkConfiguration);
+    public RemoveTicketingNoteRequestBuilder removeTicketingNote() {
+        return new RemoveTicketingNoteRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -536,9 +536,9 @@ public class Ticketing {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveTicketingNote2Response removeTicketingNote2(@Nonnull RemoveTicketingNote2Request request) {
-        RequestOperation<RemoveTicketingNote2Request, RemoveTicketingNote2Response> operation
-              = new RemoveTicketingNote2.Sync(sdkConfiguration, _headers);
+    public RemoveTicketingNoteResponse removeTicketingNote(@Nonnull RemoveTicketingNoteRequest request) {
+        RequestOperation<RemoveTicketingNoteRequest, RemoveTicketingNoteResponse> operation
+              = new RemoveTicketingNote.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -547,8 +547,8 @@ public class Ticketing {
      * 
      * @return The call builder
      */
-    public RemoveTicketingTicket2RequestBuilder removeTicketingTicket2() {
-        return new RemoveTicketingTicket2RequestBuilder(sdkConfiguration);
+    public RemoveTicketingTicketRequestBuilder removeTicketingTicket() {
+        return new RemoveTicketingTicketRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -558,9 +558,9 @@ public class Ticketing {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveTicketingTicket2Response removeTicketingTicket2(@Nonnull RemoveTicketingTicket2Request request) {
-        RequestOperation<RemoveTicketingTicket2Request, RemoveTicketingTicket2Response> operation
-              = new RemoveTicketingTicket2.Sync(sdkConfiguration, _headers);
+    public RemoveTicketingTicketResponse removeTicketingTicket(@Nonnull RemoveTicketingTicketRequest request) {
+        RequestOperation<RemoveTicketingTicketRequest, RemoveTicketingTicketResponse> operation
+              = new RemoveTicketingTicket.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -569,8 +569,8 @@ public class Ticketing {
      * 
      * @return The call builder
      */
-    public UpdateTicketingCategory2RequestBuilder updateTicketingCategory2() {
-        return new UpdateTicketingCategory2RequestBuilder(sdkConfiguration);
+    public UpdateTicketingCategoryRequestBuilder updateTicketingCategory() {
+        return new UpdateTicketingCategoryRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -580,9 +580,9 @@ public class Ticketing {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateTicketingCategory2Response updateTicketingCategory2(@Nonnull UpdateTicketingCategory2Request request) {
-        RequestOperation<UpdateTicketingCategory2Request, UpdateTicketingCategory2Response> operation
-              = new UpdateTicketingCategory2.Sync(sdkConfiguration, _headers);
+    public UpdateTicketingCategoryResponse updateTicketingCategory(@Nonnull UpdateTicketingCategoryRequest request) {
+        RequestOperation<UpdateTicketingCategoryRequest, UpdateTicketingCategoryResponse> operation
+              = new UpdateTicketingCategory.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -591,8 +591,8 @@ public class Ticketing {
      * 
      * @return The call builder
      */
-    public UpdateTicketingCustomer2RequestBuilder updateTicketingCustomer2() {
-        return new UpdateTicketingCustomer2RequestBuilder(sdkConfiguration);
+    public UpdateTicketingCustomerRequestBuilder updateTicketingCustomer() {
+        return new UpdateTicketingCustomerRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -602,9 +602,9 @@ public class Ticketing {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateTicketingCustomer2Response updateTicketingCustomer2(@Nonnull UpdateTicketingCustomer2Request request) {
-        RequestOperation<UpdateTicketingCustomer2Request, UpdateTicketingCustomer2Response> operation
-              = new UpdateTicketingCustomer2.Sync(sdkConfiguration, _headers);
+    public UpdateTicketingCustomerResponse updateTicketingCustomer(@Nonnull UpdateTicketingCustomerRequest request) {
+        RequestOperation<UpdateTicketingCustomerRequest, UpdateTicketingCustomerResponse> operation
+              = new UpdateTicketingCustomer.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -613,8 +613,8 @@ public class Ticketing {
      * 
      * @return The call builder
      */
-    public UpdateTicketingNote2RequestBuilder updateTicketingNote2() {
-        return new UpdateTicketingNote2RequestBuilder(sdkConfiguration);
+    public UpdateTicketingNoteRequestBuilder updateTicketingNote() {
+        return new UpdateTicketingNoteRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -624,9 +624,9 @@ public class Ticketing {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateTicketingNote2Response updateTicketingNote2(@Nonnull UpdateTicketingNote2Request request) {
-        RequestOperation<UpdateTicketingNote2Request, UpdateTicketingNote2Response> operation
-              = new UpdateTicketingNote2.Sync(sdkConfiguration, _headers);
+    public UpdateTicketingNoteResponse updateTicketingNote(@Nonnull UpdateTicketingNoteRequest request) {
+        RequestOperation<UpdateTicketingNoteRequest, UpdateTicketingNoteResponse> operation
+              = new UpdateTicketingNote.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -635,8 +635,8 @@ public class Ticketing {
      * 
      * @return The call builder
      */
-    public UpdateTicketingTicket2RequestBuilder updateTicketingTicket2() {
-        return new UpdateTicketingTicket2RequestBuilder(sdkConfiguration);
+    public UpdateTicketingTicketRequestBuilder updateTicketingTicket() {
+        return new UpdateTicketingTicketRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -646,9 +646,9 @@ public class Ticketing {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateTicketingTicket2Response updateTicketingTicket2(@Nonnull UpdateTicketingTicket2Request request) {
-        RequestOperation<UpdateTicketingTicket2Request, UpdateTicketingTicket2Response> operation
-              = new UpdateTicketingTicket2.Sync(sdkConfiguration, _headers);
+    public UpdateTicketingTicketResponse updateTicketingTicket(@Nonnull UpdateTicketingTicketRequest request) {
+        RequestOperation<UpdateTicketingTicketRequest, UpdateTicketingTicketResponse> operation
+              = new UpdateTicketingTicket.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

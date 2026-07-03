@@ -7,30 +7,30 @@ import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOper
 
 import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
-import to.unified.unified_java_sdk.models.operations.CreateAtsInterview2Request;
-import to.unified.unified_java_sdk.models.operations.GetAtsInterview2Request;
-import to.unified.unified_java_sdk.models.operations.ListAtsInterviews2Request;
-import to.unified.unified_java_sdk.models.operations.PatchAtsInterview2Request;
-import to.unified.unified_java_sdk.models.operations.RemoveAtsInterview2Request;
-import to.unified.unified_java_sdk.models.operations.UpdateAtsInterview2Request;
-import to.unified.unified_java_sdk.models.operations.async.CreateAtsInterview2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.CreateAtsInterview2Response;
-import to.unified.unified_java_sdk.models.operations.async.GetAtsInterview2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.GetAtsInterview2Response;
-import to.unified.unified_java_sdk.models.operations.async.ListAtsInterviews2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.ListAtsInterviews2Response;
-import to.unified.unified_java_sdk.models.operations.async.PatchAtsInterview2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.PatchAtsInterview2Response;
-import to.unified.unified_java_sdk.models.operations.async.RemoveAtsInterview2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.RemoveAtsInterview2Response;
-import to.unified.unified_java_sdk.models.operations.async.UpdateAtsInterview2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.UpdateAtsInterview2Response;
-import to.unified.unified_java_sdk.operations.CreateAtsInterview2;
-import to.unified.unified_java_sdk.operations.GetAtsInterview2;
-import to.unified.unified_java_sdk.operations.ListAtsInterviews2;
-import to.unified.unified_java_sdk.operations.PatchAtsInterview2;
-import to.unified.unified_java_sdk.operations.RemoveAtsInterview2;
-import to.unified.unified_java_sdk.operations.UpdateAtsInterview2;
+import to.unified.unified_java_sdk.models.operations.CreateAtsInterviewRequest;
+import to.unified.unified_java_sdk.models.operations.GetAtsInterviewRequest;
+import to.unified.unified_java_sdk.models.operations.ListAtsInterviewsRequest;
+import to.unified.unified_java_sdk.models.operations.PatchAtsInterviewRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveAtsInterviewRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateAtsInterviewRequest;
+import to.unified.unified_java_sdk.models.operations.async.CreateAtsInterviewRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.CreateAtsInterviewResponse;
+import to.unified.unified_java_sdk.models.operations.async.GetAtsInterviewRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetAtsInterviewResponse;
+import to.unified.unified_java_sdk.models.operations.async.ListAtsInterviewsRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListAtsInterviewsResponse;
+import to.unified.unified_java_sdk.models.operations.async.PatchAtsInterviewRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.PatchAtsInterviewResponse;
+import to.unified.unified_java_sdk.models.operations.async.RemoveAtsInterviewRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.RemoveAtsInterviewResponse;
+import to.unified.unified_java_sdk.models.operations.async.UpdateAtsInterviewRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.UpdateAtsInterviewResponse;
+import to.unified.unified_java_sdk.operations.CreateAtsInterview;
+import to.unified.unified_java_sdk.operations.GetAtsInterview;
+import to.unified.unified_java_sdk.operations.ListAtsInterviews;
+import to.unified.unified_java_sdk.operations.PatchAtsInterview;
+import to.unified.unified_java_sdk.operations.RemoveAtsInterview;
+import to.unified.unified_java_sdk.operations.UpdateAtsInterview;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -59,19 +59,19 @@ public class AsyncInterview {
      * 
      * @return The async call builder
      */
-    public CreateAtsInterview2RequestBuilder createAtsInterview2() {
-        return new CreateAtsInterview2RequestBuilder(sdkConfiguration);
+    public CreateAtsInterviewRequestBuilder createAtsInterview() {
+        return new CreateAtsInterviewRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Create an interview
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<CreateAtsInterview2Response>} - The async response
+     * @return {@code CompletableFuture<CreateAtsInterviewResponse>} - The async response
      */
-    public CompletableFuture<CreateAtsInterview2Response> createAtsInterview2(@Nonnull CreateAtsInterview2Request request) {
-        AsyncRequestOperation<CreateAtsInterview2Request, CreateAtsInterview2Response> operation
-              = new CreateAtsInterview2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<CreateAtsInterviewResponse> createAtsInterview(@Nonnull CreateAtsInterviewRequest request) {
+        AsyncRequestOperation<CreateAtsInterviewRequest, CreateAtsInterviewResponse> operation
+              = new CreateAtsInterview.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -82,19 +82,19 @@ public class AsyncInterview {
      * 
      * @return The async call builder
      */
-    public GetAtsInterview2RequestBuilder getAtsInterview2() {
-        return new GetAtsInterview2RequestBuilder(sdkConfiguration);
+    public GetAtsInterviewRequestBuilder getAtsInterview() {
+        return new GetAtsInterviewRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Retrieve an interview
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<GetAtsInterview2Response>} - The async response
+     * @return {@code CompletableFuture<GetAtsInterviewResponse>} - The async response
      */
-    public CompletableFuture<GetAtsInterview2Response> getAtsInterview2(@Nonnull GetAtsInterview2Request request) {
-        AsyncRequestOperation<GetAtsInterview2Request, GetAtsInterview2Response> operation
-              = new GetAtsInterview2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<GetAtsInterviewResponse> getAtsInterview(@Nonnull GetAtsInterviewRequest request) {
+        AsyncRequestOperation<GetAtsInterviewRequest, GetAtsInterviewResponse> operation
+              = new GetAtsInterview.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -105,19 +105,19 @@ public class AsyncInterview {
      * 
      * @return The async call builder
      */
-    public ListAtsInterviews2RequestBuilder listAtsInterviews2() {
-        return new ListAtsInterviews2RequestBuilder(sdkConfiguration);
+    public ListAtsInterviewsRequestBuilder listAtsInterviews() {
+        return new ListAtsInterviewsRequestBuilder(sdkConfiguration);
     }
 
     /**
      * List all interviews
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<ListAtsInterviews2Response>} - The async response
+     * @return {@code CompletableFuture<ListAtsInterviewsResponse>} - The async response
      */
-    public CompletableFuture<ListAtsInterviews2Response> listAtsInterviews2(@Nonnull ListAtsInterviews2Request request) {
-        AsyncRequestOperation<ListAtsInterviews2Request, ListAtsInterviews2Response> operation
-              = new ListAtsInterviews2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<ListAtsInterviewsResponse> listAtsInterviews(@Nonnull ListAtsInterviewsRequest request) {
+        AsyncRequestOperation<ListAtsInterviewsRequest, ListAtsInterviewsResponse> operation
+              = new ListAtsInterviews.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -128,19 +128,19 @@ public class AsyncInterview {
      * 
      * @return The async call builder
      */
-    public PatchAtsInterview2RequestBuilder patchAtsInterview2() {
-        return new PatchAtsInterview2RequestBuilder(sdkConfiguration);
+    public PatchAtsInterviewRequestBuilder patchAtsInterview() {
+        return new PatchAtsInterviewRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update an interview
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<PatchAtsInterview2Response>} - The async response
+     * @return {@code CompletableFuture<PatchAtsInterviewResponse>} - The async response
      */
-    public CompletableFuture<PatchAtsInterview2Response> patchAtsInterview2(@Nonnull PatchAtsInterview2Request request) {
-        AsyncRequestOperation<PatchAtsInterview2Request, PatchAtsInterview2Response> operation
-              = new PatchAtsInterview2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<PatchAtsInterviewResponse> patchAtsInterview(@Nonnull PatchAtsInterviewRequest request) {
+        AsyncRequestOperation<PatchAtsInterviewRequest, PatchAtsInterviewResponse> operation
+              = new PatchAtsInterview.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -151,19 +151,19 @@ public class AsyncInterview {
      * 
      * @return The async call builder
      */
-    public RemoveAtsInterview2RequestBuilder removeAtsInterview2() {
-        return new RemoveAtsInterview2RequestBuilder(sdkConfiguration);
+    public RemoveAtsInterviewRequestBuilder removeAtsInterview() {
+        return new RemoveAtsInterviewRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Remove an interview
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<RemoveAtsInterview2Response>} - The async response
+     * @return {@code CompletableFuture<RemoveAtsInterviewResponse>} - The async response
      */
-    public CompletableFuture<RemoveAtsInterview2Response> removeAtsInterview2(@Nonnull RemoveAtsInterview2Request request) {
-        AsyncRequestOperation<RemoveAtsInterview2Request, RemoveAtsInterview2Response> operation
-              = new RemoveAtsInterview2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<RemoveAtsInterviewResponse> removeAtsInterview(@Nonnull RemoveAtsInterviewRequest request) {
+        AsyncRequestOperation<RemoveAtsInterviewRequest, RemoveAtsInterviewResponse> operation
+              = new RemoveAtsInterview.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -174,19 +174,19 @@ public class AsyncInterview {
      * 
      * @return The async call builder
      */
-    public UpdateAtsInterview2RequestBuilder updateAtsInterview2() {
-        return new UpdateAtsInterview2RequestBuilder(sdkConfiguration);
+    public UpdateAtsInterviewRequestBuilder updateAtsInterview() {
+        return new UpdateAtsInterviewRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update an interview
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<UpdateAtsInterview2Response>} - The async response
+     * @return {@code CompletableFuture<UpdateAtsInterviewResponse>} - The async response
      */
-    public CompletableFuture<UpdateAtsInterview2Response> updateAtsInterview2(@Nonnull UpdateAtsInterview2Request request) {
-        AsyncRequestOperation<UpdateAtsInterview2Request, UpdateAtsInterview2Response> operation
-              = new UpdateAtsInterview2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<UpdateAtsInterviewResponse> updateAtsInterview(@Nonnull UpdateAtsInterviewRequest request) {
+        AsyncRequestOperation<UpdateAtsInterviewRequest, UpdateAtsInterviewResponse> operation
+              = new UpdateAtsInterview.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

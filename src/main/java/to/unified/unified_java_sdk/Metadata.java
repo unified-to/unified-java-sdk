@@ -6,30 +6,30 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
-import to.unified.unified_java_sdk.models.operations.CreateMetadataMetadata2Request;
-import to.unified.unified_java_sdk.models.operations.CreateMetadataMetadata2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.CreateMetadataMetadata2Response;
-import to.unified.unified_java_sdk.models.operations.GetMetadataMetadata2Request;
-import to.unified.unified_java_sdk.models.operations.GetMetadataMetadata2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.GetMetadataMetadata2Response;
-import to.unified.unified_java_sdk.models.operations.ListMetadataMetadatas2Request;
-import to.unified.unified_java_sdk.models.operations.ListMetadataMetadatas2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.ListMetadataMetadatas2Response;
-import to.unified.unified_java_sdk.models.operations.PatchMetadataMetadata2Request;
-import to.unified.unified_java_sdk.models.operations.PatchMetadataMetadata2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.PatchMetadataMetadata2Response;
-import to.unified.unified_java_sdk.models.operations.RemoveMetadataMetadata2Request;
-import to.unified.unified_java_sdk.models.operations.RemoveMetadataMetadata2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.RemoveMetadataMetadata2Response;
-import to.unified.unified_java_sdk.models.operations.UpdateMetadataMetadata2Request;
-import to.unified.unified_java_sdk.models.operations.UpdateMetadataMetadata2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.UpdateMetadataMetadata2Response;
-import to.unified.unified_java_sdk.operations.CreateMetadataMetadata2;
-import to.unified.unified_java_sdk.operations.GetMetadataMetadata2;
-import to.unified.unified_java_sdk.operations.ListMetadataMetadatas2;
-import to.unified.unified_java_sdk.operations.PatchMetadataMetadata2;
-import to.unified.unified_java_sdk.operations.RemoveMetadataMetadata2;
-import to.unified.unified_java_sdk.operations.UpdateMetadataMetadata2;
+import to.unified.unified_java_sdk.models.operations.CreateMetadataMetadataRequest;
+import to.unified.unified_java_sdk.models.operations.CreateMetadataMetadataRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.CreateMetadataMetadataResponse;
+import to.unified.unified_java_sdk.models.operations.GetMetadataMetadataRequest;
+import to.unified.unified_java_sdk.models.operations.GetMetadataMetadataRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetMetadataMetadataResponse;
+import to.unified.unified_java_sdk.models.operations.ListMetadataMetadatasRequest;
+import to.unified.unified_java_sdk.models.operations.ListMetadataMetadatasRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListMetadataMetadatasResponse;
+import to.unified.unified_java_sdk.models.operations.PatchMetadataMetadataRequest;
+import to.unified.unified_java_sdk.models.operations.PatchMetadataMetadataRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.PatchMetadataMetadataResponse;
+import to.unified.unified_java_sdk.models.operations.RemoveMetadataMetadataRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveMetadataMetadataRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.RemoveMetadataMetadataResponse;
+import to.unified.unified_java_sdk.models.operations.UpdateMetadataMetadataRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateMetadataMetadataRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.UpdateMetadataMetadataResponse;
+import to.unified.unified_java_sdk.operations.CreateMetadataMetadata;
+import to.unified.unified_java_sdk.operations.GetMetadataMetadata;
+import to.unified.unified_java_sdk.operations.ListMetadataMetadatas;
+import to.unified.unified_java_sdk.operations.PatchMetadataMetadata;
+import to.unified.unified_java_sdk.operations.RemoveMetadataMetadata;
+import to.unified.unified_java_sdk.operations.UpdateMetadataMetadata;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -57,8 +57,8 @@ public class Metadata {
      * 
      * @return The call builder
      */
-    public CreateMetadataMetadata2RequestBuilder createMetadataMetadata2() {
-        return new CreateMetadataMetadata2RequestBuilder(sdkConfiguration);
+    public CreateMetadataMetadataRequestBuilder createMetadataMetadata() {
+        return new CreateMetadataMetadataRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -68,9 +68,9 @@ public class Metadata {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateMetadataMetadata2Response createMetadataMetadata2(@Nonnull CreateMetadataMetadata2Request request) {
-        RequestOperation<CreateMetadataMetadata2Request, CreateMetadataMetadata2Response> operation
-              = new CreateMetadataMetadata2.Sync(sdkConfiguration, _headers);
+    public CreateMetadataMetadataResponse createMetadataMetadata(@Nonnull CreateMetadataMetadataRequest request) {
+        RequestOperation<CreateMetadataMetadataRequest, CreateMetadataMetadataResponse> operation
+              = new CreateMetadataMetadata.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -79,8 +79,8 @@ public class Metadata {
      * 
      * @return The call builder
      */
-    public GetMetadataMetadata2RequestBuilder getMetadataMetadata2() {
-        return new GetMetadataMetadata2RequestBuilder(sdkConfiguration);
+    public GetMetadataMetadataRequestBuilder getMetadataMetadata() {
+        return new GetMetadataMetadataRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -90,9 +90,9 @@ public class Metadata {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetMetadataMetadata2Response getMetadataMetadata2(@Nonnull GetMetadataMetadata2Request request) {
-        RequestOperation<GetMetadataMetadata2Request, GetMetadataMetadata2Response> operation
-              = new GetMetadataMetadata2.Sync(sdkConfiguration, _headers);
+    public GetMetadataMetadataResponse getMetadataMetadata(@Nonnull GetMetadataMetadataRequest request) {
+        RequestOperation<GetMetadataMetadataRequest, GetMetadataMetadataResponse> operation
+              = new GetMetadataMetadata.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -101,8 +101,8 @@ public class Metadata {
      * 
      * @return The call builder
      */
-    public ListMetadataMetadatas2RequestBuilder listMetadataMetadatas2() {
-        return new ListMetadataMetadatas2RequestBuilder(sdkConfiguration);
+    public ListMetadataMetadatasRequestBuilder listMetadataMetadatas() {
+        return new ListMetadataMetadatasRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -112,9 +112,9 @@ public class Metadata {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListMetadataMetadatas2Response listMetadataMetadatas2(@Nonnull ListMetadataMetadatas2Request request) {
-        RequestOperation<ListMetadataMetadatas2Request, ListMetadataMetadatas2Response> operation
-              = new ListMetadataMetadatas2.Sync(sdkConfiguration, _headers);
+    public ListMetadataMetadatasResponse listMetadataMetadatas(@Nonnull ListMetadataMetadatasRequest request) {
+        RequestOperation<ListMetadataMetadatasRequest, ListMetadataMetadatasResponse> operation
+              = new ListMetadataMetadatas.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -123,8 +123,8 @@ public class Metadata {
      * 
      * @return The call builder
      */
-    public PatchMetadataMetadata2RequestBuilder patchMetadataMetadata2() {
-        return new PatchMetadataMetadata2RequestBuilder(sdkConfiguration);
+    public PatchMetadataMetadataRequestBuilder patchMetadataMetadata() {
+        return new PatchMetadataMetadataRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -134,9 +134,9 @@ public class Metadata {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchMetadataMetadata2Response patchMetadataMetadata2(@Nonnull PatchMetadataMetadata2Request request) {
-        RequestOperation<PatchMetadataMetadata2Request, PatchMetadataMetadata2Response> operation
-              = new PatchMetadataMetadata2.Sync(sdkConfiguration, _headers);
+    public PatchMetadataMetadataResponse patchMetadataMetadata(@Nonnull PatchMetadataMetadataRequest request) {
+        RequestOperation<PatchMetadataMetadataRequest, PatchMetadataMetadataResponse> operation
+              = new PatchMetadataMetadata.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -145,8 +145,8 @@ public class Metadata {
      * 
      * @return The call builder
      */
-    public RemoveMetadataMetadata2RequestBuilder removeMetadataMetadata2() {
-        return new RemoveMetadataMetadata2RequestBuilder(sdkConfiguration);
+    public RemoveMetadataMetadataRequestBuilder removeMetadataMetadata() {
+        return new RemoveMetadataMetadataRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -156,9 +156,9 @@ public class Metadata {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveMetadataMetadata2Response removeMetadataMetadata2(@Nonnull RemoveMetadataMetadata2Request request) {
-        RequestOperation<RemoveMetadataMetadata2Request, RemoveMetadataMetadata2Response> operation
-              = new RemoveMetadataMetadata2.Sync(sdkConfiguration, _headers);
+    public RemoveMetadataMetadataResponse removeMetadataMetadata(@Nonnull RemoveMetadataMetadataRequest request) {
+        RequestOperation<RemoveMetadataMetadataRequest, RemoveMetadataMetadataResponse> operation
+              = new RemoveMetadataMetadata.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -167,8 +167,8 @@ public class Metadata {
      * 
      * @return The call builder
      */
-    public UpdateMetadataMetadata2RequestBuilder updateMetadataMetadata2() {
-        return new UpdateMetadataMetadata2RequestBuilder(sdkConfiguration);
+    public UpdateMetadataMetadataRequestBuilder updateMetadataMetadata() {
+        return new UpdateMetadataMetadataRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -178,9 +178,9 @@ public class Metadata {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateMetadataMetadata2Response updateMetadataMetadata2(@Nonnull UpdateMetadataMetadata2Request request) {
-        RequestOperation<UpdateMetadataMetadata2Request, UpdateMetadataMetadata2Response> operation
-              = new UpdateMetadataMetadata2.Sync(sdkConfiguration, _headers);
+    public UpdateMetadataMetadataResponse updateMetadataMetadata(@Nonnull UpdateMetadataMetadataRequest request) {
+        RequestOperation<UpdateMetadataMetadataRequest, UpdateMetadataMetadataResponse> operation
+              = new UpdateMetadataMetadata.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

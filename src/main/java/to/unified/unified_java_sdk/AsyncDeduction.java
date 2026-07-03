@@ -7,30 +7,30 @@ import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOper
 
 import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
-import to.unified.unified_java_sdk.models.operations.CreateHrisDeduction2Request;
-import to.unified.unified_java_sdk.models.operations.GetHrisDeduction2Request;
-import to.unified.unified_java_sdk.models.operations.ListHrisDeductions2Request;
-import to.unified.unified_java_sdk.models.operations.PatchHrisDeduction2Request;
-import to.unified.unified_java_sdk.models.operations.RemoveHrisDeduction2Request;
-import to.unified.unified_java_sdk.models.operations.UpdateHrisDeduction2Request;
-import to.unified.unified_java_sdk.models.operations.async.CreateHrisDeduction2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.CreateHrisDeduction2Response;
-import to.unified.unified_java_sdk.models.operations.async.GetHrisDeduction2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.GetHrisDeduction2Response;
-import to.unified.unified_java_sdk.models.operations.async.ListHrisDeductions2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.ListHrisDeductions2Response;
-import to.unified.unified_java_sdk.models.operations.async.PatchHrisDeduction2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.PatchHrisDeduction2Response;
-import to.unified.unified_java_sdk.models.operations.async.RemoveHrisDeduction2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.RemoveHrisDeduction2Response;
-import to.unified.unified_java_sdk.models.operations.async.UpdateHrisDeduction2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.UpdateHrisDeduction2Response;
-import to.unified.unified_java_sdk.operations.CreateHrisDeduction2;
-import to.unified.unified_java_sdk.operations.GetHrisDeduction2;
-import to.unified.unified_java_sdk.operations.ListHrisDeductions2;
-import to.unified.unified_java_sdk.operations.PatchHrisDeduction2;
-import to.unified.unified_java_sdk.operations.RemoveHrisDeduction2;
-import to.unified.unified_java_sdk.operations.UpdateHrisDeduction2;
+import to.unified.unified_java_sdk.models.operations.CreateHrisDeductionRequest;
+import to.unified.unified_java_sdk.models.operations.GetHrisDeductionRequest;
+import to.unified.unified_java_sdk.models.operations.ListHrisDeductionsRequest;
+import to.unified.unified_java_sdk.models.operations.PatchHrisDeductionRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveHrisDeductionRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateHrisDeductionRequest;
+import to.unified.unified_java_sdk.models.operations.async.CreateHrisDeductionRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.CreateHrisDeductionResponse;
+import to.unified.unified_java_sdk.models.operations.async.GetHrisDeductionRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetHrisDeductionResponse;
+import to.unified.unified_java_sdk.models.operations.async.ListHrisDeductionsRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListHrisDeductionsResponse;
+import to.unified.unified_java_sdk.models.operations.async.PatchHrisDeductionRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.PatchHrisDeductionResponse;
+import to.unified.unified_java_sdk.models.operations.async.RemoveHrisDeductionRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.RemoveHrisDeductionResponse;
+import to.unified.unified_java_sdk.models.operations.async.UpdateHrisDeductionRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.UpdateHrisDeductionResponse;
+import to.unified.unified_java_sdk.operations.CreateHrisDeduction;
+import to.unified.unified_java_sdk.operations.GetHrisDeduction;
+import to.unified.unified_java_sdk.operations.ListHrisDeductions;
+import to.unified.unified_java_sdk.operations.PatchHrisDeduction;
+import to.unified.unified_java_sdk.operations.RemoveHrisDeduction;
+import to.unified.unified_java_sdk.operations.UpdateHrisDeduction;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -59,19 +59,19 @@ public class AsyncDeduction {
      * 
      * @return The async call builder
      */
-    public CreateHrisDeduction2RequestBuilder createHrisDeduction2() {
-        return new CreateHrisDeduction2RequestBuilder(sdkConfiguration);
+    public CreateHrisDeductionRequestBuilder createHrisDeduction() {
+        return new CreateHrisDeductionRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Create a deduction
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<CreateHrisDeduction2Response>} - The async response
+     * @return {@code CompletableFuture<CreateHrisDeductionResponse>} - The async response
      */
-    public CompletableFuture<CreateHrisDeduction2Response> createHrisDeduction2(@Nonnull CreateHrisDeduction2Request request) {
-        AsyncRequestOperation<CreateHrisDeduction2Request, CreateHrisDeduction2Response> operation
-              = new CreateHrisDeduction2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<CreateHrisDeductionResponse> createHrisDeduction(@Nonnull CreateHrisDeductionRequest request) {
+        AsyncRequestOperation<CreateHrisDeductionRequest, CreateHrisDeductionResponse> operation
+              = new CreateHrisDeduction.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -82,19 +82,19 @@ public class AsyncDeduction {
      * 
      * @return The async call builder
      */
-    public GetHrisDeduction2RequestBuilder getHrisDeduction2() {
-        return new GetHrisDeduction2RequestBuilder(sdkConfiguration);
+    public GetHrisDeductionRequestBuilder getHrisDeduction() {
+        return new GetHrisDeductionRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Retrieve a deduction
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<GetHrisDeduction2Response>} - The async response
+     * @return {@code CompletableFuture<GetHrisDeductionResponse>} - The async response
      */
-    public CompletableFuture<GetHrisDeduction2Response> getHrisDeduction2(@Nonnull GetHrisDeduction2Request request) {
-        AsyncRequestOperation<GetHrisDeduction2Request, GetHrisDeduction2Response> operation
-              = new GetHrisDeduction2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<GetHrisDeductionResponse> getHrisDeduction(@Nonnull GetHrisDeductionRequest request) {
+        AsyncRequestOperation<GetHrisDeductionRequest, GetHrisDeductionResponse> operation
+              = new GetHrisDeduction.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -105,19 +105,19 @@ public class AsyncDeduction {
      * 
      * @return The async call builder
      */
-    public ListHrisDeductions2RequestBuilder listHrisDeductions2() {
-        return new ListHrisDeductions2RequestBuilder(sdkConfiguration);
+    public ListHrisDeductionsRequestBuilder listHrisDeductions() {
+        return new ListHrisDeductionsRequestBuilder(sdkConfiguration);
     }
 
     /**
      * List all deductions
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<ListHrisDeductions2Response>} - The async response
+     * @return {@code CompletableFuture<ListHrisDeductionsResponse>} - The async response
      */
-    public CompletableFuture<ListHrisDeductions2Response> listHrisDeductions2(@Nonnull ListHrisDeductions2Request request) {
-        AsyncRequestOperation<ListHrisDeductions2Request, ListHrisDeductions2Response> operation
-              = new ListHrisDeductions2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<ListHrisDeductionsResponse> listHrisDeductions(@Nonnull ListHrisDeductionsRequest request) {
+        AsyncRequestOperation<ListHrisDeductionsRequest, ListHrisDeductionsResponse> operation
+              = new ListHrisDeductions.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -128,19 +128,19 @@ public class AsyncDeduction {
      * 
      * @return The async call builder
      */
-    public PatchHrisDeduction2RequestBuilder patchHrisDeduction2() {
-        return new PatchHrisDeduction2RequestBuilder(sdkConfiguration);
+    public PatchHrisDeductionRequestBuilder patchHrisDeduction() {
+        return new PatchHrisDeductionRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update a deduction
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<PatchHrisDeduction2Response>} - The async response
+     * @return {@code CompletableFuture<PatchHrisDeductionResponse>} - The async response
      */
-    public CompletableFuture<PatchHrisDeduction2Response> patchHrisDeduction2(@Nonnull PatchHrisDeduction2Request request) {
-        AsyncRequestOperation<PatchHrisDeduction2Request, PatchHrisDeduction2Response> operation
-              = new PatchHrisDeduction2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<PatchHrisDeductionResponse> patchHrisDeduction(@Nonnull PatchHrisDeductionRequest request) {
+        AsyncRequestOperation<PatchHrisDeductionRequest, PatchHrisDeductionResponse> operation
+              = new PatchHrisDeduction.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -151,19 +151,19 @@ public class AsyncDeduction {
      * 
      * @return The async call builder
      */
-    public RemoveHrisDeduction2RequestBuilder removeHrisDeduction2() {
-        return new RemoveHrisDeduction2RequestBuilder(sdkConfiguration);
+    public RemoveHrisDeductionRequestBuilder removeHrisDeduction() {
+        return new RemoveHrisDeductionRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Remove a deduction
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<RemoveHrisDeduction2Response>} - The async response
+     * @return {@code CompletableFuture<RemoveHrisDeductionResponse>} - The async response
      */
-    public CompletableFuture<RemoveHrisDeduction2Response> removeHrisDeduction2(@Nonnull RemoveHrisDeduction2Request request) {
-        AsyncRequestOperation<RemoveHrisDeduction2Request, RemoveHrisDeduction2Response> operation
-              = new RemoveHrisDeduction2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<RemoveHrisDeductionResponse> removeHrisDeduction(@Nonnull RemoveHrisDeductionRequest request) {
+        AsyncRequestOperation<RemoveHrisDeductionRequest, RemoveHrisDeductionResponse> operation
+              = new RemoveHrisDeduction.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -174,19 +174,19 @@ public class AsyncDeduction {
      * 
      * @return The async call builder
      */
-    public UpdateHrisDeduction2RequestBuilder updateHrisDeduction2() {
-        return new UpdateHrisDeduction2RequestBuilder(sdkConfiguration);
+    public UpdateHrisDeductionRequestBuilder updateHrisDeduction() {
+        return new UpdateHrisDeductionRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update a deduction
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<UpdateHrisDeduction2Response>} - The async response
+     * @return {@code CompletableFuture<UpdateHrisDeductionResponse>} - The async response
      */
-    public CompletableFuture<UpdateHrisDeduction2Response> updateHrisDeduction2(@Nonnull UpdateHrisDeduction2Request request) {
-        AsyncRequestOperation<UpdateHrisDeduction2Request, UpdateHrisDeduction2Response> operation
-              = new UpdateHrisDeduction2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<UpdateHrisDeductionResponse> updateHrisDeduction(@Nonnull UpdateHrisDeductionRequest request) {
+        AsyncRequestOperation<UpdateHrisDeductionRequest, UpdateHrisDeductionResponse> operation
+              = new UpdateHrisDeduction.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

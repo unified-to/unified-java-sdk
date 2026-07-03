@@ -4,29 +4,29 @@
 
 ### Available Operations
 
-* [createAccountingOrder2](#createaccountingorder2) - Create an order
-* [getAccountingOrder2](#getaccountingorder2) - Retrieve an order
-* [listAccountingOrders2](#listaccountingorders2) - List all orders
-* [patchAccountingOrder2](#patchaccountingorder2) - Update an order
-* [patchAssessmentOrder2](#patchassessmentorder2) - Update an order
-* [removeAccountingOrder2](#removeaccountingorder2) - Remove an order
-* [updateAccountingOrder2](#updateaccountingorder2) - Update an order
-* [updateAssessmentOrder2](#updateassessmentorder2) - Update an order
+* [createAccountingOrder](#createaccountingorder) - Create an order
+* [getAccountingOrder](#getaccountingorder) - Retrieve an order
+* [listAccountingOrders](#listaccountingorders) - List all orders
+* [patchAccountingOrder](#patchaccountingorder) - Update an order
+* [patchAssessmentOrder](#patchassessmentorder) - Update an order
+* [removeAccountingOrder](#removeaccountingorder) - Remove an order
+* [updateAccountingOrder](#updateaccountingorder) - Update an order
+* [updateAssessmentOrder](#updateassessmentorder) - Update an order
 
-## createAccountingOrder2
+## createAccountingOrder
 
 Create an order
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createAccountingOrder2" method="post" path="/accounting/{connection_id}/order" -->
+<!-- UsageSnippet language="java" operationID="createAccountingOrder" method="post" path="/accounting/{connection_id}/order" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.CreateAccountingOrder2Request;
-import to.unified.unified_java_sdk.models.operations.CreateAccountingOrder2Response;
+import to.unified.unified_java_sdk.models.operations.CreateAccountingOrderRequest;
+import to.unified.unified_java_sdk.models.operations.CreateAccountingOrderResponse;
 import to.unified.unified_java_sdk.models.shared.AccountingOrder;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -40,13 +40,13 @@ public class Application {
                     .build())
             .build();
 
-        CreateAccountingOrder2Request req = CreateAccountingOrder2Request.builder()
+        CreateAccountingOrderRequest req = CreateAccountingOrderRequest.builder()
                 .accountingOrder(AccountingOrder.builder()
                     .build())
                 .connectionId("<id>")
                 .build();
 
-        CreateAccountingOrder2Response res = sdk.order().createAccountingOrder2()
+        CreateAccountingOrderResponse res = sdk.order().createAccountingOrder()
                 .request(req)
                 .call();
 
@@ -59,13 +59,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                 | Type                                                                                      | Required                                                                                  | Description                                                                               |
-| ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
-| `request`                                                                                 | [CreateAccountingOrder2Request](../../models/operations/CreateAccountingOrder2Request.md) | :heavy_check_mark:                                                                        | The request object to use for the request.                                                |
+| Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
+| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| `request`                                                                               | [CreateAccountingOrderRequest](../../models/operations/CreateAccountingOrderRequest.md) | :heavy_check_mark:                                                                      | The request object to use for the request.                                              |
 
 ### Response
 
-**[CreateAccountingOrder2Response](../../models/operations/CreateAccountingOrder2Response.md)**
+**[CreateAccountingOrderResponse](../../models/operations/CreateAccountingOrderResponse.md)**
 
 ### Errors
 
@@ -73,20 +73,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## getAccountingOrder2
+## getAccountingOrder
 
 Retrieve an order
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="getAccountingOrder2" method="get" path="/accounting/{connection_id}/order/{id}" -->
+<!-- UsageSnippet language="java" operationID="getAccountingOrder" method="get" path="/accounting/{connection_id}/order/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.GetAccountingOrder2Request;
-import to.unified.unified_java_sdk.models.operations.GetAccountingOrder2Response;
+import to.unified.unified_java_sdk.models.operations.GetAccountingOrderRequest;
+import to.unified.unified_java_sdk.models.operations.GetAccountingOrderResponse;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -99,12 +99,12 @@ public class Application {
                     .build())
             .build();
 
-        GetAccountingOrder2Request req = GetAccountingOrder2Request.builder()
+        GetAccountingOrderRequest req = GetAccountingOrderRequest.builder()
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        GetAccountingOrder2Response res = sdk.order().getAccountingOrder2()
+        GetAccountingOrderResponse res = sdk.order().getAccountingOrder()
                 .request(req)
                 .call();
 
@@ -117,13 +117,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                           | Type                                                                                | Required                                                                            | Description                                                                         |
-| ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
-| `request`                                                                           | [GetAccountingOrder2Request](../../models/operations/GetAccountingOrder2Request.md) | :heavy_check_mark:                                                                  | The request object to use for the request.                                          |
+| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
+| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| `request`                                                                         | [GetAccountingOrderRequest](../../models/operations/GetAccountingOrderRequest.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
 
 ### Response
 
-**[GetAccountingOrder2Response](../../models/operations/GetAccountingOrder2Response.md)**
+**[GetAccountingOrderResponse](../../models/operations/GetAccountingOrderResponse.md)**
 
 ### Errors
 
@@ -131,20 +131,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## listAccountingOrders2
+## listAccountingOrders
 
 List all orders
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="listAccountingOrders2" method="get" path="/accounting/{connection_id}/order" -->
+<!-- UsageSnippet language="java" operationID="listAccountingOrders" method="get" path="/accounting/{connection_id}/order" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.ListAccountingOrders2Request;
-import to.unified.unified_java_sdk.models.operations.ListAccountingOrders2Response;
+import to.unified.unified_java_sdk.models.operations.ListAccountingOrdersRequest;
+import to.unified.unified_java_sdk.models.operations.ListAccountingOrdersResponse;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -157,11 +157,11 @@ public class Application {
                     .build())
             .build();
 
-        ListAccountingOrders2Request req = ListAccountingOrders2Request.builder()
+        ListAccountingOrdersRequest req = ListAccountingOrdersRequest.builder()
                 .connectionId("<id>")
                 .build();
 
-        ListAccountingOrders2Response res = sdk.order().listAccountingOrders2()
+        ListAccountingOrdersResponse res = sdk.order().listAccountingOrders()
                 .request(req)
                 .call();
 
@@ -174,13 +174,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
-| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
-| `request`                                                                               | [ListAccountingOrders2Request](../../models/operations/ListAccountingOrders2Request.md) | :heavy_check_mark:                                                                      | The request object to use for the request.                                              |
+| Parameter                                                                             | Type                                                                                  | Required                                                                              | Description                                                                           |
+| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| `request`                                                                             | [ListAccountingOrdersRequest](../../models/operations/ListAccountingOrdersRequest.md) | :heavy_check_mark:                                                                    | The request object to use for the request.                                            |
 
 ### Response
 
-**[ListAccountingOrders2Response](../../models/operations/ListAccountingOrders2Response.md)**
+**[ListAccountingOrdersResponse](../../models/operations/ListAccountingOrdersResponse.md)**
 
 ### Errors
 
@@ -188,20 +188,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## patchAccountingOrder2
+## patchAccountingOrder
 
 Update an order
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchAccountingOrder2" method="patch" path="/accounting/{connection_id}/order/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchAccountingOrder" method="patch" path="/accounting/{connection_id}/order/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.PatchAccountingOrder2Request;
-import to.unified.unified_java_sdk.models.operations.PatchAccountingOrder2Response;
+import to.unified.unified_java_sdk.models.operations.PatchAccountingOrderRequest;
+import to.unified.unified_java_sdk.models.operations.PatchAccountingOrderResponse;
 import to.unified.unified_java_sdk.models.shared.AccountingOrder;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -215,14 +215,14 @@ public class Application {
                     .build())
             .build();
 
-        PatchAccountingOrder2Request req = PatchAccountingOrder2Request.builder()
+        PatchAccountingOrderRequest req = PatchAccountingOrderRequest.builder()
                 .accountingOrder(AccountingOrder.builder()
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        PatchAccountingOrder2Response res = sdk.order().patchAccountingOrder2()
+        PatchAccountingOrderResponse res = sdk.order().patchAccountingOrder()
                 .request(req)
                 .call();
 
@@ -235,13 +235,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
-| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
-| `request`                                                                               | [PatchAccountingOrder2Request](../../models/operations/PatchAccountingOrder2Request.md) | :heavy_check_mark:                                                                      | The request object to use for the request.                                              |
+| Parameter                                                                             | Type                                                                                  | Required                                                                              | Description                                                                           |
+| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| `request`                                                                             | [PatchAccountingOrderRequest](../../models/operations/PatchAccountingOrderRequest.md) | :heavy_check_mark:                                                                    | The request object to use for the request.                                            |
 
 ### Response
 
-**[PatchAccountingOrder2Response](../../models/operations/PatchAccountingOrder2Response.md)**
+**[PatchAccountingOrderResponse](../../models/operations/PatchAccountingOrderResponse.md)**
 
 ### Errors
 
@@ -249,20 +249,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## patchAssessmentOrder2
+## patchAssessmentOrder
 
 Update an order
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchAssessmentOrder2" method="patch" path="/assessment/{connection_id}/order/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchAssessmentOrder" method="patch" path="/assessment/{connection_id}/order/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.PatchAssessmentOrder2Request;
-import to.unified.unified_java_sdk.models.operations.PatchAssessmentOrder2Response;
+import to.unified.unified_java_sdk.models.operations.PatchAssessmentOrderRequest;
+import to.unified.unified_java_sdk.models.operations.PatchAssessmentOrderResponse;
 import to.unified.unified_java_sdk.models.shared.AssessmentOrder;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -276,7 +276,7 @@ public class Application {
                     .build())
             .build();
 
-        PatchAssessmentOrder2Request req = PatchAssessmentOrder2Request.builder()
+        PatchAssessmentOrderRequest req = PatchAssessmentOrderRequest.builder()
                 .assessmentOrder(AssessmentOrder.builder()
                     .connectionId("<id>")
                     .workspaceId("<id>")
@@ -285,7 +285,7 @@ public class Application {
                 .id("<id>")
                 .build();
 
-        PatchAssessmentOrder2Response res = sdk.order().patchAssessmentOrder2()
+        PatchAssessmentOrderResponse res = sdk.order().patchAssessmentOrder()
                 .request(req)
                 .call();
 
@@ -298,13 +298,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
-| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
-| `request`                                                                               | [PatchAssessmentOrder2Request](../../models/operations/PatchAssessmentOrder2Request.md) | :heavy_check_mark:                                                                      | The request object to use for the request.                                              |
+| Parameter                                                                             | Type                                                                                  | Required                                                                              | Description                                                                           |
+| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| `request`                                                                             | [PatchAssessmentOrderRequest](../../models/operations/PatchAssessmentOrderRequest.md) | :heavy_check_mark:                                                                    | The request object to use for the request.                                            |
 
 ### Response
 
-**[PatchAssessmentOrder2Response](../../models/operations/PatchAssessmentOrder2Response.md)**
+**[PatchAssessmentOrderResponse](../../models/operations/PatchAssessmentOrderResponse.md)**
 
 ### Errors
 
@@ -312,20 +312,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## removeAccountingOrder2
+## removeAccountingOrder
 
 Remove an order
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="removeAccountingOrder2" method="delete" path="/accounting/{connection_id}/order/{id}" -->
+<!-- UsageSnippet language="java" operationID="removeAccountingOrder" method="delete" path="/accounting/{connection_id}/order/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.RemoveAccountingOrder2Request;
-import to.unified.unified_java_sdk.models.operations.RemoveAccountingOrder2Response;
+import to.unified.unified_java_sdk.models.operations.RemoveAccountingOrderRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveAccountingOrderResponse;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -338,12 +338,12 @@ public class Application {
                     .build())
             .build();
 
-        RemoveAccountingOrder2Request req = RemoveAccountingOrder2Request.builder()
+        RemoveAccountingOrderRequest req = RemoveAccountingOrderRequest.builder()
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        RemoveAccountingOrder2Response res = sdk.order().removeAccountingOrder2()
+        RemoveAccountingOrderResponse res = sdk.order().removeAccountingOrder()
                 .request(req)
                 .call();
 
@@ -354,13 +354,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                 | Type                                                                                      | Required                                                                                  | Description                                                                               |
-| ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
-| `request`                                                                                 | [RemoveAccountingOrder2Request](../../models/operations/RemoveAccountingOrder2Request.md) | :heavy_check_mark:                                                                        | The request object to use for the request.                                                |
+| Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
+| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| `request`                                                                               | [RemoveAccountingOrderRequest](../../models/operations/RemoveAccountingOrderRequest.md) | :heavy_check_mark:                                                                      | The request object to use for the request.                                              |
 
 ### Response
 
-**[RemoveAccountingOrder2Response](../../models/operations/RemoveAccountingOrder2Response.md)**
+**[RemoveAccountingOrderResponse](../../models/operations/RemoveAccountingOrderResponse.md)**
 
 ### Errors
 
@@ -368,20 +368,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## updateAccountingOrder2
+## updateAccountingOrder
 
 Update an order
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateAccountingOrder2" method="put" path="/accounting/{connection_id}/order/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateAccountingOrder" method="put" path="/accounting/{connection_id}/order/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.UpdateAccountingOrder2Request;
-import to.unified.unified_java_sdk.models.operations.UpdateAccountingOrder2Response;
+import to.unified.unified_java_sdk.models.operations.UpdateAccountingOrderRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateAccountingOrderResponse;
 import to.unified.unified_java_sdk.models.shared.AccountingOrder;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -395,14 +395,14 @@ public class Application {
                     .build())
             .build();
 
-        UpdateAccountingOrder2Request req = UpdateAccountingOrder2Request.builder()
+        UpdateAccountingOrderRequest req = UpdateAccountingOrderRequest.builder()
                 .accountingOrder(AccountingOrder.builder()
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        UpdateAccountingOrder2Response res = sdk.order().updateAccountingOrder2()
+        UpdateAccountingOrderResponse res = sdk.order().updateAccountingOrder()
                 .request(req)
                 .call();
 
@@ -415,13 +415,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                 | Type                                                                                      | Required                                                                                  | Description                                                                               |
-| ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
-| `request`                                                                                 | [UpdateAccountingOrder2Request](../../models/operations/UpdateAccountingOrder2Request.md) | :heavy_check_mark:                                                                        | The request object to use for the request.                                                |
+| Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
+| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| `request`                                                                               | [UpdateAccountingOrderRequest](../../models/operations/UpdateAccountingOrderRequest.md) | :heavy_check_mark:                                                                      | The request object to use for the request.                                              |
 
 ### Response
 
-**[UpdateAccountingOrder2Response](../../models/operations/UpdateAccountingOrder2Response.md)**
+**[UpdateAccountingOrderResponse](../../models/operations/UpdateAccountingOrderResponse.md)**
 
 ### Errors
 
@@ -429,20 +429,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## updateAssessmentOrder2
+## updateAssessmentOrder
 
 Update an order
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateAssessmentOrder2" method="put" path="/assessment/{connection_id}/order/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateAssessmentOrder" method="put" path="/assessment/{connection_id}/order/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.UpdateAssessmentOrder2Request;
-import to.unified.unified_java_sdk.models.operations.UpdateAssessmentOrder2Response;
+import to.unified.unified_java_sdk.models.operations.UpdateAssessmentOrderRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateAssessmentOrderResponse;
 import to.unified.unified_java_sdk.models.shared.AssessmentOrder;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -456,7 +456,7 @@ public class Application {
                     .build())
             .build();
 
-        UpdateAssessmentOrder2Request req = UpdateAssessmentOrder2Request.builder()
+        UpdateAssessmentOrderRequest req = UpdateAssessmentOrderRequest.builder()
                 .assessmentOrder(AssessmentOrder.builder()
                     .connectionId("<id>")
                     .workspaceId("<id>")
@@ -465,7 +465,7 @@ public class Application {
                 .id("<id>")
                 .build();
 
-        UpdateAssessmentOrder2Response res = sdk.order().updateAssessmentOrder2()
+        UpdateAssessmentOrderResponse res = sdk.order().updateAssessmentOrder()
                 .request(req)
                 .call();
 
@@ -478,13 +478,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                 | Type                                                                                      | Required                                                                                  | Description                                                                               |
-| ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
-| `request`                                                                                 | [UpdateAssessmentOrder2Request](../../models/operations/UpdateAssessmentOrder2Request.md) | :heavy_check_mark:                                                                        | The request object to use for the request.                                                |
+| Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
+| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| `request`                                                                               | [UpdateAssessmentOrderRequest](../../models/operations/UpdateAssessmentOrderRequest.md) | :heavy_check_mark:                                                                      | The request object to use for the request.                                              |
 
 ### Response
 
-**[UpdateAssessmentOrder2Response](../../models/operations/UpdateAssessmentOrder2Response.md)**
+**[UpdateAssessmentOrderResponse](../../models/operations/UpdateAssessmentOrderResponse.md)**
 
 ### Errors
 

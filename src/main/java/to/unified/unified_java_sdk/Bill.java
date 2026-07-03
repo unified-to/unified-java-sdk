@@ -6,30 +6,30 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
-import to.unified.unified_java_sdk.models.operations.CreateAccountingBill2Request;
-import to.unified.unified_java_sdk.models.operations.CreateAccountingBill2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.CreateAccountingBill2Response;
-import to.unified.unified_java_sdk.models.operations.GetAccountingBill2Request;
-import to.unified.unified_java_sdk.models.operations.GetAccountingBill2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.GetAccountingBill2Response;
-import to.unified.unified_java_sdk.models.operations.ListAccountingBills2Request;
-import to.unified.unified_java_sdk.models.operations.ListAccountingBills2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.ListAccountingBills2Response;
-import to.unified.unified_java_sdk.models.operations.PatchAccountingBill2Request;
-import to.unified.unified_java_sdk.models.operations.PatchAccountingBill2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.PatchAccountingBill2Response;
-import to.unified.unified_java_sdk.models.operations.RemoveAccountingBill2Request;
-import to.unified.unified_java_sdk.models.operations.RemoveAccountingBill2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.RemoveAccountingBill2Response;
-import to.unified.unified_java_sdk.models.operations.UpdateAccountingBill2Request;
-import to.unified.unified_java_sdk.models.operations.UpdateAccountingBill2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.UpdateAccountingBill2Response;
-import to.unified.unified_java_sdk.operations.CreateAccountingBill2;
-import to.unified.unified_java_sdk.operations.GetAccountingBill2;
-import to.unified.unified_java_sdk.operations.ListAccountingBills2;
-import to.unified.unified_java_sdk.operations.PatchAccountingBill2;
-import to.unified.unified_java_sdk.operations.RemoveAccountingBill2;
-import to.unified.unified_java_sdk.operations.UpdateAccountingBill2;
+import to.unified.unified_java_sdk.models.operations.CreateAccountingBillRequest;
+import to.unified.unified_java_sdk.models.operations.CreateAccountingBillRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.CreateAccountingBillResponse;
+import to.unified.unified_java_sdk.models.operations.GetAccountingBillRequest;
+import to.unified.unified_java_sdk.models.operations.GetAccountingBillRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetAccountingBillResponse;
+import to.unified.unified_java_sdk.models.operations.ListAccountingBillsRequest;
+import to.unified.unified_java_sdk.models.operations.ListAccountingBillsRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListAccountingBillsResponse;
+import to.unified.unified_java_sdk.models.operations.PatchAccountingBillRequest;
+import to.unified.unified_java_sdk.models.operations.PatchAccountingBillRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.PatchAccountingBillResponse;
+import to.unified.unified_java_sdk.models.operations.RemoveAccountingBillRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveAccountingBillRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.RemoveAccountingBillResponse;
+import to.unified.unified_java_sdk.models.operations.UpdateAccountingBillRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateAccountingBillRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.UpdateAccountingBillResponse;
+import to.unified.unified_java_sdk.operations.CreateAccountingBill;
+import to.unified.unified_java_sdk.operations.GetAccountingBill;
+import to.unified.unified_java_sdk.operations.ListAccountingBills;
+import to.unified.unified_java_sdk.operations.PatchAccountingBill;
+import to.unified.unified_java_sdk.operations.RemoveAccountingBill;
+import to.unified.unified_java_sdk.operations.UpdateAccountingBill;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -57,8 +57,8 @@ public class Bill {
      * 
      * @return The call builder
      */
-    public CreateAccountingBill2RequestBuilder createAccountingBill2() {
-        return new CreateAccountingBill2RequestBuilder(sdkConfiguration);
+    public CreateAccountingBillRequestBuilder createAccountingBill() {
+        return new CreateAccountingBillRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -68,9 +68,9 @@ public class Bill {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateAccountingBill2Response createAccountingBill2(@Nonnull CreateAccountingBill2Request request) {
-        RequestOperation<CreateAccountingBill2Request, CreateAccountingBill2Response> operation
-              = new CreateAccountingBill2.Sync(sdkConfiguration, _headers);
+    public CreateAccountingBillResponse createAccountingBill(@Nonnull CreateAccountingBillRequest request) {
+        RequestOperation<CreateAccountingBillRequest, CreateAccountingBillResponse> operation
+              = new CreateAccountingBill.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -79,8 +79,8 @@ public class Bill {
      * 
      * @return The call builder
      */
-    public GetAccountingBill2RequestBuilder getAccountingBill2() {
-        return new GetAccountingBill2RequestBuilder(sdkConfiguration);
+    public GetAccountingBillRequestBuilder getAccountingBill() {
+        return new GetAccountingBillRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -90,9 +90,9 @@ public class Bill {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetAccountingBill2Response getAccountingBill2(@Nonnull GetAccountingBill2Request request) {
-        RequestOperation<GetAccountingBill2Request, GetAccountingBill2Response> operation
-              = new GetAccountingBill2.Sync(sdkConfiguration, _headers);
+    public GetAccountingBillResponse getAccountingBill(@Nonnull GetAccountingBillRequest request) {
+        RequestOperation<GetAccountingBillRequest, GetAccountingBillResponse> operation
+              = new GetAccountingBill.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -101,8 +101,8 @@ public class Bill {
      * 
      * @return The call builder
      */
-    public ListAccountingBills2RequestBuilder listAccountingBills2() {
-        return new ListAccountingBills2RequestBuilder(sdkConfiguration);
+    public ListAccountingBillsRequestBuilder listAccountingBills() {
+        return new ListAccountingBillsRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -112,9 +112,9 @@ public class Bill {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListAccountingBills2Response listAccountingBills2(@Nonnull ListAccountingBills2Request request) {
-        RequestOperation<ListAccountingBills2Request, ListAccountingBills2Response> operation
-              = new ListAccountingBills2.Sync(sdkConfiguration, _headers);
+    public ListAccountingBillsResponse listAccountingBills(@Nonnull ListAccountingBillsRequest request) {
+        RequestOperation<ListAccountingBillsRequest, ListAccountingBillsResponse> operation
+              = new ListAccountingBills.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -123,8 +123,8 @@ public class Bill {
      * 
      * @return The call builder
      */
-    public PatchAccountingBill2RequestBuilder patchAccountingBill2() {
-        return new PatchAccountingBill2RequestBuilder(sdkConfiguration);
+    public PatchAccountingBillRequestBuilder patchAccountingBill() {
+        return new PatchAccountingBillRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -134,9 +134,9 @@ public class Bill {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchAccountingBill2Response patchAccountingBill2(@Nonnull PatchAccountingBill2Request request) {
-        RequestOperation<PatchAccountingBill2Request, PatchAccountingBill2Response> operation
-              = new PatchAccountingBill2.Sync(sdkConfiguration, _headers);
+    public PatchAccountingBillResponse patchAccountingBill(@Nonnull PatchAccountingBillRequest request) {
+        RequestOperation<PatchAccountingBillRequest, PatchAccountingBillResponse> operation
+              = new PatchAccountingBill.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -145,8 +145,8 @@ public class Bill {
      * 
      * @return The call builder
      */
-    public RemoveAccountingBill2RequestBuilder removeAccountingBill2() {
-        return new RemoveAccountingBill2RequestBuilder(sdkConfiguration);
+    public RemoveAccountingBillRequestBuilder removeAccountingBill() {
+        return new RemoveAccountingBillRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -156,9 +156,9 @@ public class Bill {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveAccountingBill2Response removeAccountingBill2(@Nonnull RemoveAccountingBill2Request request) {
-        RequestOperation<RemoveAccountingBill2Request, RemoveAccountingBill2Response> operation
-              = new RemoveAccountingBill2.Sync(sdkConfiguration, _headers);
+    public RemoveAccountingBillResponse removeAccountingBill(@Nonnull RemoveAccountingBillRequest request) {
+        RequestOperation<RemoveAccountingBillRequest, RemoveAccountingBillResponse> operation
+              = new RemoveAccountingBill.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -167,8 +167,8 @@ public class Bill {
      * 
      * @return The call builder
      */
-    public UpdateAccountingBill2RequestBuilder updateAccountingBill2() {
-        return new UpdateAccountingBill2RequestBuilder(sdkConfiguration);
+    public UpdateAccountingBillRequestBuilder updateAccountingBill() {
+        return new UpdateAccountingBillRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -178,9 +178,9 @@ public class Bill {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateAccountingBill2Response updateAccountingBill2(@Nonnull UpdateAccountingBill2Request request) {
-        RequestOperation<UpdateAccountingBill2Request, UpdateAccountingBill2Response> operation
-              = new UpdateAccountingBill2.Sync(sdkConfiguration, _headers);
+    public UpdateAccountingBillResponse updateAccountingBill(@Nonnull UpdateAccountingBillRequest request) {
+        RequestOperation<UpdateAccountingBillRequest, UpdateAccountingBillResponse> operation
+              = new UpdateAccountingBill.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

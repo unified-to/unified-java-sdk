@@ -7,82 +7,82 @@ import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOper
 
 import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
-import to.unified.unified_java_sdk.models.operations.CreateDatastoreDatabase2Request;
-import to.unified.unified_java_sdk.models.operations.CreateDatastoreQuery2Request;
-import to.unified.unified_java_sdk.models.operations.CreateDatastoreRecord2Request;
-import to.unified.unified_java_sdk.models.operations.CreateDatastoreTable2Request;
-import to.unified.unified_java_sdk.models.operations.GetDatastoreDatabase2Request;
-import to.unified.unified_java_sdk.models.operations.GetDatastoreRecord2Request;
-import to.unified.unified_java_sdk.models.operations.GetDatastoreTable2Request;
-import to.unified.unified_java_sdk.models.operations.ListDatastoreDatabases2Request;
-import to.unified.unified_java_sdk.models.operations.ListDatastoreRecords2Request;
-import to.unified.unified_java_sdk.models.operations.ListDatastoreTables2Request;
-import to.unified.unified_java_sdk.models.operations.PatchDatastoreDatabase2Request;
-import to.unified.unified_java_sdk.models.operations.PatchDatastoreRecord2Request;
-import to.unified.unified_java_sdk.models.operations.PatchDatastoreTable2Request;
-import to.unified.unified_java_sdk.models.operations.RemoveDatastoreDatabase2Request;
-import to.unified.unified_java_sdk.models.operations.RemoveDatastoreRecord2Request;
-import to.unified.unified_java_sdk.models.operations.RemoveDatastoreTable2Request;
-import to.unified.unified_java_sdk.models.operations.UpdateDatastoreDatabase2Request;
-import to.unified.unified_java_sdk.models.operations.UpdateDatastoreRecord2Request;
-import to.unified.unified_java_sdk.models.operations.UpdateDatastoreTable2Request;
-import to.unified.unified_java_sdk.models.operations.async.CreateDatastoreDatabase2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.CreateDatastoreDatabase2Response;
-import to.unified.unified_java_sdk.models.operations.async.CreateDatastoreQuery2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.CreateDatastoreQuery2Response;
-import to.unified.unified_java_sdk.models.operations.async.CreateDatastoreRecord2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.CreateDatastoreRecord2Response;
-import to.unified.unified_java_sdk.models.operations.async.CreateDatastoreTable2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.CreateDatastoreTable2Response;
-import to.unified.unified_java_sdk.models.operations.async.GetDatastoreDatabase2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.GetDatastoreDatabase2Response;
-import to.unified.unified_java_sdk.models.operations.async.GetDatastoreRecord2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.GetDatastoreRecord2Response;
-import to.unified.unified_java_sdk.models.operations.async.GetDatastoreTable2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.GetDatastoreTable2Response;
-import to.unified.unified_java_sdk.models.operations.async.ListDatastoreDatabases2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.ListDatastoreDatabases2Response;
-import to.unified.unified_java_sdk.models.operations.async.ListDatastoreRecords2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.ListDatastoreRecords2Response;
-import to.unified.unified_java_sdk.models.operations.async.ListDatastoreTables2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.ListDatastoreTables2Response;
-import to.unified.unified_java_sdk.models.operations.async.PatchDatastoreDatabase2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.PatchDatastoreDatabase2Response;
-import to.unified.unified_java_sdk.models.operations.async.PatchDatastoreRecord2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.PatchDatastoreRecord2Response;
-import to.unified.unified_java_sdk.models.operations.async.PatchDatastoreTable2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.PatchDatastoreTable2Response;
-import to.unified.unified_java_sdk.models.operations.async.RemoveDatastoreDatabase2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.RemoveDatastoreDatabase2Response;
-import to.unified.unified_java_sdk.models.operations.async.RemoveDatastoreRecord2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.RemoveDatastoreRecord2Response;
-import to.unified.unified_java_sdk.models.operations.async.RemoveDatastoreTable2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.RemoveDatastoreTable2Response;
-import to.unified.unified_java_sdk.models.operations.async.UpdateDatastoreDatabase2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.UpdateDatastoreDatabase2Response;
-import to.unified.unified_java_sdk.models.operations.async.UpdateDatastoreRecord2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.UpdateDatastoreRecord2Response;
-import to.unified.unified_java_sdk.models.operations.async.UpdateDatastoreTable2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.UpdateDatastoreTable2Response;
-import to.unified.unified_java_sdk.operations.CreateDatastoreDatabase2;
-import to.unified.unified_java_sdk.operations.CreateDatastoreQuery2;
-import to.unified.unified_java_sdk.operations.CreateDatastoreRecord2;
-import to.unified.unified_java_sdk.operations.CreateDatastoreTable2;
-import to.unified.unified_java_sdk.operations.GetDatastoreDatabase2;
-import to.unified.unified_java_sdk.operations.GetDatastoreRecord2;
-import to.unified.unified_java_sdk.operations.GetDatastoreTable2;
-import to.unified.unified_java_sdk.operations.ListDatastoreDatabases2;
-import to.unified.unified_java_sdk.operations.ListDatastoreRecords2;
-import to.unified.unified_java_sdk.operations.ListDatastoreTables2;
-import to.unified.unified_java_sdk.operations.PatchDatastoreDatabase2;
-import to.unified.unified_java_sdk.operations.PatchDatastoreRecord2;
-import to.unified.unified_java_sdk.operations.PatchDatastoreTable2;
-import to.unified.unified_java_sdk.operations.RemoveDatastoreDatabase2;
-import to.unified.unified_java_sdk.operations.RemoveDatastoreRecord2;
-import to.unified.unified_java_sdk.operations.RemoveDatastoreTable2;
-import to.unified.unified_java_sdk.operations.UpdateDatastoreDatabase2;
-import to.unified.unified_java_sdk.operations.UpdateDatastoreRecord2;
-import to.unified.unified_java_sdk.operations.UpdateDatastoreTable2;
+import to.unified.unified_java_sdk.models.operations.CreateDatastoreDatabaseRequest;
+import to.unified.unified_java_sdk.models.operations.CreateDatastoreQueryRequest;
+import to.unified.unified_java_sdk.models.operations.CreateDatastoreRecordRequest;
+import to.unified.unified_java_sdk.models.operations.CreateDatastoreTableRequest;
+import to.unified.unified_java_sdk.models.operations.GetDatastoreDatabaseRequest;
+import to.unified.unified_java_sdk.models.operations.GetDatastoreRecordRequest;
+import to.unified.unified_java_sdk.models.operations.GetDatastoreTableRequest;
+import to.unified.unified_java_sdk.models.operations.ListDatastoreDatabasesRequest;
+import to.unified.unified_java_sdk.models.operations.ListDatastoreRecordsRequest;
+import to.unified.unified_java_sdk.models.operations.ListDatastoreTablesRequest;
+import to.unified.unified_java_sdk.models.operations.PatchDatastoreDatabaseRequest;
+import to.unified.unified_java_sdk.models.operations.PatchDatastoreRecordRequest;
+import to.unified.unified_java_sdk.models.operations.PatchDatastoreTableRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveDatastoreDatabaseRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveDatastoreRecordRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveDatastoreTableRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateDatastoreDatabaseRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateDatastoreRecordRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateDatastoreTableRequest;
+import to.unified.unified_java_sdk.models.operations.async.CreateDatastoreDatabaseRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.CreateDatastoreDatabaseResponse;
+import to.unified.unified_java_sdk.models.operations.async.CreateDatastoreQueryRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.CreateDatastoreQueryResponse;
+import to.unified.unified_java_sdk.models.operations.async.CreateDatastoreRecordRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.CreateDatastoreRecordResponse;
+import to.unified.unified_java_sdk.models.operations.async.CreateDatastoreTableRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.CreateDatastoreTableResponse;
+import to.unified.unified_java_sdk.models.operations.async.GetDatastoreDatabaseRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetDatastoreDatabaseResponse;
+import to.unified.unified_java_sdk.models.operations.async.GetDatastoreRecordRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetDatastoreRecordResponse;
+import to.unified.unified_java_sdk.models.operations.async.GetDatastoreTableRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetDatastoreTableResponse;
+import to.unified.unified_java_sdk.models.operations.async.ListDatastoreDatabasesRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListDatastoreDatabasesResponse;
+import to.unified.unified_java_sdk.models.operations.async.ListDatastoreRecordsRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListDatastoreRecordsResponse;
+import to.unified.unified_java_sdk.models.operations.async.ListDatastoreTablesRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListDatastoreTablesResponse;
+import to.unified.unified_java_sdk.models.operations.async.PatchDatastoreDatabaseRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.PatchDatastoreDatabaseResponse;
+import to.unified.unified_java_sdk.models.operations.async.PatchDatastoreRecordRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.PatchDatastoreRecordResponse;
+import to.unified.unified_java_sdk.models.operations.async.PatchDatastoreTableRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.PatchDatastoreTableResponse;
+import to.unified.unified_java_sdk.models.operations.async.RemoveDatastoreDatabaseRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.RemoveDatastoreDatabaseResponse;
+import to.unified.unified_java_sdk.models.operations.async.RemoveDatastoreRecordRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.RemoveDatastoreRecordResponse;
+import to.unified.unified_java_sdk.models.operations.async.RemoveDatastoreTableRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.RemoveDatastoreTableResponse;
+import to.unified.unified_java_sdk.models.operations.async.UpdateDatastoreDatabaseRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.UpdateDatastoreDatabaseResponse;
+import to.unified.unified_java_sdk.models.operations.async.UpdateDatastoreRecordRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.UpdateDatastoreRecordResponse;
+import to.unified.unified_java_sdk.models.operations.async.UpdateDatastoreTableRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.UpdateDatastoreTableResponse;
+import to.unified.unified_java_sdk.operations.CreateDatastoreDatabase;
+import to.unified.unified_java_sdk.operations.CreateDatastoreQuery;
+import to.unified.unified_java_sdk.operations.CreateDatastoreRecord;
+import to.unified.unified_java_sdk.operations.CreateDatastoreTable;
+import to.unified.unified_java_sdk.operations.GetDatastoreDatabase;
+import to.unified.unified_java_sdk.operations.GetDatastoreRecord;
+import to.unified.unified_java_sdk.operations.GetDatastoreTable;
+import to.unified.unified_java_sdk.operations.ListDatastoreDatabases;
+import to.unified.unified_java_sdk.operations.ListDatastoreRecords;
+import to.unified.unified_java_sdk.operations.ListDatastoreTables;
+import to.unified.unified_java_sdk.operations.PatchDatastoreDatabase;
+import to.unified.unified_java_sdk.operations.PatchDatastoreRecord;
+import to.unified.unified_java_sdk.operations.PatchDatastoreTable;
+import to.unified.unified_java_sdk.operations.RemoveDatastoreDatabase;
+import to.unified.unified_java_sdk.operations.RemoveDatastoreRecord;
+import to.unified.unified_java_sdk.operations.RemoveDatastoreTable;
+import to.unified.unified_java_sdk.operations.UpdateDatastoreDatabase;
+import to.unified.unified_java_sdk.operations.UpdateDatastoreRecord;
+import to.unified.unified_java_sdk.operations.UpdateDatastoreTable;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -111,19 +111,19 @@ public class AsyncDatastore {
      * 
      * @return The async call builder
      */
-    public CreateDatastoreDatabase2RequestBuilder createDatastoreDatabase2() {
-        return new CreateDatastoreDatabase2RequestBuilder(sdkConfiguration);
+    public CreateDatastoreDatabaseRequestBuilder createDatastoreDatabase() {
+        return new CreateDatastoreDatabaseRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Create a database
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<CreateDatastoreDatabase2Response>} - The async response
+     * @return {@code CompletableFuture<CreateDatastoreDatabaseResponse>} - The async response
      */
-    public CompletableFuture<CreateDatastoreDatabase2Response> createDatastoreDatabase2(@Nonnull CreateDatastoreDatabase2Request request) {
-        AsyncRequestOperation<CreateDatastoreDatabase2Request, CreateDatastoreDatabase2Response> operation
-              = new CreateDatastoreDatabase2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<CreateDatastoreDatabaseResponse> createDatastoreDatabase(@Nonnull CreateDatastoreDatabaseRequest request) {
+        AsyncRequestOperation<CreateDatastoreDatabaseRequest, CreateDatastoreDatabaseResponse> operation
+              = new CreateDatastoreDatabase.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -134,19 +134,19 @@ public class AsyncDatastore {
      * 
      * @return The async call builder
      */
-    public CreateDatastoreQuery2RequestBuilder createDatastoreQuery2() {
-        return new CreateDatastoreQuery2RequestBuilder(sdkConfiguration);
+    public CreateDatastoreQueryRequestBuilder createDatastoreQuery() {
+        return new CreateDatastoreQueryRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Create a query
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<CreateDatastoreQuery2Response>} - The async response
+     * @return {@code CompletableFuture<CreateDatastoreQueryResponse>} - The async response
      */
-    public CompletableFuture<CreateDatastoreQuery2Response> createDatastoreQuery2(@Nonnull CreateDatastoreQuery2Request request) {
-        AsyncRequestOperation<CreateDatastoreQuery2Request, CreateDatastoreQuery2Response> operation
-              = new CreateDatastoreQuery2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<CreateDatastoreQueryResponse> createDatastoreQuery(@Nonnull CreateDatastoreQueryRequest request) {
+        AsyncRequestOperation<CreateDatastoreQueryRequest, CreateDatastoreQueryResponse> operation
+              = new CreateDatastoreQuery.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -157,19 +157,19 @@ public class AsyncDatastore {
      * 
      * @return The async call builder
      */
-    public CreateDatastoreRecord2RequestBuilder createDatastoreRecord2() {
-        return new CreateDatastoreRecord2RequestBuilder(sdkConfiguration);
+    public CreateDatastoreRecordRequestBuilder createDatastoreRecord() {
+        return new CreateDatastoreRecordRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Create a record
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<CreateDatastoreRecord2Response>} - The async response
+     * @return {@code CompletableFuture<CreateDatastoreRecordResponse>} - The async response
      */
-    public CompletableFuture<CreateDatastoreRecord2Response> createDatastoreRecord2(@Nonnull CreateDatastoreRecord2Request request) {
-        AsyncRequestOperation<CreateDatastoreRecord2Request, CreateDatastoreRecord2Response> operation
-              = new CreateDatastoreRecord2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<CreateDatastoreRecordResponse> createDatastoreRecord(@Nonnull CreateDatastoreRecordRequest request) {
+        AsyncRequestOperation<CreateDatastoreRecordRequest, CreateDatastoreRecordResponse> operation
+              = new CreateDatastoreRecord.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -180,19 +180,19 @@ public class AsyncDatastore {
      * 
      * @return The async call builder
      */
-    public CreateDatastoreTable2RequestBuilder createDatastoreTable2() {
-        return new CreateDatastoreTable2RequestBuilder(sdkConfiguration);
+    public CreateDatastoreTableRequestBuilder createDatastoreTable() {
+        return new CreateDatastoreTableRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Create a table
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<CreateDatastoreTable2Response>} - The async response
+     * @return {@code CompletableFuture<CreateDatastoreTableResponse>} - The async response
      */
-    public CompletableFuture<CreateDatastoreTable2Response> createDatastoreTable2(@Nonnull CreateDatastoreTable2Request request) {
-        AsyncRequestOperation<CreateDatastoreTable2Request, CreateDatastoreTable2Response> operation
-              = new CreateDatastoreTable2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<CreateDatastoreTableResponse> createDatastoreTable(@Nonnull CreateDatastoreTableRequest request) {
+        AsyncRequestOperation<CreateDatastoreTableRequest, CreateDatastoreTableResponse> operation
+              = new CreateDatastoreTable.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -203,19 +203,19 @@ public class AsyncDatastore {
      * 
      * @return The async call builder
      */
-    public GetDatastoreDatabase2RequestBuilder getDatastoreDatabase2() {
-        return new GetDatastoreDatabase2RequestBuilder(sdkConfiguration);
+    public GetDatastoreDatabaseRequestBuilder getDatastoreDatabase() {
+        return new GetDatastoreDatabaseRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Retrieve a database
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<GetDatastoreDatabase2Response>} - The async response
+     * @return {@code CompletableFuture<GetDatastoreDatabaseResponse>} - The async response
      */
-    public CompletableFuture<GetDatastoreDatabase2Response> getDatastoreDatabase2(@Nonnull GetDatastoreDatabase2Request request) {
-        AsyncRequestOperation<GetDatastoreDatabase2Request, GetDatastoreDatabase2Response> operation
-              = new GetDatastoreDatabase2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<GetDatastoreDatabaseResponse> getDatastoreDatabase(@Nonnull GetDatastoreDatabaseRequest request) {
+        AsyncRequestOperation<GetDatastoreDatabaseRequest, GetDatastoreDatabaseResponse> operation
+              = new GetDatastoreDatabase.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -226,19 +226,19 @@ public class AsyncDatastore {
      * 
      * @return The async call builder
      */
-    public GetDatastoreRecord2RequestBuilder getDatastoreRecord2() {
-        return new GetDatastoreRecord2RequestBuilder(sdkConfiguration);
+    public GetDatastoreRecordRequestBuilder getDatastoreRecord() {
+        return new GetDatastoreRecordRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Retrieve a record
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<GetDatastoreRecord2Response>} - The async response
+     * @return {@code CompletableFuture<GetDatastoreRecordResponse>} - The async response
      */
-    public CompletableFuture<GetDatastoreRecord2Response> getDatastoreRecord2(@Nonnull GetDatastoreRecord2Request request) {
-        AsyncRequestOperation<GetDatastoreRecord2Request, GetDatastoreRecord2Response> operation
-              = new GetDatastoreRecord2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<GetDatastoreRecordResponse> getDatastoreRecord(@Nonnull GetDatastoreRecordRequest request) {
+        AsyncRequestOperation<GetDatastoreRecordRequest, GetDatastoreRecordResponse> operation
+              = new GetDatastoreRecord.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -249,19 +249,19 @@ public class AsyncDatastore {
      * 
      * @return The async call builder
      */
-    public GetDatastoreTable2RequestBuilder getDatastoreTable2() {
-        return new GetDatastoreTable2RequestBuilder(sdkConfiguration);
+    public GetDatastoreTableRequestBuilder getDatastoreTable() {
+        return new GetDatastoreTableRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Retrieve a table
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<GetDatastoreTable2Response>} - The async response
+     * @return {@code CompletableFuture<GetDatastoreTableResponse>} - The async response
      */
-    public CompletableFuture<GetDatastoreTable2Response> getDatastoreTable2(@Nonnull GetDatastoreTable2Request request) {
-        AsyncRequestOperation<GetDatastoreTable2Request, GetDatastoreTable2Response> operation
-              = new GetDatastoreTable2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<GetDatastoreTableResponse> getDatastoreTable(@Nonnull GetDatastoreTableRequest request) {
+        AsyncRequestOperation<GetDatastoreTableRequest, GetDatastoreTableResponse> operation
+              = new GetDatastoreTable.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -272,19 +272,19 @@ public class AsyncDatastore {
      * 
      * @return The async call builder
      */
-    public ListDatastoreDatabases2RequestBuilder listDatastoreDatabases2() {
-        return new ListDatastoreDatabases2RequestBuilder(sdkConfiguration);
+    public ListDatastoreDatabasesRequestBuilder listDatastoreDatabases() {
+        return new ListDatastoreDatabasesRequestBuilder(sdkConfiguration);
     }
 
     /**
      * List all databases
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<ListDatastoreDatabases2Response>} - The async response
+     * @return {@code CompletableFuture<ListDatastoreDatabasesResponse>} - The async response
      */
-    public CompletableFuture<ListDatastoreDatabases2Response> listDatastoreDatabases2(@Nonnull ListDatastoreDatabases2Request request) {
-        AsyncRequestOperation<ListDatastoreDatabases2Request, ListDatastoreDatabases2Response> operation
-              = new ListDatastoreDatabases2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<ListDatastoreDatabasesResponse> listDatastoreDatabases(@Nonnull ListDatastoreDatabasesRequest request) {
+        AsyncRequestOperation<ListDatastoreDatabasesRequest, ListDatastoreDatabasesResponse> operation
+              = new ListDatastoreDatabases.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -295,19 +295,19 @@ public class AsyncDatastore {
      * 
      * @return The async call builder
      */
-    public ListDatastoreRecords2RequestBuilder listDatastoreRecords2() {
-        return new ListDatastoreRecords2RequestBuilder(sdkConfiguration);
+    public ListDatastoreRecordsRequestBuilder listDatastoreRecords() {
+        return new ListDatastoreRecordsRequestBuilder(sdkConfiguration);
     }
 
     /**
      * List all records
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<ListDatastoreRecords2Response>} - The async response
+     * @return {@code CompletableFuture<ListDatastoreRecordsResponse>} - The async response
      */
-    public CompletableFuture<ListDatastoreRecords2Response> listDatastoreRecords2(@Nonnull ListDatastoreRecords2Request request) {
-        AsyncRequestOperation<ListDatastoreRecords2Request, ListDatastoreRecords2Response> operation
-              = new ListDatastoreRecords2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<ListDatastoreRecordsResponse> listDatastoreRecords(@Nonnull ListDatastoreRecordsRequest request) {
+        AsyncRequestOperation<ListDatastoreRecordsRequest, ListDatastoreRecordsResponse> operation
+              = new ListDatastoreRecords.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -318,19 +318,19 @@ public class AsyncDatastore {
      * 
      * @return The async call builder
      */
-    public ListDatastoreTables2RequestBuilder listDatastoreTables2() {
-        return new ListDatastoreTables2RequestBuilder(sdkConfiguration);
+    public ListDatastoreTablesRequestBuilder listDatastoreTables() {
+        return new ListDatastoreTablesRequestBuilder(sdkConfiguration);
     }
 
     /**
      * List all tables
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<ListDatastoreTables2Response>} - The async response
+     * @return {@code CompletableFuture<ListDatastoreTablesResponse>} - The async response
      */
-    public CompletableFuture<ListDatastoreTables2Response> listDatastoreTables2(@Nonnull ListDatastoreTables2Request request) {
-        AsyncRequestOperation<ListDatastoreTables2Request, ListDatastoreTables2Response> operation
-              = new ListDatastoreTables2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<ListDatastoreTablesResponse> listDatastoreTables(@Nonnull ListDatastoreTablesRequest request) {
+        AsyncRequestOperation<ListDatastoreTablesRequest, ListDatastoreTablesResponse> operation
+              = new ListDatastoreTables.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -341,19 +341,19 @@ public class AsyncDatastore {
      * 
      * @return The async call builder
      */
-    public PatchDatastoreDatabase2RequestBuilder patchDatastoreDatabase2() {
-        return new PatchDatastoreDatabase2RequestBuilder(sdkConfiguration);
+    public PatchDatastoreDatabaseRequestBuilder patchDatastoreDatabase() {
+        return new PatchDatastoreDatabaseRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update a database
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<PatchDatastoreDatabase2Response>} - The async response
+     * @return {@code CompletableFuture<PatchDatastoreDatabaseResponse>} - The async response
      */
-    public CompletableFuture<PatchDatastoreDatabase2Response> patchDatastoreDatabase2(@Nonnull PatchDatastoreDatabase2Request request) {
-        AsyncRequestOperation<PatchDatastoreDatabase2Request, PatchDatastoreDatabase2Response> operation
-              = new PatchDatastoreDatabase2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<PatchDatastoreDatabaseResponse> patchDatastoreDatabase(@Nonnull PatchDatastoreDatabaseRequest request) {
+        AsyncRequestOperation<PatchDatastoreDatabaseRequest, PatchDatastoreDatabaseResponse> operation
+              = new PatchDatastoreDatabase.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -364,19 +364,19 @@ public class AsyncDatastore {
      * 
      * @return The async call builder
      */
-    public PatchDatastoreRecord2RequestBuilder patchDatastoreRecord2() {
-        return new PatchDatastoreRecord2RequestBuilder(sdkConfiguration);
+    public PatchDatastoreRecordRequestBuilder patchDatastoreRecord() {
+        return new PatchDatastoreRecordRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update a record
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<PatchDatastoreRecord2Response>} - The async response
+     * @return {@code CompletableFuture<PatchDatastoreRecordResponse>} - The async response
      */
-    public CompletableFuture<PatchDatastoreRecord2Response> patchDatastoreRecord2(@Nonnull PatchDatastoreRecord2Request request) {
-        AsyncRequestOperation<PatchDatastoreRecord2Request, PatchDatastoreRecord2Response> operation
-              = new PatchDatastoreRecord2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<PatchDatastoreRecordResponse> patchDatastoreRecord(@Nonnull PatchDatastoreRecordRequest request) {
+        AsyncRequestOperation<PatchDatastoreRecordRequest, PatchDatastoreRecordResponse> operation
+              = new PatchDatastoreRecord.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -387,19 +387,19 @@ public class AsyncDatastore {
      * 
      * @return The async call builder
      */
-    public PatchDatastoreTable2RequestBuilder patchDatastoreTable2() {
-        return new PatchDatastoreTable2RequestBuilder(sdkConfiguration);
+    public PatchDatastoreTableRequestBuilder patchDatastoreTable() {
+        return new PatchDatastoreTableRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update a table
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<PatchDatastoreTable2Response>} - The async response
+     * @return {@code CompletableFuture<PatchDatastoreTableResponse>} - The async response
      */
-    public CompletableFuture<PatchDatastoreTable2Response> patchDatastoreTable2(@Nonnull PatchDatastoreTable2Request request) {
-        AsyncRequestOperation<PatchDatastoreTable2Request, PatchDatastoreTable2Response> operation
-              = new PatchDatastoreTable2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<PatchDatastoreTableResponse> patchDatastoreTable(@Nonnull PatchDatastoreTableRequest request) {
+        AsyncRequestOperation<PatchDatastoreTableRequest, PatchDatastoreTableResponse> operation
+              = new PatchDatastoreTable.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -410,19 +410,19 @@ public class AsyncDatastore {
      * 
      * @return The async call builder
      */
-    public RemoveDatastoreDatabase2RequestBuilder removeDatastoreDatabase2() {
-        return new RemoveDatastoreDatabase2RequestBuilder(sdkConfiguration);
+    public RemoveDatastoreDatabaseRequestBuilder removeDatastoreDatabase() {
+        return new RemoveDatastoreDatabaseRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Remove a database
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<RemoveDatastoreDatabase2Response>} - The async response
+     * @return {@code CompletableFuture<RemoveDatastoreDatabaseResponse>} - The async response
      */
-    public CompletableFuture<RemoveDatastoreDatabase2Response> removeDatastoreDatabase2(@Nonnull RemoveDatastoreDatabase2Request request) {
-        AsyncRequestOperation<RemoveDatastoreDatabase2Request, RemoveDatastoreDatabase2Response> operation
-              = new RemoveDatastoreDatabase2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<RemoveDatastoreDatabaseResponse> removeDatastoreDatabase(@Nonnull RemoveDatastoreDatabaseRequest request) {
+        AsyncRequestOperation<RemoveDatastoreDatabaseRequest, RemoveDatastoreDatabaseResponse> operation
+              = new RemoveDatastoreDatabase.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -433,19 +433,19 @@ public class AsyncDatastore {
      * 
      * @return The async call builder
      */
-    public RemoveDatastoreRecord2RequestBuilder removeDatastoreRecord2() {
-        return new RemoveDatastoreRecord2RequestBuilder(sdkConfiguration);
+    public RemoveDatastoreRecordRequestBuilder removeDatastoreRecord() {
+        return new RemoveDatastoreRecordRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Remove a record
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<RemoveDatastoreRecord2Response>} - The async response
+     * @return {@code CompletableFuture<RemoveDatastoreRecordResponse>} - The async response
      */
-    public CompletableFuture<RemoveDatastoreRecord2Response> removeDatastoreRecord2(@Nonnull RemoveDatastoreRecord2Request request) {
-        AsyncRequestOperation<RemoveDatastoreRecord2Request, RemoveDatastoreRecord2Response> operation
-              = new RemoveDatastoreRecord2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<RemoveDatastoreRecordResponse> removeDatastoreRecord(@Nonnull RemoveDatastoreRecordRequest request) {
+        AsyncRequestOperation<RemoveDatastoreRecordRequest, RemoveDatastoreRecordResponse> operation
+              = new RemoveDatastoreRecord.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -456,19 +456,19 @@ public class AsyncDatastore {
      * 
      * @return The async call builder
      */
-    public RemoveDatastoreTable2RequestBuilder removeDatastoreTable2() {
-        return new RemoveDatastoreTable2RequestBuilder(sdkConfiguration);
+    public RemoveDatastoreTableRequestBuilder removeDatastoreTable() {
+        return new RemoveDatastoreTableRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Remove a table
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<RemoveDatastoreTable2Response>} - The async response
+     * @return {@code CompletableFuture<RemoveDatastoreTableResponse>} - The async response
      */
-    public CompletableFuture<RemoveDatastoreTable2Response> removeDatastoreTable2(@Nonnull RemoveDatastoreTable2Request request) {
-        AsyncRequestOperation<RemoveDatastoreTable2Request, RemoveDatastoreTable2Response> operation
-              = new RemoveDatastoreTable2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<RemoveDatastoreTableResponse> removeDatastoreTable(@Nonnull RemoveDatastoreTableRequest request) {
+        AsyncRequestOperation<RemoveDatastoreTableRequest, RemoveDatastoreTableResponse> operation
+              = new RemoveDatastoreTable.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -479,19 +479,19 @@ public class AsyncDatastore {
      * 
      * @return The async call builder
      */
-    public UpdateDatastoreDatabase2RequestBuilder updateDatastoreDatabase2() {
-        return new UpdateDatastoreDatabase2RequestBuilder(sdkConfiguration);
+    public UpdateDatastoreDatabaseRequestBuilder updateDatastoreDatabase() {
+        return new UpdateDatastoreDatabaseRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update a database
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<UpdateDatastoreDatabase2Response>} - The async response
+     * @return {@code CompletableFuture<UpdateDatastoreDatabaseResponse>} - The async response
      */
-    public CompletableFuture<UpdateDatastoreDatabase2Response> updateDatastoreDatabase2(@Nonnull UpdateDatastoreDatabase2Request request) {
-        AsyncRequestOperation<UpdateDatastoreDatabase2Request, UpdateDatastoreDatabase2Response> operation
-              = new UpdateDatastoreDatabase2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<UpdateDatastoreDatabaseResponse> updateDatastoreDatabase(@Nonnull UpdateDatastoreDatabaseRequest request) {
+        AsyncRequestOperation<UpdateDatastoreDatabaseRequest, UpdateDatastoreDatabaseResponse> operation
+              = new UpdateDatastoreDatabase.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -502,19 +502,19 @@ public class AsyncDatastore {
      * 
      * @return The async call builder
      */
-    public UpdateDatastoreRecord2RequestBuilder updateDatastoreRecord2() {
-        return new UpdateDatastoreRecord2RequestBuilder(sdkConfiguration);
+    public UpdateDatastoreRecordRequestBuilder updateDatastoreRecord() {
+        return new UpdateDatastoreRecordRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update a record
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<UpdateDatastoreRecord2Response>} - The async response
+     * @return {@code CompletableFuture<UpdateDatastoreRecordResponse>} - The async response
      */
-    public CompletableFuture<UpdateDatastoreRecord2Response> updateDatastoreRecord2(@Nonnull UpdateDatastoreRecord2Request request) {
-        AsyncRequestOperation<UpdateDatastoreRecord2Request, UpdateDatastoreRecord2Response> operation
-              = new UpdateDatastoreRecord2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<UpdateDatastoreRecordResponse> updateDatastoreRecord(@Nonnull UpdateDatastoreRecordRequest request) {
+        AsyncRequestOperation<UpdateDatastoreRecordRequest, UpdateDatastoreRecordResponse> operation
+              = new UpdateDatastoreRecord.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -525,19 +525,19 @@ public class AsyncDatastore {
      * 
      * @return The async call builder
      */
-    public UpdateDatastoreTable2RequestBuilder updateDatastoreTable2() {
-        return new UpdateDatastoreTable2RequestBuilder(sdkConfiguration);
+    public UpdateDatastoreTableRequestBuilder updateDatastoreTable() {
+        return new UpdateDatastoreTableRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update a table
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<UpdateDatastoreTable2Response>} - The async response
+     * @return {@code CompletableFuture<UpdateDatastoreTableResponse>} - The async response
      */
-    public CompletableFuture<UpdateDatastoreTable2Response> updateDatastoreTable2(@Nonnull UpdateDatastoreTable2Request request) {
-        AsyncRequestOperation<UpdateDatastoreTable2Request, UpdateDatastoreTable2Response> operation
-              = new UpdateDatastoreTable2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<UpdateDatastoreTableResponse> updateDatastoreTable(@Nonnull UpdateDatastoreTableRequest request) {
+        AsyncRequestOperation<UpdateDatastoreTableRequest, UpdateDatastoreTableResponse> operation
+              = new UpdateDatastoreTable.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

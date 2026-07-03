@@ -7,30 +7,30 @@ import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOper
 
 import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
-import to.unified.unified_java_sdk.models.operations.CreateHrisDevice2Request;
-import to.unified.unified_java_sdk.models.operations.GetHrisDevice2Request;
-import to.unified.unified_java_sdk.models.operations.ListHrisDevices2Request;
-import to.unified.unified_java_sdk.models.operations.PatchHrisDevice2Request;
-import to.unified.unified_java_sdk.models.operations.RemoveHrisDevice2Request;
-import to.unified.unified_java_sdk.models.operations.UpdateHrisDevice2Request;
-import to.unified.unified_java_sdk.models.operations.async.CreateHrisDevice2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.CreateHrisDevice2Response;
-import to.unified.unified_java_sdk.models.operations.async.GetHrisDevice2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.GetHrisDevice2Response;
-import to.unified.unified_java_sdk.models.operations.async.ListHrisDevices2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.ListHrisDevices2Response;
-import to.unified.unified_java_sdk.models.operations.async.PatchHrisDevice2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.PatchHrisDevice2Response;
-import to.unified.unified_java_sdk.models.operations.async.RemoveHrisDevice2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.RemoveHrisDevice2Response;
-import to.unified.unified_java_sdk.models.operations.async.UpdateHrisDevice2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.UpdateHrisDevice2Response;
-import to.unified.unified_java_sdk.operations.CreateHrisDevice2;
-import to.unified.unified_java_sdk.operations.GetHrisDevice2;
-import to.unified.unified_java_sdk.operations.ListHrisDevices2;
-import to.unified.unified_java_sdk.operations.PatchHrisDevice2;
-import to.unified.unified_java_sdk.operations.RemoveHrisDevice2;
-import to.unified.unified_java_sdk.operations.UpdateHrisDevice2;
+import to.unified.unified_java_sdk.models.operations.CreateHrisDeviceRequest;
+import to.unified.unified_java_sdk.models.operations.GetHrisDeviceRequest;
+import to.unified.unified_java_sdk.models.operations.ListHrisDevicesRequest;
+import to.unified.unified_java_sdk.models.operations.PatchHrisDeviceRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveHrisDeviceRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateHrisDeviceRequest;
+import to.unified.unified_java_sdk.models.operations.async.CreateHrisDeviceRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.CreateHrisDeviceResponse;
+import to.unified.unified_java_sdk.models.operations.async.GetHrisDeviceRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetHrisDeviceResponse;
+import to.unified.unified_java_sdk.models.operations.async.ListHrisDevicesRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListHrisDevicesResponse;
+import to.unified.unified_java_sdk.models.operations.async.PatchHrisDeviceRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.PatchHrisDeviceResponse;
+import to.unified.unified_java_sdk.models.operations.async.RemoveHrisDeviceRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.RemoveHrisDeviceResponse;
+import to.unified.unified_java_sdk.models.operations.async.UpdateHrisDeviceRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.UpdateHrisDeviceResponse;
+import to.unified.unified_java_sdk.operations.CreateHrisDevice;
+import to.unified.unified_java_sdk.operations.GetHrisDevice;
+import to.unified.unified_java_sdk.operations.ListHrisDevices;
+import to.unified.unified_java_sdk.operations.PatchHrisDevice;
+import to.unified.unified_java_sdk.operations.RemoveHrisDevice;
+import to.unified.unified_java_sdk.operations.UpdateHrisDevice;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -59,19 +59,19 @@ public class AsyncDevice {
      * 
      * @return The async call builder
      */
-    public CreateHrisDevice2RequestBuilder createHrisDevice2() {
-        return new CreateHrisDevice2RequestBuilder(sdkConfiguration);
+    public CreateHrisDeviceRequestBuilder createHrisDevice() {
+        return new CreateHrisDeviceRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Create a device
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<CreateHrisDevice2Response>} - The async response
+     * @return {@code CompletableFuture<CreateHrisDeviceResponse>} - The async response
      */
-    public CompletableFuture<CreateHrisDevice2Response> createHrisDevice2(@Nonnull CreateHrisDevice2Request request) {
-        AsyncRequestOperation<CreateHrisDevice2Request, CreateHrisDevice2Response> operation
-              = new CreateHrisDevice2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<CreateHrisDeviceResponse> createHrisDevice(@Nonnull CreateHrisDeviceRequest request) {
+        AsyncRequestOperation<CreateHrisDeviceRequest, CreateHrisDeviceResponse> operation
+              = new CreateHrisDevice.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -82,19 +82,19 @@ public class AsyncDevice {
      * 
      * @return The async call builder
      */
-    public GetHrisDevice2RequestBuilder getHrisDevice2() {
-        return new GetHrisDevice2RequestBuilder(sdkConfiguration);
+    public GetHrisDeviceRequestBuilder getHrisDevice() {
+        return new GetHrisDeviceRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Retrieve a device
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<GetHrisDevice2Response>} - The async response
+     * @return {@code CompletableFuture<GetHrisDeviceResponse>} - The async response
      */
-    public CompletableFuture<GetHrisDevice2Response> getHrisDevice2(@Nonnull GetHrisDevice2Request request) {
-        AsyncRequestOperation<GetHrisDevice2Request, GetHrisDevice2Response> operation
-              = new GetHrisDevice2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<GetHrisDeviceResponse> getHrisDevice(@Nonnull GetHrisDeviceRequest request) {
+        AsyncRequestOperation<GetHrisDeviceRequest, GetHrisDeviceResponse> operation
+              = new GetHrisDevice.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -105,19 +105,19 @@ public class AsyncDevice {
      * 
      * @return The async call builder
      */
-    public ListHrisDevices2RequestBuilder listHrisDevices2() {
-        return new ListHrisDevices2RequestBuilder(sdkConfiguration);
+    public ListHrisDevicesRequestBuilder listHrisDevices() {
+        return new ListHrisDevicesRequestBuilder(sdkConfiguration);
     }
 
     /**
      * List all devices
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<ListHrisDevices2Response>} - The async response
+     * @return {@code CompletableFuture<ListHrisDevicesResponse>} - The async response
      */
-    public CompletableFuture<ListHrisDevices2Response> listHrisDevices2(@Nonnull ListHrisDevices2Request request) {
-        AsyncRequestOperation<ListHrisDevices2Request, ListHrisDevices2Response> operation
-              = new ListHrisDevices2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<ListHrisDevicesResponse> listHrisDevices(@Nonnull ListHrisDevicesRequest request) {
+        AsyncRequestOperation<ListHrisDevicesRequest, ListHrisDevicesResponse> operation
+              = new ListHrisDevices.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -128,19 +128,19 @@ public class AsyncDevice {
      * 
      * @return The async call builder
      */
-    public PatchHrisDevice2RequestBuilder patchHrisDevice2() {
-        return new PatchHrisDevice2RequestBuilder(sdkConfiguration);
+    public PatchHrisDeviceRequestBuilder patchHrisDevice() {
+        return new PatchHrisDeviceRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update a device
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<PatchHrisDevice2Response>} - The async response
+     * @return {@code CompletableFuture<PatchHrisDeviceResponse>} - The async response
      */
-    public CompletableFuture<PatchHrisDevice2Response> patchHrisDevice2(@Nonnull PatchHrisDevice2Request request) {
-        AsyncRequestOperation<PatchHrisDevice2Request, PatchHrisDevice2Response> operation
-              = new PatchHrisDevice2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<PatchHrisDeviceResponse> patchHrisDevice(@Nonnull PatchHrisDeviceRequest request) {
+        AsyncRequestOperation<PatchHrisDeviceRequest, PatchHrisDeviceResponse> operation
+              = new PatchHrisDevice.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -151,19 +151,19 @@ public class AsyncDevice {
      * 
      * @return The async call builder
      */
-    public RemoveHrisDevice2RequestBuilder removeHrisDevice2() {
-        return new RemoveHrisDevice2RequestBuilder(sdkConfiguration);
+    public RemoveHrisDeviceRequestBuilder removeHrisDevice() {
+        return new RemoveHrisDeviceRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Remove a device
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<RemoveHrisDevice2Response>} - The async response
+     * @return {@code CompletableFuture<RemoveHrisDeviceResponse>} - The async response
      */
-    public CompletableFuture<RemoveHrisDevice2Response> removeHrisDevice2(@Nonnull RemoveHrisDevice2Request request) {
-        AsyncRequestOperation<RemoveHrisDevice2Request, RemoveHrisDevice2Response> operation
-              = new RemoveHrisDevice2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<RemoveHrisDeviceResponse> removeHrisDevice(@Nonnull RemoveHrisDeviceRequest request) {
+        AsyncRequestOperation<RemoveHrisDeviceRequest, RemoveHrisDeviceResponse> operation
+              = new RemoveHrisDevice.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -174,19 +174,19 @@ public class AsyncDevice {
      * 
      * @return The async call builder
      */
-    public UpdateHrisDevice2RequestBuilder updateHrisDevice2() {
-        return new UpdateHrisDevice2RequestBuilder(sdkConfiguration);
+    public UpdateHrisDeviceRequestBuilder updateHrisDevice() {
+        return new UpdateHrisDeviceRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update a device
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<UpdateHrisDevice2Response>} - The async response
+     * @return {@code CompletableFuture<UpdateHrisDeviceResponse>} - The async response
      */
-    public CompletableFuture<UpdateHrisDevice2Response> updateHrisDevice2(@Nonnull UpdateHrisDevice2Request request) {
-        AsyncRequestOperation<UpdateHrisDevice2Request, UpdateHrisDevice2Response> operation
-              = new UpdateHrisDevice2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<UpdateHrisDeviceResponse> updateHrisDevice(@Nonnull UpdateHrisDeviceRequest request) {
+        AsyncRequestOperation<UpdateHrisDeviceRequest, UpdateHrisDeviceResponse> operation
+              = new UpdateHrisDevice.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

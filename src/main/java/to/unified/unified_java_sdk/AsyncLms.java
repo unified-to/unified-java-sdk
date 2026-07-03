@@ -7,174 +7,174 @@ import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOper
 
 import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
-import to.unified.unified_java_sdk.models.operations.CreateLmsActivity2Request;
-import to.unified.unified_java_sdk.models.operations.CreateLmsClass2Request;
-import to.unified.unified_java_sdk.models.operations.CreateLmsCollection2Request;
-import to.unified.unified_java_sdk.models.operations.CreateLmsContent2Request;
-import to.unified.unified_java_sdk.models.operations.CreateLmsCourse2Request;
-import to.unified.unified_java_sdk.models.operations.CreateLmsInstructor2Request;
-import to.unified.unified_java_sdk.models.operations.CreateLmsStudent2Request;
-import to.unified.unified_java_sdk.models.operations.GetLmsActivity2Request;
-import to.unified.unified_java_sdk.models.operations.GetLmsClass2Request;
-import to.unified.unified_java_sdk.models.operations.GetLmsCollection2Request;
-import to.unified.unified_java_sdk.models.operations.GetLmsContent2Request;
-import to.unified.unified_java_sdk.models.operations.GetLmsCourse2Request;
-import to.unified.unified_java_sdk.models.operations.GetLmsInstructor2Request;
-import to.unified.unified_java_sdk.models.operations.GetLmsStudent2Request;
-import to.unified.unified_java_sdk.models.operations.ListLmsActivities2Request;
-import to.unified.unified_java_sdk.models.operations.ListLmsClasses2Request;
-import to.unified.unified_java_sdk.models.operations.ListLmsCollections2Request;
-import to.unified.unified_java_sdk.models.operations.ListLmsContents2Request;
-import to.unified.unified_java_sdk.models.operations.ListLmsCourses2Request;
-import to.unified.unified_java_sdk.models.operations.ListLmsInstructors2Request;
-import to.unified.unified_java_sdk.models.operations.ListLmsStudents2Request;
-import to.unified.unified_java_sdk.models.operations.PatchLmsActivity2Request;
-import to.unified.unified_java_sdk.models.operations.PatchLmsClass2Request;
-import to.unified.unified_java_sdk.models.operations.PatchLmsCollection2Request;
-import to.unified.unified_java_sdk.models.operations.PatchLmsContent2Request;
-import to.unified.unified_java_sdk.models.operations.PatchLmsCourse2Request;
-import to.unified.unified_java_sdk.models.operations.PatchLmsInstructor2Request;
-import to.unified.unified_java_sdk.models.operations.PatchLmsStudent2Request;
-import to.unified.unified_java_sdk.models.operations.RemoveLmsActivity2Request;
-import to.unified.unified_java_sdk.models.operations.RemoveLmsClass2Request;
-import to.unified.unified_java_sdk.models.operations.RemoveLmsCollection2Request;
-import to.unified.unified_java_sdk.models.operations.RemoveLmsContent2Request;
-import to.unified.unified_java_sdk.models.operations.RemoveLmsCourse2Request;
-import to.unified.unified_java_sdk.models.operations.RemoveLmsInstructor2Request;
-import to.unified.unified_java_sdk.models.operations.RemoveLmsStudent2Request;
-import to.unified.unified_java_sdk.models.operations.UpdateLmsActivity2Request;
-import to.unified.unified_java_sdk.models.operations.UpdateLmsClass2Request;
-import to.unified.unified_java_sdk.models.operations.UpdateLmsCollection2Request;
-import to.unified.unified_java_sdk.models.operations.UpdateLmsContent2Request;
-import to.unified.unified_java_sdk.models.operations.UpdateLmsCourse2Request;
-import to.unified.unified_java_sdk.models.operations.UpdateLmsInstructor2Request;
-import to.unified.unified_java_sdk.models.operations.UpdateLmsStudent2Request;
-import to.unified.unified_java_sdk.models.operations.async.CreateLmsActivity2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.CreateLmsActivity2Response;
-import to.unified.unified_java_sdk.models.operations.async.CreateLmsClass2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.CreateLmsClass2Response;
-import to.unified.unified_java_sdk.models.operations.async.CreateLmsCollection2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.CreateLmsCollection2Response;
-import to.unified.unified_java_sdk.models.operations.async.CreateLmsContent2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.CreateLmsContent2Response;
-import to.unified.unified_java_sdk.models.operations.async.CreateLmsCourse2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.CreateLmsCourse2Response;
-import to.unified.unified_java_sdk.models.operations.async.CreateLmsInstructor2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.CreateLmsInstructor2Response;
-import to.unified.unified_java_sdk.models.operations.async.CreateLmsStudent2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.CreateLmsStudent2Response;
-import to.unified.unified_java_sdk.models.operations.async.GetLmsActivity2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.GetLmsActivity2Response;
-import to.unified.unified_java_sdk.models.operations.async.GetLmsClass2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.GetLmsClass2Response;
-import to.unified.unified_java_sdk.models.operations.async.GetLmsCollection2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.GetLmsCollection2Response;
-import to.unified.unified_java_sdk.models.operations.async.GetLmsContent2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.GetLmsContent2Response;
-import to.unified.unified_java_sdk.models.operations.async.GetLmsCourse2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.GetLmsCourse2Response;
-import to.unified.unified_java_sdk.models.operations.async.GetLmsInstructor2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.GetLmsInstructor2Response;
-import to.unified.unified_java_sdk.models.operations.async.GetLmsStudent2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.GetLmsStudent2Response;
-import to.unified.unified_java_sdk.models.operations.async.ListLmsActivities2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.ListLmsActivities2Response;
-import to.unified.unified_java_sdk.models.operations.async.ListLmsClasses2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.ListLmsClasses2Response;
-import to.unified.unified_java_sdk.models.operations.async.ListLmsCollections2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.ListLmsCollections2Response;
-import to.unified.unified_java_sdk.models.operations.async.ListLmsContents2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.ListLmsContents2Response;
-import to.unified.unified_java_sdk.models.operations.async.ListLmsCourses2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.ListLmsCourses2Response;
-import to.unified.unified_java_sdk.models.operations.async.ListLmsInstructors2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.ListLmsInstructors2Response;
-import to.unified.unified_java_sdk.models.operations.async.ListLmsStudents2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.ListLmsStudents2Response;
-import to.unified.unified_java_sdk.models.operations.async.PatchLmsActivity2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.PatchLmsActivity2Response;
-import to.unified.unified_java_sdk.models.operations.async.PatchLmsClass2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.PatchLmsClass2Response;
-import to.unified.unified_java_sdk.models.operations.async.PatchLmsCollection2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.PatchLmsCollection2Response;
-import to.unified.unified_java_sdk.models.operations.async.PatchLmsContent2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.PatchLmsContent2Response;
-import to.unified.unified_java_sdk.models.operations.async.PatchLmsCourse2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.PatchLmsCourse2Response;
-import to.unified.unified_java_sdk.models.operations.async.PatchLmsInstructor2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.PatchLmsInstructor2Response;
-import to.unified.unified_java_sdk.models.operations.async.PatchLmsStudent2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.PatchLmsStudent2Response;
-import to.unified.unified_java_sdk.models.operations.async.RemoveLmsActivity2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.RemoveLmsActivity2Response;
-import to.unified.unified_java_sdk.models.operations.async.RemoveLmsClass2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.RemoveLmsClass2Response;
-import to.unified.unified_java_sdk.models.operations.async.RemoveLmsCollection2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.RemoveLmsCollection2Response;
-import to.unified.unified_java_sdk.models.operations.async.RemoveLmsContent2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.RemoveLmsContent2Response;
-import to.unified.unified_java_sdk.models.operations.async.RemoveLmsCourse2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.RemoveLmsCourse2Response;
-import to.unified.unified_java_sdk.models.operations.async.RemoveLmsInstructor2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.RemoveLmsInstructor2Response;
-import to.unified.unified_java_sdk.models.operations.async.RemoveLmsStudent2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.RemoveLmsStudent2Response;
-import to.unified.unified_java_sdk.models.operations.async.UpdateLmsActivity2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.UpdateLmsActivity2Response;
-import to.unified.unified_java_sdk.models.operations.async.UpdateLmsClass2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.UpdateLmsClass2Response;
-import to.unified.unified_java_sdk.models.operations.async.UpdateLmsCollection2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.UpdateLmsCollection2Response;
-import to.unified.unified_java_sdk.models.operations.async.UpdateLmsContent2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.UpdateLmsContent2Response;
-import to.unified.unified_java_sdk.models.operations.async.UpdateLmsCourse2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.UpdateLmsCourse2Response;
-import to.unified.unified_java_sdk.models.operations.async.UpdateLmsInstructor2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.UpdateLmsInstructor2Response;
-import to.unified.unified_java_sdk.models.operations.async.UpdateLmsStudent2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.UpdateLmsStudent2Response;
-import to.unified.unified_java_sdk.operations.CreateLmsActivity2;
-import to.unified.unified_java_sdk.operations.CreateLmsClass2;
-import to.unified.unified_java_sdk.operations.CreateLmsCollection2;
-import to.unified.unified_java_sdk.operations.CreateLmsContent2;
-import to.unified.unified_java_sdk.operations.CreateLmsCourse2;
-import to.unified.unified_java_sdk.operations.CreateLmsInstructor2;
-import to.unified.unified_java_sdk.operations.CreateLmsStudent2;
-import to.unified.unified_java_sdk.operations.GetLmsActivity2;
-import to.unified.unified_java_sdk.operations.GetLmsClass2;
-import to.unified.unified_java_sdk.operations.GetLmsCollection2;
-import to.unified.unified_java_sdk.operations.GetLmsContent2;
-import to.unified.unified_java_sdk.operations.GetLmsCourse2;
-import to.unified.unified_java_sdk.operations.GetLmsInstructor2;
-import to.unified.unified_java_sdk.operations.GetLmsStudent2;
-import to.unified.unified_java_sdk.operations.ListLmsActivities2;
-import to.unified.unified_java_sdk.operations.ListLmsClasses2;
-import to.unified.unified_java_sdk.operations.ListLmsCollections2;
-import to.unified.unified_java_sdk.operations.ListLmsContents2;
-import to.unified.unified_java_sdk.operations.ListLmsCourses2;
-import to.unified.unified_java_sdk.operations.ListLmsInstructors2;
-import to.unified.unified_java_sdk.operations.ListLmsStudents2;
-import to.unified.unified_java_sdk.operations.PatchLmsActivity2;
-import to.unified.unified_java_sdk.operations.PatchLmsClass2;
-import to.unified.unified_java_sdk.operations.PatchLmsCollection2;
-import to.unified.unified_java_sdk.operations.PatchLmsContent2;
-import to.unified.unified_java_sdk.operations.PatchLmsCourse2;
-import to.unified.unified_java_sdk.operations.PatchLmsInstructor2;
-import to.unified.unified_java_sdk.operations.PatchLmsStudent2;
-import to.unified.unified_java_sdk.operations.RemoveLmsActivity2;
-import to.unified.unified_java_sdk.operations.RemoveLmsClass2;
-import to.unified.unified_java_sdk.operations.RemoveLmsCollection2;
-import to.unified.unified_java_sdk.operations.RemoveLmsContent2;
-import to.unified.unified_java_sdk.operations.RemoveLmsCourse2;
-import to.unified.unified_java_sdk.operations.RemoveLmsInstructor2;
-import to.unified.unified_java_sdk.operations.RemoveLmsStudent2;
-import to.unified.unified_java_sdk.operations.UpdateLmsActivity2;
-import to.unified.unified_java_sdk.operations.UpdateLmsClass2;
-import to.unified.unified_java_sdk.operations.UpdateLmsCollection2;
-import to.unified.unified_java_sdk.operations.UpdateLmsContent2;
-import to.unified.unified_java_sdk.operations.UpdateLmsCourse2;
-import to.unified.unified_java_sdk.operations.UpdateLmsInstructor2;
-import to.unified.unified_java_sdk.operations.UpdateLmsStudent2;
+import to.unified.unified_java_sdk.models.operations.CreateLmsActivityRequest;
+import to.unified.unified_java_sdk.models.operations.CreateLmsClassRequest;
+import to.unified.unified_java_sdk.models.operations.CreateLmsCollectionRequest;
+import to.unified.unified_java_sdk.models.operations.CreateLmsContentRequest;
+import to.unified.unified_java_sdk.models.operations.CreateLmsCourseRequest;
+import to.unified.unified_java_sdk.models.operations.CreateLmsInstructorRequest;
+import to.unified.unified_java_sdk.models.operations.CreateLmsStudentRequest;
+import to.unified.unified_java_sdk.models.operations.GetLmsActivityRequest;
+import to.unified.unified_java_sdk.models.operations.GetLmsClassRequest;
+import to.unified.unified_java_sdk.models.operations.GetLmsCollectionRequest;
+import to.unified.unified_java_sdk.models.operations.GetLmsContentRequest;
+import to.unified.unified_java_sdk.models.operations.GetLmsCourseRequest;
+import to.unified.unified_java_sdk.models.operations.GetLmsInstructorRequest;
+import to.unified.unified_java_sdk.models.operations.GetLmsStudentRequest;
+import to.unified.unified_java_sdk.models.operations.ListLmsActivitiesRequest;
+import to.unified.unified_java_sdk.models.operations.ListLmsClassesRequest;
+import to.unified.unified_java_sdk.models.operations.ListLmsCollectionsRequest;
+import to.unified.unified_java_sdk.models.operations.ListLmsContentsRequest;
+import to.unified.unified_java_sdk.models.operations.ListLmsCoursesRequest;
+import to.unified.unified_java_sdk.models.operations.ListLmsInstructorsRequest;
+import to.unified.unified_java_sdk.models.operations.ListLmsStudentsRequest;
+import to.unified.unified_java_sdk.models.operations.PatchLmsActivityRequest;
+import to.unified.unified_java_sdk.models.operations.PatchLmsClassRequest;
+import to.unified.unified_java_sdk.models.operations.PatchLmsCollectionRequest;
+import to.unified.unified_java_sdk.models.operations.PatchLmsContentRequest;
+import to.unified.unified_java_sdk.models.operations.PatchLmsCourseRequest;
+import to.unified.unified_java_sdk.models.operations.PatchLmsInstructorRequest;
+import to.unified.unified_java_sdk.models.operations.PatchLmsStudentRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveLmsActivityRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveLmsClassRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveLmsCollectionRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveLmsContentRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveLmsCourseRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveLmsInstructorRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveLmsStudentRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateLmsActivityRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateLmsClassRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateLmsCollectionRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateLmsContentRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateLmsCourseRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateLmsInstructorRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateLmsStudentRequest;
+import to.unified.unified_java_sdk.models.operations.async.CreateLmsActivityRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.CreateLmsActivityResponse;
+import to.unified.unified_java_sdk.models.operations.async.CreateLmsClassRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.CreateLmsClassResponse;
+import to.unified.unified_java_sdk.models.operations.async.CreateLmsCollectionRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.CreateLmsCollectionResponse;
+import to.unified.unified_java_sdk.models.operations.async.CreateLmsContentRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.CreateLmsContentResponse;
+import to.unified.unified_java_sdk.models.operations.async.CreateLmsCourseRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.CreateLmsCourseResponse;
+import to.unified.unified_java_sdk.models.operations.async.CreateLmsInstructorRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.CreateLmsInstructorResponse;
+import to.unified.unified_java_sdk.models.operations.async.CreateLmsStudentRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.CreateLmsStudentResponse;
+import to.unified.unified_java_sdk.models.operations.async.GetLmsActivityRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetLmsActivityResponse;
+import to.unified.unified_java_sdk.models.operations.async.GetLmsClassRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetLmsClassResponse;
+import to.unified.unified_java_sdk.models.operations.async.GetLmsCollectionRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetLmsCollectionResponse;
+import to.unified.unified_java_sdk.models.operations.async.GetLmsContentRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetLmsContentResponse;
+import to.unified.unified_java_sdk.models.operations.async.GetLmsCourseRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetLmsCourseResponse;
+import to.unified.unified_java_sdk.models.operations.async.GetLmsInstructorRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetLmsInstructorResponse;
+import to.unified.unified_java_sdk.models.operations.async.GetLmsStudentRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetLmsStudentResponse;
+import to.unified.unified_java_sdk.models.operations.async.ListLmsActivitiesRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListLmsActivitiesResponse;
+import to.unified.unified_java_sdk.models.operations.async.ListLmsClassesRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListLmsClassesResponse;
+import to.unified.unified_java_sdk.models.operations.async.ListLmsCollectionsRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListLmsCollectionsResponse;
+import to.unified.unified_java_sdk.models.operations.async.ListLmsContentsRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListLmsContentsResponse;
+import to.unified.unified_java_sdk.models.operations.async.ListLmsCoursesRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListLmsCoursesResponse;
+import to.unified.unified_java_sdk.models.operations.async.ListLmsInstructorsRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListLmsInstructorsResponse;
+import to.unified.unified_java_sdk.models.operations.async.ListLmsStudentsRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListLmsStudentsResponse;
+import to.unified.unified_java_sdk.models.operations.async.PatchLmsActivityRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.PatchLmsActivityResponse;
+import to.unified.unified_java_sdk.models.operations.async.PatchLmsClassRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.PatchLmsClassResponse;
+import to.unified.unified_java_sdk.models.operations.async.PatchLmsCollectionRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.PatchLmsCollectionResponse;
+import to.unified.unified_java_sdk.models.operations.async.PatchLmsContentRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.PatchLmsContentResponse;
+import to.unified.unified_java_sdk.models.operations.async.PatchLmsCourseRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.PatchLmsCourseResponse;
+import to.unified.unified_java_sdk.models.operations.async.PatchLmsInstructorRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.PatchLmsInstructorResponse;
+import to.unified.unified_java_sdk.models.operations.async.PatchLmsStudentRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.PatchLmsStudentResponse;
+import to.unified.unified_java_sdk.models.operations.async.RemoveLmsActivityRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.RemoveLmsActivityResponse;
+import to.unified.unified_java_sdk.models.operations.async.RemoveLmsClassRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.RemoveLmsClassResponse;
+import to.unified.unified_java_sdk.models.operations.async.RemoveLmsCollectionRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.RemoveLmsCollectionResponse;
+import to.unified.unified_java_sdk.models.operations.async.RemoveLmsContentRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.RemoveLmsContentResponse;
+import to.unified.unified_java_sdk.models.operations.async.RemoveLmsCourseRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.RemoveLmsCourseResponse;
+import to.unified.unified_java_sdk.models.operations.async.RemoveLmsInstructorRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.RemoveLmsInstructorResponse;
+import to.unified.unified_java_sdk.models.operations.async.RemoveLmsStudentRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.RemoveLmsStudentResponse;
+import to.unified.unified_java_sdk.models.operations.async.UpdateLmsActivityRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.UpdateLmsActivityResponse;
+import to.unified.unified_java_sdk.models.operations.async.UpdateLmsClassRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.UpdateLmsClassResponse;
+import to.unified.unified_java_sdk.models.operations.async.UpdateLmsCollectionRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.UpdateLmsCollectionResponse;
+import to.unified.unified_java_sdk.models.operations.async.UpdateLmsContentRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.UpdateLmsContentResponse;
+import to.unified.unified_java_sdk.models.operations.async.UpdateLmsCourseRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.UpdateLmsCourseResponse;
+import to.unified.unified_java_sdk.models.operations.async.UpdateLmsInstructorRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.UpdateLmsInstructorResponse;
+import to.unified.unified_java_sdk.models.operations.async.UpdateLmsStudentRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.UpdateLmsStudentResponse;
+import to.unified.unified_java_sdk.operations.CreateLmsActivity;
+import to.unified.unified_java_sdk.operations.CreateLmsClass;
+import to.unified.unified_java_sdk.operations.CreateLmsCollection;
+import to.unified.unified_java_sdk.operations.CreateLmsContent;
+import to.unified.unified_java_sdk.operations.CreateLmsCourse;
+import to.unified.unified_java_sdk.operations.CreateLmsInstructor;
+import to.unified.unified_java_sdk.operations.CreateLmsStudent;
+import to.unified.unified_java_sdk.operations.GetLmsActivity;
+import to.unified.unified_java_sdk.operations.GetLmsClass;
+import to.unified.unified_java_sdk.operations.GetLmsCollection;
+import to.unified.unified_java_sdk.operations.GetLmsContent;
+import to.unified.unified_java_sdk.operations.GetLmsCourse;
+import to.unified.unified_java_sdk.operations.GetLmsInstructor;
+import to.unified.unified_java_sdk.operations.GetLmsStudent;
+import to.unified.unified_java_sdk.operations.ListLmsActivities;
+import to.unified.unified_java_sdk.operations.ListLmsClasses;
+import to.unified.unified_java_sdk.operations.ListLmsCollections;
+import to.unified.unified_java_sdk.operations.ListLmsContents;
+import to.unified.unified_java_sdk.operations.ListLmsCourses;
+import to.unified.unified_java_sdk.operations.ListLmsInstructors;
+import to.unified.unified_java_sdk.operations.ListLmsStudents;
+import to.unified.unified_java_sdk.operations.PatchLmsActivity;
+import to.unified.unified_java_sdk.operations.PatchLmsClass;
+import to.unified.unified_java_sdk.operations.PatchLmsCollection;
+import to.unified.unified_java_sdk.operations.PatchLmsContent;
+import to.unified.unified_java_sdk.operations.PatchLmsCourse;
+import to.unified.unified_java_sdk.operations.PatchLmsInstructor;
+import to.unified.unified_java_sdk.operations.PatchLmsStudent;
+import to.unified.unified_java_sdk.operations.RemoveLmsActivity;
+import to.unified.unified_java_sdk.operations.RemoveLmsClass;
+import to.unified.unified_java_sdk.operations.RemoveLmsCollection;
+import to.unified.unified_java_sdk.operations.RemoveLmsContent;
+import to.unified.unified_java_sdk.operations.RemoveLmsCourse;
+import to.unified.unified_java_sdk.operations.RemoveLmsInstructor;
+import to.unified.unified_java_sdk.operations.RemoveLmsStudent;
+import to.unified.unified_java_sdk.operations.UpdateLmsActivity;
+import to.unified.unified_java_sdk.operations.UpdateLmsClass;
+import to.unified.unified_java_sdk.operations.UpdateLmsCollection;
+import to.unified.unified_java_sdk.operations.UpdateLmsContent;
+import to.unified.unified_java_sdk.operations.UpdateLmsCourse;
+import to.unified.unified_java_sdk.operations.UpdateLmsInstructor;
+import to.unified.unified_java_sdk.operations.UpdateLmsStudent;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -203,19 +203,19 @@ public class AsyncLms {
      * 
      * @return The async call builder
      */
-    public CreateLmsActivity2RequestBuilder createLmsActivity2() {
-        return new CreateLmsActivity2RequestBuilder(sdkConfiguration);
+    public CreateLmsActivityRequestBuilder createLmsActivity() {
+        return new CreateLmsActivityRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Create an activity
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<CreateLmsActivity2Response>} - The async response
+     * @return {@code CompletableFuture<CreateLmsActivityResponse>} - The async response
      */
-    public CompletableFuture<CreateLmsActivity2Response> createLmsActivity2(@Nonnull CreateLmsActivity2Request request) {
-        AsyncRequestOperation<CreateLmsActivity2Request, CreateLmsActivity2Response> operation
-              = new CreateLmsActivity2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<CreateLmsActivityResponse> createLmsActivity(@Nonnull CreateLmsActivityRequest request) {
+        AsyncRequestOperation<CreateLmsActivityRequest, CreateLmsActivityResponse> operation
+              = new CreateLmsActivity.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -226,19 +226,19 @@ public class AsyncLms {
      * 
      * @return The async call builder
      */
-    public CreateLmsClass2RequestBuilder createLmsClass2() {
-        return new CreateLmsClass2RequestBuilder(sdkConfiguration);
+    public CreateLmsClassRequestBuilder createLmsClass() {
+        return new CreateLmsClassRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Create a class
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<CreateLmsClass2Response>} - The async response
+     * @return {@code CompletableFuture<CreateLmsClassResponse>} - The async response
      */
-    public CompletableFuture<CreateLmsClass2Response> createLmsClass2(@Nonnull CreateLmsClass2Request request) {
-        AsyncRequestOperation<CreateLmsClass2Request, CreateLmsClass2Response> operation
-              = new CreateLmsClass2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<CreateLmsClassResponse> createLmsClass(@Nonnull CreateLmsClassRequest request) {
+        AsyncRequestOperation<CreateLmsClassRequest, CreateLmsClassResponse> operation
+              = new CreateLmsClass.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -249,19 +249,19 @@ public class AsyncLms {
      * 
      * @return The async call builder
      */
-    public CreateLmsCollection2RequestBuilder createLmsCollection2() {
-        return new CreateLmsCollection2RequestBuilder(sdkConfiguration);
+    public CreateLmsCollectionRequestBuilder createLmsCollection() {
+        return new CreateLmsCollectionRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Create a collection
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<CreateLmsCollection2Response>} - The async response
+     * @return {@code CompletableFuture<CreateLmsCollectionResponse>} - The async response
      */
-    public CompletableFuture<CreateLmsCollection2Response> createLmsCollection2(@Nonnull CreateLmsCollection2Request request) {
-        AsyncRequestOperation<CreateLmsCollection2Request, CreateLmsCollection2Response> operation
-              = new CreateLmsCollection2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<CreateLmsCollectionResponse> createLmsCollection(@Nonnull CreateLmsCollectionRequest request) {
+        AsyncRequestOperation<CreateLmsCollectionRequest, CreateLmsCollectionResponse> operation
+              = new CreateLmsCollection.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -272,19 +272,19 @@ public class AsyncLms {
      * 
      * @return The async call builder
      */
-    public CreateLmsContent2RequestBuilder createLmsContent2() {
-        return new CreateLmsContent2RequestBuilder(sdkConfiguration);
+    public CreateLmsContentRequestBuilder createLmsContent() {
+        return new CreateLmsContentRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Create a content
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<CreateLmsContent2Response>} - The async response
+     * @return {@code CompletableFuture<CreateLmsContentResponse>} - The async response
      */
-    public CompletableFuture<CreateLmsContent2Response> createLmsContent2(@Nonnull CreateLmsContent2Request request) {
-        AsyncRequestOperation<CreateLmsContent2Request, CreateLmsContent2Response> operation
-              = new CreateLmsContent2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<CreateLmsContentResponse> createLmsContent(@Nonnull CreateLmsContentRequest request) {
+        AsyncRequestOperation<CreateLmsContentRequest, CreateLmsContentResponse> operation
+              = new CreateLmsContent.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -295,19 +295,19 @@ public class AsyncLms {
      * 
      * @return The async call builder
      */
-    public CreateLmsCourse2RequestBuilder createLmsCourse2() {
-        return new CreateLmsCourse2RequestBuilder(sdkConfiguration);
+    public CreateLmsCourseRequestBuilder createLmsCourse() {
+        return new CreateLmsCourseRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Create a course
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<CreateLmsCourse2Response>} - The async response
+     * @return {@code CompletableFuture<CreateLmsCourseResponse>} - The async response
      */
-    public CompletableFuture<CreateLmsCourse2Response> createLmsCourse2(@Nonnull CreateLmsCourse2Request request) {
-        AsyncRequestOperation<CreateLmsCourse2Request, CreateLmsCourse2Response> operation
-              = new CreateLmsCourse2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<CreateLmsCourseResponse> createLmsCourse(@Nonnull CreateLmsCourseRequest request) {
+        AsyncRequestOperation<CreateLmsCourseRequest, CreateLmsCourseResponse> operation
+              = new CreateLmsCourse.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -318,19 +318,19 @@ public class AsyncLms {
      * 
      * @return The async call builder
      */
-    public CreateLmsInstructor2RequestBuilder createLmsInstructor2() {
-        return new CreateLmsInstructor2RequestBuilder(sdkConfiguration);
+    public CreateLmsInstructorRequestBuilder createLmsInstructor() {
+        return new CreateLmsInstructorRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Create an instructor
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<CreateLmsInstructor2Response>} - The async response
+     * @return {@code CompletableFuture<CreateLmsInstructorResponse>} - The async response
      */
-    public CompletableFuture<CreateLmsInstructor2Response> createLmsInstructor2(@Nonnull CreateLmsInstructor2Request request) {
-        AsyncRequestOperation<CreateLmsInstructor2Request, CreateLmsInstructor2Response> operation
-              = new CreateLmsInstructor2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<CreateLmsInstructorResponse> createLmsInstructor(@Nonnull CreateLmsInstructorRequest request) {
+        AsyncRequestOperation<CreateLmsInstructorRequest, CreateLmsInstructorResponse> operation
+              = new CreateLmsInstructor.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -341,19 +341,19 @@ public class AsyncLms {
      * 
      * @return The async call builder
      */
-    public CreateLmsStudent2RequestBuilder createLmsStudent2() {
-        return new CreateLmsStudent2RequestBuilder(sdkConfiguration);
+    public CreateLmsStudentRequestBuilder createLmsStudent() {
+        return new CreateLmsStudentRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Create a student
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<CreateLmsStudent2Response>} - The async response
+     * @return {@code CompletableFuture<CreateLmsStudentResponse>} - The async response
      */
-    public CompletableFuture<CreateLmsStudent2Response> createLmsStudent2(@Nonnull CreateLmsStudent2Request request) {
-        AsyncRequestOperation<CreateLmsStudent2Request, CreateLmsStudent2Response> operation
-              = new CreateLmsStudent2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<CreateLmsStudentResponse> createLmsStudent(@Nonnull CreateLmsStudentRequest request) {
+        AsyncRequestOperation<CreateLmsStudentRequest, CreateLmsStudentResponse> operation
+              = new CreateLmsStudent.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -364,19 +364,19 @@ public class AsyncLms {
      * 
      * @return The async call builder
      */
-    public GetLmsActivity2RequestBuilder getLmsActivity2() {
-        return new GetLmsActivity2RequestBuilder(sdkConfiguration);
+    public GetLmsActivityRequestBuilder getLmsActivity() {
+        return new GetLmsActivityRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Retrieve an activity
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<GetLmsActivity2Response>} - The async response
+     * @return {@code CompletableFuture<GetLmsActivityResponse>} - The async response
      */
-    public CompletableFuture<GetLmsActivity2Response> getLmsActivity2(@Nonnull GetLmsActivity2Request request) {
-        AsyncRequestOperation<GetLmsActivity2Request, GetLmsActivity2Response> operation
-              = new GetLmsActivity2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<GetLmsActivityResponse> getLmsActivity(@Nonnull GetLmsActivityRequest request) {
+        AsyncRequestOperation<GetLmsActivityRequest, GetLmsActivityResponse> operation
+              = new GetLmsActivity.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -387,19 +387,19 @@ public class AsyncLms {
      * 
      * @return The async call builder
      */
-    public GetLmsClass2RequestBuilder getLmsClass2() {
-        return new GetLmsClass2RequestBuilder(sdkConfiguration);
+    public GetLmsClassRequestBuilder getLmsClass() {
+        return new GetLmsClassRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Retrieve a class
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<GetLmsClass2Response>} - The async response
+     * @return {@code CompletableFuture<GetLmsClassResponse>} - The async response
      */
-    public CompletableFuture<GetLmsClass2Response> getLmsClass2(@Nonnull GetLmsClass2Request request) {
-        AsyncRequestOperation<GetLmsClass2Request, GetLmsClass2Response> operation
-              = new GetLmsClass2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<GetLmsClassResponse> getLmsClass(@Nonnull GetLmsClassRequest request) {
+        AsyncRequestOperation<GetLmsClassRequest, GetLmsClassResponse> operation
+              = new GetLmsClass.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -410,19 +410,19 @@ public class AsyncLms {
      * 
      * @return The async call builder
      */
-    public GetLmsCollection2RequestBuilder getLmsCollection2() {
-        return new GetLmsCollection2RequestBuilder(sdkConfiguration);
+    public GetLmsCollectionRequestBuilder getLmsCollection() {
+        return new GetLmsCollectionRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Retrieve a collection
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<GetLmsCollection2Response>} - The async response
+     * @return {@code CompletableFuture<GetLmsCollectionResponse>} - The async response
      */
-    public CompletableFuture<GetLmsCollection2Response> getLmsCollection2(@Nonnull GetLmsCollection2Request request) {
-        AsyncRequestOperation<GetLmsCollection2Request, GetLmsCollection2Response> operation
-              = new GetLmsCollection2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<GetLmsCollectionResponse> getLmsCollection(@Nonnull GetLmsCollectionRequest request) {
+        AsyncRequestOperation<GetLmsCollectionRequest, GetLmsCollectionResponse> operation
+              = new GetLmsCollection.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -433,19 +433,19 @@ public class AsyncLms {
      * 
      * @return The async call builder
      */
-    public GetLmsContent2RequestBuilder getLmsContent2() {
-        return new GetLmsContent2RequestBuilder(sdkConfiguration);
+    public GetLmsContentRequestBuilder getLmsContent() {
+        return new GetLmsContentRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Retrieve a content
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<GetLmsContent2Response>} - The async response
+     * @return {@code CompletableFuture<GetLmsContentResponse>} - The async response
      */
-    public CompletableFuture<GetLmsContent2Response> getLmsContent2(@Nonnull GetLmsContent2Request request) {
-        AsyncRequestOperation<GetLmsContent2Request, GetLmsContent2Response> operation
-              = new GetLmsContent2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<GetLmsContentResponse> getLmsContent(@Nonnull GetLmsContentRequest request) {
+        AsyncRequestOperation<GetLmsContentRequest, GetLmsContentResponse> operation
+              = new GetLmsContent.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -456,19 +456,19 @@ public class AsyncLms {
      * 
      * @return The async call builder
      */
-    public GetLmsCourse2RequestBuilder getLmsCourse2() {
-        return new GetLmsCourse2RequestBuilder(sdkConfiguration);
+    public GetLmsCourseRequestBuilder getLmsCourse() {
+        return new GetLmsCourseRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Retrieve a course
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<GetLmsCourse2Response>} - The async response
+     * @return {@code CompletableFuture<GetLmsCourseResponse>} - The async response
      */
-    public CompletableFuture<GetLmsCourse2Response> getLmsCourse2(@Nonnull GetLmsCourse2Request request) {
-        AsyncRequestOperation<GetLmsCourse2Request, GetLmsCourse2Response> operation
-              = new GetLmsCourse2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<GetLmsCourseResponse> getLmsCourse(@Nonnull GetLmsCourseRequest request) {
+        AsyncRequestOperation<GetLmsCourseRequest, GetLmsCourseResponse> operation
+              = new GetLmsCourse.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -479,19 +479,19 @@ public class AsyncLms {
      * 
      * @return The async call builder
      */
-    public GetLmsInstructor2RequestBuilder getLmsInstructor2() {
-        return new GetLmsInstructor2RequestBuilder(sdkConfiguration);
+    public GetLmsInstructorRequestBuilder getLmsInstructor() {
+        return new GetLmsInstructorRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Retrieve an instructor
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<GetLmsInstructor2Response>} - The async response
+     * @return {@code CompletableFuture<GetLmsInstructorResponse>} - The async response
      */
-    public CompletableFuture<GetLmsInstructor2Response> getLmsInstructor2(@Nonnull GetLmsInstructor2Request request) {
-        AsyncRequestOperation<GetLmsInstructor2Request, GetLmsInstructor2Response> operation
-              = new GetLmsInstructor2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<GetLmsInstructorResponse> getLmsInstructor(@Nonnull GetLmsInstructorRequest request) {
+        AsyncRequestOperation<GetLmsInstructorRequest, GetLmsInstructorResponse> operation
+              = new GetLmsInstructor.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -502,19 +502,19 @@ public class AsyncLms {
      * 
      * @return The async call builder
      */
-    public GetLmsStudent2RequestBuilder getLmsStudent2() {
-        return new GetLmsStudent2RequestBuilder(sdkConfiguration);
+    public GetLmsStudentRequestBuilder getLmsStudent() {
+        return new GetLmsStudentRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Retrieve a student
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<GetLmsStudent2Response>} - The async response
+     * @return {@code CompletableFuture<GetLmsStudentResponse>} - The async response
      */
-    public CompletableFuture<GetLmsStudent2Response> getLmsStudent2(@Nonnull GetLmsStudent2Request request) {
-        AsyncRequestOperation<GetLmsStudent2Request, GetLmsStudent2Response> operation
-              = new GetLmsStudent2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<GetLmsStudentResponse> getLmsStudent(@Nonnull GetLmsStudentRequest request) {
+        AsyncRequestOperation<GetLmsStudentRequest, GetLmsStudentResponse> operation
+              = new GetLmsStudent.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -525,19 +525,19 @@ public class AsyncLms {
      * 
      * @return The async call builder
      */
-    public ListLmsActivities2RequestBuilder listLmsActivities2() {
-        return new ListLmsActivities2RequestBuilder(sdkConfiguration);
+    public ListLmsActivitiesRequestBuilder listLmsActivities() {
+        return new ListLmsActivitiesRequestBuilder(sdkConfiguration);
     }
 
     /**
      * List all activities
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<ListLmsActivities2Response>} - The async response
+     * @return {@code CompletableFuture<ListLmsActivitiesResponse>} - The async response
      */
-    public CompletableFuture<ListLmsActivities2Response> listLmsActivities2(@Nonnull ListLmsActivities2Request request) {
-        AsyncRequestOperation<ListLmsActivities2Request, ListLmsActivities2Response> operation
-              = new ListLmsActivities2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<ListLmsActivitiesResponse> listLmsActivities(@Nonnull ListLmsActivitiesRequest request) {
+        AsyncRequestOperation<ListLmsActivitiesRequest, ListLmsActivitiesResponse> operation
+              = new ListLmsActivities.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -548,19 +548,19 @@ public class AsyncLms {
      * 
      * @return The async call builder
      */
-    public ListLmsClasses2RequestBuilder listLmsClasses2() {
-        return new ListLmsClasses2RequestBuilder(sdkConfiguration);
+    public ListLmsClassesRequestBuilder listLmsClasses() {
+        return new ListLmsClassesRequestBuilder(sdkConfiguration);
     }
 
     /**
      * List all classes
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<ListLmsClasses2Response>} - The async response
+     * @return {@code CompletableFuture<ListLmsClassesResponse>} - The async response
      */
-    public CompletableFuture<ListLmsClasses2Response> listLmsClasses2(@Nonnull ListLmsClasses2Request request) {
-        AsyncRequestOperation<ListLmsClasses2Request, ListLmsClasses2Response> operation
-              = new ListLmsClasses2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<ListLmsClassesResponse> listLmsClasses(@Nonnull ListLmsClassesRequest request) {
+        AsyncRequestOperation<ListLmsClassesRequest, ListLmsClassesResponse> operation
+              = new ListLmsClasses.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -571,19 +571,19 @@ public class AsyncLms {
      * 
      * @return The async call builder
      */
-    public ListLmsCollections2RequestBuilder listLmsCollections2() {
-        return new ListLmsCollections2RequestBuilder(sdkConfiguration);
+    public ListLmsCollectionsRequestBuilder listLmsCollections() {
+        return new ListLmsCollectionsRequestBuilder(sdkConfiguration);
     }
 
     /**
      * List all collections
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<ListLmsCollections2Response>} - The async response
+     * @return {@code CompletableFuture<ListLmsCollectionsResponse>} - The async response
      */
-    public CompletableFuture<ListLmsCollections2Response> listLmsCollections2(@Nonnull ListLmsCollections2Request request) {
-        AsyncRequestOperation<ListLmsCollections2Request, ListLmsCollections2Response> operation
-              = new ListLmsCollections2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<ListLmsCollectionsResponse> listLmsCollections(@Nonnull ListLmsCollectionsRequest request) {
+        AsyncRequestOperation<ListLmsCollectionsRequest, ListLmsCollectionsResponse> operation
+              = new ListLmsCollections.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -594,19 +594,19 @@ public class AsyncLms {
      * 
      * @return The async call builder
      */
-    public ListLmsContents2RequestBuilder listLmsContents2() {
-        return new ListLmsContents2RequestBuilder(sdkConfiguration);
+    public ListLmsContentsRequestBuilder listLmsContents() {
+        return new ListLmsContentsRequestBuilder(sdkConfiguration);
     }
 
     /**
      * List all contents
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<ListLmsContents2Response>} - The async response
+     * @return {@code CompletableFuture<ListLmsContentsResponse>} - The async response
      */
-    public CompletableFuture<ListLmsContents2Response> listLmsContents2(@Nonnull ListLmsContents2Request request) {
-        AsyncRequestOperation<ListLmsContents2Request, ListLmsContents2Response> operation
-              = new ListLmsContents2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<ListLmsContentsResponse> listLmsContents(@Nonnull ListLmsContentsRequest request) {
+        AsyncRequestOperation<ListLmsContentsRequest, ListLmsContentsResponse> operation
+              = new ListLmsContents.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -617,19 +617,19 @@ public class AsyncLms {
      * 
      * @return The async call builder
      */
-    public ListLmsCourses2RequestBuilder listLmsCourses2() {
-        return new ListLmsCourses2RequestBuilder(sdkConfiguration);
+    public ListLmsCoursesRequestBuilder listLmsCourses() {
+        return new ListLmsCoursesRequestBuilder(sdkConfiguration);
     }
 
     /**
      * List all courses
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<ListLmsCourses2Response>} - The async response
+     * @return {@code CompletableFuture<ListLmsCoursesResponse>} - The async response
      */
-    public CompletableFuture<ListLmsCourses2Response> listLmsCourses2(@Nonnull ListLmsCourses2Request request) {
-        AsyncRequestOperation<ListLmsCourses2Request, ListLmsCourses2Response> operation
-              = new ListLmsCourses2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<ListLmsCoursesResponse> listLmsCourses(@Nonnull ListLmsCoursesRequest request) {
+        AsyncRequestOperation<ListLmsCoursesRequest, ListLmsCoursesResponse> operation
+              = new ListLmsCourses.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -640,19 +640,19 @@ public class AsyncLms {
      * 
      * @return The async call builder
      */
-    public ListLmsInstructors2RequestBuilder listLmsInstructors2() {
-        return new ListLmsInstructors2RequestBuilder(sdkConfiguration);
+    public ListLmsInstructorsRequestBuilder listLmsInstructors() {
+        return new ListLmsInstructorsRequestBuilder(sdkConfiguration);
     }
 
     /**
      * List all instructors
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<ListLmsInstructors2Response>} - The async response
+     * @return {@code CompletableFuture<ListLmsInstructorsResponse>} - The async response
      */
-    public CompletableFuture<ListLmsInstructors2Response> listLmsInstructors2(@Nonnull ListLmsInstructors2Request request) {
-        AsyncRequestOperation<ListLmsInstructors2Request, ListLmsInstructors2Response> operation
-              = new ListLmsInstructors2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<ListLmsInstructorsResponse> listLmsInstructors(@Nonnull ListLmsInstructorsRequest request) {
+        AsyncRequestOperation<ListLmsInstructorsRequest, ListLmsInstructorsResponse> operation
+              = new ListLmsInstructors.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -663,19 +663,19 @@ public class AsyncLms {
      * 
      * @return The async call builder
      */
-    public ListLmsStudents2RequestBuilder listLmsStudents2() {
-        return new ListLmsStudents2RequestBuilder(sdkConfiguration);
+    public ListLmsStudentsRequestBuilder listLmsStudents() {
+        return new ListLmsStudentsRequestBuilder(sdkConfiguration);
     }
 
     /**
      * List all students
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<ListLmsStudents2Response>} - The async response
+     * @return {@code CompletableFuture<ListLmsStudentsResponse>} - The async response
      */
-    public CompletableFuture<ListLmsStudents2Response> listLmsStudents2(@Nonnull ListLmsStudents2Request request) {
-        AsyncRequestOperation<ListLmsStudents2Request, ListLmsStudents2Response> operation
-              = new ListLmsStudents2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<ListLmsStudentsResponse> listLmsStudents(@Nonnull ListLmsStudentsRequest request) {
+        AsyncRequestOperation<ListLmsStudentsRequest, ListLmsStudentsResponse> operation
+              = new ListLmsStudents.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -686,19 +686,19 @@ public class AsyncLms {
      * 
      * @return The async call builder
      */
-    public PatchLmsActivity2RequestBuilder patchLmsActivity2() {
-        return new PatchLmsActivity2RequestBuilder(sdkConfiguration);
+    public PatchLmsActivityRequestBuilder patchLmsActivity() {
+        return new PatchLmsActivityRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update an activity
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<PatchLmsActivity2Response>} - The async response
+     * @return {@code CompletableFuture<PatchLmsActivityResponse>} - The async response
      */
-    public CompletableFuture<PatchLmsActivity2Response> patchLmsActivity2(@Nonnull PatchLmsActivity2Request request) {
-        AsyncRequestOperation<PatchLmsActivity2Request, PatchLmsActivity2Response> operation
-              = new PatchLmsActivity2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<PatchLmsActivityResponse> patchLmsActivity(@Nonnull PatchLmsActivityRequest request) {
+        AsyncRequestOperation<PatchLmsActivityRequest, PatchLmsActivityResponse> operation
+              = new PatchLmsActivity.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -709,19 +709,19 @@ public class AsyncLms {
      * 
      * @return The async call builder
      */
-    public PatchLmsClass2RequestBuilder patchLmsClass2() {
-        return new PatchLmsClass2RequestBuilder(sdkConfiguration);
+    public PatchLmsClassRequestBuilder patchLmsClass() {
+        return new PatchLmsClassRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update a class
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<PatchLmsClass2Response>} - The async response
+     * @return {@code CompletableFuture<PatchLmsClassResponse>} - The async response
      */
-    public CompletableFuture<PatchLmsClass2Response> patchLmsClass2(@Nonnull PatchLmsClass2Request request) {
-        AsyncRequestOperation<PatchLmsClass2Request, PatchLmsClass2Response> operation
-              = new PatchLmsClass2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<PatchLmsClassResponse> patchLmsClass(@Nonnull PatchLmsClassRequest request) {
+        AsyncRequestOperation<PatchLmsClassRequest, PatchLmsClassResponse> operation
+              = new PatchLmsClass.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -732,19 +732,19 @@ public class AsyncLms {
      * 
      * @return The async call builder
      */
-    public PatchLmsCollection2RequestBuilder patchLmsCollection2() {
-        return new PatchLmsCollection2RequestBuilder(sdkConfiguration);
+    public PatchLmsCollectionRequestBuilder patchLmsCollection() {
+        return new PatchLmsCollectionRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update a collection
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<PatchLmsCollection2Response>} - The async response
+     * @return {@code CompletableFuture<PatchLmsCollectionResponse>} - The async response
      */
-    public CompletableFuture<PatchLmsCollection2Response> patchLmsCollection2(@Nonnull PatchLmsCollection2Request request) {
-        AsyncRequestOperation<PatchLmsCollection2Request, PatchLmsCollection2Response> operation
-              = new PatchLmsCollection2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<PatchLmsCollectionResponse> patchLmsCollection(@Nonnull PatchLmsCollectionRequest request) {
+        AsyncRequestOperation<PatchLmsCollectionRequest, PatchLmsCollectionResponse> operation
+              = new PatchLmsCollection.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -755,19 +755,19 @@ public class AsyncLms {
      * 
      * @return The async call builder
      */
-    public PatchLmsContent2RequestBuilder patchLmsContent2() {
-        return new PatchLmsContent2RequestBuilder(sdkConfiguration);
+    public PatchLmsContentRequestBuilder patchLmsContent() {
+        return new PatchLmsContentRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update a content
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<PatchLmsContent2Response>} - The async response
+     * @return {@code CompletableFuture<PatchLmsContentResponse>} - The async response
      */
-    public CompletableFuture<PatchLmsContent2Response> patchLmsContent2(@Nonnull PatchLmsContent2Request request) {
-        AsyncRequestOperation<PatchLmsContent2Request, PatchLmsContent2Response> operation
-              = new PatchLmsContent2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<PatchLmsContentResponse> patchLmsContent(@Nonnull PatchLmsContentRequest request) {
+        AsyncRequestOperation<PatchLmsContentRequest, PatchLmsContentResponse> operation
+              = new PatchLmsContent.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -778,19 +778,19 @@ public class AsyncLms {
      * 
      * @return The async call builder
      */
-    public PatchLmsCourse2RequestBuilder patchLmsCourse2() {
-        return new PatchLmsCourse2RequestBuilder(sdkConfiguration);
+    public PatchLmsCourseRequestBuilder patchLmsCourse() {
+        return new PatchLmsCourseRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update a course
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<PatchLmsCourse2Response>} - The async response
+     * @return {@code CompletableFuture<PatchLmsCourseResponse>} - The async response
      */
-    public CompletableFuture<PatchLmsCourse2Response> patchLmsCourse2(@Nonnull PatchLmsCourse2Request request) {
-        AsyncRequestOperation<PatchLmsCourse2Request, PatchLmsCourse2Response> operation
-              = new PatchLmsCourse2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<PatchLmsCourseResponse> patchLmsCourse(@Nonnull PatchLmsCourseRequest request) {
+        AsyncRequestOperation<PatchLmsCourseRequest, PatchLmsCourseResponse> operation
+              = new PatchLmsCourse.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -801,19 +801,19 @@ public class AsyncLms {
      * 
      * @return The async call builder
      */
-    public PatchLmsInstructor2RequestBuilder patchLmsInstructor2() {
-        return new PatchLmsInstructor2RequestBuilder(sdkConfiguration);
+    public PatchLmsInstructorRequestBuilder patchLmsInstructor() {
+        return new PatchLmsInstructorRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update an instructor
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<PatchLmsInstructor2Response>} - The async response
+     * @return {@code CompletableFuture<PatchLmsInstructorResponse>} - The async response
      */
-    public CompletableFuture<PatchLmsInstructor2Response> patchLmsInstructor2(@Nonnull PatchLmsInstructor2Request request) {
-        AsyncRequestOperation<PatchLmsInstructor2Request, PatchLmsInstructor2Response> operation
-              = new PatchLmsInstructor2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<PatchLmsInstructorResponse> patchLmsInstructor(@Nonnull PatchLmsInstructorRequest request) {
+        AsyncRequestOperation<PatchLmsInstructorRequest, PatchLmsInstructorResponse> operation
+              = new PatchLmsInstructor.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -824,19 +824,19 @@ public class AsyncLms {
      * 
      * @return The async call builder
      */
-    public PatchLmsStudent2RequestBuilder patchLmsStudent2() {
-        return new PatchLmsStudent2RequestBuilder(sdkConfiguration);
+    public PatchLmsStudentRequestBuilder patchLmsStudent() {
+        return new PatchLmsStudentRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update a student
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<PatchLmsStudent2Response>} - The async response
+     * @return {@code CompletableFuture<PatchLmsStudentResponse>} - The async response
      */
-    public CompletableFuture<PatchLmsStudent2Response> patchLmsStudent2(@Nonnull PatchLmsStudent2Request request) {
-        AsyncRequestOperation<PatchLmsStudent2Request, PatchLmsStudent2Response> operation
-              = new PatchLmsStudent2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<PatchLmsStudentResponse> patchLmsStudent(@Nonnull PatchLmsStudentRequest request) {
+        AsyncRequestOperation<PatchLmsStudentRequest, PatchLmsStudentResponse> operation
+              = new PatchLmsStudent.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -847,19 +847,19 @@ public class AsyncLms {
      * 
      * @return The async call builder
      */
-    public RemoveLmsActivity2RequestBuilder removeLmsActivity2() {
-        return new RemoveLmsActivity2RequestBuilder(sdkConfiguration);
+    public RemoveLmsActivityRequestBuilder removeLmsActivity() {
+        return new RemoveLmsActivityRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Remove an activity
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<RemoveLmsActivity2Response>} - The async response
+     * @return {@code CompletableFuture<RemoveLmsActivityResponse>} - The async response
      */
-    public CompletableFuture<RemoveLmsActivity2Response> removeLmsActivity2(@Nonnull RemoveLmsActivity2Request request) {
-        AsyncRequestOperation<RemoveLmsActivity2Request, RemoveLmsActivity2Response> operation
-              = new RemoveLmsActivity2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<RemoveLmsActivityResponse> removeLmsActivity(@Nonnull RemoveLmsActivityRequest request) {
+        AsyncRequestOperation<RemoveLmsActivityRequest, RemoveLmsActivityResponse> operation
+              = new RemoveLmsActivity.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -870,19 +870,19 @@ public class AsyncLms {
      * 
      * @return The async call builder
      */
-    public RemoveLmsClass2RequestBuilder removeLmsClass2() {
-        return new RemoveLmsClass2RequestBuilder(sdkConfiguration);
+    public RemoveLmsClassRequestBuilder removeLmsClass() {
+        return new RemoveLmsClassRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Remove a class
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<RemoveLmsClass2Response>} - The async response
+     * @return {@code CompletableFuture<RemoveLmsClassResponse>} - The async response
      */
-    public CompletableFuture<RemoveLmsClass2Response> removeLmsClass2(@Nonnull RemoveLmsClass2Request request) {
-        AsyncRequestOperation<RemoveLmsClass2Request, RemoveLmsClass2Response> operation
-              = new RemoveLmsClass2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<RemoveLmsClassResponse> removeLmsClass(@Nonnull RemoveLmsClassRequest request) {
+        AsyncRequestOperation<RemoveLmsClassRequest, RemoveLmsClassResponse> operation
+              = new RemoveLmsClass.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -893,19 +893,19 @@ public class AsyncLms {
      * 
      * @return The async call builder
      */
-    public RemoveLmsCollection2RequestBuilder removeLmsCollection2() {
-        return new RemoveLmsCollection2RequestBuilder(sdkConfiguration);
+    public RemoveLmsCollectionRequestBuilder removeLmsCollection() {
+        return new RemoveLmsCollectionRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Remove a collection
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<RemoveLmsCollection2Response>} - The async response
+     * @return {@code CompletableFuture<RemoveLmsCollectionResponse>} - The async response
      */
-    public CompletableFuture<RemoveLmsCollection2Response> removeLmsCollection2(@Nonnull RemoveLmsCollection2Request request) {
-        AsyncRequestOperation<RemoveLmsCollection2Request, RemoveLmsCollection2Response> operation
-              = new RemoveLmsCollection2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<RemoveLmsCollectionResponse> removeLmsCollection(@Nonnull RemoveLmsCollectionRequest request) {
+        AsyncRequestOperation<RemoveLmsCollectionRequest, RemoveLmsCollectionResponse> operation
+              = new RemoveLmsCollection.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -916,19 +916,19 @@ public class AsyncLms {
      * 
      * @return The async call builder
      */
-    public RemoveLmsContent2RequestBuilder removeLmsContent2() {
-        return new RemoveLmsContent2RequestBuilder(sdkConfiguration);
+    public RemoveLmsContentRequestBuilder removeLmsContent() {
+        return new RemoveLmsContentRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Remove a content
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<RemoveLmsContent2Response>} - The async response
+     * @return {@code CompletableFuture<RemoveLmsContentResponse>} - The async response
      */
-    public CompletableFuture<RemoveLmsContent2Response> removeLmsContent2(@Nonnull RemoveLmsContent2Request request) {
-        AsyncRequestOperation<RemoveLmsContent2Request, RemoveLmsContent2Response> operation
-              = new RemoveLmsContent2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<RemoveLmsContentResponse> removeLmsContent(@Nonnull RemoveLmsContentRequest request) {
+        AsyncRequestOperation<RemoveLmsContentRequest, RemoveLmsContentResponse> operation
+              = new RemoveLmsContent.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -939,19 +939,19 @@ public class AsyncLms {
      * 
      * @return The async call builder
      */
-    public RemoveLmsCourse2RequestBuilder removeLmsCourse2() {
-        return new RemoveLmsCourse2RequestBuilder(sdkConfiguration);
+    public RemoveLmsCourseRequestBuilder removeLmsCourse() {
+        return new RemoveLmsCourseRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Remove a course
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<RemoveLmsCourse2Response>} - The async response
+     * @return {@code CompletableFuture<RemoveLmsCourseResponse>} - The async response
      */
-    public CompletableFuture<RemoveLmsCourse2Response> removeLmsCourse2(@Nonnull RemoveLmsCourse2Request request) {
-        AsyncRequestOperation<RemoveLmsCourse2Request, RemoveLmsCourse2Response> operation
-              = new RemoveLmsCourse2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<RemoveLmsCourseResponse> removeLmsCourse(@Nonnull RemoveLmsCourseRequest request) {
+        AsyncRequestOperation<RemoveLmsCourseRequest, RemoveLmsCourseResponse> operation
+              = new RemoveLmsCourse.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -962,19 +962,19 @@ public class AsyncLms {
      * 
      * @return The async call builder
      */
-    public RemoveLmsInstructor2RequestBuilder removeLmsInstructor2() {
-        return new RemoveLmsInstructor2RequestBuilder(sdkConfiguration);
+    public RemoveLmsInstructorRequestBuilder removeLmsInstructor() {
+        return new RemoveLmsInstructorRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Remove an instructor
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<RemoveLmsInstructor2Response>} - The async response
+     * @return {@code CompletableFuture<RemoveLmsInstructorResponse>} - The async response
      */
-    public CompletableFuture<RemoveLmsInstructor2Response> removeLmsInstructor2(@Nonnull RemoveLmsInstructor2Request request) {
-        AsyncRequestOperation<RemoveLmsInstructor2Request, RemoveLmsInstructor2Response> operation
-              = new RemoveLmsInstructor2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<RemoveLmsInstructorResponse> removeLmsInstructor(@Nonnull RemoveLmsInstructorRequest request) {
+        AsyncRequestOperation<RemoveLmsInstructorRequest, RemoveLmsInstructorResponse> operation
+              = new RemoveLmsInstructor.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -985,19 +985,19 @@ public class AsyncLms {
      * 
      * @return The async call builder
      */
-    public RemoveLmsStudent2RequestBuilder removeLmsStudent2() {
-        return new RemoveLmsStudent2RequestBuilder(sdkConfiguration);
+    public RemoveLmsStudentRequestBuilder removeLmsStudent() {
+        return new RemoveLmsStudentRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Remove a student
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<RemoveLmsStudent2Response>} - The async response
+     * @return {@code CompletableFuture<RemoveLmsStudentResponse>} - The async response
      */
-    public CompletableFuture<RemoveLmsStudent2Response> removeLmsStudent2(@Nonnull RemoveLmsStudent2Request request) {
-        AsyncRequestOperation<RemoveLmsStudent2Request, RemoveLmsStudent2Response> operation
-              = new RemoveLmsStudent2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<RemoveLmsStudentResponse> removeLmsStudent(@Nonnull RemoveLmsStudentRequest request) {
+        AsyncRequestOperation<RemoveLmsStudentRequest, RemoveLmsStudentResponse> operation
+              = new RemoveLmsStudent.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1008,19 +1008,19 @@ public class AsyncLms {
      * 
      * @return The async call builder
      */
-    public UpdateLmsActivity2RequestBuilder updateLmsActivity2() {
-        return new UpdateLmsActivity2RequestBuilder(sdkConfiguration);
+    public UpdateLmsActivityRequestBuilder updateLmsActivity() {
+        return new UpdateLmsActivityRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update an activity
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<UpdateLmsActivity2Response>} - The async response
+     * @return {@code CompletableFuture<UpdateLmsActivityResponse>} - The async response
      */
-    public CompletableFuture<UpdateLmsActivity2Response> updateLmsActivity2(@Nonnull UpdateLmsActivity2Request request) {
-        AsyncRequestOperation<UpdateLmsActivity2Request, UpdateLmsActivity2Response> operation
-              = new UpdateLmsActivity2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<UpdateLmsActivityResponse> updateLmsActivity(@Nonnull UpdateLmsActivityRequest request) {
+        AsyncRequestOperation<UpdateLmsActivityRequest, UpdateLmsActivityResponse> operation
+              = new UpdateLmsActivity.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1031,19 +1031,19 @@ public class AsyncLms {
      * 
      * @return The async call builder
      */
-    public UpdateLmsClass2RequestBuilder updateLmsClass2() {
-        return new UpdateLmsClass2RequestBuilder(sdkConfiguration);
+    public UpdateLmsClassRequestBuilder updateLmsClass() {
+        return new UpdateLmsClassRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update a class
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<UpdateLmsClass2Response>} - The async response
+     * @return {@code CompletableFuture<UpdateLmsClassResponse>} - The async response
      */
-    public CompletableFuture<UpdateLmsClass2Response> updateLmsClass2(@Nonnull UpdateLmsClass2Request request) {
-        AsyncRequestOperation<UpdateLmsClass2Request, UpdateLmsClass2Response> operation
-              = new UpdateLmsClass2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<UpdateLmsClassResponse> updateLmsClass(@Nonnull UpdateLmsClassRequest request) {
+        AsyncRequestOperation<UpdateLmsClassRequest, UpdateLmsClassResponse> operation
+              = new UpdateLmsClass.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1054,19 +1054,19 @@ public class AsyncLms {
      * 
      * @return The async call builder
      */
-    public UpdateLmsCollection2RequestBuilder updateLmsCollection2() {
-        return new UpdateLmsCollection2RequestBuilder(sdkConfiguration);
+    public UpdateLmsCollectionRequestBuilder updateLmsCollection() {
+        return new UpdateLmsCollectionRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update a collection
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<UpdateLmsCollection2Response>} - The async response
+     * @return {@code CompletableFuture<UpdateLmsCollectionResponse>} - The async response
      */
-    public CompletableFuture<UpdateLmsCollection2Response> updateLmsCollection2(@Nonnull UpdateLmsCollection2Request request) {
-        AsyncRequestOperation<UpdateLmsCollection2Request, UpdateLmsCollection2Response> operation
-              = new UpdateLmsCollection2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<UpdateLmsCollectionResponse> updateLmsCollection(@Nonnull UpdateLmsCollectionRequest request) {
+        AsyncRequestOperation<UpdateLmsCollectionRequest, UpdateLmsCollectionResponse> operation
+              = new UpdateLmsCollection.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1077,19 +1077,19 @@ public class AsyncLms {
      * 
      * @return The async call builder
      */
-    public UpdateLmsContent2RequestBuilder updateLmsContent2() {
-        return new UpdateLmsContent2RequestBuilder(sdkConfiguration);
+    public UpdateLmsContentRequestBuilder updateLmsContent() {
+        return new UpdateLmsContentRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update a content
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<UpdateLmsContent2Response>} - The async response
+     * @return {@code CompletableFuture<UpdateLmsContentResponse>} - The async response
      */
-    public CompletableFuture<UpdateLmsContent2Response> updateLmsContent2(@Nonnull UpdateLmsContent2Request request) {
-        AsyncRequestOperation<UpdateLmsContent2Request, UpdateLmsContent2Response> operation
-              = new UpdateLmsContent2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<UpdateLmsContentResponse> updateLmsContent(@Nonnull UpdateLmsContentRequest request) {
+        AsyncRequestOperation<UpdateLmsContentRequest, UpdateLmsContentResponse> operation
+              = new UpdateLmsContent.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1100,19 +1100,19 @@ public class AsyncLms {
      * 
      * @return The async call builder
      */
-    public UpdateLmsCourse2RequestBuilder updateLmsCourse2() {
-        return new UpdateLmsCourse2RequestBuilder(sdkConfiguration);
+    public UpdateLmsCourseRequestBuilder updateLmsCourse() {
+        return new UpdateLmsCourseRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update a course
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<UpdateLmsCourse2Response>} - The async response
+     * @return {@code CompletableFuture<UpdateLmsCourseResponse>} - The async response
      */
-    public CompletableFuture<UpdateLmsCourse2Response> updateLmsCourse2(@Nonnull UpdateLmsCourse2Request request) {
-        AsyncRequestOperation<UpdateLmsCourse2Request, UpdateLmsCourse2Response> operation
-              = new UpdateLmsCourse2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<UpdateLmsCourseResponse> updateLmsCourse(@Nonnull UpdateLmsCourseRequest request) {
+        AsyncRequestOperation<UpdateLmsCourseRequest, UpdateLmsCourseResponse> operation
+              = new UpdateLmsCourse.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1123,19 +1123,19 @@ public class AsyncLms {
      * 
      * @return The async call builder
      */
-    public UpdateLmsInstructor2RequestBuilder updateLmsInstructor2() {
-        return new UpdateLmsInstructor2RequestBuilder(sdkConfiguration);
+    public UpdateLmsInstructorRequestBuilder updateLmsInstructor() {
+        return new UpdateLmsInstructorRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update an instructor
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<UpdateLmsInstructor2Response>} - The async response
+     * @return {@code CompletableFuture<UpdateLmsInstructorResponse>} - The async response
      */
-    public CompletableFuture<UpdateLmsInstructor2Response> updateLmsInstructor2(@Nonnull UpdateLmsInstructor2Request request) {
-        AsyncRequestOperation<UpdateLmsInstructor2Request, UpdateLmsInstructor2Response> operation
-              = new UpdateLmsInstructor2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<UpdateLmsInstructorResponse> updateLmsInstructor(@Nonnull UpdateLmsInstructorRequest request) {
+        AsyncRequestOperation<UpdateLmsInstructorRequest, UpdateLmsInstructorResponse> operation
+              = new UpdateLmsInstructor.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1146,19 +1146,19 @@ public class AsyncLms {
      * 
      * @return The async call builder
      */
-    public UpdateLmsStudent2RequestBuilder updateLmsStudent2() {
-        return new UpdateLmsStudent2RequestBuilder(sdkConfiguration);
+    public UpdateLmsStudentRequestBuilder updateLmsStudent() {
+        return new UpdateLmsStudentRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update a student
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<UpdateLmsStudent2Response>} - The async response
+     * @return {@code CompletableFuture<UpdateLmsStudentResponse>} - The async response
      */
-    public CompletableFuture<UpdateLmsStudent2Response> updateLmsStudent2(@Nonnull UpdateLmsStudent2Request request) {
-        AsyncRequestOperation<UpdateLmsStudent2Request, UpdateLmsStudent2Response> operation
-              = new UpdateLmsStudent2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<UpdateLmsStudentResponse> updateLmsStudent(@Nonnull UpdateLmsStudentRequest request) {
+        AsyncRequestOperation<UpdateLmsStudentRequest, UpdateLmsStudentResponse> operation
+              = new UpdateLmsStudent.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

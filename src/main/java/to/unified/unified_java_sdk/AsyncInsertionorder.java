@@ -7,30 +7,30 @@ import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOper
 
 import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
-import to.unified.unified_java_sdk.models.operations.CreateAdsInsertionorder2Request;
-import to.unified.unified_java_sdk.models.operations.GetAdsInsertionorder2Request;
-import to.unified.unified_java_sdk.models.operations.ListAdsInsertionorders2Request;
-import to.unified.unified_java_sdk.models.operations.PatchAdsInsertionorder2Request;
-import to.unified.unified_java_sdk.models.operations.RemoveAdsInsertionorder2Request;
-import to.unified.unified_java_sdk.models.operations.UpdateAdsInsertionorder2Request;
-import to.unified.unified_java_sdk.models.operations.async.CreateAdsInsertionorder2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.CreateAdsInsertionorder2Response;
-import to.unified.unified_java_sdk.models.operations.async.GetAdsInsertionorder2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.GetAdsInsertionorder2Response;
-import to.unified.unified_java_sdk.models.operations.async.ListAdsInsertionorders2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.ListAdsInsertionorders2Response;
-import to.unified.unified_java_sdk.models.operations.async.PatchAdsInsertionorder2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.PatchAdsInsertionorder2Response;
-import to.unified.unified_java_sdk.models.operations.async.RemoveAdsInsertionorder2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.RemoveAdsInsertionorder2Response;
-import to.unified.unified_java_sdk.models.operations.async.UpdateAdsInsertionorder2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.UpdateAdsInsertionorder2Response;
-import to.unified.unified_java_sdk.operations.CreateAdsInsertionorder2;
-import to.unified.unified_java_sdk.operations.GetAdsInsertionorder2;
-import to.unified.unified_java_sdk.operations.ListAdsInsertionorders2;
-import to.unified.unified_java_sdk.operations.PatchAdsInsertionorder2;
-import to.unified.unified_java_sdk.operations.RemoveAdsInsertionorder2;
-import to.unified.unified_java_sdk.operations.UpdateAdsInsertionorder2;
+import to.unified.unified_java_sdk.models.operations.CreateAdsInsertionorderRequest;
+import to.unified.unified_java_sdk.models.operations.GetAdsInsertionorderRequest;
+import to.unified.unified_java_sdk.models.operations.ListAdsInsertionordersRequest;
+import to.unified.unified_java_sdk.models.operations.PatchAdsInsertionorderRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveAdsInsertionorderRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateAdsInsertionorderRequest;
+import to.unified.unified_java_sdk.models.operations.async.CreateAdsInsertionorderRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.CreateAdsInsertionorderResponse;
+import to.unified.unified_java_sdk.models.operations.async.GetAdsInsertionorderRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetAdsInsertionorderResponse;
+import to.unified.unified_java_sdk.models.operations.async.ListAdsInsertionordersRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListAdsInsertionordersResponse;
+import to.unified.unified_java_sdk.models.operations.async.PatchAdsInsertionorderRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.PatchAdsInsertionorderResponse;
+import to.unified.unified_java_sdk.models.operations.async.RemoveAdsInsertionorderRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.RemoveAdsInsertionorderResponse;
+import to.unified.unified_java_sdk.models.operations.async.UpdateAdsInsertionorderRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.UpdateAdsInsertionorderResponse;
+import to.unified.unified_java_sdk.operations.CreateAdsInsertionorder;
+import to.unified.unified_java_sdk.operations.GetAdsInsertionorder;
+import to.unified.unified_java_sdk.operations.ListAdsInsertionorders;
+import to.unified.unified_java_sdk.operations.PatchAdsInsertionorder;
+import to.unified.unified_java_sdk.operations.RemoveAdsInsertionorder;
+import to.unified.unified_java_sdk.operations.UpdateAdsInsertionorder;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -59,19 +59,19 @@ public class AsyncInsertionorder {
      * 
      * @return The async call builder
      */
-    public CreateAdsInsertionorder2RequestBuilder createAdsInsertionorder2() {
-        return new CreateAdsInsertionorder2RequestBuilder(sdkConfiguration);
+    public CreateAdsInsertionorderRequestBuilder createAdsInsertionorder() {
+        return new CreateAdsInsertionorderRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Create an insertionorder
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<CreateAdsInsertionorder2Response>} - The async response
+     * @return {@code CompletableFuture<CreateAdsInsertionorderResponse>} - The async response
      */
-    public CompletableFuture<CreateAdsInsertionorder2Response> createAdsInsertionorder2(@Nonnull CreateAdsInsertionorder2Request request) {
-        AsyncRequestOperation<CreateAdsInsertionorder2Request, CreateAdsInsertionorder2Response> operation
-              = new CreateAdsInsertionorder2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<CreateAdsInsertionorderResponse> createAdsInsertionorder(@Nonnull CreateAdsInsertionorderRequest request) {
+        AsyncRequestOperation<CreateAdsInsertionorderRequest, CreateAdsInsertionorderResponse> operation
+              = new CreateAdsInsertionorder.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -82,19 +82,19 @@ public class AsyncInsertionorder {
      * 
      * @return The async call builder
      */
-    public GetAdsInsertionorder2RequestBuilder getAdsInsertionorder2() {
-        return new GetAdsInsertionorder2RequestBuilder(sdkConfiguration);
+    public GetAdsInsertionorderRequestBuilder getAdsInsertionorder() {
+        return new GetAdsInsertionorderRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Retrieve an insertionorder
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<GetAdsInsertionorder2Response>} - The async response
+     * @return {@code CompletableFuture<GetAdsInsertionorderResponse>} - The async response
      */
-    public CompletableFuture<GetAdsInsertionorder2Response> getAdsInsertionorder2(@Nonnull GetAdsInsertionorder2Request request) {
-        AsyncRequestOperation<GetAdsInsertionorder2Request, GetAdsInsertionorder2Response> operation
-              = new GetAdsInsertionorder2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<GetAdsInsertionorderResponse> getAdsInsertionorder(@Nonnull GetAdsInsertionorderRequest request) {
+        AsyncRequestOperation<GetAdsInsertionorderRequest, GetAdsInsertionorderResponse> operation
+              = new GetAdsInsertionorder.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -105,19 +105,19 @@ public class AsyncInsertionorder {
      * 
      * @return The async call builder
      */
-    public ListAdsInsertionorders2RequestBuilder listAdsInsertionorders2() {
-        return new ListAdsInsertionorders2RequestBuilder(sdkConfiguration);
+    public ListAdsInsertionordersRequestBuilder listAdsInsertionorders() {
+        return new ListAdsInsertionordersRequestBuilder(sdkConfiguration);
     }
 
     /**
      * List all insertionorders
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<ListAdsInsertionorders2Response>} - The async response
+     * @return {@code CompletableFuture<ListAdsInsertionordersResponse>} - The async response
      */
-    public CompletableFuture<ListAdsInsertionorders2Response> listAdsInsertionorders2(@Nonnull ListAdsInsertionorders2Request request) {
-        AsyncRequestOperation<ListAdsInsertionorders2Request, ListAdsInsertionorders2Response> operation
-              = new ListAdsInsertionorders2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<ListAdsInsertionordersResponse> listAdsInsertionorders(@Nonnull ListAdsInsertionordersRequest request) {
+        AsyncRequestOperation<ListAdsInsertionordersRequest, ListAdsInsertionordersResponse> operation
+              = new ListAdsInsertionorders.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -128,19 +128,19 @@ public class AsyncInsertionorder {
      * 
      * @return The async call builder
      */
-    public PatchAdsInsertionorder2RequestBuilder patchAdsInsertionorder2() {
-        return new PatchAdsInsertionorder2RequestBuilder(sdkConfiguration);
+    public PatchAdsInsertionorderRequestBuilder patchAdsInsertionorder() {
+        return new PatchAdsInsertionorderRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update an insertionorder
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<PatchAdsInsertionorder2Response>} - The async response
+     * @return {@code CompletableFuture<PatchAdsInsertionorderResponse>} - The async response
      */
-    public CompletableFuture<PatchAdsInsertionorder2Response> patchAdsInsertionorder2(@Nonnull PatchAdsInsertionorder2Request request) {
-        AsyncRequestOperation<PatchAdsInsertionorder2Request, PatchAdsInsertionorder2Response> operation
-              = new PatchAdsInsertionorder2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<PatchAdsInsertionorderResponse> patchAdsInsertionorder(@Nonnull PatchAdsInsertionorderRequest request) {
+        AsyncRequestOperation<PatchAdsInsertionorderRequest, PatchAdsInsertionorderResponse> operation
+              = new PatchAdsInsertionorder.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -151,19 +151,19 @@ public class AsyncInsertionorder {
      * 
      * @return The async call builder
      */
-    public RemoveAdsInsertionorder2RequestBuilder removeAdsInsertionorder2() {
-        return new RemoveAdsInsertionorder2RequestBuilder(sdkConfiguration);
+    public RemoveAdsInsertionorderRequestBuilder removeAdsInsertionorder() {
+        return new RemoveAdsInsertionorderRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Remove an insertionorder
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<RemoveAdsInsertionorder2Response>} - The async response
+     * @return {@code CompletableFuture<RemoveAdsInsertionorderResponse>} - The async response
      */
-    public CompletableFuture<RemoveAdsInsertionorder2Response> removeAdsInsertionorder2(@Nonnull RemoveAdsInsertionorder2Request request) {
-        AsyncRequestOperation<RemoveAdsInsertionorder2Request, RemoveAdsInsertionorder2Response> operation
-              = new RemoveAdsInsertionorder2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<RemoveAdsInsertionorderResponse> removeAdsInsertionorder(@Nonnull RemoveAdsInsertionorderRequest request) {
+        AsyncRequestOperation<RemoveAdsInsertionorderRequest, RemoveAdsInsertionorderResponse> operation
+              = new RemoveAdsInsertionorder.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -174,19 +174,19 @@ public class AsyncInsertionorder {
      * 
      * @return The async call builder
      */
-    public UpdateAdsInsertionorder2RequestBuilder updateAdsInsertionorder2() {
-        return new UpdateAdsInsertionorder2RequestBuilder(sdkConfiguration);
+    public UpdateAdsInsertionorderRequestBuilder updateAdsInsertionorder() {
+        return new UpdateAdsInsertionorderRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update an insertionorder
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<UpdateAdsInsertionorder2Response>} - The async response
+     * @return {@code CompletableFuture<UpdateAdsInsertionorderResponse>} - The async response
      */
-    public CompletableFuture<UpdateAdsInsertionorder2Response> updateAdsInsertionorder2(@Nonnull UpdateAdsInsertionorder2Request request) {
-        AsyncRequestOperation<UpdateAdsInsertionorder2Request, UpdateAdsInsertionorder2Response> operation
-              = new UpdateAdsInsertionorder2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<UpdateAdsInsertionorderResponse> updateAdsInsertionorder(@Nonnull UpdateAdsInsertionorderRequest request) {
+        AsyncRequestOperation<UpdateAdsInsertionorderRequest, UpdateAdsInsertionorderResponse> operation
+              = new UpdateAdsInsertionorder.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

@@ -4,41 +4,41 @@
 
 ### Available Operations
 
-* [createUcComment2](#createuccomment2) - Create a comment
-* [createUcContact2](#createuccontact2) - Create a contact
-* [createUcRecording2](#createucrecording2) - Create a recording
-* [getUcCall2](#getuccall2) - Retrieve a call
-* [getUcComment2](#getuccomment2) - Retrieve a comment
-* [getUcContact2](#getuccontact2) - Retrieve a contact
-* [getUcRecording2](#getucrecording2) - Retrieve a recording
-* [listUcCalls2](#listuccalls2) - List all calls
-* [listUcComments2](#listuccomments2) - List all comments
-* [listUcContacts2](#listuccontacts2) - List all contacts
-* [listUcRecordings2](#listucrecordings2) - List all recordings
-* [patchUcComment2](#patchuccomment2) - Update a comment
-* [patchUcContact2](#patchuccontact2) - Update a contact
-* [patchUcRecording2](#patchucrecording2) - Update a recording
-* [removeUcComment2](#removeuccomment2) - Remove a comment
-* [removeUcContact2](#removeuccontact2) - Remove a contact
-* [removeUcRecording2](#removeucrecording2) - Remove a recording
-* [updateUcComment2](#updateuccomment2) - Update a comment
-* [updateUcContact2](#updateuccontact2) - Update a contact
-* [updateUcRecording2](#updateucrecording2) - Update a recording
+* [createUcComment](#createuccomment) - Create a comment
+* [createUcContact](#createuccontact) - Create a contact
+* [createUcRecording](#createucrecording) - Create a recording
+* [getUcCall](#getuccall) - Retrieve a call
+* [getUcComment](#getuccomment) - Retrieve a comment
+* [getUcContact](#getuccontact) - Retrieve a contact
+* [getUcRecording](#getucrecording) - Retrieve a recording
+* [listUcCalls](#listuccalls) - List all calls
+* [listUcComments](#listuccomments) - List all comments
+* [listUcContacts](#listuccontacts) - List all contacts
+* [listUcRecordings](#listucrecordings) - List all recordings
+* [patchUcComment](#patchuccomment) - Update a comment
+* [patchUcContact](#patchuccontact) - Update a contact
+* [patchUcRecording](#patchucrecording) - Update a recording
+* [removeUcComment](#removeuccomment) - Remove a comment
+* [removeUcContact](#removeuccontact) - Remove a contact
+* [removeUcRecording](#removeucrecording) - Remove a recording
+* [updateUcComment](#updateuccomment) - Update a comment
+* [updateUcContact](#updateuccontact) - Update a contact
+* [updateUcRecording](#updateucrecording) - Update a recording
 
-## createUcComment2
+## createUcComment
 
 Create a comment
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createUcComment2" method="post" path="/uc/{connection_id}/comment" -->
+<!-- UsageSnippet language="java" operationID="createUcComment" method="post" path="/uc/{connection_id}/comment" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.CreateUcComment2Request;
-import to.unified.unified_java_sdk.models.operations.CreateUcComment2Response;
+import to.unified.unified_java_sdk.models.operations.CreateUcCommentRequest;
+import to.unified.unified_java_sdk.models.operations.CreateUcCommentResponse;
 import to.unified.unified_java_sdk.models.shared.Security;
 import to.unified.unified_java_sdk.models.shared.UcComment;
 
@@ -52,13 +52,13 @@ public class Application {
                     .build())
             .build();
 
-        CreateUcComment2Request req = CreateUcComment2Request.builder()
+        CreateUcCommentRequest req = CreateUcCommentRequest.builder()
                 .ucComment(UcComment.builder()
                     .build())
                 .connectionId("<id>")
                 .build();
 
-        CreateUcComment2Response res = sdk.uc().createUcComment2()
+        CreateUcCommentResponse res = sdk.uc().createUcComment()
                 .request(req)
                 .call();
 
@@ -71,13 +71,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
-| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
-| `request`                                                                     | [CreateUcComment2Request](../../models/operations/CreateUcComment2Request.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
+| Parameter                                                                   | Type                                                                        | Required                                                                    | Description                                                                 |
+| --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| `request`                                                                   | [CreateUcCommentRequest](../../models/operations/CreateUcCommentRequest.md) | :heavy_check_mark:                                                          | The request object to use for the request.                                  |
 
 ### Response
 
-**[CreateUcComment2Response](../../models/operations/CreateUcComment2Response.md)**
+**[CreateUcCommentResponse](../../models/operations/CreateUcCommentResponse.md)**
 
 ### Errors
 
@@ -85,20 +85,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## createUcContact2
+## createUcContact
 
 Create a contact
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createUcContact2" method="post" path="/uc/{connection_id}/contact" -->
+<!-- UsageSnippet language="java" operationID="createUcContact" method="post" path="/uc/{connection_id}/contact" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.CreateUcContact2Request;
-import to.unified.unified_java_sdk.models.operations.CreateUcContact2Response;
+import to.unified.unified_java_sdk.models.operations.CreateUcContactRequest;
+import to.unified.unified_java_sdk.models.operations.CreateUcContactResponse;
 import to.unified.unified_java_sdk.models.shared.Security;
 import to.unified.unified_java_sdk.models.shared.UcContact;
 
@@ -112,13 +112,13 @@ public class Application {
                     .build())
             .build();
 
-        CreateUcContact2Request req = CreateUcContact2Request.builder()
+        CreateUcContactRequest req = CreateUcContactRequest.builder()
                 .ucContact(UcContact.builder()
                     .build())
                 .connectionId("<id>")
                 .build();
 
-        CreateUcContact2Response res = sdk.uc().createUcContact2()
+        CreateUcContactResponse res = sdk.uc().createUcContact()
                 .request(req)
                 .call();
 
@@ -131,13 +131,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
-| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
-| `request`                                                                     | [CreateUcContact2Request](../../models/operations/CreateUcContact2Request.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
+| Parameter                                                                   | Type                                                                        | Required                                                                    | Description                                                                 |
+| --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| `request`                                                                   | [CreateUcContactRequest](../../models/operations/CreateUcContactRequest.md) | :heavy_check_mark:                                                          | The request object to use for the request.                                  |
 
 ### Response
 
-**[CreateUcContact2Response](../../models/operations/CreateUcContact2Response.md)**
+**[CreateUcContactResponse](../../models/operations/CreateUcContactResponse.md)**
 
 ### Errors
 
@@ -145,20 +145,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## createUcRecording2
+## createUcRecording
 
 Create a recording
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createUcRecording2" method="post" path="/uc/{connection_id}/recording" -->
+<!-- UsageSnippet language="java" operationID="createUcRecording" method="post" path="/uc/{connection_id}/recording" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.CreateUcRecording2Request;
-import to.unified.unified_java_sdk.models.operations.CreateUcRecording2Response;
+import to.unified.unified_java_sdk.models.operations.CreateUcRecordingRequest;
+import to.unified.unified_java_sdk.models.operations.CreateUcRecordingResponse;
 import to.unified.unified_java_sdk.models.shared.Security;
 import to.unified.unified_java_sdk.models.shared.UcRecording;
 
@@ -172,13 +172,13 @@ public class Application {
                     .build())
             .build();
 
-        CreateUcRecording2Request req = CreateUcRecording2Request.builder()
+        CreateUcRecordingRequest req = CreateUcRecordingRequest.builder()
                 .ucRecording(UcRecording.builder()
                     .build())
                 .connectionId("<id>")
                 .build();
 
-        CreateUcRecording2Response res = sdk.uc().createUcRecording2()
+        CreateUcRecordingResponse res = sdk.uc().createUcRecording()
                 .request(req)
                 .call();
 
@@ -191,13 +191,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
-| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
-| `request`                                                                         | [CreateUcRecording2Request](../../models/operations/CreateUcRecording2Request.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
+| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| `request`                                                                       | [CreateUcRecordingRequest](../../models/operations/CreateUcRecordingRequest.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
 
 ### Response
 
-**[CreateUcRecording2Response](../../models/operations/CreateUcRecording2Response.md)**
+**[CreateUcRecordingResponse](../../models/operations/CreateUcRecordingResponse.md)**
 
 ### Errors
 
@@ -205,20 +205,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## getUcCall2
+## getUcCall
 
 Retrieve a call
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="getUcCall2" method="get" path="/uc/{connection_id}/call/{id}" -->
+<!-- UsageSnippet language="java" operationID="getUcCall" method="get" path="/uc/{connection_id}/call/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.GetUcCall2Request;
-import to.unified.unified_java_sdk.models.operations.GetUcCall2Response;
+import to.unified.unified_java_sdk.models.operations.GetUcCallRequest;
+import to.unified.unified_java_sdk.models.operations.GetUcCallResponse;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -231,12 +231,12 @@ public class Application {
                     .build())
             .build();
 
-        GetUcCall2Request req = GetUcCall2Request.builder()
+        GetUcCallRequest req = GetUcCallRequest.builder()
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        GetUcCall2Response res = sdk.uc().getUcCall2()
+        GetUcCallResponse res = sdk.uc().getUcCall()
                 .request(req)
                 .call();
 
@@ -249,13 +249,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                         | Type                                                              | Required                                                          | Description                                                       |
-| ----------------------------------------------------------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------- |
-| `request`                                                         | [GetUcCall2Request](../../models/operations/GetUcCall2Request.md) | :heavy_check_mark:                                                | The request object to use for the request.                        |
+| Parameter                                                       | Type                                                            | Required                                                        | Description                                                     |
+| --------------------------------------------------------------- | --------------------------------------------------------------- | --------------------------------------------------------------- | --------------------------------------------------------------- |
+| `request`                                                       | [GetUcCallRequest](../../models/operations/GetUcCallRequest.md) | :heavy_check_mark:                                              | The request object to use for the request.                      |
 
 ### Response
 
-**[GetUcCall2Response](../../models/operations/GetUcCall2Response.md)**
+**[GetUcCallResponse](../../models/operations/GetUcCallResponse.md)**
 
 ### Errors
 
@@ -263,20 +263,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## getUcComment2
+## getUcComment
 
 Retrieve a comment
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="getUcComment2" method="get" path="/uc/{connection_id}/comment/{id}" -->
+<!-- UsageSnippet language="java" operationID="getUcComment" method="get" path="/uc/{connection_id}/comment/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.GetUcComment2Request;
-import to.unified.unified_java_sdk.models.operations.GetUcComment2Response;
+import to.unified.unified_java_sdk.models.operations.GetUcCommentRequest;
+import to.unified.unified_java_sdk.models.operations.GetUcCommentResponse;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -289,12 +289,12 @@ public class Application {
                     .build())
             .build();
 
-        GetUcComment2Request req = GetUcComment2Request.builder()
+        GetUcCommentRequest req = GetUcCommentRequest.builder()
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        GetUcComment2Response res = sdk.uc().getUcComment2()
+        GetUcCommentResponse res = sdk.uc().getUcComment()
                 .request(req)
                 .call();
 
@@ -307,13 +307,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                               | Type                                                                    | Required                                                                | Description                                                             |
-| ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- |
-| `request`                                                               | [GetUcComment2Request](../../models/operations/GetUcComment2Request.md) | :heavy_check_mark:                                                      | The request object to use for the request.                              |
+| Parameter                                                             | Type                                                                  | Required                                                              | Description                                                           |
+| --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- |
+| `request`                                                             | [GetUcCommentRequest](../../models/operations/GetUcCommentRequest.md) | :heavy_check_mark:                                                    | The request object to use for the request.                            |
 
 ### Response
 
-**[GetUcComment2Response](../../models/operations/GetUcComment2Response.md)**
+**[GetUcCommentResponse](../../models/operations/GetUcCommentResponse.md)**
 
 ### Errors
 
@@ -321,20 +321,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## getUcContact2
+## getUcContact
 
 Retrieve a contact
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="getUcContact2" method="get" path="/uc/{connection_id}/contact/{id}" -->
+<!-- UsageSnippet language="java" operationID="getUcContact" method="get" path="/uc/{connection_id}/contact/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.GetUcContact2Request;
-import to.unified.unified_java_sdk.models.operations.GetUcContact2Response;
+import to.unified.unified_java_sdk.models.operations.GetUcContactRequest;
+import to.unified.unified_java_sdk.models.operations.GetUcContactResponse;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -347,12 +347,12 @@ public class Application {
                     .build())
             .build();
 
-        GetUcContact2Request req = GetUcContact2Request.builder()
+        GetUcContactRequest req = GetUcContactRequest.builder()
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        GetUcContact2Response res = sdk.uc().getUcContact2()
+        GetUcContactResponse res = sdk.uc().getUcContact()
                 .request(req)
                 .call();
 
@@ -365,13 +365,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                               | Type                                                                    | Required                                                                | Description                                                             |
-| ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- |
-| `request`                                                               | [GetUcContact2Request](../../models/operations/GetUcContact2Request.md) | :heavy_check_mark:                                                      | The request object to use for the request.                              |
+| Parameter                                                             | Type                                                                  | Required                                                              | Description                                                           |
+| --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- |
+| `request`                                                             | [GetUcContactRequest](../../models/operations/GetUcContactRequest.md) | :heavy_check_mark:                                                    | The request object to use for the request.                            |
 
 ### Response
 
-**[GetUcContact2Response](../../models/operations/GetUcContact2Response.md)**
+**[GetUcContactResponse](../../models/operations/GetUcContactResponse.md)**
 
 ### Errors
 
@@ -379,20 +379,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## getUcRecording2
+## getUcRecording
 
 Retrieve a recording
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="getUcRecording2" method="get" path="/uc/{connection_id}/recording/{id}" -->
+<!-- UsageSnippet language="java" operationID="getUcRecording" method="get" path="/uc/{connection_id}/recording/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.GetUcRecording2Request;
-import to.unified.unified_java_sdk.models.operations.GetUcRecording2Response;
+import to.unified.unified_java_sdk.models.operations.GetUcRecordingRequest;
+import to.unified.unified_java_sdk.models.operations.GetUcRecordingResponse;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -405,12 +405,12 @@ public class Application {
                     .build())
             .build();
 
-        GetUcRecording2Request req = GetUcRecording2Request.builder()
+        GetUcRecordingRequest req = GetUcRecordingRequest.builder()
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        GetUcRecording2Response res = sdk.uc().getUcRecording2()
+        GetUcRecordingResponse res = sdk.uc().getUcRecording()
                 .request(req)
                 .call();
 
@@ -423,13 +423,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                   | Type                                                                        | Required                                                                    | Description                                                                 |
-| --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
-| `request`                                                                   | [GetUcRecording2Request](../../models/operations/GetUcRecording2Request.md) | :heavy_check_mark:                                                          | The request object to use for the request.                                  |
+| Parameter                                                                 | Type                                                                      | Required                                                                  | Description                                                               |
+| ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
+| `request`                                                                 | [GetUcRecordingRequest](../../models/operations/GetUcRecordingRequest.md) | :heavy_check_mark:                                                        | The request object to use for the request.                                |
 
 ### Response
 
-**[GetUcRecording2Response](../../models/operations/GetUcRecording2Response.md)**
+**[GetUcRecordingResponse](../../models/operations/GetUcRecordingResponse.md)**
 
 ### Errors
 
@@ -437,20 +437,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## listUcCalls2
+## listUcCalls
 
 List all calls
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="listUcCalls2" method="get" path="/uc/{connection_id}/call" -->
+<!-- UsageSnippet language="java" operationID="listUcCalls" method="get" path="/uc/{connection_id}/call" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.ListUcCalls2Request;
-import to.unified.unified_java_sdk.models.operations.ListUcCalls2Response;
+import to.unified.unified_java_sdk.models.operations.ListUcCallsRequest;
+import to.unified.unified_java_sdk.models.operations.ListUcCallsResponse;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -463,11 +463,11 @@ public class Application {
                     .build())
             .build();
 
-        ListUcCalls2Request req = ListUcCalls2Request.builder()
+        ListUcCallsRequest req = ListUcCallsRequest.builder()
                 .connectionId("<id>")
                 .build();
 
-        ListUcCalls2Response res = sdk.uc().listUcCalls2()
+        ListUcCallsResponse res = sdk.uc().listUcCalls()
                 .request(req)
                 .call();
 
@@ -480,13 +480,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                             | Type                                                                  | Required                                                              | Description                                                           |
-| --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- |
-| `request`                                                             | [ListUcCalls2Request](../../models/operations/ListUcCalls2Request.md) | :heavy_check_mark:                                                    | The request object to use for the request.                            |
+| Parameter                                                           | Type                                                                | Required                                                            | Description                                                         |
+| ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- |
+| `request`                                                           | [ListUcCallsRequest](../../models/operations/ListUcCallsRequest.md) | :heavy_check_mark:                                                  | The request object to use for the request.                          |
 
 ### Response
 
-**[ListUcCalls2Response](../../models/operations/ListUcCalls2Response.md)**
+**[ListUcCallsResponse](../../models/operations/ListUcCallsResponse.md)**
 
 ### Errors
 
@@ -494,20 +494,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## listUcComments2
+## listUcComments
 
 List all comments
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="listUcComments2" method="get" path="/uc/{connection_id}/comment" -->
+<!-- UsageSnippet language="java" operationID="listUcComments" method="get" path="/uc/{connection_id}/comment" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.ListUcComments2Request;
-import to.unified.unified_java_sdk.models.operations.ListUcComments2Response;
+import to.unified.unified_java_sdk.models.operations.ListUcCommentsRequest;
+import to.unified.unified_java_sdk.models.operations.ListUcCommentsResponse;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -520,11 +520,11 @@ public class Application {
                     .build())
             .build();
 
-        ListUcComments2Request req = ListUcComments2Request.builder()
+        ListUcCommentsRequest req = ListUcCommentsRequest.builder()
                 .connectionId("<id>")
                 .build();
 
-        ListUcComments2Response res = sdk.uc().listUcComments2()
+        ListUcCommentsResponse res = sdk.uc().listUcComments()
                 .request(req)
                 .call();
 
@@ -537,13 +537,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                   | Type                                                                        | Required                                                                    | Description                                                                 |
-| --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
-| `request`                                                                   | [ListUcComments2Request](../../models/operations/ListUcComments2Request.md) | :heavy_check_mark:                                                          | The request object to use for the request.                                  |
+| Parameter                                                                 | Type                                                                      | Required                                                                  | Description                                                               |
+| ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
+| `request`                                                                 | [ListUcCommentsRequest](../../models/operations/ListUcCommentsRequest.md) | :heavy_check_mark:                                                        | The request object to use for the request.                                |
 
 ### Response
 
-**[ListUcComments2Response](../../models/operations/ListUcComments2Response.md)**
+**[ListUcCommentsResponse](../../models/operations/ListUcCommentsResponse.md)**
 
 ### Errors
 
@@ -551,20 +551,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## listUcContacts2
+## listUcContacts
 
 List all contacts
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="listUcContacts2" method="get" path="/uc/{connection_id}/contact" -->
+<!-- UsageSnippet language="java" operationID="listUcContacts" method="get" path="/uc/{connection_id}/contact" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.ListUcContacts2Request;
-import to.unified.unified_java_sdk.models.operations.ListUcContacts2Response;
+import to.unified.unified_java_sdk.models.operations.ListUcContactsRequest;
+import to.unified.unified_java_sdk.models.operations.ListUcContactsResponse;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -577,11 +577,11 @@ public class Application {
                     .build())
             .build();
 
-        ListUcContacts2Request req = ListUcContacts2Request.builder()
+        ListUcContactsRequest req = ListUcContactsRequest.builder()
                 .connectionId("<id>")
                 .build();
 
-        ListUcContacts2Response res = sdk.uc().listUcContacts2()
+        ListUcContactsResponse res = sdk.uc().listUcContacts()
                 .request(req)
                 .call();
 
@@ -594,13 +594,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                   | Type                                                                        | Required                                                                    | Description                                                                 |
-| --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
-| `request`                                                                   | [ListUcContacts2Request](../../models/operations/ListUcContacts2Request.md) | :heavy_check_mark:                                                          | The request object to use for the request.                                  |
+| Parameter                                                                 | Type                                                                      | Required                                                                  | Description                                                               |
+| ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
+| `request`                                                                 | [ListUcContactsRequest](../../models/operations/ListUcContactsRequest.md) | :heavy_check_mark:                                                        | The request object to use for the request.                                |
 
 ### Response
 
-**[ListUcContacts2Response](../../models/operations/ListUcContacts2Response.md)**
+**[ListUcContactsResponse](../../models/operations/ListUcContactsResponse.md)**
 
 ### Errors
 
@@ -608,20 +608,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## listUcRecordings2
+## listUcRecordings
 
 List all recordings
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="listUcRecordings2" method="get" path="/uc/{connection_id}/recording" -->
+<!-- UsageSnippet language="java" operationID="listUcRecordings" method="get" path="/uc/{connection_id}/recording" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.ListUcRecordings2Request;
-import to.unified.unified_java_sdk.models.operations.ListUcRecordings2Response;
+import to.unified.unified_java_sdk.models.operations.ListUcRecordingsRequest;
+import to.unified.unified_java_sdk.models.operations.ListUcRecordingsResponse;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -634,11 +634,11 @@ public class Application {
                     .build())
             .build();
 
-        ListUcRecordings2Request req = ListUcRecordings2Request.builder()
+        ListUcRecordingsRequest req = ListUcRecordingsRequest.builder()
                 .connectionId("<id>")
                 .build();
 
-        ListUcRecordings2Response res = sdk.uc().listUcRecordings2()
+        ListUcRecordingsResponse res = sdk.uc().listUcRecordings()
                 .request(req)
                 .call();
 
@@ -651,13 +651,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
-| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
-| `request`                                                                       | [ListUcRecordings2Request](../../models/operations/ListUcRecordings2Request.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
+| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
+| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| `request`                                                                     | [ListUcRecordingsRequest](../../models/operations/ListUcRecordingsRequest.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
 
 ### Response
 
-**[ListUcRecordings2Response](../../models/operations/ListUcRecordings2Response.md)**
+**[ListUcRecordingsResponse](../../models/operations/ListUcRecordingsResponse.md)**
 
 ### Errors
 
@@ -665,20 +665,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## patchUcComment2
+## patchUcComment
 
 Update a comment
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchUcComment2" method="patch" path="/uc/{connection_id}/comment/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchUcComment" method="patch" path="/uc/{connection_id}/comment/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.PatchUcComment2Request;
-import to.unified.unified_java_sdk.models.operations.PatchUcComment2Response;
+import to.unified.unified_java_sdk.models.operations.PatchUcCommentRequest;
+import to.unified.unified_java_sdk.models.operations.PatchUcCommentResponse;
 import to.unified.unified_java_sdk.models.shared.Security;
 import to.unified.unified_java_sdk.models.shared.UcComment;
 
@@ -692,14 +692,14 @@ public class Application {
                     .build())
             .build();
 
-        PatchUcComment2Request req = PatchUcComment2Request.builder()
+        PatchUcCommentRequest req = PatchUcCommentRequest.builder()
                 .ucComment(UcComment.builder()
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        PatchUcComment2Response res = sdk.uc().patchUcComment2()
+        PatchUcCommentResponse res = sdk.uc().patchUcComment()
                 .request(req)
                 .call();
 
@@ -712,13 +712,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                   | Type                                                                        | Required                                                                    | Description                                                                 |
-| --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
-| `request`                                                                   | [PatchUcComment2Request](../../models/operations/PatchUcComment2Request.md) | :heavy_check_mark:                                                          | The request object to use for the request.                                  |
+| Parameter                                                                 | Type                                                                      | Required                                                                  | Description                                                               |
+| ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
+| `request`                                                                 | [PatchUcCommentRequest](../../models/operations/PatchUcCommentRequest.md) | :heavy_check_mark:                                                        | The request object to use for the request.                                |
 
 ### Response
 
-**[PatchUcComment2Response](../../models/operations/PatchUcComment2Response.md)**
+**[PatchUcCommentResponse](../../models/operations/PatchUcCommentResponse.md)**
 
 ### Errors
 
@@ -726,20 +726,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## patchUcContact2
+## patchUcContact
 
 Update a contact
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchUcContact2" method="patch" path="/uc/{connection_id}/contact/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchUcContact" method="patch" path="/uc/{connection_id}/contact/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.PatchUcContact2Request;
-import to.unified.unified_java_sdk.models.operations.PatchUcContact2Response;
+import to.unified.unified_java_sdk.models.operations.PatchUcContactRequest;
+import to.unified.unified_java_sdk.models.operations.PatchUcContactResponse;
 import to.unified.unified_java_sdk.models.shared.Security;
 import to.unified.unified_java_sdk.models.shared.UcContact;
 
@@ -753,14 +753,14 @@ public class Application {
                     .build())
             .build();
 
-        PatchUcContact2Request req = PatchUcContact2Request.builder()
+        PatchUcContactRequest req = PatchUcContactRequest.builder()
                 .ucContact(UcContact.builder()
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        PatchUcContact2Response res = sdk.uc().patchUcContact2()
+        PatchUcContactResponse res = sdk.uc().patchUcContact()
                 .request(req)
                 .call();
 
@@ -773,13 +773,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                   | Type                                                                        | Required                                                                    | Description                                                                 |
-| --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
-| `request`                                                                   | [PatchUcContact2Request](../../models/operations/PatchUcContact2Request.md) | :heavy_check_mark:                                                          | The request object to use for the request.                                  |
+| Parameter                                                                 | Type                                                                      | Required                                                                  | Description                                                               |
+| ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
+| `request`                                                                 | [PatchUcContactRequest](../../models/operations/PatchUcContactRequest.md) | :heavy_check_mark:                                                        | The request object to use for the request.                                |
 
 ### Response
 
-**[PatchUcContact2Response](../../models/operations/PatchUcContact2Response.md)**
+**[PatchUcContactResponse](../../models/operations/PatchUcContactResponse.md)**
 
 ### Errors
 
@@ -787,20 +787,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## patchUcRecording2
+## patchUcRecording
 
 Update a recording
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchUcRecording2" method="patch" path="/uc/{connection_id}/recording/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchUcRecording" method="patch" path="/uc/{connection_id}/recording/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.PatchUcRecording2Request;
-import to.unified.unified_java_sdk.models.operations.PatchUcRecording2Response;
+import to.unified.unified_java_sdk.models.operations.PatchUcRecordingRequest;
+import to.unified.unified_java_sdk.models.operations.PatchUcRecordingResponse;
 import to.unified.unified_java_sdk.models.shared.Security;
 import to.unified.unified_java_sdk.models.shared.UcRecording;
 
@@ -814,14 +814,14 @@ public class Application {
                     .build())
             .build();
 
-        PatchUcRecording2Request req = PatchUcRecording2Request.builder()
+        PatchUcRecordingRequest req = PatchUcRecordingRequest.builder()
                 .ucRecording(UcRecording.builder()
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        PatchUcRecording2Response res = sdk.uc().patchUcRecording2()
+        PatchUcRecordingResponse res = sdk.uc().patchUcRecording()
                 .request(req)
                 .call();
 
@@ -834,13 +834,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
-| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
-| `request`                                                                       | [PatchUcRecording2Request](../../models/operations/PatchUcRecording2Request.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
+| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
+| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| `request`                                                                     | [PatchUcRecordingRequest](../../models/operations/PatchUcRecordingRequest.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
 
 ### Response
 
-**[PatchUcRecording2Response](../../models/operations/PatchUcRecording2Response.md)**
+**[PatchUcRecordingResponse](../../models/operations/PatchUcRecordingResponse.md)**
 
 ### Errors
 
@@ -848,20 +848,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## removeUcComment2
+## removeUcComment
 
 Remove a comment
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="removeUcComment2" method="delete" path="/uc/{connection_id}/comment/{id}" -->
+<!-- UsageSnippet language="java" operationID="removeUcComment" method="delete" path="/uc/{connection_id}/comment/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.RemoveUcComment2Request;
-import to.unified.unified_java_sdk.models.operations.RemoveUcComment2Response;
+import to.unified.unified_java_sdk.models.operations.RemoveUcCommentRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveUcCommentResponse;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -874,12 +874,12 @@ public class Application {
                     .build())
             .build();
 
-        RemoveUcComment2Request req = RemoveUcComment2Request.builder()
+        RemoveUcCommentRequest req = RemoveUcCommentRequest.builder()
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        RemoveUcComment2Response res = sdk.uc().removeUcComment2()
+        RemoveUcCommentResponse res = sdk.uc().removeUcComment()
                 .request(req)
                 .call();
 
@@ -890,13 +890,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
-| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
-| `request`                                                                     | [RemoveUcComment2Request](../../models/operations/RemoveUcComment2Request.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
+| Parameter                                                                   | Type                                                                        | Required                                                                    | Description                                                                 |
+| --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| `request`                                                                   | [RemoveUcCommentRequest](../../models/operations/RemoveUcCommentRequest.md) | :heavy_check_mark:                                                          | The request object to use for the request.                                  |
 
 ### Response
 
-**[RemoveUcComment2Response](../../models/operations/RemoveUcComment2Response.md)**
+**[RemoveUcCommentResponse](../../models/operations/RemoveUcCommentResponse.md)**
 
 ### Errors
 
@@ -904,20 +904,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## removeUcContact2
+## removeUcContact
 
 Remove a contact
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="removeUcContact2" method="delete" path="/uc/{connection_id}/contact/{id}" -->
+<!-- UsageSnippet language="java" operationID="removeUcContact" method="delete" path="/uc/{connection_id}/contact/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.RemoveUcContact2Request;
-import to.unified.unified_java_sdk.models.operations.RemoveUcContact2Response;
+import to.unified.unified_java_sdk.models.operations.RemoveUcContactRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveUcContactResponse;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -930,12 +930,12 @@ public class Application {
                     .build())
             .build();
 
-        RemoveUcContact2Request req = RemoveUcContact2Request.builder()
+        RemoveUcContactRequest req = RemoveUcContactRequest.builder()
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        RemoveUcContact2Response res = sdk.uc().removeUcContact2()
+        RemoveUcContactResponse res = sdk.uc().removeUcContact()
                 .request(req)
                 .call();
 
@@ -946,13 +946,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
-| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
-| `request`                                                                     | [RemoveUcContact2Request](../../models/operations/RemoveUcContact2Request.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
+| Parameter                                                                   | Type                                                                        | Required                                                                    | Description                                                                 |
+| --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| `request`                                                                   | [RemoveUcContactRequest](../../models/operations/RemoveUcContactRequest.md) | :heavy_check_mark:                                                          | The request object to use for the request.                                  |
 
 ### Response
 
-**[RemoveUcContact2Response](../../models/operations/RemoveUcContact2Response.md)**
+**[RemoveUcContactResponse](../../models/operations/RemoveUcContactResponse.md)**
 
 ### Errors
 
@@ -960,20 +960,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## removeUcRecording2
+## removeUcRecording
 
 Remove a recording
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="removeUcRecording2" method="delete" path="/uc/{connection_id}/recording/{id}" -->
+<!-- UsageSnippet language="java" operationID="removeUcRecording" method="delete" path="/uc/{connection_id}/recording/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.RemoveUcRecording2Request;
-import to.unified.unified_java_sdk.models.operations.RemoveUcRecording2Response;
+import to.unified.unified_java_sdk.models.operations.RemoveUcRecordingRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveUcRecordingResponse;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -986,12 +986,12 @@ public class Application {
                     .build())
             .build();
 
-        RemoveUcRecording2Request req = RemoveUcRecording2Request.builder()
+        RemoveUcRecordingRequest req = RemoveUcRecordingRequest.builder()
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        RemoveUcRecording2Response res = sdk.uc().removeUcRecording2()
+        RemoveUcRecordingResponse res = sdk.uc().removeUcRecording()
                 .request(req)
                 .call();
 
@@ -1002,13 +1002,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
-| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
-| `request`                                                                         | [RemoveUcRecording2Request](../../models/operations/RemoveUcRecording2Request.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
+| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| `request`                                                                       | [RemoveUcRecordingRequest](../../models/operations/RemoveUcRecordingRequest.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
 
 ### Response
 
-**[RemoveUcRecording2Response](../../models/operations/RemoveUcRecording2Response.md)**
+**[RemoveUcRecordingResponse](../../models/operations/RemoveUcRecordingResponse.md)**
 
 ### Errors
 
@@ -1016,20 +1016,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## updateUcComment2
+## updateUcComment
 
 Update a comment
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateUcComment2" method="put" path="/uc/{connection_id}/comment/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateUcComment" method="put" path="/uc/{connection_id}/comment/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.UpdateUcComment2Request;
-import to.unified.unified_java_sdk.models.operations.UpdateUcComment2Response;
+import to.unified.unified_java_sdk.models.operations.UpdateUcCommentRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateUcCommentResponse;
 import to.unified.unified_java_sdk.models.shared.Security;
 import to.unified.unified_java_sdk.models.shared.UcComment;
 
@@ -1043,14 +1043,14 @@ public class Application {
                     .build())
             .build();
 
-        UpdateUcComment2Request req = UpdateUcComment2Request.builder()
+        UpdateUcCommentRequest req = UpdateUcCommentRequest.builder()
                 .ucComment(UcComment.builder()
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        UpdateUcComment2Response res = sdk.uc().updateUcComment2()
+        UpdateUcCommentResponse res = sdk.uc().updateUcComment()
                 .request(req)
                 .call();
 
@@ -1063,13 +1063,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
-| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
-| `request`                                                                     | [UpdateUcComment2Request](../../models/operations/UpdateUcComment2Request.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
+| Parameter                                                                   | Type                                                                        | Required                                                                    | Description                                                                 |
+| --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| `request`                                                                   | [UpdateUcCommentRequest](../../models/operations/UpdateUcCommentRequest.md) | :heavy_check_mark:                                                          | The request object to use for the request.                                  |
 
 ### Response
 
-**[UpdateUcComment2Response](../../models/operations/UpdateUcComment2Response.md)**
+**[UpdateUcCommentResponse](../../models/operations/UpdateUcCommentResponse.md)**
 
 ### Errors
 
@@ -1077,20 +1077,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## updateUcContact2
+## updateUcContact
 
 Update a contact
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateUcContact2" method="put" path="/uc/{connection_id}/contact/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateUcContact" method="put" path="/uc/{connection_id}/contact/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.UpdateUcContact2Request;
-import to.unified.unified_java_sdk.models.operations.UpdateUcContact2Response;
+import to.unified.unified_java_sdk.models.operations.UpdateUcContactRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateUcContactResponse;
 import to.unified.unified_java_sdk.models.shared.Security;
 import to.unified.unified_java_sdk.models.shared.UcContact;
 
@@ -1104,14 +1104,14 @@ public class Application {
                     .build())
             .build();
 
-        UpdateUcContact2Request req = UpdateUcContact2Request.builder()
+        UpdateUcContactRequest req = UpdateUcContactRequest.builder()
                 .ucContact(UcContact.builder()
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        UpdateUcContact2Response res = sdk.uc().updateUcContact2()
+        UpdateUcContactResponse res = sdk.uc().updateUcContact()
                 .request(req)
                 .call();
 
@@ -1124,13 +1124,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
-| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
-| `request`                                                                     | [UpdateUcContact2Request](../../models/operations/UpdateUcContact2Request.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
+| Parameter                                                                   | Type                                                                        | Required                                                                    | Description                                                                 |
+| --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| `request`                                                                   | [UpdateUcContactRequest](../../models/operations/UpdateUcContactRequest.md) | :heavy_check_mark:                                                          | The request object to use for the request.                                  |
 
 ### Response
 
-**[UpdateUcContact2Response](../../models/operations/UpdateUcContact2Response.md)**
+**[UpdateUcContactResponse](../../models/operations/UpdateUcContactResponse.md)**
 
 ### Errors
 
@@ -1138,20 +1138,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## updateUcRecording2
+## updateUcRecording
 
 Update a recording
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateUcRecording2" method="put" path="/uc/{connection_id}/recording/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateUcRecording" method="put" path="/uc/{connection_id}/recording/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.UpdateUcRecording2Request;
-import to.unified.unified_java_sdk.models.operations.UpdateUcRecording2Response;
+import to.unified.unified_java_sdk.models.operations.UpdateUcRecordingRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateUcRecordingResponse;
 import to.unified.unified_java_sdk.models.shared.Security;
 import to.unified.unified_java_sdk.models.shared.UcRecording;
 
@@ -1165,14 +1165,14 @@ public class Application {
                     .build())
             .build();
 
-        UpdateUcRecording2Request req = UpdateUcRecording2Request.builder()
+        UpdateUcRecordingRequest req = UpdateUcRecordingRequest.builder()
                 .ucRecording(UcRecording.builder()
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        UpdateUcRecording2Response res = sdk.uc().updateUcRecording2()
+        UpdateUcRecordingResponse res = sdk.uc().updateUcRecording()
                 .request(req)
                 .call();
 
@@ -1185,13 +1185,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
-| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
-| `request`                                                                         | [UpdateUcRecording2Request](../../models/operations/UpdateUcRecording2Request.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
+| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| `request`                                                                       | [UpdateUcRecordingRequest](../../models/operations/UpdateUcRecordingRequest.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
 
 ### Response
 
-**[UpdateUcRecording2Response](../../models/operations/UpdateUcRecording2Response.md)**
+**[UpdateUcRecordingResponse](../../models/operations/UpdateUcRecordingResponse.md)**
 
 ### Errors
 

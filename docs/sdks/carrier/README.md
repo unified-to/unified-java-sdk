@@ -4,23 +4,23 @@
 
 ### Available Operations
 
-* [getShippingCarrier2](#getshippingcarrier2) - Retrieve a carrier
-* [listShippingCarriers2](#listshippingcarriers2) - List all carriers
+* [getShippingCarrier](#getshippingcarrier) - Retrieve a carrier
+* [listShippingCarriers](#listshippingcarriers) - List all carriers
 
-## getShippingCarrier2
+## getShippingCarrier
 
 Retrieve a carrier
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="getShippingCarrier2" method="get" path="/shipping/{connection_id}/carrier/{id}" -->
+<!-- UsageSnippet language="java" operationID="getShippingCarrier" method="get" path="/shipping/{connection_id}/carrier/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.GetShippingCarrier2Request;
-import to.unified.unified_java_sdk.models.operations.GetShippingCarrier2Response;
+import to.unified.unified_java_sdk.models.operations.GetShippingCarrierRequest;
+import to.unified.unified_java_sdk.models.operations.GetShippingCarrierResponse;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -33,12 +33,12 @@ public class Application {
                     .build())
             .build();
 
-        GetShippingCarrier2Request req = GetShippingCarrier2Request.builder()
+        GetShippingCarrierRequest req = GetShippingCarrierRequest.builder()
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        GetShippingCarrier2Response res = sdk.carrier().getShippingCarrier2()
+        GetShippingCarrierResponse res = sdk.carrier().getShippingCarrier()
                 .request(req)
                 .call();
 
@@ -51,13 +51,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                           | Type                                                                                | Required                                                                            | Description                                                                         |
-| ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
-| `request`                                                                           | [GetShippingCarrier2Request](../../models/operations/GetShippingCarrier2Request.md) | :heavy_check_mark:                                                                  | The request object to use for the request.                                          |
+| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
+| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| `request`                                                                         | [GetShippingCarrierRequest](../../models/operations/GetShippingCarrierRequest.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
 
 ### Response
 
-**[GetShippingCarrier2Response](../../models/operations/GetShippingCarrier2Response.md)**
+**[GetShippingCarrierResponse](../../models/operations/GetShippingCarrierResponse.md)**
 
 ### Errors
 
@@ -65,20 +65,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## listShippingCarriers2
+## listShippingCarriers
 
 List all carriers
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="listShippingCarriers2" method="get" path="/shipping/{connection_id}/carrier" -->
+<!-- UsageSnippet language="java" operationID="listShippingCarriers" method="get" path="/shipping/{connection_id}/carrier" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.ListShippingCarriers2Request;
-import to.unified.unified_java_sdk.models.operations.ListShippingCarriers2Response;
+import to.unified.unified_java_sdk.models.operations.ListShippingCarriersRequest;
+import to.unified.unified_java_sdk.models.operations.ListShippingCarriersResponse;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -91,11 +91,11 @@ public class Application {
                     .build())
             .build();
 
-        ListShippingCarriers2Request req = ListShippingCarriers2Request.builder()
+        ListShippingCarriersRequest req = ListShippingCarriersRequest.builder()
                 .connectionId("<id>")
                 .build();
 
-        ListShippingCarriers2Response res = sdk.carrier().listShippingCarriers2()
+        ListShippingCarriersResponse res = sdk.carrier().listShippingCarriers()
                 .request(req)
                 .call();
 
@@ -108,13 +108,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
-| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
-| `request`                                                                               | [ListShippingCarriers2Request](../../models/operations/ListShippingCarriers2Request.md) | :heavy_check_mark:                                                                      | The request object to use for the request.                                              |
+| Parameter                                                                             | Type                                                                                  | Required                                                                              | Description                                                                           |
+| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| `request`                                                                             | [ListShippingCarriersRequest](../../models/operations/ListShippingCarriersRequest.md) | :heavy_check_mark:                                                                    | The request object to use for the request.                                            |
 
 ### Response
 
-**[ListShippingCarriers2Response](../../models/operations/ListShippingCarriers2Response.md)**
+**[ListShippingCarriersResponse](../../models/operations/ListShippingCarriersResponse.md)**
 
 ### Errors
 

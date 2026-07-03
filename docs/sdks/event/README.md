@@ -4,40 +4,40 @@
 
 ### Available Operations
 
-* [createAnalyticsEvent2](#createanalyticsevent2) - Create an event
-* [createCalendarEvent2](#createcalendarevent2) - Create an event
-* [createCrmEvent2](#createcrmevent2) - Create an event
-* [getAnalyticsEvent2](#getanalyticsevent2) - Retrieve an event
-* [getCalendarEvent2](#getcalendarevent2) - Retrieve an event
-* [getClubsEvent2](#getclubsevent2) - Retrieve an event
-* [getCrmEvent2](#getcrmevent2) - Retrieve an event
-* [listAnalyticsEvents2](#listanalyticsevents2) - List all events
-* [listCalendarEvents2](#listcalendarevents2) - List all events
-* [listClubsEvents2](#listclubsevents2) - List all events
-* [listCrmEvents2](#listcrmevents2) - List all events
-* [patchCalendarEvent2](#patchcalendarevent2) - Update an event
-* [patchCrmEvent2](#patchcrmevent2) - Update an event
-* [patchMessagingEvent2](#patchmessagingevent2) - Update an event
-* [removeCalendarEvent2](#removecalendarevent2) - Remove an event
-* [removeCrmEvent2](#removecrmevent2) - Remove an event
-* [updateCalendarEvent2](#updatecalendarevent2) - Update an event
-* [updateCrmEvent2](#updatecrmevent2) - Update an event
-* [updateMessagingEvent2](#updatemessagingevent2) - Update an event
+* [createAnalyticsEvent](#createanalyticsevent) - Create an event
+* [createCalendarEvent](#createcalendarevent) - Create an event
+* [createCrmEvent](#createcrmevent) - Create an event
+* [getAnalyticsEvent](#getanalyticsevent) - Retrieve an event
+* [getCalendarEvent](#getcalendarevent) - Retrieve an event
+* [getClubsEvent](#getclubsevent) - Retrieve an event
+* [getCrmEvent](#getcrmevent) - Retrieve an event
+* [listAnalyticsEvents](#listanalyticsevents) - List all events
+* [listCalendarEvents](#listcalendarevents) - List all events
+* [listClubsEvents](#listclubsevents) - List all events
+* [listCrmEvents](#listcrmevents) - List all events
+* [patchCalendarEvent](#patchcalendarevent) - Update an event
+* [patchCrmEvent](#patchcrmevent) - Update an event
+* [patchMessagingEvent](#patchmessagingevent) - Update an event
+* [removeCalendarEvent](#removecalendarevent) - Remove an event
+* [removeCrmEvent](#removecrmevent) - Remove an event
+* [updateCalendarEvent](#updatecalendarevent) - Update an event
+* [updateCrmEvent](#updatecrmevent) - Update an event
+* [updateMessagingEvent](#updatemessagingevent) - Update an event
 
-## createAnalyticsEvent2
+## createAnalyticsEvent
 
 Create an event
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createAnalyticsEvent2" method="post" path="/analytics/{connection_id}/event" -->
+<!-- UsageSnippet language="java" operationID="createAnalyticsEvent" method="post" path="/analytics/{connection_id}/event" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.CreateAnalyticsEvent2Request;
-import to.unified.unified_java_sdk.models.operations.CreateAnalyticsEvent2Response;
+import to.unified.unified_java_sdk.models.operations.CreateAnalyticsEventRequest;
+import to.unified.unified_java_sdk.models.operations.CreateAnalyticsEventResponse;
 import to.unified.unified_java_sdk.models.shared.AnalyticsEvent;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -51,13 +51,13 @@ public class Application {
                     .build())
             .build();
 
-        CreateAnalyticsEvent2Request req = CreateAnalyticsEvent2Request.builder()
+        CreateAnalyticsEventRequest req = CreateAnalyticsEventRequest.builder()
                 .analyticsEvent(AnalyticsEvent.builder()
                     .build())
                 .connectionId("<id>")
                 .build();
 
-        CreateAnalyticsEvent2Response res = sdk.event().createAnalyticsEvent2()
+        CreateAnalyticsEventResponse res = sdk.event().createAnalyticsEvent()
                 .request(req)
                 .call();
 
@@ -70,13 +70,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
-| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
-| `request`                                                                               | [CreateAnalyticsEvent2Request](../../models/operations/CreateAnalyticsEvent2Request.md) | :heavy_check_mark:                                                                      | The request object to use for the request.                                              |
+| Parameter                                                                             | Type                                                                                  | Required                                                                              | Description                                                                           |
+| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| `request`                                                                             | [CreateAnalyticsEventRequest](../../models/operations/CreateAnalyticsEventRequest.md) | :heavy_check_mark:                                                                    | The request object to use for the request.                                            |
 
 ### Response
 
-**[CreateAnalyticsEvent2Response](../../models/operations/CreateAnalyticsEvent2Response.md)**
+**[CreateAnalyticsEventResponse](../../models/operations/CreateAnalyticsEventResponse.md)**
 
 ### Errors
 
@@ -84,20 +84,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## createCalendarEvent2
+## createCalendarEvent
 
 Create an event
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createCalendarEvent2" method="post" path="/calendar/{connection_id}/event" -->
+<!-- UsageSnippet language="java" operationID="createCalendarEvent" method="post" path="/calendar/{connection_id}/event" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.CreateCalendarEvent2Request;
-import to.unified.unified_java_sdk.models.operations.CreateCalendarEvent2Response;
+import to.unified.unified_java_sdk.models.operations.CreateCalendarEventRequest;
+import to.unified.unified_java_sdk.models.operations.CreateCalendarEventResponse;
 import to.unified.unified_java_sdk.models.shared.CalendarEvent;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -111,13 +111,13 @@ public class Application {
                     .build())
             .build();
 
-        CreateCalendarEvent2Request req = CreateCalendarEvent2Request.builder()
+        CreateCalendarEventRequest req = CreateCalendarEventRequest.builder()
                 .calendarEvent(CalendarEvent.builder()
                     .build())
                 .connectionId("<id>")
                 .build();
 
-        CreateCalendarEvent2Response res = sdk.event().createCalendarEvent2()
+        CreateCalendarEventResponse res = sdk.event().createCalendarEvent()
                 .request(req)
                 .call();
 
@@ -130,13 +130,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                             | Type                                                                                  | Required                                                                              | Description                                                                           |
-| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
-| `request`                                                                             | [CreateCalendarEvent2Request](../../models/operations/CreateCalendarEvent2Request.md) | :heavy_check_mark:                                                                    | The request object to use for the request.                                            |
+| Parameter                                                                           | Type                                                                                | Required                                                                            | Description                                                                         |
+| ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| `request`                                                                           | [CreateCalendarEventRequest](../../models/operations/CreateCalendarEventRequest.md) | :heavy_check_mark:                                                                  | The request object to use for the request.                                          |
 
 ### Response
 
-**[CreateCalendarEvent2Response](../../models/operations/CreateCalendarEvent2Response.md)**
+**[CreateCalendarEventResponse](../../models/operations/CreateCalendarEventResponse.md)**
 
 ### Errors
 
@@ -144,20 +144,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## createCrmEvent2
+## createCrmEvent
 
 Create an event
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createCrmEvent2" method="post" path="/crm/{connection_id}/event" -->
+<!-- UsageSnippet language="java" operationID="createCrmEvent" method="post" path="/crm/{connection_id}/event" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.CreateCrmEvent2Request;
-import to.unified.unified_java_sdk.models.operations.CreateCrmEvent2Response;
+import to.unified.unified_java_sdk.models.operations.CreateCrmEventRequest;
+import to.unified.unified_java_sdk.models.operations.CreateCrmEventResponse;
 import to.unified.unified_java_sdk.models.shared.CrmEvent;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -171,13 +171,13 @@ public class Application {
                     .build())
             .build();
 
-        CreateCrmEvent2Request req = CreateCrmEvent2Request.builder()
+        CreateCrmEventRequest req = CreateCrmEventRequest.builder()
                 .crmEvent(CrmEvent.builder()
                     .build())
                 .connectionId("<id>")
                 .build();
 
-        CreateCrmEvent2Response res = sdk.event().createCrmEvent2()
+        CreateCrmEventResponse res = sdk.event().createCrmEvent()
                 .request(req)
                 .call();
 
@@ -190,13 +190,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                   | Type                                                                        | Required                                                                    | Description                                                                 |
-| --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
-| `request`                                                                   | [CreateCrmEvent2Request](../../models/operations/CreateCrmEvent2Request.md) | :heavy_check_mark:                                                          | The request object to use for the request.                                  |
+| Parameter                                                                 | Type                                                                      | Required                                                                  | Description                                                               |
+| ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
+| `request`                                                                 | [CreateCrmEventRequest](../../models/operations/CreateCrmEventRequest.md) | :heavy_check_mark:                                                        | The request object to use for the request.                                |
 
 ### Response
 
-**[CreateCrmEvent2Response](../../models/operations/CreateCrmEvent2Response.md)**
+**[CreateCrmEventResponse](../../models/operations/CreateCrmEventResponse.md)**
 
 ### Errors
 
@@ -204,20 +204,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## getAnalyticsEvent2
+## getAnalyticsEvent
 
 Retrieve an event
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="getAnalyticsEvent2" method="get" path="/analytics/{connection_id}/event/{id}" -->
+<!-- UsageSnippet language="java" operationID="getAnalyticsEvent" method="get" path="/analytics/{connection_id}/event/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.GetAnalyticsEvent2Request;
-import to.unified.unified_java_sdk.models.operations.GetAnalyticsEvent2Response;
+import to.unified.unified_java_sdk.models.operations.GetAnalyticsEventRequest;
+import to.unified.unified_java_sdk.models.operations.GetAnalyticsEventResponse;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -230,12 +230,12 @@ public class Application {
                     .build())
             .build();
 
-        GetAnalyticsEvent2Request req = GetAnalyticsEvent2Request.builder()
+        GetAnalyticsEventRequest req = GetAnalyticsEventRequest.builder()
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        GetAnalyticsEvent2Response res = sdk.event().getAnalyticsEvent2()
+        GetAnalyticsEventResponse res = sdk.event().getAnalyticsEvent()
                 .request(req)
                 .call();
 
@@ -248,13 +248,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
-| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
-| `request`                                                                         | [GetAnalyticsEvent2Request](../../models/operations/GetAnalyticsEvent2Request.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
+| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| `request`                                                                       | [GetAnalyticsEventRequest](../../models/operations/GetAnalyticsEventRequest.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
 
 ### Response
 
-**[GetAnalyticsEvent2Response](../../models/operations/GetAnalyticsEvent2Response.md)**
+**[GetAnalyticsEventResponse](../../models/operations/GetAnalyticsEventResponse.md)**
 
 ### Errors
 
@@ -262,20 +262,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## getCalendarEvent2
+## getCalendarEvent
 
 Retrieve an event
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="getCalendarEvent2" method="get" path="/calendar/{connection_id}/event/{id}" -->
+<!-- UsageSnippet language="java" operationID="getCalendarEvent" method="get" path="/calendar/{connection_id}/event/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.GetCalendarEvent2Request;
-import to.unified.unified_java_sdk.models.operations.GetCalendarEvent2Response;
+import to.unified.unified_java_sdk.models.operations.GetCalendarEventRequest;
+import to.unified.unified_java_sdk.models.operations.GetCalendarEventResponse;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -288,12 +288,12 @@ public class Application {
                     .build())
             .build();
 
-        GetCalendarEvent2Request req = GetCalendarEvent2Request.builder()
+        GetCalendarEventRequest req = GetCalendarEventRequest.builder()
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        GetCalendarEvent2Response res = sdk.event().getCalendarEvent2()
+        GetCalendarEventResponse res = sdk.event().getCalendarEvent()
                 .request(req)
                 .call();
 
@@ -306,13 +306,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
-| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
-| `request`                                                                       | [GetCalendarEvent2Request](../../models/operations/GetCalendarEvent2Request.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
+| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
+| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| `request`                                                                     | [GetCalendarEventRequest](../../models/operations/GetCalendarEventRequest.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
 
 ### Response
 
-**[GetCalendarEvent2Response](../../models/operations/GetCalendarEvent2Response.md)**
+**[GetCalendarEventResponse](../../models/operations/GetCalendarEventResponse.md)**
 
 ### Errors
 
@@ -320,20 +320,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## getClubsEvent2
+## getClubsEvent
 
 Retrieve an event
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="getClubsEvent2" method="get" path="/clubs/{connection_id}/event/{id}" -->
+<!-- UsageSnippet language="java" operationID="getClubsEvent" method="get" path="/clubs/{connection_id}/event/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.GetClubsEvent2Request;
-import to.unified.unified_java_sdk.models.operations.GetClubsEvent2Response;
+import to.unified.unified_java_sdk.models.operations.GetClubsEventRequest;
+import to.unified.unified_java_sdk.models.operations.GetClubsEventResponse;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -346,12 +346,12 @@ public class Application {
                     .build())
             .build();
 
-        GetClubsEvent2Request req = GetClubsEvent2Request.builder()
+        GetClubsEventRequest req = GetClubsEventRequest.builder()
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        GetClubsEvent2Response res = sdk.event().getClubsEvent2()
+        GetClubsEventResponse res = sdk.event().getClubsEvent()
                 .request(req)
                 .call();
 
@@ -364,13 +364,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                 | Type                                                                      | Required                                                                  | Description                                                               |
-| ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
-| `request`                                                                 | [GetClubsEvent2Request](../../models/operations/GetClubsEvent2Request.md) | :heavy_check_mark:                                                        | The request object to use for the request.                                |
+| Parameter                                                               | Type                                                                    | Required                                                                | Description                                                             |
+| ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- |
+| `request`                                                               | [GetClubsEventRequest](../../models/operations/GetClubsEventRequest.md) | :heavy_check_mark:                                                      | The request object to use for the request.                              |
 
 ### Response
 
-**[GetClubsEvent2Response](../../models/operations/GetClubsEvent2Response.md)**
+**[GetClubsEventResponse](../../models/operations/GetClubsEventResponse.md)**
 
 ### Errors
 
@@ -378,20 +378,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## getCrmEvent2
+## getCrmEvent
 
 Retrieve an event
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="getCrmEvent2" method="get" path="/crm/{connection_id}/event/{id}" -->
+<!-- UsageSnippet language="java" operationID="getCrmEvent" method="get" path="/crm/{connection_id}/event/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.GetCrmEvent2Request;
-import to.unified.unified_java_sdk.models.operations.GetCrmEvent2Response;
+import to.unified.unified_java_sdk.models.operations.GetCrmEventRequest;
+import to.unified.unified_java_sdk.models.operations.GetCrmEventResponse;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -404,12 +404,12 @@ public class Application {
                     .build())
             .build();
 
-        GetCrmEvent2Request req = GetCrmEvent2Request.builder()
+        GetCrmEventRequest req = GetCrmEventRequest.builder()
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        GetCrmEvent2Response res = sdk.event().getCrmEvent2()
+        GetCrmEventResponse res = sdk.event().getCrmEvent()
                 .request(req)
                 .call();
 
@@ -422,13 +422,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                             | Type                                                                  | Required                                                              | Description                                                           |
-| --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- |
-| `request`                                                             | [GetCrmEvent2Request](../../models/operations/GetCrmEvent2Request.md) | :heavy_check_mark:                                                    | The request object to use for the request.                            |
+| Parameter                                                           | Type                                                                | Required                                                            | Description                                                         |
+| ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- |
+| `request`                                                           | [GetCrmEventRequest](../../models/operations/GetCrmEventRequest.md) | :heavy_check_mark:                                                  | The request object to use for the request.                          |
 
 ### Response
 
-**[GetCrmEvent2Response](../../models/operations/GetCrmEvent2Response.md)**
+**[GetCrmEventResponse](../../models/operations/GetCrmEventResponse.md)**
 
 ### Errors
 
@@ -436,20 +436,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## listAnalyticsEvents2
+## listAnalyticsEvents
 
 List all events
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="listAnalyticsEvents2" method="get" path="/analytics/{connection_id}/event" -->
+<!-- UsageSnippet language="java" operationID="listAnalyticsEvents" method="get" path="/analytics/{connection_id}/event" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.ListAnalyticsEvents2Request;
-import to.unified.unified_java_sdk.models.operations.ListAnalyticsEvents2Response;
+import to.unified.unified_java_sdk.models.operations.ListAnalyticsEventsRequest;
+import to.unified.unified_java_sdk.models.operations.ListAnalyticsEventsResponse;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -462,11 +462,11 @@ public class Application {
                     .build())
             .build();
 
-        ListAnalyticsEvents2Request req = ListAnalyticsEvents2Request.builder()
+        ListAnalyticsEventsRequest req = ListAnalyticsEventsRequest.builder()
                 .connectionId("<id>")
                 .build();
 
-        ListAnalyticsEvents2Response res = sdk.event().listAnalyticsEvents2()
+        ListAnalyticsEventsResponse res = sdk.event().listAnalyticsEvents()
                 .request(req)
                 .call();
 
@@ -479,13 +479,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                             | Type                                                                                  | Required                                                                              | Description                                                                           |
-| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
-| `request`                                                                             | [ListAnalyticsEvents2Request](../../models/operations/ListAnalyticsEvents2Request.md) | :heavy_check_mark:                                                                    | The request object to use for the request.                                            |
+| Parameter                                                                           | Type                                                                                | Required                                                                            | Description                                                                         |
+| ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| `request`                                                                           | [ListAnalyticsEventsRequest](../../models/operations/ListAnalyticsEventsRequest.md) | :heavy_check_mark:                                                                  | The request object to use for the request.                                          |
 
 ### Response
 
-**[ListAnalyticsEvents2Response](../../models/operations/ListAnalyticsEvents2Response.md)**
+**[ListAnalyticsEventsResponse](../../models/operations/ListAnalyticsEventsResponse.md)**
 
 ### Errors
 
@@ -493,20 +493,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## listCalendarEvents2
+## listCalendarEvents
 
 List all events
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="listCalendarEvents2" method="get" path="/calendar/{connection_id}/event" -->
+<!-- UsageSnippet language="java" operationID="listCalendarEvents" method="get" path="/calendar/{connection_id}/event" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.ListCalendarEvents2Request;
-import to.unified.unified_java_sdk.models.operations.ListCalendarEvents2Response;
+import to.unified.unified_java_sdk.models.operations.ListCalendarEventsRequest;
+import to.unified.unified_java_sdk.models.operations.ListCalendarEventsResponse;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -519,11 +519,11 @@ public class Application {
                     .build())
             .build();
 
-        ListCalendarEvents2Request req = ListCalendarEvents2Request.builder()
+        ListCalendarEventsRequest req = ListCalendarEventsRequest.builder()
                 .connectionId("<id>")
                 .build();
 
-        ListCalendarEvents2Response res = sdk.event().listCalendarEvents2()
+        ListCalendarEventsResponse res = sdk.event().listCalendarEvents()
                 .request(req)
                 .call();
 
@@ -536,13 +536,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                           | Type                                                                                | Required                                                                            | Description                                                                         |
-| ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
-| `request`                                                                           | [ListCalendarEvents2Request](../../models/operations/ListCalendarEvents2Request.md) | :heavy_check_mark:                                                                  | The request object to use for the request.                                          |
+| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
+| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| `request`                                                                         | [ListCalendarEventsRequest](../../models/operations/ListCalendarEventsRequest.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
 
 ### Response
 
-**[ListCalendarEvents2Response](../../models/operations/ListCalendarEvents2Response.md)**
+**[ListCalendarEventsResponse](../../models/operations/ListCalendarEventsResponse.md)**
 
 ### Errors
 
@@ -550,20 +550,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## listClubsEvents2
+## listClubsEvents
 
 List all events
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="listClubsEvents2" method="get" path="/clubs/{connection_id}/event" -->
+<!-- UsageSnippet language="java" operationID="listClubsEvents" method="get" path="/clubs/{connection_id}/event" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.ListClubsEvents2Request;
-import to.unified.unified_java_sdk.models.operations.ListClubsEvents2Response;
+import to.unified.unified_java_sdk.models.operations.ListClubsEventsRequest;
+import to.unified.unified_java_sdk.models.operations.ListClubsEventsResponse;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -576,11 +576,11 @@ public class Application {
                     .build())
             .build();
 
-        ListClubsEvents2Request req = ListClubsEvents2Request.builder()
+        ListClubsEventsRequest req = ListClubsEventsRequest.builder()
                 .connectionId("<id>")
                 .build();
 
-        ListClubsEvents2Response res = sdk.event().listClubsEvents2()
+        ListClubsEventsResponse res = sdk.event().listClubsEvents()
                 .request(req)
                 .call();
 
@@ -593,13 +593,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
-| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
-| `request`                                                                     | [ListClubsEvents2Request](../../models/operations/ListClubsEvents2Request.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
+| Parameter                                                                   | Type                                                                        | Required                                                                    | Description                                                                 |
+| --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| `request`                                                                   | [ListClubsEventsRequest](../../models/operations/ListClubsEventsRequest.md) | :heavy_check_mark:                                                          | The request object to use for the request.                                  |
 
 ### Response
 
-**[ListClubsEvents2Response](../../models/operations/ListClubsEvents2Response.md)**
+**[ListClubsEventsResponse](../../models/operations/ListClubsEventsResponse.md)**
 
 ### Errors
 
@@ -607,20 +607,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## listCrmEvents2
+## listCrmEvents
 
 List all events
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="listCrmEvents2" method="get" path="/crm/{connection_id}/event" -->
+<!-- UsageSnippet language="java" operationID="listCrmEvents" method="get" path="/crm/{connection_id}/event" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.ListCrmEvents2Request;
-import to.unified.unified_java_sdk.models.operations.ListCrmEvents2Response;
+import to.unified.unified_java_sdk.models.operations.ListCrmEventsRequest;
+import to.unified.unified_java_sdk.models.operations.ListCrmEventsResponse;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -633,11 +633,11 @@ public class Application {
                     .build())
             .build();
 
-        ListCrmEvents2Request req = ListCrmEvents2Request.builder()
+        ListCrmEventsRequest req = ListCrmEventsRequest.builder()
                 .connectionId("<id>")
                 .build();
 
-        ListCrmEvents2Response res = sdk.event().listCrmEvents2()
+        ListCrmEventsResponse res = sdk.event().listCrmEvents()
                 .request(req)
                 .call();
 
@@ -650,13 +650,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                 | Type                                                                      | Required                                                                  | Description                                                               |
-| ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
-| `request`                                                                 | [ListCrmEvents2Request](../../models/operations/ListCrmEvents2Request.md) | :heavy_check_mark:                                                        | The request object to use for the request.                                |
+| Parameter                                                               | Type                                                                    | Required                                                                | Description                                                             |
+| ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- |
+| `request`                                                               | [ListCrmEventsRequest](../../models/operations/ListCrmEventsRequest.md) | :heavy_check_mark:                                                      | The request object to use for the request.                              |
 
 ### Response
 
-**[ListCrmEvents2Response](../../models/operations/ListCrmEvents2Response.md)**
+**[ListCrmEventsResponse](../../models/operations/ListCrmEventsResponse.md)**
 
 ### Errors
 
@@ -664,20 +664,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## patchCalendarEvent2
+## patchCalendarEvent
 
 Update an event
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchCalendarEvent2" method="patch" path="/calendar/{connection_id}/event/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchCalendarEvent" method="patch" path="/calendar/{connection_id}/event/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.PatchCalendarEvent2Request;
-import to.unified.unified_java_sdk.models.operations.PatchCalendarEvent2Response;
+import to.unified.unified_java_sdk.models.operations.PatchCalendarEventRequest;
+import to.unified.unified_java_sdk.models.operations.PatchCalendarEventResponse;
 import to.unified.unified_java_sdk.models.shared.CalendarEvent;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -691,14 +691,309 @@ public class Application {
                     .build())
             .build();
 
-        PatchCalendarEvent2Request req = PatchCalendarEvent2Request.builder()
+        PatchCalendarEventRequest req = PatchCalendarEventRequest.builder()
                 .calendarEvent(CalendarEvent.builder()
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        PatchCalendarEvent2Response res = sdk.event().patchCalendarEvent2()
+        PatchCalendarEventResponse res = sdk.event().patchCalendarEvent()
+                .request(req)
+                .call();
+
+        if (res.calendarEvent().isPresent()) {
+            System.out.println(res.calendarEvent().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
+| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| `request`                                                                         | [PatchCalendarEventRequest](../../models/operations/PatchCalendarEventRequest.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
+
+### Response
+
+**[PatchCalendarEventResponse](../../models/operations/PatchCalendarEventResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## patchCrmEvent
+
+Update an event
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="patchCrmEvent" method="patch" path="/crm/{connection_id}/event/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.PatchCrmEventRequest;
+import to.unified.unified_java_sdk.models.operations.PatchCrmEventResponse;
+import to.unified.unified_java_sdk.models.shared.CrmEvent;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        PatchCrmEventRequest req = PatchCrmEventRequest.builder()
+                .crmEvent(CrmEvent.builder()
+                    .build())
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        PatchCrmEventResponse res = sdk.event().patchCrmEvent()
+                .request(req)
+                .call();
+
+        if (res.crmEvent().isPresent()) {
+            System.out.println(res.crmEvent().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                               | Type                                                                    | Required                                                                | Description                                                             |
+| ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- |
+| `request`                                                               | [PatchCrmEventRequest](../../models/operations/PatchCrmEventRequest.md) | :heavy_check_mark:                                                      | The request object to use for the request.                              |
+
+### Response
+
+**[PatchCrmEventResponse](../../models/operations/PatchCrmEventResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## patchMessagingEvent
+
+Update an event
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="patchMessagingEvent" method="patch" path="/messaging/{connection_id}/event/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.PatchMessagingEventRequest;
+import to.unified.unified_java_sdk.models.operations.PatchMessagingEventResponse;
+import to.unified.unified_java_sdk.models.shared.MessagingEvent;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        PatchMessagingEventRequest req = PatchMessagingEventRequest.builder()
+                .messagingEvent(MessagingEvent.builder()
+                    .build())
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        PatchMessagingEventResponse res = sdk.event().patchMessagingEvent()
+                .request(req)
+                .call();
+
+        if (res.messagingEvent().isPresent()) {
+            System.out.println(res.messagingEvent().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                           | Type                                                                                | Required                                                                            | Description                                                                         |
+| ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| `request`                                                                           | [PatchMessagingEventRequest](../../models/operations/PatchMessagingEventRequest.md) | :heavy_check_mark:                                                                  | The request object to use for the request.                                          |
+
+### Response
+
+**[PatchMessagingEventResponse](../../models/operations/PatchMessagingEventResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## removeCalendarEvent
+
+Remove an event
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="removeCalendarEvent" method="delete" path="/calendar/{connection_id}/event/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.RemoveCalendarEventRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveCalendarEventResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        RemoveCalendarEventRequest req = RemoveCalendarEventRequest.builder()
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        RemoveCalendarEventResponse res = sdk.event().removeCalendarEvent()
+                .request(req)
+                .call();
+
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                           | Type                                                                                | Required                                                                            | Description                                                                         |
+| ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| `request`                                                                           | [RemoveCalendarEventRequest](../../models/operations/RemoveCalendarEventRequest.md) | :heavy_check_mark:                                                                  | The request object to use for the request.                                          |
+
+### Response
+
+**[RemoveCalendarEventResponse](../../models/operations/RemoveCalendarEventResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## removeCrmEvent
+
+Remove an event
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="removeCrmEvent" method="delete" path="/crm/{connection_id}/event/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.RemoveCrmEventRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveCrmEventResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        RemoveCrmEventRequest req = RemoveCrmEventRequest.builder()
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        RemoveCrmEventResponse res = sdk.event().removeCrmEvent()
+                .request(req)
+                .call();
+
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                 | Type                                                                      | Required                                                                  | Description                                                               |
+| ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
+| `request`                                                                 | [RemoveCrmEventRequest](../../models/operations/RemoveCrmEventRequest.md) | :heavy_check_mark:                                                        | The request object to use for the request.                                |
+
+### Response
+
+**[RemoveCrmEventResponse](../../models/operations/RemoveCrmEventResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## updateCalendarEvent
+
+Update an event
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="updateCalendarEvent" method="put" path="/calendar/{connection_id}/event/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.UpdateCalendarEventRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateCalendarEventResponse;
+import to.unified.unified_java_sdk.models.shared.CalendarEvent;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        UpdateCalendarEventRequest req = UpdateCalendarEventRequest.builder()
+                .calendarEvent(CalendarEvent.builder()
+                    .build())
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        UpdateCalendarEventResponse res = sdk.event().updateCalendarEvent()
                 .request(req)
                 .call();
 
@@ -713,11 +1008,11 @@ public class Application {
 
 | Parameter                                                                           | Type                                                                                | Required                                                                            | Description                                                                         |
 | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
-| `request`                                                                           | [PatchCalendarEvent2Request](../../models/operations/PatchCalendarEvent2Request.md) | :heavy_check_mark:                                                                  | The request object to use for the request.                                          |
+| `request`                                                                           | [UpdateCalendarEventRequest](../../models/operations/UpdateCalendarEventRequest.md) | :heavy_check_mark:                                                                  | The request object to use for the request.                                          |
 
 ### Response
 
-**[PatchCalendarEvent2Response](../../models/operations/PatchCalendarEvent2Response.md)**
+**[UpdateCalendarEventResponse](../../models/operations/UpdateCalendarEventResponse.md)**
 
 ### Errors
 
@@ -725,20 +1020,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## patchCrmEvent2
+## updateCrmEvent
 
 Update an event
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchCrmEvent2" method="patch" path="/crm/{connection_id}/event/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateCrmEvent" method="put" path="/crm/{connection_id}/event/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.PatchCrmEvent2Request;
-import to.unified.unified_java_sdk.models.operations.PatchCrmEvent2Response;
+import to.unified.unified_java_sdk.models.operations.UpdateCrmEventRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateCrmEventResponse;
 import to.unified.unified_java_sdk.models.shared.CrmEvent;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -752,14 +1047,14 @@ public class Application {
                     .build())
             .build();
 
-        PatchCrmEvent2Request req = PatchCrmEvent2Request.builder()
+        UpdateCrmEventRequest req = UpdateCrmEventRequest.builder()
                 .crmEvent(CrmEvent.builder()
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        PatchCrmEvent2Response res = sdk.event().patchCrmEvent2()
+        UpdateCrmEventResponse res = sdk.event().updateCrmEvent()
                 .request(req)
                 .call();
 
@@ -774,11 +1069,11 @@ public class Application {
 
 | Parameter                                                                 | Type                                                                      | Required                                                                  | Description                                                               |
 | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
-| `request`                                                                 | [PatchCrmEvent2Request](../../models/operations/PatchCrmEvent2Request.md) | :heavy_check_mark:                                                        | The request object to use for the request.                                |
+| `request`                                                                 | [UpdateCrmEventRequest](../../models/operations/UpdateCrmEventRequest.md) | :heavy_check_mark:                                                        | The request object to use for the request.                                |
 
 ### Response
 
-**[PatchCrmEvent2Response](../../models/operations/PatchCrmEvent2Response.md)**
+**[UpdateCrmEventResponse](../../models/operations/UpdateCrmEventResponse.md)**
 
 ### Errors
 
@@ -786,20 +1081,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## patchMessagingEvent2
+## updateMessagingEvent
 
 Update an event
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchMessagingEvent2" method="patch" path="/messaging/{connection_id}/event/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateMessagingEvent" method="put" path="/messaging/{connection_id}/event/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.PatchMessagingEvent2Request;
-import to.unified.unified_java_sdk.models.operations.PatchMessagingEvent2Response;
+import to.unified.unified_java_sdk.models.operations.UpdateMessagingEventRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateMessagingEventResponse;
 import to.unified.unified_java_sdk.models.shared.MessagingEvent;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -813,14 +1108,14 @@ public class Application {
                     .build())
             .build();
 
-        PatchMessagingEvent2Request req = PatchMessagingEvent2Request.builder()
+        UpdateMessagingEventRequest req = UpdateMessagingEventRequest.builder()
                 .messagingEvent(MessagingEvent.builder()
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        PatchMessagingEvent2Response res = sdk.event().patchMessagingEvent2()
+        UpdateMessagingEventResponse res = sdk.event().updateMessagingEvent()
                 .request(req)
                 .call();
 
@@ -835,306 +1130,11 @@ public class Application {
 
 | Parameter                                                                             | Type                                                                                  | Required                                                                              | Description                                                                           |
 | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
-| `request`                                                                             | [PatchMessagingEvent2Request](../../models/operations/PatchMessagingEvent2Request.md) | :heavy_check_mark:                                                                    | The request object to use for the request.                                            |
+| `request`                                                                             | [UpdateMessagingEventRequest](../../models/operations/UpdateMessagingEventRequest.md) | :heavy_check_mark:                                                                    | The request object to use for the request.                                            |
 
 ### Response
 
-**[PatchMessagingEvent2Response](../../models/operations/PatchMessagingEvent2Response.md)**
-
-### Errors
-
-| Error Type             | Status Code            | Content Type           |
-| ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
-
-## removeCalendarEvent2
-
-Remove an event
-
-### Example Usage
-
-<!-- UsageSnippet language="java" operationID="removeCalendarEvent2" method="delete" path="/calendar/{connection_id}/event/{id}" -->
-```java
-package hello.world;
-
-import java.lang.Exception;
-import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.RemoveCalendarEvent2Request;
-import to.unified.unified_java_sdk.models.operations.RemoveCalendarEvent2Response;
-import to.unified.unified_java_sdk.models.shared.Security;
-
-public class Application {
-
-    public static void main(String[] args) throws Exception {
-
-        UnifiedTo sdk = UnifiedTo.builder()
-                .security(Security.builder()
-                    .jwt(System.getenv().getOrDefault("JWT", ""))
-                    .build())
-            .build();
-
-        RemoveCalendarEvent2Request req = RemoveCalendarEvent2Request.builder()
-                .connectionId("<id>")
-                .id("<id>")
-                .build();
-
-        RemoveCalendarEvent2Response res = sdk.event().removeCalendarEvent2()
-                .request(req)
-                .call();
-
-        // handle response
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                             | Type                                                                                  | Required                                                                              | Description                                                                           |
-| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
-| `request`                                                                             | [RemoveCalendarEvent2Request](../../models/operations/RemoveCalendarEvent2Request.md) | :heavy_check_mark:                                                                    | The request object to use for the request.                                            |
-
-### Response
-
-**[RemoveCalendarEvent2Response](../../models/operations/RemoveCalendarEvent2Response.md)**
-
-### Errors
-
-| Error Type             | Status Code            | Content Type           |
-| ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
-
-## removeCrmEvent2
-
-Remove an event
-
-### Example Usage
-
-<!-- UsageSnippet language="java" operationID="removeCrmEvent2" method="delete" path="/crm/{connection_id}/event/{id}" -->
-```java
-package hello.world;
-
-import java.lang.Exception;
-import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.RemoveCrmEvent2Request;
-import to.unified.unified_java_sdk.models.operations.RemoveCrmEvent2Response;
-import to.unified.unified_java_sdk.models.shared.Security;
-
-public class Application {
-
-    public static void main(String[] args) throws Exception {
-
-        UnifiedTo sdk = UnifiedTo.builder()
-                .security(Security.builder()
-                    .jwt(System.getenv().getOrDefault("JWT", ""))
-                    .build())
-            .build();
-
-        RemoveCrmEvent2Request req = RemoveCrmEvent2Request.builder()
-                .connectionId("<id>")
-                .id("<id>")
-                .build();
-
-        RemoveCrmEvent2Response res = sdk.event().removeCrmEvent2()
-                .request(req)
-                .call();
-
-        // handle response
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                   | Type                                                                        | Required                                                                    | Description                                                                 |
-| --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
-| `request`                                                                   | [RemoveCrmEvent2Request](../../models/operations/RemoveCrmEvent2Request.md) | :heavy_check_mark:                                                          | The request object to use for the request.                                  |
-
-### Response
-
-**[RemoveCrmEvent2Response](../../models/operations/RemoveCrmEvent2Response.md)**
-
-### Errors
-
-| Error Type             | Status Code            | Content Type           |
-| ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
-
-## updateCalendarEvent2
-
-Update an event
-
-### Example Usage
-
-<!-- UsageSnippet language="java" operationID="updateCalendarEvent2" method="put" path="/calendar/{connection_id}/event/{id}" -->
-```java
-package hello.world;
-
-import java.lang.Exception;
-import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.UpdateCalendarEvent2Request;
-import to.unified.unified_java_sdk.models.operations.UpdateCalendarEvent2Response;
-import to.unified.unified_java_sdk.models.shared.CalendarEvent;
-import to.unified.unified_java_sdk.models.shared.Security;
-
-public class Application {
-
-    public static void main(String[] args) throws Exception {
-
-        UnifiedTo sdk = UnifiedTo.builder()
-                .security(Security.builder()
-                    .jwt(System.getenv().getOrDefault("JWT", ""))
-                    .build())
-            .build();
-
-        UpdateCalendarEvent2Request req = UpdateCalendarEvent2Request.builder()
-                .calendarEvent(CalendarEvent.builder()
-                    .build())
-                .connectionId("<id>")
-                .id("<id>")
-                .build();
-
-        UpdateCalendarEvent2Response res = sdk.event().updateCalendarEvent2()
-                .request(req)
-                .call();
-
-        if (res.calendarEvent().isPresent()) {
-            System.out.println(res.calendarEvent().get());
-        }
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                             | Type                                                                                  | Required                                                                              | Description                                                                           |
-| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
-| `request`                                                                             | [UpdateCalendarEvent2Request](../../models/operations/UpdateCalendarEvent2Request.md) | :heavy_check_mark:                                                                    | The request object to use for the request.                                            |
-
-### Response
-
-**[UpdateCalendarEvent2Response](../../models/operations/UpdateCalendarEvent2Response.md)**
-
-### Errors
-
-| Error Type             | Status Code            | Content Type           |
-| ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
-
-## updateCrmEvent2
-
-Update an event
-
-### Example Usage
-
-<!-- UsageSnippet language="java" operationID="updateCrmEvent2" method="put" path="/crm/{connection_id}/event/{id}" -->
-```java
-package hello.world;
-
-import java.lang.Exception;
-import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.UpdateCrmEvent2Request;
-import to.unified.unified_java_sdk.models.operations.UpdateCrmEvent2Response;
-import to.unified.unified_java_sdk.models.shared.CrmEvent;
-import to.unified.unified_java_sdk.models.shared.Security;
-
-public class Application {
-
-    public static void main(String[] args) throws Exception {
-
-        UnifiedTo sdk = UnifiedTo.builder()
-                .security(Security.builder()
-                    .jwt(System.getenv().getOrDefault("JWT", ""))
-                    .build())
-            .build();
-
-        UpdateCrmEvent2Request req = UpdateCrmEvent2Request.builder()
-                .crmEvent(CrmEvent.builder()
-                    .build())
-                .connectionId("<id>")
-                .id("<id>")
-                .build();
-
-        UpdateCrmEvent2Response res = sdk.event().updateCrmEvent2()
-                .request(req)
-                .call();
-
-        if (res.crmEvent().isPresent()) {
-            System.out.println(res.crmEvent().get());
-        }
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                   | Type                                                                        | Required                                                                    | Description                                                                 |
-| --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
-| `request`                                                                   | [UpdateCrmEvent2Request](../../models/operations/UpdateCrmEvent2Request.md) | :heavy_check_mark:                                                          | The request object to use for the request.                                  |
-
-### Response
-
-**[UpdateCrmEvent2Response](../../models/operations/UpdateCrmEvent2Response.md)**
-
-### Errors
-
-| Error Type             | Status Code            | Content Type           |
-| ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
-
-## updateMessagingEvent2
-
-Update an event
-
-### Example Usage
-
-<!-- UsageSnippet language="java" operationID="updateMessagingEvent2" method="put" path="/messaging/{connection_id}/event/{id}" -->
-```java
-package hello.world;
-
-import java.lang.Exception;
-import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.UpdateMessagingEvent2Request;
-import to.unified.unified_java_sdk.models.operations.UpdateMessagingEvent2Response;
-import to.unified.unified_java_sdk.models.shared.MessagingEvent;
-import to.unified.unified_java_sdk.models.shared.Security;
-
-public class Application {
-
-    public static void main(String[] args) throws Exception {
-
-        UnifiedTo sdk = UnifiedTo.builder()
-                .security(Security.builder()
-                    .jwt(System.getenv().getOrDefault("JWT", ""))
-                    .build())
-            .build();
-
-        UpdateMessagingEvent2Request req = UpdateMessagingEvent2Request.builder()
-                .messagingEvent(MessagingEvent.builder()
-                    .build())
-                .connectionId("<id>")
-                .id("<id>")
-                .build();
-
-        UpdateMessagingEvent2Response res = sdk.event().updateMessagingEvent2()
-                .request(req)
-                .call();
-
-        if (res.messagingEvent().isPresent()) {
-            System.out.println(res.messagingEvent().get());
-        }
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
-| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
-| `request`                                                                               | [UpdateMessagingEvent2Request](../../models/operations/UpdateMessagingEvent2Request.md) | :heavy_check_mark:                                                                      | The request object to use for the request.                                              |
-
-### Response
-
-**[UpdateMessagingEvent2Response](../../models/operations/UpdateMessagingEvent2Response.md)**
+**[UpdateMessagingEventResponse](../../models/operations/UpdateMessagingEventResponse.md)**
 
 ### Errors
 

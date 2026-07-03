@@ -7,30 +7,30 @@ import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOper
 
 import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
-import to.unified.unified_java_sdk.models.operations.CreateHrisEmployee2Request;
-import to.unified.unified_java_sdk.models.operations.GetHrisEmployee2Request;
-import to.unified.unified_java_sdk.models.operations.ListHrisEmployees2Request;
-import to.unified.unified_java_sdk.models.operations.PatchHrisEmployee2Request;
-import to.unified.unified_java_sdk.models.operations.RemoveHrisEmployee2Request;
-import to.unified.unified_java_sdk.models.operations.UpdateHrisEmployee2Request;
-import to.unified.unified_java_sdk.models.operations.async.CreateHrisEmployee2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.CreateHrisEmployee2Response;
-import to.unified.unified_java_sdk.models.operations.async.GetHrisEmployee2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.GetHrisEmployee2Response;
-import to.unified.unified_java_sdk.models.operations.async.ListHrisEmployees2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.ListHrisEmployees2Response;
-import to.unified.unified_java_sdk.models.operations.async.PatchHrisEmployee2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.PatchHrisEmployee2Response;
-import to.unified.unified_java_sdk.models.operations.async.RemoveHrisEmployee2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.RemoveHrisEmployee2Response;
-import to.unified.unified_java_sdk.models.operations.async.UpdateHrisEmployee2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.UpdateHrisEmployee2Response;
-import to.unified.unified_java_sdk.operations.CreateHrisEmployee2;
-import to.unified.unified_java_sdk.operations.GetHrisEmployee2;
-import to.unified.unified_java_sdk.operations.ListHrisEmployees2;
-import to.unified.unified_java_sdk.operations.PatchHrisEmployee2;
-import to.unified.unified_java_sdk.operations.RemoveHrisEmployee2;
-import to.unified.unified_java_sdk.operations.UpdateHrisEmployee2;
+import to.unified.unified_java_sdk.models.operations.CreateHrisEmployeeRequest;
+import to.unified.unified_java_sdk.models.operations.GetHrisEmployeeRequest;
+import to.unified.unified_java_sdk.models.operations.ListHrisEmployeesRequest;
+import to.unified.unified_java_sdk.models.operations.PatchHrisEmployeeRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveHrisEmployeeRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateHrisEmployeeRequest;
+import to.unified.unified_java_sdk.models.operations.async.CreateHrisEmployeeRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.CreateHrisEmployeeResponse;
+import to.unified.unified_java_sdk.models.operations.async.GetHrisEmployeeRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetHrisEmployeeResponse;
+import to.unified.unified_java_sdk.models.operations.async.ListHrisEmployeesRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListHrisEmployeesResponse;
+import to.unified.unified_java_sdk.models.operations.async.PatchHrisEmployeeRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.PatchHrisEmployeeResponse;
+import to.unified.unified_java_sdk.models.operations.async.RemoveHrisEmployeeRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.RemoveHrisEmployeeResponse;
+import to.unified.unified_java_sdk.models.operations.async.UpdateHrisEmployeeRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.UpdateHrisEmployeeResponse;
+import to.unified.unified_java_sdk.operations.CreateHrisEmployee;
+import to.unified.unified_java_sdk.operations.GetHrisEmployee;
+import to.unified.unified_java_sdk.operations.ListHrisEmployees;
+import to.unified.unified_java_sdk.operations.PatchHrisEmployee;
+import to.unified.unified_java_sdk.operations.RemoveHrisEmployee;
+import to.unified.unified_java_sdk.operations.UpdateHrisEmployee;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -59,19 +59,19 @@ public class AsyncEmployee {
      * 
      * @return The async call builder
      */
-    public CreateHrisEmployee2RequestBuilder createHrisEmployee2() {
-        return new CreateHrisEmployee2RequestBuilder(sdkConfiguration);
+    public CreateHrisEmployeeRequestBuilder createHrisEmployee() {
+        return new CreateHrisEmployeeRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Create an employee
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<CreateHrisEmployee2Response>} - The async response
+     * @return {@code CompletableFuture<CreateHrisEmployeeResponse>} - The async response
      */
-    public CompletableFuture<CreateHrisEmployee2Response> createHrisEmployee2(@Nonnull CreateHrisEmployee2Request request) {
-        AsyncRequestOperation<CreateHrisEmployee2Request, CreateHrisEmployee2Response> operation
-              = new CreateHrisEmployee2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<CreateHrisEmployeeResponse> createHrisEmployee(@Nonnull CreateHrisEmployeeRequest request) {
+        AsyncRequestOperation<CreateHrisEmployeeRequest, CreateHrisEmployeeResponse> operation
+              = new CreateHrisEmployee.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -82,19 +82,19 @@ public class AsyncEmployee {
      * 
      * @return The async call builder
      */
-    public GetHrisEmployee2RequestBuilder getHrisEmployee2() {
-        return new GetHrisEmployee2RequestBuilder(sdkConfiguration);
+    public GetHrisEmployeeRequestBuilder getHrisEmployee() {
+        return new GetHrisEmployeeRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Retrieve an employee
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<GetHrisEmployee2Response>} - The async response
+     * @return {@code CompletableFuture<GetHrisEmployeeResponse>} - The async response
      */
-    public CompletableFuture<GetHrisEmployee2Response> getHrisEmployee2(@Nonnull GetHrisEmployee2Request request) {
-        AsyncRequestOperation<GetHrisEmployee2Request, GetHrisEmployee2Response> operation
-              = new GetHrisEmployee2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<GetHrisEmployeeResponse> getHrisEmployee(@Nonnull GetHrisEmployeeRequest request) {
+        AsyncRequestOperation<GetHrisEmployeeRequest, GetHrisEmployeeResponse> operation
+              = new GetHrisEmployee.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -105,19 +105,19 @@ public class AsyncEmployee {
      * 
      * @return The async call builder
      */
-    public ListHrisEmployees2RequestBuilder listHrisEmployees2() {
-        return new ListHrisEmployees2RequestBuilder(sdkConfiguration);
+    public ListHrisEmployeesRequestBuilder listHrisEmployees() {
+        return new ListHrisEmployeesRequestBuilder(sdkConfiguration);
     }
 
     /**
      * List all employees
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<ListHrisEmployees2Response>} - The async response
+     * @return {@code CompletableFuture<ListHrisEmployeesResponse>} - The async response
      */
-    public CompletableFuture<ListHrisEmployees2Response> listHrisEmployees2(@Nonnull ListHrisEmployees2Request request) {
-        AsyncRequestOperation<ListHrisEmployees2Request, ListHrisEmployees2Response> operation
-              = new ListHrisEmployees2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<ListHrisEmployeesResponse> listHrisEmployees(@Nonnull ListHrisEmployeesRequest request) {
+        AsyncRequestOperation<ListHrisEmployeesRequest, ListHrisEmployeesResponse> operation
+              = new ListHrisEmployees.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -128,19 +128,19 @@ public class AsyncEmployee {
      * 
      * @return The async call builder
      */
-    public PatchHrisEmployee2RequestBuilder patchHrisEmployee2() {
-        return new PatchHrisEmployee2RequestBuilder(sdkConfiguration);
+    public PatchHrisEmployeeRequestBuilder patchHrisEmployee() {
+        return new PatchHrisEmployeeRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update an employee
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<PatchHrisEmployee2Response>} - The async response
+     * @return {@code CompletableFuture<PatchHrisEmployeeResponse>} - The async response
      */
-    public CompletableFuture<PatchHrisEmployee2Response> patchHrisEmployee2(@Nonnull PatchHrisEmployee2Request request) {
-        AsyncRequestOperation<PatchHrisEmployee2Request, PatchHrisEmployee2Response> operation
-              = new PatchHrisEmployee2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<PatchHrisEmployeeResponse> patchHrisEmployee(@Nonnull PatchHrisEmployeeRequest request) {
+        AsyncRequestOperation<PatchHrisEmployeeRequest, PatchHrisEmployeeResponse> operation
+              = new PatchHrisEmployee.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -151,19 +151,19 @@ public class AsyncEmployee {
      * 
      * @return The async call builder
      */
-    public RemoveHrisEmployee2RequestBuilder removeHrisEmployee2() {
-        return new RemoveHrisEmployee2RequestBuilder(sdkConfiguration);
+    public RemoveHrisEmployeeRequestBuilder removeHrisEmployee() {
+        return new RemoveHrisEmployeeRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Remove an employee
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<RemoveHrisEmployee2Response>} - The async response
+     * @return {@code CompletableFuture<RemoveHrisEmployeeResponse>} - The async response
      */
-    public CompletableFuture<RemoveHrisEmployee2Response> removeHrisEmployee2(@Nonnull RemoveHrisEmployee2Request request) {
-        AsyncRequestOperation<RemoveHrisEmployee2Request, RemoveHrisEmployee2Response> operation
-              = new RemoveHrisEmployee2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<RemoveHrisEmployeeResponse> removeHrisEmployee(@Nonnull RemoveHrisEmployeeRequest request) {
+        AsyncRequestOperation<RemoveHrisEmployeeRequest, RemoveHrisEmployeeResponse> operation
+              = new RemoveHrisEmployee.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -174,19 +174,19 @@ public class AsyncEmployee {
      * 
      * @return The async call builder
      */
-    public UpdateHrisEmployee2RequestBuilder updateHrisEmployee2() {
-        return new UpdateHrisEmployee2RequestBuilder(sdkConfiguration);
+    public UpdateHrisEmployeeRequestBuilder updateHrisEmployee() {
+        return new UpdateHrisEmployeeRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update an employee
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<UpdateHrisEmployee2Response>} - The async response
+     * @return {@code CompletableFuture<UpdateHrisEmployeeResponse>} - The async response
      */
-    public CompletableFuture<UpdateHrisEmployee2Response> updateHrisEmployee2(@Nonnull UpdateHrisEmployee2Request request) {
-        AsyncRequestOperation<UpdateHrisEmployee2Request, UpdateHrisEmployee2Response> operation
-              = new UpdateHrisEmployee2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<UpdateHrisEmployeeResponse> updateHrisEmployee(@Nonnull UpdateHrisEmployeeRequest request) {
+        AsyncRequestOperation<UpdateHrisEmployeeRequest, UpdateHrisEmployeeResponse> operation
+              = new UpdateHrisEmployee.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

@@ -6,30 +6,30 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
-import to.unified.unified_java_sdk.models.operations.CreateHrisDevice2Request;
-import to.unified.unified_java_sdk.models.operations.CreateHrisDevice2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.CreateHrisDevice2Response;
-import to.unified.unified_java_sdk.models.operations.GetHrisDevice2Request;
-import to.unified.unified_java_sdk.models.operations.GetHrisDevice2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.GetHrisDevice2Response;
-import to.unified.unified_java_sdk.models.operations.ListHrisDevices2Request;
-import to.unified.unified_java_sdk.models.operations.ListHrisDevices2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.ListHrisDevices2Response;
-import to.unified.unified_java_sdk.models.operations.PatchHrisDevice2Request;
-import to.unified.unified_java_sdk.models.operations.PatchHrisDevice2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.PatchHrisDevice2Response;
-import to.unified.unified_java_sdk.models.operations.RemoveHrisDevice2Request;
-import to.unified.unified_java_sdk.models.operations.RemoveHrisDevice2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.RemoveHrisDevice2Response;
-import to.unified.unified_java_sdk.models.operations.UpdateHrisDevice2Request;
-import to.unified.unified_java_sdk.models.operations.UpdateHrisDevice2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.UpdateHrisDevice2Response;
-import to.unified.unified_java_sdk.operations.CreateHrisDevice2;
-import to.unified.unified_java_sdk.operations.GetHrisDevice2;
-import to.unified.unified_java_sdk.operations.ListHrisDevices2;
-import to.unified.unified_java_sdk.operations.PatchHrisDevice2;
-import to.unified.unified_java_sdk.operations.RemoveHrisDevice2;
-import to.unified.unified_java_sdk.operations.UpdateHrisDevice2;
+import to.unified.unified_java_sdk.models.operations.CreateHrisDeviceRequest;
+import to.unified.unified_java_sdk.models.operations.CreateHrisDeviceRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.CreateHrisDeviceResponse;
+import to.unified.unified_java_sdk.models.operations.GetHrisDeviceRequest;
+import to.unified.unified_java_sdk.models.operations.GetHrisDeviceRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetHrisDeviceResponse;
+import to.unified.unified_java_sdk.models.operations.ListHrisDevicesRequest;
+import to.unified.unified_java_sdk.models.operations.ListHrisDevicesRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListHrisDevicesResponse;
+import to.unified.unified_java_sdk.models.operations.PatchHrisDeviceRequest;
+import to.unified.unified_java_sdk.models.operations.PatchHrisDeviceRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.PatchHrisDeviceResponse;
+import to.unified.unified_java_sdk.models.operations.RemoveHrisDeviceRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveHrisDeviceRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.RemoveHrisDeviceResponse;
+import to.unified.unified_java_sdk.models.operations.UpdateHrisDeviceRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateHrisDeviceRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.UpdateHrisDeviceResponse;
+import to.unified.unified_java_sdk.operations.CreateHrisDevice;
+import to.unified.unified_java_sdk.operations.GetHrisDevice;
+import to.unified.unified_java_sdk.operations.ListHrisDevices;
+import to.unified.unified_java_sdk.operations.PatchHrisDevice;
+import to.unified.unified_java_sdk.operations.RemoveHrisDevice;
+import to.unified.unified_java_sdk.operations.UpdateHrisDevice;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -57,8 +57,8 @@ public class Device {
      * 
      * @return The call builder
      */
-    public CreateHrisDevice2RequestBuilder createHrisDevice2() {
-        return new CreateHrisDevice2RequestBuilder(sdkConfiguration);
+    public CreateHrisDeviceRequestBuilder createHrisDevice() {
+        return new CreateHrisDeviceRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -68,9 +68,9 @@ public class Device {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateHrisDevice2Response createHrisDevice2(@Nonnull CreateHrisDevice2Request request) {
-        RequestOperation<CreateHrisDevice2Request, CreateHrisDevice2Response> operation
-              = new CreateHrisDevice2.Sync(sdkConfiguration, _headers);
+    public CreateHrisDeviceResponse createHrisDevice(@Nonnull CreateHrisDeviceRequest request) {
+        RequestOperation<CreateHrisDeviceRequest, CreateHrisDeviceResponse> operation
+              = new CreateHrisDevice.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -79,8 +79,8 @@ public class Device {
      * 
      * @return The call builder
      */
-    public GetHrisDevice2RequestBuilder getHrisDevice2() {
-        return new GetHrisDevice2RequestBuilder(sdkConfiguration);
+    public GetHrisDeviceRequestBuilder getHrisDevice() {
+        return new GetHrisDeviceRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -90,9 +90,9 @@ public class Device {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetHrisDevice2Response getHrisDevice2(@Nonnull GetHrisDevice2Request request) {
-        RequestOperation<GetHrisDevice2Request, GetHrisDevice2Response> operation
-              = new GetHrisDevice2.Sync(sdkConfiguration, _headers);
+    public GetHrisDeviceResponse getHrisDevice(@Nonnull GetHrisDeviceRequest request) {
+        RequestOperation<GetHrisDeviceRequest, GetHrisDeviceResponse> operation
+              = new GetHrisDevice.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -101,8 +101,8 @@ public class Device {
      * 
      * @return The call builder
      */
-    public ListHrisDevices2RequestBuilder listHrisDevices2() {
-        return new ListHrisDevices2RequestBuilder(sdkConfiguration);
+    public ListHrisDevicesRequestBuilder listHrisDevices() {
+        return new ListHrisDevicesRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -112,9 +112,9 @@ public class Device {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListHrisDevices2Response listHrisDevices2(@Nonnull ListHrisDevices2Request request) {
-        RequestOperation<ListHrisDevices2Request, ListHrisDevices2Response> operation
-              = new ListHrisDevices2.Sync(sdkConfiguration, _headers);
+    public ListHrisDevicesResponse listHrisDevices(@Nonnull ListHrisDevicesRequest request) {
+        RequestOperation<ListHrisDevicesRequest, ListHrisDevicesResponse> operation
+              = new ListHrisDevices.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -123,8 +123,8 @@ public class Device {
      * 
      * @return The call builder
      */
-    public PatchHrisDevice2RequestBuilder patchHrisDevice2() {
-        return new PatchHrisDevice2RequestBuilder(sdkConfiguration);
+    public PatchHrisDeviceRequestBuilder patchHrisDevice() {
+        return new PatchHrisDeviceRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -134,9 +134,9 @@ public class Device {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchHrisDevice2Response patchHrisDevice2(@Nonnull PatchHrisDevice2Request request) {
-        RequestOperation<PatchHrisDevice2Request, PatchHrisDevice2Response> operation
-              = new PatchHrisDevice2.Sync(sdkConfiguration, _headers);
+    public PatchHrisDeviceResponse patchHrisDevice(@Nonnull PatchHrisDeviceRequest request) {
+        RequestOperation<PatchHrisDeviceRequest, PatchHrisDeviceResponse> operation
+              = new PatchHrisDevice.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -145,8 +145,8 @@ public class Device {
      * 
      * @return The call builder
      */
-    public RemoveHrisDevice2RequestBuilder removeHrisDevice2() {
-        return new RemoveHrisDevice2RequestBuilder(sdkConfiguration);
+    public RemoveHrisDeviceRequestBuilder removeHrisDevice() {
+        return new RemoveHrisDeviceRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -156,9 +156,9 @@ public class Device {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveHrisDevice2Response removeHrisDevice2(@Nonnull RemoveHrisDevice2Request request) {
-        RequestOperation<RemoveHrisDevice2Request, RemoveHrisDevice2Response> operation
-              = new RemoveHrisDevice2.Sync(sdkConfiguration, _headers);
+    public RemoveHrisDeviceResponse removeHrisDevice(@Nonnull RemoveHrisDeviceRequest request) {
+        RequestOperation<RemoveHrisDeviceRequest, RemoveHrisDeviceResponse> operation
+              = new RemoveHrisDevice.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -167,8 +167,8 @@ public class Device {
      * 
      * @return The call builder
      */
-    public UpdateHrisDevice2RequestBuilder updateHrisDevice2() {
-        return new UpdateHrisDevice2RequestBuilder(sdkConfiguration);
+    public UpdateHrisDeviceRequestBuilder updateHrisDevice() {
+        return new UpdateHrisDeviceRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -178,9 +178,9 @@ public class Device {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateHrisDevice2Response updateHrisDevice2(@Nonnull UpdateHrisDevice2Request request) {
-        RequestOperation<UpdateHrisDevice2Request, UpdateHrisDevice2Response> operation
-              = new UpdateHrisDevice2.Sync(sdkConfiguration, _headers);
+    public UpdateHrisDeviceResponse updateHrisDevice(@Nonnull UpdateHrisDeviceRequest request) {
+        RequestOperation<UpdateHrisDeviceRequest, UpdateHrisDeviceResponse> operation
+              = new UpdateHrisDevice.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

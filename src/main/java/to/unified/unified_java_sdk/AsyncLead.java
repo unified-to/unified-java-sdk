@@ -7,30 +7,30 @@ import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOper
 
 import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
-import to.unified.unified_java_sdk.models.operations.CreateCrmLead2Request;
-import to.unified.unified_java_sdk.models.operations.GetCrmLead2Request;
-import to.unified.unified_java_sdk.models.operations.ListCrmLeads2Request;
-import to.unified.unified_java_sdk.models.operations.PatchCrmLead2Request;
-import to.unified.unified_java_sdk.models.operations.RemoveCrmLead2Request;
-import to.unified.unified_java_sdk.models.operations.UpdateCrmLead2Request;
-import to.unified.unified_java_sdk.models.operations.async.CreateCrmLead2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.CreateCrmLead2Response;
-import to.unified.unified_java_sdk.models.operations.async.GetCrmLead2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.GetCrmLead2Response;
-import to.unified.unified_java_sdk.models.operations.async.ListCrmLeads2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.ListCrmLeads2Response;
-import to.unified.unified_java_sdk.models.operations.async.PatchCrmLead2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.PatchCrmLead2Response;
-import to.unified.unified_java_sdk.models.operations.async.RemoveCrmLead2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.RemoveCrmLead2Response;
-import to.unified.unified_java_sdk.models.operations.async.UpdateCrmLead2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.UpdateCrmLead2Response;
-import to.unified.unified_java_sdk.operations.CreateCrmLead2;
-import to.unified.unified_java_sdk.operations.GetCrmLead2;
-import to.unified.unified_java_sdk.operations.ListCrmLeads2;
-import to.unified.unified_java_sdk.operations.PatchCrmLead2;
-import to.unified.unified_java_sdk.operations.RemoveCrmLead2;
-import to.unified.unified_java_sdk.operations.UpdateCrmLead2;
+import to.unified.unified_java_sdk.models.operations.CreateCrmLeadRequest;
+import to.unified.unified_java_sdk.models.operations.GetCrmLeadRequest;
+import to.unified.unified_java_sdk.models.operations.ListCrmLeadsRequest;
+import to.unified.unified_java_sdk.models.operations.PatchCrmLeadRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveCrmLeadRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateCrmLeadRequest;
+import to.unified.unified_java_sdk.models.operations.async.CreateCrmLeadRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.CreateCrmLeadResponse;
+import to.unified.unified_java_sdk.models.operations.async.GetCrmLeadRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetCrmLeadResponse;
+import to.unified.unified_java_sdk.models.operations.async.ListCrmLeadsRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListCrmLeadsResponse;
+import to.unified.unified_java_sdk.models.operations.async.PatchCrmLeadRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.PatchCrmLeadResponse;
+import to.unified.unified_java_sdk.models.operations.async.RemoveCrmLeadRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.RemoveCrmLeadResponse;
+import to.unified.unified_java_sdk.models.operations.async.UpdateCrmLeadRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.UpdateCrmLeadResponse;
+import to.unified.unified_java_sdk.operations.CreateCrmLead;
+import to.unified.unified_java_sdk.operations.GetCrmLead;
+import to.unified.unified_java_sdk.operations.ListCrmLeads;
+import to.unified.unified_java_sdk.operations.PatchCrmLead;
+import to.unified.unified_java_sdk.operations.RemoveCrmLead;
+import to.unified.unified_java_sdk.operations.UpdateCrmLead;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -59,19 +59,19 @@ public class AsyncLead {
      * 
      * @return The async call builder
      */
-    public CreateCrmLead2RequestBuilder createCrmLead2() {
-        return new CreateCrmLead2RequestBuilder(sdkConfiguration);
+    public CreateCrmLeadRequestBuilder createCrmLead() {
+        return new CreateCrmLeadRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Create a lead
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<CreateCrmLead2Response>} - The async response
+     * @return {@code CompletableFuture<CreateCrmLeadResponse>} - The async response
      */
-    public CompletableFuture<CreateCrmLead2Response> createCrmLead2(@Nonnull CreateCrmLead2Request request) {
-        AsyncRequestOperation<CreateCrmLead2Request, CreateCrmLead2Response> operation
-              = new CreateCrmLead2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<CreateCrmLeadResponse> createCrmLead(@Nonnull CreateCrmLeadRequest request) {
+        AsyncRequestOperation<CreateCrmLeadRequest, CreateCrmLeadResponse> operation
+              = new CreateCrmLead.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -82,19 +82,19 @@ public class AsyncLead {
      * 
      * @return The async call builder
      */
-    public GetCrmLead2RequestBuilder getCrmLead2() {
-        return new GetCrmLead2RequestBuilder(sdkConfiguration);
+    public GetCrmLeadRequestBuilder getCrmLead() {
+        return new GetCrmLeadRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Retrieve a lead
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<GetCrmLead2Response>} - The async response
+     * @return {@code CompletableFuture<GetCrmLeadResponse>} - The async response
      */
-    public CompletableFuture<GetCrmLead2Response> getCrmLead2(@Nonnull GetCrmLead2Request request) {
-        AsyncRequestOperation<GetCrmLead2Request, GetCrmLead2Response> operation
-              = new GetCrmLead2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<GetCrmLeadResponse> getCrmLead(@Nonnull GetCrmLeadRequest request) {
+        AsyncRequestOperation<GetCrmLeadRequest, GetCrmLeadResponse> operation
+              = new GetCrmLead.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -105,19 +105,19 @@ public class AsyncLead {
      * 
      * @return The async call builder
      */
-    public ListCrmLeads2RequestBuilder listCrmLeads2() {
-        return new ListCrmLeads2RequestBuilder(sdkConfiguration);
+    public ListCrmLeadsRequestBuilder listCrmLeads() {
+        return new ListCrmLeadsRequestBuilder(sdkConfiguration);
     }
 
     /**
      * List all leads
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<ListCrmLeads2Response>} - The async response
+     * @return {@code CompletableFuture<ListCrmLeadsResponse>} - The async response
      */
-    public CompletableFuture<ListCrmLeads2Response> listCrmLeads2(@Nonnull ListCrmLeads2Request request) {
-        AsyncRequestOperation<ListCrmLeads2Request, ListCrmLeads2Response> operation
-              = new ListCrmLeads2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<ListCrmLeadsResponse> listCrmLeads(@Nonnull ListCrmLeadsRequest request) {
+        AsyncRequestOperation<ListCrmLeadsRequest, ListCrmLeadsResponse> operation
+              = new ListCrmLeads.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -128,19 +128,19 @@ public class AsyncLead {
      * 
      * @return The async call builder
      */
-    public PatchCrmLead2RequestBuilder patchCrmLead2() {
-        return new PatchCrmLead2RequestBuilder(sdkConfiguration);
+    public PatchCrmLeadRequestBuilder patchCrmLead() {
+        return new PatchCrmLeadRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update a lead
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<PatchCrmLead2Response>} - The async response
+     * @return {@code CompletableFuture<PatchCrmLeadResponse>} - The async response
      */
-    public CompletableFuture<PatchCrmLead2Response> patchCrmLead2(@Nonnull PatchCrmLead2Request request) {
-        AsyncRequestOperation<PatchCrmLead2Request, PatchCrmLead2Response> operation
-              = new PatchCrmLead2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<PatchCrmLeadResponse> patchCrmLead(@Nonnull PatchCrmLeadRequest request) {
+        AsyncRequestOperation<PatchCrmLeadRequest, PatchCrmLeadResponse> operation
+              = new PatchCrmLead.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -151,19 +151,19 @@ public class AsyncLead {
      * 
      * @return The async call builder
      */
-    public RemoveCrmLead2RequestBuilder removeCrmLead2() {
-        return new RemoveCrmLead2RequestBuilder(sdkConfiguration);
+    public RemoveCrmLeadRequestBuilder removeCrmLead() {
+        return new RemoveCrmLeadRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Remove a lead
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<RemoveCrmLead2Response>} - The async response
+     * @return {@code CompletableFuture<RemoveCrmLeadResponse>} - The async response
      */
-    public CompletableFuture<RemoveCrmLead2Response> removeCrmLead2(@Nonnull RemoveCrmLead2Request request) {
-        AsyncRequestOperation<RemoveCrmLead2Request, RemoveCrmLead2Response> operation
-              = new RemoveCrmLead2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<RemoveCrmLeadResponse> removeCrmLead(@Nonnull RemoveCrmLeadRequest request) {
+        AsyncRequestOperation<RemoveCrmLeadRequest, RemoveCrmLeadResponse> operation
+              = new RemoveCrmLead.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -174,19 +174,19 @@ public class AsyncLead {
      * 
      * @return The async call builder
      */
-    public UpdateCrmLead2RequestBuilder updateCrmLead2() {
-        return new UpdateCrmLead2RequestBuilder(sdkConfiguration);
+    public UpdateCrmLeadRequestBuilder updateCrmLead() {
+        return new UpdateCrmLeadRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update a lead
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<UpdateCrmLead2Response>} - The async response
+     * @return {@code CompletableFuture<UpdateCrmLeadResponse>} - The async response
      */
-    public CompletableFuture<UpdateCrmLead2Response> updateCrmLead2(@Nonnull UpdateCrmLead2Request request) {
-        AsyncRequestOperation<UpdateCrmLead2Request, UpdateCrmLead2Response> operation
-              = new UpdateCrmLead2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<UpdateCrmLeadResponse> updateCrmLead(@Nonnull UpdateCrmLeadRequest request) {
+        AsyncRequestOperation<UpdateCrmLeadRequest, UpdateCrmLeadResponse> operation
+              = new UpdateCrmLead.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

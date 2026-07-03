@@ -4,40 +4,40 @@
 
 ### Available Operations
 
-* [createDatastoreDatabase2](#createdatastoredatabase2) - Create a database
-* [createDatastoreQuery2](#createdatastorequery2) - Create a query
-* [createDatastoreRecord2](#createdatastorerecord2) - Create a record
-* [createDatastoreTable2](#createdatastoretable2) - Create a table
-* [getDatastoreDatabase2](#getdatastoredatabase2) - Retrieve a database
-* [getDatastoreRecord2](#getdatastorerecord2) - Retrieve a record
-* [getDatastoreTable2](#getdatastoretable2) - Retrieve a table
-* [listDatastoreDatabases2](#listdatastoredatabases2) - List all databases
-* [listDatastoreRecords2](#listdatastorerecords2) - List all records
-* [listDatastoreTables2](#listdatastoretables2) - List all tables
-* [patchDatastoreDatabase2](#patchdatastoredatabase2) - Update a database
-* [patchDatastoreRecord2](#patchdatastorerecord2) - Update a record
-* [patchDatastoreTable2](#patchdatastoretable2) - Update a table
-* [removeDatastoreDatabase2](#removedatastoredatabase2) - Remove a database
-* [removeDatastoreRecord2](#removedatastorerecord2) - Remove a record
-* [removeDatastoreTable2](#removedatastoretable2) - Remove a table
-* [updateDatastoreDatabase2](#updatedatastoredatabase2) - Update a database
-* [updateDatastoreRecord2](#updatedatastorerecord2) - Update a record
-* [updateDatastoreTable2](#updatedatastoretable2) - Update a table
+* [createDatastoreDatabase](#createdatastoredatabase) - Create a database
+* [createDatastoreQuery](#createdatastorequery) - Create a query
+* [createDatastoreRecord](#createdatastorerecord) - Create a record
+* [createDatastoreTable](#createdatastoretable) - Create a table
+* [getDatastoreDatabase](#getdatastoredatabase) - Retrieve a database
+* [getDatastoreRecord](#getdatastorerecord) - Retrieve a record
+* [getDatastoreTable](#getdatastoretable) - Retrieve a table
+* [listDatastoreDatabases](#listdatastoredatabases) - List all databases
+* [listDatastoreRecords](#listdatastorerecords) - List all records
+* [listDatastoreTables](#listdatastoretables) - List all tables
+* [patchDatastoreDatabase](#patchdatastoredatabase) - Update a database
+* [patchDatastoreRecord](#patchdatastorerecord) - Update a record
+* [patchDatastoreTable](#patchdatastoretable) - Update a table
+* [removeDatastoreDatabase](#removedatastoredatabase) - Remove a database
+* [removeDatastoreRecord](#removedatastorerecord) - Remove a record
+* [removeDatastoreTable](#removedatastoretable) - Remove a table
+* [updateDatastoreDatabase](#updatedatastoredatabase) - Update a database
+* [updateDatastoreRecord](#updatedatastorerecord) - Update a record
+* [updateDatastoreTable](#updatedatastoretable) - Update a table
 
-## createDatastoreDatabase2
+## createDatastoreDatabase
 
 Create a database
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createDatastoreDatabase2" method="post" path="/datastore/{connection_id}/database" -->
+<!-- UsageSnippet language="java" operationID="createDatastoreDatabase" method="post" path="/datastore/{connection_id}/database" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.CreateDatastoreDatabase2Request;
-import to.unified.unified_java_sdk.models.operations.CreateDatastoreDatabase2Response;
+import to.unified.unified_java_sdk.models.operations.CreateDatastoreDatabaseRequest;
+import to.unified.unified_java_sdk.models.operations.CreateDatastoreDatabaseResponse;
 import to.unified.unified_java_sdk.models.shared.DatastoreDatabase;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -51,13 +51,13 @@ public class Application {
                     .build())
             .build();
 
-        CreateDatastoreDatabase2Request req = CreateDatastoreDatabase2Request.builder()
+        CreateDatastoreDatabaseRequest req = CreateDatastoreDatabaseRequest.builder()
                 .datastoreDatabase(DatastoreDatabase.builder()
                     .build())
                 .connectionId("<id>")
                 .build();
 
-        CreateDatastoreDatabase2Response res = sdk.datastore().createDatastoreDatabase2()
+        CreateDatastoreDatabaseResponse res = sdk.datastore().createDatastoreDatabase()
                 .request(req)
                 .call();
 
@@ -70,13 +70,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                     | Type                                                                                          | Required                                                                                      | Description                                                                                   |
-| --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
-| `request`                                                                                     | [CreateDatastoreDatabase2Request](../../models/operations/CreateDatastoreDatabase2Request.md) | :heavy_check_mark:                                                                            | The request object to use for the request.                                                    |
+| Parameter                                                                                   | Type                                                                                        | Required                                                                                    | Description                                                                                 |
+| ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
+| `request`                                                                                   | [CreateDatastoreDatabaseRequest](../../models/operations/CreateDatastoreDatabaseRequest.md) | :heavy_check_mark:                                                                          | The request object to use for the request.                                                  |
 
 ### Response
 
-**[CreateDatastoreDatabase2Response](../../models/operations/CreateDatastoreDatabase2Response.md)**
+**[CreateDatastoreDatabaseResponse](../../models/operations/CreateDatastoreDatabaseResponse.md)**
 
 ### Errors
 
@@ -84,20 +84,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## createDatastoreQuery2
+## createDatastoreQuery
 
 Create a query
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createDatastoreQuery2" method="post" path="/datastore/{connection_id}/query" -->
+<!-- UsageSnippet language="java" operationID="createDatastoreQuery" method="post" path="/datastore/{connection_id}/query" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.CreateDatastoreQuery2Request;
-import to.unified.unified_java_sdk.models.operations.CreateDatastoreQuery2Response;
+import to.unified.unified_java_sdk.models.operations.CreateDatastoreQueryRequest;
+import to.unified.unified_java_sdk.models.operations.CreateDatastoreQueryResponse;
 import to.unified.unified_java_sdk.models.shared.DatastoreQuery;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -111,13 +111,13 @@ public class Application {
                     .build())
             .build();
 
-        CreateDatastoreQuery2Request req = CreateDatastoreQuery2Request.builder()
+        CreateDatastoreQueryRequest req = CreateDatastoreQueryRequest.builder()
                 .datastoreQuery(DatastoreQuery.builder()
                     .build())
                 .connectionId("<id>")
                 .build();
 
-        CreateDatastoreQuery2Response res = sdk.datastore().createDatastoreQuery2()
+        CreateDatastoreQueryResponse res = sdk.datastore().createDatastoreQuery()
                 .request(req)
                 .call();
 
@@ -130,13 +130,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
-| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
-| `request`                                                                               | [CreateDatastoreQuery2Request](../../models/operations/CreateDatastoreQuery2Request.md) | :heavy_check_mark:                                                                      | The request object to use for the request.                                              |
+| Parameter                                                                             | Type                                                                                  | Required                                                                              | Description                                                                           |
+| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| `request`                                                                             | [CreateDatastoreQueryRequest](../../models/operations/CreateDatastoreQueryRequest.md) | :heavy_check_mark:                                                                    | The request object to use for the request.                                            |
 
 ### Response
 
-**[CreateDatastoreQuery2Response](../../models/operations/CreateDatastoreQuery2Response.md)**
+**[CreateDatastoreQueryResponse](../../models/operations/CreateDatastoreQueryResponse.md)**
 
 ### Errors
 
@@ -144,904 +144,21 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## createDatastoreRecord2
+## createDatastoreRecord
 
 Create a record
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createDatastoreRecord2" method="post" path="/datastore/{connection_id}/record" -->
+<!-- UsageSnippet language="java" operationID="createDatastoreRecord" method="post" path="/datastore/{connection_id}/record" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import java.util.Map;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.CreateDatastoreRecord2Request;
-import to.unified.unified_java_sdk.models.operations.CreateDatastoreRecord2Response;
-import to.unified.unified_java_sdk.models.shared.*;
-
-public class Application {
-
-    public static void main(String[] args) throws Exception {
-
-        UnifiedTo sdk = UnifiedTo.builder()
-                .security(Security.builder()
-                    .jwt(System.getenv().getOrDefault("JWT", ""))
-                    .build())
-            .build();
-
-        CreateDatastoreRecord2Request req = CreateDatastoreRecord2Request.builder()
-                .datastoreRecord(DatastoreRecord.builder()
-                    .fields(Map.ofEntries(
-                        Map.entry("key", DatastoreFieldValue.builder()
-                            .build())))
-                    .build())
-                .connectionId("<id>")
-                .build();
-
-        CreateDatastoreRecord2Response res = sdk.datastore().createDatastoreRecord2()
-                .request(req)
-                .call();
-
-        if (res.datastoreRecord().isPresent()) {
-            System.out.println(res.datastoreRecord().get());
-        }
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                                 | Type                                                                                      | Required                                                                                  | Description                                                                               |
-| ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
-| `request`                                                                                 | [CreateDatastoreRecord2Request](../../models/operations/CreateDatastoreRecord2Request.md) | :heavy_check_mark:                                                                        | The request object to use for the request.                                                |
-
-### Response
-
-**[CreateDatastoreRecord2Response](../../models/operations/CreateDatastoreRecord2Response.md)**
-
-### Errors
-
-| Error Type             | Status Code            | Content Type           |
-| ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
-
-## createDatastoreTable2
-
-Create a table
-
-### Example Usage
-
-<!-- UsageSnippet language="java" operationID="createDatastoreTable2" method="post" path="/datastore/{connection_id}/table" -->
-```java
-package hello.world;
-
-import java.lang.Exception;
-import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.CreateDatastoreTable2Request;
-import to.unified.unified_java_sdk.models.operations.CreateDatastoreTable2Response;
-import to.unified.unified_java_sdk.models.shared.DatastoreTable;
-import to.unified.unified_java_sdk.models.shared.Security;
-
-public class Application {
-
-    public static void main(String[] args) throws Exception {
-
-        UnifiedTo sdk = UnifiedTo.builder()
-                .security(Security.builder()
-                    .jwt(System.getenv().getOrDefault("JWT", ""))
-                    .build())
-            .build();
-
-        CreateDatastoreTable2Request req = CreateDatastoreTable2Request.builder()
-                .datastoreTable(DatastoreTable.builder()
-                    .build())
-                .connectionId("<id>")
-                .build();
-
-        CreateDatastoreTable2Response res = sdk.datastore().createDatastoreTable2()
-                .request(req)
-                .call();
-
-        if (res.datastoreTable().isPresent()) {
-            System.out.println(res.datastoreTable().get());
-        }
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
-| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
-| `request`                                                                               | [CreateDatastoreTable2Request](../../models/operations/CreateDatastoreTable2Request.md) | :heavy_check_mark:                                                                      | The request object to use for the request.                                              |
-
-### Response
-
-**[CreateDatastoreTable2Response](../../models/operations/CreateDatastoreTable2Response.md)**
-
-### Errors
-
-| Error Type             | Status Code            | Content Type           |
-| ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
-
-## getDatastoreDatabase2
-
-Retrieve a database
-
-### Example Usage
-
-<!-- UsageSnippet language="java" operationID="getDatastoreDatabase2" method="get" path="/datastore/{connection_id}/database/{id}" -->
-```java
-package hello.world;
-
-import java.lang.Exception;
-import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.GetDatastoreDatabase2Request;
-import to.unified.unified_java_sdk.models.operations.GetDatastoreDatabase2Response;
-import to.unified.unified_java_sdk.models.shared.Security;
-
-public class Application {
-
-    public static void main(String[] args) throws Exception {
-
-        UnifiedTo sdk = UnifiedTo.builder()
-                .security(Security.builder()
-                    .jwt(System.getenv().getOrDefault("JWT", ""))
-                    .build())
-            .build();
-
-        GetDatastoreDatabase2Request req = GetDatastoreDatabase2Request.builder()
-                .connectionId("<id>")
-                .id("<id>")
-                .build();
-
-        GetDatastoreDatabase2Response res = sdk.datastore().getDatastoreDatabase2()
-                .request(req)
-                .call();
-
-        if (res.datastoreDatabase().isPresent()) {
-            System.out.println(res.datastoreDatabase().get());
-        }
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
-| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
-| `request`                                                                               | [GetDatastoreDatabase2Request](../../models/operations/GetDatastoreDatabase2Request.md) | :heavy_check_mark:                                                                      | The request object to use for the request.                                              |
-
-### Response
-
-**[GetDatastoreDatabase2Response](../../models/operations/GetDatastoreDatabase2Response.md)**
-
-### Errors
-
-| Error Type             | Status Code            | Content Type           |
-| ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
-
-## getDatastoreRecord2
-
-Retrieve a record
-
-### Example Usage
-
-<!-- UsageSnippet language="java" operationID="getDatastoreRecord2" method="get" path="/datastore/{connection_id}/record/{id}" -->
-```java
-package hello.world;
-
-import java.lang.Exception;
-import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.GetDatastoreRecord2Request;
-import to.unified.unified_java_sdk.models.operations.GetDatastoreRecord2Response;
-import to.unified.unified_java_sdk.models.shared.Security;
-
-public class Application {
-
-    public static void main(String[] args) throws Exception {
-
-        UnifiedTo sdk = UnifiedTo.builder()
-                .security(Security.builder()
-                    .jwt(System.getenv().getOrDefault("JWT", ""))
-                    .build())
-            .build();
-
-        GetDatastoreRecord2Request req = GetDatastoreRecord2Request.builder()
-                .connectionId("<id>")
-                .id("<id>")
-                .build();
-
-        GetDatastoreRecord2Response res = sdk.datastore().getDatastoreRecord2()
-                .request(req)
-                .call();
-
-        if (res.datastoreRecord().isPresent()) {
-            System.out.println(res.datastoreRecord().get());
-        }
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                           | Type                                                                                | Required                                                                            | Description                                                                         |
-| ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
-| `request`                                                                           | [GetDatastoreRecord2Request](../../models/operations/GetDatastoreRecord2Request.md) | :heavy_check_mark:                                                                  | The request object to use for the request.                                          |
-
-### Response
-
-**[GetDatastoreRecord2Response](../../models/operations/GetDatastoreRecord2Response.md)**
-
-### Errors
-
-| Error Type             | Status Code            | Content Type           |
-| ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
-
-## getDatastoreTable2
-
-Retrieve a table
-
-### Example Usage
-
-<!-- UsageSnippet language="java" operationID="getDatastoreTable2" method="get" path="/datastore/{connection_id}/table/{id}" -->
-```java
-package hello.world;
-
-import java.lang.Exception;
-import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.GetDatastoreTable2Request;
-import to.unified.unified_java_sdk.models.operations.GetDatastoreTable2Response;
-import to.unified.unified_java_sdk.models.shared.Security;
-
-public class Application {
-
-    public static void main(String[] args) throws Exception {
-
-        UnifiedTo sdk = UnifiedTo.builder()
-                .security(Security.builder()
-                    .jwt(System.getenv().getOrDefault("JWT", ""))
-                    .build())
-            .build();
-
-        GetDatastoreTable2Request req = GetDatastoreTable2Request.builder()
-                .connectionId("<id>")
-                .id("<id>")
-                .build();
-
-        GetDatastoreTable2Response res = sdk.datastore().getDatastoreTable2()
-                .request(req)
-                .call();
-
-        if (res.datastoreTable().isPresent()) {
-            System.out.println(res.datastoreTable().get());
-        }
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
-| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
-| `request`                                                                         | [GetDatastoreTable2Request](../../models/operations/GetDatastoreTable2Request.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
-
-### Response
-
-**[GetDatastoreTable2Response](../../models/operations/GetDatastoreTable2Response.md)**
-
-### Errors
-
-| Error Type             | Status Code            | Content Type           |
-| ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
-
-## listDatastoreDatabases2
-
-List all databases
-
-### Example Usage
-
-<!-- UsageSnippet language="java" operationID="listDatastoreDatabases2" method="get" path="/datastore/{connection_id}/database" -->
-```java
-package hello.world;
-
-import java.lang.Exception;
-import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.ListDatastoreDatabases2Request;
-import to.unified.unified_java_sdk.models.operations.ListDatastoreDatabases2Response;
-import to.unified.unified_java_sdk.models.shared.Security;
-
-public class Application {
-
-    public static void main(String[] args) throws Exception {
-
-        UnifiedTo sdk = UnifiedTo.builder()
-                .security(Security.builder()
-                    .jwt(System.getenv().getOrDefault("JWT", ""))
-                    .build())
-            .build();
-
-        ListDatastoreDatabases2Request req = ListDatastoreDatabases2Request.builder()
-                .connectionId("<id>")
-                .build();
-
-        ListDatastoreDatabases2Response res = sdk.datastore().listDatastoreDatabases2()
-                .request(req)
-                .call();
-
-        if (res.datastoreDatabases().isPresent()) {
-            System.out.println(res.datastoreDatabases().get());
-        }
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                                   | Type                                                                                        | Required                                                                                    | Description                                                                                 |
-| ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
-| `request`                                                                                   | [ListDatastoreDatabases2Request](../../models/operations/ListDatastoreDatabases2Request.md) | :heavy_check_mark:                                                                          | The request object to use for the request.                                                  |
-
-### Response
-
-**[ListDatastoreDatabases2Response](../../models/operations/ListDatastoreDatabases2Response.md)**
-
-### Errors
-
-| Error Type             | Status Code            | Content Type           |
-| ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
-
-## listDatastoreRecords2
-
-List all records
-
-### Example Usage
-
-<!-- UsageSnippet language="java" operationID="listDatastoreRecords2" method="get" path="/datastore/{connection_id}/record" -->
-```java
-package hello.world;
-
-import java.lang.Exception;
-import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.ListDatastoreRecords2Request;
-import to.unified.unified_java_sdk.models.operations.ListDatastoreRecords2Response;
-import to.unified.unified_java_sdk.models.shared.Security;
-
-public class Application {
-
-    public static void main(String[] args) throws Exception {
-
-        UnifiedTo sdk = UnifiedTo.builder()
-                .security(Security.builder()
-                    .jwt(System.getenv().getOrDefault("JWT", ""))
-                    .build())
-            .build();
-
-        ListDatastoreRecords2Request req = ListDatastoreRecords2Request.builder()
-                .connectionId("<id>")
-                .build();
-
-        ListDatastoreRecords2Response res = sdk.datastore().listDatastoreRecords2()
-                .request(req)
-                .call();
-
-        if (res.datastoreRecords().isPresent()) {
-            System.out.println(res.datastoreRecords().get());
-        }
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
-| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
-| `request`                                                                               | [ListDatastoreRecords2Request](../../models/operations/ListDatastoreRecords2Request.md) | :heavy_check_mark:                                                                      | The request object to use for the request.                                              |
-
-### Response
-
-**[ListDatastoreRecords2Response](../../models/operations/ListDatastoreRecords2Response.md)**
-
-### Errors
-
-| Error Type             | Status Code            | Content Type           |
-| ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
-
-## listDatastoreTables2
-
-List all tables
-
-### Example Usage
-
-<!-- UsageSnippet language="java" operationID="listDatastoreTables2" method="get" path="/datastore/{connection_id}/table" -->
-```java
-package hello.world;
-
-import java.lang.Exception;
-import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.ListDatastoreTables2Request;
-import to.unified.unified_java_sdk.models.operations.ListDatastoreTables2Response;
-import to.unified.unified_java_sdk.models.shared.Security;
-
-public class Application {
-
-    public static void main(String[] args) throws Exception {
-
-        UnifiedTo sdk = UnifiedTo.builder()
-                .security(Security.builder()
-                    .jwt(System.getenv().getOrDefault("JWT", ""))
-                    .build())
-            .build();
-
-        ListDatastoreTables2Request req = ListDatastoreTables2Request.builder()
-                .connectionId("<id>")
-                .build();
-
-        ListDatastoreTables2Response res = sdk.datastore().listDatastoreTables2()
-                .request(req)
-                .call();
-
-        if (res.datastoreTables().isPresent()) {
-            System.out.println(res.datastoreTables().get());
-        }
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                             | Type                                                                                  | Required                                                                              | Description                                                                           |
-| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
-| `request`                                                                             | [ListDatastoreTables2Request](../../models/operations/ListDatastoreTables2Request.md) | :heavy_check_mark:                                                                    | The request object to use for the request.                                            |
-
-### Response
-
-**[ListDatastoreTables2Response](../../models/operations/ListDatastoreTables2Response.md)**
-
-### Errors
-
-| Error Type             | Status Code            | Content Type           |
-| ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
-
-## patchDatastoreDatabase2
-
-Update a database
-
-### Example Usage
-
-<!-- UsageSnippet language="java" operationID="patchDatastoreDatabase2" method="patch" path="/datastore/{connection_id}/database/{id}" -->
-```java
-package hello.world;
-
-import java.lang.Exception;
-import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.PatchDatastoreDatabase2Request;
-import to.unified.unified_java_sdk.models.operations.PatchDatastoreDatabase2Response;
-import to.unified.unified_java_sdk.models.shared.DatastoreDatabase;
-import to.unified.unified_java_sdk.models.shared.Security;
-
-public class Application {
-
-    public static void main(String[] args) throws Exception {
-
-        UnifiedTo sdk = UnifiedTo.builder()
-                .security(Security.builder()
-                    .jwt(System.getenv().getOrDefault("JWT", ""))
-                    .build())
-            .build();
-
-        PatchDatastoreDatabase2Request req = PatchDatastoreDatabase2Request.builder()
-                .datastoreDatabase(DatastoreDatabase.builder()
-                    .build())
-                .connectionId("<id>")
-                .id("<id>")
-                .build();
-
-        PatchDatastoreDatabase2Response res = sdk.datastore().patchDatastoreDatabase2()
-                .request(req)
-                .call();
-
-        if (res.datastoreDatabase().isPresent()) {
-            System.out.println(res.datastoreDatabase().get());
-        }
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                                   | Type                                                                                        | Required                                                                                    | Description                                                                                 |
-| ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
-| `request`                                                                                   | [PatchDatastoreDatabase2Request](../../models/operations/PatchDatastoreDatabase2Request.md) | :heavy_check_mark:                                                                          | The request object to use for the request.                                                  |
-
-### Response
-
-**[PatchDatastoreDatabase2Response](../../models/operations/PatchDatastoreDatabase2Response.md)**
-
-### Errors
-
-| Error Type             | Status Code            | Content Type           |
-| ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
-
-## patchDatastoreRecord2
-
-Update a record
-
-### Example Usage
-
-<!-- UsageSnippet language="java" operationID="patchDatastoreRecord2" method="patch" path="/datastore/{connection_id}/record/{id}" -->
-```java
-package hello.world;
-
-import java.lang.Exception;
-import java.util.Map;
-import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.PatchDatastoreRecord2Request;
-import to.unified.unified_java_sdk.models.operations.PatchDatastoreRecord2Response;
-import to.unified.unified_java_sdk.models.shared.*;
-
-public class Application {
-
-    public static void main(String[] args) throws Exception {
-
-        UnifiedTo sdk = UnifiedTo.builder()
-                .security(Security.builder()
-                    .jwt(System.getenv().getOrDefault("JWT", ""))
-                    .build())
-            .build();
-
-        PatchDatastoreRecord2Request req = PatchDatastoreRecord2Request.builder()
-                .datastoreRecord(DatastoreRecord.builder()
-                    .fields(Map.ofEntries(
-                        Map.entry("key", DatastoreFieldValue.builder()
-                            .build())))
-                    .build())
-                .connectionId("<id>")
-                .id("<id>")
-                .build();
-
-        PatchDatastoreRecord2Response res = sdk.datastore().patchDatastoreRecord2()
-                .request(req)
-                .call();
-
-        if (res.datastoreRecord().isPresent()) {
-            System.out.println(res.datastoreRecord().get());
-        }
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
-| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
-| `request`                                                                               | [PatchDatastoreRecord2Request](../../models/operations/PatchDatastoreRecord2Request.md) | :heavy_check_mark:                                                                      | The request object to use for the request.                                              |
-
-### Response
-
-**[PatchDatastoreRecord2Response](../../models/operations/PatchDatastoreRecord2Response.md)**
-
-### Errors
-
-| Error Type             | Status Code            | Content Type           |
-| ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
-
-## patchDatastoreTable2
-
-Update a table
-
-### Example Usage
-
-<!-- UsageSnippet language="java" operationID="patchDatastoreTable2" method="patch" path="/datastore/{connection_id}/table/{id}" -->
-```java
-package hello.world;
-
-import java.lang.Exception;
-import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.PatchDatastoreTable2Request;
-import to.unified.unified_java_sdk.models.operations.PatchDatastoreTable2Response;
-import to.unified.unified_java_sdk.models.shared.DatastoreTable;
-import to.unified.unified_java_sdk.models.shared.Security;
-
-public class Application {
-
-    public static void main(String[] args) throws Exception {
-
-        UnifiedTo sdk = UnifiedTo.builder()
-                .security(Security.builder()
-                    .jwt(System.getenv().getOrDefault("JWT", ""))
-                    .build())
-            .build();
-
-        PatchDatastoreTable2Request req = PatchDatastoreTable2Request.builder()
-                .datastoreTable(DatastoreTable.builder()
-                    .build())
-                .connectionId("<id>")
-                .id("<id>")
-                .build();
-
-        PatchDatastoreTable2Response res = sdk.datastore().patchDatastoreTable2()
-                .request(req)
-                .call();
-
-        if (res.datastoreTable().isPresent()) {
-            System.out.println(res.datastoreTable().get());
-        }
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                             | Type                                                                                  | Required                                                                              | Description                                                                           |
-| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
-| `request`                                                                             | [PatchDatastoreTable2Request](../../models/operations/PatchDatastoreTable2Request.md) | :heavy_check_mark:                                                                    | The request object to use for the request.                                            |
-
-### Response
-
-**[PatchDatastoreTable2Response](../../models/operations/PatchDatastoreTable2Response.md)**
-
-### Errors
-
-| Error Type             | Status Code            | Content Type           |
-| ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
-
-## removeDatastoreDatabase2
-
-Remove a database
-
-### Example Usage
-
-<!-- UsageSnippet language="java" operationID="removeDatastoreDatabase2" method="delete" path="/datastore/{connection_id}/database/{id}" -->
-```java
-package hello.world;
-
-import java.lang.Exception;
-import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.RemoveDatastoreDatabase2Request;
-import to.unified.unified_java_sdk.models.operations.RemoveDatastoreDatabase2Response;
-import to.unified.unified_java_sdk.models.shared.Security;
-
-public class Application {
-
-    public static void main(String[] args) throws Exception {
-
-        UnifiedTo sdk = UnifiedTo.builder()
-                .security(Security.builder()
-                    .jwt(System.getenv().getOrDefault("JWT", ""))
-                    .build())
-            .build();
-
-        RemoveDatastoreDatabase2Request req = RemoveDatastoreDatabase2Request.builder()
-                .connectionId("<id>")
-                .id("<id>")
-                .build();
-
-        RemoveDatastoreDatabase2Response res = sdk.datastore().removeDatastoreDatabase2()
-                .request(req)
-                .call();
-
-        // handle response
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                                     | Type                                                                                          | Required                                                                                      | Description                                                                                   |
-| --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
-| `request`                                                                                     | [RemoveDatastoreDatabase2Request](../../models/operations/RemoveDatastoreDatabase2Request.md) | :heavy_check_mark:                                                                            | The request object to use for the request.                                                    |
-
-### Response
-
-**[RemoveDatastoreDatabase2Response](../../models/operations/RemoveDatastoreDatabase2Response.md)**
-
-### Errors
-
-| Error Type             | Status Code            | Content Type           |
-| ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
-
-## removeDatastoreRecord2
-
-Remove a record
-
-### Example Usage
-
-<!-- UsageSnippet language="java" operationID="removeDatastoreRecord2" method="delete" path="/datastore/{connection_id}/record/{id}" -->
-```java
-package hello.world;
-
-import java.lang.Exception;
-import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.RemoveDatastoreRecord2Request;
-import to.unified.unified_java_sdk.models.operations.RemoveDatastoreRecord2Response;
-import to.unified.unified_java_sdk.models.shared.Security;
-
-public class Application {
-
-    public static void main(String[] args) throws Exception {
-
-        UnifiedTo sdk = UnifiedTo.builder()
-                .security(Security.builder()
-                    .jwt(System.getenv().getOrDefault("JWT", ""))
-                    .build())
-            .build();
-
-        RemoveDatastoreRecord2Request req = RemoveDatastoreRecord2Request.builder()
-                .connectionId("<id>")
-                .id("<id>")
-                .build();
-
-        RemoveDatastoreRecord2Response res = sdk.datastore().removeDatastoreRecord2()
-                .request(req)
-                .call();
-
-        // handle response
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                                 | Type                                                                                      | Required                                                                                  | Description                                                                               |
-| ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
-| `request`                                                                                 | [RemoveDatastoreRecord2Request](../../models/operations/RemoveDatastoreRecord2Request.md) | :heavy_check_mark:                                                                        | The request object to use for the request.                                                |
-
-### Response
-
-**[RemoveDatastoreRecord2Response](../../models/operations/RemoveDatastoreRecord2Response.md)**
-
-### Errors
-
-| Error Type             | Status Code            | Content Type           |
-| ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
-
-## removeDatastoreTable2
-
-Remove a table
-
-### Example Usage
-
-<!-- UsageSnippet language="java" operationID="removeDatastoreTable2" method="delete" path="/datastore/{connection_id}/table/{id}" -->
-```java
-package hello.world;
-
-import java.lang.Exception;
-import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.RemoveDatastoreTable2Request;
-import to.unified.unified_java_sdk.models.operations.RemoveDatastoreTable2Response;
-import to.unified.unified_java_sdk.models.shared.Security;
-
-public class Application {
-
-    public static void main(String[] args) throws Exception {
-
-        UnifiedTo sdk = UnifiedTo.builder()
-                .security(Security.builder()
-                    .jwt(System.getenv().getOrDefault("JWT", ""))
-                    .build())
-            .build();
-
-        RemoveDatastoreTable2Request req = RemoveDatastoreTable2Request.builder()
-                .connectionId("<id>")
-                .id("<id>")
-                .build();
-
-        RemoveDatastoreTable2Response res = sdk.datastore().removeDatastoreTable2()
-                .request(req)
-                .call();
-
-        // handle response
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
-| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
-| `request`                                                                               | [RemoveDatastoreTable2Request](../../models/operations/RemoveDatastoreTable2Request.md) | :heavy_check_mark:                                                                      | The request object to use for the request.                                              |
-
-### Response
-
-**[RemoveDatastoreTable2Response](../../models/operations/RemoveDatastoreTable2Response.md)**
-
-### Errors
-
-| Error Type             | Status Code            | Content Type           |
-| ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
-
-## updateDatastoreDatabase2
-
-Update a database
-
-### Example Usage
-
-<!-- UsageSnippet language="java" operationID="updateDatastoreDatabase2" method="put" path="/datastore/{connection_id}/database/{id}" -->
-```java
-package hello.world;
-
-import java.lang.Exception;
-import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.UpdateDatastoreDatabase2Request;
-import to.unified.unified_java_sdk.models.operations.UpdateDatastoreDatabase2Response;
-import to.unified.unified_java_sdk.models.shared.DatastoreDatabase;
-import to.unified.unified_java_sdk.models.shared.Security;
-
-public class Application {
-
-    public static void main(String[] args) throws Exception {
-
-        UnifiedTo sdk = UnifiedTo.builder()
-                .security(Security.builder()
-                    .jwt(System.getenv().getOrDefault("JWT", ""))
-                    .build())
-            .build();
-
-        UpdateDatastoreDatabase2Request req = UpdateDatastoreDatabase2Request.builder()
-                .datastoreDatabase(DatastoreDatabase.builder()
-                    .build())
-                .connectionId("<id>")
-                .id("<id>")
-                .build();
-
-        UpdateDatastoreDatabase2Response res = sdk.datastore().updateDatastoreDatabase2()
-                .request(req)
-                .call();
-
-        if (res.datastoreDatabase().isPresent()) {
-            System.out.println(res.datastoreDatabase().get());
-        }
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                                     | Type                                                                                          | Required                                                                                      | Description                                                                                   |
-| --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
-| `request`                                                                                     | [UpdateDatastoreDatabase2Request](../../models/operations/UpdateDatastoreDatabase2Request.md) | :heavy_check_mark:                                                                            | The request object to use for the request.                                                    |
-
-### Response
-
-**[UpdateDatastoreDatabase2Response](../../models/operations/UpdateDatastoreDatabase2Response.md)**
-
-### Errors
-
-| Error Type             | Status Code            | Content Type           |
-| ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
-
-## updateDatastoreRecord2
-
-Update a record
-
-### Example Usage
-
-<!-- UsageSnippet language="java" operationID="updateDatastoreRecord2" method="put" path="/datastore/{connection_id}/record/{id}" -->
-```java
-package hello.world;
-
-import java.lang.Exception;
-import java.util.Map;
-import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.UpdateDatastoreRecord2Request;
-import to.unified.unified_java_sdk.models.operations.UpdateDatastoreRecord2Response;
+import to.unified.unified_java_sdk.models.operations.CreateDatastoreRecordRequest;
+import to.unified.unified_java_sdk.models.operations.CreateDatastoreRecordResponse;
 import to.unified.unified_java_sdk.models.shared.DatastoreRecord;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -1055,16 +172,15 @@ public class Application {
                     .build())
             .build();
 
-        UpdateDatastoreRecord2Request req = UpdateDatastoreRecord2Request.builder()
+        CreateDatastoreRecordRequest req = CreateDatastoreRecordRequest.builder()
                 .datastoreRecord(DatastoreRecord.builder()
                     .fields(Map.ofEntries(
                     ))
                     .build())
                 .connectionId("<id>")
-                .id("<id>")
                 .build();
 
-        UpdateDatastoreRecord2Response res = sdk.datastore().updateDatastoreRecord2()
+        CreateDatastoreRecordResponse res = sdk.datastore().createDatastoreRecord()
                 .request(req)
                 .call();
 
@@ -1077,13 +193,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                 | Type                                                                                      | Required                                                                                  | Description                                                                               |
-| ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
-| `request`                                                                                 | [UpdateDatastoreRecord2Request](../../models/operations/UpdateDatastoreRecord2Request.md) | :heavy_check_mark:                                                                        | The request object to use for the request.                                                |
+| Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
+| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| `request`                                                                               | [CreateDatastoreRecordRequest](../../models/operations/CreateDatastoreRecordRequest.md) | :heavy_check_mark:                                                                      | The request object to use for the request.                                              |
 
 ### Response
 
-**[UpdateDatastoreRecord2Response](../../models/operations/UpdateDatastoreRecord2Response.md)**
+**[CreateDatastoreRecordResponse](../../models/operations/CreateDatastoreRecordResponse.md)**
 
 ### Errors
 
@@ -1091,20 +207,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## updateDatastoreTable2
+## createDatastoreTable
 
-Update a table
+Create a table
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateDatastoreTable2" method="put" path="/datastore/{connection_id}/table/{id}" -->
+<!-- UsageSnippet language="java" operationID="createDatastoreTable" method="post" path="/datastore/{connection_id}/table" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.UpdateDatastoreTable2Request;
-import to.unified.unified_java_sdk.models.operations.UpdateDatastoreTable2Response;
+import to.unified.unified_java_sdk.models.operations.CreateDatastoreTableRequest;
+import to.unified.unified_java_sdk.models.operations.CreateDatastoreTableResponse;
 import to.unified.unified_java_sdk.models.shared.DatastoreTable;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -1118,14 +234,13 @@ public class Application {
                     .build())
             .build();
 
-        UpdateDatastoreTable2Request req = UpdateDatastoreTable2Request.builder()
+        CreateDatastoreTableRequest req = CreateDatastoreTableRequest.builder()
                 .datastoreTable(DatastoreTable.builder()
                     .build())
                 .connectionId("<id>")
-                .id("<id>")
                 .build();
 
-        UpdateDatastoreTable2Response res = sdk.datastore().updateDatastoreTable2()
+        CreateDatastoreTableResponse res = sdk.datastore().createDatastoreTable()
                 .request(req)
                 .call();
 
@@ -1138,13 +253,898 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
-| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
-| `request`                                                                               | [UpdateDatastoreTable2Request](../../models/operations/UpdateDatastoreTable2Request.md) | :heavy_check_mark:                                                                      | The request object to use for the request.                                              |
+| Parameter                                                                             | Type                                                                                  | Required                                                                              | Description                                                                           |
+| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| `request`                                                                             | [CreateDatastoreTableRequest](../../models/operations/CreateDatastoreTableRequest.md) | :heavy_check_mark:                                                                    | The request object to use for the request.                                            |
 
 ### Response
 
-**[UpdateDatastoreTable2Response](../../models/operations/UpdateDatastoreTable2Response.md)**
+**[CreateDatastoreTableResponse](../../models/operations/CreateDatastoreTableResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## getDatastoreDatabase
+
+Retrieve a database
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="getDatastoreDatabase" method="get" path="/datastore/{connection_id}/database/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.GetDatastoreDatabaseRequest;
+import to.unified.unified_java_sdk.models.operations.GetDatastoreDatabaseResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        GetDatastoreDatabaseRequest req = GetDatastoreDatabaseRequest.builder()
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        GetDatastoreDatabaseResponse res = sdk.datastore().getDatastoreDatabase()
+                .request(req)
+                .call();
+
+        if (res.datastoreDatabase().isPresent()) {
+            System.out.println(res.datastoreDatabase().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                             | Type                                                                                  | Required                                                                              | Description                                                                           |
+| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| `request`                                                                             | [GetDatastoreDatabaseRequest](../../models/operations/GetDatastoreDatabaseRequest.md) | :heavy_check_mark:                                                                    | The request object to use for the request.                                            |
+
+### Response
+
+**[GetDatastoreDatabaseResponse](../../models/operations/GetDatastoreDatabaseResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## getDatastoreRecord
+
+Retrieve a record
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="getDatastoreRecord" method="get" path="/datastore/{connection_id}/record/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.GetDatastoreRecordRequest;
+import to.unified.unified_java_sdk.models.operations.GetDatastoreRecordResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        GetDatastoreRecordRequest req = GetDatastoreRecordRequest.builder()
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        GetDatastoreRecordResponse res = sdk.datastore().getDatastoreRecord()
+                .request(req)
+                .call();
+
+        if (res.datastoreRecord().isPresent()) {
+            System.out.println(res.datastoreRecord().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
+| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| `request`                                                                         | [GetDatastoreRecordRequest](../../models/operations/GetDatastoreRecordRequest.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
+
+### Response
+
+**[GetDatastoreRecordResponse](../../models/operations/GetDatastoreRecordResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## getDatastoreTable
+
+Retrieve a table
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="getDatastoreTable" method="get" path="/datastore/{connection_id}/table/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.GetDatastoreTableRequest;
+import to.unified.unified_java_sdk.models.operations.GetDatastoreTableResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        GetDatastoreTableRequest req = GetDatastoreTableRequest.builder()
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        GetDatastoreTableResponse res = sdk.datastore().getDatastoreTable()
+                .request(req)
+                .call();
+
+        if (res.datastoreTable().isPresent()) {
+            System.out.println(res.datastoreTable().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| `request`                                                                       | [GetDatastoreTableRequest](../../models/operations/GetDatastoreTableRequest.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
+
+### Response
+
+**[GetDatastoreTableResponse](../../models/operations/GetDatastoreTableResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## listDatastoreDatabases
+
+List all databases
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="listDatastoreDatabases" method="get" path="/datastore/{connection_id}/database" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.ListDatastoreDatabasesRequest;
+import to.unified.unified_java_sdk.models.operations.ListDatastoreDatabasesResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        ListDatastoreDatabasesRequest req = ListDatastoreDatabasesRequest.builder()
+                .connectionId("<id>")
+                .build();
+
+        ListDatastoreDatabasesResponse res = sdk.datastore().listDatastoreDatabases()
+                .request(req)
+                .call();
+
+        if (res.datastoreDatabases().isPresent()) {
+            System.out.println(res.datastoreDatabases().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                 | Type                                                                                      | Required                                                                                  | Description                                                                               |
+| ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
+| `request`                                                                                 | [ListDatastoreDatabasesRequest](../../models/operations/ListDatastoreDatabasesRequest.md) | :heavy_check_mark:                                                                        | The request object to use for the request.                                                |
+
+### Response
+
+**[ListDatastoreDatabasesResponse](../../models/operations/ListDatastoreDatabasesResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## listDatastoreRecords
+
+List all records
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="listDatastoreRecords" method="get" path="/datastore/{connection_id}/record" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.ListDatastoreRecordsRequest;
+import to.unified.unified_java_sdk.models.operations.ListDatastoreRecordsResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        ListDatastoreRecordsRequest req = ListDatastoreRecordsRequest.builder()
+                .connectionId("<id>")
+                .build();
+
+        ListDatastoreRecordsResponse res = sdk.datastore().listDatastoreRecords()
+                .request(req)
+                .call();
+
+        if (res.datastoreRecords().isPresent()) {
+            System.out.println(res.datastoreRecords().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                             | Type                                                                                  | Required                                                                              | Description                                                                           |
+| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| `request`                                                                             | [ListDatastoreRecordsRequest](../../models/operations/ListDatastoreRecordsRequest.md) | :heavy_check_mark:                                                                    | The request object to use for the request.                                            |
+
+### Response
+
+**[ListDatastoreRecordsResponse](../../models/operations/ListDatastoreRecordsResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## listDatastoreTables
+
+List all tables
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="listDatastoreTables" method="get" path="/datastore/{connection_id}/table" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.ListDatastoreTablesRequest;
+import to.unified.unified_java_sdk.models.operations.ListDatastoreTablesResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        ListDatastoreTablesRequest req = ListDatastoreTablesRequest.builder()
+                .connectionId("<id>")
+                .build();
+
+        ListDatastoreTablesResponse res = sdk.datastore().listDatastoreTables()
+                .request(req)
+                .call();
+
+        if (res.datastoreTables().isPresent()) {
+            System.out.println(res.datastoreTables().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                           | Type                                                                                | Required                                                                            | Description                                                                         |
+| ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| `request`                                                                           | [ListDatastoreTablesRequest](../../models/operations/ListDatastoreTablesRequest.md) | :heavy_check_mark:                                                                  | The request object to use for the request.                                          |
+
+### Response
+
+**[ListDatastoreTablesResponse](../../models/operations/ListDatastoreTablesResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## patchDatastoreDatabase
+
+Update a database
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="patchDatastoreDatabase" method="patch" path="/datastore/{connection_id}/database/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.PatchDatastoreDatabaseRequest;
+import to.unified.unified_java_sdk.models.operations.PatchDatastoreDatabaseResponse;
+import to.unified.unified_java_sdk.models.shared.DatastoreDatabase;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        PatchDatastoreDatabaseRequest req = PatchDatastoreDatabaseRequest.builder()
+                .datastoreDatabase(DatastoreDatabase.builder()
+                    .build())
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        PatchDatastoreDatabaseResponse res = sdk.datastore().patchDatastoreDatabase()
+                .request(req)
+                .call();
+
+        if (res.datastoreDatabase().isPresent()) {
+            System.out.println(res.datastoreDatabase().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                 | Type                                                                                      | Required                                                                                  | Description                                                                               |
+| ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
+| `request`                                                                                 | [PatchDatastoreDatabaseRequest](../../models/operations/PatchDatastoreDatabaseRequest.md) | :heavy_check_mark:                                                                        | The request object to use for the request.                                                |
+
+### Response
+
+**[PatchDatastoreDatabaseResponse](../../models/operations/PatchDatastoreDatabaseResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## patchDatastoreRecord
+
+Update a record
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="patchDatastoreRecord" method="patch" path="/datastore/{connection_id}/record/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import java.util.Map;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.PatchDatastoreRecordRequest;
+import to.unified.unified_java_sdk.models.operations.PatchDatastoreRecordResponse;
+import to.unified.unified_java_sdk.models.shared.DatastoreRecord;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        PatchDatastoreRecordRequest req = PatchDatastoreRecordRequest.builder()
+                .datastoreRecord(DatastoreRecord.builder()
+                    .fields(Map.ofEntries(
+                    ))
+                    .build())
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        PatchDatastoreRecordResponse res = sdk.datastore().patchDatastoreRecord()
+                .request(req)
+                .call();
+
+        if (res.datastoreRecord().isPresent()) {
+            System.out.println(res.datastoreRecord().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                             | Type                                                                                  | Required                                                                              | Description                                                                           |
+| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| `request`                                                                             | [PatchDatastoreRecordRequest](../../models/operations/PatchDatastoreRecordRequest.md) | :heavy_check_mark:                                                                    | The request object to use for the request.                                            |
+
+### Response
+
+**[PatchDatastoreRecordResponse](../../models/operations/PatchDatastoreRecordResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## patchDatastoreTable
+
+Update a table
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="patchDatastoreTable" method="patch" path="/datastore/{connection_id}/table/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.PatchDatastoreTableRequest;
+import to.unified.unified_java_sdk.models.operations.PatchDatastoreTableResponse;
+import to.unified.unified_java_sdk.models.shared.DatastoreTable;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        PatchDatastoreTableRequest req = PatchDatastoreTableRequest.builder()
+                .datastoreTable(DatastoreTable.builder()
+                    .build())
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        PatchDatastoreTableResponse res = sdk.datastore().patchDatastoreTable()
+                .request(req)
+                .call();
+
+        if (res.datastoreTable().isPresent()) {
+            System.out.println(res.datastoreTable().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                           | Type                                                                                | Required                                                                            | Description                                                                         |
+| ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| `request`                                                                           | [PatchDatastoreTableRequest](../../models/operations/PatchDatastoreTableRequest.md) | :heavy_check_mark:                                                                  | The request object to use for the request.                                          |
+
+### Response
+
+**[PatchDatastoreTableResponse](../../models/operations/PatchDatastoreTableResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## removeDatastoreDatabase
+
+Remove a database
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="removeDatastoreDatabase" method="delete" path="/datastore/{connection_id}/database/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.RemoveDatastoreDatabaseRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveDatastoreDatabaseResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        RemoveDatastoreDatabaseRequest req = RemoveDatastoreDatabaseRequest.builder()
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        RemoveDatastoreDatabaseResponse res = sdk.datastore().removeDatastoreDatabase()
+                .request(req)
+                .call();
+
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                   | Type                                                                                        | Required                                                                                    | Description                                                                                 |
+| ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
+| `request`                                                                                   | [RemoveDatastoreDatabaseRequest](../../models/operations/RemoveDatastoreDatabaseRequest.md) | :heavy_check_mark:                                                                          | The request object to use for the request.                                                  |
+
+### Response
+
+**[RemoveDatastoreDatabaseResponse](../../models/operations/RemoveDatastoreDatabaseResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## removeDatastoreRecord
+
+Remove a record
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="removeDatastoreRecord" method="delete" path="/datastore/{connection_id}/record/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.RemoveDatastoreRecordRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveDatastoreRecordResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        RemoveDatastoreRecordRequest req = RemoveDatastoreRecordRequest.builder()
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        RemoveDatastoreRecordResponse res = sdk.datastore().removeDatastoreRecord()
+                .request(req)
+                .call();
+
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
+| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| `request`                                                                               | [RemoveDatastoreRecordRequest](../../models/operations/RemoveDatastoreRecordRequest.md) | :heavy_check_mark:                                                                      | The request object to use for the request.                                              |
+
+### Response
+
+**[RemoveDatastoreRecordResponse](../../models/operations/RemoveDatastoreRecordResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## removeDatastoreTable
+
+Remove a table
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="removeDatastoreTable" method="delete" path="/datastore/{connection_id}/table/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.RemoveDatastoreTableRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveDatastoreTableResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        RemoveDatastoreTableRequest req = RemoveDatastoreTableRequest.builder()
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        RemoveDatastoreTableResponse res = sdk.datastore().removeDatastoreTable()
+                .request(req)
+                .call();
+
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                             | Type                                                                                  | Required                                                                              | Description                                                                           |
+| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| `request`                                                                             | [RemoveDatastoreTableRequest](../../models/operations/RemoveDatastoreTableRequest.md) | :heavy_check_mark:                                                                    | The request object to use for the request.                                            |
+
+### Response
+
+**[RemoveDatastoreTableResponse](../../models/operations/RemoveDatastoreTableResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## updateDatastoreDatabase
+
+Update a database
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="updateDatastoreDatabase" method="put" path="/datastore/{connection_id}/database/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.UpdateDatastoreDatabaseRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateDatastoreDatabaseResponse;
+import to.unified.unified_java_sdk.models.shared.DatastoreDatabase;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        UpdateDatastoreDatabaseRequest req = UpdateDatastoreDatabaseRequest.builder()
+                .datastoreDatabase(DatastoreDatabase.builder()
+                    .build())
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        UpdateDatastoreDatabaseResponse res = sdk.datastore().updateDatastoreDatabase()
+                .request(req)
+                .call();
+
+        if (res.datastoreDatabase().isPresent()) {
+            System.out.println(res.datastoreDatabase().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                   | Type                                                                                        | Required                                                                                    | Description                                                                                 |
+| ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
+| `request`                                                                                   | [UpdateDatastoreDatabaseRequest](../../models/operations/UpdateDatastoreDatabaseRequest.md) | :heavy_check_mark:                                                                          | The request object to use for the request.                                                  |
+
+### Response
+
+**[UpdateDatastoreDatabaseResponse](../../models/operations/UpdateDatastoreDatabaseResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## updateDatastoreRecord
+
+Update a record
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="updateDatastoreRecord" method="put" path="/datastore/{connection_id}/record/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import java.util.Map;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.UpdateDatastoreRecordRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateDatastoreRecordResponse;
+import to.unified.unified_java_sdk.models.shared.DatastoreRecord;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        UpdateDatastoreRecordRequest req = UpdateDatastoreRecordRequest.builder()
+                .datastoreRecord(DatastoreRecord.builder()
+                    .fields(Map.ofEntries(
+                    ))
+                    .build())
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        UpdateDatastoreRecordResponse res = sdk.datastore().updateDatastoreRecord()
+                .request(req)
+                .call();
+
+        if (res.datastoreRecord().isPresent()) {
+            System.out.println(res.datastoreRecord().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
+| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| `request`                                                                               | [UpdateDatastoreRecordRequest](../../models/operations/UpdateDatastoreRecordRequest.md) | :heavy_check_mark:                                                                      | The request object to use for the request.                                              |
+
+### Response
+
+**[UpdateDatastoreRecordResponse](../../models/operations/UpdateDatastoreRecordResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## updateDatastoreTable
+
+Update a table
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="updateDatastoreTable" method="put" path="/datastore/{connection_id}/table/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.UpdateDatastoreTableRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateDatastoreTableResponse;
+import to.unified.unified_java_sdk.models.shared.DatastoreTable;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        UpdateDatastoreTableRequest req = UpdateDatastoreTableRequest.builder()
+                .datastoreTable(DatastoreTable.builder()
+                    .build())
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        UpdateDatastoreTableResponse res = sdk.datastore().updateDatastoreTable()
+                .request(req)
+                .call();
+
+        if (res.datastoreTable().isPresent()) {
+            System.out.println(res.datastoreTable().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                             | Type                                                                                  | Required                                                                              | Description                                                                           |
+| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| `request`                                                                             | [UpdateDatastoreTableRequest](../../models/operations/UpdateDatastoreTableRequest.md) | :heavy_check_mark:                                                                    | The request object to use for the request.                                            |
+
+### Response
+
+**[UpdateDatastoreTableResponse](../../models/operations/UpdateDatastoreTableResponse.md)**
 
 ### Errors
 

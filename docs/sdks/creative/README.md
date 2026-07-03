@@ -4,27 +4,27 @@
 
 ### Available Operations
 
-* [createAdsCreative2](#createadscreative2) - Create a creative
-* [getAdsCreative2](#getadscreative2) - Retrieve a creative
-* [listAdsCreatives2](#listadscreatives2) - List all creatives
-* [patchAdsCreative2](#patchadscreative2) - Update a creative
-* [removeAdsCreative2](#removeadscreative2) - Remove a creative
-* [updateAdsCreative2](#updateadscreative2) - Update a creative
+* [createAdsCreative](#createadscreative) - Create a creative
+* [getAdsCreative](#getadscreative) - Retrieve a creative
+* [listAdsCreatives](#listadscreatives) - List all creatives
+* [patchAdsCreative](#patchadscreative) - Update a creative
+* [removeAdsCreative](#removeadscreative) - Remove a creative
+* [updateAdsCreative](#updateadscreative) - Update a creative
 
-## createAdsCreative2
+## createAdsCreative
 
 Create a creative
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createAdsCreative2" method="post" path="/ads/{connection_id}/creative" -->
+<!-- UsageSnippet language="java" operationID="createAdsCreative" method="post" path="/ads/{connection_id}/creative" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.CreateAdsCreative2Request;
-import to.unified.unified_java_sdk.models.operations.CreateAdsCreative2Response;
+import to.unified.unified_java_sdk.models.operations.CreateAdsCreativeRequest;
+import to.unified.unified_java_sdk.models.operations.CreateAdsCreativeResponse;
 import to.unified.unified_java_sdk.models.shared.AdsCreative;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -38,13 +38,13 @@ public class Application {
                     .build())
             .build();
 
-        CreateAdsCreative2Request req = CreateAdsCreative2Request.builder()
+        CreateAdsCreativeRequest req = CreateAdsCreativeRequest.builder()
                 .adsCreative(AdsCreative.builder()
                     .build())
                 .connectionId("<id>")
                 .build();
 
-        CreateAdsCreative2Response res = sdk.creative().createAdsCreative2()
+        CreateAdsCreativeResponse res = sdk.creative().createAdsCreative()
                 .request(req)
                 .call();
 
@@ -57,13 +57,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
-| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
-| `request`                                                                         | [CreateAdsCreative2Request](../../models/operations/CreateAdsCreative2Request.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
+| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| `request`                                                                       | [CreateAdsCreativeRequest](../../models/operations/CreateAdsCreativeRequest.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
 
 ### Response
 
-**[CreateAdsCreative2Response](../../models/operations/CreateAdsCreative2Response.md)**
+**[CreateAdsCreativeResponse](../../models/operations/CreateAdsCreativeResponse.md)**
 
 ### Errors
 
@@ -71,20 +71,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## getAdsCreative2
+## getAdsCreative
 
 Retrieve a creative
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="getAdsCreative2" method="get" path="/ads/{connection_id}/creative/{id}" -->
+<!-- UsageSnippet language="java" operationID="getAdsCreative" method="get" path="/ads/{connection_id}/creative/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.GetAdsCreative2Request;
-import to.unified.unified_java_sdk.models.operations.GetAdsCreative2Response;
+import to.unified.unified_java_sdk.models.operations.GetAdsCreativeRequest;
+import to.unified.unified_java_sdk.models.operations.GetAdsCreativeResponse;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -97,12 +97,12 @@ public class Application {
                     .build())
             .build();
 
-        GetAdsCreative2Request req = GetAdsCreative2Request.builder()
+        GetAdsCreativeRequest req = GetAdsCreativeRequest.builder()
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        GetAdsCreative2Response res = sdk.creative().getAdsCreative2()
+        GetAdsCreativeResponse res = sdk.creative().getAdsCreative()
                 .request(req)
                 .call();
 
@@ -115,13 +115,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                   | Type                                                                        | Required                                                                    | Description                                                                 |
-| --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
-| `request`                                                                   | [GetAdsCreative2Request](../../models/operations/GetAdsCreative2Request.md) | :heavy_check_mark:                                                          | The request object to use for the request.                                  |
+| Parameter                                                                 | Type                                                                      | Required                                                                  | Description                                                               |
+| ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
+| `request`                                                                 | [GetAdsCreativeRequest](../../models/operations/GetAdsCreativeRequest.md) | :heavy_check_mark:                                                        | The request object to use for the request.                                |
 
 ### Response
 
-**[GetAdsCreative2Response](../../models/operations/GetAdsCreative2Response.md)**
+**[GetAdsCreativeResponse](../../models/operations/GetAdsCreativeResponse.md)**
 
 ### Errors
 
@@ -129,20 +129,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## listAdsCreatives2
+## listAdsCreatives
 
 List all creatives
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="listAdsCreatives2" method="get" path="/ads/{connection_id}/creative" -->
+<!-- UsageSnippet language="java" operationID="listAdsCreatives" method="get" path="/ads/{connection_id}/creative" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.ListAdsCreatives2Request;
-import to.unified.unified_java_sdk.models.operations.ListAdsCreatives2Response;
+import to.unified.unified_java_sdk.models.operations.ListAdsCreativesRequest;
+import to.unified.unified_java_sdk.models.operations.ListAdsCreativesResponse;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -155,11 +155,11 @@ public class Application {
                     .build())
             .build();
 
-        ListAdsCreatives2Request req = ListAdsCreatives2Request.builder()
+        ListAdsCreativesRequest req = ListAdsCreativesRequest.builder()
                 .connectionId("<id>")
                 .build();
 
-        ListAdsCreatives2Response res = sdk.creative().listAdsCreatives2()
+        ListAdsCreativesResponse res = sdk.creative().listAdsCreatives()
                 .request(req)
                 .call();
 
@@ -172,13 +172,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
-| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
-| `request`                                                                       | [ListAdsCreatives2Request](../../models/operations/ListAdsCreatives2Request.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
+| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
+| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| `request`                                                                     | [ListAdsCreativesRequest](../../models/operations/ListAdsCreativesRequest.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
 
 ### Response
 
-**[ListAdsCreatives2Response](../../models/operations/ListAdsCreatives2Response.md)**
+**[ListAdsCreativesResponse](../../models/operations/ListAdsCreativesResponse.md)**
 
 ### Errors
 
@@ -186,20 +186,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## patchAdsCreative2
+## patchAdsCreative
 
 Update a creative
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchAdsCreative2" method="patch" path="/ads/{connection_id}/creative/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchAdsCreative" method="patch" path="/ads/{connection_id}/creative/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.PatchAdsCreative2Request;
-import to.unified.unified_java_sdk.models.operations.PatchAdsCreative2Response;
+import to.unified.unified_java_sdk.models.operations.PatchAdsCreativeRequest;
+import to.unified.unified_java_sdk.models.operations.PatchAdsCreativeResponse;
 import to.unified.unified_java_sdk.models.shared.AdsCreative;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -213,14 +213,14 @@ public class Application {
                     .build())
             .build();
 
-        PatchAdsCreative2Request req = PatchAdsCreative2Request.builder()
+        PatchAdsCreativeRequest req = PatchAdsCreativeRequest.builder()
                 .adsCreative(AdsCreative.builder()
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        PatchAdsCreative2Response res = sdk.creative().patchAdsCreative2()
+        PatchAdsCreativeResponse res = sdk.creative().patchAdsCreative()
                 .request(req)
                 .call();
 
@@ -233,13 +233,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
-| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
-| `request`                                                                       | [PatchAdsCreative2Request](../../models/operations/PatchAdsCreative2Request.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
+| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
+| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| `request`                                                                     | [PatchAdsCreativeRequest](../../models/operations/PatchAdsCreativeRequest.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
 
 ### Response
 
-**[PatchAdsCreative2Response](../../models/operations/PatchAdsCreative2Response.md)**
+**[PatchAdsCreativeResponse](../../models/operations/PatchAdsCreativeResponse.md)**
 
 ### Errors
 
@@ -247,20 +247,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## removeAdsCreative2
+## removeAdsCreative
 
 Remove a creative
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="removeAdsCreative2" method="delete" path="/ads/{connection_id}/creative/{id}" -->
+<!-- UsageSnippet language="java" operationID="removeAdsCreative" method="delete" path="/ads/{connection_id}/creative/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.RemoveAdsCreative2Request;
-import to.unified.unified_java_sdk.models.operations.RemoveAdsCreative2Response;
+import to.unified.unified_java_sdk.models.operations.RemoveAdsCreativeRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveAdsCreativeResponse;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -273,12 +273,12 @@ public class Application {
                     .build())
             .build();
 
-        RemoveAdsCreative2Request req = RemoveAdsCreative2Request.builder()
+        RemoveAdsCreativeRequest req = RemoveAdsCreativeRequest.builder()
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        RemoveAdsCreative2Response res = sdk.creative().removeAdsCreative2()
+        RemoveAdsCreativeResponse res = sdk.creative().removeAdsCreative()
                 .request(req)
                 .call();
 
@@ -289,13 +289,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
-| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
-| `request`                                                                         | [RemoveAdsCreative2Request](../../models/operations/RemoveAdsCreative2Request.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
+| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| `request`                                                                       | [RemoveAdsCreativeRequest](../../models/operations/RemoveAdsCreativeRequest.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
 
 ### Response
 
-**[RemoveAdsCreative2Response](../../models/operations/RemoveAdsCreative2Response.md)**
+**[RemoveAdsCreativeResponse](../../models/operations/RemoveAdsCreativeResponse.md)**
 
 ### Errors
 
@@ -303,20 +303,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## updateAdsCreative2
+## updateAdsCreative
 
 Update a creative
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateAdsCreative2" method="put" path="/ads/{connection_id}/creative/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateAdsCreative" method="put" path="/ads/{connection_id}/creative/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.UpdateAdsCreative2Request;
-import to.unified.unified_java_sdk.models.operations.UpdateAdsCreative2Response;
+import to.unified.unified_java_sdk.models.operations.UpdateAdsCreativeRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateAdsCreativeResponse;
 import to.unified.unified_java_sdk.models.shared.AdsCreative;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -330,14 +330,14 @@ public class Application {
                     .build())
             .build();
 
-        UpdateAdsCreative2Request req = UpdateAdsCreative2Request.builder()
+        UpdateAdsCreativeRequest req = UpdateAdsCreativeRequest.builder()
                 .adsCreative(AdsCreative.builder()
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        UpdateAdsCreative2Response res = sdk.creative().updateAdsCreative2()
+        UpdateAdsCreativeResponse res = sdk.creative().updateAdsCreative()
                 .request(req)
                 .call();
 
@@ -350,13 +350,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
-| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
-| `request`                                                                         | [UpdateAdsCreative2Request](../../models/operations/UpdateAdsCreative2Request.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
+| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| `request`                                                                       | [UpdateAdsCreativeRequest](../../models/operations/UpdateAdsCreativeRequest.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
 
 ### Response
 
-**[UpdateAdsCreative2Response](../../models/operations/UpdateAdsCreative2Response.md)**
+**[UpdateAdsCreativeResponse](../../models/operations/UpdateAdsCreativeResponse.md)**
 
 ### Errors
 

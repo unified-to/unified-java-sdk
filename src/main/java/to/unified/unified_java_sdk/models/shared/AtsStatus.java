@@ -29,6 +29,11 @@ public class AtsStatus {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("job_id")
+    private String jobId;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("original_status")
     private String originalStatus;
 
@@ -46,11 +51,13 @@ public class AtsStatus {
     public AtsStatus(
             @JsonProperty("description") @Nullable String description,
             @JsonProperty("id") @Nullable String id,
+            @JsonProperty("job_id") @Nullable String jobId,
             @JsonProperty("original_status") @Nullable String originalStatus,
             @JsonProperty("raw") @Nullable Map<String, Object> raw,
             @JsonProperty("status") @Nullable AtsStatusStatus status) {
         this.description = description;
         this.id = id;
+        this.jobId = jobId;
         this.originalStatus = originalStatus;
         this.raw = raw;
         this.status = status;
@@ -58,7 +65,7 @@ public class AtsStatus {
     
     public AtsStatus() {
         this(null, null, null,
-            null, null);
+            null, null, null);
     }
 
     public Optional<String> description() {
@@ -67,6 +74,10 @@ public class AtsStatus {
 
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
+    }
+
+    public Optional<String> jobId() {
+        return Optional.ofNullable(this.jobId);
     }
 
     public Optional<String> originalStatus() {
@@ -94,6 +105,12 @@ public class AtsStatus {
 
     public AtsStatus withId(@Nullable String id) {
         this.id = id;
+        return this;
+    }
+
+
+    public AtsStatus withJobId(@Nullable String jobId) {
+        this.jobId = jobId;
         return this;
     }
 
@@ -128,6 +145,7 @@ public class AtsStatus {
         return 
             Utils.enhancedDeepEquals(this.description, other.description) &&
             Utils.enhancedDeepEquals(this.id, other.id) &&
+            Utils.enhancedDeepEquals(this.jobId, other.jobId) &&
             Utils.enhancedDeepEquals(this.originalStatus, other.originalStatus) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
             Utils.enhancedDeepEquals(this.status, other.status);
@@ -136,8 +154,8 @@ public class AtsStatus {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            description, id, originalStatus,
-            raw, status);
+            description, id, jobId,
+            originalStatus, raw, status);
     }
     
     @Override
@@ -145,6 +163,7 @@ public class AtsStatus {
         return Utils.toString(AtsStatus.class,
                 "description", description,
                 "id", id,
+                "jobId", jobId,
                 "originalStatus", originalStatus,
                 "raw", raw,
                 "status", status);
@@ -156,6 +175,8 @@ public class AtsStatus {
         private String description;
 
         private String id;
+
+        private String jobId;
 
         private String originalStatus;
 
@@ -177,6 +198,11 @@ public class AtsStatus {
             return this;
         }
 
+        public Builder jobId(@Nullable String jobId) {
+            this.jobId = jobId;
+            return this;
+        }
+
         public Builder originalStatus(@Nullable String originalStatus) {
             this.originalStatus = originalStatus;
             return this;
@@ -194,8 +220,8 @@ public class AtsStatus {
 
         public AtsStatus build() {
             return new AtsStatus(
-                description, id, originalStatus,
-                raw, status);
+                description, id, jobId,
+                originalStatus, raw, status);
         }
 
     }

@@ -6,14 +6,14 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
-import to.unified.unified_java_sdk.models.operations.GetShippingTracking2Request;
-import to.unified.unified_java_sdk.models.operations.GetShippingTracking2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.GetShippingTracking2Response;
-import to.unified.unified_java_sdk.models.operations.ListShippingTrackings2Request;
-import to.unified.unified_java_sdk.models.operations.ListShippingTrackings2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.ListShippingTrackings2Response;
-import to.unified.unified_java_sdk.operations.GetShippingTracking2;
-import to.unified.unified_java_sdk.operations.ListShippingTrackings2;
+import to.unified.unified_java_sdk.models.operations.GetShippingTrackingRequest;
+import to.unified.unified_java_sdk.models.operations.GetShippingTrackingRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetShippingTrackingResponse;
+import to.unified.unified_java_sdk.models.operations.ListShippingTrackingsRequest;
+import to.unified.unified_java_sdk.models.operations.ListShippingTrackingsRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListShippingTrackingsResponse;
+import to.unified.unified_java_sdk.operations.GetShippingTracking;
+import to.unified.unified_java_sdk.operations.ListShippingTrackings;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -41,8 +41,8 @@ public class Tracking {
      * 
      * @return The call builder
      */
-    public GetShippingTracking2RequestBuilder getShippingTracking2() {
-        return new GetShippingTracking2RequestBuilder(sdkConfiguration);
+    public GetShippingTrackingRequestBuilder getShippingTracking() {
+        return new GetShippingTrackingRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -52,9 +52,9 @@ public class Tracking {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetShippingTracking2Response getShippingTracking2(@Nonnull GetShippingTracking2Request request) {
-        RequestOperation<GetShippingTracking2Request, GetShippingTracking2Response> operation
-              = new GetShippingTracking2.Sync(sdkConfiguration, _headers);
+    public GetShippingTrackingResponse getShippingTracking(@Nonnull GetShippingTrackingRequest request) {
+        RequestOperation<GetShippingTrackingRequest, GetShippingTrackingResponse> operation
+              = new GetShippingTracking.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -63,8 +63,8 @@ public class Tracking {
      * 
      * @return The call builder
      */
-    public ListShippingTrackings2RequestBuilder listShippingTrackings2() {
-        return new ListShippingTrackings2RequestBuilder(sdkConfiguration);
+    public ListShippingTrackingsRequestBuilder listShippingTrackings() {
+        return new ListShippingTrackingsRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -74,9 +74,9 @@ public class Tracking {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListShippingTrackings2Response listShippingTrackings2(@Nonnull ListShippingTrackings2Request request) {
-        RequestOperation<ListShippingTrackings2Request, ListShippingTrackings2Response> operation
-              = new ListShippingTrackings2.Sync(sdkConfiguration, _headers);
+    public ListShippingTrackingsResponse listShippingTrackings(@Nonnull ListShippingTrackingsRequest request) {
+        RequestOperation<ListShippingTrackingsRequest, ListShippingTrackingsResponse> operation
+              = new ListShippingTrackings.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

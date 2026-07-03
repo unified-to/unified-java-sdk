@@ -4,22 +4,22 @@
 
 ### Available Operations
 
-* [listAtsApplicationstatuses2](#listatsapplicationstatuses2) - List all applicationstatuses
+* [listAtsApplicationstatuses](#listatsapplicationstatuses) - List all applicationstatuses
 
-## listAtsApplicationstatuses2
+## listAtsApplicationstatuses
 
 List all applicationstatuses
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="listAtsApplicationstatuses2" method="get" path="/ats/{connection_id}/applicationstatus" -->
+<!-- UsageSnippet language="java" operationID="listAtsApplicationstatuses" method="get" path="/ats/{connection_id}/applicationstatus" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.ListAtsApplicationstatuses2Request;
-import to.unified.unified_java_sdk.models.operations.ListAtsApplicationstatuses2Response;
+import to.unified.unified_java_sdk.models.operations.ListAtsApplicationstatusesRequest;
+import to.unified.unified_java_sdk.models.operations.ListAtsApplicationstatusesResponse;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -32,11 +32,11 @@ public class Application {
                     .build())
             .build();
 
-        ListAtsApplicationstatuses2Request req = ListAtsApplicationstatuses2Request.builder()
+        ListAtsApplicationstatusesRequest req = ListAtsApplicationstatusesRequest.builder()
                 .connectionId("<id>")
                 .build();
 
-        ListAtsApplicationstatuses2Response res = sdk.applicationstatus().listAtsApplicationstatuses2()
+        ListAtsApplicationstatusesResponse res = sdk.applicationstatus().listAtsApplicationstatuses()
                 .request(req)
                 .call();
 
@@ -49,13 +49,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                           | Type                                                                                                | Required                                                                                            | Description                                                                                         |
-| --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
-| `request`                                                                                           | [ListAtsApplicationstatuses2Request](../../models/operations/ListAtsApplicationstatuses2Request.md) | :heavy_check_mark:                                                                                  | The request object to use for the request.                                                          |
+| Parameter                                                                                         | Type                                                                                              | Required                                                                                          | Description                                                                                       |
+| ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
+| `request`                                                                                         | [ListAtsApplicationstatusesRequest](../../models/operations/ListAtsApplicationstatusesRequest.md) | :heavy_check_mark:                                                                                | The request object to use for the request.                                                        |
 
 ### Response
 
-**[ListAtsApplicationstatuses2Response](../../models/operations/ListAtsApplicationstatuses2Response.md)**
+**[ListAtsApplicationstatusesResponse](../../models/operations/ListAtsApplicationstatusesResponse.md)**
 
 ### Errors
 

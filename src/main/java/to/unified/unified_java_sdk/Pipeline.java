@@ -6,30 +6,30 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
-import to.unified.unified_java_sdk.models.operations.CreateCrmPipeline2Request;
-import to.unified.unified_java_sdk.models.operations.CreateCrmPipeline2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.CreateCrmPipeline2Response;
-import to.unified.unified_java_sdk.models.operations.GetCrmPipeline2Request;
-import to.unified.unified_java_sdk.models.operations.GetCrmPipeline2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.GetCrmPipeline2Response;
-import to.unified.unified_java_sdk.models.operations.ListCrmPipelines2Request;
-import to.unified.unified_java_sdk.models.operations.ListCrmPipelines2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.ListCrmPipelines2Response;
-import to.unified.unified_java_sdk.models.operations.PatchCrmPipeline2Request;
-import to.unified.unified_java_sdk.models.operations.PatchCrmPipeline2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.PatchCrmPipeline2Response;
-import to.unified.unified_java_sdk.models.operations.RemoveCrmPipeline2Request;
-import to.unified.unified_java_sdk.models.operations.RemoveCrmPipeline2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.RemoveCrmPipeline2Response;
-import to.unified.unified_java_sdk.models.operations.UpdateCrmPipeline2Request;
-import to.unified.unified_java_sdk.models.operations.UpdateCrmPipeline2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.UpdateCrmPipeline2Response;
-import to.unified.unified_java_sdk.operations.CreateCrmPipeline2;
-import to.unified.unified_java_sdk.operations.GetCrmPipeline2;
-import to.unified.unified_java_sdk.operations.ListCrmPipelines2;
-import to.unified.unified_java_sdk.operations.PatchCrmPipeline2;
-import to.unified.unified_java_sdk.operations.RemoveCrmPipeline2;
-import to.unified.unified_java_sdk.operations.UpdateCrmPipeline2;
+import to.unified.unified_java_sdk.models.operations.CreateCrmPipelineRequest;
+import to.unified.unified_java_sdk.models.operations.CreateCrmPipelineRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.CreateCrmPipelineResponse;
+import to.unified.unified_java_sdk.models.operations.GetCrmPipelineRequest;
+import to.unified.unified_java_sdk.models.operations.GetCrmPipelineRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetCrmPipelineResponse;
+import to.unified.unified_java_sdk.models.operations.ListCrmPipelinesRequest;
+import to.unified.unified_java_sdk.models.operations.ListCrmPipelinesRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListCrmPipelinesResponse;
+import to.unified.unified_java_sdk.models.operations.PatchCrmPipelineRequest;
+import to.unified.unified_java_sdk.models.operations.PatchCrmPipelineRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.PatchCrmPipelineResponse;
+import to.unified.unified_java_sdk.models.operations.RemoveCrmPipelineRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveCrmPipelineRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.RemoveCrmPipelineResponse;
+import to.unified.unified_java_sdk.models.operations.UpdateCrmPipelineRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateCrmPipelineRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.UpdateCrmPipelineResponse;
+import to.unified.unified_java_sdk.operations.CreateCrmPipeline;
+import to.unified.unified_java_sdk.operations.GetCrmPipeline;
+import to.unified.unified_java_sdk.operations.ListCrmPipelines;
+import to.unified.unified_java_sdk.operations.PatchCrmPipeline;
+import to.unified.unified_java_sdk.operations.RemoveCrmPipeline;
+import to.unified.unified_java_sdk.operations.UpdateCrmPipeline;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -57,8 +57,8 @@ public class Pipeline {
      * 
      * @return The call builder
      */
-    public CreateCrmPipeline2RequestBuilder createCrmPipeline2() {
-        return new CreateCrmPipeline2RequestBuilder(sdkConfiguration);
+    public CreateCrmPipelineRequestBuilder createCrmPipeline() {
+        return new CreateCrmPipelineRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -68,9 +68,9 @@ public class Pipeline {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateCrmPipeline2Response createCrmPipeline2(@Nonnull CreateCrmPipeline2Request request) {
-        RequestOperation<CreateCrmPipeline2Request, CreateCrmPipeline2Response> operation
-              = new CreateCrmPipeline2.Sync(sdkConfiguration, _headers);
+    public CreateCrmPipelineResponse createCrmPipeline(@Nonnull CreateCrmPipelineRequest request) {
+        RequestOperation<CreateCrmPipelineRequest, CreateCrmPipelineResponse> operation
+              = new CreateCrmPipeline.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -79,8 +79,8 @@ public class Pipeline {
      * 
      * @return The call builder
      */
-    public GetCrmPipeline2RequestBuilder getCrmPipeline2() {
-        return new GetCrmPipeline2RequestBuilder(sdkConfiguration);
+    public GetCrmPipelineRequestBuilder getCrmPipeline() {
+        return new GetCrmPipelineRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -90,9 +90,9 @@ public class Pipeline {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetCrmPipeline2Response getCrmPipeline2(@Nonnull GetCrmPipeline2Request request) {
-        RequestOperation<GetCrmPipeline2Request, GetCrmPipeline2Response> operation
-              = new GetCrmPipeline2.Sync(sdkConfiguration, _headers);
+    public GetCrmPipelineResponse getCrmPipeline(@Nonnull GetCrmPipelineRequest request) {
+        RequestOperation<GetCrmPipelineRequest, GetCrmPipelineResponse> operation
+              = new GetCrmPipeline.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -101,8 +101,8 @@ public class Pipeline {
      * 
      * @return The call builder
      */
-    public ListCrmPipelines2RequestBuilder listCrmPipelines2() {
-        return new ListCrmPipelines2RequestBuilder(sdkConfiguration);
+    public ListCrmPipelinesRequestBuilder listCrmPipelines() {
+        return new ListCrmPipelinesRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -112,9 +112,9 @@ public class Pipeline {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListCrmPipelines2Response listCrmPipelines2(@Nonnull ListCrmPipelines2Request request) {
-        RequestOperation<ListCrmPipelines2Request, ListCrmPipelines2Response> operation
-              = new ListCrmPipelines2.Sync(sdkConfiguration, _headers);
+    public ListCrmPipelinesResponse listCrmPipelines(@Nonnull ListCrmPipelinesRequest request) {
+        RequestOperation<ListCrmPipelinesRequest, ListCrmPipelinesResponse> operation
+              = new ListCrmPipelines.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -123,8 +123,8 @@ public class Pipeline {
      * 
      * @return The call builder
      */
-    public PatchCrmPipeline2RequestBuilder patchCrmPipeline2() {
-        return new PatchCrmPipeline2RequestBuilder(sdkConfiguration);
+    public PatchCrmPipelineRequestBuilder patchCrmPipeline() {
+        return new PatchCrmPipelineRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -134,9 +134,9 @@ public class Pipeline {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchCrmPipeline2Response patchCrmPipeline2(@Nonnull PatchCrmPipeline2Request request) {
-        RequestOperation<PatchCrmPipeline2Request, PatchCrmPipeline2Response> operation
-              = new PatchCrmPipeline2.Sync(sdkConfiguration, _headers);
+    public PatchCrmPipelineResponse patchCrmPipeline(@Nonnull PatchCrmPipelineRequest request) {
+        RequestOperation<PatchCrmPipelineRequest, PatchCrmPipelineResponse> operation
+              = new PatchCrmPipeline.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -145,8 +145,8 @@ public class Pipeline {
      * 
      * @return The call builder
      */
-    public RemoveCrmPipeline2RequestBuilder removeCrmPipeline2() {
-        return new RemoveCrmPipeline2RequestBuilder(sdkConfiguration);
+    public RemoveCrmPipelineRequestBuilder removeCrmPipeline() {
+        return new RemoveCrmPipelineRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -156,9 +156,9 @@ public class Pipeline {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveCrmPipeline2Response removeCrmPipeline2(@Nonnull RemoveCrmPipeline2Request request) {
-        RequestOperation<RemoveCrmPipeline2Request, RemoveCrmPipeline2Response> operation
-              = new RemoveCrmPipeline2.Sync(sdkConfiguration, _headers);
+    public RemoveCrmPipelineResponse removeCrmPipeline(@Nonnull RemoveCrmPipelineRequest request) {
+        RequestOperation<RemoveCrmPipelineRequest, RemoveCrmPipelineResponse> operation
+              = new RemoveCrmPipeline.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -167,8 +167,8 @@ public class Pipeline {
      * 
      * @return The call builder
      */
-    public UpdateCrmPipeline2RequestBuilder updateCrmPipeline2() {
-        return new UpdateCrmPipeline2RequestBuilder(sdkConfiguration);
+    public UpdateCrmPipelineRequestBuilder updateCrmPipeline() {
+        return new UpdateCrmPipelineRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -178,9 +178,9 @@ public class Pipeline {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateCrmPipeline2Response updateCrmPipeline2(@Nonnull UpdateCrmPipeline2Request request) {
-        RequestOperation<UpdateCrmPipeline2Request, UpdateCrmPipeline2Response> operation
-              = new UpdateCrmPipeline2.Sync(sdkConfiguration, _headers);
+    public UpdateCrmPipelineResponse updateCrmPipeline(@Nonnull UpdateCrmPipelineRequest request) {
+        RequestOperation<UpdateCrmPipelineRequest, UpdateCrmPipelineResponse> operation
+              = new UpdateCrmPipeline.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

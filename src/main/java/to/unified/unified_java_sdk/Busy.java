@@ -6,10 +6,10 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
-import to.unified.unified_java_sdk.models.operations.ListCalendarBusies2Request;
-import to.unified.unified_java_sdk.models.operations.ListCalendarBusies2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.ListCalendarBusies2Response;
-import to.unified.unified_java_sdk.operations.ListCalendarBusies2;
+import to.unified.unified_java_sdk.models.operations.ListCalendarBusiesRequest;
+import to.unified.unified_java_sdk.models.operations.ListCalendarBusiesRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListCalendarBusiesResponse;
+import to.unified.unified_java_sdk.operations.ListCalendarBusies;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -37,8 +37,8 @@ public class Busy {
      * 
      * @return The call builder
      */
-    public ListCalendarBusies2RequestBuilder listCalendarBusies2() {
-        return new ListCalendarBusies2RequestBuilder(sdkConfiguration);
+    public ListCalendarBusiesRequestBuilder listCalendarBusies() {
+        return new ListCalendarBusiesRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -48,9 +48,9 @@ public class Busy {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListCalendarBusies2Response listCalendarBusies2(@Nonnull ListCalendarBusies2Request request) {
-        RequestOperation<ListCalendarBusies2Request, ListCalendarBusies2Response> operation
-              = new ListCalendarBusies2.Sync(sdkConfiguration, _headers);
+    public ListCalendarBusiesResponse listCalendarBusies(@Nonnull ListCalendarBusiesRequest request) {
+        RequestOperation<ListCalendarBusiesRequest, ListCalendarBusiesResponse> operation
+              = new ListCalendarBusies.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

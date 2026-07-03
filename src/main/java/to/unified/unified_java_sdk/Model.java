@@ -6,14 +6,14 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
-import to.unified.unified_java_sdk.models.operations.GetGenaiModel2Request;
-import to.unified.unified_java_sdk.models.operations.GetGenaiModel2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.GetGenaiModel2Response;
-import to.unified.unified_java_sdk.models.operations.ListGenaiModels2Request;
-import to.unified.unified_java_sdk.models.operations.ListGenaiModels2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.ListGenaiModels2Response;
-import to.unified.unified_java_sdk.operations.GetGenaiModel2;
-import to.unified.unified_java_sdk.operations.ListGenaiModels2;
+import to.unified.unified_java_sdk.models.operations.GetGenaiModelRequest;
+import to.unified.unified_java_sdk.models.operations.GetGenaiModelRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetGenaiModelResponse;
+import to.unified.unified_java_sdk.models.operations.ListGenaiModelsRequest;
+import to.unified.unified_java_sdk.models.operations.ListGenaiModelsRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListGenaiModelsResponse;
+import to.unified.unified_java_sdk.operations.GetGenaiModel;
+import to.unified.unified_java_sdk.operations.ListGenaiModels;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -41,8 +41,8 @@ public class Model {
      * 
      * @return The call builder
      */
-    public GetGenaiModel2RequestBuilder getGenaiModel2() {
-        return new GetGenaiModel2RequestBuilder(sdkConfiguration);
+    public GetGenaiModelRequestBuilder getGenaiModel() {
+        return new GetGenaiModelRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -52,9 +52,9 @@ public class Model {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetGenaiModel2Response getGenaiModel2(@Nonnull GetGenaiModel2Request request) {
-        RequestOperation<GetGenaiModel2Request, GetGenaiModel2Response> operation
-              = new GetGenaiModel2.Sync(sdkConfiguration, _headers);
+    public GetGenaiModelResponse getGenaiModel(@Nonnull GetGenaiModelRequest request) {
+        RequestOperation<GetGenaiModelRequest, GetGenaiModelResponse> operation
+              = new GetGenaiModel.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -63,8 +63,8 @@ public class Model {
      * 
      * @return The call builder
      */
-    public ListGenaiModels2RequestBuilder listGenaiModels2() {
-        return new ListGenaiModels2RequestBuilder(sdkConfiguration);
+    public ListGenaiModelsRequestBuilder listGenaiModels() {
+        return new ListGenaiModelsRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -74,9 +74,9 @@ public class Model {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListGenaiModels2Response listGenaiModels2(@Nonnull ListGenaiModels2Request request) {
-        RequestOperation<ListGenaiModels2Request, ListGenaiModels2Response> operation
-              = new ListGenaiModels2.Sync(sdkConfiguration, _headers);
+    public ListGenaiModelsResponse listGenaiModels(@Nonnull ListGenaiModelsRequest request) {
+        RequestOperation<ListGenaiModelsRequest, ListGenaiModelsResponse> operation
+              = new ListGenaiModels.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

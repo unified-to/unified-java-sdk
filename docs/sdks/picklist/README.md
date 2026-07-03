@@ -4,22 +4,22 @@
 
 ### Available Operations
 
-* [listCrmPicklists2](#listcrmpicklists2) - List all picklists
+* [listCrmPicklists](#listcrmpicklists) - List all picklists
 
-## listCrmPicklists2
+## listCrmPicklists
 
 List all picklists
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="listCrmPicklists2" method="get" path="/crm/{connection_id}/picklist" -->
+<!-- UsageSnippet language="java" operationID="listCrmPicklists" method="get" path="/crm/{connection_id}/picklist" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.ListCrmPicklists2Request;
-import to.unified.unified_java_sdk.models.operations.ListCrmPicklists2Response;
+import to.unified.unified_java_sdk.models.operations.ListCrmPicklistsRequest;
+import to.unified.unified_java_sdk.models.operations.ListCrmPicklistsResponse;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -32,11 +32,11 @@ public class Application {
                     .build())
             .build();
 
-        ListCrmPicklists2Request req = ListCrmPicklists2Request.builder()
+        ListCrmPicklistsRequest req = ListCrmPicklistsRequest.builder()
                 .connectionId("<id>")
                 .build();
 
-        ListCrmPicklists2Response res = sdk.picklist().listCrmPicklists2()
+        ListCrmPicklistsResponse res = sdk.picklist().listCrmPicklists()
                 .request(req)
                 .call();
 
@@ -49,13 +49,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
-| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
-| `request`                                                                       | [ListCrmPicklists2Request](../../models/operations/ListCrmPicklists2Request.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
+| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
+| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| `request`                                                                     | [ListCrmPicklistsRequest](../../models/operations/ListCrmPicklistsRequest.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
 
 ### Response
 
-**[ListCrmPicklists2Response](../../models/operations/ListCrmPicklists2Response.md)**
+**[ListCrmPicklistsResponse](../../models/operations/ListCrmPicklistsResponse.md)**
 
 ### Errors
 

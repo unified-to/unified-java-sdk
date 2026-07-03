@@ -6,62 +6,62 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
-import to.unified.unified_java_sdk.models.operations.CreateAdsOrganization2Request;
-import to.unified.unified_java_sdk.models.operations.CreateAdsOrganization2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.CreateAdsOrganization2Response;
-import to.unified.unified_java_sdk.models.operations.CreateRepoOrganization2Request;
-import to.unified.unified_java_sdk.models.operations.CreateRepoOrganization2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.CreateRepoOrganization2Response;
-import to.unified.unified_java_sdk.models.operations.GetAccountingOrganization2Request;
-import to.unified.unified_java_sdk.models.operations.GetAccountingOrganization2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.GetAccountingOrganization2Response;
-import to.unified.unified_java_sdk.models.operations.GetAdsOrganization2Request;
-import to.unified.unified_java_sdk.models.operations.GetAdsOrganization2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.GetAdsOrganization2Response;
-import to.unified.unified_java_sdk.models.operations.GetRepoOrganization2Request;
-import to.unified.unified_java_sdk.models.operations.GetRepoOrganization2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.GetRepoOrganization2Response;
-import to.unified.unified_java_sdk.models.operations.ListAccountingOrganizations2Request;
-import to.unified.unified_java_sdk.models.operations.ListAccountingOrganizations2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.ListAccountingOrganizations2Response;
-import to.unified.unified_java_sdk.models.operations.ListAdsOrganizations2Request;
-import to.unified.unified_java_sdk.models.operations.ListAdsOrganizations2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.ListAdsOrganizations2Response;
-import to.unified.unified_java_sdk.models.operations.ListRepoOrganizations2Request;
-import to.unified.unified_java_sdk.models.operations.ListRepoOrganizations2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.ListRepoOrganizations2Response;
-import to.unified.unified_java_sdk.models.operations.PatchAdsOrganization2Request;
-import to.unified.unified_java_sdk.models.operations.PatchAdsOrganization2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.PatchAdsOrganization2Response;
-import to.unified.unified_java_sdk.models.operations.PatchRepoOrganization2Request;
-import to.unified.unified_java_sdk.models.operations.PatchRepoOrganization2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.PatchRepoOrganization2Response;
-import to.unified.unified_java_sdk.models.operations.RemoveAdsOrganization2Request;
-import to.unified.unified_java_sdk.models.operations.RemoveAdsOrganization2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.RemoveAdsOrganization2Response;
-import to.unified.unified_java_sdk.models.operations.RemoveRepoOrganization2Request;
-import to.unified.unified_java_sdk.models.operations.RemoveRepoOrganization2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.RemoveRepoOrganization2Response;
-import to.unified.unified_java_sdk.models.operations.UpdateAdsOrganization2Request;
-import to.unified.unified_java_sdk.models.operations.UpdateAdsOrganization2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.UpdateAdsOrganization2Response;
-import to.unified.unified_java_sdk.models.operations.UpdateRepoOrganization2Request;
-import to.unified.unified_java_sdk.models.operations.UpdateRepoOrganization2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.UpdateRepoOrganization2Response;
-import to.unified.unified_java_sdk.operations.CreateAdsOrganization2;
-import to.unified.unified_java_sdk.operations.CreateRepoOrganization2;
-import to.unified.unified_java_sdk.operations.GetAccountingOrganization2;
-import to.unified.unified_java_sdk.operations.GetAdsOrganization2;
-import to.unified.unified_java_sdk.operations.GetRepoOrganization2;
-import to.unified.unified_java_sdk.operations.ListAccountingOrganizations2;
-import to.unified.unified_java_sdk.operations.ListAdsOrganizations2;
-import to.unified.unified_java_sdk.operations.ListRepoOrganizations2;
-import to.unified.unified_java_sdk.operations.PatchAdsOrganization2;
-import to.unified.unified_java_sdk.operations.PatchRepoOrganization2;
-import to.unified.unified_java_sdk.operations.RemoveAdsOrganization2;
-import to.unified.unified_java_sdk.operations.RemoveRepoOrganization2;
-import to.unified.unified_java_sdk.operations.UpdateAdsOrganization2;
-import to.unified.unified_java_sdk.operations.UpdateRepoOrganization2;
+import to.unified.unified_java_sdk.models.operations.CreateAdsOrganizationRequest;
+import to.unified.unified_java_sdk.models.operations.CreateAdsOrganizationRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.CreateAdsOrganizationResponse;
+import to.unified.unified_java_sdk.models.operations.CreateRepoOrganizationRequest;
+import to.unified.unified_java_sdk.models.operations.CreateRepoOrganizationRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.CreateRepoOrganizationResponse;
+import to.unified.unified_java_sdk.models.operations.GetAccountingOrganizationRequest;
+import to.unified.unified_java_sdk.models.operations.GetAccountingOrganizationRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetAccountingOrganizationResponse;
+import to.unified.unified_java_sdk.models.operations.GetAdsOrganizationRequest;
+import to.unified.unified_java_sdk.models.operations.GetAdsOrganizationRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetAdsOrganizationResponse;
+import to.unified.unified_java_sdk.models.operations.GetRepoOrganizationRequest;
+import to.unified.unified_java_sdk.models.operations.GetRepoOrganizationRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetRepoOrganizationResponse;
+import to.unified.unified_java_sdk.models.operations.ListAccountingOrganizationsRequest;
+import to.unified.unified_java_sdk.models.operations.ListAccountingOrganizationsRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListAccountingOrganizationsResponse;
+import to.unified.unified_java_sdk.models.operations.ListAdsOrganizationsRequest;
+import to.unified.unified_java_sdk.models.operations.ListAdsOrganizationsRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListAdsOrganizationsResponse;
+import to.unified.unified_java_sdk.models.operations.ListRepoOrganizationsRequest;
+import to.unified.unified_java_sdk.models.operations.ListRepoOrganizationsRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListRepoOrganizationsResponse;
+import to.unified.unified_java_sdk.models.operations.PatchAdsOrganizationRequest;
+import to.unified.unified_java_sdk.models.operations.PatchAdsOrganizationRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.PatchAdsOrganizationResponse;
+import to.unified.unified_java_sdk.models.operations.PatchRepoOrganizationRequest;
+import to.unified.unified_java_sdk.models.operations.PatchRepoOrganizationRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.PatchRepoOrganizationResponse;
+import to.unified.unified_java_sdk.models.operations.RemoveAdsOrganizationRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveAdsOrganizationRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.RemoveAdsOrganizationResponse;
+import to.unified.unified_java_sdk.models.operations.RemoveRepoOrganizationRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveRepoOrganizationRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.RemoveRepoOrganizationResponse;
+import to.unified.unified_java_sdk.models.operations.UpdateAdsOrganizationRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateAdsOrganizationRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.UpdateAdsOrganizationResponse;
+import to.unified.unified_java_sdk.models.operations.UpdateRepoOrganizationRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateRepoOrganizationRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.UpdateRepoOrganizationResponse;
+import to.unified.unified_java_sdk.operations.CreateAdsOrganization;
+import to.unified.unified_java_sdk.operations.CreateRepoOrganization;
+import to.unified.unified_java_sdk.operations.GetAccountingOrganization;
+import to.unified.unified_java_sdk.operations.GetAdsOrganization;
+import to.unified.unified_java_sdk.operations.GetRepoOrganization;
+import to.unified.unified_java_sdk.operations.ListAccountingOrganizations;
+import to.unified.unified_java_sdk.operations.ListAdsOrganizations;
+import to.unified.unified_java_sdk.operations.ListRepoOrganizations;
+import to.unified.unified_java_sdk.operations.PatchAdsOrganization;
+import to.unified.unified_java_sdk.operations.PatchRepoOrganization;
+import to.unified.unified_java_sdk.operations.RemoveAdsOrganization;
+import to.unified.unified_java_sdk.operations.RemoveRepoOrganization;
+import to.unified.unified_java_sdk.operations.UpdateAdsOrganization;
+import to.unified.unified_java_sdk.operations.UpdateRepoOrganization;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -89,8 +89,8 @@ public class Organization {
      * 
      * @return The call builder
      */
-    public CreateAdsOrganization2RequestBuilder createAdsOrganization2() {
-        return new CreateAdsOrganization2RequestBuilder(sdkConfiguration);
+    public CreateAdsOrganizationRequestBuilder createAdsOrganization() {
+        return new CreateAdsOrganizationRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -100,9 +100,9 @@ public class Organization {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateAdsOrganization2Response createAdsOrganization2(@Nonnull CreateAdsOrganization2Request request) {
-        RequestOperation<CreateAdsOrganization2Request, CreateAdsOrganization2Response> operation
-              = new CreateAdsOrganization2.Sync(sdkConfiguration, _headers);
+    public CreateAdsOrganizationResponse createAdsOrganization(@Nonnull CreateAdsOrganizationRequest request) {
+        RequestOperation<CreateAdsOrganizationRequest, CreateAdsOrganizationResponse> operation
+              = new CreateAdsOrganization.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -111,8 +111,8 @@ public class Organization {
      * 
      * @return The call builder
      */
-    public CreateRepoOrganization2RequestBuilder createRepoOrganization2() {
-        return new CreateRepoOrganization2RequestBuilder(sdkConfiguration);
+    public CreateRepoOrganizationRequestBuilder createRepoOrganization() {
+        return new CreateRepoOrganizationRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -122,9 +122,9 @@ public class Organization {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateRepoOrganization2Response createRepoOrganization2(@Nonnull CreateRepoOrganization2Request request) {
-        RequestOperation<CreateRepoOrganization2Request, CreateRepoOrganization2Response> operation
-              = new CreateRepoOrganization2.Sync(sdkConfiguration, _headers);
+    public CreateRepoOrganizationResponse createRepoOrganization(@Nonnull CreateRepoOrganizationRequest request) {
+        RequestOperation<CreateRepoOrganizationRequest, CreateRepoOrganizationResponse> operation
+              = new CreateRepoOrganization.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -133,30 +133,8 @@ public class Organization {
      * 
      * @return The call builder
      */
-    public GetAccountingOrganization2RequestBuilder getAccountingOrganization2() {
-        return new GetAccountingOrganization2RequestBuilder(sdkConfiguration);
-    }
-
-    /**
-     * Retrieve an organization
-     * 
-     * @param request The request object containing all the parameters for the API call.
-     * @return The response from the API call
-     * @throws RuntimeException subclass if the API call fails
-     */
-    public GetAccountingOrganization2Response getAccountingOrganization2(@Nonnull GetAccountingOrganization2Request request) {
-        RequestOperation<GetAccountingOrganization2Request, GetAccountingOrganization2Response> operation
-              = new GetAccountingOrganization2.Sync(sdkConfiguration, _headers);
-        return operation.handleResponse(operation.doRequest(request));
-    }
-
-    /**
-     * Retrieve an organization
-     * 
-     * @return The call builder
-     */
-    public GetAdsOrganization2RequestBuilder getAdsOrganization2() {
-        return new GetAdsOrganization2RequestBuilder(sdkConfiguration);
+    public GetAccountingOrganizationRequestBuilder getAccountingOrganization() {
+        return new GetAccountingOrganizationRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -166,9 +144,9 @@ public class Organization {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetAdsOrganization2Response getAdsOrganization2(@Nonnull GetAdsOrganization2Request request) {
-        RequestOperation<GetAdsOrganization2Request, GetAdsOrganization2Response> operation
-              = new GetAdsOrganization2.Sync(sdkConfiguration, _headers);
+    public GetAccountingOrganizationResponse getAccountingOrganization(@Nonnull GetAccountingOrganizationRequest request) {
+        RequestOperation<GetAccountingOrganizationRequest, GetAccountingOrganizationResponse> operation
+              = new GetAccountingOrganization.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -177,8 +155,8 @@ public class Organization {
      * 
      * @return The call builder
      */
-    public GetRepoOrganization2RequestBuilder getRepoOrganization2() {
-        return new GetRepoOrganization2RequestBuilder(sdkConfiguration);
+    public GetAdsOrganizationRequestBuilder getAdsOrganization() {
+        return new GetAdsOrganizationRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -188,9 +166,31 @@ public class Organization {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetRepoOrganization2Response getRepoOrganization2(@Nonnull GetRepoOrganization2Request request) {
-        RequestOperation<GetRepoOrganization2Request, GetRepoOrganization2Response> operation
-              = new GetRepoOrganization2.Sync(sdkConfiguration, _headers);
+    public GetAdsOrganizationResponse getAdsOrganization(@Nonnull GetAdsOrganizationRequest request) {
+        RequestOperation<GetAdsOrganizationRequest, GetAdsOrganizationResponse> operation
+              = new GetAdsOrganization.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Retrieve an organization
+     * 
+     * @return The call builder
+     */
+    public GetRepoOrganizationRequestBuilder getRepoOrganization() {
+        return new GetRepoOrganizationRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Retrieve an organization
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetRepoOrganizationResponse getRepoOrganization(@Nonnull GetRepoOrganizationRequest request) {
+        RequestOperation<GetRepoOrganizationRequest, GetRepoOrganizationResponse> operation
+              = new GetRepoOrganization.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -199,8 +199,8 @@ public class Organization {
      * 
      * @return The call builder
      */
-    public ListAccountingOrganizations2RequestBuilder listAccountingOrganizations2() {
-        return new ListAccountingOrganizations2RequestBuilder(sdkConfiguration);
+    public ListAccountingOrganizationsRequestBuilder listAccountingOrganizations() {
+        return new ListAccountingOrganizationsRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -210,9 +210,9 @@ public class Organization {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListAccountingOrganizations2Response listAccountingOrganizations2(@Nonnull ListAccountingOrganizations2Request request) {
-        RequestOperation<ListAccountingOrganizations2Request, ListAccountingOrganizations2Response> operation
-              = new ListAccountingOrganizations2.Sync(sdkConfiguration, _headers);
+    public ListAccountingOrganizationsResponse listAccountingOrganizations(@Nonnull ListAccountingOrganizationsRequest request) {
+        RequestOperation<ListAccountingOrganizationsRequest, ListAccountingOrganizationsResponse> operation
+              = new ListAccountingOrganizations.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -221,8 +221,8 @@ public class Organization {
      * 
      * @return The call builder
      */
-    public ListAdsOrganizations2RequestBuilder listAdsOrganizations2() {
-        return new ListAdsOrganizations2RequestBuilder(sdkConfiguration);
+    public ListAdsOrganizationsRequestBuilder listAdsOrganizations() {
+        return new ListAdsOrganizationsRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -232,9 +232,9 @@ public class Organization {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListAdsOrganizations2Response listAdsOrganizations2(@Nonnull ListAdsOrganizations2Request request) {
-        RequestOperation<ListAdsOrganizations2Request, ListAdsOrganizations2Response> operation
-              = new ListAdsOrganizations2.Sync(sdkConfiguration, _headers);
+    public ListAdsOrganizationsResponse listAdsOrganizations(@Nonnull ListAdsOrganizationsRequest request) {
+        RequestOperation<ListAdsOrganizationsRequest, ListAdsOrganizationsResponse> operation
+              = new ListAdsOrganizations.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -243,8 +243,8 @@ public class Organization {
      * 
      * @return The call builder
      */
-    public ListRepoOrganizations2RequestBuilder listRepoOrganizations2() {
-        return new ListRepoOrganizations2RequestBuilder(sdkConfiguration);
+    public ListRepoOrganizationsRequestBuilder listRepoOrganizations() {
+        return new ListRepoOrganizationsRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -254,9 +254,9 @@ public class Organization {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListRepoOrganizations2Response listRepoOrganizations2(@Nonnull ListRepoOrganizations2Request request) {
-        RequestOperation<ListRepoOrganizations2Request, ListRepoOrganizations2Response> operation
-              = new ListRepoOrganizations2.Sync(sdkConfiguration, _headers);
+    public ListRepoOrganizationsResponse listRepoOrganizations(@Nonnull ListRepoOrganizationsRequest request) {
+        RequestOperation<ListRepoOrganizationsRequest, ListRepoOrganizationsResponse> operation
+              = new ListRepoOrganizations.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -265,30 +265,8 @@ public class Organization {
      * 
      * @return The call builder
      */
-    public PatchAdsOrganization2RequestBuilder patchAdsOrganization2() {
-        return new PatchAdsOrganization2RequestBuilder(sdkConfiguration);
-    }
-
-    /**
-     * Update an organization
-     * 
-     * @param request The request object containing all the parameters for the API call.
-     * @return The response from the API call
-     * @throws RuntimeException subclass if the API call fails
-     */
-    public PatchAdsOrganization2Response patchAdsOrganization2(@Nonnull PatchAdsOrganization2Request request) {
-        RequestOperation<PatchAdsOrganization2Request, PatchAdsOrganization2Response> operation
-              = new PatchAdsOrganization2.Sync(sdkConfiguration, _headers);
-        return operation.handleResponse(operation.doRequest(request));
-    }
-
-    /**
-     * Update an organization
-     * 
-     * @return The call builder
-     */
-    public PatchRepoOrganization2RequestBuilder patchRepoOrganization2() {
-        return new PatchRepoOrganization2RequestBuilder(sdkConfiguration);
+    public PatchAdsOrganizationRequestBuilder patchAdsOrganization() {
+        return new PatchAdsOrganizationRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -298,9 +276,31 @@ public class Organization {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchRepoOrganization2Response patchRepoOrganization2(@Nonnull PatchRepoOrganization2Request request) {
-        RequestOperation<PatchRepoOrganization2Request, PatchRepoOrganization2Response> operation
-              = new PatchRepoOrganization2.Sync(sdkConfiguration, _headers);
+    public PatchAdsOrganizationResponse patchAdsOrganization(@Nonnull PatchAdsOrganizationRequest request) {
+        RequestOperation<PatchAdsOrganizationRequest, PatchAdsOrganizationResponse> operation
+              = new PatchAdsOrganization.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Update an organization
+     * 
+     * @return The call builder
+     */
+    public PatchRepoOrganizationRequestBuilder patchRepoOrganization() {
+        return new PatchRepoOrganizationRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Update an organization
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchRepoOrganizationResponse patchRepoOrganization(@Nonnull PatchRepoOrganizationRequest request) {
+        RequestOperation<PatchRepoOrganizationRequest, PatchRepoOrganizationResponse> operation
+              = new PatchRepoOrganization.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -309,30 +309,8 @@ public class Organization {
      * 
      * @return The call builder
      */
-    public RemoveAdsOrganization2RequestBuilder removeAdsOrganization2() {
-        return new RemoveAdsOrganization2RequestBuilder(sdkConfiguration);
-    }
-
-    /**
-     * Remove an organization
-     * 
-     * @param request The request object containing all the parameters for the API call.
-     * @return The response from the API call
-     * @throws RuntimeException subclass if the API call fails
-     */
-    public RemoveAdsOrganization2Response removeAdsOrganization2(@Nonnull RemoveAdsOrganization2Request request) {
-        RequestOperation<RemoveAdsOrganization2Request, RemoveAdsOrganization2Response> operation
-              = new RemoveAdsOrganization2.Sync(sdkConfiguration, _headers);
-        return operation.handleResponse(operation.doRequest(request));
-    }
-
-    /**
-     * Remove an organization
-     * 
-     * @return The call builder
-     */
-    public RemoveRepoOrganization2RequestBuilder removeRepoOrganization2() {
-        return new RemoveRepoOrganization2RequestBuilder(sdkConfiguration);
+    public RemoveAdsOrganizationRequestBuilder removeAdsOrganization() {
+        return new RemoveAdsOrganizationRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -342,9 +320,31 @@ public class Organization {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveRepoOrganization2Response removeRepoOrganization2(@Nonnull RemoveRepoOrganization2Request request) {
-        RequestOperation<RemoveRepoOrganization2Request, RemoveRepoOrganization2Response> operation
-              = new RemoveRepoOrganization2.Sync(sdkConfiguration, _headers);
+    public RemoveAdsOrganizationResponse removeAdsOrganization(@Nonnull RemoveAdsOrganizationRequest request) {
+        RequestOperation<RemoveAdsOrganizationRequest, RemoveAdsOrganizationResponse> operation
+              = new RemoveAdsOrganization.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Remove an organization
+     * 
+     * @return The call builder
+     */
+    public RemoveRepoOrganizationRequestBuilder removeRepoOrganization() {
+        return new RemoveRepoOrganizationRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Remove an organization
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveRepoOrganizationResponse removeRepoOrganization(@Nonnull RemoveRepoOrganizationRequest request) {
+        RequestOperation<RemoveRepoOrganizationRequest, RemoveRepoOrganizationResponse> operation
+              = new RemoveRepoOrganization.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -353,8 +353,8 @@ public class Organization {
      * 
      * @return The call builder
      */
-    public UpdateAdsOrganization2RequestBuilder updateAdsOrganization2() {
-        return new UpdateAdsOrganization2RequestBuilder(sdkConfiguration);
+    public UpdateAdsOrganizationRequestBuilder updateAdsOrganization() {
+        return new UpdateAdsOrganizationRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -364,9 +364,9 @@ public class Organization {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateAdsOrganization2Response updateAdsOrganization2(@Nonnull UpdateAdsOrganization2Request request) {
-        RequestOperation<UpdateAdsOrganization2Request, UpdateAdsOrganization2Response> operation
-              = new UpdateAdsOrganization2.Sync(sdkConfiguration, _headers);
+    public UpdateAdsOrganizationResponse updateAdsOrganization(@Nonnull UpdateAdsOrganizationRequest request) {
+        RequestOperation<UpdateAdsOrganizationRequest, UpdateAdsOrganizationResponse> operation
+              = new UpdateAdsOrganization.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -375,8 +375,8 @@ public class Organization {
      * 
      * @return The call builder
      */
-    public UpdateRepoOrganization2RequestBuilder updateRepoOrganization2() {
-        return new UpdateRepoOrganization2RequestBuilder(sdkConfiguration);
+    public UpdateRepoOrganizationRequestBuilder updateRepoOrganization() {
+        return new UpdateRepoOrganizationRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -386,9 +386,9 @@ public class Organization {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateRepoOrganization2Response updateRepoOrganization2(@Nonnull UpdateRepoOrganization2Request request) {
-        RequestOperation<UpdateRepoOrganization2Request, UpdateRepoOrganization2Response> operation
-              = new UpdateRepoOrganization2.Sync(sdkConfiguration, _headers);
+    public UpdateRepoOrganizationResponse updateRepoOrganization(@Nonnull UpdateRepoOrganizationRequest request) {
+        RequestOperation<UpdateRepoOrganizationRequest, UpdateRepoOrganizationResponse> operation
+              = new UpdateRepoOrganization.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

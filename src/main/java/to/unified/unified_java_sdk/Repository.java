@@ -6,30 +6,30 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
-import to.unified.unified_java_sdk.models.operations.CreateRepoRepository2Request;
-import to.unified.unified_java_sdk.models.operations.CreateRepoRepository2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.CreateRepoRepository2Response;
-import to.unified.unified_java_sdk.models.operations.GetRepoRepository2Request;
-import to.unified.unified_java_sdk.models.operations.GetRepoRepository2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.GetRepoRepository2Response;
-import to.unified.unified_java_sdk.models.operations.ListRepoRepositories2Request;
-import to.unified.unified_java_sdk.models.operations.ListRepoRepositories2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.ListRepoRepositories2Response;
-import to.unified.unified_java_sdk.models.operations.PatchRepoRepository2Request;
-import to.unified.unified_java_sdk.models.operations.PatchRepoRepository2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.PatchRepoRepository2Response;
-import to.unified.unified_java_sdk.models.operations.RemoveRepoRepository2Request;
-import to.unified.unified_java_sdk.models.operations.RemoveRepoRepository2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.RemoveRepoRepository2Response;
-import to.unified.unified_java_sdk.models.operations.UpdateRepoRepository2Request;
-import to.unified.unified_java_sdk.models.operations.UpdateRepoRepository2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.UpdateRepoRepository2Response;
-import to.unified.unified_java_sdk.operations.CreateRepoRepository2;
-import to.unified.unified_java_sdk.operations.GetRepoRepository2;
-import to.unified.unified_java_sdk.operations.ListRepoRepositories2;
-import to.unified.unified_java_sdk.operations.PatchRepoRepository2;
-import to.unified.unified_java_sdk.operations.RemoveRepoRepository2;
-import to.unified.unified_java_sdk.operations.UpdateRepoRepository2;
+import to.unified.unified_java_sdk.models.operations.CreateRepoRepositoryRequest;
+import to.unified.unified_java_sdk.models.operations.CreateRepoRepositoryRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.CreateRepoRepositoryResponse;
+import to.unified.unified_java_sdk.models.operations.GetRepoRepositoryRequest;
+import to.unified.unified_java_sdk.models.operations.GetRepoRepositoryRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetRepoRepositoryResponse;
+import to.unified.unified_java_sdk.models.operations.ListRepoRepositoriesRequest;
+import to.unified.unified_java_sdk.models.operations.ListRepoRepositoriesRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListRepoRepositoriesResponse;
+import to.unified.unified_java_sdk.models.operations.PatchRepoRepositoryRequest;
+import to.unified.unified_java_sdk.models.operations.PatchRepoRepositoryRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.PatchRepoRepositoryResponse;
+import to.unified.unified_java_sdk.models.operations.RemoveRepoRepositoryRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveRepoRepositoryRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.RemoveRepoRepositoryResponse;
+import to.unified.unified_java_sdk.models.operations.UpdateRepoRepositoryRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateRepoRepositoryRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.UpdateRepoRepositoryResponse;
+import to.unified.unified_java_sdk.operations.CreateRepoRepository;
+import to.unified.unified_java_sdk.operations.GetRepoRepository;
+import to.unified.unified_java_sdk.operations.ListRepoRepositories;
+import to.unified.unified_java_sdk.operations.PatchRepoRepository;
+import to.unified.unified_java_sdk.operations.RemoveRepoRepository;
+import to.unified.unified_java_sdk.operations.UpdateRepoRepository;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -57,8 +57,8 @@ public class Repository {
      * 
      * @return The call builder
      */
-    public CreateRepoRepository2RequestBuilder createRepoRepository2() {
-        return new CreateRepoRepository2RequestBuilder(sdkConfiguration);
+    public CreateRepoRepositoryRequestBuilder createRepoRepository() {
+        return new CreateRepoRepositoryRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -68,9 +68,9 @@ public class Repository {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateRepoRepository2Response createRepoRepository2(@Nonnull CreateRepoRepository2Request request) {
-        RequestOperation<CreateRepoRepository2Request, CreateRepoRepository2Response> operation
-              = new CreateRepoRepository2.Sync(sdkConfiguration, _headers);
+    public CreateRepoRepositoryResponse createRepoRepository(@Nonnull CreateRepoRepositoryRequest request) {
+        RequestOperation<CreateRepoRepositoryRequest, CreateRepoRepositoryResponse> operation
+              = new CreateRepoRepository.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -79,8 +79,8 @@ public class Repository {
      * 
      * @return The call builder
      */
-    public GetRepoRepository2RequestBuilder getRepoRepository2() {
-        return new GetRepoRepository2RequestBuilder(sdkConfiguration);
+    public GetRepoRepositoryRequestBuilder getRepoRepository() {
+        return new GetRepoRepositoryRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -90,9 +90,9 @@ public class Repository {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetRepoRepository2Response getRepoRepository2(@Nonnull GetRepoRepository2Request request) {
-        RequestOperation<GetRepoRepository2Request, GetRepoRepository2Response> operation
-              = new GetRepoRepository2.Sync(sdkConfiguration, _headers);
+    public GetRepoRepositoryResponse getRepoRepository(@Nonnull GetRepoRepositoryRequest request) {
+        RequestOperation<GetRepoRepositoryRequest, GetRepoRepositoryResponse> operation
+              = new GetRepoRepository.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -101,8 +101,8 @@ public class Repository {
      * 
      * @return The call builder
      */
-    public ListRepoRepositories2RequestBuilder listRepoRepositories2() {
-        return new ListRepoRepositories2RequestBuilder(sdkConfiguration);
+    public ListRepoRepositoriesRequestBuilder listRepoRepositories() {
+        return new ListRepoRepositoriesRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -112,9 +112,9 @@ public class Repository {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListRepoRepositories2Response listRepoRepositories2(@Nonnull ListRepoRepositories2Request request) {
-        RequestOperation<ListRepoRepositories2Request, ListRepoRepositories2Response> operation
-              = new ListRepoRepositories2.Sync(sdkConfiguration, _headers);
+    public ListRepoRepositoriesResponse listRepoRepositories(@Nonnull ListRepoRepositoriesRequest request) {
+        RequestOperation<ListRepoRepositoriesRequest, ListRepoRepositoriesResponse> operation
+              = new ListRepoRepositories.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -123,8 +123,8 @@ public class Repository {
      * 
      * @return The call builder
      */
-    public PatchRepoRepository2RequestBuilder patchRepoRepository2() {
-        return new PatchRepoRepository2RequestBuilder(sdkConfiguration);
+    public PatchRepoRepositoryRequestBuilder patchRepoRepository() {
+        return new PatchRepoRepositoryRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -134,9 +134,9 @@ public class Repository {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchRepoRepository2Response patchRepoRepository2(@Nonnull PatchRepoRepository2Request request) {
-        RequestOperation<PatchRepoRepository2Request, PatchRepoRepository2Response> operation
-              = new PatchRepoRepository2.Sync(sdkConfiguration, _headers);
+    public PatchRepoRepositoryResponse patchRepoRepository(@Nonnull PatchRepoRepositoryRequest request) {
+        RequestOperation<PatchRepoRepositoryRequest, PatchRepoRepositoryResponse> operation
+              = new PatchRepoRepository.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -145,8 +145,8 @@ public class Repository {
      * 
      * @return The call builder
      */
-    public RemoveRepoRepository2RequestBuilder removeRepoRepository2() {
-        return new RemoveRepoRepository2RequestBuilder(sdkConfiguration);
+    public RemoveRepoRepositoryRequestBuilder removeRepoRepository() {
+        return new RemoveRepoRepositoryRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -156,9 +156,9 @@ public class Repository {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveRepoRepository2Response removeRepoRepository2(@Nonnull RemoveRepoRepository2Request request) {
-        RequestOperation<RemoveRepoRepository2Request, RemoveRepoRepository2Response> operation
-              = new RemoveRepoRepository2.Sync(sdkConfiguration, _headers);
+    public RemoveRepoRepositoryResponse removeRepoRepository(@Nonnull RemoveRepoRepositoryRequest request) {
+        RequestOperation<RemoveRepoRepositoryRequest, RemoveRepoRepositoryResponse> operation
+              = new RemoveRepoRepository.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -167,8 +167,8 @@ public class Repository {
      * 
      * @return The call builder
      */
-    public UpdateRepoRepository2RequestBuilder updateRepoRepository2() {
-        return new UpdateRepoRepository2RequestBuilder(sdkConfiguration);
+    public UpdateRepoRepositoryRequestBuilder updateRepoRepository() {
+        return new UpdateRepoRepositoryRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -178,9 +178,9 @@ public class Repository {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateRepoRepository2Response updateRepoRepository2(@Nonnull UpdateRepoRepository2Request request) {
-        RequestOperation<UpdateRepoRepository2Request, UpdateRepoRepository2Response> operation
-              = new UpdateRepoRepository2.Sync(sdkConfiguration, _headers);
+    public UpdateRepoRepositoryResponse updateRepoRepository(@Nonnull UpdateRepoRepositoryRequest request) {
+        RequestOperation<UpdateRepoRepositoryRequest, UpdateRepoRepositoryResponse> operation
+              = new UpdateRepoRepository.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

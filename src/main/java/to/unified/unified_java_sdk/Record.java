@@ -6,30 +6,30 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
-import to.unified.unified_java_sdk.models.operations.CreateDatastoreRecord2Request;
-import to.unified.unified_java_sdk.models.operations.CreateDatastoreRecord2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.CreateDatastoreRecord2Response;
-import to.unified.unified_java_sdk.models.operations.GetDatastoreRecord2Request;
-import to.unified.unified_java_sdk.models.operations.GetDatastoreRecord2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.GetDatastoreRecord2Response;
-import to.unified.unified_java_sdk.models.operations.ListDatastoreRecords2Request;
-import to.unified.unified_java_sdk.models.operations.ListDatastoreRecords2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.ListDatastoreRecords2Response;
-import to.unified.unified_java_sdk.models.operations.PatchDatastoreRecord2Request;
-import to.unified.unified_java_sdk.models.operations.PatchDatastoreRecord2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.PatchDatastoreRecord2Response;
-import to.unified.unified_java_sdk.models.operations.RemoveDatastoreRecord2Request;
-import to.unified.unified_java_sdk.models.operations.RemoveDatastoreRecord2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.RemoveDatastoreRecord2Response;
-import to.unified.unified_java_sdk.models.operations.UpdateDatastoreRecord2Request;
-import to.unified.unified_java_sdk.models.operations.UpdateDatastoreRecord2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.UpdateDatastoreRecord2Response;
-import to.unified.unified_java_sdk.operations.CreateDatastoreRecord2;
-import to.unified.unified_java_sdk.operations.GetDatastoreRecord2;
-import to.unified.unified_java_sdk.operations.ListDatastoreRecords2;
-import to.unified.unified_java_sdk.operations.PatchDatastoreRecord2;
-import to.unified.unified_java_sdk.operations.RemoveDatastoreRecord2;
-import to.unified.unified_java_sdk.operations.UpdateDatastoreRecord2;
+import to.unified.unified_java_sdk.models.operations.CreateDatastoreRecordRequest;
+import to.unified.unified_java_sdk.models.operations.CreateDatastoreRecordRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.CreateDatastoreRecordResponse;
+import to.unified.unified_java_sdk.models.operations.GetDatastoreRecordRequest;
+import to.unified.unified_java_sdk.models.operations.GetDatastoreRecordRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetDatastoreRecordResponse;
+import to.unified.unified_java_sdk.models.operations.ListDatastoreRecordsRequest;
+import to.unified.unified_java_sdk.models.operations.ListDatastoreRecordsRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListDatastoreRecordsResponse;
+import to.unified.unified_java_sdk.models.operations.PatchDatastoreRecordRequest;
+import to.unified.unified_java_sdk.models.operations.PatchDatastoreRecordRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.PatchDatastoreRecordResponse;
+import to.unified.unified_java_sdk.models.operations.RemoveDatastoreRecordRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveDatastoreRecordRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.RemoveDatastoreRecordResponse;
+import to.unified.unified_java_sdk.models.operations.UpdateDatastoreRecordRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateDatastoreRecordRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.UpdateDatastoreRecordResponse;
+import to.unified.unified_java_sdk.operations.CreateDatastoreRecord;
+import to.unified.unified_java_sdk.operations.GetDatastoreRecord;
+import to.unified.unified_java_sdk.operations.ListDatastoreRecords;
+import to.unified.unified_java_sdk.operations.PatchDatastoreRecord;
+import to.unified.unified_java_sdk.operations.RemoveDatastoreRecord;
+import to.unified.unified_java_sdk.operations.UpdateDatastoreRecord;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -57,8 +57,8 @@ public class Record {
      * 
      * @return The call builder
      */
-    public CreateDatastoreRecord2RequestBuilder createDatastoreRecord2() {
-        return new CreateDatastoreRecord2RequestBuilder(sdkConfiguration);
+    public CreateDatastoreRecordRequestBuilder createDatastoreRecord() {
+        return new CreateDatastoreRecordRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -68,9 +68,9 @@ public class Record {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateDatastoreRecord2Response createDatastoreRecord2(@Nonnull CreateDatastoreRecord2Request request) {
-        RequestOperation<CreateDatastoreRecord2Request, CreateDatastoreRecord2Response> operation
-              = new CreateDatastoreRecord2.Sync(sdkConfiguration, _headers);
+    public CreateDatastoreRecordResponse createDatastoreRecord(@Nonnull CreateDatastoreRecordRequest request) {
+        RequestOperation<CreateDatastoreRecordRequest, CreateDatastoreRecordResponse> operation
+              = new CreateDatastoreRecord.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -79,8 +79,8 @@ public class Record {
      * 
      * @return The call builder
      */
-    public GetDatastoreRecord2RequestBuilder getDatastoreRecord2() {
-        return new GetDatastoreRecord2RequestBuilder(sdkConfiguration);
+    public GetDatastoreRecordRequestBuilder getDatastoreRecord() {
+        return new GetDatastoreRecordRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -90,9 +90,9 @@ public class Record {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetDatastoreRecord2Response getDatastoreRecord2(@Nonnull GetDatastoreRecord2Request request) {
-        RequestOperation<GetDatastoreRecord2Request, GetDatastoreRecord2Response> operation
-              = new GetDatastoreRecord2.Sync(sdkConfiguration, _headers);
+    public GetDatastoreRecordResponse getDatastoreRecord(@Nonnull GetDatastoreRecordRequest request) {
+        RequestOperation<GetDatastoreRecordRequest, GetDatastoreRecordResponse> operation
+              = new GetDatastoreRecord.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -101,8 +101,8 @@ public class Record {
      * 
      * @return The call builder
      */
-    public ListDatastoreRecords2RequestBuilder listDatastoreRecords2() {
-        return new ListDatastoreRecords2RequestBuilder(sdkConfiguration);
+    public ListDatastoreRecordsRequestBuilder listDatastoreRecords() {
+        return new ListDatastoreRecordsRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -112,9 +112,9 @@ public class Record {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListDatastoreRecords2Response listDatastoreRecords2(@Nonnull ListDatastoreRecords2Request request) {
-        RequestOperation<ListDatastoreRecords2Request, ListDatastoreRecords2Response> operation
-              = new ListDatastoreRecords2.Sync(sdkConfiguration, _headers);
+    public ListDatastoreRecordsResponse listDatastoreRecords(@Nonnull ListDatastoreRecordsRequest request) {
+        RequestOperation<ListDatastoreRecordsRequest, ListDatastoreRecordsResponse> operation
+              = new ListDatastoreRecords.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -123,8 +123,8 @@ public class Record {
      * 
      * @return The call builder
      */
-    public PatchDatastoreRecord2RequestBuilder patchDatastoreRecord2() {
-        return new PatchDatastoreRecord2RequestBuilder(sdkConfiguration);
+    public PatchDatastoreRecordRequestBuilder patchDatastoreRecord() {
+        return new PatchDatastoreRecordRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -134,9 +134,9 @@ public class Record {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchDatastoreRecord2Response patchDatastoreRecord2(@Nonnull PatchDatastoreRecord2Request request) {
-        RequestOperation<PatchDatastoreRecord2Request, PatchDatastoreRecord2Response> operation
-              = new PatchDatastoreRecord2.Sync(sdkConfiguration, _headers);
+    public PatchDatastoreRecordResponse patchDatastoreRecord(@Nonnull PatchDatastoreRecordRequest request) {
+        RequestOperation<PatchDatastoreRecordRequest, PatchDatastoreRecordResponse> operation
+              = new PatchDatastoreRecord.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -145,8 +145,8 @@ public class Record {
      * 
      * @return The call builder
      */
-    public RemoveDatastoreRecord2RequestBuilder removeDatastoreRecord2() {
-        return new RemoveDatastoreRecord2RequestBuilder(sdkConfiguration);
+    public RemoveDatastoreRecordRequestBuilder removeDatastoreRecord() {
+        return new RemoveDatastoreRecordRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -156,9 +156,9 @@ public class Record {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveDatastoreRecord2Response removeDatastoreRecord2(@Nonnull RemoveDatastoreRecord2Request request) {
-        RequestOperation<RemoveDatastoreRecord2Request, RemoveDatastoreRecord2Response> operation
-              = new RemoveDatastoreRecord2.Sync(sdkConfiguration, _headers);
+    public RemoveDatastoreRecordResponse removeDatastoreRecord(@Nonnull RemoveDatastoreRecordRequest request) {
+        RequestOperation<RemoveDatastoreRecordRequest, RemoveDatastoreRecordResponse> operation
+              = new RemoveDatastoreRecord.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -167,8 +167,8 @@ public class Record {
      * 
      * @return The call builder
      */
-    public UpdateDatastoreRecord2RequestBuilder updateDatastoreRecord2() {
-        return new UpdateDatastoreRecord2RequestBuilder(sdkConfiguration);
+    public UpdateDatastoreRecordRequestBuilder updateDatastoreRecord() {
+        return new UpdateDatastoreRecordRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -178,9 +178,9 @@ public class Record {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateDatastoreRecord2Response updateDatastoreRecord2(@Nonnull UpdateDatastoreRecord2Request request) {
-        RequestOperation<UpdateDatastoreRecord2Request, UpdateDatastoreRecord2Response> operation
-              = new UpdateDatastoreRecord2.Sync(sdkConfiguration, _headers);
+    public UpdateDatastoreRecordResponse updateDatastoreRecord(@Nonnull UpdateDatastoreRecordRequest request) {
+        RequestOperation<UpdateDatastoreRecordRequest, UpdateDatastoreRecordResponse> operation
+              = new UpdateDatastoreRecord.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

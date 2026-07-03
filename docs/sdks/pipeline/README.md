@@ -4,27 +4,27 @@
 
 ### Available Operations
 
-* [createCrmPipeline2](#createcrmpipeline2) - Create a pipeline
-* [getCrmPipeline2](#getcrmpipeline2) - Retrieve a pipeline
-* [listCrmPipelines2](#listcrmpipelines2) - List all pipelines
-* [patchCrmPipeline2](#patchcrmpipeline2) - Update a pipeline
-* [removeCrmPipeline2](#removecrmpipeline2) - Remove a pipeline
-* [updateCrmPipeline2](#updatecrmpipeline2) - Update a pipeline
+* [createCrmPipeline](#createcrmpipeline) - Create a pipeline
+* [getCrmPipeline](#getcrmpipeline) - Retrieve a pipeline
+* [listCrmPipelines](#listcrmpipelines) - List all pipelines
+* [patchCrmPipeline](#patchcrmpipeline) - Update a pipeline
+* [removeCrmPipeline](#removecrmpipeline) - Remove a pipeline
+* [updateCrmPipeline](#updatecrmpipeline) - Update a pipeline
 
-## createCrmPipeline2
+## createCrmPipeline
 
 Create a pipeline
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createCrmPipeline2" method="post" path="/crm/{connection_id}/pipeline" -->
+<!-- UsageSnippet language="java" operationID="createCrmPipeline" method="post" path="/crm/{connection_id}/pipeline" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.CreateCrmPipeline2Request;
-import to.unified.unified_java_sdk.models.operations.CreateCrmPipeline2Response;
+import to.unified.unified_java_sdk.models.operations.CreateCrmPipelineRequest;
+import to.unified.unified_java_sdk.models.operations.CreateCrmPipelineResponse;
 import to.unified.unified_java_sdk.models.shared.CrmPipeline;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -38,13 +38,13 @@ public class Application {
                     .build())
             .build();
 
-        CreateCrmPipeline2Request req = CreateCrmPipeline2Request.builder()
+        CreateCrmPipelineRequest req = CreateCrmPipelineRequest.builder()
                 .crmPipeline(CrmPipeline.builder()
                     .build())
                 .connectionId("<id>")
                 .build();
 
-        CreateCrmPipeline2Response res = sdk.pipeline().createCrmPipeline2()
+        CreateCrmPipelineResponse res = sdk.pipeline().createCrmPipeline()
                 .request(req)
                 .call();
 
@@ -57,13 +57,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
-| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
-| `request`                                                                         | [CreateCrmPipeline2Request](../../models/operations/CreateCrmPipeline2Request.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
+| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| `request`                                                                       | [CreateCrmPipelineRequest](../../models/operations/CreateCrmPipelineRequest.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
 
 ### Response
 
-**[CreateCrmPipeline2Response](../../models/operations/CreateCrmPipeline2Response.md)**
+**[CreateCrmPipelineResponse](../../models/operations/CreateCrmPipelineResponse.md)**
 
 ### Errors
 
@@ -71,20 +71,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## getCrmPipeline2
+## getCrmPipeline
 
 Retrieve a pipeline
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="getCrmPipeline2" method="get" path="/crm/{connection_id}/pipeline/{id}" -->
+<!-- UsageSnippet language="java" operationID="getCrmPipeline" method="get" path="/crm/{connection_id}/pipeline/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.GetCrmPipeline2Request;
-import to.unified.unified_java_sdk.models.operations.GetCrmPipeline2Response;
+import to.unified.unified_java_sdk.models.operations.GetCrmPipelineRequest;
+import to.unified.unified_java_sdk.models.operations.GetCrmPipelineResponse;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -97,12 +97,12 @@ public class Application {
                     .build())
             .build();
 
-        GetCrmPipeline2Request req = GetCrmPipeline2Request.builder()
+        GetCrmPipelineRequest req = GetCrmPipelineRequest.builder()
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        GetCrmPipeline2Response res = sdk.pipeline().getCrmPipeline2()
+        GetCrmPipelineResponse res = sdk.pipeline().getCrmPipeline()
                 .request(req)
                 .call();
 
@@ -115,13 +115,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                   | Type                                                                        | Required                                                                    | Description                                                                 |
-| --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
-| `request`                                                                   | [GetCrmPipeline2Request](../../models/operations/GetCrmPipeline2Request.md) | :heavy_check_mark:                                                          | The request object to use for the request.                                  |
+| Parameter                                                                 | Type                                                                      | Required                                                                  | Description                                                               |
+| ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
+| `request`                                                                 | [GetCrmPipelineRequest](../../models/operations/GetCrmPipelineRequest.md) | :heavy_check_mark:                                                        | The request object to use for the request.                                |
 
 ### Response
 
-**[GetCrmPipeline2Response](../../models/operations/GetCrmPipeline2Response.md)**
+**[GetCrmPipelineResponse](../../models/operations/GetCrmPipelineResponse.md)**
 
 ### Errors
 
@@ -129,20 +129,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## listCrmPipelines2
+## listCrmPipelines
 
 List all pipelines
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="listCrmPipelines2" method="get" path="/crm/{connection_id}/pipeline" -->
+<!-- UsageSnippet language="java" operationID="listCrmPipelines" method="get" path="/crm/{connection_id}/pipeline" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.ListCrmPipelines2Request;
-import to.unified.unified_java_sdk.models.operations.ListCrmPipelines2Response;
+import to.unified.unified_java_sdk.models.operations.ListCrmPipelinesRequest;
+import to.unified.unified_java_sdk.models.operations.ListCrmPipelinesResponse;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -155,11 +155,11 @@ public class Application {
                     .build())
             .build();
 
-        ListCrmPipelines2Request req = ListCrmPipelines2Request.builder()
+        ListCrmPipelinesRequest req = ListCrmPipelinesRequest.builder()
                 .connectionId("<id>")
                 .build();
 
-        ListCrmPipelines2Response res = sdk.pipeline().listCrmPipelines2()
+        ListCrmPipelinesResponse res = sdk.pipeline().listCrmPipelines()
                 .request(req)
                 .call();
 
@@ -172,13 +172,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
-| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
-| `request`                                                                       | [ListCrmPipelines2Request](../../models/operations/ListCrmPipelines2Request.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
+| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
+| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| `request`                                                                     | [ListCrmPipelinesRequest](../../models/operations/ListCrmPipelinesRequest.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
 
 ### Response
 
-**[ListCrmPipelines2Response](../../models/operations/ListCrmPipelines2Response.md)**
+**[ListCrmPipelinesResponse](../../models/operations/ListCrmPipelinesResponse.md)**
 
 ### Errors
 
@@ -186,20 +186,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## patchCrmPipeline2
+## patchCrmPipeline
 
 Update a pipeline
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchCrmPipeline2" method="patch" path="/crm/{connection_id}/pipeline/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchCrmPipeline" method="patch" path="/crm/{connection_id}/pipeline/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.PatchCrmPipeline2Request;
-import to.unified.unified_java_sdk.models.operations.PatchCrmPipeline2Response;
+import to.unified.unified_java_sdk.models.operations.PatchCrmPipelineRequest;
+import to.unified.unified_java_sdk.models.operations.PatchCrmPipelineResponse;
 import to.unified.unified_java_sdk.models.shared.CrmPipeline;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -213,14 +213,14 @@ public class Application {
                     .build())
             .build();
 
-        PatchCrmPipeline2Request req = PatchCrmPipeline2Request.builder()
+        PatchCrmPipelineRequest req = PatchCrmPipelineRequest.builder()
                 .crmPipeline(CrmPipeline.builder()
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        PatchCrmPipeline2Response res = sdk.pipeline().patchCrmPipeline2()
+        PatchCrmPipelineResponse res = sdk.pipeline().patchCrmPipeline()
                 .request(req)
                 .call();
 
@@ -233,13 +233,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
-| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
-| `request`                                                                       | [PatchCrmPipeline2Request](../../models/operations/PatchCrmPipeline2Request.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
+| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
+| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| `request`                                                                     | [PatchCrmPipelineRequest](../../models/operations/PatchCrmPipelineRequest.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
 
 ### Response
 
-**[PatchCrmPipeline2Response](../../models/operations/PatchCrmPipeline2Response.md)**
+**[PatchCrmPipelineResponse](../../models/operations/PatchCrmPipelineResponse.md)**
 
 ### Errors
 
@@ -247,20 +247,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## removeCrmPipeline2
+## removeCrmPipeline
 
 Remove a pipeline
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="removeCrmPipeline2" method="delete" path="/crm/{connection_id}/pipeline/{id}" -->
+<!-- UsageSnippet language="java" operationID="removeCrmPipeline" method="delete" path="/crm/{connection_id}/pipeline/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.RemoveCrmPipeline2Request;
-import to.unified.unified_java_sdk.models.operations.RemoveCrmPipeline2Response;
+import to.unified.unified_java_sdk.models.operations.RemoveCrmPipelineRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveCrmPipelineResponse;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -273,12 +273,12 @@ public class Application {
                     .build())
             .build();
 
-        RemoveCrmPipeline2Request req = RemoveCrmPipeline2Request.builder()
+        RemoveCrmPipelineRequest req = RemoveCrmPipelineRequest.builder()
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        RemoveCrmPipeline2Response res = sdk.pipeline().removeCrmPipeline2()
+        RemoveCrmPipelineResponse res = sdk.pipeline().removeCrmPipeline()
                 .request(req)
                 .call();
 
@@ -289,13 +289,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
-| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
-| `request`                                                                         | [RemoveCrmPipeline2Request](../../models/operations/RemoveCrmPipeline2Request.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
+| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| `request`                                                                       | [RemoveCrmPipelineRequest](../../models/operations/RemoveCrmPipelineRequest.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
 
 ### Response
 
-**[RemoveCrmPipeline2Response](../../models/operations/RemoveCrmPipeline2Response.md)**
+**[RemoveCrmPipelineResponse](../../models/operations/RemoveCrmPipelineResponse.md)**
 
 ### Errors
 
@@ -303,20 +303,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## updateCrmPipeline2
+## updateCrmPipeline
 
 Update a pipeline
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateCrmPipeline2" method="put" path="/crm/{connection_id}/pipeline/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateCrmPipeline" method="put" path="/crm/{connection_id}/pipeline/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.UpdateCrmPipeline2Request;
-import to.unified.unified_java_sdk.models.operations.UpdateCrmPipeline2Response;
+import to.unified.unified_java_sdk.models.operations.UpdateCrmPipelineRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateCrmPipelineResponse;
 import to.unified.unified_java_sdk.models.shared.CrmPipeline;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -330,14 +330,14 @@ public class Application {
                     .build())
             .build();
 
-        UpdateCrmPipeline2Request req = UpdateCrmPipeline2Request.builder()
+        UpdateCrmPipelineRequest req = UpdateCrmPipelineRequest.builder()
                 .crmPipeline(CrmPipeline.builder()
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        UpdateCrmPipeline2Response res = sdk.pipeline().updateCrmPipeline2()
+        UpdateCrmPipelineResponse res = sdk.pipeline().updateCrmPipeline()
                 .request(req)
                 .call();
 
@@ -350,13 +350,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
-| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
-| `request`                                                                         | [UpdateCrmPipeline2Request](../../models/operations/UpdateCrmPipeline2Request.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
+| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| `request`                                                                       | [UpdateCrmPipelineRequest](../../models/operations/UpdateCrmPipelineRequest.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
 
 ### Response
 
-**[UpdateCrmPipeline2Response](../../models/operations/UpdateCrmPipeline2Response.md)**
+**[UpdateCrmPipelineResponse](../../models/operations/UpdateCrmPipelineResponse.md)**
 
 ### Errors
 

@@ -6,82 +6,82 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
-import to.unified.unified_java_sdk.models.operations.CreateAtsCompany2Request;
-import to.unified.unified_java_sdk.models.operations.CreateAtsCompany2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.CreateAtsCompany2Response;
-import to.unified.unified_java_sdk.models.operations.CreateCrmCompany2Request;
-import to.unified.unified_java_sdk.models.operations.CreateCrmCompany2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.CreateCrmCompany2Response;
-import to.unified.unified_java_sdk.models.operations.CreateHrisCompany2Request;
-import to.unified.unified_java_sdk.models.operations.CreateHrisCompany2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.CreateHrisCompany2Response;
-import to.unified.unified_java_sdk.models.operations.GetAtsCompany2Request;
-import to.unified.unified_java_sdk.models.operations.GetAtsCompany2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.GetAtsCompany2Response;
-import to.unified.unified_java_sdk.models.operations.GetCrmCompany2Request;
-import to.unified.unified_java_sdk.models.operations.GetCrmCompany2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.GetCrmCompany2Response;
-import to.unified.unified_java_sdk.models.operations.GetHrisCompany2Request;
-import to.unified.unified_java_sdk.models.operations.GetHrisCompany2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.GetHrisCompany2Response;
-import to.unified.unified_java_sdk.models.operations.ListAtsCompanies2Request;
-import to.unified.unified_java_sdk.models.operations.ListAtsCompanies2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.ListAtsCompanies2Response;
-import to.unified.unified_java_sdk.models.operations.ListCrmCompanies2Request;
-import to.unified.unified_java_sdk.models.operations.ListCrmCompanies2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.ListCrmCompanies2Response;
-import to.unified.unified_java_sdk.models.operations.ListEnrichCompanies2Request;
-import to.unified.unified_java_sdk.models.operations.ListEnrichCompanies2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.ListEnrichCompanies2Response;
-import to.unified.unified_java_sdk.models.operations.ListHrisCompanies2Request;
-import to.unified.unified_java_sdk.models.operations.ListHrisCompanies2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.ListHrisCompanies2Response;
-import to.unified.unified_java_sdk.models.operations.PatchAtsCompany2Request;
-import to.unified.unified_java_sdk.models.operations.PatchAtsCompany2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.PatchAtsCompany2Response;
-import to.unified.unified_java_sdk.models.operations.PatchCrmCompany2Request;
-import to.unified.unified_java_sdk.models.operations.PatchCrmCompany2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.PatchCrmCompany2Response;
-import to.unified.unified_java_sdk.models.operations.PatchHrisCompany2Request;
-import to.unified.unified_java_sdk.models.operations.PatchHrisCompany2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.PatchHrisCompany2Response;
-import to.unified.unified_java_sdk.models.operations.RemoveAtsCompany2Request;
-import to.unified.unified_java_sdk.models.operations.RemoveAtsCompany2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.RemoveAtsCompany2Response;
-import to.unified.unified_java_sdk.models.operations.RemoveCrmCompany2Request;
-import to.unified.unified_java_sdk.models.operations.RemoveCrmCompany2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.RemoveCrmCompany2Response;
-import to.unified.unified_java_sdk.models.operations.RemoveHrisCompany2Request;
-import to.unified.unified_java_sdk.models.operations.RemoveHrisCompany2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.RemoveHrisCompany2Response;
-import to.unified.unified_java_sdk.models.operations.UpdateAtsCompany2Request;
-import to.unified.unified_java_sdk.models.operations.UpdateAtsCompany2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.UpdateAtsCompany2Response;
-import to.unified.unified_java_sdk.models.operations.UpdateCrmCompany2Request;
-import to.unified.unified_java_sdk.models.operations.UpdateCrmCompany2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.UpdateCrmCompany2Response;
-import to.unified.unified_java_sdk.models.operations.UpdateHrisCompany2Request;
-import to.unified.unified_java_sdk.models.operations.UpdateHrisCompany2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.UpdateHrisCompany2Response;
-import to.unified.unified_java_sdk.operations.CreateAtsCompany2;
-import to.unified.unified_java_sdk.operations.CreateCrmCompany2;
-import to.unified.unified_java_sdk.operations.CreateHrisCompany2;
-import to.unified.unified_java_sdk.operations.GetAtsCompany2;
-import to.unified.unified_java_sdk.operations.GetCrmCompany2;
-import to.unified.unified_java_sdk.operations.GetHrisCompany2;
-import to.unified.unified_java_sdk.operations.ListAtsCompanies2;
-import to.unified.unified_java_sdk.operations.ListCrmCompanies2;
-import to.unified.unified_java_sdk.operations.ListEnrichCompanies2;
-import to.unified.unified_java_sdk.operations.ListHrisCompanies2;
-import to.unified.unified_java_sdk.operations.PatchAtsCompany2;
-import to.unified.unified_java_sdk.operations.PatchCrmCompany2;
-import to.unified.unified_java_sdk.operations.PatchHrisCompany2;
-import to.unified.unified_java_sdk.operations.RemoveAtsCompany2;
-import to.unified.unified_java_sdk.operations.RemoveCrmCompany2;
-import to.unified.unified_java_sdk.operations.RemoveHrisCompany2;
-import to.unified.unified_java_sdk.operations.UpdateAtsCompany2;
-import to.unified.unified_java_sdk.operations.UpdateCrmCompany2;
-import to.unified.unified_java_sdk.operations.UpdateHrisCompany2;
+import to.unified.unified_java_sdk.models.operations.CreateAtsCompanyRequest;
+import to.unified.unified_java_sdk.models.operations.CreateAtsCompanyRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.CreateAtsCompanyResponse;
+import to.unified.unified_java_sdk.models.operations.CreateCrmCompanyRequest;
+import to.unified.unified_java_sdk.models.operations.CreateCrmCompanyRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.CreateCrmCompanyResponse;
+import to.unified.unified_java_sdk.models.operations.CreateHrisCompanyRequest;
+import to.unified.unified_java_sdk.models.operations.CreateHrisCompanyRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.CreateHrisCompanyResponse;
+import to.unified.unified_java_sdk.models.operations.GetAtsCompanyRequest;
+import to.unified.unified_java_sdk.models.operations.GetAtsCompanyRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetAtsCompanyResponse;
+import to.unified.unified_java_sdk.models.operations.GetCrmCompanyRequest;
+import to.unified.unified_java_sdk.models.operations.GetCrmCompanyRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetCrmCompanyResponse;
+import to.unified.unified_java_sdk.models.operations.GetHrisCompanyRequest;
+import to.unified.unified_java_sdk.models.operations.GetHrisCompanyRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetHrisCompanyResponse;
+import to.unified.unified_java_sdk.models.operations.ListAtsCompaniesRequest;
+import to.unified.unified_java_sdk.models.operations.ListAtsCompaniesRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListAtsCompaniesResponse;
+import to.unified.unified_java_sdk.models.operations.ListCrmCompaniesRequest;
+import to.unified.unified_java_sdk.models.operations.ListCrmCompaniesRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListCrmCompaniesResponse;
+import to.unified.unified_java_sdk.models.operations.ListEnrichCompaniesRequest;
+import to.unified.unified_java_sdk.models.operations.ListEnrichCompaniesRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListEnrichCompaniesResponse;
+import to.unified.unified_java_sdk.models.operations.ListHrisCompaniesRequest;
+import to.unified.unified_java_sdk.models.operations.ListHrisCompaniesRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListHrisCompaniesResponse;
+import to.unified.unified_java_sdk.models.operations.PatchAtsCompanyRequest;
+import to.unified.unified_java_sdk.models.operations.PatchAtsCompanyRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.PatchAtsCompanyResponse;
+import to.unified.unified_java_sdk.models.operations.PatchCrmCompanyRequest;
+import to.unified.unified_java_sdk.models.operations.PatchCrmCompanyRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.PatchCrmCompanyResponse;
+import to.unified.unified_java_sdk.models.operations.PatchHrisCompanyRequest;
+import to.unified.unified_java_sdk.models.operations.PatchHrisCompanyRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.PatchHrisCompanyResponse;
+import to.unified.unified_java_sdk.models.operations.RemoveAtsCompanyRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveAtsCompanyRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.RemoveAtsCompanyResponse;
+import to.unified.unified_java_sdk.models.operations.RemoveCrmCompanyRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveCrmCompanyRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.RemoveCrmCompanyResponse;
+import to.unified.unified_java_sdk.models.operations.RemoveHrisCompanyRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveHrisCompanyRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.RemoveHrisCompanyResponse;
+import to.unified.unified_java_sdk.models.operations.UpdateAtsCompanyRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateAtsCompanyRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.UpdateAtsCompanyResponse;
+import to.unified.unified_java_sdk.models.operations.UpdateCrmCompanyRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateCrmCompanyRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.UpdateCrmCompanyResponse;
+import to.unified.unified_java_sdk.models.operations.UpdateHrisCompanyRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateHrisCompanyRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.UpdateHrisCompanyResponse;
+import to.unified.unified_java_sdk.operations.CreateAtsCompany;
+import to.unified.unified_java_sdk.operations.CreateCrmCompany;
+import to.unified.unified_java_sdk.operations.CreateHrisCompany;
+import to.unified.unified_java_sdk.operations.GetAtsCompany;
+import to.unified.unified_java_sdk.operations.GetCrmCompany;
+import to.unified.unified_java_sdk.operations.GetHrisCompany;
+import to.unified.unified_java_sdk.operations.ListAtsCompanies;
+import to.unified.unified_java_sdk.operations.ListCrmCompanies;
+import to.unified.unified_java_sdk.operations.ListEnrichCompanies;
+import to.unified.unified_java_sdk.operations.ListHrisCompanies;
+import to.unified.unified_java_sdk.operations.PatchAtsCompany;
+import to.unified.unified_java_sdk.operations.PatchCrmCompany;
+import to.unified.unified_java_sdk.operations.PatchHrisCompany;
+import to.unified.unified_java_sdk.operations.RemoveAtsCompany;
+import to.unified.unified_java_sdk.operations.RemoveCrmCompany;
+import to.unified.unified_java_sdk.operations.RemoveHrisCompany;
+import to.unified.unified_java_sdk.operations.UpdateAtsCompany;
+import to.unified.unified_java_sdk.operations.UpdateCrmCompany;
+import to.unified.unified_java_sdk.operations.UpdateHrisCompany;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -109,8 +109,8 @@ public class Company {
      * 
      * @return The call builder
      */
-    public CreateAtsCompany2RequestBuilder createAtsCompany2() {
-        return new CreateAtsCompany2RequestBuilder(sdkConfiguration);
+    public CreateAtsCompanyRequestBuilder createAtsCompany() {
+        return new CreateAtsCompanyRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -120,9 +120,9 @@ public class Company {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateAtsCompany2Response createAtsCompany2(@Nonnull CreateAtsCompany2Request request) {
-        RequestOperation<CreateAtsCompany2Request, CreateAtsCompany2Response> operation
-              = new CreateAtsCompany2.Sync(sdkConfiguration, _headers);
+    public CreateAtsCompanyResponse createAtsCompany(@Nonnull CreateAtsCompanyRequest request) {
+        RequestOperation<CreateAtsCompanyRequest, CreateAtsCompanyResponse> operation
+              = new CreateAtsCompany.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -131,30 +131,8 @@ public class Company {
      * 
      * @return The call builder
      */
-    public CreateCrmCompany2RequestBuilder createCrmCompany2() {
-        return new CreateCrmCompany2RequestBuilder(sdkConfiguration);
-    }
-
-    /**
-     * Create a company
-     * 
-     * @param request The request object containing all the parameters for the API call.
-     * @return The response from the API call
-     * @throws RuntimeException subclass if the API call fails
-     */
-    public CreateCrmCompany2Response createCrmCompany2(@Nonnull CreateCrmCompany2Request request) {
-        RequestOperation<CreateCrmCompany2Request, CreateCrmCompany2Response> operation
-              = new CreateCrmCompany2.Sync(sdkConfiguration, _headers);
-        return operation.handleResponse(operation.doRequest(request));
-    }
-
-    /**
-     * Create a company
-     * 
-     * @return The call builder
-     */
-    public CreateHrisCompany2RequestBuilder createHrisCompany2() {
-        return new CreateHrisCompany2RequestBuilder(sdkConfiguration);
+    public CreateCrmCompanyRequestBuilder createCrmCompany() {
+        return new CreateCrmCompanyRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -164,9 +142,31 @@ public class Company {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateHrisCompany2Response createHrisCompany2(@Nonnull CreateHrisCompany2Request request) {
-        RequestOperation<CreateHrisCompany2Request, CreateHrisCompany2Response> operation
-              = new CreateHrisCompany2.Sync(sdkConfiguration, _headers);
+    public CreateCrmCompanyResponse createCrmCompany(@Nonnull CreateCrmCompanyRequest request) {
+        RequestOperation<CreateCrmCompanyRequest, CreateCrmCompanyResponse> operation
+              = new CreateCrmCompany.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Create a company
+     * 
+     * @return The call builder
+     */
+    public CreateHrisCompanyRequestBuilder createHrisCompany() {
+        return new CreateHrisCompanyRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Create a company
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateHrisCompanyResponse createHrisCompany(@Nonnull CreateHrisCompanyRequest request) {
+        RequestOperation<CreateHrisCompanyRequest, CreateHrisCompanyResponse> operation
+              = new CreateHrisCompany.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -175,8 +175,8 @@ public class Company {
      * 
      * @return The call builder
      */
-    public GetAtsCompany2RequestBuilder getAtsCompany2() {
-        return new GetAtsCompany2RequestBuilder(sdkConfiguration);
+    public GetAtsCompanyRequestBuilder getAtsCompany() {
+        return new GetAtsCompanyRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -186,9 +186,9 @@ public class Company {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetAtsCompany2Response getAtsCompany2(@Nonnull GetAtsCompany2Request request) {
-        RequestOperation<GetAtsCompany2Request, GetAtsCompany2Response> operation
-              = new GetAtsCompany2.Sync(sdkConfiguration, _headers);
+    public GetAtsCompanyResponse getAtsCompany(@Nonnull GetAtsCompanyRequest request) {
+        RequestOperation<GetAtsCompanyRequest, GetAtsCompanyResponse> operation
+              = new GetAtsCompany.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -197,8 +197,8 @@ public class Company {
      * 
      * @return The call builder
      */
-    public GetCrmCompany2RequestBuilder getCrmCompany2() {
-        return new GetCrmCompany2RequestBuilder(sdkConfiguration);
+    public GetCrmCompanyRequestBuilder getCrmCompany() {
+        return new GetCrmCompanyRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -208,9 +208,9 @@ public class Company {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetCrmCompany2Response getCrmCompany2(@Nonnull GetCrmCompany2Request request) {
-        RequestOperation<GetCrmCompany2Request, GetCrmCompany2Response> operation
-              = new GetCrmCompany2.Sync(sdkConfiguration, _headers);
+    public GetCrmCompanyResponse getCrmCompany(@Nonnull GetCrmCompanyRequest request) {
+        RequestOperation<GetCrmCompanyRequest, GetCrmCompanyResponse> operation
+              = new GetCrmCompany.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -219,8 +219,8 @@ public class Company {
      * 
      * @return The call builder
      */
-    public GetHrisCompany2RequestBuilder getHrisCompany2() {
-        return new GetHrisCompany2RequestBuilder(sdkConfiguration);
+    public GetHrisCompanyRequestBuilder getHrisCompany() {
+        return new GetHrisCompanyRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -230,9 +230,9 @@ public class Company {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetHrisCompany2Response getHrisCompany2(@Nonnull GetHrisCompany2Request request) {
-        RequestOperation<GetHrisCompany2Request, GetHrisCompany2Response> operation
-              = new GetHrisCompany2.Sync(sdkConfiguration, _headers);
+    public GetHrisCompanyResponse getHrisCompany(@Nonnull GetHrisCompanyRequest request) {
+        RequestOperation<GetHrisCompanyRequest, GetHrisCompanyResponse> operation
+              = new GetHrisCompany.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -241,30 +241,8 @@ public class Company {
      * 
      * @return The call builder
      */
-    public ListAtsCompanies2RequestBuilder listAtsCompanies2() {
-        return new ListAtsCompanies2RequestBuilder(sdkConfiguration);
-    }
-
-    /**
-     * List all companies
-     * 
-     * @param request The request object containing all the parameters for the API call.
-     * @return The response from the API call
-     * @throws RuntimeException subclass if the API call fails
-     */
-    public ListAtsCompanies2Response listAtsCompanies2(@Nonnull ListAtsCompanies2Request request) {
-        RequestOperation<ListAtsCompanies2Request, ListAtsCompanies2Response> operation
-              = new ListAtsCompanies2.Sync(sdkConfiguration, _headers);
-        return operation.handleResponse(operation.doRequest(request));
-    }
-
-    /**
-     * List all companies
-     * 
-     * @return The call builder
-     */
-    public ListCrmCompanies2RequestBuilder listCrmCompanies2() {
-        return new ListCrmCompanies2RequestBuilder(sdkConfiguration);
+    public ListAtsCompaniesRequestBuilder listAtsCompanies() {
+        return new ListAtsCompaniesRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -274,9 +252,31 @@ public class Company {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListCrmCompanies2Response listCrmCompanies2(@Nonnull ListCrmCompanies2Request request) {
-        RequestOperation<ListCrmCompanies2Request, ListCrmCompanies2Response> operation
-              = new ListCrmCompanies2.Sync(sdkConfiguration, _headers);
+    public ListAtsCompaniesResponse listAtsCompanies(@Nonnull ListAtsCompaniesRequest request) {
+        RequestOperation<ListAtsCompaniesRequest, ListAtsCompaniesResponse> operation
+              = new ListAtsCompanies.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * List all companies
+     * 
+     * @return The call builder
+     */
+    public ListCrmCompaniesRequestBuilder listCrmCompanies() {
+        return new ListCrmCompaniesRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * List all companies
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListCrmCompaniesResponse listCrmCompanies(@Nonnull ListCrmCompaniesRequest request) {
+        RequestOperation<ListCrmCompaniesRequest, ListCrmCompaniesResponse> operation
+              = new ListCrmCompanies.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -285,8 +285,8 @@ public class Company {
      * 
      * @return The call builder
      */
-    public ListEnrichCompanies2RequestBuilder listEnrichCompanies2() {
-        return new ListEnrichCompanies2RequestBuilder(sdkConfiguration);
+    public ListEnrichCompaniesRequestBuilder listEnrichCompanies() {
+        return new ListEnrichCompaniesRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -296,9 +296,9 @@ public class Company {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListEnrichCompanies2Response listEnrichCompanies2(@Nonnull ListEnrichCompanies2Request request) {
-        RequestOperation<ListEnrichCompanies2Request, ListEnrichCompanies2Response> operation
-              = new ListEnrichCompanies2.Sync(sdkConfiguration, _headers);
+    public ListEnrichCompaniesResponse listEnrichCompanies(@Nonnull ListEnrichCompaniesRequest request) {
+        RequestOperation<ListEnrichCompaniesRequest, ListEnrichCompaniesResponse> operation
+              = new ListEnrichCompanies.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -307,8 +307,8 @@ public class Company {
      * 
      * @return The call builder
      */
-    public ListHrisCompanies2RequestBuilder listHrisCompanies2() {
-        return new ListHrisCompanies2RequestBuilder(sdkConfiguration);
+    public ListHrisCompaniesRequestBuilder listHrisCompanies() {
+        return new ListHrisCompaniesRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -318,9 +318,9 @@ public class Company {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListHrisCompanies2Response listHrisCompanies2(@Nonnull ListHrisCompanies2Request request) {
-        RequestOperation<ListHrisCompanies2Request, ListHrisCompanies2Response> operation
-              = new ListHrisCompanies2.Sync(sdkConfiguration, _headers);
+    public ListHrisCompaniesResponse listHrisCompanies(@Nonnull ListHrisCompaniesRequest request) {
+        RequestOperation<ListHrisCompaniesRequest, ListHrisCompaniesResponse> operation
+              = new ListHrisCompanies.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -329,8 +329,8 @@ public class Company {
      * 
      * @return The call builder
      */
-    public PatchAtsCompany2RequestBuilder patchAtsCompany2() {
-        return new PatchAtsCompany2RequestBuilder(sdkConfiguration);
+    public PatchAtsCompanyRequestBuilder patchAtsCompany() {
+        return new PatchAtsCompanyRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -340,9 +340,9 @@ public class Company {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchAtsCompany2Response patchAtsCompany2(@Nonnull PatchAtsCompany2Request request) {
-        RequestOperation<PatchAtsCompany2Request, PatchAtsCompany2Response> operation
-              = new PatchAtsCompany2.Sync(sdkConfiguration, _headers);
+    public PatchAtsCompanyResponse patchAtsCompany(@Nonnull PatchAtsCompanyRequest request) {
+        RequestOperation<PatchAtsCompanyRequest, PatchAtsCompanyResponse> operation
+              = new PatchAtsCompany.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -351,8 +351,8 @@ public class Company {
      * 
      * @return The call builder
      */
-    public PatchCrmCompany2RequestBuilder patchCrmCompany2() {
-        return new PatchCrmCompany2RequestBuilder(sdkConfiguration);
+    public PatchCrmCompanyRequestBuilder patchCrmCompany() {
+        return new PatchCrmCompanyRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -362,9 +362,9 @@ public class Company {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchCrmCompany2Response patchCrmCompany2(@Nonnull PatchCrmCompany2Request request) {
-        RequestOperation<PatchCrmCompany2Request, PatchCrmCompany2Response> operation
-              = new PatchCrmCompany2.Sync(sdkConfiguration, _headers);
+    public PatchCrmCompanyResponse patchCrmCompany(@Nonnull PatchCrmCompanyRequest request) {
+        RequestOperation<PatchCrmCompanyRequest, PatchCrmCompanyResponse> operation
+              = new PatchCrmCompany.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -373,8 +373,8 @@ public class Company {
      * 
      * @return The call builder
      */
-    public PatchHrisCompany2RequestBuilder patchHrisCompany2() {
-        return new PatchHrisCompany2RequestBuilder(sdkConfiguration);
+    public PatchHrisCompanyRequestBuilder patchHrisCompany() {
+        return new PatchHrisCompanyRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -384,9 +384,9 @@ public class Company {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchHrisCompany2Response patchHrisCompany2(@Nonnull PatchHrisCompany2Request request) {
-        RequestOperation<PatchHrisCompany2Request, PatchHrisCompany2Response> operation
-              = new PatchHrisCompany2.Sync(sdkConfiguration, _headers);
+    public PatchHrisCompanyResponse patchHrisCompany(@Nonnull PatchHrisCompanyRequest request) {
+        RequestOperation<PatchHrisCompanyRequest, PatchHrisCompanyResponse> operation
+              = new PatchHrisCompany.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -395,30 +395,8 @@ public class Company {
      * 
      * @return The call builder
      */
-    public RemoveAtsCompany2RequestBuilder removeAtsCompany2() {
-        return new RemoveAtsCompany2RequestBuilder(sdkConfiguration);
-    }
-
-    /**
-     * Remove a company
-     * 
-     * @param request The request object containing all the parameters for the API call.
-     * @return The response from the API call
-     * @throws RuntimeException subclass if the API call fails
-     */
-    public RemoveAtsCompany2Response removeAtsCompany2(@Nonnull RemoveAtsCompany2Request request) {
-        RequestOperation<RemoveAtsCompany2Request, RemoveAtsCompany2Response> operation
-              = new RemoveAtsCompany2.Sync(sdkConfiguration, _headers);
-        return operation.handleResponse(operation.doRequest(request));
-    }
-
-    /**
-     * Remove a company
-     * 
-     * @return The call builder
-     */
-    public RemoveCrmCompany2RequestBuilder removeCrmCompany2() {
-        return new RemoveCrmCompany2RequestBuilder(sdkConfiguration);
+    public RemoveAtsCompanyRequestBuilder removeAtsCompany() {
+        return new RemoveAtsCompanyRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -428,9 +406,9 @@ public class Company {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveCrmCompany2Response removeCrmCompany2(@Nonnull RemoveCrmCompany2Request request) {
-        RequestOperation<RemoveCrmCompany2Request, RemoveCrmCompany2Response> operation
-              = new RemoveCrmCompany2.Sync(sdkConfiguration, _headers);
+    public RemoveAtsCompanyResponse removeAtsCompany(@Nonnull RemoveAtsCompanyRequest request) {
+        RequestOperation<RemoveAtsCompanyRequest, RemoveAtsCompanyResponse> operation
+              = new RemoveAtsCompany.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -439,8 +417,8 @@ public class Company {
      * 
      * @return The call builder
      */
-    public RemoveHrisCompany2RequestBuilder removeHrisCompany2() {
-        return new RemoveHrisCompany2RequestBuilder(sdkConfiguration);
+    public RemoveCrmCompanyRequestBuilder removeCrmCompany() {
+        return new RemoveCrmCompanyRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -450,9 +428,31 @@ public class Company {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveHrisCompany2Response removeHrisCompany2(@Nonnull RemoveHrisCompany2Request request) {
-        RequestOperation<RemoveHrisCompany2Request, RemoveHrisCompany2Response> operation
-              = new RemoveHrisCompany2.Sync(sdkConfiguration, _headers);
+    public RemoveCrmCompanyResponse removeCrmCompany(@Nonnull RemoveCrmCompanyRequest request) {
+        RequestOperation<RemoveCrmCompanyRequest, RemoveCrmCompanyResponse> operation
+              = new RemoveCrmCompany.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Remove a company
+     * 
+     * @return The call builder
+     */
+    public RemoveHrisCompanyRequestBuilder removeHrisCompany() {
+        return new RemoveHrisCompanyRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Remove a company
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveHrisCompanyResponse removeHrisCompany(@Nonnull RemoveHrisCompanyRequest request) {
+        RequestOperation<RemoveHrisCompanyRequest, RemoveHrisCompanyResponse> operation
+              = new RemoveHrisCompany.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -461,8 +461,8 @@ public class Company {
      * 
      * @return The call builder
      */
-    public UpdateAtsCompany2RequestBuilder updateAtsCompany2() {
-        return new UpdateAtsCompany2RequestBuilder(sdkConfiguration);
+    public UpdateAtsCompanyRequestBuilder updateAtsCompany() {
+        return new UpdateAtsCompanyRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -472,9 +472,9 @@ public class Company {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateAtsCompany2Response updateAtsCompany2(@Nonnull UpdateAtsCompany2Request request) {
-        RequestOperation<UpdateAtsCompany2Request, UpdateAtsCompany2Response> operation
-              = new UpdateAtsCompany2.Sync(sdkConfiguration, _headers);
+    public UpdateAtsCompanyResponse updateAtsCompany(@Nonnull UpdateAtsCompanyRequest request) {
+        RequestOperation<UpdateAtsCompanyRequest, UpdateAtsCompanyResponse> operation
+              = new UpdateAtsCompany.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -483,8 +483,8 @@ public class Company {
      * 
      * @return The call builder
      */
-    public UpdateCrmCompany2RequestBuilder updateCrmCompany2() {
-        return new UpdateCrmCompany2RequestBuilder(sdkConfiguration);
+    public UpdateCrmCompanyRequestBuilder updateCrmCompany() {
+        return new UpdateCrmCompanyRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -494,9 +494,9 @@ public class Company {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateCrmCompany2Response updateCrmCompany2(@Nonnull UpdateCrmCompany2Request request) {
-        RequestOperation<UpdateCrmCompany2Request, UpdateCrmCompany2Response> operation
-              = new UpdateCrmCompany2.Sync(sdkConfiguration, _headers);
+    public UpdateCrmCompanyResponse updateCrmCompany(@Nonnull UpdateCrmCompanyRequest request) {
+        RequestOperation<UpdateCrmCompanyRequest, UpdateCrmCompanyResponse> operation
+              = new UpdateCrmCompany.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -505,8 +505,8 @@ public class Company {
      * 
      * @return The call builder
      */
-    public UpdateHrisCompany2RequestBuilder updateHrisCompany2() {
-        return new UpdateHrisCompany2RequestBuilder(sdkConfiguration);
+    public UpdateHrisCompanyRequestBuilder updateHrisCompany() {
+        return new UpdateHrisCompanyRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -516,9 +516,9 @@ public class Company {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateHrisCompany2Response updateHrisCompany2(@Nonnull UpdateHrisCompany2Request request) {
-        RequestOperation<UpdateHrisCompany2Request, UpdateHrisCompany2Response> operation
-              = new UpdateHrisCompany2.Sync(sdkConfiguration, _headers);
+    public UpdateHrisCompanyResponse updateHrisCompany(@Nonnull UpdateHrisCompanyRequest request) {
+        RequestOperation<UpdateHrisCompanyRequest, UpdateHrisCompanyResponse> operation
+              = new UpdateHrisCompany.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

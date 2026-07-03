@@ -6,14 +6,14 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
-import to.unified.unified_java_sdk.models.operations.GetAccountingBalancesheet2Request;
-import to.unified.unified_java_sdk.models.operations.GetAccountingBalancesheet2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.GetAccountingBalancesheet2Response;
-import to.unified.unified_java_sdk.models.operations.ListAccountingBalancesheets2Request;
-import to.unified.unified_java_sdk.models.operations.ListAccountingBalancesheets2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.ListAccountingBalancesheets2Response;
-import to.unified.unified_java_sdk.operations.GetAccountingBalancesheet2;
-import to.unified.unified_java_sdk.operations.ListAccountingBalancesheets2;
+import to.unified.unified_java_sdk.models.operations.GetAccountingBalancesheetRequest;
+import to.unified.unified_java_sdk.models.operations.GetAccountingBalancesheetRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetAccountingBalancesheetResponse;
+import to.unified.unified_java_sdk.models.operations.ListAccountingBalancesheetsRequest;
+import to.unified.unified_java_sdk.models.operations.ListAccountingBalancesheetsRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListAccountingBalancesheetsResponse;
+import to.unified.unified_java_sdk.operations.GetAccountingBalancesheet;
+import to.unified.unified_java_sdk.operations.ListAccountingBalancesheets;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -41,8 +41,8 @@ public class Balancesheet {
      * 
      * @return The call builder
      */
-    public GetAccountingBalancesheet2RequestBuilder getAccountingBalancesheet2() {
-        return new GetAccountingBalancesheet2RequestBuilder(sdkConfiguration);
+    public GetAccountingBalancesheetRequestBuilder getAccountingBalancesheet() {
+        return new GetAccountingBalancesheetRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -52,9 +52,9 @@ public class Balancesheet {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetAccountingBalancesheet2Response getAccountingBalancesheet2(@Nonnull GetAccountingBalancesheet2Request request) {
-        RequestOperation<GetAccountingBalancesheet2Request, GetAccountingBalancesheet2Response> operation
-              = new GetAccountingBalancesheet2.Sync(sdkConfiguration, _headers);
+    public GetAccountingBalancesheetResponse getAccountingBalancesheet(@Nonnull GetAccountingBalancesheetRequest request) {
+        RequestOperation<GetAccountingBalancesheetRequest, GetAccountingBalancesheetResponse> operation
+              = new GetAccountingBalancesheet.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -63,8 +63,8 @@ public class Balancesheet {
      * 
      * @return The call builder
      */
-    public ListAccountingBalancesheets2RequestBuilder listAccountingBalancesheets2() {
-        return new ListAccountingBalancesheets2RequestBuilder(sdkConfiguration);
+    public ListAccountingBalancesheetsRequestBuilder listAccountingBalancesheets() {
+        return new ListAccountingBalancesheetsRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -74,9 +74,9 @@ public class Balancesheet {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListAccountingBalancesheets2Response listAccountingBalancesheets2(@Nonnull ListAccountingBalancesheets2Request request) {
-        RequestOperation<ListAccountingBalancesheets2Request, ListAccountingBalancesheets2Response> operation
-              = new ListAccountingBalancesheets2.Sync(sdkConfiguration, _headers);
+    public ListAccountingBalancesheetsResponse listAccountingBalancesheets(@Nonnull ListAccountingBalancesheetsRequest request) {
+        RequestOperation<ListAccountingBalancesheetsRequest, ListAccountingBalancesheetsResponse> operation
+              = new ListAccountingBalancesheets.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

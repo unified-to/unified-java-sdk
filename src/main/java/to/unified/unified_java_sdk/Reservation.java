@@ -6,30 +6,30 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
-import to.unified.unified_java_sdk.models.operations.CreateCommerceReservation2Request;
-import to.unified.unified_java_sdk.models.operations.CreateCommerceReservation2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.CreateCommerceReservation2Response;
-import to.unified.unified_java_sdk.models.operations.GetCommerceReservation2Request;
-import to.unified.unified_java_sdk.models.operations.GetCommerceReservation2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.GetCommerceReservation2Response;
-import to.unified.unified_java_sdk.models.operations.ListCommerceReservations2Request;
-import to.unified.unified_java_sdk.models.operations.ListCommerceReservations2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.ListCommerceReservations2Response;
-import to.unified.unified_java_sdk.models.operations.PatchCommerceReservation2Request;
-import to.unified.unified_java_sdk.models.operations.PatchCommerceReservation2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.PatchCommerceReservation2Response;
-import to.unified.unified_java_sdk.models.operations.RemoveCommerceReservation2Request;
-import to.unified.unified_java_sdk.models.operations.RemoveCommerceReservation2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.RemoveCommerceReservation2Response;
-import to.unified.unified_java_sdk.models.operations.UpdateCommerceReservation2Request;
-import to.unified.unified_java_sdk.models.operations.UpdateCommerceReservation2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.UpdateCommerceReservation2Response;
-import to.unified.unified_java_sdk.operations.CreateCommerceReservation2;
-import to.unified.unified_java_sdk.operations.GetCommerceReservation2;
-import to.unified.unified_java_sdk.operations.ListCommerceReservations2;
-import to.unified.unified_java_sdk.operations.PatchCommerceReservation2;
-import to.unified.unified_java_sdk.operations.RemoveCommerceReservation2;
-import to.unified.unified_java_sdk.operations.UpdateCommerceReservation2;
+import to.unified.unified_java_sdk.models.operations.CreateCommerceReservationRequest;
+import to.unified.unified_java_sdk.models.operations.CreateCommerceReservationRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.CreateCommerceReservationResponse;
+import to.unified.unified_java_sdk.models.operations.GetCommerceReservationRequest;
+import to.unified.unified_java_sdk.models.operations.GetCommerceReservationRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetCommerceReservationResponse;
+import to.unified.unified_java_sdk.models.operations.ListCommerceReservationsRequest;
+import to.unified.unified_java_sdk.models.operations.ListCommerceReservationsRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListCommerceReservationsResponse;
+import to.unified.unified_java_sdk.models.operations.PatchCommerceReservationRequest;
+import to.unified.unified_java_sdk.models.operations.PatchCommerceReservationRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.PatchCommerceReservationResponse;
+import to.unified.unified_java_sdk.models.operations.RemoveCommerceReservationRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveCommerceReservationRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.RemoveCommerceReservationResponse;
+import to.unified.unified_java_sdk.models.operations.UpdateCommerceReservationRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateCommerceReservationRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.UpdateCommerceReservationResponse;
+import to.unified.unified_java_sdk.operations.CreateCommerceReservation;
+import to.unified.unified_java_sdk.operations.GetCommerceReservation;
+import to.unified.unified_java_sdk.operations.ListCommerceReservations;
+import to.unified.unified_java_sdk.operations.PatchCommerceReservation;
+import to.unified.unified_java_sdk.operations.RemoveCommerceReservation;
+import to.unified.unified_java_sdk.operations.UpdateCommerceReservation;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -57,8 +57,8 @@ public class Reservation {
      * 
      * @return The call builder
      */
-    public CreateCommerceReservation2RequestBuilder createCommerceReservation2() {
-        return new CreateCommerceReservation2RequestBuilder(sdkConfiguration);
+    public CreateCommerceReservationRequestBuilder createCommerceReservation() {
+        return new CreateCommerceReservationRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -68,9 +68,9 @@ public class Reservation {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateCommerceReservation2Response createCommerceReservation2(@Nonnull CreateCommerceReservation2Request request) {
-        RequestOperation<CreateCommerceReservation2Request, CreateCommerceReservation2Response> operation
-              = new CreateCommerceReservation2.Sync(sdkConfiguration, _headers);
+    public CreateCommerceReservationResponse createCommerceReservation(@Nonnull CreateCommerceReservationRequest request) {
+        RequestOperation<CreateCommerceReservationRequest, CreateCommerceReservationResponse> operation
+              = new CreateCommerceReservation.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -79,8 +79,8 @@ public class Reservation {
      * 
      * @return The call builder
      */
-    public GetCommerceReservation2RequestBuilder getCommerceReservation2() {
-        return new GetCommerceReservation2RequestBuilder(sdkConfiguration);
+    public GetCommerceReservationRequestBuilder getCommerceReservation() {
+        return new GetCommerceReservationRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -90,9 +90,9 @@ public class Reservation {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetCommerceReservation2Response getCommerceReservation2(@Nonnull GetCommerceReservation2Request request) {
-        RequestOperation<GetCommerceReservation2Request, GetCommerceReservation2Response> operation
-              = new GetCommerceReservation2.Sync(sdkConfiguration, _headers);
+    public GetCommerceReservationResponse getCommerceReservation(@Nonnull GetCommerceReservationRequest request) {
+        RequestOperation<GetCommerceReservationRequest, GetCommerceReservationResponse> operation
+              = new GetCommerceReservation.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -101,8 +101,8 @@ public class Reservation {
      * 
      * @return The call builder
      */
-    public ListCommerceReservations2RequestBuilder listCommerceReservations2() {
-        return new ListCommerceReservations2RequestBuilder(sdkConfiguration);
+    public ListCommerceReservationsRequestBuilder listCommerceReservations() {
+        return new ListCommerceReservationsRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -112,9 +112,9 @@ public class Reservation {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListCommerceReservations2Response listCommerceReservations2(@Nonnull ListCommerceReservations2Request request) {
-        RequestOperation<ListCommerceReservations2Request, ListCommerceReservations2Response> operation
-              = new ListCommerceReservations2.Sync(sdkConfiguration, _headers);
+    public ListCommerceReservationsResponse listCommerceReservations(@Nonnull ListCommerceReservationsRequest request) {
+        RequestOperation<ListCommerceReservationsRequest, ListCommerceReservationsResponse> operation
+              = new ListCommerceReservations.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -123,8 +123,8 @@ public class Reservation {
      * 
      * @return The call builder
      */
-    public PatchCommerceReservation2RequestBuilder patchCommerceReservation2() {
-        return new PatchCommerceReservation2RequestBuilder(sdkConfiguration);
+    public PatchCommerceReservationRequestBuilder patchCommerceReservation() {
+        return new PatchCommerceReservationRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -134,9 +134,9 @@ public class Reservation {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchCommerceReservation2Response patchCommerceReservation2(@Nonnull PatchCommerceReservation2Request request) {
-        RequestOperation<PatchCommerceReservation2Request, PatchCommerceReservation2Response> operation
-              = new PatchCommerceReservation2.Sync(sdkConfiguration, _headers);
+    public PatchCommerceReservationResponse patchCommerceReservation(@Nonnull PatchCommerceReservationRequest request) {
+        RequestOperation<PatchCommerceReservationRequest, PatchCommerceReservationResponse> operation
+              = new PatchCommerceReservation.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -145,8 +145,8 @@ public class Reservation {
      * 
      * @return The call builder
      */
-    public RemoveCommerceReservation2RequestBuilder removeCommerceReservation2() {
-        return new RemoveCommerceReservation2RequestBuilder(sdkConfiguration);
+    public RemoveCommerceReservationRequestBuilder removeCommerceReservation() {
+        return new RemoveCommerceReservationRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -156,9 +156,9 @@ public class Reservation {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveCommerceReservation2Response removeCommerceReservation2(@Nonnull RemoveCommerceReservation2Request request) {
-        RequestOperation<RemoveCommerceReservation2Request, RemoveCommerceReservation2Response> operation
-              = new RemoveCommerceReservation2.Sync(sdkConfiguration, _headers);
+    public RemoveCommerceReservationResponse removeCommerceReservation(@Nonnull RemoveCommerceReservationRequest request) {
+        RequestOperation<RemoveCommerceReservationRequest, RemoveCommerceReservationResponse> operation
+              = new RemoveCommerceReservation.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -167,8 +167,8 @@ public class Reservation {
      * 
      * @return The call builder
      */
-    public UpdateCommerceReservation2RequestBuilder updateCommerceReservation2() {
-        return new UpdateCommerceReservation2RequestBuilder(sdkConfiguration);
+    public UpdateCommerceReservationRequestBuilder updateCommerceReservation() {
+        return new UpdateCommerceReservationRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -178,9 +178,9 @@ public class Reservation {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateCommerceReservation2Response updateCommerceReservation2(@Nonnull UpdateCommerceReservation2Request request) {
-        RequestOperation<UpdateCommerceReservation2Request, UpdateCommerceReservation2Response> operation
-              = new UpdateCommerceReservation2.Sync(sdkConfiguration, _headers);
+    public UpdateCommerceReservationResponse updateCommerceReservation(@Nonnull UpdateCommerceReservationRequest request) {
+        RequestOperation<UpdateCommerceReservationRequest, UpdateCommerceReservationResponse> operation
+              = new UpdateCommerceReservation.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

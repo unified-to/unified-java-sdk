@@ -4,33 +4,33 @@
 
 ### Available Operations
 
-* [createAdsCampaign2](#createadscampaign2) - Create a campaign
-* [createMartechCampaign2](#createmartechcampaign2) - Create a campaign
-* [getAdsCampaign2](#getadscampaign2) - Retrieve a campaign
-* [getMartechCampaign2](#getmartechcampaign2) - Retrieve a campaign
-* [listAdsCampaigns2](#listadscampaigns2) - List all campaigns
-* [listMartechCampaigns2](#listmartechcampaigns2) - List all campaigns
-* [patchAdsCampaign2](#patchadscampaign2) - Update a campaign
-* [patchMartechCampaign2](#patchmartechcampaign2) - Update a campaign
-* [removeAdsCampaign2](#removeadscampaign2) - Remove a campaign
-* [removeMartechCampaign2](#removemartechcampaign2) - Remove a campaign
-* [updateAdsCampaign2](#updateadscampaign2) - Update a campaign
-* [updateMartechCampaign2](#updatemartechcampaign2) - Update a campaign
+* [createAdsCampaign](#createadscampaign) - Create a campaign
+* [createMartechCampaign](#createmartechcampaign) - Create a campaign
+* [getAdsCampaign](#getadscampaign) - Retrieve a campaign
+* [getMartechCampaign](#getmartechcampaign) - Retrieve a campaign
+* [listAdsCampaigns](#listadscampaigns) - List all campaigns
+* [listMartechCampaigns](#listmartechcampaigns) - List all campaigns
+* [patchAdsCampaign](#patchadscampaign) - Update a campaign
+* [patchMartechCampaign](#patchmartechcampaign) - Update a campaign
+* [removeAdsCampaign](#removeadscampaign) - Remove a campaign
+* [removeMartechCampaign](#removemartechcampaign) - Remove a campaign
+* [updateAdsCampaign](#updateadscampaign) - Update a campaign
+* [updateMartechCampaign](#updatemartechcampaign) - Update a campaign
 
-## createAdsCampaign2
+## createAdsCampaign
 
 Create a campaign
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createAdsCampaign2" method="post" path="/ads/{connection_id}/campaign" -->
+<!-- UsageSnippet language="java" operationID="createAdsCampaign" method="post" path="/ads/{connection_id}/campaign" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.CreateAdsCampaign2Request;
-import to.unified.unified_java_sdk.models.operations.CreateAdsCampaign2Response;
+import to.unified.unified_java_sdk.models.operations.CreateAdsCampaignRequest;
+import to.unified.unified_java_sdk.models.operations.CreateAdsCampaignResponse;
 import to.unified.unified_java_sdk.models.shared.AdsCampaign;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -44,13 +44,13 @@ public class Application {
                     .build())
             .build();
 
-        CreateAdsCampaign2Request req = CreateAdsCampaign2Request.builder()
+        CreateAdsCampaignRequest req = CreateAdsCampaignRequest.builder()
                 .adsCampaign(AdsCampaign.builder()
                     .build())
                 .connectionId("<id>")
                 .build();
 
-        CreateAdsCampaign2Response res = sdk.campaign().createAdsCampaign2()
+        CreateAdsCampaignResponse res = sdk.campaign().createAdsCampaign()
                 .request(req)
                 .call();
 
@@ -63,13 +63,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
-| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
-| `request`                                                                         | [CreateAdsCampaign2Request](../../models/operations/CreateAdsCampaign2Request.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
+| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| `request`                                                                       | [CreateAdsCampaignRequest](../../models/operations/CreateAdsCampaignRequest.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
 
 ### Response
 
-**[CreateAdsCampaign2Response](../../models/operations/CreateAdsCampaign2Response.md)**
+**[CreateAdsCampaignResponse](../../models/operations/CreateAdsCampaignResponse.md)**
 
 ### Errors
 
@@ -77,20 +77,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## createMartechCampaign2
+## createMartechCampaign
 
 Create a campaign
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createMartechCampaign2" method="post" path="/martech/{connection_id}/campaign" -->
+<!-- UsageSnippet language="java" operationID="createMartechCampaign" method="post" path="/martech/{connection_id}/campaign" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.CreateMartechCampaign2Request;
-import to.unified.unified_java_sdk.models.operations.CreateMartechCampaign2Response;
+import to.unified.unified_java_sdk.models.operations.CreateMartechCampaignRequest;
+import to.unified.unified_java_sdk.models.operations.CreateMartechCampaignResponse;
 import to.unified.unified_java_sdk.models.shared.MarketingCampaign;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -104,13 +104,13 @@ public class Application {
                     .build())
             .build();
 
-        CreateMartechCampaign2Request req = CreateMartechCampaign2Request.builder()
+        CreateMartechCampaignRequest req = CreateMartechCampaignRequest.builder()
                 .marketingCampaign(MarketingCampaign.builder()
                     .build())
                 .connectionId("<id>")
                 .build();
 
-        CreateMartechCampaign2Response res = sdk.campaign().createMartechCampaign2()
+        CreateMartechCampaignResponse res = sdk.campaign().createMartechCampaign()
                 .request(req)
                 .call();
 
@@ -123,13 +123,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                 | Type                                                                                      | Required                                                                                  | Description                                                                               |
-| ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
-| `request`                                                                                 | [CreateMartechCampaign2Request](../../models/operations/CreateMartechCampaign2Request.md) | :heavy_check_mark:                                                                        | The request object to use for the request.                                                |
+| Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
+| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| `request`                                                                               | [CreateMartechCampaignRequest](../../models/operations/CreateMartechCampaignRequest.md) | :heavy_check_mark:                                                                      | The request object to use for the request.                                              |
 
 ### Response
 
-**[CreateMartechCampaign2Response](../../models/operations/CreateMartechCampaign2Response.md)**
+**[CreateMartechCampaignResponse](../../models/operations/CreateMartechCampaignResponse.md)**
 
 ### Errors
 
@@ -137,20 +137,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## getAdsCampaign2
+## getAdsCampaign
 
 Retrieve a campaign
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="getAdsCampaign2" method="get" path="/ads/{connection_id}/campaign/{id}" -->
+<!-- UsageSnippet language="java" operationID="getAdsCampaign" method="get" path="/ads/{connection_id}/campaign/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.GetAdsCampaign2Request;
-import to.unified.unified_java_sdk.models.operations.GetAdsCampaign2Response;
+import to.unified.unified_java_sdk.models.operations.GetAdsCampaignRequest;
+import to.unified.unified_java_sdk.models.operations.GetAdsCampaignResponse;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -163,12 +163,12 @@ public class Application {
                     .build())
             .build();
 
-        GetAdsCampaign2Request req = GetAdsCampaign2Request.builder()
+        GetAdsCampaignRequest req = GetAdsCampaignRequest.builder()
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        GetAdsCampaign2Response res = sdk.campaign().getAdsCampaign2()
+        GetAdsCampaignResponse res = sdk.campaign().getAdsCampaign()
                 .request(req)
                 .call();
 
@@ -181,13 +181,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                   | Type                                                                        | Required                                                                    | Description                                                                 |
-| --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
-| `request`                                                                   | [GetAdsCampaign2Request](../../models/operations/GetAdsCampaign2Request.md) | :heavy_check_mark:                                                          | The request object to use for the request.                                  |
+| Parameter                                                                 | Type                                                                      | Required                                                                  | Description                                                               |
+| ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
+| `request`                                                                 | [GetAdsCampaignRequest](../../models/operations/GetAdsCampaignRequest.md) | :heavy_check_mark:                                                        | The request object to use for the request.                                |
 
 ### Response
 
-**[GetAdsCampaign2Response](../../models/operations/GetAdsCampaign2Response.md)**
+**[GetAdsCampaignResponse](../../models/operations/GetAdsCampaignResponse.md)**
 
 ### Errors
 
@@ -195,20 +195,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## getMartechCampaign2
+## getMartechCampaign
 
 Retrieve a campaign
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="getMartechCampaign2" method="get" path="/martech/{connection_id}/campaign/{id}" -->
+<!-- UsageSnippet language="java" operationID="getMartechCampaign" method="get" path="/martech/{connection_id}/campaign/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.GetMartechCampaign2Request;
-import to.unified.unified_java_sdk.models.operations.GetMartechCampaign2Response;
+import to.unified.unified_java_sdk.models.operations.GetMartechCampaignRequest;
+import to.unified.unified_java_sdk.models.operations.GetMartechCampaignResponse;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -221,12 +221,12 @@ public class Application {
                     .build())
             .build();
 
-        GetMartechCampaign2Request req = GetMartechCampaign2Request.builder()
+        GetMartechCampaignRequest req = GetMartechCampaignRequest.builder()
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        GetMartechCampaign2Response res = sdk.campaign().getMartechCampaign2()
+        GetMartechCampaignResponse res = sdk.campaign().getMartechCampaign()
                 .request(req)
                 .call();
 
@@ -239,13 +239,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                           | Type                                                                                | Required                                                                            | Description                                                                         |
-| ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
-| `request`                                                                           | [GetMartechCampaign2Request](../../models/operations/GetMartechCampaign2Request.md) | :heavy_check_mark:                                                                  | The request object to use for the request.                                          |
+| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
+| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| `request`                                                                         | [GetMartechCampaignRequest](../../models/operations/GetMartechCampaignRequest.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
 
 ### Response
 
-**[GetMartechCampaign2Response](../../models/operations/GetMartechCampaign2Response.md)**
+**[GetMartechCampaignResponse](../../models/operations/GetMartechCampaignResponse.md)**
 
 ### Errors
 
@@ -253,20 +253,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## listAdsCampaigns2
+## listAdsCampaigns
 
 List all campaigns
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="listAdsCampaigns2" method="get" path="/ads/{connection_id}/campaign" -->
+<!-- UsageSnippet language="java" operationID="listAdsCampaigns" method="get" path="/ads/{connection_id}/campaign" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.ListAdsCampaigns2Request;
-import to.unified.unified_java_sdk.models.operations.ListAdsCampaigns2Response;
+import to.unified.unified_java_sdk.models.operations.ListAdsCampaignsRequest;
+import to.unified.unified_java_sdk.models.operations.ListAdsCampaignsResponse;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -279,11 +279,11 @@ public class Application {
                     .build())
             .build();
 
-        ListAdsCampaigns2Request req = ListAdsCampaigns2Request.builder()
+        ListAdsCampaignsRequest req = ListAdsCampaignsRequest.builder()
                 .connectionId("<id>")
                 .build();
 
-        ListAdsCampaigns2Response res = sdk.campaign().listAdsCampaigns2()
+        ListAdsCampaignsResponse res = sdk.campaign().listAdsCampaigns()
                 .request(req)
                 .call();
 
@@ -296,13 +296,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
-| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
-| `request`                                                                       | [ListAdsCampaigns2Request](../../models/operations/ListAdsCampaigns2Request.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
+| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
+| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| `request`                                                                     | [ListAdsCampaignsRequest](../../models/operations/ListAdsCampaignsRequest.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
 
 ### Response
 
-**[ListAdsCampaigns2Response](../../models/operations/ListAdsCampaigns2Response.md)**
+**[ListAdsCampaignsResponse](../../models/operations/ListAdsCampaignsResponse.md)**
 
 ### Errors
 
@@ -310,20 +310,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## listMartechCampaigns2
+## listMartechCampaigns
 
 List all campaigns
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="listMartechCampaigns2" method="get" path="/martech/{connection_id}/campaign" -->
+<!-- UsageSnippet language="java" operationID="listMartechCampaigns" method="get" path="/martech/{connection_id}/campaign" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.ListMartechCampaigns2Request;
-import to.unified.unified_java_sdk.models.operations.ListMartechCampaigns2Response;
+import to.unified.unified_java_sdk.models.operations.ListMartechCampaignsRequest;
+import to.unified.unified_java_sdk.models.operations.ListMartechCampaignsResponse;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -336,11 +336,11 @@ public class Application {
                     .build())
             .build();
 
-        ListMartechCampaigns2Request req = ListMartechCampaigns2Request.builder()
+        ListMartechCampaignsRequest req = ListMartechCampaignsRequest.builder()
                 .connectionId("<id>")
                 .build();
 
-        ListMartechCampaigns2Response res = sdk.campaign().listMartechCampaigns2()
+        ListMartechCampaignsResponse res = sdk.campaign().listMartechCampaigns()
                 .request(req)
                 .call();
 
@@ -353,13 +353,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
-| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
-| `request`                                                                               | [ListMartechCampaigns2Request](../../models/operations/ListMartechCampaigns2Request.md) | :heavy_check_mark:                                                                      | The request object to use for the request.                                              |
+| Parameter                                                                             | Type                                                                                  | Required                                                                              | Description                                                                           |
+| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| `request`                                                                             | [ListMartechCampaignsRequest](../../models/operations/ListMartechCampaignsRequest.md) | :heavy_check_mark:                                                                    | The request object to use for the request.                                            |
 
 ### Response
 
-**[ListMartechCampaigns2Response](../../models/operations/ListMartechCampaigns2Response.md)**
+**[ListMartechCampaignsResponse](../../models/operations/ListMartechCampaignsResponse.md)**
 
 ### Errors
 
@@ -367,20 +367,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## patchAdsCampaign2
+## patchAdsCampaign
 
 Update a campaign
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchAdsCampaign2" method="patch" path="/ads/{connection_id}/campaign/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchAdsCampaign" method="patch" path="/ads/{connection_id}/campaign/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.PatchAdsCampaign2Request;
-import to.unified.unified_java_sdk.models.operations.PatchAdsCampaign2Response;
+import to.unified.unified_java_sdk.models.operations.PatchAdsCampaignRequest;
+import to.unified.unified_java_sdk.models.operations.PatchAdsCampaignResponse;
 import to.unified.unified_java_sdk.models.shared.AdsCampaign;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -394,14 +394,248 @@ public class Application {
                     .build())
             .build();
 
-        PatchAdsCampaign2Request req = PatchAdsCampaign2Request.builder()
+        PatchAdsCampaignRequest req = PatchAdsCampaignRequest.builder()
                 .adsCampaign(AdsCampaign.builder()
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        PatchAdsCampaign2Response res = sdk.campaign().patchAdsCampaign2()
+        PatchAdsCampaignResponse res = sdk.campaign().patchAdsCampaign()
+                .request(req)
+                .call();
+
+        if (res.adsCampaign().isPresent()) {
+            System.out.println(res.adsCampaign().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
+| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| `request`                                                                     | [PatchAdsCampaignRequest](../../models/operations/PatchAdsCampaignRequest.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
+
+### Response
+
+**[PatchAdsCampaignResponse](../../models/operations/PatchAdsCampaignResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## patchMartechCampaign
+
+Update a campaign
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="patchMartechCampaign" method="patch" path="/martech/{connection_id}/campaign/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.PatchMartechCampaignRequest;
+import to.unified.unified_java_sdk.models.operations.PatchMartechCampaignResponse;
+import to.unified.unified_java_sdk.models.shared.MarketingCampaign;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        PatchMartechCampaignRequest req = PatchMartechCampaignRequest.builder()
+                .marketingCampaign(MarketingCampaign.builder()
+                    .build())
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        PatchMartechCampaignResponse res = sdk.campaign().patchMartechCampaign()
+                .request(req)
+                .call();
+
+        if (res.marketingCampaign().isPresent()) {
+            System.out.println(res.marketingCampaign().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                             | Type                                                                                  | Required                                                                              | Description                                                                           |
+| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| `request`                                                                             | [PatchMartechCampaignRequest](../../models/operations/PatchMartechCampaignRequest.md) | :heavy_check_mark:                                                                    | The request object to use for the request.                                            |
+
+### Response
+
+**[PatchMartechCampaignResponse](../../models/operations/PatchMartechCampaignResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## removeAdsCampaign
+
+Remove a campaign
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="removeAdsCampaign" method="delete" path="/ads/{connection_id}/campaign/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.RemoveAdsCampaignRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveAdsCampaignResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        RemoveAdsCampaignRequest req = RemoveAdsCampaignRequest.builder()
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        RemoveAdsCampaignResponse res = sdk.campaign().removeAdsCampaign()
+                .request(req)
+                .call();
+
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| `request`                                                                       | [RemoveAdsCampaignRequest](../../models/operations/RemoveAdsCampaignRequest.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
+
+### Response
+
+**[RemoveAdsCampaignResponse](../../models/operations/RemoveAdsCampaignResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## removeMartechCampaign
+
+Remove a campaign
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="removeMartechCampaign" method="delete" path="/martech/{connection_id}/campaign/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.RemoveMartechCampaignRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveMartechCampaignResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        RemoveMartechCampaignRequest req = RemoveMartechCampaignRequest.builder()
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        RemoveMartechCampaignResponse res = sdk.campaign().removeMartechCampaign()
+                .request(req)
+                .call();
+
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
+| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| `request`                                                                               | [RemoveMartechCampaignRequest](../../models/operations/RemoveMartechCampaignRequest.md) | :heavy_check_mark:                                                                      | The request object to use for the request.                                              |
+
+### Response
+
+**[RemoveMartechCampaignResponse](../../models/operations/RemoveMartechCampaignResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## updateAdsCampaign
+
+Update a campaign
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="updateAdsCampaign" method="put" path="/ads/{connection_id}/campaign/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.UpdateAdsCampaignRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateAdsCampaignResponse;
+import to.unified.unified_java_sdk.models.shared.AdsCampaign;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        UpdateAdsCampaignRequest req = UpdateAdsCampaignRequest.builder()
+                .adsCampaign(AdsCampaign.builder()
+                    .build())
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        UpdateAdsCampaignResponse res = sdk.campaign().updateAdsCampaign()
                 .request(req)
                 .call();
 
@@ -416,11 +650,11 @@ public class Application {
 
 | Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
 | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
-| `request`                                                                       | [PatchAdsCampaign2Request](../../models/operations/PatchAdsCampaign2Request.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
+| `request`                                                                       | [UpdateAdsCampaignRequest](../../models/operations/UpdateAdsCampaignRequest.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
 
 ### Response
 
-**[PatchAdsCampaign2Response](../../models/operations/PatchAdsCampaign2Response.md)**
+**[UpdateAdsCampaignResponse](../../models/operations/UpdateAdsCampaignResponse.md)**
 
 ### Errors
 
@@ -428,20 +662,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## patchMartechCampaign2
+## updateMartechCampaign
 
 Update a campaign
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchMartechCampaign2" method="patch" path="/martech/{connection_id}/campaign/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateMartechCampaign" method="put" path="/martech/{connection_id}/campaign/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.PatchMartechCampaign2Request;
-import to.unified.unified_java_sdk.models.operations.PatchMartechCampaign2Response;
+import to.unified.unified_java_sdk.models.operations.UpdateMartechCampaignRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateMartechCampaignResponse;
 import to.unified.unified_java_sdk.models.shared.MarketingCampaign;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -455,14 +689,14 @@ public class Application {
                     .build())
             .build();
 
-        PatchMartechCampaign2Request req = PatchMartechCampaign2Request.builder()
+        UpdateMartechCampaignRequest req = UpdateMartechCampaignRequest.builder()
                 .marketingCampaign(MarketingCampaign.builder()
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        PatchMartechCampaign2Response res = sdk.campaign().patchMartechCampaign2()
+        UpdateMartechCampaignResponse res = sdk.campaign().updateMartechCampaign()
                 .request(req)
                 .call();
 
@@ -477,245 +711,11 @@ public class Application {
 
 | Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
 | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
-| `request`                                                                               | [PatchMartechCampaign2Request](../../models/operations/PatchMartechCampaign2Request.md) | :heavy_check_mark:                                                                      | The request object to use for the request.                                              |
+| `request`                                                                               | [UpdateMartechCampaignRequest](../../models/operations/UpdateMartechCampaignRequest.md) | :heavy_check_mark:                                                                      | The request object to use for the request.                                              |
 
 ### Response
 
-**[PatchMartechCampaign2Response](../../models/operations/PatchMartechCampaign2Response.md)**
-
-### Errors
-
-| Error Type             | Status Code            | Content Type           |
-| ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
-
-## removeAdsCampaign2
-
-Remove a campaign
-
-### Example Usage
-
-<!-- UsageSnippet language="java" operationID="removeAdsCampaign2" method="delete" path="/ads/{connection_id}/campaign/{id}" -->
-```java
-package hello.world;
-
-import java.lang.Exception;
-import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.RemoveAdsCampaign2Request;
-import to.unified.unified_java_sdk.models.operations.RemoveAdsCampaign2Response;
-import to.unified.unified_java_sdk.models.shared.Security;
-
-public class Application {
-
-    public static void main(String[] args) throws Exception {
-
-        UnifiedTo sdk = UnifiedTo.builder()
-                .security(Security.builder()
-                    .jwt(System.getenv().getOrDefault("JWT", ""))
-                    .build())
-            .build();
-
-        RemoveAdsCampaign2Request req = RemoveAdsCampaign2Request.builder()
-                .connectionId("<id>")
-                .id("<id>")
-                .build();
-
-        RemoveAdsCampaign2Response res = sdk.campaign().removeAdsCampaign2()
-                .request(req)
-                .call();
-
-        // handle response
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
-| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
-| `request`                                                                         | [RemoveAdsCampaign2Request](../../models/operations/RemoveAdsCampaign2Request.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
-
-### Response
-
-**[RemoveAdsCampaign2Response](../../models/operations/RemoveAdsCampaign2Response.md)**
-
-### Errors
-
-| Error Type             | Status Code            | Content Type           |
-| ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
-
-## removeMartechCampaign2
-
-Remove a campaign
-
-### Example Usage
-
-<!-- UsageSnippet language="java" operationID="removeMartechCampaign2" method="delete" path="/martech/{connection_id}/campaign/{id}" -->
-```java
-package hello.world;
-
-import java.lang.Exception;
-import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.RemoveMartechCampaign2Request;
-import to.unified.unified_java_sdk.models.operations.RemoveMartechCampaign2Response;
-import to.unified.unified_java_sdk.models.shared.Security;
-
-public class Application {
-
-    public static void main(String[] args) throws Exception {
-
-        UnifiedTo sdk = UnifiedTo.builder()
-                .security(Security.builder()
-                    .jwt(System.getenv().getOrDefault("JWT", ""))
-                    .build())
-            .build();
-
-        RemoveMartechCampaign2Request req = RemoveMartechCampaign2Request.builder()
-                .connectionId("<id>")
-                .id("<id>")
-                .build();
-
-        RemoveMartechCampaign2Response res = sdk.campaign().removeMartechCampaign2()
-                .request(req)
-                .call();
-
-        // handle response
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                                 | Type                                                                                      | Required                                                                                  | Description                                                                               |
-| ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
-| `request`                                                                                 | [RemoveMartechCampaign2Request](../../models/operations/RemoveMartechCampaign2Request.md) | :heavy_check_mark:                                                                        | The request object to use for the request.                                                |
-
-### Response
-
-**[RemoveMartechCampaign2Response](../../models/operations/RemoveMartechCampaign2Response.md)**
-
-### Errors
-
-| Error Type             | Status Code            | Content Type           |
-| ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
-
-## updateAdsCampaign2
-
-Update a campaign
-
-### Example Usage
-
-<!-- UsageSnippet language="java" operationID="updateAdsCampaign2" method="put" path="/ads/{connection_id}/campaign/{id}" -->
-```java
-package hello.world;
-
-import java.lang.Exception;
-import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.UpdateAdsCampaign2Request;
-import to.unified.unified_java_sdk.models.operations.UpdateAdsCampaign2Response;
-import to.unified.unified_java_sdk.models.shared.AdsCampaign;
-import to.unified.unified_java_sdk.models.shared.Security;
-
-public class Application {
-
-    public static void main(String[] args) throws Exception {
-
-        UnifiedTo sdk = UnifiedTo.builder()
-                .security(Security.builder()
-                    .jwt(System.getenv().getOrDefault("JWT", ""))
-                    .build())
-            .build();
-
-        UpdateAdsCampaign2Request req = UpdateAdsCampaign2Request.builder()
-                .adsCampaign(AdsCampaign.builder()
-                    .build())
-                .connectionId("<id>")
-                .id("<id>")
-                .build();
-
-        UpdateAdsCampaign2Response res = sdk.campaign().updateAdsCampaign2()
-                .request(req)
-                .call();
-
-        if (res.adsCampaign().isPresent()) {
-            System.out.println(res.adsCampaign().get());
-        }
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
-| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
-| `request`                                                                         | [UpdateAdsCampaign2Request](../../models/operations/UpdateAdsCampaign2Request.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
-
-### Response
-
-**[UpdateAdsCampaign2Response](../../models/operations/UpdateAdsCampaign2Response.md)**
-
-### Errors
-
-| Error Type             | Status Code            | Content Type           |
-| ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
-
-## updateMartechCampaign2
-
-Update a campaign
-
-### Example Usage
-
-<!-- UsageSnippet language="java" operationID="updateMartechCampaign2" method="put" path="/martech/{connection_id}/campaign/{id}" -->
-```java
-package hello.world;
-
-import java.lang.Exception;
-import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.UpdateMartechCampaign2Request;
-import to.unified.unified_java_sdk.models.operations.UpdateMartechCampaign2Response;
-import to.unified.unified_java_sdk.models.shared.MarketingCampaign;
-import to.unified.unified_java_sdk.models.shared.Security;
-
-public class Application {
-
-    public static void main(String[] args) throws Exception {
-
-        UnifiedTo sdk = UnifiedTo.builder()
-                .security(Security.builder()
-                    .jwt(System.getenv().getOrDefault("JWT", ""))
-                    .build())
-            .build();
-
-        UpdateMartechCampaign2Request req = UpdateMartechCampaign2Request.builder()
-                .marketingCampaign(MarketingCampaign.builder()
-                    .build())
-                .connectionId("<id>")
-                .id("<id>")
-                .build();
-
-        UpdateMartechCampaign2Response res = sdk.campaign().updateMartechCampaign2()
-                .request(req)
-                .call();
-
-        if (res.marketingCampaign().isPresent()) {
-            System.out.println(res.marketingCampaign().get());
-        }
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                                 | Type                                                                                      | Required                                                                                  | Description                                                                               |
-| ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
-| `request`                                                                                 | [UpdateMartechCampaign2Request](../../models/operations/UpdateMartechCampaign2Request.md) | :heavy_check_mark:                                                                        | The request object to use for the request.                                                |
-
-### Response
-
-**[UpdateMartechCampaign2Response](../../models/operations/UpdateMartechCampaign2Response.md)**
+**[UpdateMartechCampaignResponse](../../models/operations/UpdateMartechCampaignResponse.md)**
 
 ### Errors
 

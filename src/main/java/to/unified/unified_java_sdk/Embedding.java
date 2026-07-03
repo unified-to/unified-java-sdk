@@ -6,10 +6,10 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
-import to.unified.unified_java_sdk.models.operations.CreateGenaiEmbedding2Request;
-import to.unified.unified_java_sdk.models.operations.CreateGenaiEmbedding2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.CreateGenaiEmbedding2Response;
-import to.unified.unified_java_sdk.operations.CreateGenaiEmbedding2;
+import to.unified.unified_java_sdk.models.operations.CreateGenaiEmbeddingRequest;
+import to.unified.unified_java_sdk.models.operations.CreateGenaiEmbeddingRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.CreateGenaiEmbeddingResponse;
+import to.unified.unified_java_sdk.operations.CreateGenaiEmbedding;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -37,8 +37,8 @@ public class Embedding {
      * 
      * @return The call builder
      */
-    public CreateGenaiEmbedding2RequestBuilder createGenaiEmbedding2() {
-        return new CreateGenaiEmbedding2RequestBuilder(sdkConfiguration);
+    public CreateGenaiEmbeddingRequestBuilder createGenaiEmbedding() {
+        return new CreateGenaiEmbeddingRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -48,9 +48,9 @@ public class Embedding {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateGenaiEmbedding2Response createGenaiEmbedding2(@Nonnull CreateGenaiEmbedding2Request request) {
-        RequestOperation<CreateGenaiEmbedding2Request, CreateGenaiEmbedding2Response> operation
-              = new CreateGenaiEmbedding2.Sync(sdkConfiguration, _headers);
+    public CreateGenaiEmbeddingResponse createGenaiEmbedding(@Nonnull CreateGenaiEmbeddingRequest request) {
+        RequestOperation<CreateGenaiEmbeddingRequest, CreateGenaiEmbeddingResponse> operation
+              = new CreateGenaiEmbedding.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

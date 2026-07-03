@@ -4,27 +4,27 @@
 
 ### Available Operations
 
-* [createAdsInsertionorder2](#createadsinsertionorder2) - Create an insertionorder
-* [getAdsInsertionorder2](#getadsinsertionorder2) - Retrieve an insertionorder
-* [listAdsInsertionorders2](#listadsinsertionorders2) - List all insertionorders
-* [patchAdsInsertionorder2](#patchadsinsertionorder2) - Update an insertionorder
-* [removeAdsInsertionorder2](#removeadsinsertionorder2) - Remove an insertionorder
-* [updateAdsInsertionorder2](#updateadsinsertionorder2) - Update an insertionorder
+* [createAdsInsertionorder](#createadsinsertionorder) - Create an insertionorder
+* [getAdsInsertionorder](#getadsinsertionorder) - Retrieve an insertionorder
+* [listAdsInsertionorders](#listadsinsertionorders) - List all insertionorders
+* [patchAdsInsertionorder](#patchadsinsertionorder) - Update an insertionorder
+* [removeAdsInsertionorder](#removeadsinsertionorder) - Remove an insertionorder
+* [updateAdsInsertionorder](#updateadsinsertionorder) - Update an insertionorder
 
-## createAdsInsertionorder2
+## createAdsInsertionorder
 
 Create an insertionorder
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createAdsInsertionorder2" method="post" path="/ads/{connection_id}/insertionorder" -->
+<!-- UsageSnippet language="java" operationID="createAdsInsertionorder" method="post" path="/ads/{connection_id}/insertionorder" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.CreateAdsInsertionorder2Request;
-import to.unified.unified_java_sdk.models.operations.CreateAdsInsertionorder2Response;
+import to.unified.unified_java_sdk.models.operations.CreateAdsInsertionorderRequest;
+import to.unified.unified_java_sdk.models.operations.CreateAdsInsertionorderResponse;
 import to.unified.unified_java_sdk.models.shared.AdsInsertionorder;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -38,13 +38,13 @@ public class Application {
                     .build())
             .build();
 
-        CreateAdsInsertionorder2Request req = CreateAdsInsertionorder2Request.builder()
+        CreateAdsInsertionorderRequest req = CreateAdsInsertionorderRequest.builder()
                 .adsInsertionorder(AdsInsertionorder.builder()
                     .build())
                 .connectionId("<id>")
                 .build();
 
-        CreateAdsInsertionorder2Response res = sdk.insertionorder().createAdsInsertionorder2()
+        CreateAdsInsertionorderResponse res = sdk.insertionorder().createAdsInsertionorder()
                 .request(req)
                 .call();
 
@@ -57,13 +57,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                     | Type                                                                                          | Required                                                                                      | Description                                                                                   |
-| --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
-| `request`                                                                                     | [CreateAdsInsertionorder2Request](../../models/operations/CreateAdsInsertionorder2Request.md) | :heavy_check_mark:                                                                            | The request object to use for the request.                                                    |
+| Parameter                                                                                   | Type                                                                                        | Required                                                                                    | Description                                                                                 |
+| ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
+| `request`                                                                                   | [CreateAdsInsertionorderRequest](../../models/operations/CreateAdsInsertionorderRequest.md) | :heavy_check_mark:                                                                          | The request object to use for the request.                                                  |
 
 ### Response
 
-**[CreateAdsInsertionorder2Response](../../models/operations/CreateAdsInsertionorder2Response.md)**
+**[CreateAdsInsertionorderResponse](../../models/operations/CreateAdsInsertionorderResponse.md)**
 
 ### Errors
 
@@ -71,20 +71,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## getAdsInsertionorder2
+## getAdsInsertionorder
 
 Retrieve an insertionorder
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="getAdsInsertionorder2" method="get" path="/ads/{connection_id}/insertionorder/{id}" -->
+<!-- UsageSnippet language="java" operationID="getAdsInsertionorder" method="get" path="/ads/{connection_id}/insertionorder/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.GetAdsInsertionorder2Request;
-import to.unified.unified_java_sdk.models.operations.GetAdsInsertionorder2Response;
+import to.unified.unified_java_sdk.models.operations.GetAdsInsertionorderRequest;
+import to.unified.unified_java_sdk.models.operations.GetAdsInsertionorderResponse;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -97,12 +97,12 @@ public class Application {
                     .build())
             .build();
 
-        GetAdsInsertionorder2Request req = GetAdsInsertionorder2Request.builder()
+        GetAdsInsertionorderRequest req = GetAdsInsertionorderRequest.builder()
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        GetAdsInsertionorder2Response res = sdk.insertionorder().getAdsInsertionorder2()
+        GetAdsInsertionorderResponse res = sdk.insertionorder().getAdsInsertionorder()
                 .request(req)
                 .call();
 
@@ -115,13 +115,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
-| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
-| `request`                                                                               | [GetAdsInsertionorder2Request](../../models/operations/GetAdsInsertionorder2Request.md) | :heavy_check_mark:                                                                      | The request object to use for the request.                                              |
+| Parameter                                                                             | Type                                                                                  | Required                                                                              | Description                                                                           |
+| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| `request`                                                                             | [GetAdsInsertionorderRequest](../../models/operations/GetAdsInsertionorderRequest.md) | :heavy_check_mark:                                                                    | The request object to use for the request.                                            |
 
 ### Response
 
-**[GetAdsInsertionorder2Response](../../models/operations/GetAdsInsertionorder2Response.md)**
+**[GetAdsInsertionorderResponse](../../models/operations/GetAdsInsertionorderResponse.md)**
 
 ### Errors
 
@@ -129,20 +129,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## listAdsInsertionorders2
+## listAdsInsertionorders
 
 List all insertionorders
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="listAdsInsertionorders2" method="get" path="/ads/{connection_id}/insertionorder" -->
+<!-- UsageSnippet language="java" operationID="listAdsInsertionorders" method="get" path="/ads/{connection_id}/insertionorder" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.ListAdsInsertionorders2Request;
-import to.unified.unified_java_sdk.models.operations.ListAdsInsertionorders2Response;
+import to.unified.unified_java_sdk.models.operations.ListAdsInsertionordersRequest;
+import to.unified.unified_java_sdk.models.operations.ListAdsInsertionordersResponse;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -155,11 +155,11 @@ public class Application {
                     .build())
             .build();
 
-        ListAdsInsertionorders2Request req = ListAdsInsertionorders2Request.builder()
+        ListAdsInsertionordersRequest req = ListAdsInsertionordersRequest.builder()
                 .connectionId("<id>")
                 .build();
 
-        ListAdsInsertionorders2Response res = sdk.insertionorder().listAdsInsertionorders2()
+        ListAdsInsertionordersResponse res = sdk.insertionorder().listAdsInsertionorders()
                 .request(req)
                 .call();
 
@@ -172,13 +172,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                   | Type                                                                                        | Required                                                                                    | Description                                                                                 |
-| ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
-| `request`                                                                                   | [ListAdsInsertionorders2Request](../../models/operations/ListAdsInsertionorders2Request.md) | :heavy_check_mark:                                                                          | The request object to use for the request.                                                  |
+| Parameter                                                                                 | Type                                                                                      | Required                                                                                  | Description                                                                               |
+| ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
+| `request`                                                                                 | [ListAdsInsertionordersRequest](../../models/operations/ListAdsInsertionordersRequest.md) | :heavy_check_mark:                                                                        | The request object to use for the request.                                                |
 
 ### Response
 
-**[ListAdsInsertionorders2Response](../../models/operations/ListAdsInsertionorders2Response.md)**
+**[ListAdsInsertionordersResponse](../../models/operations/ListAdsInsertionordersResponse.md)**
 
 ### Errors
 
@@ -186,20 +186,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## patchAdsInsertionorder2
+## patchAdsInsertionorder
 
 Update an insertionorder
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchAdsInsertionorder2" method="patch" path="/ads/{connection_id}/insertionorder/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchAdsInsertionorder" method="patch" path="/ads/{connection_id}/insertionorder/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.PatchAdsInsertionorder2Request;
-import to.unified.unified_java_sdk.models.operations.PatchAdsInsertionorder2Response;
+import to.unified.unified_java_sdk.models.operations.PatchAdsInsertionorderRequest;
+import to.unified.unified_java_sdk.models.operations.PatchAdsInsertionorderResponse;
 import to.unified.unified_java_sdk.models.shared.AdsInsertionorder;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -213,14 +213,14 @@ public class Application {
                     .build())
             .build();
 
-        PatchAdsInsertionorder2Request req = PatchAdsInsertionorder2Request.builder()
+        PatchAdsInsertionorderRequest req = PatchAdsInsertionorderRequest.builder()
                 .adsInsertionorder(AdsInsertionorder.builder()
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        PatchAdsInsertionorder2Response res = sdk.insertionorder().patchAdsInsertionorder2()
+        PatchAdsInsertionorderResponse res = sdk.insertionorder().patchAdsInsertionorder()
                 .request(req)
                 .call();
 
@@ -233,13 +233,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                   | Type                                                                                        | Required                                                                                    | Description                                                                                 |
-| ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
-| `request`                                                                                   | [PatchAdsInsertionorder2Request](../../models/operations/PatchAdsInsertionorder2Request.md) | :heavy_check_mark:                                                                          | The request object to use for the request.                                                  |
+| Parameter                                                                                 | Type                                                                                      | Required                                                                                  | Description                                                                               |
+| ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
+| `request`                                                                                 | [PatchAdsInsertionorderRequest](../../models/operations/PatchAdsInsertionorderRequest.md) | :heavy_check_mark:                                                                        | The request object to use for the request.                                                |
 
 ### Response
 
-**[PatchAdsInsertionorder2Response](../../models/operations/PatchAdsInsertionorder2Response.md)**
+**[PatchAdsInsertionorderResponse](../../models/operations/PatchAdsInsertionorderResponse.md)**
 
 ### Errors
 
@@ -247,20 +247,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## removeAdsInsertionorder2
+## removeAdsInsertionorder
 
 Remove an insertionorder
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="removeAdsInsertionorder2" method="delete" path="/ads/{connection_id}/insertionorder/{id}" -->
+<!-- UsageSnippet language="java" operationID="removeAdsInsertionorder" method="delete" path="/ads/{connection_id}/insertionorder/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.RemoveAdsInsertionorder2Request;
-import to.unified.unified_java_sdk.models.operations.RemoveAdsInsertionorder2Response;
+import to.unified.unified_java_sdk.models.operations.RemoveAdsInsertionorderRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveAdsInsertionorderResponse;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -273,12 +273,12 @@ public class Application {
                     .build())
             .build();
 
-        RemoveAdsInsertionorder2Request req = RemoveAdsInsertionorder2Request.builder()
+        RemoveAdsInsertionorderRequest req = RemoveAdsInsertionorderRequest.builder()
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        RemoveAdsInsertionorder2Response res = sdk.insertionorder().removeAdsInsertionorder2()
+        RemoveAdsInsertionorderResponse res = sdk.insertionorder().removeAdsInsertionorder()
                 .request(req)
                 .call();
 
@@ -289,13 +289,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                     | Type                                                                                          | Required                                                                                      | Description                                                                                   |
-| --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
-| `request`                                                                                     | [RemoveAdsInsertionorder2Request](../../models/operations/RemoveAdsInsertionorder2Request.md) | :heavy_check_mark:                                                                            | The request object to use for the request.                                                    |
+| Parameter                                                                                   | Type                                                                                        | Required                                                                                    | Description                                                                                 |
+| ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
+| `request`                                                                                   | [RemoveAdsInsertionorderRequest](../../models/operations/RemoveAdsInsertionorderRequest.md) | :heavy_check_mark:                                                                          | The request object to use for the request.                                                  |
 
 ### Response
 
-**[RemoveAdsInsertionorder2Response](../../models/operations/RemoveAdsInsertionorder2Response.md)**
+**[RemoveAdsInsertionorderResponse](../../models/operations/RemoveAdsInsertionorderResponse.md)**
 
 ### Errors
 
@@ -303,20 +303,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## updateAdsInsertionorder2
+## updateAdsInsertionorder
 
 Update an insertionorder
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateAdsInsertionorder2" method="put" path="/ads/{connection_id}/insertionorder/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateAdsInsertionorder" method="put" path="/ads/{connection_id}/insertionorder/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.UpdateAdsInsertionorder2Request;
-import to.unified.unified_java_sdk.models.operations.UpdateAdsInsertionorder2Response;
+import to.unified.unified_java_sdk.models.operations.UpdateAdsInsertionorderRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateAdsInsertionorderResponse;
 import to.unified.unified_java_sdk.models.shared.AdsInsertionorder;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -330,14 +330,14 @@ public class Application {
                     .build())
             .build();
 
-        UpdateAdsInsertionorder2Request req = UpdateAdsInsertionorder2Request.builder()
+        UpdateAdsInsertionorderRequest req = UpdateAdsInsertionorderRequest.builder()
                 .adsInsertionorder(AdsInsertionorder.builder()
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        UpdateAdsInsertionorder2Response res = sdk.insertionorder().updateAdsInsertionorder2()
+        UpdateAdsInsertionorderResponse res = sdk.insertionorder().updateAdsInsertionorder()
                 .request(req)
                 .call();
 
@@ -350,13 +350,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                     | Type                                                                                          | Required                                                                                      | Description                                                                                   |
-| --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
-| `request`                                                                                     | [UpdateAdsInsertionorder2Request](../../models/operations/UpdateAdsInsertionorder2Request.md) | :heavy_check_mark:                                                                            | The request object to use for the request.                                                    |
+| Parameter                                                                                   | Type                                                                                        | Required                                                                                    | Description                                                                                 |
+| ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
+| `request`                                                                                   | [UpdateAdsInsertionorderRequest](../../models/operations/UpdateAdsInsertionorderRequest.md) | :heavy_check_mark:                                                                          | The request object to use for the request.                                                  |
 
 ### Response
 
-**[UpdateAdsInsertionorder2Response](../../models/operations/UpdateAdsInsertionorder2Response.md)**
+**[UpdateAdsInsertionorderResponse](../../models/operations/UpdateAdsInsertionorderResponse.md)**
 
 ### Errors
 

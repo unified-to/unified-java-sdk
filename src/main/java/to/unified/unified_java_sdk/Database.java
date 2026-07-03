@@ -6,30 +6,30 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
-import to.unified.unified_java_sdk.models.operations.CreateDatastoreDatabase2Request;
-import to.unified.unified_java_sdk.models.operations.CreateDatastoreDatabase2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.CreateDatastoreDatabase2Response;
-import to.unified.unified_java_sdk.models.operations.GetDatastoreDatabase2Request;
-import to.unified.unified_java_sdk.models.operations.GetDatastoreDatabase2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.GetDatastoreDatabase2Response;
-import to.unified.unified_java_sdk.models.operations.ListDatastoreDatabases2Request;
-import to.unified.unified_java_sdk.models.operations.ListDatastoreDatabases2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.ListDatastoreDatabases2Response;
-import to.unified.unified_java_sdk.models.operations.PatchDatastoreDatabase2Request;
-import to.unified.unified_java_sdk.models.operations.PatchDatastoreDatabase2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.PatchDatastoreDatabase2Response;
-import to.unified.unified_java_sdk.models.operations.RemoveDatastoreDatabase2Request;
-import to.unified.unified_java_sdk.models.operations.RemoveDatastoreDatabase2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.RemoveDatastoreDatabase2Response;
-import to.unified.unified_java_sdk.models.operations.UpdateDatastoreDatabase2Request;
-import to.unified.unified_java_sdk.models.operations.UpdateDatastoreDatabase2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.UpdateDatastoreDatabase2Response;
-import to.unified.unified_java_sdk.operations.CreateDatastoreDatabase2;
-import to.unified.unified_java_sdk.operations.GetDatastoreDatabase2;
-import to.unified.unified_java_sdk.operations.ListDatastoreDatabases2;
-import to.unified.unified_java_sdk.operations.PatchDatastoreDatabase2;
-import to.unified.unified_java_sdk.operations.RemoveDatastoreDatabase2;
-import to.unified.unified_java_sdk.operations.UpdateDatastoreDatabase2;
+import to.unified.unified_java_sdk.models.operations.CreateDatastoreDatabaseRequest;
+import to.unified.unified_java_sdk.models.operations.CreateDatastoreDatabaseRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.CreateDatastoreDatabaseResponse;
+import to.unified.unified_java_sdk.models.operations.GetDatastoreDatabaseRequest;
+import to.unified.unified_java_sdk.models.operations.GetDatastoreDatabaseRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetDatastoreDatabaseResponse;
+import to.unified.unified_java_sdk.models.operations.ListDatastoreDatabasesRequest;
+import to.unified.unified_java_sdk.models.operations.ListDatastoreDatabasesRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListDatastoreDatabasesResponse;
+import to.unified.unified_java_sdk.models.operations.PatchDatastoreDatabaseRequest;
+import to.unified.unified_java_sdk.models.operations.PatchDatastoreDatabaseRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.PatchDatastoreDatabaseResponse;
+import to.unified.unified_java_sdk.models.operations.RemoveDatastoreDatabaseRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveDatastoreDatabaseRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.RemoveDatastoreDatabaseResponse;
+import to.unified.unified_java_sdk.models.operations.UpdateDatastoreDatabaseRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateDatastoreDatabaseRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.UpdateDatastoreDatabaseResponse;
+import to.unified.unified_java_sdk.operations.CreateDatastoreDatabase;
+import to.unified.unified_java_sdk.operations.GetDatastoreDatabase;
+import to.unified.unified_java_sdk.operations.ListDatastoreDatabases;
+import to.unified.unified_java_sdk.operations.PatchDatastoreDatabase;
+import to.unified.unified_java_sdk.operations.RemoveDatastoreDatabase;
+import to.unified.unified_java_sdk.operations.UpdateDatastoreDatabase;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -57,8 +57,8 @@ public class Database {
      * 
      * @return The call builder
      */
-    public CreateDatastoreDatabase2RequestBuilder createDatastoreDatabase2() {
-        return new CreateDatastoreDatabase2RequestBuilder(sdkConfiguration);
+    public CreateDatastoreDatabaseRequestBuilder createDatastoreDatabase() {
+        return new CreateDatastoreDatabaseRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -68,9 +68,9 @@ public class Database {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateDatastoreDatabase2Response createDatastoreDatabase2(@Nonnull CreateDatastoreDatabase2Request request) {
-        RequestOperation<CreateDatastoreDatabase2Request, CreateDatastoreDatabase2Response> operation
-              = new CreateDatastoreDatabase2.Sync(sdkConfiguration, _headers);
+    public CreateDatastoreDatabaseResponse createDatastoreDatabase(@Nonnull CreateDatastoreDatabaseRequest request) {
+        RequestOperation<CreateDatastoreDatabaseRequest, CreateDatastoreDatabaseResponse> operation
+              = new CreateDatastoreDatabase.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -79,8 +79,8 @@ public class Database {
      * 
      * @return The call builder
      */
-    public GetDatastoreDatabase2RequestBuilder getDatastoreDatabase2() {
-        return new GetDatastoreDatabase2RequestBuilder(sdkConfiguration);
+    public GetDatastoreDatabaseRequestBuilder getDatastoreDatabase() {
+        return new GetDatastoreDatabaseRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -90,9 +90,9 @@ public class Database {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetDatastoreDatabase2Response getDatastoreDatabase2(@Nonnull GetDatastoreDatabase2Request request) {
-        RequestOperation<GetDatastoreDatabase2Request, GetDatastoreDatabase2Response> operation
-              = new GetDatastoreDatabase2.Sync(sdkConfiguration, _headers);
+    public GetDatastoreDatabaseResponse getDatastoreDatabase(@Nonnull GetDatastoreDatabaseRequest request) {
+        RequestOperation<GetDatastoreDatabaseRequest, GetDatastoreDatabaseResponse> operation
+              = new GetDatastoreDatabase.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -101,8 +101,8 @@ public class Database {
      * 
      * @return The call builder
      */
-    public ListDatastoreDatabases2RequestBuilder listDatastoreDatabases2() {
-        return new ListDatastoreDatabases2RequestBuilder(sdkConfiguration);
+    public ListDatastoreDatabasesRequestBuilder listDatastoreDatabases() {
+        return new ListDatastoreDatabasesRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -112,9 +112,9 @@ public class Database {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListDatastoreDatabases2Response listDatastoreDatabases2(@Nonnull ListDatastoreDatabases2Request request) {
-        RequestOperation<ListDatastoreDatabases2Request, ListDatastoreDatabases2Response> operation
-              = new ListDatastoreDatabases2.Sync(sdkConfiguration, _headers);
+    public ListDatastoreDatabasesResponse listDatastoreDatabases(@Nonnull ListDatastoreDatabasesRequest request) {
+        RequestOperation<ListDatastoreDatabasesRequest, ListDatastoreDatabasesResponse> operation
+              = new ListDatastoreDatabases.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -123,8 +123,8 @@ public class Database {
      * 
      * @return The call builder
      */
-    public PatchDatastoreDatabase2RequestBuilder patchDatastoreDatabase2() {
-        return new PatchDatastoreDatabase2RequestBuilder(sdkConfiguration);
+    public PatchDatastoreDatabaseRequestBuilder patchDatastoreDatabase() {
+        return new PatchDatastoreDatabaseRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -134,9 +134,9 @@ public class Database {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchDatastoreDatabase2Response patchDatastoreDatabase2(@Nonnull PatchDatastoreDatabase2Request request) {
-        RequestOperation<PatchDatastoreDatabase2Request, PatchDatastoreDatabase2Response> operation
-              = new PatchDatastoreDatabase2.Sync(sdkConfiguration, _headers);
+    public PatchDatastoreDatabaseResponse patchDatastoreDatabase(@Nonnull PatchDatastoreDatabaseRequest request) {
+        RequestOperation<PatchDatastoreDatabaseRequest, PatchDatastoreDatabaseResponse> operation
+              = new PatchDatastoreDatabase.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -145,8 +145,8 @@ public class Database {
      * 
      * @return The call builder
      */
-    public RemoveDatastoreDatabase2RequestBuilder removeDatastoreDatabase2() {
-        return new RemoveDatastoreDatabase2RequestBuilder(sdkConfiguration);
+    public RemoveDatastoreDatabaseRequestBuilder removeDatastoreDatabase() {
+        return new RemoveDatastoreDatabaseRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -156,9 +156,9 @@ public class Database {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveDatastoreDatabase2Response removeDatastoreDatabase2(@Nonnull RemoveDatastoreDatabase2Request request) {
-        RequestOperation<RemoveDatastoreDatabase2Request, RemoveDatastoreDatabase2Response> operation
-              = new RemoveDatastoreDatabase2.Sync(sdkConfiguration, _headers);
+    public RemoveDatastoreDatabaseResponse removeDatastoreDatabase(@Nonnull RemoveDatastoreDatabaseRequest request) {
+        RequestOperation<RemoveDatastoreDatabaseRequest, RemoveDatastoreDatabaseResponse> operation
+              = new RemoveDatastoreDatabase.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -167,8 +167,8 @@ public class Database {
      * 
      * @return The call builder
      */
-    public UpdateDatastoreDatabase2RequestBuilder updateDatastoreDatabase2() {
-        return new UpdateDatastoreDatabase2RequestBuilder(sdkConfiguration);
+    public UpdateDatastoreDatabaseRequestBuilder updateDatastoreDatabase() {
+        return new UpdateDatastoreDatabaseRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -178,9 +178,9 @@ public class Database {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateDatastoreDatabase2Response updateDatastoreDatabase2(@Nonnull UpdateDatastoreDatabase2Request request) {
-        RequestOperation<UpdateDatastoreDatabase2Request, UpdateDatastoreDatabase2Response> operation
-              = new UpdateDatastoreDatabase2.Sync(sdkConfiguration, _headers);
+    public UpdateDatastoreDatabaseResponse updateDatastoreDatabase(@Nonnull UpdateDatastoreDatabaseRequest request) {
+        RequestOperation<UpdateDatastoreDatabaseRequest, UpdateDatastoreDatabaseResponse> operation
+              = new UpdateDatastoreDatabase.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

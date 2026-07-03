@@ -6,30 +6,30 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
-import to.unified.unified_java_sdk.models.operations.CreateAccountingTaxrate2Request;
-import to.unified.unified_java_sdk.models.operations.CreateAccountingTaxrate2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.CreateAccountingTaxrate2Response;
-import to.unified.unified_java_sdk.models.operations.GetAccountingTaxrate2Request;
-import to.unified.unified_java_sdk.models.operations.GetAccountingTaxrate2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.GetAccountingTaxrate2Response;
-import to.unified.unified_java_sdk.models.operations.ListAccountingTaxrates2Request;
-import to.unified.unified_java_sdk.models.operations.ListAccountingTaxrates2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.ListAccountingTaxrates2Response;
-import to.unified.unified_java_sdk.models.operations.PatchAccountingTaxrate2Request;
-import to.unified.unified_java_sdk.models.operations.PatchAccountingTaxrate2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.PatchAccountingTaxrate2Response;
-import to.unified.unified_java_sdk.models.operations.RemoveAccountingTaxrate2Request;
-import to.unified.unified_java_sdk.models.operations.RemoveAccountingTaxrate2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.RemoveAccountingTaxrate2Response;
-import to.unified.unified_java_sdk.models.operations.UpdateAccountingTaxrate2Request;
-import to.unified.unified_java_sdk.models.operations.UpdateAccountingTaxrate2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.UpdateAccountingTaxrate2Response;
-import to.unified.unified_java_sdk.operations.CreateAccountingTaxrate2;
-import to.unified.unified_java_sdk.operations.GetAccountingTaxrate2;
-import to.unified.unified_java_sdk.operations.ListAccountingTaxrates2;
-import to.unified.unified_java_sdk.operations.PatchAccountingTaxrate2;
-import to.unified.unified_java_sdk.operations.RemoveAccountingTaxrate2;
-import to.unified.unified_java_sdk.operations.UpdateAccountingTaxrate2;
+import to.unified.unified_java_sdk.models.operations.CreateAccountingTaxrateRequest;
+import to.unified.unified_java_sdk.models.operations.CreateAccountingTaxrateRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.CreateAccountingTaxrateResponse;
+import to.unified.unified_java_sdk.models.operations.GetAccountingTaxrateRequest;
+import to.unified.unified_java_sdk.models.operations.GetAccountingTaxrateRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetAccountingTaxrateResponse;
+import to.unified.unified_java_sdk.models.operations.ListAccountingTaxratesRequest;
+import to.unified.unified_java_sdk.models.operations.ListAccountingTaxratesRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListAccountingTaxratesResponse;
+import to.unified.unified_java_sdk.models.operations.PatchAccountingTaxrateRequest;
+import to.unified.unified_java_sdk.models.operations.PatchAccountingTaxrateRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.PatchAccountingTaxrateResponse;
+import to.unified.unified_java_sdk.models.operations.RemoveAccountingTaxrateRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveAccountingTaxrateRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.RemoveAccountingTaxrateResponse;
+import to.unified.unified_java_sdk.models.operations.UpdateAccountingTaxrateRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateAccountingTaxrateRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.UpdateAccountingTaxrateResponse;
+import to.unified.unified_java_sdk.operations.CreateAccountingTaxrate;
+import to.unified.unified_java_sdk.operations.GetAccountingTaxrate;
+import to.unified.unified_java_sdk.operations.ListAccountingTaxrates;
+import to.unified.unified_java_sdk.operations.PatchAccountingTaxrate;
+import to.unified.unified_java_sdk.operations.RemoveAccountingTaxrate;
+import to.unified.unified_java_sdk.operations.UpdateAccountingTaxrate;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -57,8 +57,8 @@ public class Taxrate {
      * 
      * @return The call builder
      */
-    public CreateAccountingTaxrate2RequestBuilder createAccountingTaxrate2() {
-        return new CreateAccountingTaxrate2RequestBuilder(sdkConfiguration);
+    public CreateAccountingTaxrateRequestBuilder createAccountingTaxrate() {
+        return new CreateAccountingTaxrateRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -68,9 +68,9 @@ public class Taxrate {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateAccountingTaxrate2Response createAccountingTaxrate2(@Nonnull CreateAccountingTaxrate2Request request) {
-        RequestOperation<CreateAccountingTaxrate2Request, CreateAccountingTaxrate2Response> operation
-              = new CreateAccountingTaxrate2.Sync(sdkConfiguration, _headers);
+    public CreateAccountingTaxrateResponse createAccountingTaxrate(@Nonnull CreateAccountingTaxrateRequest request) {
+        RequestOperation<CreateAccountingTaxrateRequest, CreateAccountingTaxrateResponse> operation
+              = new CreateAccountingTaxrate.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -79,8 +79,8 @@ public class Taxrate {
      * 
      * @return The call builder
      */
-    public GetAccountingTaxrate2RequestBuilder getAccountingTaxrate2() {
-        return new GetAccountingTaxrate2RequestBuilder(sdkConfiguration);
+    public GetAccountingTaxrateRequestBuilder getAccountingTaxrate() {
+        return new GetAccountingTaxrateRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -90,9 +90,9 @@ public class Taxrate {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetAccountingTaxrate2Response getAccountingTaxrate2(@Nonnull GetAccountingTaxrate2Request request) {
-        RequestOperation<GetAccountingTaxrate2Request, GetAccountingTaxrate2Response> operation
-              = new GetAccountingTaxrate2.Sync(sdkConfiguration, _headers);
+    public GetAccountingTaxrateResponse getAccountingTaxrate(@Nonnull GetAccountingTaxrateRequest request) {
+        RequestOperation<GetAccountingTaxrateRequest, GetAccountingTaxrateResponse> operation
+              = new GetAccountingTaxrate.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -101,8 +101,8 @@ public class Taxrate {
      * 
      * @return The call builder
      */
-    public ListAccountingTaxrates2RequestBuilder listAccountingTaxrates2() {
-        return new ListAccountingTaxrates2RequestBuilder(sdkConfiguration);
+    public ListAccountingTaxratesRequestBuilder listAccountingTaxrates() {
+        return new ListAccountingTaxratesRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -112,9 +112,9 @@ public class Taxrate {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListAccountingTaxrates2Response listAccountingTaxrates2(@Nonnull ListAccountingTaxrates2Request request) {
-        RequestOperation<ListAccountingTaxrates2Request, ListAccountingTaxrates2Response> operation
-              = new ListAccountingTaxrates2.Sync(sdkConfiguration, _headers);
+    public ListAccountingTaxratesResponse listAccountingTaxrates(@Nonnull ListAccountingTaxratesRequest request) {
+        RequestOperation<ListAccountingTaxratesRequest, ListAccountingTaxratesResponse> operation
+              = new ListAccountingTaxrates.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -123,8 +123,8 @@ public class Taxrate {
      * 
      * @return The call builder
      */
-    public PatchAccountingTaxrate2RequestBuilder patchAccountingTaxrate2() {
-        return new PatchAccountingTaxrate2RequestBuilder(sdkConfiguration);
+    public PatchAccountingTaxrateRequestBuilder patchAccountingTaxrate() {
+        return new PatchAccountingTaxrateRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -134,9 +134,9 @@ public class Taxrate {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchAccountingTaxrate2Response patchAccountingTaxrate2(@Nonnull PatchAccountingTaxrate2Request request) {
-        RequestOperation<PatchAccountingTaxrate2Request, PatchAccountingTaxrate2Response> operation
-              = new PatchAccountingTaxrate2.Sync(sdkConfiguration, _headers);
+    public PatchAccountingTaxrateResponse patchAccountingTaxrate(@Nonnull PatchAccountingTaxrateRequest request) {
+        RequestOperation<PatchAccountingTaxrateRequest, PatchAccountingTaxrateResponse> operation
+              = new PatchAccountingTaxrate.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -145,8 +145,8 @@ public class Taxrate {
      * 
      * @return The call builder
      */
-    public RemoveAccountingTaxrate2RequestBuilder removeAccountingTaxrate2() {
-        return new RemoveAccountingTaxrate2RequestBuilder(sdkConfiguration);
+    public RemoveAccountingTaxrateRequestBuilder removeAccountingTaxrate() {
+        return new RemoveAccountingTaxrateRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -156,9 +156,9 @@ public class Taxrate {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveAccountingTaxrate2Response removeAccountingTaxrate2(@Nonnull RemoveAccountingTaxrate2Request request) {
-        RequestOperation<RemoveAccountingTaxrate2Request, RemoveAccountingTaxrate2Response> operation
-              = new RemoveAccountingTaxrate2.Sync(sdkConfiguration, _headers);
+    public RemoveAccountingTaxrateResponse removeAccountingTaxrate(@Nonnull RemoveAccountingTaxrateRequest request) {
+        RequestOperation<RemoveAccountingTaxrateRequest, RemoveAccountingTaxrateResponse> operation
+              = new RemoveAccountingTaxrate.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -167,8 +167,8 @@ public class Taxrate {
      * 
      * @return The call builder
      */
-    public UpdateAccountingTaxrate2RequestBuilder updateAccountingTaxrate2() {
-        return new UpdateAccountingTaxrate2RequestBuilder(sdkConfiguration);
+    public UpdateAccountingTaxrateRequestBuilder updateAccountingTaxrate() {
+        return new UpdateAccountingTaxrateRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -178,9 +178,9 @@ public class Taxrate {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateAccountingTaxrate2Response updateAccountingTaxrate2(@Nonnull UpdateAccountingTaxrate2Request request) {
-        RequestOperation<UpdateAccountingTaxrate2Request, UpdateAccountingTaxrate2Response> operation
-              = new UpdateAccountingTaxrate2.Sync(sdkConfiguration, _headers);
+    public UpdateAccountingTaxrateResponse updateAccountingTaxrate(@Nonnull UpdateAccountingTaxrateRequest request) {
+        RequestOperation<UpdateAccountingTaxrateRequest, UpdateAccountingTaxrateResponse> operation
+              = new UpdateAccountingTaxrate.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

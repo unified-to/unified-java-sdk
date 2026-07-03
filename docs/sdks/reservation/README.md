@@ -4,27 +4,27 @@
 
 ### Available Operations
 
-* [createCommerceReservation2](#createcommercereservation2) - Create a reservation
-* [getCommerceReservation2](#getcommercereservation2) - Retrieve a reservation
-* [listCommerceReservations2](#listcommercereservations2) - List all reservations
-* [patchCommerceReservation2](#patchcommercereservation2) - Update a reservation
-* [removeCommerceReservation2](#removecommercereservation2) - Remove a reservation
-* [updateCommerceReservation2](#updatecommercereservation2) - Update a reservation
+* [createCommerceReservation](#createcommercereservation) - Create a reservation
+* [getCommerceReservation](#getcommercereservation) - Retrieve a reservation
+* [listCommerceReservations](#listcommercereservations) - List all reservations
+* [patchCommerceReservation](#patchcommercereservation) - Update a reservation
+* [removeCommerceReservation](#removecommercereservation) - Remove a reservation
+* [updateCommerceReservation](#updatecommercereservation) - Update a reservation
 
-## createCommerceReservation2
+## createCommerceReservation
 
 Create a reservation
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createCommerceReservation2" method="post" path="/commerce/{connection_id}/reservation" -->
+<!-- UsageSnippet language="java" operationID="createCommerceReservation" method="post" path="/commerce/{connection_id}/reservation" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.CreateCommerceReservation2Request;
-import to.unified.unified_java_sdk.models.operations.CreateCommerceReservation2Response;
+import to.unified.unified_java_sdk.models.operations.CreateCommerceReservationRequest;
+import to.unified.unified_java_sdk.models.operations.CreateCommerceReservationResponse;
 import to.unified.unified_java_sdk.models.shared.CommerceReservation;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -38,13 +38,13 @@ public class Application {
                     .build())
             .build();
 
-        CreateCommerceReservation2Request req = CreateCommerceReservation2Request.builder()
+        CreateCommerceReservationRequest req = CreateCommerceReservationRequest.builder()
                 .commerceReservation(CommerceReservation.builder()
                     .build())
                 .connectionId("<id>")
                 .build();
 
-        CreateCommerceReservation2Response res = sdk.reservation().createCommerceReservation2()
+        CreateCommerceReservationResponse res = sdk.reservation().createCommerceReservation()
                 .request(req)
                 .call();
 
@@ -57,13 +57,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                         | Type                                                                                              | Required                                                                                          | Description                                                                                       |
-| ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
-| `request`                                                                                         | [CreateCommerceReservation2Request](../../models/operations/CreateCommerceReservation2Request.md) | :heavy_check_mark:                                                                                | The request object to use for the request.                                                        |
+| Parameter                                                                                       | Type                                                                                            | Required                                                                                        | Description                                                                                     |
+| ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
+| `request`                                                                                       | [CreateCommerceReservationRequest](../../models/operations/CreateCommerceReservationRequest.md) | :heavy_check_mark:                                                                              | The request object to use for the request.                                                      |
 
 ### Response
 
-**[CreateCommerceReservation2Response](../../models/operations/CreateCommerceReservation2Response.md)**
+**[CreateCommerceReservationResponse](../../models/operations/CreateCommerceReservationResponse.md)**
 
 ### Errors
 
@@ -71,20 +71,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## getCommerceReservation2
+## getCommerceReservation
 
 Retrieve a reservation
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="getCommerceReservation2" method="get" path="/commerce/{connection_id}/reservation/{id}" -->
+<!-- UsageSnippet language="java" operationID="getCommerceReservation" method="get" path="/commerce/{connection_id}/reservation/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.GetCommerceReservation2Request;
-import to.unified.unified_java_sdk.models.operations.GetCommerceReservation2Response;
+import to.unified.unified_java_sdk.models.operations.GetCommerceReservationRequest;
+import to.unified.unified_java_sdk.models.operations.GetCommerceReservationResponse;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -97,12 +97,12 @@ public class Application {
                     .build())
             .build();
 
-        GetCommerceReservation2Request req = GetCommerceReservation2Request.builder()
+        GetCommerceReservationRequest req = GetCommerceReservationRequest.builder()
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        GetCommerceReservation2Response res = sdk.reservation().getCommerceReservation2()
+        GetCommerceReservationResponse res = sdk.reservation().getCommerceReservation()
                 .request(req)
                 .call();
 
@@ -115,13 +115,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                   | Type                                                                                        | Required                                                                                    | Description                                                                                 |
-| ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
-| `request`                                                                                   | [GetCommerceReservation2Request](../../models/operations/GetCommerceReservation2Request.md) | :heavy_check_mark:                                                                          | The request object to use for the request.                                                  |
+| Parameter                                                                                 | Type                                                                                      | Required                                                                                  | Description                                                                               |
+| ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
+| `request`                                                                                 | [GetCommerceReservationRequest](../../models/operations/GetCommerceReservationRequest.md) | :heavy_check_mark:                                                                        | The request object to use for the request.                                                |
 
 ### Response
 
-**[GetCommerceReservation2Response](../../models/operations/GetCommerceReservation2Response.md)**
+**[GetCommerceReservationResponse](../../models/operations/GetCommerceReservationResponse.md)**
 
 ### Errors
 
@@ -129,20 +129,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## listCommerceReservations2
+## listCommerceReservations
 
 List all reservations
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="listCommerceReservations2" method="get" path="/commerce/{connection_id}/reservation" -->
+<!-- UsageSnippet language="java" operationID="listCommerceReservations" method="get" path="/commerce/{connection_id}/reservation" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.ListCommerceReservations2Request;
-import to.unified.unified_java_sdk.models.operations.ListCommerceReservations2Response;
+import to.unified.unified_java_sdk.models.operations.ListCommerceReservationsRequest;
+import to.unified.unified_java_sdk.models.operations.ListCommerceReservationsResponse;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -155,11 +155,11 @@ public class Application {
                     .build())
             .build();
 
-        ListCommerceReservations2Request req = ListCommerceReservations2Request.builder()
+        ListCommerceReservationsRequest req = ListCommerceReservationsRequest.builder()
                 .connectionId("<id>")
                 .build();
 
-        ListCommerceReservations2Response res = sdk.reservation().listCommerceReservations2()
+        ListCommerceReservationsResponse res = sdk.reservation().listCommerceReservations()
                 .request(req)
                 .call();
 
@@ -172,13 +172,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                       | Type                                                                                            | Required                                                                                        | Description                                                                                     |
-| ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
-| `request`                                                                                       | [ListCommerceReservations2Request](../../models/operations/ListCommerceReservations2Request.md) | :heavy_check_mark:                                                                              | The request object to use for the request.                                                      |
+| Parameter                                                                                     | Type                                                                                          | Required                                                                                      | Description                                                                                   |
+| --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
+| `request`                                                                                     | [ListCommerceReservationsRequest](../../models/operations/ListCommerceReservationsRequest.md) | :heavy_check_mark:                                                                            | The request object to use for the request.                                                    |
 
 ### Response
 
-**[ListCommerceReservations2Response](../../models/operations/ListCommerceReservations2Response.md)**
+**[ListCommerceReservationsResponse](../../models/operations/ListCommerceReservationsResponse.md)**
 
 ### Errors
 
@@ -186,20 +186,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## patchCommerceReservation2
+## patchCommerceReservation
 
 Update a reservation
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchCommerceReservation2" method="patch" path="/commerce/{connection_id}/reservation/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchCommerceReservation" method="patch" path="/commerce/{connection_id}/reservation/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.PatchCommerceReservation2Request;
-import to.unified.unified_java_sdk.models.operations.PatchCommerceReservation2Response;
+import to.unified.unified_java_sdk.models.operations.PatchCommerceReservationRequest;
+import to.unified.unified_java_sdk.models.operations.PatchCommerceReservationResponse;
 import to.unified.unified_java_sdk.models.shared.CommerceReservation;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -213,14 +213,14 @@ public class Application {
                     .build())
             .build();
 
-        PatchCommerceReservation2Request req = PatchCommerceReservation2Request.builder()
+        PatchCommerceReservationRequest req = PatchCommerceReservationRequest.builder()
                 .commerceReservation(CommerceReservation.builder()
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        PatchCommerceReservation2Response res = sdk.reservation().patchCommerceReservation2()
+        PatchCommerceReservationResponse res = sdk.reservation().patchCommerceReservation()
                 .request(req)
                 .call();
 
@@ -233,13 +233,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                       | Type                                                                                            | Required                                                                                        | Description                                                                                     |
-| ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
-| `request`                                                                                       | [PatchCommerceReservation2Request](../../models/operations/PatchCommerceReservation2Request.md) | :heavy_check_mark:                                                                              | The request object to use for the request.                                                      |
+| Parameter                                                                                     | Type                                                                                          | Required                                                                                      | Description                                                                                   |
+| --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
+| `request`                                                                                     | [PatchCommerceReservationRequest](../../models/operations/PatchCommerceReservationRequest.md) | :heavy_check_mark:                                                                            | The request object to use for the request.                                                    |
 
 ### Response
 
-**[PatchCommerceReservation2Response](../../models/operations/PatchCommerceReservation2Response.md)**
+**[PatchCommerceReservationResponse](../../models/operations/PatchCommerceReservationResponse.md)**
 
 ### Errors
 
@@ -247,20 +247,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## removeCommerceReservation2
+## removeCommerceReservation
 
 Remove a reservation
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="removeCommerceReservation2" method="delete" path="/commerce/{connection_id}/reservation/{id}" -->
+<!-- UsageSnippet language="java" operationID="removeCommerceReservation" method="delete" path="/commerce/{connection_id}/reservation/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.RemoveCommerceReservation2Request;
-import to.unified.unified_java_sdk.models.operations.RemoveCommerceReservation2Response;
+import to.unified.unified_java_sdk.models.operations.RemoveCommerceReservationRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveCommerceReservationResponse;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -273,12 +273,12 @@ public class Application {
                     .build())
             .build();
 
-        RemoveCommerceReservation2Request req = RemoveCommerceReservation2Request.builder()
+        RemoveCommerceReservationRequest req = RemoveCommerceReservationRequest.builder()
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        RemoveCommerceReservation2Response res = sdk.reservation().removeCommerceReservation2()
+        RemoveCommerceReservationResponse res = sdk.reservation().removeCommerceReservation()
                 .request(req)
                 .call();
 
@@ -289,13 +289,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                         | Type                                                                                              | Required                                                                                          | Description                                                                                       |
-| ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
-| `request`                                                                                         | [RemoveCommerceReservation2Request](../../models/operations/RemoveCommerceReservation2Request.md) | :heavy_check_mark:                                                                                | The request object to use for the request.                                                        |
+| Parameter                                                                                       | Type                                                                                            | Required                                                                                        | Description                                                                                     |
+| ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
+| `request`                                                                                       | [RemoveCommerceReservationRequest](../../models/operations/RemoveCommerceReservationRequest.md) | :heavy_check_mark:                                                                              | The request object to use for the request.                                                      |
 
 ### Response
 
-**[RemoveCommerceReservation2Response](../../models/operations/RemoveCommerceReservation2Response.md)**
+**[RemoveCommerceReservationResponse](../../models/operations/RemoveCommerceReservationResponse.md)**
 
 ### Errors
 
@@ -303,20 +303,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## updateCommerceReservation2
+## updateCommerceReservation
 
 Update a reservation
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateCommerceReservation2" method="put" path="/commerce/{connection_id}/reservation/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateCommerceReservation" method="put" path="/commerce/{connection_id}/reservation/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.UpdateCommerceReservation2Request;
-import to.unified.unified_java_sdk.models.operations.UpdateCommerceReservation2Response;
+import to.unified.unified_java_sdk.models.operations.UpdateCommerceReservationRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateCommerceReservationResponse;
 import to.unified.unified_java_sdk.models.shared.CommerceReservation;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -330,14 +330,14 @@ public class Application {
                     .build())
             .build();
 
-        UpdateCommerceReservation2Request req = UpdateCommerceReservation2Request.builder()
+        UpdateCommerceReservationRequest req = UpdateCommerceReservationRequest.builder()
                 .commerceReservation(CommerceReservation.builder()
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        UpdateCommerceReservation2Response res = sdk.reservation().updateCommerceReservation2()
+        UpdateCommerceReservationResponse res = sdk.reservation().updateCommerceReservation()
                 .request(req)
                 .call();
 
@@ -350,13 +350,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                         | Type                                                                                              | Required                                                                                          | Description                                                                                       |
-| ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
-| `request`                                                                                         | [UpdateCommerceReservation2Request](../../models/operations/UpdateCommerceReservation2Request.md) | :heavy_check_mark:                                                                                | The request object to use for the request.                                                        |
+| Parameter                                                                                       | Type                                                                                            | Required                                                                                        | Description                                                                                     |
+| ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
+| `request`                                                                                       | [UpdateCommerceReservationRequest](../../models/operations/UpdateCommerceReservationRequest.md) | :heavy_check_mark:                                                                              | The request object to use for the request.                                                      |
 
 ### Response
 
-**[UpdateCommerceReservation2Response](../../models/operations/UpdateCommerceReservation2Response.md)**
+**[UpdateCommerceReservationResponse](../../models/operations/UpdateCommerceReservationResponse.md)**
 
 ### Errors
 

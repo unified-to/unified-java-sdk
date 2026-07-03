@@ -4,27 +4,27 @@
 
 ### Available Operations
 
-* [createKmsSpace2](#createkmsspace2) - Create a space
-* [getKmsSpace2](#getkmsspace2) - Retrieve a space
-* [listKmsSpaces2](#listkmsspaces2) - List all spaces
-* [patchKmsSpace2](#patchkmsspace2) - Update a space
-* [removeKmsSpace2](#removekmsspace2) - Remove a space
-* [updateKmsSpace2](#updatekmsspace2) - Update a space
+* [createKmsSpace](#createkmsspace) - Create a space
+* [getKmsSpace](#getkmsspace) - Retrieve a space
+* [listKmsSpaces](#listkmsspaces) - List all spaces
+* [patchKmsSpace](#patchkmsspace) - Update a space
+* [removeKmsSpace](#removekmsspace) - Remove a space
+* [updateKmsSpace](#updatekmsspace) - Update a space
 
-## createKmsSpace2
+## createKmsSpace
 
 Create a space
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createKmsSpace2" method="post" path="/kms/{connection_id}/space" -->
+<!-- UsageSnippet language="java" operationID="createKmsSpace" method="post" path="/kms/{connection_id}/space" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.CreateKmsSpace2Request;
-import to.unified.unified_java_sdk.models.operations.CreateKmsSpace2Response;
+import to.unified.unified_java_sdk.models.operations.CreateKmsSpaceRequest;
+import to.unified.unified_java_sdk.models.operations.CreateKmsSpaceResponse;
 import to.unified.unified_java_sdk.models.shared.KmsSpace;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -38,13 +38,13 @@ public class Application {
                     .build())
             .build();
 
-        CreateKmsSpace2Request req = CreateKmsSpace2Request.builder()
+        CreateKmsSpaceRequest req = CreateKmsSpaceRequest.builder()
                 .kmsSpace(KmsSpace.builder()
                     .build())
                 .connectionId("<id>")
                 .build();
 
-        CreateKmsSpace2Response res = sdk.space().createKmsSpace2()
+        CreateKmsSpaceResponse res = sdk.space().createKmsSpace()
                 .request(req)
                 .call();
 
@@ -57,13 +57,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                   | Type                                                                        | Required                                                                    | Description                                                                 |
-| --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
-| `request`                                                                   | [CreateKmsSpace2Request](../../models/operations/CreateKmsSpace2Request.md) | :heavy_check_mark:                                                          | The request object to use for the request.                                  |
+| Parameter                                                                 | Type                                                                      | Required                                                                  | Description                                                               |
+| ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
+| `request`                                                                 | [CreateKmsSpaceRequest](../../models/operations/CreateKmsSpaceRequest.md) | :heavy_check_mark:                                                        | The request object to use for the request.                                |
 
 ### Response
 
-**[CreateKmsSpace2Response](../../models/operations/CreateKmsSpace2Response.md)**
+**[CreateKmsSpaceResponse](../../models/operations/CreateKmsSpaceResponse.md)**
 
 ### Errors
 
@@ -71,20 +71,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## getKmsSpace2
+## getKmsSpace
 
 Retrieve a space
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="getKmsSpace2" method="get" path="/kms/{connection_id}/space/{id}" -->
+<!-- UsageSnippet language="java" operationID="getKmsSpace" method="get" path="/kms/{connection_id}/space/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.GetKmsSpace2Request;
-import to.unified.unified_java_sdk.models.operations.GetKmsSpace2Response;
+import to.unified.unified_java_sdk.models.operations.GetKmsSpaceRequest;
+import to.unified.unified_java_sdk.models.operations.GetKmsSpaceResponse;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -97,12 +97,12 @@ public class Application {
                     .build())
             .build();
 
-        GetKmsSpace2Request req = GetKmsSpace2Request.builder()
+        GetKmsSpaceRequest req = GetKmsSpaceRequest.builder()
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        GetKmsSpace2Response res = sdk.space().getKmsSpace2()
+        GetKmsSpaceResponse res = sdk.space().getKmsSpace()
                 .request(req)
                 .call();
 
@@ -115,13 +115,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                             | Type                                                                  | Required                                                              | Description                                                           |
-| --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- |
-| `request`                                                             | [GetKmsSpace2Request](../../models/operations/GetKmsSpace2Request.md) | :heavy_check_mark:                                                    | The request object to use for the request.                            |
+| Parameter                                                           | Type                                                                | Required                                                            | Description                                                         |
+| ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- |
+| `request`                                                           | [GetKmsSpaceRequest](../../models/operations/GetKmsSpaceRequest.md) | :heavy_check_mark:                                                  | The request object to use for the request.                          |
 
 ### Response
 
-**[GetKmsSpace2Response](../../models/operations/GetKmsSpace2Response.md)**
+**[GetKmsSpaceResponse](../../models/operations/GetKmsSpaceResponse.md)**
 
 ### Errors
 
@@ -129,20 +129,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## listKmsSpaces2
+## listKmsSpaces
 
 List all spaces
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="listKmsSpaces2" method="get" path="/kms/{connection_id}/space" -->
+<!-- UsageSnippet language="java" operationID="listKmsSpaces" method="get" path="/kms/{connection_id}/space" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.ListKmsSpaces2Request;
-import to.unified.unified_java_sdk.models.operations.ListKmsSpaces2Response;
+import to.unified.unified_java_sdk.models.operations.ListKmsSpacesRequest;
+import to.unified.unified_java_sdk.models.operations.ListKmsSpacesResponse;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -155,11 +155,11 @@ public class Application {
                     .build())
             .build();
 
-        ListKmsSpaces2Request req = ListKmsSpaces2Request.builder()
+        ListKmsSpacesRequest req = ListKmsSpacesRequest.builder()
                 .connectionId("<id>")
                 .build();
 
-        ListKmsSpaces2Response res = sdk.space().listKmsSpaces2()
+        ListKmsSpacesResponse res = sdk.space().listKmsSpaces()
                 .request(req)
                 .call();
 
@@ -172,13 +172,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                 | Type                                                                      | Required                                                                  | Description                                                               |
-| ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
-| `request`                                                                 | [ListKmsSpaces2Request](../../models/operations/ListKmsSpaces2Request.md) | :heavy_check_mark:                                                        | The request object to use for the request.                                |
+| Parameter                                                               | Type                                                                    | Required                                                                | Description                                                             |
+| ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- |
+| `request`                                                               | [ListKmsSpacesRequest](../../models/operations/ListKmsSpacesRequest.md) | :heavy_check_mark:                                                      | The request object to use for the request.                              |
 
 ### Response
 
-**[ListKmsSpaces2Response](../../models/operations/ListKmsSpaces2Response.md)**
+**[ListKmsSpacesResponse](../../models/operations/ListKmsSpacesResponse.md)**
 
 ### Errors
 
@@ -186,20 +186,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## patchKmsSpace2
+## patchKmsSpace
 
 Update a space
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchKmsSpace2" method="patch" path="/kms/{connection_id}/space/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchKmsSpace" method="patch" path="/kms/{connection_id}/space/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.PatchKmsSpace2Request;
-import to.unified.unified_java_sdk.models.operations.PatchKmsSpace2Response;
+import to.unified.unified_java_sdk.models.operations.PatchKmsSpaceRequest;
+import to.unified.unified_java_sdk.models.operations.PatchKmsSpaceResponse;
 import to.unified.unified_java_sdk.models.shared.KmsSpace;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -213,14 +213,14 @@ public class Application {
                     .build())
             .build();
 
-        PatchKmsSpace2Request req = PatchKmsSpace2Request.builder()
+        PatchKmsSpaceRequest req = PatchKmsSpaceRequest.builder()
                 .kmsSpace(KmsSpace.builder()
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        PatchKmsSpace2Response res = sdk.space().patchKmsSpace2()
+        PatchKmsSpaceResponse res = sdk.space().patchKmsSpace()
                 .request(req)
                 .call();
 
@@ -233,13 +233,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                 | Type                                                                      | Required                                                                  | Description                                                               |
-| ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
-| `request`                                                                 | [PatchKmsSpace2Request](../../models/operations/PatchKmsSpace2Request.md) | :heavy_check_mark:                                                        | The request object to use for the request.                                |
+| Parameter                                                               | Type                                                                    | Required                                                                | Description                                                             |
+| ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- |
+| `request`                                                               | [PatchKmsSpaceRequest](../../models/operations/PatchKmsSpaceRequest.md) | :heavy_check_mark:                                                      | The request object to use for the request.                              |
 
 ### Response
 
-**[PatchKmsSpace2Response](../../models/operations/PatchKmsSpace2Response.md)**
+**[PatchKmsSpaceResponse](../../models/operations/PatchKmsSpaceResponse.md)**
 
 ### Errors
 
@@ -247,20 +247,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## removeKmsSpace2
+## removeKmsSpace
 
 Remove a space
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="removeKmsSpace2" method="delete" path="/kms/{connection_id}/space/{id}" -->
+<!-- UsageSnippet language="java" operationID="removeKmsSpace" method="delete" path="/kms/{connection_id}/space/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.RemoveKmsSpace2Request;
-import to.unified.unified_java_sdk.models.operations.RemoveKmsSpace2Response;
+import to.unified.unified_java_sdk.models.operations.RemoveKmsSpaceRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveKmsSpaceResponse;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -273,12 +273,12 @@ public class Application {
                     .build())
             .build();
 
-        RemoveKmsSpace2Request req = RemoveKmsSpace2Request.builder()
+        RemoveKmsSpaceRequest req = RemoveKmsSpaceRequest.builder()
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        RemoveKmsSpace2Response res = sdk.space().removeKmsSpace2()
+        RemoveKmsSpaceResponse res = sdk.space().removeKmsSpace()
                 .request(req)
                 .call();
 
@@ -289,13 +289,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                   | Type                                                                        | Required                                                                    | Description                                                                 |
-| --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
-| `request`                                                                   | [RemoveKmsSpace2Request](../../models/operations/RemoveKmsSpace2Request.md) | :heavy_check_mark:                                                          | The request object to use for the request.                                  |
+| Parameter                                                                 | Type                                                                      | Required                                                                  | Description                                                               |
+| ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
+| `request`                                                                 | [RemoveKmsSpaceRequest](../../models/operations/RemoveKmsSpaceRequest.md) | :heavy_check_mark:                                                        | The request object to use for the request.                                |
 
 ### Response
 
-**[RemoveKmsSpace2Response](../../models/operations/RemoveKmsSpace2Response.md)**
+**[RemoveKmsSpaceResponse](../../models/operations/RemoveKmsSpaceResponse.md)**
 
 ### Errors
 
@@ -303,20 +303,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## updateKmsSpace2
+## updateKmsSpace
 
 Update a space
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateKmsSpace2" method="put" path="/kms/{connection_id}/space/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateKmsSpace" method="put" path="/kms/{connection_id}/space/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.UpdateKmsSpace2Request;
-import to.unified.unified_java_sdk.models.operations.UpdateKmsSpace2Response;
+import to.unified.unified_java_sdk.models.operations.UpdateKmsSpaceRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateKmsSpaceResponse;
 import to.unified.unified_java_sdk.models.shared.KmsSpace;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -330,14 +330,14 @@ public class Application {
                     .build())
             .build();
 
-        UpdateKmsSpace2Request req = UpdateKmsSpace2Request.builder()
+        UpdateKmsSpaceRequest req = UpdateKmsSpaceRequest.builder()
                 .kmsSpace(KmsSpace.builder()
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        UpdateKmsSpace2Response res = sdk.space().updateKmsSpace2()
+        UpdateKmsSpaceResponse res = sdk.space().updateKmsSpace()
                 .request(req)
                 .call();
 
@@ -350,13 +350,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                   | Type                                                                        | Required                                                                    | Description                                                                 |
-| --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
-| `request`                                                                   | [UpdateKmsSpace2Request](../../models/operations/UpdateKmsSpace2Request.md) | :heavy_check_mark:                                                          | The request object to use for the request.                                  |
+| Parameter                                                                 | Type                                                                      | Required                                                                  | Description                                                               |
+| ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
+| `request`                                                                 | [UpdateKmsSpaceRequest](../../models/operations/UpdateKmsSpaceRequest.md) | :heavy_check_mark:                                                        | The request object to use for the request.                                |
 
 ### Response
 
-**[UpdateKmsSpace2Response](../../models/operations/UpdateKmsSpace2Response.md)**
+**[UpdateKmsSpaceResponse](../../models/operations/UpdateKmsSpaceResponse.md)**
 
 ### Errors
 

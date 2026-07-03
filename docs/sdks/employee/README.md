@@ -4,27 +4,27 @@
 
 ### Available Operations
 
-* [createHrisEmployee2](#createhrisemployee2) - Create an employee
-* [getHrisEmployee2](#gethrisemployee2) - Retrieve an employee
-* [listHrisEmployees2](#listhrisemployees2) - List all employees
-* [patchHrisEmployee2](#patchhrisemployee2) - Update an employee
-* [removeHrisEmployee2](#removehrisemployee2) - Remove an employee
-* [updateHrisEmployee2](#updatehrisemployee2) - Update an employee
+* [createHrisEmployee](#createhrisemployee) - Create an employee
+* [getHrisEmployee](#gethrisemployee) - Retrieve an employee
+* [listHrisEmployees](#listhrisemployees) - List all employees
+* [patchHrisEmployee](#patchhrisemployee) - Update an employee
+* [removeHrisEmployee](#removehrisemployee) - Remove an employee
+* [updateHrisEmployee](#updatehrisemployee) - Update an employee
 
-## createHrisEmployee2
+## createHrisEmployee
 
 Create an employee
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createHrisEmployee2" method="post" path="/hris/{connection_id}/employee" -->
+<!-- UsageSnippet language="java" operationID="createHrisEmployee" method="post" path="/hris/{connection_id}/employee" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.CreateHrisEmployee2Request;
-import to.unified.unified_java_sdk.models.operations.CreateHrisEmployee2Response;
+import to.unified.unified_java_sdk.models.operations.CreateHrisEmployeeRequest;
+import to.unified.unified_java_sdk.models.operations.CreateHrisEmployeeResponse;
 import to.unified.unified_java_sdk.models.shared.HrisEmployee;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -38,13 +38,13 @@ public class Application {
                     .build())
             .build();
 
-        CreateHrisEmployee2Request req = CreateHrisEmployee2Request.builder()
+        CreateHrisEmployeeRequest req = CreateHrisEmployeeRequest.builder()
                 .hrisEmployee(HrisEmployee.builder()
                     .build())
                 .connectionId("<id>")
                 .build();
 
-        CreateHrisEmployee2Response res = sdk.employee().createHrisEmployee2()
+        CreateHrisEmployeeResponse res = sdk.employee().createHrisEmployee()
                 .request(req)
                 .call();
 
@@ -57,13 +57,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                           | Type                                                                                | Required                                                                            | Description                                                                         |
-| ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
-| `request`                                                                           | [CreateHrisEmployee2Request](../../models/operations/CreateHrisEmployee2Request.md) | :heavy_check_mark:                                                                  | The request object to use for the request.                                          |
+| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
+| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| `request`                                                                         | [CreateHrisEmployeeRequest](../../models/operations/CreateHrisEmployeeRequest.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
 
 ### Response
 
-**[CreateHrisEmployee2Response](../../models/operations/CreateHrisEmployee2Response.md)**
+**[CreateHrisEmployeeResponse](../../models/operations/CreateHrisEmployeeResponse.md)**
 
 ### Errors
 
@@ -71,20 +71,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## getHrisEmployee2
+## getHrisEmployee
 
 Retrieve an employee
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="getHrisEmployee2" method="get" path="/hris/{connection_id}/employee/{id}" -->
+<!-- UsageSnippet language="java" operationID="getHrisEmployee" method="get" path="/hris/{connection_id}/employee/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.GetHrisEmployee2Request;
-import to.unified.unified_java_sdk.models.operations.GetHrisEmployee2Response;
+import to.unified.unified_java_sdk.models.operations.GetHrisEmployeeRequest;
+import to.unified.unified_java_sdk.models.operations.GetHrisEmployeeResponse;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -97,12 +97,12 @@ public class Application {
                     .build())
             .build();
 
-        GetHrisEmployee2Request req = GetHrisEmployee2Request.builder()
+        GetHrisEmployeeRequest req = GetHrisEmployeeRequest.builder()
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        GetHrisEmployee2Response res = sdk.employee().getHrisEmployee2()
+        GetHrisEmployeeResponse res = sdk.employee().getHrisEmployee()
                 .request(req)
                 .call();
 
@@ -115,13 +115,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
-| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
-| `request`                                                                     | [GetHrisEmployee2Request](../../models/operations/GetHrisEmployee2Request.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
+| Parameter                                                                   | Type                                                                        | Required                                                                    | Description                                                                 |
+| --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| `request`                                                                   | [GetHrisEmployeeRequest](../../models/operations/GetHrisEmployeeRequest.md) | :heavy_check_mark:                                                          | The request object to use for the request.                                  |
 
 ### Response
 
-**[GetHrisEmployee2Response](../../models/operations/GetHrisEmployee2Response.md)**
+**[GetHrisEmployeeResponse](../../models/operations/GetHrisEmployeeResponse.md)**
 
 ### Errors
 
@@ -129,20 +129,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## listHrisEmployees2
+## listHrisEmployees
 
 List all employees
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="listHrisEmployees2" method="get" path="/hris/{connection_id}/employee" -->
+<!-- UsageSnippet language="java" operationID="listHrisEmployees" method="get" path="/hris/{connection_id}/employee" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.ListHrisEmployees2Request;
-import to.unified.unified_java_sdk.models.operations.ListHrisEmployees2Response;
+import to.unified.unified_java_sdk.models.operations.ListHrisEmployeesRequest;
+import to.unified.unified_java_sdk.models.operations.ListHrisEmployeesResponse;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -155,11 +155,11 @@ public class Application {
                     .build())
             .build();
 
-        ListHrisEmployees2Request req = ListHrisEmployees2Request.builder()
+        ListHrisEmployeesRequest req = ListHrisEmployeesRequest.builder()
                 .connectionId("<id>")
                 .build();
 
-        ListHrisEmployees2Response res = sdk.employee().listHrisEmployees2()
+        ListHrisEmployeesResponse res = sdk.employee().listHrisEmployees()
                 .request(req)
                 .call();
 
@@ -172,13 +172,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
-| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
-| `request`                                                                         | [ListHrisEmployees2Request](../../models/operations/ListHrisEmployees2Request.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
+| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| `request`                                                                       | [ListHrisEmployeesRequest](../../models/operations/ListHrisEmployeesRequest.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
 
 ### Response
 
-**[ListHrisEmployees2Response](../../models/operations/ListHrisEmployees2Response.md)**
+**[ListHrisEmployeesResponse](../../models/operations/ListHrisEmployeesResponse.md)**
 
 ### Errors
 
@@ -186,20 +186,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## patchHrisEmployee2
+## patchHrisEmployee
 
 Update an employee
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchHrisEmployee2" method="patch" path="/hris/{connection_id}/employee/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchHrisEmployee" method="patch" path="/hris/{connection_id}/employee/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.PatchHrisEmployee2Request;
-import to.unified.unified_java_sdk.models.operations.PatchHrisEmployee2Response;
+import to.unified.unified_java_sdk.models.operations.PatchHrisEmployeeRequest;
+import to.unified.unified_java_sdk.models.operations.PatchHrisEmployeeResponse;
 import to.unified.unified_java_sdk.models.shared.HrisEmployee;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -213,14 +213,14 @@ public class Application {
                     .build())
             .build();
 
-        PatchHrisEmployee2Request req = PatchHrisEmployee2Request.builder()
+        PatchHrisEmployeeRequest req = PatchHrisEmployeeRequest.builder()
                 .hrisEmployee(HrisEmployee.builder()
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        PatchHrisEmployee2Response res = sdk.employee().patchHrisEmployee2()
+        PatchHrisEmployeeResponse res = sdk.employee().patchHrisEmployee()
                 .request(req)
                 .call();
 
@@ -233,13 +233,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
-| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
-| `request`                                                                         | [PatchHrisEmployee2Request](../../models/operations/PatchHrisEmployee2Request.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
+| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| `request`                                                                       | [PatchHrisEmployeeRequest](../../models/operations/PatchHrisEmployeeRequest.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
 
 ### Response
 
-**[PatchHrisEmployee2Response](../../models/operations/PatchHrisEmployee2Response.md)**
+**[PatchHrisEmployeeResponse](../../models/operations/PatchHrisEmployeeResponse.md)**
 
 ### Errors
 
@@ -247,20 +247,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## removeHrisEmployee2
+## removeHrisEmployee
 
 Remove an employee
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="removeHrisEmployee2" method="delete" path="/hris/{connection_id}/employee/{id}" -->
+<!-- UsageSnippet language="java" operationID="removeHrisEmployee" method="delete" path="/hris/{connection_id}/employee/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.RemoveHrisEmployee2Request;
-import to.unified.unified_java_sdk.models.operations.RemoveHrisEmployee2Response;
+import to.unified.unified_java_sdk.models.operations.RemoveHrisEmployeeRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveHrisEmployeeResponse;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -273,12 +273,12 @@ public class Application {
                     .build())
             .build();
 
-        RemoveHrisEmployee2Request req = RemoveHrisEmployee2Request.builder()
+        RemoveHrisEmployeeRequest req = RemoveHrisEmployeeRequest.builder()
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        RemoveHrisEmployee2Response res = sdk.employee().removeHrisEmployee2()
+        RemoveHrisEmployeeResponse res = sdk.employee().removeHrisEmployee()
                 .request(req)
                 .call();
 
@@ -289,13 +289,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                           | Type                                                                                | Required                                                                            | Description                                                                         |
-| ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
-| `request`                                                                           | [RemoveHrisEmployee2Request](../../models/operations/RemoveHrisEmployee2Request.md) | :heavy_check_mark:                                                                  | The request object to use for the request.                                          |
+| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
+| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| `request`                                                                         | [RemoveHrisEmployeeRequest](../../models/operations/RemoveHrisEmployeeRequest.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
 
 ### Response
 
-**[RemoveHrisEmployee2Response](../../models/operations/RemoveHrisEmployee2Response.md)**
+**[RemoveHrisEmployeeResponse](../../models/operations/RemoveHrisEmployeeResponse.md)**
 
 ### Errors
 
@@ -303,20 +303,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## updateHrisEmployee2
+## updateHrisEmployee
 
 Update an employee
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateHrisEmployee2" method="put" path="/hris/{connection_id}/employee/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateHrisEmployee" method="put" path="/hris/{connection_id}/employee/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.UpdateHrisEmployee2Request;
-import to.unified.unified_java_sdk.models.operations.UpdateHrisEmployee2Response;
+import to.unified.unified_java_sdk.models.operations.UpdateHrisEmployeeRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateHrisEmployeeResponse;
 import to.unified.unified_java_sdk.models.shared.HrisEmployee;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -330,14 +330,14 @@ public class Application {
                     .build())
             .build();
 
-        UpdateHrisEmployee2Request req = UpdateHrisEmployee2Request.builder()
+        UpdateHrisEmployeeRequest req = UpdateHrisEmployeeRequest.builder()
                 .hrisEmployee(HrisEmployee.builder()
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        UpdateHrisEmployee2Response res = sdk.employee().updateHrisEmployee2()
+        UpdateHrisEmployeeResponse res = sdk.employee().updateHrisEmployee()
                 .request(req)
                 .call();
 
@@ -350,13 +350,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                           | Type                                                                                | Required                                                                            | Description                                                                         |
-| ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
-| `request`                                                                           | [UpdateHrisEmployee2Request](../../models/operations/UpdateHrisEmployee2Request.md) | :heavy_check_mark:                                                                  | The request object to use for the request.                                          |
+| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
+| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| `request`                                                                         | [UpdateHrisEmployeeRequest](../../models/operations/UpdateHrisEmployeeRequest.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
 
 ### Response
 
-**[UpdateHrisEmployee2Response](../../models/operations/UpdateHrisEmployee2Response.md)**
+**[UpdateHrisEmployeeResponse](../../models/operations/UpdateHrisEmployeeResponse.md)**
 
 ### Errors
 

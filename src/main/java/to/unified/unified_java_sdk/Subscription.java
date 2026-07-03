@@ -6,30 +6,30 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
-import to.unified.unified_java_sdk.models.operations.CreatePaymentSubscription2Request;
-import to.unified.unified_java_sdk.models.operations.CreatePaymentSubscription2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.CreatePaymentSubscription2Response;
-import to.unified.unified_java_sdk.models.operations.GetPaymentSubscription2Request;
-import to.unified.unified_java_sdk.models.operations.GetPaymentSubscription2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.GetPaymentSubscription2Response;
-import to.unified.unified_java_sdk.models.operations.ListPaymentSubscriptions2Request;
-import to.unified.unified_java_sdk.models.operations.ListPaymentSubscriptions2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.ListPaymentSubscriptions2Response;
-import to.unified.unified_java_sdk.models.operations.PatchPaymentSubscription2Request;
-import to.unified.unified_java_sdk.models.operations.PatchPaymentSubscription2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.PatchPaymentSubscription2Response;
-import to.unified.unified_java_sdk.models.operations.RemovePaymentSubscription2Request;
-import to.unified.unified_java_sdk.models.operations.RemovePaymentSubscription2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.RemovePaymentSubscription2Response;
-import to.unified.unified_java_sdk.models.operations.UpdatePaymentSubscription2Request;
-import to.unified.unified_java_sdk.models.operations.UpdatePaymentSubscription2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.UpdatePaymentSubscription2Response;
-import to.unified.unified_java_sdk.operations.CreatePaymentSubscription2;
-import to.unified.unified_java_sdk.operations.GetPaymentSubscription2;
-import to.unified.unified_java_sdk.operations.ListPaymentSubscriptions2;
-import to.unified.unified_java_sdk.operations.PatchPaymentSubscription2;
-import to.unified.unified_java_sdk.operations.RemovePaymentSubscription2;
-import to.unified.unified_java_sdk.operations.UpdatePaymentSubscription2;
+import to.unified.unified_java_sdk.models.operations.CreatePaymentSubscriptionRequest;
+import to.unified.unified_java_sdk.models.operations.CreatePaymentSubscriptionRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.CreatePaymentSubscriptionResponse;
+import to.unified.unified_java_sdk.models.operations.GetPaymentSubscriptionRequest;
+import to.unified.unified_java_sdk.models.operations.GetPaymentSubscriptionRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetPaymentSubscriptionResponse;
+import to.unified.unified_java_sdk.models.operations.ListPaymentSubscriptionsRequest;
+import to.unified.unified_java_sdk.models.operations.ListPaymentSubscriptionsRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListPaymentSubscriptionsResponse;
+import to.unified.unified_java_sdk.models.operations.PatchPaymentSubscriptionRequest;
+import to.unified.unified_java_sdk.models.operations.PatchPaymentSubscriptionRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.PatchPaymentSubscriptionResponse;
+import to.unified.unified_java_sdk.models.operations.RemovePaymentSubscriptionRequest;
+import to.unified.unified_java_sdk.models.operations.RemovePaymentSubscriptionRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.RemovePaymentSubscriptionResponse;
+import to.unified.unified_java_sdk.models.operations.UpdatePaymentSubscriptionRequest;
+import to.unified.unified_java_sdk.models.operations.UpdatePaymentSubscriptionRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.UpdatePaymentSubscriptionResponse;
+import to.unified.unified_java_sdk.operations.CreatePaymentSubscription;
+import to.unified.unified_java_sdk.operations.GetPaymentSubscription;
+import to.unified.unified_java_sdk.operations.ListPaymentSubscriptions;
+import to.unified.unified_java_sdk.operations.PatchPaymentSubscription;
+import to.unified.unified_java_sdk.operations.RemovePaymentSubscription;
+import to.unified.unified_java_sdk.operations.UpdatePaymentSubscription;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -57,8 +57,8 @@ public class Subscription {
      * 
      * @return The call builder
      */
-    public CreatePaymentSubscription2RequestBuilder createPaymentSubscription2() {
-        return new CreatePaymentSubscription2RequestBuilder(sdkConfiguration);
+    public CreatePaymentSubscriptionRequestBuilder createPaymentSubscription() {
+        return new CreatePaymentSubscriptionRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -68,9 +68,9 @@ public class Subscription {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreatePaymentSubscription2Response createPaymentSubscription2(@Nonnull CreatePaymentSubscription2Request request) {
-        RequestOperation<CreatePaymentSubscription2Request, CreatePaymentSubscription2Response> operation
-              = new CreatePaymentSubscription2.Sync(sdkConfiguration, _headers);
+    public CreatePaymentSubscriptionResponse createPaymentSubscription(@Nonnull CreatePaymentSubscriptionRequest request) {
+        RequestOperation<CreatePaymentSubscriptionRequest, CreatePaymentSubscriptionResponse> operation
+              = new CreatePaymentSubscription.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -79,8 +79,8 @@ public class Subscription {
      * 
      * @return The call builder
      */
-    public GetPaymentSubscription2RequestBuilder getPaymentSubscription2() {
-        return new GetPaymentSubscription2RequestBuilder(sdkConfiguration);
+    public GetPaymentSubscriptionRequestBuilder getPaymentSubscription() {
+        return new GetPaymentSubscriptionRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -90,9 +90,9 @@ public class Subscription {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetPaymentSubscription2Response getPaymentSubscription2(@Nonnull GetPaymentSubscription2Request request) {
-        RequestOperation<GetPaymentSubscription2Request, GetPaymentSubscription2Response> operation
-              = new GetPaymentSubscription2.Sync(sdkConfiguration, _headers);
+    public GetPaymentSubscriptionResponse getPaymentSubscription(@Nonnull GetPaymentSubscriptionRequest request) {
+        RequestOperation<GetPaymentSubscriptionRequest, GetPaymentSubscriptionResponse> operation
+              = new GetPaymentSubscription.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -101,8 +101,8 @@ public class Subscription {
      * 
      * @return The call builder
      */
-    public ListPaymentSubscriptions2RequestBuilder listPaymentSubscriptions2() {
-        return new ListPaymentSubscriptions2RequestBuilder(sdkConfiguration);
+    public ListPaymentSubscriptionsRequestBuilder listPaymentSubscriptions() {
+        return new ListPaymentSubscriptionsRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -112,9 +112,9 @@ public class Subscription {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListPaymentSubscriptions2Response listPaymentSubscriptions2(@Nonnull ListPaymentSubscriptions2Request request) {
-        RequestOperation<ListPaymentSubscriptions2Request, ListPaymentSubscriptions2Response> operation
-              = new ListPaymentSubscriptions2.Sync(sdkConfiguration, _headers);
+    public ListPaymentSubscriptionsResponse listPaymentSubscriptions(@Nonnull ListPaymentSubscriptionsRequest request) {
+        RequestOperation<ListPaymentSubscriptionsRequest, ListPaymentSubscriptionsResponse> operation
+              = new ListPaymentSubscriptions.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -123,8 +123,8 @@ public class Subscription {
      * 
      * @return The call builder
      */
-    public PatchPaymentSubscription2RequestBuilder patchPaymentSubscription2() {
-        return new PatchPaymentSubscription2RequestBuilder(sdkConfiguration);
+    public PatchPaymentSubscriptionRequestBuilder patchPaymentSubscription() {
+        return new PatchPaymentSubscriptionRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -134,9 +134,9 @@ public class Subscription {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchPaymentSubscription2Response patchPaymentSubscription2(@Nonnull PatchPaymentSubscription2Request request) {
-        RequestOperation<PatchPaymentSubscription2Request, PatchPaymentSubscription2Response> operation
-              = new PatchPaymentSubscription2.Sync(sdkConfiguration, _headers);
+    public PatchPaymentSubscriptionResponse patchPaymentSubscription(@Nonnull PatchPaymentSubscriptionRequest request) {
+        RequestOperation<PatchPaymentSubscriptionRequest, PatchPaymentSubscriptionResponse> operation
+              = new PatchPaymentSubscription.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -145,8 +145,8 @@ public class Subscription {
      * 
      * @return The call builder
      */
-    public RemovePaymentSubscription2RequestBuilder removePaymentSubscription2() {
-        return new RemovePaymentSubscription2RequestBuilder(sdkConfiguration);
+    public RemovePaymentSubscriptionRequestBuilder removePaymentSubscription() {
+        return new RemovePaymentSubscriptionRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -156,9 +156,9 @@ public class Subscription {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemovePaymentSubscription2Response removePaymentSubscription2(@Nonnull RemovePaymentSubscription2Request request) {
-        RequestOperation<RemovePaymentSubscription2Request, RemovePaymentSubscription2Response> operation
-              = new RemovePaymentSubscription2.Sync(sdkConfiguration, _headers);
+    public RemovePaymentSubscriptionResponse removePaymentSubscription(@Nonnull RemovePaymentSubscriptionRequest request) {
+        RequestOperation<RemovePaymentSubscriptionRequest, RemovePaymentSubscriptionResponse> operation
+              = new RemovePaymentSubscription.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -167,8 +167,8 @@ public class Subscription {
      * 
      * @return The call builder
      */
-    public UpdatePaymentSubscription2RequestBuilder updatePaymentSubscription2() {
-        return new UpdatePaymentSubscription2RequestBuilder(sdkConfiguration);
+    public UpdatePaymentSubscriptionRequestBuilder updatePaymentSubscription() {
+        return new UpdatePaymentSubscriptionRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -178,9 +178,9 @@ public class Subscription {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdatePaymentSubscription2Response updatePaymentSubscription2(@Nonnull UpdatePaymentSubscription2Request request) {
-        RequestOperation<UpdatePaymentSubscription2Request, UpdatePaymentSubscription2Response> operation
-              = new UpdatePaymentSubscription2.Sync(sdkConfiguration, _headers);
+    public UpdatePaymentSubscriptionResponse updatePaymentSubscription(@Nonnull UpdatePaymentSubscriptionRequest request) {
+        RequestOperation<UpdatePaymentSubscriptionRequest, UpdatePaymentSubscriptionResponse> operation
+              = new UpdatePaymentSubscription.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

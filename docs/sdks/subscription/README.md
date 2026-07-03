@@ -4,27 +4,27 @@
 
 ### Available Operations
 
-* [createPaymentSubscription2](#createpaymentsubscription2) - Create a subscription
-* [getPaymentSubscription2](#getpaymentsubscription2) - Retrieve a subscription
-* [listPaymentSubscriptions2](#listpaymentsubscriptions2) - List all subscriptions
-* [patchPaymentSubscription2](#patchpaymentsubscription2) - Update a subscription
-* [removePaymentSubscription2](#removepaymentsubscription2) - Remove a subscription
-* [updatePaymentSubscription2](#updatepaymentsubscription2) - Update a subscription
+* [createPaymentSubscription](#createpaymentsubscription) - Create a subscription
+* [getPaymentSubscription](#getpaymentsubscription) - Retrieve a subscription
+* [listPaymentSubscriptions](#listpaymentsubscriptions) - List all subscriptions
+* [patchPaymentSubscription](#patchpaymentsubscription) - Update a subscription
+* [removePaymentSubscription](#removepaymentsubscription) - Remove a subscription
+* [updatePaymentSubscription](#updatepaymentsubscription) - Update a subscription
 
-## createPaymentSubscription2
+## createPaymentSubscription
 
 Create a subscription
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createPaymentSubscription2" method="post" path="/payment/{connection_id}/subscription" -->
+<!-- UsageSnippet language="java" operationID="createPaymentSubscription" method="post" path="/payment/{connection_id}/subscription" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.CreatePaymentSubscription2Request;
-import to.unified.unified_java_sdk.models.operations.CreatePaymentSubscription2Response;
+import to.unified.unified_java_sdk.models.operations.CreatePaymentSubscriptionRequest;
+import to.unified.unified_java_sdk.models.operations.CreatePaymentSubscriptionResponse;
 import to.unified.unified_java_sdk.models.shared.PaymentSubscription;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -38,13 +38,13 @@ public class Application {
                     .build())
             .build();
 
-        CreatePaymentSubscription2Request req = CreatePaymentSubscription2Request.builder()
+        CreatePaymentSubscriptionRequest req = CreatePaymentSubscriptionRequest.builder()
                 .paymentSubscription(PaymentSubscription.builder()
                     .build())
                 .connectionId("<id>")
                 .build();
 
-        CreatePaymentSubscription2Response res = sdk.subscription().createPaymentSubscription2()
+        CreatePaymentSubscriptionResponse res = sdk.subscription().createPaymentSubscription()
                 .request(req)
                 .call();
 
@@ -57,13 +57,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                         | Type                                                                                              | Required                                                                                          | Description                                                                                       |
-| ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
-| `request`                                                                                         | [CreatePaymentSubscription2Request](../../models/operations/CreatePaymentSubscription2Request.md) | :heavy_check_mark:                                                                                | The request object to use for the request.                                                        |
+| Parameter                                                                                       | Type                                                                                            | Required                                                                                        | Description                                                                                     |
+| ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
+| `request`                                                                                       | [CreatePaymentSubscriptionRequest](../../models/operations/CreatePaymentSubscriptionRequest.md) | :heavy_check_mark:                                                                              | The request object to use for the request.                                                      |
 
 ### Response
 
-**[CreatePaymentSubscription2Response](../../models/operations/CreatePaymentSubscription2Response.md)**
+**[CreatePaymentSubscriptionResponse](../../models/operations/CreatePaymentSubscriptionResponse.md)**
 
 ### Errors
 
@@ -71,20 +71,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## getPaymentSubscription2
+## getPaymentSubscription
 
 Retrieve a subscription
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="getPaymentSubscription2" method="get" path="/payment/{connection_id}/subscription/{id}" -->
+<!-- UsageSnippet language="java" operationID="getPaymentSubscription" method="get" path="/payment/{connection_id}/subscription/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.GetPaymentSubscription2Request;
-import to.unified.unified_java_sdk.models.operations.GetPaymentSubscription2Response;
+import to.unified.unified_java_sdk.models.operations.GetPaymentSubscriptionRequest;
+import to.unified.unified_java_sdk.models.operations.GetPaymentSubscriptionResponse;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -97,12 +97,12 @@ public class Application {
                     .build())
             .build();
 
-        GetPaymentSubscription2Request req = GetPaymentSubscription2Request.builder()
+        GetPaymentSubscriptionRequest req = GetPaymentSubscriptionRequest.builder()
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        GetPaymentSubscription2Response res = sdk.subscription().getPaymentSubscription2()
+        GetPaymentSubscriptionResponse res = sdk.subscription().getPaymentSubscription()
                 .request(req)
                 .call();
 
@@ -115,13 +115,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                   | Type                                                                                        | Required                                                                                    | Description                                                                                 |
-| ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
-| `request`                                                                                   | [GetPaymentSubscription2Request](../../models/operations/GetPaymentSubscription2Request.md) | :heavy_check_mark:                                                                          | The request object to use for the request.                                                  |
+| Parameter                                                                                 | Type                                                                                      | Required                                                                                  | Description                                                                               |
+| ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
+| `request`                                                                                 | [GetPaymentSubscriptionRequest](../../models/operations/GetPaymentSubscriptionRequest.md) | :heavy_check_mark:                                                                        | The request object to use for the request.                                                |
 
 ### Response
 
-**[GetPaymentSubscription2Response](../../models/operations/GetPaymentSubscription2Response.md)**
+**[GetPaymentSubscriptionResponse](../../models/operations/GetPaymentSubscriptionResponse.md)**
 
 ### Errors
 
@@ -129,20 +129,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## listPaymentSubscriptions2
+## listPaymentSubscriptions
 
 List all subscriptions
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="listPaymentSubscriptions2" method="get" path="/payment/{connection_id}/subscription" -->
+<!-- UsageSnippet language="java" operationID="listPaymentSubscriptions" method="get" path="/payment/{connection_id}/subscription" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.ListPaymentSubscriptions2Request;
-import to.unified.unified_java_sdk.models.operations.ListPaymentSubscriptions2Response;
+import to.unified.unified_java_sdk.models.operations.ListPaymentSubscriptionsRequest;
+import to.unified.unified_java_sdk.models.operations.ListPaymentSubscriptionsResponse;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -155,11 +155,11 @@ public class Application {
                     .build())
             .build();
 
-        ListPaymentSubscriptions2Request req = ListPaymentSubscriptions2Request.builder()
+        ListPaymentSubscriptionsRequest req = ListPaymentSubscriptionsRequest.builder()
                 .connectionId("<id>")
                 .build();
 
-        ListPaymentSubscriptions2Response res = sdk.subscription().listPaymentSubscriptions2()
+        ListPaymentSubscriptionsResponse res = sdk.subscription().listPaymentSubscriptions()
                 .request(req)
                 .call();
 
@@ -172,13 +172,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                       | Type                                                                                            | Required                                                                                        | Description                                                                                     |
-| ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
-| `request`                                                                                       | [ListPaymentSubscriptions2Request](../../models/operations/ListPaymentSubscriptions2Request.md) | :heavy_check_mark:                                                                              | The request object to use for the request.                                                      |
+| Parameter                                                                                     | Type                                                                                          | Required                                                                                      | Description                                                                                   |
+| --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
+| `request`                                                                                     | [ListPaymentSubscriptionsRequest](../../models/operations/ListPaymentSubscriptionsRequest.md) | :heavy_check_mark:                                                                            | The request object to use for the request.                                                    |
 
 ### Response
 
-**[ListPaymentSubscriptions2Response](../../models/operations/ListPaymentSubscriptions2Response.md)**
+**[ListPaymentSubscriptionsResponse](../../models/operations/ListPaymentSubscriptionsResponse.md)**
 
 ### Errors
 
@@ -186,20 +186,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## patchPaymentSubscription2
+## patchPaymentSubscription
 
 Update a subscription
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchPaymentSubscription2" method="patch" path="/payment/{connection_id}/subscription/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchPaymentSubscription" method="patch" path="/payment/{connection_id}/subscription/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.PatchPaymentSubscription2Request;
-import to.unified.unified_java_sdk.models.operations.PatchPaymentSubscription2Response;
+import to.unified.unified_java_sdk.models.operations.PatchPaymentSubscriptionRequest;
+import to.unified.unified_java_sdk.models.operations.PatchPaymentSubscriptionResponse;
 import to.unified.unified_java_sdk.models.shared.PaymentSubscription;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -213,14 +213,14 @@ public class Application {
                     .build())
             .build();
 
-        PatchPaymentSubscription2Request req = PatchPaymentSubscription2Request.builder()
+        PatchPaymentSubscriptionRequest req = PatchPaymentSubscriptionRequest.builder()
                 .paymentSubscription(PaymentSubscription.builder()
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        PatchPaymentSubscription2Response res = sdk.subscription().patchPaymentSubscription2()
+        PatchPaymentSubscriptionResponse res = sdk.subscription().patchPaymentSubscription()
                 .request(req)
                 .call();
 
@@ -233,13 +233,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                       | Type                                                                                            | Required                                                                                        | Description                                                                                     |
-| ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
-| `request`                                                                                       | [PatchPaymentSubscription2Request](../../models/operations/PatchPaymentSubscription2Request.md) | :heavy_check_mark:                                                                              | The request object to use for the request.                                                      |
+| Parameter                                                                                     | Type                                                                                          | Required                                                                                      | Description                                                                                   |
+| --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
+| `request`                                                                                     | [PatchPaymentSubscriptionRequest](../../models/operations/PatchPaymentSubscriptionRequest.md) | :heavy_check_mark:                                                                            | The request object to use for the request.                                                    |
 
 ### Response
 
-**[PatchPaymentSubscription2Response](../../models/operations/PatchPaymentSubscription2Response.md)**
+**[PatchPaymentSubscriptionResponse](../../models/operations/PatchPaymentSubscriptionResponse.md)**
 
 ### Errors
 
@@ -247,20 +247,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## removePaymentSubscription2
+## removePaymentSubscription
 
 Remove a subscription
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="removePaymentSubscription2" method="delete" path="/payment/{connection_id}/subscription/{id}" -->
+<!-- UsageSnippet language="java" operationID="removePaymentSubscription" method="delete" path="/payment/{connection_id}/subscription/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.RemovePaymentSubscription2Request;
-import to.unified.unified_java_sdk.models.operations.RemovePaymentSubscription2Response;
+import to.unified.unified_java_sdk.models.operations.RemovePaymentSubscriptionRequest;
+import to.unified.unified_java_sdk.models.operations.RemovePaymentSubscriptionResponse;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -273,12 +273,12 @@ public class Application {
                     .build())
             .build();
 
-        RemovePaymentSubscription2Request req = RemovePaymentSubscription2Request.builder()
+        RemovePaymentSubscriptionRequest req = RemovePaymentSubscriptionRequest.builder()
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        RemovePaymentSubscription2Response res = sdk.subscription().removePaymentSubscription2()
+        RemovePaymentSubscriptionResponse res = sdk.subscription().removePaymentSubscription()
                 .request(req)
                 .call();
 
@@ -289,13 +289,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                         | Type                                                                                              | Required                                                                                          | Description                                                                                       |
-| ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
-| `request`                                                                                         | [RemovePaymentSubscription2Request](../../models/operations/RemovePaymentSubscription2Request.md) | :heavy_check_mark:                                                                                | The request object to use for the request.                                                        |
+| Parameter                                                                                       | Type                                                                                            | Required                                                                                        | Description                                                                                     |
+| ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
+| `request`                                                                                       | [RemovePaymentSubscriptionRequest](../../models/operations/RemovePaymentSubscriptionRequest.md) | :heavy_check_mark:                                                                              | The request object to use for the request.                                                      |
 
 ### Response
 
-**[RemovePaymentSubscription2Response](../../models/operations/RemovePaymentSubscription2Response.md)**
+**[RemovePaymentSubscriptionResponse](../../models/operations/RemovePaymentSubscriptionResponse.md)**
 
 ### Errors
 
@@ -303,20 +303,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## updatePaymentSubscription2
+## updatePaymentSubscription
 
 Update a subscription
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updatePaymentSubscription2" method="put" path="/payment/{connection_id}/subscription/{id}" -->
+<!-- UsageSnippet language="java" operationID="updatePaymentSubscription" method="put" path="/payment/{connection_id}/subscription/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.UpdatePaymentSubscription2Request;
-import to.unified.unified_java_sdk.models.operations.UpdatePaymentSubscription2Response;
+import to.unified.unified_java_sdk.models.operations.UpdatePaymentSubscriptionRequest;
+import to.unified.unified_java_sdk.models.operations.UpdatePaymentSubscriptionResponse;
 import to.unified.unified_java_sdk.models.shared.PaymentSubscription;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -330,14 +330,14 @@ public class Application {
                     .build())
             .build();
 
-        UpdatePaymentSubscription2Request req = UpdatePaymentSubscription2Request.builder()
+        UpdatePaymentSubscriptionRequest req = UpdatePaymentSubscriptionRequest.builder()
                 .paymentSubscription(PaymentSubscription.builder()
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        UpdatePaymentSubscription2Response res = sdk.subscription().updatePaymentSubscription2()
+        UpdatePaymentSubscriptionResponse res = sdk.subscription().updatePaymentSubscription()
                 .request(req)
                 .call();
 
@@ -350,13 +350,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                         | Type                                                                                              | Required                                                                                          | Description                                                                                       |
-| ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
-| `request`                                                                                         | [UpdatePaymentSubscription2Request](../../models/operations/UpdatePaymentSubscription2Request.md) | :heavy_check_mark:                                                                                | The request object to use for the request.                                                        |
+| Parameter                                                                                       | Type                                                                                            | Required                                                                                        | Description                                                                                     |
+| ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
+| `request`                                                                                       | [UpdatePaymentSubscriptionRequest](../../models/operations/UpdatePaymentSubscriptionRequest.md) | :heavy_check_mark:                                                                              | The request object to use for the request.                                                      |
 
 ### Response
 
-**[UpdatePaymentSubscription2Response](../../models/operations/UpdatePaymentSubscription2Response.md)**
+**[UpdatePaymentSubscriptionResponse](../../models/operations/UpdatePaymentSubscriptionResponse.md)**
 
 ### Errors
 

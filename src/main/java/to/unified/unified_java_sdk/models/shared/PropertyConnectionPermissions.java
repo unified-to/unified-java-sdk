@@ -30,6 +30,8 @@ public class PropertyConnectionPermissions {
     public static final PropertyConnectionPermissions ACCOUNTING_INVOICE_WRITE = new PropertyConnectionPermissions("accounting_invoice_write");
     public static final PropertyConnectionPermissions ACCOUNTING_BILL_READ = new PropertyConnectionPermissions("accounting_bill_read");
     public static final PropertyConnectionPermissions ACCOUNTING_BILL_WRITE = new PropertyConnectionPermissions("accounting_bill_write");
+    public static final PropertyConnectionPermissions ACCOUNTING_VENDORCREDIT_READ = new PropertyConnectionPermissions("accounting_vendorcredit_read");
+    public static final PropertyConnectionPermissions ACCOUNTING_VENDORCREDIT_WRITE = new PropertyConnectionPermissions("accounting_vendorcredit_write");
     public static final PropertyConnectionPermissions ACCOUNTING_CREDITMEMO_READ = new PropertyConnectionPermissions("accounting_creditmemo_read");
     public static final PropertyConnectionPermissions ACCOUNTING_CREDITMEMO_WRITE = new PropertyConnectionPermissions("accounting_creditmemo_write");
     public static final PropertyConnectionPermissions ACCOUNTING_CONTACT_READ = new PropertyConnectionPermissions("accounting_contact_read");
@@ -372,6 +374,8 @@ public class PropertyConnectionPermissions {
         map.put("accounting_invoice_write", ACCOUNTING_INVOICE_WRITE);
         map.put("accounting_bill_read", ACCOUNTING_BILL_READ);
         map.put("accounting_bill_write", ACCOUNTING_BILL_WRITE);
+        map.put("accounting_vendorcredit_read", ACCOUNTING_VENDORCREDIT_READ);
+        map.put("accounting_vendorcredit_write", ACCOUNTING_VENDORCREDIT_WRITE);
         map.put("accounting_creditmemo_read", ACCOUNTING_CREDITMEMO_READ);
         map.put("accounting_creditmemo_write", ACCOUNTING_CREDITMEMO_WRITE);
         map.put("accounting_contact_read", ACCOUNTING_CONTACT_READ);
@@ -646,6 +650,8 @@ public class PropertyConnectionPermissions {
         map.put("accounting_invoice_write", PropertyConnectionPermissionsEnum.ACCOUNTING_INVOICE_WRITE);
         map.put("accounting_bill_read", PropertyConnectionPermissionsEnum.ACCOUNTING_BILL_READ);
         map.put("accounting_bill_write", PropertyConnectionPermissionsEnum.ACCOUNTING_BILL_WRITE);
+        map.put("accounting_vendorcredit_read", PropertyConnectionPermissionsEnum.ACCOUNTING_VENDORCREDIT_READ);
+        map.put("accounting_vendorcredit_write", PropertyConnectionPermissionsEnum.ACCOUNTING_VENDORCREDIT_WRITE);
         map.put("accounting_creditmemo_read", PropertyConnectionPermissionsEnum.ACCOUNTING_CREDITMEMO_READ);
         map.put("accounting_creditmemo_write", PropertyConnectionPermissionsEnum.ACCOUNTING_CREDITMEMO_WRITE);
         map.put("accounting_contact_read", PropertyConnectionPermissionsEnum.ACCOUNTING_CONTACT_READ);
@@ -921,6 +927,8 @@ public class PropertyConnectionPermissions {
         ACCOUNTING_INVOICE_WRITE("accounting_invoice_write"),
         ACCOUNTING_BILL_READ("accounting_bill_read"),
         ACCOUNTING_BILL_WRITE("accounting_bill_write"),
+        ACCOUNTING_VENDORCREDIT_READ("accounting_vendorcredit_read"),
+        ACCOUNTING_VENDORCREDIT_WRITE("accounting_vendorcredit_write"),
         ACCOUNTING_CREDITMEMO_READ("accounting_creditmemo_read"),
         ACCOUNTING_CREDITMEMO_WRITE("accounting_creditmemo_write"),
         ACCOUNTING_CONTACT_READ("accounting_contact_read"),

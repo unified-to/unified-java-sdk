@@ -6,30 +6,30 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
-import to.unified.unified_java_sdk.models.operations.CreateAccountingAccount2Request;
-import to.unified.unified_java_sdk.models.operations.CreateAccountingAccount2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.CreateAccountingAccount2Response;
-import to.unified.unified_java_sdk.models.operations.GetAccountingAccount2Request;
-import to.unified.unified_java_sdk.models.operations.GetAccountingAccount2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.GetAccountingAccount2Response;
-import to.unified.unified_java_sdk.models.operations.ListAccountingAccounts2Request;
-import to.unified.unified_java_sdk.models.operations.ListAccountingAccounts2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.ListAccountingAccounts2Response;
-import to.unified.unified_java_sdk.models.operations.PatchAccountingAccount2Request;
-import to.unified.unified_java_sdk.models.operations.PatchAccountingAccount2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.PatchAccountingAccount2Response;
-import to.unified.unified_java_sdk.models.operations.RemoveAccountingAccount2Request;
-import to.unified.unified_java_sdk.models.operations.RemoveAccountingAccount2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.RemoveAccountingAccount2Response;
-import to.unified.unified_java_sdk.models.operations.UpdateAccountingAccount2Request;
-import to.unified.unified_java_sdk.models.operations.UpdateAccountingAccount2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.UpdateAccountingAccount2Response;
-import to.unified.unified_java_sdk.operations.CreateAccountingAccount2;
-import to.unified.unified_java_sdk.operations.GetAccountingAccount2;
-import to.unified.unified_java_sdk.operations.ListAccountingAccounts2;
-import to.unified.unified_java_sdk.operations.PatchAccountingAccount2;
-import to.unified.unified_java_sdk.operations.RemoveAccountingAccount2;
-import to.unified.unified_java_sdk.operations.UpdateAccountingAccount2;
+import to.unified.unified_java_sdk.models.operations.CreateAccountingAccountRequest;
+import to.unified.unified_java_sdk.models.operations.CreateAccountingAccountRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.CreateAccountingAccountResponse;
+import to.unified.unified_java_sdk.models.operations.GetAccountingAccountRequest;
+import to.unified.unified_java_sdk.models.operations.GetAccountingAccountRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetAccountingAccountResponse;
+import to.unified.unified_java_sdk.models.operations.ListAccountingAccountsRequest;
+import to.unified.unified_java_sdk.models.operations.ListAccountingAccountsRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListAccountingAccountsResponse;
+import to.unified.unified_java_sdk.models.operations.PatchAccountingAccountRequest;
+import to.unified.unified_java_sdk.models.operations.PatchAccountingAccountRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.PatchAccountingAccountResponse;
+import to.unified.unified_java_sdk.models.operations.RemoveAccountingAccountRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveAccountingAccountRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.RemoveAccountingAccountResponse;
+import to.unified.unified_java_sdk.models.operations.UpdateAccountingAccountRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateAccountingAccountRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.UpdateAccountingAccountResponse;
+import to.unified.unified_java_sdk.operations.CreateAccountingAccount;
+import to.unified.unified_java_sdk.operations.GetAccountingAccount;
+import to.unified.unified_java_sdk.operations.ListAccountingAccounts;
+import to.unified.unified_java_sdk.operations.PatchAccountingAccount;
+import to.unified.unified_java_sdk.operations.RemoveAccountingAccount;
+import to.unified.unified_java_sdk.operations.UpdateAccountingAccount;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -57,8 +57,8 @@ public class Account {
      * 
      * @return The call builder
      */
-    public CreateAccountingAccount2RequestBuilder createAccountingAccount2() {
-        return new CreateAccountingAccount2RequestBuilder(sdkConfiguration);
+    public CreateAccountingAccountRequestBuilder createAccountingAccount() {
+        return new CreateAccountingAccountRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -68,9 +68,9 @@ public class Account {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateAccountingAccount2Response createAccountingAccount2(@Nonnull CreateAccountingAccount2Request request) {
-        RequestOperation<CreateAccountingAccount2Request, CreateAccountingAccount2Response> operation
-              = new CreateAccountingAccount2.Sync(sdkConfiguration, _headers);
+    public CreateAccountingAccountResponse createAccountingAccount(@Nonnull CreateAccountingAccountRequest request) {
+        RequestOperation<CreateAccountingAccountRequest, CreateAccountingAccountResponse> operation
+              = new CreateAccountingAccount.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -79,8 +79,8 @@ public class Account {
      * 
      * @return The call builder
      */
-    public GetAccountingAccount2RequestBuilder getAccountingAccount2() {
-        return new GetAccountingAccount2RequestBuilder(sdkConfiguration);
+    public GetAccountingAccountRequestBuilder getAccountingAccount() {
+        return new GetAccountingAccountRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -90,9 +90,9 @@ public class Account {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetAccountingAccount2Response getAccountingAccount2(@Nonnull GetAccountingAccount2Request request) {
-        RequestOperation<GetAccountingAccount2Request, GetAccountingAccount2Response> operation
-              = new GetAccountingAccount2.Sync(sdkConfiguration, _headers);
+    public GetAccountingAccountResponse getAccountingAccount(@Nonnull GetAccountingAccountRequest request) {
+        RequestOperation<GetAccountingAccountRequest, GetAccountingAccountResponse> operation
+              = new GetAccountingAccount.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -101,8 +101,8 @@ public class Account {
      * 
      * @return The call builder
      */
-    public ListAccountingAccounts2RequestBuilder listAccountingAccounts2() {
-        return new ListAccountingAccounts2RequestBuilder(sdkConfiguration);
+    public ListAccountingAccountsRequestBuilder listAccountingAccounts() {
+        return new ListAccountingAccountsRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -112,9 +112,9 @@ public class Account {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListAccountingAccounts2Response listAccountingAccounts2(@Nonnull ListAccountingAccounts2Request request) {
-        RequestOperation<ListAccountingAccounts2Request, ListAccountingAccounts2Response> operation
-              = new ListAccountingAccounts2.Sync(sdkConfiguration, _headers);
+    public ListAccountingAccountsResponse listAccountingAccounts(@Nonnull ListAccountingAccountsRequest request) {
+        RequestOperation<ListAccountingAccountsRequest, ListAccountingAccountsResponse> operation
+              = new ListAccountingAccounts.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -123,8 +123,8 @@ public class Account {
      * 
      * @return The call builder
      */
-    public PatchAccountingAccount2RequestBuilder patchAccountingAccount2() {
-        return new PatchAccountingAccount2RequestBuilder(sdkConfiguration);
+    public PatchAccountingAccountRequestBuilder patchAccountingAccount() {
+        return new PatchAccountingAccountRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -134,9 +134,9 @@ public class Account {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchAccountingAccount2Response patchAccountingAccount2(@Nonnull PatchAccountingAccount2Request request) {
-        RequestOperation<PatchAccountingAccount2Request, PatchAccountingAccount2Response> operation
-              = new PatchAccountingAccount2.Sync(sdkConfiguration, _headers);
+    public PatchAccountingAccountResponse patchAccountingAccount(@Nonnull PatchAccountingAccountRequest request) {
+        RequestOperation<PatchAccountingAccountRequest, PatchAccountingAccountResponse> operation
+              = new PatchAccountingAccount.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -145,8 +145,8 @@ public class Account {
      * 
      * @return The call builder
      */
-    public RemoveAccountingAccount2RequestBuilder removeAccountingAccount2() {
-        return new RemoveAccountingAccount2RequestBuilder(sdkConfiguration);
+    public RemoveAccountingAccountRequestBuilder removeAccountingAccount() {
+        return new RemoveAccountingAccountRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -156,9 +156,9 @@ public class Account {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveAccountingAccount2Response removeAccountingAccount2(@Nonnull RemoveAccountingAccount2Request request) {
-        RequestOperation<RemoveAccountingAccount2Request, RemoveAccountingAccount2Response> operation
-              = new RemoveAccountingAccount2.Sync(sdkConfiguration, _headers);
+    public RemoveAccountingAccountResponse removeAccountingAccount(@Nonnull RemoveAccountingAccountRequest request) {
+        RequestOperation<RemoveAccountingAccountRequest, RemoveAccountingAccountResponse> operation
+              = new RemoveAccountingAccount.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -167,8 +167,8 @@ public class Account {
      * 
      * @return The call builder
      */
-    public UpdateAccountingAccount2RequestBuilder updateAccountingAccount2() {
-        return new UpdateAccountingAccount2RequestBuilder(sdkConfiguration);
+    public UpdateAccountingAccountRequestBuilder updateAccountingAccount() {
+        return new UpdateAccountingAccountRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -178,9 +178,9 @@ public class Account {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateAccountingAccount2Response updateAccountingAccount2(@Nonnull UpdateAccountingAccount2Request request) {
-        RequestOperation<UpdateAccountingAccount2Request, UpdateAccountingAccount2Response> operation
-              = new UpdateAccountingAccount2.Sync(sdkConfiguration, _headers);
+    public UpdateAccountingAccountResponse updateAccountingAccount(@Nonnull UpdateAccountingAccountRequest request) {
+        RequestOperation<UpdateAccountingAccountRequest, UpdateAccountingAccountResponse> operation
+              = new UpdateAccountingAccount.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

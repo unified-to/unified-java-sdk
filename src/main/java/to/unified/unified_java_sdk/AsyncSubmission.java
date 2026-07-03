@@ -7,14 +7,14 @@ import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOper
 
 import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
-import to.unified.unified_java_sdk.models.operations.GetFormsSubmission2Request;
-import to.unified.unified_java_sdk.models.operations.ListFormsSubmissions2Request;
-import to.unified.unified_java_sdk.models.operations.async.GetFormsSubmission2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.GetFormsSubmission2Response;
-import to.unified.unified_java_sdk.models.operations.async.ListFormsSubmissions2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.ListFormsSubmissions2Response;
-import to.unified.unified_java_sdk.operations.GetFormsSubmission2;
-import to.unified.unified_java_sdk.operations.ListFormsSubmissions2;
+import to.unified.unified_java_sdk.models.operations.GetFormsSubmissionRequest;
+import to.unified.unified_java_sdk.models.operations.ListFormsSubmissionsRequest;
+import to.unified.unified_java_sdk.models.operations.async.GetFormsSubmissionRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetFormsSubmissionResponse;
+import to.unified.unified_java_sdk.models.operations.async.ListFormsSubmissionsRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListFormsSubmissionsResponse;
+import to.unified.unified_java_sdk.operations.GetFormsSubmission;
+import to.unified.unified_java_sdk.operations.ListFormsSubmissions;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -43,19 +43,19 @@ public class AsyncSubmission {
      * 
      * @return The async call builder
      */
-    public GetFormsSubmission2RequestBuilder getFormsSubmission2() {
-        return new GetFormsSubmission2RequestBuilder(sdkConfiguration);
+    public GetFormsSubmissionRequestBuilder getFormsSubmission() {
+        return new GetFormsSubmissionRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Retrieve a submission
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<GetFormsSubmission2Response>} - The async response
+     * @return {@code CompletableFuture<GetFormsSubmissionResponse>} - The async response
      */
-    public CompletableFuture<GetFormsSubmission2Response> getFormsSubmission2(@Nonnull GetFormsSubmission2Request request) {
-        AsyncRequestOperation<GetFormsSubmission2Request, GetFormsSubmission2Response> operation
-              = new GetFormsSubmission2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<GetFormsSubmissionResponse> getFormsSubmission(@Nonnull GetFormsSubmissionRequest request) {
+        AsyncRequestOperation<GetFormsSubmissionRequest, GetFormsSubmissionResponse> operation
+              = new GetFormsSubmission.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -66,19 +66,19 @@ public class AsyncSubmission {
      * 
      * @return The async call builder
      */
-    public ListFormsSubmissions2RequestBuilder listFormsSubmissions2() {
-        return new ListFormsSubmissions2RequestBuilder(sdkConfiguration);
+    public ListFormsSubmissionsRequestBuilder listFormsSubmissions() {
+        return new ListFormsSubmissionsRequestBuilder(sdkConfiguration);
     }
 
     /**
      * List all submissions
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<ListFormsSubmissions2Response>} - The async response
+     * @return {@code CompletableFuture<ListFormsSubmissionsResponse>} - The async response
      */
-    public CompletableFuture<ListFormsSubmissions2Response> listFormsSubmissions2(@Nonnull ListFormsSubmissions2Request request) {
-        AsyncRequestOperation<ListFormsSubmissions2Request, ListFormsSubmissions2Response> operation
-              = new ListFormsSubmissions2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<ListFormsSubmissionsResponse> listFormsSubmissions(@Nonnull ListFormsSubmissionsRequest request) {
+        AsyncRequestOperation<ListFormsSubmissionsRequest, ListFormsSubmissionsResponse> operation
+              = new ListFormsSubmissions.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

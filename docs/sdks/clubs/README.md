@@ -4,31 +4,31 @@
 
 ### Available Operations
 
-* [getClubsActivity2](#getclubsactivity2) - Retrieve an activity
-* [getClubsEvent2](#getclubsevent2) - Retrieve an event
-* [getClubsGroup2](#getclubsgroup2) - Retrieve a group
-* [getClubsLocation2](#getclubslocation2) - Retrieve a location
-* [getClubsMember2](#getclubsmember2) - Retrieve a member
-* [listClubsActivities2](#listclubsactivities2) - List all activities
-* [listClubsEvents2](#listclubsevents2) - List all events
-* [listClubsGroups2](#listclubsgroups2) - List all groups
-* [listClubsLocations2](#listclubslocations2) - List all locations
-* [listClubsMembers2](#listclubsmembers2) - List all members
+* [getClubsActivity](#getclubsactivity) - Retrieve an activity
+* [getClubsEvent](#getclubsevent) - Retrieve an event
+* [getClubsGroup](#getclubsgroup) - Retrieve a group
+* [getClubsLocation](#getclubslocation) - Retrieve a location
+* [getClubsMember](#getclubsmember) - Retrieve a member
+* [listClubsActivities](#listclubsactivities) - List all activities
+* [listClubsEvents](#listclubsevents) - List all events
+* [listClubsGroups](#listclubsgroups) - List all groups
+* [listClubsLocations](#listclubslocations) - List all locations
+* [listClubsMembers](#listclubsmembers) - List all members
 
-## getClubsActivity2
+## getClubsActivity
 
 Retrieve an activity
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="getClubsActivity2" method="get" path="/clubs/{connection_id}/activity/{id}" -->
+<!-- UsageSnippet language="java" operationID="getClubsActivity" method="get" path="/clubs/{connection_id}/activity/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.GetClubsActivity2Request;
-import to.unified.unified_java_sdk.models.operations.GetClubsActivity2Response;
+import to.unified.unified_java_sdk.models.operations.GetClubsActivityRequest;
+import to.unified.unified_java_sdk.models.operations.GetClubsActivityResponse;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -41,12 +41,12 @@ public class Application {
                     .build())
             .build();
 
-        GetClubsActivity2Request req = GetClubsActivity2Request.builder()
+        GetClubsActivityRequest req = GetClubsActivityRequest.builder()
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        GetClubsActivity2Response res = sdk.clubs().getClubsActivity2()
+        GetClubsActivityResponse res = sdk.clubs().getClubsActivity()
                 .request(req)
                 .call();
 
@@ -59,13 +59,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
-| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
-| `request`                                                                       | [GetClubsActivity2Request](../../models/operations/GetClubsActivity2Request.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
+| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
+| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| `request`                                                                     | [GetClubsActivityRequest](../../models/operations/GetClubsActivityRequest.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
 
 ### Response
 
-**[GetClubsActivity2Response](../../models/operations/GetClubsActivity2Response.md)**
+**[GetClubsActivityResponse](../../models/operations/GetClubsActivityResponse.md)**
 
 ### Errors
 
@@ -73,20 +73,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## getClubsEvent2
+## getClubsEvent
 
 Retrieve an event
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="getClubsEvent2" method="get" path="/clubs/{connection_id}/event/{id}" -->
+<!-- UsageSnippet language="java" operationID="getClubsEvent" method="get" path="/clubs/{connection_id}/event/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.GetClubsEvent2Request;
-import to.unified.unified_java_sdk.models.operations.GetClubsEvent2Response;
+import to.unified.unified_java_sdk.models.operations.GetClubsEventRequest;
+import to.unified.unified_java_sdk.models.operations.GetClubsEventResponse;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -99,12 +99,12 @@ public class Application {
                     .build())
             .build();
 
-        GetClubsEvent2Request req = GetClubsEvent2Request.builder()
+        GetClubsEventRequest req = GetClubsEventRequest.builder()
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        GetClubsEvent2Response res = sdk.clubs().getClubsEvent2()
+        GetClubsEventResponse res = sdk.clubs().getClubsEvent()
                 .request(req)
                 .call();
 
@@ -117,13 +117,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                 | Type                                                                      | Required                                                                  | Description                                                               |
-| ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
-| `request`                                                                 | [GetClubsEvent2Request](../../models/operations/GetClubsEvent2Request.md) | :heavy_check_mark:                                                        | The request object to use for the request.                                |
+| Parameter                                                               | Type                                                                    | Required                                                                | Description                                                             |
+| ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- |
+| `request`                                                               | [GetClubsEventRequest](../../models/operations/GetClubsEventRequest.md) | :heavy_check_mark:                                                      | The request object to use for the request.                              |
 
 ### Response
 
-**[GetClubsEvent2Response](../../models/operations/GetClubsEvent2Response.md)**
+**[GetClubsEventResponse](../../models/operations/GetClubsEventResponse.md)**
 
 ### Errors
 
@@ -131,20 +131,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## getClubsGroup2
+## getClubsGroup
 
 Retrieve a group
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="getClubsGroup2" method="get" path="/clubs/{connection_id}/group/{id}" -->
+<!-- UsageSnippet language="java" operationID="getClubsGroup" method="get" path="/clubs/{connection_id}/group/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.GetClubsGroup2Request;
-import to.unified.unified_java_sdk.models.operations.GetClubsGroup2Response;
+import to.unified.unified_java_sdk.models.operations.GetClubsGroupRequest;
+import to.unified.unified_java_sdk.models.operations.GetClubsGroupResponse;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -157,12 +157,12 @@ public class Application {
                     .build())
             .build();
 
-        GetClubsGroup2Request req = GetClubsGroup2Request.builder()
+        GetClubsGroupRequest req = GetClubsGroupRequest.builder()
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        GetClubsGroup2Response res = sdk.clubs().getClubsGroup2()
+        GetClubsGroupResponse res = sdk.clubs().getClubsGroup()
                 .request(req)
                 .call();
 
@@ -175,13 +175,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                 | Type                                                                      | Required                                                                  | Description                                                               |
-| ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
-| `request`                                                                 | [GetClubsGroup2Request](../../models/operations/GetClubsGroup2Request.md) | :heavy_check_mark:                                                        | The request object to use for the request.                                |
+| Parameter                                                               | Type                                                                    | Required                                                                | Description                                                             |
+| ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- |
+| `request`                                                               | [GetClubsGroupRequest](../../models/operations/GetClubsGroupRequest.md) | :heavy_check_mark:                                                      | The request object to use for the request.                              |
 
 ### Response
 
-**[GetClubsGroup2Response](../../models/operations/GetClubsGroup2Response.md)**
+**[GetClubsGroupResponse](../../models/operations/GetClubsGroupResponse.md)**
 
 ### Errors
 
@@ -189,20 +189,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## getClubsLocation2
+## getClubsLocation
 
 Retrieve a location
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="getClubsLocation2" method="get" path="/clubs/{connection_id}/location/{id}" -->
+<!-- UsageSnippet language="java" operationID="getClubsLocation" method="get" path="/clubs/{connection_id}/location/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.GetClubsLocation2Request;
-import to.unified.unified_java_sdk.models.operations.GetClubsLocation2Response;
+import to.unified.unified_java_sdk.models.operations.GetClubsLocationRequest;
+import to.unified.unified_java_sdk.models.operations.GetClubsLocationResponse;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -215,12 +215,12 @@ public class Application {
                     .build())
             .build();
 
-        GetClubsLocation2Request req = GetClubsLocation2Request.builder()
+        GetClubsLocationRequest req = GetClubsLocationRequest.builder()
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        GetClubsLocation2Response res = sdk.clubs().getClubsLocation2()
+        GetClubsLocationResponse res = sdk.clubs().getClubsLocation()
                 .request(req)
                 .call();
 
@@ -233,13 +233,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
-| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
-| `request`                                                                       | [GetClubsLocation2Request](../../models/operations/GetClubsLocation2Request.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
+| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
+| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| `request`                                                                     | [GetClubsLocationRequest](../../models/operations/GetClubsLocationRequest.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
 
 ### Response
 
-**[GetClubsLocation2Response](../../models/operations/GetClubsLocation2Response.md)**
+**[GetClubsLocationResponse](../../models/operations/GetClubsLocationResponse.md)**
 
 ### Errors
 
@@ -247,20 +247,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## getClubsMember2
+## getClubsMember
 
 Retrieve a member
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="getClubsMember2" method="get" path="/clubs/{connection_id}/member/{id}" -->
+<!-- UsageSnippet language="java" operationID="getClubsMember" method="get" path="/clubs/{connection_id}/member/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.GetClubsMember2Request;
-import to.unified.unified_java_sdk.models.operations.GetClubsMember2Response;
+import to.unified.unified_java_sdk.models.operations.GetClubsMemberRequest;
+import to.unified.unified_java_sdk.models.operations.GetClubsMemberResponse;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -273,12 +273,12 @@ public class Application {
                     .build())
             .build();
 
-        GetClubsMember2Request req = GetClubsMember2Request.builder()
+        GetClubsMemberRequest req = GetClubsMemberRequest.builder()
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        GetClubsMember2Response res = sdk.clubs().getClubsMember2()
+        GetClubsMemberResponse res = sdk.clubs().getClubsMember()
                 .request(req)
                 .call();
 
@@ -291,13 +291,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                   | Type                                                                        | Required                                                                    | Description                                                                 |
-| --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
-| `request`                                                                   | [GetClubsMember2Request](../../models/operations/GetClubsMember2Request.md) | :heavy_check_mark:                                                          | The request object to use for the request.                                  |
+| Parameter                                                                 | Type                                                                      | Required                                                                  | Description                                                               |
+| ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
+| `request`                                                                 | [GetClubsMemberRequest](../../models/operations/GetClubsMemberRequest.md) | :heavy_check_mark:                                                        | The request object to use for the request.                                |
 
 ### Response
 
-**[GetClubsMember2Response](../../models/operations/GetClubsMember2Response.md)**
+**[GetClubsMemberResponse](../../models/operations/GetClubsMemberResponse.md)**
 
 ### Errors
 
@@ -305,20 +305,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## listClubsActivities2
+## listClubsActivities
 
 List all activities
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="listClubsActivities2" method="get" path="/clubs/{connection_id}/activity" -->
+<!-- UsageSnippet language="java" operationID="listClubsActivities" method="get" path="/clubs/{connection_id}/activity" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.ListClubsActivities2Request;
-import to.unified.unified_java_sdk.models.operations.ListClubsActivities2Response;
+import to.unified.unified_java_sdk.models.operations.ListClubsActivitiesRequest;
+import to.unified.unified_java_sdk.models.operations.ListClubsActivitiesResponse;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -331,11 +331,11 @@ public class Application {
                     .build())
             .build();
 
-        ListClubsActivities2Request req = ListClubsActivities2Request.builder()
+        ListClubsActivitiesRequest req = ListClubsActivitiesRequest.builder()
                 .connectionId("<id>")
                 .build();
 
-        ListClubsActivities2Response res = sdk.clubs().listClubsActivities2()
+        ListClubsActivitiesResponse res = sdk.clubs().listClubsActivities()
                 .request(req)
                 .call();
 
@@ -348,13 +348,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                             | Type                                                                                  | Required                                                                              | Description                                                                           |
-| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
-| `request`                                                                             | [ListClubsActivities2Request](../../models/operations/ListClubsActivities2Request.md) | :heavy_check_mark:                                                                    | The request object to use for the request.                                            |
+| Parameter                                                                           | Type                                                                                | Required                                                                            | Description                                                                         |
+| ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| `request`                                                                           | [ListClubsActivitiesRequest](../../models/operations/ListClubsActivitiesRequest.md) | :heavy_check_mark:                                                                  | The request object to use for the request.                                          |
 
 ### Response
 
-**[ListClubsActivities2Response](../../models/operations/ListClubsActivities2Response.md)**
+**[ListClubsActivitiesResponse](../../models/operations/ListClubsActivitiesResponse.md)**
 
 ### Errors
 
@@ -362,20 +362,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## listClubsEvents2
+## listClubsEvents
 
 List all events
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="listClubsEvents2" method="get" path="/clubs/{connection_id}/event" -->
+<!-- UsageSnippet language="java" operationID="listClubsEvents" method="get" path="/clubs/{connection_id}/event" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.ListClubsEvents2Request;
-import to.unified.unified_java_sdk.models.operations.ListClubsEvents2Response;
+import to.unified.unified_java_sdk.models.operations.ListClubsEventsRequest;
+import to.unified.unified_java_sdk.models.operations.ListClubsEventsResponse;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -388,11 +388,11 @@ public class Application {
                     .build())
             .build();
 
-        ListClubsEvents2Request req = ListClubsEvents2Request.builder()
+        ListClubsEventsRequest req = ListClubsEventsRequest.builder()
                 .connectionId("<id>")
                 .build();
 
-        ListClubsEvents2Response res = sdk.clubs().listClubsEvents2()
+        ListClubsEventsResponse res = sdk.clubs().listClubsEvents()
                 .request(req)
                 .call();
 
@@ -405,13 +405,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
-| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
-| `request`                                                                     | [ListClubsEvents2Request](../../models/operations/ListClubsEvents2Request.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
+| Parameter                                                                   | Type                                                                        | Required                                                                    | Description                                                                 |
+| --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| `request`                                                                   | [ListClubsEventsRequest](../../models/operations/ListClubsEventsRequest.md) | :heavy_check_mark:                                                          | The request object to use for the request.                                  |
 
 ### Response
 
-**[ListClubsEvents2Response](../../models/operations/ListClubsEvents2Response.md)**
+**[ListClubsEventsResponse](../../models/operations/ListClubsEventsResponse.md)**
 
 ### Errors
 
@@ -419,20 +419,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## listClubsGroups2
+## listClubsGroups
 
 List all groups
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="listClubsGroups2" method="get" path="/clubs/{connection_id}/group" -->
+<!-- UsageSnippet language="java" operationID="listClubsGroups" method="get" path="/clubs/{connection_id}/group" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.ListClubsGroups2Request;
-import to.unified.unified_java_sdk.models.operations.ListClubsGroups2Response;
+import to.unified.unified_java_sdk.models.operations.ListClubsGroupsRequest;
+import to.unified.unified_java_sdk.models.operations.ListClubsGroupsResponse;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -445,11 +445,11 @@ public class Application {
                     .build())
             .build();
 
-        ListClubsGroups2Request req = ListClubsGroups2Request.builder()
+        ListClubsGroupsRequest req = ListClubsGroupsRequest.builder()
                 .connectionId("<id>")
                 .build();
 
-        ListClubsGroups2Response res = sdk.clubs().listClubsGroups2()
+        ListClubsGroupsResponse res = sdk.clubs().listClubsGroups()
                 .request(req)
                 .call();
 
@@ -462,13 +462,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
-| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
-| `request`                                                                     | [ListClubsGroups2Request](../../models/operations/ListClubsGroups2Request.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
+| Parameter                                                                   | Type                                                                        | Required                                                                    | Description                                                                 |
+| --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| `request`                                                                   | [ListClubsGroupsRequest](../../models/operations/ListClubsGroupsRequest.md) | :heavy_check_mark:                                                          | The request object to use for the request.                                  |
 
 ### Response
 
-**[ListClubsGroups2Response](../../models/operations/ListClubsGroups2Response.md)**
+**[ListClubsGroupsResponse](../../models/operations/ListClubsGroupsResponse.md)**
 
 ### Errors
 
@@ -476,20 +476,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## listClubsLocations2
+## listClubsLocations
 
 List all locations
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="listClubsLocations2" method="get" path="/clubs/{connection_id}/location" -->
+<!-- UsageSnippet language="java" operationID="listClubsLocations" method="get" path="/clubs/{connection_id}/location" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.ListClubsLocations2Request;
-import to.unified.unified_java_sdk.models.operations.ListClubsLocations2Response;
+import to.unified.unified_java_sdk.models.operations.ListClubsLocationsRequest;
+import to.unified.unified_java_sdk.models.operations.ListClubsLocationsResponse;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -502,11 +502,11 @@ public class Application {
                     .build())
             .build();
 
-        ListClubsLocations2Request req = ListClubsLocations2Request.builder()
+        ListClubsLocationsRequest req = ListClubsLocationsRequest.builder()
                 .connectionId("<id>")
                 .build();
 
-        ListClubsLocations2Response res = sdk.clubs().listClubsLocations2()
+        ListClubsLocationsResponse res = sdk.clubs().listClubsLocations()
                 .request(req)
                 .call();
 
@@ -519,13 +519,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                           | Type                                                                                | Required                                                                            | Description                                                                         |
-| ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
-| `request`                                                                           | [ListClubsLocations2Request](../../models/operations/ListClubsLocations2Request.md) | :heavy_check_mark:                                                                  | The request object to use for the request.                                          |
+| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
+| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| `request`                                                                         | [ListClubsLocationsRequest](../../models/operations/ListClubsLocationsRequest.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
 
 ### Response
 
-**[ListClubsLocations2Response](../../models/operations/ListClubsLocations2Response.md)**
+**[ListClubsLocationsResponse](../../models/operations/ListClubsLocationsResponse.md)**
 
 ### Errors
 
@@ -533,20 +533,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## listClubsMembers2
+## listClubsMembers
 
 List all members
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="listClubsMembers2" method="get" path="/clubs/{connection_id}/member" -->
+<!-- UsageSnippet language="java" operationID="listClubsMembers" method="get" path="/clubs/{connection_id}/member" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.ListClubsMembers2Request;
-import to.unified.unified_java_sdk.models.operations.ListClubsMembers2Response;
+import to.unified.unified_java_sdk.models.operations.ListClubsMembersRequest;
+import to.unified.unified_java_sdk.models.operations.ListClubsMembersResponse;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -559,11 +559,11 @@ public class Application {
                     .build())
             .build();
 
-        ListClubsMembers2Request req = ListClubsMembers2Request.builder()
+        ListClubsMembersRequest req = ListClubsMembersRequest.builder()
                 .connectionId("<id>")
                 .build();
 
-        ListClubsMembers2Response res = sdk.clubs().listClubsMembers2()
+        ListClubsMembersResponse res = sdk.clubs().listClubsMembers()
                 .request(req)
                 .call();
 
@@ -576,13 +576,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
-| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
-| `request`                                                                       | [ListClubsMembers2Request](../../models/operations/ListClubsMembers2Request.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
+| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
+| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| `request`                                                                     | [ListClubsMembersRequest](../../models/operations/ListClubsMembersRequest.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
 
 ### Response
 
-**[ListClubsMembers2Response](../../models/operations/ListClubsMembers2Response.md)**
+**[ListClubsMembersResponse](../../models/operations/ListClubsMembersResponse.md)**
 
 ### Errors
 

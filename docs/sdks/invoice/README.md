@@ -4,27 +4,27 @@
 
 ### Available Operations
 
-* [createAccountingInvoice2](#createaccountinginvoice2) - Create an invoice
-* [getAccountingInvoice2](#getaccountinginvoice2) - Retrieve an invoice
-* [listAccountingInvoices2](#listaccountinginvoices2) - List all invoices
-* [patchAccountingInvoice2](#patchaccountinginvoice2) - Update an invoice
-* [removeAccountingInvoice2](#removeaccountinginvoice2) - Remove an invoice
-* [updateAccountingInvoice2](#updateaccountinginvoice2) - Update an invoice
+* [createAccountingInvoice](#createaccountinginvoice) - Create an invoice
+* [getAccountingInvoice](#getaccountinginvoice) - Retrieve an invoice
+* [listAccountingInvoices](#listaccountinginvoices) - List all invoices
+* [patchAccountingInvoice](#patchaccountinginvoice) - Update an invoice
+* [removeAccountingInvoice](#removeaccountinginvoice) - Remove an invoice
+* [updateAccountingInvoice](#updateaccountinginvoice) - Update an invoice
 
-## createAccountingInvoice2
+## createAccountingInvoice
 
 Create an invoice
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createAccountingInvoice2" method="post" path="/accounting/{connection_id}/invoice" -->
+<!-- UsageSnippet language="java" operationID="createAccountingInvoice" method="post" path="/accounting/{connection_id}/invoice" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.CreateAccountingInvoice2Request;
-import to.unified.unified_java_sdk.models.operations.CreateAccountingInvoice2Response;
+import to.unified.unified_java_sdk.models.operations.CreateAccountingInvoiceRequest;
+import to.unified.unified_java_sdk.models.operations.CreateAccountingInvoiceResponse;
 import to.unified.unified_java_sdk.models.shared.AccountingInvoice;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -38,13 +38,13 @@ public class Application {
                     .build())
             .build();
 
-        CreateAccountingInvoice2Request req = CreateAccountingInvoice2Request.builder()
+        CreateAccountingInvoiceRequest req = CreateAccountingInvoiceRequest.builder()
                 .accountingInvoice(AccountingInvoice.builder()
                     .build())
                 .connectionId("<id>")
                 .build();
 
-        CreateAccountingInvoice2Response res = sdk.invoice().createAccountingInvoice2()
+        CreateAccountingInvoiceResponse res = sdk.invoice().createAccountingInvoice()
                 .request(req)
                 .call();
 
@@ -57,13 +57,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                     | Type                                                                                          | Required                                                                                      | Description                                                                                   |
-| --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
-| `request`                                                                                     | [CreateAccountingInvoice2Request](../../models/operations/CreateAccountingInvoice2Request.md) | :heavy_check_mark:                                                                            | The request object to use for the request.                                                    |
+| Parameter                                                                                   | Type                                                                                        | Required                                                                                    | Description                                                                                 |
+| ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
+| `request`                                                                                   | [CreateAccountingInvoiceRequest](../../models/operations/CreateAccountingInvoiceRequest.md) | :heavy_check_mark:                                                                          | The request object to use for the request.                                                  |
 
 ### Response
 
-**[CreateAccountingInvoice2Response](../../models/operations/CreateAccountingInvoice2Response.md)**
+**[CreateAccountingInvoiceResponse](../../models/operations/CreateAccountingInvoiceResponse.md)**
 
 ### Errors
 
@@ -71,20 +71,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## getAccountingInvoice2
+## getAccountingInvoice
 
 Retrieve an invoice
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="getAccountingInvoice2" method="get" path="/accounting/{connection_id}/invoice/{id}" -->
+<!-- UsageSnippet language="java" operationID="getAccountingInvoice" method="get" path="/accounting/{connection_id}/invoice/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.GetAccountingInvoice2Request;
-import to.unified.unified_java_sdk.models.operations.GetAccountingInvoice2Response;
+import to.unified.unified_java_sdk.models.operations.GetAccountingInvoiceRequest;
+import to.unified.unified_java_sdk.models.operations.GetAccountingInvoiceResponse;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -97,12 +97,12 @@ public class Application {
                     .build())
             .build();
 
-        GetAccountingInvoice2Request req = GetAccountingInvoice2Request.builder()
+        GetAccountingInvoiceRequest req = GetAccountingInvoiceRequest.builder()
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        GetAccountingInvoice2Response res = sdk.invoice().getAccountingInvoice2()
+        GetAccountingInvoiceResponse res = sdk.invoice().getAccountingInvoice()
                 .request(req)
                 .call();
 
@@ -115,13 +115,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
-| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
-| `request`                                                                               | [GetAccountingInvoice2Request](../../models/operations/GetAccountingInvoice2Request.md) | :heavy_check_mark:                                                                      | The request object to use for the request.                                              |
+| Parameter                                                                             | Type                                                                                  | Required                                                                              | Description                                                                           |
+| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| `request`                                                                             | [GetAccountingInvoiceRequest](../../models/operations/GetAccountingInvoiceRequest.md) | :heavy_check_mark:                                                                    | The request object to use for the request.                                            |
 
 ### Response
 
-**[GetAccountingInvoice2Response](../../models/operations/GetAccountingInvoice2Response.md)**
+**[GetAccountingInvoiceResponse](../../models/operations/GetAccountingInvoiceResponse.md)**
 
 ### Errors
 
@@ -129,20 +129,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## listAccountingInvoices2
+## listAccountingInvoices
 
 List all invoices
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="listAccountingInvoices2" method="get" path="/accounting/{connection_id}/invoice" -->
+<!-- UsageSnippet language="java" operationID="listAccountingInvoices" method="get" path="/accounting/{connection_id}/invoice" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.ListAccountingInvoices2Request;
-import to.unified.unified_java_sdk.models.operations.ListAccountingInvoices2Response;
+import to.unified.unified_java_sdk.models.operations.ListAccountingInvoicesRequest;
+import to.unified.unified_java_sdk.models.operations.ListAccountingInvoicesResponse;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -155,11 +155,11 @@ public class Application {
                     .build())
             .build();
 
-        ListAccountingInvoices2Request req = ListAccountingInvoices2Request.builder()
+        ListAccountingInvoicesRequest req = ListAccountingInvoicesRequest.builder()
                 .connectionId("<id>")
                 .build();
 
-        ListAccountingInvoices2Response res = sdk.invoice().listAccountingInvoices2()
+        ListAccountingInvoicesResponse res = sdk.invoice().listAccountingInvoices()
                 .request(req)
                 .call();
 
@@ -172,13 +172,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                   | Type                                                                                        | Required                                                                                    | Description                                                                                 |
-| ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
-| `request`                                                                                   | [ListAccountingInvoices2Request](../../models/operations/ListAccountingInvoices2Request.md) | :heavy_check_mark:                                                                          | The request object to use for the request.                                                  |
+| Parameter                                                                                 | Type                                                                                      | Required                                                                                  | Description                                                                               |
+| ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
+| `request`                                                                                 | [ListAccountingInvoicesRequest](../../models/operations/ListAccountingInvoicesRequest.md) | :heavy_check_mark:                                                                        | The request object to use for the request.                                                |
 
 ### Response
 
-**[ListAccountingInvoices2Response](../../models/operations/ListAccountingInvoices2Response.md)**
+**[ListAccountingInvoicesResponse](../../models/operations/ListAccountingInvoicesResponse.md)**
 
 ### Errors
 
@@ -186,20 +186,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## patchAccountingInvoice2
+## patchAccountingInvoice
 
 Update an invoice
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchAccountingInvoice2" method="patch" path="/accounting/{connection_id}/invoice/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchAccountingInvoice" method="patch" path="/accounting/{connection_id}/invoice/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.PatchAccountingInvoice2Request;
-import to.unified.unified_java_sdk.models.operations.PatchAccountingInvoice2Response;
+import to.unified.unified_java_sdk.models.operations.PatchAccountingInvoiceRequest;
+import to.unified.unified_java_sdk.models.operations.PatchAccountingInvoiceResponse;
 import to.unified.unified_java_sdk.models.shared.AccountingInvoice;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -213,14 +213,14 @@ public class Application {
                     .build())
             .build();
 
-        PatchAccountingInvoice2Request req = PatchAccountingInvoice2Request.builder()
+        PatchAccountingInvoiceRequest req = PatchAccountingInvoiceRequest.builder()
                 .accountingInvoice(AccountingInvoice.builder()
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        PatchAccountingInvoice2Response res = sdk.invoice().patchAccountingInvoice2()
+        PatchAccountingInvoiceResponse res = sdk.invoice().patchAccountingInvoice()
                 .request(req)
                 .call();
 
@@ -233,13 +233,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                   | Type                                                                                        | Required                                                                                    | Description                                                                                 |
-| ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
-| `request`                                                                                   | [PatchAccountingInvoice2Request](../../models/operations/PatchAccountingInvoice2Request.md) | :heavy_check_mark:                                                                          | The request object to use for the request.                                                  |
+| Parameter                                                                                 | Type                                                                                      | Required                                                                                  | Description                                                                               |
+| ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
+| `request`                                                                                 | [PatchAccountingInvoiceRequest](../../models/operations/PatchAccountingInvoiceRequest.md) | :heavy_check_mark:                                                                        | The request object to use for the request.                                                |
 
 ### Response
 
-**[PatchAccountingInvoice2Response](../../models/operations/PatchAccountingInvoice2Response.md)**
+**[PatchAccountingInvoiceResponse](../../models/operations/PatchAccountingInvoiceResponse.md)**
 
 ### Errors
 
@@ -247,20 +247,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## removeAccountingInvoice2
+## removeAccountingInvoice
 
 Remove an invoice
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="removeAccountingInvoice2" method="delete" path="/accounting/{connection_id}/invoice/{id}" -->
+<!-- UsageSnippet language="java" operationID="removeAccountingInvoice" method="delete" path="/accounting/{connection_id}/invoice/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.RemoveAccountingInvoice2Request;
-import to.unified.unified_java_sdk.models.operations.RemoveAccountingInvoice2Response;
+import to.unified.unified_java_sdk.models.operations.RemoveAccountingInvoiceRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveAccountingInvoiceResponse;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -273,12 +273,12 @@ public class Application {
                     .build())
             .build();
 
-        RemoveAccountingInvoice2Request req = RemoveAccountingInvoice2Request.builder()
+        RemoveAccountingInvoiceRequest req = RemoveAccountingInvoiceRequest.builder()
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        RemoveAccountingInvoice2Response res = sdk.invoice().removeAccountingInvoice2()
+        RemoveAccountingInvoiceResponse res = sdk.invoice().removeAccountingInvoice()
                 .request(req)
                 .call();
 
@@ -289,13 +289,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                     | Type                                                                                          | Required                                                                                      | Description                                                                                   |
-| --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
-| `request`                                                                                     | [RemoveAccountingInvoice2Request](../../models/operations/RemoveAccountingInvoice2Request.md) | :heavy_check_mark:                                                                            | The request object to use for the request.                                                    |
+| Parameter                                                                                   | Type                                                                                        | Required                                                                                    | Description                                                                                 |
+| ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
+| `request`                                                                                   | [RemoveAccountingInvoiceRequest](../../models/operations/RemoveAccountingInvoiceRequest.md) | :heavy_check_mark:                                                                          | The request object to use for the request.                                                  |
 
 ### Response
 
-**[RemoveAccountingInvoice2Response](../../models/operations/RemoveAccountingInvoice2Response.md)**
+**[RemoveAccountingInvoiceResponse](../../models/operations/RemoveAccountingInvoiceResponse.md)**
 
 ### Errors
 
@@ -303,20 +303,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## updateAccountingInvoice2
+## updateAccountingInvoice
 
 Update an invoice
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateAccountingInvoice2" method="put" path="/accounting/{connection_id}/invoice/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateAccountingInvoice" method="put" path="/accounting/{connection_id}/invoice/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.UpdateAccountingInvoice2Request;
-import to.unified.unified_java_sdk.models.operations.UpdateAccountingInvoice2Response;
+import to.unified.unified_java_sdk.models.operations.UpdateAccountingInvoiceRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateAccountingInvoiceResponse;
 import to.unified.unified_java_sdk.models.shared.AccountingInvoice;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -330,14 +330,14 @@ public class Application {
                     .build())
             .build();
 
-        UpdateAccountingInvoice2Request req = UpdateAccountingInvoice2Request.builder()
+        UpdateAccountingInvoiceRequest req = UpdateAccountingInvoiceRequest.builder()
                 .accountingInvoice(AccountingInvoice.builder()
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        UpdateAccountingInvoice2Response res = sdk.invoice().updateAccountingInvoice2()
+        UpdateAccountingInvoiceResponse res = sdk.invoice().updateAccountingInvoice()
                 .request(req)
                 .call();
 
@@ -350,13 +350,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                     | Type                                                                                          | Required                                                                                      | Description                                                                                   |
-| --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
-| `request`                                                                                     | [UpdateAccountingInvoice2Request](../../models/operations/UpdateAccountingInvoice2Request.md) | :heavy_check_mark:                                                                            | The request object to use for the request.                                                    |
+| Parameter                                                                                   | Type                                                                                        | Required                                                                                    | Description                                                                                 |
+| ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
+| `request`                                                                                   | [UpdateAccountingInvoiceRequest](../../models/operations/UpdateAccountingInvoiceRequest.md) | :heavy_check_mark:                                                                          | The request object to use for the request.                                                  |
 
 ### Response
 
-**[UpdateAccountingInvoice2Response](../../models/operations/UpdateAccountingInvoice2Response.md)**
+**[UpdateAccountingInvoiceResponse](../../models/operations/UpdateAccountingInvoiceResponse.md)**
 
 ### Errors
 

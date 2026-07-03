@@ -4,27 +4,27 @@
 
 ### Available Operations
 
-* [createAccountingCreditmemo2](#createaccountingcreditmemo2) - Create a creditmemo
-* [getAccountingCreditmemo2](#getaccountingcreditmemo2) - Retrieve a creditmemo
-* [listAccountingCreditmemoes2](#listaccountingcreditmemoes2) - List all creditmemoes
-* [patchAccountingCreditmemo2](#patchaccountingcreditmemo2) - Update a creditmemo
-* [removeAccountingCreditmemo2](#removeaccountingcreditmemo2) - Remove a creditmemo
-* [updateAccountingCreditmemo2](#updateaccountingcreditmemo2) - Update a creditmemo
+* [createAccountingCreditmemo](#createaccountingcreditmemo) - Create a creditmemo
+* [getAccountingCreditmemo](#getaccountingcreditmemo) - Retrieve a creditmemo
+* [listAccountingCreditmemoes](#listaccountingcreditmemoes) - List all creditmemoes
+* [patchAccountingCreditmemo](#patchaccountingcreditmemo) - Update a creditmemo
+* [removeAccountingCreditmemo](#removeaccountingcreditmemo) - Remove a creditmemo
+* [updateAccountingCreditmemo](#updateaccountingcreditmemo) - Update a creditmemo
 
-## createAccountingCreditmemo2
+## createAccountingCreditmemo
 
 Create a creditmemo
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createAccountingCreditmemo2" method="post" path="/accounting/{connection_id}/creditmemo" -->
+<!-- UsageSnippet language="java" operationID="createAccountingCreditmemo" method="post" path="/accounting/{connection_id}/creditmemo" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.CreateAccountingCreditmemo2Request;
-import to.unified.unified_java_sdk.models.operations.CreateAccountingCreditmemo2Response;
+import to.unified.unified_java_sdk.models.operations.CreateAccountingCreditmemoRequest;
+import to.unified.unified_java_sdk.models.operations.CreateAccountingCreditmemoResponse;
 import to.unified.unified_java_sdk.models.shared.AccountingCreditmemo;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -38,189 +38,13 @@ public class Application {
                     .build())
             .build();
 
-        CreateAccountingCreditmemo2Request req = CreateAccountingCreditmemo2Request.builder()
+        CreateAccountingCreditmemoRequest req = CreateAccountingCreditmemoRequest.builder()
                 .accountingCreditmemo(AccountingCreditmemo.builder()
                     .build())
                 .connectionId("<id>")
                 .build();
 
-        CreateAccountingCreditmemo2Response res = sdk.creditmemo().createAccountingCreditmemo2()
-                .request(req)
-                .call();
-
-        if (res.accountingCreditmemo().isPresent()) {
-            System.out.println(res.accountingCreditmemo().get());
-        }
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                                           | Type                                                                                                | Required                                                                                            | Description                                                                                         |
-| --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
-| `request`                                                                                           | [CreateAccountingCreditmemo2Request](../../models/operations/CreateAccountingCreditmemo2Request.md) | :heavy_check_mark:                                                                                  | The request object to use for the request.                                                          |
-
-### Response
-
-**[CreateAccountingCreditmemo2Response](../../models/operations/CreateAccountingCreditmemo2Response.md)**
-
-### Errors
-
-| Error Type             | Status Code            | Content Type           |
-| ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
-
-## getAccountingCreditmemo2
-
-Retrieve a creditmemo
-
-### Example Usage
-
-<!-- UsageSnippet language="java" operationID="getAccountingCreditmemo2" method="get" path="/accounting/{connection_id}/creditmemo/{id}" -->
-```java
-package hello.world;
-
-import java.lang.Exception;
-import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.GetAccountingCreditmemo2Request;
-import to.unified.unified_java_sdk.models.operations.GetAccountingCreditmemo2Response;
-import to.unified.unified_java_sdk.models.shared.Security;
-
-public class Application {
-
-    public static void main(String[] args) throws Exception {
-
-        UnifiedTo sdk = UnifiedTo.builder()
-                .security(Security.builder()
-                    .jwt(System.getenv().getOrDefault("JWT", ""))
-                    .build())
-            .build();
-
-        GetAccountingCreditmemo2Request req = GetAccountingCreditmemo2Request.builder()
-                .connectionId("<id>")
-                .id("<id>")
-                .build();
-
-        GetAccountingCreditmemo2Response res = sdk.creditmemo().getAccountingCreditmemo2()
-                .request(req)
-                .call();
-
-        if (res.accountingCreditmemo().isPresent()) {
-            System.out.println(res.accountingCreditmemo().get());
-        }
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                                     | Type                                                                                          | Required                                                                                      | Description                                                                                   |
-| --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
-| `request`                                                                                     | [GetAccountingCreditmemo2Request](../../models/operations/GetAccountingCreditmemo2Request.md) | :heavy_check_mark:                                                                            | The request object to use for the request.                                                    |
-
-### Response
-
-**[GetAccountingCreditmemo2Response](../../models/operations/GetAccountingCreditmemo2Response.md)**
-
-### Errors
-
-| Error Type             | Status Code            | Content Type           |
-| ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
-
-## listAccountingCreditmemoes2
-
-List all creditmemoes
-
-### Example Usage
-
-<!-- UsageSnippet language="java" operationID="listAccountingCreditmemoes2" method="get" path="/accounting/{connection_id}/creditmemo" -->
-```java
-package hello.world;
-
-import java.lang.Exception;
-import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.ListAccountingCreditmemoes2Request;
-import to.unified.unified_java_sdk.models.operations.ListAccountingCreditmemoes2Response;
-import to.unified.unified_java_sdk.models.shared.Security;
-
-public class Application {
-
-    public static void main(String[] args) throws Exception {
-
-        UnifiedTo sdk = UnifiedTo.builder()
-                .security(Security.builder()
-                    .jwt(System.getenv().getOrDefault("JWT", ""))
-                    .build())
-            .build();
-
-        ListAccountingCreditmemoes2Request req = ListAccountingCreditmemoes2Request.builder()
-                .connectionId("<id>")
-                .build();
-
-        ListAccountingCreditmemoes2Response res = sdk.creditmemo().listAccountingCreditmemoes2()
-                .request(req)
-                .call();
-
-        if (res.accountingCreditmemoes().isPresent()) {
-            System.out.println(res.accountingCreditmemoes().get());
-        }
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                                           | Type                                                                                                | Required                                                                                            | Description                                                                                         |
-| --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
-| `request`                                                                                           | [ListAccountingCreditmemoes2Request](../../models/operations/ListAccountingCreditmemoes2Request.md) | :heavy_check_mark:                                                                                  | The request object to use for the request.                                                          |
-
-### Response
-
-**[ListAccountingCreditmemoes2Response](../../models/operations/ListAccountingCreditmemoes2Response.md)**
-
-### Errors
-
-| Error Type             | Status Code            | Content Type           |
-| ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
-
-## patchAccountingCreditmemo2
-
-Update a creditmemo
-
-### Example Usage
-
-<!-- UsageSnippet language="java" operationID="patchAccountingCreditmemo2" method="patch" path="/accounting/{connection_id}/creditmemo/{id}" -->
-```java
-package hello.world;
-
-import java.lang.Exception;
-import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.PatchAccountingCreditmemo2Request;
-import to.unified.unified_java_sdk.models.operations.PatchAccountingCreditmemo2Response;
-import to.unified.unified_java_sdk.models.shared.AccountingCreditmemo;
-import to.unified.unified_java_sdk.models.shared.Security;
-
-public class Application {
-
-    public static void main(String[] args) throws Exception {
-
-        UnifiedTo sdk = UnifiedTo.builder()
-                .security(Security.builder()
-                    .jwt(System.getenv().getOrDefault("JWT", ""))
-                    .build())
-            .build();
-
-        PatchAccountingCreditmemo2Request req = PatchAccountingCreditmemo2Request.builder()
-                .accountingCreditmemo(AccountingCreditmemo.builder()
-                    .build())
-                .connectionId("<id>")
-                .id("<id>")
-                .build();
-
-        PatchAccountingCreditmemo2Response res = sdk.creditmemo().patchAccountingCreditmemo2()
+        CreateAccountingCreditmemoResponse res = sdk.creditmemo().createAccountingCreditmemo()
                 .request(req)
                 .call();
 
@@ -235,11 +59,11 @@ public class Application {
 
 | Parameter                                                                                         | Type                                                                                              | Required                                                                                          | Description                                                                                       |
 | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
-| `request`                                                                                         | [PatchAccountingCreditmemo2Request](../../models/operations/PatchAccountingCreditmemo2Request.md) | :heavy_check_mark:                                                                                | The request object to use for the request.                                                        |
+| `request`                                                                                         | [CreateAccountingCreditmemoRequest](../../models/operations/CreateAccountingCreditmemoRequest.md) | :heavy_check_mark:                                                                                | The request object to use for the request.                                                        |
 
 ### Response
 
-**[PatchAccountingCreditmemo2Response](../../models/operations/PatchAccountingCreditmemo2Response.md)**
+**[CreateAccountingCreditmemoResponse](../../models/operations/CreateAccountingCreditmemoResponse.md)**
 
 ### Errors
 
@@ -247,20 +71,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## removeAccountingCreditmemo2
+## getAccountingCreditmemo
 
-Remove a creditmemo
+Retrieve a creditmemo
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="removeAccountingCreditmemo2" method="delete" path="/accounting/{connection_id}/creditmemo/{id}" -->
+<!-- UsageSnippet language="java" operationID="getAccountingCreditmemo" method="get" path="/accounting/{connection_id}/creditmemo/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.RemoveAccountingCreditmemo2Request;
-import to.unified.unified_java_sdk.models.operations.RemoveAccountingCreditmemo2Response;
+import to.unified.unified_java_sdk.models.operations.GetAccountingCreditmemoRequest;
+import to.unified.unified_java_sdk.models.operations.GetAccountingCreditmemoResponse;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -273,29 +97,31 @@ public class Application {
                     .build())
             .build();
 
-        RemoveAccountingCreditmemo2Request req = RemoveAccountingCreditmemo2Request.builder()
+        GetAccountingCreditmemoRequest req = GetAccountingCreditmemoRequest.builder()
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        RemoveAccountingCreditmemo2Response res = sdk.creditmemo().removeAccountingCreditmemo2()
+        GetAccountingCreditmemoResponse res = sdk.creditmemo().getAccountingCreditmemo()
                 .request(req)
                 .call();
 
-        // handle response
+        if (res.accountingCreditmemo().isPresent()) {
+            System.out.println(res.accountingCreditmemo().get());
+        }
     }
 }
 ```
 
 ### Parameters
 
-| Parameter                                                                                           | Type                                                                                                | Required                                                                                            | Description                                                                                         |
-| --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
-| `request`                                                                                           | [RemoveAccountingCreditmemo2Request](../../models/operations/RemoveAccountingCreditmemo2Request.md) | :heavy_check_mark:                                                                                  | The request object to use for the request.                                                          |
+| Parameter                                                                                   | Type                                                                                        | Required                                                                                    | Description                                                                                 |
+| ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
+| `request`                                                                                   | [GetAccountingCreditmemoRequest](../../models/operations/GetAccountingCreditmemoRequest.md) | :heavy_check_mark:                                                                          | The request object to use for the request.                                                  |
 
 ### Response
 
-**[RemoveAccountingCreditmemo2Response](../../models/operations/RemoveAccountingCreditmemo2Response.md)**
+**[GetAccountingCreditmemoResponse](../../models/operations/GetAccountingCreditmemoResponse.md)**
 
 ### Errors
 
@@ -303,20 +129,77 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## updateAccountingCreditmemo2
+## listAccountingCreditmemoes
 
-Update a creditmemo
+List all creditmemoes
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateAccountingCreditmemo2" method="put" path="/accounting/{connection_id}/creditmemo/{id}" -->
+<!-- UsageSnippet language="java" operationID="listAccountingCreditmemoes" method="get" path="/accounting/{connection_id}/creditmemo" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.UpdateAccountingCreditmemo2Request;
-import to.unified.unified_java_sdk.models.operations.UpdateAccountingCreditmemo2Response;
+import to.unified.unified_java_sdk.models.operations.ListAccountingCreditmemoesRequest;
+import to.unified.unified_java_sdk.models.operations.ListAccountingCreditmemoesResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        ListAccountingCreditmemoesRequest req = ListAccountingCreditmemoesRequest.builder()
+                .connectionId("<id>")
+                .build();
+
+        ListAccountingCreditmemoesResponse res = sdk.creditmemo().listAccountingCreditmemoes()
+                .request(req)
+                .call();
+
+        if (res.accountingCreditmemoes().isPresent()) {
+            System.out.println(res.accountingCreditmemoes().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                         | Type                                                                                              | Required                                                                                          | Description                                                                                       |
+| ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
+| `request`                                                                                         | [ListAccountingCreditmemoesRequest](../../models/operations/ListAccountingCreditmemoesRequest.md) | :heavy_check_mark:                                                                                | The request object to use for the request.                                                        |
+
+### Response
+
+**[ListAccountingCreditmemoesResponse](../../models/operations/ListAccountingCreditmemoesResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## patchAccountingCreditmemo
+
+Update a creditmemo
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="patchAccountingCreditmemo" method="patch" path="/accounting/{connection_id}/creditmemo/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.PatchAccountingCreditmemoRequest;
+import to.unified.unified_java_sdk.models.operations.PatchAccountingCreditmemoResponse;
 import to.unified.unified_java_sdk.models.shared.AccountingCreditmemo;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -330,14 +213,14 @@ public class Application {
                     .build())
             .build();
 
-        UpdateAccountingCreditmemo2Request req = UpdateAccountingCreditmemo2Request.builder()
+        PatchAccountingCreditmemoRequest req = PatchAccountingCreditmemoRequest.builder()
                 .accountingCreditmemo(AccountingCreditmemo.builder()
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        UpdateAccountingCreditmemo2Response res = sdk.creditmemo().updateAccountingCreditmemo2()
+        PatchAccountingCreditmemoResponse res = sdk.creditmemo().patchAccountingCreditmemo()
                 .request(req)
                 .call();
 
@@ -350,13 +233,130 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                           | Type                                                                                                | Required                                                                                            | Description                                                                                         |
-| --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
-| `request`                                                                                           | [UpdateAccountingCreditmemo2Request](../../models/operations/UpdateAccountingCreditmemo2Request.md) | :heavy_check_mark:                                                                                  | The request object to use for the request.                                                          |
+| Parameter                                                                                       | Type                                                                                            | Required                                                                                        | Description                                                                                     |
+| ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
+| `request`                                                                                       | [PatchAccountingCreditmemoRequest](../../models/operations/PatchAccountingCreditmemoRequest.md) | :heavy_check_mark:                                                                              | The request object to use for the request.                                                      |
 
 ### Response
 
-**[UpdateAccountingCreditmemo2Response](../../models/operations/UpdateAccountingCreditmemo2Response.md)**
+**[PatchAccountingCreditmemoResponse](../../models/operations/PatchAccountingCreditmemoResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## removeAccountingCreditmemo
+
+Remove a creditmemo
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="removeAccountingCreditmemo" method="delete" path="/accounting/{connection_id}/creditmemo/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.RemoveAccountingCreditmemoRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveAccountingCreditmemoResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        RemoveAccountingCreditmemoRequest req = RemoveAccountingCreditmemoRequest.builder()
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        RemoveAccountingCreditmemoResponse res = sdk.creditmemo().removeAccountingCreditmemo()
+                .request(req)
+                .call();
+
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                         | Type                                                                                              | Required                                                                                          | Description                                                                                       |
+| ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
+| `request`                                                                                         | [RemoveAccountingCreditmemoRequest](../../models/operations/RemoveAccountingCreditmemoRequest.md) | :heavy_check_mark:                                                                                | The request object to use for the request.                                                        |
+
+### Response
+
+**[RemoveAccountingCreditmemoResponse](../../models/operations/RemoveAccountingCreditmemoResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## updateAccountingCreditmemo
+
+Update a creditmemo
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="updateAccountingCreditmemo" method="put" path="/accounting/{connection_id}/creditmemo/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.UpdateAccountingCreditmemoRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateAccountingCreditmemoResponse;
+import to.unified.unified_java_sdk.models.shared.AccountingCreditmemo;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        UpdateAccountingCreditmemoRequest req = UpdateAccountingCreditmemoRequest.builder()
+                .accountingCreditmemo(AccountingCreditmemo.builder()
+                    .build())
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        UpdateAccountingCreditmemoResponse res = sdk.creditmemo().updateAccountingCreditmemo()
+                .request(req)
+                .call();
+
+        if (res.accountingCreditmemo().isPresent()) {
+            System.out.println(res.accountingCreditmemo().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                         | Type                                                                                              | Required                                                                                          | Description                                                                                       |
+| ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
+| `request`                                                                                         | [UpdateAccountingCreditmemoRequest](../../models/operations/UpdateAccountingCreditmemoRequest.md) | :heavy_check_mark:                                                                                | The request object to use for the request.                                                        |
+
+### Response
+
+**[UpdateAccountingCreditmemoResponse](../../models/operations/UpdateAccountingCreditmemoResponse.md)**
 
 ### Errors
 

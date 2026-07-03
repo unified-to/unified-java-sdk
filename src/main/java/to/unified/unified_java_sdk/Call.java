@@ -6,14 +6,14 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
-import to.unified.unified_java_sdk.models.operations.GetUcCall2Request;
-import to.unified.unified_java_sdk.models.operations.GetUcCall2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.GetUcCall2Response;
-import to.unified.unified_java_sdk.models.operations.ListUcCalls2Request;
-import to.unified.unified_java_sdk.models.operations.ListUcCalls2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.ListUcCalls2Response;
-import to.unified.unified_java_sdk.operations.GetUcCall2;
-import to.unified.unified_java_sdk.operations.ListUcCalls2;
+import to.unified.unified_java_sdk.models.operations.GetUcCallRequest;
+import to.unified.unified_java_sdk.models.operations.GetUcCallRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetUcCallResponse;
+import to.unified.unified_java_sdk.models.operations.ListUcCallsRequest;
+import to.unified.unified_java_sdk.models.operations.ListUcCallsRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListUcCallsResponse;
+import to.unified.unified_java_sdk.operations.GetUcCall;
+import to.unified.unified_java_sdk.operations.ListUcCalls;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -41,8 +41,8 @@ public class Call {
      * 
      * @return The call builder
      */
-    public GetUcCall2RequestBuilder getUcCall2() {
-        return new GetUcCall2RequestBuilder(sdkConfiguration);
+    public GetUcCallRequestBuilder getUcCall() {
+        return new GetUcCallRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -52,9 +52,9 @@ public class Call {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetUcCall2Response getUcCall2(@Nonnull GetUcCall2Request request) {
-        RequestOperation<GetUcCall2Request, GetUcCall2Response> operation
-              = new GetUcCall2.Sync(sdkConfiguration, _headers);
+    public GetUcCallResponse getUcCall(@Nonnull GetUcCallRequest request) {
+        RequestOperation<GetUcCallRequest, GetUcCallResponse> operation
+              = new GetUcCall.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -63,8 +63,8 @@ public class Call {
      * 
      * @return The call builder
      */
-    public ListUcCalls2RequestBuilder listUcCalls2() {
-        return new ListUcCalls2RequestBuilder(sdkConfiguration);
+    public ListUcCallsRequestBuilder listUcCalls() {
+        return new ListUcCallsRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -74,9 +74,9 @@ public class Call {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListUcCalls2Response listUcCalls2(@Nonnull ListUcCalls2Request request) {
-        RequestOperation<ListUcCalls2Request, ListUcCalls2Response> operation
-              = new ListUcCalls2.Sync(sdkConfiguration, _headers);
+    public ListUcCallsResponse listUcCalls(@Nonnull ListUcCallsRequest request) {
+        RequestOperation<ListUcCallsRequest, ListUcCallsResponse> operation
+              = new ListUcCalls.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

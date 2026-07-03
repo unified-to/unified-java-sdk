@@ -4,29 +4,29 @@
 
 ### Available Operations
 
-* [createAssessmentPackage2](#createassessmentpackage2) - Create an assessment package
-* [getAssessmentPackage2](#getassessmentpackage2) - Get an assessment package
-* [listAssessmentPackages2](#listassessmentpackages2) - List assessment packages
-* [patchAssessmentOrder2](#patchassessmentorder2) - Update an order
-* [patchAssessmentPackage2](#patchassessmentpackage2) - Update an assessment package
-* [removeAssessmentPackage2](#removeassessmentpackage2) - Delete an assessment package
-* [updateAssessmentOrder2](#updateassessmentorder2) - Update an order
-* [updateAssessmentPackage2](#updateassessmentpackage2) - Update an assessment package
+* [createAssessmentPackage](#createassessmentpackage) - Create an assessment package
+* [getAssessmentPackage](#getassessmentpackage) - Get an assessment package
+* [listAssessmentPackages](#listassessmentpackages) - List assessment packages
+* [patchAssessmentOrder](#patchassessmentorder) - Update an order
+* [patchAssessmentPackage](#patchassessmentpackage) - Update an assessment package
+* [removeAssessmentPackage](#removeassessmentpackage) - Delete an assessment package
+* [updateAssessmentOrder](#updateassessmentorder) - Update an order
+* [updateAssessmentPackage](#updateassessmentpackage) - Update an assessment package
 
-## createAssessmentPackage2
+## createAssessmentPackage
 
 Create an assessment package
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createAssessmentPackage2" method="post" path="/assessment/{connection_id}/package" -->
+<!-- UsageSnippet language="java" operationID="createAssessmentPackage" method="post" path="/assessment/{connection_id}/package" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.CreateAssessmentPackage2Request;
-import to.unified.unified_java_sdk.models.operations.CreateAssessmentPackage2Response;
+import to.unified.unified_java_sdk.models.operations.CreateAssessmentPackageRequest;
+import to.unified.unified_java_sdk.models.operations.CreateAssessmentPackageResponse;
 import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
@@ -39,14 +39,14 @@ public class Application {
                     .build())
             .build();
 
-        CreateAssessmentPackage2Request req = CreateAssessmentPackage2Request.builder()
+        CreateAssessmentPackageRequest req = CreateAssessmentPackageRequest.builder()
                 .assessmentPackage(AssessmentPackage.builder()
-                    .type(AssessmentPackageType.VIDEO_INTERVIEW)
+                    .type(AssessmentPackageType.REFERENCE_CHECK)
                     .build())
                 .connectionId("<id>")
                 .build();
 
-        CreateAssessmentPackage2Response res = sdk.assessment().createAssessmentPackage2()
+        CreateAssessmentPackageResponse res = sdk.assessment().createAssessmentPackage()
                 .request(req)
                 .call();
 
@@ -59,13 +59,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                     | Type                                                                                          | Required                                                                                      | Description                                                                                   |
-| --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
-| `request`                                                                                     | [CreateAssessmentPackage2Request](../../models/operations/CreateAssessmentPackage2Request.md) | :heavy_check_mark:                                                                            | The request object to use for the request.                                                    |
+| Parameter                                                                                   | Type                                                                                        | Required                                                                                    | Description                                                                                 |
+| ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
+| `request`                                                                                   | [CreateAssessmentPackageRequest](../../models/operations/CreateAssessmentPackageRequest.md) | :heavy_check_mark:                                                                          | The request object to use for the request.                                                  |
 
 ### Response
 
-**[CreateAssessmentPackage2Response](../../models/operations/CreateAssessmentPackage2Response.md)**
+**[CreateAssessmentPackageResponse](../../models/operations/CreateAssessmentPackageResponse.md)**
 
 ### Errors
 
@@ -73,20 +73,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## getAssessmentPackage2
+## getAssessmentPackage
 
 Get an assessment package
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="getAssessmentPackage2" method="get" path="/assessment/{connection_id}/package/{id}" -->
+<!-- UsageSnippet language="java" operationID="getAssessmentPackage" method="get" path="/assessment/{connection_id}/package/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.GetAssessmentPackage2Request;
-import to.unified.unified_java_sdk.models.operations.GetAssessmentPackage2Response;
+import to.unified.unified_java_sdk.models.operations.GetAssessmentPackageRequest;
+import to.unified.unified_java_sdk.models.operations.GetAssessmentPackageResponse;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -99,12 +99,12 @@ public class Application {
                     .build())
             .build();
 
-        GetAssessmentPackage2Request req = GetAssessmentPackage2Request.builder()
+        GetAssessmentPackageRequest req = GetAssessmentPackageRequest.builder()
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        GetAssessmentPackage2Response res = sdk.assessment().getAssessmentPackage2()
+        GetAssessmentPackageResponse res = sdk.assessment().getAssessmentPackage()
                 .request(req)
                 .call();
 
@@ -117,13 +117,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
-| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
-| `request`                                                                               | [GetAssessmentPackage2Request](../../models/operations/GetAssessmentPackage2Request.md) | :heavy_check_mark:                                                                      | The request object to use for the request.                                              |
+| Parameter                                                                             | Type                                                                                  | Required                                                                              | Description                                                                           |
+| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| `request`                                                                             | [GetAssessmentPackageRequest](../../models/operations/GetAssessmentPackageRequest.md) | :heavy_check_mark:                                                                    | The request object to use for the request.                                            |
 
 ### Response
 
-**[GetAssessmentPackage2Response](../../models/operations/GetAssessmentPackage2Response.md)**
+**[GetAssessmentPackageResponse](../../models/operations/GetAssessmentPackageResponse.md)**
 
 ### Errors
 
@@ -131,20 +131,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## listAssessmentPackages2
+## listAssessmentPackages
 
 List assessment packages
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="listAssessmentPackages2" method="get" path="/assessment/{connection_id}/package" -->
+<!-- UsageSnippet language="java" operationID="listAssessmentPackages" method="get" path="/assessment/{connection_id}/package" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.ListAssessmentPackages2Request;
-import to.unified.unified_java_sdk.models.operations.ListAssessmentPackages2Response;
+import to.unified.unified_java_sdk.models.operations.ListAssessmentPackagesRequest;
+import to.unified.unified_java_sdk.models.operations.ListAssessmentPackagesResponse;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -157,11 +157,11 @@ public class Application {
                     .build())
             .build();
 
-        ListAssessmentPackages2Request req = ListAssessmentPackages2Request.builder()
+        ListAssessmentPackagesRequest req = ListAssessmentPackagesRequest.builder()
                 .connectionId("<id>")
                 .build();
 
-        ListAssessmentPackages2Response res = sdk.assessment().listAssessmentPackages2()
+        ListAssessmentPackagesResponse res = sdk.assessment().listAssessmentPackages()
                 .request(req)
                 .call();
 
@@ -174,13 +174,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                   | Type                                                                                        | Required                                                                                    | Description                                                                                 |
-| ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
-| `request`                                                                                   | [ListAssessmentPackages2Request](../../models/operations/ListAssessmentPackages2Request.md) | :heavy_check_mark:                                                                          | The request object to use for the request.                                                  |
+| Parameter                                                                                 | Type                                                                                      | Required                                                                                  | Description                                                                               |
+| ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
+| `request`                                                                                 | [ListAssessmentPackagesRequest](../../models/operations/ListAssessmentPackagesRequest.md) | :heavy_check_mark:                                                                        | The request object to use for the request.                                                |
 
 ### Response
 
-**[ListAssessmentPackages2Response](../../models/operations/ListAssessmentPackages2Response.md)**
+**[ListAssessmentPackagesResponse](../../models/operations/ListAssessmentPackagesResponse.md)**
 
 ### Errors
 
@@ -188,20 +188,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## patchAssessmentOrder2
+## patchAssessmentOrder
 
 Update an order
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchAssessmentOrder2" method="patch" path="/assessment/{connection_id}/order/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchAssessmentOrder" method="patch" path="/assessment/{connection_id}/order/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.PatchAssessmentOrder2Request;
-import to.unified.unified_java_sdk.models.operations.PatchAssessmentOrder2Response;
+import to.unified.unified_java_sdk.models.operations.PatchAssessmentOrderRequest;
+import to.unified.unified_java_sdk.models.operations.PatchAssessmentOrderResponse;
 import to.unified.unified_java_sdk.models.shared.AssessmentOrder;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -215,7 +215,7 @@ public class Application {
                     .build())
             .build();
 
-        PatchAssessmentOrder2Request req = PatchAssessmentOrder2Request.builder()
+        PatchAssessmentOrderRequest req = PatchAssessmentOrderRequest.builder()
                 .assessmentOrder(AssessmentOrder.builder()
                     .connectionId("<id>")
                     .workspaceId("<id>")
@@ -224,7 +224,187 @@ public class Application {
                 .id("<id>")
                 .build();
 
-        PatchAssessmentOrder2Response res = sdk.assessment().patchAssessmentOrder2()
+        PatchAssessmentOrderResponse res = sdk.assessment().patchAssessmentOrder()
+                .request(req)
+                .call();
+
+        if (res.assessmentOrder().isPresent()) {
+            System.out.println(res.assessmentOrder().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                             | Type                                                                                  | Required                                                                              | Description                                                                           |
+| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| `request`                                                                             | [PatchAssessmentOrderRequest](../../models/operations/PatchAssessmentOrderRequest.md) | :heavy_check_mark:                                                                    | The request object to use for the request.                                            |
+
+### Response
+
+**[PatchAssessmentOrderResponse](../../models/operations/PatchAssessmentOrderResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## patchAssessmentPackage
+
+Update an assessment package
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="patchAssessmentPackage" method="patch" path="/assessment/{connection_id}/package/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.PatchAssessmentPackageRequest;
+import to.unified.unified_java_sdk.models.operations.PatchAssessmentPackageResponse;
+import to.unified.unified_java_sdk.models.shared.*;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        PatchAssessmentPackageRequest req = PatchAssessmentPackageRequest.builder()
+                .assessmentPackage(AssessmentPackage.builder()
+                    .type(AssessmentPackageType.BACKGROUND_CHECK)
+                    .build())
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        PatchAssessmentPackageResponse res = sdk.assessment().patchAssessmentPackage()
+                .request(req)
+                .call();
+
+        if (res.assessmentPackage().isPresent()) {
+            System.out.println(res.assessmentPackage().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                 | Type                                                                                      | Required                                                                                  | Description                                                                               |
+| ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
+| `request`                                                                                 | [PatchAssessmentPackageRequest](../../models/operations/PatchAssessmentPackageRequest.md) | :heavy_check_mark:                                                                        | The request object to use for the request.                                                |
+
+### Response
+
+**[PatchAssessmentPackageResponse](../../models/operations/PatchAssessmentPackageResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## removeAssessmentPackage
+
+Delete an assessment package
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="removeAssessmentPackage" method="delete" path="/assessment/{connection_id}/package/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.RemoveAssessmentPackageRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveAssessmentPackageResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        RemoveAssessmentPackageRequest req = RemoveAssessmentPackageRequest.builder()
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        RemoveAssessmentPackageResponse res = sdk.assessment().removeAssessmentPackage()
+                .request(req)
+                .call();
+
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                   | Type                                                                                        | Required                                                                                    | Description                                                                                 |
+| ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
+| `request`                                                                                   | [RemoveAssessmentPackageRequest](../../models/operations/RemoveAssessmentPackageRequest.md) | :heavy_check_mark:                                                                          | The request object to use for the request.                                                  |
+
+### Response
+
+**[RemoveAssessmentPackageResponse](../../models/operations/RemoveAssessmentPackageResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## updateAssessmentOrder
+
+Update an order
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="updateAssessmentOrder" method="put" path="/assessment/{connection_id}/order/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.UpdateAssessmentOrderRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateAssessmentOrderResponse;
+import to.unified.unified_java_sdk.models.shared.AssessmentOrder;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        UpdateAssessmentOrderRequest req = UpdateAssessmentOrderRequest.builder()
+                .assessmentOrder(AssessmentOrder.builder()
+                    .connectionId("<id>")
+                    .workspaceId("<id>")
+                    .build())
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        UpdateAssessmentOrderResponse res = sdk.assessment().updateAssessmentOrder()
                 .request(req)
                 .call();
 
@@ -239,11 +419,11 @@ public class Application {
 
 | Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
 | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
-| `request`                                                                               | [PatchAssessmentOrder2Request](../../models/operations/PatchAssessmentOrder2Request.md) | :heavy_check_mark:                                                                      | The request object to use for the request.                                              |
+| `request`                                                                               | [UpdateAssessmentOrderRequest](../../models/operations/UpdateAssessmentOrderRequest.md) | :heavy_check_mark:                                                                      | The request object to use for the request.                                              |
 
 ### Response
 
-**[PatchAssessmentOrder2Response](../../models/operations/PatchAssessmentOrder2Response.md)**
+**[UpdateAssessmentOrderResponse](../../models/operations/UpdateAssessmentOrderResponse.md)**
 
 ### Errors
 
@@ -251,20 +431,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## patchAssessmentPackage2
+## updateAssessmentPackage
 
 Update an assessment package
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchAssessmentPackage2" method="patch" path="/assessment/{connection_id}/package/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateAssessmentPackage" method="put" path="/assessment/{connection_id}/package/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.PatchAssessmentPackage2Request;
-import to.unified.unified_java_sdk.models.operations.PatchAssessmentPackage2Response;
+import to.unified.unified_java_sdk.models.operations.UpdateAssessmentPackageRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateAssessmentPackageResponse;
 import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
@@ -277,7 +457,7 @@ public class Application {
                     .build())
             .build();
 
-        PatchAssessmentPackage2Request req = PatchAssessmentPackage2Request.builder()
+        UpdateAssessmentPackageRequest req = UpdateAssessmentPackageRequest.builder()
                 .assessmentPackage(AssessmentPackage.builder()
                     .type(AssessmentPackageType.OTHER)
                     .build())
@@ -285,7 +465,7 @@ public class Application {
                 .id("<id>")
                 .build();
 
-        PatchAssessmentPackage2Response res = sdk.assessment().patchAssessmentPackage2()
+        UpdateAssessmentPackageResponse res = sdk.assessment().updateAssessmentPackage()
                 .request(req)
                 .call();
 
@@ -300,191 +480,11 @@ public class Application {
 
 | Parameter                                                                                   | Type                                                                                        | Required                                                                                    | Description                                                                                 |
 | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
-| `request`                                                                                   | [PatchAssessmentPackage2Request](../../models/operations/PatchAssessmentPackage2Request.md) | :heavy_check_mark:                                                                          | The request object to use for the request.                                                  |
+| `request`                                                                                   | [UpdateAssessmentPackageRequest](../../models/operations/UpdateAssessmentPackageRequest.md) | :heavy_check_mark:                                                                          | The request object to use for the request.                                                  |
 
 ### Response
 
-**[PatchAssessmentPackage2Response](../../models/operations/PatchAssessmentPackage2Response.md)**
-
-### Errors
-
-| Error Type             | Status Code            | Content Type           |
-| ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
-
-## removeAssessmentPackage2
-
-Delete an assessment package
-
-### Example Usage
-
-<!-- UsageSnippet language="java" operationID="removeAssessmentPackage2" method="delete" path="/assessment/{connection_id}/package/{id}" -->
-```java
-package hello.world;
-
-import java.lang.Exception;
-import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.RemoveAssessmentPackage2Request;
-import to.unified.unified_java_sdk.models.operations.RemoveAssessmentPackage2Response;
-import to.unified.unified_java_sdk.models.shared.Security;
-
-public class Application {
-
-    public static void main(String[] args) throws Exception {
-
-        UnifiedTo sdk = UnifiedTo.builder()
-                .security(Security.builder()
-                    .jwt(System.getenv().getOrDefault("JWT", ""))
-                    .build())
-            .build();
-
-        RemoveAssessmentPackage2Request req = RemoveAssessmentPackage2Request.builder()
-                .connectionId("<id>")
-                .id("<id>")
-                .build();
-
-        RemoveAssessmentPackage2Response res = sdk.assessment().removeAssessmentPackage2()
-                .request(req)
-                .call();
-
-        // handle response
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                                     | Type                                                                                          | Required                                                                                      | Description                                                                                   |
-| --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
-| `request`                                                                                     | [RemoveAssessmentPackage2Request](../../models/operations/RemoveAssessmentPackage2Request.md) | :heavy_check_mark:                                                                            | The request object to use for the request.                                                    |
-
-### Response
-
-**[RemoveAssessmentPackage2Response](../../models/operations/RemoveAssessmentPackage2Response.md)**
-
-### Errors
-
-| Error Type             | Status Code            | Content Type           |
-| ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
-
-## updateAssessmentOrder2
-
-Update an order
-
-### Example Usage
-
-<!-- UsageSnippet language="java" operationID="updateAssessmentOrder2" method="put" path="/assessment/{connection_id}/order/{id}" -->
-```java
-package hello.world;
-
-import java.lang.Exception;
-import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.UpdateAssessmentOrder2Request;
-import to.unified.unified_java_sdk.models.operations.UpdateAssessmentOrder2Response;
-import to.unified.unified_java_sdk.models.shared.AssessmentOrder;
-import to.unified.unified_java_sdk.models.shared.Security;
-
-public class Application {
-
-    public static void main(String[] args) throws Exception {
-
-        UnifiedTo sdk = UnifiedTo.builder()
-                .security(Security.builder()
-                    .jwt(System.getenv().getOrDefault("JWT", ""))
-                    .build())
-            .build();
-
-        UpdateAssessmentOrder2Request req = UpdateAssessmentOrder2Request.builder()
-                .assessmentOrder(AssessmentOrder.builder()
-                    .connectionId("<id>")
-                    .workspaceId("<id>")
-                    .build())
-                .connectionId("<id>")
-                .id("<id>")
-                .build();
-
-        UpdateAssessmentOrder2Response res = sdk.assessment().updateAssessmentOrder2()
-                .request(req)
-                .call();
-
-        if (res.assessmentOrder().isPresent()) {
-            System.out.println(res.assessmentOrder().get());
-        }
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                                 | Type                                                                                      | Required                                                                                  | Description                                                                               |
-| ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
-| `request`                                                                                 | [UpdateAssessmentOrder2Request](../../models/operations/UpdateAssessmentOrder2Request.md) | :heavy_check_mark:                                                                        | The request object to use for the request.                                                |
-
-### Response
-
-**[UpdateAssessmentOrder2Response](../../models/operations/UpdateAssessmentOrder2Response.md)**
-
-### Errors
-
-| Error Type             | Status Code            | Content Type           |
-| ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
-
-## updateAssessmentPackage2
-
-Update an assessment package
-
-### Example Usage
-
-<!-- UsageSnippet language="java" operationID="updateAssessmentPackage2" method="put" path="/assessment/{connection_id}/package/{id}" -->
-```java
-package hello.world;
-
-import java.lang.Exception;
-import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.UpdateAssessmentPackage2Request;
-import to.unified.unified_java_sdk.models.operations.UpdateAssessmentPackage2Response;
-import to.unified.unified_java_sdk.models.shared.*;
-
-public class Application {
-
-    public static void main(String[] args) throws Exception {
-
-        UnifiedTo sdk = UnifiedTo.builder()
-                .security(Security.builder()
-                    .jwt(System.getenv().getOrDefault("JWT", ""))
-                    .build())
-            .build();
-
-        UpdateAssessmentPackage2Request req = UpdateAssessmentPackage2Request.builder()
-                .assessmentPackage(AssessmentPackage.builder()
-                    .type(AssessmentPackageType.OTHER)
-                    .build())
-                .connectionId("<id>")
-                .id("<id>")
-                .build();
-
-        UpdateAssessmentPackage2Response res = sdk.assessment().updateAssessmentPackage2()
-                .request(req)
-                .call();
-
-        if (res.assessmentPackage().isPresent()) {
-            System.out.println(res.assessmentPackage().get());
-        }
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                                     | Type                                                                                          | Required                                                                                      | Description                                                                                   |
-| --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
-| `request`                                                                                     | [UpdateAssessmentPackage2Request](../../models/operations/UpdateAssessmentPackage2Request.md) | :heavy_check_mark:                                                                            | The request object to use for the request.                                                    |
-
-### Response
-
-**[UpdateAssessmentPackage2Response](../../models/operations/UpdateAssessmentPackage2Response.md)**
+**[UpdateAssessmentPackageResponse](../../models/operations/UpdateAssessmentPackageResponse.md)**
 
 ### Errors
 

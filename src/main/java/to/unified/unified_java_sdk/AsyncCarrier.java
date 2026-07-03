@@ -7,14 +7,14 @@ import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOper
 
 import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
-import to.unified.unified_java_sdk.models.operations.GetShippingCarrier2Request;
-import to.unified.unified_java_sdk.models.operations.ListShippingCarriers2Request;
-import to.unified.unified_java_sdk.models.operations.async.GetShippingCarrier2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.GetShippingCarrier2Response;
-import to.unified.unified_java_sdk.models.operations.async.ListShippingCarriers2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.ListShippingCarriers2Response;
-import to.unified.unified_java_sdk.operations.GetShippingCarrier2;
-import to.unified.unified_java_sdk.operations.ListShippingCarriers2;
+import to.unified.unified_java_sdk.models.operations.GetShippingCarrierRequest;
+import to.unified.unified_java_sdk.models.operations.ListShippingCarriersRequest;
+import to.unified.unified_java_sdk.models.operations.async.GetShippingCarrierRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetShippingCarrierResponse;
+import to.unified.unified_java_sdk.models.operations.async.ListShippingCarriersRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListShippingCarriersResponse;
+import to.unified.unified_java_sdk.operations.GetShippingCarrier;
+import to.unified.unified_java_sdk.operations.ListShippingCarriers;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -43,19 +43,19 @@ public class AsyncCarrier {
      * 
      * @return The async call builder
      */
-    public GetShippingCarrier2RequestBuilder getShippingCarrier2() {
-        return new GetShippingCarrier2RequestBuilder(sdkConfiguration);
+    public GetShippingCarrierRequestBuilder getShippingCarrier() {
+        return new GetShippingCarrierRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Retrieve a carrier
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<GetShippingCarrier2Response>} - The async response
+     * @return {@code CompletableFuture<GetShippingCarrierResponse>} - The async response
      */
-    public CompletableFuture<GetShippingCarrier2Response> getShippingCarrier2(@Nonnull GetShippingCarrier2Request request) {
-        AsyncRequestOperation<GetShippingCarrier2Request, GetShippingCarrier2Response> operation
-              = new GetShippingCarrier2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<GetShippingCarrierResponse> getShippingCarrier(@Nonnull GetShippingCarrierRequest request) {
+        AsyncRequestOperation<GetShippingCarrierRequest, GetShippingCarrierResponse> operation
+              = new GetShippingCarrier.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -66,19 +66,19 @@ public class AsyncCarrier {
      * 
      * @return The async call builder
      */
-    public ListShippingCarriers2RequestBuilder listShippingCarriers2() {
-        return new ListShippingCarriers2RequestBuilder(sdkConfiguration);
+    public ListShippingCarriersRequestBuilder listShippingCarriers() {
+        return new ListShippingCarriersRequestBuilder(sdkConfiguration);
     }
 
     /**
      * List all carriers
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<ListShippingCarriers2Response>} - The async response
+     * @return {@code CompletableFuture<ListShippingCarriersResponse>} - The async response
      */
-    public CompletableFuture<ListShippingCarriers2Response> listShippingCarriers2(@Nonnull ListShippingCarriers2Request request) {
-        AsyncRequestOperation<ListShippingCarriers2Request, ListShippingCarriers2Response> operation
-              = new ListShippingCarriers2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<ListShippingCarriersResponse> listShippingCarriers(@Nonnull ListShippingCarriersRequest request) {
+        AsyncRequestOperation<ListShippingCarriersRequest, ListShippingCarriersResponse> operation
+              = new ListShippingCarriers.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

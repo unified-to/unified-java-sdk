@@ -7,14 +7,14 @@ import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOper
 
 import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
-import to.unified.unified_java_sdk.models.operations.GetAnalyticsSession2Request;
-import to.unified.unified_java_sdk.models.operations.ListAnalyticsSessions2Request;
-import to.unified.unified_java_sdk.models.operations.async.GetAnalyticsSession2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.GetAnalyticsSession2Response;
-import to.unified.unified_java_sdk.models.operations.async.ListAnalyticsSessions2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.ListAnalyticsSessions2Response;
-import to.unified.unified_java_sdk.operations.GetAnalyticsSession2;
-import to.unified.unified_java_sdk.operations.ListAnalyticsSessions2;
+import to.unified.unified_java_sdk.models.operations.GetAnalyticsSessionRequest;
+import to.unified.unified_java_sdk.models.operations.ListAnalyticsSessionsRequest;
+import to.unified.unified_java_sdk.models.operations.async.GetAnalyticsSessionRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetAnalyticsSessionResponse;
+import to.unified.unified_java_sdk.models.operations.async.ListAnalyticsSessionsRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListAnalyticsSessionsResponse;
+import to.unified.unified_java_sdk.operations.GetAnalyticsSession;
+import to.unified.unified_java_sdk.operations.ListAnalyticsSessions;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -43,19 +43,19 @@ public class AsyncSession {
      * 
      * @return The async call builder
      */
-    public GetAnalyticsSession2RequestBuilder getAnalyticsSession2() {
-        return new GetAnalyticsSession2RequestBuilder(sdkConfiguration);
+    public GetAnalyticsSessionRequestBuilder getAnalyticsSession() {
+        return new GetAnalyticsSessionRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Retrieve a session
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<GetAnalyticsSession2Response>} - The async response
+     * @return {@code CompletableFuture<GetAnalyticsSessionResponse>} - The async response
      */
-    public CompletableFuture<GetAnalyticsSession2Response> getAnalyticsSession2(@Nonnull GetAnalyticsSession2Request request) {
-        AsyncRequestOperation<GetAnalyticsSession2Request, GetAnalyticsSession2Response> operation
-              = new GetAnalyticsSession2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<GetAnalyticsSessionResponse> getAnalyticsSession(@Nonnull GetAnalyticsSessionRequest request) {
+        AsyncRequestOperation<GetAnalyticsSessionRequest, GetAnalyticsSessionResponse> operation
+              = new GetAnalyticsSession.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -66,19 +66,19 @@ public class AsyncSession {
      * 
      * @return The async call builder
      */
-    public ListAnalyticsSessions2RequestBuilder listAnalyticsSessions2() {
-        return new ListAnalyticsSessions2RequestBuilder(sdkConfiguration);
+    public ListAnalyticsSessionsRequestBuilder listAnalyticsSessions() {
+        return new ListAnalyticsSessionsRequestBuilder(sdkConfiguration);
     }
 
     /**
      * List all sessions
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<ListAnalyticsSessions2Response>} - The async response
+     * @return {@code CompletableFuture<ListAnalyticsSessionsResponse>} - The async response
      */
-    public CompletableFuture<ListAnalyticsSessions2Response> listAnalyticsSessions2(@Nonnull ListAnalyticsSessions2Request request) {
-        AsyncRequestOperation<ListAnalyticsSessions2Request, ListAnalyticsSessions2Response> operation
-              = new ListAnalyticsSessions2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<ListAnalyticsSessionsResponse> listAnalyticsSessions(@Nonnull ListAnalyticsSessionsRequest request) {
+        AsyncRequestOperation<ListAnalyticsSessionsRequest, ListAnalyticsSessionsResponse> operation
+              = new ListAnalyticsSessions.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

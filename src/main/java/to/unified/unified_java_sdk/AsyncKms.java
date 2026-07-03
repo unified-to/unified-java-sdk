@@ -7,78 +7,78 @@ import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOper
 
 import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
-import to.unified.unified_java_sdk.models.operations.CreateKmsComment2Request;
-import to.unified.unified_java_sdk.models.operations.CreateKmsPage2Request;
-import to.unified.unified_java_sdk.models.operations.CreateKmsSpace2Request;
-import to.unified.unified_java_sdk.models.operations.GetKmsComment2Request;
-import to.unified.unified_java_sdk.models.operations.GetKmsPage2Request;
-import to.unified.unified_java_sdk.models.operations.GetKmsSpace2Request;
-import to.unified.unified_java_sdk.models.operations.ListKmsComments2Request;
-import to.unified.unified_java_sdk.models.operations.ListKmsPages2Request;
-import to.unified.unified_java_sdk.models.operations.ListKmsSpaces2Request;
-import to.unified.unified_java_sdk.models.operations.PatchKmsComment2Request;
-import to.unified.unified_java_sdk.models.operations.PatchKmsPage2Request;
-import to.unified.unified_java_sdk.models.operations.PatchKmsSpace2Request;
-import to.unified.unified_java_sdk.models.operations.RemoveKmsComment2Request;
-import to.unified.unified_java_sdk.models.operations.RemoveKmsPage2Request;
-import to.unified.unified_java_sdk.models.operations.RemoveKmsSpace2Request;
-import to.unified.unified_java_sdk.models.operations.UpdateKmsComment2Request;
-import to.unified.unified_java_sdk.models.operations.UpdateKmsPage2Request;
-import to.unified.unified_java_sdk.models.operations.UpdateKmsSpace2Request;
-import to.unified.unified_java_sdk.models.operations.async.CreateKmsComment2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.CreateKmsComment2Response;
-import to.unified.unified_java_sdk.models.operations.async.CreateKmsPage2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.CreateKmsPage2Response;
-import to.unified.unified_java_sdk.models.operations.async.CreateKmsSpace2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.CreateKmsSpace2Response;
-import to.unified.unified_java_sdk.models.operations.async.GetKmsComment2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.GetKmsComment2Response;
-import to.unified.unified_java_sdk.models.operations.async.GetKmsPage2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.GetKmsPage2Response;
-import to.unified.unified_java_sdk.models.operations.async.GetKmsSpace2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.GetKmsSpace2Response;
-import to.unified.unified_java_sdk.models.operations.async.ListKmsComments2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.ListKmsComments2Response;
-import to.unified.unified_java_sdk.models.operations.async.ListKmsPages2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.ListKmsPages2Response;
-import to.unified.unified_java_sdk.models.operations.async.ListKmsSpaces2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.ListKmsSpaces2Response;
-import to.unified.unified_java_sdk.models.operations.async.PatchKmsComment2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.PatchKmsComment2Response;
-import to.unified.unified_java_sdk.models.operations.async.PatchKmsPage2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.PatchKmsPage2Response;
-import to.unified.unified_java_sdk.models.operations.async.PatchKmsSpace2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.PatchKmsSpace2Response;
-import to.unified.unified_java_sdk.models.operations.async.RemoveKmsComment2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.RemoveKmsComment2Response;
-import to.unified.unified_java_sdk.models.operations.async.RemoveKmsPage2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.RemoveKmsPage2Response;
-import to.unified.unified_java_sdk.models.operations.async.RemoveKmsSpace2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.RemoveKmsSpace2Response;
-import to.unified.unified_java_sdk.models.operations.async.UpdateKmsComment2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.UpdateKmsComment2Response;
-import to.unified.unified_java_sdk.models.operations.async.UpdateKmsPage2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.UpdateKmsPage2Response;
-import to.unified.unified_java_sdk.models.operations.async.UpdateKmsSpace2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.UpdateKmsSpace2Response;
-import to.unified.unified_java_sdk.operations.CreateKmsComment2;
-import to.unified.unified_java_sdk.operations.CreateKmsPage2;
-import to.unified.unified_java_sdk.operations.CreateKmsSpace2;
-import to.unified.unified_java_sdk.operations.GetKmsComment2;
-import to.unified.unified_java_sdk.operations.GetKmsPage2;
-import to.unified.unified_java_sdk.operations.GetKmsSpace2;
-import to.unified.unified_java_sdk.operations.ListKmsComments2;
-import to.unified.unified_java_sdk.operations.ListKmsPages2;
-import to.unified.unified_java_sdk.operations.ListKmsSpaces2;
-import to.unified.unified_java_sdk.operations.PatchKmsComment2;
-import to.unified.unified_java_sdk.operations.PatchKmsPage2;
-import to.unified.unified_java_sdk.operations.PatchKmsSpace2;
-import to.unified.unified_java_sdk.operations.RemoveKmsComment2;
-import to.unified.unified_java_sdk.operations.RemoveKmsPage2;
-import to.unified.unified_java_sdk.operations.RemoveKmsSpace2;
-import to.unified.unified_java_sdk.operations.UpdateKmsComment2;
-import to.unified.unified_java_sdk.operations.UpdateKmsPage2;
-import to.unified.unified_java_sdk.operations.UpdateKmsSpace2;
+import to.unified.unified_java_sdk.models.operations.CreateKmsCommentRequest;
+import to.unified.unified_java_sdk.models.operations.CreateKmsPageRequest;
+import to.unified.unified_java_sdk.models.operations.CreateKmsSpaceRequest;
+import to.unified.unified_java_sdk.models.operations.GetKmsCommentRequest;
+import to.unified.unified_java_sdk.models.operations.GetKmsPageRequest;
+import to.unified.unified_java_sdk.models.operations.GetKmsSpaceRequest;
+import to.unified.unified_java_sdk.models.operations.ListKmsCommentsRequest;
+import to.unified.unified_java_sdk.models.operations.ListKmsPagesRequest;
+import to.unified.unified_java_sdk.models.operations.ListKmsSpacesRequest;
+import to.unified.unified_java_sdk.models.operations.PatchKmsCommentRequest;
+import to.unified.unified_java_sdk.models.operations.PatchKmsPageRequest;
+import to.unified.unified_java_sdk.models.operations.PatchKmsSpaceRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveKmsCommentRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveKmsPageRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveKmsSpaceRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateKmsCommentRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateKmsPageRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateKmsSpaceRequest;
+import to.unified.unified_java_sdk.models.operations.async.CreateKmsCommentRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.CreateKmsCommentResponse;
+import to.unified.unified_java_sdk.models.operations.async.CreateKmsPageRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.CreateKmsPageResponse;
+import to.unified.unified_java_sdk.models.operations.async.CreateKmsSpaceRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.CreateKmsSpaceResponse;
+import to.unified.unified_java_sdk.models.operations.async.GetKmsCommentRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetKmsCommentResponse;
+import to.unified.unified_java_sdk.models.operations.async.GetKmsPageRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetKmsPageResponse;
+import to.unified.unified_java_sdk.models.operations.async.GetKmsSpaceRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetKmsSpaceResponse;
+import to.unified.unified_java_sdk.models.operations.async.ListKmsCommentsRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListKmsCommentsResponse;
+import to.unified.unified_java_sdk.models.operations.async.ListKmsPagesRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListKmsPagesResponse;
+import to.unified.unified_java_sdk.models.operations.async.ListKmsSpacesRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListKmsSpacesResponse;
+import to.unified.unified_java_sdk.models.operations.async.PatchKmsCommentRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.PatchKmsCommentResponse;
+import to.unified.unified_java_sdk.models.operations.async.PatchKmsPageRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.PatchKmsPageResponse;
+import to.unified.unified_java_sdk.models.operations.async.PatchKmsSpaceRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.PatchKmsSpaceResponse;
+import to.unified.unified_java_sdk.models.operations.async.RemoveKmsCommentRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.RemoveKmsCommentResponse;
+import to.unified.unified_java_sdk.models.operations.async.RemoveKmsPageRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.RemoveKmsPageResponse;
+import to.unified.unified_java_sdk.models.operations.async.RemoveKmsSpaceRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.RemoveKmsSpaceResponse;
+import to.unified.unified_java_sdk.models.operations.async.UpdateKmsCommentRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.UpdateKmsCommentResponse;
+import to.unified.unified_java_sdk.models.operations.async.UpdateKmsPageRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.UpdateKmsPageResponse;
+import to.unified.unified_java_sdk.models.operations.async.UpdateKmsSpaceRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.UpdateKmsSpaceResponse;
+import to.unified.unified_java_sdk.operations.CreateKmsComment;
+import to.unified.unified_java_sdk.operations.CreateKmsPage;
+import to.unified.unified_java_sdk.operations.CreateKmsSpace;
+import to.unified.unified_java_sdk.operations.GetKmsComment;
+import to.unified.unified_java_sdk.operations.GetKmsPage;
+import to.unified.unified_java_sdk.operations.GetKmsSpace;
+import to.unified.unified_java_sdk.operations.ListKmsComments;
+import to.unified.unified_java_sdk.operations.ListKmsPages;
+import to.unified.unified_java_sdk.operations.ListKmsSpaces;
+import to.unified.unified_java_sdk.operations.PatchKmsComment;
+import to.unified.unified_java_sdk.operations.PatchKmsPage;
+import to.unified.unified_java_sdk.operations.PatchKmsSpace;
+import to.unified.unified_java_sdk.operations.RemoveKmsComment;
+import to.unified.unified_java_sdk.operations.RemoveKmsPage;
+import to.unified.unified_java_sdk.operations.RemoveKmsSpace;
+import to.unified.unified_java_sdk.operations.UpdateKmsComment;
+import to.unified.unified_java_sdk.operations.UpdateKmsPage;
+import to.unified.unified_java_sdk.operations.UpdateKmsSpace;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -107,19 +107,19 @@ public class AsyncKms {
      * 
      * @return The async call builder
      */
-    public CreateKmsComment2RequestBuilder createKmsComment2() {
-        return new CreateKmsComment2RequestBuilder(sdkConfiguration);
+    public CreateKmsCommentRequestBuilder createKmsComment() {
+        return new CreateKmsCommentRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Create a comment
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<CreateKmsComment2Response>} - The async response
+     * @return {@code CompletableFuture<CreateKmsCommentResponse>} - The async response
      */
-    public CompletableFuture<CreateKmsComment2Response> createKmsComment2(@Nonnull CreateKmsComment2Request request) {
-        AsyncRequestOperation<CreateKmsComment2Request, CreateKmsComment2Response> operation
-              = new CreateKmsComment2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<CreateKmsCommentResponse> createKmsComment(@Nonnull CreateKmsCommentRequest request) {
+        AsyncRequestOperation<CreateKmsCommentRequest, CreateKmsCommentResponse> operation
+              = new CreateKmsComment.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -130,19 +130,19 @@ public class AsyncKms {
      * 
      * @return The async call builder
      */
-    public CreateKmsPage2RequestBuilder createKmsPage2() {
-        return new CreateKmsPage2RequestBuilder(sdkConfiguration);
+    public CreateKmsPageRequestBuilder createKmsPage() {
+        return new CreateKmsPageRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Create a page
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<CreateKmsPage2Response>} - The async response
+     * @return {@code CompletableFuture<CreateKmsPageResponse>} - The async response
      */
-    public CompletableFuture<CreateKmsPage2Response> createKmsPage2(@Nonnull CreateKmsPage2Request request) {
-        AsyncRequestOperation<CreateKmsPage2Request, CreateKmsPage2Response> operation
-              = new CreateKmsPage2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<CreateKmsPageResponse> createKmsPage(@Nonnull CreateKmsPageRequest request) {
+        AsyncRequestOperation<CreateKmsPageRequest, CreateKmsPageResponse> operation
+              = new CreateKmsPage.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -153,19 +153,19 @@ public class AsyncKms {
      * 
      * @return The async call builder
      */
-    public CreateKmsSpace2RequestBuilder createKmsSpace2() {
-        return new CreateKmsSpace2RequestBuilder(sdkConfiguration);
+    public CreateKmsSpaceRequestBuilder createKmsSpace() {
+        return new CreateKmsSpaceRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Create a space
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<CreateKmsSpace2Response>} - The async response
+     * @return {@code CompletableFuture<CreateKmsSpaceResponse>} - The async response
      */
-    public CompletableFuture<CreateKmsSpace2Response> createKmsSpace2(@Nonnull CreateKmsSpace2Request request) {
-        AsyncRequestOperation<CreateKmsSpace2Request, CreateKmsSpace2Response> operation
-              = new CreateKmsSpace2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<CreateKmsSpaceResponse> createKmsSpace(@Nonnull CreateKmsSpaceRequest request) {
+        AsyncRequestOperation<CreateKmsSpaceRequest, CreateKmsSpaceResponse> operation
+              = new CreateKmsSpace.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -176,19 +176,19 @@ public class AsyncKms {
      * 
      * @return The async call builder
      */
-    public GetKmsComment2RequestBuilder getKmsComment2() {
-        return new GetKmsComment2RequestBuilder(sdkConfiguration);
+    public GetKmsCommentRequestBuilder getKmsComment() {
+        return new GetKmsCommentRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Retrieve a comment
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<GetKmsComment2Response>} - The async response
+     * @return {@code CompletableFuture<GetKmsCommentResponse>} - The async response
      */
-    public CompletableFuture<GetKmsComment2Response> getKmsComment2(@Nonnull GetKmsComment2Request request) {
-        AsyncRequestOperation<GetKmsComment2Request, GetKmsComment2Response> operation
-              = new GetKmsComment2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<GetKmsCommentResponse> getKmsComment(@Nonnull GetKmsCommentRequest request) {
+        AsyncRequestOperation<GetKmsCommentRequest, GetKmsCommentResponse> operation
+              = new GetKmsComment.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -199,19 +199,19 @@ public class AsyncKms {
      * 
      * @return The async call builder
      */
-    public GetKmsPage2RequestBuilder getKmsPage2() {
-        return new GetKmsPage2RequestBuilder(sdkConfiguration);
+    public GetKmsPageRequestBuilder getKmsPage() {
+        return new GetKmsPageRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Retrieve a page
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<GetKmsPage2Response>} - The async response
+     * @return {@code CompletableFuture<GetKmsPageResponse>} - The async response
      */
-    public CompletableFuture<GetKmsPage2Response> getKmsPage2(@Nonnull GetKmsPage2Request request) {
-        AsyncRequestOperation<GetKmsPage2Request, GetKmsPage2Response> operation
-              = new GetKmsPage2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<GetKmsPageResponse> getKmsPage(@Nonnull GetKmsPageRequest request) {
+        AsyncRequestOperation<GetKmsPageRequest, GetKmsPageResponse> operation
+              = new GetKmsPage.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -222,19 +222,19 @@ public class AsyncKms {
      * 
      * @return The async call builder
      */
-    public GetKmsSpace2RequestBuilder getKmsSpace2() {
-        return new GetKmsSpace2RequestBuilder(sdkConfiguration);
+    public GetKmsSpaceRequestBuilder getKmsSpace() {
+        return new GetKmsSpaceRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Retrieve a space
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<GetKmsSpace2Response>} - The async response
+     * @return {@code CompletableFuture<GetKmsSpaceResponse>} - The async response
      */
-    public CompletableFuture<GetKmsSpace2Response> getKmsSpace2(@Nonnull GetKmsSpace2Request request) {
-        AsyncRequestOperation<GetKmsSpace2Request, GetKmsSpace2Response> operation
-              = new GetKmsSpace2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<GetKmsSpaceResponse> getKmsSpace(@Nonnull GetKmsSpaceRequest request) {
+        AsyncRequestOperation<GetKmsSpaceRequest, GetKmsSpaceResponse> operation
+              = new GetKmsSpace.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -245,19 +245,19 @@ public class AsyncKms {
      * 
      * @return The async call builder
      */
-    public ListKmsComments2RequestBuilder listKmsComments2() {
-        return new ListKmsComments2RequestBuilder(sdkConfiguration);
+    public ListKmsCommentsRequestBuilder listKmsComments() {
+        return new ListKmsCommentsRequestBuilder(sdkConfiguration);
     }
 
     /**
      * List all comments
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<ListKmsComments2Response>} - The async response
+     * @return {@code CompletableFuture<ListKmsCommentsResponse>} - The async response
      */
-    public CompletableFuture<ListKmsComments2Response> listKmsComments2(@Nonnull ListKmsComments2Request request) {
-        AsyncRequestOperation<ListKmsComments2Request, ListKmsComments2Response> operation
-              = new ListKmsComments2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<ListKmsCommentsResponse> listKmsComments(@Nonnull ListKmsCommentsRequest request) {
+        AsyncRequestOperation<ListKmsCommentsRequest, ListKmsCommentsResponse> operation
+              = new ListKmsComments.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -268,19 +268,19 @@ public class AsyncKms {
      * 
      * @return The async call builder
      */
-    public ListKmsPages2RequestBuilder listKmsPages2() {
-        return new ListKmsPages2RequestBuilder(sdkConfiguration);
+    public ListKmsPagesRequestBuilder listKmsPages() {
+        return new ListKmsPagesRequestBuilder(sdkConfiguration);
     }
 
     /**
      * List all pages
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<ListKmsPages2Response>} - The async response
+     * @return {@code CompletableFuture<ListKmsPagesResponse>} - The async response
      */
-    public CompletableFuture<ListKmsPages2Response> listKmsPages2(@Nonnull ListKmsPages2Request request) {
-        AsyncRequestOperation<ListKmsPages2Request, ListKmsPages2Response> operation
-              = new ListKmsPages2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<ListKmsPagesResponse> listKmsPages(@Nonnull ListKmsPagesRequest request) {
+        AsyncRequestOperation<ListKmsPagesRequest, ListKmsPagesResponse> operation
+              = new ListKmsPages.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -291,19 +291,19 @@ public class AsyncKms {
      * 
      * @return The async call builder
      */
-    public ListKmsSpaces2RequestBuilder listKmsSpaces2() {
-        return new ListKmsSpaces2RequestBuilder(sdkConfiguration);
+    public ListKmsSpacesRequestBuilder listKmsSpaces() {
+        return new ListKmsSpacesRequestBuilder(sdkConfiguration);
     }
 
     /**
      * List all spaces
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<ListKmsSpaces2Response>} - The async response
+     * @return {@code CompletableFuture<ListKmsSpacesResponse>} - The async response
      */
-    public CompletableFuture<ListKmsSpaces2Response> listKmsSpaces2(@Nonnull ListKmsSpaces2Request request) {
-        AsyncRequestOperation<ListKmsSpaces2Request, ListKmsSpaces2Response> operation
-              = new ListKmsSpaces2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<ListKmsSpacesResponse> listKmsSpaces(@Nonnull ListKmsSpacesRequest request) {
+        AsyncRequestOperation<ListKmsSpacesRequest, ListKmsSpacesResponse> operation
+              = new ListKmsSpaces.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -314,19 +314,19 @@ public class AsyncKms {
      * 
      * @return The async call builder
      */
-    public PatchKmsComment2RequestBuilder patchKmsComment2() {
-        return new PatchKmsComment2RequestBuilder(sdkConfiguration);
+    public PatchKmsCommentRequestBuilder patchKmsComment() {
+        return new PatchKmsCommentRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update a comment
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<PatchKmsComment2Response>} - The async response
+     * @return {@code CompletableFuture<PatchKmsCommentResponse>} - The async response
      */
-    public CompletableFuture<PatchKmsComment2Response> patchKmsComment2(@Nonnull PatchKmsComment2Request request) {
-        AsyncRequestOperation<PatchKmsComment2Request, PatchKmsComment2Response> operation
-              = new PatchKmsComment2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<PatchKmsCommentResponse> patchKmsComment(@Nonnull PatchKmsCommentRequest request) {
+        AsyncRequestOperation<PatchKmsCommentRequest, PatchKmsCommentResponse> operation
+              = new PatchKmsComment.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -337,19 +337,19 @@ public class AsyncKms {
      * 
      * @return The async call builder
      */
-    public PatchKmsPage2RequestBuilder patchKmsPage2() {
-        return new PatchKmsPage2RequestBuilder(sdkConfiguration);
+    public PatchKmsPageRequestBuilder patchKmsPage() {
+        return new PatchKmsPageRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update a page
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<PatchKmsPage2Response>} - The async response
+     * @return {@code CompletableFuture<PatchKmsPageResponse>} - The async response
      */
-    public CompletableFuture<PatchKmsPage2Response> patchKmsPage2(@Nonnull PatchKmsPage2Request request) {
-        AsyncRequestOperation<PatchKmsPage2Request, PatchKmsPage2Response> operation
-              = new PatchKmsPage2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<PatchKmsPageResponse> patchKmsPage(@Nonnull PatchKmsPageRequest request) {
+        AsyncRequestOperation<PatchKmsPageRequest, PatchKmsPageResponse> operation
+              = new PatchKmsPage.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -360,19 +360,19 @@ public class AsyncKms {
      * 
      * @return The async call builder
      */
-    public PatchKmsSpace2RequestBuilder patchKmsSpace2() {
-        return new PatchKmsSpace2RequestBuilder(sdkConfiguration);
+    public PatchKmsSpaceRequestBuilder patchKmsSpace() {
+        return new PatchKmsSpaceRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update a space
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<PatchKmsSpace2Response>} - The async response
+     * @return {@code CompletableFuture<PatchKmsSpaceResponse>} - The async response
      */
-    public CompletableFuture<PatchKmsSpace2Response> patchKmsSpace2(@Nonnull PatchKmsSpace2Request request) {
-        AsyncRequestOperation<PatchKmsSpace2Request, PatchKmsSpace2Response> operation
-              = new PatchKmsSpace2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<PatchKmsSpaceResponse> patchKmsSpace(@Nonnull PatchKmsSpaceRequest request) {
+        AsyncRequestOperation<PatchKmsSpaceRequest, PatchKmsSpaceResponse> operation
+              = new PatchKmsSpace.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -383,19 +383,19 @@ public class AsyncKms {
      * 
      * @return The async call builder
      */
-    public RemoveKmsComment2RequestBuilder removeKmsComment2() {
-        return new RemoveKmsComment2RequestBuilder(sdkConfiguration);
+    public RemoveKmsCommentRequestBuilder removeKmsComment() {
+        return new RemoveKmsCommentRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Remove a comment
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<RemoveKmsComment2Response>} - The async response
+     * @return {@code CompletableFuture<RemoveKmsCommentResponse>} - The async response
      */
-    public CompletableFuture<RemoveKmsComment2Response> removeKmsComment2(@Nonnull RemoveKmsComment2Request request) {
-        AsyncRequestOperation<RemoveKmsComment2Request, RemoveKmsComment2Response> operation
-              = new RemoveKmsComment2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<RemoveKmsCommentResponse> removeKmsComment(@Nonnull RemoveKmsCommentRequest request) {
+        AsyncRequestOperation<RemoveKmsCommentRequest, RemoveKmsCommentResponse> operation
+              = new RemoveKmsComment.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -406,19 +406,19 @@ public class AsyncKms {
      * 
      * @return The async call builder
      */
-    public RemoveKmsPage2RequestBuilder removeKmsPage2() {
-        return new RemoveKmsPage2RequestBuilder(sdkConfiguration);
+    public RemoveKmsPageRequestBuilder removeKmsPage() {
+        return new RemoveKmsPageRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Remove a page
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<RemoveKmsPage2Response>} - The async response
+     * @return {@code CompletableFuture<RemoveKmsPageResponse>} - The async response
      */
-    public CompletableFuture<RemoveKmsPage2Response> removeKmsPage2(@Nonnull RemoveKmsPage2Request request) {
-        AsyncRequestOperation<RemoveKmsPage2Request, RemoveKmsPage2Response> operation
-              = new RemoveKmsPage2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<RemoveKmsPageResponse> removeKmsPage(@Nonnull RemoveKmsPageRequest request) {
+        AsyncRequestOperation<RemoveKmsPageRequest, RemoveKmsPageResponse> operation
+              = new RemoveKmsPage.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -429,19 +429,19 @@ public class AsyncKms {
      * 
      * @return The async call builder
      */
-    public RemoveKmsSpace2RequestBuilder removeKmsSpace2() {
-        return new RemoveKmsSpace2RequestBuilder(sdkConfiguration);
+    public RemoveKmsSpaceRequestBuilder removeKmsSpace() {
+        return new RemoveKmsSpaceRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Remove a space
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<RemoveKmsSpace2Response>} - The async response
+     * @return {@code CompletableFuture<RemoveKmsSpaceResponse>} - The async response
      */
-    public CompletableFuture<RemoveKmsSpace2Response> removeKmsSpace2(@Nonnull RemoveKmsSpace2Request request) {
-        AsyncRequestOperation<RemoveKmsSpace2Request, RemoveKmsSpace2Response> operation
-              = new RemoveKmsSpace2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<RemoveKmsSpaceResponse> removeKmsSpace(@Nonnull RemoveKmsSpaceRequest request) {
+        AsyncRequestOperation<RemoveKmsSpaceRequest, RemoveKmsSpaceResponse> operation
+              = new RemoveKmsSpace.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -452,19 +452,19 @@ public class AsyncKms {
      * 
      * @return The async call builder
      */
-    public UpdateKmsComment2RequestBuilder updateKmsComment2() {
-        return new UpdateKmsComment2RequestBuilder(sdkConfiguration);
+    public UpdateKmsCommentRequestBuilder updateKmsComment() {
+        return new UpdateKmsCommentRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update a comment
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<UpdateKmsComment2Response>} - The async response
+     * @return {@code CompletableFuture<UpdateKmsCommentResponse>} - The async response
      */
-    public CompletableFuture<UpdateKmsComment2Response> updateKmsComment2(@Nonnull UpdateKmsComment2Request request) {
-        AsyncRequestOperation<UpdateKmsComment2Request, UpdateKmsComment2Response> operation
-              = new UpdateKmsComment2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<UpdateKmsCommentResponse> updateKmsComment(@Nonnull UpdateKmsCommentRequest request) {
+        AsyncRequestOperation<UpdateKmsCommentRequest, UpdateKmsCommentResponse> operation
+              = new UpdateKmsComment.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -475,19 +475,19 @@ public class AsyncKms {
      * 
      * @return The async call builder
      */
-    public UpdateKmsPage2RequestBuilder updateKmsPage2() {
-        return new UpdateKmsPage2RequestBuilder(sdkConfiguration);
+    public UpdateKmsPageRequestBuilder updateKmsPage() {
+        return new UpdateKmsPageRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update a page
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<UpdateKmsPage2Response>} - The async response
+     * @return {@code CompletableFuture<UpdateKmsPageResponse>} - The async response
      */
-    public CompletableFuture<UpdateKmsPage2Response> updateKmsPage2(@Nonnull UpdateKmsPage2Request request) {
-        AsyncRequestOperation<UpdateKmsPage2Request, UpdateKmsPage2Response> operation
-              = new UpdateKmsPage2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<UpdateKmsPageResponse> updateKmsPage(@Nonnull UpdateKmsPageRequest request) {
+        AsyncRequestOperation<UpdateKmsPageRequest, UpdateKmsPageResponse> operation
+              = new UpdateKmsPage.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -498,19 +498,19 @@ public class AsyncKms {
      * 
      * @return The async call builder
      */
-    public UpdateKmsSpace2RequestBuilder updateKmsSpace2() {
-        return new UpdateKmsSpace2RequestBuilder(sdkConfiguration);
+    public UpdateKmsSpaceRequestBuilder updateKmsSpace() {
+        return new UpdateKmsSpaceRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update a space
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<UpdateKmsSpace2Response>} - The async response
+     * @return {@code CompletableFuture<UpdateKmsSpaceResponse>} - The async response
      */
-    public CompletableFuture<UpdateKmsSpace2Response> updateKmsSpace2(@Nonnull UpdateKmsSpace2Request request) {
-        AsyncRequestOperation<UpdateKmsSpace2Request, UpdateKmsSpace2Response> operation
-              = new UpdateKmsSpace2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<UpdateKmsSpaceResponse> updateKmsSpace(@Nonnull UpdateKmsSpaceRequest request) {
+        AsyncRequestOperation<UpdateKmsSpaceRequest, UpdateKmsSpaceResponse> operation
+              = new UpdateKmsSpace.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

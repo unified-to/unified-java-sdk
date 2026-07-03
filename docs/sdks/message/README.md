@@ -4,27 +4,27 @@
 
 ### Available Operations
 
-* [createMessagingMessage2](#createmessagingmessage2) - Create a message
-* [getMessagingMessage2](#getmessagingmessage2) - Retrieve a message
-* [listMessagingMessages2](#listmessagingmessages2) - List all messages
-* [patchMessagingMessage2](#patchmessagingmessage2) - Update a message
-* [removeMessagingMessage2](#removemessagingmessage2) - Remove a message
-* [updateMessagingMessage2](#updatemessagingmessage2) - Update a message
+* [createMessagingMessage](#createmessagingmessage) - Create a message
+* [getMessagingMessage](#getmessagingmessage) - Retrieve a message
+* [listMessagingMessages](#listmessagingmessages) - List all messages
+* [patchMessagingMessage](#patchmessagingmessage) - Update a message
+* [removeMessagingMessage](#removemessagingmessage) - Remove a message
+* [updateMessagingMessage](#updatemessagingmessage) - Update a message
 
-## createMessagingMessage2
+## createMessagingMessage
 
 Create a message
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createMessagingMessage2" method="post" path="/messaging/{connection_id}/message" -->
+<!-- UsageSnippet language="java" operationID="createMessagingMessage" method="post" path="/messaging/{connection_id}/message" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.CreateMessagingMessage2Request;
-import to.unified.unified_java_sdk.models.operations.CreateMessagingMessage2Response;
+import to.unified.unified_java_sdk.models.operations.CreateMessagingMessageRequest;
+import to.unified.unified_java_sdk.models.operations.CreateMessagingMessageResponse;
 import to.unified.unified_java_sdk.models.shared.MessagingMessage;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -38,13 +38,13 @@ public class Application {
                     .build())
             .build();
 
-        CreateMessagingMessage2Request req = CreateMessagingMessage2Request.builder()
+        CreateMessagingMessageRequest req = CreateMessagingMessageRequest.builder()
                 .messagingMessage(MessagingMessage.builder()
                     .build())
                 .connectionId("<id>")
                 .build();
 
-        CreateMessagingMessage2Response res = sdk.message().createMessagingMessage2()
+        CreateMessagingMessageResponse res = sdk.message().createMessagingMessage()
                 .request(req)
                 .call();
 
@@ -57,13 +57,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                   | Type                                                                                        | Required                                                                                    | Description                                                                                 |
-| ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
-| `request`                                                                                   | [CreateMessagingMessage2Request](../../models/operations/CreateMessagingMessage2Request.md) | :heavy_check_mark:                                                                          | The request object to use for the request.                                                  |
+| Parameter                                                                                 | Type                                                                                      | Required                                                                                  | Description                                                                               |
+| ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
+| `request`                                                                                 | [CreateMessagingMessageRequest](../../models/operations/CreateMessagingMessageRequest.md) | :heavy_check_mark:                                                                        | The request object to use for the request.                                                |
 
 ### Response
 
-**[CreateMessagingMessage2Response](../../models/operations/CreateMessagingMessage2Response.md)**
+**[CreateMessagingMessageResponse](../../models/operations/CreateMessagingMessageResponse.md)**
 
 ### Errors
 
@@ -71,20 +71,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## getMessagingMessage2
+## getMessagingMessage
 
 Retrieve a message
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="getMessagingMessage2" method="get" path="/messaging/{connection_id}/message/{id}" -->
+<!-- UsageSnippet language="java" operationID="getMessagingMessage" method="get" path="/messaging/{connection_id}/message/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.GetMessagingMessage2Request;
-import to.unified.unified_java_sdk.models.operations.GetMessagingMessage2Response;
+import to.unified.unified_java_sdk.models.operations.GetMessagingMessageRequest;
+import to.unified.unified_java_sdk.models.operations.GetMessagingMessageResponse;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -97,12 +97,12 @@ public class Application {
                     .build())
             .build();
 
-        GetMessagingMessage2Request req = GetMessagingMessage2Request.builder()
+        GetMessagingMessageRequest req = GetMessagingMessageRequest.builder()
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        GetMessagingMessage2Response res = sdk.message().getMessagingMessage2()
+        GetMessagingMessageResponse res = sdk.message().getMessagingMessage()
                 .request(req)
                 .call();
 
@@ -115,13 +115,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                             | Type                                                                                  | Required                                                                              | Description                                                                           |
-| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
-| `request`                                                                             | [GetMessagingMessage2Request](../../models/operations/GetMessagingMessage2Request.md) | :heavy_check_mark:                                                                    | The request object to use for the request.                                            |
+| Parameter                                                                           | Type                                                                                | Required                                                                            | Description                                                                         |
+| ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| `request`                                                                           | [GetMessagingMessageRequest](../../models/operations/GetMessagingMessageRequest.md) | :heavy_check_mark:                                                                  | The request object to use for the request.                                          |
 
 ### Response
 
-**[GetMessagingMessage2Response](../../models/operations/GetMessagingMessage2Response.md)**
+**[GetMessagingMessageResponse](../../models/operations/GetMessagingMessageResponse.md)**
 
 ### Errors
 
@@ -129,20 +129,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## listMessagingMessages2
+## listMessagingMessages
 
 List all messages
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="listMessagingMessages2" method="get" path="/messaging/{connection_id}/message" -->
+<!-- UsageSnippet language="java" operationID="listMessagingMessages" method="get" path="/messaging/{connection_id}/message" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.ListMessagingMessages2Request;
-import to.unified.unified_java_sdk.models.operations.ListMessagingMessages2Response;
+import to.unified.unified_java_sdk.models.operations.ListMessagingMessagesRequest;
+import to.unified.unified_java_sdk.models.operations.ListMessagingMessagesResponse;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -155,11 +155,11 @@ public class Application {
                     .build())
             .build();
 
-        ListMessagingMessages2Request req = ListMessagingMessages2Request.builder()
+        ListMessagingMessagesRequest req = ListMessagingMessagesRequest.builder()
                 .connectionId("<id>")
                 .build();
 
-        ListMessagingMessages2Response res = sdk.message().listMessagingMessages2()
+        ListMessagingMessagesResponse res = sdk.message().listMessagingMessages()
                 .request(req)
                 .call();
 
@@ -172,13 +172,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                 | Type                                                                                      | Required                                                                                  | Description                                                                               |
-| ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
-| `request`                                                                                 | [ListMessagingMessages2Request](../../models/operations/ListMessagingMessages2Request.md) | :heavy_check_mark:                                                                        | The request object to use for the request.                                                |
+| Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
+| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| `request`                                                                               | [ListMessagingMessagesRequest](../../models/operations/ListMessagingMessagesRequest.md) | :heavy_check_mark:                                                                      | The request object to use for the request.                                              |
 
 ### Response
 
-**[ListMessagingMessages2Response](../../models/operations/ListMessagingMessages2Response.md)**
+**[ListMessagingMessagesResponse](../../models/operations/ListMessagingMessagesResponse.md)**
 
 ### Errors
 
@@ -186,20 +186,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## patchMessagingMessage2
+## patchMessagingMessage
 
 Update a message
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchMessagingMessage2" method="patch" path="/messaging/{connection_id}/message/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchMessagingMessage" method="patch" path="/messaging/{connection_id}/message/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.PatchMessagingMessage2Request;
-import to.unified.unified_java_sdk.models.operations.PatchMessagingMessage2Response;
+import to.unified.unified_java_sdk.models.operations.PatchMessagingMessageRequest;
+import to.unified.unified_java_sdk.models.operations.PatchMessagingMessageResponse;
 import to.unified.unified_java_sdk.models.shared.MessagingMessage;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -213,14 +213,14 @@ public class Application {
                     .build())
             .build();
 
-        PatchMessagingMessage2Request req = PatchMessagingMessage2Request.builder()
+        PatchMessagingMessageRequest req = PatchMessagingMessageRequest.builder()
                 .messagingMessage(MessagingMessage.builder()
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        PatchMessagingMessage2Response res = sdk.message().patchMessagingMessage2()
+        PatchMessagingMessageResponse res = sdk.message().patchMessagingMessage()
                 .request(req)
                 .call();
 
@@ -233,13 +233,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                 | Type                                                                                      | Required                                                                                  | Description                                                                               |
-| ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
-| `request`                                                                                 | [PatchMessagingMessage2Request](../../models/operations/PatchMessagingMessage2Request.md) | :heavy_check_mark:                                                                        | The request object to use for the request.                                                |
+| Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
+| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| `request`                                                                               | [PatchMessagingMessageRequest](../../models/operations/PatchMessagingMessageRequest.md) | :heavy_check_mark:                                                                      | The request object to use for the request.                                              |
 
 ### Response
 
-**[PatchMessagingMessage2Response](../../models/operations/PatchMessagingMessage2Response.md)**
+**[PatchMessagingMessageResponse](../../models/operations/PatchMessagingMessageResponse.md)**
 
 ### Errors
 
@@ -247,20 +247,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## removeMessagingMessage2
+## removeMessagingMessage
 
 Remove a message
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="removeMessagingMessage2" method="delete" path="/messaging/{connection_id}/message/{id}" -->
+<!-- UsageSnippet language="java" operationID="removeMessagingMessage" method="delete" path="/messaging/{connection_id}/message/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.RemoveMessagingMessage2Request;
-import to.unified.unified_java_sdk.models.operations.RemoveMessagingMessage2Response;
+import to.unified.unified_java_sdk.models.operations.RemoveMessagingMessageRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveMessagingMessageResponse;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -273,12 +273,12 @@ public class Application {
                     .build())
             .build();
 
-        RemoveMessagingMessage2Request req = RemoveMessagingMessage2Request.builder()
+        RemoveMessagingMessageRequest req = RemoveMessagingMessageRequest.builder()
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        RemoveMessagingMessage2Response res = sdk.message().removeMessagingMessage2()
+        RemoveMessagingMessageResponse res = sdk.message().removeMessagingMessage()
                 .request(req)
                 .call();
 
@@ -289,13 +289,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                   | Type                                                                                        | Required                                                                                    | Description                                                                                 |
-| ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
-| `request`                                                                                   | [RemoveMessagingMessage2Request](../../models/operations/RemoveMessagingMessage2Request.md) | :heavy_check_mark:                                                                          | The request object to use for the request.                                                  |
+| Parameter                                                                                 | Type                                                                                      | Required                                                                                  | Description                                                                               |
+| ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
+| `request`                                                                                 | [RemoveMessagingMessageRequest](../../models/operations/RemoveMessagingMessageRequest.md) | :heavy_check_mark:                                                                        | The request object to use for the request.                                                |
 
 ### Response
 
-**[RemoveMessagingMessage2Response](../../models/operations/RemoveMessagingMessage2Response.md)**
+**[RemoveMessagingMessageResponse](../../models/operations/RemoveMessagingMessageResponse.md)**
 
 ### Errors
 
@@ -303,20 +303,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## updateMessagingMessage2
+## updateMessagingMessage
 
 Update a message
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateMessagingMessage2" method="put" path="/messaging/{connection_id}/message/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateMessagingMessage" method="put" path="/messaging/{connection_id}/message/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.UpdateMessagingMessage2Request;
-import to.unified.unified_java_sdk.models.operations.UpdateMessagingMessage2Response;
+import to.unified.unified_java_sdk.models.operations.UpdateMessagingMessageRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateMessagingMessageResponse;
 import to.unified.unified_java_sdk.models.shared.MessagingMessage;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -330,14 +330,14 @@ public class Application {
                     .build())
             .build();
 
-        UpdateMessagingMessage2Request req = UpdateMessagingMessage2Request.builder()
+        UpdateMessagingMessageRequest req = UpdateMessagingMessageRequest.builder()
                 .messagingMessage(MessagingMessage.builder()
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        UpdateMessagingMessage2Response res = sdk.message().updateMessagingMessage2()
+        UpdateMessagingMessageResponse res = sdk.message().updateMessagingMessage()
                 .request(req)
                 .call();
 
@@ -350,13 +350,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                   | Type                                                                                        | Required                                                                                    | Description                                                                                 |
-| ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
-| `request`                                                                                   | [UpdateMessagingMessage2Request](../../models/operations/UpdateMessagingMessage2Request.md) | :heavy_check_mark:                                                                          | The request object to use for the request.                                                  |
+| Parameter                                                                                 | Type                                                                                      | Required                                                                                  | Description                                                                               |
+| ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
+| `request`                                                                                 | [UpdateMessagingMessageRequest](../../models/operations/UpdateMessagingMessageRequest.md) | :heavy_check_mark:                                                                        | The request object to use for the request.                                                |
 
 ### Response
 
-**[UpdateMessagingMessage2Response](../../models/operations/UpdateMessagingMessage2Response.md)**
+**[UpdateMessagingMessageResponse](../../models/operations/UpdateMessagingMessageResponse.md)**
 
 ### Errors
 

@@ -4,23 +4,23 @@
 
 ### Available Operations
 
-* [getAccountingBalancesheet2](#getaccountingbalancesheet2) - Retrieve a balancesheet
-* [listAccountingBalancesheets2](#listaccountingbalancesheets2) - List all balancesheets
+* [getAccountingBalancesheet](#getaccountingbalancesheet) - Retrieve a balancesheet
+* [listAccountingBalancesheets](#listaccountingbalancesheets) - List all balancesheets
 
-## getAccountingBalancesheet2
+## getAccountingBalancesheet
 
 Retrieve a balancesheet
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="getAccountingBalancesheet2" method="get" path="/accounting/{connection_id}/balancesheet/{id}" -->
+<!-- UsageSnippet language="java" operationID="getAccountingBalancesheet" method="get" path="/accounting/{connection_id}/balancesheet/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.GetAccountingBalancesheet2Request;
-import to.unified.unified_java_sdk.models.operations.GetAccountingBalancesheet2Response;
+import to.unified.unified_java_sdk.models.operations.GetAccountingBalancesheetRequest;
+import to.unified.unified_java_sdk.models.operations.GetAccountingBalancesheetResponse;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -33,12 +33,12 @@ public class Application {
                     .build())
             .build();
 
-        GetAccountingBalancesheet2Request req = GetAccountingBalancesheet2Request.builder()
+        GetAccountingBalancesheetRequest req = GetAccountingBalancesheetRequest.builder()
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        GetAccountingBalancesheet2Response res = sdk.balancesheet().getAccountingBalancesheet2()
+        GetAccountingBalancesheetResponse res = sdk.balancesheet().getAccountingBalancesheet()
                 .request(req)
                 .call();
 
@@ -51,13 +51,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                         | Type                                                                                              | Required                                                                                          | Description                                                                                       |
-| ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
-| `request`                                                                                         | [GetAccountingBalancesheet2Request](../../models/operations/GetAccountingBalancesheet2Request.md) | :heavy_check_mark:                                                                                | The request object to use for the request.                                                        |
+| Parameter                                                                                       | Type                                                                                            | Required                                                                                        | Description                                                                                     |
+| ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
+| `request`                                                                                       | [GetAccountingBalancesheetRequest](../../models/operations/GetAccountingBalancesheetRequest.md) | :heavy_check_mark:                                                                              | The request object to use for the request.                                                      |
 
 ### Response
 
-**[GetAccountingBalancesheet2Response](../../models/operations/GetAccountingBalancesheet2Response.md)**
+**[GetAccountingBalancesheetResponse](../../models/operations/GetAccountingBalancesheetResponse.md)**
 
 ### Errors
 
@@ -65,20 +65,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## listAccountingBalancesheets2
+## listAccountingBalancesheets
 
 List all balancesheets
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="listAccountingBalancesheets2" method="get" path="/accounting/{connection_id}/balancesheet" -->
+<!-- UsageSnippet language="java" operationID="listAccountingBalancesheets" method="get" path="/accounting/{connection_id}/balancesheet" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.ListAccountingBalancesheets2Request;
-import to.unified.unified_java_sdk.models.operations.ListAccountingBalancesheets2Response;
+import to.unified.unified_java_sdk.models.operations.ListAccountingBalancesheetsRequest;
+import to.unified.unified_java_sdk.models.operations.ListAccountingBalancesheetsResponse;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -91,11 +91,11 @@ public class Application {
                     .build())
             .build();
 
-        ListAccountingBalancesheets2Request req = ListAccountingBalancesheets2Request.builder()
+        ListAccountingBalancesheetsRequest req = ListAccountingBalancesheetsRequest.builder()
                 .connectionId("<id>")
                 .build();
 
-        ListAccountingBalancesheets2Response res = sdk.balancesheet().listAccountingBalancesheets2()
+        ListAccountingBalancesheetsResponse res = sdk.balancesheet().listAccountingBalancesheets()
                 .request(req)
                 .call();
 
@@ -108,13 +108,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                             | Type                                                                                                  | Required                                                                                              | Description                                                                                           |
-| ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
-| `request`                                                                                             | [ListAccountingBalancesheets2Request](../../models/operations/ListAccountingBalancesheets2Request.md) | :heavy_check_mark:                                                                                    | The request object to use for the request.                                                            |
+| Parameter                                                                                           | Type                                                                                                | Required                                                                                            | Description                                                                                         |
+| --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
+| `request`                                                                                           | [ListAccountingBalancesheetsRequest](../../models/operations/ListAccountingBalancesheetsRequest.md) | :heavy_check_mark:                                                                                  | The request object to use for the request.                                                          |
 
 ### Response
 
-**[ListAccountingBalancesheets2Response](../../models/operations/ListAccountingBalancesheets2Response.md)**
+**[ListAccountingBalancesheetsResponse](../../models/operations/ListAccountingBalancesheetsResponse.md)**
 
 ### Errors
 

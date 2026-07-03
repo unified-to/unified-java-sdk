@@ -4,35 +4,35 @@
 
 ### Available Operations
 
-* [createAtsActivity2](#createatsactivity2) - Create an activity
-* [createLmsActivity2](#createlmsactivity2) - Create an activity
-* [getAtsActivity2](#getatsactivity2) - Retrieve an activity
-* [getClubsActivity2](#getclubsactivity2) - Retrieve an activity
-* [getLmsActivity2](#getlmsactivity2) - Retrieve an activity
-* [listAtsActivities2](#listatsactivities2) - List all activities
-* [listClubsActivities2](#listclubsactivities2) - List all activities
-* [listLmsActivities2](#listlmsactivities2) - List all activities
-* [patchAtsActivity2](#patchatsactivity2) - Update an activity
-* [patchLmsActivity2](#patchlmsactivity2) - Update an activity
-* [removeAtsActivity2](#removeatsactivity2) - Remove an activity
-* [removeLmsActivity2](#removelmsactivity2) - Remove an activity
-* [updateAtsActivity2](#updateatsactivity2) - Update an activity
-* [updateLmsActivity2](#updatelmsactivity2) - Update an activity
+* [createAtsActivity](#createatsactivity) - Create an activity
+* [createLmsActivity](#createlmsactivity) - Create an activity
+* [getAtsActivity](#getatsactivity) - Retrieve an activity
+* [getClubsActivity](#getclubsactivity) - Retrieve an activity
+* [getLmsActivity](#getlmsactivity) - Retrieve an activity
+* [listAtsActivities](#listatsactivities) - List all activities
+* [listClubsActivities](#listclubsactivities) - List all activities
+* [listLmsActivities](#listlmsactivities) - List all activities
+* [patchAtsActivity](#patchatsactivity) - Update an activity
+* [patchLmsActivity](#patchlmsactivity) - Update an activity
+* [removeAtsActivity](#removeatsactivity) - Remove an activity
+* [removeLmsActivity](#removelmsactivity) - Remove an activity
+* [updateAtsActivity](#updateatsactivity) - Update an activity
+* [updateLmsActivity](#updatelmsactivity) - Update an activity
 
-## createAtsActivity2
+## createAtsActivity
 
 Create an activity
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createAtsActivity2" method="post" path="/ats/{connection_id}/activity" -->
+<!-- UsageSnippet language="java" operationID="createAtsActivity" method="post" path="/ats/{connection_id}/activity" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.CreateAtsActivity2Request;
-import to.unified.unified_java_sdk.models.operations.CreateAtsActivity2Response;
+import to.unified.unified_java_sdk.models.operations.CreateAtsActivityRequest;
+import to.unified.unified_java_sdk.models.operations.CreateAtsActivityResponse;
 import to.unified.unified_java_sdk.models.shared.AtsActivity;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -46,13 +46,13 @@ public class Application {
                     .build())
             .build();
 
-        CreateAtsActivity2Request req = CreateAtsActivity2Request.builder()
+        CreateAtsActivityRequest req = CreateAtsActivityRequest.builder()
                 .atsActivity(AtsActivity.builder()
                     .build())
                 .connectionId("<id>")
                 .build();
 
-        CreateAtsActivity2Response res = sdk.activity().createAtsActivity2()
+        CreateAtsActivityResponse res = sdk.activity().createAtsActivity()
                 .request(req)
                 .call();
 
@@ -65,13 +65,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
-| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
-| `request`                                                                         | [CreateAtsActivity2Request](../../models/operations/CreateAtsActivity2Request.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
+| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| `request`                                                                       | [CreateAtsActivityRequest](../../models/operations/CreateAtsActivityRequest.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
 
 ### Response
 
-**[CreateAtsActivity2Response](../../models/operations/CreateAtsActivity2Response.md)**
+**[CreateAtsActivityResponse](../../models/operations/CreateAtsActivityResponse.md)**
 
 ### Errors
 
@@ -79,20 +79,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## createLmsActivity2
+## createLmsActivity
 
 Create an activity
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createLmsActivity2" method="post" path="/lms/{connection_id}/activity" -->
+<!-- UsageSnippet language="java" operationID="createLmsActivity" method="post" path="/lms/{connection_id}/activity" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.CreateLmsActivity2Request;
-import to.unified.unified_java_sdk.models.operations.CreateLmsActivity2Response;
+import to.unified.unified_java_sdk.models.operations.CreateLmsActivityRequest;
+import to.unified.unified_java_sdk.models.operations.CreateLmsActivityResponse;
 import to.unified.unified_java_sdk.models.shared.LmsActivity;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -106,13 +106,13 @@ public class Application {
                     .build())
             .build();
 
-        CreateLmsActivity2Request req = CreateLmsActivity2Request.builder()
+        CreateLmsActivityRequest req = CreateLmsActivityRequest.builder()
                 .lmsActivity(LmsActivity.builder()
                     .build())
                 .connectionId("<id>")
                 .build();
 
-        CreateLmsActivity2Response res = sdk.activity().createLmsActivity2()
+        CreateLmsActivityResponse res = sdk.activity().createLmsActivity()
                 .request(req)
                 .call();
 
@@ -125,13 +125,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
-| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
-| `request`                                                                         | [CreateLmsActivity2Request](../../models/operations/CreateLmsActivity2Request.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
+| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| `request`                                                                       | [CreateLmsActivityRequest](../../models/operations/CreateLmsActivityRequest.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
 
 ### Response
 
-**[CreateLmsActivity2Response](../../models/operations/CreateLmsActivity2Response.md)**
+**[CreateLmsActivityResponse](../../models/operations/CreateLmsActivityResponse.md)**
 
 ### Errors
 
@@ -139,20 +139,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## getAtsActivity2
+## getAtsActivity
 
 Retrieve an activity
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="getAtsActivity2" method="get" path="/ats/{connection_id}/activity/{id}" -->
+<!-- UsageSnippet language="java" operationID="getAtsActivity" method="get" path="/ats/{connection_id}/activity/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.GetAtsActivity2Request;
-import to.unified.unified_java_sdk.models.operations.GetAtsActivity2Response;
+import to.unified.unified_java_sdk.models.operations.GetAtsActivityRequest;
+import to.unified.unified_java_sdk.models.operations.GetAtsActivityResponse;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -165,12 +165,12 @@ public class Application {
                     .build())
             .build();
 
-        GetAtsActivity2Request req = GetAtsActivity2Request.builder()
+        GetAtsActivityRequest req = GetAtsActivityRequest.builder()
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        GetAtsActivity2Response res = sdk.activity().getAtsActivity2()
+        GetAtsActivityResponse res = sdk.activity().getAtsActivity()
                 .request(req)
                 .call();
 
@@ -183,13 +183,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                   | Type                                                                        | Required                                                                    | Description                                                                 |
-| --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
-| `request`                                                                   | [GetAtsActivity2Request](../../models/operations/GetAtsActivity2Request.md) | :heavy_check_mark:                                                          | The request object to use for the request.                                  |
+| Parameter                                                                 | Type                                                                      | Required                                                                  | Description                                                               |
+| ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
+| `request`                                                                 | [GetAtsActivityRequest](../../models/operations/GetAtsActivityRequest.md) | :heavy_check_mark:                                                        | The request object to use for the request.                                |
 
 ### Response
 
-**[GetAtsActivity2Response](../../models/operations/GetAtsActivity2Response.md)**
+**[GetAtsActivityResponse](../../models/operations/GetAtsActivityResponse.md)**
 
 ### Errors
 
@@ -197,20 +197,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## getClubsActivity2
+## getClubsActivity
 
 Retrieve an activity
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="getClubsActivity2" method="get" path="/clubs/{connection_id}/activity/{id}" -->
+<!-- UsageSnippet language="java" operationID="getClubsActivity" method="get" path="/clubs/{connection_id}/activity/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.GetClubsActivity2Request;
-import to.unified.unified_java_sdk.models.operations.GetClubsActivity2Response;
+import to.unified.unified_java_sdk.models.operations.GetClubsActivityRequest;
+import to.unified.unified_java_sdk.models.operations.GetClubsActivityResponse;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -223,12 +223,12 @@ public class Application {
                     .build())
             .build();
 
-        GetClubsActivity2Request req = GetClubsActivity2Request.builder()
+        GetClubsActivityRequest req = GetClubsActivityRequest.builder()
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        GetClubsActivity2Response res = sdk.activity().getClubsActivity2()
+        GetClubsActivityResponse res = sdk.activity().getClubsActivity()
                 .request(req)
                 .call();
 
@@ -241,13 +241,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
-| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
-| `request`                                                                       | [GetClubsActivity2Request](../../models/operations/GetClubsActivity2Request.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
+| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
+| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| `request`                                                                     | [GetClubsActivityRequest](../../models/operations/GetClubsActivityRequest.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
 
 ### Response
 
-**[GetClubsActivity2Response](../../models/operations/GetClubsActivity2Response.md)**
+**[GetClubsActivityResponse](../../models/operations/GetClubsActivityResponse.md)**
 
 ### Errors
 
@@ -255,20 +255,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## getLmsActivity2
+## getLmsActivity
 
 Retrieve an activity
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="getLmsActivity2" method="get" path="/lms/{connection_id}/activity/{id}" -->
+<!-- UsageSnippet language="java" operationID="getLmsActivity" method="get" path="/lms/{connection_id}/activity/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.GetLmsActivity2Request;
-import to.unified.unified_java_sdk.models.operations.GetLmsActivity2Response;
+import to.unified.unified_java_sdk.models.operations.GetLmsActivityRequest;
+import to.unified.unified_java_sdk.models.operations.GetLmsActivityResponse;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -281,12 +281,12 @@ public class Application {
                     .build())
             .build();
 
-        GetLmsActivity2Request req = GetLmsActivity2Request.builder()
+        GetLmsActivityRequest req = GetLmsActivityRequest.builder()
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        GetLmsActivity2Response res = sdk.activity().getLmsActivity2()
+        GetLmsActivityResponse res = sdk.activity().getLmsActivity()
                 .request(req)
                 .call();
 
@@ -299,13 +299,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                   | Type                                                                        | Required                                                                    | Description                                                                 |
-| --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
-| `request`                                                                   | [GetLmsActivity2Request](../../models/operations/GetLmsActivity2Request.md) | :heavy_check_mark:                                                          | The request object to use for the request.                                  |
+| Parameter                                                                 | Type                                                                      | Required                                                                  | Description                                                               |
+| ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
+| `request`                                                                 | [GetLmsActivityRequest](../../models/operations/GetLmsActivityRequest.md) | :heavy_check_mark:                                                        | The request object to use for the request.                                |
 
 ### Response
 
-**[GetLmsActivity2Response](../../models/operations/GetLmsActivity2Response.md)**
+**[GetLmsActivityResponse](../../models/operations/GetLmsActivityResponse.md)**
 
 ### Errors
 
@@ -313,20 +313,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## listAtsActivities2
+## listAtsActivities
 
 List all activities
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="listAtsActivities2" method="get" path="/ats/{connection_id}/activity" -->
+<!-- UsageSnippet language="java" operationID="listAtsActivities" method="get" path="/ats/{connection_id}/activity" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.ListAtsActivities2Request;
-import to.unified.unified_java_sdk.models.operations.ListAtsActivities2Response;
+import to.unified.unified_java_sdk.models.operations.ListAtsActivitiesRequest;
+import to.unified.unified_java_sdk.models.operations.ListAtsActivitiesResponse;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -339,11 +339,11 @@ public class Application {
                     .build())
             .build();
 
-        ListAtsActivities2Request req = ListAtsActivities2Request.builder()
+        ListAtsActivitiesRequest req = ListAtsActivitiesRequest.builder()
                 .connectionId("<id>")
                 .build();
 
-        ListAtsActivities2Response res = sdk.activity().listAtsActivities2()
+        ListAtsActivitiesResponse res = sdk.activity().listAtsActivities()
                 .request(req)
                 .call();
 
@@ -356,13 +356,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
-| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
-| `request`                                                                         | [ListAtsActivities2Request](../../models/operations/ListAtsActivities2Request.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
+| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| `request`                                                                       | [ListAtsActivitiesRequest](../../models/operations/ListAtsActivitiesRequest.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
 
 ### Response
 
-**[ListAtsActivities2Response](../../models/operations/ListAtsActivities2Response.md)**
+**[ListAtsActivitiesResponse](../../models/operations/ListAtsActivitiesResponse.md)**
 
 ### Errors
 
@@ -370,20 +370,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## listClubsActivities2
+## listClubsActivities
 
 List all activities
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="listClubsActivities2" method="get" path="/clubs/{connection_id}/activity" -->
+<!-- UsageSnippet language="java" operationID="listClubsActivities" method="get" path="/clubs/{connection_id}/activity" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.ListClubsActivities2Request;
-import to.unified.unified_java_sdk.models.operations.ListClubsActivities2Response;
+import to.unified.unified_java_sdk.models.operations.ListClubsActivitiesRequest;
+import to.unified.unified_java_sdk.models.operations.ListClubsActivitiesResponse;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -396,11 +396,11 @@ public class Application {
                     .build())
             .build();
 
-        ListClubsActivities2Request req = ListClubsActivities2Request.builder()
+        ListClubsActivitiesRequest req = ListClubsActivitiesRequest.builder()
                 .connectionId("<id>")
                 .build();
 
-        ListClubsActivities2Response res = sdk.activity().listClubsActivities2()
+        ListClubsActivitiesResponse res = sdk.activity().listClubsActivities()
                 .request(req)
                 .call();
 
@@ -413,13 +413,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                             | Type                                                                                  | Required                                                                              | Description                                                                           |
-| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
-| `request`                                                                             | [ListClubsActivities2Request](../../models/operations/ListClubsActivities2Request.md) | :heavy_check_mark:                                                                    | The request object to use for the request.                                            |
+| Parameter                                                                           | Type                                                                                | Required                                                                            | Description                                                                         |
+| ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| `request`                                                                           | [ListClubsActivitiesRequest](../../models/operations/ListClubsActivitiesRequest.md) | :heavy_check_mark:                                                                  | The request object to use for the request.                                          |
 
 ### Response
 
-**[ListClubsActivities2Response](../../models/operations/ListClubsActivities2Response.md)**
+**[ListClubsActivitiesResponse](../../models/operations/ListClubsActivitiesResponse.md)**
 
 ### Errors
 
@@ -427,20 +427,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## listLmsActivities2
+## listLmsActivities
 
 List all activities
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="listLmsActivities2" method="get" path="/lms/{connection_id}/activity" -->
+<!-- UsageSnippet language="java" operationID="listLmsActivities" method="get" path="/lms/{connection_id}/activity" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.ListLmsActivities2Request;
-import to.unified.unified_java_sdk.models.operations.ListLmsActivities2Response;
+import to.unified.unified_java_sdk.models.operations.ListLmsActivitiesRequest;
+import to.unified.unified_java_sdk.models.operations.ListLmsActivitiesResponse;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -453,11 +453,11 @@ public class Application {
                     .build())
             .build();
 
-        ListLmsActivities2Request req = ListLmsActivities2Request.builder()
+        ListLmsActivitiesRequest req = ListLmsActivitiesRequest.builder()
                 .connectionId("<id>")
                 .build();
 
-        ListLmsActivities2Response res = sdk.activity().listLmsActivities2()
+        ListLmsActivitiesResponse res = sdk.activity().listLmsActivities()
                 .request(req)
                 .call();
 
@@ -470,13 +470,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
-| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
-| `request`                                                                         | [ListLmsActivities2Request](../../models/operations/ListLmsActivities2Request.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
+| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| `request`                                                                       | [ListLmsActivitiesRequest](../../models/operations/ListLmsActivitiesRequest.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
 
 ### Response
 
-**[ListLmsActivities2Response](../../models/operations/ListLmsActivities2Response.md)**
+**[ListLmsActivitiesResponse](../../models/operations/ListLmsActivitiesResponse.md)**
 
 ### Errors
 
@@ -484,20 +484,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## patchAtsActivity2
+## patchAtsActivity
 
 Update an activity
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchAtsActivity2" method="patch" path="/ats/{connection_id}/activity/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchAtsActivity" method="patch" path="/ats/{connection_id}/activity/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.PatchAtsActivity2Request;
-import to.unified.unified_java_sdk.models.operations.PatchAtsActivity2Response;
+import to.unified.unified_java_sdk.models.operations.PatchAtsActivityRequest;
+import to.unified.unified_java_sdk.models.operations.PatchAtsActivityResponse;
 import to.unified.unified_java_sdk.models.shared.AtsActivity;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -511,14 +511,248 @@ public class Application {
                     .build())
             .build();
 
-        PatchAtsActivity2Request req = PatchAtsActivity2Request.builder()
+        PatchAtsActivityRequest req = PatchAtsActivityRequest.builder()
                 .atsActivity(AtsActivity.builder()
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        PatchAtsActivity2Response res = sdk.activity().patchAtsActivity2()
+        PatchAtsActivityResponse res = sdk.activity().patchAtsActivity()
+                .request(req)
+                .call();
+
+        if (res.atsActivity().isPresent()) {
+            System.out.println(res.atsActivity().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
+| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| `request`                                                                     | [PatchAtsActivityRequest](../../models/operations/PatchAtsActivityRequest.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
+
+### Response
+
+**[PatchAtsActivityResponse](../../models/operations/PatchAtsActivityResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## patchLmsActivity
+
+Update an activity
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="patchLmsActivity" method="patch" path="/lms/{connection_id}/activity/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.PatchLmsActivityRequest;
+import to.unified.unified_java_sdk.models.operations.PatchLmsActivityResponse;
+import to.unified.unified_java_sdk.models.shared.LmsActivity;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        PatchLmsActivityRequest req = PatchLmsActivityRequest.builder()
+                .lmsActivity(LmsActivity.builder()
+                    .build())
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        PatchLmsActivityResponse res = sdk.activity().patchLmsActivity()
+                .request(req)
+                .call();
+
+        if (res.lmsActivity().isPresent()) {
+            System.out.println(res.lmsActivity().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
+| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| `request`                                                                     | [PatchLmsActivityRequest](../../models/operations/PatchLmsActivityRequest.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
+
+### Response
+
+**[PatchLmsActivityResponse](../../models/operations/PatchLmsActivityResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## removeAtsActivity
+
+Remove an activity
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="removeAtsActivity" method="delete" path="/ats/{connection_id}/activity/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.RemoveAtsActivityRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveAtsActivityResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        RemoveAtsActivityRequest req = RemoveAtsActivityRequest.builder()
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        RemoveAtsActivityResponse res = sdk.activity().removeAtsActivity()
+                .request(req)
+                .call();
+
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| `request`                                                                       | [RemoveAtsActivityRequest](../../models/operations/RemoveAtsActivityRequest.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
+
+### Response
+
+**[RemoveAtsActivityResponse](../../models/operations/RemoveAtsActivityResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## removeLmsActivity
+
+Remove an activity
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="removeLmsActivity" method="delete" path="/lms/{connection_id}/activity/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.RemoveLmsActivityRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveLmsActivityResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        RemoveLmsActivityRequest req = RemoveLmsActivityRequest.builder()
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        RemoveLmsActivityResponse res = sdk.activity().removeLmsActivity()
+                .request(req)
+                .call();
+
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| `request`                                                                       | [RemoveLmsActivityRequest](../../models/operations/RemoveLmsActivityRequest.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
+
+### Response
+
+**[RemoveLmsActivityResponse](../../models/operations/RemoveLmsActivityResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## updateAtsActivity
+
+Update an activity
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="updateAtsActivity" method="put" path="/ats/{connection_id}/activity/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.UpdateAtsActivityRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateAtsActivityResponse;
+import to.unified.unified_java_sdk.models.shared.AtsActivity;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        UpdateAtsActivityRequest req = UpdateAtsActivityRequest.builder()
+                .atsActivity(AtsActivity.builder()
+                    .build())
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        UpdateAtsActivityResponse res = sdk.activity().updateAtsActivity()
                 .request(req)
                 .call();
 
@@ -533,11 +767,11 @@ public class Application {
 
 | Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
 | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
-| `request`                                                                       | [PatchAtsActivity2Request](../../models/operations/PatchAtsActivity2Request.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
+| `request`                                                                       | [UpdateAtsActivityRequest](../../models/operations/UpdateAtsActivityRequest.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
 
 ### Response
 
-**[PatchAtsActivity2Response](../../models/operations/PatchAtsActivity2Response.md)**
+**[UpdateAtsActivityResponse](../../models/operations/UpdateAtsActivityResponse.md)**
 
 ### Errors
 
@@ -545,20 +779,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## patchLmsActivity2
+## updateLmsActivity
 
 Update an activity
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchLmsActivity2" method="patch" path="/lms/{connection_id}/activity/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateLmsActivity" method="put" path="/lms/{connection_id}/activity/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.PatchLmsActivity2Request;
-import to.unified.unified_java_sdk.models.operations.PatchLmsActivity2Response;
+import to.unified.unified_java_sdk.models.operations.UpdateLmsActivityRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateLmsActivityResponse;
 import to.unified.unified_java_sdk.models.shared.LmsActivity;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -572,14 +806,14 @@ public class Application {
                     .build())
             .build();
 
-        PatchLmsActivity2Request req = PatchLmsActivity2Request.builder()
+        UpdateLmsActivityRequest req = UpdateLmsActivityRequest.builder()
                 .lmsActivity(LmsActivity.builder()
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        PatchLmsActivity2Response res = sdk.activity().patchLmsActivity2()
+        UpdateLmsActivityResponse res = sdk.activity().updateLmsActivity()
                 .request(req)
                 .call();
 
@@ -594,245 +828,11 @@ public class Application {
 
 | Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
 | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
-| `request`                                                                       | [PatchLmsActivity2Request](../../models/operations/PatchLmsActivity2Request.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
+| `request`                                                                       | [UpdateLmsActivityRequest](../../models/operations/UpdateLmsActivityRequest.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
 
 ### Response
 
-**[PatchLmsActivity2Response](../../models/operations/PatchLmsActivity2Response.md)**
-
-### Errors
-
-| Error Type             | Status Code            | Content Type           |
-| ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
-
-## removeAtsActivity2
-
-Remove an activity
-
-### Example Usage
-
-<!-- UsageSnippet language="java" operationID="removeAtsActivity2" method="delete" path="/ats/{connection_id}/activity/{id}" -->
-```java
-package hello.world;
-
-import java.lang.Exception;
-import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.RemoveAtsActivity2Request;
-import to.unified.unified_java_sdk.models.operations.RemoveAtsActivity2Response;
-import to.unified.unified_java_sdk.models.shared.Security;
-
-public class Application {
-
-    public static void main(String[] args) throws Exception {
-
-        UnifiedTo sdk = UnifiedTo.builder()
-                .security(Security.builder()
-                    .jwt(System.getenv().getOrDefault("JWT", ""))
-                    .build())
-            .build();
-
-        RemoveAtsActivity2Request req = RemoveAtsActivity2Request.builder()
-                .connectionId("<id>")
-                .id("<id>")
-                .build();
-
-        RemoveAtsActivity2Response res = sdk.activity().removeAtsActivity2()
-                .request(req)
-                .call();
-
-        // handle response
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
-| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
-| `request`                                                                         | [RemoveAtsActivity2Request](../../models/operations/RemoveAtsActivity2Request.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
-
-### Response
-
-**[RemoveAtsActivity2Response](../../models/operations/RemoveAtsActivity2Response.md)**
-
-### Errors
-
-| Error Type             | Status Code            | Content Type           |
-| ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
-
-## removeLmsActivity2
-
-Remove an activity
-
-### Example Usage
-
-<!-- UsageSnippet language="java" operationID="removeLmsActivity2" method="delete" path="/lms/{connection_id}/activity/{id}" -->
-```java
-package hello.world;
-
-import java.lang.Exception;
-import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.RemoveLmsActivity2Request;
-import to.unified.unified_java_sdk.models.operations.RemoveLmsActivity2Response;
-import to.unified.unified_java_sdk.models.shared.Security;
-
-public class Application {
-
-    public static void main(String[] args) throws Exception {
-
-        UnifiedTo sdk = UnifiedTo.builder()
-                .security(Security.builder()
-                    .jwt(System.getenv().getOrDefault("JWT", ""))
-                    .build())
-            .build();
-
-        RemoveLmsActivity2Request req = RemoveLmsActivity2Request.builder()
-                .connectionId("<id>")
-                .id("<id>")
-                .build();
-
-        RemoveLmsActivity2Response res = sdk.activity().removeLmsActivity2()
-                .request(req)
-                .call();
-
-        // handle response
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
-| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
-| `request`                                                                         | [RemoveLmsActivity2Request](../../models/operations/RemoveLmsActivity2Request.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
-
-### Response
-
-**[RemoveLmsActivity2Response](../../models/operations/RemoveLmsActivity2Response.md)**
-
-### Errors
-
-| Error Type             | Status Code            | Content Type           |
-| ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
-
-## updateAtsActivity2
-
-Update an activity
-
-### Example Usage
-
-<!-- UsageSnippet language="java" operationID="updateAtsActivity2" method="put" path="/ats/{connection_id}/activity/{id}" -->
-```java
-package hello.world;
-
-import java.lang.Exception;
-import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.UpdateAtsActivity2Request;
-import to.unified.unified_java_sdk.models.operations.UpdateAtsActivity2Response;
-import to.unified.unified_java_sdk.models.shared.AtsActivity;
-import to.unified.unified_java_sdk.models.shared.Security;
-
-public class Application {
-
-    public static void main(String[] args) throws Exception {
-
-        UnifiedTo sdk = UnifiedTo.builder()
-                .security(Security.builder()
-                    .jwt(System.getenv().getOrDefault("JWT", ""))
-                    .build())
-            .build();
-
-        UpdateAtsActivity2Request req = UpdateAtsActivity2Request.builder()
-                .atsActivity(AtsActivity.builder()
-                    .build())
-                .connectionId("<id>")
-                .id("<id>")
-                .build();
-
-        UpdateAtsActivity2Response res = sdk.activity().updateAtsActivity2()
-                .request(req)
-                .call();
-
-        if (res.atsActivity().isPresent()) {
-            System.out.println(res.atsActivity().get());
-        }
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
-| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
-| `request`                                                                         | [UpdateAtsActivity2Request](../../models/operations/UpdateAtsActivity2Request.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
-
-### Response
-
-**[UpdateAtsActivity2Response](../../models/operations/UpdateAtsActivity2Response.md)**
-
-### Errors
-
-| Error Type             | Status Code            | Content Type           |
-| ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
-
-## updateLmsActivity2
-
-Update an activity
-
-### Example Usage
-
-<!-- UsageSnippet language="java" operationID="updateLmsActivity2" method="put" path="/lms/{connection_id}/activity/{id}" -->
-```java
-package hello.world;
-
-import java.lang.Exception;
-import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.UpdateLmsActivity2Request;
-import to.unified.unified_java_sdk.models.operations.UpdateLmsActivity2Response;
-import to.unified.unified_java_sdk.models.shared.LmsActivity;
-import to.unified.unified_java_sdk.models.shared.Security;
-
-public class Application {
-
-    public static void main(String[] args) throws Exception {
-
-        UnifiedTo sdk = UnifiedTo.builder()
-                .security(Security.builder()
-                    .jwt(System.getenv().getOrDefault("JWT", ""))
-                    .build())
-            .build();
-
-        UpdateLmsActivity2Request req = UpdateLmsActivity2Request.builder()
-                .lmsActivity(LmsActivity.builder()
-                    .build())
-                .connectionId("<id>")
-                .id("<id>")
-                .build();
-
-        UpdateLmsActivity2Response res = sdk.activity().updateLmsActivity2()
-                .request(req)
-                .call();
-
-        if (res.lmsActivity().isPresent()) {
-            System.out.println(res.lmsActivity().get());
-        }
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
-| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
-| `request`                                                                         | [UpdateLmsActivity2Request](../../models/operations/UpdateLmsActivity2Request.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
-
-### Response
-
-**[UpdateLmsActivity2Response](../../models/operations/UpdateLmsActivity2Response.md)**
+**[UpdateLmsActivityResponse](../../models/operations/UpdateLmsActivityResponse.md)**
 
 ### Errors
 

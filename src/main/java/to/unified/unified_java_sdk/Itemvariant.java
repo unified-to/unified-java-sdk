@@ -6,30 +6,30 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
-import to.unified.unified_java_sdk.models.operations.CreateCommerceItemvariant2Request;
-import to.unified.unified_java_sdk.models.operations.CreateCommerceItemvariant2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.CreateCommerceItemvariant2Response;
-import to.unified.unified_java_sdk.models.operations.GetCommerceItemvariant2Request;
-import to.unified.unified_java_sdk.models.operations.GetCommerceItemvariant2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.GetCommerceItemvariant2Response;
-import to.unified.unified_java_sdk.models.operations.ListCommerceItemvariants2Request;
-import to.unified.unified_java_sdk.models.operations.ListCommerceItemvariants2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.ListCommerceItemvariants2Response;
-import to.unified.unified_java_sdk.models.operations.PatchCommerceItemvariant2Request;
-import to.unified.unified_java_sdk.models.operations.PatchCommerceItemvariant2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.PatchCommerceItemvariant2Response;
-import to.unified.unified_java_sdk.models.operations.RemoveCommerceItemvariant2Request;
-import to.unified.unified_java_sdk.models.operations.RemoveCommerceItemvariant2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.RemoveCommerceItemvariant2Response;
-import to.unified.unified_java_sdk.models.operations.UpdateCommerceItemvariant2Request;
-import to.unified.unified_java_sdk.models.operations.UpdateCommerceItemvariant2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.UpdateCommerceItemvariant2Response;
-import to.unified.unified_java_sdk.operations.CreateCommerceItemvariant2;
-import to.unified.unified_java_sdk.operations.GetCommerceItemvariant2;
-import to.unified.unified_java_sdk.operations.ListCommerceItemvariants2;
-import to.unified.unified_java_sdk.operations.PatchCommerceItemvariant2;
-import to.unified.unified_java_sdk.operations.RemoveCommerceItemvariant2;
-import to.unified.unified_java_sdk.operations.UpdateCommerceItemvariant2;
+import to.unified.unified_java_sdk.models.operations.CreateCommerceItemvariantRequest;
+import to.unified.unified_java_sdk.models.operations.CreateCommerceItemvariantRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.CreateCommerceItemvariantResponse;
+import to.unified.unified_java_sdk.models.operations.GetCommerceItemvariantRequest;
+import to.unified.unified_java_sdk.models.operations.GetCommerceItemvariantRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetCommerceItemvariantResponse;
+import to.unified.unified_java_sdk.models.operations.ListCommerceItemvariantsRequest;
+import to.unified.unified_java_sdk.models.operations.ListCommerceItemvariantsRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListCommerceItemvariantsResponse;
+import to.unified.unified_java_sdk.models.operations.PatchCommerceItemvariantRequest;
+import to.unified.unified_java_sdk.models.operations.PatchCommerceItemvariantRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.PatchCommerceItemvariantResponse;
+import to.unified.unified_java_sdk.models.operations.RemoveCommerceItemvariantRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveCommerceItemvariantRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.RemoveCommerceItemvariantResponse;
+import to.unified.unified_java_sdk.models.operations.UpdateCommerceItemvariantRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateCommerceItemvariantRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.UpdateCommerceItemvariantResponse;
+import to.unified.unified_java_sdk.operations.CreateCommerceItemvariant;
+import to.unified.unified_java_sdk.operations.GetCommerceItemvariant;
+import to.unified.unified_java_sdk.operations.ListCommerceItemvariants;
+import to.unified.unified_java_sdk.operations.PatchCommerceItemvariant;
+import to.unified.unified_java_sdk.operations.RemoveCommerceItemvariant;
+import to.unified.unified_java_sdk.operations.UpdateCommerceItemvariant;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -57,8 +57,8 @@ public class Itemvariant {
      * 
      * @return The call builder
      */
-    public CreateCommerceItemvariant2RequestBuilder createCommerceItemvariant2() {
-        return new CreateCommerceItemvariant2RequestBuilder(sdkConfiguration);
+    public CreateCommerceItemvariantRequestBuilder createCommerceItemvariant() {
+        return new CreateCommerceItemvariantRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -68,9 +68,9 @@ public class Itemvariant {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateCommerceItemvariant2Response createCommerceItemvariant2(@Nonnull CreateCommerceItemvariant2Request request) {
-        RequestOperation<CreateCommerceItemvariant2Request, CreateCommerceItemvariant2Response> operation
-              = new CreateCommerceItemvariant2.Sync(sdkConfiguration, _headers);
+    public CreateCommerceItemvariantResponse createCommerceItemvariant(@Nonnull CreateCommerceItemvariantRequest request) {
+        RequestOperation<CreateCommerceItemvariantRequest, CreateCommerceItemvariantResponse> operation
+              = new CreateCommerceItemvariant.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -79,8 +79,8 @@ public class Itemvariant {
      * 
      * @return The call builder
      */
-    public GetCommerceItemvariant2RequestBuilder getCommerceItemvariant2() {
-        return new GetCommerceItemvariant2RequestBuilder(sdkConfiguration);
+    public GetCommerceItemvariantRequestBuilder getCommerceItemvariant() {
+        return new GetCommerceItemvariantRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -90,9 +90,9 @@ public class Itemvariant {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetCommerceItemvariant2Response getCommerceItemvariant2(@Nonnull GetCommerceItemvariant2Request request) {
-        RequestOperation<GetCommerceItemvariant2Request, GetCommerceItemvariant2Response> operation
-              = new GetCommerceItemvariant2.Sync(sdkConfiguration, _headers);
+    public GetCommerceItemvariantResponse getCommerceItemvariant(@Nonnull GetCommerceItemvariantRequest request) {
+        RequestOperation<GetCommerceItemvariantRequest, GetCommerceItemvariantResponse> operation
+              = new GetCommerceItemvariant.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -101,8 +101,8 @@ public class Itemvariant {
      * 
      * @return The call builder
      */
-    public ListCommerceItemvariants2RequestBuilder listCommerceItemvariants2() {
-        return new ListCommerceItemvariants2RequestBuilder(sdkConfiguration);
+    public ListCommerceItemvariantsRequestBuilder listCommerceItemvariants() {
+        return new ListCommerceItemvariantsRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -112,9 +112,9 @@ public class Itemvariant {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListCommerceItemvariants2Response listCommerceItemvariants2(@Nonnull ListCommerceItemvariants2Request request) {
-        RequestOperation<ListCommerceItemvariants2Request, ListCommerceItemvariants2Response> operation
-              = new ListCommerceItemvariants2.Sync(sdkConfiguration, _headers);
+    public ListCommerceItemvariantsResponse listCommerceItemvariants(@Nonnull ListCommerceItemvariantsRequest request) {
+        RequestOperation<ListCommerceItemvariantsRequest, ListCommerceItemvariantsResponse> operation
+              = new ListCommerceItemvariants.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -123,8 +123,8 @@ public class Itemvariant {
      * 
      * @return The call builder
      */
-    public PatchCommerceItemvariant2RequestBuilder patchCommerceItemvariant2() {
-        return new PatchCommerceItemvariant2RequestBuilder(sdkConfiguration);
+    public PatchCommerceItemvariantRequestBuilder patchCommerceItemvariant() {
+        return new PatchCommerceItemvariantRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -134,9 +134,9 @@ public class Itemvariant {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchCommerceItemvariant2Response patchCommerceItemvariant2(@Nonnull PatchCommerceItemvariant2Request request) {
-        RequestOperation<PatchCommerceItemvariant2Request, PatchCommerceItemvariant2Response> operation
-              = new PatchCommerceItemvariant2.Sync(sdkConfiguration, _headers);
+    public PatchCommerceItemvariantResponse patchCommerceItemvariant(@Nonnull PatchCommerceItemvariantRequest request) {
+        RequestOperation<PatchCommerceItemvariantRequest, PatchCommerceItemvariantResponse> operation
+              = new PatchCommerceItemvariant.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -145,8 +145,8 @@ public class Itemvariant {
      * 
      * @return The call builder
      */
-    public RemoveCommerceItemvariant2RequestBuilder removeCommerceItemvariant2() {
-        return new RemoveCommerceItemvariant2RequestBuilder(sdkConfiguration);
+    public RemoveCommerceItemvariantRequestBuilder removeCommerceItemvariant() {
+        return new RemoveCommerceItemvariantRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -156,9 +156,9 @@ public class Itemvariant {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveCommerceItemvariant2Response removeCommerceItemvariant2(@Nonnull RemoveCommerceItemvariant2Request request) {
-        RequestOperation<RemoveCommerceItemvariant2Request, RemoveCommerceItemvariant2Response> operation
-              = new RemoveCommerceItemvariant2.Sync(sdkConfiguration, _headers);
+    public RemoveCommerceItemvariantResponse removeCommerceItemvariant(@Nonnull RemoveCommerceItemvariantRequest request) {
+        RequestOperation<RemoveCommerceItemvariantRequest, RemoveCommerceItemvariantResponse> operation
+              = new RemoveCommerceItemvariant.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -167,8 +167,8 @@ public class Itemvariant {
      * 
      * @return The call builder
      */
-    public UpdateCommerceItemvariant2RequestBuilder updateCommerceItemvariant2() {
-        return new UpdateCommerceItemvariant2RequestBuilder(sdkConfiguration);
+    public UpdateCommerceItemvariantRequestBuilder updateCommerceItemvariant() {
+        return new UpdateCommerceItemvariantRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -178,9 +178,9 @@ public class Itemvariant {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateCommerceItemvariant2Response updateCommerceItemvariant2(@Nonnull UpdateCommerceItemvariant2Request request) {
-        RequestOperation<UpdateCommerceItemvariant2Request, UpdateCommerceItemvariant2Response> operation
-              = new UpdateCommerceItemvariant2.Sync(sdkConfiguration, _headers);
+    public UpdateCommerceItemvariantResponse updateCommerceItemvariant(@Nonnull UpdateCommerceItemvariantRequest request) {
+        RequestOperation<UpdateCommerceItemvariantRequest, UpdateCommerceItemvariantResponse> operation
+              = new UpdateCommerceItemvariant.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

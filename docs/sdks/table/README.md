@@ -4,27 +4,27 @@
 
 ### Available Operations
 
-* [createDatastoreTable2](#createdatastoretable2) - Create a table
-* [getDatastoreTable2](#getdatastoretable2) - Retrieve a table
-* [listDatastoreTables2](#listdatastoretables2) - List all tables
-* [patchDatastoreTable2](#patchdatastoretable2) - Update a table
-* [removeDatastoreTable2](#removedatastoretable2) - Remove a table
-* [updateDatastoreTable2](#updatedatastoretable2) - Update a table
+* [createDatastoreTable](#createdatastoretable) - Create a table
+* [getDatastoreTable](#getdatastoretable) - Retrieve a table
+* [listDatastoreTables](#listdatastoretables) - List all tables
+* [patchDatastoreTable](#patchdatastoretable) - Update a table
+* [removeDatastoreTable](#removedatastoretable) - Remove a table
+* [updateDatastoreTable](#updatedatastoretable) - Update a table
 
-## createDatastoreTable2
+## createDatastoreTable
 
 Create a table
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createDatastoreTable2" method="post" path="/datastore/{connection_id}/table" -->
+<!-- UsageSnippet language="java" operationID="createDatastoreTable" method="post" path="/datastore/{connection_id}/table" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.CreateDatastoreTable2Request;
-import to.unified.unified_java_sdk.models.operations.CreateDatastoreTable2Response;
+import to.unified.unified_java_sdk.models.operations.CreateDatastoreTableRequest;
+import to.unified.unified_java_sdk.models.operations.CreateDatastoreTableResponse;
 import to.unified.unified_java_sdk.models.shared.DatastoreTable;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -38,13 +38,13 @@ public class Application {
                     .build())
             .build();
 
-        CreateDatastoreTable2Request req = CreateDatastoreTable2Request.builder()
+        CreateDatastoreTableRequest req = CreateDatastoreTableRequest.builder()
                 .datastoreTable(DatastoreTable.builder()
                     .build())
                 .connectionId("<id>")
                 .build();
 
-        CreateDatastoreTable2Response res = sdk.table().createDatastoreTable2()
+        CreateDatastoreTableResponse res = sdk.table().createDatastoreTable()
                 .request(req)
                 .call();
 
@@ -57,13 +57,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
-| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
-| `request`                                                                               | [CreateDatastoreTable2Request](../../models/operations/CreateDatastoreTable2Request.md) | :heavy_check_mark:                                                                      | The request object to use for the request.                                              |
+| Parameter                                                                             | Type                                                                                  | Required                                                                              | Description                                                                           |
+| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| `request`                                                                             | [CreateDatastoreTableRequest](../../models/operations/CreateDatastoreTableRequest.md) | :heavy_check_mark:                                                                    | The request object to use for the request.                                            |
 
 ### Response
 
-**[CreateDatastoreTable2Response](../../models/operations/CreateDatastoreTable2Response.md)**
+**[CreateDatastoreTableResponse](../../models/operations/CreateDatastoreTableResponse.md)**
 
 ### Errors
 
@@ -71,20 +71,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## getDatastoreTable2
+## getDatastoreTable
 
 Retrieve a table
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="getDatastoreTable2" method="get" path="/datastore/{connection_id}/table/{id}" -->
+<!-- UsageSnippet language="java" operationID="getDatastoreTable" method="get" path="/datastore/{connection_id}/table/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.GetDatastoreTable2Request;
-import to.unified.unified_java_sdk.models.operations.GetDatastoreTable2Response;
+import to.unified.unified_java_sdk.models.operations.GetDatastoreTableRequest;
+import to.unified.unified_java_sdk.models.operations.GetDatastoreTableResponse;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -97,12 +97,12 @@ public class Application {
                     .build())
             .build();
 
-        GetDatastoreTable2Request req = GetDatastoreTable2Request.builder()
+        GetDatastoreTableRequest req = GetDatastoreTableRequest.builder()
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        GetDatastoreTable2Response res = sdk.table().getDatastoreTable2()
+        GetDatastoreTableResponse res = sdk.table().getDatastoreTable()
                 .request(req)
                 .call();
 
@@ -115,13 +115,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
-| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
-| `request`                                                                         | [GetDatastoreTable2Request](../../models/operations/GetDatastoreTable2Request.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
+| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| `request`                                                                       | [GetDatastoreTableRequest](../../models/operations/GetDatastoreTableRequest.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
 
 ### Response
 
-**[GetDatastoreTable2Response](../../models/operations/GetDatastoreTable2Response.md)**
+**[GetDatastoreTableResponse](../../models/operations/GetDatastoreTableResponse.md)**
 
 ### Errors
 
@@ -129,20 +129,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## listDatastoreTables2
+## listDatastoreTables
 
 List all tables
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="listDatastoreTables2" method="get" path="/datastore/{connection_id}/table" -->
+<!-- UsageSnippet language="java" operationID="listDatastoreTables" method="get" path="/datastore/{connection_id}/table" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.ListDatastoreTables2Request;
-import to.unified.unified_java_sdk.models.operations.ListDatastoreTables2Response;
+import to.unified.unified_java_sdk.models.operations.ListDatastoreTablesRequest;
+import to.unified.unified_java_sdk.models.operations.ListDatastoreTablesResponse;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -155,11 +155,11 @@ public class Application {
                     .build())
             .build();
 
-        ListDatastoreTables2Request req = ListDatastoreTables2Request.builder()
+        ListDatastoreTablesRequest req = ListDatastoreTablesRequest.builder()
                 .connectionId("<id>")
                 .build();
 
-        ListDatastoreTables2Response res = sdk.table().listDatastoreTables2()
+        ListDatastoreTablesResponse res = sdk.table().listDatastoreTables()
                 .request(req)
                 .call();
 
@@ -172,13 +172,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                             | Type                                                                                  | Required                                                                              | Description                                                                           |
-| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
-| `request`                                                                             | [ListDatastoreTables2Request](../../models/operations/ListDatastoreTables2Request.md) | :heavy_check_mark:                                                                    | The request object to use for the request.                                            |
+| Parameter                                                                           | Type                                                                                | Required                                                                            | Description                                                                         |
+| ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| `request`                                                                           | [ListDatastoreTablesRequest](../../models/operations/ListDatastoreTablesRequest.md) | :heavy_check_mark:                                                                  | The request object to use for the request.                                          |
 
 ### Response
 
-**[ListDatastoreTables2Response](../../models/operations/ListDatastoreTables2Response.md)**
+**[ListDatastoreTablesResponse](../../models/operations/ListDatastoreTablesResponse.md)**
 
 ### Errors
 
@@ -186,20 +186,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## patchDatastoreTable2
+## patchDatastoreTable
 
 Update a table
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchDatastoreTable2" method="patch" path="/datastore/{connection_id}/table/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchDatastoreTable" method="patch" path="/datastore/{connection_id}/table/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.PatchDatastoreTable2Request;
-import to.unified.unified_java_sdk.models.operations.PatchDatastoreTable2Response;
+import to.unified.unified_java_sdk.models.operations.PatchDatastoreTableRequest;
+import to.unified.unified_java_sdk.models.operations.PatchDatastoreTableResponse;
 import to.unified.unified_java_sdk.models.shared.DatastoreTable;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -213,14 +213,14 @@ public class Application {
                     .build())
             .build();
 
-        PatchDatastoreTable2Request req = PatchDatastoreTable2Request.builder()
+        PatchDatastoreTableRequest req = PatchDatastoreTableRequest.builder()
                 .datastoreTable(DatastoreTable.builder()
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        PatchDatastoreTable2Response res = sdk.table().patchDatastoreTable2()
+        PatchDatastoreTableResponse res = sdk.table().patchDatastoreTable()
                 .request(req)
                 .call();
 
@@ -233,13 +233,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                             | Type                                                                                  | Required                                                                              | Description                                                                           |
-| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
-| `request`                                                                             | [PatchDatastoreTable2Request](../../models/operations/PatchDatastoreTable2Request.md) | :heavy_check_mark:                                                                    | The request object to use for the request.                                            |
+| Parameter                                                                           | Type                                                                                | Required                                                                            | Description                                                                         |
+| ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| `request`                                                                           | [PatchDatastoreTableRequest](../../models/operations/PatchDatastoreTableRequest.md) | :heavy_check_mark:                                                                  | The request object to use for the request.                                          |
 
 ### Response
 
-**[PatchDatastoreTable2Response](../../models/operations/PatchDatastoreTable2Response.md)**
+**[PatchDatastoreTableResponse](../../models/operations/PatchDatastoreTableResponse.md)**
 
 ### Errors
 
@@ -247,20 +247,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## removeDatastoreTable2
+## removeDatastoreTable
 
 Remove a table
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="removeDatastoreTable2" method="delete" path="/datastore/{connection_id}/table/{id}" -->
+<!-- UsageSnippet language="java" operationID="removeDatastoreTable" method="delete" path="/datastore/{connection_id}/table/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.RemoveDatastoreTable2Request;
-import to.unified.unified_java_sdk.models.operations.RemoveDatastoreTable2Response;
+import to.unified.unified_java_sdk.models.operations.RemoveDatastoreTableRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveDatastoreTableResponse;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -273,12 +273,12 @@ public class Application {
                     .build())
             .build();
 
-        RemoveDatastoreTable2Request req = RemoveDatastoreTable2Request.builder()
+        RemoveDatastoreTableRequest req = RemoveDatastoreTableRequest.builder()
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        RemoveDatastoreTable2Response res = sdk.table().removeDatastoreTable2()
+        RemoveDatastoreTableResponse res = sdk.table().removeDatastoreTable()
                 .request(req)
                 .call();
 
@@ -289,13 +289,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
-| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
-| `request`                                                                               | [RemoveDatastoreTable2Request](../../models/operations/RemoveDatastoreTable2Request.md) | :heavy_check_mark:                                                                      | The request object to use for the request.                                              |
+| Parameter                                                                             | Type                                                                                  | Required                                                                              | Description                                                                           |
+| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| `request`                                                                             | [RemoveDatastoreTableRequest](../../models/operations/RemoveDatastoreTableRequest.md) | :heavy_check_mark:                                                                    | The request object to use for the request.                                            |
 
 ### Response
 
-**[RemoveDatastoreTable2Response](../../models/operations/RemoveDatastoreTable2Response.md)**
+**[RemoveDatastoreTableResponse](../../models/operations/RemoveDatastoreTableResponse.md)**
 
 ### Errors
 
@@ -303,20 +303,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## updateDatastoreTable2
+## updateDatastoreTable
 
 Update a table
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateDatastoreTable2" method="put" path="/datastore/{connection_id}/table/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateDatastoreTable" method="put" path="/datastore/{connection_id}/table/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.UpdateDatastoreTable2Request;
-import to.unified.unified_java_sdk.models.operations.UpdateDatastoreTable2Response;
+import to.unified.unified_java_sdk.models.operations.UpdateDatastoreTableRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateDatastoreTableResponse;
 import to.unified.unified_java_sdk.models.shared.DatastoreTable;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -330,14 +330,14 @@ public class Application {
                     .build())
             .build();
 
-        UpdateDatastoreTable2Request req = UpdateDatastoreTable2Request.builder()
+        UpdateDatastoreTableRequest req = UpdateDatastoreTableRequest.builder()
                 .datastoreTable(DatastoreTable.builder()
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        UpdateDatastoreTable2Response res = sdk.table().updateDatastoreTable2()
+        UpdateDatastoreTableResponse res = sdk.table().updateDatastoreTable()
                 .request(req)
                 .call();
 
@@ -350,13 +350,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
-| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
-| `request`                                                                               | [UpdateDatastoreTable2Request](../../models/operations/UpdateDatastoreTable2Request.md) | :heavy_check_mark:                                                                      | The request object to use for the request.                                              |
+| Parameter                                                                             | Type                                                                                  | Required                                                                              | Description                                                                           |
+| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| `request`                                                                             | [UpdateDatastoreTableRequest](../../models/operations/UpdateDatastoreTableRequest.md) | :heavy_check_mark:                                                                    | The request object to use for the request.                                            |
 
 ### Response
 
-**[UpdateDatastoreTable2Response](../../models/operations/UpdateDatastoreTable2Response.md)**
+**[UpdateDatastoreTableResponse](../../models/operations/UpdateDatastoreTableResponse.md)**
 
 ### Errors
 

@@ -4,27 +4,27 @@
 
 ### Available Operations
 
-* [createVerificationRequest2](#createverificationrequest2) - Create a request
-* [getVerificationRequest2](#getverificationrequest2) - Retrieve a request
-* [listVerificationRequests2](#listverificationrequests2) - List all requests
-* [patchVerificationRequest2](#patchverificationrequest2) - Update a request
-* [removeVerificationRequest2](#removeverificationrequest2) - Remove a request
-* [updateVerificationRequest2](#updateverificationrequest2) - Update a request
+* [createVerificationRequest](#createverificationrequest) - Create a request
+* [getVerificationRequest](#getverificationrequest) - Retrieve a request
+* [listVerificationRequests](#listverificationrequests) - List all requests
+* [patchVerificationRequest](#patchverificationrequest) - Update a request
+* [removeVerificationRequest](#removeverificationrequest) - Remove a request
+* [updateVerificationRequest](#updateverificationrequest) - Update a request
 
-## createVerificationRequest2
+## createVerificationRequest
 
 Create a request
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createVerificationRequest2" method="post" path="/verification/{connection_id}/request" -->
+<!-- UsageSnippet language="java" operationID="createVerificationRequest" method="post" path="/verification/{connection_id}/request" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.CreateVerificationRequest2Request;
-import to.unified.unified_java_sdk.models.operations.CreateVerificationRequest2Response;
+import to.unified.unified_java_sdk.models.operations.CreateVerificationRequestRequest;
+import to.unified.unified_java_sdk.models.operations.CreateVerificationRequestResponse;
 import to.unified.unified_java_sdk.models.shared.Security;
 import to.unified.unified_java_sdk.models.shared.VerificationRequest;
 
@@ -38,13 +38,13 @@ public class Application {
                     .build())
             .build();
 
-        CreateVerificationRequest2Request req = CreateVerificationRequest2Request.builder()
+        CreateVerificationRequestRequest req = CreateVerificationRequestRequest.builder()
                 .verificationRequest(VerificationRequest.builder()
                     .build())
                 .connectionId("<id>")
                 .build();
 
-        CreateVerificationRequest2Response res = sdk.request().createVerificationRequest2()
+        CreateVerificationRequestResponse res = sdk.request().createVerificationRequest()
                 .request(req)
                 .call();
 
@@ -57,13 +57,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                         | Type                                                                                              | Required                                                                                          | Description                                                                                       |
-| ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
-| `request`                                                                                         | [CreateVerificationRequest2Request](../../models/operations/CreateVerificationRequest2Request.md) | :heavy_check_mark:                                                                                | The request object to use for the request.                                                        |
+| Parameter                                                                                       | Type                                                                                            | Required                                                                                        | Description                                                                                     |
+| ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
+| `request`                                                                                       | [CreateVerificationRequestRequest](../../models/operations/CreateVerificationRequestRequest.md) | :heavy_check_mark:                                                                              | The request object to use for the request.                                                      |
 
 ### Response
 
-**[CreateVerificationRequest2Response](../../models/operations/CreateVerificationRequest2Response.md)**
+**[CreateVerificationRequestResponse](../../models/operations/CreateVerificationRequestResponse.md)**
 
 ### Errors
 
@@ -71,20 +71,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## getVerificationRequest2
+## getVerificationRequest
 
 Retrieve a request
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="getVerificationRequest2" method="get" path="/verification/{connection_id}/request/{id}" -->
+<!-- UsageSnippet language="java" operationID="getVerificationRequest" method="get" path="/verification/{connection_id}/request/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.GetVerificationRequest2Request;
-import to.unified.unified_java_sdk.models.operations.GetVerificationRequest2Response;
+import to.unified.unified_java_sdk.models.operations.GetVerificationRequestRequest;
+import to.unified.unified_java_sdk.models.operations.GetVerificationRequestResponse;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -97,12 +97,12 @@ public class Application {
                     .build())
             .build();
 
-        GetVerificationRequest2Request req = GetVerificationRequest2Request.builder()
+        GetVerificationRequestRequest req = GetVerificationRequestRequest.builder()
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        GetVerificationRequest2Response res = sdk.request().getVerificationRequest2()
+        GetVerificationRequestResponse res = sdk.request().getVerificationRequest()
                 .request(req)
                 .call();
 
@@ -115,13 +115,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                   | Type                                                                                        | Required                                                                                    | Description                                                                                 |
-| ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
-| `request`                                                                                   | [GetVerificationRequest2Request](../../models/operations/GetVerificationRequest2Request.md) | :heavy_check_mark:                                                                          | The request object to use for the request.                                                  |
+| Parameter                                                                                 | Type                                                                                      | Required                                                                                  | Description                                                                               |
+| ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
+| `request`                                                                                 | [GetVerificationRequestRequest](../../models/operations/GetVerificationRequestRequest.md) | :heavy_check_mark:                                                                        | The request object to use for the request.                                                |
 
 ### Response
 
-**[GetVerificationRequest2Response](../../models/operations/GetVerificationRequest2Response.md)**
+**[GetVerificationRequestResponse](../../models/operations/GetVerificationRequestResponse.md)**
 
 ### Errors
 
@@ -129,20 +129,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## listVerificationRequests2
+## listVerificationRequests
 
 List all requests
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="listVerificationRequests2" method="get" path="/verification/{connection_id}/request" -->
+<!-- UsageSnippet language="java" operationID="listVerificationRequests" method="get" path="/verification/{connection_id}/request" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.ListVerificationRequests2Request;
-import to.unified.unified_java_sdk.models.operations.ListVerificationRequests2Response;
+import to.unified.unified_java_sdk.models.operations.ListVerificationRequestsRequest;
+import to.unified.unified_java_sdk.models.operations.ListVerificationRequestsResponse;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -155,11 +155,11 @@ public class Application {
                     .build())
             .build();
 
-        ListVerificationRequests2Request req = ListVerificationRequests2Request.builder()
+        ListVerificationRequestsRequest req = ListVerificationRequestsRequest.builder()
                 .connectionId("<id>")
                 .build();
 
-        ListVerificationRequests2Response res = sdk.request().listVerificationRequests2()
+        ListVerificationRequestsResponse res = sdk.request().listVerificationRequests()
                 .request(req)
                 .call();
 
@@ -172,13 +172,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                       | Type                                                                                            | Required                                                                                        | Description                                                                                     |
-| ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
-| `request`                                                                                       | [ListVerificationRequests2Request](../../models/operations/ListVerificationRequests2Request.md) | :heavy_check_mark:                                                                              | The request object to use for the request.                                                      |
+| Parameter                                                                                     | Type                                                                                          | Required                                                                                      | Description                                                                                   |
+| --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
+| `request`                                                                                     | [ListVerificationRequestsRequest](../../models/operations/ListVerificationRequestsRequest.md) | :heavy_check_mark:                                                                            | The request object to use for the request.                                                    |
 
 ### Response
 
-**[ListVerificationRequests2Response](../../models/operations/ListVerificationRequests2Response.md)**
+**[ListVerificationRequestsResponse](../../models/operations/ListVerificationRequestsResponse.md)**
 
 ### Errors
 
@@ -186,20 +186,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## patchVerificationRequest2
+## patchVerificationRequest
 
 Update a request
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchVerificationRequest2" method="patch" path="/verification/{connection_id}/request/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchVerificationRequest" method="patch" path="/verification/{connection_id}/request/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.PatchVerificationRequest2Request;
-import to.unified.unified_java_sdk.models.operations.PatchVerificationRequest2Response;
+import to.unified.unified_java_sdk.models.operations.PatchVerificationRequestRequest;
+import to.unified.unified_java_sdk.models.operations.PatchVerificationRequestResponse;
 import to.unified.unified_java_sdk.models.shared.Security;
 import to.unified.unified_java_sdk.models.shared.VerificationRequest;
 
@@ -213,14 +213,14 @@ public class Application {
                     .build())
             .build();
 
-        PatchVerificationRequest2Request req = PatchVerificationRequest2Request.builder()
+        PatchVerificationRequestRequest req = PatchVerificationRequestRequest.builder()
                 .verificationRequest(VerificationRequest.builder()
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        PatchVerificationRequest2Response res = sdk.request().patchVerificationRequest2()
+        PatchVerificationRequestResponse res = sdk.request().patchVerificationRequest()
                 .request(req)
                 .call();
 
@@ -233,13 +233,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                       | Type                                                                                            | Required                                                                                        | Description                                                                                     |
-| ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
-| `request`                                                                                       | [PatchVerificationRequest2Request](../../models/operations/PatchVerificationRequest2Request.md) | :heavy_check_mark:                                                                              | The request object to use for the request.                                                      |
+| Parameter                                                                                     | Type                                                                                          | Required                                                                                      | Description                                                                                   |
+| --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
+| `request`                                                                                     | [PatchVerificationRequestRequest](../../models/operations/PatchVerificationRequestRequest.md) | :heavy_check_mark:                                                                            | The request object to use for the request.                                                    |
 
 ### Response
 
-**[PatchVerificationRequest2Response](../../models/operations/PatchVerificationRequest2Response.md)**
+**[PatchVerificationRequestResponse](../../models/operations/PatchVerificationRequestResponse.md)**
 
 ### Errors
 
@@ -247,20 +247,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## removeVerificationRequest2
+## removeVerificationRequest
 
 Remove a request
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="removeVerificationRequest2" method="delete" path="/verification/{connection_id}/request/{id}" -->
+<!-- UsageSnippet language="java" operationID="removeVerificationRequest" method="delete" path="/verification/{connection_id}/request/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.RemoveVerificationRequest2Request;
-import to.unified.unified_java_sdk.models.operations.RemoveVerificationRequest2Response;
+import to.unified.unified_java_sdk.models.operations.RemoveVerificationRequestRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveVerificationRequestResponse;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -273,12 +273,12 @@ public class Application {
                     .build())
             .build();
 
-        RemoveVerificationRequest2Request req = RemoveVerificationRequest2Request.builder()
+        RemoveVerificationRequestRequest req = RemoveVerificationRequestRequest.builder()
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        RemoveVerificationRequest2Response res = sdk.request().removeVerificationRequest2()
+        RemoveVerificationRequestResponse res = sdk.request().removeVerificationRequest()
                 .request(req)
                 .call();
 
@@ -289,13 +289,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                         | Type                                                                                              | Required                                                                                          | Description                                                                                       |
-| ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
-| `request`                                                                                         | [RemoveVerificationRequest2Request](../../models/operations/RemoveVerificationRequest2Request.md) | :heavy_check_mark:                                                                                | The request object to use for the request.                                                        |
+| Parameter                                                                                       | Type                                                                                            | Required                                                                                        | Description                                                                                     |
+| ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
+| `request`                                                                                       | [RemoveVerificationRequestRequest](../../models/operations/RemoveVerificationRequestRequest.md) | :heavy_check_mark:                                                                              | The request object to use for the request.                                                      |
 
 ### Response
 
-**[RemoveVerificationRequest2Response](../../models/operations/RemoveVerificationRequest2Response.md)**
+**[RemoveVerificationRequestResponse](../../models/operations/RemoveVerificationRequestResponse.md)**
 
 ### Errors
 
@@ -303,20 +303,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## updateVerificationRequest2
+## updateVerificationRequest
 
 Update a request
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateVerificationRequest2" method="put" path="/verification/{connection_id}/request/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateVerificationRequest" method="put" path="/verification/{connection_id}/request/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.UpdateVerificationRequest2Request;
-import to.unified.unified_java_sdk.models.operations.UpdateVerificationRequest2Response;
+import to.unified.unified_java_sdk.models.operations.UpdateVerificationRequestRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateVerificationRequestResponse;
 import to.unified.unified_java_sdk.models.shared.Security;
 import to.unified.unified_java_sdk.models.shared.VerificationRequest;
 
@@ -330,14 +330,14 @@ public class Application {
                     .build())
             .build();
 
-        UpdateVerificationRequest2Request req = UpdateVerificationRequest2Request.builder()
+        UpdateVerificationRequestRequest req = UpdateVerificationRequestRequest.builder()
                 .verificationRequest(VerificationRequest.builder()
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        UpdateVerificationRequest2Response res = sdk.request().updateVerificationRequest2()
+        UpdateVerificationRequestResponse res = sdk.request().updateVerificationRequest()
                 .request(req)
                 .call();
 
@@ -350,13 +350,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                         | Type                                                                                              | Required                                                                                          | Description                                                                                       |
-| ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
-| `request`                                                                                         | [UpdateVerificationRequest2Request](../../models/operations/UpdateVerificationRequest2Request.md) | :heavy_check_mark:                                                                                | The request object to use for the request.                                                        |
+| Parameter                                                                                       | Type                                                                                            | Required                                                                                        | Description                                                                                     |
+| ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
+| `request`                                                                                       | [UpdateVerificationRequestRequest](../../models/operations/UpdateVerificationRequestRequest.md) | :heavy_check_mark:                                                                              | The request object to use for the request.                                                      |
 
 ### Response
 
-**[UpdateVerificationRequest2Response](../../models/operations/UpdateVerificationRequest2Response.md)**
+**[UpdateVerificationRequestResponse](../../models/operations/UpdateVerificationRequestResponse.md)**
 
 ### Errors
 

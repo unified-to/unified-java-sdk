@@ -6,22 +6,22 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
-import to.unified.unified_java_sdk.models.operations.CreateGenaiEmbedding2Request;
-import to.unified.unified_java_sdk.models.operations.CreateGenaiEmbedding2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.CreateGenaiEmbedding2Response;
-import to.unified.unified_java_sdk.models.operations.CreateGenaiPrompt2Request;
-import to.unified.unified_java_sdk.models.operations.CreateGenaiPrompt2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.CreateGenaiPrompt2Response;
-import to.unified.unified_java_sdk.models.operations.GetGenaiModel2Request;
-import to.unified.unified_java_sdk.models.operations.GetGenaiModel2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.GetGenaiModel2Response;
-import to.unified.unified_java_sdk.models.operations.ListGenaiModels2Request;
-import to.unified.unified_java_sdk.models.operations.ListGenaiModels2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.ListGenaiModels2Response;
-import to.unified.unified_java_sdk.operations.CreateGenaiEmbedding2;
-import to.unified.unified_java_sdk.operations.CreateGenaiPrompt2;
-import to.unified.unified_java_sdk.operations.GetGenaiModel2;
-import to.unified.unified_java_sdk.operations.ListGenaiModels2;
+import to.unified.unified_java_sdk.models.operations.CreateGenaiEmbeddingRequest;
+import to.unified.unified_java_sdk.models.operations.CreateGenaiEmbeddingRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.CreateGenaiEmbeddingResponse;
+import to.unified.unified_java_sdk.models.operations.CreateGenaiPromptRequest;
+import to.unified.unified_java_sdk.models.operations.CreateGenaiPromptRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.CreateGenaiPromptResponse;
+import to.unified.unified_java_sdk.models.operations.GetGenaiModelRequest;
+import to.unified.unified_java_sdk.models.operations.GetGenaiModelRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetGenaiModelResponse;
+import to.unified.unified_java_sdk.models.operations.ListGenaiModelsRequest;
+import to.unified.unified_java_sdk.models.operations.ListGenaiModelsRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListGenaiModelsResponse;
+import to.unified.unified_java_sdk.operations.CreateGenaiEmbedding;
+import to.unified.unified_java_sdk.operations.CreateGenaiPrompt;
+import to.unified.unified_java_sdk.operations.GetGenaiModel;
+import to.unified.unified_java_sdk.operations.ListGenaiModels;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -49,8 +49,8 @@ public class Genai {
      * 
      * @return The call builder
      */
-    public CreateGenaiEmbedding2RequestBuilder createGenaiEmbedding2() {
-        return new CreateGenaiEmbedding2RequestBuilder(sdkConfiguration);
+    public CreateGenaiEmbeddingRequestBuilder createGenaiEmbedding() {
+        return new CreateGenaiEmbeddingRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -60,9 +60,9 @@ public class Genai {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateGenaiEmbedding2Response createGenaiEmbedding2(@Nonnull CreateGenaiEmbedding2Request request) {
-        RequestOperation<CreateGenaiEmbedding2Request, CreateGenaiEmbedding2Response> operation
-              = new CreateGenaiEmbedding2.Sync(sdkConfiguration, _headers);
+    public CreateGenaiEmbeddingResponse createGenaiEmbedding(@Nonnull CreateGenaiEmbeddingRequest request) {
+        RequestOperation<CreateGenaiEmbeddingRequest, CreateGenaiEmbeddingResponse> operation
+              = new CreateGenaiEmbedding.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -71,8 +71,8 @@ public class Genai {
      * 
      * @return The call builder
      */
-    public CreateGenaiPrompt2RequestBuilder createGenaiPrompt2() {
-        return new CreateGenaiPrompt2RequestBuilder(sdkConfiguration);
+    public CreateGenaiPromptRequestBuilder createGenaiPrompt() {
+        return new CreateGenaiPromptRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -82,9 +82,9 @@ public class Genai {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateGenaiPrompt2Response createGenaiPrompt2(@Nonnull CreateGenaiPrompt2Request request) {
-        RequestOperation<CreateGenaiPrompt2Request, CreateGenaiPrompt2Response> operation
-              = new CreateGenaiPrompt2.Sync(sdkConfiguration, _headers);
+    public CreateGenaiPromptResponse createGenaiPrompt(@Nonnull CreateGenaiPromptRequest request) {
+        RequestOperation<CreateGenaiPromptRequest, CreateGenaiPromptResponse> operation
+              = new CreateGenaiPrompt.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -93,8 +93,8 @@ public class Genai {
      * 
      * @return The call builder
      */
-    public GetGenaiModel2RequestBuilder getGenaiModel2() {
-        return new GetGenaiModel2RequestBuilder(sdkConfiguration);
+    public GetGenaiModelRequestBuilder getGenaiModel() {
+        return new GetGenaiModelRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -104,9 +104,9 @@ public class Genai {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetGenaiModel2Response getGenaiModel2(@Nonnull GetGenaiModel2Request request) {
-        RequestOperation<GetGenaiModel2Request, GetGenaiModel2Response> operation
-              = new GetGenaiModel2.Sync(sdkConfiguration, _headers);
+    public GetGenaiModelResponse getGenaiModel(@Nonnull GetGenaiModelRequest request) {
+        RequestOperation<GetGenaiModelRequest, GetGenaiModelResponse> operation
+              = new GetGenaiModel.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -115,8 +115,8 @@ public class Genai {
      * 
      * @return The call builder
      */
-    public ListGenaiModels2RequestBuilder listGenaiModels2() {
-        return new ListGenaiModels2RequestBuilder(sdkConfiguration);
+    public ListGenaiModelsRequestBuilder listGenaiModels() {
+        return new ListGenaiModelsRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -126,9 +126,9 @@ public class Genai {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListGenaiModels2Response listGenaiModels2(@Nonnull ListGenaiModels2Request request) {
-        RequestOperation<ListGenaiModels2Request, ListGenaiModels2Response> operation
-              = new ListGenaiModels2.Sync(sdkConfiguration, _headers);
+    public ListGenaiModelsResponse listGenaiModels(@Nonnull ListGenaiModelsRequest request) {
+        RequestOperation<ListGenaiModelsRequest, ListGenaiModelsResponse> operation
+              = new ListGenaiModels.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

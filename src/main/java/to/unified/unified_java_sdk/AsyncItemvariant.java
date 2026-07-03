@@ -7,30 +7,30 @@ import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOper
 
 import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
-import to.unified.unified_java_sdk.models.operations.CreateCommerceItemvariant2Request;
-import to.unified.unified_java_sdk.models.operations.GetCommerceItemvariant2Request;
-import to.unified.unified_java_sdk.models.operations.ListCommerceItemvariants2Request;
-import to.unified.unified_java_sdk.models.operations.PatchCommerceItemvariant2Request;
-import to.unified.unified_java_sdk.models.operations.RemoveCommerceItemvariant2Request;
-import to.unified.unified_java_sdk.models.operations.UpdateCommerceItemvariant2Request;
-import to.unified.unified_java_sdk.models.operations.async.CreateCommerceItemvariant2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.CreateCommerceItemvariant2Response;
-import to.unified.unified_java_sdk.models.operations.async.GetCommerceItemvariant2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.GetCommerceItemvariant2Response;
-import to.unified.unified_java_sdk.models.operations.async.ListCommerceItemvariants2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.ListCommerceItemvariants2Response;
-import to.unified.unified_java_sdk.models.operations.async.PatchCommerceItemvariant2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.PatchCommerceItemvariant2Response;
-import to.unified.unified_java_sdk.models.operations.async.RemoveCommerceItemvariant2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.RemoveCommerceItemvariant2Response;
-import to.unified.unified_java_sdk.models.operations.async.UpdateCommerceItemvariant2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.UpdateCommerceItemvariant2Response;
-import to.unified.unified_java_sdk.operations.CreateCommerceItemvariant2;
-import to.unified.unified_java_sdk.operations.GetCommerceItemvariant2;
-import to.unified.unified_java_sdk.operations.ListCommerceItemvariants2;
-import to.unified.unified_java_sdk.operations.PatchCommerceItemvariant2;
-import to.unified.unified_java_sdk.operations.RemoveCommerceItemvariant2;
-import to.unified.unified_java_sdk.operations.UpdateCommerceItemvariant2;
+import to.unified.unified_java_sdk.models.operations.CreateCommerceItemvariantRequest;
+import to.unified.unified_java_sdk.models.operations.GetCommerceItemvariantRequest;
+import to.unified.unified_java_sdk.models.operations.ListCommerceItemvariantsRequest;
+import to.unified.unified_java_sdk.models.operations.PatchCommerceItemvariantRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveCommerceItemvariantRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateCommerceItemvariantRequest;
+import to.unified.unified_java_sdk.models.operations.async.CreateCommerceItemvariantRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.CreateCommerceItemvariantResponse;
+import to.unified.unified_java_sdk.models.operations.async.GetCommerceItemvariantRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetCommerceItemvariantResponse;
+import to.unified.unified_java_sdk.models.operations.async.ListCommerceItemvariantsRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListCommerceItemvariantsResponse;
+import to.unified.unified_java_sdk.models.operations.async.PatchCommerceItemvariantRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.PatchCommerceItemvariantResponse;
+import to.unified.unified_java_sdk.models.operations.async.RemoveCommerceItemvariantRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.RemoveCommerceItemvariantResponse;
+import to.unified.unified_java_sdk.models.operations.async.UpdateCommerceItemvariantRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.UpdateCommerceItemvariantResponse;
+import to.unified.unified_java_sdk.operations.CreateCommerceItemvariant;
+import to.unified.unified_java_sdk.operations.GetCommerceItemvariant;
+import to.unified.unified_java_sdk.operations.ListCommerceItemvariants;
+import to.unified.unified_java_sdk.operations.PatchCommerceItemvariant;
+import to.unified.unified_java_sdk.operations.RemoveCommerceItemvariant;
+import to.unified.unified_java_sdk.operations.UpdateCommerceItemvariant;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -59,19 +59,19 @@ public class AsyncItemvariant {
      * 
      * @return The async call builder
      */
-    public CreateCommerceItemvariant2RequestBuilder createCommerceItemvariant2() {
-        return new CreateCommerceItemvariant2RequestBuilder(sdkConfiguration);
+    public CreateCommerceItemvariantRequestBuilder createCommerceItemvariant() {
+        return new CreateCommerceItemvariantRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Create an itemvariant
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<CreateCommerceItemvariant2Response>} - The async response
+     * @return {@code CompletableFuture<CreateCommerceItemvariantResponse>} - The async response
      */
-    public CompletableFuture<CreateCommerceItemvariant2Response> createCommerceItemvariant2(@Nonnull CreateCommerceItemvariant2Request request) {
-        AsyncRequestOperation<CreateCommerceItemvariant2Request, CreateCommerceItemvariant2Response> operation
-              = new CreateCommerceItemvariant2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<CreateCommerceItemvariantResponse> createCommerceItemvariant(@Nonnull CreateCommerceItemvariantRequest request) {
+        AsyncRequestOperation<CreateCommerceItemvariantRequest, CreateCommerceItemvariantResponse> operation
+              = new CreateCommerceItemvariant.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -82,19 +82,19 @@ public class AsyncItemvariant {
      * 
      * @return The async call builder
      */
-    public GetCommerceItemvariant2RequestBuilder getCommerceItemvariant2() {
-        return new GetCommerceItemvariant2RequestBuilder(sdkConfiguration);
+    public GetCommerceItemvariantRequestBuilder getCommerceItemvariant() {
+        return new GetCommerceItemvariantRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Retrieve an itemvariant
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<GetCommerceItemvariant2Response>} - The async response
+     * @return {@code CompletableFuture<GetCommerceItemvariantResponse>} - The async response
      */
-    public CompletableFuture<GetCommerceItemvariant2Response> getCommerceItemvariant2(@Nonnull GetCommerceItemvariant2Request request) {
-        AsyncRequestOperation<GetCommerceItemvariant2Request, GetCommerceItemvariant2Response> operation
-              = new GetCommerceItemvariant2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<GetCommerceItemvariantResponse> getCommerceItemvariant(@Nonnull GetCommerceItemvariantRequest request) {
+        AsyncRequestOperation<GetCommerceItemvariantRequest, GetCommerceItemvariantResponse> operation
+              = new GetCommerceItemvariant.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -105,19 +105,19 @@ public class AsyncItemvariant {
      * 
      * @return The async call builder
      */
-    public ListCommerceItemvariants2RequestBuilder listCommerceItemvariants2() {
-        return new ListCommerceItemvariants2RequestBuilder(sdkConfiguration);
+    public ListCommerceItemvariantsRequestBuilder listCommerceItemvariants() {
+        return new ListCommerceItemvariantsRequestBuilder(sdkConfiguration);
     }
 
     /**
      * List all itemvariants
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<ListCommerceItemvariants2Response>} - The async response
+     * @return {@code CompletableFuture<ListCommerceItemvariantsResponse>} - The async response
      */
-    public CompletableFuture<ListCommerceItemvariants2Response> listCommerceItemvariants2(@Nonnull ListCommerceItemvariants2Request request) {
-        AsyncRequestOperation<ListCommerceItemvariants2Request, ListCommerceItemvariants2Response> operation
-              = new ListCommerceItemvariants2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<ListCommerceItemvariantsResponse> listCommerceItemvariants(@Nonnull ListCommerceItemvariantsRequest request) {
+        AsyncRequestOperation<ListCommerceItemvariantsRequest, ListCommerceItemvariantsResponse> operation
+              = new ListCommerceItemvariants.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -128,19 +128,19 @@ public class AsyncItemvariant {
      * 
      * @return The async call builder
      */
-    public PatchCommerceItemvariant2RequestBuilder patchCommerceItemvariant2() {
-        return new PatchCommerceItemvariant2RequestBuilder(sdkConfiguration);
+    public PatchCommerceItemvariantRequestBuilder patchCommerceItemvariant() {
+        return new PatchCommerceItemvariantRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update an itemvariant
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<PatchCommerceItemvariant2Response>} - The async response
+     * @return {@code CompletableFuture<PatchCommerceItemvariantResponse>} - The async response
      */
-    public CompletableFuture<PatchCommerceItemvariant2Response> patchCommerceItemvariant2(@Nonnull PatchCommerceItemvariant2Request request) {
-        AsyncRequestOperation<PatchCommerceItemvariant2Request, PatchCommerceItemvariant2Response> operation
-              = new PatchCommerceItemvariant2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<PatchCommerceItemvariantResponse> patchCommerceItemvariant(@Nonnull PatchCommerceItemvariantRequest request) {
+        AsyncRequestOperation<PatchCommerceItemvariantRequest, PatchCommerceItemvariantResponse> operation
+              = new PatchCommerceItemvariant.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -151,19 +151,19 @@ public class AsyncItemvariant {
      * 
      * @return The async call builder
      */
-    public RemoveCommerceItemvariant2RequestBuilder removeCommerceItemvariant2() {
-        return new RemoveCommerceItemvariant2RequestBuilder(sdkConfiguration);
+    public RemoveCommerceItemvariantRequestBuilder removeCommerceItemvariant() {
+        return new RemoveCommerceItemvariantRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Remove an itemvariant
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<RemoveCommerceItemvariant2Response>} - The async response
+     * @return {@code CompletableFuture<RemoveCommerceItemvariantResponse>} - The async response
      */
-    public CompletableFuture<RemoveCommerceItemvariant2Response> removeCommerceItemvariant2(@Nonnull RemoveCommerceItemvariant2Request request) {
-        AsyncRequestOperation<RemoveCommerceItemvariant2Request, RemoveCommerceItemvariant2Response> operation
-              = new RemoveCommerceItemvariant2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<RemoveCommerceItemvariantResponse> removeCommerceItemvariant(@Nonnull RemoveCommerceItemvariantRequest request) {
+        AsyncRequestOperation<RemoveCommerceItemvariantRequest, RemoveCommerceItemvariantResponse> operation
+              = new RemoveCommerceItemvariant.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -174,19 +174,19 @@ public class AsyncItemvariant {
      * 
      * @return The async call builder
      */
-    public UpdateCommerceItemvariant2RequestBuilder updateCommerceItemvariant2() {
-        return new UpdateCommerceItemvariant2RequestBuilder(sdkConfiguration);
+    public UpdateCommerceItemvariantRequestBuilder updateCommerceItemvariant() {
+        return new UpdateCommerceItemvariantRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update an itemvariant
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<UpdateCommerceItemvariant2Response>} - The async response
+     * @return {@code CompletableFuture<UpdateCommerceItemvariantResponse>} - The async response
      */
-    public CompletableFuture<UpdateCommerceItemvariant2Response> updateCommerceItemvariant2(@Nonnull UpdateCommerceItemvariant2Request request) {
-        AsyncRequestOperation<UpdateCommerceItemvariant2Request, UpdateCommerceItemvariant2Response> operation
-              = new UpdateCommerceItemvariant2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<UpdateCommerceItemvariantResponse> updateCommerceItemvariant(@Nonnull UpdateCommerceItemvariantRequest request) {
+        AsyncRequestOperation<UpdateCommerceItemvariantRequest, UpdateCommerceItemvariantResponse> operation
+              = new UpdateCommerceItemvariant.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

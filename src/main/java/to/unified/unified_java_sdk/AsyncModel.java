@@ -7,14 +7,14 @@ import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOper
 
 import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
-import to.unified.unified_java_sdk.models.operations.GetGenaiModel2Request;
-import to.unified.unified_java_sdk.models.operations.ListGenaiModels2Request;
-import to.unified.unified_java_sdk.models.operations.async.GetGenaiModel2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.GetGenaiModel2Response;
-import to.unified.unified_java_sdk.models.operations.async.ListGenaiModels2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.ListGenaiModels2Response;
-import to.unified.unified_java_sdk.operations.GetGenaiModel2;
-import to.unified.unified_java_sdk.operations.ListGenaiModels2;
+import to.unified.unified_java_sdk.models.operations.GetGenaiModelRequest;
+import to.unified.unified_java_sdk.models.operations.ListGenaiModelsRequest;
+import to.unified.unified_java_sdk.models.operations.async.GetGenaiModelRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetGenaiModelResponse;
+import to.unified.unified_java_sdk.models.operations.async.ListGenaiModelsRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListGenaiModelsResponse;
+import to.unified.unified_java_sdk.operations.GetGenaiModel;
+import to.unified.unified_java_sdk.operations.ListGenaiModels;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -43,19 +43,19 @@ public class AsyncModel {
      * 
      * @return The async call builder
      */
-    public GetGenaiModel2RequestBuilder getGenaiModel2() {
-        return new GetGenaiModel2RequestBuilder(sdkConfiguration);
+    public GetGenaiModelRequestBuilder getGenaiModel() {
+        return new GetGenaiModelRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Retrieve a model
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<GetGenaiModel2Response>} - The async response
+     * @return {@code CompletableFuture<GetGenaiModelResponse>} - The async response
      */
-    public CompletableFuture<GetGenaiModel2Response> getGenaiModel2(@Nonnull GetGenaiModel2Request request) {
-        AsyncRequestOperation<GetGenaiModel2Request, GetGenaiModel2Response> operation
-              = new GetGenaiModel2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<GetGenaiModelResponse> getGenaiModel(@Nonnull GetGenaiModelRequest request) {
+        AsyncRequestOperation<GetGenaiModelRequest, GetGenaiModelResponse> operation
+              = new GetGenaiModel.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -66,19 +66,19 @@ public class AsyncModel {
      * 
      * @return The async call builder
      */
-    public ListGenaiModels2RequestBuilder listGenaiModels2() {
-        return new ListGenaiModels2RequestBuilder(sdkConfiguration);
+    public ListGenaiModelsRequestBuilder listGenaiModels() {
+        return new ListGenaiModelsRequestBuilder(sdkConfiguration);
     }
 
     /**
      * List all models
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<ListGenaiModels2Response>} - The async response
+     * @return {@code CompletableFuture<ListGenaiModelsResponse>} - The async response
      */
-    public CompletableFuture<ListGenaiModels2Response> listGenaiModels2(@Nonnull ListGenaiModels2Request request) {
-        AsyncRequestOperation<ListGenaiModels2Request, ListGenaiModels2Response> operation
-              = new ListGenaiModels2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<ListGenaiModelsResponse> listGenaiModels(@Nonnull ListGenaiModelsRequest request) {
+        AsyncRequestOperation<ListGenaiModelsRequest, ListGenaiModelsResponse> operation
+              = new ListGenaiModels.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

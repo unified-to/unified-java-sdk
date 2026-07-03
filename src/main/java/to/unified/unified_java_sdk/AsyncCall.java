@@ -7,14 +7,14 @@ import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOper
 
 import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
-import to.unified.unified_java_sdk.models.operations.GetUcCall2Request;
-import to.unified.unified_java_sdk.models.operations.ListUcCalls2Request;
-import to.unified.unified_java_sdk.models.operations.async.GetUcCall2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.GetUcCall2Response;
-import to.unified.unified_java_sdk.models.operations.async.ListUcCalls2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.ListUcCalls2Response;
-import to.unified.unified_java_sdk.operations.GetUcCall2;
-import to.unified.unified_java_sdk.operations.ListUcCalls2;
+import to.unified.unified_java_sdk.models.operations.GetUcCallRequest;
+import to.unified.unified_java_sdk.models.operations.ListUcCallsRequest;
+import to.unified.unified_java_sdk.models.operations.async.GetUcCallRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetUcCallResponse;
+import to.unified.unified_java_sdk.models.operations.async.ListUcCallsRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListUcCallsResponse;
+import to.unified.unified_java_sdk.operations.GetUcCall;
+import to.unified.unified_java_sdk.operations.ListUcCalls;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -43,19 +43,19 @@ public class AsyncCall {
      * 
      * @return The async call builder
      */
-    public GetUcCall2RequestBuilder getUcCall2() {
-        return new GetUcCall2RequestBuilder(sdkConfiguration);
+    public GetUcCallRequestBuilder getUcCall() {
+        return new GetUcCallRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Retrieve a call
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<GetUcCall2Response>} - The async response
+     * @return {@code CompletableFuture<GetUcCallResponse>} - The async response
      */
-    public CompletableFuture<GetUcCall2Response> getUcCall2(@Nonnull GetUcCall2Request request) {
-        AsyncRequestOperation<GetUcCall2Request, GetUcCall2Response> operation
-              = new GetUcCall2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<GetUcCallResponse> getUcCall(@Nonnull GetUcCallRequest request) {
+        AsyncRequestOperation<GetUcCallRequest, GetUcCallResponse> operation
+              = new GetUcCall.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -66,19 +66,19 @@ public class AsyncCall {
      * 
      * @return The async call builder
      */
-    public ListUcCalls2RequestBuilder listUcCalls2() {
-        return new ListUcCalls2RequestBuilder(sdkConfiguration);
+    public ListUcCallsRequestBuilder listUcCalls() {
+        return new ListUcCallsRequestBuilder(sdkConfiguration);
     }
 
     /**
      * List all calls
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<ListUcCalls2Response>} - The async response
+     * @return {@code CompletableFuture<ListUcCallsResponse>} - The async response
      */
-    public CompletableFuture<ListUcCalls2Response> listUcCalls2(@Nonnull ListUcCalls2Request request) {
-        AsyncRequestOperation<ListUcCalls2Request, ListUcCalls2Response> operation
-              = new ListUcCalls2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<ListUcCallsResponse> listUcCalls(@Nonnull ListUcCallsRequest request) {
+        AsyncRequestOperation<ListUcCallsRequest, ListUcCallsResponse> operation
+              = new ListUcCalls.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

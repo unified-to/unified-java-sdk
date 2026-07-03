@@ -7,10 +7,10 @@ import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOper
 
 import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
-import to.unified.unified_java_sdk.models.operations.CreateDatastoreQuery2Request;
-import to.unified.unified_java_sdk.models.operations.async.CreateDatastoreQuery2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.CreateDatastoreQuery2Response;
-import to.unified.unified_java_sdk.operations.CreateDatastoreQuery2;
+import to.unified.unified_java_sdk.models.operations.CreateDatastoreQueryRequest;
+import to.unified.unified_java_sdk.models.operations.async.CreateDatastoreQueryRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.CreateDatastoreQueryResponse;
+import to.unified.unified_java_sdk.operations.CreateDatastoreQuery;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -39,19 +39,19 @@ public class AsyncQuery {
      * 
      * @return The async call builder
      */
-    public CreateDatastoreQuery2RequestBuilder createDatastoreQuery2() {
-        return new CreateDatastoreQuery2RequestBuilder(sdkConfiguration);
+    public CreateDatastoreQueryRequestBuilder createDatastoreQuery() {
+        return new CreateDatastoreQueryRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Create a query
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<CreateDatastoreQuery2Response>} - The async response
+     * @return {@code CompletableFuture<CreateDatastoreQueryResponse>} - The async response
      */
-    public CompletableFuture<CreateDatastoreQuery2Response> createDatastoreQuery2(@Nonnull CreateDatastoreQuery2Request request) {
-        AsyncRequestOperation<CreateDatastoreQuery2Request, CreateDatastoreQuery2Response> operation
-              = new CreateDatastoreQuery2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<CreateDatastoreQueryResponse> createDatastoreQuery(@Nonnull CreateDatastoreQueryRequest request) {
+        AsyncRequestOperation<CreateDatastoreQueryRequest, CreateDatastoreQueryResponse> operation
+              = new CreateDatastoreQuery.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

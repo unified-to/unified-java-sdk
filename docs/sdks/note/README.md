@@ -4,27 +4,27 @@
 
 ### Available Operations
 
-* [createTicketingNote2](#createticketingnote2) - Create a note
-* [getTicketingNote2](#getticketingnote2) - Retrieve a note
-* [listTicketingNotes2](#listticketingnotes2) - List all notes
-* [patchTicketingNote2](#patchticketingnote2) - Update a note
-* [removeTicketingNote2](#removeticketingnote2) - Remove a note
-* [updateTicketingNote2](#updateticketingnote2) - Update a note
+* [createTicketingNote](#createticketingnote) - Create a note
+* [getTicketingNote](#getticketingnote) - Retrieve a note
+* [listTicketingNotes](#listticketingnotes) - List all notes
+* [patchTicketingNote](#patchticketingnote) - Update a note
+* [removeTicketingNote](#removeticketingnote) - Remove a note
+* [updateTicketingNote](#updateticketingnote) - Update a note
 
-## createTicketingNote2
+## createTicketingNote
 
 Create a note
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createTicketingNote2" method="post" path="/ticketing/{connection_id}/note" -->
+<!-- UsageSnippet language="java" operationID="createTicketingNote" method="post" path="/ticketing/{connection_id}/note" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.CreateTicketingNote2Request;
-import to.unified.unified_java_sdk.models.operations.CreateTicketingNote2Response;
+import to.unified.unified_java_sdk.models.operations.CreateTicketingNoteRequest;
+import to.unified.unified_java_sdk.models.operations.CreateTicketingNoteResponse;
 import to.unified.unified_java_sdk.models.shared.Security;
 import to.unified.unified_java_sdk.models.shared.TicketingNote;
 
@@ -38,13 +38,13 @@ public class Application {
                     .build())
             .build();
 
-        CreateTicketingNote2Request req = CreateTicketingNote2Request.builder()
+        CreateTicketingNoteRequest req = CreateTicketingNoteRequest.builder()
                 .ticketingNote(TicketingNote.builder()
                     .build())
                 .connectionId("<id>")
                 .build();
 
-        CreateTicketingNote2Response res = sdk.note().createTicketingNote2()
+        CreateTicketingNoteResponse res = sdk.note().createTicketingNote()
                 .request(req)
                 .call();
 
@@ -57,13 +57,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                             | Type                                                                                  | Required                                                                              | Description                                                                           |
-| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
-| `request`                                                                             | [CreateTicketingNote2Request](../../models/operations/CreateTicketingNote2Request.md) | :heavy_check_mark:                                                                    | The request object to use for the request.                                            |
+| Parameter                                                                           | Type                                                                                | Required                                                                            | Description                                                                         |
+| ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| `request`                                                                           | [CreateTicketingNoteRequest](../../models/operations/CreateTicketingNoteRequest.md) | :heavy_check_mark:                                                                  | The request object to use for the request.                                          |
 
 ### Response
 
-**[CreateTicketingNote2Response](../../models/operations/CreateTicketingNote2Response.md)**
+**[CreateTicketingNoteResponse](../../models/operations/CreateTicketingNoteResponse.md)**
 
 ### Errors
 
@@ -71,20 +71,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## getTicketingNote2
+## getTicketingNote
 
 Retrieve a note
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="getTicketingNote2" method="get" path="/ticketing/{connection_id}/note/{id}" -->
+<!-- UsageSnippet language="java" operationID="getTicketingNote" method="get" path="/ticketing/{connection_id}/note/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.GetTicketingNote2Request;
-import to.unified.unified_java_sdk.models.operations.GetTicketingNote2Response;
+import to.unified.unified_java_sdk.models.operations.GetTicketingNoteRequest;
+import to.unified.unified_java_sdk.models.operations.GetTicketingNoteResponse;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -97,12 +97,12 @@ public class Application {
                     .build())
             .build();
 
-        GetTicketingNote2Request req = GetTicketingNote2Request.builder()
+        GetTicketingNoteRequest req = GetTicketingNoteRequest.builder()
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        GetTicketingNote2Response res = sdk.note().getTicketingNote2()
+        GetTicketingNoteResponse res = sdk.note().getTicketingNote()
                 .request(req)
                 .call();
 
@@ -115,13 +115,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
-| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
-| `request`                                                                       | [GetTicketingNote2Request](../../models/operations/GetTicketingNote2Request.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
+| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
+| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| `request`                                                                     | [GetTicketingNoteRequest](../../models/operations/GetTicketingNoteRequest.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
 
 ### Response
 
-**[GetTicketingNote2Response](../../models/operations/GetTicketingNote2Response.md)**
+**[GetTicketingNoteResponse](../../models/operations/GetTicketingNoteResponse.md)**
 
 ### Errors
 
@@ -129,20 +129,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## listTicketingNotes2
+## listTicketingNotes
 
 List all notes
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="listTicketingNotes2" method="get" path="/ticketing/{connection_id}/note" -->
+<!-- UsageSnippet language="java" operationID="listTicketingNotes" method="get" path="/ticketing/{connection_id}/note" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.ListTicketingNotes2Request;
-import to.unified.unified_java_sdk.models.operations.ListTicketingNotes2Response;
+import to.unified.unified_java_sdk.models.operations.ListTicketingNotesRequest;
+import to.unified.unified_java_sdk.models.operations.ListTicketingNotesResponse;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -155,11 +155,11 @@ public class Application {
                     .build())
             .build();
 
-        ListTicketingNotes2Request req = ListTicketingNotes2Request.builder()
+        ListTicketingNotesRequest req = ListTicketingNotesRequest.builder()
                 .connectionId("<id>")
                 .build();
 
-        ListTicketingNotes2Response res = sdk.note().listTicketingNotes2()
+        ListTicketingNotesResponse res = sdk.note().listTicketingNotes()
                 .request(req)
                 .call();
 
@@ -172,13 +172,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                           | Type                                                                                | Required                                                                            | Description                                                                         |
-| ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
-| `request`                                                                           | [ListTicketingNotes2Request](../../models/operations/ListTicketingNotes2Request.md) | :heavy_check_mark:                                                                  | The request object to use for the request.                                          |
+| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
+| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| `request`                                                                         | [ListTicketingNotesRequest](../../models/operations/ListTicketingNotesRequest.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
 
 ### Response
 
-**[ListTicketingNotes2Response](../../models/operations/ListTicketingNotes2Response.md)**
+**[ListTicketingNotesResponse](../../models/operations/ListTicketingNotesResponse.md)**
 
 ### Errors
 
@@ -186,20 +186,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## patchTicketingNote2
+## patchTicketingNote
 
 Update a note
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchTicketingNote2" method="patch" path="/ticketing/{connection_id}/note/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchTicketingNote" method="patch" path="/ticketing/{connection_id}/note/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.PatchTicketingNote2Request;
-import to.unified.unified_java_sdk.models.operations.PatchTicketingNote2Response;
+import to.unified.unified_java_sdk.models.operations.PatchTicketingNoteRequest;
+import to.unified.unified_java_sdk.models.operations.PatchTicketingNoteResponse;
 import to.unified.unified_java_sdk.models.shared.Security;
 import to.unified.unified_java_sdk.models.shared.TicketingNote;
 
@@ -213,14 +213,14 @@ public class Application {
                     .build())
             .build();
 
-        PatchTicketingNote2Request req = PatchTicketingNote2Request.builder()
+        PatchTicketingNoteRequest req = PatchTicketingNoteRequest.builder()
                 .ticketingNote(TicketingNote.builder()
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        PatchTicketingNote2Response res = sdk.note().patchTicketingNote2()
+        PatchTicketingNoteResponse res = sdk.note().patchTicketingNote()
                 .request(req)
                 .call();
 
@@ -233,13 +233,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                           | Type                                                                                | Required                                                                            | Description                                                                         |
-| ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
-| `request`                                                                           | [PatchTicketingNote2Request](../../models/operations/PatchTicketingNote2Request.md) | :heavy_check_mark:                                                                  | The request object to use for the request.                                          |
+| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
+| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| `request`                                                                         | [PatchTicketingNoteRequest](../../models/operations/PatchTicketingNoteRequest.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
 
 ### Response
 
-**[PatchTicketingNote2Response](../../models/operations/PatchTicketingNote2Response.md)**
+**[PatchTicketingNoteResponse](../../models/operations/PatchTicketingNoteResponse.md)**
 
 ### Errors
 
@@ -247,20 +247,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## removeTicketingNote2
+## removeTicketingNote
 
 Remove a note
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="removeTicketingNote2" method="delete" path="/ticketing/{connection_id}/note/{id}" -->
+<!-- UsageSnippet language="java" operationID="removeTicketingNote" method="delete" path="/ticketing/{connection_id}/note/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.RemoveTicketingNote2Request;
-import to.unified.unified_java_sdk.models.operations.RemoveTicketingNote2Response;
+import to.unified.unified_java_sdk.models.operations.RemoveTicketingNoteRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveTicketingNoteResponse;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -273,12 +273,12 @@ public class Application {
                     .build())
             .build();
 
-        RemoveTicketingNote2Request req = RemoveTicketingNote2Request.builder()
+        RemoveTicketingNoteRequest req = RemoveTicketingNoteRequest.builder()
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        RemoveTicketingNote2Response res = sdk.note().removeTicketingNote2()
+        RemoveTicketingNoteResponse res = sdk.note().removeTicketingNote()
                 .request(req)
                 .call();
 
@@ -289,13 +289,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                             | Type                                                                                  | Required                                                                              | Description                                                                           |
-| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
-| `request`                                                                             | [RemoveTicketingNote2Request](../../models/operations/RemoveTicketingNote2Request.md) | :heavy_check_mark:                                                                    | The request object to use for the request.                                            |
+| Parameter                                                                           | Type                                                                                | Required                                                                            | Description                                                                         |
+| ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| `request`                                                                           | [RemoveTicketingNoteRequest](../../models/operations/RemoveTicketingNoteRequest.md) | :heavy_check_mark:                                                                  | The request object to use for the request.                                          |
 
 ### Response
 
-**[RemoveTicketingNote2Response](../../models/operations/RemoveTicketingNote2Response.md)**
+**[RemoveTicketingNoteResponse](../../models/operations/RemoveTicketingNoteResponse.md)**
 
 ### Errors
 
@@ -303,20 +303,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## updateTicketingNote2
+## updateTicketingNote
 
 Update a note
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateTicketingNote2" method="put" path="/ticketing/{connection_id}/note/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateTicketingNote" method="put" path="/ticketing/{connection_id}/note/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.UpdateTicketingNote2Request;
-import to.unified.unified_java_sdk.models.operations.UpdateTicketingNote2Response;
+import to.unified.unified_java_sdk.models.operations.UpdateTicketingNoteRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateTicketingNoteResponse;
 import to.unified.unified_java_sdk.models.shared.Security;
 import to.unified.unified_java_sdk.models.shared.TicketingNote;
 
@@ -330,14 +330,14 @@ public class Application {
                     .build())
             .build();
 
-        UpdateTicketingNote2Request req = UpdateTicketingNote2Request.builder()
+        UpdateTicketingNoteRequest req = UpdateTicketingNoteRequest.builder()
                 .ticketingNote(TicketingNote.builder()
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        UpdateTicketingNote2Response res = sdk.note().updateTicketingNote2()
+        UpdateTicketingNoteResponse res = sdk.note().updateTicketingNote()
                 .request(req)
                 .call();
 
@@ -350,13 +350,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                             | Type                                                                                  | Required                                                                              | Description                                                                           |
-| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
-| `request`                                                                             | [UpdateTicketingNote2Request](../../models/operations/UpdateTicketingNote2Request.md) | :heavy_check_mark:                                                                    | The request object to use for the request.                                            |
+| Parameter                                                                           | Type                                                                                | Required                                                                            | Description                                                                         |
+| ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| `request`                                                                           | [UpdateTicketingNoteRequest](../../models/operations/UpdateTicketingNoteRequest.md) | :heavy_check_mark:                                                                  | The request object to use for the request.                                          |
 
 ### Response
 
-**[UpdateTicketingNote2Response](../../models/operations/UpdateTicketingNote2Response.md)**
+**[UpdateTicketingNoteResponse](../../models/operations/UpdateTicketingNoteResponse.md)**
 
 ### Errors
 

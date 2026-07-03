@@ -6,94 +6,94 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
-import to.unified.unified_java_sdk.models.operations.CreatePaymentLink2Request;
-import to.unified.unified_java_sdk.models.operations.CreatePaymentLink2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.CreatePaymentLink2Response;
-import to.unified.unified_java_sdk.models.operations.CreatePaymentPayment2Request;
-import to.unified.unified_java_sdk.models.operations.CreatePaymentPayment2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.CreatePaymentPayment2Response;
-import to.unified.unified_java_sdk.models.operations.CreatePaymentSubscription2Request;
-import to.unified.unified_java_sdk.models.operations.CreatePaymentSubscription2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.CreatePaymentSubscription2Response;
-import to.unified.unified_java_sdk.models.operations.GetPaymentLink2Request;
-import to.unified.unified_java_sdk.models.operations.GetPaymentLink2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.GetPaymentLink2Response;
-import to.unified.unified_java_sdk.models.operations.GetPaymentPayment2Request;
-import to.unified.unified_java_sdk.models.operations.GetPaymentPayment2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.GetPaymentPayment2Response;
-import to.unified.unified_java_sdk.models.operations.GetPaymentPayout2Request;
-import to.unified.unified_java_sdk.models.operations.GetPaymentPayout2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.GetPaymentPayout2Response;
-import to.unified.unified_java_sdk.models.operations.GetPaymentRefund2Request;
-import to.unified.unified_java_sdk.models.operations.GetPaymentRefund2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.GetPaymentRefund2Response;
-import to.unified.unified_java_sdk.models.operations.GetPaymentSubscription2Request;
-import to.unified.unified_java_sdk.models.operations.GetPaymentSubscription2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.GetPaymentSubscription2Response;
-import to.unified.unified_java_sdk.models.operations.ListPaymentLinks2Request;
-import to.unified.unified_java_sdk.models.operations.ListPaymentLinks2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.ListPaymentLinks2Response;
-import to.unified.unified_java_sdk.models.operations.ListPaymentPayments2Request;
-import to.unified.unified_java_sdk.models.operations.ListPaymentPayments2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.ListPaymentPayments2Response;
-import to.unified.unified_java_sdk.models.operations.ListPaymentPayouts2Request;
-import to.unified.unified_java_sdk.models.operations.ListPaymentPayouts2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.ListPaymentPayouts2Response;
-import to.unified.unified_java_sdk.models.operations.ListPaymentRefunds2Request;
-import to.unified.unified_java_sdk.models.operations.ListPaymentRefunds2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.ListPaymentRefunds2Response;
-import to.unified.unified_java_sdk.models.operations.ListPaymentSubscriptions2Request;
-import to.unified.unified_java_sdk.models.operations.ListPaymentSubscriptions2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.ListPaymentSubscriptions2Response;
-import to.unified.unified_java_sdk.models.operations.PatchPaymentLink2Request;
-import to.unified.unified_java_sdk.models.operations.PatchPaymentLink2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.PatchPaymentLink2Response;
-import to.unified.unified_java_sdk.models.operations.PatchPaymentPayment2Request;
-import to.unified.unified_java_sdk.models.operations.PatchPaymentPayment2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.PatchPaymentPayment2Response;
-import to.unified.unified_java_sdk.models.operations.PatchPaymentSubscription2Request;
-import to.unified.unified_java_sdk.models.operations.PatchPaymentSubscription2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.PatchPaymentSubscription2Response;
-import to.unified.unified_java_sdk.models.operations.RemovePaymentLink2Request;
-import to.unified.unified_java_sdk.models.operations.RemovePaymentLink2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.RemovePaymentLink2Response;
-import to.unified.unified_java_sdk.models.operations.RemovePaymentPayment2Request;
-import to.unified.unified_java_sdk.models.operations.RemovePaymentPayment2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.RemovePaymentPayment2Response;
-import to.unified.unified_java_sdk.models.operations.RemovePaymentSubscription2Request;
-import to.unified.unified_java_sdk.models.operations.RemovePaymentSubscription2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.RemovePaymentSubscription2Response;
-import to.unified.unified_java_sdk.models.operations.UpdatePaymentLink2Request;
-import to.unified.unified_java_sdk.models.operations.UpdatePaymentLink2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.UpdatePaymentLink2Response;
-import to.unified.unified_java_sdk.models.operations.UpdatePaymentPayment2Request;
-import to.unified.unified_java_sdk.models.operations.UpdatePaymentPayment2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.UpdatePaymentPayment2Response;
-import to.unified.unified_java_sdk.models.operations.UpdatePaymentSubscription2Request;
-import to.unified.unified_java_sdk.models.operations.UpdatePaymentSubscription2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.UpdatePaymentSubscription2Response;
-import to.unified.unified_java_sdk.operations.CreatePaymentLink2;
-import to.unified.unified_java_sdk.operations.CreatePaymentPayment2;
-import to.unified.unified_java_sdk.operations.CreatePaymentSubscription2;
-import to.unified.unified_java_sdk.operations.GetPaymentLink2;
-import to.unified.unified_java_sdk.operations.GetPaymentPayment2;
-import to.unified.unified_java_sdk.operations.GetPaymentPayout2;
-import to.unified.unified_java_sdk.operations.GetPaymentRefund2;
-import to.unified.unified_java_sdk.operations.GetPaymentSubscription2;
-import to.unified.unified_java_sdk.operations.ListPaymentLinks2;
-import to.unified.unified_java_sdk.operations.ListPaymentPayments2;
-import to.unified.unified_java_sdk.operations.ListPaymentPayouts2;
-import to.unified.unified_java_sdk.operations.ListPaymentRefunds2;
-import to.unified.unified_java_sdk.operations.ListPaymentSubscriptions2;
-import to.unified.unified_java_sdk.operations.PatchPaymentLink2;
-import to.unified.unified_java_sdk.operations.PatchPaymentPayment2;
-import to.unified.unified_java_sdk.operations.PatchPaymentSubscription2;
-import to.unified.unified_java_sdk.operations.RemovePaymentLink2;
-import to.unified.unified_java_sdk.operations.RemovePaymentPayment2;
-import to.unified.unified_java_sdk.operations.RemovePaymentSubscription2;
-import to.unified.unified_java_sdk.operations.UpdatePaymentLink2;
-import to.unified.unified_java_sdk.operations.UpdatePaymentPayment2;
-import to.unified.unified_java_sdk.operations.UpdatePaymentSubscription2;
+import to.unified.unified_java_sdk.models.operations.CreatePaymentLinkRequest;
+import to.unified.unified_java_sdk.models.operations.CreatePaymentLinkRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.CreatePaymentLinkResponse;
+import to.unified.unified_java_sdk.models.operations.CreatePaymentPaymentRequest;
+import to.unified.unified_java_sdk.models.operations.CreatePaymentPaymentRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.CreatePaymentPaymentResponse;
+import to.unified.unified_java_sdk.models.operations.CreatePaymentSubscriptionRequest;
+import to.unified.unified_java_sdk.models.operations.CreatePaymentSubscriptionRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.CreatePaymentSubscriptionResponse;
+import to.unified.unified_java_sdk.models.operations.GetPaymentLinkRequest;
+import to.unified.unified_java_sdk.models.operations.GetPaymentLinkRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetPaymentLinkResponse;
+import to.unified.unified_java_sdk.models.operations.GetPaymentPaymentRequest;
+import to.unified.unified_java_sdk.models.operations.GetPaymentPaymentRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetPaymentPaymentResponse;
+import to.unified.unified_java_sdk.models.operations.GetPaymentPayoutRequest;
+import to.unified.unified_java_sdk.models.operations.GetPaymentPayoutRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetPaymentPayoutResponse;
+import to.unified.unified_java_sdk.models.operations.GetPaymentRefundRequest;
+import to.unified.unified_java_sdk.models.operations.GetPaymentRefundRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetPaymentRefundResponse;
+import to.unified.unified_java_sdk.models.operations.GetPaymentSubscriptionRequest;
+import to.unified.unified_java_sdk.models.operations.GetPaymentSubscriptionRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetPaymentSubscriptionResponse;
+import to.unified.unified_java_sdk.models.operations.ListPaymentLinksRequest;
+import to.unified.unified_java_sdk.models.operations.ListPaymentLinksRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListPaymentLinksResponse;
+import to.unified.unified_java_sdk.models.operations.ListPaymentPaymentsRequest;
+import to.unified.unified_java_sdk.models.operations.ListPaymentPaymentsRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListPaymentPaymentsResponse;
+import to.unified.unified_java_sdk.models.operations.ListPaymentPayoutsRequest;
+import to.unified.unified_java_sdk.models.operations.ListPaymentPayoutsRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListPaymentPayoutsResponse;
+import to.unified.unified_java_sdk.models.operations.ListPaymentRefundsRequest;
+import to.unified.unified_java_sdk.models.operations.ListPaymentRefundsRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListPaymentRefundsResponse;
+import to.unified.unified_java_sdk.models.operations.ListPaymentSubscriptionsRequest;
+import to.unified.unified_java_sdk.models.operations.ListPaymentSubscriptionsRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListPaymentSubscriptionsResponse;
+import to.unified.unified_java_sdk.models.operations.PatchPaymentLinkRequest;
+import to.unified.unified_java_sdk.models.operations.PatchPaymentLinkRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.PatchPaymentLinkResponse;
+import to.unified.unified_java_sdk.models.operations.PatchPaymentPaymentRequest;
+import to.unified.unified_java_sdk.models.operations.PatchPaymentPaymentRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.PatchPaymentPaymentResponse;
+import to.unified.unified_java_sdk.models.operations.PatchPaymentSubscriptionRequest;
+import to.unified.unified_java_sdk.models.operations.PatchPaymentSubscriptionRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.PatchPaymentSubscriptionResponse;
+import to.unified.unified_java_sdk.models.operations.RemovePaymentLinkRequest;
+import to.unified.unified_java_sdk.models.operations.RemovePaymentLinkRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.RemovePaymentLinkResponse;
+import to.unified.unified_java_sdk.models.operations.RemovePaymentPaymentRequest;
+import to.unified.unified_java_sdk.models.operations.RemovePaymentPaymentRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.RemovePaymentPaymentResponse;
+import to.unified.unified_java_sdk.models.operations.RemovePaymentSubscriptionRequest;
+import to.unified.unified_java_sdk.models.operations.RemovePaymentSubscriptionRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.RemovePaymentSubscriptionResponse;
+import to.unified.unified_java_sdk.models.operations.UpdatePaymentLinkRequest;
+import to.unified.unified_java_sdk.models.operations.UpdatePaymentLinkRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.UpdatePaymentLinkResponse;
+import to.unified.unified_java_sdk.models.operations.UpdatePaymentPaymentRequest;
+import to.unified.unified_java_sdk.models.operations.UpdatePaymentPaymentRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.UpdatePaymentPaymentResponse;
+import to.unified.unified_java_sdk.models.operations.UpdatePaymentSubscriptionRequest;
+import to.unified.unified_java_sdk.models.operations.UpdatePaymentSubscriptionRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.UpdatePaymentSubscriptionResponse;
+import to.unified.unified_java_sdk.operations.CreatePaymentLink;
+import to.unified.unified_java_sdk.operations.CreatePaymentPayment;
+import to.unified.unified_java_sdk.operations.CreatePaymentSubscription;
+import to.unified.unified_java_sdk.operations.GetPaymentLink;
+import to.unified.unified_java_sdk.operations.GetPaymentPayment;
+import to.unified.unified_java_sdk.operations.GetPaymentPayout;
+import to.unified.unified_java_sdk.operations.GetPaymentRefund;
+import to.unified.unified_java_sdk.operations.GetPaymentSubscription;
+import to.unified.unified_java_sdk.operations.ListPaymentLinks;
+import to.unified.unified_java_sdk.operations.ListPaymentPayments;
+import to.unified.unified_java_sdk.operations.ListPaymentPayouts;
+import to.unified.unified_java_sdk.operations.ListPaymentRefunds;
+import to.unified.unified_java_sdk.operations.ListPaymentSubscriptions;
+import to.unified.unified_java_sdk.operations.PatchPaymentLink;
+import to.unified.unified_java_sdk.operations.PatchPaymentPayment;
+import to.unified.unified_java_sdk.operations.PatchPaymentSubscription;
+import to.unified.unified_java_sdk.operations.RemovePaymentLink;
+import to.unified.unified_java_sdk.operations.RemovePaymentPayment;
+import to.unified.unified_java_sdk.operations.RemovePaymentSubscription;
+import to.unified.unified_java_sdk.operations.UpdatePaymentLink;
+import to.unified.unified_java_sdk.operations.UpdatePaymentPayment;
+import to.unified.unified_java_sdk.operations.UpdatePaymentSubscription;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -121,8 +121,8 @@ public class Payment {
      * 
      * @return The call builder
      */
-    public CreatePaymentLink2RequestBuilder createPaymentLink2() {
-        return new CreatePaymentLink2RequestBuilder(sdkConfiguration);
+    public CreatePaymentLinkRequestBuilder createPaymentLink() {
+        return new CreatePaymentLinkRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -132,9 +132,9 @@ public class Payment {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreatePaymentLink2Response createPaymentLink2(@Nonnull CreatePaymentLink2Request request) {
-        RequestOperation<CreatePaymentLink2Request, CreatePaymentLink2Response> operation
-              = new CreatePaymentLink2.Sync(sdkConfiguration, _headers);
+    public CreatePaymentLinkResponse createPaymentLink(@Nonnull CreatePaymentLinkRequest request) {
+        RequestOperation<CreatePaymentLinkRequest, CreatePaymentLinkResponse> operation
+              = new CreatePaymentLink.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -143,8 +143,8 @@ public class Payment {
      * 
      * @return The call builder
      */
-    public CreatePaymentPayment2RequestBuilder createPaymentPayment2() {
-        return new CreatePaymentPayment2RequestBuilder(sdkConfiguration);
+    public CreatePaymentPaymentRequestBuilder createPaymentPayment() {
+        return new CreatePaymentPaymentRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -154,9 +154,9 @@ public class Payment {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreatePaymentPayment2Response createPaymentPayment2(@Nonnull CreatePaymentPayment2Request request) {
-        RequestOperation<CreatePaymentPayment2Request, CreatePaymentPayment2Response> operation
-              = new CreatePaymentPayment2.Sync(sdkConfiguration, _headers);
+    public CreatePaymentPaymentResponse createPaymentPayment(@Nonnull CreatePaymentPaymentRequest request) {
+        RequestOperation<CreatePaymentPaymentRequest, CreatePaymentPaymentResponse> operation
+              = new CreatePaymentPayment.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -165,8 +165,8 @@ public class Payment {
      * 
      * @return The call builder
      */
-    public CreatePaymentSubscription2RequestBuilder createPaymentSubscription2() {
-        return new CreatePaymentSubscription2RequestBuilder(sdkConfiguration);
+    public CreatePaymentSubscriptionRequestBuilder createPaymentSubscription() {
+        return new CreatePaymentSubscriptionRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -176,9 +176,9 @@ public class Payment {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreatePaymentSubscription2Response createPaymentSubscription2(@Nonnull CreatePaymentSubscription2Request request) {
-        RequestOperation<CreatePaymentSubscription2Request, CreatePaymentSubscription2Response> operation
-              = new CreatePaymentSubscription2.Sync(sdkConfiguration, _headers);
+    public CreatePaymentSubscriptionResponse createPaymentSubscription(@Nonnull CreatePaymentSubscriptionRequest request) {
+        RequestOperation<CreatePaymentSubscriptionRequest, CreatePaymentSubscriptionResponse> operation
+              = new CreatePaymentSubscription.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -187,8 +187,8 @@ public class Payment {
      * 
      * @return The call builder
      */
-    public GetPaymentLink2RequestBuilder getPaymentLink2() {
-        return new GetPaymentLink2RequestBuilder(sdkConfiguration);
+    public GetPaymentLinkRequestBuilder getPaymentLink() {
+        return new GetPaymentLinkRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -198,9 +198,9 @@ public class Payment {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetPaymentLink2Response getPaymentLink2(@Nonnull GetPaymentLink2Request request) {
-        RequestOperation<GetPaymentLink2Request, GetPaymentLink2Response> operation
-              = new GetPaymentLink2.Sync(sdkConfiguration, _headers);
+    public GetPaymentLinkResponse getPaymentLink(@Nonnull GetPaymentLinkRequest request) {
+        RequestOperation<GetPaymentLinkRequest, GetPaymentLinkResponse> operation
+              = new GetPaymentLink.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -209,8 +209,8 @@ public class Payment {
      * 
      * @return The call builder
      */
-    public GetPaymentPayment2RequestBuilder getPaymentPayment2() {
-        return new GetPaymentPayment2RequestBuilder(sdkConfiguration);
+    public GetPaymentPaymentRequestBuilder getPaymentPayment() {
+        return new GetPaymentPaymentRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -220,9 +220,9 @@ public class Payment {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetPaymentPayment2Response getPaymentPayment2(@Nonnull GetPaymentPayment2Request request) {
-        RequestOperation<GetPaymentPayment2Request, GetPaymentPayment2Response> operation
-              = new GetPaymentPayment2.Sync(sdkConfiguration, _headers);
+    public GetPaymentPaymentResponse getPaymentPayment(@Nonnull GetPaymentPaymentRequest request) {
+        RequestOperation<GetPaymentPaymentRequest, GetPaymentPaymentResponse> operation
+              = new GetPaymentPayment.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -231,8 +231,8 @@ public class Payment {
      * 
      * @return The call builder
      */
-    public GetPaymentPayout2RequestBuilder getPaymentPayout2() {
-        return new GetPaymentPayout2RequestBuilder(sdkConfiguration);
+    public GetPaymentPayoutRequestBuilder getPaymentPayout() {
+        return new GetPaymentPayoutRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -242,9 +242,9 @@ public class Payment {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetPaymentPayout2Response getPaymentPayout2(@Nonnull GetPaymentPayout2Request request) {
-        RequestOperation<GetPaymentPayout2Request, GetPaymentPayout2Response> operation
-              = new GetPaymentPayout2.Sync(sdkConfiguration, _headers);
+    public GetPaymentPayoutResponse getPaymentPayout(@Nonnull GetPaymentPayoutRequest request) {
+        RequestOperation<GetPaymentPayoutRequest, GetPaymentPayoutResponse> operation
+              = new GetPaymentPayout.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -253,8 +253,8 @@ public class Payment {
      * 
      * @return The call builder
      */
-    public GetPaymentRefund2RequestBuilder getPaymentRefund2() {
-        return new GetPaymentRefund2RequestBuilder(sdkConfiguration);
+    public GetPaymentRefundRequestBuilder getPaymentRefund() {
+        return new GetPaymentRefundRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -264,9 +264,9 @@ public class Payment {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetPaymentRefund2Response getPaymentRefund2(@Nonnull GetPaymentRefund2Request request) {
-        RequestOperation<GetPaymentRefund2Request, GetPaymentRefund2Response> operation
-              = new GetPaymentRefund2.Sync(sdkConfiguration, _headers);
+    public GetPaymentRefundResponse getPaymentRefund(@Nonnull GetPaymentRefundRequest request) {
+        RequestOperation<GetPaymentRefundRequest, GetPaymentRefundResponse> operation
+              = new GetPaymentRefund.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -275,8 +275,8 @@ public class Payment {
      * 
      * @return The call builder
      */
-    public GetPaymentSubscription2RequestBuilder getPaymentSubscription2() {
-        return new GetPaymentSubscription2RequestBuilder(sdkConfiguration);
+    public GetPaymentSubscriptionRequestBuilder getPaymentSubscription() {
+        return new GetPaymentSubscriptionRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -286,9 +286,9 @@ public class Payment {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetPaymentSubscription2Response getPaymentSubscription2(@Nonnull GetPaymentSubscription2Request request) {
-        RequestOperation<GetPaymentSubscription2Request, GetPaymentSubscription2Response> operation
-              = new GetPaymentSubscription2.Sync(sdkConfiguration, _headers);
+    public GetPaymentSubscriptionResponse getPaymentSubscription(@Nonnull GetPaymentSubscriptionRequest request) {
+        RequestOperation<GetPaymentSubscriptionRequest, GetPaymentSubscriptionResponse> operation
+              = new GetPaymentSubscription.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -297,8 +297,8 @@ public class Payment {
      * 
      * @return The call builder
      */
-    public ListPaymentLinks2RequestBuilder listPaymentLinks2() {
-        return new ListPaymentLinks2RequestBuilder(sdkConfiguration);
+    public ListPaymentLinksRequestBuilder listPaymentLinks() {
+        return new ListPaymentLinksRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -308,9 +308,9 @@ public class Payment {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListPaymentLinks2Response listPaymentLinks2(@Nonnull ListPaymentLinks2Request request) {
-        RequestOperation<ListPaymentLinks2Request, ListPaymentLinks2Response> operation
-              = new ListPaymentLinks2.Sync(sdkConfiguration, _headers);
+    public ListPaymentLinksResponse listPaymentLinks(@Nonnull ListPaymentLinksRequest request) {
+        RequestOperation<ListPaymentLinksRequest, ListPaymentLinksResponse> operation
+              = new ListPaymentLinks.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -319,8 +319,8 @@ public class Payment {
      * 
      * @return The call builder
      */
-    public ListPaymentPayments2RequestBuilder listPaymentPayments2() {
-        return new ListPaymentPayments2RequestBuilder(sdkConfiguration);
+    public ListPaymentPaymentsRequestBuilder listPaymentPayments() {
+        return new ListPaymentPaymentsRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -330,9 +330,9 @@ public class Payment {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListPaymentPayments2Response listPaymentPayments2(@Nonnull ListPaymentPayments2Request request) {
-        RequestOperation<ListPaymentPayments2Request, ListPaymentPayments2Response> operation
-              = new ListPaymentPayments2.Sync(sdkConfiguration, _headers);
+    public ListPaymentPaymentsResponse listPaymentPayments(@Nonnull ListPaymentPaymentsRequest request) {
+        RequestOperation<ListPaymentPaymentsRequest, ListPaymentPaymentsResponse> operation
+              = new ListPaymentPayments.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -341,8 +341,8 @@ public class Payment {
      * 
      * @return The call builder
      */
-    public ListPaymentPayouts2RequestBuilder listPaymentPayouts2() {
-        return new ListPaymentPayouts2RequestBuilder(sdkConfiguration);
+    public ListPaymentPayoutsRequestBuilder listPaymentPayouts() {
+        return new ListPaymentPayoutsRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -352,9 +352,9 @@ public class Payment {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListPaymentPayouts2Response listPaymentPayouts2(@Nonnull ListPaymentPayouts2Request request) {
-        RequestOperation<ListPaymentPayouts2Request, ListPaymentPayouts2Response> operation
-              = new ListPaymentPayouts2.Sync(sdkConfiguration, _headers);
+    public ListPaymentPayoutsResponse listPaymentPayouts(@Nonnull ListPaymentPayoutsRequest request) {
+        RequestOperation<ListPaymentPayoutsRequest, ListPaymentPayoutsResponse> operation
+              = new ListPaymentPayouts.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -363,8 +363,8 @@ public class Payment {
      * 
      * @return The call builder
      */
-    public ListPaymentRefunds2RequestBuilder listPaymentRefunds2() {
-        return new ListPaymentRefunds2RequestBuilder(sdkConfiguration);
+    public ListPaymentRefundsRequestBuilder listPaymentRefunds() {
+        return new ListPaymentRefundsRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -374,9 +374,9 @@ public class Payment {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListPaymentRefunds2Response listPaymentRefunds2(@Nonnull ListPaymentRefunds2Request request) {
-        RequestOperation<ListPaymentRefunds2Request, ListPaymentRefunds2Response> operation
-              = new ListPaymentRefunds2.Sync(sdkConfiguration, _headers);
+    public ListPaymentRefundsResponse listPaymentRefunds(@Nonnull ListPaymentRefundsRequest request) {
+        RequestOperation<ListPaymentRefundsRequest, ListPaymentRefundsResponse> operation
+              = new ListPaymentRefunds.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -385,8 +385,8 @@ public class Payment {
      * 
      * @return The call builder
      */
-    public ListPaymentSubscriptions2RequestBuilder listPaymentSubscriptions2() {
-        return new ListPaymentSubscriptions2RequestBuilder(sdkConfiguration);
+    public ListPaymentSubscriptionsRequestBuilder listPaymentSubscriptions() {
+        return new ListPaymentSubscriptionsRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -396,9 +396,9 @@ public class Payment {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListPaymentSubscriptions2Response listPaymentSubscriptions2(@Nonnull ListPaymentSubscriptions2Request request) {
-        RequestOperation<ListPaymentSubscriptions2Request, ListPaymentSubscriptions2Response> operation
-              = new ListPaymentSubscriptions2.Sync(sdkConfiguration, _headers);
+    public ListPaymentSubscriptionsResponse listPaymentSubscriptions(@Nonnull ListPaymentSubscriptionsRequest request) {
+        RequestOperation<ListPaymentSubscriptionsRequest, ListPaymentSubscriptionsResponse> operation
+              = new ListPaymentSubscriptions.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -407,8 +407,8 @@ public class Payment {
      * 
      * @return The call builder
      */
-    public PatchPaymentLink2RequestBuilder patchPaymentLink2() {
-        return new PatchPaymentLink2RequestBuilder(sdkConfiguration);
+    public PatchPaymentLinkRequestBuilder patchPaymentLink() {
+        return new PatchPaymentLinkRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -418,9 +418,9 @@ public class Payment {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchPaymentLink2Response patchPaymentLink2(@Nonnull PatchPaymentLink2Request request) {
-        RequestOperation<PatchPaymentLink2Request, PatchPaymentLink2Response> operation
-              = new PatchPaymentLink2.Sync(sdkConfiguration, _headers);
+    public PatchPaymentLinkResponse patchPaymentLink(@Nonnull PatchPaymentLinkRequest request) {
+        RequestOperation<PatchPaymentLinkRequest, PatchPaymentLinkResponse> operation
+              = new PatchPaymentLink.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -429,8 +429,8 @@ public class Payment {
      * 
      * @return The call builder
      */
-    public PatchPaymentPayment2RequestBuilder patchPaymentPayment2() {
-        return new PatchPaymentPayment2RequestBuilder(sdkConfiguration);
+    public PatchPaymentPaymentRequestBuilder patchPaymentPayment() {
+        return new PatchPaymentPaymentRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -440,9 +440,9 @@ public class Payment {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchPaymentPayment2Response patchPaymentPayment2(@Nonnull PatchPaymentPayment2Request request) {
-        RequestOperation<PatchPaymentPayment2Request, PatchPaymentPayment2Response> operation
-              = new PatchPaymentPayment2.Sync(sdkConfiguration, _headers);
+    public PatchPaymentPaymentResponse patchPaymentPayment(@Nonnull PatchPaymentPaymentRequest request) {
+        RequestOperation<PatchPaymentPaymentRequest, PatchPaymentPaymentResponse> operation
+              = new PatchPaymentPayment.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -451,8 +451,8 @@ public class Payment {
      * 
      * @return The call builder
      */
-    public PatchPaymentSubscription2RequestBuilder patchPaymentSubscription2() {
-        return new PatchPaymentSubscription2RequestBuilder(sdkConfiguration);
+    public PatchPaymentSubscriptionRequestBuilder patchPaymentSubscription() {
+        return new PatchPaymentSubscriptionRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -462,9 +462,9 @@ public class Payment {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchPaymentSubscription2Response patchPaymentSubscription2(@Nonnull PatchPaymentSubscription2Request request) {
-        RequestOperation<PatchPaymentSubscription2Request, PatchPaymentSubscription2Response> operation
-              = new PatchPaymentSubscription2.Sync(sdkConfiguration, _headers);
+    public PatchPaymentSubscriptionResponse patchPaymentSubscription(@Nonnull PatchPaymentSubscriptionRequest request) {
+        RequestOperation<PatchPaymentSubscriptionRequest, PatchPaymentSubscriptionResponse> operation
+              = new PatchPaymentSubscription.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -473,8 +473,8 @@ public class Payment {
      * 
      * @return The call builder
      */
-    public RemovePaymentLink2RequestBuilder removePaymentLink2() {
-        return new RemovePaymentLink2RequestBuilder(sdkConfiguration);
+    public RemovePaymentLinkRequestBuilder removePaymentLink() {
+        return new RemovePaymentLinkRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -484,9 +484,9 @@ public class Payment {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemovePaymentLink2Response removePaymentLink2(@Nonnull RemovePaymentLink2Request request) {
-        RequestOperation<RemovePaymentLink2Request, RemovePaymentLink2Response> operation
-              = new RemovePaymentLink2.Sync(sdkConfiguration, _headers);
+    public RemovePaymentLinkResponse removePaymentLink(@Nonnull RemovePaymentLinkRequest request) {
+        RequestOperation<RemovePaymentLinkRequest, RemovePaymentLinkResponse> operation
+              = new RemovePaymentLink.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -495,8 +495,8 @@ public class Payment {
      * 
      * @return The call builder
      */
-    public RemovePaymentPayment2RequestBuilder removePaymentPayment2() {
-        return new RemovePaymentPayment2RequestBuilder(sdkConfiguration);
+    public RemovePaymentPaymentRequestBuilder removePaymentPayment() {
+        return new RemovePaymentPaymentRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -506,9 +506,9 @@ public class Payment {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemovePaymentPayment2Response removePaymentPayment2(@Nonnull RemovePaymentPayment2Request request) {
-        RequestOperation<RemovePaymentPayment2Request, RemovePaymentPayment2Response> operation
-              = new RemovePaymentPayment2.Sync(sdkConfiguration, _headers);
+    public RemovePaymentPaymentResponse removePaymentPayment(@Nonnull RemovePaymentPaymentRequest request) {
+        RequestOperation<RemovePaymentPaymentRequest, RemovePaymentPaymentResponse> operation
+              = new RemovePaymentPayment.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -517,8 +517,8 @@ public class Payment {
      * 
      * @return The call builder
      */
-    public RemovePaymentSubscription2RequestBuilder removePaymentSubscription2() {
-        return new RemovePaymentSubscription2RequestBuilder(sdkConfiguration);
+    public RemovePaymentSubscriptionRequestBuilder removePaymentSubscription() {
+        return new RemovePaymentSubscriptionRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -528,9 +528,9 @@ public class Payment {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemovePaymentSubscription2Response removePaymentSubscription2(@Nonnull RemovePaymentSubscription2Request request) {
-        RequestOperation<RemovePaymentSubscription2Request, RemovePaymentSubscription2Response> operation
-              = new RemovePaymentSubscription2.Sync(sdkConfiguration, _headers);
+    public RemovePaymentSubscriptionResponse removePaymentSubscription(@Nonnull RemovePaymentSubscriptionRequest request) {
+        RequestOperation<RemovePaymentSubscriptionRequest, RemovePaymentSubscriptionResponse> operation
+              = new RemovePaymentSubscription.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -539,8 +539,8 @@ public class Payment {
      * 
      * @return The call builder
      */
-    public UpdatePaymentLink2RequestBuilder updatePaymentLink2() {
-        return new UpdatePaymentLink2RequestBuilder(sdkConfiguration);
+    public UpdatePaymentLinkRequestBuilder updatePaymentLink() {
+        return new UpdatePaymentLinkRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -550,9 +550,9 @@ public class Payment {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdatePaymentLink2Response updatePaymentLink2(@Nonnull UpdatePaymentLink2Request request) {
-        RequestOperation<UpdatePaymentLink2Request, UpdatePaymentLink2Response> operation
-              = new UpdatePaymentLink2.Sync(sdkConfiguration, _headers);
+    public UpdatePaymentLinkResponse updatePaymentLink(@Nonnull UpdatePaymentLinkRequest request) {
+        RequestOperation<UpdatePaymentLinkRequest, UpdatePaymentLinkResponse> operation
+              = new UpdatePaymentLink.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -561,8 +561,8 @@ public class Payment {
      * 
      * @return The call builder
      */
-    public UpdatePaymentPayment2RequestBuilder updatePaymentPayment2() {
-        return new UpdatePaymentPayment2RequestBuilder(sdkConfiguration);
+    public UpdatePaymentPaymentRequestBuilder updatePaymentPayment() {
+        return new UpdatePaymentPaymentRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -572,9 +572,9 @@ public class Payment {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdatePaymentPayment2Response updatePaymentPayment2(@Nonnull UpdatePaymentPayment2Request request) {
-        RequestOperation<UpdatePaymentPayment2Request, UpdatePaymentPayment2Response> operation
-              = new UpdatePaymentPayment2.Sync(sdkConfiguration, _headers);
+    public UpdatePaymentPaymentResponse updatePaymentPayment(@Nonnull UpdatePaymentPaymentRequest request) {
+        RequestOperation<UpdatePaymentPaymentRequest, UpdatePaymentPaymentResponse> operation
+              = new UpdatePaymentPayment.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -583,8 +583,8 @@ public class Payment {
      * 
      * @return The call builder
      */
-    public UpdatePaymentSubscription2RequestBuilder updatePaymentSubscription2() {
-        return new UpdatePaymentSubscription2RequestBuilder(sdkConfiguration);
+    public UpdatePaymentSubscriptionRequestBuilder updatePaymentSubscription() {
+        return new UpdatePaymentSubscriptionRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -594,9 +594,9 @@ public class Payment {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdatePaymentSubscription2Response updatePaymentSubscription2(@Nonnull UpdatePaymentSubscription2Request request) {
-        RequestOperation<UpdatePaymentSubscription2Request, UpdatePaymentSubscription2Response> operation
-              = new UpdatePaymentSubscription2.Sync(sdkConfiguration, _headers);
+    public UpdatePaymentSubscriptionResponse updatePaymentSubscription(@Nonnull UpdatePaymentSubscriptionRequest request) {
+        RequestOperation<UpdatePaymentSubscriptionRequest, UpdatePaymentSubscriptionResponse> operation
+              = new UpdatePaymentSubscription.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

@@ -7,30 +7,30 @@ import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOper
 
 import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
-import to.unified.unified_java_sdk.models.operations.CreateCommerceInventory2Request;
-import to.unified.unified_java_sdk.models.operations.GetCommerceInventory2Request;
-import to.unified.unified_java_sdk.models.operations.ListCommerceInventories2Request;
-import to.unified.unified_java_sdk.models.operations.PatchCommerceInventory2Request;
-import to.unified.unified_java_sdk.models.operations.RemoveCommerceInventory2Request;
-import to.unified.unified_java_sdk.models.operations.UpdateCommerceInventory2Request;
-import to.unified.unified_java_sdk.models.operations.async.CreateCommerceInventory2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.CreateCommerceInventory2Response;
-import to.unified.unified_java_sdk.models.operations.async.GetCommerceInventory2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.GetCommerceInventory2Response;
-import to.unified.unified_java_sdk.models.operations.async.ListCommerceInventories2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.ListCommerceInventories2Response;
-import to.unified.unified_java_sdk.models.operations.async.PatchCommerceInventory2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.PatchCommerceInventory2Response;
-import to.unified.unified_java_sdk.models.operations.async.RemoveCommerceInventory2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.RemoveCommerceInventory2Response;
-import to.unified.unified_java_sdk.models.operations.async.UpdateCommerceInventory2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.UpdateCommerceInventory2Response;
-import to.unified.unified_java_sdk.operations.CreateCommerceInventory2;
-import to.unified.unified_java_sdk.operations.GetCommerceInventory2;
-import to.unified.unified_java_sdk.operations.ListCommerceInventories2;
-import to.unified.unified_java_sdk.operations.PatchCommerceInventory2;
-import to.unified.unified_java_sdk.operations.RemoveCommerceInventory2;
-import to.unified.unified_java_sdk.operations.UpdateCommerceInventory2;
+import to.unified.unified_java_sdk.models.operations.CreateCommerceInventoryRequest;
+import to.unified.unified_java_sdk.models.operations.GetCommerceInventoryRequest;
+import to.unified.unified_java_sdk.models.operations.ListCommerceInventoriesRequest;
+import to.unified.unified_java_sdk.models.operations.PatchCommerceInventoryRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveCommerceInventoryRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateCommerceInventoryRequest;
+import to.unified.unified_java_sdk.models.operations.async.CreateCommerceInventoryRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.CreateCommerceInventoryResponse;
+import to.unified.unified_java_sdk.models.operations.async.GetCommerceInventoryRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetCommerceInventoryResponse;
+import to.unified.unified_java_sdk.models.operations.async.ListCommerceInventoriesRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListCommerceInventoriesResponse;
+import to.unified.unified_java_sdk.models.operations.async.PatchCommerceInventoryRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.PatchCommerceInventoryResponse;
+import to.unified.unified_java_sdk.models.operations.async.RemoveCommerceInventoryRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.RemoveCommerceInventoryResponse;
+import to.unified.unified_java_sdk.models.operations.async.UpdateCommerceInventoryRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.UpdateCommerceInventoryResponse;
+import to.unified.unified_java_sdk.operations.CreateCommerceInventory;
+import to.unified.unified_java_sdk.operations.GetCommerceInventory;
+import to.unified.unified_java_sdk.operations.ListCommerceInventories;
+import to.unified.unified_java_sdk.operations.PatchCommerceInventory;
+import to.unified.unified_java_sdk.operations.RemoveCommerceInventory;
+import to.unified.unified_java_sdk.operations.UpdateCommerceInventory;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -59,19 +59,19 @@ public class AsyncInventory {
      * 
      * @return The async call builder
      */
-    public CreateCommerceInventory2RequestBuilder createCommerceInventory2() {
-        return new CreateCommerceInventory2RequestBuilder(sdkConfiguration);
+    public CreateCommerceInventoryRequestBuilder createCommerceInventory() {
+        return new CreateCommerceInventoryRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Create an inventory
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<CreateCommerceInventory2Response>} - The async response
+     * @return {@code CompletableFuture<CreateCommerceInventoryResponse>} - The async response
      */
-    public CompletableFuture<CreateCommerceInventory2Response> createCommerceInventory2(@Nonnull CreateCommerceInventory2Request request) {
-        AsyncRequestOperation<CreateCommerceInventory2Request, CreateCommerceInventory2Response> operation
-              = new CreateCommerceInventory2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<CreateCommerceInventoryResponse> createCommerceInventory(@Nonnull CreateCommerceInventoryRequest request) {
+        AsyncRequestOperation<CreateCommerceInventoryRequest, CreateCommerceInventoryResponse> operation
+              = new CreateCommerceInventory.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -82,19 +82,19 @@ public class AsyncInventory {
      * 
      * @return The async call builder
      */
-    public GetCommerceInventory2RequestBuilder getCommerceInventory2() {
-        return new GetCommerceInventory2RequestBuilder(sdkConfiguration);
+    public GetCommerceInventoryRequestBuilder getCommerceInventory() {
+        return new GetCommerceInventoryRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Retrieve an inventory
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<GetCommerceInventory2Response>} - The async response
+     * @return {@code CompletableFuture<GetCommerceInventoryResponse>} - The async response
      */
-    public CompletableFuture<GetCommerceInventory2Response> getCommerceInventory2(@Nonnull GetCommerceInventory2Request request) {
-        AsyncRequestOperation<GetCommerceInventory2Request, GetCommerceInventory2Response> operation
-              = new GetCommerceInventory2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<GetCommerceInventoryResponse> getCommerceInventory(@Nonnull GetCommerceInventoryRequest request) {
+        AsyncRequestOperation<GetCommerceInventoryRequest, GetCommerceInventoryResponse> operation
+              = new GetCommerceInventory.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -105,19 +105,19 @@ public class AsyncInventory {
      * 
      * @return The async call builder
      */
-    public ListCommerceInventories2RequestBuilder listCommerceInventories2() {
-        return new ListCommerceInventories2RequestBuilder(sdkConfiguration);
+    public ListCommerceInventoriesRequestBuilder listCommerceInventories() {
+        return new ListCommerceInventoriesRequestBuilder(sdkConfiguration);
     }
 
     /**
      * List all inventories
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<ListCommerceInventories2Response>} - The async response
+     * @return {@code CompletableFuture<ListCommerceInventoriesResponse>} - The async response
      */
-    public CompletableFuture<ListCommerceInventories2Response> listCommerceInventories2(@Nonnull ListCommerceInventories2Request request) {
-        AsyncRequestOperation<ListCommerceInventories2Request, ListCommerceInventories2Response> operation
-              = new ListCommerceInventories2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<ListCommerceInventoriesResponse> listCommerceInventories(@Nonnull ListCommerceInventoriesRequest request) {
+        AsyncRequestOperation<ListCommerceInventoriesRequest, ListCommerceInventoriesResponse> operation
+              = new ListCommerceInventories.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -128,19 +128,19 @@ public class AsyncInventory {
      * 
      * @return The async call builder
      */
-    public PatchCommerceInventory2RequestBuilder patchCommerceInventory2() {
-        return new PatchCommerceInventory2RequestBuilder(sdkConfiguration);
+    public PatchCommerceInventoryRequestBuilder patchCommerceInventory() {
+        return new PatchCommerceInventoryRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update an inventory
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<PatchCommerceInventory2Response>} - The async response
+     * @return {@code CompletableFuture<PatchCommerceInventoryResponse>} - The async response
      */
-    public CompletableFuture<PatchCommerceInventory2Response> patchCommerceInventory2(@Nonnull PatchCommerceInventory2Request request) {
-        AsyncRequestOperation<PatchCommerceInventory2Request, PatchCommerceInventory2Response> operation
-              = new PatchCommerceInventory2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<PatchCommerceInventoryResponse> patchCommerceInventory(@Nonnull PatchCommerceInventoryRequest request) {
+        AsyncRequestOperation<PatchCommerceInventoryRequest, PatchCommerceInventoryResponse> operation
+              = new PatchCommerceInventory.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -151,19 +151,19 @@ public class AsyncInventory {
      * 
      * @return The async call builder
      */
-    public RemoveCommerceInventory2RequestBuilder removeCommerceInventory2() {
-        return new RemoveCommerceInventory2RequestBuilder(sdkConfiguration);
+    public RemoveCommerceInventoryRequestBuilder removeCommerceInventory() {
+        return new RemoveCommerceInventoryRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Remove an inventory
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<RemoveCommerceInventory2Response>} - The async response
+     * @return {@code CompletableFuture<RemoveCommerceInventoryResponse>} - The async response
      */
-    public CompletableFuture<RemoveCommerceInventory2Response> removeCommerceInventory2(@Nonnull RemoveCommerceInventory2Request request) {
-        AsyncRequestOperation<RemoveCommerceInventory2Request, RemoveCommerceInventory2Response> operation
-              = new RemoveCommerceInventory2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<RemoveCommerceInventoryResponse> removeCommerceInventory(@Nonnull RemoveCommerceInventoryRequest request) {
+        AsyncRequestOperation<RemoveCommerceInventoryRequest, RemoveCommerceInventoryResponse> operation
+              = new RemoveCommerceInventory.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -174,19 +174,19 @@ public class AsyncInventory {
      * 
      * @return The async call builder
      */
-    public UpdateCommerceInventory2RequestBuilder updateCommerceInventory2() {
-        return new UpdateCommerceInventory2RequestBuilder(sdkConfiguration);
+    public UpdateCommerceInventoryRequestBuilder updateCommerceInventory() {
+        return new UpdateCommerceInventoryRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update an inventory
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<UpdateCommerceInventory2Response>} - The async response
+     * @return {@code CompletableFuture<UpdateCommerceInventoryResponse>} - The async response
      */
-    public CompletableFuture<UpdateCommerceInventory2Response> updateCommerceInventory2(@Nonnull UpdateCommerceInventory2Request request) {
-        AsyncRequestOperation<UpdateCommerceInventory2Request, UpdateCommerceInventory2Response> operation
-              = new UpdateCommerceInventory2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<UpdateCommerceInventoryResponse> updateCommerceInventory(@Nonnull UpdateCommerceInventoryRequest request) {
+        AsyncRequestOperation<UpdateCommerceInventoryRequest, UpdateCommerceInventoryResponse> operation
+              = new UpdateCommerceInventory.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

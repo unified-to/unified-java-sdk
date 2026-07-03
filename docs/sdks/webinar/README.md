@@ -4,27 +4,27 @@
 
 ### Available Operations
 
-* [createCalendarWebinar2](#createcalendarwebinar2) - Create a webinar
-* [getCalendarWebinar2](#getcalendarwebinar2) - Retrieve a webinar
-* [listCalendarWebinars2](#listcalendarwebinars2) - List all webinars
-* [patchCalendarWebinar2](#patchcalendarwebinar2) - Update a webinar
-* [removeCalendarWebinar2](#removecalendarwebinar2) - Remove a webinar
-* [updateCalendarWebinar2](#updatecalendarwebinar2) - Update a webinar
+* [createCalendarWebinar](#createcalendarwebinar) - Create a webinar
+* [getCalendarWebinar](#getcalendarwebinar) - Retrieve a webinar
+* [listCalendarWebinars](#listcalendarwebinars) - List all webinars
+* [patchCalendarWebinar](#patchcalendarwebinar) - Update a webinar
+* [removeCalendarWebinar](#removecalendarwebinar) - Remove a webinar
+* [updateCalendarWebinar](#updatecalendarwebinar) - Update a webinar
 
-## createCalendarWebinar2
+## createCalendarWebinar
 
 Create a webinar
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createCalendarWebinar2" method="post" path="/calendar/{connection_id}/webinar" -->
+<!-- UsageSnippet language="java" operationID="createCalendarWebinar" method="post" path="/calendar/{connection_id}/webinar" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.CreateCalendarWebinar2Request;
-import to.unified.unified_java_sdk.models.operations.CreateCalendarWebinar2Response;
+import to.unified.unified_java_sdk.models.operations.CreateCalendarWebinarRequest;
+import to.unified.unified_java_sdk.models.operations.CreateCalendarWebinarResponse;
 import to.unified.unified_java_sdk.models.shared.CalendarWebinar;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -38,13 +38,13 @@ public class Application {
                     .build())
             .build();
 
-        CreateCalendarWebinar2Request req = CreateCalendarWebinar2Request.builder()
+        CreateCalendarWebinarRequest req = CreateCalendarWebinarRequest.builder()
                 .calendarWebinar(CalendarWebinar.builder()
                     .build())
                 .connectionId("<id>")
                 .build();
 
-        CreateCalendarWebinar2Response res = sdk.webinar().createCalendarWebinar2()
+        CreateCalendarWebinarResponse res = sdk.webinar().createCalendarWebinar()
                 .request(req)
                 .call();
 
@@ -57,13 +57,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                 | Type                                                                                      | Required                                                                                  | Description                                                                               |
-| ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
-| `request`                                                                                 | [CreateCalendarWebinar2Request](../../models/operations/CreateCalendarWebinar2Request.md) | :heavy_check_mark:                                                                        | The request object to use for the request.                                                |
+| Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
+| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| `request`                                                                               | [CreateCalendarWebinarRequest](../../models/operations/CreateCalendarWebinarRequest.md) | :heavy_check_mark:                                                                      | The request object to use for the request.                                              |
 
 ### Response
 
-**[CreateCalendarWebinar2Response](../../models/operations/CreateCalendarWebinar2Response.md)**
+**[CreateCalendarWebinarResponse](../../models/operations/CreateCalendarWebinarResponse.md)**
 
 ### Errors
 
@@ -71,20 +71,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## getCalendarWebinar2
+## getCalendarWebinar
 
 Retrieve a webinar
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="getCalendarWebinar2" method="get" path="/calendar/{connection_id}/webinar/{id}" -->
+<!-- UsageSnippet language="java" operationID="getCalendarWebinar" method="get" path="/calendar/{connection_id}/webinar/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.GetCalendarWebinar2Request;
-import to.unified.unified_java_sdk.models.operations.GetCalendarWebinar2Response;
+import to.unified.unified_java_sdk.models.operations.GetCalendarWebinarRequest;
+import to.unified.unified_java_sdk.models.operations.GetCalendarWebinarResponse;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -97,12 +97,12 @@ public class Application {
                     .build())
             .build();
 
-        GetCalendarWebinar2Request req = GetCalendarWebinar2Request.builder()
+        GetCalendarWebinarRequest req = GetCalendarWebinarRequest.builder()
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        GetCalendarWebinar2Response res = sdk.webinar().getCalendarWebinar2()
+        GetCalendarWebinarResponse res = sdk.webinar().getCalendarWebinar()
                 .request(req)
                 .call();
 
@@ -115,13 +115,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                           | Type                                                                                | Required                                                                            | Description                                                                         |
-| ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
-| `request`                                                                           | [GetCalendarWebinar2Request](../../models/operations/GetCalendarWebinar2Request.md) | :heavy_check_mark:                                                                  | The request object to use for the request.                                          |
+| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
+| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| `request`                                                                         | [GetCalendarWebinarRequest](../../models/operations/GetCalendarWebinarRequest.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
 
 ### Response
 
-**[GetCalendarWebinar2Response](../../models/operations/GetCalendarWebinar2Response.md)**
+**[GetCalendarWebinarResponse](../../models/operations/GetCalendarWebinarResponse.md)**
 
 ### Errors
 
@@ -129,20 +129,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## listCalendarWebinars2
+## listCalendarWebinars
 
 List all webinars
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="listCalendarWebinars2" method="get" path="/calendar/{connection_id}/webinar" -->
+<!-- UsageSnippet language="java" operationID="listCalendarWebinars" method="get" path="/calendar/{connection_id}/webinar" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.ListCalendarWebinars2Request;
-import to.unified.unified_java_sdk.models.operations.ListCalendarWebinars2Response;
+import to.unified.unified_java_sdk.models.operations.ListCalendarWebinarsRequest;
+import to.unified.unified_java_sdk.models.operations.ListCalendarWebinarsResponse;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -155,11 +155,11 @@ public class Application {
                     .build())
             .build();
 
-        ListCalendarWebinars2Request req = ListCalendarWebinars2Request.builder()
+        ListCalendarWebinarsRequest req = ListCalendarWebinarsRequest.builder()
                 .connectionId("<id>")
                 .build();
 
-        ListCalendarWebinars2Response res = sdk.webinar().listCalendarWebinars2()
+        ListCalendarWebinarsResponse res = sdk.webinar().listCalendarWebinars()
                 .request(req)
                 .call();
 
@@ -172,13 +172,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
-| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
-| `request`                                                                               | [ListCalendarWebinars2Request](../../models/operations/ListCalendarWebinars2Request.md) | :heavy_check_mark:                                                                      | The request object to use for the request.                                              |
+| Parameter                                                                             | Type                                                                                  | Required                                                                              | Description                                                                           |
+| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| `request`                                                                             | [ListCalendarWebinarsRequest](../../models/operations/ListCalendarWebinarsRequest.md) | :heavy_check_mark:                                                                    | The request object to use for the request.                                            |
 
 ### Response
 
-**[ListCalendarWebinars2Response](../../models/operations/ListCalendarWebinars2Response.md)**
+**[ListCalendarWebinarsResponse](../../models/operations/ListCalendarWebinarsResponse.md)**
 
 ### Errors
 
@@ -186,20 +186,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## patchCalendarWebinar2
+## patchCalendarWebinar
 
 Update a webinar
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchCalendarWebinar2" method="patch" path="/calendar/{connection_id}/webinar/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchCalendarWebinar" method="patch" path="/calendar/{connection_id}/webinar/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.PatchCalendarWebinar2Request;
-import to.unified.unified_java_sdk.models.operations.PatchCalendarWebinar2Response;
+import to.unified.unified_java_sdk.models.operations.PatchCalendarWebinarRequest;
+import to.unified.unified_java_sdk.models.operations.PatchCalendarWebinarResponse;
 import to.unified.unified_java_sdk.models.shared.CalendarWebinar;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -213,14 +213,14 @@ public class Application {
                     .build())
             .build();
 
-        PatchCalendarWebinar2Request req = PatchCalendarWebinar2Request.builder()
+        PatchCalendarWebinarRequest req = PatchCalendarWebinarRequest.builder()
                 .calendarWebinar(CalendarWebinar.builder()
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        PatchCalendarWebinar2Response res = sdk.webinar().patchCalendarWebinar2()
+        PatchCalendarWebinarResponse res = sdk.webinar().patchCalendarWebinar()
                 .request(req)
                 .call();
 
@@ -233,13 +233,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
-| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
-| `request`                                                                               | [PatchCalendarWebinar2Request](../../models/operations/PatchCalendarWebinar2Request.md) | :heavy_check_mark:                                                                      | The request object to use for the request.                                              |
+| Parameter                                                                             | Type                                                                                  | Required                                                                              | Description                                                                           |
+| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| `request`                                                                             | [PatchCalendarWebinarRequest](../../models/operations/PatchCalendarWebinarRequest.md) | :heavy_check_mark:                                                                    | The request object to use for the request.                                            |
 
 ### Response
 
-**[PatchCalendarWebinar2Response](../../models/operations/PatchCalendarWebinar2Response.md)**
+**[PatchCalendarWebinarResponse](../../models/operations/PatchCalendarWebinarResponse.md)**
 
 ### Errors
 
@@ -247,20 +247,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## removeCalendarWebinar2
+## removeCalendarWebinar
 
 Remove a webinar
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="removeCalendarWebinar2" method="delete" path="/calendar/{connection_id}/webinar/{id}" -->
+<!-- UsageSnippet language="java" operationID="removeCalendarWebinar" method="delete" path="/calendar/{connection_id}/webinar/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.RemoveCalendarWebinar2Request;
-import to.unified.unified_java_sdk.models.operations.RemoveCalendarWebinar2Response;
+import to.unified.unified_java_sdk.models.operations.RemoveCalendarWebinarRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveCalendarWebinarResponse;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -273,12 +273,12 @@ public class Application {
                     .build())
             .build();
 
-        RemoveCalendarWebinar2Request req = RemoveCalendarWebinar2Request.builder()
+        RemoveCalendarWebinarRequest req = RemoveCalendarWebinarRequest.builder()
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        RemoveCalendarWebinar2Response res = sdk.webinar().removeCalendarWebinar2()
+        RemoveCalendarWebinarResponse res = sdk.webinar().removeCalendarWebinar()
                 .request(req)
                 .call();
 
@@ -289,13 +289,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                 | Type                                                                                      | Required                                                                                  | Description                                                                               |
-| ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
-| `request`                                                                                 | [RemoveCalendarWebinar2Request](../../models/operations/RemoveCalendarWebinar2Request.md) | :heavy_check_mark:                                                                        | The request object to use for the request.                                                |
+| Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
+| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| `request`                                                                               | [RemoveCalendarWebinarRequest](../../models/operations/RemoveCalendarWebinarRequest.md) | :heavy_check_mark:                                                                      | The request object to use for the request.                                              |
 
 ### Response
 
-**[RemoveCalendarWebinar2Response](../../models/operations/RemoveCalendarWebinar2Response.md)**
+**[RemoveCalendarWebinarResponse](../../models/operations/RemoveCalendarWebinarResponse.md)**
 
 ### Errors
 
@@ -303,20 +303,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## updateCalendarWebinar2
+## updateCalendarWebinar
 
 Update a webinar
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateCalendarWebinar2" method="put" path="/calendar/{connection_id}/webinar/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateCalendarWebinar" method="put" path="/calendar/{connection_id}/webinar/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.UpdateCalendarWebinar2Request;
-import to.unified.unified_java_sdk.models.operations.UpdateCalendarWebinar2Response;
+import to.unified.unified_java_sdk.models.operations.UpdateCalendarWebinarRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateCalendarWebinarResponse;
 import to.unified.unified_java_sdk.models.shared.CalendarWebinar;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -330,14 +330,14 @@ public class Application {
                     .build())
             .build();
 
-        UpdateCalendarWebinar2Request req = UpdateCalendarWebinar2Request.builder()
+        UpdateCalendarWebinarRequest req = UpdateCalendarWebinarRequest.builder()
                 .calendarWebinar(CalendarWebinar.builder()
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        UpdateCalendarWebinar2Response res = sdk.webinar().updateCalendarWebinar2()
+        UpdateCalendarWebinarResponse res = sdk.webinar().updateCalendarWebinar()
                 .request(req)
                 .call();
 
@@ -350,13 +350,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                 | Type                                                                                      | Required                                                                                  | Description                                                                               |
-| ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
-| `request`                                                                                 | [UpdateCalendarWebinar2Request](../../models/operations/UpdateCalendarWebinar2Request.md) | :heavy_check_mark:                                                                        | The request object to use for the request.                                                |
+| Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
+| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| `request`                                                                               | [UpdateCalendarWebinarRequest](../../models/operations/UpdateCalendarWebinarRequest.md) | :heavy_check_mark:                                                                      | The request object to use for the request.                                              |
 
 ### Response
 
-**[UpdateCalendarWebinar2Response](../../models/operations/UpdateCalendarWebinar2Response.md)**
+**[UpdateCalendarWebinarResponse](../../models/operations/UpdateCalendarWebinarResponse.md)**
 
 ### Errors
 

@@ -6,82 +6,82 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
-import to.unified.unified_java_sdk.models.operations.CreateMartechCampaign2Request;
-import to.unified.unified_java_sdk.models.operations.CreateMartechCampaign2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.CreateMartechCampaign2Response;
-import to.unified.unified_java_sdk.models.operations.CreateMartechList2Request;
-import to.unified.unified_java_sdk.models.operations.CreateMartechList2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.CreateMartechList2Response;
-import to.unified.unified_java_sdk.models.operations.CreateMartechMember2Request;
-import to.unified.unified_java_sdk.models.operations.CreateMartechMember2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.CreateMartechMember2Response;
-import to.unified.unified_java_sdk.models.operations.GetMartechCampaign2Request;
-import to.unified.unified_java_sdk.models.operations.GetMartechCampaign2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.GetMartechCampaign2Response;
-import to.unified.unified_java_sdk.models.operations.GetMartechList2Request;
-import to.unified.unified_java_sdk.models.operations.GetMartechList2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.GetMartechList2Response;
-import to.unified.unified_java_sdk.models.operations.GetMartechMember2Request;
-import to.unified.unified_java_sdk.models.operations.GetMartechMember2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.GetMartechMember2Response;
-import to.unified.unified_java_sdk.models.operations.ListMartechCampaigns2Request;
-import to.unified.unified_java_sdk.models.operations.ListMartechCampaigns2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.ListMartechCampaigns2Response;
-import to.unified.unified_java_sdk.models.operations.ListMartechLists2Request;
-import to.unified.unified_java_sdk.models.operations.ListMartechLists2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.ListMartechLists2Response;
-import to.unified.unified_java_sdk.models.operations.ListMartechMembers2Request;
-import to.unified.unified_java_sdk.models.operations.ListMartechMembers2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.ListMartechMembers2Response;
-import to.unified.unified_java_sdk.models.operations.ListMartechReports2Request;
-import to.unified.unified_java_sdk.models.operations.ListMartechReports2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.ListMartechReports2Response;
-import to.unified.unified_java_sdk.models.operations.PatchMartechCampaign2Request;
-import to.unified.unified_java_sdk.models.operations.PatchMartechCampaign2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.PatchMartechCampaign2Response;
-import to.unified.unified_java_sdk.models.operations.PatchMartechList2Request;
-import to.unified.unified_java_sdk.models.operations.PatchMartechList2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.PatchMartechList2Response;
-import to.unified.unified_java_sdk.models.operations.PatchMartechMember2Request;
-import to.unified.unified_java_sdk.models.operations.PatchMartechMember2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.PatchMartechMember2Response;
-import to.unified.unified_java_sdk.models.operations.RemoveMartechCampaign2Request;
-import to.unified.unified_java_sdk.models.operations.RemoveMartechCampaign2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.RemoveMartechCampaign2Response;
-import to.unified.unified_java_sdk.models.operations.RemoveMartechList2Request;
-import to.unified.unified_java_sdk.models.operations.RemoveMartechList2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.RemoveMartechList2Response;
-import to.unified.unified_java_sdk.models.operations.RemoveMartechMember2Request;
-import to.unified.unified_java_sdk.models.operations.RemoveMartechMember2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.RemoveMartechMember2Response;
-import to.unified.unified_java_sdk.models.operations.UpdateMartechCampaign2Request;
-import to.unified.unified_java_sdk.models.operations.UpdateMartechCampaign2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.UpdateMartechCampaign2Response;
-import to.unified.unified_java_sdk.models.operations.UpdateMartechList2Request;
-import to.unified.unified_java_sdk.models.operations.UpdateMartechList2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.UpdateMartechList2Response;
-import to.unified.unified_java_sdk.models.operations.UpdateMartechMember2Request;
-import to.unified.unified_java_sdk.models.operations.UpdateMartechMember2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.UpdateMartechMember2Response;
-import to.unified.unified_java_sdk.operations.CreateMartechCampaign2;
-import to.unified.unified_java_sdk.operations.CreateMartechList2;
-import to.unified.unified_java_sdk.operations.CreateMartechMember2;
-import to.unified.unified_java_sdk.operations.GetMartechCampaign2;
-import to.unified.unified_java_sdk.operations.GetMartechList2;
-import to.unified.unified_java_sdk.operations.GetMartechMember2;
-import to.unified.unified_java_sdk.operations.ListMartechCampaigns2;
-import to.unified.unified_java_sdk.operations.ListMartechLists2;
-import to.unified.unified_java_sdk.operations.ListMartechMembers2;
-import to.unified.unified_java_sdk.operations.ListMartechReports2;
-import to.unified.unified_java_sdk.operations.PatchMartechCampaign2;
-import to.unified.unified_java_sdk.operations.PatchMartechList2;
-import to.unified.unified_java_sdk.operations.PatchMartechMember2;
-import to.unified.unified_java_sdk.operations.RemoveMartechCampaign2;
-import to.unified.unified_java_sdk.operations.RemoveMartechList2;
-import to.unified.unified_java_sdk.operations.RemoveMartechMember2;
-import to.unified.unified_java_sdk.operations.UpdateMartechCampaign2;
-import to.unified.unified_java_sdk.operations.UpdateMartechList2;
-import to.unified.unified_java_sdk.operations.UpdateMartechMember2;
+import to.unified.unified_java_sdk.models.operations.CreateMartechCampaignRequest;
+import to.unified.unified_java_sdk.models.operations.CreateMartechCampaignRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.CreateMartechCampaignResponse;
+import to.unified.unified_java_sdk.models.operations.CreateMartechListRequest;
+import to.unified.unified_java_sdk.models.operations.CreateMartechListRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.CreateMartechListResponse;
+import to.unified.unified_java_sdk.models.operations.CreateMartechMemberRequest;
+import to.unified.unified_java_sdk.models.operations.CreateMartechMemberRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.CreateMartechMemberResponse;
+import to.unified.unified_java_sdk.models.operations.GetMartechCampaignRequest;
+import to.unified.unified_java_sdk.models.operations.GetMartechCampaignRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetMartechCampaignResponse;
+import to.unified.unified_java_sdk.models.operations.GetMartechListRequest;
+import to.unified.unified_java_sdk.models.operations.GetMartechListRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetMartechListResponse;
+import to.unified.unified_java_sdk.models.operations.GetMartechMemberRequest;
+import to.unified.unified_java_sdk.models.operations.GetMartechMemberRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetMartechMemberResponse;
+import to.unified.unified_java_sdk.models.operations.ListMartechCampaignsRequest;
+import to.unified.unified_java_sdk.models.operations.ListMartechCampaignsRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListMartechCampaignsResponse;
+import to.unified.unified_java_sdk.models.operations.ListMartechListsRequest;
+import to.unified.unified_java_sdk.models.operations.ListMartechListsRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListMartechListsResponse;
+import to.unified.unified_java_sdk.models.operations.ListMartechMembersRequest;
+import to.unified.unified_java_sdk.models.operations.ListMartechMembersRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListMartechMembersResponse;
+import to.unified.unified_java_sdk.models.operations.ListMartechReportsRequest;
+import to.unified.unified_java_sdk.models.operations.ListMartechReportsRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListMartechReportsResponse;
+import to.unified.unified_java_sdk.models.operations.PatchMartechCampaignRequest;
+import to.unified.unified_java_sdk.models.operations.PatchMartechCampaignRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.PatchMartechCampaignResponse;
+import to.unified.unified_java_sdk.models.operations.PatchMartechListRequest;
+import to.unified.unified_java_sdk.models.operations.PatchMartechListRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.PatchMartechListResponse;
+import to.unified.unified_java_sdk.models.operations.PatchMartechMemberRequest;
+import to.unified.unified_java_sdk.models.operations.PatchMartechMemberRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.PatchMartechMemberResponse;
+import to.unified.unified_java_sdk.models.operations.RemoveMartechCampaignRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveMartechCampaignRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.RemoveMartechCampaignResponse;
+import to.unified.unified_java_sdk.models.operations.RemoveMartechListRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveMartechListRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.RemoveMartechListResponse;
+import to.unified.unified_java_sdk.models.operations.RemoveMartechMemberRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveMartechMemberRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.RemoveMartechMemberResponse;
+import to.unified.unified_java_sdk.models.operations.UpdateMartechCampaignRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateMartechCampaignRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.UpdateMartechCampaignResponse;
+import to.unified.unified_java_sdk.models.operations.UpdateMartechListRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateMartechListRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.UpdateMartechListResponse;
+import to.unified.unified_java_sdk.models.operations.UpdateMartechMemberRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateMartechMemberRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.UpdateMartechMemberResponse;
+import to.unified.unified_java_sdk.operations.CreateMartechCampaign;
+import to.unified.unified_java_sdk.operations.CreateMartechList;
+import to.unified.unified_java_sdk.operations.CreateMartechMember;
+import to.unified.unified_java_sdk.operations.GetMartechCampaign;
+import to.unified.unified_java_sdk.operations.GetMartechList;
+import to.unified.unified_java_sdk.operations.GetMartechMember;
+import to.unified.unified_java_sdk.operations.ListMartechCampaigns;
+import to.unified.unified_java_sdk.operations.ListMartechLists;
+import to.unified.unified_java_sdk.operations.ListMartechMembers;
+import to.unified.unified_java_sdk.operations.ListMartechReports;
+import to.unified.unified_java_sdk.operations.PatchMartechCampaign;
+import to.unified.unified_java_sdk.operations.PatchMartechList;
+import to.unified.unified_java_sdk.operations.PatchMartechMember;
+import to.unified.unified_java_sdk.operations.RemoveMartechCampaign;
+import to.unified.unified_java_sdk.operations.RemoveMartechList;
+import to.unified.unified_java_sdk.operations.RemoveMartechMember;
+import to.unified.unified_java_sdk.operations.UpdateMartechCampaign;
+import to.unified.unified_java_sdk.operations.UpdateMartechList;
+import to.unified.unified_java_sdk.operations.UpdateMartechMember;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -109,8 +109,8 @@ public class Martech {
      * 
      * @return The call builder
      */
-    public CreateMartechCampaign2RequestBuilder createMartechCampaign2() {
-        return new CreateMartechCampaign2RequestBuilder(sdkConfiguration);
+    public CreateMartechCampaignRequestBuilder createMartechCampaign() {
+        return new CreateMartechCampaignRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -120,9 +120,9 @@ public class Martech {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateMartechCampaign2Response createMartechCampaign2(@Nonnull CreateMartechCampaign2Request request) {
-        RequestOperation<CreateMartechCampaign2Request, CreateMartechCampaign2Response> operation
-              = new CreateMartechCampaign2.Sync(sdkConfiguration, _headers);
+    public CreateMartechCampaignResponse createMartechCampaign(@Nonnull CreateMartechCampaignRequest request) {
+        RequestOperation<CreateMartechCampaignRequest, CreateMartechCampaignResponse> operation
+              = new CreateMartechCampaign.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -131,8 +131,8 @@ public class Martech {
      * 
      * @return The call builder
      */
-    public CreateMartechList2RequestBuilder createMartechList2() {
-        return new CreateMartechList2RequestBuilder(sdkConfiguration);
+    public CreateMartechListRequestBuilder createMartechList() {
+        return new CreateMartechListRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -142,9 +142,9 @@ public class Martech {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateMartechList2Response createMartechList2(@Nonnull CreateMartechList2Request request) {
-        RequestOperation<CreateMartechList2Request, CreateMartechList2Response> operation
-              = new CreateMartechList2.Sync(sdkConfiguration, _headers);
+    public CreateMartechListResponse createMartechList(@Nonnull CreateMartechListRequest request) {
+        RequestOperation<CreateMartechListRequest, CreateMartechListResponse> operation
+              = new CreateMartechList.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -153,8 +153,8 @@ public class Martech {
      * 
      * @return The call builder
      */
-    public CreateMartechMember2RequestBuilder createMartechMember2() {
-        return new CreateMartechMember2RequestBuilder(sdkConfiguration);
+    public CreateMartechMemberRequestBuilder createMartechMember() {
+        return new CreateMartechMemberRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -164,9 +164,9 @@ public class Martech {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateMartechMember2Response createMartechMember2(@Nonnull CreateMartechMember2Request request) {
-        RequestOperation<CreateMartechMember2Request, CreateMartechMember2Response> operation
-              = new CreateMartechMember2.Sync(sdkConfiguration, _headers);
+    public CreateMartechMemberResponse createMartechMember(@Nonnull CreateMartechMemberRequest request) {
+        RequestOperation<CreateMartechMemberRequest, CreateMartechMemberResponse> operation
+              = new CreateMartechMember.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -175,8 +175,8 @@ public class Martech {
      * 
      * @return The call builder
      */
-    public GetMartechCampaign2RequestBuilder getMartechCampaign2() {
-        return new GetMartechCampaign2RequestBuilder(sdkConfiguration);
+    public GetMartechCampaignRequestBuilder getMartechCampaign() {
+        return new GetMartechCampaignRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -186,9 +186,9 @@ public class Martech {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetMartechCampaign2Response getMartechCampaign2(@Nonnull GetMartechCampaign2Request request) {
-        RequestOperation<GetMartechCampaign2Request, GetMartechCampaign2Response> operation
-              = new GetMartechCampaign2.Sync(sdkConfiguration, _headers);
+    public GetMartechCampaignResponse getMartechCampaign(@Nonnull GetMartechCampaignRequest request) {
+        RequestOperation<GetMartechCampaignRequest, GetMartechCampaignResponse> operation
+              = new GetMartechCampaign.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -197,8 +197,8 @@ public class Martech {
      * 
      * @return The call builder
      */
-    public GetMartechList2RequestBuilder getMartechList2() {
-        return new GetMartechList2RequestBuilder(sdkConfiguration);
+    public GetMartechListRequestBuilder getMartechList() {
+        return new GetMartechListRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -208,9 +208,9 @@ public class Martech {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetMartechList2Response getMartechList2(@Nonnull GetMartechList2Request request) {
-        RequestOperation<GetMartechList2Request, GetMartechList2Response> operation
-              = new GetMartechList2.Sync(sdkConfiguration, _headers);
+    public GetMartechListResponse getMartechList(@Nonnull GetMartechListRequest request) {
+        RequestOperation<GetMartechListRequest, GetMartechListResponse> operation
+              = new GetMartechList.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -219,8 +219,8 @@ public class Martech {
      * 
      * @return The call builder
      */
-    public GetMartechMember2RequestBuilder getMartechMember2() {
-        return new GetMartechMember2RequestBuilder(sdkConfiguration);
+    public GetMartechMemberRequestBuilder getMartechMember() {
+        return new GetMartechMemberRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -230,9 +230,9 @@ public class Martech {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetMartechMember2Response getMartechMember2(@Nonnull GetMartechMember2Request request) {
-        RequestOperation<GetMartechMember2Request, GetMartechMember2Response> operation
-              = new GetMartechMember2.Sync(sdkConfiguration, _headers);
+    public GetMartechMemberResponse getMartechMember(@Nonnull GetMartechMemberRequest request) {
+        RequestOperation<GetMartechMemberRequest, GetMartechMemberResponse> operation
+              = new GetMartechMember.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -241,8 +241,8 @@ public class Martech {
      * 
      * @return The call builder
      */
-    public ListMartechCampaigns2RequestBuilder listMartechCampaigns2() {
-        return new ListMartechCampaigns2RequestBuilder(sdkConfiguration);
+    public ListMartechCampaignsRequestBuilder listMartechCampaigns() {
+        return new ListMartechCampaignsRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -252,9 +252,9 @@ public class Martech {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListMartechCampaigns2Response listMartechCampaigns2(@Nonnull ListMartechCampaigns2Request request) {
-        RequestOperation<ListMartechCampaigns2Request, ListMartechCampaigns2Response> operation
-              = new ListMartechCampaigns2.Sync(sdkConfiguration, _headers);
+    public ListMartechCampaignsResponse listMartechCampaigns(@Nonnull ListMartechCampaignsRequest request) {
+        RequestOperation<ListMartechCampaignsRequest, ListMartechCampaignsResponse> operation
+              = new ListMartechCampaigns.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -263,8 +263,8 @@ public class Martech {
      * 
      * @return The call builder
      */
-    public ListMartechLists2RequestBuilder listMartechLists2() {
-        return new ListMartechLists2RequestBuilder(sdkConfiguration);
+    public ListMartechListsRequestBuilder listMartechLists() {
+        return new ListMartechListsRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -274,9 +274,9 @@ public class Martech {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListMartechLists2Response listMartechLists2(@Nonnull ListMartechLists2Request request) {
-        RequestOperation<ListMartechLists2Request, ListMartechLists2Response> operation
-              = new ListMartechLists2.Sync(sdkConfiguration, _headers);
+    public ListMartechListsResponse listMartechLists(@Nonnull ListMartechListsRequest request) {
+        RequestOperation<ListMartechListsRequest, ListMartechListsResponse> operation
+              = new ListMartechLists.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -285,8 +285,8 @@ public class Martech {
      * 
      * @return The call builder
      */
-    public ListMartechMembers2RequestBuilder listMartechMembers2() {
-        return new ListMartechMembers2RequestBuilder(sdkConfiguration);
+    public ListMartechMembersRequestBuilder listMartechMembers() {
+        return new ListMartechMembersRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -296,9 +296,9 @@ public class Martech {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListMartechMembers2Response listMartechMembers2(@Nonnull ListMartechMembers2Request request) {
-        RequestOperation<ListMartechMembers2Request, ListMartechMembers2Response> operation
-              = new ListMartechMembers2.Sync(sdkConfiguration, _headers);
+    public ListMartechMembersResponse listMartechMembers(@Nonnull ListMartechMembersRequest request) {
+        RequestOperation<ListMartechMembersRequest, ListMartechMembersResponse> operation
+              = new ListMartechMembers.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -307,8 +307,8 @@ public class Martech {
      * 
      * @return The call builder
      */
-    public ListMartechReports2RequestBuilder listMartechReports2() {
-        return new ListMartechReports2RequestBuilder(sdkConfiguration);
+    public ListMartechReportsRequestBuilder listMartechReports() {
+        return new ListMartechReportsRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -318,9 +318,9 @@ public class Martech {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListMartechReports2Response listMartechReports2(@Nonnull ListMartechReports2Request request) {
-        RequestOperation<ListMartechReports2Request, ListMartechReports2Response> operation
-              = new ListMartechReports2.Sync(sdkConfiguration, _headers);
+    public ListMartechReportsResponse listMartechReports(@Nonnull ListMartechReportsRequest request) {
+        RequestOperation<ListMartechReportsRequest, ListMartechReportsResponse> operation
+              = new ListMartechReports.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -329,8 +329,8 @@ public class Martech {
      * 
      * @return The call builder
      */
-    public PatchMartechCampaign2RequestBuilder patchMartechCampaign2() {
-        return new PatchMartechCampaign2RequestBuilder(sdkConfiguration);
+    public PatchMartechCampaignRequestBuilder patchMartechCampaign() {
+        return new PatchMartechCampaignRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -340,9 +340,9 @@ public class Martech {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchMartechCampaign2Response patchMartechCampaign2(@Nonnull PatchMartechCampaign2Request request) {
-        RequestOperation<PatchMartechCampaign2Request, PatchMartechCampaign2Response> operation
-              = new PatchMartechCampaign2.Sync(sdkConfiguration, _headers);
+    public PatchMartechCampaignResponse patchMartechCampaign(@Nonnull PatchMartechCampaignRequest request) {
+        RequestOperation<PatchMartechCampaignRequest, PatchMartechCampaignResponse> operation
+              = new PatchMartechCampaign.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -351,8 +351,8 @@ public class Martech {
      * 
      * @return The call builder
      */
-    public PatchMartechList2RequestBuilder patchMartechList2() {
-        return new PatchMartechList2RequestBuilder(sdkConfiguration);
+    public PatchMartechListRequestBuilder patchMartechList() {
+        return new PatchMartechListRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -362,9 +362,9 @@ public class Martech {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchMartechList2Response patchMartechList2(@Nonnull PatchMartechList2Request request) {
-        RequestOperation<PatchMartechList2Request, PatchMartechList2Response> operation
-              = new PatchMartechList2.Sync(sdkConfiguration, _headers);
+    public PatchMartechListResponse patchMartechList(@Nonnull PatchMartechListRequest request) {
+        RequestOperation<PatchMartechListRequest, PatchMartechListResponse> operation
+              = new PatchMartechList.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -373,8 +373,8 @@ public class Martech {
      * 
      * @return The call builder
      */
-    public PatchMartechMember2RequestBuilder patchMartechMember2() {
-        return new PatchMartechMember2RequestBuilder(sdkConfiguration);
+    public PatchMartechMemberRequestBuilder patchMartechMember() {
+        return new PatchMartechMemberRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -384,9 +384,9 @@ public class Martech {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchMartechMember2Response patchMartechMember2(@Nonnull PatchMartechMember2Request request) {
-        RequestOperation<PatchMartechMember2Request, PatchMartechMember2Response> operation
-              = new PatchMartechMember2.Sync(sdkConfiguration, _headers);
+    public PatchMartechMemberResponse patchMartechMember(@Nonnull PatchMartechMemberRequest request) {
+        RequestOperation<PatchMartechMemberRequest, PatchMartechMemberResponse> operation
+              = new PatchMartechMember.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -395,8 +395,8 @@ public class Martech {
      * 
      * @return The call builder
      */
-    public RemoveMartechCampaign2RequestBuilder removeMartechCampaign2() {
-        return new RemoveMartechCampaign2RequestBuilder(sdkConfiguration);
+    public RemoveMartechCampaignRequestBuilder removeMartechCampaign() {
+        return new RemoveMartechCampaignRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -406,9 +406,9 @@ public class Martech {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveMartechCampaign2Response removeMartechCampaign2(@Nonnull RemoveMartechCampaign2Request request) {
-        RequestOperation<RemoveMartechCampaign2Request, RemoveMartechCampaign2Response> operation
-              = new RemoveMartechCampaign2.Sync(sdkConfiguration, _headers);
+    public RemoveMartechCampaignResponse removeMartechCampaign(@Nonnull RemoveMartechCampaignRequest request) {
+        RequestOperation<RemoveMartechCampaignRequest, RemoveMartechCampaignResponse> operation
+              = new RemoveMartechCampaign.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -417,8 +417,8 @@ public class Martech {
      * 
      * @return The call builder
      */
-    public RemoveMartechList2RequestBuilder removeMartechList2() {
-        return new RemoveMartechList2RequestBuilder(sdkConfiguration);
+    public RemoveMartechListRequestBuilder removeMartechList() {
+        return new RemoveMartechListRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -428,9 +428,9 @@ public class Martech {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveMartechList2Response removeMartechList2(@Nonnull RemoveMartechList2Request request) {
-        RequestOperation<RemoveMartechList2Request, RemoveMartechList2Response> operation
-              = new RemoveMartechList2.Sync(sdkConfiguration, _headers);
+    public RemoveMartechListResponse removeMartechList(@Nonnull RemoveMartechListRequest request) {
+        RequestOperation<RemoveMartechListRequest, RemoveMartechListResponse> operation
+              = new RemoveMartechList.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -439,8 +439,8 @@ public class Martech {
      * 
      * @return The call builder
      */
-    public RemoveMartechMember2RequestBuilder removeMartechMember2() {
-        return new RemoveMartechMember2RequestBuilder(sdkConfiguration);
+    public RemoveMartechMemberRequestBuilder removeMartechMember() {
+        return new RemoveMartechMemberRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -450,9 +450,9 @@ public class Martech {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveMartechMember2Response removeMartechMember2(@Nonnull RemoveMartechMember2Request request) {
-        RequestOperation<RemoveMartechMember2Request, RemoveMartechMember2Response> operation
-              = new RemoveMartechMember2.Sync(sdkConfiguration, _headers);
+    public RemoveMartechMemberResponse removeMartechMember(@Nonnull RemoveMartechMemberRequest request) {
+        RequestOperation<RemoveMartechMemberRequest, RemoveMartechMemberResponse> operation
+              = new RemoveMartechMember.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -461,8 +461,8 @@ public class Martech {
      * 
      * @return The call builder
      */
-    public UpdateMartechCampaign2RequestBuilder updateMartechCampaign2() {
-        return new UpdateMartechCampaign2RequestBuilder(sdkConfiguration);
+    public UpdateMartechCampaignRequestBuilder updateMartechCampaign() {
+        return new UpdateMartechCampaignRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -472,9 +472,9 @@ public class Martech {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateMartechCampaign2Response updateMartechCampaign2(@Nonnull UpdateMartechCampaign2Request request) {
-        RequestOperation<UpdateMartechCampaign2Request, UpdateMartechCampaign2Response> operation
-              = new UpdateMartechCampaign2.Sync(sdkConfiguration, _headers);
+    public UpdateMartechCampaignResponse updateMartechCampaign(@Nonnull UpdateMartechCampaignRequest request) {
+        RequestOperation<UpdateMartechCampaignRequest, UpdateMartechCampaignResponse> operation
+              = new UpdateMartechCampaign.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -483,8 +483,8 @@ public class Martech {
      * 
      * @return The call builder
      */
-    public UpdateMartechList2RequestBuilder updateMartechList2() {
-        return new UpdateMartechList2RequestBuilder(sdkConfiguration);
+    public UpdateMartechListRequestBuilder updateMartechList() {
+        return new UpdateMartechListRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -494,9 +494,9 @@ public class Martech {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateMartechList2Response updateMartechList2(@Nonnull UpdateMartechList2Request request) {
-        RequestOperation<UpdateMartechList2Request, UpdateMartechList2Response> operation
-              = new UpdateMartechList2.Sync(sdkConfiguration, _headers);
+    public UpdateMartechListResponse updateMartechList(@Nonnull UpdateMartechListRequest request) {
+        RequestOperation<UpdateMartechListRequest, UpdateMartechListResponse> operation
+              = new UpdateMartechList.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -505,8 +505,8 @@ public class Martech {
      * 
      * @return The call builder
      */
-    public UpdateMartechMember2RequestBuilder updateMartechMember2() {
-        return new UpdateMartechMember2RequestBuilder(sdkConfiguration);
+    public UpdateMartechMemberRequestBuilder updateMartechMember() {
+        return new UpdateMartechMemberRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -516,9 +516,9 @@ public class Martech {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateMartechMember2Response updateMartechMember2(@Nonnull UpdateMartechMember2Request request) {
-        RequestOperation<UpdateMartechMember2Request, UpdateMartechMember2Response> operation
-              = new UpdateMartechMember2.Sync(sdkConfiguration, _headers);
+    public UpdateMartechMemberResponse updateMartechMember(@Nonnull UpdateMartechMemberRequest request) {
+        RequestOperation<UpdateMartechMemberRequest, UpdateMartechMemberResponse> operation
+              = new UpdateMartechMember.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

@@ -6,30 +6,30 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
-import to.unified.unified_java_sdk.models.operations.CreateAnalyticsProperty2Request;
-import to.unified.unified_java_sdk.models.operations.CreateAnalyticsProperty2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.CreateAnalyticsProperty2Response;
-import to.unified.unified_java_sdk.models.operations.GetAnalyticsProperty2Request;
-import to.unified.unified_java_sdk.models.operations.GetAnalyticsProperty2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.GetAnalyticsProperty2Response;
-import to.unified.unified_java_sdk.models.operations.ListAnalyticsProperties2Request;
-import to.unified.unified_java_sdk.models.operations.ListAnalyticsProperties2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.ListAnalyticsProperties2Response;
-import to.unified.unified_java_sdk.models.operations.PatchAnalyticsProperty2Request;
-import to.unified.unified_java_sdk.models.operations.PatchAnalyticsProperty2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.PatchAnalyticsProperty2Response;
-import to.unified.unified_java_sdk.models.operations.RemoveAnalyticsProperty2Request;
-import to.unified.unified_java_sdk.models.operations.RemoveAnalyticsProperty2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.RemoveAnalyticsProperty2Response;
-import to.unified.unified_java_sdk.models.operations.UpdateAnalyticsProperty2Request;
-import to.unified.unified_java_sdk.models.operations.UpdateAnalyticsProperty2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.UpdateAnalyticsProperty2Response;
-import to.unified.unified_java_sdk.operations.CreateAnalyticsProperty2;
-import to.unified.unified_java_sdk.operations.GetAnalyticsProperty2;
-import to.unified.unified_java_sdk.operations.ListAnalyticsProperties2;
-import to.unified.unified_java_sdk.operations.PatchAnalyticsProperty2;
-import to.unified.unified_java_sdk.operations.RemoveAnalyticsProperty2;
-import to.unified.unified_java_sdk.operations.UpdateAnalyticsProperty2;
+import to.unified.unified_java_sdk.models.operations.CreateAnalyticsPropertyRequest;
+import to.unified.unified_java_sdk.models.operations.CreateAnalyticsPropertyRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.CreateAnalyticsPropertyResponse;
+import to.unified.unified_java_sdk.models.operations.GetAnalyticsPropertyRequest;
+import to.unified.unified_java_sdk.models.operations.GetAnalyticsPropertyRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetAnalyticsPropertyResponse;
+import to.unified.unified_java_sdk.models.operations.ListAnalyticsPropertiesRequest;
+import to.unified.unified_java_sdk.models.operations.ListAnalyticsPropertiesRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListAnalyticsPropertiesResponse;
+import to.unified.unified_java_sdk.models.operations.PatchAnalyticsPropertyRequest;
+import to.unified.unified_java_sdk.models.operations.PatchAnalyticsPropertyRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.PatchAnalyticsPropertyResponse;
+import to.unified.unified_java_sdk.models.operations.RemoveAnalyticsPropertyRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveAnalyticsPropertyRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.RemoveAnalyticsPropertyResponse;
+import to.unified.unified_java_sdk.models.operations.UpdateAnalyticsPropertyRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateAnalyticsPropertyRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.UpdateAnalyticsPropertyResponse;
+import to.unified.unified_java_sdk.operations.CreateAnalyticsProperty;
+import to.unified.unified_java_sdk.operations.GetAnalyticsProperty;
+import to.unified.unified_java_sdk.operations.ListAnalyticsProperties;
+import to.unified.unified_java_sdk.operations.PatchAnalyticsProperty;
+import to.unified.unified_java_sdk.operations.RemoveAnalyticsProperty;
+import to.unified.unified_java_sdk.operations.UpdateAnalyticsProperty;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -57,8 +57,8 @@ public class Property {
      * 
      * @return The call builder
      */
-    public CreateAnalyticsProperty2RequestBuilder createAnalyticsProperty2() {
-        return new CreateAnalyticsProperty2RequestBuilder(sdkConfiguration);
+    public CreateAnalyticsPropertyRequestBuilder createAnalyticsProperty() {
+        return new CreateAnalyticsPropertyRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -68,9 +68,9 @@ public class Property {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateAnalyticsProperty2Response createAnalyticsProperty2(@Nonnull CreateAnalyticsProperty2Request request) {
-        RequestOperation<CreateAnalyticsProperty2Request, CreateAnalyticsProperty2Response> operation
-              = new CreateAnalyticsProperty2.Sync(sdkConfiguration, _headers);
+    public CreateAnalyticsPropertyResponse createAnalyticsProperty(@Nonnull CreateAnalyticsPropertyRequest request) {
+        RequestOperation<CreateAnalyticsPropertyRequest, CreateAnalyticsPropertyResponse> operation
+              = new CreateAnalyticsProperty.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -79,8 +79,8 @@ public class Property {
      * 
      * @return The call builder
      */
-    public GetAnalyticsProperty2RequestBuilder getAnalyticsProperty2() {
-        return new GetAnalyticsProperty2RequestBuilder(sdkConfiguration);
+    public GetAnalyticsPropertyRequestBuilder getAnalyticsProperty() {
+        return new GetAnalyticsPropertyRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -90,9 +90,9 @@ public class Property {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetAnalyticsProperty2Response getAnalyticsProperty2(@Nonnull GetAnalyticsProperty2Request request) {
-        RequestOperation<GetAnalyticsProperty2Request, GetAnalyticsProperty2Response> operation
-              = new GetAnalyticsProperty2.Sync(sdkConfiguration, _headers);
+    public GetAnalyticsPropertyResponse getAnalyticsProperty(@Nonnull GetAnalyticsPropertyRequest request) {
+        RequestOperation<GetAnalyticsPropertyRequest, GetAnalyticsPropertyResponse> operation
+              = new GetAnalyticsProperty.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -101,8 +101,8 @@ public class Property {
      * 
      * @return The call builder
      */
-    public ListAnalyticsProperties2RequestBuilder listAnalyticsProperties2() {
-        return new ListAnalyticsProperties2RequestBuilder(sdkConfiguration);
+    public ListAnalyticsPropertiesRequestBuilder listAnalyticsProperties() {
+        return new ListAnalyticsPropertiesRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -112,9 +112,9 @@ public class Property {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListAnalyticsProperties2Response listAnalyticsProperties2(@Nonnull ListAnalyticsProperties2Request request) {
-        RequestOperation<ListAnalyticsProperties2Request, ListAnalyticsProperties2Response> operation
-              = new ListAnalyticsProperties2.Sync(sdkConfiguration, _headers);
+    public ListAnalyticsPropertiesResponse listAnalyticsProperties(@Nonnull ListAnalyticsPropertiesRequest request) {
+        RequestOperation<ListAnalyticsPropertiesRequest, ListAnalyticsPropertiesResponse> operation
+              = new ListAnalyticsProperties.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -123,8 +123,8 @@ public class Property {
      * 
      * @return The call builder
      */
-    public PatchAnalyticsProperty2RequestBuilder patchAnalyticsProperty2() {
-        return new PatchAnalyticsProperty2RequestBuilder(sdkConfiguration);
+    public PatchAnalyticsPropertyRequestBuilder patchAnalyticsProperty() {
+        return new PatchAnalyticsPropertyRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -134,9 +134,9 @@ public class Property {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchAnalyticsProperty2Response patchAnalyticsProperty2(@Nonnull PatchAnalyticsProperty2Request request) {
-        RequestOperation<PatchAnalyticsProperty2Request, PatchAnalyticsProperty2Response> operation
-              = new PatchAnalyticsProperty2.Sync(sdkConfiguration, _headers);
+    public PatchAnalyticsPropertyResponse patchAnalyticsProperty(@Nonnull PatchAnalyticsPropertyRequest request) {
+        RequestOperation<PatchAnalyticsPropertyRequest, PatchAnalyticsPropertyResponse> operation
+              = new PatchAnalyticsProperty.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -145,8 +145,8 @@ public class Property {
      * 
      * @return The call builder
      */
-    public RemoveAnalyticsProperty2RequestBuilder removeAnalyticsProperty2() {
-        return new RemoveAnalyticsProperty2RequestBuilder(sdkConfiguration);
+    public RemoveAnalyticsPropertyRequestBuilder removeAnalyticsProperty() {
+        return new RemoveAnalyticsPropertyRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -156,9 +156,9 @@ public class Property {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveAnalyticsProperty2Response removeAnalyticsProperty2(@Nonnull RemoveAnalyticsProperty2Request request) {
-        RequestOperation<RemoveAnalyticsProperty2Request, RemoveAnalyticsProperty2Response> operation
-              = new RemoveAnalyticsProperty2.Sync(sdkConfiguration, _headers);
+    public RemoveAnalyticsPropertyResponse removeAnalyticsProperty(@Nonnull RemoveAnalyticsPropertyRequest request) {
+        RequestOperation<RemoveAnalyticsPropertyRequest, RemoveAnalyticsPropertyResponse> operation
+              = new RemoveAnalyticsProperty.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -167,8 +167,8 @@ public class Property {
      * 
      * @return The call builder
      */
-    public UpdateAnalyticsProperty2RequestBuilder updateAnalyticsProperty2() {
-        return new UpdateAnalyticsProperty2RequestBuilder(sdkConfiguration);
+    public UpdateAnalyticsPropertyRequestBuilder updateAnalyticsProperty() {
+        return new UpdateAnalyticsPropertyRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -178,9 +178,9 @@ public class Property {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateAnalyticsProperty2Response updateAnalyticsProperty2(@Nonnull UpdateAnalyticsProperty2Request request) {
-        RequestOperation<UpdateAnalyticsProperty2Request, UpdateAnalyticsProperty2Response> operation
-              = new UpdateAnalyticsProperty2.Sync(sdkConfiguration, _headers);
+    public UpdateAnalyticsPropertyResponse updateAnalyticsProperty(@Nonnull UpdateAnalyticsPropertyRequest request) {
+        RequestOperation<UpdateAnalyticsPropertyRequest, UpdateAnalyticsPropertyResponse> operation
+              = new UpdateAnalyticsProperty.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

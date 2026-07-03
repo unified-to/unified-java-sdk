@@ -6,30 +6,30 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
-import to.unified.unified_java_sdk.models.operations.CreateCommerceReview2Request;
-import to.unified.unified_java_sdk.models.operations.CreateCommerceReview2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.CreateCommerceReview2Response;
-import to.unified.unified_java_sdk.models.operations.GetCommerceReview2Request;
-import to.unified.unified_java_sdk.models.operations.GetCommerceReview2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.GetCommerceReview2Response;
-import to.unified.unified_java_sdk.models.operations.ListCommerceReviews2Request;
-import to.unified.unified_java_sdk.models.operations.ListCommerceReviews2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.ListCommerceReviews2Response;
-import to.unified.unified_java_sdk.models.operations.PatchCommerceReview2Request;
-import to.unified.unified_java_sdk.models.operations.PatchCommerceReview2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.PatchCommerceReview2Response;
-import to.unified.unified_java_sdk.models.operations.RemoveCommerceReview2Request;
-import to.unified.unified_java_sdk.models.operations.RemoveCommerceReview2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.RemoveCommerceReview2Response;
-import to.unified.unified_java_sdk.models.operations.UpdateCommerceReview2Request;
-import to.unified.unified_java_sdk.models.operations.UpdateCommerceReview2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.UpdateCommerceReview2Response;
-import to.unified.unified_java_sdk.operations.CreateCommerceReview2;
-import to.unified.unified_java_sdk.operations.GetCommerceReview2;
-import to.unified.unified_java_sdk.operations.ListCommerceReviews2;
-import to.unified.unified_java_sdk.operations.PatchCommerceReview2;
-import to.unified.unified_java_sdk.operations.RemoveCommerceReview2;
-import to.unified.unified_java_sdk.operations.UpdateCommerceReview2;
+import to.unified.unified_java_sdk.models.operations.CreateCommerceReviewRequest;
+import to.unified.unified_java_sdk.models.operations.CreateCommerceReviewRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.CreateCommerceReviewResponse;
+import to.unified.unified_java_sdk.models.operations.GetCommerceReviewRequest;
+import to.unified.unified_java_sdk.models.operations.GetCommerceReviewRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetCommerceReviewResponse;
+import to.unified.unified_java_sdk.models.operations.ListCommerceReviewsRequest;
+import to.unified.unified_java_sdk.models.operations.ListCommerceReviewsRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListCommerceReviewsResponse;
+import to.unified.unified_java_sdk.models.operations.PatchCommerceReviewRequest;
+import to.unified.unified_java_sdk.models.operations.PatchCommerceReviewRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.PatchCommerceReviewResponse;
+import to.unified.unified_java_sdk.models.operations.RemoveCommerceReviewRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveCommerceReviewRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.RemoveCommerceReviewResponse;
+import to.unified.unified_java_sdk.models.operations.UpdateCommerceReviewRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateCommerceReviewRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.UpdateCommerceReviewResponse;
+import to.unified.unified_java_sdk.operations.CreateCommerceReview;
+import to.unified.unified_java_sdk.operations.GetCommerceReview;
+import to.unified.unified_java_sdk.operations.ListCommerceReviews;
+import to.unified.unified_java_sdk.operations.PatchCommerceReview;
+import to.unified.unified_java_sdk.operations.RemoveCommerceReview;
+import to.unified.unified_java_sdk.operations.UpdateCommerceReview;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -57,8 +57,8 @@ public class Review {
      * 
      * @return The call builder
      */
-    public CreateCommerceReview2RequestBuilder createCommerceReview2() {
-        return new CreateCommerceReview2RequestBuilder(sdkConfiguration);
+    public CreateCommerceReviewRequestBuilder createCommerceReview() {
+        return new CreateCommerceReviewRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -68,9 +68,9 @@ public class Review {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateCommerceReview2Response createCommerceReview2(@Nonnull CreateCommerceReview2Request request) {
-        RequestOperation<CreateCommerceReview2Request, CreateCommerceReview2Response> operation
-              = new CreateCommerceReview2.Sync(sdkConfiguration, _headers);
+    public CreateCommerceReviewResponse createCommerceReview(@Nonnull CreateCommerceReviewRequest request) {
+        RequestOperation<CreateCommerceReviewRequest, CreateCommerceReviewResponse> operation
+              = new CreateCommerceReview.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -79,8 +79,8 @@ public class Review {
      * 
      * @return The call builder
      */
-    public GetCommerceReview2RequestBuilder getCommerceReview2() {
-        return new GetCommerceReview2RequestBuilder(sdkConfiguration);
+    public GetCommerceReviewRequestBuilder getCommerceReview() {
+        return new GetCommerceReviewRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -90,9 +90,9 @@ public class Review {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetCommerceReview2Response getCommerceReview2(@Nonnull GetCommerceReview2Request request) {
-        RequestOperation<GetCommerceReview2Request, GetCommerceReview2Response> operation
-              = new GetCommerceReview2.Sync(sdkConfiguration, _headers);
+    public GetCommerceReviewResponse getCommerceReview(@Nonnull GetCommerceReviewRequest request) {
+        RequestOperation<GetCommerceReviewRequest, GetCommerceReviewResponse> operation
+              = new GetCommerceReview.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -101,8 +101,8 @@ public class Review {
      * 
      * @return The call builder
      */
-    public ListCommerceReviews2RequestBuilder listCommerceReviews2() {
-        return new ListCommerceReviews2RequestBuilder(sdkConfiguration);
+    public ListCommerceReviewsRequestBuilder listCommerceReviews() {
+        return new ListCommerceReviewsRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -112,9 +112,9 @@ public class Review {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListCommerceReviews2Response listCommerceReviews2(@Nonnull ListCommerceReviews2Request request) {
-        RequestOperation<ListCommerceReviews2Request, ListCommerceReviews2Response> operation
-              = new ListCommerceReviews2.Sync(sdkConfiguration, _headers);
+    public ListCommerceReviewsResponse listCommerceReviews(@Nonnull ListCommerceReviewsRequest request) {
+        RequestOperation<ListCommerceReviewsRequest, ListCommerceReviewsResponse> operation
+              = new ListCommerceReviews.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -123,8 +123,8 @@ public class Review {
      * 
      * @return The call builder
      */
-    public PatchCommerceReview2RequestBuilder patchCommerceReview2() {
-        return new PatchCommerceReview2RequestBuilder(sdkConfiguration);
+    public PatchCommerceReviewRequestBuilder patchCommerceReview() {
+        return new PatchCommerceReviewRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -134,9 +134,9 @@ public class Review {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchCommerceReview2Response patchCommerceReview2(@Nonnull PatchCommerceReview2Request request) {
-        RequestOperation<PatchCommerceReview2Request, PatchCommerceReview2Response> operation
-              = new PatchCommerceReview2.Sync(sdkConfiguration, _headers);
+    public PatchCommerceReviewResponse patchCommerceReview(@Nonnull PatchCommerceReviewRequest request) {
+        RequestOperation<PatchCommerceReviewRequest, PatchCommerceReviewResponse> operation
+              = new PatchCommerceReview.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -145,8 +145,8 @@ public class Review {
      * 
      * @return The call builder
      */
-    public RemoveCommerceReview2RequestBuilder removeCommerceReview2() {
-        return new RemoveCommerceReview2RequestBuilder(sdkConfiguration);
+    public RemoveCommerceReviewRequestBuilder removeCommerceReview() {
+        return new RemoveCommerceReviewRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -156,9 +156,9 @@ public class Review {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveCommerceReview2Response removeCommerceReview2(@Nonnull RemoveCommerceReview2Request request) {
-        RequestOperation<RemoveCommerceReview2Request, RemoveCommerceReview2Response> operation
-              = new RemoveCommerceReview2.Sync(sdkConfiguration, _headers);
+    public RemoveCommerceReviewResponse removeCommerceReview(@Nonnull RemoveCommerceReviewRequest request) {
+        RequestOperation<RemoveCommerceReviewRequest, RemoveCommerceReviewResponse> operation
+              = new RemoveCommerceReview.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -167,8 +167,8 @@ public class Review {
      * 
      * @return The call builder
      */
-    public UpdateCommerceReview2RequestBuilder updateCommerceReview2() {
-        return new UpdateCommerceReview2RequestBuilder(sdkConfiguration);
+    public UpdateCommerceReviewRequestBuilder updateCommerceReview() {
+        return new UpdateCommerceReviewRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -178,9 +178,9 @@ public class Review {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateCommerceReview2Response updateCommerceReview2(@Nonnull UpdateCommerceReview2Request request) {
-        RequestOperation<UpdateCommerceReview2Request, UpdateCommerceReview2Response> operation
-              = new UpdateCommerceReview2.Sync(sdkConfiguration, _headers);
+    public UpdateCommerceReviewResponse updateCommerceReview(@Nonnull UpdateCommerceReviewRequest request) {
+        RequestOperation<UpdateCommerceReviewRequest, UpdateCommerceReviewResponse> operation
+              = new UpdateCommerceReview.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

@@ -4,27 +4,27 @@
 
 ### Available Operations
 
-* [createDatastoreDatabase2](#createdatastoredatabase2) - Create a database
-* [getDatastoreDatabase2](#getdatastoredatabase2) - Retrieve a database
-* [listDatastoreDatabases2](#listdatastoredatabases2) - List all databases
-* [patchDatastoreDatabase2](#patchdatastoredatabase2) - Update a database
-* [removeDatastoreDatabase2](#removedatastoredatabase2) - Remove a database
-* [updateDatastoreDatabase2](#updatedatastoredatabase2) - Update a database
+* [createDatastoreDatabase](#createdatastoredatabase) - Create a database
+* [getDatastoreDatabase](#getdatastoredatabase) - Retrieve a database
+* [listDatastoreDatabases](#listdatastoredatabases) - List all databases
+* [patchDatastoreDatabase](#patchdatastoredatabase) - Update a database
+* [removeDatastoreDatabase](#removedatastoredatabase) - Remove a database
+* [updateDatastoreDatabase](#updatedatastoredatabase) - Update a database
 
-## createDatastoreDatabase2
+## createDatastoreDatabase
 
 Create a database
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createDatastoreDatabase2" method="post" path="/datastore/{connection_id}/database" -->
+<!-- UsageSnippet language="java" operationID="createDatastoreDatabase" method="post" path="/datastore/{connection_id}/database" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.CreateDatastoreDatabase2Request;
-import to.unified.unified_java_sdk.models.operations.CreateDatastoreDatabase2Response;
+import to.unified.unified_java_sdk.models.operations.CreateDatastoreDatabaseRequest;
+import to.unified.unified_java_sdk.models.operations.CreateDatastoreDatabaseResponse;
 import to.unified.unified_java_sdk.models.shared.DatastoreDatabase;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -38,13 +38,13 @@ public class Application {
                     .build())
             .build();
 
-        CreateDatastoreDatabase2Request req = CreateDatastoreDatabase2Request.builder()
+        CreateDatastoreDatabaseRequest req = CreateDatastoreDatabaseRequest.builder()
                 .datastoreDatabase(DatastoreDatabase.builder()
                     .build())
                 .connectionId("<id>")
                 .build();
 
-        CreateDatastoreDatabase2Response res = sdk.database().createDatastoreDatabase2()
+        CreateDatastoreDatabaseResponse res = sdk.database().createDatastoreDatabase()
                 .request(req)
                 .call();
 
@@ -57,13 +57,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                     | Type                                                                                          | Required                                                                                      | Description                                                                                   |
-| --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
-| `request`                                                                                     | [CreateDatastoreDatabase2Request](../../models/operations/CreateDatastoreDatabase2Request.md) | :heavy_check_mark:                                                                            | The request object to use for the request.                                                    |
+| Parameter                                                                                   | Type                                                                                        | Required                                                                                    | Description                                                                                 |
+| ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
+| `request`                                                                                   | [CreateDatastoreDatabaseRequest](../../models/operations/CreateDatastoreDatabaseRequest.md) | :heavy_check_mark:                                                                          | The request object to use for the request.                                                  |
 
 ### Response
 
-**[CreateDatastoreDatabase2Response](../../models/operations/CreateDatastoreDatabase2Response.md)**
+**[CreateDatastoreDatabaseResponse](../../models/operations/CreateDatastoreDatabaseResponse.md)**
 
 ### Errors
 
@@ -71,20 +71,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## getDatastoreDatabase2
+## getDatastoreDatabase
 
 Retrieve a database
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="getDatastoreDatabase2" method="get" path="/datastore/{connection_id}/database/{id}" -->
+<!-- UsageSnippet language="java" operationID="getDatastoreDatabase" method="get" path="/datastore/{connection_id}/database/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.GetDatastoreDatabase2Request;
-import to.unified.unified_java_sdk.models.operations.GetDatastoreDatabase2Response;
+import to.unified.unified_java_sdk.models.operations.GetDatastoreDatabaseRequest;
+import to.unified.unified_java_sdk.models.operations.GetDatastoreDatabaseResponse;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -97,12 +97,12 @@ public class Application {
                     .build())
             .build();
 
-        GetDatastoreDatabase2Request req = GetDatastoreDatabase2Request.builder()
+        GetDatastoreDatabaseRequest req = GetDatastoreDatabaseRequest.builder()
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        GetDatastoreDatabase2Response res = sdk.database().getDatastoreDatabase2()
+        GetDatastoreDatabaseResponse res = sdk.database().getDatastoreDatabase()
                 .request(req)
                 .call();
 
@@ -115,13 +115,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
-| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
-| `request`                                                                               | [GetDatastoreDatabase2Request](../../models/operations/GetDatastoreDatabase2Request.md) | :heavy_check_mark:                                                                      | The request object to use for the request.                                              |
+| Parameter                                                                             | Type                                                                                  | Required                                                                              | Description                                                                           |
+| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| `request`                                                                             | [GetDatastoreDatabaseRequest](../../models/operations/GetDatastoreDatabaseRequest.md) | :heavy_check_mark:                                                                    | The request object to use for the request.                                            |
 
 ### Response
 
-**[GetDatastoreDatabase2Response](../../models/operations/GetDatastoreDatabase2Response.md)**
+**[GetDatastoreDatabaseResponse](../../models/operations/GetDatastoreDatabaseResponse.md)**
 
 ### Errors
 
@@ -129,20 +129,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## listDatastoreDatabases2
+## listDatastoreDatabases
 
 List all databases
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="listDatastoreDatabases2" method="get" path="/datastore/{connection_id}/database" -->
+<!-- UsageSnippet language="java" operationID="listDatastoreDatabases" method="get" path="/datastore/{connection_id}/database" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.ListDatastoreDatabases2Request;
-import to.unified.unified_java_sdk.models.operations.ListDatastoreDatabases2Response;
+import to.unified.unified_java_sdk.models.operations.ListDatastoreDatabasesRequest;
+import to.unified.unified_java_sdk.models.operations.ListDatastoreDatabasesResponse;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -155,11 +155,11 @@ public class Application {
                     .build())
             .build();
 
-        ListDatastoreDatabases2Request req = ListDatastoreDatabases2Request.builder()
+        ListDatastoreDatabasesRequest req = ListDatastoreDatabasesRequest.builder()
                 .connectionId("<id>")
                 .build();
 
-        ListDatastoreDatabases2Response res = sdk.database().listDatastoreDatabases2()
+        ListDatastoreDatabasesResponse res = sdk.database().listDatastoreDatabases()
                 .request(req)
                 .call();
 
@@ -172,13 +172,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                   | Type                                                                                        | Required                                                                                    | Description                                                                                 |
-| ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
-| `request`                                                                                   | [ListDatastoreDatabases2Request](../../models/operations/ListDatastoreDatabases2Request.md) | :heavy_check_mark:                                                                          | The request object to use for the request.                                                  |
+| Parameter                                                                                 | Type                                                                                      | Required                                                                                  | Description                                                                               |
+| ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
+| `request`                                                                                 | [ListDatastoreDatabasesRequest](../../models/operations/ListDatastoreDatabasesRequest.md) | :heavy_check_mark:                                                                        | The request object to use for the request.                                                |
 
 ### Response
 
-**[ListDatastoreDatabases2Response](../../models/operations/ListDatastoreDatabases2Response.md)**
+**[ListDatastoreDatabasesResponse](../../models/operations/ListDatastoreDatabasesResponse.md)**
 
 ### Errors
 
@@ -186,20 +186,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## patchDatastoreDatabase2
+## patchDatastoreDatabase
 
 Update a database
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchDatastoreDatabase2" method="patch" path="/datastore/{connection_id}/database/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchDatastoreDatabase" method="patch" path="/datastore/{connection_id}/database/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.PatchDatastoreDatabase2Request;
-import to.unified.unified_java_sdk.models.operations.PatchDatastoreDatabase2Response;
+import to.unified.unified_java_sdk.models.operations.PatchDatastoreDatabaseRequest;
+import to.unified.unified_java_sdk.models.operations.PatchDatastoreDatabaseResponse;
 import to.unified.unified_java_sdk.models.shared.DatastoreDatabase;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -213,14 +213,14 @@ public class Application {
                     .build())
             .build();
 
-        PatchDatastoreDatabase2Request req = PatchDatastoreDatabase2Request.builder()
+        PatchDatastoreDatabaseRequest req = PatchDatastoreDatabaseRequest.builder()
                 .datastoreDatabase(DatastoreDatabase.builder()
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        PatchDatastoreDatabase2Response res = sdk.database().patchDatastoreDatabase2()
+        PatchDatastoreDatabaseResponse res = sdk.database().patchDatastoreDatabase()
                 .request(req)
                 .call();
 
@@ -233,13 +233,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                   | Type                                                                                        | Required                                                                                    | Description                                                                                 |
-| ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
-| `request`                                                                                   | [PatchDatastoreDatabase2Request](../../models/operations/PatchDatastoreDatabase2Request.md) | :heavy_check_mark:                                                                          | The request object to use for the request.                                                  |
+| Parameter                                                                                 | Type                                                                                      | Required                                                                                  | Description                                                                               |
+| ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
+| `request`                                                                                 | [PatchDatastoreDatabaseRequest](../../models/operations/PatchDatastoreDatabaseRequest.md) | :heavy_check_mark:                                                                        | The request object to use for the request.                                                |
 
 ### Response
 
-**[PatchDatastoreDatabase2Response](../../models/operations/PatchDatastoreDatabase2Response.md)**
+**[PatchDatastoreDatabaseResponse](../../models/operations/PatchDatastoreDatabaseResponse.md)**
 
 ### Errors
 
@@ -247,20 +247,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## removeDatastoreDatabase2
+## removeDatastoreDatabase
 
 Remove a database
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="removeDatastoreDatabase2" method="delete" path="/datastore/{connection_id}/database/{id}" -->
+<!-- UsageSnippet language="java" operationID="removeDatastoreDatabase" method="delete" path="/datastore/{connection_id}/database/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.RemoveDatastoreDatabase2Request;
-import to.unified.unified_java_sdk.models.operations.RemoveDatastoreDatabase2Response;
+import to.unified.unified_java_sdk.models.operations.RemoveDatastoreDatabaseRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveDatastoreDatabaseResponse;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -273,12 +273,12 @@ public class Application {
                     .build())
             .build();
 
-        RemoveDatastoreDatabase2Request req = RemoveDatastoreDatabase2Request.builder()
+        RemoveDatastoreDatabaseRequest req = RemoveDatastoreDatabaseRequest.builder()
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        RemoveDatastoreDatabase2Response res = sdk.database().removeDatastoreDatabase2()
+        RemoveDatastoreDatabaseResponse res = sdk.database().removeDatastoreDatabase()
                 .request(req)
                 .call();
 
@@ -289,13 +289,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                     | Type                                                                                          | Required                                                                                      | Description                                                                                   |
-| --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
-| `request`                                                                                     | [RemoveDatastoreDatabase2Request](../../models/operations/RemoveDatastoreDatabase2Request.md) | :heavy_check_mark:                                                                            | The request object to use for the request.                                                    |
+| Parameter                                                                                   | Type                                                                                        | Required                                                                                    | Description                                                                                 |
+| ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
+| `request`                                                                                   | [RemoveDatastoreDatabaseRequest](../../models/operations/RemoveDatastoreDatabaseRequest.md) | :heavy_check_mark:                                                                          | The request object to use for the request.                                                  |
 
 ### Response
 
-**[RemoveDatastoreDatabase2Response](../../models/operations/RemoveDatastoreDatabase2Response.md)**
+**[RemoveDatastoreDatabaseResponse](../../models/operations/RemoveDatastoreDatabaseResponse.md)**
 
 ### Errors
 
@@ -303,20 +303,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## updateDatastoreDatabase2
+## updateDatastoreDatabase
 
 Update a database
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateDatastoreDatabase2" method="put" path="/datastore/{connection_id}/database/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateDatastoreDatabase" method="put" path="/datastore/{connection_id}/database/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.UpdateDatastoreDatabase2Request;
-import to.unified.unified_java_sdk.models.operations.UpdateDatastoreDatabase2Response;
+import to.unified.unified_java_sdk.models.operations.UpdateDatastoreDatabaseRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateDatastoreDatabaseResponse;
 import to.unified.unified_java_sdk.models.shared.DatastoreDatabase;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -330,14 +330,14 @@ public class Application {
                     .build())
             .build();
 
-        UpdateDatastoreDatabase2Request req = UpdateDatastoreDatabase2Request.builder()
+        UpdateDatastoreDatabaseRequest req = UpdateDatastoreDatabaseRequest.builder()
                 .datastoreDatabase(DatastoreDatabase.builder()
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        UpdateDatastoreDatabase2Response res = sdk.database().updateDatastoreDatabase2()
+        UpdateDatastoreDatabaseResponse res = sdk.database().updateDatastoreDatabase()
                 .request(req)
                 .call();
 
@@ -350,13 +350,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                     | Type                                                                                          | Required                                                                                      | Description                                                                                   |
-| --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
-| `request`                                                                                     | [UpdateDatastoreDatabase2Request](../../models/operations/UpdateDatastoreDatabase2Request.md) | :heavy_check_mark:                                                                            | The request object to use for the request.                                                    |
+| Parameter                                                                                   | Type                                                                                        | Required                                                                                    | Description                                                                                 |
+| ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
+| `request`                                                                                   | [UpdateDatastoreDatabaseRequest](../../models/operations/UpdateDatastoreDatabaseRequest.md) | :heavy_check_mark:                                                                          | The request object to use for the request.                                                  |
 
 ### Response
 
-**[UpdateDatastoreDatabase2Response](../../models/operations/UpdateDatastoreDatabase2Response.md)**
+**[UpdateDatastoreDatabaseResponse](../../models/operations/UpdateDatastoreDatabaseResponse.md)**
 
 ### Errors
 

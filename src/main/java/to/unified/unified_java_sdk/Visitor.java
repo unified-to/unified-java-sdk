@@ -6,30 +6,30 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
-import to.unified.unified_java_sdk.models.operations.CreateAnalyticsVisitor2Request;
-import to.unified.unified_java_sdk.models.operations.CreateAnalyticsVisitor2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.CreateAnalyticsVisitor2Response;
-import to.unified.unified_java_sdk.models.operations.GetAnalyticsVisitor2Request;
-import to.unified.unified_java_sdk.models.operations.GetAnalyticsVisitor2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.GetAnalyticsVisitor2Response;
-import to.unified.unified_java_sdk.models.operations.ListAnalyticsVisitors2Request;
-import to.unified.unified_java_sdk.models.operations.ListAnalyticsVisitors2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.ListAnalyticsVisitors2Response;
-import to.unified.unified_java_sdk.models.operations.PatchAnalyticsVisitor2Request;
-import to.unified.unified_java_sdk.models.operations.PatchAnalyticsVisitor2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.PatchAnalyticsVisitor2Response;
-import to.unified.unified_java_sdk.models.operations.RemoveAnalyticsVisitor2Request;
-import to.unified.unified_java_sdk.models.operations.RemoveAnalyticsVisitor2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.RemoveAnalyticsVisitor2Response;
-import to.unified.unified_java_sdk.models.operations.UpdateAnalyticsVisitor2Request;
-import to.unified.unified_java_sdk.models.operations.UpdateAnalyticsVisitor2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.UpdateAnalyticsVisitor2Response;
-import to.unified.unified_java_sdk.operations.CreateAnalyticsVisitor2;
-import to.unified.unified_java_sdk.operations.GetAnalyticsVisitor2;
-import to.unified.unified_java_sdk.operations.ListAnalyticsVisitors2;
-import to.unified.unified_java_sdk.operations.PatchAnalyticsVisitor2;
-import to.unified.unified_java_sdk.operations.RemoveAnalyticsVisitor2;
-import to.unified.unified_java_sdk.operations.UpdateAnalyticsVisitor2;
+import to.unified.unified_java_sdk.models.operations.CreateAnalyticsVisitorRequest;
+import to.unified.unified_java_sdk.models.operations.CreateAnalyticsVisitorRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.CreateAnalyticsVisitorResponse;
+import to.unified.unified_java_sdk.models.operations.GetAnalyticsVisitorRequest;
+import to.unified.unified_java_sdk.models.operations.GetAnalyticsVisitorRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetAnalyticsVisitorResponse;
+import to.unified.unified_java_sdk.models.operations.ListAnalyticsVisitorsRequest;
+import to.unified.unified_java_sdk.models.operations.ListAnalyticsVisitorsRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListAnalyticsVisitorsResponse;
+import to.unified.unified_java_sdk.models.operations.PatchAnalyticsVisitorRequest;
+import to.unified.unified_java_sdk.models.operations.PatchAnalyticsVisitorRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.PatchAnalyticsVisitorResponse;
+import to.unified.unified_java_sdk.models.operations.RemoveAnalyticsVisitorRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveAnalyticsVisitorRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.RemoveAnalyticsVisitorResponse;
+import to.unified.unified_java_sdk.models.operations.UpdateAnalyticsVisitorRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateAnalyticsVisitorRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.UpdateAnalyticsVisitorResponse;
+import to.unified.unified_java_sdk.operations.CreateAnalyticsVisitor;
+import to.unified.unified_java_sdk.operations.GetAnalyticsVisitor;
+import to.unified.unified_java_sdk.operations.ListAnalyticsVisitors;
+import to.unified.unified_java_sdk.operations.PatchAnalyticsVisitor;
+import to.unified.unified_java_sdk.operations.RemoveAnalyticsVisitor;
+import to.unified.unified_java_sdk.operations.UpdateAnalyticsVisitor;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -57,8 +57,8 @@ public class Visitor {
      * 
      * @return The call builder
      */
-    public CreateAnalyticsVisitor2RequestBuilder createAnalyticsVisitor2() {
-        return new CreateAnalyticsVisitor2RequestBuilder(sdkConfiguration);
+    public CreateAnalyticsVisitorRequestBuilder createAnalyticsVisitor() {
+        return new CreateAnalyticsVisitorRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -68,9 +68,9 @@ public class Visitor {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateAnalyticsVisitor2Response createAnalyticsVisitor2(@Nonnull CreateAnalyticsVisitor2Request request) {
-        RequestOperation<CreateAnalyticsVisitor2Request, CreateAnalyticsVisitor2Response> operation
-              = new CreateAnalyticsVisitor2.Sync(sdkConfiguration, _headers);
+    public CreateAnalyticsVisitorResponse createAnalyticsVisitor(@Nonnull CreateAnalyticsVisitorRequest request) {
+        RequestOperation<CreateAnalyticsVisitorRequest, CreateAnalyticsVisitorResponse> operation
+              = new CreateAnalyticsVisitor.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -79,8 +79,8 @@ public class Visitor {
      * 
      * @return The call builder
      */
-    public GetAnalyticsVisitor2RequestBuilder getAnalyticsVisitor2() {
-        return new GetAnalyticsVisitor2RequestBuilder(sdkConfiguration);
+    public GetAnalyticsVisitorRequestBuilder getAnalyticsVisitor() {
+        return new GetAnalyticsVisitorRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -90,9 +90,9 @@ public class Visitor {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetAnalyticsVisitor2Response getAnalyticsVisitor2(@Nonnull GetAnalyticsVisitor2Request request) {
-        RequestOperation<GetAnalyticsVisitor2Request, GetAnalyticsVisitor2Response> operation
-              = new GetAnalyticsVisitor2.Sync(sdkConfiguration, _headers);
+    public GetAnalyticsVisitorResponse getAnalyticsVisitor(@Nonnull GetAnalyticsVisitorRequest request) {
+        RequestOperation<GetAnalyticsVisitorRequest, GetAnalyticsVisitorResponse> operation
+              = new GetAnalyticsVisitor.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -101,8 +101,8 @@ public class Visitor {
      * 
      * @return The call builder
      */
-    public ListAnalyticsVisitors2RequestBuilder listAnalyticsVisitors2() {
-        return new ListAnalyticsVisitors2RequestBuilder(sdkConfiguration);
+    public ListAnalyticsVisitorsRequestBuilder listAnalyticsVisitors() {
+        return new ListAnalyticsVisitorsRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -112,9 +112,9 @@ public class Visitor {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListAnalyticsVisitors2Response listAnalyticsVisitors2(@Nonnull ListAnalyticsVisitors2Request request) {
-        RequestOperation<ListAnalyticsVisitors2Request, ListAnalyticsVisitors2Response> operation
-              = new ListAnalyticsVisitors2.Sync(sdkConfiguration, _headers);
+    public ListAnalyticsVisitorsResponse listAnalyticsVisitors(@Nonnull ListAnalyticsVisitorsRequest request) {
+        RequestOperation<ListAnalyticsVisitorsRequest, ListAnalyticsVisitorsResponse> operation
+              = new ListAnalyticsVisitors.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -123,8 +123,8 @@ public class Visitor {
      * 
      * @return The call builder
      */
-    public PatchAnalyticsVisitor2RequestBuilder patchAnalyticsVisitor2() {
-        return new PatchAnalyticsVisitor2RequestBuilder(sdkConfiguration);
+    public PatchAnalyticsVisitorRequestBuilder patchAnalyticsVisitor() {
+        return new PatchAnalyticsVisitorRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -134,9 +134,9 @@ public class Visitor {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchAnalyticsVisitor2Response patchAnalyticsVisitor2(@Nonnull PatchAnalyticsVisitor2Request request) {
-        RequestOperation<PatchAnalyticsVisitor2Request, PatchAnalyticsVisitor2Response> operation
-              = new PatchAnalyticsVisitor2.Sync(sdkConfiguration, _headers);
+    public PatchAnalyticsVisitorResponse patchAnalyticsVisitor(@Nonnull PatchAnalyticsVisitorRequest request) {
+        RequestOperation<PatchAnalyticsVisitorRequest, PatchAnalyticsVisitorResponse> operation
+              = new PatchAnalyticsVisitor.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -145,8 +145,8 @@ public class Visitor {
      * 
      * @return The call builder
      */
-    public RemoveAnalyticsVisitor2RequestBuilder removeAnalyticsVisitor2() {
-        return new RemoveAnalyticsVisitor2RequestBuilder(sdkConfiguration);
+    public RemoveAnalyticsVisitorRequestBuilder removeAnalyticsVisitor() {
+        return new RemoveAnalyticsVisitorRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -156,9 +156,9 @@ public class Visitor {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveAnalyticsVisitor2Response removeAnalyticsVisitor2(@Nonnull RemoveAnalyticsVisitor2Request request) {
-        RequestOperation<RemoveAnalyticsVisitor2Request, RemoveAnalyticsVisitor2Response> operation
-              = new RemoveAnalyticsVisitor2.Sync(sdkConfiguration, _headers);
+    public RemoveAnalyticsVisitorResponse removeAnalyticsVisitor(@Nonnull RemoveAnalyticsVisitorRequest request) {
+        RequestOperation<RemoveAnalyticsVisitorRequest, RemoveAnalyticsVisitorResponse> operation
+              = new RemoveAnalyticsVisitor.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -167,8 +167,8 @@ public class Visitor {
      * 
      * @return The call builder
      */
-    public UpdateAnalyticsVisitor2RequestBuilder updateAnalyticsVisitor2() {
-        return new UpdateAnalyticsVisitor2RequestBuilder(sdkConfiguration);
+    public UpdateAnalyticsVisitorRequestBuilder updateAnalyticsVisitor() {
+        return new UpdateAnalyticsVisitorRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -178,9 +178,9 @@ public class Visitor {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateAnalyticsVisitor2Response updateAnalyticsVisitor2(@Nonnull UpdateAnalyticsVisitor2Request request) {
-        RequestOperation<UpdateAnalyticsVisitor2Request, UpdateAnalyticsVisitor2Response> operation
-              = new UpdateAnalyticsVisitor2.Sync(sdkConfiguration, _headers);
+    public UpdateAnalyticsVisitorResponse updateAnalyticsVisitor(@Nonnull UpdateAnalyticsVisitorRequest request) {
+        RequestOperation<UpdateAnalyticsVisitorRequest, UpdateAnalyticsVisitorResponse> operation
+              = new UpdateAnalyticsVisitor.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

@@ -6,14 +6,14 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
-import to.unified.unified_java_sdk.models.operations.GetTaskChange2Request;
-import to.unified.unified_java_sdk.models.operations.GetTaskChange2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.GetTaskChange2Response;
-import to.unified.unified_java_sdk.models.operations.ListTaskChanges2Request;
-import to.unified.unified_java_sdk.models.operations.ListTaskChanges2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.ListTaskChanges2Response;
-import to.unified.unified_java_sdk.operations.GetTaskChange2;
-import to.unified.unified_java_sdk.operations.ListTaskChanges2;
+import to.unified.unified_java_sdk.models.operations.GetTaskChangeRequest;
+import to.unified.unified_java_sdk.models.operations.GetTaskChangeRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetTaskChangeResponse;
+import to.unified.unified_java_sdk.models.operations.ListTaskChangesRequest;
+import to.unified.unified_java_sdk.models.operations.ListTaskChangesRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListTaskChangesResponse;
+import to.unified.unified_java_sdk.operations.GetTaskChange;
+import to.unified.unified_java_sdk.operations.ListTaskChanges;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -41,8 +41,8 @@ public class Change {
      * 
      * @return The call builder
      */
-    public GetTaskChange2RequestBuilder getTaskChange2() {
-        return new GetTaskChange2RequestBuilder(sdkConfiguration);
+    public GetTaskChangeRequestBuilder getTaskChange() {
+        return new GetTaskChangeRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -52,9 +52,9 @@ public class Change {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetTaskChange2Response getTaskChange2(@Nonnull GetTaskChange2Request request) {
-        RequestOperation<GetTaskChange2Request, GetTaskChange2Response> operation
-              = new GetTaskChange2.Sync(sdkConfiguration, _headers);
+    public GetTaskChangeResponse getTaskChange(@Nonnull GetTaskChangeRequest request) {
+        RequestOperation<GetTaskChangeRequest, GetTaskChangeResponse> operation
+              = new GetTaskChange.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -63,8 +63,8 @@ public class Change {
      * 
      * @return The call builder
      */
-    public ListTaskChanges2RequestBuilder listTaskChanges2() {
-        return new ListTaskChanges2RequestBuilder(sdkConfiguration);
+    public ListTaskChangesRequestBuilder listTaskChanges() {
+        return new ListTaskChangesRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -74,9 +74,9 @@ public class Change {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListTaskChanges2Response listTaskChanges2(@Nonnull ListTaskChanges2Request request) {
-        RequestOperation<ListTaskChanges2Request, ListTaskChanges2Response> operation
-              = new ListTaskChanges2.Sync(sdkConfiguration, _headers);
+    public ListTaskChangesResponse listTaskChanges(@Nonnull ListTaskChangesRequest request) {
+        RequestOperation<ListTaskChangesRequest, ListTaskChangesResponse> operation
+              = new ListTaskChanges.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

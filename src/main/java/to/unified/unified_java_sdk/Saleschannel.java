@@ -6,30 +6,30 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
-import to.unified.unified_java_sdk.models.operations.CreateCommerceSaleschannel2Request;
-import to.unified.unified_java_sdk.models.operations.CreateCommerceSaleschannel2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.CreateCommerceSaleschannel2Response;
-import to.unified.unified_java_sdk.models.operations.GetCommerceSaleschannel2Request;
-import to.unified.unified_java_sdk.models.operations.GetCommerceSaleschannel2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.GetCommerceSaleschannel2Response;
-import to.unified.unified_java_sdk.models.operations.ListCommerceSaleschannels2Request;
-import to.unified.unified_java_sdk.models.operations.ListCommerceSaleschannels2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.ListCommerceSaleschannels2Response;
-import to.unified.unified_java_sdk.models.operations.PatchCommerceSaleschannel2Request;
-import to.unified.unified_java_sdk.models.operations.PatchCommerceSaleschannel2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.PatchCommerceSaleschannel2Response;
-import to.unified.unified_java_sdk.models.operations.RemoveCommerceSaleschannel2Request;
-import to.unified.unified_java_sdk.models.operations.RemoveCommerceSaleschannel2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.RemoveCommerceSaleschannel2Response;
-import to.unified.unified_java_sdk.models.operations.UpdateCommerceSaleschannel2Request;
-import to.unified.unified_java_sdk.models.operations.UpdateCommerceSaleschannel2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.UpdateCommerceSaleschannel2Response;
-import to.unified.unified_java_sdk.operations.CreateCommerceSaleschannel2;
-import to.unified.unified_java_sdk.operations.GetCommerceSaleschannel2;
-import to.unified.unified_java_sdk.operations.ListCommerceSaleschannels2;
-import to.unified.unified_java_sdk.operations.PatchCommerceSaleschannel2;
-import to.unified.unified_java_sdk.operations.RemoveCommerceSaleschannel2;
-import to.unified.unified_java_sdk.operations.UpdateCommerceSaleschannel2;
+import to.unified.unified_java_sdk.models.operations.CreateCommerceSaleschannelRequest;
+import to.unified.unified_java_sdk.models.operations.CreateCommerceSaleschannelRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.CreateCommerceSaleschannelResponse;
+import to.unified.unified_java_sdk.models.operations.GetCommerceSaleschannelRequest;
+import to.unified.unified_java_sdk.models.operations.GetCommerceSaleschannelRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetCommerceSaleschannelResponse;
+import to.unified.unified_java_sdk.models.operations.ListCommerceSaleschannelsRequest;
+import to.unified.unified_java_sdk.models.operations.ListCommerceSaleschannelsRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListCommerceSaleschannelsResponse;
+import to.unified.unified_java_sdk.models.operations.PatchCommerceSaleschannelRequest;
+import to.unified.unified_java_sdk.models.operations.PatchCommerceSaleschannelRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.PatchCommerceSaleschannelResponse;
+import to.unified.unified_java_sdk.models.operations.RemoveCommerceSaleschannelRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveCommerceSaleschannelRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.RemoveCommerceSaleschannelResponse;
+import to.unified.unified_java_sdk.models.operations.UpdateCommerceSaleschannelRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateCommerceSaleschannelRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.UpdateCommerceSaleschannelResponse;
+import to.unified.unified_java_sdk.operations.CreateCommerceSaleschannel;
+import to.unified.unified_java_sdk.operations.GetCommerceSaleschannel;
+import to.unified.unified_java_sdk.operations.ListCommerceSaleschannels;
+import to.unified.unified_java_sdk.operations.PatchCommerceSaleschannel;
+import to.unified.unified_java_sdk.operations.RemoveCommerceSaleschannel;
+import to.unified.unified_java_sdk.operations.UpdateCommerceSaleschannel;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -57,8 +57,8 @@ public class Saleschannel {
      * 
      * @return The call builder
      */
-    public CreateCommerceSaleschannel2RequestBuilder createCommerceSaleschannel2() {
-        return new CreateCommerceSaleschannel2RequestBuilder(sdkConfiguration);
+    public CreateCommerceSaleschannelRequestBuilder createCommerceSaleschannel() {
+        return new CreateCommerceSaleschannelRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -68,9 +68,9 @@ public class Saleschannel {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateCommerceSaleschannel2Response createCommerceSaleschannel2(@Nonnull CreateCommerceSaleschannel2Request request) {
-        RequestOperation<CreateCommerceSaleschannel2Request, CreateCommerceSaleschannel2Response> operation
-              = new CreateCommerceSaleschannel2.Sync(sdkConfiguration, _headers);
+    public CreateCommerceSaleschannelResponse createCommerceSaleschannel(@Nonnull CreateCommerceSaleschannelRequest request) {
+        RequestOperation<CreateCommerceSaleschannelRequest, CreateCommerceSaleschannelResponse> operation
+              = new CreateCommerceSaleschannel.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -79,8 +79,8 @@ public class Saleschannel {
      * 
      * @return The call builder
      */
-    public GetCommerceSaleschannel2RequestBuilder getCommerceSaleschannel2() {
-        return new GetCommerceSaleschannel2RequestBuilder(sdkConfiguration);
+    public GetCommerceSaleschannelRequestBuilder getCommerceSaleschannel() {
+        return new GetCommerceSaleschannelRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -90,9 +90,9 @@ public class Saleschannel {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetCommerceSaleschannel2Response getCommerceSaleschannel2(@Nonnull GetCommerceSaleschannel2Request request) {
-        RequestOperation<GetCommerceSaleschannel2Request, GetCommerceSaleschannel2Response> operation
-              = new GetCommerceSaleschannel2.Sync(sdkConfiguration, _headers);
+    public GetCommerceSaleschannelResponse getCommerceSaleschannel(@Nonnull GetCommerceSaleschannelRequest request) {
+        RequestOperation<GetCommerceSaleschannelRequest, GetCommerceSaleschannelResponse> operation
+              = new GetCommerceSaleschannel.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -101,8 +101,8 @@ public class Saleschannel {
      * 
      * @return The call builder
      */
-    public ListCommerceSaleschannels2RequestBuilder listCommerceSaleschannels2() {
-        return new ListCommerceSaleschannels2RequestBuilder(sdkConfiguration);
+    public ListCommerceSaleschannelsRequestBuilder listCommerceSaleschannels() {
+        return new ListCommerceSaleschannelsRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -112,9 +112,9 @@ public class Saleschannel {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListCommerceSaleschannels2Response listCommerceSaleschannels2(@Nonnull ListCommerceSaleschannels2Request request) {
-        RequestOperation<ListCommerceSaleschannels2Request, ListCommerceSaleschannels2Response> operation
-              = new ListCommerceSaleschannels2.Sync(sdkConfiguration, _headers);
+    public ListCommerceSaleschannelsResponse listCommerceSaleschannels(@Nonnull ListCommerceSaleschannelsRequest request) {
+        RequestOperation<ListCommerceSaleschannelsRequest, ListCommerceSaleschannelsResponse> operation
+              = new ListCommerceSaleschannels.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -123,8 +123,8 @@ public class Saleschannel {
      * 
      * @return The call builder
      */
-    public PatchCommerceSaleschannel2RequestBuilder patchCommerceSaleschannel2() {
-        return new PatchCommerceSaleschannel2RequestBuilder(sdkConfiguration);
+    public PatchCommerceSaleschannelRequestBuilder patchCommerceSaleschannel() {
+        return new PatchCommerceSaleschannelRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -134,9 +134,9 @@ public class Saleschannel {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchCommerceSaleschannel2Response patchCommerceSaleschannel2(@Nonnull PatchCommerceSaleschannel2Request request) {
-        RequestOperation<PatchCommerceSaleschannel2Request, PatchCommerceSaleschannel2Response> operation
-              = new PatchCommerceSaleschannel2.Sync(sdkConfiguration, _headers);
+    public PatchCommerceSaleschannelResponse patchCommerceSaleschannel(@Nonnull PatchCommerceSaleschannelRequest request) {
+        RequestOperation<PatchCommerceSaleschannelRequest, PatchCommerceSaleschannelResponse> operation
+              = new PatchCommerceSaleschannel.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -145,8 +145,8 @@ public class Saleschannel {
      * 
      * @return The call builder
      */
-    public RemoveCommerceSaleschannel2RequestBuilder removeCommerceSaleschannel2() {
-        return new RemoveCommerceSaleschannel2RequestBuilder(sdkConfiguration);
+    public RemoveCommerceSaleschannelRequestBuilder removeCommerceSaleschannel() {
+        return new RemoveCommerceSaleschannelRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -156,9 +156,9 @@ public class Saleschannel {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveCommerceSaleschannel2Response removeCommerceSaleschannel2(@Nonnull RemoveCommerceSaleschannel2Request request) {
-        RequestOperation<RemoveCommerceSaleschannel2Request, RemoveCommerceSaleschannel2Response> operation
-              = new RemoveCommerceSaleschannel2.Sync(sdkConfiguration, _headers);
+    public RemoveCommerceSaleschannelResponse removeCommerceSaleschannel(@Nonnull RemoveCommerceSaleschannelRequest request) {
+        RequestOperation<RemoveCommerceSaleschannelRequest, RemoveCommerceSaleschannelResponse> operation
+              = new RemoveCommerceSaleschannel.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -167,8 +167,8 @@ public class Saleschannel {
      * 
      * @return The call builder
      */
-    public UpdateCommerceSaleschannel2RequestBuilder updateCommerceSaleschannel2() {
-        return new UpdateCommerceSaleschannel2RequestBuilder(sdkConfiguration);
+    public UpdateCommerceSaleschannelRequestBuilder updateCommerceSaleschannel() {
+        return new UpdateCommerceSaleschannelRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -178,9 +178,9 @@ public class Saleschannel {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateCommerceSaleschannel2Response updateCommerceSaleschannel2(@Nonnull UpdateCommerceSaleschannel2Request request) {
-        RequestOperation<UpdateCommerceSaleschannel2Request, UpdateCommerceSaleschannel2Response> operation
-              = new UpdateCommerceSaleschannel2.Sync(sdkConfiguration, _headers);
+    public UpdateCommerceSaleschannelResponse updateCommerceSaleschannel(@Nonnull UpdateCommerceSaleschannelRequest request) {
+        RequestOperation<UpdateCommerceSaleschannelRequest, UpdateCommerceSaleschannelResponse> operation
+              = new UpdateCommerceSaleschannel.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

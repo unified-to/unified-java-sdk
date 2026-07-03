@@ -4,23 +4,23 @@
 
 ### Available Operations
 
-* [getHrisPayslip2](#gethrispayslip2) - Retrieve a payslip
-* [listHrisPayslips2](#listhrispayslips2) - List all payslips
+* [getHrisPayslip](#gethrispayslip) - Retrieve a payslip
+* [listHrisPayslips](#listhrispayslips) - List all payslips
 
-## getHrisPayslip2
+## getHrisPayslip
 
 Retrieve a payslip
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="getHrisPayslip2" method="get" path="/hris/{connection_id}/payslip/{id}" -->
+<!-- UsageSnippet language="java" operationID="getHrisPayslip" method="get" path="/hris/{connection_id}/payslip/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.GetHrisPayslip2Request;
-import to.unified.unified_java_sdk.models.operations.GetHrisPayslip2Response;
+import to.unified.unified_java_sdk.models.operations.GetHrisPayslipRequest;
+import to.unified.unified_java_sdk.models.operations.GetHrisPayslipResponse;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -33,12 +33,12 @@ public class Application {
                     .build())
             .build();
 
-        GetHrisPayslip2Request req = GetHrisPayslip2Request.builder()
+        GetHrisPayslipRequest req = GetHrisPayslipRequest.builder()
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        GetHrisPayslip2Response res = sdk.payslip().getHrisPayslip2()
+        GetHrisPayslipResponse res = sdk.payslip().getHrisPayslip()
                 .request(req)
                 .call();
 
@@ -51,13 +51,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                   | Type                                                                        | Required                                                                    | Description                                                                 |
-| --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
-| `request`                                                                   | [GetHrisPayslip2Request](../../models/operations/GetHrisPayslip2Request.md) | :heavy_check_mark:                                                          | The request object to use for the request.                                  |
+| Parameter                                                                 | Type                                                                      | Required                                                                  | Description                                                               |
+| ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
+| `request`                                                                 | [GetHrisPayslipRequest](../../models/operations/GetHrisPayslipRequest.md) | :heavy_check_mark:                                                        | The request object to use for the request.                                |
 
 ### Response
 
-**[GetHrisPayslip2Response](../../models/operations/GetHrisPayslip2Response.md)**
+**[GetHrisPayslipResponse](../../models/operations/GetHrisPayslipResponse.md)**
 
 ### Errors
 
@@ -65,20 +65,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## listHrisPayslips2
+## listHrisPayslips
 
 List all payslips
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="listHrisPayslips2" method="get" path="/hris/{connection_id}/payslip" -->
+<!-- UsageSnippet language="java" operationID="listHrisPayslips" method="get" path="/hris/{connection_id}/payslip" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.ListHrisPayslips2Request;
-import to.unified.unified_java_sdk.models.operations.ListHrisPayslips2Response;
+import to.unified.unified_java_sdk.models.operations.ListHrisPayslipsRequest;
+import to.unified.unified_java_sdk.models.operations.ListHrisPayslipsResponse;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -91,11 +91,11 @@ public class Application {
                     .build())
             .build();
 
-        ListHrisPayslips2Request req = ListHrisPayslips2Request.builder()
+        ListHrisPayslipsRequest req = ListHrisPayslipsRequest.builder()
                 .connectionId("<id>")
                 .build();
 
-        ListHrisPayslips2Response res = sdk.payslip().listHrisPayslips2()
+        ListHrisPayslipsResponse res = sdk.payslip().listHrisPayslips()
                 .request(req)
                 .call();
 
@@ -108,13 +108,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
-| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
-| `request`                                                                       | [ListHrisPayslips2Request](../../models/operations/ListHrisPayslips2Request.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
+| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
+| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| `request`                                                                     | [ListHrisPayslipsRequest](../../models/operations/ListHrisPayslipsRequest.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
 
 ### Response
 
-**[ListHrisPayslips2Response](../../models/operations/ListHrisPayslips2Response.md)**
+**[ListHrisPayslipsResponse](../../models/operations/ListHrisPayslipsResponse.md)**
 
 ### Errors
 

@@ -4,27 +4,27 @@
 
 ### Available Operations
 
-* [createCommerceItemvariant2](#createcommerceitemvariant2) - Create an itemvariant
-* [getCommerceItemvariant2](#getcommerceitemvariant2) - Retrieve an itemvariant
-* [listCommerceItemvariants2](#listcommerceitemvariants2) - List all itemvariants
-* [patchCommerceItemvariant2](#patchcommerceitemvariant2) - Update an itemvariant
-* [removeCommerceItemvariant2](#removecommerceitemvariant2) - Remove an itemvariant
-* [updateCommerceItemvariant2](#updatecommerceitemvariant2) - Update an itemvariant
+* [createCommerceItemvariant](#createcommerceitemvariant) - Create an itemvariant
+* [getCommerceItemvariant](#getcommerceitemvariant) - Retrieve an itemvariant
+* [listCommerceItemvariants](#listcommerceitemvariants) - List all itemvariants
+* [patchCommerceItemvariant](#patchcommerceitemvariant) - Update an itemvariant
+* [removeCommerceItemvariant](#removecommerceitemvariant) - Remove an itemvariant
+* [updateCommerceItemvariant](#updatecommerceitemvariant) - Update an itemvariant
 
-## createCommerceItemvariant2
+## createCommerceItemvariant
 
 Create an itemvariant
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createCommerceItemvariant2" method="post" path="/commerce/{connection_id}/itemvariant" -->
+<!-- UsageSnippet language="java" operationID="createCommerceItemvariant" method="post" path="/commerce/{connection_id}/itemvariant" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.CreateCommerceItemvariant2Request;
-import to.unified.unified_java_sdk.models.operations.CreateCommerceItemvariant2Response;
+import to.unified.unified_java_sdk.models.operations.CreateCommerceItemvariantRequest;
+import to.unified.unified_java_sdk.models.operations.CreateCommerceItemvariantResponse;
 import to.unified.unified_java_sdk.models.shared.CommerceItemvariant;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -38,13 +38,13 @@ public class Application {
                     .build())
             .build();
 
-        CreateCommerceItemvariant2Request req = CreateCommerceItemvariant2Request.builder()
+        CreateCommerceItemvariantRequest req = CreateCommerceItemvariantRequest.builder()
                 .commerceItemvariant(CommerceItemvariant.builder()
                     .build())
                 .connectionId("<id>")
                 .build();
 
-        CreateCommerceItemvariant2Response res = sdk.itemvariant().createCommerceItemvariant2()
+        CreateCommerceItemvariantResponse res = sdk.itemvariant().createCommerceItemvariant()
                 .request(req)
                 .call();
 
@@ -57,13 +57,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                         | Type                                                                                              | Required                                                                                          | Description                                                                                       |
-| ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
-| `request`                                                                                         | [CreateCommerceItemvariant2Request](../../models/operations/CreateCommerceItemvariant2Request.md) | :heavy_check_mark:                                                                                | The request object to use for the request.                                                        |
+| Parameter                                                                                       | Type                                                                                            | Required                                                                                        | Description                                                                                     |
+| ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
+| `request`                                                                                       | [CreateCommerceItemvariantRequest](../../models/operations/CreateCommerceItemvariantRequest.md) | :heavy_check_mark:                                                                              | The request object to use for the request.                                                      |
 
 ### Response
 
-**[CreateCommerceItemvariant2Response](../../models/operations/CreateCommerceItemvariant2Response.md)**
+**[CreateCommerceItemvariantResponse](../../models/operations/CreateCommerceItemvariantResponse.md)**
 
 ### Errors
 
@@ -71,20 +71,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## getCommerceItemvariant2
+## getCommerceItemvariant
 
 Retrieve an itemvariant
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="getCommerceItemvariant2" method="get" path="/commerce/{connection_id}/itemvariant/{id}" -->
+<!-- UsageSnippet language="java" operationID="getCommerceItemvariant" method="get" path="/commerce/{connection_id}/itemvariant/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.GetCommerceItemvariant2Request;
-import to.unified.unified_java_sdk.models.operations.GetCommerceItemvariant2Response;
+import to.unified.unified_java_sdk.models.operations.GetCommerceItemvariantRequest;
+import to.unified.unified_java_sdk.models.operations.GetCommerceItemvariantResponse;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -97,12 +97,12 @@ public class Application {
                     .build())
             .build();
 
-        GetCommerceItemvariant2Request req = GetCommerceItemvariant2Request.builder()
+        GetCommerceItemvariantRequest req = GetCommerceItemvariantRequest.builder()
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        GetCommerceItemvariant2Response res = sdk.itemvariant().getCommerceItemvariant2()
+        GetCommerceItemvariantResponse res = sdk.itemvariant().getCommerceItemvariant()
                 .request(req)
                 .call();
 
@@ -115,13 +115,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                   | Type                                                                                        | Required                                                                                    | Description                                                                                 |
-| ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
-| `request`                                                                                   | [GetCommerceItemvariant2Request](../../models/operations/GetCommerceItemvariant2Request.md) | :heavy_check_mark:                                                                          | The request object to use for the request.                                                  |
+| Parameter                                                                                 | Type                                                                                      | Required                                                                                  | Description                                                                               |
+| ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
+| `request`                                                                                 | [GetCommerceItemvariantRequest](../../models/operations/GetCommerceItemvariantRequest.md) | :heavy_check_mark:                                                                        | The request object to use for the request.                                                |
 
 ### Response
 
-**[GetCommerceItemvariant2Response](../../models/operations/GetCommerceItemvariant2Response.md)**
+**[GetCommerceItemvariantResponse](../../models/operations/GetCommerceItemvariantResponse.md)**
 
 ### Errors
 
@@ -129,20 +129,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## listCommerceItemvariants2
+## listCommerceItemvariants
 
 List all itemvariants
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="listCommerceItemvariants2" method="get" path="/commerce/{connection_id}/itemvariant" -->
+<!-- UsageSnippet language="java" operationID="listCommerceItemvariants" method="get" path="/commerce/{connection_id}/itemvariant" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.ListCommerceItemvariants2Request;
-import to.unified.unified_java_sdk.models.operations.ListCommerceItemvariants2Response;
+import to.unified.unified_java_sdk.models.operations.ListCommerceItemvariantsRequest;
+import to.unified.unified_java_sdk.models.operations.ListCommerceItemvariantsResponse;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -155,11 +155,11 @@ public class Application {
                     .build())
             .build();
 
-        ListCommerceItemvariants2Request req = ListCommerceItemvariants2Request.builder()
+        ListCommerceItemvariantsRequest req = ListCommerceItemvariantsRequest.builder()
                 .connectionId("<id>")
                 .build();
 
-        ListCommerceItemvariants2Response res = sdk.itemvariant().listCommerceItemvariants2()
+        ListCommerceItemvariantsResponse res = sdk.itemvariant().listCommerceItemvariants()
                 .request(req)
                 .call();
 
@@ -172,13 +172,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                       | Type                                                                                            | Required                                                                                        | Description                                                                                     |
-| ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
-| `request`                                                                                       | [ListCommerceItemvariants2Request](../../models/operations/ListCommerceItemvariants2Request.md) | :heavy_check_mark:                                                                              | The request object to use for the request.                                                      |
+| Parameter                                                                                     | Type                                                                                          | Required                                                                                      | Description                                                                                   |
+| --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
+| `request`                                                                                     | [ListCommerceItemvariantsRequest](../../models/operations/ListCommerceItemvariantsRequest.md) | :heavy_check_mark:                                                                            | The request object to use for the request.                                                    |
 
 ### Response
 
-**[ListCommerceItemvariants2Response](../../models/operations/ListCommerceItemvariants2Response.md)**
+**[ListCommerceItemvariantsResponse](../../models/operations/ListCommerceItemvariantsResponse.md)**
 
 ### Errors
 
@@ -186,20 +186,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## patchCommerceItemvariant2
+## patchCommerceItemvariant
 
 Update an itemvariant
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchCommerceItemvariant2" method="patch" path="/commerce/{connection_id}/itemvariant/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchCommerceItemvariant" method="patch" path="/commerce/{connection_id}/itemvariant/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.PatchCommerceItemvariant2Request;
-import to.unified.unified_java_sdk.models.operations.PatchCommerceItemvariant2Response;
+import to.unified.unified_java_sdk.models.operations.PatchCommerceItemvariantRequest;
+import to.unified.unified_java_sdk.models.operations.PatchCommerceItemvariantResponse;
 import to.unified.unified_java_sdk.models.shared.CommerceItemvariant;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -213,14 +213,14 @@ public class Application {
                     .build())
             .build();
 
-        PatchCommerceItemvariant2Request req = PatchCommerceItemvariant2Request.builder()
+        PatchCommerceItemvariantRequest req = PatchCommerceItemvariantRequest.builder()
                 .commerceItemvariant(CommerceItemvariant.builder()
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        PatchCommerceItemvariant2Response res = sdk.itemvariant().patchCommerceItemvariant2()
+        PatchCommerceItemvariantResponse res = sdk.itemvariant().patchCommerceItemvariant()
                 .request(req)
                 .call();
 
@@ -233,13 +233,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                       | Type                                                                                            | Required                                                                                        | Description                                                                                     |
-| ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
-| `request`                                                                                       | [PatchCommerceItemvariant2Request](../../models/operations/PatchCommerceItemvariant2Request.md) | :heavy_check_mark:                                                                              | The request object to use for the request.                                                      |
+| Parameter                                                                                     | Type                                                                                          | Required                                                                                      | Description                                                                                   |
+| --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
+| `request`                                                                                     | [PatchCommerceItemvariantRequest](../../models/operations/PatchCommerceItemvariantRequest.md) | :heavy_check_mark:                                                                            | The request object to use for the request.                                                    |
 
 ### Response
 
-**[PatchCommerceItemvariant2Response](../../models/operations/PatchCommerceItemvariant2Response.md)**
+**[PatchCommerceItemvariantResponse](../../models/operations/PatchCommerceItemvariantResponse.md)**
 
 ### Errors
 
@@ -247,20 +247,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## removeCommerceItemvariant2
+## removeCommerceItemvariant
 
 Remove an itemvariant
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="removeCommerceItemvariant2" method="delete" path="/commerce/{connection_id}/itemvariant/{id}" -->
+<!-- UsageSnippet language="java" operationID="removeCommerceItemvariant" method="delete" path="/commerce/{connection_id}/itemvariant/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.RemoveCommerceItemvariant2Request;
-import to.unified.unified_java_sdk.models.operations.RemoveCommerceItemvariant2Response;
+import to.unified.unified_java_sdk.models.operations.RemoveCommerceItemvariantRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveCommerceItemvariantResponse;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -273,12 +273,12 @@ public class Application {
                     .build())
             .build();
 
-        RemoveCommerceItemvariant2Request req = RemoveCommerceItemvariant2Request.builder()
+        RemoveCommerceItemvariantRequest req = RemoveCommerceItemvariantRequest.builder()
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        RemoveCommerceItemvariant2Response res = sdk.itemvariant().removeCommerceItemvariant2()
+        RemoveCommerceItemvariantResponse res = sdk.itemvariant().removeCommerceItemvariant()
                 .request(req)
                 .call();
 
@@ -289,13 +289,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                         | Type                                                                                              | Required                                                                                          | Description                                                                                       |
-| ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
-| `request`                                                                                         | [RemoveCommerceItemvariant2Request](../../models/operations/RemoveCommerceItemvariant2Request.md) | :heavy_check_mark:                                                                                | The request object to use for the request.                                                        |
+| Parameter                                                                                       | Type                                                                                            | Required                                                                                        | Description                                                                                     |
+| ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
+| `request`                                                                                       | [RemoveCommerceItemvariantRequest](../../models/operations/RemoveCommerceItemvariantRequest.md) | :heavy_check_mark:                                                                              | The request object to use for the request.                                                      |
 
 ### Response
 
-**[RemoveCommerceItemvariant2Response](../../models/operations/RemoveCommerceItemvariant2Response.md)**
+**[RemoveCommerceItemvariantResponse](../../models/operations/RemoveCommerceItemvariantResponse.md)**
 
 ### Errors
 
@@ -303,20 +303,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## updateCommerceItemvariant2
+## updateCommerceItemvariant
 
 Update an itemvariant
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateCommerceItemvariant2" method="put" path="/commerce/{connection_id}/itemvariant/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateCommerceItemvariant" method="put" path="/commerce/{connection_id}/itemvariant/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.UpdateCommerceItemvariant2Request;
-import to.unified.unified_java_sdk.models.operations.UpdateCommerceItemvariant2Response;
+import to.unified.unified_java_sdk.models.operations.UpdateCommerceItemvariantRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateCommerceItemvariantResponse;
 import to.unified.unified_java_sdk.models.shared.CommerceItemvariant;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -330,14 +330,14 @@ public class Application {
                     .build())
             .build();
 
-        UpdateCommerceItemvariant2Request req = UpdateCommerceItemvariant2Request.builder()
+        UpdateCommerceItemvariantRequest req = UpdateCommerceItemvariantRequest.builder()
                 .commerceItemvariant(CommerceItemvariant.builder()
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        UpdateCommerceItemvariant2Response res = sdk.itemvariant().updateCommerceItemvariant2()
+        UpdateCommerceItemvariantResponse res = sdk.itemvariant().updateCommerceItemvariant()
                 .request(req)
                 .call();
 
@@ -350,13 +350,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                         | Type                                                                                              | Required                                                                                          | Description                                                                                       |
-| ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
-| `request`                                                                                         | [UpdateCommerceItemvariant2Request](../../models/operations/UpdateCommerceItemvariant2Request.md) | :heavy_check_mark:                                                                                | The request object to use for the request.                                                        |
+| Parameter                                                                                       | Type                                                                                            | Required                                                                                        | Description                                                                                     |
+| ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
+| `request`                                                                                       | [UpdateCommerceItemvariantRequest](../../models/operations/UpdateCommerceItemvariantRequest.md) | :heavy_check_mark:                                                                              | The request object to use for the request.                                                      |
 
 ### Response
 
-**[UpdateCommerceItemvariant2Response](../../models/operations/UpdateCommerceItemvariant2Response.md)**
+**[UpdateCommerceItemvariantResponse](../../models/operations/UpdateCommerceItemvariantResponse.md)**
 
 ### Errors
 

@@ -4,27 +4,27 @@
 
 ### Available Operations
 
-* [createAtsInterview2](#createatsinterview2) - Create an interview
-* [getAtsInterview2](#getatsinterview2) - Retrieve an interview
-* [listAtsInterviews2](#listatsinterviews2) - List all interviews
-* [patchAtsInterview2](#patchatsinterview2) - Update an interview
-* [removeAtsInterview2](#removeatsinterview2) - Remove an interview
-* [updateAtsInterview2](#updateatsinterview2) - Update an interview
+* [createAtsInterview](#createatsinterview) - Create an interview
+* [getAtsInterview](#getatsinterview) - Retrieve an interview
+* [listAtsInterviews](#listatsinterviews) - List all interviews
+* [patchAtsInterview](#patchatsinterview) - Update an interview
+* [removeAtsInterview](#removeatsinterview) - Remove an interview
+* [updateAtsInterview](#updateatsinterview) - Update an interview
 
-## createAtsInterview2
+## createAtsInterview
 
 Create an interview
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createAtsInterview2" method="post" path="/ats/{connection_id}/interview" -->
+<!-- UsageSnippet language="java" operationID="createAtsInterview" method="post" path="/ats/{connection_id}/interview" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.CreateAtsInterview2Request;
-import to.unified.unified_java_sdk.models.operations.CreateAtsInterview2Response;
+import to.unified.unified_java_sdk.models.operations.CreateAtsInterviewRequest;
+import to.unified.unified_java_sdk.models.operations.CreateAtsInterviewResponse;
 import to.unified.unified_java_sdk.models.shared.AtsInterview;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -38,13 +38,13 @@ public class Application {
                     .build())
             .build();
 
-        CreateAtsInterview2Request req = CreateAtsInterview2Request.builder()
+        CreateAtsInterviewRequest req = CreateAtsInterviewRequest.builder()
                 .atsInterview(AtsInterview.builder()
                     .build())
                 .connectionId("<id>")
                 .build();
 
-        CreateAtsInterview2Response res = sdk.interview().createAtsInterview2()
+        CreateAtsInterviewResponse res = sdk.interview().createAtsInterview()
                 .request(req)
                 .call();
 
@@ -57,13 +57,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                           | Type                                                                                | Required                                                                            | Description                                                                         |
-| ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
-| `request`                                                                           | [CreateAtsInterview2Request](../../models/operations/CreateAtsInterview2Request.md) | :heavy_check_mark:                                                                  | The request object to use for the request.                                          |
+| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
+| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| `request`                                                                         | [CreateAtsInterviewRequest](../../models/operations/CreateAtsInterviewRequest.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
 
 ### Response
 
-**[CreateAtsInterview2Response](../../models/operations/CreateAtsInterview2Response.md)**
+**[CreateAtsInterviewResponse](../../models/operations/CreateAtsInterviewResponse.md)**
 
 ### Errors
 
@@ -71,20 +71,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## getAtsInterview2
+## getAtsInterview
 
 Retrieve an interview
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="getAtsInterview2" method="get" path="/ats/{connection_id}/interview/{id}" -->
+<!-- UsageSnippet language="java" operationID="getAtsInterview" method="get" path="/ats/{connection_id}/interview/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.GetAtsInterview2Request;
-import to.unified.unified_java_sdk.models.operations.GetAtsInterview2Response;
+import to.unified.unified_java_sdk.models.operations.GetAtsInterviewRequest;
+import to.unified.unified_java_sdk.models.operations.GetAtsInterviewResponse;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -97,12 +97,12 @@ public class Application {
                     .build())
             .build();
 
-        GetAtsInterview2Request req = GetAtsInterview2Request.builder()
+        GetAtsInterviewRequest req = GetAtsInterviewRequest.builder()
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        GetAtsInterview2Response res = sdk.interview().getAtsInterview2()
+        GetAtsInterviewResponse res = sdk.interview().getAtsInterview()
                 .request(req)
                 .call();
 
@@ -115,13 +115,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
-| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
-| `request`                                                                     | [GetAtsInterview2Request](../../models/operations/GetAtsInterview2Request.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
+| Parameter                                                                   | Type                                                                        | Required                                                                    | Description                                                                 |
+| --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| `request`                                                                   | [GetAtsInterviewRequest](../../models/operations/GetAtsInterviewRequest.md) | :heavy_check_mark:                                                          | The request object to use for the request.                                  |
 
 ### Response
 
-**[GetAtsInterview2Response](../../models/operations/GetAtsInterview2Response.md)**
+**[GetAtsInterviewResponse](../../models/operations/GetAtsInterviewResponse.md)**
 
 ### Errors
 
@@ -129,20 +129,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## listAtsInterviews2
+## listAtsInterviews
 
 List all interviews
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="listAtsInterviews2" method="get" path="/ats/{connection_id}/interview" -->
+<!-- UsageSnippet language="java" operationID="listAtsInterviews" method="get" path="/ats/{connection_id}/interview" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.ListAtsInterviews2Request;
-import to.unified.unified_java_sdk.models.operations.ListAtsInterviews2Response;
+import to.unified.unified_java_sdk.models.operations.ListAtsInterviewsRequest;
+import to.unified.unified_java_sdk.models.operations.ListAtsInterviewsResponse;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -155,11 +155,11 @@ public class Application {
                     .build())
             .build();
 
-        ListAtsInterviews2Request req = ListAtsInterviews2Request.builder()
+        ListAtsInterviewsRequest req = ListAtsInterviewsRequest.builder()
                 .connectionId("<id>")
                 .build();
 
-        ListAtsInterviews2Response res = sdk.interview().listAtsInterviews2()
+        ListAtsInterviewsResponse res = sdk.interview().listAtsInterviews()
                 .request(req)
                 .call();
 
@@ -172,13 +172,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
-| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
-| `request`                                                                         | [ListAtsInterviews2Request](../../models/operations/ListAtsInterviews2Request.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
+| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| `request`                                                                       | [ListAtsInterviewsRequest](../../models/operations/ListAtsInterviewsRequest.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
 
 ### Response
 
-**[ListAtsInterviews2Response](../../models/operations/ListAtsInterviews2Response.md)**
+**[ListAtsInterviewsResponse](../../models/operations/ListAtsInterviewsResponse.md)**
 
 ### Errors
 
@@ -186,20 +186,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## patchAtsInterview2
+## patchAtsInterview
 
 Update an interview
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchAtsInterview2" method="patch" path="/ats/{connection_id}/interview/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchAtsInterview" method="patch" path="/ats/{connection_id}/interview/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.PatchAtsInterview2Request;
-import to.unified.unified_java_sdk.models.operations.PatchAtsInterview2Response;
+import to.unified.unified_java_sdk.models.operations.PatchAtsInterviewRequest;
+import to.unified.unified_java_sdk.models.operations.PatchAtsInterviewResponse;
 import to.unified.unified_java_sdk.models.shared.AtsInterview;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -213,14 +213,14 @@ public class Application {
                     .build())
             .build();
 
-        PatchAtsInterview2Request req = PatchAtsInterview2Request.builder()
+        PatchAtsInterviewRequest req = PatchAtsInterviewRequest.builder()
                 .atsInterview(AtsInterview.builder()
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        PatchAtsInterview2Response res = sdk.interview().patchAtsInterview2()
+        PatchAtsInterviewResponse res = sdk.interview().patchAtsInterview()
                 .request(req)
                 .call();
 
@@ -233,13 +233,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
-| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
-| `request`                                                                         | [PatchAtsInterview2Request](../../models/operations/PatchAtsInterview2Request.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
+| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| `request`                                                                       | [PatchAtsInterviewRequest](../../models/operations/PatchAtsInterviewRequest.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
 
 ### Response
 
-**[PatchAtsInterview2Response](../../models/operations/PatchAtsInterview2Response.md)**
+**[PatchAtsInterviewResponse](../../models/operations/PatchAtsInterviewResponse.md)**
 
 ### Errors
 
@@ -247,20 +247,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## removeAtsInterview2
+## removeAtsInterview
 
 Remove an interview
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="removeAtsInterview2" method="delete" path="/ats/{connection_id}/interview/{id}" -->
+<!-- UsageSnippet language="java" operationID="removeAtsInterview" method="delete" path="/ats/{connection_id}/interview/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.RemoveAtsInterview2Request;
-import to.unified.unified_java_sdk.models.operations.RemoveAtsInterview2Response;
+import to.unified.unified_java_sdk.models.operations.RemoveAtsInterviewRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveAtsInterviewResponse;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -273,12 +273,12 @@ public class Application {
                     .build())
             .build();
 
-        RemoveAtsInterview2Request req = RemoveAtsInterview2Request.builder()
+        RemoveAtsInterviewRequest req = RemoveAtsInterviewRequest.builder()
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        RemoveAtsInterview2Response res = sdk.interview().removeAtsInterview2()
+        RemoveAtsInterviewResponse res = sdk.interview().removeAtsInterview()
                 .request(req)
                 .call();
 
@@ -289,13 +289,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                           | Type                                                                                | Required                                                                            | Description                                                                         |
-| ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
-| `request`                                                                           | [RemoveAtsInterview2Request](../../models/operations/RemoveAtsInterview2Request.md) | :heavy_check_mark:                                                                  | The request object to use for the request.                                          |
+| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
+| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| `request`                                                                         | [RemoveAtsInterviewRequest](../../models/operations/RemoveAtsInterviewRequest.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
 
 ### Response
 
-**[RemoveAtsInterview2Response](../../models/operations/RemoveAtsInterview2Response.md)**
+**[RemoveAtsInterviewResponse](../../models/operations/RemoveAtsInterviewResponse.md)**
 
 ### Errors
 
@@ -303,20 +303,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## updateAtsInterview2
+## updateAtsInterview
 
 Update an interview
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateAtsInterview2" method="put" path="/ats/{connection_id}/interview/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateAtsInterview" method="put" path="/ats/{connection_id}/interview/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.UpdateAtsInterview2Request;
-import to.unified.unified_java_sdk.models.operations.UpdateAtsInterview2Response;
+import to.unified.unified_java_sdk.models.operations.UpdateAtsInterviewRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateAtsInterviewResponse;
 import to.unified.unified_java_sdk.models.shared.AtsInterview;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -330,14 +330,14 @@ public class Application {
                     .build())
             .build();
 
-        UpdateAtsInterview2Request req = UpdateAtsInterview2Request.builder()
+        UpdateAtsInterviewRequest req = UpdateAtsInterviewRequest.builder()
                 .atsInterview(AtsInterview.builder()
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        UpdateAtsInterview2Response res = sdk.interview().updateAtsInterview2()
+        UpdateAtsInterviewResponse res = sdk.interview().updateAtsInterview()
                 .request(req)
                 .call();
 
@@ -350,13 +350,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                           | Type                                                                                | Required                                                                            | Description                                                                         |
-| ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
-| `request`                                                                           | [UpdateAtsInterview2Request](../../models/operations/UpdateAtsInterview2Request.md) | :heavy_check_mark:                                                                  | The request object to use for the request.                                          |
+| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
+| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| `request`                                                                         | [UpdateAtsInterviewRequest](../../models/operations/UpdateAtsInterviewRequest.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
 
 ### Response
 
-**[UpdateAtsInterview2Response](../../models/operations/UpdateAtsInterview2Response.md)**
+**[UpdateAtsInterviewResponse](../../models/operations/UpdateAtsInterviewResponse.md)**
 
 ### Errors
 

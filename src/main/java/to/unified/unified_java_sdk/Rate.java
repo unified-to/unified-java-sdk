@@ -6,10 +6,10 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
-import to.unified.unified_java_sdk.models.operations.CreateShippingRate2Request;
-import to.unified.unified_java_sdk.models.operations.CreateShippingRate2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.CreateShippingRate2Response;
-import to.unified.unified_java_sdk.operations.CreateShippingRate2;
+import to.unified.unified_java_sdk.models.operations.CreateShippingRateRequest;
+import to.unified.unified_java_sdk.models.operations.CreateShippingRateRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.CreateShippingRateResponse;
+import to.unified.unified_java_sdk.operations.CreateShippingRate;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -37,8 +37,8 @@ public class Rate {
      * 
      * @return The call builder
      */
-    public CreateShippingRate2RequestBuilder createShippingRate2() {
-        return new CreateShippingRate2RequestBuilder(sdkConfiguration);
+    public CreateShippingRateRequestBuilder createShippingRate() {
+        return new CreateShippingRateRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -48,9 +48,9 @@ public class Rate {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateShippingRate2Response createShippingRate2(@Nonnull CreateShippingRate2Request request) {
-        RequestOperation<CreateShippingRate2Request, CreateShippingRate2Response> operation
-              = new CreateShippingRate2.Sync(sdkConfiguration, _headers);
+    public CreateShippingRateResponse createShippingRate(@Nonnull CreateShippingRateRequest request) {
+        RequestOperation<CreateShippingRateRequest, CreateShippingRateResponse> operation
+              = new CreateShippingRate.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

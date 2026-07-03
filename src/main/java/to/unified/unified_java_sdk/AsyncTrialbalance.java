@@ -7,14 +7,14 @@ import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOper
 
 import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
-import to.unified.unified_java_sdk.models.operations.GetAccountingTrialbalance2Request;
-import to.unified.unified_java_sdk.models.operations.ListAccountingTrialbalances2Request;
-import to.unified.unified_java_sdk.models.operations.async.GetAccountingTrialbalance2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.GetAccountingTrialbalance2Response;
-import to.unified.unified_java_sdk.models.operations.async.ListAccountingTrialbalances2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.ListAccountingTrialbalances2Response;
-import to.unified.unified_java_sdk.operations.GetAccountingTrialbalance2;
-import to.unified.unified_java_sdk.operations.ListAccountingTrialbalances2;
+import to.unified.unified_java_sdk.models.operations.GetAccountingTrialbalanceRequest;
+import to.unified.unified_java_sdk.models.operations.ListAccountingTrialbalancesRequest;
+import to.unified.unified_java_sdk.models.operations.async.GetAccountingTrialbalanceRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetAccountingTrialbalanceResponse;
+import to.unified.unified_java_sdk.models.operations.async.ListAccountingTrialbalancesRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListAccountingTrialbalancesResponse;
+import to.unified.unified_java_sdk.operations.GetAccountingTrialbalance;
+import to.unified.unified_java_sdk.operations.ListAccountingTrialbalances;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -43,19 +43,19 @@ public class AsyncTrialbalance {
      * 
      * @return The async call builder
      */
-    public GetAccountingTrialbalance2RequestBuilder getAccountingTrialbalance2() {
-        return new GetAccountingTrialbalance2RequestBuilder(sdkConfiguration);
+    public GetAccountingTrialbalanceRequestBuilder getAccountingTrialbalance() {
+        return new GetAccountingTrialbalanceRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Retrieve a trialbalance
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<GetAccountingTrialbalance2Response>} - The async response
+     * @return {@code CompletableFuture<GetAccountingTrialbalanceResponse>} - The async response
      */
-    public CompletableFuture<GetAccountingTrialbalance2Response> getAccountingTrialbalance2(@Nonnull GetAccountingTrialbalance2Request request) {
-        AsyncRequestOperation<GetAccountingTrialbalance2Request, GetAccountingTrialbalance2Response> operation
-              = new GetAccountingTrialbalance2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<GetAccountingTrialbalanceResponse> getAccountingTrialbalance(@Nonnull GetAccountingTrialbalanceRequest request) {
+        AsyncRequestOperation<GetAccountingTrialbalanceRequest, GetAccountingTrialbalanceResponse> operation
+              = new GetAccountingTrialbalance.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -66,19 +66,19 @@ public class AsyncTrialbalance {
      * 
      * @return The async call builder
      */
-    public ListAccountingTrialbalances2RequestBuilder listAccountingTrialbalances2() {
-        return new ListAccountingTrialbalances2RequestBuilder(sdkConfiguration);
+    public ListAccountingTrialbalancesRequestBuilder listAccountingTrialbalances() {
+        return new ListAccountingTrialbalancesRequestBuilder(sdkConfiguration);
     }
 
     /**
      * List all trialbalances
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<ListAccountingTrialbalances2Response>} - The async response
+     * @return {@code CompletableFuture<ListAccountingTrialbalancesResponse>} - The async response
      */
-    public CompletableFuture<ListAccountingTrialbalances2Response> listAccountingTrialbalances2(@Nonnull ListAccountingTrialbalances2Request request) {
-        AsyncRequestOperation<ListAccountingTrialbalances2Request, ListAccountingTrialbalances2Response> operation
-              = new ListAccountingTrialbalances2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<ListAccountingTrialbalancesResponse> listAccountingTrialbalances(@Nonnull ListAccountingTrialbalancesRequest request) {
+        AsyncRequestOperation<ListAccountingTrialbalancesRequest, ListAccountingTrialbalancesResponse> operation
+              = new ListAccountingTrialbalances.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

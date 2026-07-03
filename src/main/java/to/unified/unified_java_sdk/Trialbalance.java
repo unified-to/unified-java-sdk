@@ -6,14 +6,14 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
-import to.unified.unified_java_sdk.models.operations.GetAccountingTrialbalance2Request;
-import to.unified.unified_java_sdk.models.operations.GetAccountingTrialbalance2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.GetAccountingTrialbalance2Response;
-import to.unified.unified_java_sdk.models.operations.ListAccountingTrialbalances2Request;
-import to.unified.unified_java_sdk.models.operations.ListAccountingTrialbalances2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.ListAccountingTrialbalances2Response;
-import to.unified.unified_java_sdk.operations.GetAccountingTrialbalance2;
-import to.unified.unified_java_sdk.operations.ListAccountingTrialbalances2;
+import to.unified.unified_java_sdk.models.operations.GetAccountingTrialbalanceRequest;
+import to.unified.unified_java_sdk.models.operations.GetAccountingTrialbalanceRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetAccountingTrialbalanceResponse;
+import to.unified.unified_java_sdk.models.operations.ListAccountingTrialbalancesRequest;
+import to.unified.unified_java_sdk.models.operations.ListAccountingTrialbalancesRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListAccountingTrialbalancesResponse;
+import to.unified.unified_java_sdk.operations.GetAccountingTrialbalance;
+import to.unified.unified_java_sdk.operations.ListAccountingTrialbalances;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -41,8 +41,8 @@ public class Trialbalance {
      * 
      * @return The call builder
      */
-    public GetAccountingTrialbalance2RequestBuilder getAccountingTrialbalance2() {
-        return new GetAccountingTrialbalance2RequestBuilder(sdkConfiguration);
+    public GetAccountingTrialbalanceRequestBuilder getAccountingTrialbalance() {
+        return new GetAccountingTrialbalanceRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -52,9 +52,9 @@ public class Trialbalance {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetAccountingTrialbalance2Response getAccountingTrialbalance2(@Nonnull GetAccountingTrialbalance2Request request) {
-        RequestOperation<GetAccountingTrialbalance2Request, GetAccountingTrialbalance2Response> operation
-              = new GetAccountingTrialbalance2.Sync(sdkConfiguration, _headers);
+    public GetAccountingTrialbalanceResponse getAccountingTrialbalance(@Nonnull GetAccountingTrialbalanceRequest request) {
+        RequestOperation<GetAccountingTrialbalanceRequest, GetAccountingTrialbalanceResponse> operation
+              = new GetAccountingTrialbalance.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -63,8 +63,8 @@ public class Trialbalance {
      * 
      * @return The call builder
      */
-    public ListAccountingTrialbalances2RequestBuilder listAccountingTrialbalances2() {
-        return new ListAccountingTrialbalances2RequestBuilder(sdkConfiguration);
+    public ListAccountingTrialbalancesRequestBuilder listAccountingTrialbalances() {
+        return new ListAccountingTrialbalancesRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -74,9 +74,9 @@ public class Trialbalance {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListAccountingTrialbalances2Response listAccountingTrialbalances2(@Nonnull ListAccountingTrialbalances2Request request) {
-        RequestOperation<ListAccountingTrialbalances2Request, ListAccountingTrialbalances2Response> operation
-              = new ListAccountingTrialbalances2.Sync(sdkConfiguration, _headers);
+    public ListAccountingTrialbalancesResponse listAccountingTrialbalances(@Nonnull ListAccountingTrialbalancesRequest request) {
+        RequestOperation<ListAccountingTrialbalancesRequest, ListAccountingTrialbalancesResponse> operation
+              = new ListAccountingTrialbalances.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

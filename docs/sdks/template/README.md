@@ -4,23 +4,23 @@
 
 ### Available Operations
 
-* [getSigningTemplate2](#getsigningtemplate2) - Retrieve a template
-* [listSigningTemplates2](#listsigningtemplates2) - List all templates
+* [getSigningTemplate](#getsigningtemplate) - Retrieve a template
+* [listSigningTemplates](#listsigningtemplates) - List all templates
 
-## getSigningTemplate2
+## getSigningTemplate
 
 Retrieve a template
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="getSigningTemplate2" method="get" path="/signing/{connection_id}/template/{id}" -->
+<!-- UsageSnippet language="java" operationID="getSigningTemplate" method="get" path="/signing/{connection_id}/template/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.GetSigningTemplate2Request;
-import to.unified.unified_java_sdk.models.operations.GetSigningTemplate2Response;
+import to.unified.unified_java_sdk.models.operations.GetSigningTemplateRequest;
+import to.unified.unified_java_sdk.models.operations.GetSigningTemplateResponse;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -33,12 +33,12 @@ public class Application {
                     .build())
             .build();
 
-        GetSigningTemplate2Request req = GetSigningTemplate2Request.builder()
+        GetSigningTemplateRequest req = GetSigningTemplateRequest.builder()
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        GetSigningTemplate2Response res = sdk.template().getSigningTemplate2()
+        GetSigningTemplateResponse res = sdk.template().getSigningTemplate()
                 .request(req)
                 .call();
 
@@ -51,13 +51,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                           | Type                                                                                | Required                                                                            | Description                                                                         |
-| ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
-| `request`                                                                           | [GetSigningTemplate2Request](../../models/operations/GetSigningTemplate2Request.md) | :heavy_check_mark:                                                                  | The request object to use for the request.                                          |
+| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
+| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| `request`                                                                         | [GetSigningTemplateRequest](../../models/operations/GetSigningTemplateRequest.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
 
 ### Response
 
-**[GetSigningTemplate2Response](../../models/operations/GetSigningTemplate2Response.md)**
+**[GetSigningTemplateResponse](../../models/operations/GetSigningTemplateResponse.md)**
 
 ### Errors
 
@@ -65,20 +65,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## listSigningTemplates2
+## listSigningTemplates
 
 List all templates
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="listSigningTemplates2" method="get" path="/signing/{connection_id}/template" -->
+<!-- UsageSnippet language="java" operationID="listSigningTemplates" method="get" path="/signing/{connection_id}/template" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.ListSigningTemplates2Request;
-import to.unified.unified_java_sdk.models.operations.ListSigningTemplates2Response;
+import to.unified.unified_java_sdk.models.operations.ListSigningTemplatesRequest;
+import to.unified.unified_java_sdk.models.operations.ListSigningTemplatesResponse;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -91,11 +91,11 @@ public class Application {
                     .build())
             .build();
 
-        ListSigningTemplates2Request req = ListSigningTemplates2Request.builder()
+        ListSigningTemplatesRequest req = ListSigningTemplatesRequest.builder()
                 .connectionId("<id>")
                 .build();
 
-        ListSigningTemplates2Response res = sdk.template().listSigningTemplates2()
+        ListSigningTemplatesResponse res = sdk.template().listSigningTemplates()
                 .request(req)
                 .call();
 
@@ -108,13 +108,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
-| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
-| `request`                                                                               | [ListSigningTemplates2Request](../../models/operations/ListSigningTemplates2Request.md) | :heavy_check_mark:                                                                      | The request object to use for the request.                                              |
+| Parameter                                                                             | Type                                                                                  | Required                                                                              | Description                                                                           |
+| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| `request`                                                                             | [ListSigningTemplatesRequest](../../models/operations/ListSigningTemplatesRequest.md) | :heavy_check_mark:                                                                    | The request object to use for the request.                                            |
 
 ### Response
 
-**[ListSigningTemplates2Response](../../models/operations/ListSigningTemplates2Response.md)**
+**[ListSigningTemplatesResponse](../../models/operations/ListSigningTemplatesResponse.md)**
 
 ### Errors
 

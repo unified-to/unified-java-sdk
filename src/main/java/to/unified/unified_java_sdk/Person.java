@@ -6,10 +6,10 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
-import to.unified.unified_java_sdk.models.operations.ListEnrichPeople2Request;
-import to.unified.unified_java_sdk.models.operations.ListEnrichPeople2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.ListEnrichPeople2Response;
-import to.unified.unified_java_sdk.operations.ListEnrichPeople2;
+import to.unified.unified_java_sdk.models.operations.ListEnrichPeopleRequest;
+import to.unified.unified_java_sdk.models.operations.ListEnrichPeopleRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListEnrichPeopleResponse;
+import to.unified.unified_java_sdk.operations.ListEnrichPeople;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -37,8 +37,8 @@ public class Person {
      * 
      * @return The call builder
      */
-    public ListEnrichPeople2RequestBuilder listEnrichPeople2() {
-        return new ListEnrichPeople2RequestBuilder(sdkConfiguration);
+    public ListEnrichPeopleRequestBuilder listEnrichPeople() {
+        return new ListEnrichPeopleRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -48,9 +48,9 @@ public class Person {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListEnrichPeople2Response listEnrichPeople2(@Nonnull ListEnrichPeople2Request request) {
-        RequestOperation<ListEnrichPeople2Request, ListEnrichPeople2Response> operation
-              = new ListEnrichPeople2.Sync(sdkConfiguration, _headers);
+    public ListEnrichPeopleResponse listEnrichPeople(@Nonnull ListEnrichPeopleRequest request) {
+        RequestOperation<ListEnrichPeopleRequest, ListEnrichPeopleResponse> operation
+              = new ListEnrichPeople.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

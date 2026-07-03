@@ -4,27 +4,27 @@
 
 ### Available Operations
 
-* [createLmsContent2](#createlmscontent2) - Create a content
-* [getLmsContent2](#getlmscontent2) - Retrieve a content
-* [listLmsContents2](#listlmscontents2) - List all contents
-* [patchLmsContent2](#patchlmscontent2) - Update a content
-* [removeLmsContent2](#removelmscontent2) - Remove a content
-* [updateLmsContent2](#updatelmscontent2) - Update a content
+* [createLmsContent](#createlmscontent) - Create a content
+* [getLmsContent](#getlmscontent) - Retrieve a content
+* [listLmsContents](#listlmscontents) - List all contents
+* [patchLmsContent](#patchlmscontent) - Update a content
+* [removeLmsContent](#removelmscontent) - Remove a content
+* [updateLmsContent](#updatelmscontent) - Update a content
 
-## createLmsContent2
+## createLmsContent
 
 Create a content
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createLmsContent2" method="post" path="/lms/{connection_id}/content" -->
+<!-- UsageSnippet language="java" operationID="createLmsContent" method="post" path="/lms/{connection_id}/content" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.CreateLmsContent2Request;
-import to.unified.unified_java_sdk.models.operations.CreateLmsContent2Response;
+import to.unified.unified_java_sdk.models.operations.CreateLmsContentRequest;
+import to.unified.unified_java_sdk.models.operations.CreateLmsContentResponse;
 import to.unified.unified_java_sdk.models.shared.LmsContent;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -38,13 +38,13 @@ public class Application {
                     .build())
             .build();
 
-        CreateLmsContent2Request req = CreateLmsContent2Request.builder()
+        CreateLmsContentRequest req = CreateLmsContentRequest.builder()
                 .lmsContent(LmsContent.builder()
                     .build())
                 .connectionId("<id>")
                 .build();
 
-        CreateLmsContent2Response res = sdk.content().createLmsContent2()
+        CreateLmsContentResponse res = sdk.content().createLmsContent()
                 .request(req)
                 .call();
 
@@ -57,13 +57,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
-| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
-| `request`                                                                       | [CreateLmsContent2Request](../../models/operations/CreateLmsContent2Request.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
+| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
+| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| `request`                                                                     | [CreateLmsContentRequest](../../models/operations/CreateLmsContentRequest.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
 
 ### Response
 
-**[CreateLmsContent2Response](../../models/operations/CreateLmsContent2Response.md)**
+**[CreateLmsContentResponse](../../models/operations/CreateLmsContentResponse.md)**
 
 ### Errors
 
@@ -71,20 +71,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## getLmsContent2
+## getLmsContent
 
 Retrieve a content
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="getLmsContent2" method="get" path="/lms/{connection_id}/content/{id}" -->
+<!-- UsageSnippet language="java" operationID="getLmsContent" method="get" path="/lms/{connection_id}/content/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.GetLmsContent2Request;
-import to.unified.unified_java_sdk.models.operations.GetLmsContent2Response;
+import to.unified.unified_java_sdk.models.operations.GetLmsContentRequest;
+import to.unified.unified_java_sdk.models.operations.GetLmsContentResponse;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -97,12 +97,12 @@ public class Application {
                     .build())
             .build();
 
-        GetLmsContent2Request req = GetLmsContent2Request.builder()
+        GetLmsContentRequest req = GetLmsContentRequest.builder()
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        GetLmsContent2Response res = sdk.content().getLmsContent2()
+        GetLmsContentResponse res = sdk.content().getLmsContent()
                 .request(req)
                 .call();
 
@@ -115,13 +115,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                 | Type                                                                      | Required                                                                  | Description                                                               |
-| ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
-| `request`                                                                 | [GetLmsContent2Request](../../models/operations/GetLmsContent2Request.md) | :heavy_check_mark:                                                        | The request object to use for the request.                                |
+| Parameter                                                               | Type                                                                    | Required                                                                | Description                                                             |
+| ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- |
+| `request`                                                               | [GetLmsContentRequest](../../models/operations/GetLmsContentRequest.md) | :heavy_check_mark:                                                      | The request object to use for the request.                              |
 
 ### Response
 
-**[GetLmsContent2Response](../../models/operations/GetLmsContent2Response.md)**
+**[GetLmsContentResponse](../../models/operations/GetLmsContentResponse.md)**
 
 ### Errors
 
@@ -129,20 +129,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## listLmsContents2
+## listLmsContents
 
 List all contents
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="listLmsContents2" method="get" path="/lms/{connection_id}/content" -->
+<!-- UsageSnippet language="java" operationID="listLmsContents" method="get" path="/lms/{connection_id}/content" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.ListLmsContents2Request;
-import to.unified.unified_java_sdk.models.operations.ListLmsContents2Response;
+import to.unified.unified_java_sdk.models.operations.ListLmsContentsRequest;
+import to.unified.unified_java_sdk.models.operations.ListLmsContentsResponse;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -155,11 +155,11 @@ public class Application {
                     .build())
             .build();
 
-        ListLmsContents2Request req = ListLmsContents2Request.builder()
+        ListLmsContentsRequest req = ListLmsContentsRequest.builder()
                 .connectionId("<id>")
                 .build();
 
-        ListLmsContents2Response res = sdk.content().listLmsContents2()
+        ListLmsContentsResponse res = sdk.content().listLmsContents()
                 .request(req)
                 .call();
 
@@ -172,13 +172,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
-| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
-| `request`                                                                     | [ListLmsContents2Request](../../models/operations/ListLmsContents2Request.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
+| Parameter                                                                   | Type                                                                        | Required                                                                    | Description                                                                 |
+| --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| `request`                                                                   | [ListLmsContentsRequest](../../models/operations/ListLmsContentsRequest.md) | :heavy_check_mark:                                                          | The request object to use for the request.                                  |
 
 ### Response
 
-**[ListLmsContents2Response](../../models/operations/ListLmsContents2Response.md)**
+**[ListLmsContentsResponse](../../models/operations/ListLmsContentsResponse.md)**
 
 ### Errors
 
@@ -186,20 +186,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## patchLmsContent2
+## patchLmsContent
 
 Update a content
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchLmsContent2" method="patch" path="/lms/{connection_id}/content/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchLmsContent" method="patch" path="/lms/{connection_id}/content/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.PatchLmsContent2Request;
-import to.unified.unified_java_sdk.models.operations.PatchLmsContent2Response;
+import to.unified.unified_java_sdk.models.operations.PatchLmsContentRequest;
+import to.unified.unified_java_sdk.models.operations.PatchLmsContentResponse;
 import to.unified.unified_java_sdk.models.shared.LmsContent;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -213,14 +213,14 @@ public class Application {
                     .build())
             .build();
 
-        PatchLmsContent2Request req = PatchLmsContent2Request.builder()
+        PatchLmsContentRequest req = PatchLmsContentRequest.builder()
                 .lmsContent(LmsContent.builder()
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        PatchLmsContent2Response res = sdk.content().patchLmsContent2()
+        PatchLmsContentResponse res = sdk.content().patchLmsContent()
                 .request(req)
                 .call();
 
@@ -233,13 +233,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
-| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
-| `request`                                                                     | [PatchLmsContent2Request](../../models/operations/PatchLmsContent2Request.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
+| Parameter                                                                   | Type                                                                        | Required                                                                    | Description                                                                 |
+| --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| `request`                                                                   | [PatchLmsContentRequest](../../models/operations/PatchLmsContentRequest.md) | :heavy_check_mark:                                                          | The request object to use for the request.                                  |
 
 ### Response
 
-**[PatchLmsContent2Response](../../models/operations/PatchLmsContent2Response.md)**
+**[PatchLmsContentResponse](../../models/operations/PatchLmsContentResponse.md)**
 
 ### Errors
 
@@ -247,20 +247,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## removeLmsContent2
+## removeLmsContent
 
 Remove a content
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="removeLmsContent2" method="delete" path="/lms/{connection_id}/content/{id}" -->
+<!-- UsageSnippet language="java" operationID="removeLmsContent" method="delete" path="/lms/{connection_id}/content/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.RemoveLmsContent2Request;
-import to.unified.unified_java_sdk.models.operations.RemoveLmsContent2Response;
+import to.unified.unified_java_sdk.models.operations.RemoveLmsContentRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveLmsContentResponse;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -273,12 +273,12 @@ public class Application {
                     .build())
             .build();
 
-        RemoveLmsContent2Request req = RemoveLmsContent2Request.builder()
+        RemoveLmsContentRequest req = RemoveLmsContentRequest.builder()
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        RemoveLmsContent2Response res = sdk.content().removeLmsContent2()
+        RemoveLmsContentResponse res = sdk.content().removeLmsContent()
                 .request(req)
                 .call();
 
@@ -289,13 +289,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
-| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
-| `request`                                                                       | [RemoveLmsContent2Request](../../models/operations/RemoveLmsContent2Request.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
+| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
+| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| `request`                                                                     | [RemoveLmsContentRequest](../../models/operations/RemoveLmsContentRequest.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
 
 ### Response
 
-**[RemoveLmsContent2Response](../../models/operations/RemoveLmsContent2Response.md)**
+**[RemoveLmsContentResponse](../../models/operations/RemoveLmsContentResponse.md)**
 
 ### Errors
 
@@ -303,20 +303,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## updateLmsContent2
+## updateLmsContent
 
 Update a content
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateLmsContent2" method="put" path="/lms/{connection_id}/content/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateLmsContent" method="put" path="/lms/{connection_id}/content/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.UpdateLmsContent2Request;
-import to.unified.unified_java_sdk.models.operations.UpdateLmsContent2Response;
+import to.unified.unified_java_sdk.models.operations.UpdateLmsContentRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateLmsContentResponse;
 import to.unified.unified_java_sdk.models.shared.LmsContent;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -330,14 +330,14 @@ public class Application {
                     .build())
             .build();
 
-        UpdateLmsContent2Request req = UpdateLmsContent2Request.builder()
+        UpdateLmsContentRequest req = UpdateLmsContentRequest.builder()
                 .lmsContent(LmsContent.builder()
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        UpdateLmsContent2Response res = sdk.content().updateLmsContent2()
+        UpdateLmsContentResponse res = sdk.content().updateLmsContent()
                 .request(req)
                 .call();
 
@@ -350,13 +350,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
-| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
-| `request`                                                                       | [UpdateLmsContent2Request](../../models/operations/UpdateLmsContent2Request.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
+| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
+| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| `request`                                                                     | [UpdateLmsContentRequest](../../models/operations/UpdateLmsContentRequest.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
 
 ### Response
 
-**[UpdateLmsContent2Response](../../models/operations/UpdateLmsContent2Response.md)**
+**[UpdateLmsContentResponse](../../models/operations/UpdateLmsContentResponse.md)**
 
 ### Errors
 

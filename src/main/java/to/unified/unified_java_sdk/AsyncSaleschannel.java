@@ -7,30 +7,30 @@ import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOper
 
 import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
-import to.unified.unified_java_sdk.models.operations.CreateCommerceSaleschannel2Request;
-import to.unified.unified_java_sdk.models.operations.GetCommerceSaleschannel2Request;
-import to.unified.unified_java_sdk.models.operations.ListCommerceSaleschannels2Request;
-import to.unified.unified_java_sdk.models.operations.PatchCommerceSaleschannel2Request;
-import to.unified.unified_java_sdk.models.operations.RemoveCommerceSaleschannel2Request;
-import to.unified.unified_java_sdk.models.operations.UpdateCommerceSaleschannel2Request;
-import to.unified.unified_java_sdk.models.operations.async.CreateCommerceSaleschannel2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.CreateCommerceSaleschannel2Response;
-import to.unified.unified_java_sdk.models.operations.async.GetCommerceSaleschannel2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.GetCommerceSaleschannel2Response;
-import to.unified.unified_java_sdk.models.operations.async.ListCommerceSaleschannels2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.ListCommerceSaleschannels2Response;
-import to.unified.unified_java_sdk.models.operations.async.PatchCommerceSaleschannel2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.PatchCommerceSaleschannel2Response;
-import to.unified.unified_java_sdk.models.operations.async.RemoveCommerceSaleschannel2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.RemoveCommerceSaleschannel2Response;
-import to.unified.unified_java_sdk.models.operations.async.UpdateCommerceSaleschannel2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.UpdateCommerceSaleschannel2Response;
-import to.unified.unified_java_sdk.operations.CreateCommerceSaleschannel2;
-import to.unified.unified_java_sdk.operations.GetCommerceSaleschannel2;
-import to.unified.unified_java_sdk.operations.ListCommerceSaleschannels2;
-import to.unified.unified_java_sdk.operations.PatchCommerceSaleschannel2;
-import to.unified.unified_java_sdk.operations.RemoveCommerceSaleschannel2;
-import to.unified.unified_java_sdk.operations.UpdateCommerceSaleschannel2;
+import to.unified.unified_java_sdk.models.operations.CreateCommerceSaleschannelRequest;
+import to.unified.unified_java_sdk.models.operations.GetCommerceSaleschannelRequest;
+import to.unified.unified_java_sdk.models.operations.ListCommerceSaleschannelsRequest;
+import to.unified.unified_java_sdk.models.operations.PatchCommerceSaleschannelRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveCommerceSaleschannelRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateCommerceSaleschannelRequest;
+import to.unified.unified_java_sdk.models.operations.async.CreateCommerceSaleschannelRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.CreateCommerceSaleschannelResponse;
+import to.unified.unified_java_sdk.models.operations.async.GetCommerceSaleschannelRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetCommerceSaleschannelResponse;
+import to.unified.unified_java_sdk.models.operations.async.ListCommerceSaleschannelsRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListCommerceSaleschannelsResponse;
+import to.unified.unified_java_sdk.models.operations.async.PatchCommerceSaleschannelRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.PatchCommerceSaleschannelResponse;
+import to.unified.unified_java_sdk.models.operations.async.RemoveCommerceSaleschannelRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.RemoveCommerceSaleschannelResponse;
+import to.unified.unified_java_sdk.models.operations.async.UpdateCommerceSaleschannelRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.UpdateCommerceSaleschannelResponse;
+import to.unified.unified_java_sdk.operations.CreateCommerceSaleschannel;
+import to.unified.unified_java_sdk.operations.GetCommerceSaleschannel;
+import to.unified.unified_java_sdk.operations.ListCommerceSaleschannels;
+import to.unified.unified_java_sdk.operations.PatchCommerceSaleschannel;
+import to.unified.unified_java_sdk.operations.RemoveCommerceSaleschannel;
+import to.unified.unified_java_sdk.operations.UpdateCommerceSaleschannel;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -59,19 +59,19 @@ public class AsyncSaleschannel {
      * 
      * @return The async call builder
      */
-    public CreateCommerceSaleschannel2RequestBuilder createCommerceSaleschannel2() {
-        return new CreateCommerceSaleschannel2RequestBuilder(sdkConfiguration);
+    public CreateCommerceSaleschannelRequestBuilder createCommerceSaleschannel() {
+        return new CreateCommerceSaleschannelRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Create a saleschannel
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<CreateCommerceSaleschannel2Response>} - The async response
+     * @return {@code CompletableFuture<CreateCommerceSaleschannelResponse>} - The async response
      */
-    public CompletableFuture<CreateCommerceSaleschannel2Response> createCommerceSaleschannel2(@Nonnull CreateCommerceSaleschannel2Request request) {
-        AsyncRequestOperation<CreateCommerceSaleschannel2Request, CreateCommerceSaleschannel2Response> operation
-              = new CreateCommerceSaleschannel2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<CreateCommerceSaleschannelResponse> createCommerceSaleschannel(@Nonnull CreateCommerceSaleschannelRequest request) {
+        AsyncRequestOperation<CreateCommerceSaleschannelRequest, CreateCommerceSaleschannelResponse> operation
+              = new CreateCommerceSaleschannel.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -82,19 +82,19 @@ public class AsyncSaleschannel {
      * 
      * @return The async call builder
      */
-    public GetCommerceSaleschannel2RequestBuilder getCommerceSaleschannel2() {
-        return new GetCommerceSaleschannel2RequestBuilder(sdkConfiguration);
+    public GetCommerceSaleschannelRequestBuilder getCommerceSaleschannel() {
+        return new GetCommerceSaleschannelRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Retrieve a saleschannel
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<GetCommerceSaleschannel2Response>} - The async response
+     * @return {@code CompletableFuture<GetCommerceSaleschannelResponse>} - The async response
      */
-    public CompletableFuture<GetCommerceSaleschannel2Response> getCommerceSaleschannel2(@Nonnull GetCommerceSaleschannel2Request request) {
-        AsyncRequestOperation<GetCommerceSaleschannel2Request, GetCommerceSaleschannel2Response> operation
-              = new GetCommerceSaleschannel2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<GetCommerceSaleschannelResponse> getCommerceSaleschannel(@Nonnull GetCommerceSaleschannelRequest request) {
+        AsyncRequestOperation<GetCommerceSaleschannelRequest, GetCommerceSaleschannelResponse> operation
+              = new GetCommerceSaleschannel.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -105,19 +105,19 @@ public class AsyncSaleschannel {
      * 
      * @return The async call builder
      */
-    public ListCommerceSaleschannels2RequestBuilder listCommerceSaleschannels2() {
-        return new ListCommerceSaleschannels2RequestBuilder(sdkConfiguration);
+    public ListCommerceSaleschannelsRequestBuilder listCommerceSaleschannels() {
+        return new ListCommerceSaleschannelsRequestBuilder(sdkConfiguration);
     }
 
     /**
      * List all saleschannels
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<ListCommerceSaleschannels2Response>} - The async response
+     * @return {@code CompletableFuture<ListCommerceSaleschannelsResponse>} - The async response
      */
-    public CompletableFuture<ListCommerceSaleschannels2Response> listCommerceSaleschannels2(@Nonnull ListCommerceSaleschannels2Request request) {
-        AsyncRequestOperation<ListCommerceSaleschannels2Request, ListCommerceSaleschannels2Response> operation
-              = new ListCommerceSaleschannels2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<ListCommerceSaleschannelsResponse> listCommerceSaleschannels(@Nonnull ListCommerceSaleschannelsRequest request) {
+        AsyncRequestOperation<ListCommerceSaleschannelsRequest, ListCommerceSaleschannelsResponse> operation
+              = new ListCommerceSaleschannels.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -128,19 +128,19 @@ public class AsyncSaleschannel {
      * 
      * @return The async call builder
      */
-    public PatchCommerceSaleschannel2RequestBuilder patchCommerceSaleschannel2() {
-        return new PatchCommerceSaleschannel2RequestBuilder(sdkConfiguration);
+    public PatchCommerceSaleschannelRequestBuilder patchCommerceSaleschannel() {
+        return new PatchCommerceSaleschannelRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update a saleschannel
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<PatchCommerceSaleschannel2Response>} - The async response
+     * @return {@code CompletableFuture<PatchCommerceSaleschannelResponse>} - The async response
      */
-    public CompletableFuture<PatchCommerceSaleschannel2Response> patchCommerceSaleschannel2(@Nonnull PatchCommerceSaleschannel2Request request) {
-        AsyncRequestOperation<PatchCommerceSaleschannel2Request, PatchCommerceSaleschannel2Response> operation
-              = new PatchCommerceSaleschannel2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<PatchCommerceSaleschannelResponse> patchCommerceSaleschannel(@Nonnull PatchCommerceSaleschannelRequest request) {
+        AsyncRequestOperation<PatchCommerceSaleschannelRequest, PatchCommerceSaleschannelResponse> operation
+              = new PatchCommerceSaleschannel.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -151,19 +151,19 @@ public class AsyncSaleschannel {
      * 
      * @return The async call builder
      */
-    public RemoveCommerceSaleschannel2RequestBuilder removeCommerceSaleschannel2() {
-        return new RemoveCommerceSaleschannel2RequestBuilder(sdkConfiguration);
+    public RemoveCommerceSaleschannelRequestBuilder removeCommerceSaleschannel() {
+        return new RemoveCommerceSaleschannelRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Remove a saleschannel
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<RemoveCommerceSaleschannel2Response>} - The async response
+     * @return {@code CompletableFuture<RemoveCommerceSaleschannelResponse>} - The async response
      */
-    public CompletableFuture<RemoveCommerceSaleschannel2Response> removeCommerceSaleschannel2(@Nonnull RemoveCommerceSaleschannel2Request request) {
-        AsyncRequestOperation<RemoveCommerceSaleschannel2Request, RemoveCommerceSaleschannel2Response> operation
-              = new RemoveCommerceSaleschannel2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<RemoveCommerceSaleschannelResponse> removeCommerceSaleschannel(@Nonnull RemoveCommerceSaleschannelRequest request) {
+        AsyncRequestOperation<RemoveCommerceSaleschannelRequest, RemoveCommerceSaleschannelResponse> operation
+              = new RemoveCommerceSaleschannel.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -174,19 +174,19 @@ public class AsyncSaleschannel {
      * 
      * @return The async call builder
      */
-    public UpdateCommerceSaleschannel2RequestBuilder updateCommerceSaleschannel2() {
-        return new UpdateCommerceSaleschannel2RequestBuilder(sdkConfiguration);
+    public UpdateCommerceSaleschannelRequestBuilder updateCommerceSaleschannel() {
+        return new UpdateCommerceSaleschannelRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update a saleschannel
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<UpdateCommerceSaleschannel2Response>} - The async response
+     * @return {@code CompletableFuture<UpdateCommerceSaleschannelResponse>} - The async response
      */
-    public CompletableFuture<UpdateCommerceSaleschannel2Response> updateCommerceSaleschannel2(@Nonnull UpdateCommerceSaleschannel2Request request) {
-        AsyncRequestOperation<UpdateCommerceSaleschannel2Request, UpdateCommerceSaleschannel2Response> operation
-              = new UpdateCommerceSaleschannel2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<UpdateCommerceSaleschannelResponse> updateCommerceSaleschannel(@Nonnull UpdateCommerceSaleschannelRequest request) {
+        AsyncRequestOperation<UpdateCommerceSaleschannelRequest, UpdateCommerceSaleschannelResponse> operation
+              = new UpdateCommerceSaleschannel.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

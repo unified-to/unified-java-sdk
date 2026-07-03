@@ -6,30 +6,30 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
-import to.unified.unified_java_sdk.models.operations.CreateHrisBenefit2Request;
-import to.unified.unified_java_sdk.models.operations.CreateHrisBenefit2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.CreateHrisBenefit2Response;
-import to.unified.unified_java_sdk.models.operations.GetHrisBenefit2Request;
-import to.unified.unified_java_sdk.models.operations.GetHrisBenefit2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.GetHrisBenefit2Response;
-import to.unified.unified_java_sdk.models.operations.ListHrisBenefits2Request;
-import to.unified.unified_java_sdk.models.operations.ListHrisBenefits2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.ListHrisBenefits2Response;
-import to.unified.unified_java_sdk.models.operations.PatchHrisBenefit2Request;
-import to.unified.unified_java_sdk.models.operations.PatchHrisBenefit2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.PatchHrisBenefit2Response;
-import to.unified.unified_java_sdk.models.operations.RemoveHrisBenefit2Request;
-import to.unified.unified_java_sdk.models.operations.RemoveHrisBenefit2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.RemoveHrisBenefit2Response;
-import to.unified.unified_java_sdk.models.operations.UpdateHrisBenefit2Request;
-import to.unified.unified_java_sdk.models.operations.UpdateHrisBenefit2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.UpdateHrisBenefit2Response;
-import to.unified.unified_java_sdk.operations.CreateHrisBenefit2;
-import to.unified.unified_java_sdk.operations.GetHrisBenefit2;
-import to.unified.unified_java_sdk.operations.ListHrisBenefits2;
-import to.unified.unified_java_sdk.operations.PatchHrisBenefit2;
-import to.unified.unified_java_sdk.operations.RemoveHrisBenefit2;
-import to.unified.unified_java_sdk.operations.UpdateHrisBenefit2;
+import to.unified.unified_java_sdk.models.operations.CreateHrisBenefitRequest;
+import to.unified.unified_java_sdk.models.operations.CreateHrisBenefitRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.CreateHrisBenefitResponse;
+import to.unified.unified_java_sdk.models.operations.GetHrisBenefitRequest;
+import to.unified.unified_java_sdk.models.operations.GetHrisBenefitRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetHrisBenefitResponse;
+import to.unified.unified_java_sdk.models.operations.ListHrisBenefitsRequest;
+import to.unified.unified_java_sdk.models.operations.ListHrisBenefitsRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListHrisBenefitsResponse;
+import to.unified.unified_java_sdk.models.operations.PatchHrisBenefitRequest;
+import to.unified.unified_java_sdk.models.operations.PatchHrisBenefitRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.PatchHrisBenefitResponse;
+import to.unified.unified_java_sdk.models.operations.RemoveHrisBenefitRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveHrisBenefitRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.RemoveHrisBenefitResponse;
+import to.unified.unified_java_sdk.models.operations.UpdateHrisBenefitRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateHrisBenefitRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.UpdateHrisBenefitResponse;
+import to.unified.unified_java_sdk.operations.CreateHrisBenefit;
+import to.unified.unified_java_sdk.operations.GetHrisBenefit;
+import to.unified.unified_java_sdk.operations.ListHrisBenefits;
+import to.unified.unified_java_sdk.operations.PatchHrisBenefit;
+import to.unified.unified_java_sdk.operations.RemoveHrisBenefit;
+import to.unified.unified_java_sdk.operations.UpdateHrisBenefit;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -57,8 +57,8 @@ public class Benefit {
      * 
      * @return The call builder
      */
-    public CreateHrisBenefit2RequestBuilder createHrisBenefit2() {
-        return new CreateHrisBenefit2RequestBuilder(sdkConfiguration);
+    public CreateHrisBenefitRequestBuilder createHrisBenefit() {
+        return new CreateHrisBenefitRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -68,9 +68,9 @@ public class Benefit {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateHrisBenefit2Response createHrisBenefit2(@Nonnull CreateHrisBenefit2Request request) {
-        RequestOperation<CreateHrisBenefit2Request, CreateHrisBenefit2Response> operation
-              = new CreateHrisBenefit2.Sync(sdkConfiguration, _headers);
+    public CreateHrisBenefitResponse createHrisBenefit(@Nonnull CreateHrisBenefitRequest request) {
+        RequestOperation<CreateHrisBenefitRequest, CreateHrisBenefitResponse> operation
+              = new CreateHrisBenefit.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -79,8 +79,8 @@ public class Benefit {
      * 
      * @return The call builder
      */
-    public GetHrisBenefit2RequestBuilder getHrisBenefit2() {
-        return new GetHrisBenefit2RequestBuilder(sdkConfiguration);
+    public GetHrisBenefitRequestBuilder getHrisBenefit() {
+        return new GetHrisBenefitRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -90,9 +90,9 @@ public class Benefit {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetHrisBenefit2Response getHrisBenefit2(@Nonnull GetHrisBenefit2Request request) {
-        RequestOperation<GetHrisBenefit2Request, GetHrisBenefit2Response> operation
-              = new GetHrisBenefit2.Sync(sdkConfiguration, _headers);
+    public GetHrisBenefitResponse getHrisBenefit(@Nonnull GetHrisBenefitRequest request) {
+        RequestOperation<GetHrisBenefitRequest, GetHrisBenefitResponse> operation
+              = new GetHrisBenefit.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -101,8 +101,8 @@ public class Benefit {
      * 
      * @return The call builder
      */
-    public ListHrisBenefits2RequestBuilder listHrisBenefits2() {
-        return new ListHrisBenefits2RequestBuilder(sdkConfiguration);
+    public ListHrisBenefitsRequestBuilder listHrisBenefits() {
+        return new ListHrisBenefitsRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -112,9 +112,9 @@ public class Benefit {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListHrisBenefits2Response listHrisBenefits2(@Nonnull ListHrisBenefits2Request request) {
-        RequestOperation<ListHrisBenefits2Request, ListHrisBenefits2Response> operation
-              = new ListHrisBenefits2.Sync(sdkConfiguration, _headers);
+    public ListHrisBenefitsResponse listHrisBenefits(@Nonnull ListHrisBenefitsRequest request) {
+        RequestOperation<ListHrisBenefitsRequest, ListHrisBenefitsResponse> operation
+              = new ListHrisBenefits.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -123,8 +123,8 @@ public class Benefit {
      * 
      * @return The call builder
      */
-    public PatchHrisBenefit2RequestBuilder patchHrisBenefit2() {
-        return new PatchHrisBenefit2RequestBuilder(sdkConfiguration);
+    public PatchHrisBenefitRequestBuilder patchHrisBenefit() {
+        return new PatchHrisBenefitRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -134,9 +134,9 @@ public class Benefit {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchHrisBenefit2Response patchHrisBenefit2(@Nonnull PatchHrisBenefit2Request request) {
-        RequestOperation<PatchHrisBenefit2Request, PatchHrisBenefit2Response> operation
-              = new PatchHrisBenefit2.Sync(sdkConfiguration, _headers);
+    public PatchHrisBenefitResponse patchHrisBenefit(@Nonnull PatchHrisBenefitRequest request) {
+        RequestOperation<PatchHrisBenefitRequest, PatchHrisBenefitResponse> operation
+              = new PatchHrisBenefit.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -145,8 +145,8 @@ public class Benefit {
      * 
      * @return The call builder
      */
-    public RemoveHrisBenefit2RequestBuilder removeHrisBenefit2() {
-        return new RemoveHrisBenefit2RequestBuilder(sdkConfiguration);
+    public RemoveHrisBenefitRequestBuilder removeHrisBenefit() {
+        return new RemoveHrisBenefitRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -156,9 +156,9 @@ public class Benefit {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveHrisBenefit2Response removeHrisBenefit2(@Nonnull RemoveHrisBenefit2Request request) {
-        RequestOperation<RemoveHrisBenefit2Request, RemoveHrisBenefit2Response> operation
-              = new RemoveHrisBenefit2.Sync(sdkConfiguration, _headers);
+    public RemoveHrisBenefitResponse removeHrisBenefit(@Nonnull RemoveHrisBenefitRequest request) {
+        RequestOperation<RemoveHrisBenefitRequest, RemoveHrisBenefitResponse> operation
+              = new RemoveHrisBenefit.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -167,8 +167,8 @@ public class Benefit {
      * 
      * @return The call builder
      */
-    public UpdateHrisBenefit2RequestBuilder updateHrisBenefit2() {
-        return new UpdateHrisBenefit2RequestBuilder(sdkConfiguration);
+    public UpdateHrisBenefitRequestBuilder updateHrisBenefit() {
+        return new UpdateHrisBenefitRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -178,9 +178,9 @@ public class Benefit {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateHrisBenefit2Response updateHrisBenefit2(@Nonnull UpdateHrisBenefit2Request request) {
-        RequestOperation<UpdateHrisBenefit2Request, UpdateHrisBenefit2Response> operation
-              = new UpdateHrisBenefit2.Sync(sdkConfiguration, _headers);
+    public UpdateHrisBenefitResponse updateHrisBenefit(@Nonnull UpdateHrisBenefitRequest request) {
+        RequestOperation<UpdateHrisBenefitRequest, UpdateHrisBenefitResponse> operation
+              = new UpdateHrisBenefit.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

@@ -6,30 +6,30 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
-import to.unified.unified_java_sdk.models.operations.CreateCrmLead2Request;
-import to.unified.unified_java_sdk.models.operations.CreateCrmLead2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.CreateCrmLead2Response;
-import to.unified.unified_java_sdk.models.operations.GetCrmLead2Request;
-import to.unified.unified_java_sdk.models.operations.GetCrmLead2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.GetCrmLead2Response;
-import to.unified.unified_java_sdk.models.operations.ListCrmLeads2Request;
-import to.unified.unified_java_sdk.models.operations.ListCrmLeads2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.ListCrmLeads2Response;
-import to.unified.unified_java_sdk.models.operations.PatchCrmLead2Request;
-import to.unified.unified_java_sdk.models.operations.PatchCrmLead2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.PatchCrmLead2Response;
-import to.unified.unified_java_sdk.models.operations.RemoveCrmLead2Request;
-import to.unified.unified_java_sdk.models.operations.RemoveCrmLead2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.RemoveCrmLead2Response;
-import to.unified.unified_java_sdk.models.operations.UpdateCrmLead2Request;
-import to.unified.unified_java_sdk.models.operations.UpdateCrmLead2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.UpdateCrmLead2Response;
-import to.unified.unified_java_sdk.operations.CreateCrmLead2;
-import to.unified.unified_java_sdk.operations.GetCrmLead2;
-import to.unified.unified_java_sdk.operations.ListCrmLeads2;
-import to.unified.unified_java_sdk.operations.PatchCrmLead2;
-import to.unified.unified_java_sdk.operations.RemoveCrmLead2;
-import to.unified.unified_java_sdk.operations.UpdateCrmLead2;
+import to.unified.unified_java_sdk.models.operations.CreateCrmLeadRequest;
+import to.unified.unified_java_sdk.models.operations.CreateCrmLeadRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.CreateCrmLeadResponse;
+import to.unified.unified_java_sdk.models.operations.GetCrmLeadRequest;
+import to.unified.unified_java_sdk.models.operations.GetCrmLeadRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetCrmLeadResponse;
+import to.unified.unified_java_sdk.models.operations.ListCrmLeadsRequest;
+import to.unified.unified_java_sdk.models.operations.ListCrmLeadsRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListCrmLeadsResponse;
+import to.unified.unified_java_sdk.models.operations.PatchCrmLeadRequest;
+import to.unified.unified_java_sdk.models.operations.PatchCrmLeadRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.PatchCrmLeadResponse;
+import to.unified.unified_java_sdk.models.operations.RemoveCrmLeadRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveCrmLeadRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.RemoveCrmLeadResponse;
+import to.unified.unified_java_sdk.models.operations.UpdateCrmLeadRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateCrmLeadRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.UpdateCrmLeadResponse;
+import to.unified.unified_java_sdk.operations.CreateCrmLead;
+import to.unified.unified_java_sdk.operations.GetCrmLead;
+import to.unified.unified_java_sdk.operations.ListCrmLeads;
+import to.unified.unified_java_sdk.operations.PatchCrmLead;
+import to.unified.unified_java_sdk.operations.RemoveCrmLead;
+import to.unified.unified_java_sdk.operations.UpdateCrmLead;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -57,8 +57,8 @@ public class Lead {
      * 
      * @return The call builder
      */
-    public CreateCrmLead2RequestBuilder createCrmLead2() {
-        return new CreateCrmLead2RequestBuilder(sdkConfiguration);
+    public CreateCrmLeadRequestBuilder createCrmLead() {
+        return new CreateCrmLeadRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -68,9 +68,9 @@ public class Lead {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateCrmLead2Response createCrmLead2(@Nonnull CreateCrmLead2Request request) {
-        RequestOperation<CreateCrmLead2Request, CreateCrmLead2Response> operation
-              = new CreateCrmLead2.Sync(sdkConfiguration, _headers);
+    public CreateCrmLeadResponse createCrmLead(@Nonnull CreateCrmLeadRequest request) {
+        RequestOperation<CreateCrmLeadRequest, CreateCrmLeadResponse> operation
+              = new CreateCrmLead.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -79,8 +79,8 @@ public class Lead {
      * 
      * @return The call builder
      */
-    public GetCrmLead2RequestBuilder getCrmLead2() {
-        return new GetCrmLead2RequestBuilder(sdkConfiguration);
+    public GetCrmLeadRequestBuilder getCrmLead() {
+        return new GetCrmLeadRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -90,9 +90,9 @@ public class Lead {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetCrmLead2Response getCrmLead2(@Nonnull GetCrmLead2Request request) {
-        RequestOperation<GetCrmLead2Request, GetCrmLead2Response> operation
-              = new GetCrmLead2.Sync(sdkConfiguration, _headers);
+    public GetCrmLeadResponse getCrmLead(@Nonnull GetCrmLeadRequest request) {
+        RequestOperation<GetCrmLeadRequest, GetCrmLeadResponse> operation
+              = new GetCrmLead.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -101,8 +101,8 @@ public class Lead {
      * 
      * @return The call builder
      */
-    public ListCrmLeads2RequestBuilder listCrmLeads2() {
-        return new ListCrmLeads2RequestBuilder(sdkConfiguration);
+    public ListCrmLeadsRequestBuilder listCrmLeads() {
+        return new ListCrmLeadsRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -112,9 +112,9 @@ public class Lead {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListCrmLeads2Response listCrmLeads2(@Nonnull ListCrmLeads2Request request) {
-        RequestOperation<ListCrmLeads2Request, ListCrmLeads2Response> operation
-              = new ListCrmLeads2.Sync(sdkConfiguration, _headers);
+    public ListCrmLeadsResponse listCrmLeads(@Nonnull ListCrmLeadsRequest request) {
+        RequestOperation<ListCrmLeadsRequest, ListCrmLeadsResponse> operation
+              = new ListCrmLeads.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -123,8 +123,8 @@ public class Lead {
      * 
      * @return The call builder
      */
-    public PatchCrmLead2RequestBuilder patchCrmLead2() {
-        return new PatchCrmLead2RequestBuilder(sdkConfiguration);
+    public PatchCrmLeadRequestBuilder patchCrmLead() {
+        return new PatchCrmLeadRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -134,9 +134,9 @@ public class Lead {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchCrmLead2Response patchCrmLead2(@Nonnull PatchCrmLead2Request request) {
-        RequestOperation<PatchCrmLead2Request, PatchCrmLead2Response> operation
-              = new PatchCrmLead2.Sync(sdkConfiguration, _headers);
+    public PatchCrmLeadResponse patchCrmLead(@Nonnull PatchCrmLeadRequest request) {
+        RequestOperation<PatchCrmLeadRequest, PatchCrmLeadResponse> operation
+              = new PatchCrmLead.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -145,8 +145,8 @@ public class Lead {
      * 
      * @return The call builder
      */
-    public RemoveCrmLead2RequestBuilder removeCrmLead2() {
-        return new RemoveCrmLead2RequestBuilder(sdkConfiguration);
+    public RemoveCrmLeadRequestBuilder removeCrmLead() {
+        return new RemoveCrmLeadRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -156,9 +156,9 @@ public class Lead {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveCrmLead2Response removeCrmLead2(@Nonnull RemoveCrmLead2Request request) {
-        RequestOperation<RemoveCrmLead2Request, RemoveCrmLead2Response> operation
-              = new RemoveCrmLead2.Sync(sdkConfiguration, _headers);
+    public RemoveCrmLeadResponse removeCrmLead(@Nonnull RemoveCrmLeadRequest request) {
+        RequestOperation<RemoveCrmLeadRequest, RemoveCrmLeadResponse> operation
+              = new RemoveCrmLead.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -167,8 +167,8 @@ public class Lead {
      * 
      * @return The call builder
      */
-    public UpdateCrmLead2RequestBuilder updateCrmLead2() {
-        return new UpdateCrmLead2RequestBuilder(sdkConfiguration);
+    public UpdateCrmLeadRequestBuilder updateCrmLead() {
+        return new UpdateCrmLeadRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -178,9 +178,9 @@ public class Lead {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateCrmLead2Response updateCrmLead2(@Nonnull UpdateCrmLead2Request request) {
-        RequestOperation<UpdateCrmLead2Request, UpdateCrmLead2Response> operation
-              = new UpdateCrmLead2.Sync(sdkConfiguration, _headers);
+    public UpdateCrmLeadResponse updateCrmLead(@Nonnull UpdateCrmLeadRequest request) {
+        RequestOperation<UpdateCrmLeadRequest, UpdateCrmLeadResponse> operation
+              = new UpdateCrmLead.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

@@ -4,27 +4,27 @@
 
 ### Available Operations
 
-* [createStorageFile2](#createstoragefile2) - Create a file
-* [getStorageFile2](#getstoragefile2) - Retrieve a file
-* [listStorageFiles2](#liststoragefiles2) - List all files
-* [patchStorageFile2](#patchstoragefile2) - Update a file
-* [removeStorageFile2](#removestoragefile2) - Remove a file
-* [updateStorageFile2](#updatestoragefile2) - Update a file
+* [createStorageFile](#createstoragefile) - Create a file
+* [getStorageFile](#getstoragefile) - Retrieve a file
+* [listStorageFiles](#liststoragefiles) - List all files
+* [patchStorageFile](#patchstoragefile) - Update a file
+* [removeStorageFile](#removestoragefile) - Remove a file
+* [updateStorageFile](#updatestoragefile) - Update a file
 
-## createStorageFile2
+## createStorageFile
 
 Create a file
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createStorageFile2" method="post" path="/storage/{connection_id}/file" -->
+<!-- UsageSnippet language="java" operationID="createStorageFile" method="post" path="/storage/{connection_id}/file" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.CreateStorageFile2Request;
-import to.unified.unified_java_sdk.models.operations.CreateStorageFile2Response;
+import to.unified.unified_java_sdk.models.operations.CreateStorageFileRequest;
+import to.unified.unified_java_sdk.models.operations.CreateStorageFileResponse;
 import to.unified.unified_java_sdk.models.shared.Security;
 import to.unified.unified_java_sdk.models.shared.StorageFile;
 
@@ -38,13 +38,13 @@ public class Application {
                     .build())
             .build();
 
-        CreateStorageFile2Request req = CreateStorageFile2Request.builder()
+        CreateStorageFileRequest req = CreateStorageFileRequest.builder()
                 .storageFile(StorageFile.builder()
                     .build())
                 .connectionId("<id>")
                 .build();
 
-        CreateStorageFile2Response res = sdk.storage().createStorageFile2()
+        CreateStorageFileResponse res = sdk.storage().createStorageFile()
                 .request(req)
                 .call();
 
@@ -57,13 +57,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
-| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
-| `request`                                                                         | [CreateStorageFile2Request](../../models/operations/CreateStorageFile2Request.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
+| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| `request`                                                                       | [CreateStorageFileRequest](../../models/operations/CreateStorageFileRequest.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
 
 ### Response
 
-**[CreateStorageFile2Response](../../models/operations/CreateStorageFile2Response.md)**
+**[CreateStorageFileResponse](../../models/operations/CreateStorageFileResponse.md)**
 
 ### Errors
 
@@ -71,20 +71,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## getStorageFile2
+## getStorageFile
 
 Retrieve a file
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="getStorageFile2" method="get" path="/storage/{connection_id}/file/{id}" -->
+<!-- UsageSnippet language="java" operationID="getStorageFile" method="get" path="/storage/{connection_id}/file/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.GetStorageFile2Request;
-import to.unified.unified_java_sdk.models.operations.GetStorageFile2Response;
+import to.unified.unified_java_sdk.models.operations.GetStorageFileRequest;
+import to.unified.unified_java_sdk.models.operations.GetStorageFileResponse;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -97,12 +97,12 @@ public class Application {
                     .build())
             .build();
 
-        GetStorageFile2Request req = GetStorageFile2Request.builder()
+        GetStorageFileRequest req = GetStorageFileRequest.builder()
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        GetStorageFile2Response res = sdk.storage().getStorageFile2()
+        GetStorageFileResponse res = sdk.storage().getStorageFile()
                 .request(req)
                 .call();
 
@@ -115,13 +115,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                   | Type                                                                        | Required                                                                    | Description                                                                 |
-| --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
-| `request`                                                                   | [GetStorageFile2Request](../../models/operations/GetStorageFile2Request.md) | :heavy_check_mark:                                                          | The request object to use for the request.                                  |
+| Parameter                                                                 | Type                                                                      | Required                                                                  | Description                                                               |
+| ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
+| `request`                                                                 | [GetStorageFileRequest](../../models/operations/GetStorageFileRequest.md) | :heavy_check_mark:                                                        | The request object to use for the request.                                |
 
 ### Response
 
-**[GetStorageFile2Response](../../models/operations/GetStorageFile2Response.md)**
+**[GetStorageFileResponse](../../models/operations/GetStorageFileResponse.md)**
 
 ### Errors
 
@@ -129,20 +129,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## listStorageFiles2
+## listStorageFiles
 
 List all files
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="listStorageFiles2" method="get" path="/storage/{connection_id}/file" -->
+<!-- UsageSnippet language="java" operationID="listStorageFiles" method="get" path="/storage/{connection_id}/file" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.ListStorageFiles2Request;
-import to.unified.unified_java_sdk.models.operations.ListStorageFiles2Response;
+import to.unified.unified_java_sdk.models.operations.ListStorageFilesRequest;
+import to.unified.unified_java_sdk.models.operations.ListStorageFilesResponse;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -155,11 +155,11 @@ public class Application {
                     .build())
             .build();
 
-        ListStorageFiles2Request req = ListStorageFiles2Request.builder()
+        ListStorageFilesRequest req = ListStorageFilesRequest.builder()
                 .connectionId("<id>")
                 .build();
 
-        ListStorageFiles2Response res = sdk.storage().listStorageFiles2()
+        ListStorageFilesResponse res = sdk.storage().listStorageFiles()
                 .request(req)
                 .call();
 
@@ -172,13 +172,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
-| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
-| `request`                                                                       | [ListStorageFiles2Request](../../models/operations/ListStorageFiles2Request.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
+| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
+| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| `request`                                                                     | [ListStorageFilesRequest](../../models/operations/ListStorageFilesRequest.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
 
 ### Response
 
-**[ListStorageFiles2Response](../../models/operations/ListStorageFiles2Response.md)**
+**[ListStorageFilesResponse](../../models/operations/ListStorageFilesResponse.md)**
 
 ### Errors
 
@@ -186,20 +186,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## patchStorageFile2
+## patchStorageFile
 
 Update a file
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchStorageFile2" method="patch" path="/storage/{connection_id}/file/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchStorageFile" method="patch" path="/storage/{connection_id}/file/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.PatchStorageFile2Request;
-import to.unified.unified_java_sdk.models.operations.PatchStorageFile2Response;
+import to.unified.unified_java_sdk.models.operations.PatchStorageFileRequest;
+import to.unified.unified_java_sdk.models.operations.PatchStorageFileResponse;
 import to.unified.unified_java_sdk.models.shared.Security;
 import to.unified.unified_java_sdk.models.shared.StorageFile;
 
@@ -213,14 +213,14 @@ public class Application {
                     .build())
             .build();
 
-        PatchStorageFile2Request req = PatchStorageFile2Request.builder()
+        PatchStorageFileRequest req = PatchStorageFileRequest.builder()
                 .storageFile(StorageFile.builder()
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        PatchStorageFile2Response res = sdk.storage().patchStorageFile2()
+        PatchStorageFileResponse res = sdk.storage().patchStorageFile()
                 .request(req)
                 .call();
 
@@ -233,13 +233,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
-| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
-| `request`                                                                       | [PatchStorageFile2Request](../../models/operations/PatchStorageFile2Request.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
+| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
+| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| `request`                                                                     | [PatchStorageFileRequest](../../models/operations/PatchStorageFileRequest.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
 
 ### Response
 
-**[PatchStorageFile2Response](../../models/operations/PatchStorageFile2Response.md)**
+**[PatchStorageFileResponse](../../models/operations/PatchStorageFileResponse.md)**
 
 ### Errors
 
@@ -247,20 +247,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## removeStorageFile2
+## removeStorageFile
 
 Remove a file
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="removeStorageFile2" method="delete" path="/storage/{connection_id}/file/{id}" -->
+<!-- UsageSnippet language="java" operationID="removeStorageFile" method="delete" path="/storage/{connection_id}/file/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.RemoveStorageFile2Request;
-import to.unified.unified_java_sdk.models.operations.RemoveStorageFile2Response;
+import to.unified.unified_java_sdk.models.operations.RemoveStorageFileRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveStorageFileResponse;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -273,12 +273,12 @@ public class Application {
                     .build())
             .build();
 
-        RemoveStorageFile2Request req = RemoveStorageFile2Request.builder()
+        RemoveStorageFileRequest req = RemoveStorageFileRequest.builder()
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        RemoveStorageFile2Response res = sdk.storage().removeStorageFile2()
+        RemoveStorageFileResponse res = sdk.storage().removeStorageFile()
                 .request(req)
                 .call();
 
@@ -289,13 +289,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
-| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
-| `request`                                                                         | [RemoveStorageFile2Request](../../models/operations/RemoveStorageFile2Request.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
+| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| `request`                                                                       | [RemoveStorageFileRequest](../../models/operations/RemoveStorageFileRequest.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
 
 ### Response
 
-**[RemoveStorageFile2Response](../../models/operations/RemoveStorageFile2Response.md)**
+**[RemoveStorageFileResponse](../../models/operations/RemoveStorageFileResponse.md)**
 
 ### Errors
 
@@ -303,20 +303,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## updateStorageFile2
+## updateStorageFile
 
 Update a file
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateStorageFile2" method="put" path="/storage/{connection_id}/file/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateStorageFile" method="put" path="/storage/{connection_id}/file/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.UpdateStorageFile2Request;
-import to.unified.unified_java_sdk.models.operations.UpdateStorageFile2Response;
+import to.unified.unified_java_sdk.models.operations.UpdateStorageFileRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateStorageFileResponse;
 import to.unified.unified_java_sdk.models.shared.Security;
 import to.unified.unified_java_sdk.models.shared.StorageFile;
 
@@ -330,14 +330,14 @@ public class Application {
                     .build())
             .build();
 
-        UpdateStorageFile2Request req = UpdateStorageFile2Request.builder()
+        UpdateStorageFileRequest req = UpdateStorageFileRequest.builder()
                 .storageFile(StorageFile.builder()
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        UpdateStorageFile2Response res = sdk.storage().updateStorageFile2()
+        UpdateStorageFileResponse res = sdk.storage().updateStorageFile()
                 .request(req)
                 .call();
 
@@ -350,13 +350,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
-| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
-| `request`                                                                         | [UpdateStorageFile2Request](../../models/operations/UpdateStorageFile2Request.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
+| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| `request`                                                                       | [UpdateStorageFileRequest](../../models/operations/UpdateStorageFileRequest.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
 
 ### Response
 
-**[UpdateStorageFile2Response](../../models/operations/UpdateStorageFile2Response.md)**
+**[UpdateStorageFileResponse](../../models/operations/UpdateStorageFileResponse.md)**
 
 ### Errors
 

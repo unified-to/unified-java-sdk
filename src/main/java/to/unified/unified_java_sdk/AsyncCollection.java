@@ -7,54 +7,54 @@ import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOper
 
 import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
-import to.unified.unified_java_sdk.models.operations.CreateCommerceCollection2Request;
-import to.unified.unified_java_sdk.models.operations.CreateLmsCollection2Request;
-import to.unified.unified_java_sdk.models.operations.GetCommerceCollection2Request;
-import to.unified.unified_java_sdk.models.operations.GetLmsCollection2Request;
-import to.unified.unified_java_sdk.models.operations.ListCommerceCollections2Request;
-import to.unified.unified_java_sdk.models.operations.ListLmsCollections2Request;
-import to.unified.unified_java_sdk.models.operations.PatchCommerceCollection2Request;
-import to.unified.unified_java_sdk.models.operations.PatchLmsCollection2Request;
-import to.unified.unified_java_sdk.models.operations.RemoveCommerceCollection2Request;
-import to.unified.unified_java_sdk.models.operations.RemoveLmsCollection2Request;
-import to.unified.unified_java_sdk.models.operations.UpdateCommerceCollection2Request;
-import to.unified.unified_java_sdk.models.operations.UpdateLmsCollection2Request;
-import to.unified.unified_java_sdk.models.operations.async.CreateCommerceCollection2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.CreateCommerceCollection2Response;
-import to.unified.unified_java_sdk.models.operations.async.CreateLmsCollection2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.CreateLmsCollection2Response;
-import to.unified.unified_java_sdk.models.operations.async.GetCommerceCollection2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.GetCommerceCollection2Response;
-import to.unified.unified_java_sdk.models.operations.async.GetLmsCollection2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.GetLmsCollection2Response;
-import to.unified.unified_java_sdk.models.operations.async.ListCommerceCollections2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.ListCommerceCollections2Response;
-import to.unified.unified_java_sdk.models.operations.async.ListLmsCollections2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.ListLmsCollections2Response;
-import to.unified.unified_java_sdk.models.operations.async.PatchCommerceCollection2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.PatchCommerceCollection2Response;
-import to.unified.unified_java_sdk.models.operations.async.PatchLmsCollection2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.PatchLmsCollection2Response;
-import to.unified.unified_java_sdk.models.operations.async.RemoveCommerceCollection2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.RemoveCommerceCollection2Response;
-import to.unified.unified_java_sdk.models.operations.async.RemoveLmsCollection2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.RemoveLmsCollection2Response;
-import to.unified.unified_java_sdk.models.operations.async.UpdateCommerceCollection2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.UpdateCommerceCollection2Response;
-import to.unified.unified_java_sdk.models.operations.async.UpdateLmsCollection2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.UpdateLmsCollection2Response;
-import to.unified.unified_java_sdk.operations.CreateCommerceCollection2;
-import to.unified.unified_java_sdk.operations.CreateLmsCollection2;
-import to.unified.unified_java_sdk.operations.GetCommerceCollection2;
-import to.unified.unified_java_sdk.operations.GetLmsCollection2;
-import to.unified.unified_java_sdk.operations.ListCommerceCollections2;
-import to.unified.unified_java_sdk.operations.ListLmsCollections2;
-import to.unified.unified_java_sdk.operations.PatchCommerceCollection2;
-import to.unified.unified_java_sdk.operations.PatchLmsCollection2;
-import to.unified.unified_java_sdk.operations.RemoveCommerceCollection2;
-import to.unified.unified_java_sdk.operations.RemoveLmsCollection2;
-import to.unified.unified_java_sdk.operations.UpdateCommerceCollection2;
-import to.unified.unified_java_sdk.operations.UpdateLmsCollection2;
+import to.unified.unified_java_sdk.models.operations.CreateCommerceCollectionRequest;
+import to.unified.unified_java_sdk.models.operations.CreateLmsCollectionRequest;
+import to.unified.unified_java_sdk.models.operations.GetCommerceCollectionRequest;
+import to.unified.unified_java_sdk.models.operations.GetLmsCollectionRequest;
+import to.unified.unified_java_sdk.models.operations.ListCommerceCollectionsRequest;
+import to.unified.unified_java_sdk.models.operations.ListLmsCollectionsRequest;
+import to.unified.unified_java_sdk.models.operations.PatchCommerceCollectionRequest;
+import to.unified.unified_java_sdk.models.operations.PatchLmsCollectionRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveCommerceCollectionRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveLmsCollectionRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateCommerceCollectionRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateLmsCollectionRequest;
+import to.unified.unified_java_sdk.models.operations.async.CreateCommerceCollectionRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.CreateCommerceCollectionResponse;
+import to.unified.unified_java_sdk.models.operations.async.CreateLmsCollectionRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.CreateLmsCollectionResponse;
+import to.unified.unified_java_sdk.models.operations.async.GetCommerceCollectionRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetCommerceCollectionResponse;
+import to.unified.unified_java_sdk.models.operations.async.GetLmsCollectionRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetLmsCollectionResponse;
+import to.unified.unified_java_sdk.models.operations.async.ListCommerceCollectionsRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListCommerceCollectionsResponse;
+import to.unified.unified_java_sdk.models.operations.async.ListLmsCollectionsRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListLmsCollectionsResponse;
+import to.unified.unified_java_sdk.models.operations.async.PatchCommerceCollectionRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.PatchCommerceCollectionResponse;
+import to.unified.unified_java_sdk.models.operations.async.PatchLmsCollectionRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.PatchLmsCollectionResponse;
+import to.unified.unified_java_sdk.models.operations.async.RemoveCommerceCollectionRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.RemoveCommerceCollectionResponse;
+import to.unified.unified_java_sdk.models.operations.async.RemoveLmsCollectionRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.RemoveLmsCollectionResponse;
+import to.unified.unified_java_sdk.models.operations.async.UpdateCommerceCollectionRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.UpdateCommerceCollectionResponse;
+import to.unified.unified_java_sdk.models.operations.async.UpdateLmsCollectionRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.UpdateLmsCollectionResponse;
+import to.unified.unified_java_sdk.operations.CreateCommerceCollection;
+import to.unified.unified_java_sdk.operations.CreateLmsCollection;
+import to.unified.unified_java_sdk.operations.GetCommerceCollection;
+import to.unified.unified_java_sdk.operations.GetLmsCollection;
+import to.unified.unified_java_sdk.operations.ListCommerceCollections;
+import to.unified.unified_java_sdk.operations.ListLmsCollections;
+import to.unified.unified_java_sdk.operations.PatchCommerceCollection;
+import to.unified.unified_java_sdk.operations.PatchLmsCollection;
+import to.unified.unified_java_sdk.operations.RemoveCommerceCollection;
+import to.unified.unified_java_sdk.operations.RemoveLmsCollection;
+import to.unified.unified_java_sdk.operations.UpdateCommerceCollection;
+import to.unified.unified_java_sdk.operations.UpdateLmsCollection;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -83,19 +83,19 @@ public class AsyncCollection {
      * 
      * @return The async call builder
      */
-    public CreateCommerceCollection2RequestBuilder createCommerceCollection2() {
-        return new CreateCommerceCollection2RequestBuilder(sdkConfiguration);
+    public CreateCommerceCollectionRequestBuilder createCommerceCollection() {
+        return new CreateCommerceCollectionRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Create a collection
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<CreateCommerceCollection2Response>} - The async response
+     * @return {@code CompletableFuture<CreateCommerceCollectionResponse>} - The async response
      */
-    public CompletableFuture<CreateCommerceCollection2Response> createCommerceCollection2(@Nonnull CreateCommerceCollection2Request request) {
-        AsyncRequestOperation<CreateCommerceCollection2Request, CreateCommerceCollection2Response> operation
-              = new CreateCommerceCollection2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<CreateCommerceCollectionResponse> createCommerceCollection(@Nonnull CreateCommerceCollectionRequest request) {
+        AsyncRequestOperation<CreateCommerceCollectionRequest, CreateCommerceCollectionResponse> operation
+              = new CreateCommerceCollection.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -106,19 +106,19 @@ public class AsyncCollection {
      * 
      * @return The async call builder
      */
-    public CreateLmsCollection2RequestBuilder createLmsCollection2() {
-        return new CreateLmsCollection2RequestBuilder(sdkConfiguration);
+    public CreateLmsCollectionRequestBuilder createLmsCollection() {
+        return new CreateLmsCollectionRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Create a collection
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<CreateLmsCollection2Response>} - The async response
+     * @return {@code CompletableFuture<CreateLmsCollectionResponse>} - The async response
      */
-    public CompletableFuture<CreateLmsCollection2Response> createLmsCollection2(@Nonnull CreateLmsCollection2Request request) {
-        AsyncRequestOperation<CreateLmsCollection2Request, CreateLmsCollection2Response> operation
-              = new CreateLmsCollection2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<CreateLmsCollectionResponse> createLmsCollection(@Nonnull CreateLmsCollectionRequest request) {
+        AsyncRequestOperation<CreateLmsCollectionRequest, CreateLmsCollectionResponse> operation
+              = new CreateLmsCollection.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -129,19 +129,19 @@ public class AsyncCollection {
      * 
      * @return The async call builder
      */
-    public GetCommerceCollection2RequestBuilder getCommerceCollection2() {
-        return new GetCommerceCollection2RequestBuilder(sdkConfiguration);
+    public GetCommerceCollectionRequestBuilder getCommerceCollection() {
+        return new GetCommerceCollectionRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Retrieve a collection
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<GetCommerceCollection2Response>} - The async response
+     * @return {@code CompletableFuture<GetCommerceCollectionResponse>} - The async response
      */
-    public CompletableFuture<GetCommerceCollection2Response> getCommerceCollection2(@Nonnull GetCommerceCollection2Request request) {
-        AsyncRequestOperation<GetCommerceCollection2Request, GetCommerceCollection2Response> operation
-              = new GetCommerceCollection2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<GetCommerceCollectionResponse> getCommerceCollection(@Nonnull GetCommerceCollectionRequest request) {
+        AsyncRequestOperation<GetCommerceCollectionRequest, GetCommerceCollectionResponse> operation
+              = new GetCommerceCollection.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -152,19 +152,19 @@ public class AsyncCollection {
      * 
      * @return The async call builder
      */
-    public GetLmsCollection2RequestBuilder getLmsCollection2() {
-        return new GetLmsCollection2RequestBuilder(sdkConfiguration);
+    public GetLmsCollectionRequestBuilder getLmsCollection() {
+        return new GetLmsCollectionRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Retrieve a collection
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<GetLmsCollection2Response>} - The async response
+     * @return {@code CompletableFuture<GetLmsCollectionResponse>} - The async response
      */
-    public CompletableFuture<GetLmsCollection2Response> getLmsCollection2(@Nonnull GetLmsCollection2Request request) {
-        AsyncRequestOperation<GetLmsCollection2Request, GetLmsCollection2Response> operation
-              = new GetLmsCollection2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<GetLmsCollectionResponse> getLmsCollection(@Nonnull GetLmsCollectionRequest request) {
+        AsyncRequestOperation<GetLmsCollectionRequest, GetLmsCollectionResponse> operation
+              = new GetLmsCollection.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -175,19 +175,19 @@ public class AsyncCollection {
      * 
      * @return The async call builder
      */
-    public ListCommerceCollections2RequestBuilder listCommerceCollections2() {
-        return new ListCommerceCollections2RequestBuilder(sdkConfiguration);
+    public ListCommerceCollectionsRequestBuilder listCommerceCollections() {
+        return new ListCommerceCollectionsRequestBuilder(sdkConfiguration);
     }
 
     /**
      * List all collections
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<ListCommerceCollections2Response>} - The async response
+     * @return {@code CompletableFuture<ListCommerceCollectionsResponse>} - The async response
      */
-    public CompletableFuture<ListCommerceCollections2Response> listCommerceCollections2(@Nonnull ListCommerceCollections2Request request) {
-        AsyncRequestOperation<ListCommerceCollections2Request, ListCommerceCollections2Response> operation
-              = new ListCommerceCollections2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<ListCommerceCollectionsResponse> listCommerceCollections(@Nonnull ListCommerceCollectionsRequest request) {
+        AsyncRequestOperation<ListCommerceCollectionsRequest, ListCommerceCollectionsResponse> operation
+              = new ListCommerceCollections.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -198,19 +198,19 @@ public class AsyncCollection {
      * 
      * @return The async call builder
      */
-    public ListLmsCollections2RequestBuilder listLmsCollections2() {
-        return new ListLmsCollections2RequestBuilder(sdkConfiguration);
+    public ListLmsCollectionsRequestBuilder listLmsCollections() {
+        return new ListLmsCollectionsRequestBuilder(sdkConfiguration);
     }
 
     /**
      * List all collections
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<ListLmsCollections2Response>} - The async response
+     * @return {@code CompletableFuture<ListLmsCollectionsResponse>} - The async response
      */
-    public CompletableFuture<ListLmsCollections2Response> listLmsCollections2(@Nonnull ListLmsCollections2Request request) {
-        AsyncRequestOperation<ListLmsCollections2Request, ListLmsCollections2Response> operation
-              = new ListLmsCollections2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<ListLmsCollectionsResponse> listLmsCollections(@Nonnull ListLmsCollectionsRequest request) {
+        AsyncRequestOperation<ListLmsCollectionsRequest, ListLmsCollectionsResponse> operation
+              = new ListLmsCollections.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -221,19 +221,19 @@ public class AsyncCollection {
      * 
      * @return The async call builder
      */
-    public PatchCommerceCollection2RequestBuilder patchCommerceCollection2() {
-        return new PatchCommerceCollection2RequestBuilder(sdkConfiguration);
+    public PatchCommerceCollectionRequestBuilder patchCommerceCollection() {
+        return new PatchCommerceCollectionRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update a collection
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<PatchCommerceCollection2Response>} - The async response
+     * @return {@code CompletableFuture<PatchCommerceCollectionResponse>} - The async response
      */
-    public CompletableFuture<PatchCommerceCollection2Response> patchCommerceCollection2(@Nonnull PatchCommerceCollection2Request request) {
-        AsyncRequestOperation<PatchCommerceCollection2Request, PatchCommerceCollection2Response> operation
-              = new PatchCommerceCollection2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<PatchCommerceCollectionResponse> patchCommerceCollection(@Nonnull PatchCommerceCollectionRequest request) {
+        AsyncRequestOperation<PatchCommerceCollectionRequest, PatchCommerceCollectionResponse> operation
+              = new PatchCommerceCollection.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -244,42 +244,19 @@ public class AsyncCollection {
      * 
      * @return The async call builder
      */
-    public PatchLmsCollection2RequestBuilder patchLmsCollection2() {
-        return new PatchLmsCollection2RequestBuilder(sdkConfiguration);
+    public PatchLmsCollectionRequestBuilder patchLmsCollection() {
+        return new PatchLmsCollectionRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update a collection
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<PatchLmsCollection2Response>} - The async response
+     * @return {@code CompletableFuture<PatchLmsCollectionResponse>} - The async response
      */
-    public CompletableFuture<PatchLmsCollection2Response> patchLmsCollection2(@Nonnull PatchLmsCollection2Request request) {
-        AsyncRequestOperation<PatchLmsCollection2Request, PatchLmsCollection2Response> operation
-              = new PatchLmsCollection2.Async(sdkConfiguration, _headers);
-        return operation.doRequest(request)
-            .thenCompose(operation::handleResponse);
-    }
-
-
-    /**
-     * Remove a collection
-     * 
-     * @return The async call builder
-     */
-    public RemoveCommerceCollection2RequestBuilder removeCommerceCollection2() {
-        return new RemoveCommerceCollection2RequestBuilder(sdkConfiguration);
-    }
-
-    /**
-     * Remove a collection
-     * 
-     * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<RemoveCommerceCollection2Response>} - The async response
-     */
-    public CompletableFuture<RemoveCommerceCollection2Response> removeCommerceCollection2(@Nonnull RemoveCommerceCollection2Request request) {
-        AsyncRequestOperation<RemoveCommerceCollection2Request, RemoveCommerceCollection2Response> operation
-              = new RemoveCommerceCollection2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<PatchLmsCollectionResponse> patchLmsCollection(@Nonnull PatchLmsCollectionRequest request) {
+        AsyncRequestOperation<PatchLmsCollectionRequest, PatchLmsCollectionResponse> operation
+              = new PatchLmsCollection.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -290,19 +267,42 @@ public class AsyncCollection {
      * 
      * @return The async call builder
      */
-    public RemoveLmsCollection2RequestBuilder removeLmsCollection2() {
-        return new RemoveLmsCollection2RequestBuilder(sdkConfiguration);
+    public RemoveCommerceCollectionRequestBuilder removeCommerceCollection() {
+        return new RemoveCommerceCollectionRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Remove a collection
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<RemoveLmsCollection2Response>} - The async response
+     * @return {@code CompletableFuture<RemoveCommerceCollectionResponse>} - The async response
      */
-    public CompletableFuture<RemoveLmsCollection2Response> removeLmsCollection2(@Nonnull RemoveLmsCollection2Request request) {
-        AsyncRequestOperation<RemoveLmsCollection2Request, RemoveLmsCollection2Response> operation
-              = new RemoveLmsCollection2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<RemoveCommerceCollectionResponse> removeCommerceCollection(@Nonnull RemoveCommerceCollectionRequest request) {
+        AsyncRequestOperation<RemoveCommerceCollectionRequest, RemoveCommerceCollectionResponse> operation
+              = new RemoveCommerceCollection.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * Remove a collection
+     * 
+     * @return The async call builder
+     */
+    public RemoveLmsCollectionRequestBuilder removeLmsCollection() {
+        return new RemoveLmsCollectionRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Remove a collection
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<RemoveLmsCollectionResponse>} - The async response
+     */
+    public CompletableFuture<RemoveLmsCollectionResponse> removeLmsCollection(@Nonnull RemoveLmsCollectionRequest request) {
+        AsyncRequestOperation<RemoveLmsCollectionRequest, RemoveLmsCollectionResponse> operation
+              = new RemoveLmsCollection.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -313,19 +313,19 @@ public class AsyncCollection {
      * 
      * @return The async call builder
      */
-    public UpdateCommerceCollection2RequestBuilder updateCommerceCollection2() {
-        return new UpdateCommerceCollection2RequestBuilder(sdkConfiguration);
+    public UpdateCommerceCollectionRequestBuilder updateCommerceCollection() {
+        return new UpdateCommerceCollectionRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update a collection
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<UpdateCommerceCollection2Response>} - The async response
+     * @return {@code CompletableFuture<UpdateCommerceCollectionResponse>} - The async response
      */
-    public CompletableFuture<UpdateCommerceCollection2Response> updateCommerceCollection2(@Nonnull UpdateCommerceCollection2Request request) {
-        AsyncRequestOperation<UpdateCommerceCollection2Request, UpdateCommerceCollection2Response> operation
-              = new UpdateCommerceCollection2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<UpdateCommerceCollectionResponse> updateCommerceCollection(@Nonnull UpdateCommerceCollectionRequest request) {
+        AsyncRequestOperation<UpdateCommerceCollectionRequest, UpdateCommerceCollectionResponse> operation
+              = new UpdateCommerceCollection.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -336,19 +336,19 @@ public class AsyncCollection {
      * 
      * @return The async call builder
      */
-    public UpdateLmsCollection2RequestBuilder updateLmsCollection2() {
-        return new UpdateLmsCollection2RequestBuilder(sdkConfiguration);
+    public UpdateLmsCollectionRequestBuilder updateLmsCollection() {
+        return new UpdateLmsCollectionRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update a collection
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<UpdateLmsCollection2Response>} - The async response
+     * @return {@code CompletableFuture<UpdateLmsCollectionResponse>} - The async response
      */
-    public CompletableFuture<UpdateLmsCollection2Response> updateLmsCollection2(@Nonnull UpdateLmsCollection2Request request) {
-        AsyncRequestOperation<UpdateLmsCollection2Request, UpdateLmsCollection2Response> operation
-              = new UpdateLmsCollection2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<UpdateLmsCollectionResponse> updateLmsCollection(@Nonnull UpdateLmsCollectionRequest request) {
+        AsyncRequestOperation<UpdateLmsCollectionRequest, UpdateLmsCollectionResponse> operation
+              = new UpdateLmsCollection.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

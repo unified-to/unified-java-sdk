@@ -7,94 +7,94 @@ import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOper
 
 import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
-import to.unified.unified_java_sdk.models.operations.CreatePaymentLink2Request;
-import to.unified.unified_java_sdk.models.operations.CreatePaymentPayment2Request;
-import to.unified.unified_java_sdk.models.operations.CreatePaymentSubscription2Request;
-import to.unified.unified_java_sdk.models.operations.GetPaymentLink2Request;
-import to.unified.unified_java_sdk.models.operations.GetPaymentPayment2Request;
-import to.unified.unified_java_sdk.models.operations.GetPaymentPayout2Request;
-import to.unified.unified_java_sdk.models.operations.GetPaymentRefund2Request;
-import to.unified.unified_java_sdk.models.operations.GetPaymentSubscription2Request;
-import to.unified.unified_java_sdk.models.operations.ListPaymentLinks2Request;
-import to.unified.unified_java_sdk.models.operations.ListPaymentPayments2Request;
-import to.unified.unified_java_sdk.models.operations.ListPaymentPayouts2Request;
-import to.unified.unified_java_sdk.models.operations.ListPaymentRefunds2Request;
-import to.unified.unified_java_sdk.models.operations.ListPaymentSubscriptions2Request;
-import to.unified.unified_java_sdk.models.operations.PatchPaymentLink2Request;
-import to.unified.unified_java_sdk.models.operations.PatchPaymentPayment2Request;
-import to.unified.unified_java_sdk.models.operations.PatchPaymentSubscription2Request;
-import to.unified.unified_java_sdk.models.operations.RemovePaymentLink2Request;
-import to.unified.unified_java_sdk.models.operations.RemovePaymentPayment2Request;
-import to.unified.unified_java_sdk.models.operations.RemovePaymentSubscription2Request;
-import to.unified.unified_java_sdk.models.operations.UpdatePaymentLink2Request;
-import to.unified.unified_java_sdk.models.operations.UpdatePaymentPayment2Request;
-import to.unified.unified_java_sdk.models.operations.UpdatePaymentSubscription2Request;
-import to.unified.unified_java_sdk.models.operations.async.CreatePaymentLink2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.CreatePaymentLink2Response;
-import to.unified.unified_java_sdk.models.operations.async.CreatePaymentPayment2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.CreatePaymentPayment2Response;
-import to.unified.unified_java_sdk.models.operations.async.CreatePaymentSubscription2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.CreatePaymentSubscription2Response;
-import to.unified.unified_java_sdk.models.operations.async.GetPaymentLink2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.GetPaymentLink2Response;
-import to.unified.unified_java_sdk.models.operations.async.GetPaymentPayment2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.GetPaymentPayment2Response;
-import to.unified.unified_java_sdk.models.operations.async.GetPaymentPayout2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.GetPaymentPayout2Response;
-import to.unified.unified_java_sdk.models.operations.async.GetPaymentRefund2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.GetPaymentRefund2Response;
-import to.unified.unified_java_sdk.models.operations.async.GetPaymentSubscription2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.GetPaymentSubscription2Response;
-import to.unified.unified_java_sdk.models.operations.async.ListPaymentLinks2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.ListPaymentLinks2Response;
-import to.unified.unified_java_sdk.models.operations.async.ListPaymentPayments2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.ListPaymentPayments2Response;
-import to.unified.unified_java_sdk.models.operations.async.ListPaymentPayouts2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.ListPaymentPayouts2Response;
-import to.unified.unified_java_sdk.models.operations.async.ListPaymentRefunds2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.ListPaymentRefunds2Response;
-import to.unified.unified_java_sdk.models.operations.async.ListPaymentSubscriptions2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.ListPaymentSubscriptions2Response;
-import to.unified.unified_java_sdk.models.operations.async.PatchPaymentLink2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.PatchPaymentLink2Response;
-import to.unified.unified_java_sdk.models.operations.async.PatchPaymentPayment2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.PatchPaymentPayment2Response;
-import to.unified.unified_java_sdk.models.operations.async.PatchPaymentSubscription2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.PatchPaymentSubscription2Response;
-import to.unified.unified_java_sdk.models.operations.async.RemovePaymentLink2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.RemovePaymentLink2Response;
-import to.unified.unified_java_sdk.models.operations.async.RemovePaymentPayment2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.RemovePaymentPayment2Response;
-import to.unified.unified_java_sdk.models.operations.async.RemovePaymentSubscription2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.RemovePaymentSubscription2Response;
-import to.unified.unified_java_sdk.models.operations.async.UpdatePaymentLink2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.UpdatePaymentLink2Response;
-import to.unified.unified_java_sdk.models.operations.async.UpdatePaymentPayment2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.UpdatePaymentPayment2Response;
-import to.unified.unified_java_sdk.models.operations.async.UpdatePaymentSubscription2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.UpdatePaymentSubscription2Response;
-import to.unified.unified_java_sdk.operations.CreatePaymentLink2;
-import to.unified.unified_java_sdk.operations.CreatePaymentPayment2;
-import to.unified.unified_java_sdk.operations.CreatePaymentSubscription2;
-import to.unified.unified_java_sdk.operations.GetPaymentLink2;
-import to.unified.unified_java_sdk.operations.GetPaymentPayment2;
-import to.unified.unified_java_sdk.operations.GetPaymentPayout2;
-import to.unified.unified_java_sdk.operations.GetPaymentRefund2;
-import to.unified.unified_java_sdk.operations.GetPaymentSubscription2;
-import to.unified.unified_java_sdk.operations.ListPaymentLinks2;
-import to.unified.unified_java_sdk.operations.ListPaymentPayments2;
-import to.unified.unified_java_sdk.operations.ListPaymentPayouts2;
-import to.unified.unified_java_sdk.operations.ListPaymentRefunds2;
-import to.unified.unified_java_sdk.operations.ListPaymentSubscriptions2;
-import to.unified.unified_java_sdk.operations.PatchPaymentLink2;
-import to.unified.unified_java_sdk.operations.PatchPaymentPayment2;
-import to.unified.unified_java_sdk.operations.PatchPaymentSubscription2;
-import to.unified.unified_java_sdk.operations.RemovePaymentLink2;
-import to.unified.unified_java_sdk.operations.RemovePaymentPayment2;
-import to.unified.unified_java_sdk.operations.RemovePaymentSubscription2;
-import to.unified.unified_java_sdk.operations.UpdatePaymentLink2;
-import to.unified.unified_java_sdk.operations.UpdatePaymentPayment2;
-import to.unified.unified_java_sdk.operations.UpdatePaymentSubscription2;
+import to.unified.unified_java_sdk.models.operations.CreatePaymentLinkRequest;
+import to.unified.unified_java_sdk.models.operations.CreatePaymentPaymentRequest;
+import to.unified.unified_java_sdk.models.operations.CreatePaymentSubscriptionRequest;
+import to.unified.unified_java_sdk.models.operations.GetPaymentLinkRequest;
+import to.unified.unified_java_sdk.models.operations.GetPaymentPaymentRequest;
+import to.unified.unified_java_sdk.models.operations.GetPaymentPayoutRequest;
+import to.unified.unified_java_sdk.models.operations.GetPaymentRefundRequest;
+import to.unified.unified_java_sdk.models.operations.GetPaymentSubscriptionRequest;
+import to.unified.unified_java_sdk.models.operations.ListPaymentLinksRequest;
+import to.unified.unified_java_sdk.models.operations.ListPaymentPaymentsRequest;
+import to.unified.unified_java_sdk.models.operations.ListPaymentPayoutsRequest;
+import to.unified.unified_java_sdk.models.operations.ListPaymentRefundsRequest;
+import to.unified.unified_java_sdk.models.operations.ListPaymentSubscriptionsRequest;
+import to.unified.unified_java_sdk.models.operations.PatchPaymentLinkRequest;
+import to.unified.unified_java_sdk.models.operations.PatchPaymentPaymentRequest;
+import to.unified.unified_java_sdk.models.operations.PatchPaymentSubscriptionRequest;
+import to.unified.unified_java_sdk.models.operations.RemovePaymentLinkRequest;
+import to.unified.unified_java_sdk.models.operations.RemovePaymentPaymentRequest;
+import to.unified.unified_java_sdk.models.operations.RemovePaymentSubscriptionRequest;
+import to.unified.unified_java_sdk.models.operations.UpdatePaymentLinkRequest;
+import to.unified.unified_java_sdk.models.operations.UpdatePaymentPaymentRequest;
+import to.unified.unified_java_sdk.models.operations.UpdatePaymentSubscriptionRequest;
+import to.unified.unified_java_sdk.models.operations.async.CreatePaymentLinkRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.CreatePaymentLinkResponse;
+import to.unified.unified_java_sdk.models.operations.async.CreatePaymentPaymentRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.CreatePaymentPaymentResponse;
+import to.unified.unified_java_sdk.models.operations.async.CreatePaymentSubscriptionRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.CreatePaymentSubscriptionResponse;
+import to.unified.unified_java_sdk.models.operations.async.GetPaymentLinkRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetPaymentLinkResponse;
+import to.unified.unified_java_sdk.models.operations.async.GetPaymentPaymentRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetPaymentPaymentResponse;
+import to.unified.unified_java_sdk.models.operations.async.GetPaymentPayoutRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetPaymentPayoutResponse;
+import to.unified.unified_java_sdk.models.operations.async.GetPaymentRefundRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetPaymentRefundResponse;
+import to.unified.unified_java_sdk.models.operations.async.GetPaymentSubscriptionRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetPaymentSubscriptionResponse;
+import to.unified.unified_java_sdk.models.operations.async.ListPaymentLinksRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListPaymentLinksResponse;
+import to.unified.unified_java_sdk.models.operations.async.ListPaymentPaymentsRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListPaymentPaymentsResponse;
+import to.unified.unified_java_sdk.models.operations.async.ListPaymentPayoutsRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListPaymentPayoutsResponse;
+import to.unified.unified_java_sdk.models.operations.async.ListPaymentRefundsRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListPaymentRefundsResponse;
+import to.unified.unified_java_sdk.models.operations.async.ListPaymentSubscriptionsRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListPaymentSubscriptionsResponse;
+import to.unified.unified_java_sdk.models.operations.async.PatchPaymentLinkRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.PatchPaymentLinkResponse;
+import to.unified.unified_java_sdk.models.operations.async.PatchPaymentPaymentRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.PatchPaymentPaymentResponse;
+import to.unified.unified_java_sdk.models.operations.async.PatchPaymentSubscriptionRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.PatchPaymentSubscriptionResponse;
+import to.unified.unified_java_sdk.models.operations.async.RemovePaymentLinkRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.RemovePaymentLinkResponse;
+import to.unified.unified_java_sdk.models.operations.async.RemovePaymentPaymentRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.RemovePaymentPaymentResponse;
+import to.unified.unified_java_sdk.models.operations.async.RemovePaymentSubscriptionRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.RemovePaymentSubscriptionResponse;
+import to.unified.unified_java_sdk.models.operations.async.UpdatePaymentLinkRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.UpdatePaymentLinkResponse;
+import to.unified.unified_java_sdk.models.operations.async.UpdatePaymentPaymentRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.UpdatePaymentPaymentResponse;
+import to.unified.unified_java_sdk.models.operations.async.UpdatePaymentSubscriptionRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.UpdatePaymentSubscriptionResponse;
+import to.unified.unified_java_sdk.operations.CreatePaymentLink;
+import to.unified.unified_java_sdk.operations.CreatePaymentPayment;
+import to.unified.unified_java_sdk.operations.CreatePaymentSubscription;
+import to.unified.unified_java_sdk.operations.GetPaymentLink;
+import to.unified.unified_java_sdk.operations.GetPaymentPayment;
+import to.unified.unified_java_sdk.operations.GetPaymentPayout;
+import to.unified.unified_java_sdk.operations.GetPaymentRefund;
+import to.unified.unified_java_sdk.operations.GetPaymentSubscription;
+import to.unified.unified_java_sdk.operations.ListPaymentLinks;
+import to.unified.unified_java_sdk.operations.ListPaymentPayments;
+import to.unified.unified_java_sdk.operations.ListPaymentPayouts;
+import to.unified.unified_java_sdk.operations.ListPaymentRefunds;
+import to.unified.unified_java_sdk.operations.ListPaymentSubscriptions;
+import to.unified.unified_java_sdk.operations.PatchPaymentLink;
+import to.unified.unified_java_sdk.operations.PatchPaymentPayment;
+import to.unified.unified_java_sdk.operations.PatchPaymentSubscription;
+import to.unified.unified_java_sdk.operations.RemovePaymentLink;
+import to.unified.unified_java_sdk.operations.RemovePaymentPayment;
+import to.unified.unified_java_sdk.operations.RemovePaymentSubscription;
+import to.unified.unified_java_sdk.operations.UpdatePaymentLink;
+import to.unified.unified_java_sdk.operations.UpdatePaymentPayment;
+import to.unified.unified_java_sdk.operations.UpdatePaymentSubscription;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -123,19 +123,19 @@ public class AsyncPayment {
      * 
      * @return The async call builder
      */
-    public CreatePaymentLink2RequestBuilder createPaymentLink2() {
-        return new CreatePaymentLink2RequestBuilder(sdkConfiguration);
+    public CreatePaymentLinkRequestBuilder createPaymentLink() {
+        return new CreatePaymentLinkRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Create a link
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<CreatePaymentLink2Response>} - The async response
+     * @return {@code CompletableFuture<CreatePaymentLinkResponse>} - The async response
      */
-    public CompletableFuture<CreatePaymentLink2Response> createPaymentLink2(@Nonnull CreatePaymentLink2Request request) {
-        AsyncRequestOperation<CreatePaymentLink2Request, CreatePaymentLink2Response> operation
-              = new CreatePaymentLink2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<CreatePaymentLinkResponse> createPaymentLink(@Nonnull CreatePaymentLinkRequest request) {
+        AsyncRequestOperation<CreatePaymentLinkRequest, CreatePaymentLinkResponse> operation
+              = new CreatePaymentLink.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -146,19 +146,19 @@ public class AsyncPayment {
      * 
      * @return The async call builder
      */
-    public CreatePaymentPayment2RequestBuilder createPaymentPayment2() {
-        return new CreatePaymentPayment2RequestBuilder(sdkConfiguration);
+    public CreatePaymentPaymentRequestBuilder createPaymentPayment() {
+        return new CreatePaymentPaymentRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Create a payment
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<CreatePaymentPayment2Response>} - The async response
+     * @return {@code CompletableFuture<CreatePaymentPaymentResponse>} - The async response
      */
-    public CompletableFuture<CreatePaymentPayment2Response> createPaymentPayment2(@Nonnull CreatePaymentPayment2Request request) {
-        AsyncRequestOperation<CreatePaymentPayment2Request, CreatePaymentPayment2Response> operation
-              = new CreatePaymentPayment2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<CreatePaymentPaymentResponse> createPaymentPayment(@Nonnull CreatePaymentPaymentRequest request) {
+        AsyncRequestOperation<CreatePaymentPaymentRequest, CreatePaymentPaymentResponse> operation
+              = new CreatePaymentPayment.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -169,19 +169,19 @@ public class AsyncPayment {
      * 
      * @return The async call builder
      */
-    public CreatePaymentSubscription2RequestBuilder createPaymentSubscription2() {
-        return new CreatePaymentSubscription2RequestBuilder(sdkConfiguration);
+    public CreatePaymentSubscriptionRequestBuilder createPaymentSubscription() {
+        return new CreatePaymentSubscriptionRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Create a subscription
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<CreatePaymentSubscription2Response>} - The async response
+     * @return {@code CompletableFuture<CreatePaymentSubscriptionResponse>} - The async response
      */
-    public CompletableFuture<CreatePaymentSubscription2Response> createPaymentSubscription2(@Nonnull CreatePaymentSubscription2Request request) {
-        AsyncRequestOperation<CreatePaymentSubscription2Request, CreatePaymentSubscription2Response> operation
-              = new CreatePaymentSubscription2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<CreatePaymentSubscriptionResponse> createPaymentSubscription(@Nonnull CreatePaymentSubscriptionRequest request) {
+        AsyncRequestOperation<CreatePaymentSubscriptionRequest, CreatePaymentSubscriptionResponse> operation
+              = new CreatePaymentSubscription.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -192,19 +192,19 @@ public class AsyncPayment {
      * 
      * @return The async call builder
      */
-    public GetPaymentLink2RequestBuilder getPaymentLink2() {
-        return new GetPaymentLink2RequestBuilder(sdkConfiguration);
+    public GetPaymentLinkRequestBuilder getPaymentLink() {
+        return new GetPaymentLinkRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Retrieve a link
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<GetPaymentLink2Response>} - The async response
+     * @return {@code CompletableFuture<GetPaymentLinkResponse>} - The async response
      */
-    public CompletableFuture<GetPaymentLink2Response> getPaymentLink2(@Nonnull GetPaymentLink2Request request) {
-        AsyncRequestOperation<GetPaymentLink2Request, GetPaymentLink2Response> operation
-              = new GetPaymentLink2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<GetPaymentLinkResponse> getPaymentLink(@Nonnull GetPaymentLinkRequest request) {
+        AsyncRequestOperation<GetPaymentLinkRequest, GetPaymentLinkResponse> operation
+              = new GetPaymentLink.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -215,19 +215,19 @@ public class AsyncPayment {
      * 
      * @return The async call builder
      */
-    public GetPaymentPayment2RequestBuilder getPaymentPayment2() {
-        return new GetPaymentPayment2RequestBuilder(sdkConfiguration);
+    public GetPaymentPaymentRequestBuilder getPaymentPayment() {
+        return new GetPaymentPaymentRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Retrieve a payment
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<GetPaymentPayment2Response>} - The async response
+     * @return {@code CompletableFuture<GetPaymentPaymentResponse>} - The async response
      */
-    public CompletableFuture<GetPaymentPayment2Response> getPaymentPayment2(@Nonnull GetPaymentPayment2Request request) {
-        AsyncRequestOperation<GetPaymentPayment2Request, GetPaymentPayment2Response> operation
-              = new GetPaymentPayment2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<GetPaymentPaymentResponse> getPaymentPayment(@Nonnull GetPaymentPaymentRequest request) {
+        AsyncRequestOperation<GetPaymentPaymentRequest, GetPaymentPaymentResponse> operation
+              = new GetPaymentPayment.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -238,19 +238,19 @@ public class AsyncPayment {
      * 
      * @return The async call builder
      */
-    public GetPaymentPayout2RequestBuilder getPaymentPayout2() {
-        return new GetPaymentPayout2RequestBuilder(sdkConfiguration);
+    public GetPaymentPayoutRequestBuilder getPaymentPayout() {
+        return new GetPaymentPayoutRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Retrieve a payout
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<GetPaymentPayout2Response>} - The async response
+     * @return {@code CompletableFuture<GetPaymentPayoutResponse>} - The async response
      */
-    public CompletableFuture<GetPaymentPayout2Response> getPaymentPayout2(@Nonnull GetPaymentPayout2Request request) {
-        AsyncRequestOperation<GetPaymentPayout2Request, GetPaymentPayout2Response> operation
-              = new GetPaymentPayout2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<GetPaymentPayoutResponse> getPaymentPayout(@Nonnull GetPaymentPayoutRequest request) {
+        AsyncRequestOperation<GetPaymentPayoutRequest, GetPaymentPayoutResponse> operation
+              = new GetPaymentPayout.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -261,19 +261,19 @@ public class AsyncPayment {
      * 
      * @return The async call builder
      */
-    public GetPaymentRefund2RequestBuilder getPaymentRefund2() {
-        return new GetPaymentRefund2RequestBuilder(sdkConfiguration);
+    public GetPaymentRefundRequestBuilder getPaymentRefund() {
+        return new GetPaymentRefundRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Retrieve a refund
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<GetPaymentRefund2Response>} - The async response
+     * @return {@code CompletableFuture<GetPaymentRefundResponse>} - The async response
      */
-    public CompletableFuture<GetPaymentRefund2Response> getPaymentRefund2(@Nonnull GetPaymentRefund2Request request) {
-        AsyncRequestOperation<GetPaymentRefund2Request, GetPaymentRefund2Response> operation
-              = new GetPaymentRefund2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<GetPaymentRefundResponse> getPaymentRefund(@Nonnull GetPaymentRefundRequest request) {
+        AsyncRequestOperation<GetPaymentRefundRequest, GetPaymentRefundResponse> operation
+              = new GetPaymentRefund.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -284,19 +284,19 @@ public class AsyncPayment {
      * 
      * @return The async call builder
      */
-    public GetPaymentSubscription2RequestBuilder getPaymentSubscription2() {
-        return new GetPaymentSubscription2RequestBuilder(sdkConfiguration);
+    public GetPaymentSubscriptionRequestBuilder getPaymentSubscription() {
+        return new GetPaymentSubscriptionRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Retrieve a subscription
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<GetPaymentSubscription2Response>} - The async response
+     * @return {@code CompletableFuture<GetPaymentSubscriptionResponse>} - The async response
      */
-    public CompletableFuture<GetPaymentSubscription2Response> getPaymentSubscription2(@Nonnull GetPaymentSubscription2Request request) {
-        AsyncRequestOperation<GetPaymentSubscription2Request, GetPaymentSubscription2Response> operation
-              = new GetPaymentSubscription2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<GetPaymentSubscriptionResponse> getPaymentSubscription(@Nonnull GetPaymentSubscriptionRequest request) {
+        AsyncRequestOperation<GetPaymentSubscriptionRequest, GetPaymentSubscriptionResponse> operation
+              = new GetPaymentSubscription.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -307,19 +307,19 @@ public class AsyncPayment {
      * 
      * @return The async call builder
      */
-    public ListPaymentLinks2RequestBuilder listPaymentLinks2() {
-        return new ListPaymentLinks2RequestBuilder(sdkConfiguration);
+    public ListPaymentLinksRequestBuilder listPaymentLinks() {
+        return new ListPaymentLinksRequestBuilder(sdkConfiguration);
     }
 
     /**
      * List all links
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<ListPaymentLinks2Response>} - The async response
+     * @return {@code CompletableFuture<ListPaymentLinksResponse>} - The async response
      */
-    public CompletableFuture<ListPaymentLinks2Response> listPaymentLinks2(@Nonnull ListPaymentLinks2Request request) {
-        AsyncRequestOperation<ListPaymentLinks2Request, ListPaymentLinks2Response> operation
-              = new ListPaymentLinks2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<ListPaymentLinksResponse> listPaymentLinks(@Nonnull ListPaymentLinksRequest request) {
+        AsyncRequestOperation<ListPaymentLinksRequest, ListPaymentLinksResponse> operation
+              = new ListPaymentLinks.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -330,19 +330,19 @@ public class AsyncPayment {
      * 
      * @return The async call builder
      */
-    public ListPaymentPayments2RequestBuilder listPaymentPayments2() {
-        return new ListPaymentPayments2RequestBuilder(sdkConfiguration);
+    public ListPaymentPaymentsRequestBuilder listPaymentPayments() {
+        return new ListPaymentPaymentsRequestBuilder(sdkConfiguration);
     }
 
     /**
      * List all payments
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<ListPaymentPayments2Response>} - The async response
+     * @return {@code CompletableFuture<ListPaymentPaymentsResponse>} - The async response
      */
-    public CompletableFuture<ListPaymentPayments2Response> listPaymentPayments2(@Nonnull ListPaymentPayments2Request request) {
-        AsyncRequestOperation<ListPaymentPayments2Request, ListPaymentPayments2Response> operation
-              = new ListPaymentPayments2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<ListPaymentPaymentsResponse> listPaymentPayments(@Nonnull ListPaymentPaymentsRequest request) {
+        AsyncRequestOperation<ListPaymentPaymentsRequest, ListPaymentPaymentsResponse> operation
+              = new ListPaymentPayments.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -353,19 +353,19 @@ public class AsyncPayment {
      * 
      * @return The async call builder
      */
-    public ListPaymentPayouts2RequestBuilder listPaymentPayouts2() {
-        return new ListPaymentPayouts2RequestBuilder(sdkConfiguration);
+    public ListPaymentPayoutsRequestBuilder listPaymentPayouts() {
+        return new ListPaymentPayoutsRequestBuilder(sdkConfiguration);
     }
 
     /**
      * List all payouts
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<ListPaymentPayouts2Response>} - The async response
+     * @return {@code CompletableFuture<ListPaymentPayoutsResponse>} - The async response
      */
-    public CompletableFuture<ListPaymentPayouts2Response> listPaymentPayouts2(@Nonnull ListPaymentPayouts2Request request) {
-        AsyncRequestOperation<ListPaymentPayouts2Request, ListPaymentPayouts2Response> operation
-              = new ListPaymentPayouts2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<ListPaymentPayoutsResponse> listPaymentPayouts(@Nonnull ListPaymentPayoutsRequest request) {
+        AsyncRequestOperation<ListPaymentPayoutsRequest, ListPaymentPayoutsResponse> operation
+              = new ListPaymentPayouts.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -376,19 +376,19 @@ public class AsyncPayment {
      * 
      * @return The async call builder
      */
-    public ListPaymentRefunds2RequestBuilder listPaymentRefunds2() {
-        return new ListPaymentRefunds2RequestBuilder(sdkConfiguration);
+    public ListPaymentRefundsRequestBuilder listPaymentRefunds() {
+        return new ListPaymentRefundsRequestBuilder(sdkConfiguration);
     }
 
     /**
      * List all refunds
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<ListPaymentRefunds2Response>} - The async response
+     * @return {@code CompletableFuture<ListPaymentRefundsResponse>} - The async response
      */
-    public CompletableFuture<ListPaymentRefunds2Response> listPaymentRefunds2(@Nonnull ListPaymentRefunds2Request request) {
-        AsyncRequestOperation<ListPaymentRefunds2Request, ListPaymentRefunds2Response> operation
-              = new ListPaymentRefunds2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<ListPaymentRefundsResponse> listPaymentRefunds(@Nonnull ListPaymentRefundsRequest request) {
+        AsyncRequestOperation<ListPaymentRefundsRequest, ListPaymentRefundsResponse> operation
+              = new ListPaymentRefunds.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -399,19 +399,19 @@ public class AsyncPayment {
      * 
      * @return The async call builder
      */
-    public ListPaymentSubscriptions2RequestBuilder listPaymentSubscriptions2() {
-        return new ListPaymentSubscriptions2RequestBuilder(sdkConfiguration);
+    public ListPaymentSubscriptionsRequestBuilder listPaymentSubscriptions() {
+        return new ListPaymentSubscriptionsRequestBuilder(sdkConfiguration);
     }
 
     /**
      * List all subscriptions
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<ListPaymentSubscriptions2Response>} - The async response
+     * @return {@code CompletableFuture<ListPaymentSubscriptionsResponse>} - The async response
      */
-    public CompletableFuture<ListPaymentSubscriptions2Response> listPaymentSubscriptions2(@Nonnull ListPaymentSubscriptions2Request request) {
-        AsyncRequestOperation<ListPaymentSubscriptions2Request, ListPaymentSubscriptions2Response> operation
-              = new ListPaymentSubscriptions2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<ListPaymentSubscriptionsResponse> listPaymentSubscriptions(@Nonnull ListPaymentSubscriptionsRequest request) {
+        AsyncRequestOperation<ListPaymentSubscriptionsRequest, ListPaymentSubscriptionsResponse> operation
+              = new ListPaymentSubscriptions.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -422,19 +422,19 @@ public class AsyncPayment {
      * 
      * @return The async call builder
      */
-    public PatchPaymentLink2RequestBuilder patchPaymentLink2() {
-        return new PatchPaymentLink2RequestBuilder(sdkConfiguration);
+    public PatchPaymentLinkRequestBuilder patchPaymentLink() {
+        return new PatchPaymentLinkRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update a link
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<PatchPaymentLink2Response>} - The async response
+     * @return {@code CompletableFuture<PatchPaymentLinkResponse>} - The async response
      */
-    public CompletableFuture<PatchPaymentLink2Response> patchPaymentLink2(@Nonnull PatchPaymentLink2Request request) {
-        AsyncRequestOperation<PatchPaymentLink2Request, PatchPaymentLink2Response> operation
-              = new PatchPaymentLink2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<PatchPaymentLinkResponse> patchPaymentLink(@Nonnull PatchPaymentLinkRequest request) {
+        AsyncRequestOperation<PatchPaymentLinkRequest, PatchPaymentLinkResponse> operation
+              = new PatchPaymentLink.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -445,19 +445,19 @@ public class AsyncPayment {
      * 
      * @return The async call builder
      */
-    public PatchPaymentPayment2RequestBuilder patchPaymentPayment2() {
-        return new PatchPaymentPayment2RequestBuilder(sdkConfiguration);
+    public PatchPaymentPaymentRequestBuilder patchPaymentPayment() {
+        return new PatchPaymentPaymentRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update a payment
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<PatchPaymentPayment2Response>} - The async response
+     * @return {@code CompletableFuture<PatchPaymentPaymentResponse>} - The async response
      */
-    public CompletableFuture<PatchPaymentPayment2Response> patchPaymentPayment2(@Nonnull PatchPaymentPayment2Request request) {
-        AsyncRequestOperation<PatchPaymentPayment2Request, PatchPaymentPayment2Response> operation
-              = new PatchPaymentPayment2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<PatchPaymentPaymentResponse> patchPaymentPayment(@Nonnull PatchPaymentPaymentRequest request) {
+        AsyncRequestOperation<PatchPaymentPaymentRequest, PatchPaymentPaymentResponse> operation
+              = new PatchPaymentPayment.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -468,19 +468,19 @@ public class AsyncPayment {
      * 
      * @return The async call builder
      */
-    public PatchPaymentSubscription2RequestBuilder patchPaymentSubscription2() {
-        return new PatchPaymentSubscription2RequestBuilder(sdkConfiguration);
+    public PatchPaymentSubscriptionRequestBuilder patchPaymentSubscription() {
+        return new PatchPaymentSubscriptionRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update a subscription
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<PatchPaymentSubscription2Response>} - The async response
+     * @return {@code CompletableFuture<PatchPaymentSubscriptionResponse>} - The async response
      */
-    public CompletableFuture<PatchPaymentSubscription2Response> patchPaymentSubscription2(@Nonnull PatchPaymentSubscription2Request request) {
-        AsyncRequestOperation<PatchPaymentSubscription2Request, PatchPaymentSubscription2Response> operation
-              = new PatchPaymentSubscription2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<PatchPaymentSubscriptionResponse> patchPaymentSubscription(@Nonnull PatchPaymentSubscriptionRequest request) {
+        AsyncRequestOperation<PatchPaymentSubscriptionRequest, PatchPaymentSubscriptionResponse> operation
+              = new PatchPaymentSubscription.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -491,19 +491,19 @@ public class AsyncPayment {
      * 
      * @return The async call builder
      */
-    public RemovePaymentLink2RequestBuilder removePaymentLink2() {
-        return new RemovePaymentLink2RequestBuilder(sdkConfiguration);
+    public RemovePaymentLinkRequestBuilder removePaymentLink() {
+        return new RemovePaymentLinkRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Remove a link
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<RemovePaymentLink2Response>} - The async response
+     * @return {@code CompletableFuture<RemovePaymentLinkResponse>} - The async response
      */
-    public CompletableFuture<RemovePaymentLink2Response> removePaymentLink2(@Nonnull RemovePaymentLink2Request request) {
-        AsyncRequestOperation<RemovePaymentLink2Request, RemovePaymentLink2Response> operation
-              = new RemovePaymentLink2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<RemovePaymentLinkResponse> removePaymentLink(@Nonnull RemovePaymentLinkRequest request) {
+        AsyncRequestOperation<RemovePaymentLinkRequest, RemovePaymentLinkResponse> operation
+              = new RemovePaymentLink.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -514,19 +514,19 @@ public class AsyncPayment {
      * 
      * @return The async call builder
      */
-    public RemovePaymentPayment2RequestBuilder removePaymentPayment2() {
-        return new RemovePaymentPayment2RequestBuilder(sdkConfiguration);
+    public RemovePaymentPaymentRequestBuilder removePaymentPayment() {
+        return new RemovePaymentPaymentRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Remove a payment
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<RemovePaymentPayment2Response>} - The async response
+     * @return {@code CompletableFuture<RemovePaymentPaymentResponse>} - The async response
      */
-    public CompletableFuture<RemovePaymentPayment2Response> removePaymentPayment2(@Nonnull RemovePaymentPayment2Request request) {
-        AsyncRequestOperation<RemovePaymentPayment2Request, RemovePaymentPayment2Response> operation
-              = new RemovePaymentPayment2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<RemovePaymentPaymentResponse> removePaymentPayment(@Nonnull RemovePaymentPaymentRequest request) {
+        AsyncRequestOperation<RemovePaymentPaymentRequest, RemovePaymentPaymentResponse> operation
+              = new RemovePaymentPayment.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -537,19 +537,19 @@ public class AsyncPayment {
      * 
      * @return The async call builder
      */
-    public RemovePaymentSubscription2RequestBuilder removePaymentSubscription2() {
-        return new RemovePaymentSubscription2RequestBuilder(sdkConfiguration);
+    public RemovePaymentSubscriptionRequestBuilder removePaymentSubscription() {
+        return new RemovePaymentSubscriptionRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Remove a subscription
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<RemovePaymentSubscription2Response>} - The async response
+     * @return {@code CompletableFuture<RemovePaymentSubscriptionResponse>} - The async response
      */
-    public CompletableFuture<RemovePaymentSubscription2Response> removePaymentSubscription2(@Nonnull RemovePaymentSubscription2Request request) {
-        AsyncRequestOperation<RemovePaymentSubscription2Request, RemovePaymentSubscription2Response> operation
-              = new RemovePaymentSubscription2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<RemovePaymentSubscriptionResponse> removePaymentSubscription(@Nonnull RemovePaymentSubscriptionRequest request) {
+        AsyncRequestOperation<RemovePaymentSubscriptionRequest, RemovePaymentSubscriptionResponse> operation
+              = new RemovePaymentSubscription.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -560,19 +560,19 @@ public class AsyncPayment {
      * 
      * @return The async call builder
      */
-    public UpdatePaymentLink2RequestBuilder updatePaymentLink2() {
-        return new UpdatePaymentLink2RequestBuilder(sdkConfiguration);
+    public UpdatePaymentLinkRequestBuilder updatePaymentLink() {
+        return new UpdatePaymentLinkRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update a link
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<UpdatePaymentLink2Response>} - The async response
+     * @return {@code CompletableFuture<UpdatePaymentLinkResponse>} - The async response
      */
-    public CompletableFuture<UpdatePaymentLink2Response> updatePaymentLink2(@Nonnull UpdatePaymentLink2Request request) {
-        AsyncRequestOperation<UpdatePaymentLink2Request, UpdatePaymentLink2Response> operation
-              = new UpdatePaymentLink2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<UpdatePaymentLinkResponse> updatePaymentLink(@Nonnull UpdatePaymentLinkRequest request) {
+        AsyncRequestOperation<UpdatePaymentLinkRequest, UpdatePaymentLinkResponse> operation
+              = new UpdatePaymentLink.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -583,19 +583,19 @@ public class AsyncPayment {
      * 
      * @return The async call builder
      */
-    public UpdatePaymentPayment2RequestBuilder updatePaymentPayment2() {
-        return new UpdatePaymentPayment2RequestBuilder(sdkConfiguration);
+    public UpdatePaymentPaymentRequestBuilder updatePaymentPayment() {
+        return new UpdatePaymentPaymentRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update a payment
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<UpdatePaymentPayment2Response>} - The async response
+     * @return {@code CompletableFuture<UpdatePaymentPaymentResponse>} - The async response
      */
-    public CompletableFuture<UpdatePaymentPayment2Response> updatePaymentPayment2(@Nonnull UpdatePaymentPayment2Request request) {
-        AsyncRequestOperation<UpdatePaymentPayment2Request, UpdatePaymentPayment2Response> operation
-              = new UpdatePaymentPayment2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<UpdatePaymentPaymentResponse> updatePaymentPayment(@Nonnull UpdatePaymentPaymentRequest request) {
+        AsyncRequestOperation<UpdatePaymentPaymentRequest, UpdatePaymentPaymentResponse> operation
+              = new UpdatePaymentPayment.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -606,19 +606,19 @@ public class AsyncPayment {
      * 
      * @return The async call builder
      */
-    public UpdatePaymentSubscription2RequestBuilder updatePaymentSubscription2() {
-        return new UpdatePaymentSubscription2RequestBuilder(sdkConfiguration);
+    public UpdatePaymentSubscriptionRequestBuilder updatePaymentSubscription() {
+        return new UpdatePaymentSubscriptionRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Update a subscription
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<UpdatePaymentSubscription2Response>} - The async response
+     * @return {@code CompletableFuture<UpdatePaymentSubscriptionResponse>} - The async response
      */
-    public CompletableFuture<UpdatePaymentSubscription2Response> updatePaymentSubscription2(@Nonnull UpdatePaymentSubscription2Request request) {
-        AsyncRequestOperation<UpdatePaymentSubscription2Request, UpdatePaymentSubscription2Response> operation
-              = new UpdatePaymentSubscription2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<UpdatePaymentSubscriptionResponse> updatePaymentSubscription(@Nonnull UpdatePaymentSubscriptionRequest request) {
+        AsyncRequestOperation<UpdatePaymentSubscriptionRequest, UpdatePaymentSubscriptionResponse> operation
+              = new UpdatePaymentSubscription.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

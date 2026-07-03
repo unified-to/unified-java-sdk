@@ -7,14 +7,14 @@ import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOper
 
 import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
-import to.unified.unified_java_sdk.models.operations.GetMessagingChannel2Request;
-import to.unified.unified_java_sdk.models.operations.ListMessagingChannels2Request;
-import to.unified.unified_java_sdk.models.operations.async.GetMessagingChannel2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.GetMessagingChannel2Response;
-import to.unified.unified_java_sdk.models.operations.async.ListMessagingChannels2RequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.ListMessagingChannels2Response;
-import to.unified.unified_java_sdk.operations.GetMessagingChannel2;
-import to.unified.unified_java_sdk.operations.ListMessagingChannels2;
+import to.unified.unified_java_sdk.models.operations.GetMessagingChannelRequest;
+import to.unified.unified_java_sdk.models.operations.ListMessagingChannelsRequest;
+import to.unified.unified_java_sdk.models.operations.async.GetMessagingChannelRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetMessagingChannelResponse;
+import to.unified.unified_java_sdk.models.operations.async.ListMessagingChannelsRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListMessagingChannelsResponse;
+import to.unified.unified_java_sdk.operations.GetMessagingChannel;
+import to.unified.unified_java_sdk.operations.ListMessagingChannels;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -43,19 +43,19 @@ public class AsyncChannel {
      * 
      * @return The async call builder
      */
-    public GetMessagingChannel2RequestBuilder getMessagingChannel2() {
-        return new GetMessagingChannel2RequestBuilder(sdkConfiguration);
+    public GetMessagingChannelRequestBuilder getMessagingChannel() {
+        return new GetMessagingChannelRequestBuilder(sdkConfiguration);
     }
 
     /**
      * Retrieve a channel
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<GetMessagingChannel2Response>} - The async response
+     * @return {@code CompletableFuture<GetMessagingChannelResponse>} - The async response
      */
-    public CompletableFuture<GetMessagingChannel2Response> getMessagingChannel2(@Nonnull GetMessagingChannel2Request request) {
-        AsyncRequestOperation<GetMessagingChannel2Request, GetMessagingChannel2Response> operation
-              = new GetMessagingChannel2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<GetMessagingChannelResponse> getMessagingChannel(@Nonnull GetMessagingChannelRequest request) {
+        AsyncRequestOperation<GetMessagingChannelRequest, GetMessagingChannelResponse> operation
+              = new GetMessagingChannel.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -66,19 +66,19 @@ public class AsyncChannel {
      * 
      * @return The async call builder
      */
-    public ListMessagingChannels2RequestBuilder listMessagingChannels2() {
-        return new ListMessagingChannels2RequestBuilder(sdkConfiguration);
+    public ListMessagingChannelsRequestBuilder listMessagingChannels() {
+        return new ListMessagingChannelsRequestBuilder(sdkConfiguration);
     }
 
     /**
      * List all channels
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<ListMessagingChannels2Response>} - The async response
+     * @return {@code CompletableFuture<ListMessagingChannelsResponse>} - The async response
      */
-    public CompletableFuture<ListMessagingChannels2Response> listMessagingChannels2(@Nonnull ListMessagingChannels2Request request) {
-        AsyncRequestOperation<ListMessagingChannels2Request, ListMessagingChannels2Response> operation
-              = new ListMessagingChannels2.Async(sdkConfiguration, _headers);
+    public CompletableFuture<ListMessagingChannelsResponse> listMessagingChannels(@Nonnull ListMessagingChannelsRequest request) {
+        AsyncRequestOperation<ListMessagingChannelsRequest, ListMessagingChannelsResponse> operation
+              = new ListMessagingChannels.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

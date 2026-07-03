@@ -4,35 +4,35 @@
 
 ### Available Operations
 
-* [createCommerceLocation2](#createcommercelocation2) - Create a location
-* [createHrisLocation2](#createhrislocation2) - Create a location
-* [getClubsLocation2](#getclubslocation2) - Retrieve a location
-* [getCommerceLocation2](#getcommercelocation2) - Retrieve a location
-* [getHrisLocation2](#gethrislocation2) - Retrieve a location
-* [listClubsLocations2](#listclubslocations2) - List all locations
-* [listCommerceLocations2](#listcommercelocations2) - List all locations
-* [listHrisLocations2](#listhrislocations2) - List all locations
-* [patchCommerceLocation2](#patchcommercelocation2) - Update a location
-* [patchHrisLocation2](#patchhrislocation2) - Update a location
-* [removeCommerceLocation2](#removecommercelocation2) - Remove a location
-* [removeHrisLocation2](#removehrislocation2) - Remove a location
-* [updateCommerceLocation2](#updatecommercelocation2) - Update a location
-* [updateHrisLocation2](#updatehrislocation2) - Update a location
+* [createCommerceLocation](#createcommercelocation) - Create a location
+* [createHrisLocation](#createhrislocation) - Create a location
+* [getClubsLocation](#getclubslocation) - Retrieve a location
+* [getCommerceLocation](#getcommercelocation) - Retrieve a location
+* [getHrisLocation](#gethrislocation) - Retrieve a location
+* [listClubsLocations](#listclubslocations) - List all locations
+* [listCommerceLocations](#listcommercelocations) - List all locations
+* [listHrisLocations](#listhrislocations) - List all locations
+* [patchCommerceLocation](#patchcommercelocation) - Update a location
+* [patchHrisLocation](#patchhrislocation) - Update a location
+* [removeCommerceLocation](#removecommercelocation) - Remove a location
+* [removeHrisLocation](#removehrislocation) - Remove a location
+* [updateCommerceLocation](#updatecommercelocation) - Update a location
+* [updateHrisLocation](#updatehrislocation) - Update a location
 
-## createCommerceLocation2
+## createCommerceLocation
 
 Create a location
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createCommerceLocation2" method="post" path="/commerce/{connection_id}/location" -->
+<!-- UsageSnippet language="java" operationID="createCommerceLocation" method="post" path="/commerce/{connection_id}/location" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.CreateCommerceLocation2Request;
-import to.unified.unified_java_sdk.models.operations.CreateCommerceLocation2Response;
+import to.unified.unified_java_sdk.models.operations.CreateCommerceLocationRequest;
+import to.unified.unified_java_sdk.models.operations.CreateCommerceLocationResponse;
 import to.unified.unified_java_sdk.models.shared.CommerceLocation;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -46,13 +46,13 @@ public class Application {
                     .build())
             .build();
 
-        CreateCommerceLocation2Request req = CreateCommerceLocation2Request.builder()
+        CreateCommerceLocationRequest req = CreateCommerceLocationRequest.builder()
                 .commerceLocation(CommerceLocation.builder()
                     .build())
                 .connectionId("<id>")
                 .build();
 
-        CreateCommerceLocation2Response res = sdk.location().createCommerceLocation2()
+        CreateCommerceLocationResponse res = sdk.location().createCommerceLocation()
                 .request(req)
                 .call();
 
@@ -65,13 +65,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                   | Type                                                                                        | Required                                                                                    | Description                                                                                 |
-| ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
-| `request`                                                                                   | [CreateCommerceLocation2Request](../../models/operations/CreateCommerceLocation2Request.md) | :heavy_check_mark:                                                                          | The request object to use for the request.                                                  |
+| Parameter                                                                                 | Type                                                                                      | Required                                                                                  | Description                                                                               |
+| ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
+| `request`                                                                                 | [CreateCommerceLocationRequest](../../models/operations/CreateCommerceLocationRequest.md) | :heavy_check_mark:                                                                        | The request object to use for the request.                                                |
 
 ### Response
 
-**[CreateCommerceLocation2Response](../../models/operations/CreateCommerceLocation2Response.md)**
+**[CreateCommerceLocationResponse](../../models/operations/CreateCommerceLocationResponse.md)**
 
 ### Errors
 
@@ -79,20 +79,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## createHrisLocation2
+## createHrisLocation
 
 Create a location
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createHrisLocation2" method="post" path="/hris/{connection_id}/location" -->
+<!-- UsageSnippet language="java" operationID="createHrisLocation" method="post" path="/hris/{connection_id}/location" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.CreateHrisLocation2Request;
-import to.unified.unified_java_sdk.models.operations.CreateHrisLocation2Response;
+import to.unified.unified_java_sdk.models.operations.CreateHrisLocationRequest;
+import to.unified.unified_java_sdk.models.operations.CreateHrisLocationResponse;
 import to.unified.unified_java_sdk.models.shared.HrisLocation;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -106,13 +106,13 @@ public class Application {
                     .build())
             .build();
 
-        CreateHrisLocation2Request req = CreateHrisLocation2Request.builder()
+        CreateHrisLocationRequest req = CreateHrisLocationRequest.builder()
                 .hrisLocation(HrisLocation.builder()
                     .build())
                 .connectionId("<id>")
                 .build();
 
-        CreateHrisLocation2Response res = sdk.location().createHrisLocation2()
+        CreateHrisLocationResponse res = sdk.location().createHrisLocation()
                 .request(req)
                 .call();
 
@@ -125,13 +125,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                           | Type                                                                                | Required                                                                            | Description                                                                         |
-| ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
-| `request`                                                                           | [CreateHrisLocation2Request](../../models/operations/CreateHrisLocation2Request.md) | :heavy_check_mark:                                                                  | The request object to use for the request.                                          |
+| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
+| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| `request`                                                                         | [CreateHrisLocationRequest](../../models/operations/CreateHrisLocationRequest.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
 
 ### Response
 
-**[CreateHrisLocation2Response](../../models/operations/CreateHrisLocation2Response.md)**
+**[CreateHrisLocationResponse](../../models/operations/CreateHrisLocationResponse.md)**
 
 ### Errors
 
@@ -139,20 +139,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## getClubsLocation2
+## getClubsLocation
 
 Retrieve a location
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="getClubsLocation2" method="get" path="/clubs/{connection_id}/location/{id}" -->
+<!-- UsageSnippet language="java" operationID="getClubsLocation" method="get" path="/clubs/{connection_id}/location/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.GetClubsLocation2Request;
-import to.unified.unified_java_sdk.models.operations.GetClubsLocation2Response;
+import to.unified.unified_java_sdk.models.operations.GetClubsLocationRequest;
+import to.unified.unified_java_sdk.models.operations.GetClubsLocationResponse;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -165,12 +165,12 @@ public class Application {
                     .build())
             .build();
 
-        GetClubsLocation2Request req = GetClubsLocation2Request.builder()
+        GetClubsLocationRequest req = GetClubsLocationRequest.builder()
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        GetClubsLocation2Response res = sdk.location().getClubsLocation2()
+        GetClubsLocationResponse res = sdk.location().getClubsLocation()
                 .request(req)
                 .call();
 
@@ -183,13 +183,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
-| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
-| `request`                                                                       | [GetClubsLocation2Request](../../models/operations/GetClubsLocation2Request.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
+| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
+| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| `request`                                                                     | [GetClubsLocationRequest](../../models/operations/GetClubsLocationRequest.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
 
 ### Response
 
-**[GetClubsLocation2Response](../../models/operations/GetClubsLocation2Response.md)**
+**[GetClubsLocationResponse](../../models/operations/GetClubsLocationResponse.md)**
 
 ### Errors
 
@@ -197,20 +197,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## getCommerceLocation2
+## getCommerceLocation
 
 Retrieve a location
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="getCommerceLocation2" method="get" path="/commerce/{connection_id}/location/{id}" -->
+<!-- UsageSnippet language="java" operationID="getCommerceLocation" method="get" path="/commerce/{connection_id}/location/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.GetCommerceLocation2Request;
-import to.unified.unified_java_sdk.models.operations.GetCommerceLocation2Response;
+import to.unified.unified_java_sdk.models.operations.GetCommerceLocationRequest;
+import to.unified.unified_java_sdk.models.operations.GetCommerceLocationResponse;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -223,12 +223,12 @@ public class Application {
                     .build())
             .build();
 
-        GetCommerceLocation2Request req = GetCommerceLocation2Request.builder()
+        GetCommerceLocationRequest req = GetCommerceLocationRequest.builder()
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        GetCommerceLocation2Response res = sdk.location().getCommerceLocation2()
+        GetCommerceLocationResponse res = sdk.location().getCommerceLocation()
                 .request(req)
                 .call();
 
@@ -241,13 +241,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                             | Type                                                                                  | Required                                                                              | Description                                                                           |
-| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
-| `request`                                                                             | [GetCommerceLocation2Request](../../models/operations/GetCommerceLocation2Request.md) | :heavy_check_mark:                                                                    | The request object to use for the request.                                            |
+| Parameter                                                                           | Type                                                                                | Required                                                                            | Description                                                                         |
+| ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| `request`                                                                           | [GetCommerceLocationRequest](../../models/operations/GetCommerceLocationRequest.md) | :heavy_check_mark:                                                                  | The request object to use for the request.                                          |
 
 ### Response
 
-**[GetCommerceLocation2Response](../../models/operations/GetCommerceLocation2Response.md)**
+**[GetCommerceLocationResponse](../../models/operations/GetCommerceLocationResponse.md)**
 
 ### Errors
 
@@ -255,20 +255,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## getHrisLocation2
+## getHrisLocation
 
 Retrieve a location
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="getHrisLocation2" method="get" path="/hris/{connection_id}/location/{id}" -->
+<!-- UsageSnippet language="java" operationID="getHrisLocation" method="get" path="/hris/{connection_id}/location/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.GetHrisLocation2Request;
-import to.unified.unified_java_sdk.models.operations.GetHrisLocation2Response;
+import to.unified.unified_java_sdk.models.operations.GetHrisLocationRequest;
+import to.unified.unified_java_sdk.models.operations.GetHrisLocationResponse;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -281,12 +281,12 @@ public class Application {
                     .build())
             .build();
 
-        GetHrisLocation2Request req = GetHrisLocation2Request.builder()
+        GetHrisLocationRequest req = GetHrisLocationRequest.builder()
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        GetHrisLocation2Response res = sdk.location().getHrisLocation2()
+        GetHrisLocationResponse res = sdk.location().getHrisLocation()
                 .request(req)
                 .call();
 
@@ -299,13 +299,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
-| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
-| `request`                                                                     | [GetHrisLocation2Request](../../models/operations/GetHrisLocation2Request.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
+| Parameter                                                                   | Type                                                                        | Required                                                                    | Description                                                                 |
+| --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| `request`                                                                   | [GetHrisLocationRequest](../../models/operations/GetHrisLocationRequest.md) | :heavy_check_mark:                                                          | The request object to use for the request.                                  |
 
 ### Response
 
-**[GetHrisLocation2Response](../../models/operations/GetHrisLocation2Response.md)**
+**[GetHrisLocationResponse](../../models/operations/GetHrisLocationResponse.md)**
 
 ### Errors
 
@@ -313,20 +313,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## listClubsLocations2
+## listClubsLocations
 
 List all locations
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="listClubsLocations2" method="get" path="/clubs/{connection_id}/location" -->
+<!-- UsageSnippet language="java" operationID="listClubsLocations" method="get" path="/clubs/{connection_id}/location" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.ListClubsLocations2Request;
-import to.unified.unified_java_sdk.models.operations.ListClubsLocations2Response;
+import to.unified.unified_java_sdk.models.operations.ListClubsLocationsRequest;
+import to.unified.unified_java_sdk.models.operations.ListClubsLocationsResponse;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -339,11 +339,11 @@ public class Application {
                     .build())
             .build();
 
-        ListClubsLocations2Request req = ListClubsLocations2Request.builder()
+        ListClubsLocationsRequest req = ListClubsLocationsRequest.builder()
                 .connectionId("<id>")
                 .build();
 
-        ListClubsLocations2Response res = sdk.location().listClubsLocations2()
+        ListClubsLocationsResponse res = sdk.location().listClubsLocations()
                 .request(req)
                 .call();
 
@@ -356,13 +356,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                           | Type                                                                                | Required                                                                            | Description                                                                         |
-| ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
-| `request`                                                                           | [ListClubsLocations2Request](../../models/operations/ListClubsLocations2Request.md) | :heavy_check_mark:                                                                  | The request object to use for the request.                                          |
+| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
+| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| `request`                                                                         | [ListClubsLocationsRequest](../../models/operations/ListClubsLocationsRequest.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
 
 ### Response
 
-**[ListClubsLocations2Response](../../models/operations/ListClubsLocations2Response.md)**
+**[ListClubsLocationsResponse](../../models/operations/ListClubsLocationsResponse.md)**
 
 ### Errors
 
@@ -370,20 +370,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## listCommerceLocations2
+## listCommerceLocations
 
 List all locations
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="listCommerceLocations2" method="get" path="/commerce/{connection_id}/location" -->
+<!-- UsageSnippet language="java" operationID="listCommerceLocations" method="get" path="/commerce/{connection_id}/location" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.ListCommerceLocations2Request;
-import to.unified.unified_java_sdk.models.operations.ListCommerceLocations2Response;
+import to.unified.unified_java_sdk.models.operations.ListCommerceLocationsRequest;
+import to.unified.unified_java_sdk.models.operations.ListCommerceLocationsResponse;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -396,11 +396,11 @@ public class Application {
                     .build())
             .build();
 
-        ListCommerceLocations2Request req = ListCommerceLocations2Request.builder()
+        ListCommerceLocationsRequest req = ListCommerceLocationsRequest.builder()
                 .connectionId("<id>")
                 .build();
 
-        ListCommerceLocations2Response res = sdk.location().listCommerceLocations2()
+        ListCommerceLocationsResponse res = sdk.location().listCommerceLocations()
                 .request(req)
                 .call();
 
@@ -413,13 +413,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                 | Type                                                                                      | Required                                                                                  | Description                                                                               |
-| ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
-| `request`                                                                                 | [ListCommerceLocations2Request](../../models/operations/ListCommerceLocations2Request.md) | :heavy_check_mark:                                                                        | The request object to use for the request.                                                |
+| Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
+| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| `request`                                                                               | [ListCommerceLocationsRequest](../../models/operations/ListCommerceLocationsRequest.md) | :heavy_check_mark:                                                                      | The request object to use for the request.                                              |
 
 ### Response
 
-**[ListCommerceLocations2Response](../../models/operations/ListCommerceLocations2Response.md)**
+**[ListCommerceLocationsResponse](../../models/operations/ListCommerceLocationsResponse.md)**
 
 ### Errors
 
@@ -427,20 +427,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## listHrisLocations2
+## listHrisLocations
 
 List all locations
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="listHrisLocations2" method="get" path="/hris/{connection_id}/location" -->
+<!-- UsageSnippet language="java" operationID="listHrisLocations" method="get" path="/hris/{connection_id}/location" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.ListHrisLocations2Request;
-import to.unified.unified_java_sdk.models.operations.ListHrisLocations2Response;
+import to.unified.unified_java_sdk.models.operations.ListHrisLocationsRequest;
+import to.unified.unified_java_sdk.models.operations.ListHrisLocationsResponse;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -453,11 +453,11 @@ public class Application {
                     .build())
             .build();
 
-        ListHrisLocations2Request req = ListHrisLocations2Request.builder()
+        ListHrisLocationsRequest req = ListHrisLocationsRequest.builder()
                 .connectionId("<id>")
                 .build();
 
-        ListHrisLocations2Response res = sdk.location().listHrisLocations2()
+        ListHrisLocationsResponse res = sdk.location().listHrisLocations()
                 .request(req)
                 .call();
 
@@ -470,13 +470,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
-| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
-| `request`                                                                         | [ListHrisLocations2Request](../../models/operations/ListHrisLocations2Request.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
+| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| `request`                                                                       | [ListHrisLocationsRequest](../../models/operations/ListHrisLocationsRequest.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
 
 ### Response
 
-**[ListHrisLocations2Response](../../models/operations/ListHrisLocations2Response.md)**
+**[ListHrisLocationsResponse](../../models/operations/ListHrisLocationsResponse.md)**
 
 ### Errors
 
@@ -484,20 +484,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## patchCommerceLocation2
+## patchCommerceLocation
 
 Update a location
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchCommerceLocation2" method="patch" path="/commerce/{connection_id}/location/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchCommerceLocation" method="patch" path="/commerce/{connection_id}/location/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.PatchCommerceLocation2Request;
-import to.unified.unified_java_sdk.models.operations.PatchCommerceLocation2Response;
+import to.unified.unified_java_sdk.models.operations.PatchCommerceLocationRequest;
+import to.unified.unified_java_sdk.models.operations.PatchCommerceLocationResponse;
 import to.unified.unified_java_sdk.models.shared.CommerceLocation;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -511,14 +511,248 @@ public class Application {
                     .build())
             .build();
 
-        PatchCommerceLocation2Request req = PatchCommerceLocation2Request.builder()
+        PatchCommerceLocationRequest req = PatchCommerceLocationRequest.builder()
                 .commerceLocation(CommerceLocation.builder()
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        PatchCommerceLocation2Response res = sdk.location().patchCommerceLocation2()
+        PatchCommerceLocationResponse res = sdk.location().patchCommerceLocation()
+                .request(req)
+                .call();
+
+        if (res.commerceLocation().isPresent()) {
+            System.out.println(res.commerceLocation().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
+| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| `request`                                                                               | [PatchCommerceLocationRequest](../../models/operations/PatchCommerceLocationRequest.md) | :heavy_check_mark:                                                                      | The request object to use for the request.                                              |
+
+### Response
+
+**[PatchCommerceLocationResponse](../../models/operations/PatchCommerceLocationResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## patchHrisLocation
+
+Update a location
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="patchHrisLocation" method="patch" path="/hris/{connection_id}/location/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.PatchHrisLocationRequest;
+import to.unified.unified_java_sdk.models.operations.PatchHrisLocationResponse;
+import to.unified.unified_java_sdk.models.shared.HrisLocation;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        PatchHrisLocationRequest req = PatchHrisLocationRequest.builder()
+                .hrisLocation(HrisLocation.builder()
+                    .build())
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        PatchHrisLocationResponse res = sdk.location().patchHrisLocation()
+                .request(req)
+                .call();
+
+        if (res.hrisLocation().isPresent()) {
+            System.out.println(res.hrisLocation().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| `request`                                                                       | [PatchHrisLocationRequest](../../models/operations/PatchHrisLocationRequest.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
+
+### Response
+
+**[PatchHrisLocationResponse](../../models/operations/PatchHrisLocationResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## removeCommerceLocation
+
+Remove a location
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="removeCommerceLocation" method="delete" path="/commerce/{connection_id}/location/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.RemoveCommerceLocationRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveCommerceLocationResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        RemoveCommerceLocationRequest req = RemoveCommerceLocationRequest.builder()
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        RemoveCommerceLocationResponse res = sdk.location().removeCommerceLocation()
+                .request(req)
+                .call();
+
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                 | Type                                                                                      | Required                                                                                  | Description                                                                               |
+| ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
+| `request`                                                                                 | [RemoveCommerceLocationRequest](../../models/operations/RemoveCommerceLocationRequest.md) | :heavy_check_mark:                                                                        | The request object to use for the request.                                                |
+
+### Response
+
+**[RemoveCommerceLocationResponse](../../models/operations/RemoveCommerceLocationResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## removeHrisLocation
+
+Remove a location
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="removeHrisLocation" method="delete" path="/hris/{connection_id}/location/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.RemoveHrisLocationRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveHrisLocationResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        RemoveHrisLocationRequest req = RemoveHrisLocationRequest.builder()
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        RemoveHrisLocationResponse res = sdk.location().removeHrisLocation()
+                .request(req)
+                .call();
+
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
+| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| `request`                                                                         | [RemoveHrisLocationRequest](../../models/operations/RemoveHrisLocationRequest.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
+
+### Response
+
+**[RemoveHrisLocationResponse](../../models/operations/RemoveHrisLocationResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## updateCommerceLocation
+
+Update a location
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="updateCommerceLocation" method="put" path="/commerce/{connection_id}/location/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.UpdateCommerceLocationRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateCommerceLocationResponse;
+import to.unified.unified_java_sdk.models.shared.CommerceLocation;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        UpdateCommerceLocationRequest req = UpdateCommerceLocationRequest.builder()
+                .commerceLocation(CommerceLocation.builder()
+                    .build())
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        UpdateCommerceLocationResponse res = sdk.location().updateCommerceLocation()
                 .request(req)
                 .call();
 
@@ -533,11 +767,11 @@ public class Application {
 
 | Parameter                                                                                 | Type                                                                                      | Required                                                                                  | Description                                                                               |
 | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
-| `request`                                                                                 | [PatchCommerceLocation2Request](../../models/operations/PatchCommerceLocation2Request.md) | :heavy_check_mark:                                                                        | The request object to use for the request.                                                |
+| `request`                                                                                 | [UpdateCommerceLocationRequest](../../models/operations/UpdateCommerceLocationRequest.md) | :heavy_check_mark:                                                                        | The request object to use for the request.                                                |
 
 ### Response
 
-**[PatchCommerceLocation2Response](../../models/operations/PatchCommerceLocation2Response.md)**
+**[UpdateCommerceLocationResponse](../../models/operations/UpdateCommerceLocationResponse.md)**
 
 ### Errors
 
@@ -545,20 +779,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## patchHrisLocation2
+## updateHrisLocation
 
 Update a location
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchHrisLocation2" method="patch" path="/hris/{connection_id}/location/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateHrisLocation" method="put" path="/hris/{connection_id}/location/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.PatchHrisLocation2Request;
-import to.unified.unified_java_sdk.models.operations.PatchHrisLocation2Response;
+import to.unified.unified_java_sdk.models.operations.UpdateHrisLocationRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateHrisLocationResponse;
 import to.unified.unified_java_sdk.models.shared.HrisLocation;
 import to.unified.unified_java_sdk.models.shared.Security;
 
@@ -572,14 +806,14 @@ public class Application {
                     .build())
             .build();
 
-        PatchHrisLocation2Request req = PatchHrisLocation2Request.builder()
+        UpdateHrisLocationRequest req = UpdateHrisLocationRequest.builder()
                 .hrisLocation(HrisLocation.builder()
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
                 .build();
 
-        PatchHrisLocation2Response res = sdk.location().patchHrisLocation2()
+        UpdateHrisLocationResponse res = sdk.location().updateHrisLocation()
                 .request(req)
                 .call();
 
@@ -594,245 +828,11 @@ public class Application {
 
 | Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
 | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
-| `request`                                                                         | [PatchHrisLocation2Request](../../models/operations/PatchHrisLocation2Request.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
+| `request`                                                                         | [UpdateHrisLocationRequest](../../models/operations/UpdateHrisLocationRequest.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
 
 ### Response
 
-**[PatchHrisLocation2Response](../../models/operations/PatchHrisLocation2Response.md)**
-
-### Errors
-
-| Error Type             | Status Code            | Content Type           |
-| ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
-
-## removeCommerceLocation2
-
-Remove a location
-
-### Example Usage
-
-<!-- UsageSnippet language="java" operationID="removeCommerceLocation2" method="delete" path="/commerce/{connection_id}/location/{id}" -->
-```java
-package hello.world;
-
-import java.lang.Exception;
-import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.RemoveCommerceLocation2Request;
-import to.unified.unified_java_sdk.models.operations.RemoveCommerceLocation2Response;
-import to.unified.unified_java_sdk.models.shared.Security;
-
-public class Application {
-
-    public static void main(String[] args) throws Exception {
-
-        UnifiedTo sdk = UnifiedTo.builder()
-                .security(Security.builder()
-                    .jwt(System.getenv().getOrDefault("JWT", ""))
-                    .build())
-            .build();
-
-        RemoveCommerceLocation2Request req = RemoveCommerceLocation2Request.builder()
-                .connectionId("<id>")
-                .id("<id>")
-                .build();
-
-        RemoveCommerceLocation2Response res = sdk.location().removeCommerceLocation2()
-                .request(req)
-                .call();
-
-        // handle response
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                                   | Type                                                                                        | Required                                                                                    | Description                                                                                 |
-| ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
-| `request`                                                                                   | [RemoveCommerceLocation2Request](../../models/operations/RemoveCommerceLocation2Request.md) | :heavy_check_mark:                                                                          | The request object to use for the request.                                                  |
-
-### Response
-
-**[RemoveCommerceLocation2Response](../../models/operations/RemoveCommerceLocation2Response.md)**
-
-### Errors
-
-| Error Type             | Status Code            | Content Type           |
-| ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
-
-## removeHrisLocation2
-
-Remove a location
-
-### Example Usage
-
-<!-- UsageSnippet language="java" operationID="removeHrisLocation2" method="delete" path="/hris/{connection_id}/location/{id}" -->
-```java
-package hello.world;
-
-import java.lang.Exception;
-import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.RemoveHrisLocation2Request;
-import to.unified.unified_java_sdk.models.operations.RemoveHrisLocation2Response;
-import to.unified.unified_java_sdk.models.shared.Security;
-
-public class Application {
-
-    public static void main(String[] args) throws Exception {
-
-        UnifiedTo sdk = UnifiedTo.builder()
-                .security(Security.builder()
-                    .jwt(System.getenv().getOrDefault("JWT", ""))
-                    .build())
-            .build();
-
-        RemoveHrisLocation2Request req = RemoveHrisLocation2Request.builder()
-                .connectionId("<id>")
-                .id("<id>")
-                .build();
-
-        RemoveHrisLocation2Response res = sdk.location().removeHrisLocation2()
-                .request(req)
-                .call();
-
-        // handle response
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                           | Type                                                                                | Required                                                                            | Description                                                                         |
-| ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
-| `request`                                                                           | [RemoveHrisLocation2Request](../../models/operations/RemoveHrisLocation2Request.md) | :heavy_check_mark:                                                                  | The request object to use for the request.                                          |
-
-### Response
-
-**[RemoveHrisLocation2Response](../../models/operations/RemoveHrisLocation2Response.md)**
-
-### Errors
-
-| Error Type             | Status Code            | Content Type           |
-| ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
-
-## updateCommerceLocation2
-
-Update a location
-
-### Example Usage
-
-<!-- UsageSnippet language="java" operationID="updateCommerceLocation2" method="put" path="/commerce/{connection_id}/location/{id}" -->
-```java
-package hello.world;
-
-import java.lang.Exception;
-import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.UpdateCommerceLocation2Request;
-import to.unified.unified_java_sdk.models.operations.UpdateCommerceLocation2Response;
-import to.unified.unified_java_sdk.models.shared.CommerceLocation;
-import to.unified.unified_java_sdk.models.shared.Security;
-
-public class Application {
-
-    public static void main(String[] args) throws Exception {
-
-        UnifiedTo sdk = UnifiedTo.builder()
-                .security(Security.builder()
-                    .jwt(System.getenv().getOrDefault("JWT", ""))
-                    .build())
-            .build();
-
-        UpdateCommerceLocation2Request req = UpdateCommerceLocation2Request.builder()
-                .commerceLocation(CommerceLocation.builder()
-                    .build())
-                .connectionId("<id>")
-                .id("<id>")
-                .build();
-
-        UpdateCommerceLocation2Response res = sdk.location().updateCommerceLocation2()
-                .request(req)
-                .call();
-
-        if (res.commerceLocation().isPresent()) {
-            System.out.println(res.commerceLocation().get());
-        }
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                                   | Type                                                                                        | Required                                                                                    | Description                                                                                 |
-| ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
-| `request`                                                                                   | [UpdateCommerceLocation2Request](../../models/operations/UpdateCommerceLocation2Request.md) | :heavy_check_mark:                                                                          | The request object to use for the request.                                                  |
-
-### Response
-
-**[UpdateCommerceLocation2Response](../../models/operations/UpdateCommerceLocation2Response.md)**
-
-### Errors
-
-| Error Type             | Status Code            | Content Type           |
-| ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
-
-## updateHrisLocation2
-
-Update a location
-
-### Example Usage
-
-<!-- UsageSnippet language="java" operationID="updateHrisLocation2" method="put" path="/hris/{connection_id}/location/{id}" -->
-```java
-package hello.world;
-
-import java.lang.Exception;
-import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.UpdateHrisLocation2Request;
-import to.unified.unified_java_sdk.models.operations.UpdateHrisLocation2Response;
-import to.unified.unified_java_sdk.models.shared.HrisLocation;
-import to.unified.unified_java_sdk.models.shared.Security;
-
-public class Application {
-
-    public static void main(String[] args) throws Exception {
-
-        UnifiedTo sdk = UnifiedTo.builder()
-                .security(Security.builder()
-                    .jwt(System.getenv().getOrDefault("JWT", ""))
-                    .build())
-            .build();
-
-        UpdateHrisLocation2Request req = UpdateHrisLocation2Request.builder()
-                .hrisLocation(HrisLocation.builder()
-                    .build())
-                .connectionId("<id>")
-                .id("<id>")
-                .build();
-
-        UpdateHrisLocation2Response res = sdk.location().updateHrisLocation2()
-                .request(req)
-                .call();
-
-        if (res.hrisLocation().isPresent()) {
-            System.out.println(res.hrisLocation().get());
-        }
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                           | Type                                                                                | Required                                                                            | Description                                                                         |
-| ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
-| `request`                                                                           | [UpdateHrisLocation2Request](../../models/operations/UpdateHrisLocation2Request.md) | :heavy_check_mark:                                                                  | The request object to use for the request.                                          |
-
-### Response
-
-**[UpdateHrisLocation2Response](../../models/operations/UpdateHrisLocation2Response.md)**
+**[UpdateHrisLocationResponse](../../models/operations/UpdateHrisLocationResponse.md)**
 
 ### Errors
 
