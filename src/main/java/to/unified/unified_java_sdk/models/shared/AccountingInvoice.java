@@ -148,6 +148,11 @@ public class AccountingInvoice {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("term")
+    private AccountingInvoiceTerm term;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total_amount")
     private Double totalAmount;
 
@@ -193,6 +198,7 @@ public class AccountingInvoice {
             @JsonProperty("send") @Nullable Boolean send,
             @JsonProperty("status") @Nullable AccountingInvoiceStatus status,
             @JsonProperty("tax_amount") @Nullable Double taxAmount,
+            @JsonProperty("term") @Nullable AccountingInvoiceTerm term,
             @JsonProperty("total_amount") @Nullable Double totalAmount,
             @JsonProperty("type") @Nullable AccountingInvoiceType type,
             @JsonProperty("updated_at") @Nullable OffsetDateTime updatedAt,
@@ -222,6 +228,7 @@ public class AccountingInvoice {
         this.send = send;
         this.status = status;
         this.taxAmount = taxAmount;
+        this.term = term;
         this.totalAmount = totalAmount;
         this.type = type;
         this.updatedAt = updatedAt;
@@ -238,7 +245,7 @@ public class AccountingInvoice {
             null, null, null,
             null, null, null,
             null, null, null,
-            null, null);
+            null, null, null);
     }
 
     public Optional<List<AccountingAttachment>> attachments() {
@@ -339,6 +346,10 @@ public class AccountingInvoice {
 
     public Optional<Double> taxAmount() {
         return Optional.ofNullable(this.taxAmount);
+    }
+
+    public Optional<AccountingInvoiceTerm> term() {
+        return Optional.ofNullable(this.term);
     }
 
     public Optional<Double> totalAmount() {
@@ -512,6 +523,12 @@ public class AccountingInvoice {
     }
 
 
+    public AccountingInvoice withTerm(@Nullable AccountingInvoiceTerm term) {
+        this.term = term;
+        return this;
+    }
+
+
     public AccountingInvoice withTotalAmount(@Nullable Double totalAmount) {
         this.totalAmount = totalAmount;
         return this;
@@ -571,6 +588,7 @@ public class AccountingInvoice {
             Utils.enhancedDeepEquals(this.send, other.send) &&
             Utils.enhancedDeepEquals(this.status, other.status) &&
             Utils.enhancedDeepEquals(this.taxAmount, other.taxAmount) &&
+            Utils.enhancedDeepEquals(this.term, other.term) &&
             Utils.enhancedDeepEquals(this.totalAmount, other.totalAmount) &&
             Utils.enhancedDeepEquals(this.type, other.type) &&
             Utils.enhancedDeepEquals(this.updatedAt, other.updatedAt) &&
@@ -588,8 +606,8 @@ public class AccountingInvoice {
             paymentCollectionMethod, postedAt, raw,
             reference, refundAmount, refundReason,
             refundedAt, send, status,
-            taxAmount, totalAmount, type,
-            updatedAt, url);
+            taxAmount, term, totalAmount,
+            type, updatedAt, url);
     }
     
     @Override
@@ -620,6 +638,7 @@ public class AccountingInvoice {
                 "send", send,
                 "status", status,
                 "taxAmount", taxAmount,
+                "term", term,
                 "totalAmount", totalAmount,
                 "type", type,
                 "updatedAt", updatedAt,
@@ -678,6 +697,8 @@ public class AccountingInvoice {
         private AccountingInvoiceStatus status;
 
         private Double taxAmount;
+
+        private AccountingInvoiceTerm term;
 
         private Double totalAmount;
 
@@ -816,6 +837,11 @@ public class AccountingInvoice {
             return this;
         }
 
+        public Builder term(@Nullable AccountingInvoiceTerm term) {
+            this.term = term;
+            return this;
+        }
+
         public Builder totalAmount(@Nullable Double totalAmount) {
             this.totalAmount = totalAmount;
             return this;
@@ -846,8 +872,8 @@ public class AccountingInvoice {
                 paymentCollectionMethod, postedAt, raw,
                 reference, refundAmount, refundReason,
                 refundedAt, send, status,
-                taxAmount, totalAmount, type,
-                updatedAt, url);
+                taxAmount, term, totalAmount,
+                type, updatedAt, url);
         }
 
     }

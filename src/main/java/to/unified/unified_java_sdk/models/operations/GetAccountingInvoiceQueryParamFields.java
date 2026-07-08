@@ -29,6 +29,7 @@ public enum GetAccountingInvoiceQueryParamFields {
     CURRENCY("currency"),
     NOTES("notes"),
     REFUND_REASON("refund_reason"),
+    TERM("term"),
     LINEITEMS("lineitems"),
     STATUS("status"),
     URL("url"),

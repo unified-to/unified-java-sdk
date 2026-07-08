@@ -16,6 +16,9 @@ public enum UpdateRepoCommitQueryParamFields {
     REPO_ID("repo_id"),
     MESSAGE("message"),
     BRANCH_ID("branch_id"),
+    LINES_ADDED("lines_added"),
+    LINES_DELETED("lines_deleted"),
+    LINES_CHANGED("lines_changed"),
     RAW("raw");
 
     @JsonValue

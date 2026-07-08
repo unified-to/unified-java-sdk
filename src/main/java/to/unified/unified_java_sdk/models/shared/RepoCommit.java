@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.annotation.Nonnull;
 import jakarta.annotation.Nullable;
+import java.lang.Double;
 import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
@@ -33,6 +34,21 @@ public class RepoCommit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     private String id;
+
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("lines_added")
+    private Double linesAdded;
+
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("lines_changed")
+    private Double linesChanged;
+
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("lines_deleted")
+    private Double linesDeleted;
 
 
     @JsonInclude(Include.NON_ABSENT)
@@ -63,6 +79,9 @@ public class RepoCommit {
             @JsonProperty("branch_id") @Nullable String branchId,
             @JsonProperty("created_at") @Nullable OffsetDateTime createdAt,
             @JsonProperty("id") @Nullable String id,
+            @JsonProperty("lines_added") @Nullable Double linesAdded,
+            @JsonProperty("lines_changed") @Nullable Double linesChanged,
+            @JsonProperty("lines_deleted") @Nullable Double linesDeleted,
             @JsonProperty("message") @Nullable String message,
             @JsonProperty("raw") @Nullable Map<String, Object> raw,
             @JsonProperty("repo_id") @Nonnull String repoId,
@@ -71,6 +90,9 @@ public class RepoCommit {
         this.branchId = branchId;
         this.createdAt = createdAt;
         this.id = id;
+        this.linesAdded = linesAdded;
+        this.linesChanged = linesChanged;
+        this.linesDeleted = linesDeleted;
         this.message = message;
         this.raw = raw;
         this.repoId = Optional.ofNullable(repoId)
@@ -82,6 +104,7 @@ public class RepoCommit {
     public RepoCommit(
             @Nonnull String repoId) {
         this(null, null, null,
+            null, null, null,
             null, null, repoId,
             null, null);
     }
@@ -96,6 +119,18 @@ public class RepoCommit {
 
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
+    }
+
+    public Optional<Double> linesAdded() {
+        return Optional.ofNullable(this.linesAdded);
+    }
+
+    public Optional<Double> linesChanged() {
+        return Optional.ofNullable(this.linesChanged);
+    }
+
+    public Optional<Double> linesDeleted() {
+        return Optional.ofNullable(this.linesDeleted);
     }
 
     public Optional<String> message() {
@@ -137,6 +172,24 @@ public class RepoCommit {
 
     public RepoCommit withId(@Nullable String id) {
         this.id = id;
+        return this;
+    }
+
+
+    public RepoCommit withLinesAdded(@Nullable Double linesAdded) {
+        this.linesAdded = linesAdded;
+        return this;
+    }
+
+
+    public RepoCommit withLinesChanged(@Nullable Double linesChanged) {
+        this.linesChanged = linesChanged;
+        return this;
+    }
+
+
+    public RepoCommit withLinesDeleted(@Nullable Double linesDeleted) {
+        this.linesDeleted = linesDeleted;
         return this;
     }
 
@@ -184,6 +237,9 @@ public class RepoCommit {
             Utils.enhancedDeepEquals(this.branchId, other.branchId) &&
             Utils.enhancedDeepEquals(this.createdAt, other.createdAt) &&
             Utils.enhancedDeepEquals(this.id, other.id) &&
+            Utils.enhancedDeepEquals(this.linesAdded, other.linesAdded) &&
+            Utils.enhancedDeepEquals(this.linesChanged, other.linesChanged) &&
+            Utils.enhancedDeepEquals(this.linesDeleted, other.linesDeleted) &&
             Utils.enhancedDeepEquals(this.message, other.message) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
             Utils.enhancedDeepEquals(this.repoId, other.repoId) &&
@@ -195,6 +251,7 @@ public class RepoCommit {
     public int hashCode() {
         return Utils.enhancedHash(
             branchId, createdAt, id,
+            linesAdded, linesChanged, linesDeleted,
             message, raw, repoId,
             updatedAt, userId);
     }
@@ -205,6 +262,9 @@ public class RepoCommit {
                 "branchId", branchId,
                 "createdAt", createdAt,
                 "id", id,
+                "linesAdded", linesAdded,
+                "linesChanged", linesChanged,
+                "linesDeleted", linesDeleted,
                 "message", message,
                 "raw", raw,
                 "repoId", repoId,
@@ -220,6 +280,12 @@ public class RepoCommit {
         private OffsetDateTime createdAt;
 
         private String id;
+
+        private Double linesAdded;
+
+        private Double linesChanged;
+
+        private Double linesDeleted;
 
         private String message;
 
@@ -247,6 +313,21 @@ public class RepoCommit {
 
         public Builder id(@Nullable String id) {
             this.id = id;
+            return this;
+        }
+
+        public Builder linesAdded(@Nullable Double linesAdded) {
+            this.linesAdded = linesAdded;
+            return this;
+        }
+
+        public Builder linesChanged(@Nullable Double linesChanged) {
+            this.linesChanged = linesChanged;
+            return this;
+        }
+
+        public Builder linesDeleted(@Nullable Double linesDeleted) {
+            this.linesDeleted = linesDeleted;
             return this;
         }
 
@@ -278,6 +359,7 @@ public class RepoCommit {
         public RepoCommit build() {
             return new RepoCommit(
                 branchId, createdAt, id,
+                linesAdded, linesChanged, linesDeleted,
                 message, raw, repoId,
                 updatedAt, userId);
         }

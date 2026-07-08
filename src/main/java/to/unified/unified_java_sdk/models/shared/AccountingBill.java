@@ -143,6 +143,11 @@ public class AccountingBill {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("term")
+    private Term term;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total_amount")
     private Double totalAmount;
 
@@ -182,6 +187,7 @@ public class AccountingBill {
             @JsonProperty("send") @Nullable Boolean send,
             @JsonProperty("status") @Nullable AccountingBillStatus status,
             @JsonProperty("tax_amount") @Nullable Double taxAmount,
+            @JsonProperty("term") @Nullable Term term,
             @JsonProperty("total_amount") @Nullable Double totalAmount,
             @JsonProperty("updated_at") @Nullable OffsetDateTime updatedAt,
             @JsonProperty("url") @Nullable String url) {
@@ -209,6 +215,7 @@ public class AccountingBill {
         this.send = send;
         this.status = status;
         this.taxAmount = taxAmount;
+        this.term = term;
         this.totalAmount = totalAmount;
         this.updatedAt = updatedAt;
         this.url = url;
@@ -223,7 +230,8 @@ public class AccountingBill {
             null, null, null,
             null, null, null,
             null, null, null,
-            null, null, null);
+            null, null, null,
+            null);
     }
 
     public Optional<List<AccountingAttachment>> attachments() {
@@ -320,6 +328,10 @@ public class AccountingBill {
 
     public Optional<Double> taxAmount() {
         return Optional.ofNullable(this.taxAmount);
+    }
+
+    public Optional<Term> term() {
+        return Optional.ofNullable(this.term);
     }
 
     public Optional<Double> totalAmount() {
@@ -483,6 +495,12 @@ public class AccountingBill {
     }
 
 
+    public AccountingBill withTerm(@Nullable Term term) {
+        this.term = term;
+        return this;
+    }
+
+
     public AccountingBill withTotalAmount(@Nullable Double totalAmount) {
         this.totalAmount = totalAmount;
         return this;
@@ -535,6 +553,7 @@ public class AccountingBill {
             Utils.enhancedDeepEquals(this.send, other.send) &&
             Utils.enhancedDeepEquals(this.status, other.status) &&
             Utils.enhancedDeepEquals(this.taxAmount, other.taxAmount) &&
+            Utils.enhancedDeepEquals(this.term, other.term) &&
             Utils.enhancedDeepEquals(this.totalAmount, other.totalAmount) &&
             Utils.enhancedDeepEquals(this.updatedAt, other.updatedAt) &&
             Utils.enhancedDeepEquals(this.url, other.url);
@@ -551,7 +570,8 @@ public class AccountingBill {
             paymentCollectionMethod, postedAt, raw,
             refundAmount, refundReason, refundedAt,
             send, status, taxAmount,
-            totalAmount, updatedAt, url);
+            term, totalAmount, updatedAt,
+            url);
     }
     
     @Override
@@ -581,6 +601,7 @@ public class AccountingBill {
                 "send", send,
                 "status", status,
                 "taxAmount", taxAmount,
+                "term", term,
                 "totalAmount", totalAmount,
                 "updatedAt", updatedAt,
                 "url", url);
@@ -636,6 +657,8 @@ public class AccountingBill {
         private AccountingBillStatus status;
 
         private Double taxAmount;
+
+        private Term term;
 
         private Double totalAmount;
 
@@ -767,6 +790,11 @@ public class AccountingBill {
             return this;
         }
 
+        public Builder term(@Nullable Term term) {
+            this.term = term;
+            return this;
+        }
+
         public Builder totalAmount(@Nullable Double totalAmount) {
             this.totalAmount = totalAmount;
             return this;
@@ -792,7 +820,8 @@ public class AccountingBill {
                 paymentCollectionMethod, postedAt, raw,
                 refundAmount, refundReason, refundedAt,
                 send, status, taxAmount,
-                totalAmount, updatedAt, url);
+                term, totalAmount, updatedAt,
+                url);
         }
 
     }

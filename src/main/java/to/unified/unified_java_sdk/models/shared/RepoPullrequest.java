@@ -46,6 +46,11 @@ public class RepoPullrequest {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("notes")
+    private String notes;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
     private Map<String, Object> raw;
 
@@ -56,8 +61,23 @@ public class RepoPullrequest {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("source_branch_id")
+    private String sourceBranchId;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     private RepoPullrequestStatus status;
+
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("target_branch_id")
+    private String targetBranchId;
+
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("title")
+    private String title;
 
 
     @JsonInclude(Include.NON_ABSENT)
@@ -76,9 +96,13 @@ public class RepoPullrequest {
             @JsonProperty("created_at") @Nullable OffsetDateTime createdAt,
             @JsonProperty("id") @Nullable String id,
             @JsonProperty("labels") @Nullable List<String> labels,
+            @JsonProperty("notes") @Nullable String notes,
             @JsonProperty("raw") @Nullable Map<String, Object> raw,
             @JsonProperty("repo_id") @Nullable String repoId,
+            @JsonProperty("source_branch_id") @Nullable String sourceBranchId,
             @JsonProperty("status") @Nullable RepoPullrequestStatus status,
+            @JsonProperty("target_branch_id") @Nullable String targetBranchId,
+            @JsonProperty("title") @Nullable String title,
             @JsonProperty("updated_at") @Nullable OffsetDateTime updatedAt,
             @JsonProperty("user_ids") @Nullable List<String> userIds) {
         this.closedAt = closedAt;
@@ -86,9 +110,13 @@ public class RepoPullrequest {
         this.createdAt = createdAt;
         this.id = id;
         this.labels = labels;
+        this.notes = notes;
         this.raw = raw;
         this.repoId = repoId;
+        this.sourceBranchId = sourceBranchId;
         this.status = status;
+        this.targetBranchId = targetBranchId;
+        this.title = title;
         this.updatedAt = updatedAt;
         this.userIds = userIds;
     }
@@ -97,7 +125,8 @@ public class RepoPullrequest {
         this(null, null, null,
             null, null, null,
             null, null, null,
-            null);
+            null, null, null,
+            null, null);
     }
 
     public Optional<OffsetDateTime> closedAt() {
@@ -120,6 +149,10 @@ public class RepoPullrequest {
         return Optional.ofNullable(this.labels);
     }
 
+    public Optional<String> notes() {
+        return Optional.ofNullable(this.notes);
+    }
+
     public Optional<Map<String, Object>> raw() {
         return Optional.ofNullable(this.raw);
     }
@@ -128,8 +161,20 @@ public class RepoPullrequest {
         return Optional.ofNullable(this.repoId);
     }
 
+    public Optional<String> sourceBranchId() {
+        return Optional.ofNullable(this.sourceBranchId);
+    }
+
     public Optional<RepoPullrequestStatus> status() {
         return Optional.ofNullable(this.status);
+    }
+
+    public Optional<String> targetBranchId() {
+        return Optional.ofNullable(this.targetBranchId);
+    }
+
+    public Optional<String> title() {
+        return Optional.ofNullable(this.title);
     }
 
     public Optional<OffsetDateTime> updatedAt() {
@@ -175,6 +220,12 @@ public class RepoPullrequest {
     }
 
 
+    public RepoPullrequest withNotes(@Nullable String notes) {
+        this.notes = notes;
+        return this;
+    }
+
+
     public RepoPullrequest withRaw(@Nullable Map<String, Object> raw) {
         this.raw = raw;
         return this;
@@ -187,8 +238,26 @@ public class RepoPullrequest {
     }
 
 
+    public RepoPullrequest withSourceBranchId(@Nullable String sourceBranchId) {
+        this.sourceBranchId = sourceBranchId;
+        return this;
+    }
+
+
     public RepoPullrequest withStatus(@Nullable RepoPullrequestStatus status) {
         this.status = status;
+        return this;
+    }
+
+
+    public RepoPullrequest withTargetBranchId(@Nullable String targetBranchId) {
+        this.targetBranchId = targetBranchId;
+        return this;
+    }
+
+
+    public RepoPullrequest withTitle(@Nullable String title) {
+        this.title = title;
         return this;
     }
 
@@ -220,9 +289,13 @@ public class RepoPullrequest {
             Utils.enhancedDeepEquals(this.createdAt, other.createdAt) &&
             Utils.enhancedDeepEquals(this.id, other.id) &&
             Utils.enhancedDeepEquals(this.labels, other.labels) &&
+            Utils.enhancedDeepEquals(this.notes, other.notes) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
             Utils.enhancedDeepEquals(this.repoId, other.repoId) &&
+            Utils.enhancedDeepEquals(this.sourceBranchId, other.sourceBranchId) &&
             Utils.enhancedDeepEquals(this.status, other.status) &&
+            Utils.enhancedDeepEquals(this.targetBranchId, other.targetBranchId) &&
+            Utils.enhancedDeepEquals(this.title, other.title) &&
             Utils.enhancedDeepEquals(this.updatedAt, other.updatedAt) &&
             Utils.enhancedDeepEquals(this.userIds, other.userIds);
     }
@@ -231,9 +304,10 @@ public class RepoPullrequest {
     public int hashCode() {
         return Utils.enhancedHash(
             closedAt, commitIds, createdAt,
-            id, labels, raw,
-            repoId, status, updatedAt,
-            userIds);
+            id, labels, notes,
+            raw, repoId, sourceBranchId,
+            status, targetBranchId, title,
+            updatedAt, userIds);
     }
     
     @Override
@@ -244,9 +318,13 @@ public class RepoPullrequest {
                 "createdAt", createdAt,
                 "id", id,
                 "labels", labels,
+                "notes", notes,
                 "raw", raw,
                 "repoId", repoId,
+                "sourceBranchId", sourceBranchId,
                 "status", status,
+                "targetBranchId", targetBranchId,
+                "title", title,
                 "updatedAt", updatedAt,
                 "userIds", userIds);
     }
@@ -264,11 +342,19 @@ public class RepoPullrequest {
 
         private List<String> labels;
 
+        private String notes;
+
         private Map<String, Object> raw;
 
         private String repoId;
 
+        private String sourceBranchId;
+
         private RepoPullrequestStatus status;
+
+        private String targetBranchId;
+
+        private String title;
 
         private OffsetDateTime updatedAt;
 
@@ -303,6 +389,11 @@ public class RepoPullrequest {
             return this;
         }
 
+        public Builder notes(@Nullable String notes) {
+            this.notes = notes;
+            return this;
+        }
+
         public Builder raw(@Nullable Map<String, Object> raw) {
             this.raw = raw;
             return this;
@@ -313,8 +404,23 @@ public class RepoPullrequest {
             return this;
         }
 
+        public Builder sourceBranchId(@Nullable String sourceBranchId) {
+            this.sourceBranchId = sourceBranchId;
+            return this;
+        }
+
         public Builder status(@Nullable RepoPullrequestStatus status) {
             this.status = status;
+            return this;
+        }
+
+        public Builder targetBranchId(@Nullable String targetBranchId) {
+            this.targetBranchId = targetBranchId;
+            return this;
+        }
+
+        public Builder title(@Nullable String title) {
+            this.title = title;
             return this;
         }
 
@@ -331,9 +437,10 @@ public class RepoPullrequest {
         public RepoPullrequest build() {
             return new RepoPullrequest(
                 closedAt, commitIds, createdAt,
-                id, labels, raw,
-                repoId, status, updatedAt,
-                userIds);
+                id, labels, notes,
+                raw, repoId, sourceBranchId,
+                status, targetBranchId, title,
+                updatedAt, userIds);
         }
 
     }
