@@ -11,7 +11,6 @@ import java.util.Optional;
 public enum PatchAccountingBillQueryParamFields {
     ID("id"),
     BILL_NUMBER("bill_number"),
-    TERM("term"),
     CREATED_AT("created_at"),
     UPDATED_AT("updated_at"),
     DUE_AT("due_at"),
@@ -36,7 +35,8 @@ public enum PatchAccountingBillQueryParamFields {
     ATTACHMENTS("attachments"),
     SEND("send"),
     ORGANIZATION_ID("organization_id"),
-    RAW("raw");
+    RAW("raw"),
+    TERM("term");
 
     @JsonValue
     private final String value;

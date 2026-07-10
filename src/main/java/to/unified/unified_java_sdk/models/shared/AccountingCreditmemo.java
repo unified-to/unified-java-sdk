@@ -73,6 +73,11 @@ public class AccountingCreditmemo {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("invoice_id")
+    private String invoiceId;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lineitems")
     private List<AccountingLineitem> lineitems;
 
@@ -168,6 +173,7 @@ public class AccountingCreditmemo {
             @JsonProperty("discount_amount") @Nullable Double discountAmount,
             @JsonProperty("due_at") @Nullable OffsetDateTime dueAt,
             @JsonProperty("id") @Nullable String id,
+            @JsonProperty("invoice_id") @Nullable String invoiceId,
             @JsonProperty("lineitems") @Nullable List<AccountingLineitem> lineitems,
             @JsonProperty("notes") @Nullable String notes,
             @JsonProperty("organization_id") @Nullable String organizationId,
@@ -195,6 +201,7 @@ public class AccountingCreditmemo {
         this.discountAmount = discountAmount;
         this.dueAt = dueAt;
         this.id = id;
+        this.invoiceId = invoiceId;
         this.lineitems = lineitems;
         this.notes = notes;
         this.organizationId = organizationId;
@@ -223,7 +230,8 @@ public class AccountingCreditmemo {
             null, null, null,
             null, null, null,
             null, null, null,
-            null, null, null);
+            null, null, null,
+            null);
     }
 
     public Optional<List<AccountingAttachment>> attachments() {
@@ -264,6 +272,10 @@ public class AccountingCreditmemo {
 
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
+    }
+
+    public Optional<String> invoiceId() {
+        return Optional.ofNullable(this.invoiceId);
     }
 
     public Optional<List<AccountingLineitem>> lineitems() {
@@ -399,6 +411,12 @@ public class AccountingCreditmemo {
     }
 
 
+    public AccountingCreditmemo withInvoiceId(@Nullable String invoiceId) {
+        this.invoiceId = invoiceId;
+        return this;
+    }
+
+
     public AccountingCreditmemo withLineitems(@Nullable List<AccountingLineitem> lineitems) {
         this.lineitems = lineitems;
         return this;
@@ -521,6 +539,7 @@ public class AccountingCreditmemo {
             Utils.enhancedDeepEquals(this.discountAmount, other.discountAmount) &&
             Utils.enhancedDeepEquals(this.dueAt, other.dueAt) &&
             Utils.enhancedDeepEquals(this.id, other.id) &&
+            Utils.enhancedDeepEquals(this.invoiceId, other.invoiceId) &&
             Utils.enhancedDeepEquals(this.lineitems, other.lineitems) &&
             Utils.enhancedDeepEquals(this.notes, other.notes) &&
             Utils.enhancedDeepEquals(this.organizationId, other.organizationId) &&
@@ -546,12 +565,13 @@ public class AccountingCreditmemo {
             attachments, balanceAmount, cancelledAt,
             contactId, createdAt, creditmemoNumber,
             currency, discountAmount, dueAt,
-            id, lineitems, notes,
-            organizationId, paidAmount, paidAt,
-            paymentCollectionMethod, postedAt, raw,
-            refundAmount, refundReason, refundedAt,
-            send, status, taxAmount,
-            totalAmount, updatedAt, url);
+            id, invoiceId, lineitems,
+            notes, organizationId, paidAmount,
+            paidAt, paymentCollectionMethod, postedAt,
+            raw, refundAmount, refundReason,
+            refundedAt, send, status,
+            taxAmount, totalAmount, updatedAt,
+            url);
     }
     
     @Override
@@ -567,6 +587,7 @@ public class AccountingCreditmemo {
                 "discountAmount", discountAmount,
                 "dueAt", dueAt,
                 "id", id,
+                "invoiceId", invoiceId,
                 "lineitems", lineitems,
                 "notes", notes,
                 "organizationId", organizationId,
@@ -608,6 +629,8 @@ public class AccountingCreditmemo {
         private OffsetDateTime dueAt;
 
         private String id;
+
+        private String invoiceId;
 
         private List<AccountingLineitem> lineitems;
 
@@ -694,6 +717,11 @@ public class AccountingCreditmemo {
 
         public Builder id(@Nullable String id) {
             this.id = id;
+            return this;
+        }
+
+        public Builder invoiceId(@Nullable String invoiceId) {
+            this.invoiceId = invoiceId;
             return this;
         }
 
@@ -787,12 +815,13 @@ public class AccountingCreditmemo {
                 attachments, balanceAmount, cancelledAt,
                 contactId, createdAt, creditmemoNumber,
                 currency, discountAmount, dueAt,
-                id, lineitems, notes,
-                organizationId, paidAmount, paidAt,
-                paymentCollectionMethod, postedAt, raw,
-                refundAmount, refundReason, refundedAt,
-                send, status, taxAmount,
-                totalAmount, updatedAt, url);
+                id, invoiceId, lineitems,
+                notes, organizationId, paidAmount,
+                paidAt, paymentCollectionMethod, postedAt,
+                raw, refundAmount, refundReason,
+                refundedAt, send, status,
+                taxAmount, totalAmount, updatedAt,
+                url);
         }
 
     }

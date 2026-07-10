@@ -89,6 +89,11 @@ public class AtsActivity {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("metadata")
+    private List<AtsMetadata> metadata;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
     private Map<String, Object> raw;
 
@@ -139,6 +144,7 @@ public class AtsActivity {
             @JsonProperty("interview_id") @Nullable String interviewId,
             @JsonProperty("is_private") @Nullable Boolean isPrivate,
             @JsonProperty("job_id") @Nullable String jobId,
+            @JsonProperty("metadata") @Nullable List<AtsMetadata> metadata,
             @JsonProperty("raw") @Nullable Map<String, Object> raw,
             @JsonProperty("sub_type") @Nullable String subType,
             @JsonProperty("title") @Nullable String title,
@@ -159,6 +165,7 @@ public class AtsActivity {
         this.interviewId = interviewId;
         this.isPrivate = isPrivate;
         this.jobId = jobId;
+        this.metadata = metadata;
         this.raw = raw;
         this.subType = subType;
         this.title = title;
@@ -175,7 +182,7 @@ public class AtsActivity {
             null, null, null,
             null, null, null,
             null, null, null,
-            null, null);
+            null, null, null);
     }
 
     public Optional<String> applicationId() {
@@ -231,6 +238,10 @@ public class AtsActivity {
 
     public Optional<String> jobId() {
         return Optional.ofNullable(this.jobId);
+    }
+
+    public Optional<List<AtsMetadata>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     public Optional<Map<String, Object>> raw() {
@@ -350,6 +361,12 @@ public class AtsActivity {
     }
 
 
+    public AtsActivity withMetadata(@Nullable List<AtsMetadata> metadata) {
+        this.metadata = metadata;
+        return this;
+    }
+
+
     public AtsActivity withRaw(@Nullable Map<String, Object> raw) {
         this.raw = raw;
         return this;
@@ -418,6 +435,7 @@ public class AtsActivity {
             Utils.enhancedDeepEquals(this.interviewId, other.interviewId) &&
             Utils.enhancedDeepEquals(this.isPrivate, other.isPrivate) &&
             Utils.enhancedDeepEquals(this.jobId, other.jobId) &&
+            Utils.enhancedDeepEquals(this.metadata, other.metadata) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
             Utils.enhancedDeepEquals(this.subType, other.subType) &&
             Utils.enhancedDeepEquals(this.title, other.title) &&
@@ -434,9 +452,9 @@ public class AtsActivity {
             cc, companyId, createdAt,
             description, documentIds, from,
             id, interviewId, isPrivate,
-            jobId, raw, subType,
-            title, to, type,
-            updatedAt, userIds);
+            jobId, metadata, raw,
+            subType, title, to,
+            type, updatedAt, userIds);
     }
     
     @Override
@@ -455,6 +473,7 @@ public class AtsActivity {
                 "interviewId", interviewId,
                 "isPrivate", isPrivate,
                 "jobId", jobId,
+                "metadata", metadata,
                 "raw", raw,
                 "subType", subType,
                 "title", title,
@@ -492,6 +511,8 @@ public class AtsActivity {
         private Boolean isPrivate;
 
         private String jobId;
+
+        private List<AtsMetadata> metadata;
 
         private Map<String, Object> raw;
 
@@ -579,6 +600,11 @@ public class AtsActivity {
             return this;
         }
 
+        public Builder metadata(@Nullable List<AtsMetadata> metadata) {
+            this.metadata = metadata;
+            return this;
+        }
+
         public Builder raw(@Nullable Map<String, Object> raw) {
             this.raw = raw;
             return this;
@@ -623,9 +649,9 @@ public class AtsActivity {
                 cc, companyId, createdAt,
                 description, documentIds, from,
                 id, interviewId, isPrivate,
-                jobId, raw, subType,
-                title, to, type,
-                updatedAt, userIds);
+                jobId, metadata, raw,
+                subType, title, to,
+                type, updatedAt, userIds);
         }
 
     }
