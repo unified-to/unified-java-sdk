@@ -41,6 +41,12 @@ public class ListTaskChangesRequest {
     private String order;
 
     /**
+     * The project ID to filter by (reference to TaskProject)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=project_id")
+    private String projectId;
+
+    /**
      * Query string to search. eg. email address or name
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=query")
@@ -78,6 +84,7 @@ public class ListTaskChangesRequest {
             @Nullable Double limit,
             @Nullable Double offset,
             @Nullable String order,
+            @Nullable String projectId,
             @Nullable String query,
             @Nullable String raw,
             @Nullable String sort,
@@ -89,6 +96,7 @@ public class ListTaskChangesRequest {
         this.limit = limit;
         this.offset = offset;
         this.order = order;
+        this.projectId = projectId;
         this.query = query;
         this.raw = raw;
         this.sort = sort;
@@ -101,7 +109,7 @@ public class ListTaskChangesRequest {
         this(connectionId, null, null,
             null, null, null,
             null, null, null,
-            null);
+            null, null);
     }
 
     /**
@@ -128,6 +136,13 @@ public class ListTaskChangesRequest {
 
     public Optional<String> order() {
         return Optional.ofNullable(this.order);
+    }
+
+    /**
+     * The project ID to filter by (reference to TaskProject)
+     */
+    public Optional<String> projectId() {
+        return Optional.ofNullable(this.projectId);
     }
 
     /**
@@ -207,6 +222,15 @@ public class ListTaskChangesRequest {
 
 
     /**
+     * The project ID to filter by (reference to TaskProject)
+     */
+    public ListTaskChangesRequest withProjectId(@Nullable String projectId) {
+        this.projectId = projectId;
+        return this;
+    }
+
+
+    /**
      * Query string to search. eg. email address or name
      */
     public ListTaskChangesRequest withQuery(@Nullable String query) {
@@ -266,6 +290,7 @@ public class ListTaskChangesRequest {
             Utils.enhancedDeepEquals(this.limit, other.limit) &&
             Utils.enhancedDeepEquals(this.offset, other.offset) &&
             Utils.enhancedDeepEquals(this.order, other.order) &&
+            Utils.enhancedDeepEquals(this.projectId, other.projectId) &&
             Utils.enhancedDeepEquals(this.query, other.query) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
             Utils.enhancedDeepEquals(this.sort, other.sort) &&
@@ -277,9 +302,9 @@ public class ListTaskChangesRequest {
     public int hashCode() {
         return Utils.enhancedHash(
             connectionId, fields, limit,
-            offset, order, query,
-            raw, sort, taskId,
-            updatedGte);
+            offset, order, projectId,
+            query, raw, sort,
+            taskId, updatedGte);
     }
     
     @Override
@@ -290,6 +315,7 @@ public class ListTaskChangesRequest {
                 "limit", limit,
                 "offset", offset,
                 "order", order,
+                "projectId", projectId,
                 "query", query,
                 "raw", raw,
                 "sort", sort,
@@ -309,6 +335,8 @@ public class ListTaskChangesRequest {
         private Double offset;
 
         private String order;
+
+        private String projectId;
 
         private String query;
 
@@ -356,6 +384,14 @@ public class ListTaskChangesRequest {
         }
 
         /**
+         * The project ID to filter by (reference to TaskProject)
+         */
+        public Builder projectId(@Nullable String projectId) {
+            this.projectId = projectId;
+            return this;
+        }
+
+        /**
          * Query string to search. eg. email address or name
          */
         public Builder query(@Nullable String query) {
@@ -398,9 +434,9 @@ public class ListTaskChangesRequest {
         public ListTaskChangesRequest build() {
             return new ListTaskChangesRequest(
                 connectionId, fields, limit,
-                offset, order, query,
-                raw, sort, taskId,
-                updatedGte);
+                offset, order, projectId,
+                query, raw, sort,
+                taskId, updatedGte);
         }
 
     }
