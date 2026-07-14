@@ -22,6 +22,7 @@ public class Goal {
 
     public static final Goal UNSPECIFIED = new Goal("UNSPECIFIED");
     public static final Goal BRAND_AWARENESS = new Goal("BRAND_AWARENESS");
+    public static final Goal ENGAGEMENT = new Goal("ENGAGEMENT");
     public static final Goal REACH = new Goal("REACH");
     public static final Goal WEBSITE_TRAFFIC = new Goal("WEBSITE_TRAFFIC");
     public static final Goal LEADS = new Goal("LEADS");
@@ -102,6 +103,7 @@ public class Goal {
         Map<String, Goal> map = new LinkedHashMap<>();
         map.put("UNSPECIFIED", UNSPECIFIED);
         map.put("BRAND_AWARENESS", BRAND_AWARENESS);
+        map.put("ENGAGEMENT", ENGAGEMENT);
         map.put("REACH", REACH);
         map.put("WEBSITE_TRAFFIC", WEBSITE_TRAFFIC);
         map.put("LEADS", LEADS);
@@ -114,6 +116,7 @@ public class Goal {
         Map<String, GoalEnum> map = new HashMap<>();
         map.put("UNSPECIFIED", GoalEnum.UNSPECIFIED);
         map.put("BRAND_AWARENESS", GoalEnum.BRAND_AWARENESS);
+        map.put("ENGAGEMENT", GoalEnum.ENGAGEMENT);
         map.put("REACH", GoalEnum.REACH);
         map.put("WEBSITE_TRAFFIC", GoalEnum.WEBSITE_TRAFFIC);
         map.put("LEADS", GoalEnum.LEADS);
@@ -127,6 +130,7 @@ public class Goal {
 
         UNSPECIFIED("UNSPECIFIED"),
         BRAND_AWARENESS("BRAND_AWARENESS"),
+        ENGAGEMENT("ENGAGEMENT"),
         REACH("REACH"),
         WEBSITE_TRAFFIC("WEBSITE_TRAFFIC"),
         LEADS("LEADS"),

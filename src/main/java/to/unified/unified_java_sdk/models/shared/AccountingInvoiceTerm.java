@@ -21,8 +21,11 @@ import java.util.Optional;
 public class AccountingInvoiceTerm {
 
     public static final AccountingInvoiceTerm ON_RECEIPT = new AccountingInvoiceTerm("ON_RECEIPT");
+    public static final AccountingInvoiceTerm NET7 = new AccountingInvoiceTerm("NET_7");
     public static final AccountingInvoiceTerm NET10 = new AccountingInvoiceTerm("NET_10");
     public static final AccountingInvoiceTerm NET15 = new AccountingInvoiceTerm("NET_15");
+    public static final AccountingInvoiceTerm NET20 = new AccountingInvoiceTerm("NET_20");
+    public static final AccountingInvoiceTerm NET25 = new AccountingInvoiceTerm("NET_25");
     public static final AccountingInvoiceTerm NET30 = new AccountingInvoiceTerm("NET_30");
     public static final AccountingInvoiceTerm NET60 = new AccountingInvoiceTerm("NET_60");
 
@@ -99,8 +102,11 @@ public class AccountingInvoiceTerm {
     private static final Map<String, AccountingInvoiceTerm> createValuesMap() {
         Map<String, AccountingInvoiceTerm> map = new LinkedHashMap<>();
         map.put("ON_RECEIPT", ON_RECEIPT);
+        map.put("NET_7", NET7);
         map.put("NET_10", NET10);
         map.put("NET_15", NET15);
+        map.put("NET_20", NET20);
+        map.put("NET_25", NET25);
         map.put("NET_30", NET30);
         map.put("NET_60", NET60);
         return map;
@@ -109,8 +115,11 @@ public class AccountingInvoiceTerm {
     private static final Map<String, AccountingInvoiceTermEnum> createEnumsMap() {
         Map<String, AccountingInvoiceTermEnum> map = new HashMap<>();
         map.put("ON_RECEIPT", AccountingInvoiceTermEnum.ON_RECEIPT);
+        map.put("NET_7", AccountingInvoiceTermEnum.NET7);
         map.put("NET_10", AccountingInvoiceTermEnum.NET10);
         map.put("NET_15", AccountingInvoiceTermEnum.NET15);
+        map.put("NET_20", AccountingInvoiceTermEnum.NET20);
+        map.put("NET_25", AccountingInvoiceTermEnum.NET25);
         map.put("NET_30", AccountingInvoiceTermEnum.NET30);
         map.put("NET_60", AccountingInvoiceTermEnum.NET60);
         return map;
@@ -120,8 +129,11 @@ public class AccountingInvoiceTerm {
     public enum AccountingInvoiceTermEnum {
 
         ON_RECEIPT("ON_RECEIPT"),
+        NET7("NET_7"),
         NET10("NET_10"),
         NET15("NET_15"),
+        NET20("NET_20"),
+        NET25("NET_25"),
         NET30("NET_30"),
         NET60("NET_60"),;
 

@@ -37,6 +37,11 @@ public class AccountingExpense {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("attachments")
+    private List<AccountingAttachment> attachments;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contact_id")
     private String contactId;
 
@@ -120,6 +125,7 @@ public class AccountingExpense {
             @JsonProperty("account_id") @Nullable String accountId,
             @JsonProperty("approved_at") @Nullable OffsetDateTime approvedAt,
             @JsonProperty("approver_user_id") @Nullable String approverUserId,
+            @JsonProperty("attachments") @Nullable List<AccountingAttachment> attachments,
             @JsonProperty("contact_id") @Nullable String contactId,
             @JsonProperty("created_at") @Nullable OffsetDateTime createdAt,
             @JsonProperty("currency") @Nullable String currency,
@@ -139,6 +145,7 @@ public class AccountingExpense {
         this.accountId = accountId;
         this.approvedAt = approvedAt;
         this.approverUserId = approverUserId;
+        this.attachments = attachments;
         this.contactId = contactId;
         this.createdAt = createdAt;
         this.currency = currency;
@@ -164,7 +171,7 @@ public class AccountingExpense {
             null, null, null,
             null, null, null,
             null, null, null,
-            null);
+            null, null);
     }
 
     public Optional<String> accountId() {
@@ -177,6 +184,10 @@ public class AccountingExpense {
 
     public Optional<String> approverUserId() {
         return Optional.ofNullable(this.approverUserId);
+    }
+
+    public Optional<List<AccountingAttachment>> attachments() {
+        return Optional.ofNullable(this.attachments);
     }
 
     public Optional<String> contactId() {
@@ -262,6 +273,12 @@ public class AccountingExpense {
 
     public AccountingExpense withApproverUserId(@Nullable String approverUserId) {
         this.approverUserId = approverUserId;
+        return this;
+    }
+
+
+    public AccountingExpense withAttachments(@Nullable List<AccountingAttachment> attachments) {
+        this.attachments = attachments;
         return this;
     }
 
@@ -375,6 +392,7 @@ public class AccountingExpense {
             Utils.enhancedDeepEquals(this.accountId, other.accountId) &&
             Utils.enhancedDeepEquals(this.approvedAt, other.approvedAt) &&
             Utils.enhancedDeepEquals(this.approverUserId, other.approverUserId) &&
+            Utils.enhancedDeepEquals(this.attachments, other.attachments) &&
             Utils.enhancedDeepEquals(this.contactId, other.contactId) &&
             Utils.enhancedDeepEquals(this.createdAt, other.createdAt) &&
             Utils.enhancedDeepEquals(this.currency, other.currency) &&
@@ -397,12 +415,12 @@ public class AccountingExpense {
     public int hashCode() {
         return Utils.enhancedHash(
             accountId, approvedAt, approverUserId,
-            contactId, createdAt, currency,
-            id, lineitems, name,
-            organizationId, paymentMethod, postedAt,
-            raw, reimbursedAmount, reimbursedAt,
-            taxAmount, totalAmount, updatedAt,
-            userId);
+            attachments, contactId, createdAt,
+            currency, id, lineitems,
+            name, organizationId, paymentMethod,
+            postedAt, raw, reimbursedAmount,
+            reimbursedAt, taxAmount, totalAmount,
+            updatedAt, userId);
     }
     
     @Override
@@ -411,6 +429,7 @@ public class AccountingExpense {
                 "accountId", accountId,
                 "approvedAt", approvedAt,
                 "approverUserId", approverUserId,
+                "attachments", attachments,
                 "contactId", contactId,
                 "createdAt", createdAt,
                 "currency", currency,
@@ -437,6 +456,8 @@ public class AccountingExpense {
         private OffsetDateTime approvedAt;
 
         private String approverUserId;
+
+        private List<AccountingAttachment> attachments;
 
         private String contactId;
 
@@ -486,6 +507,11 @@ public class AccountingExpense {
 
         public Builder approverUserId(@Nullable String approverUserId) {
             this.approverUserId = approverUserId;
+            return this;
+        }
+
+        public Builder attachments(@Nullable List<AccountingAttachment> attachments) {
+            this.attachments = attachments;
             return this;
         }
 
@@ -572,12 +598,12 @@ public class AccountingExpense {
         public AccountingExpense build() {
             return new AccountingExpense(
                 accountId, approvedAt, approverUserId,
-                contactId, createdAt, currency,
-                id, lineitems, name,
-                organizationId, paymentMethod, postedAt,
-                raw, reimbursedAmount, reimbursedAt,
-                taxAmount, totalAmount, updatedAt,
-                userId);
+                attachments, contactId, createdAt,
+                currency, id, lineitems,
+                name, organizationId, paymentMethod,
+                postedAt, raw, reimbursedAmount,
+                reimbursedAt, taxAmount, totalAmount,
+                updatedAt, userId);
         }
 
     }

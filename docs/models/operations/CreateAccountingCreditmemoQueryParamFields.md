@@ -40,4 +40,5 @@ CreateAccountingCreditmemoQueryParamFields value = CreateAccountingCreditmemoQue
 | `ATTACHMENTS`               | attachments                 |
 | `SEND`                      | send                        |
 | `ORGANIZATION_ID`           | organization_id             |
+| `APPLY_AMOUNT`              | apply_amount                |
 | `RAW`                       | raw                         |

@@ -36,6 +36,7 @@ public enum ListAccountingCreditmemoesQueryParamFields {
     ATTACHMENTS("attachments"),
     SEND("send"),
     ORGANIZATION_ID("organization_id"),
+    APPLY_AMOUNT("apply_amount"),
     RAW("raw");
 
     @JsonValue

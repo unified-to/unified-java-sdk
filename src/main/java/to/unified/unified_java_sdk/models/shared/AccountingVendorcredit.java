@@ -27,6 +27,11 @@ public class AccountingVendorcredit {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("apply_amount")
+    private Double applyAmount;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("balance_amount")
     private Double balanceAmount;
 
@@ -103,6 +108,7 @@ public class AccountingVendorcredit {
     @JsonCreator
     public AccountingVendorcredit(
             @JsonProperty("account_id") @Nullable String accountId,
+            @JsonProperty("apply_amount") @Nullable Double applyAmount,
             @JsonProperty("balance_amount") @Nullable Double balanceAmount,
             @JsonProperty("bill_id") @Nullable String billId,
             @JsonProperty("contact_id") @Nullable String contactId,
@@ -119,6 +125,7 @@ public class AccountingVendorcredit {
             @JsonProperty("total_amount") @Nullable Double totalAmount,
             @JsonProperty("updated_at") @Nullable OffsetDateTime updatedAt) {
         this.accountId = accountId;
+        this.applyAmount = applyAmount;
         this.balanceAmount = balanceAmount;
         this.billId = billId;
         this.contactId = contactId;
@@ -142,11 +149,15 @@ public class AccountingVendorcredit {
             null, null, null,
             null, null, null,
             null, null, null,
-            null);
+            null, null);
     }
 
     public Optional<String> accountId() {
         return Optional.ofNullable(this.accountId);
+    }
+
+    public Optional<Double> applyAmount() {
+        return Optional.ofNullable(this.applyAmount);
     }
 
     public Optional<Double> balanceAmount() {
@@ -216,6 +227,12 @@ public class AccountingVendorcredit {
 
     public AccountingVendorcredit withAccountId(@Nullable String accountId) {
         this.accountId = accountId;
+        return this;
+    }
+
+
+    public AccountingVendorcredit withApplyAmount(@Nullable Double applyAmount) {
+        this.applyAmount = applyAmount;
         return this;
     }
 
@@ -321,6 +338,7 @@ public class AccountingVendorcredit {
         AccountingVendorcredit other = (AccountingVendorcredit) o;
         return 
             Utils.enhancedDeepEquals(this.accountId, other.accountId) &&
+            Utils.enhancedDeepEquals(this.applyAmount, other.applyAmount) &&
             Utils.enhancedDeepEquals(this.balanceAmount, other.balanceAmount) &&
             Utils.enhancedDeepEquals(this.billId, other.billId) &&
             Utils.enhancedDeepEquals(this.contactId, other.contactId) &&
@@ -341,18 +359,19 @@ public class AccountingVendorcredit {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            accountId, balanceAmount, billId,
-            contactId, createdAt, currency,
-            dueAt, id, lineitems,
-            notes, organizationId, postedAt,
-            raw, status, totalAmount,
-            updatedAt);
+            accountId, applyAmount, balanceAmount,
+            billId, contactId, createdAt,
+            currency, dueAt, id,
+            lineitems, notes, organizationId,
+            postedAt, raw, status,
+            totalAmount, updatedAt);
     }
     
     @Override
     public String toString() {
         return Utils.toString(AccountingVendorcredit.class,
                 "accountId", accountId,
+                "applyAmount", applyAmount,
                 "balanceAmount", balanceAmount,
                 "billId", billId,
                 "contactId", contactId,
@@ -374,6 +393,8 @@ public class AccountingVendorcredit {
     public final static class Builder {
 
         private String accountId;
+
+        private Double applyAmount;
 
         private Double balanceAmount;
 
@@ -411,6 +432,11 @@ public class AccountingVendorcredit {
 
         public Builder accountId(@Nullable String accountId) {
             this.accountId = accountId;
+            return this;
+        }
+
+        public Builder applyAmount(@Nullable Double applyAmount) {
+            this.applyAmount = applyAmount;
             return this;
         }
 
@@ -491,12 +517,12 @@ public class AccountingVendorcredit {
 
         public AccountingVendorcredit build() {
             return new AccountingVendorcredit(
-                accountId, balanceAmount, billId,
-                contactId, createdAt, currency,
-                dueAt, id, lineitems,
-                notes, organizationId, postedAt,
-                raw, status, totalAmount,
-                updatedAt);
+                accountId, applyAmount, balanceAmount,
+                billId, contactId, createdAt,
+                currency, dueAt, id,
+                lineitems, notes, organizationId,
+                postedAt, raw, status,
+                totalAmount, updatedAt);
         }
 
     }

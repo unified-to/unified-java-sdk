@@ -12,6 +12,7 @@ import to.unified.unified_java_sdk.models.operations.CreateHrisBenefitRequest;
 import to.unified.unified_java_sdk.models.operations.CreateHrisCompanyRequest;
 import to.unified.unified_java_sdk.models.operations.CreateHrisDeductionRequest;
 import to.unified.unified_java_sdk.models.operations.CreateHrisDeviceRequest;
+import to.unified.unified_java_sdk.models.operations.CreateHrisDocumentRequest;
 import to.unified.unified_java_sdk.models.operations.CreateHrisEmployeeRequest;
 import to.unified.unified_java_sdk.models.operations.CreateHrisGroupRequest;
 import to.unified.unified_java_sdk.models.operations.CreateHrisLocationRequest;
@@ -22,6 +23,7 @@ import to.unified.unified_java_sdk.models.operations.GetHrisBenefitRequest;
 import to.unified.unified_java_sdk.models.operations.GetHrisCompanyRequest;
 import to.unified.unified_java_sdk.models.operations.GetHrisDeductionRequest;
 import to.unified.unified_java_sdk.models.operations.GetHrisDeviceRequest;
+import to.unified.unified_java_sdk.models.operations.GetHrisDocumentRequest;
 import to.unified.unified_java_sdk.models.operations.GetHrisEmployeeRequest;
 import to.unified.unified_java_sdk.models.operations.GetHrisGroupRequest;
 import to.unified.unified_java_sdk.models.operations.GetHrisLocationRequest;
@@ -33,6 +35,7 @@ import to.unified.unified_java_sdk.models.operations.ListHrisBenefitsRequest;
 import to.unified.unified_java_sdk.models.operations.ListHrisCompaniesRequest;
 import to.unified.unified_java_sdk.models.operations.ListHrisDeductionsRequest;
 import to.unified.unified_java_sdk.models.operations.ListHrisDevicesRequest;
+import to.unified.unified_java_sdk.models.operations.ListHrisDocumentsRequest;
 import to.unified.unified_java_sdk.models.operations.ListHrisEmployeesRequest;
 import to.unified.unified_java_sdk.models.operations.ListHrisGroupsRequest;
 import to.unified.unified_java_sdk.models.operations.ListHrisLocationsRequest;
@@ -44,6 +47,7 @@ import to.unified.unified_java_sdk.models.operations.PatchHrisBenefitRequest;
 import to.unified.unified_java_sdk.models.operations.PatchHrisCompanyRequest;
 import to.unified.unified_java_sdk.models.operations.PatchHrisDeductionRequest;
 import to.unified.unified_java_sdk.models.operations.PatchHrisDeviceRequest;
+import to.unified.unified_java_sdk.models.operations.PatchHrisDocumentRequest;
 import to.unified.unified_java_sdk.models.operations.PatchHrisEmployeeRequest;
 import to.unified.unified_java_sdk.models.operations.PatchHrisGroupRequest;
 import to.unified.unified_java_sdk.models.operations.PatchHrisLocationRequest;
@@ -54,6 +58,7 @@ import to.unified.unified_java_sdk.models.operations.RemoveHrisBenefitRequest;
 import to.unified.unified_java_sdk.models.operations.RemoveHrisCompanyRequest;
 import to.unified.unified_java_sdk.models.operations.RemoveHrisDeductionRequest;
 import to.unified.unified_java_sdk.models.operations.RemoveHrisDeviceRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveHrisDocumentRequest;
 import to.unified.unified_java_sdk.models.operations.RemoveHrisEmployeeRequest;
 import to.unified.unified_java_sdk.models.operations.RemoveHrisGroupRequest;
 import to.unified.unified_java_sdk.models.operations.RemoveHrisLocationRequest;
@@ -64,6 +69,7 @@ import to.unified.unified_java_sdk.models.operations.UpdateHrisBenefitRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateHrisCompanyRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateHrisDeductionRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateHrisDeviceRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateHrisDocumentRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateHrisEmployeeRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateHrisGroupRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateHrisLocationRequest;
@@ -79,6 +85,8 @@ import to.unified.unified_java_sdk.models.operations.async.CreateHrisDeductionRe
 import to.unified.unified_java_sdk.models.operations.async.CreateHrisDeductionResponse;
 import to.unified.unified_java_sdk.models.operations.async.CreateHrisDeviceRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.CreateHrisDeviceResponse;
+import to.unified.unified_java_sdk.models.operations.async.CreateHrisDocumentRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.CreateHrisDocumentResponse;
 import to.unified.unified_java_sdk.models.operations.async.CreateHrisEmployeeRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.CreateHrisEmployeeResponse;
 import to.unified.unified_java_sdk.models.operations.async.CreateHrisGroupRequestBuilder;
@@ -99,6 +107,8 @@ import to.unified.unified_java_sdk.models.operations.async.GetHrisDeductionReque
 import to.unified.unified_java_sdk.models.operations.async.GetHrisDeductionResponse;
 import to.unified.unified_java_sdk.models.operations.async.GetHrisDeviceRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.GetHrisDeviceResponse;
+import to.unified.unified_java_sdk.models.operations.async.GetHrisDocumentRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetHrisDocumentResponse;
 import to.unified.unified_java_sdk.models.operations.async.GetHrisEmployeeRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.GetHrisEmployeeResponse;
 import to.unified.unified_java_sdk.models.operations.async.GetHrisGroupRequestBuilder;
@@ -121,6 +131,8 @@ import to.unified.unified_java_sdk.models.operations.async.ListHrisDeductionsReq
 import to.unified.unified_java_sdk.models.operations.async.ListHrisDeductionsResponse;
 import to.unified.unified_java_sdk.models.operations.async.ListHrisDevicesRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.ListHrisDevicesResponse;
+import to.unified.unified_java_sdk.models.operations.async.ListHrisDocumentsRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListHrisDocumentsResponse;
 import to.unified.unified_java_sdk.models.operations.async.ListHrisEmployeesRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.ListHrisEmployeesResponse;
 import to.unified.unified_java_sdk.models.operations.async.ListHrisGroupsRequestBuilder;
@@ -143,6 +155,8 @@ import to.unified.unified_java_sdk.models.operations.async.PatchHrisDeductionReq
 import to.unified.unified_java_sdk.models.operations.async.PatchHrisDeductionResponse;
 import to.unified.unified_java_sdk.models.operations.async.PatchHrisDeviceRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.PatchHrisDeviceResponse;
+import to.unified.unified_java_sdk.models.operations.async.PatchHrisDocumentRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.PatchHrisDocumentResponse;
 import to.unified.unified_java_sdk.models.operations.async.PatchHrisEmployeeRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.PatchHrisEmployeeResponse;
 import to.unified.unified_java_sdk.models.operations.async.PatchHrisGroupRequestBuilder;
@@ -163,6 +177,8 @@ import to.unified.unified_java_sdk.models.operations.async.RemoveHrisDeductionRe
 import to.unified.unified_java_sdk.models.operations.async.RemoveHrisDeductionResponse;
 import to.unified.unified_java_sdk.models.operations.async.RemoveHrisDeviceRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.RemoveHrisDeviceResponse;
+import to.unified.unified_java_sdk.models.operations.async.RemoveHrisDocumentRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.RemoveHrisDocumentResponse;
 import to.unified.unified_java_sdk.models.operations.async.RemoveHrisEmployeeRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.RemoveHrisEmployeeResponse;
 import to.unified.unified_java_sdk.models.operations.async.RemoveHrisGroupRequestBuilder;
@@ -183,6 +199,8 @@ import to.unified.unified_java_sdk.models.operations.async.UpdateHrisDeductionRe
 import to.unified.unified_java_sdk.models.operations.async.UpdateHrisDeductionResponse;
 import to.unified.unified_java_sdk.models.operations.async.UpdateHrisDeviceRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.UpdateHrisDeviceResponse;
+import to.unified.unified_java_sdk.models.operations.async.UpdateHrisDocumentRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.UpdateHrisDocumentResponse;
 import to.unified.unified_java_sdk.models.operations.async.UpdateHrisEmployeeRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.UpdateHrisEmployeeResponse;
 import to.unified.unified_java_sdk.models.operations.async.UpdateHrisGroupRequestBuilder;
@@ -198,6 +216,7 @@ import to.unified.unified_java_sdk.operations.CreateHrisBenefit;
 import to.unified.unified_java_sdk.operations.CreateHrisCompany;
 import to.unified.unified_java_sdk.operations.CreateHrisDeduction;
 import to.unified.unified_java_sdk.operations.CreateHrisDevice;
+import to.unified.unified_java_sdk.operations.CreateHrisDocument;
 import to.unified.unified_java_sdk.operations.CreateHrisEmployee;
 import to.unified.unified_java_sdk.operations.CreateHrisGroup;
 import to.unified.unified_java_sdk.operations.CreateHrisLocation;
@@ -208,6 +227,7 @@ import to.unified.unified_java_sdk.operations.GetHrisBenefit;
 import to.unified.unified_java_sdk.operations.GetHrisCompany;
 import to.unified.unified_java_sdk.operations.GetHrisDeduction;
 import to.unified.unified_java_sdk.operations.GetHrisDevice;
+import to.unified.unified_java_sdk.operations.GetHrisDocument;
 import to.unified.unified_java_sdk.operations.GetHrisEmployee;
 import to.unified.unified_java_sdk.operations.GetHrisGroup;
 import to.unified.unified_java_sdk.operations.GetHrisLocation;
@@ -219,6 +239,7 @@ import to.unified.unified_java_sdk.operations.ListHrisBenefits;
 import to.unified.unified_java_sdk.operations.ListHrisCompanies;
 import to.unified.unified_java_sdk.operations.ListHrisDeductions;
 import to.unified.unified_java_sdk.operations.ListHrisDevices;
+import to.unified.unified_java_sdk.operations.ListHrisDocuments;
 import to.unified.unified_java_sdk.operations.ListHrisEmployees;
 import to.unified.unified_java_sdk.operations.ListHrisGroups;
 import to.unified.unified_java_sdk.operations.ListHrisLocations;
@@ -230,6 +251,7 @@ import to.unified.unified_java_sdk.operations.PatchHrisBenefit;
 import to.unified.unified_java_sdk.operations.PatchHrisCompany;
 import to.unified.unified_java_sdk.operations.PatchHrisDeduction;
 import to.unified.unified_java_sdk.operations.PatchHrisDevice;
+import to.unified.unified_java_sdk.operations.PatchHrisDocument;
 import to.unified.unified_java_sdk.operations.PatchHrisEmployee;
 import to.unified.unified_java_sdk.operations.PatchHrisGroup;
 import to.unified.unified_java_sdk.operations.PatchHrisLocation;
@@ -240,6 +262,7 @@ import to.unified.unified_java_sdk.operations.RemoveHrisBenefit;
 import to.unified.unified_java_sdk.operations.RemoveHrisCompany;
 import to.unified.unified_java_sdk.operations.RemoveHrisDeduction;
 import to.unified.unified_java_sdk.operations.RemoveHrisDevice;
+import to.unified.unified_java_sdk.operations.RemoveHrisDocument;
 import to.unified.unified_java_sdk.operations.RemoveHrisEmployee;
 import to.unified.unified_java_sdk.operations.RemoveHrisGroup;
 import to.unified.unified_java_sdk.operations.RemoveHrisLocation;
@@ -250,6 +273,7 @@ import to.unified.unified_java_sdk.operations.UpdateHrisBenefit;
 import to.unified.unified_java_sdk.operations.UpdateHrisCompany;
 import to.unified.unified_java_sdk.operations.UpdateHrisDeduction;
 import to.unified.unified_java_sdk.operations.UpdateHrisDevice;
+import to.unified.unified_java_sdk.operations.UpdateHrisDocument;
 import to.unified.unified_java_sdk.operations.UpdateHrisEmployee;
 import to.unified.unified_java_sdk.operations.UpdateHrisGroup;
 import to.unified.unified_java_sdk.operations.UpdateHrisLocation;
@@ -388,6 +412,29 @@ public class AsyncHris {
     public CompletableFuture<CreateHrisDeviceResponse> createHrisDevice(@Nonnull CreateHrisDeviceRequest request) {
         AsyncRequestOperation<CreateHrisDeviceRequest, CreateHrisDeviceResponse> operation
               = new CreateHrisDevice.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * Create a document
+     * 
+     * @return The async call builder
+     */
+    public CreateHrisDocumentRequestBuilder createHrisDocument() {
+        return new CreateHrisDocumentRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Create a document
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<CreateHrisDocumentResponse>} - The async response
+     */
+    public CompletableFuture<CreateHrisDocumentResponse> createHrisDocument(@Nonnull CreateHrisDocumentRequest request) {
+        AsyncRequestOperation<CreateHrisDocumentRequest, CreateHrisDocumentResponse> operation
+              = new CreateHrisDocument.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -618,6 +665,29 @@ public class AsyncHris {
     public CompletableFuture<GetHrisDeviceResponse> getHrisDevice(@Nonnull GetHrisDeviceRequest request) {
         AsyncRequestOperation<GetHrisDeviceRequest, GetHrisDeviceResponse> operation
               = new GetHrisDevice.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * Retrieve a document
+     * 
+     * @return The async call builder
+     */
+    public GetHrisDocumentRequestBuilder getHrisDocument() {
+        return new GetHrisDocumentRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Retrieve a document
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<GetHrisDocumentResponse>} - The async response
+     */
+    public CompletableFuture<GetHrisDocumentResponse> getHrisDocument(@Nonnull GetHrisDocumentRequest request) {
+        AsyncRequestOperation<GetHrisDocumentRequest, GetHrisDocumentResponse> operation
+              = new GetHrisDocument.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -877,6 +947,29 @@ public class AsyncHris {
 
 
     /**
+     * List all documents
+     * 
+     * @return The async call builder
+     */
+    public ListHrisDocumentsRequestBuilder listHrisDocuments() {
+        return new ListHrisDocumentsRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * List all documents
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<ListHrisDocumentsResponse>} - The async response
+     */
+    public CompletableFuture<ListHrisDocumentsResponse> listHrisDocuments(@Nonnull ListHrisDocumentsRequest request) {
+        AsyncRequestOperation<ListHrisDocumentsRequest, ListHrisDocumentsResponse> operation
+              = new ListHrisDocuments.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
      * List all employees
      * 
      * @return The async call builder
@@ -1130,6 +1223,29 @@ public class AsyncHris {
 
 
     /**
+     * Update a document
+     * 
+     * @return The async call builder
+     */
+    public PatchHrisDocumentRequestBuilder patchHrisDocument() {
+        return new PatchHrisDocumentRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Update a document
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<PatchHrisDocumentResponse>} - The async response
+     */
+    public CompletableFuture<PatchHrisDocumentResponse> patchHrisDocument(@Nonnull PatchHrisDocumentRequest request) {
+        AsyncRequestOperation<PatchHrisDocumentRequest, PatchHrisDocumentResponse> operation
+              = new PatchHrisDocument.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
      * Update an employee
      * 
      * @return The async call builder
@@ -1360,6 +1476,29 @@ public class AsyncHris {
 
 
     /**
+     * Remove a document
+     * 
+     * @return The async call builder
+     */
+    public RemoveHrisDocumentRequestBuilder removeHrisDocument() {
+        return new RemoveHrisDocumentRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Remove a document
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<RemoveHrisDocumentResponse>} - The async response
+     */
+    public CompletableFuture<RemoveHrisDocumentResponse> removeHrisDocument(@Nonnull RemoveHrisDocumentRequest request) {
+        AsyncRequestOperation<RemoveHrisDocumentRequest, RemoveHrisDocumentResponse> operation
+              = new RemoveHrisDocument.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
      * Remove an employee
      * 
      * @return The async call builder
@@ -1584,6 +1723,29 @@ public class AsyncHris {
     public CompletableFuture<UpdateHrisDeviceResponse> updateHrisDevice(@Nonnull UpdateHrisDeviceRequest request) {
         AsyncRequestOperation<UpdateHrisDeviceRequest, UpdateHrisDeviceResponse> operation
               = new UpdateHrisDevice.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * Update a document
+     * 
+     * @return The async call builder
+     */
+    public UpdateHrisDocumentRequestBuilder updateHrisDocument() {
+        return new UpdateHrisDocumentRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Update a document
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<UpdateHrisDocumentResponse>} - The async response
+     */
+    public CompletableFuture<UpdateHrisDocumentResponse> updateHrisDocument(@Nonnull UpdateHrisDocumentRequest request) {
+        AsyncRequestOperation<UpdateHrisDocumentRequest, UpdateHrisDocumentResponse> operation
+              = new UpdateHrisDocument.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

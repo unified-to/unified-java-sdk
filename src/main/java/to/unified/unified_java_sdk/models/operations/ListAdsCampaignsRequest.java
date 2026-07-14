@@ -35,6 +35,10 @@ public class ListAdsCampaignsRequest {
     private List<ListAdsCampaignsQueryParamFields> fields;
 
 
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=goal")
+    private String goal;
+
+
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     private Double limit;
 
@@ -94,6 +98,7 @@ public class ListAdsCampaignsRequest {
             @Nonnull String connectionId,
             @Nullable String endLt,
             @Nullable List<ListAdsCampaignsQueryParamFields> fields,
+            @Nullable String goal,
             @Nullable Double limit,
             @Nullable Double offset,
             @Nullable String order,
@@ -108,6 +113,7 @@ public class ListAdsCampaignsRequest {
             .orElseThrow(() -> new IllegalArgumentException("connectionId cannot be null"));
         this.endLt = endLt;
         this.fields = fields;
+        this.goal = goal;
         this.limit = limit;
         this.offset = offset;
         this.order = order;
@@ -126,7 +132,7 @@ public class ListAdsCampaignsRequest {
             null, null, null,
             null, null, null,
             null, null, null,
-            null);
+            null, null);
     }
 
     /**
@@ -148,6 +154,10 @@ public class ListAdsCampaignsRequest {
      */
     public Optional<List<ListAdsCampaignsQueryParamFields>> fields() {
         return Optional.ofNullable(this.fields);
+    }
+
+    public Optional<String> goal() {
+        return Optional.ofNullable(this.goal);
     }
 
     public Optional<Double> limit() {
@@ -239,6 +249,12 @@ public class ListAdsCampaignsRequest {
      */
     public ListAdsCampaignsRequest withFields(@Nullable List<ListAdsCampaignsQueryParamFields> fields) {
         this.fields = fields;
+        return this;
+    }
+
+
+    public ListAdsCampaignsRequest withGoal(@Nullable String goal) {
+        this.goal = goal;
         return this;
     }
 
@@ -337,6 +353,7 @@ public class ListAdsCampaignsRequest {
             Utils.enhancedDeepEquals(this.connectionId, other.connectionId) &&
             Utils.enhancedDeepEquals(this.endLt, other.endLt) &&
             Utils.enhancedDeepEquals(this.fields, other.fields) &&
+            Utils.enhancedDeepEquals(this.goal, other.goal) &&
             Utils.enhancedDeepEquals(this.limit, other.limit) &&
             Utils.enhancedDeepEquals(this.offset, other.offset) &&
             Utils.enhancedDeepEquals(this.order, other.order) &&
@@ -353,10 +370,10 @@ public class ListAdsCampaignsRequest {
     public int hashCode() {
         return Utils.enhancedHash(
             connectionId, endLt, fields,
-            limit, offset, order,
-            orgId, query, raw,
-            sort, startGte, status,
-            updatedGte);
+            goal, limit, offset,
+            order, orgId, query,
+            raw, sort, startGte,
+            status, updatedGte);
     }
     
     @Override
@@ -365,6 +382,7 @@ public class ListAdsCampaignsRequest {
                 "connectionId", connectionId,
                 "endLt", endLt,
                 "fields", fields,
+                "goal", goal,
                 "limit", limit,
                 "offset", offset,
                 "order", order,
@@ -385,6 +403,8 @@ public class ListAdsCampaignsRequest {
         private String endLt;
 
         private List<ListAdsCampaignsQueryParamFields> fields;
+
+        private String goal;
 
         private Double limit;
 
@@ -431,6 +451,11 @@ public class ListAdsCampaignsRequest {
          */
         public Builder fields(@Nullable List<ListAdsCampaignsQueryParamFields> fields) {
             this.fields = fields;
+            return this;
+        }
+
+        public Builder goal(@Nullable String goal) {
+            this.goal = goal;
             return this;
         }
 
@@ -508,10 +533,10 @@ public class ListAdsCampaignsRequest {
         public ListAdsCampaignsRequest build() {
             return new ListAdsCampaignsRequest(
                 connectionId, endLt, fields,
-                limit, offset, order,
-                orgId, query, raw,
-                sort, startGte, status,
-                updatedGte);
+                goal, limit, offset,
+                order, orgId, query,
+                raw, sort, startGte,
+                status, updatedGte);
         }
 
     }

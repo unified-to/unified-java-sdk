@@ -9,6 +9,7 @@
 * [createHrisCompany](#createhriscompany) - Create a company
 * [createHrisDeduction](#createhrisdeduction) - Create a deduction
 * [createHrisDevice](#createhrisdevice) - Create a device
+* [createHrisDocument](#createhrisdocument) - Create a document
 * [createHrisEmployee](#createhrisemployee) - Create an employee
 * [createHrisGroup](#createhrisgroup) - Create a group
 * [createHrisLocation](#createhrislocation) - Create a location
@@ -19,6 +20,7 @@
 * [getHrisCompany](#gethriscompany) - Retrieve a company
 * [getHrisDeduction](#gethrisdeduction) - Retrieve a deduction
 * [getHrisDevice](#gethrisdevice) - Retrieve a device
+* [getHrisDocument](#gethrisdocument) - Retrieve a document
 * [getHrisEmployee](#gethrisemployee) - Retrieve an employee
 * [getHrisGroup](#gethrisgroup) - Retrieve a group
 * [getHrisLocation](#gethrislocation) - Retrieve a location
@@ -30,6 +32,7 @@
 * [listHrisCompanies](#listhriscompanies) - List all companies
 * [listHrisDeductions](#listhrisdeductions) - List all deductions
 * [listHrisDevices](#listhrisdevices) - List all devices
+* [listHrisDocuments](#listhrisdocuments) - List all documents
 * [listHrisEmployees](#listhrisemployees) - List all employees
 * [listHrisGroups](#listhrisgroups) - List all groups
 * [listHrisLocations](#listhrislocations) - List all locations
@@ -41,6 +44,7 @@
 * [patchHrisCompany](#patchhriscompany) - Update a company
 * [patchHrisDeduction](#patchhrisdeduction) - Update a deduction
 * [patchHrisDevice](#patchhrisdevice) - Update a device
+* [patchHrisDocument](#patchhrisdocument) - Update a document
 * [patchHrisEmployee](#patchhrisemployee) - Update an employee
 * [patchHrisGroup](#patchhrisgroup) - Update a group
 * [patchHrisLocation](#patchhrislocation) - Update a location
@@ -51,6 +55,7 @@
 * [removeHrisCompany](#removehriscompany) - Remove a company
 * [removeHrisDeduction](#removehrisdeduction) - Remove a deduction
 * [removeHrisDevice](#removehrisdevice) - Remove a device
+* [removeHrisDocument](#removehrisdocument) - Remove a document
 * [removeHrisEmployee](#removehrisemployee) - Remove an employee
 * [removeHrisGroup](#removehrisgroup) - Remove a group
 * [removeHrisLocation](#removehrislocation) - Remove a location
@@ -61,6 +66,7 @@
 * [updateHrisCompany](#updatehriscompany) - Update a company
 * [updateHrisDeduction](#updatehrisdeduction) - Update a deduction
 * [updateHrisDevice](#updatehrisdevice) - Update a device
+* [updateHrisDocument](#updatehrisdocument) - Update a document
 * [updateHrisEmployee](#updatehrisemployee) - Update an employee
 * [updateHrisGroup](#updatehrisgroup) - Update a group
 * [updateHrisLocation](#updatehrislocation) - Update a location
@@ -360,6 +366,66 @@ public class Application {
 ### Response
 
 **[CreateHrisDeviceResponse](../../models/operations/CreateHrisDeviceResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## createHrisDocument
+
+Create a document
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="createHrisDocument" method="post" path="/hris/{connection_id}/document" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.CreateHrisDocumentRequest;
+import to.unified.unified_java_sdk.models.operations.CreateHrisDocumentResponse;
+import to.unified.unified_java_sdk.models.shared.HrisDocument;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        CreateHrisDocumentRequest req = CreateHrisDocumentRequest.builder()
+                .hrisDocument(HrisDocument.builder()
+                    .build())
+                .connectionId("<id>")
+                .build();
+
+        CreateHrisDocumentResponse res = sdk.hris().createHrisDocument()
+                .request(req)
+                .call();
+
+        if (res.hrisDocument().isPresent()) {
+            System.out.println(res.hrisDocument().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
+| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| `request`                                                                         | [CreateHrisDocumentRequest](../../models/operations/CreateHrisDocumentRequest.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
+
+### Response
+
+**[CreateHrisDocumentResponse](../../models/operations/CreateHrisDocumentResponse.md)**
 
 ### Errors
 
@@ -952,6 +1018,64 @@ public class Application {
 ### Response
 
 **[GetHrisDeviceResponse](../../models/operations/GetHrisDeviceResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## getHrisDocument
+
+Retrieve a document
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="getHrisDocument" method="get" path="/hris/{connection_id}/document/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.GetHrisDocumentRequest;
+import to.unified.unified_java_sdk.models.operations.GetHrisDocumentResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        GetHrisDocumentRequest req = GetHrisDocumentRequest.builder()
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        GetHrisDocumentResponse res = sdk.hris().getHrisDocument()
+                .request(req)
+                .call();
+
+        if (res.hrisDocument().isPresent()) {
+            System.out.println(res.hrisDocument().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                   | Type                                                                        | Required                                                                    | Description                                                                 |
+| --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| `request`                                                                   | [GetHrisDocumentRequest](../../models/operations/GetHrisDocumentRequest.md) | :heavy_check_mark:                                                          | The request object to use for the request.                                  |
+
+### Response
+
+**[GetHrisDocumentResponse](../../models/operations/GetHrisDocumentResponse.md)**
 
 ### Errors
 
@@ -1585,6 +1709,63 @@ public class Application {
 ### Response
 
 **[ListHrisDevicesResponse](../../models/operations/ListHrisDevicesResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## listHrisDocuments
+
+List all documents
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="listHrisDocuments" method="get" path="/hris/{connection_id}/document" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.ListHrisDocumentsRequest;
+import to.unified.unified_java_sdk.models.operations.ListHrisDocumentsResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        ListHrisDocumentsRequest req = ListHrisDocumentsRequest.builder()
+                .connectionId("<id>")
+                .build();
+
+        ListHrisDocumentsResponse res = sdk.hris().listHrisDocuments()
+                .request(req)
+                .call();
+
+        if (res.hrisDocuments().isPresent()) {
+            System.out.println(res.hrisDocuments().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| `request`                                                                       | [ListHrisDocumentsRequest](../../models/operations/ListHrisDocumentsRequest.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
+
+### Response
+
+**[ListHrisDocumentsResponse](../../models/operations/ListHrisDocumentsResponse.md)**
 
 ### Errors
 
@@ -2239,6 +2420,67 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
+## patchHrisDocument
+
+Update a document
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="patchHrisDocument" method="patch" path="/hris/{connection_id}/document/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.PatchHrisDocumentRequest;
+import to.unified.unified_java_sdk.models.operations.PatchHrisDocumentResponse;
+import to.unified.unified_java_sdk.models.shared.HrisDocument;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        PatchHrisDocumentRequest req = PatchHrisDocumentRequest.builder()
+                .hrisDocument(HrisDocument.builder()
+                    .build())
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        PatchHrisDocumentResponse res = sdk.hris().patchHrisDocument()
+                .request(req)
+                .call();
+
+        if (res.hrisDocument().isPresent()) {
+            System.out.println(res.hrisDocument().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| `request`                                                                       | [PatchHrisDocumentRequest](../../models/operations/PatchHrisDocumentRequest.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
+
+### Response
+
+**[PatchHrisDocumentResponse](../../models/operations/PatchHrisDocumentResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
 ## patchHrisEmployee
 
 Update an employee
@@ -2826,6 +3068,62 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
+## removeHrisDocument
+
+Remove a document
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="removeHrisDocument" method="delete" path="/hris/{connection_id}/document/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.RemoveHrisDocumentRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveHrisDocumentResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        RemoveHrisDocumentRequest req = RemoveHrisDocumentRequest.builder()
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        RemoveHrisDocumentResponse res = sdk.hris().removeHrisDocument()
+                .request(req)
+                .call();
+
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
+| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| `request`                                                                         | [RemoveHrisDocumentRequest](../../models/operations/RemoveHrisDocumentRequest.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
+
+### Response
+
+**[RemoveHrisDocumentResponse](../../models/operations/RemoveHrisDocumentResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
 ## removeHrisEmployee
 
 Remove an employee
@@ -3404,6 +3702,67 @@ public class Application {
 ### Response
 
 **[UpdateHrisDeviceResponse](../../models/operations/UpdateHrisDeviceResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## updateHrisDocument
+
+Update a document
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="updateHrisDocument" method="put" path="/hris/{connection_id}/document/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.UpdateHrisDocumentRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateHrisDocumentResponse;
+import to.unified.unified_java_sdk.models.shared.HrisDocument;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        UpdateHrisDocumentRequest req = UpdateHrisDocumentRequest.builder()
+                .hrisDocument(HrisDocument.builder()
+                    .build())
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        UpdateHrisDocumentResponse res = sdk.hris().updateHrisDocument()
+                .request(req)
+                .call();
+
+        if (res.hrisDocument().isPresent()) {
+            System.out.println(res.hrisDocument().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
+| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| `request`                                                                         | [UpdateHrisDocumentRequest](../../models/operations/UpdateHrisDocumentRequest.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
+
+### Response
+
+**[UpdateHrisDocumentResponse](../../models/operations/UpdateHrisDocumentResponse.md)**
 
 ### Errors
 

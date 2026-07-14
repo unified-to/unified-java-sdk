@@ -21,6 +21,9 @@ import to.unified.unified_java_sdk.models.operations.CreateHrisDeductionResponse
 import to.unified.unified_java_sdk.models.operations.CreateHrisDeviceRequest;
 import to.unified.unified_java_sdk.models.operations.CreateHrisDeviceRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateHrisDeviceResponse;
+import to.unified.unified_java_sdk.models.operations.CreateHrisDocumentRequest;
+import to.unified.unified_java_sdk.models.operations.CreateHrisDocumentRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.CreateHrisDocumentResponse;
 import to.unified.unified_java_sdk.models.operations.CreateHrisEmployeeRequest;
 import to.unified.unified_java_sdk.models.operations.CreateHrisEmployeeRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateHrisEmployeeResponse;
@@ -51,6 +54,9 @@ import to.unified.unified_java_sdk.models.operations.GetHrisDeductionResponse;
 import to.unified.unified_java_sdk.models.operations.GetHrisDeviceRequest;
 import to.unified.unified_java_sdk.models.operations.GetHrisDeviceRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.GetHrisDeviceResponse;
+import to.unified.unified_java_sdk.models.operations.GetHrisDocumentRequest;
+import to.unified.unified_java_sdk.models.operations.GetHrisDocumentRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetHrisDocumentResponse;
 import to.unified.unified_java_sdk.models.operations.GetHrisEmployeeRequest;
 import to.unified.unified_java_sdk.models.operations.GetHrisEmployeeRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.GetHrisEmployeeResponse;
@@ -84,6 +90,9 @@ import to.unified.unified_java_sdk.models.operations.ListHrisDeductionsResponse;
 import to.unified.unified_java_sdk.models.operations.ListHrisDevicesRequest;
 import to.unified.unified_java_sdk.models.operations.ListHrisDevicesRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.ListHrisDevicesResponse;
+import to.unified.unified_java_sdk.models.operations.ListHrisDocumentsRequest;
+import to.unified.unified_java_sdk.models.operations.ListHrisDocumentsRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListHrisDocumentsResponse;
 import to.unified.unified_java_sdk.models.operations.ListHrisEmployeesRequest;
 import to.unified.unified_java_sdk.models.operations.ListHrisEmployeesRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.ListHrisEmployeesResponse;
@@ -117,6 +126,9 @@ import to.unified.unified_java_sdk.models.operations.PatchHrisDeductionResponse;
 import to.unified.unified_java_sdk.models.operations.PatchHrisDeviceRequest;
 import to.unified.unified_java_sdk.models.operations.PatchHrisDeviceRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.PatchHrisDeviceResponse;
+import to.unified.unified_java_sdk.models.operations.PatchHrisDocumentRequest;
+import to.unified.unified_java_sdk.models.operations.PatchHrisDocumentRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.PatchHrisDocumentResponse;
 import to.unified.unified_java_sdk.models.operations.PatchHrisEmployeeRequest;
 import to.unified.unified_java_sdk.models.operations.PatchHrisEmployeeRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.PatchHrisEmployeeResponse;
@@ -147,6 +159,9 @@ import to.unified.unified_java_sdk.models.operations.RemoveHrisDeductionResponse
 import to.unified.unified_java_sdk.models.operations.RemoveHrisDeviceRequest;
 import to.unified.unified_java_sdk.models.operations.RemoveHrisDeviceRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.RemoveHrisDeviceResponse;
+import to.unified.unified_java_sdk.models.operations.RemoveHrisDocumentRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveHrisDocumentRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.RemoveHrisDocumentResponse;
 import to.unified.unified_java_sdk.models.operations.RemoveHrisEmployeeRequest;
 import to.unified.unified_java_sdk.models.operations.RemoveHrisEmployeeRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.RemoveHrisEmployeeResponse;
@@ -177,6 +192,9 @@ import to.unified.unified_java_sdk.models.operations.UpdateHrisDeductionResponse
 import to.unified.unified_java_sdk.models.operations.UpdateHrisDeviceRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateHrisDeviceRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.UpdateHrisDeviceResponse;
+import to.unified.unified_java_sdk.models.operations.UpdateHrisDocumentRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateHrisDocumentRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.UpdateHrisDocumentResponse;
 import to.unified.unified_java_sdk.models.operations.UpdateHrisEmployeeRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateHrisEmployeeRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.UpdateHrisEmployeeResponse;
@@ -197,6 +215,7 @@ import to.unified.unified_java_sdk.operations.CreateHrisBenefit;
 import to.unified.unified_java_sdk.operations.CreateHrisCompany;
 import to.unified.unified_java_sdk.operations.CreateHrisDeduction;
 import to.unified.unified_java_sdk.operations.CreateHrisDevice;
+import to.unified.unified_java_sdk.operations.CreateHrisDocument;
 import to.unified.unified_java_sdk.operations.CreateHrisEmployee;
 import to.unified.unified_java_sdk.operations.CreateHrisGroup;
 import to.unified.unified_java_sdk.operations.CreateHrisLocation;
@@ -207,6 +226,7 @@ import to.unified.unified_java_sdk.operations.GetHrisBenefit;
 import to.unified.unified_java_sdk.operations.GetHrisCompany;
 import to.unified.unified_java_sdk.operations.GetHrisDeduction;
 import to.unified.unified_java_sdk.operations.GetHrisDevice;
+import to.unified.unified_java_sdk.operations.GetHrisDocument;
 import to.unified.unified_java_sdk.operations.GetHrisEmployee;
 import to.unified.unified_java_sdk.operations.GetHrisGroup;
 import to.unified.unified_java_sdk.operations.GetHrisLocation;
@@ -218,6 +238,7 @@ import to.unified.unified_java_sdk.operations.ListHrisBenefits;
 import to.unified.unified_java_sdk.operations.ListHrisCompanies;
 import to.unified.unified_java_sdk.operations.ListHrisDeductions;
 import to.unified.unified_java_sdk.operations.ListHrisDevices;
+import to.unified.unified_java_sdk.operations.ListHrisDocuments;
 import to.unified.unified_java_sdk.operations.ListHrisEmployees;
 import to.unified.unified_java_sdk.operations.ListHrisGroups;
 import to.unified.unified_java_sdk.operations.ListHrisLocations;
@@ -229,6 +250,7 @@ import to.unified.unified_java_sdk.operations.PatchHrisBenefit;
 import to.unified.unified_java_sdk.operations.PatchHrisCompany;
 import to.unified.unified_java_sdk.operations.PatchHrisDeduction;
 import to.unified.unified_java_sdk.operations.PatchHrisDevice;
+import to.unified.unified_java_sdk.operations.PatchHrisDocument;
 import to.unified.unified_java_sdk.operations.PatchHrisEmployee;
 import to.unified.unified_java_sdk.operations.PatchHrisGroup;
 import to.unified.unified_java_sdk.operations.PatchHrisLocation;
@@ -239,6 +261,7 @@ import to.unified.unified_java_sdk.operations.RemoveHrisBenefit;
 import to.unified.unified_java_sdk.operations.RemoveHrisCompany;
 import to.unified.unified_java_sdk.operations.RemoveHrisDeduction;
 import to.unified.unified_java_sdk.operations.RemoveHrisDevice;
+import to.unified.unified_java_sdk.operations.RemoveHrisDocument;
 import to.unified.unified_java_sdk.operations.RemoveHrisEmployee;
 import to.unified.unified_java_sdk.operations.RemoveHrisGroup;
 import to.unified.unified_java_sdk.operations.RemoveHrisLocation;
@@ -249,6 +272,7 @@ import to.unified.unified_java_sdk.operations.UpdateHrisBenefit;
 import to.unified.unified_java_sdk.operations.UpdateHrisCompany;
 import to.unified.unified_java_sdk.operations.UpdateHrisDeduction;
 import to.unified.unified_java_sdk.operations.UpdateHrisDevice;
+import to.unified.unified_java_sdk.operations.UpdateHrisDocument;
 import to.unified.unified_java_sdk.operations.UpdateHrisEmployee;
 import to.unified.unified_java_sdk.operations.UpdateHrisGroup;
 import to.unified.unified_java_sdk.operations.UpdateHrisLocation;
@@ -383,6 +407,28 @@ public class Hris {
     public CreateHrisDeviceResponse createHrisDevice(@Nonnull CreateHrisDeviceRequest request) {
         RequestOperation<CreateHrisDeviceRequest, CreateHrisDeviceResponse> operation
               = new CreateHrisDevice.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Create a document
+     * 
+     * @return The call builder
+     */
+    public CreateHrisDocumentRequestBuilder createHrisDocument() {
+        return new CreateHrisDocumentRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Create a document
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateHrisDocumentResponse createHrisDocument(@Nonnull CreateHrisDocumentRequest request) {
+        RequestOperation<CreateHrisDocumentRequest, CreateHrisDocumentResponse> operation
+              = new CreateHrisDocument.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -603,6 +649,28 @@ public class Hris {
     public GetHrisDeviceResponse getHrisDevice(@Nonnull GetHrisDeviceRequest request) {
         RequestOperation<GetHrisDeviceRequest, GetHrisDeviceResponse> operation
               = new GetHrisDevice.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Retrieve a document
+     * 
+     * @return The call builder
+     */
+    public GetHrisDocumentRequestBuilder getHrisDocument() {
+        return new GetHrisDocumentRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Retrieve a document
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetHrisDocumentResponse getHrisDocument(@Nonnull GetHrisDocumentRequest request) {
+        RequestOperation<GetHrisDocumentRequest, GetHrisDocumentResponse> operation
+              = new GetHrisDocument.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -849,6 +917,28 @@ public class Hris {
     }
 
     /**
+     * List all documents
+     * 
+     * @return The call builder
+     */
+    public ListHrisDocumentsRequestBuilder listHrisDocuments() {
+        return new ListHrisDocumentsRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * List all documents
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListHrisDocumentsResponse listHrisDocuments(@Nonnull ListHrisDocumentsRequest request) {
+        RequestOperation<ListHrisDocumentsRequest, ListHrisDocumentsResponse> operation
+              = new ListHrisDocuments.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
      * List all employees
      * 
      * @return The call builder
@@ -1091,6 +1181,28 @@ public class Hris {
     }
 
     /**
+     * Update a document
+     * 
+     * @return The call builder
+     */
+    public PatchHrisDocumentRequestBuilder patchHrisDocument() {
+        return new PatchHrisDocumentRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Update a document
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchHrisDocumentResponse patchHrisDocument(@Nonnull PatchHrisDocumentRequest request) {
+        RequestOperation<PatchHrisDocumentRequest, PatchHrisDocumentResponse> operation
+              = new PatchHrisDocument.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
      * Update an employee
      * 
      * @return The call builder
@@ -1311,6 +1423,28 @@ public class Hris {
     }
 
     /**
+     * Remove a document
+     * 
+     * @return The call builder
+     */
+    public RemoveHrisDocumentRequestBuilder removeHrisDocument() {
+        return new RemoveHrisDocumentRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Remove a document
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveHrisDocumentResponse removeHrisDocument(@Nonnull RemoveHrisDocumentRequest request) {
+        RequestOperation<RemoveHrisDocumentRequest, RemoveHrisDocumentResponse> operation
+              = new RemoveHrisDocument.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
      * Remove an employee
      * 
      * @return The call builder
@@ -1527,6 +1661,28 @@ public class Hris {
     public UpdateHrisDeviceResponse updateHrisDevice(@Nonnull UpdateHrisDeviceRequest request) {
         RequestOperation<UpdateHrisDeviceRequest, UpdateHrisDeviceResponse> operation
               = new UpdateHrisDevice.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Update a document
+     * 
+     * @return The call builder
+     */
+    public UpdateHrisDocumentRequestBuilder updateHrisDocument() {
+        return new UpdateHrisDocumentRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Update a document
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateHrisDocumentResponse updateHrisDocument(@Nonnull UpdateHrisDocumentRequest request) {
+        RequestOperation<UpdateHrisDocumentRequest, UpdateHrisDocumentResponse> operation
+              = new UpdateHrisDocument.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

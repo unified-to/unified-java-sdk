@@ -23,6 +23,11 @@ import to.unified.unified_java_sdk.utils.Utils;
 public class AccountingCreditmemo {
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("apply_amount")
+    private Double applyAmount;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attachments")
     private List<AccountingAttachment> attachments;
 
@@ -163,6 +168,7 @@ public class AccountingCreditmemo {
 
     @JsonCreator
     public AccountingCreditmemo(
+            @JsonProperty("apply_amount") @Nullable Double applyAmount,
             @JsonProperty("attachments") @Nullable List<AccountingAttachment> attachments,
             @JsonProperty("balance_amount") @Nullable Double balanceAmount,
             @JsonProperty("cancelled_at") @Nullable OffsetDateTime cancelledAt,
@@ -191,6 +197,7 @@ public class AccountingCreditmemo {
             @JsonProperty("total_amount") @Nullable Double totalAmount,
             @JsonProperty("updated_at") @Nullable OffsetDateTime updatedAt,
             @JsonProperty("url") @Nullable String url) {
+        this.applyAmount = applyAmount;
         this.attachments = attachments;
         this.balanceAmount = balanceAmount;
         this.cancelledAt = cancelledAt;
@@ -231,7 +238,11 @@ public class AccountingCreditmemo {
             null, null, null,
             null, null, null,
             null, null, null,
-            null);
+            null, null);
+    }
+
+    public Optional<Double> applyAmount() {
+        return Optional.ofNullable(this.applyAmount);
     }
 
     public Optional<List<AccountingAttachment>> attachments() {
@@ -348,6 +359,12 @@ public class AccountingCreditmemo {
 
     public static Builder builder() {
         return new Builder();
+    }
+
+
+    public AccountingCreditmemo withApplyAmount(@Nullable Double applyAmount) {
+        this.applyAmount = applyAmount;
+        return this;
     }
 
 
@@ -529,6 +546,7 @@ public class AccountingCreditmemo {
         }
         AccountingCreditmemo other = (AccountingCreditmemo) o;
         return 
+            Utils.enhancedDeepEquals(this.applyAmount, other.applyAmount) &&
             Utils.enhancedDeepEquals(this.attachments, other.attachments) &&
             Utils.enhancedDeepEquals(this.balanceAmount, other.balanceAmount) &&
             Utils.enhancedDeepEquals(this.cancelledAt, other.cancelledAt) &&
@@ -562,21 +580,22 @@ public class AccountingCreditmemo {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            attachments, balanceAmount, cancelledAt,
-            contactId, createdAt, creditmemoNumber,
-            currency, discountAmount, dueAt,
-            id, invoiceId, lineitems,
-            notes, organizationId, paidAmount,
-            paidAt, paymentCollectionMethod, postedAt,
-            raw, refundAmount, refundReason,
-            refundedAt, send, status,
-            taxAmount, totalAmount, updatedAt,
-            url);
+            applyAmount, attachments, balanceAmount,
+            cancelledAt, contactId, createdAt,
+            creditmemoNumber, currency, discountAmount,
+            dueAt, id, invoiceId,
+            lineitems, notes, organizationId,
+            paidAmount, paidAt, paymentCollectionMethod,
+            postedAt, raw, refundAmount,
+            refundReason, refundedAt, send,
+            status, taxAmount, totalAmount,
+            updatedAt, url);
     }
     
     @Override
     public String toString() {
         return Utils.toString(AccountingCreditmemo.class,
+                "applyAmount", applyAmount,
                 "attachments", attachments,
                 "balanceAmount", balanceAmount,
                 "cancelledAt", cancelledAt,
@@ -609,6 +628,8 @@ public class AccountingCreditmemo {
 
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
+
+        private Double applyAmount;
 
         private List<AccountingAttachment> attachments;
 
@@ -668,6 +689,11 @@ public class AccountingCreditmemo {
 
         private Builder() {
           // force use of static builder() method
+        }
+
+        public Builder applyAmount(@Nullable Double applyAmount) {
+            this.applyAmount = applyAmount;
+            return this;
         }
 
         public Builder attachments(@Nullable List<AccountingAttachment> attachments) {
@@ -812,16 +838,16 @@ public class AccountingCreditmemo {
 
         public AccountingCreditmemo build() {
             return new AccountingCreditmemo(
-                attachments, balanceAmount, cancelledAt,
-                contactId, createdAt, creditmemoNumber,
-                currency, discountAmount, dueAt,
-                id, invoiceId, lineitems,
-                notes, organizationId, paidAmount,
-                paidAt, paymentCollectionMethod, postedAt,
-                raw, refundAmount, refundReason,
-                refundedAt, send, status,
-                taxAmount, totalAmount, updatedAt,
-                url);
+                applyAmount, attachments, balanceAmount,
+                cancelledAt, contactId, createdAt,
+                creditmemoNumber, currency, discountAmount,
+                dueAt, id, invoiceId,
+                lineitems, notes, organizationId,
+                paidAmount, paidAt, paymentCollectionMethod,
+                postedAt, raw, refundAmount,
+                refundReason, refundedAt, send,
+                status, taxAmount, totalAmount,
+                updatedAt, url);
         }
 
     }

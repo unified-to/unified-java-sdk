@@ -28,4 +28,5 @@ GetAccountingVendorcreditQueryParamFields value = GetAccountingVendorcreditQuery
 | `LINEITEMS`       | lineitems         |
 | `STATUS`          | status            |
 | `ORGANIZATION_ID` | organization_id   |
+| `APPLY_AMOUNT`    | apply_amount      |
 | `RAW`             | raw               |

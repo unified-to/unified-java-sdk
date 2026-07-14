@@ -39,7 +39,7 @@ The samples below show how a published SDK artifact is used:
 
 Gradle:
 ```groovy
-implementation 'to.unified:unified-java-sdk:0.47.38'
+implementation 'to.unified:unified-java-sdk:0.47.39'
 ```
 
 Maven:
@@ -47,7 +47,7 @@ Maven:
 <dependency>
     <groupId>to.unified</groupId>
     <artifactId>unified-java-sdk</artifactId>
-    <version>0.47.38</version>
+    <version>0.47.39</version>
 </dependency>
 ```
 
@@ -913,16 +913,22 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 ### [Document](docs/sdks/document/README.md)
 
 * [createAtsDocument](docs/sdks/document/README.md#createatsdocument) - Create a document
+* [createHrisDocument](docs/sdks/document/README.md#createhrisdocument) - Create a document
 * [createSigningDocument](docs/sdks/document/README.md#createsigningdocument) - Create a document
 * [getAtsDocument](docs/sdks/document/README.md#getatsdocument) - Retrieve a document
+* [getHrisDocument](docs/sdks/document/README.md#gethrisdocument) - Retrieve a document
 * [getSigningDocument](docs/sdks/document/README.md#getsigningdocument) - Retrieve a document
 * [listAtsDocuments](docs/sdks/document/README.md#listatsdocuments) - List all documents
+* [listHrisDocuments](docs/sdks/document/README.md#listhrisdocuments) - List all documents
 * [listSigningDocuments](docs/sdks/document/README.md#listsigningdocuments) - List all documents
 * [patchAtsDocument](docs/sdks/document/README.md#patchatsdocument) - Update a document
+* [patchHrisDocument](docs/sdks/document/README.md#patchhrisdocument) - Update a document
 * [patchSigningDocument](docs/sdks/document/README.md#patchsigningdocument) - Update a document
 * [removeAtsDocument](docs/sdks/document/README.md#removeatsdocument) - Remove a document
+* [removeHrisDocument](docs/sdks/document/README.md#removehrisdocument) - Remove a document
 * [removeSigningDocument](docs/sdks/document/README.md#removesigningdocument) - Remove a document
 * [updateAtsDocument](docs/sdks/document/README.md#updateatsdocument) - Update a document
+* [updateHrisDocument](docs/sdks/document/README.md#updatehrisdocument) - Update a document
 * [updateSigningDocument](docs/sdks/document/README.md#updatesigningdocument) - Update a document
 
 ### [Embedding](docs/sdks/embedding/README.md)
@@ -1046,6 +1052,7 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 * [createHrisCompany](docs/sdks/hris/README.md#createhriscompany) - Create a company
 * [createHrisDeduction](docs/sdks/hris/README.md#createhrisdeduction) - Create a deduction
 * [createHrisDevice](docs/sdks/hris/README.md#createhrisdevice) - Create a device
+* [createHrisDocument](docs/sdks/hris/README.md#createhrisdocument) - Create a document
 * [createHrisEmployee](docs/sdks/hris/README.md#createhrisemployee) - Create an employee
 * [createHrisGroup](docs/sdks/hris/README.md#createhrisgroup) - Create a group
 * [createHrisLocation](docs/sdks/hris/README.md#createhrislocation) - Create a location
@@ -1056,6 +1063,7 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 * [getHrisCompany](docs/sdks/hris/README.md#gethriscompany) - Retrieve a company
 * [getHrisDeduction](docs/sdks/hris/README.md#gethrisdeduction) - Retrieve a deduction
 * [getHrisDevice](docs/sdks/hris/README.md#gethrisdevice) - Retrieve a device
+* [getHrisDocument](docs/sdks/hris/README.md#gethrisdocument) - Retrieve a document
 * [getHrisEmployee](docs/sdks/hris/README.md#gethrisemployee) - Retrieve an employee
 * [getHrisGroup](docs/sdks/hris/README.md#gethrisgroup) - Retrieve a group
 * [getHrisLocation](docs/sdks/hris/README.md#gethrislocation) - Retrieve a location
@@ -1067,6 +1075,7 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 * [listHrisCompanies](docs/sdks/hris/README.md#listhriscompanies) - List all companies
 * [listHrisDeductions](docs/sdks/hris/README.md#listhrisdeductions) - List all deductions
 * [listHrisDevices](docs/sdks/hris/README.md#listhrisdevices) - List all devices
+* [listHrisDocuments](docs/sdks/hris/README.md#listhrisdocuments) - List all documents
 * [listHrisEmployees](docs/sdks/hris/README.md#listhrisemployees) - List all employees
 * [listHrisGroups](docs/sdks/hris/README.md#listhrisgroups) - List all groups
 * [listHrisLocations](docs/sdks/hris/README.md#listhrislocations) - List all locations
@@ -1078,6 +1087,7 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 * [patchHrisCompany](docs/sdks/hris/README.md#patchhriscompany) - Update a company
 * [patchHrisDeduction](docs/sdks/hris/README.md#patchhrisdeduction) - Update a deduction
 * [patchHrisDevice](docs/sdks/hris/README.md#patchhrisdevice) - Update a device
+* [patchHrisDocument](docs/sdks/hris/README.md#patchhrisdocument) - Update a document
 * [patchHrisEmployee](docs/sdks/hris/README.md#patchhrisemployee) - Update an employee
 * [patchHrisGroup](docs/sdks/hris/README.md#patchhrisgroup) - Update a group
 * [patchHrisLocation](docs/sdks/hris/README.md#patchhrislocation) - Update a location
@@ -1088,6 +1098,7 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 * [removeHrisCompany](docs/sdks/hris/README.md#removehriscompany) - Remove a company
 * [removeHrisDeduction](docs/sdks/hris/README.md#removehrisdeduction) - Remove a deduction
 * [removeHrisDevice](docs/sdks/hris/README.md#removehrisdevice) - Remove a device
+* [removeHrisDocument](docs/sdks/hris/README.md#removehrisdocument) - Remove a document
 * [removeHrisEmployee](docs/sdks/hris/README.md#removehrisemployee) - Remove an employee
 * [removeHrisGroup](docs/sdks/hris/README.md#removehrisgroup) - Remove a group
 * [removeHrisLocation](docs/sdks/hris/README.md#removehrislocation) - Remove a location
@@ -1098,6 +1109,7 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 * [updateHrisCompany](docs/sdks/hris/README.md#updatehriscompany) - Update a company
 * [updateHrisDeduction](docs/sdks/hris/README.md#updatehrisdeduction) - Update a deduction
 * [updateHrisDevice](docs/sdks/hris/README.md#updatehrisdevice) - Update a device
+* [updateHrisDocument](docs/sdks/hris/README.md#updatehrisdocument) - Update a document
 * [updateHrisEmployee](docs/sdks/hris/README.md#updatehrisemployee) - Update an employee
 * [updateHrisGroup](docs/sdks/hris/README.md#updatehrisgroup) - Update a group
 * [updateHrisLocation](docs/sdks/hris/README.md#updatehrislocation) - Update a location

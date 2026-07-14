@@ -31,6 +31,11 @@ public class PropertyAdsReportMetricsAd {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("advertiser_name")
+    private String advertiserName;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("campaign_id")
     private String campaignId;
 
@@ -86,6 +91,11 @@ public class PropertyAdsReportMetricsAd {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("logo_creative_id")
+    private String logoCreativeId;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     private String name;
 
@@ -128,6 +138,7 @@ public class PropertyAdsReportMetricsAd {
     public PropertyAdsReportMetricsAd(
             @JsonProperty("ad_copy") @Nullable String adCopy,
             @JsonProperty("ad_type") @Nullable PropertyAdsReportMetricsAdAdType adType,
+            @JsonProperty("advertiser_name") @Nullable String advertiserName,
             @JsonProperty("campaign_id") @Nullable String campaignId,
             @JsonProperty("created_at") @Nullable OffsetDateTime createdAt,
             @JsonProperty("creative_asset_url") @Nullable String creativeAssetUrl,
@@ -139,6 +150,7 @@ public class PropertyAdsReportMetricsAd {
             @JsonProperty("group_id") @Nullable String groupId,
             @JsonProperty("headline") @Nullable String headline,
             @JsonProperty("id") @Nullable String id,
+            @JsonProperty("logo_creative_id") @Nullable String logoCreativeId,
             @JsonProperty("name") @Nullable String name,
             @JsonProperty("organization_id") @Nullable String organizationId,
             @JsonProperty("path1") @Nullable String path1,
@@ -149,6 +161,7 @@ public class PropertyAdsReportMetricsAd {
             @JsonProperty("updated_at") @Nullable OffsetDateTime updatedAt) {
         this.adCopy = adCopy;
         this.adType = adType;
+        this.advertiserName = advertiserName;
         this.campaignId = campaignId;
         this.createdAt = createdAt;
         this.creativeAssetUrl = creativeAssetUrl;
@@ -160,6 +173,7 @@ public class PropertyAdsReportMetricsAd {
         this.groupId = groupId;
         this.headline = headline;
         this.id = id;
+        this.logoCreativeId = logoCreativeId;
         this.name = name;
         this.organizationId = organizationId;
         this.path1 = path1;
@@ -177,7 +191,8 @@ public class PropertyAdsReportMetricsAd {
             null, null, null,
             null, null, null,
             null, null, null,
-            null, null, null);
+            null, null, null,
+            null, null);
     }
 
     public Optional<String> adCopy() {
@@ -186,6 +201,10 @@ public class PropertyAdsReportMetricsAd {
 
     public Optional<PropertyAdsReportMetricsAdAdType> adType() {
         return Optional.ofNullable(this.adType);
+    }
+
+    public Optional<String> advertiserName() {
+        return Optional.ofNullable(this.advertiserName);
     }
 
     public Optional<String> campaignId() {
@@ -230,6 +249,10 @@ public class PropertyAdsReportMetricsAd {
 
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
+    }
+
+    public Optional<String> logoCreativeId() {
+        return Optional.ofNullable(this.logoCreativeId);
     }
 
     public Optional<String> name() {
@@ -277,6 +300,12 @@ public class PropertyAdsReportMetricsAd {
 
     public PropertyAdsReportMetricsAd withAdType(@Nullable PropertyAdsReportMetricsAdAdType adType) {
         this.adType = adType;
+        return this;
+    }
+
+
+    public PropertyAdsReportMetricsAd withAdvertiserName(@Nullable String advertiserName) {
+        this.advertiserName = advertiserName;
         return this;
     }
 
@@ -347,6 +376,12 @@ public class PropertyAdsReportMetricsAd {
     }
 
 
+    public PropertyAdsReportMetricsAd withLogoCreativeId(@Nullable String logoCreativeId) {
+        this.logoCreativeId = logoCreativeId;
+        return this;
+    }
+
+
     public PropertyAdsReportMetricsAd withName(@Nullable String name) {
         this.name = name;
         return this;
@@ -407,6 +442,7 @@ public class PropertyAdsReportMetricsAd {
         return 
             Utils.enhancedDeepEquals(this.adCopy, other.adCopy) &&
             Utils.enhancedDeepEquals(this.adType, other.adType) &&
+            Utils.enhancedDeepEquals(this.advertiserName, other.advertiserName) &&
             Utils.enhancedDeepEquals(this.campaignId, other.campaignId) &&
             Utils.enhancedDeepEquals(this.createdAt, other.createdAt) &&
             Utils.enhancedDeepEquals(this.creativeAssetUrl, other.creativeAssetUrl) &&
@@ -418,6 +454,7 @@ public class PropertyAdsReportMetricsAd {
             Utils.enhancedDeepEquals(this.groupId, other.groupId) &&
             Utils.enhancedDeepEquals(this.headline, other.headline) &&
             Utils.enhancedDeepEquals(this.id, other.id) &&
+            Utils.enhancedDeepEquals(this.logoCreativeId, other.logoCreativeId) &&
             Utils.enhancedDeepEquals(this.name, other.name) &&
             Utils.enhancedDeepEquals(this.organizationId, other.organizationId) &&
             Utils.enhancedDeepEquals(this.path1, other.path1) &&
@@ -431,13 +468,14 @@ public class PropertyAdsReportMetricsAd {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            adCopy, adType, campaignId,
-            createdAt, creativeAssetUrl, creativeIds,
-            cta, description, displayUrl,
-            finalUrl, groupId, headline,
-            id, name, organizationId,
-            path1, path2, promoted,
-            raw, status, updatedAt);
+            adCopy, adType, advertiserName,
+            campaignId, createdAt, creativeAssetUrl,
+            creativeIds, cta, description,
+            displayUrl, finalUrl, groupId,
+            headline, id, logoCreativeId,
+            name, organizationId, path1,
+            path2, promoted, raw,
+            status, updatedAt);
     }
     
     @Override
@@ -445,6 +483,7 @@ public class PropertyAdsReportMetricsAd {
         return Utils.toString(PropertyAdsReportMetricsAd.class,
                 "adCopy", adCopy,
                 "adType", adType,
+                "advertiserName", advertiserName,
                 "campaignId", campaignId,
                 "createdAt", createdAt,
                 "creativeAssetUrl", creativeAssetUrl,
@@ -456,6 +495,7 @@ public class PropertyAdsReportMetricsAd {
                 "groupId", groupId,
                 "headline", headline,
                 "id", id,
+                "logoCreativeId", logoCreativeId,
                 "name", name,
                 "organizationId", organizationId,
                 "path1", path1,
@@ -472,6 +512,8 @@ public class PropertyAdsReportMetricsAd {
         private String adCopy;
 
         private PropertyAdsReportMetricsAdAdType adType;
+
+        private String advertiserName;
 
         private String campaignId;
 
@@ -494,6 +536,8 @@ public class PropertyAdsReportMetricsAd {
         private String headline;
 
         private String id;
+
+        private String logoCreativeId;
 
         private String name;
 
@@ -522,6 +566,11 @@ public class PropertyAdsReportMetricsAd {
 
         public Builder adType(@Nullable PropertyAdsReportMetricsAdAdType adType) {
             this.adType = adType;
+            return this;
+        }
+
+        public Builder advertiserName(@Nullable String advertiserName) {
+            this.advertiserName = advertiserName;
             return this;
         }
 
@@ -580,6 +629,11 @@ public class PropertyAdsReportMetricsAd {
             return this;
         }
 
+        public Builder logoCreativeId(@Nullable String logoCreativeId) {
+            this.logoCreativeId = logoCreativeId;
+            return this;
+        }
+
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
@@ -622,13 +676,14 @@ public class PropertyAdsReportMetricsAd {
 
         public PropertyAdsReportMetricsAd build() {
             return new PropertyAdsReportMetricsAd(
-                adCopy, adType, campaignId,
-                createdAt, creativeAssetUrl, creativeIds,
-                cta, description, displayUrl,
-                finalUrl, groupId, headline,
-                id, name, organizationId,
-                path1, path2, promoted,
-                raw, status, updatedAt);
+                adCopy, adType, advertiserName,
+                campaignId, createdAt, creativeAssetUrl,
+                creativeIds, cta, description,
+                displayUrl, finalUrl, groupId,
+                headline, id, logoCreativeId,
+                name, organizationId, path1,
+                path2, promoted, raw,
+                status, updatedAt);
         }
 
     }

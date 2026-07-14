@@ -9,50 +9,74 @@ import jakarta.annotation.Nonnull;
 import to.unified.unified_java_sdk.models.operations.CreateAtsDocumentRequest;
 import to.unified.unified_java_sdk.models.operations.CreateAtsDocumentRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateAtsDocumentResponse;
+import to.unified.unified_java_sdk.models.operations.CreateHrisDocumentRequest;
+import to.unified.unified_java_sdk.models.operations.CreateHrisDocumentRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.CreateHrisDocumentResponse;
 import to.unified.unified_java_sdk.models.operations.CreateSigningDocumentRequest;
 import to.unified.unified_java_sdk.models.operations.CreateSigningDocumentRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateSigningDocumentResponse;
 import to.unified.unified_java_sdk.models.operations.GetAtsDocumentRequest;
 import to.unified.unified_java_sdk.models.operations.GetAtsDocumentRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.GetAtsDocumentResponse;
+import to.unified.unified_java_sdk.models.operations.GetHrisDocumentRequest;
+import to.unified.unified_java_sdk.models.operations.GetHrisDocumentRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetHrisDocumentResponse;
 import to.unified.unified_java_sdk.models.operations.GetSigningDocumentRequest;
 import to.unified.unified_java_sdk.models.operations.GetSigningDocumentRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.GetSigningDocumentResponse;
 import to.unified.unified_java_sdk.models.operations.ListAtsDocumentsRequest;
 import to.unified.unified_java_sdk.models.operations.ListAtsDocumentsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.ListAtsDocumentsResponse;
+import to.unified.unified_java_sdk.models.operations.ListHrisDocumentsRequest;
+import to.unified.unified_java_sdk.models.operations.ListHrisDocumentsRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListHrisDocumentsResponse;
 import to.unified.unified_java_sdk.models.operations.ListSigningDocumentsRequest;
 import to.unified.unified_java_sdk.models.operations.ListSigningDocumentsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.ListSigningDocumentsResponse;
 import to.unified.unified_java_sdk.models.operations.PatchAtsDocumentRequest;
 import to.unified.unified_java_sdk.models.operations.PatchAtsDocumentRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.PatchAtsDocumentResponse;
+import to.unified.unified_java_sdk.models.operations.PatchHrisDocumentRequest;
+import to.unified.unified_java_sdk.models.operations.PatchHrisDocumentRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.PatchHrisDocumentResponse;
 import to.unified.unified_java_sdk.models.operations.PatchSigningDocumentRequest;
 import to.unified.unified_java_sdk.models.operations.PatchSigningDocumentRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.PatchSigningDocumentResponse;
 import to.unified.unified_java_sdk.models.operations.RemoveAtsDocumentRequest;
 import to.unified.unified_java_sdk.models.operations.RemoveAtsDocumentRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.RemoveAtsDocumentResponse;
+import to.unified.unified_java_sdk.models.operations.RemoveHrisDocumentRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveHrisDocumentRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.RemoveHrisDocumentResponse;
 import to.unified.unified_java_sdk.models.operations.RemoveSigningDocumentRequest;
 import to.unified.unified_java_sdk.models.operations.RemoveSigningDocumentRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.RemoveSigningDocumentResponse;
 import to.unified.unified_java_sdk.models.operations.UpdateAtsDocumentRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateAtsDocumentRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.UpdateAtsDocumentResponse;
+import to.unified.unified_java_sdk.models.operations.UpdateHrisDocumentRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateHrisDocumentRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.UpdateHrisDocumentResponse;
 import to.unified.unified_java_sdk.models.operations.UpdateSigningDocumentRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateSigningDocumentRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.UpdateSigningDocumentResponse;
 import to.unified.unified_java_sdk.operations.CreateAtsDocument;
+import to.unified.unified_java_sdk.operations.CreateHrisDocument;
 import to.unified.unified_java_sdk.operations.CreateSigningDocument;
 import to.unified.unified_java_sdk.operations.GetAtsDocument;
+import to.unified.unified_java_sdk.operations.GetHrisDocument;
 import to.unified.unified_java_sdk.operations.GetSigningDocument;
 import to.unified.unified_java_sdk.operations.ListAtsDocuments;
+import to.unified.unified_java_sdk.operations.ListHrisDocuments;
 import to.unified.unified_java_sdk.operations.ListSigningDocuments;
 import to.unified.unified_java_sdk.operations.PatchAtsDocument;
+import to.unified.unified_java_sdk.operations.PatchHrisDocument;
 import to.unified.unified_java_sdk.operations.PatchSigningDocument;
 import to.unified.unified_java_sdk.operations.RemoveAtsDocument;
+import to.unified.unified_java_sdk.operations.RemoveHrisDocument;
 import to.unified.unified_java_sdk.operations.RemoveSigningDocument;
 import to.unified.unified_java_sdk.operations.UpdateAtsDocument;
+import to.unified.unified_java_sdk.operations.UpdateHrisDocument;
 import to.unified.unified_java_sdk.operations.UpdateSigningDocument;
 import to.unified.unified_java_sdk.utils.Headers;
 
@@ -95,6 +119,28 @@ public class Document {
     public CreateAtsDocumentResponse createAtsDocument(@Nonnull CreateAtsDocumentRequest request) {
         RequestOperation<CreateAtsDocumentRequest, CreateAtsDocumentResponse> operation
               = new CreateAtsDocument.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Create a document
+     * 
+     * @return The call builder
+     */
+    public CreateHrisDocumentRequestBuilder createHrisDocument() {
+        return new CreateHrisDocumentRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Create a document
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateHrisDocumentResponse createHrisDocument(@Nonnull CreateHrisDocumentRequest request) {
+        RequestOperation<CreateHrisDocumentRequest, CreateHrisDocumentResponse> operation
+              = new CreateHrisDocument.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -147,6 +193,28 @@ public class Document {
      * 
      * @return The call builder
      */
+    public GetHrisDocumentRequestBuilder getHrisDocument() {
+        return new GetHrisDocumentRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Retrieve a document
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetHrisDocumentResponse getHrisDocument(@Nonnull GetHrisDocumentRequest request) {
+        RequestOperation<GetHrisDocumentRequest, GetHrisDocumentResponse> operation
+              = new GetHrisDocument.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Retrieve a document
+     * 
+     * @return The call builder
+     */
     public GetSigningDocumentRequestBuilder getSigningDocument() {
         return new GetSigningDocumentRequestBuilder(sdkConfiguration);
     }
@@ -183,6 +251,28 @@ public class Document {
     public ListAtsDocumentsResponse listAtsDocuments(@Nonnull ListAtsDocumentsRequest request) {
         RequestOperation<ListAtsDocumentsRequest, ListAtsDocumentsResponse> operation
               = new ListAtsDocuments.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * List all documents
+     * 
+     * @return The call builder
+     */
+    public ListHrisDocumentsRequestBuilder listHrisDocuments() {
+        return new ListHrisDocumentsRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * List all documents
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListHrisDocumentsResponse listHrisDocuments(@Nonnull ListHrisDocumentsRequest request) {
+        RequestOperation<ListHrisDocumentsRequest, ListHrisDocumentsResponse> operation
+              = new ListHrisDocuments.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -235,6 +325,28 @@ public class Document {
      * 
      * @return The call builder
      */
+    public PatchHrisDocumentRequestBuilder patchHrisDocument() {
+        return new PatchHrisDocumentRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Update a document
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchHrisDocumentResponse patchHrisDocument(@Nonnull PatchHrisDocumentRequest request) {
+        RequestOperation<PatchHrisDocumentRequest, PatchHrisDocumentResponse> operation
+              = new PatchHrisDocument.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Update a document
+     * 
+     * @return The call builder
+     */
     public PatchSigningDocumentRequestBuilder patchSigningDocument() {
         return new PatchSigningDocumentRequestBuilder(sdkConfiguration);
     }
@@ -279,6 +391,28 @@ public class Document {
      * 
      * @return The call builder
      */
+    public RemoveHrisDocumentRequestBuilder removeHrisDocument() {
+        return new RemoveHrisDocumentRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Remove a document
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveHrisDocumentResponse removeHrisDocument(@Nonnull RemoveHrisDocumentRequest request) {
+        RequestOperation<RemoveHrisDocumentRequest, RemoveHrisDocumentResponse> operation
+              = new RemoveHrisDocument.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Remove a document
+     * 
+     * @return The call builder
+     */
     public RemoveSigningDocumentRequestBuilder removeSigningDocument() {
         return new RemoveSigningDocumentRequestBuilder(sdkConfiguration);
     }
@@ -315,6 +449,28 @@ public class Document {
     public UpdateAtsDocumentResponse updateAtsDocument(@Nonnull UpdateAtsDocumentRequest request) {
         RequestOperation<UpdateAtsDocumentRequest, UpdateAtsDocumentResponse> operation
               = new UpdateAtsDocument.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Update a document
+     * 
+     * @return The call builder
+     */
+    public UpdateHrisDocumentRequestBuilder updateHrisDocument() {
+        return new UpdateHrisDocumentRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Update a document
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateHrisDocumentResponse updateHrisDocument(@Nonnull UpdateHrisDocumentRequest request) {
+        RequestOperation<UpdateHrisDocumentRequest, UpdateHrisDocumentResponse> operation
+              = new UpdateHrisDocument.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

@@ -21,8 +21,11 @@ import java.util.Optional;
 public class Term {
 
     public static final Term ON_RECEIPT = new Term("ON_RECEIPT");
+    public static final Term NET7 = new Term("NET_7");
     public static final Term NET10 = new Term("NET_10");
     public static final Term NET15 = new Term("NET_15");
+    public static final Term NET20 = new Term("NET_20");
+    public static final Term NET25 = new Term("NET_25");
     public static final Term NET30 = new Term("NET_30");
     public static final Term NET60 = new Term("NET_60");
 
@@ -99,8 +102,11 @@ public class Term {
     private static final Map<String, Term> createValuesMap() {
         Map<String, Term> map = new LinkedHashMap<>();
         map.put("ON_RECEIPT", ON_RECEIPT);
+        map.put("NET_7", NET7);
         map.put("NET_10", NET10);
         map.put("NET_15", NET15);
+        map.put("NET_20", NET20);
+        map.put("NET_25", NET25);
         map.put("NET_30", NET30);
         map.put("NET_60", NET60);
         return map;
@@ -109,8 +115,11 @@ public class Term {
     private static final Map<String, TermEnum> createEnumsMap() {
         Map<String, TermEnum> map = new HashMap<>();
         map.put("ON_RECEIPT", TermEnum.ON_RECEIPT);
+        map.put("NET_7", TermEnum.NET7);
         map.put("NET_10", TermEnum.NET10);
         map.put("NET_15", TermEnum.NET15);
+        map.put("NET_20", TermEnum.NET20);
+        map.put("NET_25", TermEnum.NET25);
         map.put("NET_30", TermEnum.NET30);
         map.put("NET_60", TermEnum.NET60);
         return map;
@@ -120,8 +129,11 @@ public class Term {
     public enum TermEnum {
 
         ON_RECEIPT("ON_RECEIPT"),
+        NET7("NET_7"),
         NET10("NET_10"),
         NET15("NET_15"),
+        NET20("NET_20"),
+        NET25("NET_25"),
         NET30("NET_30"),
         NET60("NET_60"),;
 

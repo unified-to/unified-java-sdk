@@ -22,6 +22,7 @@ public class PropertyAdsReportMetricsCampaignGoal {
 
     public static final PropertyAdsReportMetricsCampaignGoal UNSPECIFIED = new PropertyAdsReportMetricsCampaignGoal("UNSPECIFIED");
     public static final PropertyAdsReportMetricsCampaignGoal BRAND_AWARENESS = new PropertyAdsReportMetricsCampaignGoal("BRAND_AWARENESS");
+    public static final PropertyAdsReportMetricsCampaignGoal ENGAGEMENT = new PropertyAdsReportMetricsCampaignGoal("ENGAGEMENT");
     public static final PropertyAdsReportMetricsCampaignGoal REACH = new PropertyAdsReportMetricsCampaignGoal("REACH");
     public static final PropertyAdsReportMetricsCampaignGoal WEBSITE_TRAFFIC = new PropertyAdsReportMetricsCampaignGoal("WEBSITE_TRAFFIC");
     public static final PropertyAdsReportMetricsCampaignGoal LEADS = new PropertyAdsReportMetricsCampaignGoal("LEADS");
@@ -102,6 +103,7 @@ public class PropertyAdsReportMetricsCampaignGoal {
         Map<String, PropertyAdsReportMetricsCampaignGoal> map = new LinkedHashMap<>();
         map.put("UNSPECIFIED", UNSPECIFIED);
         map.put("BRAND_AWARENESS", BRAND_AWARENESS);
+        map.put("ENGAGEMENT", ENGAGEMENT);
         map.put("REACH", REACH);
         map.put("WEBSITE_TRAFFIC", WEBSITE_TRAFFIC);
         map.put("LEADS", LEADS);
@@ -114,6 +116,7 @@ public class PropertyAdsReportMetricsCampaignGoal {
         Map<String, PropertyAdsReportMetricsCampaignGoalEnum> map = new HashMap<>();
         map.put("UNSPECIFIED", PropertyAdsReportMetricsCampaignGoalEnum.UNSPECIFIED);
         map.put("BRAND_AWARENESS", PropertyAdsReportMetricsCampaignGoalEnum.BRAND_AWARENESS);
+        map.put("ENGAGEMENT", PropertyAdsReportMetricsCampaignGoalEnum.ENGAGEMENT);
         map.put("REACH", PropertyAdsReportMetricsCampaignGoalEnum.REACH);
         map.put("WEBSITE_TRAFFIC", PropertyAdsReportMetricsCampaignGoalEnum.WEBSITE_TRAFFIC);
         map.put("LEADS", PropertyAdsReportMetricsCampaignGoalEnum.LEADS);
@@ -127,6 +130,7 @@ public class PropertyAdsReportMetricsCampaignGoal {
 
         UNSPECIFIED("UNSPECIFIED"),
         BRAND_AWARENESS("BRAND_AWARENESS"),
+        ENGAGEMENT("ENGAGEMENT"),
         REACH("REACH"),
         WEBSITE_TRAFFIC("WEBSITE_TRAFFIC"),
         LEADS("LEADS"),
