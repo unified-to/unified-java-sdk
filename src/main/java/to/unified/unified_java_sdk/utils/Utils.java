@@ -57,7 +57,6 @@ import java.util.concurrent.CompletableFuture;
 import javax.net.ssl.SSLSession;
 
 import org.apache.commons.io.IOUtils;
-import org.openapitools.jackson.nullable.JsonNullable;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.core.type.TypeReference;
@@ -93,15 +92,6 @@ public final class Utils {
         }
 
         return baseURL + path;
-    }
-    
-    public static <T> String generateURL(Class<T> type, String baseURL, String path, JsonNullable<? extends T> params,
-            Globals globals) throws JsonProcessingException, IllegalArgumentException, IllegalAccessException {
-        if (params.isPresent() && params.get() != null) {
-            return generateURL(type, baseURL, path, params.get(), globals);
-        } else {
-            return baseURL;
-        }
     }
     
     public static <T> String generateURL(Class<T> type, String baseURL, String path, Optional<? extends T> params,
@@ -288,15 +278,6 @@ public final class Utils {
     public static <T extends Object> List<QueryParameter> getQueryParams(Class<T> type, Optional<? extends T> params,
             Globals globals) throws Exception {
         if (params.isEmpty()) {
-            return Collections.emptyList();
-        } else {
-            return getQueryParams(type, params.get(), globals);
-        }
-    }
-    
-    public static <T extends Object> List<QueryParameter> getQueryParams(Class<T> type, JsonNullable<? extends T> params,
-            Globals globals) throws Exception {
-        if (!params.isPresent() || params.get() == null) {
             return Collections.emptyList();
         } else {
             return getQueryParams(type, params.get(), globals);
@@ -577,12 +558,6 @@ public final class Utils {
     public static Object resolveOptionals(Object o) {
         if (o instanceof Optional) {
             return ((Optional<?>) o).orElse(null);
-        } else if (o instanceof JsonNullable) {
-            // TODO if JsonNullable.of(null) then we probably want an explicit null
-            // to be used by the caller of this so should probably return an EXPLICIT_NULL 
-            // (a singleton constant object that represents this scenario without us being
-            // coupled to JsonNullable).
-            return ((JsonNullable<?>) o).orElse(null);
         } else {
             return o;
         }
@@ -673,17 +648,6 @@ public final class Utils {
             } else {
                 return o;
             }
-        } else if (jt.getRawClass().equals(JsonNullable.class)) {
-            JsonNullable<?> n = (JsonNullable<?>) o;
-            if (n.isPresent()) {
-                if (n.get() == null) {
-                    return o;
-                } else {
-                    return JsonNullable.of(convertToStringShape(n.get(), jt.getContentType()));
-                }
-            } else {
-                return o;
-            }
         } else if (STRING_CONVERSIONS.containsKey(jt.getRawClass())) {
             return STRING_CONVERSIONS.get(jt.getRawClass()).apply(o);
         } else {
@@ -708,17 +672,6 @@ public final class Utils {
             Optional<?> optional = (Optional<?>) o;
             if (optional.isPresent()) {
                 return Optional.of(convertToStringShapeInverse(optional.get(), jt.getContentType()));
-            } else {
-                return o;
-            }
-        } else if (jt.getRawClass().equals(JsonNullable.class)) {
-            JsonNullable<?> n = (JsonNullable<?>) o;
-            if (n.isPresent()) {
-                if (n.get() == null) {
-                    return o;
-                } else {
-                    return JsonNullable.of(convertToStringShapeInverse(n.get(), jt.getContentType()));
-                }
             } else {
                 return o;
             }
@@ -759,9 +712,6 @@ public final class Utils {
         } else if (a.getRawClass().equals(Optional.class)) {
             JavaType b = convertToStringShape(f, a.getContentType());
             return f.constructParametricType(Optional.class, b);
-        } else if (a.getRawClass().equals(JsonNullable.class)) {
-            JavaType b = convertToStringShape(f, a.getContentType());
-            return f.constructParametricType(JsonNullable.class, b);
         } else if (a.getRawClass().equals(BigInteger.class)) {
             return f.constructType(BigIntegerString.class);
         } else if (a.getRawClass().equals(BigDecimal.class)) {
@@ -1283,10 +1233,6 @@ public final class Utils {
     public static boolean isPresentAndNotNull(Optional<?> x) {
         return x.isPresent();    
     }
-    
-    public static boolean isPresentAndNotNull(JsonNullable<?> x) {
-        return x.isPresent() && x.get() != null;
-    }
 
     public static void setSseSentinel(Object o, String value) {
         if (o == null || value.isBlank()) {
@@ -1379,15 +1325,6 @@ public final class Utils {
             return defaultValue;
         }
     }
-
-    // internal use    
-    public static <T> Optional<T> toOptional(JsonNullable<T> a) {
-        if (a.isPresent() && a.get() != null) {
-            return Optional.of(a.get());
-        } else {
-            return Optional.empty();
-        }
-    }
     
     // internal use
     public static String sortJSONObjectKeys(String json, String... fields) {
@@ -1445,23 +1382,11 @@ public final class Utils {
         return value.orElse(valueIfNotPresent);
     }
 
-    public static <T> T valueOrElse(JsonNullable<T> value, T valueIfNotPresent) {
-        if (value.isPresent()) {
-            return value.get();
-        } else {
-            return valueIfNotPresent;
-        }
-    }
-
     public static <T> T valueOrNull(T value) {
         return valueOrElse(value, null);
     }
 
     public static <T> T valueOrNull(Optional<T> value) {
-        return valueOrElse(value, null);
-    }
-
-    public static <T> T valueOrNull(JsonNullable<T> value) {
         return valueOrElse(value, null);
     }
 
@@ -1515,14 +1440,6 @@ public final class Utils {
             return false;
         } else if (a instanceof Optional && b instanceof Optional) {
             return enhancedDeepEquals(((Optional<?>) a).orElse(null), ((Optional<?>) b).orElse(null));
-        } else if (a instanceof JsonNullable && b instanceof JsonNullable) {
-            JsonNullable<?> x = (JsonNullable<?>) a;
-            JsonNullable<?> y = (JsonNullable<?>) b;
-            if (x.isPresent() && y.isPresent()) {
-                return enhancedDeepEquals(x.get(), y.get());
-            } else {
-                return Objects.deepEquals(x, y);
-            }
         } else if (a instanceof List && b instanceof List) {
             List<?> listA = (List<?>) a;
             List<?> listB = (List<?>) b;
@@ -1594,9 +1511,6 @@ public final class Utils {
         } else if (o instanceof Optional) {
             Optional<?> opt = (Optional<?>) o;
             return opt.map(Utils::enhancedHashCode).orElse(Optional.empty().hashCode());
-        } else if (o instanceof JsonNullable) {
-            JsonNullable<?> n = (JsonNullable<?>) o;
-            return n.isPresent() ? Utils.enhancedHashCode(n.get()) : JsonNullable.undefined().hashCode();
         } else if (o instanceof List) {
             return ((List<?>) o).stream().mapToInt(Utils::enhancedHashCode).sum();
         } else if (o instanceof Map) {

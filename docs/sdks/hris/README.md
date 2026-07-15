@@ -25,6 +25,7 @@
 * [getHrisGroup](#gethrisgroup) - Retrieve a group
 * [getHrisLocation](#gethrislocation) - Retrieve a location
 * [getHrisPayslip](#gethrispayslip) - Retrieve a payslip
+* [getHrisTaxonomy](#gethristaxonomy) - Retrieve a taxonomy
 * [getHrisTimeoff](#gethristimeoff) - Retrieve a timeoff
 * [getHrisTimeshift](#gethristimeshift) - Retrieve a timeshift
 * [listHrisBankaccounts](#listhrisbankaccounts) - List all bankaccounts
@@ -37,6 +38,7 @@
 * [listHrisGroups](#listhrisgroups) - List all groups
 * [listHrisLocations](#listhrislocations) - List all locations
 * [listHrisPayslips](#listhrispayslips) - List all payslips
+* [listHrisTaxonomies](#listhristaxonomies) - List all taxonomies
 * [listHrisTimeoffs](#listhristimeoffs) - List all timeoffs
 * [listHrisTimeshifts](#listhristimeshifts) - List all timeshifts
 * [patchHrisBankaccount](#patchhrisbankaccount) - Update a bankaccount
@@ -1315,6 +1317,64 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
+## getHrisTaxonomy
+
+Retrieve a taxonomy
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="getHrisTaxonomy" method="get" path="/hris/{connection_id}/taxonomy/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.GetHrisTaxonomyRequest;
+import to.unified.unified_java_sdk.models.operations.GetHrisTaxonomyResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        GetHrisTaxonomyRequest req = GetHrisTaxonomyRequest.builder()
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        GetHrisTaxonomyResponse res = sdk.hris().getHrisTaxonomy()
+                .request(req)
+                .call();
+
+        if (res.hrisTaxonomy().isPresent()) {
+            System.out.println(res.hrisTaxonomy().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                   | Type                                                                        | Required                                                                    | Description                                                                 |
+| --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| `request`                                                                   | [GetHrisTaxonomyRequest](../../models/operations/GetHrisTaxonomyRequest.md) | :heavy_check_mark:                                                          | The request object to use for the request.                                  |
+
+### Response
+
+**[GetHrisTaxonomyResponse](../../models/operations/GetHrisTaxonomyResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
 ## getHrisTimeoff
 
 Retrieve a timeoff
@@ -1994,6 +2054,63 @@ public class Application {
 ### Response
 
 **[ListHrisPayslipsResponse](../../models/operations/ListHrisPayslipsResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## listHrisTaxonomies
+
+List all taxonomies
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="listHrisTaxonomies" method="get" path="/hris/{connection_id}/taxonomy" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.ListHrisTaxonomiesRequest;
+import to.unified.unified_java_sdk.models.operations.ListHrisTaxonomiesResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        ListHrisTaxonomiesRequest req = ListHrisTaxonomiesRequest.builder()
+                .connectionId("<id>")
+                .build();
+
+        ListHrisTaxonomiesResponse res = sdk.hris().listHrisTaxonomies()
+                .request(req)
+                .call();
+
+        if (res.hrisTaxonomies().isPresent()) {
+            System.out.println(res.hrisTaxonomies().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
+| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| `request`                                                                         | [ListHrisTaxonomiesRequest](../../models/operations/ListHrisTaxonomiesRequest.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
+
+### Response
+
+**[ListHrisTaxonomiesResponse](../../models/operations/ListHrisTaxonomiesResponse.md)**
 
 ### Errors
 

@@ -74,6 +74,11 @@ public class HrisPayslip {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("payment_reference")
+    private String paymentReference;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payment_type")
     private PaymentType paymentType;
 
@@ -109,6 +114,7 @@ public class HrisPayslip {
             @JsonProperty("id") @Nullable String id,
             @JsonProperty("net_amount") @Nullable Double netAmount,
             @JsonProperty("paid_at") @Nullable OffsetDateTime paidAt,
+            @JsonProperty("payment_reference") @Nullable String paymentReference,
             @JsonProperty("payment_type") @Nullable PaymentType paymentType,
             @JsonProperty("raw") @Nullable Map<String, Object> raw,
             @JsonProperty("start_at") @Nullable OffsetDateTime startAt,
@@ -124,6 +130,7 @@ public class HrisPayslip {
         this.id = id;
         this.netAmount = netAmount;
         this.paidAt = paidAt;
+        this.paymentReference = paymentReference;
         this.paymentType = paymentType;
         this.raw = raw;
         this.startAt = startAt;
@@ -136,7 +143,8 @@ public class HrisPayslip {
             null, null, null,
             null, null, null,
             null, null, null,
-            null, null, null);
+            null, null, null,
+            null);
     }
 
     public Optional<String> companyId() {
@@ -180,6 +188,10 @@ public class HrisPayslip {
 
     public Optional<OffsetDateTime> paidAt() {
         return Optional.ofNullable(this.paidAt);
+    }
+
+    public Optional<String> paymentReference() {
+        return Optional.ofNullable(this.paymentReference);
     }
 
     public Optional<PaymentType> paymentType() {
@@ -270,6 +282,12 @@ public class HrisPayslip {
     }
 
 
+    public HrisPayslip withPaymentReference(@Nullable String paymentReference) {
+        this.paymentReference = paymentReference;
+        return this;
+    }
+
+
     public HrisPayslip withPaymentType(@Nullable PaymentType paymentType) {
         this.paymentType = paymentType;
         return this;
@@ -320,6 +338,7 @@ public class HrisPayslip {
             Utils.enhancedDeepEquals(this.id, other.id) &&
             Utils.enhancedDeepEquals(this.netAmount, other.netAmount) &&
             Utils.enhancedDeepEquals(this.paidAt, other.paidAt) &&
+            Utils.enhancedDeepEquals(this.paymentReference, other.paymentReference) &&
             Utils.enhancedDeepEquals(this.paymentType, other.paymentType) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
             Utils.enhancedDeepEquals(this.startAt, other.startAt) &&
@@ -333,8 +352,9 @@ public class HrisPayslip {
             companyId, createdAt, currency,
             deduction, details, endAt,
             grossAmount, id, netAmount,
-            paidAt, paymentType, raw,
-            startAt, updatedAt, userId);
+            paidAt, paymentReference, paymentType,
+            raw, startAt, updatedAt,
+            userId);
     }
     
     @Override
@@ -350,6 +370,7 @@ public class HrisPayslip {
                 "id", id,
                 "netAmount", netAmount,
                 "paidAt", paidAt,
+                "paymentReference", paymentReference,
                 "paymentType", paymentType,
                 "raw", raw,
                 "startAt", startAt,
@@ -379,6 +400,8 @@ public class HrisPayslip {
         private Double netAmount;
 
         private OffsetDateTime paidAt;
+
+        private String paymentReference;
 
         private PaymentType paymentType;
 
@@ -447,6 +470,11 @@ public class HrisPayslip {
             return this;
         }
 
+        public Builder paymentReference(@Nullable String paymentReference) {
+            this.paymentReference = paymentReference;
+            return this;
+        }
+
         public Builder paymentType(@Nullable PaymentType paymentType) {
             this.paymentType = paymentType;
             return this;
@@ -477,8 +505,9 @@ public class HrisPayslip {
                 companyId, createdAt, currency,
                 deduction, details, endAt,
                 grossAmount, id, netAmount,
-                paidAt, paymentType, raw,
-                startAt, updatedAt, userId);
+                paidAt, paymentReference, paymentType,
+                raw, startAt, updatedAt,
+                userId);
         }
 
     }

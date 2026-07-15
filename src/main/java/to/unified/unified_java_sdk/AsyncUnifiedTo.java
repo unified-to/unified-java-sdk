@@ -191,6 +191,8 @@ public class AsyncUnifiedTo {
 
     private final AsyncPayslip payslip;
 
+    private final AsyncTaxonomy taxonomy;
+
     private final AsyncTimeoff timeoff;
 
     private final AsyncTimeshift timeshift;
@@ -671,6 +673,10 @@ public class AsyncUnifiedTo {
         return payslip;
     }
 
+    public AsyncTaxonomy taxonomy() {
+        return taxonomy;
+    }
+
     public AsyncTimeoff timeoff() {
         return timeoff;
     }
@@ -1014,6 +1020,7 @@ public class AsyncUnifiedTo {
         this.device = new AsyncDevice(syncSDK.device(), sdkConfiguration);
         this.employee = new AsyncEmployee(syncSDK.employee(), sdkConfiguration);
         this.payslip = new AsyncPayslip(syncSDK.payslip(), sdkConfiguration);
+        this.taxonomy = new AsyncTaxonomy(syncSDK.taxonomy(), sdkConfiguration);
         this.timeoff = new AsyncTimeoff(syncSDK.timeoff(), sdkConfiguration);
         this.timeshift = new AsyncTimeshift(syncSDK.timeshift(), sdkConfiguration);
         this.kms = new AsyncKms(syncSDK.kms(), sdkConfiguration);

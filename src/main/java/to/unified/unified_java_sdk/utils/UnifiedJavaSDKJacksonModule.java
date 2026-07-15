@@ -10,7 +10,6 @@ import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.Module;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
-import org.openapitools.jackson.nullable.JsonNullableModule;
 import com.fasterxml.jackson.datatype.jdk8.Jdk8Module;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 
@@ -18,7 +17,7 @@ import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
  * A composite Jackson {@link Module} that registers all SDK-required Jackson customizations.
  *
  * <p>Register this with a custom {@link ObjectMapper} to enable full serialization support
- * for SDK types. Bundles {@code JavaTimeModule}, {@code Jdk8Module}, {@code JsonNullableModule},
+ * for SDK types. Bundles {@code JavaTimeModule}, {@code Jdk8Module},
  * and SDK strict deserializers, and applies the same feature flags used by
  * {@link JSON#getMapper()}:
  * <ul>
@@ -53,7 +52,6 @@ public class UnifiedJavaSDKJacksonModule extends Module {
     public void setupModule(SetupContext context) {
         new JavaTimeModule().setupModule(context);
         new Jdk8Module().setupModule(context);
-        new JsonNullableModule().setupModule(context);
         Deserializers.STRICT_DESERIALIZERS.setupModule(context);
         if (context.getOwner() instanceof ObjectMapper) {
             ObjectMapper mapper = (ObjectMapper) context.getOwner();

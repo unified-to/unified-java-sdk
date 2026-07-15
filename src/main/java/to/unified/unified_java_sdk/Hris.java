@@ -69,6 +69,9 @@ import to.unified.unified_java_sdk.models.operations.GetHrisLocationResponse;
 import to.unified.unified_java_sdk.models.operations.GetHrisPayslipRequest;
 import to.unified.unified_java_sdk.models.operations.GetHrisPayslipRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.GetHrisPayslipResponse;
+import to.unified.unified_java_sdk.models.operations.GetHrisTaxonomyRequest;
+import to.unified.unified_java_sdk.models.operations.GetHrisTaxonomyRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetHrisTaxonomyResponse;
 import to.unified.unified_java_sdk.models.operations.GetHrisTimeoffRequest;
 import to.unified.unified_java_sdk.models.operations.GetHrisTimeoffRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.GetHrisTimeoffResponse;
@@ -105,6 +108,9 @@ import to.unified.unified_java_sdk.models.operations.ListHrisLocationsResponse;
 import to.unified.unified_java_sdk.models.operations.ListHrisPayslipsRequest;
 import to.unified.unified_java_sdk.models.operations.ListHrisPayslipsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.ListHrisPayslipsResponse;
+import to.unified.unified_java_sdk.models.operations.ListHrisTaxonomiesRequest;
+import to.unified.unified_java_sdk.models.operations.ListHrisTaxonomiesRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListHrisTaxonomiesResponse;
 import to.unified.unified_java_sdk.models.operations.ListHrisTimeoffsRequest;
 import to.unified.unified_java_sdk.models.operations.ListHrisTimeoffsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.ListHrisTimeoffsResponse;
@@ -231,6 +237,7 @@ import to.unified.unified_java_sdk.operations.GetHrisEmployee;
 import to.unified.unified_java_sdk.operations.GetHrisGroup;
 import to.unified.unified_java_sdk.operations.GetHrisLocation;
 import to.unified.unified_java_sdk.operations.GetHrisPayslip;
+import to.unified.unified_java_sdk.operations.GetHrisTaxonomy;
 import to.unified.unified_java_sdk.operations.GetHrisTimeoff;
 import to.unified.unified_java_sdk.operations.GetHrisTimeshift;
 import to.unified.unified_java_sdk.operations.ListHrisBankaccounts;
@@ -243,6 +250,7 @@ import to.unified.unified_java_sdk.operations.ListHrisEmployees;
 import to.unified.unified_java_sdk.operations.ListHrisGroups;
 import to.unified.unified_java_sdk.operations.ListHrisLocations;
 import to.unified.unified_java_sdk.operations.ListHrisPayslips;
+import to.unified.unified_java_sdk.operations.ListHrisTaxonomies;
 import to.unified.unified_java_sdk.operations.ListHrisTimeoffs;
 import to.unified.unified_java_sdk.operations.ListHrisTimeshifts;
 import to.unified.unified_java_sdk.operations.PatchHrisBankaccount;
@@ -763,6 +771,28 @@ public class Hris {
     }
 
     /**
+     * Retrieve a taxonomy
+     * 
+     * @return The call builder
+     */
+    public GetHrisTaxonomyRequestBuilder getHrisTaxonomy() {
+        return new GetHrisTaxonomyRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Retrieve a taxonomy
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetHrisTaxonomyResponse getHrisTaxonomy(@Nonnull GetHrisTaxonomyRequest request) {
+        RequestOperation<GetHrisTaxonomyRequest, GetHrisTaxonomyResponse> operation
+              = new GetHrisTaxonomy.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
      * Retrieve a timeoff
      * 
      * @return The call builder
@@ -1023,6 +1053,28 @@ public class Hris {
     public ListHrisPayslipsResponse listHrisPayslips(@Nonnull ListHrisPayslipsRequest request) {
         RequestOperation<ListHrisPayslipsRequest, ListHrisPayslipsResponse> operation
               = new ListHrisPayslips.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * List all taxonomies
+     * 
+     * @return The call builder
+     */
+    public ListHrisTaxonomiesRequestBuilder listHrisTaxonomies() {
+        return new ListHrisTaxonomiesRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * List all taxonomies
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListHrisTaxonomiesResponse listHrisTaxonomies(@Nonnull ListHrisTaxonomiesRequest request) {
+        RequestOperation<ListHrisTaxonomiesRequest, ListHrisTaxonomiesResponse> operation
+              = new ListHrisTaxonomies.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

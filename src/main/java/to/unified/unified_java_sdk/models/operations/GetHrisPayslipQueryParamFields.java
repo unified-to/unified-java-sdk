@@ -14,6 +14,7 @@ public enum GetHrisPayslipQueryParamFields {
     UPDATED_AT("updated_at"),
     USER_ID("user_id"),
     COMPANY_ID("company_id"),
+    PAYMENT_REFERENCE("payment_reference"),
     PAYMENT_TYPE("payment_type"),
     PAID_AT("paid_at"),
     START_AT("start_at"),

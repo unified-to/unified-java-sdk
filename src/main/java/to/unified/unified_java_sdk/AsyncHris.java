@@ -28,6 +28,7 @@ import to.unified.unified_java_sdk.models.operations.GetHrisEmployeeRequest;
 import to.unified.unified_java_sdk.models.operations.GetHrisGroupRequest;
 import to.unified.unified_java_sdk.models.operations.GetHrisLocationRequest;
 import to.unified.unified_java_sdk.models.operations.GetHrisPayslipRequest;
+import to.unified.unified_java_sdk.models.operations.GetHrisTaxonomyRequest;
 import to.unified.unified_java_sdk.models.operations.GetHrisTimeoffRequest;
 import to.unified.unified_java_sdk.models.operations.GetHrisTimeshiftRequest;
 import to.unified.unified_java_sdk.models.operations.ListHrisBankaccountsRequest;
@@ -40,6 +41,7 @@ import to.unified.unified_java_sdk.models.operations.ListHrisEmployeesRequest;
 import to.unified.unified_java_sdk.models.operations.ListHrisGroupsRequest;
 import to.unified.unified_java_sdk.models.operations.ListHrisLocationsRequest;
 import to.unified.unified_java_sdk.models.operations.ListHrisPayslipsRequest;
+import to.unified.unified_java_sdk.models.operations.ListHrisTaxonomiesRequest;
 import to.unified.unified_java_sdk.models.operations.ListHrisTimeoffsRequest;
 import to.unified.unified_java_sdk.models.operations.ListHrisTimeshiftsRequest;
 import to.unified.unified_java_sdk.models.operations.PatchHrisBankaccountRequest;
@@ -117,6 +119,8 @@ import to.unified.unified_java_sdk.models.operations.async.GetHrisLocationReques
 import to.unified.unified_java_sdk.models.operations.async.GetHrisLocationResponse;
 import to.unified.unified_java_sdk.models.operations.async.GetHrisPayslipRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.GetHrisPayslipResponse;
+import to.unified.unified_java_sdk.models.operations.async.GetHrisTaxonomyRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetHrisTaxonomyResponse;
 import to.unified.unified_java_sdk.models.operations.async.GetHrisTimeoffRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.GetHrisTimeoffResponse;
 import to.unified.unified_java_sdk.models.operations.async.GetHrisTimeshiftRequestBuilder;
@@ -141,6 +145,8 @@ import to.unified.unified_java_sdk.models.operations.async.ListHrisLocationsRequ
 import to.unified.unified_java_sdk.models.operations.async.ListHrisLocationsResponse;
 import to.unified.unified_java_sdk.models.operations.async.ListHrisPayslipsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.ListHrisPayslipsResponse;
+import to.unified.unified_java_sdk.models.operations.async.ListHrisTaxonomiesRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListHrisTaxonomiesResponse;
 import to.unified.unified_java_sdk.models.operations.async.ListHrisTimeoffsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.ListHrisTimeoffsResponse;
 import to.unified.unified_java_sdk.models.operations.async.ListHrisTimeshiftsRequestBuilder;
@@ -232,6 +238,7 @@ import to.unified.unified_java_sdk.operations.GetHrisEmployee;
 import to.unified.unified_java_sdk.operations.GetHrisGroup;
 import to.unified.unified_java_sdk.operations.GetHrisLocation;
 import to.unified.unified_java_sdk.operations.GetHrisPayslip;
+import to.unified.unified_java_sdk.operations.GetHrisTaxonomy;
 import to.unified.unified_java_sdk.operations.GetHrisTimeoff;
 import to.unified.unified_java_sdk.operations.GetHrisTimeshift;
 import to.unified.unified_java_sdk.operations.ListHrisBankaccounts;
@@ -244,6 +251,7 @@ import to.unified.unified_java_sdk.operations.ListHrisEmployees;
 import to.unified.unified_java_sdk.operations.ListHrisGroups;
 import to.unified.unified_java_sdk.operations.ListHrisLocations;
 import to.unified.unified_java_sdk.operations.ListHrisPayslips;
+import to.unified.unified_java_sdk.operations.ListHrisTaxonomies;
 import to.unified.unified_java_sdk.operations.ListHrisTimeoffs;
 import to.unified.unified_java_sdk.operations.ListHrisTimeshifts;
 import to.unified.unified_java_sdk.operations.PatchHrisBankaccount;
@@ -786,6 +794,29 @@ public class AsyncHris {
 
 
     /**
+     * Retrieve a taxonomy
+     * 
+     * @return The async call builder
+     */
+    public GetHrisTaxonomyRequestBuilder getHrisTaxonomy() {
+        return new GetHrisTaxonomyRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Retrieve a taxonomy
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<GetHrisTaxonomyResponse>} - The async response
+     */
+    public CompletableFuture<GetHrisTaxonomyResponse> getHrisTaxonomy(@Nonnull GetHrisTaxonomyRequest request) {
+        AsyncRequestOperation<GetHrisTaxonomyRequest, GetHrisTaxonomyResponse> operation
+              = new GetHrisTaxonomy.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
      * Retrieve a timeoff
      * 
      * @return The async call builder
@@ -1056,6 +1087,29 @@ public class AsyncHris {
     public CompletableFuture<ListHrisPayslipsResponse> listHrisPayslips(@Nonnull ListHrisPayslipsRequest request) {
         AsyncRequestOperation<ListHrisPayslipsRequest, ListHrisPayslipsResponse> operation
               = new ListHrisPayslips.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * List all taxonomies
+     * 
+     * @return The async call builder
+     */
+    public ListHrisTaxonomiesRequestBuilder listHrisTaxonomies() {
+        return new ListHrisTaxonomiesRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * List all taxonomies
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<ListHrisTaxonomiesResponse>} - The async response
+     */
+    public CompletableFuture<ListHrisTaxonomiesResponse> listHrisTaxonomies(@Nonnull ListHrisTaxonomiesRequest request) {
+        AsyncRequestOperation<ListHrisTaxonomiesRequest, ListHrisTaxonomiesResponse> operation
+              = new ListHrisTaxonomies.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

@@ -22,8 +22,6 @@ import java.util.stream.Collectors;
 
 import to.unified.unified_java_sdk.utils.Utils.TypeReferenceWithShape;
 
-import org.openapitools.jackson.nullable.JsonNullable;
-
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.core.JsonProcessingException;
@@ -162,23 +160,12 @@ public class OneOfDeserializer<T> extends StdDeserializer<T> {
 
             // Handle null JSON value
             if (jsonNode != null && jsonNode.isNull()) {
-                // Null JSON value matches null object or JsonNullable containing null
+                // Null JSON value matches null object
                 matched++;
                 return;
             }
 
             if (obj == null || jsonNode == null) {
-                return;
-            }
-
-            // Unwrap JsonNullable fields
-            if (isJsonNullable(obj)) {
-                Object unwrapped = unwrapJsonNullable(obj);
-                if (unwrapped != null) {
-                    countFieldsRecursive(unwrapped, jsonNode);
-                    return;
-                }
-                // JsonNullable is present but contains null - already handled above
                 return;
             }
 
@@ -350,25 +337,6 @@ public class OneOfDeserializer<T> extends StdDeserializer<T> {
         }
 
         return wrapper;
-    }
-
-    /**
-     * Checks if an object is a JsonNullable wrapper.
-     */
-    private static boolean isJsonNullable(Object obj) {
-        return obj instanceof JsonNullable;
-    }
-
-    /**
-     * Unwraps a JsonNullable object to get its contained value.
-     * Returns null if the JsonNullable is not present or contains null.
-     */
-    private static Object unwrapJsonNullable(Object obj) {
-        if (!(obj instanceof JsonNullable)) {
-            return null;
-        }
-        JsonNullable<?> nullable = (JsonNullable<?>) obj;
-        return nullable.isPresent() ? nullable.get() : null;
     }
 
     private static boolean isPrimitiveOrString(Object obj) {

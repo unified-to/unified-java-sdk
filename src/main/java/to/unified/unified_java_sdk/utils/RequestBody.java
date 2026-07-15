@@ -18,14 +18,14 @@ import java.util.Map;
 import java.util.Optional;
 import java.util.regex.Pattern;
 
-import org.openapitools.jackson.nullable.JsonNullable;
-
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 public final class RequestBody {
     private static final Map<String, String> SERIALIZATION_METHOD_TO_CONTENT_TYPE = Map.of("json", "application/json",
             "form", "application/x-www-form-urlencoded", "multipart", "multipart/form-data", "raw",
             "application/octet-stream", "string", "text/plain");
+
+    private static final Object UNDEFINED = new Object();
 
     private RequestBody() {
         // prevent instantiation
@@ -39,7 +39,7 @@ public final class RequestBody {
         }
 
         if (!nullable && (request instanceof Optional) && ((Optional<?>) request).isEmpty()) {
-            request = JsonNullable.undefined();
+            request = UNDEFINED;
         }
 
         if (Types.getType(request.getClass()) != Types.OBJECT) {
@@ -95,7 +95,7 @@ public final class RequestBody {
             body = new SerializedBody(contentType, BodyPublishers.ofString(value.toString()));
         } else if (jsonPattern.matcher(contentType).matches()) {
             ObjectMapper mapper = JSON.getMapper();
-            if (value instanceof JsonNullable && !((JsonNullable<?>) value).isPresent()) {
+            if (value == UNDEFINED) {
                 body = new SerializedBody(contentType, BodyPublishers.noBody());
             } else {
                 body = new SerializedBody(contentType, BodyPublishers.ofString(mapper.writeValueAsString(value)));

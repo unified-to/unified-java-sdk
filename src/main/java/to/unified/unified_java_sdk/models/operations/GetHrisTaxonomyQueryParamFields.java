@@ -8,28 +8,27 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 
-public enum ListHrisPayslipsQueryParamFields {
+public enum GetHrisTaxonomyQueryParamFields {
     ID("id"),
     CREATED_AT("created_at"),
     UPDATED_AT("updated_at"),
-    USER_ID("user_id"),
-    COMPANY_ID("company_id"),
-    PAYMENT_REFERENCE("payment_reference"),
-    PAYMENT_TYPE("payment_type"),
-    PAID_AT("paid_at"),
-    START_AT("start_at"),
-    END_AT("end_at"),
-    CURRENCY("currency"),
-    GROSS_AMOUNT("gross_amount"),
-    NET_AMOUNT("net_amount"),
-    DETAILS("details"),
-    DEDUCTION("deduction"),
+    TYPE("type"),
+    NAME("name"),
+    DESCRIPTION("description"),
+    DOMAIN("domain"),
+    CATEGORY("category"),
+    SUBCATEGORY("subcategory"),
+    PARENT_ID("parent_id"),
+    ALTERNATIVE_NAMES("alternative_names"),
+    URL("url"),
+    ROLE_IDS("role_ids"),
+    IS_ACTIVE("is_active"),
     RAW("raw");
 
     @JsonValue
     private final String value;
 
-    ListHrisPayslipsQueryParamFields(String value) {
+    GetHrisTaxonomyQueryParamFields(String value) {
         this.value = value;
     }
     
@@ -37,8 +36,8 @@ public enum ListHrisPayslipsQueryParamFields {
         return value;
     }
     
-    public static Optional<ListHrisPayslipsQueryParamFields> fromValue(String value) {
-        for (ListHrisPayslipsQueryParamFields o: ListHrisPayslipsQueryParamFields.values()) {
+    public static Optional<GetHrisTaxonomyQueryParamFields> fromValue(String value) {
+        for (GetHrisTaxonomyQueryParamFields o: GetHrisTaxonomyQueryParamFields.values()) {
             if (Objects.deepEquals(o.value, value)) {
                 return Optional.of(o);
             }

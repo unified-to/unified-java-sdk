@@ -86,6 +86,7 @@ public class ObjectType {
     public static final ObjectType HRIS_BENEFIT = new ObjectType("hris_benefit");
     public static final ObjectType HRIS_BANKACCOUNT = new ObjectType("hris_bankaccount");
     public static final ObjectType HRIS_DOCUMENT = new ObjectType("hris_document");
+    public static final ObjectType HRIS_TAXONOMY = new ObjectType("hris_taxonomy");
     public static final ObjectType MARTECH_LIST = new ObjectType("martech_list");
     public static final ObjectType MARTECH_MEMBER = new ObjectType("martech_member");
     public static final ObjectType MARTECH_CAMPAIGN = new ObjectType("martech_campaign");
@@ -308,6 +309,7 @@ public class ObjectType {
         map.put("hris_benefit", HRIS_BENEFIT);
         map.put("hris_bankaccount", HRIS_BANKACCOUNT);
         map.put("hris_document", HRIS_DOCUMENT);
+        map.put("hris_taxonomy", HRIS_TAXONOMY);
         map.put("martech_list", MARTECH_LIST);
         map.put("martech_member", MARTECH_MEMBER);
         map.put("martech_campaign", MARTECH_CAMPAIGN);
@@ -462,6 +464,7 @@ public class ObjectType {
         map.put("hris_benefit", ObjectTypeEnum.HRIS_BENEFIT);
         map.put("hris_bankaccount", ObjectTypeEnum.HRIS_BANKACCOUNT);
         map.put("hris_document", ObjectTypeEnum.HRIS_DOCUMENT);
+        map.put("hris_taxonomy", ObjectTypeEnum.HRIS_TAXONOMY);
         map.put("martech_list", ObjectTypeEnum.MARTECH_LIST);
         map.put("martech_member", ObjectTypeEnum.MARTECH_MEMBER);
         map.put("martech_campaign", ObjectTypeEnum.MARTECH_CAMPAIGN);
@@ -617,6 +620,7 @@ public class ObjectType {
         HRIS_BENEFIT("hris_benefit"),
         HRIS_BANKACCOUNT("hris_bankaccount"),
         HRIS_DOCUMENT("hris_document"),
+        HRIS_TAXONOMY("hris_taxonomy"),
         MARTECH_LIST("martech_list"),
         MARTECH_MEMBER("martech_member"),
         MARTECH_CAMPAIGN("martech_campaign"),

@@ -308,6 +308,9 @@ public class UnifiedTo {
     private final Payslip payslip;
 
 
+    private final Taxonomy taxonomy;
+
+
     private final Timeoff timeoff;
 
 
@@ -939,6 +942,11 @@ public class UnifiedTo {
     }
 
 
+    public Taxonomy taxonomy() {
+        return taxonomy;
+    }
+
+
     public Timeoff timeoff() {
         return timeoff;
     }
@@ -1474,6 +1482,7 @@ public class UnifiedTo {
         this.device = new Device(sdkConfiguration);
         this.employee = new Employee(sdkConfiguration);
         this.payslip = new Payslip(sdkConfiguration);
+        this.taxonomy = new Taxonomy(sdkConfiguration);
         this.timeoff = new Timeoff(sdkConfiguration);
         this.timeshift = new Timeshift(sdkConfiguration);
         this.kms = new Kms(sdkConfiguration);
