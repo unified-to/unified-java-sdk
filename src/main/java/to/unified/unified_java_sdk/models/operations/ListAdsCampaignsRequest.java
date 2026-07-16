@@ -22,6 +22,10 @@ public class ListAdsCampaignsRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=connection_id")
     private String connectionId;
 
+
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=effective_status")
+    private String effectiveStatus;
+
     /**
      * The end date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      */
@@ -96,6 +100,7 @@ public class ListAdsCampaignsRequest {
     @JsonCreator
     public ListAdsCampaignsRequest(
             @Nonnull String connectionId,
+            @Nullable String effectiveStatus,
             @Nullable String endLt,
             @Nullable List<ListAdsCampaignsQueryParamFields> fields,
             @Nullable String goal,
@@ -111,6 +116,7 @@ public class ListAdsCampaignsRequest {
             @Nullable String updatedGte) {
         this.connectionId = Optional.ofNullable(connectionId)
             .orElseThrow(() -> new IllegalArgumentException("connectionId cannot be null"));
+        this.effectiveStatus = effectiveStatus;
         this.endLt = endLt;
         this.fields = fields;
         this.goal = goal;
@@ -132,7 +138,7 @@ public class ListAdsCampaignsRequest {
             null, null, null,
             null, null, null,
             null, null, null,
-            null, null);
+            null, null, null);
     }
 
     /**
@@ -140,6 +146,10 @@ public class ListAdsCampaignsRequest {
      */
     public String connectionId() {
         return this.connectionId;
+    }
+
+    public Optional<String> effectiveStatus() {
+        return Optional.ofNullable(this.effectiveStatus);
     }
 
     /**
@@ -231,6 +241,12 @@ public class ListAdsCampaignsRequest {
      */
     public ListAdsCampaignsRequest withConnectionId(@Nonnull String connectionId) {
         this.connectionId = Utils.checkNotNull(connectionId, "connectionId");
+        return this;
+    }
+
+
+    public ListAdsCampaignsRequest withEffectiveStatus(@Nullable String effectiveStatus) {
+        this.effectiveStatus = effectiveStatus;
         return this;
     }
 
@@ -351,6 +367,7 @@ public class ListAdsCampaignsRequest {
         ListAdsCampaignsRequest other = (ListAdsCampaignsRequest) o;
         return 
             Utils.enhancedDeepEquals(this.connectionId, other.connectionId) &&
+            Utils.enhancedDeepEquals(this.effectiveStatus, other.effectiveStatus) &&
             Utils.enhancedDeepEquals(this.endLt, other.endLt) &&
             Utils.enhancedDeepEquals(this.fields, other.fields) &&
             Utils.enhancedDeepEquals(this.goal, other.goal) &&
@@ -369,17 +386,18 @@ public class ListAdsCampaignsRequest {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            connectionId, endLt, fields,
-            goal, limit, offset,
-            order, orgId, query,
-            raw, sort, startGte,
-            status, updatedGte);
+            connectionId, effectiveStatus, endLt,
+            fields, goal, limit,
+            offset, order, orgId,
+            query, raw, sort,
+            startGte, status, updatedGte);
     }
     
     @Override
     public String toString() {
         return Utils.toString(ListAdsCampaignsRequest.class,
                 "connectionId", connectionId,
+                "effectiveStatus", effectiveStatus,
                 "endLt", endLt,
                 "fields", fields,
                 "goal", goal,
@@ -399,6 +417,8 @@ public class ListAdsCampaignsRequest {
     public final static class Builder {
 
         private String connectionId;
+
+        private String effectiveStatus;
 
         private String endLt;
 
@@ -435,6 +455,11 @@ public class ListAdsCampaignsRequest {
          */
         public Builder connectionId(@Nonnull String connectionId) {
             this.connectionId = Utils.checkNotNull(connectionId, "connectionId");
+            return this;
+        }
+
+        public Builder effectiveStatus(@Nullable String effectiveStatus) {
+            this.effectiveStatus = effectiveStatus;
             return this;
         }
 
@@ -532,11 +557,11 @@ public class ListAdsCampaignsRequest {
 
         public ListAdsCampaignsRequest build() {
             return new ListAdsCampaignsRequest(
-                connectionId, endLt, fields,
-                goal, limit, offset,
-                order, orgId, query,
-                raw, sort, startGte,
-                status, updatedGte);
+                connectionId, effectiveStatus, endLt,
+                fields, goal, limit,
+                offset, order, orgId,
+                query, raw, sort,
+                startGte, status, updatedGte);
         }
 
     }

@@ -57,6 +57,11 @@ public class AdsCampaign {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("effective_status")
+    private EffectiveStatus effectiveStatus;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("end_at")
     private OffsetDateTime endAt;
 
@@ -134,6 +139,7 @@ public class AdsCampaign {
             @JsonProperty("category") @Nullable String category,
             @JsonProperty("created_at") @Nullable OffsetDateTime createdAt,
             @JsonProperty("currency") @Nullable String currency,
+            @JsonProperty("effective_status") @Nullable EffectiveStatus effectiveStatus,
             @JsonProperty("end_at") @Nullable OffsetDateTime endAt,
             @JsonProperty("frequency_cap") @Nullable PropertyAdsCampaignFrequencyCap frequencyCap,
             @JsonProperty("goal") @Nullable Goal goal,
@@ -155,6 +161,7 @@ public class AdsCampaign {
         this.category = category;
         this.createdAt = createdAt;
         this.currency = currency;
+        this.effectiveStatus = effectiveStatus;
         this.endAt = endAt;
         this.frequencyCap = frequencyCap;
         this.goal = goal;
@@ -178,7 +185,8 @@ public class AdsCampaign {
             null, null, null,
             null, null, null,
             null, null, null,
-            null, null, null);
+            null, null, null,
+            null);
     }
 
     public Optional<AdvertisingChannelType> advertisingChannelType() {
@@ -207,6 +215,10 @@ public class AdsCampaign {
 
     public Optional<String> currency() {
         return Optional.ofNullable(this.currency);
+    }
+
+    public Optional<EffectiveStatus> effectiveStatus() {
+        return Optional.ofNullable(this.effectiveStatus);
     }
 
     public Optional<OffsetDateTime> endAt() {
@@ -312,6 +324,12 @@ public class AdsCampaign {
     }
 
 
+    public AdsCampaign withEffectiveStatus(@Nullable EffectiveStatus effectiveStatus) {
+        this.effectiveStatus = effectiveStatus;
+        return this;
+    }
+
+
     public AdsCampaign withEndAt(@Nullable OffsetDateTime endAt) {
         this.endAt = endAt;
         return this;
@@ -413,6 +431,7 @@ public class AdsCampaign {
             Utils.enhancedDeepEquals(this.category, other.category) &&
             Utils.enhancedDeepEquals(this.createdAt, other.createdAt) &&
             Utils.enhancedDeepEquals(this.currency, other.currency) &&
+            Utils.enhancedDeepEquals(this.effectiveStatus, other.effectiveStatus) &&
             Utils.enhancedDeepEquals(this.endAt, other.endAt) &&
             Utils.enhancedDeepEquals(this.frequencyCap, other.frequencyCap) &&
             Utils.enhancedDeepEquals(this.goal, other.goal) &&
@@ -434,11 +453,12 @@ public class AdsCampaign {
         return Utils.enhancedHash(
             advertisingChannelType, budgetAmount, budgetPeriod,
             campaignBudgetIdentifier, category, createdAt,
-            currency, endAt, frequencyCap,
-            goal, hasEuPoliticalAds, id,
-            name, organizationId, plannedSpendAmount,
-            raw, startAt, status,
-            targeting, totalSpendAmount, updatedAt);
+            currency, effectiveStatus, endAt,
+            frequencyCap, goal, hasEuPoliticalAds,
+            id, name, organizationId,
+            plannedSpendAmount, raw, startAt,
+            status, targeting, totalSpendAmount,
+            updatedAt);
     }
     
     @Override
@@ -451,6 +471,7 @@ public class AdsCampaign {
                 "category", category,
                 "createdAt", createdAt,
                 "currency", currency,
+                "effectiveStatus", effectiveStatus,
                 "endAt", endAt,
                 "frequencyCap", frequencyCap,
                 "goal", goal,
@@ -483,6 +504,8 @@ public class AdsCampaign {
         private OffsetDateTime createdAt;
 
         private String currency;
+
+        private EffectiveStatus effectiveStatus;
 
         private OffsetDateTime endAt;
 
@@ -548,6 +571,11 @@ public class AdsCampaign {
 
         public Builder currency(@Nullable String currency) {
             this.currency = currency;
+            return this;
+        }
+
+        public Builder effectiveStatus(@Nullable EffectiveStatus effectiveStatus) {
+            this.effectiveStatus = effectiveStatus;
             return this;
         }
 
@@ -625,11 +653,12 @@ public class AdsCampaign {
             return new AdsCampaign(
                 advertisingChannelType, budgetAmount, budgetPeriod,
                 campaignBudgetIdentifier, category, createdAt,
-                currency, endAt, frequencyCap,
-                goal, hasEuPoliticalAds, id,
-                name, organizationId, plannedSpendAmount,
-                raw, startAt, status,
-                targeting, totalSpendAmount, updatedAt);
+                currency, effectiveStatus, endAt,
+                frequencyCap, goal, hasEuPoliticalAds,
+                id, name, organizationId,
+                plannedSpendAmount, raw, startAt,
+                status, targeting, totalSpendAmount,
+                updatedAt);
         }
 
     }

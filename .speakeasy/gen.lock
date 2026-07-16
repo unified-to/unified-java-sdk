@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: cfc256ab-f291-4245-b909-5b9e9a6e6803
 management:
-  docChecksum: 37f0bcef1ef1eca49684f622cd72a3f4
+  docChecksum: 187dee688fb0a5b05b3100f79c0eab58
   docVersion: "1.0"
-  speakeasyVersion: 1.790.1
-  generationVersion: 2.918.1
-  releaseVersion: 0.47.40
-  configChecksum: 60134838e60172b597e20fe22d546f0a
+  speakeasyVersion: 1.790.2
+  generationVersion: 2.918.3
+  releaseVersion: 0.47.41
+  configChecksum: 4bc3dd25b1535eeae3e3b65d28461b42
   repoURL: https://github.com/unified-to/unified-java-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-java-sdk
@@ -2964,6 +2964,7 @@ trackedFiles:
   docs/models/shared/DutiesPaidBy.md:
     id: fc84f6a1c7e2
     pristine_git_object: 20dcd3165e7d5777051312fff2fc2d7fa0c06e7d
+  docs/models/shared/EffectiveStatus.md: {}
   docs/models/shared/EmployerContributionType.md:
     id: 58f6684eccd0
     pristine_git_object: 473da6eba18d7320ae2e8ea2f9d36e4b4ec0d1a2
@@ -3938,6 +3939,7 @@ trackedFiles:
   docs/models/shared/PropertyAdsReportMetricsCampaignBudgetPeriod.md:
     id: 11a71e9fc263
     pristine_git_object: e83d49557cea119ed1c0b01da712874747439cc1
+  docs/models/shared/PropertyAdsReportMetricsCampaignEffectiveStatus.md: {}
   docs/models/shared/PropertyAdsReportMetricsCampaignFrequencyCap.md:
     id: 199829937a01
     pristine_git_object: da139ab3c6743ad760b703e5e45944a1532fce89
@@ -11600,6 +11602,7 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/models/shared/DutiesPaidBy.java:
     id: c8890727aaf9
     pristine_git_object: 9ad3042dd40215d1040df4e037b8ba0fccf4bf18
+  src/main/java/to/unified/unified_java_sdk/models/shared/EffectiveStatus.java: {}
   src/main/java/to/unified/unified_java_sdk/models/shared/EmployerContributionType.java:
     id: 6e2913c7289f
     pristine_git_object: a4c0fd5f93fb9d16ea47a22bf588d097b66f817c
@@ -12574,6 +12577,7 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/models/shared/PropertyAdsReportMetricsCampaignBudgetPeriod.java:
     id: 56ae0731ecc2
     pristine_git_object: 6ca0f6f0ad3e6125f88306d6fec2fcb7a9ed1441
+  src/main/java/to/unified/unified_java_sdk/models/shared/PropertyAdsReportMetricsCampaignEffectiveStatus.java: {}
   src/main/java/to/unified/unified_java_sdk/models/shared/PropertyAdsReportMetricsCampaignFrequencyCap.java:
     id: 70649b25d112
     pristine_git_object: a2d8fb47a7e39f5789f236d3c469e958ef57317c
@@ -27633,7 +27637,7 @@ examples:
           application/json: [{}]
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: "## Java SDK Changes:\n* `unified-to.hris.getHrisTaxonomy()`: **Added**\n* `unified-to.hris.listHrisTaxonomies()`: **Added**\n* `unified-to.taxonomy.getHrisTaxonomy()`: **Added**\n* `unified-to.taxonomy.listHrisTaxonomies()`: **Added**\n* `unified-to.hris.getHrisPayslip()`: \n  *  `request.fields` **Changed**\n  *  `response.paymentReference` **Added**\n* `unified-to.hris.listHrisPayslips()`: \n  *  `request.fields` **Changed**\n  *  `response.[].paymentReference` **Added**\n* `unified-to.payslip.getHrisPayslip()`: \n  *  `request.fields` **Changed**\n  *  `response.paymentReference` **Added**\n* `unified-to.payslip.listHrisPayslips()`: \n  *  `request.fields` **Changed**\n  *  `response.[].paymentReference` **Added**\n* `unified-to.unified.createUnifiedConnection()`: \n  *  `request.permissions[]` **Changed**\n  *  `response.permissions[]` **Changed**\n* `unified-to.unified.createUnifiedWebhook()`: \n  *  `request.webhook.objectType.enum(hrisTaxonomy)` **Added**\n  *  `response.objectType.enum(hrisTaxonomy)` **Added**\n* `unified-to.unified.getUnifiedConnection()`:  `response.permissions[]` **Changed**\n* `unified-to.unified.getUnifiedWebhook()`:  `response.objectType.enum(hrisTaxonomy)` **Added**\n* `unified-to.unified.listUnifiedConnections()`:  `response.[].permissions[]` **Changed**\n* `unified-to.unified.listUnifiedIntegrationWorkspaces()`:  `response.[].support.Map<IntegrationSupport>.listRoleId` **Added**\n* `unified-to.unified.listUnifiedIntegrations()`:  `response.[].support.Map<IntegrationSupport>.listRoleId` **Added**\n* `unified-to.unified.listUnifiedWebhooks()`:  `response.[].objectType.enum(hrisTaxonomy)` **Added**\n* `unified-to.unified.patchUnifiedConnection()`: \n  *  `request.connection.permissions[]` **Changed**\n  *  `response.permissions[]` **Changed**\n* `unified-to.unified.patchUnifiedWebhook()`: \n  *  `request.webhook.objectType.enum(hrisTaxonomy)` **Added**\n  *  `response.objectType.enum(hrisTaxonomy)` **Added**\n* `unified-to.unified.updateUnifiedConnection()`: \n  *  `request.connection.permissions[]` **Changed**\n  *  `response.permissions[]` **Changed**\n* `unified-to.unified.updateUnifiedWebhook()`: \n  *  `request.webhook.objectType.enum(hrisTaxonomy)` **Added**\n  *  `response.objectType.enum(hrisTaxonomy)` **Added**\n* `unified-to.connection.createUnifiedConnection()`: \n  *  `request.permissions[]` **Changed**\n  *  `response.permissions[]` **Changed**\n* `unified-to.connection.getUnifiedConnection()`:  `response.permissions[]` **Changed**\n* `unified-to.connection.listUnifiedConnections()`:  `response.[].permissions[]` **Changed**\n* `unified-to.connection.patchUnifiedConnection()`: \n  *  `request.connection.permissions[]` **Changed**\n  *  `response.permissions[]` **Changed**\n* `unified-to.connection.updateUnifiedConnection()`: \n  *  `request.connection.permissions[]` **Changed**\n  *  `response.permissions[]` **Changed**\n* `unified-to.integration.listUnifiedIntegrationWorkspaces()`:  `response.[].support.Map<IntegrationSupport>.listRoleId` **Added**\n* `unified-to.integration.listUnifiedIntegrations()`:  `response.[].support.Map<IntegrationSupport>.listRoleId` **Added**\n* `unified-to.webhook.createUnifiedWebhook()`: \n  *  `request.webhook.objectType.enum(hrisTaxonomy)` **Added**\n  *  `response.objectType.enum(hrisTaxonomy)` **Added**\n* `unified-to.webhook.getUnifiedWebhook()`:  `response.objectType.enum(hrisTaxonomy)` **Added**\n* `unified-to.webhook.listUnifiedWebhooks()`:  `response.[].objectType.enum(hrisTaxonomy)` **Added**\n* `unified-to.webhook.patchUnifiedWebhook()`: \n  *  `request.webhook.objectType.enum(hrisTaxonomy)` **Added**\n  *  `response.objectType.enum(hrisTaxonomy)` **Added**\n* `unified-to.webhook.updateUnifiedWebhook()`: \n  *  `request.webhook.objectType.enum(hrisTaxonomy)` **Added**\n  *  `response.objectType.enum(hrisTaxonomy)` **Added**\n"
+releaseNotes: "## Java SDK Changes:\n* `unified-to.report.listAdsReports()`:  `response.[].metrics[].campaign.effectiveStatus` **Added**\n* `unified-to.ads.createAdsCampaign()`: \n  *  `request` **Changed**\n  *  `response.effectiveStatus` **Added**\n* `unified-to.ads.getAdsCampaign()`: \n  *  `request.fields` **Changed**\n  *  `response.effectiveStatus` **Added**\n* `unified-to.ads.listAdsCampaigns()`: \n  *  `request` **Changed**\n  *  `response.[].effectiveStatus` **Added**\n* `unified-to.ads.listAdsReports()`:  `response.[].metrics[].campaign.effectiveStatus` **Added**\n* `unified-to.ads.patchAdsCampaign()`: \n  *  `request` **Changed**\n  *  `response.effectiveStatus` **Added**\n* `unified-to.ads.updateAdsCampaign()`: \n  *  `request` **Changed**\n  *  `response.effectiveStatus` **Added**\n* `unified-to.campaign.createAdsCampaign()`: \n  *  `request` **Changed**\n  *  `response.effectiveStatus` **Added**\n* `unified-to.campaign.getAdsCampaign()`: \n  *  `request.fields` **Changed**\n  *  `response.effectiveStatus` **Added**\n* `unified-to.campaign.listAdsCampaigns()`: \n  *  `request` **Changed**\n  *  `response.[].effectiveStatus` **Added**\n* `unified-to.campaign.patchAdsCampaign()`: \n  *  `request` **Changed**\n  *  `response.effectiveStatus` **Added**\n* `unified-to.campaign.updateAdsCampaign()`: \n  *  `request` **Changed**\n  *  `response.effectiveStatus` **Added**\n"
 generatedFiles:
   - .gitattributes
   - USAGE.md
