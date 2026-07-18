@@ -117,6 +117,11 @@ public class Integration {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("requires_cname")
+    private Boolean requiresCname;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("saml")
     private Saml saml;
 
@@ -188,6 +193,7 @@ public class Integration {
             @JsonProperty("partnership") @Nullable Partnership partnership,
             @JsonProperty("popularity") @Nullable Double popularity,
             @JsonProperty("rate_limit_description") @Nullable String rateLimitDescription,
+            @JsonProperty("requires_cname") @Nullable Boolean requiresCname,
             @JsonProperty("saml") @Nullable Saml saml,
             @JsonProperty("sandbox") @Nullable Sandbox sandbox,
             @JsonProperty("support") @Nullable Map<String, IntegrationSupport> support,
@@ -218,6 +224,7 @@ public class Integration {
         this.partnership = partnership;
         this.popularity = popularity;
         this.rateLimitDescription = rateLimitDescription;
+        this.requiresCname = requiresCname;
         this.saml = saml;
         this.sandbox = sandbox;
         this.support = support;
@@ -243,8 +250,8 @@ public class Integration {
             null, null, null,
             null, null, null,
             null, null, null,
-            null, type, null,
-            null);
+            null, null, type,
+            null, null);
     }
 
     public Optional<Double> activeHealthyConnections() {
@@ -320,6 +327,10 @@ public class Integration {
 
     public Optional<String> rateLimitDescription() {
         return Optional.ofNullable(this.rateLimitDescription);
+    }
+
+    public Optional<Boolean> requiresCname() {
+        return Optional.ofNullable(this.requiresCname);
     }
 
     public Optional<Saml> saml() {
@@ -484,6 +495,12 @@ public class Integration {
     }
 
 
+    public Integration withRequiresCname(@Nullable Boolean requiresCname) {
+        this.requiresCname = requiresCname;
+        return this;
+    }
+
+
     public Integration withSaml(@Nullable Saml saml) {
         this.saml = saml;
         return this;
@@ -578,6 +595,7 @@ public class Integration {
             Utils.enhancedDeepEquals(this.partnership, other.partnership) &&
             Utils.enhancedDeepEquals(this.popularity, other.popularity) &&
             Utils.enhancedDeepEquals(this.rateLimitDescription, other.rateLimitDescription) &&
+            Utils.enhancedDeepEquals(this.requiresCname, other.requiresCname) &&
             Utils.enhancedDeepEquals(this.saml, other.saml) &&
             Utils.enhancedDeepEquals(this.sandbox, other.sandbox) &&
             Utils.enhancedDeepEquals(this.support, other.support) &&
@@ -599,10 +617,10 @@ public class Integration {
             featured, inProgress, isActive,
             isHidden, logoUrl, name,
             partnership, popularity, rateLimitDescription,
-            saml, sandbox, support,
-            testedAt, textColor, tokenInstructions,
-            tokenNames, type, updatedAt,
-            webUrl);
+            requiresCname, saml, sandbox,
+            support, testedAt, textColor,
+            tokenInstructions, tokenNames, type,
+            updatedAt, webUrl);
     }
     
     @Override
@@ -626,6 +644,7 @@ public class Integration {
                 "partnership", partnership,
                 "popularity", popularity,
                 "rateLimitDescription", rateLimitDescription,
+                "requiresCname", requiresCname,
                 "saml", saml,
                 "sandbox", sandbox,
                 "support", support,
@@ -676,6 +695,8 @@ public class Integration {
         private Double popularity;
 
         private String rateLimitDescription;
+
+        private Boolean requiresCname;
 
         private Saml saml;
 
@@ -794,6 +815,11 @@ public class Integration {
             return this;
         }
 
+        public Builder requiresCname(@Nullable Boolean requiresCname) {
+            this.requiresCname = requiresCname;
+            return this;
+        }
+
         public Builder saml(@Nullable Saml saml) {
             this.saml = saml;
             return this;
@@ -858,10 +884,10 @@ public class Integration {
                 featured, inProgress, isActive,
                 isHidden, logoUrl, name,
                 partnership, popularity, rateLimitDescription,
-                saml, sandbox, support,
-                testedAt, textColor, tokenInstructions,
-                tokenNames, type, updatedAt,
-                webUrl);
+                requiresCname, saml, sandbox,
+                support, testedAt, textColor,
+                tokenInstructions, tokenNames, type,
+                updatedAt, webUrl);
         }
 
     }

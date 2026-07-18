@@ -85,6 +85,11 @@ public class PropertyAdsReportMetricsGroup {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("effective_status")
+    private PropertyAdsReportMetricsGroupEffectiveStatus effectiveStatus;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("end_at")
     private OffsetDateTime endAt;
 
@@ -182,6 +187,7 @@ public class PropertyAdsReportMetricsGroup {
             @JsonProperty("created_at") @Nullable OffsetDateTime createdAt,
             @JsonProperty("creative_ids") @Nullable List<String> creativeIds,
             @JsonProperty("currency") @Nullable String currency,
+            @JsonProperty("effective_status") @Nullable PropertyAdsReportMetricsGroupEffectiveStatus effectiveStatus,
             @JsonProperty("end_at") @Nullable OffsetDateTime endAt,
             @JsonProperty("frequency_cap") @Nullable PropertyAdsReportMetricsGroupFrequencyCap frequencyCap,
             @JsonProperty("has_eu_political_ads") @Nullable Boolean hasEuPoliticalAds,
@@ -211,6 +217,7 @@ public class PropertyAdsReportMetricsGroup {
         this.createdAt = createdAt;
         this.creativeIds = creativeIds;
         this.currency = currency;
+        this.effectiveStatus = effectiveStatus;
         this.endAt = endAt;
         this.frequencyCap = frequencyCap;
         this.hasEuPoliticalAds = hasEuPoliticalAds;
@@ -240,7 +247,7 @@ public class PropertyAdsReportMetricsGroup {
             null, null, null,
             null, null, null,
             null, null, null,
-            null, null);
+            null, null, null);
     }
 
     public Optional<Double> bidAmount() {
@@ -292,6 +299,10 @@ public class PropertyAdsReportMetricsGroup {
 
     public Optional<String> currency() {
         return Optional.ofNullable(this.currency);
+    }
+
+    public Optional<PropertyAdsReportMetricsGroupEffectiveStatus> effectiveStatus() {
+        return Optional.ofNullable(this.effectiveStatus);
     }
 
     public Optional<OffsetDateTime> endAt() {
@@ -442,6 +453,12 @@ public class PropertyAdsReportMetricsGroup {
     }
 
 
+    public PropertyAdsReportMetricsGroup withEffectiveStatus(@Nullable PropertyAdsReportMetricsGroupEffectiveStatus effectiveStatus) {
+        this.effectiveStatus = effectiveStatus;
+        return this;
+    }
+
+
     public PropertyAdsReportMetricsGroup withEndAt(@Nullable OffsetDateTime endAt) {
         this.endAt = endAt;
         return this;
@@ -566,6 +583,7 @@ public class PropertyAdsReportMetricsGroup {
             Utils.enhancedDeepEquals(this.createdAt, other.createdAt) &&
             Utils.enhancedDeepEquals(this.creativeIds, other.creativeIds) &&
             Utils.enhancedDeepEquals(this.currency, other.currency) &&
+            Utils.enhancedDeepEquals(this.effectiveStatus, other.effectiveStatus) &&
             Utils.enhancedDeepEquals(this.endAt, other.endAt) &&
             Utils.enhancedDeepEquals(this.frequencyCap, other.frequencyCap) &&
             Utils.enhancedDeepEquals(this.hasEuPoliticalAds, other.hasEuPoliticalAds) &&
@@ -592,12 +610,12 @@ public class PropertyAdsReportMetricsGroup {
             budgetAllocationType, budgetAmount, budgetMaxAmount,
             budgetPeriod, budgetUnit, campaignId,
             createdAt, creativeIds, currency,
-            endAt, frequencyCap, hasEuPoliticalAds,
-            id, insertionorderId, name,
-            optimizationGoal, organizationId, pacing,
-            parentId, promoted, raw,
-            startAt, status, targeting,
-            type, updatedAt);
+            effectiveStatus, endAt, frequencyCap,
+            hasEuPoliticalAds, id, insertionorderId,
+            name, optimizationGoal, organizationId,
+            pacing, parentId, promoted,
+            raw, startAt, status,
+            targeting, type, updatedAt);
     }
     
     @Override
@@ -615,6 +633,7 @@ public class PropertyAdsReportMetricsGroup {
                 "createdAt", createdAt,
                 "creativeIds", creativeIds,
                 "currency", currency,
+                "effectiveStatus", effectiveStatus,
                 "endAt", endAt,
                 "frequencyCap", frequencyCap,
                 "hasEuPoliticalAds", hasEuPoliticalAds,
@@ -660,6 +679,8 @@ public class PropertyAdsReportMetricsGroup {
         private List<String> creativeIds;
 
         private String currency;
+
+        private PropertyAdsReportMetricsGroupEffectiveStatus effectiveStatus;
 
         private OffsetDateTime endAt;
 
@@ -762,6 +783,11 @@ public class PropertyAdsReportMetricsGroup {
             return this;
         }
 
+        public Builder effectiveStatus(@Nullable PropertyAdsReportMetricsGroupEffectiveStatus effectiveStatus) {
+            this.effectiveStatus = effectiveStatus;
+            return this;
+        }
+
         public Builder endAt(@Nullable OffsetDateTime endAt) {
             this.endAt = endAt;
             return this;
@@ -853,12 +879,12 @@ public class PropertyAdsReportMetricsGroup {
                 budgetAllocationType, budgetAmount, budgetMaxAmount,
                 budgetPeriod, budgetUnit, campaignId,
                 createdAt, creativeIds, currency,
-                endAt, frequencyCap, hasEuPoliticalAds,
-                id, insertionorderId, name,
-                optimizationGoal, organizationId, pacing,
-                parentId, promoted, raw,
-                startAt, status, targeting,
-                type, updatedAt);
+                effectiveStatus, endAt, frequencyCap,
+                hasEuPoliticalAds, id, insertionorderId,
+                name, optimizationGoal, organizationId,
+                pacing, parentId, promoted,
+                raw, startAt, status,
+                targeting, type, updatedAt);
         }
 
     }

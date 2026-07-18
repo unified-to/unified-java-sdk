@@ -14,6 +14,7 @@ import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
 import java.time.OffsetDateTime;
+import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
@@ -57,6 +58,11 @@ public class RepoCommit {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("pullrequest_ids")
+    private List<String> pullrequestIds;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
     private Map<String, Object> raw;
 
@@ -83,6 +89,7 @@ public class RepoCommit {
             @JsonProperty("lines_changed") @Nullable Double linesChanged,
             @JsonProperty("lines_deleted") @Nullable Double linesDeleted,
             @JsonProperty("message") @Nullable String message,
+            @JsonProperty("pullrequest_ids") @Nullable List<String> pullrequestIds,
             @JsonProperty("raw") @Nullable Map<String, Object> raw,
             @JsonProperty("repo_id") @Nonnull String repoId,
             @JsonProperty("updated_at") @Nullable OffsetDateTime updatedAt,
@@ -94,6 +101,7 @@ public class RepoCommit {
         this.linesChanged = linesChanged;
         this.linesDeleted = linesDeleted;
         this.message = message;
+        this.pullrequestIds = pullrequestIds;
         this.raw = raw;
         this.repoId = Optional.ofNullable(repoId)
             .orElseThrow(() -> new IllegalArgumentException("repoId cannot be null"));
@@ -105,8 +113,8 @@ public class RepoCommit {
             @Nonnull String repoId) {
         this(null, null, null,
             null, null, null,
-            null, null, repoId,
-            null, null);
+            null, null, null,
+            repoId, null, null);
     }
 
     public Optional<String> branchId() {
@@ -135,6 +143,10 @@ public class RepoCommit {
 
     public Optional<String> message() {
         return Optional.ofNullable(this.message);
+    }
+
+    public Optional<List<String>> pullrequestIds() {
+        return Optional.ofNullable(this.pullrequestIds);
     }
 
     public Optional<Map<String, Object>> raw() {
@@ -200,6 +212,12 @@ public class RepoCommit {
     }
 
 
+    public RepoCommit withPullrequestIds(@Nullable List<String> pullrequestIds) {
+        this.pullrequestIds = pullrequestIds;
+        return this;
+    }
+
+
     public RepoCommit withRaw(@Nullable Map<String, Object> raw) {
         this.raw = raw;
         return this;
@@ -241,6 +259,7 @@ public class RepoCommit {
             Utils.enhancedDeepEquals(this.linesChanged, other.linesChanged) &&
             Utils.enhancedDeepEquals(this.linesDeleted, other.linesDeleted) &&
             Utils.enhancedDeepEquals(this.message, other.message) &&
+            Utils.enhancedDeepEquals(this.pullrequestIds, other.pullrequestIds) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
             Utils.enhancedDeepEquals(this.repoId, other.repoId) &&
             Utils.enhancedDeepEquals(this.updatedAt, other.updatedAt) &&
@@ -252,8 +271,8 @@ public class RepoCommit {
         return Utils.enhancedHash(
             branchId, createdAt, id,
             linesAdded, linesChanged, linesDeleted,
-            message, raw, repoId,
-            updatedAt, userId);
+            message, pullrequestIds, raw,
+            repoId, updatedAt, userId);
     }
     
     @Override
@@ -266,6 +285,7 @@ public class RepoCommit {
                 "linesChanged", linesChanged,
                 "linesDeleted", linesDeleted,
                 "message", message,
+                "pullrequestIds", pullrequestIds,
                 "raw", raw,
                 "repoId", repoId,
                 "updatedAt", updatedAt,
@@ -288,6 +308,8 @@ public class RepoCommit {
         private Double linesDeleted;
 
         private String message;
+
+        private List<String> pullrequestIds;
 
         private Map<String, Object> raw;
 
@@ -336,6 +358,11 @@ public class RepoCommit {
             return this;
         }
 
+        public Builder pullrequestIds(@Nullable List<String> pullrequestIds) {
+            this.pullrequestIds = pullrequestIds;
+            return this;
+        }
+
         public Builder raw(@Nullable Map<String, Object> raw) {
             this.raw = raw;
             return this;
@@ -360,8 +387,8 @@ public class RepoCommit {
             return new RepoCommit(
                 branchId, createdAt, id,
                 linesAdded, linesChanged, linesDeleted,
-                message, raw, repoId,
-                updatedAt, userId);
+                message, pullrequestIds, raw,
+                repoId, updatedAt, userId);
         }
 
     }

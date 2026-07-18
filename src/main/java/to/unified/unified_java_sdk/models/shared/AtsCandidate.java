@@ -152,6 +152,13 @@ public class AtsCandidate {
     @JsonProperty("user_id")
     private String userId;
 
+    /**
+     * references hris employees
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("user_ids")
+    private List<String> userIds;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("web_url")
@@ -185,6 +192,7 @@ public class AtsCandidate {
             @JsonProperty("title") @Nullable String title,
             @JsonProperty("updated_at") @Nullable OffsetDateTime updatedAt,
             @JsonProperty("user_id") @Nullable String userId,
+            @JsonProperty("user_ids") @Nullable List<String> userIds,
             @JsonProperty("web_url") @Nullable String webUrl) {
         this.address = address;
         this.companyId = companyId;
@@ -212,6 +220,7 @@ public class AtsCandidate {
         this.title = title;
         this.updatedAt = updatedAt;
         this.userId = userId;
+        this.userIds = userIds;
         this.webUrl = webUrl;
     }
     
@@ -224,7 +233,8 @@ public class AtsCandidate {
             null, null, null,
             null, null, null,
             null, null, null,
-            null, null, null);
+            null, null, null,
+            null);
     }
 
     public Optional<PropertyAtsCandidateAddress> address() {
@@ -333,6 +343,13 @@ public class AtsCandidate {
 
     public Optional<String> userId() {
         return Optional.ofNullable(this.userId);
+    }
+
+    /**
+     * references hris employees
+     */
+    public Optional<List<String>> userIds() {
+        return Optional.ofNullable(this.userIds);
     }
 
     public Optional<String> webUrl() {
@@ -504,6 +521,15 @@ public class AtsCandidate {
     }
 
 
+    /**
+     * references hris employees
+     */
+    public AtsCandidate withUserIds(@Nullable List<String> userIds) {
+        this.userIds = userIds;
+        return this;
+    }
+
+
     public AtsCandidate withWebUrl(@Nullable String webUrl) {
         this.webUrl = webUrl;
         return this;
@@ -546,6 +572,7 @@ public class AtsCandidate {
             Utils.enhancedDeepEquals(this.title, other.title) &&
             Utils.enhancedDeepEquals(this.updatedAt, other.updatedAt) &&
             Utils.enhancedDeepEquals(this.userId, other.userId) &&
+            Utils.enhancedDeepEquals(this.userIds, other.userIds) &&
             Utils.enhancedDeepEquals(this.webUrl, other.webUrl);
     }
     
@@ -560,7 +587,8 @@ public class AtsCandidate {
             metadata, name, origin,
             raw, skills, sources,
             tags, telephones, title,
-            updatedAt, userId, webUrl);
+            updatedAt, userId, userIds,
+            webUrl);
     }
     
     @Override
@@ -592,6 +620,7 @@ public class AtsCandidate {
                 "title", title,
                 "updatedAt", updatedAt,
                 "userId", userId,
+                "userIds", userIds,
                 "webUrl", webUrl);
     }
 
@@ -649,6 +678,8 @@ public class AtsCandidate {
         private OffsetDateTime updatedAt;
 
         private String userId;
+
+        private List<String> userIds;
 
         private String webUrl;
 
@@ -790,6 +821,14 @@ public class AtsCandidate {
             return this;
         }
 
+        /**
+         * references hris employees
+         */
+        public Builder userIds(@Nullable List<String> userIds) {
+            this.userIds = userIds;
+            return this;
+        }
+
         public Builder webUrl(@Nullable String webUrl) {
             this.webUrl = webUrl;
             return this;
@@ -805,7 +844,8 @@ public class AtsCandidate {
                 metadata, name, origin,
                 raw, skills, sources,
                 tags, telephones, title,
-                updatedAt, userId, webUrl);
+                updatedAt, userId, userIds,
+                webUrl);
         }
 
     }

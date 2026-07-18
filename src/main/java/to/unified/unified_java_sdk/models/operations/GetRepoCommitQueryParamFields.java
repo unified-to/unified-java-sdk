@@ -16,6 +16,7 @@ public enum GetRepoCommitQueryParamFields {
     REPO_ID("repo_id"),
     MESSAGE("message"),
     BRANCH_ID("branch_id"),
+    PULLREQUEST_IDS("pullrequest_ids"),
     LINES_ADDED("lines_added"),
     LINES_DELETED("lines_deleted"),
     LINES_CHANGED("lines_changed"),

@@ -28,6 +28,10 @@ public class ListAdsGroupsRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=connection_id")
     private String connectionId;
 
+
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=effective_status")
+    private String effectiveStatus;
+
     /**
      * The end date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      */
@@ -111,6 +115,7 @@ public class ListAdsGroupsRequest {
     public ListAdsGroupsRequest(
             @Nullable String campaignId,
             @Nonnull String connectionId,
+            @Nullable String effectiveStatus,
             @Nullable String endLt,
             @Nullable List<ListAdsGroupsQueryParamFields> fields,
             @Nullable String ioId,
@@ -128,6 +133,7 @@ public class ListAdsGroupsRequest {
         this.campaignId = campaignId;
         this.connectionId = Optional.ofNullable(connectionId)
             .orElseThrow(() -> new IllegalArgumentException("connectionId cannot be null"));
+        this.effectiveStatus = effectiveStatus;
         this.endLt = endLt;
         this.fields = fields;
         this.ioId = ioId;
@@ -151,7 +157,7 @@ public class ListAdsGroupsRequest {
             null, null, null,
             null, null, null,
             null, null, null,
-            null);
+            null, null);
     }
 
     /**
@@ -166,6 +172,10 @@ public class ListAdsGroupsRequest {
      */
     public String connectionId() {
         return this.connectionId;
+    }
+
+    public Optional<String> effectiveStatus() {
+        return Optional.ofNullable(this.effectiveStatus);
     }
 
     /**
@@ -276,6 +286,12 @@ public class ListAdsGroupsRequest {
      */
     public ListAdsGroupsRequest withConnectionId(@Nonnull String connectionId) {
         this.connectionId = Utils.checkNotNull(connectionId, "connectionId");
+        return this;
+    }
+
+
+    public ListAdsGroupsRequest withEffectiveStatus(@Nullable String effectiveStatus) {
+        this.effectiveStatus = effectiveStatus;
         return this;
     }
 
@@ -409,6 +425,7 @@ public class ListAdsGroupsRequest {
         return 
             Utils.enhancedDeepEquals(this.campaignId, other.campaignId) &&
             Utils.enhancedDeepEquals(this.connectionId, other.connectionId) &&
+            Utils.enhancedDeepEquals(this.effectiveStatus, other.effectiveStatus) &&
             Utils.enhancedDeepEquals(this.endLt, other.endLt) &&
             Utils.enhancedDeepEquals(this.fields, other.fields) &&
             Utils.enhancedDeepEquals(this.ioId, other.ioId) &&
@@ -428,12 +445,12 @@ public class ListAdsGroupsRequest {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            campaignId, connectionId, endLt,
-            fields, ioId, limit,
-            offset, order, orgId,
-            parentId, query, raw,
-            sort, startGte, status,
-            updatedGte);
+            campaignId, connectionId, effectiveStatus,
+            endLt, fields, ioId,
+            limit, offset, order,
+            orgId, parentId, query,
+            raw, sort, startGte,
+            status, updatedGte);
     }
     
     @Override
@@ -441,6 +458,7 @@ public class ListAdsGroupsRequest {
         return Utils.toString(ListAdsGroupsRequest.class,
                 "campaignId", campaignId,
                 "connectionId", connectionId,
+                "effectiveStatus", effectiveStatus,
                 "endLt", endLt,
                 "fields", fields,
                 "ioId", ioId,
@@ -463,6 +481,8 @@ public class ListAdsGroupsRequest {
         private String campaignId;
 
         private String connectionId;
+
+        private String effectiveStatus;
 
         private String endLt;
 
@@ -509,6 +529,11 @@ public class ListAdsGroupsRequest {
          */
         public Builder connectionId(@Nonnull String connectionId) {
             this.connectionId = Utils.checkNotNull(connectionId, "connectionId");
+            return this;
+        }
+
+        public Builder effectiveStatus(@Nullable String effectiveStatus) {
+            this.effectiveStatus = effectiveStatus;
             return this;
         }
 
@@ -617,12 +642,12 @@ public class ListAdsGroupsRequest {
 
         public ListAdsGroupsRequest build() {
             return new ListAdsGroupsRequest(
-                campaignId, connectionId, endLt,
-                fields, ioId, limit,
-                offset, order, orgId,
-                parentId, query, raw,
-                sort, startGte, status,
-                updatedGte);
+                campaignId, connectionId, effectiveStatus,
+                endLt, fields, ioId,
+                limit, offset, order,
+                orgId, parentId, query,
+                raw, sort, startGte,
+                status, updatedGte);
         }
 
     }
