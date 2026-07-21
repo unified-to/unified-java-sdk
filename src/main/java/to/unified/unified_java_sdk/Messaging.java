@@ -6,6 +6,9 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import to.unified.unified_java_sdk.models.operations.CreateMessagingChannelRequest;
+import to.unified.unified_java_sdk.models.operations.CreateMessagingChannelRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.CreateMessagingChannelResponse;
 import to.unified.unified_java_sdk.models.operations.CreateMessagingMessageRequest;
 import to.unified.unified_java_sdk.models.operations.CreateMessagingMessageRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateMessagingMessageResponse;
@@ -21,29 +24,42 @@ import to.unified.unified_java_sdk.models.operations.ListMessagingChannelsRespon
 import to.unified.unified_java_sdk.models.operations.ListMessagingMessagesRequest;
 import to.unified.unified_java_sdk.models.operations.ListMessagingMessagesRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.ListMessagingMessagesResponse;
+import to.unified.unified_java_sdk.models.operations.PatchMessagingChannelRequest;
+import to.unified.unified_java_sdk.models.operations.PatchMessagingChannelRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.PatchMessagingChannelResponse;
 import to.unified.unified_java_sdk.models.operations.PatchMessagingEventRequest;
 import to.unified.unified_java_sdk.models.operations.PatchMessagingEventRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.PatchMessagingEventResponse;
 import to.unified.unified_java_sdk.models.operations.PatchMessagingMessageRequest;
 import to.unified.unified_java_sdk.models.operations.PatchMessagingMessageRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.PatchMessagingMessageResponse;
+import to.unified.unified_java_sdk.models.operations.RemoveMessagingChannelRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveMessagingChannelRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.RemoveMessagingChannelResponse;
 import to.unified.unified_java_sdk.models.operations.RemoveMessagingMessageRequest;
 import to.unified.unified_java_sdk.models.operations.RemoveMessagingMessageRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.RemoveMessagingMessageResponse;
+import to.unified.unified_java_sdk.models.operations.UpdateMessagingChannelRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateMessagingChannelRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.UpdateMessagingChannelResponse;
 import to.unified.unified_java_sdk.models.operations.UpdateMessagingEventRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateMessagingEventRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.UpdateMessagingEventResponse;
 import to.unified.unified_java_sdk.models.operations.UpdateMessagingMessageRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateMessagingMessageRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.UpdateMessagingMessageResponse;
+import to.unified.unified_java_sdk.operations.CreateMessagingChannel;
 import to.unified.unified_java_sdk.operations.CreateMessagingMessage;
 import to.unified.unified_java_sdk.operations.GetMessagingChannel;
 import to.unified.unified_java_sdk.operations.GetMessagingMessage;
 import to.unified.unified_java_sdk.operations.ListMessagingChannels;
 import to.unified.unified_java_sdk.operations.ListMessagingMessages;
+import to.unified.unified_java_sdk.operations.PatchMessagingChannel;
 import to.unified.unified_java_sdk.operations.PatchMessagingEvent;
 import to.unified.unified_java_sdk.operations.PatchMessagingMessage;
+import to.unified.unified_java_sdk.operations.RemoveMessagingChannel;
 import to.unified.unified_java_sdk.operations.RemoveMessagingMessage;
+import to.unified.unified_java_sdk.operations.UpdateMessagingChannel;
 import to.unified.unified_java_sdk.operations.UpdateMessagingEvent;
 import to.unified.unified_java_sdk.operations.UpdateMessagingMessage;
 import to.unified.unified_java_sdk.utils.Headers;
@@ -66,6 +82,28 @@ public class Messaging {
      */
     public AsyncMessaging async() {
         return asyncSDK;
+    }
+
+    /**
+     * Create a channel
+     * 
+     * @return The call builder
+     */
+    public CreateMessagingChannelRequestBuilder createMessagingChannel() {
+        return new CreateMessagingChannelRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Create a channel
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateMessagingChannelResponse createMessagingChannel(@Nonnull CreateMessagingChannelRequest request) {
+        RequestOperation<CreateMessagingChannelRequest, CreateMessagingChannelResponse> operation
+              = new CreateMessagingChannel.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
     }
 
     /**
@@ -179,6 +217,28 @@ public class Messaging {
     }
 
     /**
+     * Update a channel
+     * 
+     * @return The call builder
+     */
+    public PatchMessagingChannelRequestBuilder patchMessagingChannel() {
+        return new PatchMessagingChannelRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Update a channel
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchMessagingChannelResponse patchMessagingChannel(@Nonnull PatchMessagingChannelRequest request) {
+        RequestOperation<PatchMessagingChannelRequest, PatchMessagingChannelResponse> operation
+              = new PatchMessagingChannel.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
      * Update an event
      * 
      * @return The call builder
@@ -223,6 +283,28 @@ public class Messaging {
     }
 
     /**
+     * Remove a channel
+     * 
+     * @return The call builder
+     */
+    public RemoveMessagingChannelRequestBuilder removeMessagingChannel() {
+        return new RemoveMessagingChannelRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Remove a channel
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveMessagingChannelResponse removeMessagingChannel(@Nonnull RemoveMessagingChannelRequest request) {
+        RequestOperation<RemoveMessagingChannelRequest, RemoveMessagingChannelResponse> operation
+              = new RemoveMessagingChannel.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
      * Remove a message
      * 
      * @return The call builder
@@ -241,6 +323,28 @@ public class Messaging {
     public RemoveMessagingMessageResponse removeMessagingMessage(@Nonnull RemoveMessagingMessageRequest request) {
         RequestOperation<RemoveMessagingMessageRequest, RemoveMessagingMessageResponse> operation
               = new RemoveMessagingMessage.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Update a channel
+     * 
+     * @return The call builder
+     */
+    public UpdateMessagingChannelRequestBuilder updateMessagingChannel() {
+        return new UpdateMessagingChannelRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Update a channel
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateMessagingChannelResponse updateMessagingChannel(@Nonnull UpdateMessagingChannelRequest request) {
+        RequestOperation<UpdateMessagingChannelRequest, UpdateMessagingChannelResponse> operation
+              = new UpdateMessagingChannel.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

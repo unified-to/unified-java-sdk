@@ -39,7 +39,7 @@ The samples below show how a published SDK artifact is used:
 
 Gradle:
 ```groovy
-implementation 'to.unified:unified-java-sdk:0.47.43'
+implementation 'to.unified:unified-java-sdk:0.47.44'
 ```
 
 Maven:
@@ -47,7 +47,7 @@ Maven:
 <dependency>
     <groupId>to.unified</groupId>
     <artifactId>unified-java-sdk</artifactId>
-    <version>0.47.43</version>
+    <version>0.47.44</version>
 </dependency>
 ```
 
@@ -593,8 +593,12 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 
 ### [Channel](docs/sdks/channel/README.md)
 
+* [createMessagingChannel](docs/sdks/channel/README.md#createmessagingchannel) - Create a channel
 * [getMessagingChannel](docs/sdks/channel/README.md#getmessagingchannel) - Retrieve a channel
 * [listMessagingChannels](docs/sdks/channel/README.md#listmessagingchannels) - List all channels
+* [patchMessagingChannel](docs/sdks/channel/README.md#patchmessagingchannel) - Update a channel
+* [removeMessagingChannel](docs/sdks/channel/README.md#removemessagingchannel) - Remove a channel
+* [updateMessagingChannel](docs/sdks/channel/README.md#updatemessagingchannel) - Update a channel
 
 ### [Class](docs/sdks/class/README.md)
 
@@ -1383,14 +1387,18 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 
 ### [Messaging](docs/sdks/messaging/README.md)
 
+* [createMessagingChannel](docs/sdks/messaging/README.md#createmessagingchannel) - Create a channel
 * [createMessagingMessage](docs/sdks/messaging/README.md#createmessagingmessage) - Create a message
 * [getMessagingChannel](docs/sdks/messaging/README.md#getmessagingchannel) - Retrieve a channel
 * [getMessagingMessage](docs/sdks/messaging/README.md#getmessagingmessage) - Retrieve a message
 * [listMessagingChannels](docs/sdks/messaging/README.md#listmessagingchannels) - List all channels
 * [listMessagingMessages](docs/sdks/messaging/README.md#listmessagingmessages) - List all messages
+* [patchMessagingChannel](docs/sdks/messaging/README.md#patchmessagingchannel) - Update a channel
 * [patchMessagingEvent](docs/sdks/messaging/README.md#patchmessagingevent) - Update an event
 * [patchMessagingMessage](docs/sdks/messaging/README.md#patchmessagingmessage) - Update a message
+* [removeMessagingChannel](docs/sdks/messaging/README.md#removemessagingchannel) - Remove a channel
 * [removeMessagingMessage](docs/sdks/messaging/README.md#removemessagingmessage) - Remove a message
+* [updateMessagingChannel](docs/sdks/messaging/README.md#updatemessagingchannel) - Update a channel
 * [updateMessagingEvent](docs/sdks/messaging/README.md#updatemessagingevent) - Update an event
 * [updateMessagingMessage](docs/sdks/messaging/README.md#updatemessagingmessage) - Update a message
 

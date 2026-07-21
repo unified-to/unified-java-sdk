@@ -6,14 +6,30 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import to.unified.unified_java_sdk.models.operations.CreateMessagingChannelRequest;
+import to.unified.unified_java_sdk.models.operations.CreateMessagingChannelRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.CreateMessagingChannelResponse;
 import to.unified.unified_java_sdk.models.operations.GetMessagingChannelRequest;
 import to.unified.unified_java_sdk.models.operations.GetMessagingChannelRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.GetMessagingChannelResponse;
 import to.unified.unified_java_sdk.models.operations.ListMessagingChannelsRequest;
 import to.unified.unified_java_sdk.models.operations.ListMessagingChannelsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.ListMessagingChannelsResponse;
+import to.unified.unified_java_sdk.models.operations.PatchMessagingChannelRequest;
+import to.unified.unified_java_sdk.models.operations.PatchMessagingChannelRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.PatchMessagingChannelResponse;
+import to.unified.unified_java_sdk.models.operations.RemoveMessagingChannelRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveMessagingChannelRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.RemoveMessagingChannelResponse;
+import to.unified.unified_java_sdk.models.operations.UpdateMessagingChannelRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateMessagingChannelRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.UpdateMessagingChannelResponse;
+import to.unified.unified_java_sdk.operations.CreateMessagingChannel;
 import to.unified.unified_java_sdk.operations.GetMessagingChannel;
 import to.unified.unified_java_sdk.operations.ListMessagingChannels;
+import to.unified.unified_java_sdk.operations.PatchMessagingChannel;
+import to.unified.unified_java_sdk.operations.RemoveMessagingChannel;
+import to.unified.unified_java_sdk.operations.UpdateMessagingChannel;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -34,6 +50,28 @@ public class Channel {
      */
     public AsyncChannel async() {
         return asyncSDK;
+    }
+
+    /**
+     * Create a channel
+     * 
+     * @return The call builder
+     */
+    public CreateMessagingChannelRequestBuilder createMessagingChannel() {
+        return new CreateMessagingChannelRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Create a channel
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateMessagingChannelResponse createMessagingChannel(@Nonnull CreateMessagingChannelRequest request) {
+        RequestOperation<CreateMessagingChannelRequest, CreateMessagingChannelResponse> operation
+              = new CreateMessagingChannel.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
     }
 
     /**
@@ -77,6 +115,72 @@ public class Channel {
     public ListMessagingChannelsResponse listMessagingChannels(@Nonnull ListMessagingChannelsRequest request) {
         RequestOperation<ListMessagingChannelsRequest, ListMessagingChannelsResponse> operation
               = new ListMessagingChannels.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Update a channel
+     * 
+     * @return The call builder
+     */
+    public PatchMessagingChannelRequestBuilder patchMessagingChannel() {
+        return new PatchMessagingChannelRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Update a channel
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchMessagingChannelResponse patchMessagingChannel(@Nonnull PatchMessagingChannelRequest request) {
+        RequestOperation<PatchMessagingChannelRequest, PatchMessagingChannelResponse> operation
+              = new PatchMessagingChannel.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Remove a channel
+     * 
+     * @return The call builder
+     */
+    public RemoveMessagingChannelRequestBuilder removeMessagingChannel() {
+        return new RemoveMessagingChannelRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Remove a channel
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveMessagingChannelResponse removeMessagingChannel(@Nonnull RemoveMessagingChannelRequest request) {
+        RequestOperation<RemoveMessagingChannelRequest, RemoveMessagingChannelResponse> operation
+              = new RemoveMessagingChannel.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Update a channel
+     * 
+     * @return The call builder
+     */
+    public UpdateMessagingChannelRequestBuilder updateMessagingChannel() {
+        return new UpdateMessagingChannelRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Update a channel
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateMessagingChannelResponse updateMessagingChannel(@Nonnull UpdateMessagingChannelRequest request) {
+        RequestOperation<UpdateMessagingChannelRequest, UpdateMessagingChannelResponse> operation
+              = new UpdateMessagingChannel.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

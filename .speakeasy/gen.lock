@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: cfc256ab-f291-4245-b909-5b9e9a6e6803
 management:
-  docChecksum: 3b22e3eb6058fda75068b7b68db79d73
+  docChecksum: 1c53d4c83d670f3e7401df3422270680
   docVersion: "1.0"
-  speakeasyVersion: 1.790.2
-  generationVersion: 2.918.3
-  releaseVersion: 0.47.43
-  configChecksum: ad1318d00be1dfe639bded106d8a27cd
+  speakeasyVersion: 1.790.3
+  generationVersion: 2.918.4
+  releaseVersion: 0.47.44
+  configChecksum: 92acec8980a081cc933b7150417158d9
   repoURL: https://github.com/unified-to/unified-java-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-java-sdk
@@ -284,6 +284,9 @@ trackedFiles:
   docs/models/operations/CreateMartechMemberQueryParamFields.md: {}
   docs/models/operations/CreateMartechMemberRequest.md: {}
   docs/models/operations/CreateMartechMemberResponse.md: {}
+  docs/models/operations/CreateMessagingChannelQueryParamFields.md: {}
+  docs/models/operations/CreateMessagingChannelRequest.md: {}
+  docs/models/operations/CreateMessagingChannelResponse.md: {}
   docs/models/operations/CreateMessagingMessageQueryParamFields.md: {}
   docs/models/operations/CreateMessagingMessageRequest.md: {}
   docs/models/operations/CreateMessagingMessageResponse.md: {}
@@ -1552,6 +1555,9 @@ trackedFiles:
   docs/models/operations/PatchMartechMemberQueryParamFields.md: {}
   docs/models/operations/PatchMartechMemberRequest.md: {}
   docs/models/operations/PatchMartechMemberResponse.md: {}
+  docs/models/operations/PatchMessagingChannelQueryParamFields.md: {}
+  docs/models/operations/PatchMessagingChannelRequest.md: {}
+  docs/models/operations/PatchMessagingChannelResponse.md: {}
   docs/models/operations/PatchMessagingEventQueryParamFields.md: {}
   docs/models/operations/PatchMessagingEventRequest.md: {}
   docs/models/operations/PatchMessagingEventResponse.md: {}
@@ -1827,6 +1833,8 @@ trackedFiles:
   docs/models/operations/RemoveMartechListResponse.md: {}
   docs/models/operations/RemoveMartechMemberRequest.md: {}
   docs/models/operations/RemoveMartechMemberResponse.md: {}
+  docs/models/operations/RemoveMessagingChannelRequest.md: {}
+  docs/models/operations/RemoveMessagingChannelResponse.md: {}
   docs/models/operations/RemoveMessagingMessageRequest.md: {}
   docs/models/operations/RemoveMessagingMessageResponse.md: {}
   docs/models/operations/RemoveMetadataMetadataRequest.md: {}
@@ -2146,6 +2154,9 @@ trackedFiles:
   docs/models/operations/UpdateMartechMemberQueryParamFields.md: {}
   docs/models/operations/UpdateMartechMemberRequest.md: {}
   docs/models/operations/UpdateMartechMemberResponse.md: {}
+  docs/models/operations/UpdateMessagingChannelQueryParamFields.md: {}
+  docs/models/operations/UpdateMessagingChannelRequest.md: {}
+  docs/models/operations/UpdateMessagingChannelResponse.md: {}
   docs/models/operations/UpdateMessagingEventQueryParamFields.md: {}
   docs/models/operations/UpdateMessagingEventRequest.md: {}
   docs/models/operations/UpdateMessagingEventResponse.md: {}
@@ -6311,6 +6322,7 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/models/operations//async/CreateMartechCampaignRequestBuilder.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations//async/CreateMartechListRequestBuilder.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations//async/CreateMartechMemberRequestBuilder.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations//async/CreateMessagingChannelRequestBuilder.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations//async/CreateMessagingMessageRequestBuilder.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations//async/CreateMetadataMetadataRequestBuilder.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations//async/CreatePassthroughJsonRequestBuilder.java: {}
@@ -6761,6 +6773,7 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/models/operations//async/PatchMartechCampaignRequestBuilder.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations//async/PatchMartechListRequestBuilder.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations//async/PatchMartechMemberRequestBuilder.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations//async/PatchMessagingChannelRequestBuilder.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations//async/PatchMessagingEventRequestBuilder.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations//async/PatchMessagingMessageRequestBuilder.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations//async/PatchMetadataMetadataRequestBuilder.java: {}
@@ -6882,6 +6895,7 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/models/operations//async/RemoveMartechCampaignRequestBuilder.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations//async/RemoveMartechListRequestBuilder.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations//async/RemoveMartechMemberRequestBuilder.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations//async/RemoveMessagingChannelRequestBuilder.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations//async/RemoveMessagingMessageRequestBuilder.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations//async/RemoveMetadataMetadataRequestBuilder.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations//async/RemovePassthroughRequestBuilder.java: {}
@@ -7003,6 +7017,7 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/models/operations//async/UpdateMartechCampaignRequestBuilder.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations//async/UpdateMartechListRequestBuilder.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations//async/UpdateMartechMemberRequestBuilder.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations//async/UpdateMessagingChannelRequestBuilder.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations//async/UpdateMessagingEventRequestBuilder.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations//async/UpdateMessagingMessageRequestBuilder.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations//async/UpdateMetadataMetadataRequestBuilder.java: {}
@@ -7372,6 +7387,10 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/models/operations/CreateMartechMemberRequest.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/CreateMartechMemberRequestBuilder.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/CreateMartechMemberResponse.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/CreateMessagingChannelQueryParamFields.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/CreateMessagingChannelRequest.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/CreateMessagingChannelRequestBuilder.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/CreateMessagingChannelResponse.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/CreateMessagingMessageQueryParamFields.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/CreateMessagingMessageRequest.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/CreateMessagingMessageRequestBuilder.java: {}
@@ -9090,6 +9109,10 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/models/operations/PatchMartechMemberRequest.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/PatchMartechMemberRequestBuilder.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/PatchMartechMemberResponse.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/PatchMessagingChannelQueryParamFields.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/PatchMessagingChannelRequest.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/PatchMessagingChannelRequestBuilder.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/PatchMessagingChannelResponse.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/PatchMessagingEventQueryParamFields.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/PatchMessagingEventRequest.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/PatchMessagingEventRequestBuilder.java: {}
@@ -9486,6 +9509,9 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/models/operations/RemoveMartechMemberRequest.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/RemoveMartechMemberRequestBuilder.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/RemoveMartechMemberResponse.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/RemoveMessagingChannelRequest.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/RemoveMessagingChannelRequestBuilder.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/RemoveMessagingChannelResponse.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/RemoveMessagingMessageRequest.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/RemoveMessagingMessageRequestBuilder.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/RemoveMessagingMessageResponse.java: {}
@@ -9926,6 +9952,10 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/models/operations/UpdateMartechMemberRequest.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/UpdateMartechMemberRequestBuilder.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/UpdateMartechMemberResponse.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/UpdateMessagingChannelQueryParamFields.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/UpdateMessagingChannelRequest.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/UpdateMessagingChannelRequestBuilder.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/UpdateMessagingChannelResponse.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/UpdateMessagingEventQueryParamFields.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/UpdateMessagingEventRequest.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/UpdateMessagingEventRequestBuilder.java: {}
@@ -10166,6 +10196,7 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/models/operations/async/CreateMartechCampaignResponse.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/async/CreateMartechListResponse.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/async/CreateMartechMemberResponse.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/async/CreateMessagingChannelResponse.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/async/CreateMessagingMessageResponse.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/async/CreateMetadataMetadataResponse.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/async/CreatePassthroughJsonResponse.java: {}
@@ -10616,6 +10647,7 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/models/operations/async/PatchMartechCampaignResponse.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/async/PatchMartechListResponse.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/async/PatchMartechMemberResponse.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/async/PatchMessagingChannelResponse.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/async/PatchMessagingEventResponse.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/async/PatchMessagingMessageResponse.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/async/PatchMetadataMetadataResponse.java: {}
@@ -10737,6 +10769,7 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/models/operations/async/RemoveMartechCampaignResponse.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/async/RemoveMartechListResponse.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/async/RemoveMartechMemberResponse.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/async/RemoveMessagingChannelResponse.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/async/RemoveMessagingMessageResponse.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/async/RemoveMetadataMetadataResponse.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/async/RemovePassthroughResponse.java: {}
@@ -10858,6 +10891,7 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/models/operations/async/UpdateMartechCampaignResponse.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/async/UpdateMartechListResponse.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/async/UpdateMartechMemberResponse.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/async/UpdateMessagingChannelResponse.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/async/UpdateMessagingEventResponse.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/async/UpdateMessagingMessageResponse.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/async/UpdateMetadataMetadataResponse.java: {}
@@ -13638,6 +13672,7 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/operations/CreateMartechCampaign.java: {}
   src/main/java/to/unified/unified_java_sdk/operations/CreateMartechList.java: {}
   src/main/java/to/unified/unified_java_sdk/operations/CreateMartechMember.java: {}
+  src/main/java/to/unified/unified_java_sdk/operations/CreateMessagingChannel.java: {}
   src/main/java/to/unified/unified_java_sdk/operations/CreateMessagingMessage.java: {}
   src/main/java/to/unified/unified_java_sdk/operations/CreateMetadataMetadata.java: {}
   src/main/java/to/unified/unified_java_sdk/operations/CreatePassthroughJson.java: {}
@@ -14091,6 +14126,7 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/operations/PatchMartechCampaign.java: {}
   src/main/java/to/unified/unified_java_sdk/operations/PatchMartechList.java: {}
   src/main/java/to/unified/unified_java_sdk/operations/PatchMartechMember.java: {}
+  src/main/java/to/unified/unified_java_sdk/operations/PatchMessagingChannel.java: {}
   src/main/java/to/unified/unified_java_sdk/operations/PatchMessagingEvent.java: {}
   src/main/java/to/unified/unified_java_sdk/operations/PatchMessagingMessage.java: {}
   src/main/java/to/unified/unified_java_sdk/operations/PatchMetadataMetadata.java: {}
@@ -14212,6 +14248,7 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/operations/RemoveMartechCampaign.java: {}
   src/main/java/to/unified/unified_java_sdk/operations/RemoveMartechList.java: {}
   src/main/java/to/unified/unified_java_sdk/operations/RemoveMartechMember.java: {}
+  src/main/java/to/unified/unified_java_sdk/operations/RemoveMessagingChannel.java: {}
   src/main/java/to/unified/unified_java_sdk/operations/RemoveMessagingMessage.java: {}
   src/main/java/to/unified/unified_java_sdk/operations/RemoveMetadataMetadata.java: {}
   src/main/java/to/unified/unified_java_sdk/operations/RemovePassthrough.java: {}
@@ -14333,6 +14370,7 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/operations/UpdateMartechCampaign.java: {}
   src/main/java/to/unified/unified_java_sdk/operations/UpdateMartechList.java: {}
   src/main/java/to/unified/unified_java_sdk/operations/UpdateMartechMember.java: {}
+  src/main/java/to/unified/unified_java_sdk/operations/UpdateMessagingChannel.java: {}
   src/main/java/to/unified/unified_java_sdk/operations/UpdateMessagingEvent.java: {}
   src/main/java/to/unified/unified_java_sdk/operations/UpdateMessagingMessage.java: {}
   src/main/java/to/unified/unified_java_sdk/operations/UpdateMetadataMetadata.java: {}
@@ -27641,9 +27679,47 @@ examples:
       responses:
         "200":
           application/json: [{}]
+  createMessagingChannel:
+    speakeasy-default-create-messaging-channel:
+      parameters:
+        path:
+          connection_id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  patchMessagingChannel:
+    speakeasy-default-patch-messaging-channel:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  removeMessagingChannel:
+    speakeasy-default-remove-messaging-channel:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+  updateMessagingChannel:
+    speakeasy-default-update-messaging-channel:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: "## Java SDK Changes:\n* `unified-to.report.listAdsReports()`:  `response.[].metrics[].group.effectiveStatus` **Added**\n* `unified-to.ads.createAdsAd()`: \n  *  `request.fields` **Changed**\n* `unified-to.ads.createAdsGroup()`: \n  *  `request` **Changed**\n  *  `response.effectiveStatus` **Added**\n* `unified-to.ads.getAdsAd()`: \n  *  `request.fields` **Changed**\n* `unified-to.ads.getAdsGroup()`: \n  *  `request.fields` **Changed**\n  *  `response.effectiveStatus` **Added**\n* `unified-to.ads.listAdsAds()`: \n  *  `request.fields` **Changed**\n* `unified-to.ads.listAdsGroups()`: \n  *  `request` **Changed**\n  *  `response.[].effectiveStatus` **Added**\n* `unified-to.ads.listAdsReports()`:  `response.[].metrics[].group.effectiveStatus` **Added**\n* `unified-to.ads.patchAdsAd()`: \n  *  `request.fields` **Changed**\n* `unified-to.ads.patchAdsGroup()`: \n  *  `request` **Changed**\n  *  `response.effectiveStatus` **Added**\n* `unified-to.ads.updateAdsAd()`: \n  *  `request.fields` **Changed**\n* `unified-to.ads.updateAdsGroup()`: \n  *  `request` **Changed**\n  *  `response.effectiveStatus` **Added**\n* `unified-to.ad.createAdsAd()`: \n  *  `request.fields` **Changed**\n* `unified-to.ad.getAdsAd()`: \n  *  `request.fields` **Changed**\n* `unified-to.ad.listAdsAds()`: \n  *  `request.fields` **Changed**\n* `unified-to.ad.patchAdsAd()`: \n  *  `request.fields` **Changed**\n* `unified-to.ad.updateAdsAd()`: \n  *  `request.fields` **Changed**\n* `unified-to.group.createAdsGroup()`: \n  *  `request` **Changed**\n  *  `response.effectiveStatus` **Added**\n* `unified-to.group.getAdsGroup()`: \n  *  `request.fields` **Changed**\n  *  `response.effectiveStatus` **Added**\n* `unified-to.group.listAdsGroups()`: \n  *  `request` **Changed**\n  *  `response.[].effectiveStatus` **Added**\n* `unified-to.group.patchAdsGroup()`: \n  *  `request` **Changed**\n  *  `response.effectiveStatus` **Added**\n* `unified-to.group.updateAdsGroup()`: \n  *  `request` **Changed**\n  *  `response.effectiveStatus` **Added**\n* `unified-to.ats.createAtsCandidate()`: \n  *  `request` **Changed**\n  *  `response.userIds` **Added**\n* `unified-to.ats.getAtsCandidate()`: \n  *  `request.fields` **Changed**\n  *  `response.userIds` **Added**\n* `unified-to.ats.listAtsCandidates()`: \n  *  `request.fields` **Changed**\n  *  `response.[].userIds` **Added**\n* `unified-to.ats.patchAtsCandidate()`: \n  *  `request` **Changed**\n  *  `response.userIds` **Added**\n* `unified-to.ats.updateAtsCandidate()`: \n  *  `request` **Changed**\n  *  `response.userIds` **Added**\n* `unified-to.candidate.createAtsCandidate()`: \n  *  `request` **Changed**\n  *  `response.userIds` **Added**\n* `unified-to.candidate.getAtsCandidate()`: \n  *  `request.fields` **Changed**\n  *  `response.userIds` **Added**\n* `unified-to.candidate.listAtsCandidates()`: \n  *  `request.fields` **Changed**\n  *  `response.[].userIds` **Added**\n* `unified-to.candidate.patchAtsCandidate()`: \n  *  `request` **Changed**\n  *  `response.userIds` **Added**\n* `unified-to.candidate.updateAtsCandidate()`: \n  *  `request` **Changed**\n  *  `response.userIds` **Added**\n* `unified-to.repo.createRepoCommit()`: \n  *  `request` **Changed**\n  *  `response.pullrequestIds` **Added**\n* `unified-to.repo.getRepoCommit()`: \n  *  `request.fields` **Changed**\n  *  `response.pullrequestIds` **Added**\n* `unified-to.repo.listRepoCommits()`: \n  *  `request.fields` **Changed**\n  *  `response.[].pullrequestIds` **Added**\n* `unified-to.repo.patchRepoCommit()`: \n  *  `request` **Changed**\n  *  `response.pullrequestIds` **Added**\n* `unified-to.repo.updateRepoCommit()`: \n  *  `request` **Changed**\n  *  `response.pullrequestIds` **Added**\n* `unified-to.commit.createRepoCommit()`: \n  *  `request` **Changed**\n  *  `response.pullrequestIds` **Added**\n* `unified-to.commit.getRepoCommit()`: \n  *  `request.fields` **Changed**\n  *  `response.pullrequestIds` **Added**\n* `unified-to.commit.listRepoCommits()`: \n  *  `request.fields` **Changed**\n  *  `response.[].pullrequestIds` **Added**\n* `unified-to.commit.patchRepoCommit()`: \n  *  `request` **Changed**\n  *  `response.pullrequestIds` **Added**\n* `unified-to.commit.updateRepoCommit()`: \n  *  `request` **Changed**\n  *  `response.pullrequestIds` **Added**\n* `unified-to.unified.listUnifiedIntegrationWorkspaces()`:  `response.[].requiresCname` **Added**\n* `unified-to.unified.listUnifiedIntegrations()`:  `response.[].requiresCname` **Added**\n* `unified-to.integration.listUnifiedIntegrationWorkspaces()`:  `response.[].requiresCname` **Added**\n* `unified-to.integration.listUnifiedIntegrations()`:  `response.[].requiresCname` **Added**\n"
+releaseNotes: "## Java SDK Changes:\n* `unified-to.messaging.createMessagingChannel()`: **Added**\n* `unified-to.messaging.patchMessagingChannel()`: **Added**\n* `unified-to.messaging.removeMessagingChannel()`: **Added**\n* `unified-to.messaging.updateMessagingChannel()`: **Added**\n* `unified-to.channel.createMessagingChannel()`: **Added**\n* `unified-to.channel.patchMessagingChannel()`: **Added**\n* `unified-to.channel.removeMessagingChannel()`: **Added**\n* `unified-to.channel.updateMessagingChannel()`: **Added**\n* `unified-to.unified.createUnifiedConnection()`: \n  *  `request.permissions[].enum(messagingChannelWrite)` **Added**\n  *  `response.permissions[].enum(messagingChannelWrite)` **Added**\n* `unified-to.unified.getUnifiedConnection()`:  `response.permissions[].enum(messagingChannelWrite)` **Added**\n* `unified-to.unified.listUnifiedConnections()`:  `response.[].permissions[].enum(messagingChannelWrite)` **Added**\n* `unified-to.unified.patchUnifiedConnection()`: \n  *  `request.connection.permissions[].enum(messagingChannelWrite)` **Added**\n  *  `response.permissions[].enum(messagingChannelWrite)` **Added**\n* `unified-to.unified.updateUnifiedConnection()`: \n  *  `request.connection.permissions[].enum(messagingChannelWrite)` **Added**\n  *  `response.permissions[].enum(messagingChannelWrite)` **Added**\n* `unified-to.connection.createUnifiedConnection()`: \n  *  `request.permissions[].enum(messagingChannelWrite)` **Added**\n  *  `response.permissions[].enum(messagingChannelWrite)` **Added**\n* `unified-to.connection.getUnifiedConnection()`:  `response.permissions[].enum(messagingChannelWrite)` **Added**\n* `unified-to.connection.listUnifiedConnections()`:  `response.[].permissions[].enum(messagingChannelWrite)` **Added**\n* `unified-to.connection.patchUnifiedConnection()`: \n  *  `request.connection.permissions[].enum(messagingChannelWrite)` **Added**\n  *  `response.permissions[].enum(messagingChannelWrite)` **Added**\n* `unified-to.connection.updateUnifiedConnection()`: \n  *  `request.connection.permissions[].enum(messagingChannelWrite)` **Added**\n  *  `response.permissions[].enum(messagingChannelWrite)` **Added**\n"
 generatedFiles:
   - .gitattributes
   - USAGE.md
