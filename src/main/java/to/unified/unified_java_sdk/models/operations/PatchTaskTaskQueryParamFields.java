@@ -19,6 +19,8 @@ public enum PatchTaskTaskQueryParamFields {
     STATUS("status"),
     NOTES("notes"),
     DUE_AT("due_at"),
+    START_AT("start_at"),
+    END_AT("end_at"),
     PRIORITY("priority"),
     ASSIGNED_USER_IDS("assigned_user_ids"),
     CREATOR_USER_ID("creator_user_id"),
@@ -29,6 +31,7 @@ public enum PatchTaskTaskQueryParamFields {
     ATTACHMENT_IDS("attachment_ids"),
     METADATA("metadata"),
     HAS_CHILDREN("has_children"),
+    TYPE("type"),
     RAW("raw");
 
     @JsonValue

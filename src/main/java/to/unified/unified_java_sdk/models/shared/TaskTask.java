@@ -54,6 +54,11 @@ public class TaskTask {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("end_at")
+    private OffsetDateTime endAt;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("follower_user_ids")
     private List<String> followerUserIds;
 
@@ -109,6 +114,11 @@ public class TaskTask {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("start_at")
+    private OffsetDateTime startAt;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     private TaskTaskStatus status;
 
@@ -116,6 +126,11 @@ public class TaskTask {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     private List<String> tags;
+
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("type")
+    private String type;
 
 
     @JsonInclude(Include.NON_ABSENT)
@@ -135,6 +150,7 @@ public class TaskTask {
             @JsonProperty("created_at") @Nullable OffsetDateTime createdAt,
             @JsonProperty("creator_user_id") @Nullable String creatorUserId,
             @JsonProperty("due_at") @Nullable OffsetDateTime dueAt,
+            @JsonProperty("end_at") @Nullable OffsetDateTime endAt,
             @JsonProperty("follower_user_ids") @Nullable List<String> followerUserIds,
             @JsonProperty("group_ids") @Nullable List<String> groupIds,
             @JsonProperty("has_children") @Nullable Boolean hasChildren,
@@ -146,8 +162,10 @@ public class TaskTask {
             @JsonProperty("priority") @Nullable String priority,
             @JsonProperty("project_id") @Nullable String projectId,
             @JsonProperty("raw") @Nullable Map<String, Object> raw,
+            @JsonProperty("start_at") @Nullable OffsetDateTime startAt,
             @JsonProperty("status") @Nullable TaskTaskStatus status,
             @JsonProperty("tags") @Nullable List<String> tags,
+            @JsonProperty("type") @Nullable String type,
             @JsonProperty("updated_at") @Nullable OffsetDateTime updatedAt,
             @JsonProperty("url") @Nullable String url) {
         this.assignedUserIds = assignedUserIds;
@@ -156,6 +174,7 @@ public class TaskTask {
         this.createdAt = createdAt;
         this.creatorUserId = creatorUserId;
         this.dueAt = dueAt;
+        this.endAt = endAt;
         this.followerUserIds = followerUserIds;
         this.groupIds = groupIds;
         this.hasChildren = hasChildren;
@@ -167,14 +186,17 @@ public class TaskTask {
         this.priority = priority;
         this.projectId = projectId;
         this.raw = raw;
+        this.startAt = startAt;
         this.status = status;
         this.tags = tags;
+        this.type = type;
         this.updatedAt = updatedAt;
         this.url = url;
     }
     
     public TaskTask() {
         this(null, null, null,
+            null, null, null,
             null, null, null,
             null, null, null,
             null, null, null,
@@ -208,6 +230,10 @@ public class TaskTask {
 
     public Optional<OffsetDateTime> dueAt() {
         return Optional.ofNullable(this.dueAt);
+    }
+
+    public Optional<OffsetDateTime> endAt() {
+        return Optional.ofNullable(this.endAt);
     }
 
     public Optional<List<String>> followerUserIds() {
@@ -254,12 +280,20 @@ public class TaskTask {
         return Optional.ofNullable(this.raw);
     }
 
+    public Optional<OffsetDateTime> startAt() {
+        return Optional.ofNullable(this.startAt);
+    }
+
     public Optional<TaskTaskStatus> status() {
         return Optional.ofNullable(this.status);
     }
 
     public Optional<List<String>> tags() {
         return Optional.ofNullable(this.tags);
+    }
+
+    public Optional<String> type() {
+        return Optional.ofNullable(this.type);
     }
 
     public Optional<OffsetDateTime> updatedAt() {
@@ -310,6 +344,12 @@ public class TaskTask {
 
     public TaskTask withDueAt(@Nullable OffsetDateTime dueAt) {
         this.dueAt = dueAt;
+        return this;
+    }
+
+
+    public TaskTask withEndAt(@Nullable OffsetDateTime endAt) {
+        this.endAt = endAt;
         return this;
     }
 
@@ -380,6 +420,12 @@ public class TaskTask {
     }
 
 
+    public TaskTask withStartAt(@Nullable OffsetDateTime startAt) {
+        this.startAt = startAt;
+        return this;
+    }
+
+
     public TaskTask withStatus(@Nullable TaskTaskStatus status) {
         this.status = status;
         return this;
@@ -388,6 +434,12 @@ public class TaskTask {
 
     public TaskTask withTags(@Nullable List<String> tags) {
         this.tags = tags;
+        return this;
+    }
+
+
+    public TaskTask withType(@Nullable String type) {
+        this.type = type;
         return this;
     }
 
@@ -420,6 +472,7 @@ public class TaskTask {
             Utils.enhancedDeepEquals(this.createdAt, other.createdAt) &&
             Utils.enhancedDeepEquals(this.creatorUserId, other.creatorUserId) &&
             Utils.enhancedDeepEquals(this.dueAt, other.dueAt) &&
+            Utils.enhancedDeepEquals(this.endAt, other.endAt) &&
             Utils.enhancedDeepEquals(this.followerUserIds, other.followerUserIds) &&
             Utils.enhancedDeepEquals(this.groupIds, other.groupIds) &&
             Utils.enhancedDeepEquals(this.hasChildren, other.hasChildren) &&
@@ -431,8 +484,10 @@ public class TaskTask {
             Utils.enhancedDeepEquals(this.priority, other.priority) &&
             Utils.enhancedDeepEquals(this.projectId, other.projectId) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
+            Utils.enhancedDeepEquals(this.startAt, other.startAt) &&
             Utils.enhancedDeepEquals(this.status, other.status) &&
             Utils.enhancedDeepEquals(this.tags, other.tags) &&
+            Utils.enhancedDeepEquals(this.type, other.type) &&
             Utils.enhancedDeepEquals(this.updatedAt, other.updatedAt) &&
             Utils.enhancedDeepEquals(this.url, other.url);
     }
@@ -442,11 +497,12 @@ public class TaskTask {
         return Utils.enhancedHash(
             assignedUserIds, attachmentIds, completedAt,
             createdAt, creatorUserId, dueAt,
-            followerUserIds, groupIds, hasChildren,
-            id, metadata, name,
-            notes, parentId, priority,
-            projectId, raw, status,
-            tags, updatedAt, url);
+            endAt, followerUserIds, groupIds,
+            hasChildren, id, metadata,
+            name, notes, parentId,
+            priority, projectId, raw,
+            startAt, status, tags,
+            type, updatedAt, url);
     }
     
     @Override
@@ -458,6 +514,7 @@ public class TaskTask {
                 "createdAt", createdAt,
                 "creatorUserId", creatorUserId,
                 "dueAt", dueAt,
+                "endAt", endAt,
                 "followerUserIds", followerUserIds,
                 "groupIds", groupIds,
                 "hasChildren", hasChildren,
@@ -469,8 +526,10 @@ public class TaskTask {
                 "priority", priority,
                 "projectId", projectId,
                 "raw", raw,
+                "startAt", startAt,
                 "status", status,
                 "tags", tags,
+                "type", type,
                 "updatedAt", updatedAt,
                 "url", url);
     }
@@ -489,6 +548,8 @@ public class TaskTask {
         private String creatorUserId;
 
         private OffsetDateTime dueAt;
+
+        private OffsetDateTime endAt;
 
         private List<String> followerUserIds;
 
@@ -512,9 +573,13 @@ public class TaskTask {
 
         private Map<String, Object> raw;
 
+        private OffsetDateTime startAt;
+
         private TaskTaskStatus status;
 
         private List<String> tags;
+
+        private String type;
 
         private OffsetDateTime updatedAt;
 
@@ -554,6 +619,11 @@ public class TaskTask {
 
         public Builder dueAt(@Nullable OffsetDateTime dueAt) {
             this.dueAt = dueAt;
+            return this;
+        }
+
+        public Builder endAt(@Nullable OffsetDateTime endAt) {
+            this.endAt = endAt;
             return this;
         }
 
@@ -612,6 +682,11 @@ public class TaskTask {
             return this;
         }
 
+        public Builder startAt(@Nullable OffsetDateTime startAt) {
+            this.startAt = startAt;
+            return this;
+        }
+
         public Builder status(@Nullable TaskTaskStatus status) {
             this.status = status;
             return this;
@@ -619,6 +694,11 @@ public class TaskTask {
 
         public Builder tags(@Nullable List<String> tags) {
             this.tags = tags;
+            return this;
+        }
+
+        public Builder type(@Nullable String type) {
+            this.type = type;
             return this;
         }
 
@@ -636,11 +716,12 @@ public class TaskTask {
             return new TaskTask(
                 assignedUserIds, attachmentIds, completedAt,
                 createdAt, creatorUserId, dueAt,
-                followerUserIds, groupIds, hasChildren,
-                id, metadata, name,
-                notes, parentId, priority,
-                projectId, raw, status,
-                tags, updatedAt, url);
+                endAt, followerUserIds, groupIds,
+                hasChildren, id, metadata,
+                name, notes, parentId,
+                priority, projectId, raw,
+                startAt, status, tags,
+                type, updatedAt, url);
         }
 
     }

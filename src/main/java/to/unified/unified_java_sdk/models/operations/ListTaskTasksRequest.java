@@ -17,6 +17,12 @@ import to.unified.unified_java_sdk.utils.Utils;
 
 public class ListTaskTasksRequest {
     /**
+     * The assigned user/employee ID to filter by (reference to HrisEmployee)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=assigned_user_id")
+    private String assignedUserId;
+
+    /**
      * ID of the connection
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=connection_id")
@@ -103,6 +109,7 @@ public class ListTaskTasksRequest {
 
     @JsonCreator
     public ListTaskTasksRequest(
+            @Nullable String assignedUserId,
             @Nonnull String connectionId,
             @Nullable String endLt,
             @Nullable List<ListTaskTasksQueryParamFields> fields,
@@ -118,6 +125,7 @@ public class ListTaskTasksRequest {
             @Nullable String status,
             @Nullable String updatedGte,
             @Nullable String userId) {
+        this.assignedUserId = assignedUserId;
         this.connectionId = Optional.ofNullable(connectionId)
             .orElseThrow(() -> new IllegalArgumentException("connectionId cannot be null"));
         this.endLt = endLt;
@@ -138,11 +146,19 @@ public class ListTaskTasksRequest {
     
     public ListTaskTasksRequest(
             @Nonnull String connectionId) {
-        this(connectionId, null, null,
+        this(null, connectionId, null,
             null, null, null,
             null, null, null,
             null, null, null,
-            null, null, null);
+            null, null, null,
+            null);
+    }
+
+    /**
+     * The assigned user/employee ID to filter by (reference to HrisEmployee)
+     */
+    public Optional<String> assignedUserId() {
+        return Optional.ofNullable(this.assignedUserId);
     }
 
     /**
@@ -243,6 +259,15 @@ public class ListTaskTasksRequest {
 
     public static Builder builder() {
         return new Builder();
+    }
+
+
+    /**
+     * The assigned user/employee ID to filter by (reference to HrisEmployee)
+     */
+    public ListTaskTasksRequest withAssignedUserId(@Nullable String assignedUserId) {
+        this.assignedUserId = assignedUserId;
+        return this;
     }
 
 
@@ -382,6 +407,7 @@ public class ListTaskTasksRequest {
         }
         ListTaskTasksRequest other = (ListTaskTasksRequest) o;
         return 
+            Utils.enhancedDeepEquals(this.assignedUserId, other.assignedUserId) &&
             Utils.enhancedDeepEquals(this.connectionId, other.connectionId) &&
             Utils.enhancedDeepEquals(this.endLt, other.endLt) &&
             Utils.enhancedDeepEquals(this.fields, other.fields) &&
@@ -402,16 +428,18 @@ public class ListTaskTasksRequest {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            connectionId, endLt, fields,
-            limit, offset, order,
-            parentId, projectId, query,
-            raw, sort, startGte,
-            status, updatedGte, userId);
+            assignedUserId, connectionId, endLt,
+            fields, limit, offset,
+            order, parentId, projectId,
+            query, raw, sort,
+            startGte, status, updatedGte,
+            userId);
     }
     
     @Override
     public String toString() {
         return Utils.toString(ListTaskTasksRequest.class,
+                "assignedUserId", assignedUserId,
                 "connectionId", connectionId,
                 "endLt", endLt,
                 "fields", fields,
@@ -431,6 +459,8 @@ public class ListTaskTasksRequest {
 
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
+
+        private String assignedUserId;
 
         private String connectionId;
 
@@ -464,6 +494,14 @@ public class ListTaskTasksRequest {
 
         private Builder() {
           // force use of static builder() method
+        }
+
+        /**
+         * The assigned user/employee ID to filter by (reference to HrisEmployee)
+         */
+        public Builder assignedUserId(@Nullable String assignedUserId) {
+            this.assignedUserId = assignedUserId;
+            return this;
         }
 
         /**
@@ -579,11 +617,12 @@ public class ListTaskTasksRequest {
 
         public ListTaskTasksRequest build() {
             return new ListTaskTasksRequest(
-                connectionId, endLt, fields,
-                limit, offset, order,
-                parentId, projectId, query,
-                raw, sort, startGte,
-                status, updatedGte, userId);
+                assignedUserId, connectionId, endLt,
+                fields, limit, offset,
+                order, parentId, projectId,
+                query, raw, sort,
+                startGte, status, updatedGte,
+                userId);
         }
 
     }
