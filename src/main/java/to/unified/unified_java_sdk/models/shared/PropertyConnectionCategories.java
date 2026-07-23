@@ -51,6 +51,7 @@ public class PropertyConnectionCategories {
     public static final PropertyConnectionCategories SIGNING = new PropertyConnectionCategories("signing");
     public static final PropertyConnectionCategories CLUBS = new PropertyConnectionCategories("clubs");
     public static final PropertyConnectionCategories DATASTORE = new PropertyConnectionCategories("datastore");
+    public static final PropertyConnectionCategories CDP = new PropertyConnectionCategories("cdp");
 
     // This map will grow whenever a Color gets created with a new
     // unrecognized value (a potential memory leak if the user is not
@@ -155,6 +156,7 @@ public class PropertyConnectionCategories {
         map.put("signing", SIGNING);
         map.put("clubs", CLUBS);
         map.put("datastore", DATASTORE);
+        map.put("cdp", CDP);
         return map;
     }
 
@@ -191,6 +193,7 @@ public class PropertyConnectionCategories {
         map.put("signing", PropertyConnectionCategoriesEnum.SIGNING);
         map.put("clubs", PropertyConnectionCategoriesEnum.CLUBS);
         map.put("datastore", PropertyConnectionCategoriesEnum.DATASTORE);
+        map.put("cdp", PropertyConnectionCategoriesEnum.CDP);
         return map;
     }
     
@@ -227,7 +230,8 @@ public class PropertyConnectionCategories {
         ASSESSMENT("assessment"),
         SIGNING("signing"),
         CLUBS("clubs"),
-        DATASTORE("datastore"),;
+        DATASTORE("datastore"),
+        CDP("cdp"),;
 
         private final String value;
 

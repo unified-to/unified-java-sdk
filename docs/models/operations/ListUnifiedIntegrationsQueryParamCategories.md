@@ -44,3 +44,4 @@ ListUnifiedIntegrationsQueryParamCategories value = ListUnifiedIntegrationsQuery
 | `SIGNING`      | signing        |
 | `CLUBS`        | clubs          |
 | `DATASTORE`    | datastore      |
+| `CDP`          | cdp            |

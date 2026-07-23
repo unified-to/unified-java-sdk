@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: cfc256ab-f291-4245-b909-5b9e9a6e6803
 management:
-  docChecksum: 335e17908653c0fa69c4c2a83a1a7885
+  docChecksum: df9d7e70f96a426fc6497f3a82fde17e
   docVersion: "1.0"
   speakeasyVersion: 1.790.3
   generationVersion: 2.918.4
-  releaseVersion: 0.47.45
-  configChecksum: 5a54fd8e07304db876169a7d79143e93
+  releaseVersion: 0.47.46
+  configChecksum: e115d98a0d29b1185833b83307bc37e5
   repoURL: https://github.com/unified-to/unified-java-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-java-sdk
@@ -149,6 +149,24 @@ trackedFiles:
   docs/models/operations/CreateCalendarWebinarQueryParamFields.md: {}
   docs/models/operations/CreateCalendarWebinarRequest.md: {}
   docs/models/operations/CreateCalendarWebinarResponse.md: {}
+  docs/models/operations/CreateCdpActivationQueryParamFields.md: {}
+  docs/models/operations/CreateCdpActivationRequest.md: {}
+  docs/models/operations/CreateCdpActivationResponse.md: {}
+  docs/models/operations/CreateCdpDestinationQueryParamFields.md: {}
+  docs/models/operations/CreateCdpDestinationRequest.md: {}
+  docs/models/operations/CreateCdpDestinationResponse.md: {}
+  docs/models/operations/CreateCdpEventQueryParamFields.md: {}
+  docs/models/operations/CreateCdpEventRequest.md: {}
+  docs/models/operations/CreateCdpEventResponse.md: {}
+  docs/models/operations/CreateCdpProfileQueryParamFields.md: {}
+  docs/models/operations/CreateCdpProfileRequest.md: {}
+  docs/models/operations/CreateCdpProfileResponse.md: {}
+  docs/models/operations/CreateCdpSegmentQueryParamFields.md: {}
+  docs/models/operations/CreateCdpSegmentRequest.md: {}
+  docs/models/operations/CreateCdpSegmentResponse.md: {}
+  docs/models/operations/CreateCdpSourceQueryParamFields.md: {}
+  docs/models/operations/CreateCdpSourceRequest.md: {}
+  docs/models/operations/CreateCdpSourceResponse.md: {}
   docs/models/operations/CreateCommerceCollectionQueryParamFields.md: {}
   docs/models/operations/CreateCommerceCollectionRequest.md: {}
   docs/models/operations/CreateCommerceCollectionResponse.md: {}
@@ -536,6 +554,24 @@ trackedFiles:
   docs/models/operations/GetCalendarWebinarQueryParamFields.md: {}
   docs/models/operations/GetCalendarWebinarRequest.md: {}
   docs/models/operations/GetCalendarWebinarResponse.md: {}
+  docs/models/operations/GetCdpActivationQueryParamFields.md: {}
+  docs/models/operations/GetCdpActivationRequest.md: {}
+  docs/models/operations/GetCdpActivationResponse.md: {}
+  docs/models/operations/GetCdpDestinationQueryParamFields.md: {}
+  docs/models/operations/GetCdpDestinationRequest.md: {}
+  docs/models/operations/GetCdpDestinationResponse.md: {}
+  docs/models/operations/GetCdpEventQueryParamFields.md: {}
+  docs/models/operations/GetCdpEventRequest.md: {}
+  docs/models/operations/GetCdpEventResponse.md: {}
+  docs/models/operations/GetCdpProfileQueryParamFields.md: {}
+  docs/models/operations/GetCdpProfileRequest.md: {}
+  docs/models/operations/GetCdpProfileResponse.md: {}
+  docs/models/operations/GetCdpSegmentQueryParamFields.md: {}
+  docs/models/operations/GetCdpSegmentRequest.md: {}
+  docs/models/operations/GetCdpSegmentResponse.md: {}
+  docs/models/operations/GetCdpSourceQueryParamFields.md: {}
+  docs/models/operations/GetCdpSourceRequest.md: {}
+  docs/models/operations/GetCdpSourceResponse.md: {}
   docs/models/operations/GetClubsActivityQueryParamFields.md: {}
   docs/models/operations/GetClubsActivityRequest.md: {}
   docs/models/operations/GetClubsActivityResponse.md: {}
@@ -993,6 +1029,24 @@ trackedFiles:
   docs/models/operations/ListCalendarWebinarsQueryParamFields.md: {}
   docs/models/operations/ListCalendarWebinarsRequest.md: {}
   docs/models/operations/ListCalendarWebinarsResponse.md: {}
+  docs/models/operations/ListCdpActivationsQueryParamFields.md: {}
+  docs/models/operations/ListCdpActivationsRequest.md: {}
+  docs/models/operations/ListCdpActivationsResponse.md: {}
+  docs/models/operations/ListCdpDestinationsQueryParamFields.md: {}
+  docs/models/operations/ListCdpDestinationsRequest.md: {}
+  docs/models/operations/ListCdpDestinationsResponse.md: {}
+  docs/models/operations/ListCdpEventsQueryParamFields.md: {}
+  docs/models/operations/ListCdpEventsRequest.md: {}
+  docs/models/operations/ListCdpEventsResponse.md: {}
+  docs/models/operations/ListCdpProfilesQueryParamFields.md: {}
+  docs/models/operations/ListCdpProfilesRequest.md: {}
+  docs/models/operations/ListCdpProfilesResponse.md: {}
+  docs/models/operations/ListCdpSegmentsQueryParamFields.md: {}
+  docs/models/operations/ListCdpSegmentsRequest.md: {}
+  docs/models/operations/ListCdpSegmentsResponse.md: {}
+  docs/models/operations/ListCdpSourcesQueryParamFields.md: {}
+  docs/models/operations/ListCdpSourcesRequest.md: {}
+  docs/models/operations/ListCdpSourcesResponse.md: {}
   docs/models/operations/ListClubsActivitiesQueryParamFields.md: {}
   docs/models/operations/ListClubsActivitiesRequest.md: {}
   docs/models/operations/ListClubsActivitiesResponse.md: {}
@@ -1429,6 +1483,24 @@ trackedFiles:
   docs/models/operations/PatchCalendarWebinarQueryParamFields.md: {}
   docs/models/operations/PatchCalendarWebinarRequest.md: {}
   docs/models/operations/PatchCalendarWebinarResponse.md: {}
+  docs/models/operations/PatchCdpActivationQueryParamFields.md: {}
+  docs/models/operations/PatchCdpActivationRequest.md: {}
+  docs/models/operations/PatchCdpActivationResponse.md: {}
+  docs/models/operations/PatchCdpDestinationQueryParamFields.md: {}
+  docs/models/operations/PatchCdpDestinationRequest.md: {}
+  docs/models/operations/PatchCdpDestinationResponse.md: {}
+  docs/models/operations/PatchCdpEventQueryParamFields.md: {}
+  docs/models/operations/PatchCdpEventRequest.md: {}
+  docs/models/operations/PatchCdpEventResponse.md: {}
+  docs/models/operations/PatchCdpProfileQueryParamFields.md: {}
+  docs/models/operations/PatchCdpProfileRequest.md: {}
+  docs/models/operations/PatchCdpProfileResponse.md: {}
+  docs/models/operations/PatchCdpSegmentQueryParamFields.md: {}
+  docs/models/operations/PatchCdpSegmentRequest.md: {}
+  docs/models/operations/PatchCdpSegmentResponse.md: {}
+  docs/models/operations/PatchCdpSourceQueryParamFields.md: {}
+  docs/models/operations/PatchCdpSourceRequest.md: {}
+  docs/models/operations/PatchCdpSourceResponse.md: {}
   docs/models/operations/PatchCommerceCollectionQueryParamFields.md: {}
   docs/models/operations/PatchCommerceCollectionRequest.md: {}
   docs/models/operations/PatchCommerceCollectionResponse.md: {}
@@ -1749,6 +1821,18 @@ trackedFiles:
   docs/models/operations/RemoveCalendarLinkResponse.md: {}
   docs/models/operations/RemoveCalendarWebinarRequest.md: {}
   docs/models/operations/RemoveCalendarWebinarResponse.md: {}
+  docs/models/operations/RemoveCdpActivationRequest.md: {}
+  docs/models/operations/RemoveCdpActivationResponse.md: {}
+  docs/models/operations/RemoveCdpDestinationRequest.md: {}
+  docs/models/operations/RemoveCdpDestinationResponse.md: {}
+  docs/models/operations/RemoveCdpEventRequest.md: {}
+  docs/models/operations/RemoveCdpEventResponse.md: {}
+  docs/models/operations/RemoveCdpProfileRequest.md: {}
+  docs/models/operations/RemoveCdpProfileResponse.md: {}
+  docs/models/operations/RemoveCdpSegmentRequest.md: {}
+  docs/models/operations/RemoveCdpSegmentResponse.md: {}
+  docs/models/operations/RemoveCdpSourceRequest.md: {}
+  docs/models/operations/RemoveCdpSourceResponse.md: {}
   docs/models/operations/RemoveCommerceCollectionRequest.md: {}
   docs/models/operations/RemoveCommerceCollectionResponse.md: {}
   docs/models/operations/RemoveCommerceInventoryRequest.md: {}
@@ -2028,6 +2112,24 @@ trackedFiles:
   docs/models/operations/UpdateCalendarWebinarQueryParamFields.md: {}
   docs/models/operations/UpdateCalendarWebinarRequest.md: {}
   docs/models/operations/UpdateCalendarWebinarResponse.md: {}
+  docs/models/operations/UpdateCdpActivationQueryParamFields.md: {}
+  docs/models/operations/UpdateCdpActivationRequest.md: {}
+  docs/models/operations/UpdateCdpActivationResponse.md: {}
+  docs/models/operations/UpdateCdpDestinationQueryParamFields.md: {}
+  docs/models/operations/UpdateCdpDestinationRequest.md: {}
+  docs/models/operations/UpdateCdpDestinationResponse.md: {}
+  docs/models/operations/UpdateCdpEventQueryParamFields.md: {}
+  docs/models/operations/UpdateCdpEventRequest.md: {}
+  docs/models/operations/UpdateCdpEventResponse.md: {}
+  docs/models/operations/UpdateCdpProfileQueryParamFields.md: {}
+  docs/models/operations/UpdateCdpProfileRequest.md: {}
+  docs/models/operations/UpdateCdpProfileResponse.md: {}
+  docs/models/operations/UpdateCdpSegmentQueryParamFields.md: {}
+  docs/models/operations/UpdateCdpSegmentRequest.md: {}
+  docs/models/operations/UpdateCdpSegmentResponse.md: {}
+  docs/models/operations/UpdateCdpSourceQueryParamFields.md: {}
+  docs/models/operations/UpdateCdpSourceRequest.md: {}
+  docs/models/operations/UpdateCdpSourceResponse.md: {}
   docs/models/operations/UpdateCommerceCollectionQueryParamFields.md: {}
   docs/models/operations/UpdateCommerceCollectionRequest.md: {}
   docs/models/operations/UpdateCommerceCollectionResponse.md: {}
@@ -2760,6 +2862,30 @@ trackedFiles:
   docs/models/shared/CalendarWebinarStatus.md:
     id: 8caeca327e43
     pristine_git_object: 5a001a02ca765456cb50750837cbe688f90f6a39
+  docs/models/shared/CdpActivation.md: {}
+  docs/models/shared/CdpActivationStatus.md: {}
+  docs/models/shared/CdpConsent.md: {}
+  docs/models/shared/CdpConsentStatus.md: {}
+  docs/models/shared/CdpDestination.md: {}
+  docs/models/shared/CdpEvent.md: {}
+  docs/models/shared/CdpEventType.md: {}
+  docs/models/shared/CdpIdentifier.md: {}
+  docs/models/shared/CdpIdentifierType.md: {}
+  docs/models/shared/CdpMetadata.md: {}
+  docs/models/shared/CdpMetadata1.md: {}
+  docs/models/shared/CdpMetadata5.md: {}
+  docs/models/shared/CdpMetadataExtraData.md: {}
+  docs/models/shared/CdpMetadataFormat.md: {}
+  docs/models/shared/CdpMetadataSchemas1.md: {}
+  docs/models/shared/CdpMetadataSchemas5.md: {}
+  docs/models/shared/CdpMetadataValue.md: {}
+  docs/models/shared/CdpProfile.md: {}
+  docs/models/shared/CdpProfileGender.md: {}
+  docs/models/shared/CdpProfileSegment.md: {}
+  docs/models/shared/CdpSegment.md: {}
+  docs/models/shared/CdpSegmentType.md: {}
+  docs/models/shared/CdpSource.md: {}
+  docs/models/shared/CdpSourceDirection.md: {}
   docs/models/shared/CityTarget.md:
     id: 3849974e79f4
     pristine_git_object: 01593d38289a6ec20ba79e95f8a04396da78a0c0
@@ -2862,6 +2988,7 @@ trackedFiles:
   docs/models/shared/CommerceTelephoneType.md:
     id: 3259d7698c06
     pristine_git_object: 43c771ee3a70f561f3d801103c8962bc248c74c7
+  docs/models/shared/ComputeMode.md: {}
   docs/models/shared/Connection.md:
     id: aba68e017b61
     pristine_git_object: 9b4e36a457fdfd00f2752f33eb68ba0643ff99ea
@@ -2972,6 +3099,7 @@ trackedFiles:
     id: 232c8a4eb11d
     pristine_git_object: 2e7b9e0dd82108dbf346d9e710dd0270cbc873c2
   docs/models/shared/Dimension.md: {}
+  docs/models/shared/Direction.md: {}
   docs/models/shared/DurationType.md: {}
   docs/models/shared/DutiesPaidBy.md:
     id: fc84f6a1c7e2
@@ -3438,6 +3566,7 @@ trackedFiles:
   docs/models/shared/ListPipelineId.md:
     id: f3c309ab6cae
     pristine_git_object: 0b983de04d291f54cc9ca5a096f6bfa1dec4e52e
+  docs/models/shared/ListProfileId.md: {}
   docs/models/shared/ListProjectId.md:
     id: abff21328258
     pristine_git_object: 284fc33e81adb7602648bde6bd5fb692d9dff480
@@ -3543,6 +3672,7 @@ trackedFiles:
   docs/models/shared/LmsStudent.md:
     id: e95623cde2ca
     pristine_git_object: aab1609d3c515dd69c9821f4570b8710a53c5bf8
+  docs/models/shared/LmsSubject.md: {}
   docs/models/shared/LmsTelephone.md:
     id: 6916e95c3ce3
     pristine_git_object: 0fc080dc72ce39faf976df66040051e38c9bad36
@@ -4155,6 +4285,7 @@ trackedFiles:
   docs/models/shared/PropertyCalendarWebinarOrganizerStatus.md:
     id: 485b3efcef8e
     pristine_git_object: bded4aa8ece916133e3b1faaaa60548315b7e734
+  docs/models/shared/PropertyCdpProfileAddress.md: {}
   docs/models/shared/PropertyClubsGroupAddress.md: {}
   docs/models/shared/PropertyClubsLocationAddress.md: {}
   docs/models/shared/PropertyCommerceLocationAddress.md:
@@ -4866,6 +4997,7 @@ trackedFiles:
   docs/models/shared/VirtualWebhookPipelineId.md:
     id: 0a99e01a47c3
     pristine_git_object: 26e2aefda3c21cba088b5bf82c9f99a67e570764
+  docs/models/shared/VirtualWebhookProfileId.md: {}
   docs/models/shared/VirtualWebhookProjectId.md:
     id: 9ec76d64448e
     pristine_git_object: 6b5367e7725ecaf3aaef79f3e36f936956b05434
@@ -4935,6 +5067,7 @@ trackedFiles:
   docs/sdks/accounting/README.md:
     id: 6abb8976ed95
     pristine_git_object: c5d442f75599e8ae68c9465e170987c90a18a3ba
+  docs/sdks/activation/README.md: {}
   docs/sdks/activity/README.md:
     id: f6e8241fca80
     pristine_git_object: 0196817345c45666ac4f193da77c9eda8dbcb036
@@ -5005,6 +5138,7 @@ trackedFiles:
   docs/sdks/category/README.md:
     id: 432d778e36ac
     pristine_git_object: d2e41813b297b6ace97ae1e979dfe2bfee909494
+  docs/sdks/cdp/README.md: {}
   docs/sdks/change/README.md:
     id: e67b08f5a457
     pristine_git_object: 0333c4ed429c6b2f31c8b042be137dbc33d1c5a3
@@ -5062,6 +5196,7 @@ trackedFiles:
   docs/sdks/deduction/README.md:
     id: 22b077d984cb
     pristine_git_object: 071603d13c5a693fc9bd968af9d8d26419c93a85
+  docs/sdks/destination/README.md: {}
   docs/sdks/device/README.md:
     id: 433bb454e987
     pristine_git_object: 1e539e0d125d4656a568fbb43f0fa45744e88ea6
@@ -5213,6 +5348,7 @@ trackedFiles:
   docs/sdks/pipeline/README.md:
     id: e4ed78a43760
     pristine_git_object: c365ddb2ae3e2c821d3d2a9229d4a03befd02f38
+  docs/sdks/profile/README.md: {}
   docs/sdks/profitloss/README.md:
     id: ec0607bf8fc7
     pristine_git_object: 66cb3cea9d7a8bcf41763d802697fa12f5acc69e
@@ -5274,6 +5410,7 @@ trackedFiles:
     id: c2a30ae6874b
     pristine_git_object: 4261fd8a41fb7bcd797dcf1c934e63cb0fd344e0
   docs/sdks/secretsmanager/README.md: {}
+  docs/sdks/segment/README.md: {}
   docs/sdks/session/README.md: {}
   docs/sdks/shipment/README.md:
     id: db5a5da218b7
@@ -5283,6 +5420,7 @@ trackedFiles:
     pristine_git_object: defe77cd678198347097fe614869f2036a94cc28
   docs/sdks/signatory/README.md: {}
   docs/sdks/signing/README.md: {}
+  docs/sdks/source/README.md: {}
   docs/sdks/space/README.md:
     id: b3ce86241634
     pristine_git_object: a3c69487292a52ba5f2d912fefb73c2c554c19c7
@@ -5381,6 +5519,7 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/Accounting.java:
     id: d56e31379ea2
     pristine_git_object: 33ccd11773087d5921f28bbacea7253b1f1b6443
+  src/main/java/to/unified/unified_java_sdk/Activation.java: {}
   src/main/java/to/unified/unified_java_sdk/Activity.java:
     id: 00e6eca9ee17
     pristine_git_object: c29b090708dcf78052cef24ac0b785449f4e1176
@@ -5409,6 +5548,7 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/AsyncAccounting.java:
     id: a5aa97f3b09a
     pristine_git_object: 8e8adf3fd48e856c2a0eb893ff8629535133fc2c
+  src/main/java/to/unified/unified_java_sdk/AsyncActivation.java: {}
   src/main/java/to/unified/unified_java_sdk/AsyncActivity.java:
     id: 0e0b98aa5c5c
     pristine_git_object: 788da0fe14a978b426c44378ae922af5f231ac92
@@ -5479,6 +5619,7 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/AsyncCategory.java:
     id: dab801724510
     pristine_git_object: 9b9cbcff87d91794c3f8c89b8ce3a26e63d7a542
+  src/main/java/to/unified/unified_java_sdk/AsyncCdp.java: {}
   src/main/java/to/unified/unified_java_sdk/AsyncChange.java:
     id: b21149017cd3
     pristine_git_object: 6d4c901242a8e68d77bfb5eb8ad91c51793f138d
@@ -5536,6 +5677,7 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/AsyncDeduction.java:
     id: 93c2f238d4ae
     pristine_git_object: ee67de0c2c024a8879d6cba11bd645dab61db929
+  src/main/java/to/unified/unified_java_sdk/AsyncDestination.java: {}
   src/main/java/to/unified/unified_java_sdk/AsyncDevice.java:
     id: 9ddb43071b9e
     pristine_git_object: a07a2aa221d6be5d5bed71b4e3a2eb86140f0cc2
@@ -5687,6 +5829,7 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/AsyncPipeline.java:
     id: 57280103363c
     pristine_git_object: 73c7cba80f6f4392013990f26f18c91bda713e7b
+  src/main/java/to/unified/unified_java_sdk/AsyncProfile.java: {}
   src/main/java/to/unified/unified_java_sdk/AsyncProfitloss.java:
     id: a02dadd91f82
     pristine_git_object: 077f9161c0cca5e487ffc7bb688399d0eb492eee
@@ -5748,6 +5891,7 @@ trackedFiles:
     id: b910a7c8f0fb
     pristine_git_object: 2e873d0ee9c32534f1f4ee858c46996d8ea17bc4
   src/main/java/to/unified/unified_java_sdk/AsyncSecretsmanager.java: {}
+  src/main/java/to/unified/unified_java_sdk/AsyncSegment.java: {}
   src/main/java/to/unified/unified_java_sdk/AsyncSession.java: {}
   src/main/java/to/unified/unified_java_sdk/AsyncShipment.java:
     id: 1feacec8024e
@@ -5757,6 +5901,7 @@ trackedFiles:
     pristine_git_object: 38a0acc4f08beea299cc574d746fb7dc0c07ea89
   src/main/java/to/unified/unified_java_sdk/AsyncSignatory.java: {}
   src/main/java/to/unified/unified_java_sdk/AsyncSigning.java: {}
+  src/main/java/to/unified/unified_java_sdk/AsyncSource.java: {}
   src/main/java/to/unified/unified_java_sdk/AsyncSpace.java:
     id: ce2637d9d93c
     pristine_git_object: 745f4dade87dfd93245f2217a3cda6f3e365d2c2
@@ -5876,6 +6021,7 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/Category.java:
     id: da41f0d4c1de
     pristine_git_object: 408a3eb341231a001fef76c5273fc28322bfb41c
+  src/main/java/to/unified/unified_java_sdk/Cdp.java: {}
   src/main/java/to/unified/unified_java_sdk/Change.java:
     id: 6e41edd1e06a
     pristine_git_object: 7297c612c752718345aaf8b9a2d8b0b534cfb332
@@ -5933,6 +6079,7 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/Deduction.java:
     id: 0aa85c208fe8
     pristine_git_object: 89d8f1ad9de89e4f3b8f626d8ab4f97fc7d66d8e
+  src/main/java/to/unified/unified_java_sdk/Destination.java: {}
   src/main/java/to/unified/unified_java_sdk/Device.java:
     id: 8b414d2c7707
     pristine_git_object: 7ba8030070ad69d17ea4cd2cd62cca91e6a56220
@@ -6084,6 +6231,7 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/Pipeline.java:
     id: c8c0eeef3aeb
     pristine_git_object: 116399a20c928fcf6b8b060cf0f951f12a1a820e
+  src/main/java/to/unified/unified_java_sdk/Profile.java: {}
   src/main/java/to/unified/unified_java_sdk/Profitloss.java:
     id: cd43161136dc
     pristine_git_object: 9fba4cfbb1ea1772fe3ef42eb3a11e7536b5522f
@@ -6151,6 +6299,7 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/SecuritySource.java:
     id: c722bf1b95fc
     pristine_git_object: cb96bcc4ab8ba7fdfecbf25a587f3e676d86b3d2
+  src/main/java/to/unified/unified_java_sdk/Segment.java: {}
   src/main/java/to/unified/unified_java_sdk/Session.java: {}
   src/main/java/to/unified/unified_java_sdk/Shipment.java:
     id: 49ca701586d6
@@ -6160,6 +6309,7 @@ trackedFiles:
     pristine_git_object: b96cd280300760fb75815bdfa7f057ce0f4abc02
   src/main/java/to/unified/unified_java_sdk/Signatory.java: {}
   src/main/java/to/unified/unified_java_sdk/Signing.java: {}
+  src/main/java/to/unified/unified_java_sdk/Source.java: {}
   src/main/java/to/unified/unified_java_sdk/Space.java:
     id: e8d78ce3384e
     pristine_git_object: fb86ce6a63b117ae19460ab01ef1b8b2000b8665
@@ -6279,6 +6429,12 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/models/operations//async/CreateCalendarEventRequestBuilder.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations//async/CreateCalendarLinkRequestBuilder.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations//async/CreateCalendarWebinarRequestBuilder.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations//async/CreateCdpActivationRequestBuilder.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations//async/CreateCdpDestinationRequestBuilder.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations//async/CreateCdpEventRequestBuilder.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations//async/CreateCdpProfileRequestBuilder.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations//async/CreateCdpSegmentRequestBuilder.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations//async/CreateCdpSourceRequestBuilder.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations//async/CreateCommerceCollectionRequestBuilder.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations//async/CreateCommerceInventoryRequestBuilder.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations//async/CreateCommerceItemRequestBuilder.java: {}
@@ -6416,6 +6572,12 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/models/operations//async/GetCalendarLinkRequestBuilder.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations//async/GetCalendarRecordingRequestBuilder.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations//async/GetCalendarWebinarRequestBuilder.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations//async/GetCdpActivationRequestBuilder.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations//async/GetCdpDestinationRequestBuilder.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations//async/GetCdpEventRequestBuilder.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations//async/GetCdpProfileRequestBuilder.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations//async/GetCdpSegmentRequestBuilder.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations//async/GetCdpSourceRequestBuilder.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations//async/GetClubsActivityRequestBuilder.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations//async/GetClubsEventRequestBuilder.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations//async/GetClubsGroupRequestBuilder.java: {}
@@ -6577,6 +6739,12 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/models/operations//async/ListCalendarLinksRequestBuilder.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations//async/ListCalendarRecordingsRequestBuilder.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations//async/ListCalendarWebinarsRequestBuilder.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations//async/ListCdpActivationsRequestBuilder.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations//async/ListCdpDestinationsRequestBuilder.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations//async/ListCdpEventsRequestBuilder.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations//async/ListCdpProfilesRequestBuilder.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations//async/ListCdpSegmentsRequestBuilder.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations//async/ListCdpSourcesRequestBuilder.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations//async/ListClubsActivitiesRequestBuilder.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations//async/ListClubsEventsRequestBuilder.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations//async/ListClubsGroupsRequestBuilder.java: {}
@@ -6733,6 +6901,12 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/models/operations//async/PatchCalendarEventRequestBuilder.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations//async/PatchCalendarLinkRequestBuilder.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations//async/PatchCalendarWebinarRequestBuilder.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations//async/PatchCdpActivationRequestBuilder.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations//async/PatchCdpDestinationRequestBuilder.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations//async/PatchCdpEventRequestBuilder.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations//async/PatchCdpProfileRequestBuilder.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations//async/PatchCdpSegmentRequestBuilder.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations//async/PatchCdpSourceRequestBuilder.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations//async/PatchCommerceCollectionRequestBuilder.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations//async/PatchCommerceInventoryRequestBuilder.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations//async/PatchCommerceItemRequestBuilder.java: {}
@@ -6855,6 +7029,12 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/models/operations//async/RemoveCalendarEventRequestBuilder.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations//async/RemoveCalendarLinkRequestBuilder.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations//async/RemoveCalendarWebinarRequestBuilder.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations//async/RemoveCdpActivationRequestBuilder.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations//async/RemoveCdpDestinationRequestBuilder.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations//async/RemoveCdpEventRequestBuilder.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations//async/RemoveCdpProfileRequestBuilder.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations//async/RemoveCdpSegmentRequestBuilder.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations//async/RemoveCdpSourceRequestBuilder.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations//async/RemoveCommerceCollectionRequestBuilder.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations//async/RemoveCommerceInventoryRequestBuilder.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations//async/RemoveCommerceItemRequestBuilder.java: {}
@@ -6977,6 +7157,12 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/models/operations//async/UpdateCalendarEventRequestBuilder.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations//async/UpdateCalendarLinkRequestBuilder.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations//async/UpdateCalendarWebinarRequestBuilder.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations//async/UpdateCdpActivationRequestBuilder.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations//async/UpdateCdpDestinationRequestBuilder.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations//async/UpdateCdpEventRequestBuilder.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations//async/UpdateCdpProfileRequestBuilder.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations//async/UpdateCdpSegmentRequestBuilder.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations//async/UpdateCdpSourceRequestBuilder.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations//async/UpdateCommerceCollectionRequestBuilder.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations//async/UpdateCommerceInventoryRequestBuilder.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations//async/UpdateCommerceItemRequestBuilder.java: {}
@@ -7209,6 +7395,30 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/models/operations/CreateCalendarWebinarRequest.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/CreateCalendarWebinarRequestBuilder.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/CreateCalendarWebinarResponse.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/CreateCdpActivationQueryParamFields.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/CreateCdpActivationRequest.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/CreateCdpActivationRequestBuilder.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/CreateCdpActivationResponse.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/CreateCdpDestinationQueryParamFields.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/CreateCdpDestinationRequest.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/CreateCdpDestinationRequestBuilder.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/CreateCdpDestinationResponse.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/CreateCdpEventQueryParamFields.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/CreateCdpEventRequest.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/CreateCdpEventRequestBuilder.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/CreateCdpEventResponse.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/CreateCdpProfileQueryParamFields.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/CreateCdpProfileRequest.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/CreateCdpProfileRequestBuilder.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/CreateCdpProfileResponse.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/CreateCdpSegmentQueryParamFields.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/CreateCdpSegmentRequest.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/CreateCdpSegmentRequestBuilder.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/CreateCdpSegmentResponse.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/CreateCdpSourceQueryParamFields.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/CreateCdpSourceRequest.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/CreateCdpSourceRequestBuilder.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/CreateCdpSourceResponse.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/CreateCommerceCollectionQueryParamFields.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/CreateCommerceCollectionRequest.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/CreateCommerceCollectionRequestBuilder.java: {}
@@ -7733,6 +7943,30 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/models/operations/GetCalendarWebinarRequest.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/GetCalendarWebinarRequestBuilder.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/GetCalendarWebinarResponse.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/GetCdpActivationQueryParamFields.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/GetCdpActivationRequest.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/GetCdpActivationRequestBuilder.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/GetCdpActivationResponse.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/GetCdpDestinationQueryParamFields.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/GetCdpDestinationRequest.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/GetCdpDestinationRequestBuilder.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/GetCdpDestinationResponse.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/GetCdpEventQueryParamFields.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/GetCdpEventRequest.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/GetCdpEventRequestBuilder.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/GetCdpEventResponse.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/GetCdpProfileQueryParamFields.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/GetCdpProfileRequest.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/GetCdpProfileRequestBuilder.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/GetCdpProfileResponse.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/GetCdpSegmentQueryParamFields.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/GetCdpSegmentRequest.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/GetCdpSegmentRequestBuilder.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/GetCdpSegmentResponse.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/GetCdpSourceQueryParamFields.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/GetCdpSourceRequest.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/GetCdpSourceRequestBuilder.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/GetCdpSourceResponse.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/GetClubsActivityQueryParamFields.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/GetClubsActivityRequest.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/GetClubsActivityRequestBuilder.java: {}
@@ -8351,6 +8585,30 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/models/operations/ListCalendarWebinarsRequest.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/ListCalendarWebinarsRequestBuilder.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/ListCalendarWebinarsResponse.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/ListCdpActivationsQueryParamFields.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/ListCdpActivationsRequest.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/ListCdpActivationsRequestBuilder.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/ListCdpActivationsResponse.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/ListCdpDestinationsQueryParamFields.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/ListCdpDestinationsRequest.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/ListCdpDestinationsRequestBuilder.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/ListCdpDestinationsResponse.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/ListCdpEventsQueryParamFields.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/ListCdpEventsRequest.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/ListCdpEventsRequestBuilder.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/ListCdpEventsResponse.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/ListCdpProfilesQueryParamFields.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/ListCdpProfilesRequest.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/ListCdpProfilesRequestBuilder.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/ListCdpProfilesResponse.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/ListCdpSegmentsQueryParamFields.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/ListCdpSegmentsRequest.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/ListCdpSegmentsRequestBuilder.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/ListCdpSegmentsResponse.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/ListCdpSourcesQueryParamFields.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/ListCdpSourcesRequest.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/ListCdpSourcesRequestBuilder.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/ListCdpSourcesResponse.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/ListClubsActivitiesQueryParamFields.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/ListClubsActivitiesRequest.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/ListClubsActivitiesRequestBuilder.java: {}
@@ -8943,6 +9201,30 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/models/operations/PatchCalendarWebinarRequest.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/PatchCalendarWebinarRequestBuilder.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/PatchCalendarWebinarResponse.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/PatchCdpActivationQueryParamFields.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/PatchCdpActivationRequest.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/PatchCdpActivationRequestBuilder.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/PatchCdpActivationResponse.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/PatchCdpDestinationQueryParamFields.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/PatchCdpDestinationRequest.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/PatchCdpDestinationRequestBuilder.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/PatchCdpDestinationResponse.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/PatchCdpEventQueryParamFields.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/PatchCdpEventRequest.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/PatchCdpEventRequestBuilder.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/PatchCdpEventResponse.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/PatchCdpProfileQueryParamFields.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/PatchCdpProfileRequest.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/PatchCdpProfileRequestBuilder.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/PatchCdpProfileResponse.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/PatchCdpSegmentQueryParamFields.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/PatchCdpSegmentRequest.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/PatchCdpSegmentRequestBuilder.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/PatchCdpSegmentResponse.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/PatchCdpSourceQueryParamFields.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/PatchCdpSourceRequest.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/PatchCdpSourceRequestBuilder.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/PatchCdpSourceResponse.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/PatchCommerceCollectionQueryParamFields.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/PatchCommerceCollectionRequest.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/PatchCommerceCollectionRequestBuilder.java: {}
@@ -9385,6 +9667,24 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/models/operations/RemoveCalendarWebinarRequest.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/RemoveCalendarWebinarRequestBuilder.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/RemoveCalendarWebinarResponse.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/RemoveCdpActivationRequest.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/RemoveCdpActivationRequestBuilder.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/RemoveCdpActivationResponse.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/RemoveCdpDestinationRequest.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/RemoveCdpDestinationRequestBuilder.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/RemoveCdpDestinationResponse.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/RemoveCdpEventRequest.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/RemoveCdpEventRequestBuilder.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/RemoveCdpEventResponse.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/RemoveCdpProfileRequest.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/RemoveCdpProfileRequestBuilder.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/RemoveCdpProfileResponse.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/RemoveCdpSegmentRequest.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/RemoveCdpSegmentRequestBuilder.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/RemoveCdpSegmentResponse.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/RemoveCdpSourceRequest.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/RemoveCdpSourceRequestBuilder.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/RemoveCdpSourceResponse.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/RemoveCommerceCollectionRequest.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/RemoveCommerceCollectionRequestBuilder.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/RemoveCommerceCollectionResponse.java: {}
@@ -9786,6 +10086,30 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/models/operations/UpdateCalendarWebinarRequest.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/UpdateCalendarWebinarRequestBuilder.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/UpdateCalendarWebinarResponse.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/UpdateCdpActivationQueryParamFields.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/UpdateCdpActivationRequest.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/UpdateCdpActivationRequestBuilder.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/UpdateCdpActivationResponse.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/UpdateCdpDestinationQueryParamFields.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/UpdateCdpDestinationRequest.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/UpdateCdpDestinationRequestBuilder.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/UpdateCdpDestinationResponse.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/UpdateCdpEventQueryParamFields.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/UpdateCdpEventRequest.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/UpdateCdpEventRequestBuilder.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/UpdateCdpEventResponse.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/UpdateCdpProfileQueryParamFields.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/UpdateCdpProfileRequest.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/UpdateCdpProfileRequestBuilder.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/UpdateCdpProfileResponse.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/UpdateCdpSegmentQueryParamFields.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/UpdateCdpSegmentRequest.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/UpdateCdpSegmentRequestBuilder.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/UpdateCdpSegmentResponse.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/UpdateCdpSourceQueryParamFields.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/UpdateCdpSourceRequest.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/UpdateCdpSourceRequestBuilder.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/UpdateCdpSourceResponse.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/UpdateCommerceCollectionQueryParamFields.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/UpdateCommerceCollectionRequest.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/UpdateCommerceCollectionRequestBuilder.java: {}
@@ -10153,6 +10477,12 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/models/operations/async/CreateCalendarEventResponse.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/async/CreateCalendarLinkResponse.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/async/CreateCalendarWebinarResponse.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/async/CreateCdpActivationResponse.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/async/CreateCdpDestinationResponse.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/async/CreateCdpEventResponse.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/async/CreateCdpProfileResponse.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/async/CreateCdpSegmentResponse.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/async/CreateCdpSourceResponse.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/async/CreateCommerceCollectionResponse.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/async/CreateCommerceInventoryResponse.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/async/CreateCommerceItemResponse.java: {}
@@ -10290,6 +10620,12 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/models/operations/async/GetCalendarLinkResponse.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/async/GetCalendarRecordingResponse.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/async/GetCalendarWebinarResponse.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/async/GetCdpActivationResponse.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/async/GetCdpDestinationResponse.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/async/GetCdpEventResponse.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/async/GetCdpProfileResponse.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/async/GetCdpSegmentResponse.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/async/GetCdpSourceResponse.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/async/GetClubsActivityResponse.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/async/GetClubsEventResponse.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/async/GetClubsGroupResponse.java: {}
@@ -10451,6 +10787,12 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/models/operations/async/ListCalendarLinksResponse.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/async/ListCalendarRecordingsResponse.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/async/ListCalendarWebinarsResponse.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/async/ListCdpActivationsResponse.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/async/ListCdpDestinationsResponse.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/async/ListCdpEventsResponse.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/async/ListCdpProfilesResponse.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/async/ListCdpSegmentsResponse.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/async/ListCdpSourcesResponse.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/async/ListClubsActivitiesResponse.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/async/ListClubsEventsResponse.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/async/ListClubsGroupsResponse.java: {}
@@ -10607,6 +10949,12 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/models/operations/async/PatchCalendarEventResponse.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/async/PatchCalendarLinkResponse.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/async/PatchCalendarWebinarResponse.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/async/PatchCdpActivationResponse.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/async/PatchCdpDestinationResponse.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/async/PatchCdpEventResponse.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/async/PatchCdpProfileResponse.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/async/PatchCdpSegmentResponse.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/async/PatchCdpSourceResponse.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/async/PatchCommerceCollectionResponse.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/async/PatchCommerceInventoryResponse.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/async/PatchCommerceItemResponse.java: {}
@@ -10729,6 +11077,12 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/models/operations/async/RemoveCalendarEventResponse.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/async/RemoveCalendarLinkResponse.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/async/RemoveCalendarWebinarResponse.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/async/RemoveCdpActivationResponse.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/async/RemoveCdpDestinationResponse.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/async/RemoveCdpEventResponse.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/async/RemoveCdpProfileResponse.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/async/RemoveCdpSegmentResponse.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/async/RemoveCdpSourceResponse.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/async/RemoveCommerceCollectionResponse.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/async/RemoveCommerceInventoryResponse.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/async/RemoveCommerceItemResponse.java: {}
@@ -10851,6 +11205,12 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/models/operations/async/UpdateCalendarEventResponse.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/async/UpdateCalendarLinkResponse.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/async/UpdateCalendarWebinarResponse.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/async/UpdateCdpActivationResponse.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/async/UpdateCdpDestinationResponse.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/async/UpdateCdpEventResponse.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/async/UpdateCdpProfileResponse.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/async/UpdateCdpSegmentResponse.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/async/UpdateCdpSourceResponse.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/async/UpdateCommerceCollectionResponse.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/async/UpdateCommerceInventoryResponse.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/async/UpdateCommerceItemResponse.java: {}
@@ -11426,6 +11786,30 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/models/shared/CalendarWebinarStatus.java:
     id: deb65dc2a1fe
     pristine_git_object: 6e67622fa99d553bea1cccc645287516a31316a2
+  src/main/java/to/unified/unified_java_sdk/models/shared/CdpActivation.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/shared/CdpActivationStatus.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/shared/CdpConsent.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/shared/CdpConsentStatus.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/shared/CdpDestination.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/shared/CdpEvent.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/shared/CdpEventType.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/shared/CdpIdentifier.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/shared/CdpIdentifierType.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/shared/CdpMetadata.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/shared/CdpMetadata1.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/shared/CdpMetadata5.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/shared/CdpMetadataExtraData.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/shared/CdpMetadataFormat.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/shared/CdpMetadataSchemas1.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/shared/CdpMetadataSchemas5.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/shared/CdpMetadataValue.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/shared/CdpProfile.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/shared/CdpProfileGender.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/shared/CdpProfileSegment.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/shared/CdpSegment.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/shared/CdpSegmentType.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/shared/CdpSource.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/shared/CdpSourceDirection.java: {}
   src/main/java/to/unified/unified_java_sdk/models/shared/CityTarget.java:
     id: "028156815364"
     pristine_git_object: b62b8ec00cff6d61a3b2fb4f8e3f37bcaf91c6e5
@@ -11528,6 +11912,7 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/models/shared/CommerceTelephoneType.java:
     id: dc678ef38ae3
     pristine_git_object: e1d6e34bcdc1e703e3b983527dc70c5027cf29ef
+  src/main/java/to/unified/unified_java_sdk/models/shared/ComputeMode.java: {}
   src/main/java/to/unified/unified_java_sdk/models/shared/Connection.java:
     id: 4c89d5b9563a
     pristine_git_object: 020818953d44c1da96096293aa7c47cea3dfed62
@@ -11638,6 +12023,7 @@ trackedFiles:
     id: e3d67bb03100
     pristine_git_object: 85d88197b32c85821b56e403e9f85822701f14df
   src/main/java/to/unified/unified_java_sdk/models/shared/Dimension.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/shared/Direction.java: {}
   src/main/java/to/unified/unified_java_sdk/models/shared/DurationType.java: {}
   src/main/java/to/unified/unified_java_sdk/models/shared/DutiesPaidBy.java:
     id: c8890727aaf9
@@ -12104,6 +12490,7 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/models/shared/ListPipelineId.java:
     id: 941324c899b6
     pristine_git_object: 338ca3e54803d6aa858bc58e60d1d0a9d7f0456b
+  src/main/java/to/unified/unified_java_sdk/models/shared/ListProfileId.java: {}
   src/main/java/to/unified/unified_java_sdk/models/shared/ListProjectId.java:
     id: 1f2874e205bf
     pristine_git_object: d3bbb9c65b45f4856a99dbddc999fcc7d585e422
@@ -12209,6 +12596,7 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/models/shared/LmsStudent.java:
     id: aeea89bee7e0
     pristine_git_object: 15a7b86ccaf3642b92f16558c509fdac83995044
+  src/main/java/to/unified/unified_java_sdk/models/shared/LmsSubject.java: {}
   src/main/java/to/unified/unified_java_sdk/models/shared/LmsTelephone.java:
     id: c8d70340dbe3
     pristine_git_object: 4a2bd25b0f8cc1c064cd168043fcab9e19aaf635
@@ -12821,6 +13209,7 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/models/shared/PropertyCalendarWebinarOrganizerStatus.java:
     id: 1612bb5137a2
     pristine_git_object: 187e7f13c7989c178b67aacf9ce563564ac0bedb
+  src/main/java/to/unified/unified_java_sdk/models/shared/PropertyCdpProfileAddress.java: {}
   src/main/java/to/unified/unified_java_sdk/models/shared/PropertyClubsGroupAddress.java: {}
   src/main/java/to/unified/unified_java_sdk/models/shared/PropertyClubsLocationAddress.java: {}
   src/main/java/to/unified/unified_java_sdk/models/shared/PropertyCommerceLocationAddress.java:
@@ -13532,6 +13921,7 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/models/shared/VirtualWebhookPipelineId.java:
     id: a6c226b1973c
     pristine_git_object: 3789b78dd7f331e1cf19871c075ca78a0fcf05be
+  src/main/java/to/unified/unified_java_sdk/models/shared/VirtualWebhookProfileId.java: {}
   src/main/java/to/unified/unified_java_sdk/models/shared/VirtualWebhookProjectId.java:
     id: c03fafe2b568
     pristine_git_object: af2e28e4e0c9fe1aeafd5a0184fbd56773c42608
@@ -13631,6 +14021,12 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/operations/CreateCalendarEvent.java: {}
   src/main/java/to/unified/unified_java_sdk/operations/CreateCalendarLink.java: {}
   src/main/java/to/unified/unified_java_sdk/operations/CreateCalendarWebinar.java: {}
+  src/main/java/to/unified/unified_java_sdk/operations/CreateCdpActivation.java: {}
+  src/main/java/to/unified/unified_java_sdk/operations/CreateCdpDestination.java: {}
+  src/main/java/to/unified/unified_java_sdk/operations/CreateCdpEvent.java: {}
+  src/main/java/to/unified/unified_java_sdk/operations/CreateCdpProfile.java: {}
+  src/main/java/to/unified/unified_java_sdk/operations/CreateCdpSegment.java: {}
+  src/main/java/to/unified/unified_java_sdk/operations/CreateCdpSource.java: {}
   src/main/java/to/unified/unified_java_sdk/operations/CreateCommerceCollection.java: {}
   src/main/java/to/unified/unified_java_sdk/operations/CreateCommerceInventory.java: {}
   src/main/java/to/unified/unified_java_sdk/operations/CreateCommerceItem.java: {}
@@ -13768,6 +14164,12 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/operations/GetCalendarLink.java: {}
   src/main/java/to/unified/unified_java_sdk/operations/GetCalendarRecording.java: {}
   src/main/java/to/unified/unified_java_sdk/operations/GetCalendarWebinar.java: {}
+  src/main/java/to/unified/unified_java_sdk/operations/GetCdpActivation.java: {}
+  src/main/java/to/unified/unified_java_sdk/operations/GetCdpDestination.java: {}
+  src/main/java/to/unified/unified_java_sdk/operations/GetCdpEvent.java: {}
+  src/main/java/to/unified/unified_java_sdk/operations/GetCdpProfile.java: {}
+  src/main/java/to/unified/unified_java_sdk/operations/GetCdpSegment.java: {}
+  src/main/java/to/unified/unified_java_sdk/operations/GetCdpSource.java: {}
   src/main/java/to/unified/unified_java_sdk/operations/GetClubsActivity.java: {}
   src/main/java/to/unified/unified_java_sdk/operations/GetClubsEvent.java: {}
   src/main/java/to/unified/unified_java_sdk/operations/GetClubsGroup.java: {}
@@ -13929,6 +14331,12 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/operations/ListCalendarLinks.java: {}
   src/main/java/to/unified/unified_java_sdk/operations/ListCalendarRecordings.java: {}
   src/main/java/to/unified/unified_java_sdk/operations/ListCalendarWebinars.java: {}
+  src/main/java/to/unified/unified_java_sdk/operations/ListCdpActivations.java: {}
+  src/main/java/to/unified/unified_java_sdk/operations/ListCdpDestinations.java: {}
+  src/main/java/to/unified/unified_java_sdk/operations/ListCdpEvents.java: {}
+  src/main/java/to/unified/unified_java_sdk/operations/ListCdpProfiles.java: {}
+  src/main/java/to/unified/unified_java_sdk/operations/ListCdpSegments.java: {}
+  src/main/java/to/unified/unified_java_sdk/operations/ListCdpSources.java: {}
   src/main/java/to/unified/unified_java_sdk/operations/ListClubsActivities.java: {}
   src/main/java/to/unified/unified_java_sdk/operations/ListClubsEvents.java: {}
   src/main/java/to/unified/unified_java_sdk/operations/ListClubsGroups.java: {}
@@ -14088,6 +14496,12 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/operations/PatchCalendarEvent.java: {}
   src/main/java/to/unified/unified_java_sdk/operations/PatchCalendarLink.java: {}
   src/main/java/to/unified/unified_java_sdk/operations/PatchCalendarWebinar.java: {}
+  src/main/java/to/unified/unified_java_sdk/operations/PatchCdpActivation.java: {}
+  src/main/java/to/unified/unified_java_sdk/operations/PatchCdpDestination.java: {}
+  src/main/java/to/unified/unified_java_sdk/operations/PatchCdpEvent.java: {}
+  src/main/java/to/unified/unified_java_sdk/operations/PatchCdpProfile.java: {}
+  src/main/java/to/unified/unified_java_sdk/operations/PatchCdpSegment.java: {}
+  src/main/java/to/unified/unified_java_sdk/operations/PatchCdpSource.java: {}
   src/main/java/to/unified/unified_java_sdk/operations/PatchCommerceCollection.java: {}
   src/main/java/to/unified/unified_java_sdk/operations/PatchCommerceInventory.java: {}
   src/main/java/to/unified/unified_java_sdk/operations/PatchCommerceItem.java: {}
@@ -14210,6 +14624,12 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/operations/RemoveCalendarEvent.java: {}
   src/main/java/to/unified/unified_java_sdk/operations/RemoveCalendarLink.java: {}
   src/main/java/to/unified/unified_java_sdk/operations/RemoveCalendarWebinar.java: {}
+  src/main/java/to/unified/unified_java_sdk/operations/RemoveCdpActivation.java: {}
+  src/main/java/to/unified/unified_java_sdk/operations/RemoveCdpDestination.java: {}
+  src/main/java/to/unified/unified_java_sdk/operations/RemoveCdpEvent.java: {}
+  src/main/java/to/unified/unified_java_sdk/operations/RemoveCdpProfile.java: {}
+  src/main/java/to/unified/unified_java_sdk/operations/RemoveCdpSegment.java: {}
+  src/main/java/to/unified/unified_java_sdk/operations/RemoveCdpSource.java: {}
   src/main/java/to/unified/unified_java_sdk/operations/RemoveCommerceCollection.java: {}
   src/main/java/to/unified/unified_java_sdk/operations/RemoveCommerceInventory.java: {}
   src/main/java/to/unified/unified_java_sdk/operations/RemoveCommerceItem.java: {}
@@ -14332,6 +14752,12 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/operations/UpdateCalendarEvent.java: {}
   src/main/java/to/unified/unified_java_sdk/operations/UpdateCalendarLink.java: {}
   src/main/java/to/unified/unified_java_sdk/operations/UpdateCalendarWebinar.java: {}
+  src/main/java/to/unified/unified_java_sdk/operations/UpdateCdpActivation.java: {}
+  src/main/java/to/unified/unified_java_sdk/operations/UpdateCdpDestination.java: {}
+  src/main/java/to/unified/unified_java_sdk/operations/UpdateCdpEvent.java: {}
+  src/main/java/to/unified/unified_java_sdk/operations/UpdateCdpProfile.java: {}
+  src/main/java/to/unified/unified_java_sdk/operations/UpdateCdpSegment.java: {}
+  src/main/java/to/unified/unified_java_sdk/operations/UpdateCdpSource.java: {}
   src/main/java/to/unified/unified_java_sdk/operations/UpdateCommerceCollection.java: {}
   src/main/java/to/unified/unified_java_sdk/operations/UpdateCommerceInventory.java: {}
   src/main/java/to/unified/unified_java_sdk/operations/UpdateCommerceItem.java: {}
@@ -27721,9 +28147,339 @@ examples:
       responses:
         "200":
           application/json: {}
+  createCdpEvent:
+    speakeasy-default-create-cdp-event:
+      parameters:
+        path:
+          connection_id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  getCdpEvent:
+    speakeasy-default-get-cdp-event:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      responses:
+        "200":
+          application/json: {}
+  listCdpEvents:
+    speakeasy-default-list-cdp-events:
+      parameters:
+        path:
+          connection_id: "<id>"
+      responses:
+        "200":
+          application/json: [{}]
+  patchCdpEvent:
+    speakeasy-default-patch-cdp-event:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  removeCdpEvent:
+    speakeasy-default-remove-cdp-event:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+  updateCdpEvent:
+    speakeasy-default-update-cdp-event:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  createCdpActivation:
+    speakeasy-default-create-cdp-activation:
+      parameters:
+        path:
+          connection_id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  createCdpDestination:
+    speakeasy-default-create-cdp-destination:
+      parameters:
+        path:
+          connection_id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  createCdpProfile:
+    speakeasy-default-create-cdp-profile:
+      parameters:
+        path:
+          connection_id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  createCdpSegment:
+    speakeasy-default-create-cdp-segment:
+      parameters:
+        path:
+          connection_id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  createCdpSource:
+    speakeasy-default-create-cdp-source:
+      parameters:
+        path:
+          connection_id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  getCdpActivation:
+    speakeasy-default-get-cdp-activation:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      responses:
+        "200":
+          application/json: {}
+  getCdpDestination:
+    speakeasy-default-get-cdp-destination:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      responses:
+        "200":
+          application/json: {}
+  getCdpProfile:
+    speakeasy-default-get-cdp-profile:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      responses:
+        "200":
+          application/json: {}
+  getCdpSegment:
+    speakeasy-default-get-cdp-segment:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      responses:
+        "200":
+          application/json: {}
+  getCdpSource:
+    speakeasy-default-get-cdp-source:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      responses:
+        "200":
+          application/json: {}
+  listCdpActivations:
+    speakeasy-default-list-cdp-activations:
+      parameters:
+        path:
+          connection_id: "<id>"
+      responses:
+        "200":
+          application/json: [{}]
+  listCdpDestinations:
+    speakeasy-default-list-cdp-destinations:
+      parameters:
+        path:
+          connection_id: "<id>"
+      responses:
+        "200":
+          application/json: [{}]
+  listCdpProfiles:
+    speakeasy-default-list-cdp-profiles:
+      parameters:
+        path:
+          connection_id: "<id>"
+      responses:
+        "200":
+          application/json: [{}]
+  listCdpSegments:
+    speakeasy-default-list-cdp-segments:
+      parameters:
+        path:
+          connection_id: "<id>"
+      responses:
+        "200":
+          application/json: [{}]
+  listCdpSources:
+    speakeasy-default-list-cdp-sources:
+      parameters:
+        path:
+          connection_id: "<id>"
+      responses:
+        "200":
+          application/json: [{}]
+  patchCdpActivation:
+    speakeasy-default-patch-cdp-activation:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  patchCdpDestination:
+    speakeasy-default-patch-cdp-destination:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  patchCdpProfile:
+    speakeasy-default-patch-cdp-profile:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  patchCdpSegment:
+    speakeasy-default-patch-cdp-segment:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  patchCdpSource:
+    speakeasy-default-patch-cdp-source:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  removeCdpActivation:
+    speakeasy-default-remove-cdp-activation:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+  removeCdpDestination:
+    speakeasy-default-remove-cdp-destination:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+  removeCdpProfile:
+    speakeasy-default-remove-cdp-profile:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+  removeCdpSegment:
+    speakeasy-default-remove-cdp-segment:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+  removeCdpSource:
+    speakeasy-default-remove-cdp-source:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+  updateCdpActivation:
+    speakeasy-default-update-cdp-activation:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  updateCdpDestination:
+    speakeasy-default-update-cdp-destination:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  updateCdpProfile:
+    speakeasy-default-update-cdp-profile:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  updateCdpSegment:
+    speakeasy-default-update-cdp-segment:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  updateCdpSource:
+    speakeasy-default-update-cdp-source:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: "## Java SDK Changes:\n* `unified-to.task.createTaskTask()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to.task.getTaskTask()`: \n  *  `request.fields` **Changed**\n  *  `response` **Changed**\n* `unified-to.task.listTaskTasks()`: \n  *  `request` **Changed**\n  *  `response.[]` **Changed**\n* `unified-to.task.patchTaskTask()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to.task.updateTaskTask()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to.unified.listUnifiedIntegrationWorkspaces()`:  `response.[].support.Map<IntegrationSupport>` **Changed**\n* `unified-to.unified.listUnifiedIntegrations()`:  `response.[].support.Map<IntegrationSupport>` **Changed**\n* `unified-to.integration.listUnifiedIntegrationWorkspaces()`:  `response.[].support.Map<IntegrationSupport>` **Changed**\n* `unified-to.integration.listUnifiedIntegrations()`:  `response.[].support.Map<IntegrationSupport>` **Changed**\n"
+releaseNotes: "## Java SDK Changes:\n* `unified-to.event.createCdpEvent()`: **Added**\n* `unified-to.event.getCdpEvent()`: **Added**\n* `unified-to.event.listCdpEvents()`: **Added**\n* `unified-to.event.patchCdpEvent()`: **Added**\n* `unified-to.event.removeCdpEvent()`: **Added**\n* `unified-to.event.updateCdpEvent()`: **Added**\n* `unified-to.cdp.createCdpActivation()`: **Added**\n* `unified-to.cdp.createCdpDestination()`: **Added**\n* `unified-to.cdp.createCdpEvent()`: **Added**\n* `unified-to.cdp.createCdpProfile()`: **Added**\n* `unified-to.cdp.createCdpSegment()`: **Added**\n* `unified-to.cdp.createCdpSource()`: **Added**\n* `unified-to.cdp.getCdpActivation()`: **Added**\n* `unified-to.cdp.getCdpDestination()`: **Added**\n* `unified-to.cdp.getCdpEvent()`: **Added**\n* `unified-to.cdp.getCdpProfile()`: **Added**\n* `unified-to.cdp.getCdpSegment()`: **Added**\n* `unified-to.cdp.getCdpSource()`: **Added**\n* `unified-to.cdp.listCdpActivations()`: **Added**\n* `unified-to.cdp.listCdpDestinations()`: **Added**\n* `unified-to.cdp.listCdpEvents()`: **Added**\n* `unified-to.cdp.listCdpProfiles()`: **Added**\n* `unified-to.cdp.listCdpSegments()`: **Added**\n* `unified-to.cdp.listCdpSources()`: **Added**\n* `unified-to.cdp.patchCdpActivation()`: **Added**\n* `unified-to.cdp.patchCdpDestination()`: **Added**\n* `unified-to.cdp.patchCdpEvent()`: **Added**\n* `unified-to.cdp.patchCdpProfile()`: **Added**\n* `unified-to.cdp.patchCdpSegment()`: **Added**\n* `unified-to.cdp.patchCdpSource()`: **Added**\n* `unified-to.cdp.removeCdpActivation()`: **Added**\n* `unified-to.cdp.removeCdpDestination()`: **Added**\n* `unified-to.cdp.removeCdpEvent()`: **Added**\n* `unified-to.cdp.removeCdpProfile()`: **Added**\n* `unified-to.cdp.removeCdpSegment()`: **Added**\n* `unified-to.cdp.removeCdpSource()`: **Added**\n* `unified-to.cdp.updateCdpActivation()`: **Added**\n* `unified-to.cdp.updateCdpDestination()`: **Added**\n* `unified-to.cdp.updateCdpEvent()`: **Added**\n* `unified-to.cdp.updateCdpProfile()`: **Added**\n* `unified-to.cdp.updateCdpSegment()`: **Added**\n* `unified-to.cdp.updateCdpSource()`: **Added**\n* `unified-to.activation.createCdpActivation()`: **Added**\n* `unified-to.activation.getCdpActivation()`: **Added**\n* `unified-to.activation.listCdpActivations()`: **Added**\n* `unified-to.activation.patchCdpActivation()`: **Added**\n* `unified-to.activation.removeCdpActivation()`: **Added**\n* `unified-to.activation.updateCdpActivation()`: **Added**\n* `unified-to.destination.createCdpDestination()`: **Added**\n* `unified-to.destination.getCdpDestination()`: **Added**\n* `unified-to.destination.listCdpDestinations()`: **Added**\n* `unified-to.destination.patchCdpDestination()`: **Added**\n* `unified-to.destination.removeCdpDestination()`: **Added**\n* `unified-to.destination.updateCdpDestination()`: **Added**\n* `unified-to.profile.createCdpProfile()`: **Added**\n* `unified-to.profile.getCdpProfile()`: **Added**\n* `unified-to.profile.listCdpProfiles()`: **Added**\n* `unified-to.profile.patchCdpProfile()`: **Added**\n* `unified-to.profile.removeCdpProfile()`: **Added**\n* `unified-to.profile.updateCdpProfile()`: **Added**\n* `unified-to.segment.createCdpSegment()`: **Added**\n* `unified-to.segment.getCdpSegment()`: **Added**\n* `unified-to.segment.listCdpSegments()`: **Added**\n* `unified-to.segment.patchCdpSegment()`: **Added**\n* `unified-to.segment.removeCdpSegment()`: **Added**\n* `unified-to.segment.updateCdpSegment()`: **Added**\n* `unified-to.source.createCdpSource()`: **Added**\n* `unified-to.source.getCdpSource()`: **Added**\n* `unified-to.source.listCdpSources()`: **Added**\n* `unified-to.source.patchCdpSource()`: **Added**\n* `unified-to.source.removeCdpSource()`: **Added**\n* `unified-to.source.updateCdpSource()`: **Added**\n* `unified-to.lms.createLmsContent()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to.lms.getLmsContent()`: \n  *  `request.fields` **Changed**\n  *  `response` **Changed**\n* `unified-to.lms.listLmsContents()`: \n  *  `request.fields` **Changed**\n  *  `response.[]` **Changed**\n* `unified-to.lms.patchLmsContent()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to.lms.updateLmsContent()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to.content.createLmsContent()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to.content.getLmsContent()`: \n  *  `request.fields` **Changed**\n  *  `response` **Changed**\n* `unified-to.content.listLmsContents()`: \n  *  `request.fields` **Changed**\n  *  `response.[]` **Changed**\n* `unified-to.content.patchLmsContent()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to.content.updateLmsContent()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to.unified.createUnifiedConnection()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to.unified.createUnifiedWebhook()`: \n  *  `request.webhook.objectType` **Changed**\n  *  `response.objectType` **Changed**\n* `unified-to.unified.getUnifiedConnection()`:  `response` **Changed**\n* `unified-to.unified.getUnifiedWebhook()`:  `response.objectType` **Changed**\n* `unified-to.unified.listUnifiedConnections()`: \n  *  `request.categories` **Changed**\n  *  `response.[]` **Changed**\n* `unified-to.unified.listUnifiedIntegrationWorkspaces()`: \n  *  `request.categories` **Changed**\n  *  `response.[]` **Changed**\n* `unified-to.unified.listUnifiedIntegrations()`: \n  *  `request.categories` **Changed**\n  *  `response.[]` **Changed**\n* `unified-to.unified.listUnifiedWebhooks()`:  `response.[].objectType` **Changed**\n* `unified-to.unified.patchUnifiedConnection()`: \n  *  `request.connection` **Changed**\n  *  `response` **Changed**\n* `unified-to.unified.patchUnifiedWebhook()`: \n  *  `request.webhook.objectType` **Changed**\n  *  `response.objectType` **Changed**\n* `unified-to.unified.updateUnifiedConnection()`: \n  *  `request.connection` **Changed**\n  *  `response` **Changed**\n* `unified-to.unified.updateUnifiedWebhook()`: \n  *  `request.webhook.objectType` **Changed**\n  *  `response.objectType` **Changed**\n* `unified-to.connection.createUnifiedConnection()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to.connection.getUnifiedConnection()`:  `response` **Changed**\n* `unified-to.connection.listUnifiedConnections()`: \n  *  `request.categories` **Changed**\n  *  `response.[]` **Changed**\n* `unified-to.connection.patchUnifiedConnection()`: \n  *  `request.connection` **Changed**\n  *  `response` **Changed**\n* `unified-to.connection.updateUnifiedConnection()`: \n  *  `request.connection` **Changed**\n  *  `response` **Changed**\n* `unified-to.integration.listUnifiedIntegrationWorkspaces()`: \n  *  `request.categories` **Changed**\n  *  `response.[]` **Changed**\n* `unified-to.integration.listUnifiedIntegrations()`: \n  *  `request.categories` **Changed**\n  *  `response.[]` **Changed**\n* `unified-to.webhook.createUnifiedWebhook()`: \n  *  `request.webhook.objectType` **Changed**\n  *  `response.objectType` **Changed**\n* `unified-to.webhook.getUnifiedWebhook()`:  `response.objectType` **Changed**\n* `unified-to.webhook.listUnifiedWebhooks()`:  `response.[].objectType` **Changed**\n* `unified-to.webhook.patchUnifiedWebhook()`: \n  *  `request.webhook.objectType` **Changed**\n  *  `response.objectType` **Changed**\n* `unified-to.webhook.updateUnifiedWebhook()`: \n  *  `request.webhook.objectType` **Changed**\n  *  `response.objectType` **Changed**\n"
 generatedFiles:
   - .gitattributes
   - USAGE.md

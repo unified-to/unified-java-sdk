@@ -296,6 +296,18 @@ public class PropertyConnectionPermissions {
     public static final PropertyConnectionPermissions DATASTORE_RECORD_WRITE = new PropertyConnectionPermissions("datastore_record_write");
     public static final PropertyConnectionPermissions DATASTORE_QUERY_READ = new PropertyConnectionPermissions("datastore_query_read");
     public static final PropertyConnectionPermissions DATASTORE_QUERY_WRITE = new PropertyConnectionPermissions("datastore_query_write");
+    public static final PropertyConnectionPermissions CDP_PROFILE_READ = new PropertyConnectionPermissions("cdp_profile_read");
+    public static final PropertyConnectionPermissions CDP_PROFILE_WRITE = new PropertyConnectionPermissions("cdp_profile_write");
+    public static final PropertyConnectionPermissions CDP_SEGMENT_READ = new PropertyConnectionPermissions("cdp_segment_read");
+    public static final PropertyConnectionPermissions CDP_SEGMENT_WRITE = new PropertyConnectionPermissions("cdp_segment_write");
+    public static final PropertyConnectionPermissions CDP_EVENT_READ = new PropertyConnectionPermissions("cdp_event_read");
+    public static final PropertyConnectionPermissions CDP_EVENT_WRITE = new PropertyConnectionPermissions("cdp_event_write");
+    public static final PropertyConnectionPermissions CDP_SOURCE_READ = new PropertyConnectionPermissions("cdp_source_read");
+    public static final PropertyConnectionPermissions CDP_SOURCE_WRITE = new PropertyConnectionPermissions("cdp_source_write");
+    public static final PropertyConnectionPermissions CDP_DESTINATION_READ = new PropertyConnectionPermissions("cdp_destination_read");
+    public static final PropertyConnectionPermissions CDP_DESTINATION_WRITE = new PropertyConnectionPermissions("cdp_destination_write");
+    public static final PropertyConnectionPermissions CDP_ACTIVATION_READ = new PropertyConnectionPermissions("cdp_activation_read");
+    public static final PropertyConnectionPermissions CDP_ACTIVATION_WRITE = new PropertyConnectionPermissions("cdp_activation_write");
 
     // This map will grow whenever a Color gets created with a new
     // unrecognized value (a potential memory leak if the user is not
@@ -645,6 +657,18 @@ public class PropertyConnectionPermissions {
         map.put("datastore_record_write", DATASTORE_RECORD_WRITE);
         map.put("datastore_query_read", DATASTORE_QUERY_READ);
         map.put("datastore_query_write", DATASTORE_QUERY_WRITE);
+        map.put("cdp_profile_read", CDP_PROFILE_READ);
+        map.put("cdp_profile_write", CDP_PROFILE_WRITE);
+        map.put("cdp_segment_read", CDP_SEGMENT_READ);
+        map.put("cdp_segment_write", CDP_SEGMENT_WRITE);
+        map.put("cdp_event_read", CDP_EVENT_READ);
+        map.put("cdp_event_write", CDP_EVENT_WRITE);
+        map.put("cdp_source_read", CDP_SOURCE_READ);
+        map.put("cdp_source_write", CDP_SOURCE_WRITE);
+        map.put("cdp_destination_read", CDP_DESTINATION_READ);
+        map.put("cdp_destination_write", CDP_DESTINATION_WRITE);
+        map.put("cdp_activation_read", CDP_ACTIVATION_READ);
+        map.put("cdp_activation_write", CDP_ACTIVATION_WRITE);
         return map;
     }
 
@@ -926,6 +950,18 @@ public class PropertyConnectionPermissions {
         map.put("datastore_record_write", PropertyConnectionPermissionsEnum.DATASTORE_RECORD_WRITE);
         map.put("datastore_query_read", PropertyConnectionPermissionsEnum.DATASTORE_QUERY_READ);
         map.put("datastore_query_write", PropertyConnectionPermissionsEnum.DATASTORE_QUERY_WRITE);
+        map.put("cdp_profile_read", PropertyConnectionPermissionsEnum.CDP_PROFILE_READ);
+        map.put("cdp_profile_write", PropertyConnectionPermissionsEnum.CDP_PROFILE_WRITE);
+        map.put("cdp_segment_read", PropertyConnectionPermissionsEnum.CDP_SEGMENT_READ);
+        map.put("cdp_segment_write", PropertyConnectionPermissionsEnum.CDP_SEGMENT_WRITE);
+        map.put("cdp_event_read", PropertyConnectionPermissionsEnum.CDP_EVENT_READ);
+        map.put("cdp_event_write", PropertyConnectionPermissionsEnum.CDP_EVENT_WRITE);
+        map.put("cdp_source_read", PropertyConnectionPermissionsEnum.CDP_SOURCE_READ);
+        map.put("cdp_source_write", PropertyConnectionPermissionsEnum.CDP_SOURCE_WRITE);
+        map.put("cdp_destination_read", PropertyConnectionPermissionsEnum.CDP_DESTINATION_READ);
+        map.put("cdp_destination_write", PropertyConnectionPermissionsEnum.CDP_DESTINATION_WRITE);
+        map.put("cdp_activation_read", PropertyConnectionPermissionsEnum.CDP_ACTIVATION_READ);
+        map.put("cdp_activation_write", PropertyConnectionPermissionsEnum.CDP_ACTIVATION_WRITE);
         return map;
     }
     
@@ -1207,7 +1243,19 @@ public class PropertyConnectionPermissions {
         DATASTORE_RECORD_READ("datastore_record_read"),
         DATASTORE_RECORD_WRITE("datastore_record_write"),
         DATASTORE_QUERY_READ("datastore_query_read"),
-        DATASTORE_QUERY_WRITE("datastore_query_write"),;
+        DATASTORE_QUERY_WRITE("datastore_query_write"),
+        CDP_PROFILE_READ("cdp_profile_read"),
+        CDP_PROFILE_WRITE("cdp_profile_write"),
+        CDP_SEGMENT_READ("cdp_segment_read"),
+        CDP_SEGMENT_WRITE("cdp_segment_write"),
+        CDP_EVENT_READ("cdp_event_read"),
+        CDP_EVENT_WRITE("cdp_event_write"),
+        CDP_SOURCE_READ("cdp_source_read"),
+        CDP_SOURCE_WRITE("cdp_source_write"),
+        CDP_DESTINATION_READ("cdp_destination_read"),
+        CDP_DESTINATION_WRITE("cdp_destination_write"),
+        CDP_ACTIVATION_READ("cdp_activation_read"),
+        CDP_ACTIVATION_WRITE("cdp_activation_write"),;
 
         private final String value;
 

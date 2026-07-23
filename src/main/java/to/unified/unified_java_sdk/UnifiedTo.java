@@ -194,6 +194,24 @@ public class UnifiedTo {
     private final Webinar webinar;
 
 
+    private final Cdp cdp;
+
+
+    private final Activation activation;
+
+
+    private final Destination destination;
+
+
+    private final Profile profile;
+
+
+    private final Segment segment;
+
+
+    private final Source source;
+
+
     private final Clubs clubs;
 
 
@@ -749,6 +767,36 @@ public class UnifiedTo {
 
     public Webinar webinar() {
         return webinar;
+    }
+
+
+    public Cdp cdp() {
+        return cdp;
+    }
+
+
+    public Activation activation() {
+        return activation;
+    }
+
+
+    public Destination destination() {
+        return destination;
+    }
+
+
+    public Profile profile() {
+        return profile;
+    }
+
+
+    public Segment segment() {
+        return segment;
+    }
+
+
+    public Source source() {
+        return source;
     }
 
 
@@ -1444,6 +1492,12 @@ public class UnifiedTo {
         this.link = new Link(sdkConfiguration);
         this.recording = new Recording(sdkConfiguration);
         this.webinar = new Webinar(sdkConfiguration);
+        this.cdp = new Cdp(sdkConfiguration);
+        this.activation = new Activation(sdkConfiguration);
+        this.destination = new Destination(sdkConfiguration);
+        this.profile = new Profile(sdkConfiguration);
+        this.segment = new Segment(sdkConfiguration);
+        this.source = new Source(sdkConfiguration);
         this.clubs = new Clubs(sdkConfiguration);
         this.location = new Location(sdkConfiguration);
         this.member = new Member(sdkConfiguration);

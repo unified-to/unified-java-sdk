@@ -1,0 +1,13 @@
+# CdpMetadata
+
+
+## Fields
+
+| Field                                                                          | Type                                                                           | Required                                                                       | Description                                                                    |
+| ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ |
+| `extraData`                                                                    | [Optional\<CdpMetadataExtraData>](../../models/shared/CdpMetadataExtraData.md) | :heavy_minus_sign:                                                             | N/A                                                                            |
+| `format`                                                                       | [Optional\<CdpMetadataFormat>](../../models/shared/CdpMetadataFormat.md)       | :heavy_minus_sign:                                                             | N/A                                                                            |
+| `id`                                                                           | *Optional\<String>*                                                            | :heavy_minus_sign:                                                             | N/A                                                                            |
+| `namespace`                                                                    | *Optional\<String>*                                                            | :heavy_minus_sign:                                                             | N/A                                                                            |
+| `slug`                                                                         | *Optional\<String>*                                                            | :heavy_minus_sign:                                                             | N/A                                                                            |
+| `value`                                                                        | [Optional\<CdpMetadataValue>](../../models/shared/CdpMetadataValue.md)         | :heavy_minus_sign:                                                             | N/A                                                                            |

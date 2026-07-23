@@ -115,6 +115,18 @@ public class AsyncUnifiedTo {
 
     private final AsyncWebinar webinar;
 
+    private final AsyncCdp cdp;
+
+    private final AsyncActivation activation;
+
+    private final AsyncDestination destination;
+
+    private final AsyncProfile profile;
+
+    private final AsyncSegment segment;
+
+    private final AsyncSource source;
+
     private final AsyncClubs clubs;
 
     private final AsyncLocation location;
@@ -519,6 +531,30 @@ public class AsyncUnifiedTo {
 
     public AsyncWebinar webinar() {
         return webinar;
+    }
+
+    public AsyncCdp cdp() {
+        return cdp;
+    }
+
+    public AsyncActivation activation() {
+        return activation;
+    }
+
+    public AsyncDestination destination() {
+        return destination;
+    }
+
+    public AsyncProfile profile() {
+        return profile;
+    }
+
+    public AsyncSegment segment() {
+        return segment;
+    }
+
+    public AsyncSource source() {
+        return source;
     }
 
     public AsyncClubs clubs() {
@@ -982,6 +1018,12 @@ public class AsyncUnifiedTo {
         this.link = new AsyncLink(syncSDK.link(), sdkConfiguration);
         this.recording = new AsyncRecording(syncSDK.recording(), sdkConfiguration);
         this.webinar = new AsyncWebinar(syncSDK.webinar(), sdkConfiguration);
+        this.cdp = new AsyncCdp(syncSDK.cdp(), sdkConfiguration);
+        this.activation = new AsyncActivation(syncSDK.activation(), sdkConfiguration);
+        this.destination = new AsyncDestination(syncSDK.destination(), sdkConfiguration);
+        this.profile = new AsyncProfile(syncSDK.profile(), sdkConfiguration);
+        this.segment = new AsyncSegment(syncSDK.segment(), sdkConfiguration);
+        this.source = new AsyncSource(syncSDK.source(), sdkConfiguration);
         this.clubs = new AsyncClubs(syncSDK.clubs(), sdkConfiguration);
         this.location = new AsyncLocation(syncSDK.location(), sdkConfiguration);
         this.member = new AsyncMember(syncSDK.member(), sdkConfiguration);

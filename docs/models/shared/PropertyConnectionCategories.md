@@ -47,3 +47,4 @@ PropertyConnectionCategories custom = PropertyConnectionCategories.of("custom_va
 | `SIGNING`      | signing        |
 | `CLUBS`        | clubs          |
 | `DATASTORE`    | datastore      |
+| `CDP`          | cdp            |

@@ -6,21 +6,27 @@
 
 * [createAnalyticsEvent](#createanalyticsevent) - Create an event
 * [createCalendarEvent](#createcalendarevent) - Create an event
+* [createCdpEvent](#createcdpevent) - Create an event
 * [createCrmEvent](#createcrmevent) - Create an event
 * [getAnalyticsEvent](#getanalyticsevent) - Retrieve an event
 * [getCalendarEvent](#getcalendarevent) - Retrieve an event
+* [getCdpEvent](#getcdpevent) - Retrieve an event
 * [getClubsEvent](#getclubsevent) - Retrieve an event
 * [getCrmEvent](#getcrmevent) - Retrieve an event
 * [listAnalyticsEvents](#listanalyticsevents) - List all events
 * [listCalendarEvents](#listcalendarevents) - List all events
+* [listCdpEvents](#listcdpevents) - List all events
 * [listClubsEvents](#listclubsevents) - List all events
 * [listCrmEvents](#listcrmevents) - List all events
 * [patchCalendarEvent](#patchcalendarevent) - Update an event
+* [patchCdpEvent](#patchcdpevent) - Update an event
 * [patchCrmEvent](#patchcrmevent) - Update an event
 * [patchMessagingEvent](#patchmessagingevent) - Update an event
 * [removeCalendarEvent](#removecalendarevent) - Remove an event
+* [removeCdpEvent](#removecdpevent) - Remove an event
 * [removeCrmEvent](#removecrmevent) - Remove an event
 * [updateCalendarEvent](#updatecalendarevent) - Update an event
+* [updateCdpEvent](#updatecdpevent) - Update an event
 * [updateCrmEvent](#updatecrmevent) - Update an event
 * [updateMessagingEvent](#updatemessagingevent) - Update an event
 
@@ -137,6 +143,66 @@ public class Application {
 ### Response
 
 **[CreateCalendarEventResponse](../../models/operations/CreateCalendarEventResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## createCdpEvent
+
+Create an event
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="createCdpEvent" method="post" path="/cdp/{connection_id}/event" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.CreateCdpEventRequest;
+import to.unified.unified_java_sdk.models.operations.CreateCdpEventResponse;
+import to.unified.unified_java_sdk.models.shared.CdpEvent;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        CreateCdpEventRequest req = CreateCdpEventRequest.builder()
+                .cdpEvent(CdpEvent.builder()
+                    .build())
+                .connectionId("<id>")
+                .build();
+
+        CreateCdpEventResponse res = sdk.event().createCdpEvent()
+                .request(req)
+                .call();
+
+        if (res.cdpEvent().isPresent()) {
+            System.out.println(res.cdpEvent().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                 | Type                                                                      | Required                                                                  | Description                                                               |
+| ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
+| `request`                                                                 | [CreateCdpEventRequest](../../models/operations/CreateCdpEventRequest.md) | :heavy_check_mark:                                                        | The request object to use for the request.                                |
+
+### Response
+
+**[CreateCdpEventResponse](../../models/operations/CreateCdpEventResponse.md)**
 
 ### Errors
 
@@ -313,6 +379,64 @@ public class Application {
 ### Response
 
 **[GetCalendarEventResponse](../../models/operations/GetCalendarEventResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## getCdpEvent
+
+Retrieve an event
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="getCdpEvent" method="get" path="/cdp/{connection_id}/event/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.GetCdpEventRequest;
+import to.unified.unified_java_sdk.models.operations.GetCdpEventResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        GetCdpEventRequest req = GetCdpEventRequest.builder()
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        GetCdpEventResponse res = sdk.event().getCdpEvent()
+                .request(req)
+                .call();
+
+        if (res.cdpEvent().isPresent()) {
+            System.out.println(res.cdpEvent().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                           | Type                                                                | Required                                                            | Description                                                         |
+| ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- |
+| `request`                                                           | [GetCdpEventRequest](../../models/operations/GetCdpEventRequest.md) | :heavy_check_mark:                                                  | The request object to use for the request.                          |
+
+### Response
+
+**[GetCdpEventResponse](../../models/operations/GetCdpEventResponse.md)**
 
 ### Errors
 
@@ -550,6 +674,63 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
+## listCdpEvents
+
+List all events
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="listCdpEvents" method="get" path="/cdp/{connection_id}/event" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.ListCdpEventsRequest;
+import to.unified.unified_java_sdk.models.operations.ListCdpEventsResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        ListCdpEventsRequest req = ListCdpEventsRequest.builder()
+                .connectionId("<id>")
+                .build();
+
+        ListCdpEventsResponse res = sdk.event().listCdpEvents()
+                .request(req)
+                .call();
+
+        if (res.cdpEvents().isPresent()) {
+            System.out.println(res.cdpEvents().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                               | Type                                                                    | Required                                                                | Description                                                             |
+| ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- |
+| `request`                                                               | [ListCdpEventsRequest](../../models/operations/ListCdpEventsRequest.md) | :heavy_check_mark:                                                      | The request object to use for the request.                              |
+
+### Response
+
+**[ListCdpEventsResponse](../../models/operations/ListCdpEventsResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
 ## listClubsEvents
 
 List all events
@@ -718,6 +899,67 @@ public class Application {
 ### Response
 
 **[PatchCalendarEventResponse](../../models/operations/PatchCalendarEventResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## patchCdpEvent
+
+Update an event
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="patchCdpEvent" method="patch" path="/cdp/{connection_id}/event/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.PatchCdpEventRequest;
+import to.unified.unified_java_sdk.models.operations.PatchCdpEventResponse;
+import to.unified.unified_java_sdk.models.shared.CdpEvent;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        PatchCdpEventRequest req = PatchCdpEventRequest.builder()
+                .cdpEvent(CdpEvent.builder()
+                    .build())
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        PatchCdpEventResponse res = sdk.event().patchCdpEvent()
+                .request(req)
+                .call();
+
+        if (res.cdpEvent().isPresent()) {
+            System.out.println(res.cdpEvent().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                               | Type                                                                    | Required                                                                | Description                                                             |
+| ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- |
+| `request`                                                               | [PatchCdpEventRequest](../../models/operations/PatchCdpEventRequest.md) | :heavy_check_mark:                                                      | The request object to use for the request.                              |
+
+### Response
+
+**[PatchCdpEventResponse](../../models/operations/PatchCdpEventResponse.md)**
 
 ### Errors
 
@@ -903,6 +1145,62 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
+## removeCdpEvent
+
+Remove an event
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="removeCdpEvent" method="delete" path="/cdp/{connection_id}/event/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.RemoveCdpEventRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveCdpEventResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        RemoveCdpEventRequest req = RemoveCdpEventRequest.builder()
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        RemoveCdpEventResponse res = sdk.event().removeCdpEvent()
+                .request(req)
+                .call();
+
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                 | Type                                                                      | Required                                                                  | Description                                                               |
+| ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
+| `request`                                                                 | [RemoveCdpEventRequest](../../models/operations/RemoveCdpEventRequest.md) | :heavy_check_mark:                                                        | The request object to use for the request.                                |
+
+### Response
+
+**[RemoveCdpEventResponse](../../models/operations/RemoveCdpEventResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
 ## removeCrmEvent
 
 Remove an event
@@ -1013,6 +1311,67 @@ public class Application {
 ### Response
 
 **[UpdateCalendarEventResponse](../../models/operations/UpdateCalendarEventResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## updateCdpEvent
+
+Update an event
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="updateCdpEvent" method="put" path="/cdp/{connection_id}/event/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.UpdateCdpEventRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateCdpEventResponse;
+import to.unified.unified_java_sdk.models.shared.CdpEvent;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        UpdateCdpEventRequest req = UpdateCdpEventRequest.builder()
+                .cdpEvent(CdpEvent.builder()
+                    .build())
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        UpdateCdpEventResponse res = sdk.event().updateCdpEvent()
+                .request(req)
+                .call();
+
+        if (res.cdpEvent().isPresent()) {
+            System.out.println(res.cdpEvent().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                 | Type                                                                      | Required                                                                  | Description                                                               |
+| ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
+| `request`                                                                 | [UpdateCdpEventRequest](../../models/operations/UpdateCdpEventRequest.md) | :heavy_check_mark:                                                        | The request object to use for the request.                                |
+
+### Response
+
+**[UpdateCdpEventResponse](../../models/operations/UpdateCdpEventResponse.md)**
 
 ### Errors
 

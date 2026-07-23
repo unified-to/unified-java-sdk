@@ -48,6 +48,11 @@ public class LmsContent {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("difficulty")
+    private String difficulty;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("duration_minutes")
     private Double durationMinutes;
 
@@ -98,6 +103,11 @@ public class LmsContent {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("published_at")
+    private OffsetDateTime publishedAt;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
     private Map<String, Object> raw;
 
@@ -116,6 +126,18 @@ public class LmsContent {
     @JsonProperty("sort_order")
     private Double sortOrder;
 
+    /**
+     * Topic taxonomy as {name, rank} pairs carrying the full ancestor chain (rank = depth, 0 = top level)
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("subjects")
+    private List<LmsSubject> subjects;
+
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("tags")
+    private List<String> tags;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
@@ -128,6 +150,7 @@ public class LmsContent {
             @JsonProperty("course_ids") @Nullable List<String> courseIds,
             @JsonProperty("created_at") @Nullable OffsetDateTime createdAt,
             @JsonProperty("description") @Nullable String description,
+            @JsonProperty("difficulty") @Nullable String difficulty,
             @JsonProperty("duration_minutes") @Nullable Double durationMinutes,
             @JsonProperty("external_reference") @Nullable String externalReference,
             @JsonProperty("id") @Nullable String id,
@@ -138,16 +161,20 @@ public class LmsContent {
             @JsonProperty("media") @Nullable List<LmsMedia> media,
             @JsonProperty("name") @Nullable String name,
             @JsonProperty("provider_name") @Nullable String providerName,
+            @JsonProperty("published_at") @Nullable OffsetDateTime publishedAt,
             @JsonProperty("raw") @Nullable Map<String, Object> raw,
             @JsonProperty("short_description") @Nullable String shortDescription,
             @JsonProperty("skills") @Nullable List<String> skills,
             @JsonProperty("sort_order") @Nullable Double sortOrder,
+            @JsonProperty("subjects") @Nullable List<LmsSubject> subjects,
+            @JsonProperty("tags") @Nullable List<String> tags,
             @JsonProperty("updated_at") @Nullable OffsetDateTime updatedAt) {
         this.categories = categories;
         this.collectionIds = collectionIds;
         this.courseIds = courseIds;
         this.createdAt = createdAt;
         this.description = description;
+        this.difficulty = difficulty;
         this.durationMinutes = durationMinutes;
         this.externalReference = externalReference;
         this.id = id;
@@ -158,10 +185,13 @@ public class LmsContent {
         this.media = media;
         this.name = name;
         this.providerName = providerName;
+        this.publishedAt = publishedAt;
         this.raw = raw;
         this.shortDescription = shortDescription;
         this.skills = skills;
         this.sortOrder = sortOrder;
+        this.subjects = subjects;
+        this.tags = tags;
         this.updatedAt = updatedAt;
     }
     
@@ -172,7 +202,8 @@ public class LmsContent {
             null, null, null,
             null, null, null,
             null, null, null,
-            null, null);
+            null, null, null,
+            null, null, null);
     }
 
     public Optional<List<String>> categories() {
@@ -193,6 +224,10 @@ public class LmsContent {
 
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
+    }
+
+    public Optional<String> difficulty() {
+        return Optional.ofNullable(this.difficulty);
     }
 
     public Optional<Double> durationMinutes() {
@@ -235,6 +270,10 @@ public class LmsContent {
         return Optional.ofNullable(this.providerName);
     }
 
+    public Optional<OffsetDateTime> publishedAt() {
+        return Optional.ofNullable(this.publishedAt);
+    }
+
     public Optional<Map<String, Object>> raw() {
         return Optional.ofNullable(this.raw);
     }
@@ -249,6 +288,17 @@ public class LmsContent {
 
     public Optional<Double> sortOrder() {
         return Optional.ofNullable(this.sortOrder);
+    }
+
+    /**
+     * Topic taxonomy as {name, rank} pairs carrying the full ancestor chain (rank = depth, 0 = top level)
+     */
+    public Optional<List<LmsSubject>> subjects() {
+        return Optional.ofNullable(this.subjects);
+    }
+
+    public Optional<List<String>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     public Optional<OffsetDateTime> updatedAt() {
@@ -286,6 +336,12 @@ public class LmsContent {
 
     public LmsContent withDescription(@Nullable String description) {
         this.description = description;
+        return this;
+    }
+
+
+    public LmsContent withDifficulty(@Nullable String difficulty) {
+        this.difficulty = difficulty;
         return this;
     }
 
@@ -350,6 +406,12 @@ public class LmsContent {
     }
 
 
+    public LmsContent withPublishedAt(@Nullable OffsetDateTime publishedAt) {
+        this.publishedAt = publishedAt;
+        return this;
+    }
+
+
     public LmsContent withRaw(@Nullable Map<String, Object> raw) {
         this.raw = raw;
         return this;
@@ -370,6 +432,21 @@ public class LmsContent {
 
     public LmsContent withSortOrder(@Nullable Double sortOrder) {
         this.sortOrder = sortOrder;
+        return this;
+    }
+
+
+    /**
+     * Topic taxonomy as {name, rank} pairs carrying the full ancestor chain (rank = depth, 0 = top level)
+     */
+    public LmsContent withSubjects(@Nullable List<LmsSubject> subjects) {
+        this.subjects = subjects;
+        return this;
+    }
+
+
+    public LmsContent withTags(@Nullable List<String> tags) {
+        this.tags = tags;
         return this;
     }
 
@@ -395,6 +472,7 @@ public class LmsContent {
             Utils.enhancedDeepEquals(this.courseIds, other.courseIds) &&
             Utils.enhancedDeepEquals(this.createdAt, other.createdAt) &&
             Utils.enhancedDeepEquals(this.description, other.description) &&
+            Utils.enhancedDeepEquals(this.difficulty, other.difficulty) &&
             Utils.enhancedDeepEquals(this.durationMinutes, other.durationMinutes) &&
             Utils.enhancedDeepEquals(this.externalReference, other.externalReference) &&
             Utils.enhancedDeepEquals(this.id, other.id) &&
@@ -405,10 +483,13 @@ public class LmsContent {
             Utils.enhancedDeepEquals(this.media, other.media) &&
             Utils.enhancedDeepEquals(this.name, other.name) &&
             Utils.enhancedDeepEquals(this.providerName, other.providerName) &&
+            Utils.enhancedDeepEquals(this.publishedAt, other.publishedAt) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
             Utils.enhancedDeepEquals(this.shortDescription, other.shortDescription) &&
             Utils.enhancedDeepEquals(this.skills, other.skills) &&
             Utils.enhancedDeepEquals(this.sortOrder, other.sortOrder) &&
+            Utils.enhancedDeepEquals(this.subjects, other.subjects) &&
+            Utils.enhancedDeepEquals(this.tags, other.tags) &&
             Utils.enhancedDeepEquals(this.updatedAt, other.updatedAt);
     }
     
@@ -416,12 +497,13 @@ public class LmsContent {
     public int hashCode() {
         return Utils.enhancedHash(
             categories, collectionIds, courseIds,
-            createdAt, description, durationMinutes,
-            externalReference, id, instructorIds,
-            isActive, languages, localizations,
-            media, name, providerName,
-            raw, shortDescription, skills,
-            sortOrder, updatedAt);
+            createdAt, description, difficulty,
+            durationMinutes, externalReference, id,
+            instructorIds, isActive, languages,
+            localizations, media, name,
+            providerName, publishedAt, raw,
+            shortDescription, skills, sortOrder,
+            subjects, tags, updatedAt);
     }
     
     @Override
@@ -432,6 +514,7 @@ public class LmsContent {
                 "courseIds", courseIds,
                 "createdAt", createdAt,
                 "description", description,
+                "difficulty", difficulty,
                 "durationMinutes", durationMinutes,
                 "externalReference", externalReference,
                 "id", id,
@@ -442,10 +525,13 @@ public class LmsContent {
                 "media", media,
                 "name", name,
                 "providerName", providerName,
+                "publishedAt", publishedAt,
                 "raw", raw,
                 "shortDescription", shortDescription,
                 "skills", skills,
                 "sortOrder", sortOrder,
+                "subjects", subjects,
+                "tags", tags,
                 "updatedAt", updatedAt);
     }
 
@@ -461,6 +547,8 @@ public class LmsContent {
         private OffsetDateTime createdAt;
 
         private String description;
+
+        private String difficulty;
 
         private Double durationMinutes;
 
@@ -482,6 +570,8 @@ public class LmsContent {
 
         private String providerName;
 
+        private OffsetDateTime publishedAt;
+
         private Map<String, Object> raw;
 
         private String shortDescription;
@@ -489,6 +579,10 @@ public class LmsContent {
         private List<String> skills;
 
         private Double sortOrder;
+
+        private List<LmsSubject> subjects;
+
+        private List<String> tags;
 
         private OffsetDateTime updatedAt;
 
@@ -518,6 +612,11 @@ public class LmsContent {
 
         public Builder description(@Nullable String description) {
             this.description = description;
+            return this;
+        }
+
+        public Builder difficulty(@Nullable String difficulty) {
+            this.difficulty = difficulty;
             return this;
         }
 
@@ -571,6 +670,11 @@ public class LmsContent {
             return this;
         }
 
+        public Builder publishedAt(@Nullable OffsetDateTime publishedAt) {
+            this.publishedAt = publishedAt;
+            return this;
+        }
+
         public Builder raw(@Nullable Map<String, Object> raw) {
             this.raw = raw;
             return this;
@@ -591,6 +695,19 @@ public class LmsContent {
             return this;
         }
 
+        /**
+         * Topic taxonomy as {name, rank} pairs carrying the full ancestor chain (rank = depth, 0 = top level)
+         */
+        public Builder subjects(@Nullable List<LmsSubject> subjects) {
+            this.subjects = subjects;
+            return this;
+        }
+
+        public Builder tags(@Nullable List<String> tags) {
+            this.tags = tags;
+            return this;
+        }
+
         public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;
@@ -599,12 +716,13 @@ public class LmsContent {
         public LmsContent build() {
             return new LmsContent(
                 categories, collectionIds, courseIds,
-                createdAt, description, durationMinutes,
-                externalReference, id, instructorIds,
-                isActive, languages, localizations,
-                media, name, providerName,
-                raw, shortDescription, skills,
-                sortOrder, updatedAt);
+                createdAt, description, difficulty,
+                durationMinutes, externalReference, id,
+                instructorIds, isActive, languages,
+                localizations, media, name,
+                providerName, publishedAt, raw,
+                shortDescription, skills, sortOrder,
+                subjects, tags, updatedAt);
         }
 
     }

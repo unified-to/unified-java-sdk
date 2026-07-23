@@ -12,6 +12,9 @@ import to.unified.unified_java_sdk.models.operations.CreateAnalyticsEventRespons
 import to.unified.unified_java_sdk.models.operations.CreateCalendarEventRequest;
 import to.unified.unified_java_sdk.models.operations.CreateCalendarEventRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateCalendarEventResponse;
+import to.unified.unified_java_sdk.models.operations.CreateCdpEventRequest;
+import to.unified.unified_java_sdk.models.operations.CreateCdpEventRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.CreateCdpEventResponse;
 import to.unified.unified_java_sdk.models.operations.CreateCrmEventRequest;
 import to.unified.unified_java_sdk.models.operations.CreateCrmEventRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateCrmEventResponse;
@@ -21,6 +24,9 @@ import to.unified.unified_java_sdk.models.operations.GetAnalyticsEventResponse;
 import to.unified.unified_java_sdk.models.operations.GetCalendarEventRequest;
 import to.unified.unified_java_sdk.models.operations.GetCalendarEventRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.GetCalendarEventResponse;
+import to.unified.unified_java_sdk.models.operations.GetCdpEventRequest;
+import to.unified.unified_java_sdk.models.operations.GetCdpEventRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetCdpEventResponse;
 import to.unified.unified_java_sdk.models.operations.GetClubsEventRequest;
 import to.unified.unified_java_sdk.models.operations.GetClubsEventRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.GetClubsEventResponse;
@@ -33,6 +39,9 @@ import to.unified.unified_java_sdk.models.operations.ListAnalyticsEventsResponse
 import to.unified.unified_java_sdk.models.operations.ListCalendarEventsRequest;
 import to.unified.unified_java_sdk.models.operations.ListCalendarEventsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.ListCalendarEventsResponse;
+import to.unified.unified_java_sdk.models.operations.ListCdpEventsRequest;
+import to.unified.unified_java_sdk.models.operations.ListCdpEventsRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListCdpEventsResponse;
 import to.unified.unified_java_sdk.models.operations.ListClubsEventsRequest;
 import to.unified.unified_java_sdk.models.operations.ListClubsEventsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.ListClubsEventsResponse;
@@ -42,6 +51,9 @@ import to.unified.unified_java_sdk.models.operations.ListCrmEventsResponse;
 import to.unified.unified_java_sdk.models.operations.PatchCalendarEventRequest;
 import to.unified.unified_java_sdk.models.operations.PatchCalendarEventRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.PatchCalendarEventResponse;
+import to.unified.unified_java_sdk.models.operations.PatchCdpEventRequest;
+import to.unified.unified_java_sdk.models.operations.PatchCdpEventRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.PatchCdpEventResponse;
 import to.unified.unified_java_sdk.models.operations.PatchCrmEventRequest;
 import to.unified.unified_java_sdk.models.operations.PatchCrmEventRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.PatchCrmEventResponse;
@@ -51,12 +63,18 @@ import to.unified.unified_java_sdk.models.operations.PatchMessagingEventResponse
 import to.unified.unified_java_sdk.models.operations.RemoveCalendarEventRequest;
 import to.unified.unified_java_sdk.models.operations.RemoveCalendarEventRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.RemoveCalendarEventResponse;
+import to.unified.unified_java_sdk.models.operations.RemoveCdpEventRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveCdpEventRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.RemoveCdpEventResponse;
 import to.unified.unified_java_sdk.models.operations.RemoveCrmEventRequest;
 import to.unified.unified_java_sdk.models.operations.RemoveCrmEventRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.RemoveCrmEventResponse;
 import to.unified.unified_java_sdk.models.operations.UpdateCalendarEventRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateCalendarEventRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.UpdateCalendarEventResponse;
+import to.unified.unified_java_sdk.models.operations.UpdateCdpEventRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateCdpEventRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.UpdateCdpEventResponse;
 import to.unified.unified_java_sdk.models.operations.UpdateCrmEventRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateCrmEventRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.UpdateCrmEventResponse;
@@ -65,21 +83,27 @@ import to.unified.unified_java_sdk.models.operations.UpdateMessagingEventRequest
 import to.unified.unified_java_sdk.models.operations.UpdateMessagingEventResponse;
 import to.unified.unified_java_sdk.operations.CreateAnalyticsEvent;
 import to.unified.unified_java_sdk.operations.CreateCalendarEvent;
+import to.unified.unified_java_sdk.operations.CreateCdpEvent;
 import to.unified.unified_java_sdk.operations.CreateCrmEvent;
 import to.unified.unified_java_sdk.operations.GetAnalyticsEvent;
 import to.unified.unified_java_sdk.operations.GetCalendarEvent;
+import to.unified.unified_java_sdk.operations.GetCdpEvent;
 import to.unified.unified_java_sdk.operations.GetClubsEvent;
 import to.unified.unified_java_sdk.operations.GetCrmEvent;
 import to.unified.unified_java_sdk.operations.ListAnalyticsEvents;
 import to.unified.unified_java_sdk.operations.ListCalendarEvents;
+import to.unified.unified_java_sdk.operations.ListCdpEvents;
 import to.unified.unified_java_sdk.operations.ListClubsEvents;
 import to.unified.unified_java_sdk.operations.ListCrmEvents;
 import to.unified.unified_java_sdk.operations.PatchCalendarEvent;
+import to.unified.unified_java_sdk.operations.PatchCdpEvent;
 import to.unified.unified_java_sdk.operations.PatchCrmEvent;
 import to.unified.unified_java_sdk.operations.PatchMessagingEvent;
 import to.unified.unified_java_sdk.operations.RemoveCalendarEvent;
+import to.unified.unified_java_sdk.operations.RemoveCdpEvent;
 import to.unified.unified_java_sdk.operations.RemoveCrmEvent;
 import to.unified.unified_java_sdk.operations.UpdateCalendarEvent;
+import to.unified.unified_java_sdk.operations.UpdateCdpEvent;
 import to.unified.unified_java_sdk.operations.UpdateCrmEvent;
 import to.unified.unified_java_sdk.operations.UpdateMessagingEvent;
 import to.unified.unified_java_sdk.utils.Headers;
@@ -153,6 +177,28 @@ public class Event {
      * 
      * @return The call builder
      */
+    public CreateCdpEventRequestBuilder createCdpEvent() {
+        return new CreateCdpEventRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Create an event
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateCdpEventResponse createCdpEvent(@Nonnull CreateCdpEventRequest request) {
+        RequestOperation<CreateCdpEventRequest, CreateCdpEventResponse> operation
+              = new CreateCdpEvent.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Create an event
+     * 
+     * @return The call builder
+     */
     public CreateCrmEventRequestBuilder createCrmEvent() {
         return new CreateCrmEventRequestBuilder(sdkConfiguration);
     }
@@ -211,6 +257,28 @@ public class Event {
     public GetCalendarEventResponse getCalendarEvent(@Nonnull GetCalendarEventRequest request) {
         RequestOperation<GetCalendarEventRequest, GetCalendarEventResponse> operation
               = new GetCalendarEvent.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Retrieve an event
+     * 
+     * @return The call builder
+     */
+    public GetCdpEventRequestBuilder getCdpEvent() {
+        return new GetCdpEventRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Retrieve an event
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetCdpEventResponse getCdpEvent(@Nonnull GetCdpEventRequest request) {
+        RequestOperation<GetCdpEventRequest, GetCdpEventResponse> operation
+              = new GetCdpEvent.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -307,6 +375,28 @@ public class Event {
      * 
      * @return The call builder
      */
+    public ListCdpEventsRequestBuilder listCdpEvents() {
+        return new ListCdpEventsRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * List all events
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListCdpEventsResponse listCdpEvents(@Nonnull ListCdpEventsRequest request) {
+        RequestOperation<ListCdpEventsRequest, ListCdpEventsResponse> operation
+              = new ListCdpEvents.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * List all events
+     * 
+     * @return The call builder
+     */
     public ListClubsEventsRequestBuilder listClubsEvents() {
         return new ListClubsEventsRequestBuilder(sdkConfiguration);
     }
@@ -365,6 +455,28 @@ public class Event {
     public PatchCalendarEventResponse patchCalendarEvent(@Nonnull PatchCalendarEventRequest request) {
         RequestOperation<PatchCalendarEventRequest, PatchCalendarEventResponse> operation
               = new PatchCalendarEvent.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Update an event
+     * 
+     * @return The call builder
+     */
+    public PatchCdpEventRequestBuilder patchCdpEvent() {
+        return new PatchCdpEventRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Update an event
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchCdpEventResponse patchCdpEvent(@Nonnull PatchCdpEventRequest request) {
+        RequestOperation<PatchCdpEventRequest, PatchCdpEventResponse> operation
+              = new PatchCdpEvent.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -439,6 +551,28 @@ public class Event {
      * 
      * @return The call builder
      */
+    public RemoveCdpEventRequestBuilder removeCdpEvent() {
+        return new RemoveCdpEventRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Remove an event
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveCdpEventResponse removeCdpEvent(@Nonnull RemoveCdpEventRequest request) {
+        RequestOperation<RemoveCdpEventRequest, RemoveCdpEventResponse> operation
+              = new RemoveCdpEvent.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Remove an event
+     * 
+     * @return The call builder
+     */
     public RemoveCrmEventRequestBuilder removeCrmEvent() {
         return new RemoveCrmEventRequestBuilder(sdkConfiguration);
     }
@@ -475,6 +609,28 @@ public class Event {
     public UpdateCalendarEventResponse updateCalendarEvent(@Nonnull UpdateCalendarEventRequest request) {
         RequestOperation<UpdateCalendarEventRequest, UpdateCalendarEventResponse> operation
               = new UpdateCalendarEvent.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Update an event
+     * 
+     * @return The call builder
+     */
+    public UpdateCdpEventRequestBuilder updateCdpEvent() {
+        return new UpdateCdpEventRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Update an event
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateCdpEventResponse updateCdpEvent(@Nonnull UpdateCdpEventRequest request) {
+        RequestOperation<UpdateCdpEventRequest, UpdateCdpEventResponse> operation
+              = new UpdateCdpEvent.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

@@ -39,7 +39,8 @@ public enum QueryParamCategories {
     ASSESSMENT("assessment"),
     SIGNING("signing"),
     CLUBS("clubs"),
-    DATASTORE("datastore");
+    DATASTORE("datastore"),
+    CDP("cdp");
 
     @JsonValue
     private final String value;

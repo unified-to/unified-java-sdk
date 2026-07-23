@@ -170,6 +170,12 @@ public class ObjectType {
     public static final ObjectType DATASTORE_TABLE = new ObjectType("datastore_table");
     public static final ObjectType DATASTORE_RECORD = new ObjectType("datastore_record");
     public static final ObjectType DATASTORE_QUERY = new ObjectType("datastore_query");
+    public static final ObjectType CDP_PROFILE = new ObjectType("cdp_profile");
+    public static final ObjectType CDP_SEGMENT = new ObjectType("cdp_segment");
+    public static final ObjectType CDP_EVENT = new ObjectType("cdp_event");
+    public static final ObjectType CDP_SOURCE = new ObjectType("cdp_source");
+    public static final ObjectType CDP_DESTINATION = new ObjectType("cdp_destination");
+    public static final ObjectType CDP_ACTIVATION = new ObjectType("cdp_activation");
 
     // This map will grow whenever a Color gets created with a new
     // unrecognized value (a potential memory leak if the user is not
@@ -393,6 +399,12 @@ public class ObjectType {
         map.put("datastore_table", DATASTORE_TABLE);
         map.put("datastore_record", DATASTORE_RECORD);
         map.put("datastore_query", DATASTORE_QUERY);
+        map.put("cdp_profile", CDP_PROFILE);
+        map.put("cdp_segment", CDP_SEGMENT);
+        map.put("cdp_event", CDP_EVENT);
+        map.put("cdp_source", CDP_SOURCE);
+        map.put("cdp_destination", CDP_DESTINATION);
+        map.put("cdp_activation", CDP_ACTIVATION);
         return map;
     }
 
@@ -548,6 +560,12 @@ public class ObjectType {
         map.put("datastore_table", ObjectTypeEnum.DATASTORE_TABLE);
         map.put("datastore_record", ObjectTypeEnum.DATASTORE_RECORD);
         map.put("datastore_query", ObjectTypeEnum.DATASTORE_QUERY);
+        map.put("cdp_profile", ObjectTypeEnum.CDP_PROFILE);
+        map.put("cdp_segment", ObjectTypeEnum.CDP_SEGMENT);
+        map.put("cdp_event", ObjectTypeEnum.CDP_EVENT);
+        map.put("cdp_source", ObjectTypeEnum.CDP_SOURCE);
+        map.put("cdp_destination", ObjectTypeEnum.CDP_DESTINATION);
+        map.put("cdp_activation", ObjectTypeEnum.CDP_ACTIVATION);
         return map;
     }
     
@@ -703,7 +721,13 @@ public class ObjectType {
         DATASTORE_DATABASE("datastore_database"),
         DATASTORE_TABLE("datastore_table"),
         DATASTORE_RECORD("datastore_record"),
-        DATASTORE_QUERY("datastore_query"),;
+        DATASTORE_QUERY("datastore_query"),
+        CDP_PROFILE("cdp_profile"),
+        CDP_SEGMENT("cdp_segment"),
+        CDP_EVENT("cdp_event"),
+        CDP_SOURCE("cdp_source"),
+        CDP_DESTINATION("cdp_destination"),
+        CDP_ACTIVATION("cdp_activation"),;
 
         private final String value;
 

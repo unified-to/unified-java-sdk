@@ -47,3 +47,4 @@ PropertyIntegrationCategories custom = PropertyIntegrationCategories.of("custom_
 | `SIGNING`      | signing        |
 | `CLUBS`        | clubs          |
 | `DATASTORE`    | datastore      |
+| `CDP`          | cdp            |
