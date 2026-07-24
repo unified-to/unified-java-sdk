@@ -145,6 +145,8 @@ public class AdsReportMetricsType {
     public static final AdsReportMetricsType TWENTY_EIGHT_DVIEW = new AdsReportMetricsType("28D_VIEW");
     public static final AdsReportMetricsType TWENTY_EIGHT_DCLICK = new AdsReportMetricsType("28D_CLICK");
     public static final AdsReportMetricsType THIRTY_DCLICK = new AdsReportMetricsType("30D_CLICK");
+    public static final AdsReportMetricsType VISITS = new AdsReportMetricsType("VISITS");
+    public static final AdsReportMetricsType AUDIO_MUTES = new AdsReportMetricsType("AUDIO_MUTES");
 
     // This map will grow whenever a Color gets created with a new
     // unrecognized value (a potential memory leak if the user is not
@@ -343,6 +345,8 @@ public class AdsReportMetricsType {
         map.put("28D_VIEW", TWENTY_EIGHT_DVIEW);
         map.put("28D_CLICK", TWENTY_EIGHT_DCLICK);
         map.put("30D_CLICK", THIRTY_DCLICK);
+        map.put("VISITS", VISITS);
+        map.put("AUDIO_MUTES", AUDIO_MUTES);
         return map;
     }
 
@@ -473,6 +477,8 @@ public class AdsReportMetricsType {
         map.put("28D_VIEW", AdsReportMetricsTypeEnum.TWENTY_EIGHT_DVIEW);
         map.put("28D_CLICK", AdsReportMetricsTypeEnum.TWENTY_EIGHT_DCLICK);
         map.put("30D_CLICK", AdsReportMetricsTypeEnum.THIRTY_DCLICK);
+        map.put("VISITS", AdsReportMetricsTypeEnum.VISITS);
+        map.put("AUDIO_MUTES", AdsReportMetricsTypeEnum.AUDIO_MUTES);
         return map;
     }
     
@@ -603,7 +609,9 @@ public class AdsReportMetricsType {
         FOURTEEN_DCLICK("14D_CLICK"),
         TWENTY_EIGHT_DVIEW("28D_VIEW"),
         TWENTY_EIGHT_DCLICK("28D_CLICK"),
-        THIRTY_DCLICK("30D_CLICK"),;
+        THIRTY_DCLICK("30D_CLICK"),
+        VISITS("VISITS"),
+        AUDIO_MUTES("AUDIO_MUTES"),;
 
         private final String value;
 

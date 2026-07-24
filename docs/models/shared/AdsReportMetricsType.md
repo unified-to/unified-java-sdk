@@ -141,3 +141,5 @@ AdsReportMetricsType custom = AdsReportMetricsType.of("custom_value");
 | `TWENTY_EIGHT_DVIEW`                   | 28D_VIEW                               |
 | `TWENTY_EIGHT_DCLICK`                  | 28D_CLICK                              |
 | `THIRTY_DCLICK`                        | 30D_CLICK                              |
+| `VISITS`                               | VISITS                                 |
+| `AUDIO_MUTES`                          | AUDIO_MUTES                            |
