@@ -19,6 +19,13 @@ import to.unified.unified_java_sdk.utils.Utils;
 
 
 public class TicketingTicket {
+    /**
+     * Array of attachment IDs retrieved from StorageFile.Get endpoint
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("attachment_ids")
+    private List<String> attachmentIds;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("category_id")
@@ -106,6 +113,7 @@ public class TicketingTicket {
 
     @JsonCreator
     public TicketingTicket(
+            @JsonProperty("attachment_ids") @Nullable List<String> attachmentIds,
             @JsonProperty("category_id") @Nullable String categoryId,
             @JsonProperty("closed_at") @Nullable OffsetDateTime closedAt,
             @JsonProperty("created_at") @Nullable OffsetDateTime createdAt,
@@ -123,6 +131,7 @@ public class TicketingTicket {
             @JsonProperty("updated_at") @Nullable OffsetDateTime updatedAt,
             @JsonProperty("url") @Nullable String url,
             @JsonProperty("user_id") @Nullable String userId) {
+        this.attachmentIds = attachmentIds;
         this.categoryId = categoryId;
         this.closedAt = closedAt;
         this.createdAt = createdAt;
@@ -148,7 +157,14 @@ public class TicketingTicket {
             null, null, null,
             null, null, null,
             null, null, null,
-            null, null);
+            null, null, null);
+    }
+
+    /**
+     * Array of attachment IDs retrieved from StorageFile.Get endpoint
+     */
+    public Optional<List<String>> attachmentIds() {
+        return Optional.ofNullable(this.attachmentIds);
     }
 
     public Optional<String> categoryId() {
@@ -221,6 +237,15 @@ public class TicketingTicket {
 
     public static Builder builder() {
         return new Builder();
+    }
+
+
+    /**
+     * Array of attachment IDs retrieved from StorageFile.Get endpoint
+     */
+    public TicketingTicket withAttachmentIds(@Nullable List<String> attachmentIds) {
+        this.attachmentIds = attachmentIds;
+        return this;
     }
 
 
@@ -336,6 +361,7 @@ public class TicketingTicket {
         }
         TicketingTicket other = (TicketingTicket) o;
         return 
+            Utils.enhancedDeepEquals(this.attachmentIds, other.attachmentIds) &&
             Utils.enhancedDeepEquals(this.categoryId, other.categoryId) &&
             Utils.enhancedDeepEquals(this.closedAt, other.closedAt) &&
             Utils.enhancedDeepEquals(this.createdAt, other.createdAt) &&
@@ -358,17 +384,18 @@ public class TicketingTicket {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            categoryId, closedAt, createdAt,
-            customerId, description, dueAt,
-            id, priority, raw,
-            source, sourceRef, status,
-            subject, tags, updatedAt,
-            url, userId);
+            attachmentIds, categoryId, closedAt,
+            createdAt, customerId, description,
+            dueAt, id, priority,
+            raw, source, sourceRef,
+            status, subject, tags,
+            updatedAt, url, userId);
     }
     
     @Override
     public String toString() {
         return Utils.toString(TicketingTicket.class,
+                "attachmentIds", attachmentIds,
                 "categoryId", categoryId,
                 "closedAt", closedAt,
                 "createdAt", createdAt,
@@ -390,6 +417,8 @@ public class TicketingTicket {
 
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
+
+        private List<String> attachmentIds;
 
         private String categoryId;
 
@@ -427,6 +456,14 @@ public class TicketingTicket {
 
         private Builder() {
           // force use of static builder() method
+        }
+
+        /**
+         * Array of attachment IDs retrieved from StorageFile.Get endpoint
+         */
+        public Builder attachmentIds(@Nullable List<String> attachmentIds) {
+            this.attachmentIds = attachmentIds;
+            return this;
         }
 
         public Builder categoryId(@Nullable String categoryId) {
@@ -516,12 +553,12 @@ public class TicketingTicket {
 
         public TicketingTicket build() {
             return new TicketingTicket(
-                categoryId, closedAt, createdAt,
-                customerId, description, dueAt,
-                id, priority, raw,
-                source, sourceRef, status,
-                subject, tags, updatedAt,
-                url, userId);
+                attachmentIds, categoryId, closedAt,
+                createdAt, customerId, description,
+                dueAt, id, priority,
+                raw, source, sourceRef,
+                status, subject, tags,
+                updatedAt, url, userId);
         }
 
     }

@@ -35,6 +35,13 @@ public class AccountingExpense {
     @JsonProperty("approver_user_id")
     private String approverUserId;
 
+    /**
+     * expense approver(s); id is HR employee/user when resolved
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("approver_users")
+    private List<AccountingReference> approverUsers;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attachments")
@@ -54,6 +61,11 @@ public class AccountingExpense {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currency")
     private String currency;
+
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("external_number")
+    private String externalNumber;
 
 
     @JsonInclude(Include.NON_ABSENT)
@@ -102,6 +114,11 @@ public class AccountingExpense {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("status")
+    private AccountingExpenseStatus status;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tax_amount")
     private Double taxAmount;
 
@@ -120,15 +137,22 @@ public class AccountingExpense {
     @JsonProperty("user_id")
     private String userId;
 
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("users")
+    private List<AccountingReference> users;
+
     @JsonCreator
     public AccountingExpense(
             @JsonProperty("account_id") @Nullable String accountId,
             @JsonProperty("approved_at") @Nullable OffsetDateTime approvedAt,
             @JsonProperty("approver_user_id") @Nullable String approverUserId,
+            @JsonProperty("approver_users") @Nullable List<AccountingReference> approverUsers,
             @JsonProperty("attachments") @Nullable List<AccountingAttachment> attachments,
             @JsonProperty("contact_id") @Nullable String contactId,
             @JsonProperty("created_at") @Nullable OffsetDateTime createdAt,
             @JsonProperty("currency") @Nullable String currency,
+            @JsonProperty("external_number") @Nullable String externalNumber,
             @JsonProperty("id") @Nullable String id,
             @JsonProperty("lineitems") @Nullable List<AccountingLineitem> lineitems,
             @JsonProperty("name") @Nullable String name,
@@ -138,17 +162,21 @@ public class AccountingExpense {
             @JsonProperty("raw") @Nullable Map<String, Object> raw,
             @JsonProperty("reimbursed_amount") @Nullable Double reimbursedAmount,
             @JsonProperty("reimbursed_at") @Nullable OffsetDateTime reimbursedAt,
+            @JsonProperty("status") @Nullable AccountingExpenseStatus status,
             @JsonProperty("tax_amount") @Nullable Double taxAmount,
             @JsonProperty("total_amount") @Nullable Double totalAmount,
             @JsonProperty("updated_at") @Nullable OffsetDateTime updatedAt,
-            @JsonProperty("user_id") @Nullable String userId) {
+            @JsonProperty("user_id") @Nullable String userId,
+            @JsonProperty("users") @Nullable List<AccountingReference> users) {
         this.accountId = accountId;
         this.approvedAt = approvedAt;
         this.approverUserId = approverUserId;
+        this.approverUsers = approverUsers;
         this.attachments = attachments;
         this.contactId = contactId;
         this.createdAt = createdAt;
         this.currency = currency;
+        this.externalNumber = externalNumber;
         this.id = id;
         this.lineitems = lineitems;
         this.name = name;
@@ -158,10 +186,12 @@ public class AccountingExpense {
         this.raw = raw;
         this.reimbursedAmount = reimbursedAmount;
         this.reimbursedAt = reimbursedAt;
+        this.status = status;
         this.taxAmount = taxAmount;
         this.totalAmount = totalAmount;
         this.updatedAt = updatedAt;
         this.userId = userId;
+        this.users = users;
     }
     
     public AccountingExpense() {
@@ -171,7 +201,8 @@ public class AccountingExpense {
             null, null, null,
             null, null, null,
             null, null, null,
-            null, null);
+            null, null, null,
+            null, null, null);
     }
 
     public Optional<String> accountId() {
@@ -184,6 +215,13 @@ public class AccountingExpense {
 
     public Optional<String> approverUserId() {
         return Optional.ofNullable(this.approverUserId);
+    }
+
+    /**
+     * expense approver(s); id is HR employee/user when resolved
+     */
+    public Optional<List<AccountingReference>> approverUsers() {
+        return Optional.ofNullable(this.approverUsers);
     }
 
     public Optional<List<AccountingAttachment>> attachments() {
@@ -200,6 +238,10 @@ public class AccountingExpense {
 
     public Optional<String> currency() {
         return Optional.ofNullable(this.currency);
+    }
+
+    public Optional<String> externalNumber() {
+        return Optional.ofNullable(this.externalNumber);
     }
 
     public Optional<String> id() {
@@ -238,6 +280,10 @@ public class AccountingExpense {
         return Optional.ofNullable(this.reimbursedAt);
     }
 
+    public Optional<AccountingExpenseStatus> status() {
+        return Optional.ofNullable(this.status);
+    }
+
     public Optional<Double> taxAmount() {
         return Optional.ofNullable(this.taxAmount);
     }
@@ -252,6 +298,10 @@ public class AccountingExpense {
 
     public Optional<String> userId() {
         return Optional.ofNullable(this.userId);
+    }
+
+    public Optional<List<AccountingReference>> users() {
+        return Optional.ofNullable(this.users);
     }
 
     public static Builder builder() {
@@ -277,6 +327,15 @@ public class AccountingExpense {
     }
 
 
+    /**
+     * expense approver(s); id is HR employee/user when resolved
+     */
+    public AccountingExpense withApproverUsers(@Nullable List<AccountingReference> approverUsers) {
+        this.approverUsers = approverUsers;
+        return this;
+    }
+
+
     public AccountingExpense withAttachments(@Nullable List<AccountingAttachment> attachments) {
         this.attachments = attachments;
         return this;
@@ -297,6 +356,12 @@ public class AccountingExpense {
 
     public AccountingExpense withCurrency(@Nullable String currency) {
         this.currency = currency;
+        return this;
+    }
+
+
+    public AccountingExpense withExternalNumber(@Nullable String externalNumber) {
+        this.externalNumber = externalNumber;
         return this;
     }
 
@@ -355,6 +420,12 @@ public class AccountingExpense {
     }
 
 
+    public AccountingExpense withStatus(@Nullable AccountingExpenseStatus status) {
+        this.status = status;
+        return this;
+    }
+
+
     public AccountingExpense withTaxAmount(@Nullable Double taxAmount) {
         this.taxAmount = taxAmount;
         return this;
@@ -379,6 +450,12 @@ public class AccountingExpense {
     }
 
 
+    public AccountingExpense withUsers(@Nullable List<AccountingReference> users) {
+        this.users = users;
+        return this;
+    }
+
+
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -392,10 +469,12 @@ public class AccountingExpense {
             Utils.enhancedDeepEquals(this.accountId, other.accountId) &&
             Utils.enhancedDeepEquals(this.approvedAt, other.approvedAt) &&
             Utils.enhancedDeepEquals(this.approverUserId, other.approverUserId) &&
+            Utils.enhancedDeepEquals(this.approverUsers, other.approverUsers) &&
             Utils.enhancedDeepEquals(this.attachments, other.attachments) &&
             Utils.enhancedDeepEquals(this.contactId, other.contactId) &&
             Utils.enhancedDeepEquals(this.createdAt, other.createdAt) &&
             Utils.enhancedDeepEquals(this.currency, other.currency) &&
+            Utils.enhancedDeepEquals(this.externalNumber, other.externalNumber) &&
             Utils.enhancedDeepEquals(this.id, other.id) &&
             Utils.enhancedDeepEquals(this.lineitems, other.lineitems) &&
             Utils.enhancedDeepEquals(this.name, other.name) &&
@@ -405,22 +484,25 @@ public class AccountingExpense {
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
             Utils.enhancedDeepEquals(this.reimbursedAmount, other.reimbursedAmount) &&
             Utils.enhancedDeepEquals(this.reimbursedAt, other.reimbursedAt) &&
+            Utils.enhancedDeepEquals(this.status, other.status) &&
             Utils.enhancedDeepEquals(this.taxAmount, other.taxAmount) &&
             Utils.enhancedDeepEquals(this.totalAmount, other.totalAmount) &&
             Utils.enhancedDeepEquals(this.updatedAt, other.updatedAt) &&
-            Utils.enhancedDeepEquals(this.userId, other.userId);
+            Utils.enhancedDeepEquals(this.userId, other.userId) &&
+            Utils.enhancedDeepEquals(this.users, other.users);
     }
     
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
             accountId, approvedAt, approverUserId,
-            attachments, contactId, createdAt,
-            currency, id, lineitems,
-            name, organizationId, paymentMethod,
-            postedAt, raw, reimbursedAmount,
-            reimbursedAt, taxAmount, totalAmount,
-            updatedAt, userId);
+            approverUsers, attachments, contactId,
+            createdAt, currency, externalNumber,
+            id, lineitems, name,
+            organizationId, paymentMethod, postedAt,
+            raw, reimbursedAmount, reimbursedAt,
+            status, taxAmount, totalAmount,
+            updatedAt, userId, users);
     }
     
     @Override
@@ -429,10 +511,12 @@ public class AccountingExpense {
                 "accountId", accountId,
                 "approvedAt", approvedAt,
                 "approverUserId", approverUserId,
+                "approverUsers", approverUsers,
                 "attachments", attachments,
                 "contactId", contactId,
                 "createdAt", createdAt,
                 "currency", currency,
+                "externalNumber", externalNumber,
                 "id", id,
                 "lineitems", lineitems,
                 "name", name,
@@ -442,10 +526,12 @@ public class AccountingExpense {
                 "raw", raw,
                 "reimbursedAmount", reimbursedAmount,
                 "reimbursedAt", reimbursedAt,
+                "status", status,
                 "taxAmount", taxAmount,
                 "totalAmount", totalAmount,
                 "updatedAt", updatedAt,
-                "userId", userId);
+                "userId", userId,
+                "users", users);
     }
 
     @SuppressWarnings("UnusedReturnValue")
@@ -457,6 +543,8 @@ public class AccountingExpense {
 
         private String approverUserId;
 
+        private List<AccountingReference> approverUsers;
+
         private List<AccountingAttachment> attachments;
 
         private String contactId;
@@ -464,6 +552,8 @@ public class AccountingExpense {
         private OffsetDateTime createdAt;
 
         private String currency;
+
+        private String externalNumber;
 
         private String id;
 
@@ -483,6 +573,8 @@ public class AccountingExpense {
 
         private OffsetDateTime reimbursedAt;
 
+        private AccountingExpenseStatus status;
+
         private Double taxAmount;
 
         private Double totalAmount;
@@ -490,6 +582,8 @@ public class AccountingExpense {
         private OffsetDateTime updatedAt;
 
         private String userId;
+
+        private List<AccountingReference> users;
 
         private Builder() {
           // force use of static builder() method
@@ -510,6 +604,14 @@ public class AccountingExpense {
             return this;
         }
 
+        /**
+         * expense approver(s); id is HR employee/user when resolved
+         */
+        public Builder approverUsers(@Nullable List<AccountingReference> approverUsers) {
+            this.approverUsers = approverUsers;
+            return this;
+        }
+
         public Builder attachments(@Nullable List<AccountingAttachment> attachments) {
             this.attachments = attachments;
             return this;
@@ -527,6 +629,11 @@ public class AccountingExpense {
 
         public Builder currency(@Nullable String currency) {
             this.currency = currency;
+            return this;
+        }
+
+        public Builder externalNumber(@Nullable String externalNumber) {
+            this.externalNumber = externalNumber;
             return this;
         }
 
@@ -575,6 +682,11 @@ public class AccountingExpense {
             return this;
         }
 
+        public Builder status(@Nullable AccountingExpenseStatus status) {
+            this.status = status;
+            return this;
+        }
+
         public Builder taxAmount(@Nullable Double taxAmount) {
             this.taxAmount = taxAmount;
             return this;
@@ -595,15 +707,21 @@ public class AccountingExpense {
             return this;
         }
 
+        public Builder users(@Nullable List<AccountingReference> users) {
+            this.users = users;
+            return this;
+        }
+
         public AccountingExpense build() {
             return new AccountingExpense(
                 accountId, approvedAt, approverUserId,
-                attachments, contactId, createdAt,
-                currency, id, lineitems,
-                name, organizationId, paymentMethod,
-                postedAt, raw, reimbursedAmount,
-                reimbursedAt, taxAmount, totalAmount,
-                updatedAt, userId);
+                approverUsers, attachments, contactId,
+                createdAt, currency, externalNumber,
+                id, lineitems, name,
+                organizationId, paymentMethod, postedAt,
+                raw, reimbursedAmount, reimbursedAt,
+                status, taxAmount, totalAmount,
+                updatedAt, userId, users);
         }
 
     }

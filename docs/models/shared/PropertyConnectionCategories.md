@@ -20,6 +20,7 @@ PropertyConnectionCategories custom = PropertyConnectionCategories.of("custom_va
 | `HRIS`         | hris           |
 | `ATS`          | ats            |
 | `AUTH`         | auth           |
+| `SAML`         | saml           |
 | `CRM`          | crm            |
 | `ENRICH`       | enrich         |
 | `MARTECH`      | martech        |

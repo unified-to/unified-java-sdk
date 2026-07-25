@@ -24,6 +24,7 @@ public class PropertyIntegrationCategories {
     public static final PropertyIntegrationCategories HRIS = new PropertyIntegrationCategories("hris");
     public static final PropertyIntegrationCategories ATS = new PropertyIntegrationCategories("ats");
     public static final PropertyIntegrationCategories AUTH = new PropertyIntegrationCategories("auth");
+    public static final PropertyIntegrationCategories SAML = new PropertyIntegrationCategories("saml");
     public static final PropertyIntegrationCategories CRM = new PropertyIntegrationCategories("crm");
     public static final PropertyIntegrationCategories ENRICH = new PropertyIntegrationCategories("enrich");
     public static final PropertyIntegrationCategories MARTECH = new PropertyIntegrationCategories("martech");
@@ -129,6 +130,7 @@ public class PropertyIntegrationCategories {
         map.put("hris", HRIS);
         map.put("ats", ATS);
         map.put("auth", AUTH);
+        map.put("saml", SAML);
         map.put("crm", CRM);
         map.put("enrich", ENRICH);
         map.put("martech", MARTECH);
@@ -166,6 +168,7 @@ public class PropertyIntegrationCategories {
         map.put("hris", PropertyIntegrationCategoriesEnum.HRIS);
         map.put("ats", PropertyIntegrationCategoriesEnum.ATS);
         map.put("auth", PropertyIntegrationCategoriesEnum.AUTH);
+        map.put("saml", PropertyIntegrationCategoriesEnum.SAML);
         map.put("crm", PropertyIntegrationCategoriesEnum.CRM);
         map.put("enrich", PropertyIntegrationCategoriesEnum.ENRICH);
         map.put("martech", PropertyIntegrationCategoriesEnum.MARTECH);
@@ -204,6 +207,7 @@ public class PropertyIntegrationCategories {
         HRIS("hris"),
         ATS("ats"),
         AUTH("auth"),
+        SAML("saml"),
         CRM("crm"),
         ENRICH("enrich"),
         MARTECH("martech"),

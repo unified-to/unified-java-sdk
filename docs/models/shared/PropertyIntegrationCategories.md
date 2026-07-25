@@ -20,6 +20,7 @@ PropertyIntegrationCategories custom = PropertyIntegrationCategories.of("custom_
 | `HRIS`         | hris           |
 | `ATS`          | ats            |
 | `AUTH`         | auth           |
+| `SAML`         | saml           |
 | `CRM`          | crm            |
 | `ENRICH`       | enrich         |
 | `MARTECH`      | martech        |

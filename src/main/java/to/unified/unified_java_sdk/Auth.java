@@ -12,8 +12,12 @@ import to.unified.unified_java_sdk.models.operations.GetUnifiedIntegrationAuthRe
 import to.unified.unified_java_sdk.models.operations.GetUnifiedIntegrationLoginRequest;
 import to.unified.unified_java_sdk.models.operations.GetUnifiedIntegrationLoginRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.GetUnifiedIntegrationLoginResponse;
+import to.unified.unified_java_sdk.models.operations.GetUnifiedIntegrationSamlRequest;
+import to.unified.unified_java_sdk.models.operations.GetUnifiedIntegrationSamlRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetUnifiedIntegrationSamlResponse;
 import to.unified.unified_java_sdk.operations.GetUnifiedIntegrationAuth;
 import to.unified.unified_java_sdk.operations.GetUnifiedIntegrationLogin;
+import to.unified.unified_java_sdk.operations.GetUnifiedIntegrationSaml;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -91,6 +95,36 @@ public class Auth {
     public GetUnifiedIntegrationLoginResponse getUnifiedIntegrationLogin(@Nonnull GetUnifiedIntegrationLoginRequest request) {
         RequestOperation<GetUnifiedIntegrationLoginRequest, GetUnifiedIntegrationLoginResponse> operation
               = new GetUnifiedIntegrationLogin.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Sign in a user via SAML
+     * 
+     * <p>Returns a SAML authentication URL for the specified integration. Once a successful authentication
+     * occurs, the name and email are returned inside a jwt parameter, which is a JSON web token that is
+     * base-64 encoded.
+     * 
+     * @return The call builder
+     */
+    public GetUnifiedIntegrationSamlRequestBuilder getUnifiedIntegrationSaml() {
+        return new GetUnifiedIntegrationSamlRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Sign in a user via SAML
+     * 
+     * <p>Returns a SAML authentication URL for the specified integration. Once a successful authentication
+     * occurs, the name and email are returned inside a jwt parameter, which is a JSON web token that is
+     * base-64 encoded.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetUnifiedIntegrationSamlResponse getUnifiedIntegrationSaml(@Nonnull GetUnifiedIntegrationSamlRequest request) {
+        RequestOperation<GetUnifiedIntegrationSamlRequest, GetUnifiedIntegrationSamlResponse> operation
+              = new GetUnifiedIntegrationSaml.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

@@ -30,7 +30,7 @@ generation:
   baseServerURL: ""
   flattenGlobalSecurity: true
 java:
-  version: 0.47.47
+  version: 0.48.0
   additionalDependencies: []
   additionalPlugins: []
   artifactID: unified-java-sdk
@@ -52,8 +52,10 @@ java:
   generateOptionalUnionAccessors: false
   generateSpringBootStarter: true
   generateUnionDocs: false
+  getterStyle: presence-aware
   githubURL: github.com/unified-to/unified-java-sdk
   groupID: to.unified
+  httpClient: jdk
   imports:
     option: openapi
     paths:

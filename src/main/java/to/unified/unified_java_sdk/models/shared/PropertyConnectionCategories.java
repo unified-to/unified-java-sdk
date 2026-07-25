@@ -24,6 +24,7 @@ public class PropertyConnectionCategories {
     public static final PropertyConnectionCategories HRIS = new PropertyConnectionCategories("hris");
     public static final PropertyConnectionCategories ATS = new PropertyConnectionCategories("ats");
     public static final PropertyConnectionCategories AUTH = new PropertyConnectionCategories("auth");
+    public static final PropertyConnectionCategories SAML = new PropertyConnectionCategories("saml");
     public static final PropertyConnectionCategories CRM = new PropertyConnectionCategories("crm");
     public static final PropertyConnectionCategories ENRICH = new PropertyConnectionCategories("enrich");
     public static final PropertyConnectionCategories MARTECH = new PropertyConnectionCategories("martech");
@@ -129,6 +130,7 @@ public class PropertyConnectionCategories {
         map.put("hris", HRIS);
         map.put("ats", ATS);
         map.put("auth", AUTH);
+        map.put("saml", SAML);
         map.put("crm", CRM);
         map.put("enrich", ENRICH);
         map.put("martech", MARTECH);
@@ -166,6 +168,7 @@ public class PropertyConnectionCategories {
         map.put("hris", PropertyConnectionCategoriesEnum.HRIS);
         map.put("ats", PropertyConnectionCategoriesEnum.ATS);
         map.put("auth", PropertyConnectionCategoriesEnum.AUTH);
+        map.put("saml", PropertyConnectionCategoriesEnum.SAML);
         map.put("crm", PropertyConnectionCategoriesEnum.CRM);
         map.put("enrich", PropertyConnectionCategoriesEnum.ENRICH);
         map.put("martech", PropertyConnectionCategoriesEnum.MARTECH);
@@ -204,6 +207,7 @@ public class PropertyConnectionCategories {
         HRIS("hris"),
         ATS("ats"),
         AUTH("auth"),
+        SAML("saml"),
         CRM("crm"),
         ENRICH("enrich"),
         MARTECH("martech"),

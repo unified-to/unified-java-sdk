@@ -39,7 +39,7 @@ The samples below show how a published SDK artifact is used:
 
 Gradle:
 ```groovy
-implementation 'to.unified:unified-java-sdk:0.47.47'
+implementation 'to.unified:unified-java-sdk:0.48.0'
 ```
 
 Maven:
@@ -47,7 +47,7 @@ Maven:
 <dependency>
     <groupId>to.unified</groupId>
     <artifactId>unified-java-sdk</artifactId>
-    <version>0.47.47</version>
+    <version>0.48.0</version>
 </dependency>
 ```
 
@@ -461,6 +461,7 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 
 * [getUnifiedIntegrationAuth](docs/sdks/auth/README.md#getunifiedintegrationauth) - Authorize new connection
 * [getUnifiedIntegrationLogin](docs/sdks/auth/README.md#getunifiedintegrationlogin) - Sign in a user
+* [getUnifiedIntegrationSaml](docs/sdks/auth/README.md#getunifiedintegrationsaml) - Sign in a user via SAML
 
 ### [Availability](docs/sdks/availability/README.md)
 
@@ -1405,6 +1406,7 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 ### [Login](docs/sdks/login/README.md)
 
 * [getUnifiedIntegrationLogin](docs/sdks/login/README.md#getunifiedintegrationlogin) - Sign in a user
+* [getUnifiedIntegrationSaml](docs/sdks/login/README.md#getunifiedintegrationsaml) - Sign in a user via SAML
 
 ### [Martech](docs/sdks/martech/README.md)
 

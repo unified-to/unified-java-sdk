@@ -95,6 +95,12 @@ public class ListAccountingExpensesRequest {
     private String startGte;
 
     /**
+     * The status to filter by
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status")
+    private String status;
+
+    /**
      * Return only results whose updated date is equal or greater to this value (ISO-8601 /
      * YYYY-MM-DDTHH:MM:SSZ format)
      */
@@ -123,6 +129,7 @@ public class ListAccountingExpensesRequest {
             @Nullable String raw,
             @Nullable String sort,
             @Nullable String startGte,
+            @Nullable String status,
             @Nullable String updatedGte,
             @Nullable String userId) {
         this.categoryId = categoryId;
@@ -140,6 +147,7 @@ public class ListAccountingExpensesRequest {
         this.raw = raw;
         this.sort = sort;
         this.startGte = startGte;
+        this.status = status;
         this.updatedGte = updatedGte;
         this.userId = userId;
     }
@@ -151,7 +159,7 @@ public class ListAccountingExpensesRequest {
             null, null, null,
             null, null, null,
             null, null, null,
-            null);
+            null, null);
     }
 
     /**
@@ -240,6 +248,13 @@ public class ListAccountingExpensesRequest {
      */
     public Optional<String> startGte() {
         return Optional.ofNullable(this.startGte);
+    }
+
+    /**
+     * The status to filter by
+     */
+    public Optional<String> status() {
+        return Optional.ofNullable(this.status);
     }
 
     /**
@@ -379,6 +394,15 @@ public class ListAccountingExpensesRequest {
 
 
     /**
+     * The status to filter by
+     */
+    public ListAccountingExpensesRequest withStatus(@Nullable String status) {
+        this.status = status;
+        return this;
+    }
+
+
+    /**
      * Return only results whose updated date is equal or greater to this value (ISO-8601 /
      * YYYY-MM-DDTHH:MM:SSZ format)
      */
@@ -421,6 +445,7 @@ public class ListAccountingExpensesRequest {
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
             Utils.enhancedDeepEquals(this.sort, other.sort) &&
             Utils.enhancedDeepEquals(this.startGte, other.startGte) &&
+            Utils.enhancedDeepEquals(this.status, other.status) &&
             Utils.enhancedDeepEquals(this.updatedGte, other.updatedGte) &&
             Utils.enhancedDeepEquals(this.userId, other.userId);
     }
@@ -432,8 +457,8 @@ public class ListAccountingExpensesRequest {
             endLt, fields, groupId,
             limit, offset, order,
             orgId, query, raw,
-            sort, startGte, updatedGte,
-            userId);
+            sort, startGte, status,
+            updatedGte, userId);
     }
     
     @Override
@@ -453,6 +478,7 @@ public class ListAccountingExpensesRequest {
                 "raw", raw,
                 "sort", sort,
                 "startGte", startGte,
+                "status", status,
                 "updatedGte", updatedGte,
                 "userId", userId);
     }
@@ -487,6 +513,8 @@ public class ListAccountingExpensesRequest {
         private String sort;
 
         private String startGte;
+
+        private String status;
 
         private String updatedGte;
 
@@ -599,6 +627,14 @@ public class ListAccountingExpensesRequest {
         }
 
         /**
+         * The status to filter by
+         */
+        public Builder status(@Nullable String status) {
+            this.status = status;
+            return this;
+        }
+
+        /**
          * Return only results whose updated date is equal or greater to this value (ISO-8601 /
          * YYYY-MM-DDTHH:MM:SSZ format)
          */
@@ -621,8 +657,8 @@ public class ListAccountingExpensesRequest {
                 endLt, fields, groupId,
                 limit, offset, order,
                 orgId, query, raw,
-                sort, startGte, updatedGte,
-                userId);
+                sort, startGte, status,
+                updatedGte, userId);
         }
 
     }
