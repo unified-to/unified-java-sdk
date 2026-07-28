@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.annotation.Nullable;
 import java.lang.Boolean;
+import java.lang.Double;
 import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
@@ -104,6 +105,11 @@ public class TaskTask {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("progress")
+    private Double progress;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("project_id")
     private String projectId;
 
@@ -124,8 +130,23 @@ public class TaskTask {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("story_points")
+    private Double storyPoints;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     private List<String> tags;
+
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("time_spent")
+    private Double timeSpent;
+
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("time_spent_unit")
+    private String timeSpentUnit;
 
 
     @JsonInclude(Include.NON_ABSENT)
@@ -160,11 +181,15 @@ public class TaskTask {
             @JsonProperty("notes") @Nullable String notes,
             @JsonProperty("parent_id") @Nullable String parentId,
             @JsonProperty("priority") @Nullable String priority,
+            @JsonProperty("progress") @Nullable Double progress,
             @JsonProperty("project_id") @Nullable String projectId,
             @JsonProperty("raw") @Nullable Map<String, Object> raw,
             @JsonProperty("start_at") @Nullable OffsetDateTime startAt,
             @JsonProperty("status") @Nullable TaskTaskStatus status,
+            @JsonProperty("story_points") @Nullable Double storyPoints,
             @JsonProperty("tags") @Nullable List<String> tags,
+            @JsonProperty("time_spent") @Nullable Double timeSpent,
+            @JsonProperty("time_spent_unit") @Nullable String timeSpentUnit,
             @JsonProperty("type") @Nullable String type,
             @JsonProperty("updated_at") @Nullable OffsetDateTime updatedAt,
             @JsonProperty("url") @Nullable String url) {
@@ -184,11 +209,15 @@ public class TaskTask {
         this.notes = notes;
         this.parentId = parentId;
         this.priority = priority;
+        this.progress = progress;
         this.projectId = projectId;
         this.raw = raw;
         this.startAt = startAt;
         this.status = status;
+        this.storyPoints = storyPoints;
         this.tags = tags;
+        this.timeSpent = timeSpent;
+        this.timeSpentUnit = timeSpentUnit;
         this.type = type;
         this.updatedAt = updatedAt;
         this.url = url;
@@ -202,7 +231,9 @@ public class TaskTask {
             null, null, null,
             null, null, null,
             null, null, null,
-            null, null, null);
+            null, null, null,
+            null, null, null,
+            null);
     }
 
     public Optional<List<String>> assignedUserIds() {
@@ -272,6 +303,10 @@ public class TaskTask {
         return Optional.ofNullable(this.priority);
     }
 
+    public Optional<Double> progress() {
+        return Optional.ofNullable(this.progress);
+    }
+
     public Optional<String> projectId() {
         return Optional.ofNullable(this.projectId);
     }
@@ -288,8 +323,20 @@ public class TaskTask {
         return Optional.ofNullable(this.status);
     }
 
+    public Optional<Double> storyPoints() {
+        return Optional.ofNullable(this.storyPoints);
+    }
+
     public Optional<List<String>> tags() {
         return Optional.ofNullable(this.tags);
+    }
+
+    public Optional<Double> timeSpent() {
+        return Optional.ofNullable(this.timeSpent);
+    }
+
+    public Optional<String> timeSpentUnit() {
+        return Optional.ofNullable(this.timeSpentUnit);
     }
 
     public Optional<String> type() {
@@ -408,6 +455,12 @@ public class TaskTask {
     }
 
 
+    public TaskTask withProgress(@Nullable Double progress) {
+        this.progress = progress;
+        return this;
+    }
+
+
     public TaskTask withProjectId(@Nullable String projectId) {
         this.projectId = projectId;
         return this;
@@ -432,8 +485,26 @@ public class TaskTask {
     }
 
 
+    public TaskTask withStoryPoints(@Nullable Double storyPoints) {
+        this.storyPoints = storyPoints;
+        return this;
+    }
+
+
     public TaskTask withTags(@Nullable List<String> tags) {
         this.tags = tags;
+        return this;
+    }
+
+
+    public TaskTask withTimeSpent(@Nullable Double timeSpent) {
+        this.timeSpent = timeSpent;
+        return this;
+    }
+
+
+    public TaskTask withTimeSpentUnit(@Nullable String timeSpentUnit) {
+        this.timeSpentUnit = timeSpentUnit;
         return this;
     }
 
@@ -482,11 +553,15 @@ public class TaskTask {
             Utils.enhancedDeepEquals(this.notes, other.notes) &&
             Utils.enhancedDeepEquals(this.parentId, other.parentId) &&
             Utils.enhancedDeepEquals(this.priority, other.priority) &&
+            Utils.enhancedDeepEquals(this.progress, other.progress) &&
             Utils.enhancedDeepEquals(this.projectId, other.projectId) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
             Utils.enhancedDeepEquals(this.startAt, other.startAt) &&
             Utils.enhancedDeepEquals(this.status, other.status) &&
+            Utils.enhancedDeepEquals(this.storyPoints, other.storyPoints) &&
             Utils.enhancedDeepEquals(this.tags, other.tags) &&
+            Utils.enhancedDeepEquals(this.timeSpent, other.timeSpent) &&
+            Utils.enhancedDeepEquals(this.timeSpentUnit, other.timeSpentUnit) &&
             Utils.enhancedDeepEquals(this.type, other.type) &&
             Utils.enhancedDeepEquals(this.updatedAt, other.updatedAt) &&
             Utils.enhancedDeepEquals(this.url, other.url);
@@ -500,9 +575,11 @@ public class TaskTask {
             endAt, followerUserIds, groupIds,
             hasChildren, id, metadata,
             name, notes, parentId,
-            priority, projectId, raw,
-            startAt, status, tags,
-            type, updatedAt, url);
+            priority, progress, projectId,
+            raw, startAt, status,
+            storyPoints, tags, timeSpent,
+            timeSpentUnit, type, updatedAt,
+            url);
     }
     
     @Override
@@ -524,11 +601,15 @@ public class TaskTask {
                 "notes", notes,
                 "parentId", parentId,
                 "priority", priority,
+                "progress", progress,
                 "projectId", projectId,
                 "raw", raw,
                 "startAt", startAt,
                 "status", status,
+                "storyPoints", storyPoints,
                 "tags", tags,
+                "timeSpent", timeSpent,
+                "timeSpentUnit", timeSpentUnit,
                 "type", type,
                 "updatedAt", updatedAt,
                 "url", url);
@@ -569,6 +650,8 @@ public class TaskTask {
 
         private String priority;
 
+        private Double progress;
+
         private String projectId;
 
         private Map<String, Object> raw;
@@ -577,7 +660,13 @@ public class TaskTask {
 
         private TaskTaskStatus status;
 
+        private Double storyPoints;
+
         private List<String> tags;
+
+        private Double timeSpent;
+
+        private String timeSpentUnit;
 
         private String type;
 
@@ -672,6 +761,11 @@ public class TaskTask {
             return this;
         }
 
+        public Builder progress(@Nullable Double progress) {
+            this.progress = progress;
+            return this;
+        }
+
         public Builder projectId(@Nullable String projectId) {
             this.projectId = projectId;
             return this;
@@ -692,8 +786,23 @@ public class TaskTask {
             return this;
         }
 
+        public Builder storyPoints(@Nullable Double storyPoints) {
+            this.storyPoints = storyPoints;
+            return this;
+        }
+
         public Builder tags(@Nullable List<String> tags) {
             this.tags = tags;
+            return this;
+        }
+
+        public Builder timeSpent(@Nullable Double timeSpent) {
+            this.timeSpent = timeSpent;
+            return this;
+        }
+
+        public Builder timeSpentUnit(@Nullable String timeSpentUnit) {
+            this.timeSpentUnit = timeSpentUnit;
             return this;
         }
 
@@ -719,9 +828,11 @@ public class TaskTask {
                 endAt, followerUserIds, groupIds,
                 hasChildren, id, metadata,
                 name, notes, parentId,
-                priority, projectId, raw,
-                startAt, status, tags,
-                type, updatedAt, url);
+                priority, progress, projectId,
+                raw, startAt, status,
+                storyPoints, tags, timeSpent,
+                timeSpentUnit, type, updatedAt,
+                url);
         }
 
     }
