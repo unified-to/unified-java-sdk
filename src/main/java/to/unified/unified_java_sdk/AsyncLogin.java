@@ -8,13 +8,9 @@ import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOper
 import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.GetUnifiedIntegrationLoginRequest;
-import to.unified.unified_java_sdk.models.operations.GetUnifiedIntegrationSamlRequest;
 import to.unified.unified_java_sdk.models.operations.async.GetUnifiedIntegrationLoginRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.GetUnifiedIntegrationLoginResponse;
-import to.unified.unified_java_sdk.models.operations.async.GetUnifiedIntegrationSamlRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.GetUnifiedIntegrationSamlResponse;
 import to.unified.unified_java_sdk.operations.GetUnifiedIntegrationLogin;
-import to.unified.unified_java_sdk.operations.GetUnifiedIntegrationSaml;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -41,9 +37,9 @@ public class AsyncLogin {
     /**
      * Sign in a user
      * 
-     * <p>Returns an authentication URL for the specified integration. Once a successful authentication
-     * occurs, the name and email are returned inside a jwt parameter, which is a JSON web token that is
-     * base-64 encoded.
+     * <p>Returns an authentication URL for the specified integration. Once a successful OAuth2 code-flow
+     * authentication occurs, the name and email are returned inside a jwt parameter, which is a JSON web
+     * token that is base-64 encoded.
      * 
      * @return The async call builder
      */
@@ -54,9 +50,9 @@ public class AsyncLogin {
     /**
      * Sign in a user
      * 
-     * <p>Returns an authentication URL for the specified integration. Once a successful authentication
-     * occurs, the name and email are returned inside a jwt parameter, which is a JSON web token that is
-     * base-64 encoded.
+     * <p>Returns an authentication URL for the specified integration. Once a successful OAuth2 code-flow
+     * authentication occurs, the name and email are returned inside a jwt parameter, which is a JSON web
+     * token that is base-64 encoded.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetUnifiedIntegrationLoginResponse>} - The async response
@@ -64,37 +60,6 @@ public class AsyncLogin {
     public CompletableFuture<GetUnifiedIntegrationLoginResponse> getUnifiedIntegrationLogin(@Nonnull GetUnifiedIntegrationLoginRequest request) {
         AsyncRequestOperation<GetUnifiedIntegrationLoginRequest, GetUnifiedIntegrationLoginResponse> operation
               = new GetUnifiedIntegrationLogin.Async(sdkConfiguration, _headers);
-        return operation.doRequest(request)
-            .thenCompose(operation::handleResponse);
-    }
-
-
-    /**
-     * Sign in a user via SAML
-     * 
-     * <p>Returns a SAML authentication URL for the specified integration. Once a successful authentication
-     * occurs, the name and email are returned inside a jwt parameter, which is a JSON web token that is
-     * base-64 encoded.
-     * 
-     * @return The async call builder
-     */
-    public GetUnifiedIntegrationSamlRequestBuilder getUnifiedIntegrationSaml() {
-        return new GetUnifiedIntegrationSamlRequestBuilder(sdkConfiguration);
-    }
-
-    /**
-     * Sign in a user via SAML
-     * 
-     * <p>Returns a SAML authentication URL for the specified integration. Once a successful authentication
-     * occurs, the name and email are returned inside a jwt parameter, which is a JSON web token that is
-     * base-64 encoded.
-     * 
-     * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<GetUnifiedIntegrationSamlResponse>} - The async response
-     */
-    public CompletableFuture<GetUnifiedIntegrationSamlResponse> getUnifiedIntegrationSaml(@Nonnull GetUnifiedIntegrationSamlRequest request) {
-        AsyncRequestOperation<GetUnifiedIntegrationSamlRequest, GetUnifiedIntegrationSamlResponse> operation
-              = new GetUnifiedIntegrationSaml.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

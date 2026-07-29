@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: cfc256ab-f291-4245-b909-5b9e9a6e6803
 management:
-  docChecksum: 5b461abb1257ca6221e3f7381711a0fe
+  docChecksum: 80d7cdbe65fe311af91a91a99f56bf35
   docVersion: "1.0"
   speakeasyVersion: 1.791.0
   generationVersion: 2.924.0
-  releaseVersion: 0.48.1
-  configChecksum: d30fadab0e6aac3ecbcd07d40e93e1aa
+  releaseVersion: 0.48.2
+  configChecksum: b6ac75863e40033c601091c306331304
   repoURL: https://github.com/unified-to/unified-java-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-java-sdk
@@ -5406,6 +5406,7 @@ trackedFiles:
   docs/sdks/salesorder/README.md:
     id: 276981d6d854
     pristine_git_object: 0ec91379c95990ef6e61e763ba56d06bb401f0db
+  docs/sdks/saml/README.md: {}
   docs/sdks/scim/README.md:
     id: 1d60f0a72b05
     pristine_git_object: a38c14fd4e165610c3af30cbb307a32c6c79e5a2
@@ -5887,6 +5888,7 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/AsyncSalesorder.java:
     id: 61f60e340343
     pristine_git_object: dfbf501dc9f225ca4fe08cfadada34ba40a897ba
+  src/main/java/to/unified/unified_java_sdk/AsyncSaml.java: {}
   src/main/java/to/unified/unified_java_sdk/AsyncScim.java:
     id: 03f916378042
     pristine_git_object: 8d445ac374da3dde605c8cdfae78c6773d958fae
@@ -6292,6 +6294,7 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/Salesorder.java:
     id: 2c2f09aa4084
     pristine_git_object: d658008046b98000c63351ac71f40c32f5b4138d
+  src/main/java/to/unified/unified_java_sdk/Saml.java: {}
   src/main/java/to/unified/unified_java_sdk/Scim.java:
     id: 86192502f3c2
     pristine_git_object: 3776d1fe6146ff23cac16a78410e607375a6293c
@@ -28498,7 +28501,10 @@ examples:
           text/plain: "<value>"
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: "## Java SDK Changes:\n* `unified-to.task.createTaskTask()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to.task.getTaskTask()`: \n  *  `request.fields` **Changed**\n  *  `response` **Changed**\n* `unified-to.task.listTaskTasks()`: \n  *  `request.fields` **Changed**\n  *  `response.[]` **Changed**\n* `unified-to.task.patchTaskTask()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to.task.updateTaskTask()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n"
+releaseNotes: |
+  ## Java SDK Changes:
+  * `unified-to.saml.getUnifiedIntegrationSaml()`: **Added**
+  * `unified-to.login.getUnifiedIntegrationSaml()`: **Removed** (Breaking ⚠️)
 generatedFiles:
   - .gitattributes
   - USAGE.md

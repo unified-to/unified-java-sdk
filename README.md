@@ -39,7 +39,7 @@ The samples below show how a published SDK artifact is used:
 
 Gradle:
 ```groovy
-implementation 'to.unified:unified-java-sdk:0.48.1'
+implementation 'to.unified:unified-java-sdk:0.48.2'
 ```
 
 Maven:
@@ -47,7 +47,7 @@ Maven:
 <dependency>
     <groupId>to.unified</groupId>
     <artifactId>unified-java-sdk</artifactId>
-    <version>0.48.1</version>
+    <version>0.48.2</version>
 </dependency>
 ```
 
@@ -1406,7 +1406,6 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 ### [Login](docs/sdks/login/README.md)
 
 * [getUnifiedIntegrationLogin](docs/sdks/login/README.md#getunifiedintegrationlogin) - Sign in a user
-* [getUnifiedIntegrationSaml](docs/sdks/login/README.md#getunifiedintegrationsaml) - Sign in a user via SAML
 
 ### [Martech](docs/sdks/martech/README.md)
 
@@ -1787,6 +1786,10 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 * [patchAccountingSalesorder](docs/sdks/salesorder/README.md#patchaccountingsalesorder) - Update a salesorder
 * [removeAccountingSalesorder](docs/sdks/salesorder/README.md#removeaccountingsalesorder) - Remove a salesorder
 * [updateAccountingSalesorder](docs/sdks/salesorder/README.md#updateaccountingsalesorder) - Update a salesorder
+
+### [Saml](docs/sdks/saml/README.md)
+
+* [getUnifiedIntegrationSaml](docs/sdks/saml/README.md#getunifiedintegrationsaml) - Sign in a user via SAML
 
 ### [Scim](docs/sdks/scim/README.md)
 

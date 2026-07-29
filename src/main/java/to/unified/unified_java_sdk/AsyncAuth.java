@@ -74,9 +74,9 @@ public class AsyncAuth {
     /**
      * Sign in a user
      * 
-     * <p>Returns an authentication URL for the specified integration. Once a successful authentication
-     * occurs, the name and email are returned inside a jwt parameter, which is a JSON web token that is
-     * base-64 encoded.
+     * <p>Returns an authentication URL for the specified integration. Once a successful OAuth2 code-flow
+     * authentication occurs, the name and email are returned inside a jwt parameter, which is a JSON web
+     * token that is base-64 encoded.
      * 
      * @return The async call builder
      */
@@ -87,9 +87,9 @@ public class AsyncAuth {
     /**
      * Sign in a user
      * 
-     * <p>Returns an authentication URL for the specified integration. Once a successful authentication
-     * occurs, the name and email are returned inside a jwt parameter, which is a JSON web token that is
-     * base-64 encoded.
+     * <p>Returns an authentication URL for the specified integration. Once a successful OAuth2 code-flow
+     * authentication occurs, the name and email are returned inside a jwt parameter, which is a JSON web
+     * token that is base-64 encoded.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetUnifiedIntegrationLoginResponse>} - The async response

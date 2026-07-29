@@ -319,6 +319,8 @@ public class AsyncUnifiedTo {
 
     private final AsyncLogin login;
 
+    private final AsyncSaml saml;
+
     private final AsyncIssue issue;
 
     private final AsyncWebhook webhook;
@@ -941,6 +943,10 @@ public class AsyncUnifiedTo {
         return login;
     }
 
+    public AsyncSaml saml() {
+        return saml;
+    }
+
     public AsyncIssue issue() {
         return issue;
     }
@@ -1120,6 +1126,7 @@ public class AsyncUnifiedTo {
         this.integration = new AsyncIntegration(syncSDK.integration(), sdkConfiguration);
         this.auth = new AsyncAuth(syncSDK.auth(), sdkConfiguration);
         this.login = new AsyncLogin(syncSDK.login(), sdkConfiguration);
+        this.saml = new AsyncSaml(syncSDK.saml(), sdkConfiguration);
         this.issue = new AsyncIssue(syncSDK.issue(), sdkConfiguration);
         this.webhook = new AsyncWebhook(syncSDK.webhook(), sdkConfiguration);
         this.secretsmanager = new AsyncSecretsmanager(syncSDK.secretsmanager(), sdkConfiguration);

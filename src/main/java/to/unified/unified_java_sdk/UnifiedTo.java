@@ -500,6 +500,9 @@ public class UnifiedTo {
     private final Login login;
 
 
+    private final Saml saml;
+
+
     private final Issue issue;
 
 
@@ -1280,6 +1283,11 @@ public class UnifiedTo {
     }
 
 
+    public Saml saml() {
+        return saml;
+    }
+
+
     public Issue issue() {
         return issue;
     }
@@ -1594,6 +1602,7 @@ public class UnifiedTo {
         this.integration = new Integration(sdkConfiguration);
         this.auth = new Auth(sdkConfiguration);
         this.login = new Login(sdkConfiguration);
+        this.saml = new Saml(sdkConfiguration);
         this.issue = new Issue(sdkConfiguration);
         this.webhook = new Webhook(sdkConfiguration);
         this.secretsmanager = new Secretsmanager(sdkConfiguration);
