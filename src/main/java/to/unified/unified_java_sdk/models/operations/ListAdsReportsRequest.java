@@ -35,6 +35,12 @@ public class ListAdsReportsRequest {
     private String connectionId;
 
     /**
+     * One or more (comma-separated) of: DATE, PLATFORM, PLATFORM_POSITION, DEVICE
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=dimension")
+    private String dimension;
+
+    /**
      * The end date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=end_lt")
@@ -136,6 +142,7 @@ public class ListAdsReportsRequest {
             @Nullable String adId,
             @Nullable String campaignId,
             @Nonnull String connectionId,
+            @Nullable String dimension,
             @Nullable String endLt,
             @Nullable List<ListAdsReportsQueryParamFields> fields,
             @Nullable String groupId,
@@ -153,6 +160,7 @@ public class ListAdsReportsRequest {
         this.campaignId = campaignId;
         this.connectionId = Optional.ofNullable(connectionId)
             .orElseThrow(() -> new IllegalArgumentException("connectionId cannot be null"));
+        this.dimension = dimension;
         this.endLt = endLt;
         this.fields = fields;
         this.groupId = groupId;
@@ -175,7 +183,7 @@ public class ListAdsReportsRequest {
             null, null, null,
             null, null, null,
             null, null, null,
-            null);
+            null, null);
     }
 
     /**
@@ -197,6 +205,13 @@ public class ListAdsReportsRequest {
      */
     public String connectionId() {
         return this.connectionId;
+    }
+
+    /**
+     * One or more (comma-separated) of: DATE, PLATFORM, PLATFORM_POSITION, DEVICE
+     */
+    public Optional<String> dimension() {
+        return Optional.ofNullable(this.dimension);
     }
 
     /**
@@ -333,6 +348,15 @@ public class ListAdsReportsRequest {
      */
     public ListAdsReportsRequest withConnectionId(@Nonnull String connectionId) {
         this.connectionId = Utils.checkNotNull(connectionId, "connectionId");
+        return this;
+    }
+
+
+    /**
+     * One or more (comma-separated) of: DATE, PLATFORM, PLATFORM_POSITION, DEVICE
+     */
+    public ListAdsReportsRequest withDimension(@Nullable String dimension) {
+        this.dimension = dimension;
         return this;
     }
 
@@ -482,6 +506,7 @@ public class ListAdsReportsRequest {
             Utils.enhancedDeepEquals(this.adId, other.adId) &&
             Utils.enhancedDeepEquals(this.campaignId, other.campaignId) &&
             Utils.enhancedDeepEquals(this.connectionId, other.connectionId) &&
+            Utils.enhancedDeepEquals(this.dimension, other.dimension) &&
             Utils.enhancedDeepEquals(this.endLt, other.endLt) &&
             Utils.enhancedDeepEquals(this.fields, other.fields) &&
             Utils.enhancedDeepEquals(this.groupId, other.groupId) &&
@@ -501,11 +526,11 @@ public class ListAdsReportsRequest {
     public int hashCode() {
         return Utils.enhancedHash(
             adId, campaignId, connectionId,
-            endLt, fields, groupId,
-            limit, offset, order,
-            orgId, query, raw,
-            sort, startGte, type,
-            updatedGte);
+            dimension, endLt, fields,
+            groupId, limit, offset,
+            order, orgId, query,
+            raw, sort, startGte,
+            type, updatedGte);
     }
     
     @Override
@@ -514,6 +539,7 @@ public class ListAdsReportsRequest {
                 "adId", adId,
                 "campaignId", campaignId,
                 "connectionId", connectionId,
+                "dimension", dimension,
                 "endLt", endLt,
                 "fields", fields,
                 "groupId", groupId,
@@ -537,6 +563,8 @@ public class ListAdsReportsRequest {
         private String campaignId;
 
         private String connectionId;
+
+        private String dimension;
 
         private String endLt;
 
@@ -589,6 +617,14 @@ public class ListAdsReportsRequest {
          */
         public Builder connectionId(@Nonnull String connectionId) {
             this.connectionId = Utils.checkNotNull(connectionId, "connectionId");
+            return this;
+        }
+
+        /**
+         * One or more (comma-separated) of: DATE, PLATFORM, PLATFORM_POSITION, DEVICE
+         */
+        public Builder dimension(@Nullable String dimension) {
+            this.dimension = dimension;
             return this;
         }
 
@@ -714,11 +750,11 @@ public class ListAdsReportsRequest {
         public ListAdsReportsRequest build() {
             return new ListAdsReportsRequest(
                 adId, campaignId, connectionId,
-                endLt, fields, groupId,
-                limit, offset, order,
-                orgId, query, raw,
-                sort, startGte, type,
-                updatedGte);
+                dimension, endLt, fields,
+                groupId, limit, offset,
+                order, orgId, query,
+                raw, sort, startGte,
+                type, updatedGte);
         }
 
     }

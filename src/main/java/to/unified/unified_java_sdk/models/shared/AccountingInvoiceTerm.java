@@ -27,7 +27,10 @@ public class AccountingInvoiceTerm {
     public static final AccountingInvoiceTerm NET20 = new AccountingInvoiceTerm("NET_20");
     public static final AccountingInvoiceTerm NET25 = new AccountingInvoiceTerm("NET_25");
     public static final AccountingInvoiceTerm NET30 = new AccountingInvoiceTerm("NET_30");
+    public static final AccountingInvoiceTerm NET45 = new AccountingInvoiceTerm("NET_45");
     public static final AccountingInvoiceTerm NET60 = new AccountingInvoiceTerm("NET_60");
+    public static final AccountingInvoiceTerm NET90 = new AccountingInvoiceTerm("NET_90");
+    public static final AccountingInvoiceTerm OTHER = new AccountingInvoiceTerm("OTHER");
 
     // This map will grow whenever a Color gets created with a new
     // unrecognized value (a potential memory leak if the user is not
@@ -108,7 +111,10 @@ public class AccountingInvoiceTerm {
         map.put("NET_20", NET20);
         map.put("NET_25", NET25);
         map.put("NET_30", NET30);
+        map.put("NET_45", NET45);
         map.put("NET_60", NET60);
+        map.put("NET_90", NET90);
+        map.put("OTHER", OTHER);
         return map;
     }
 
@@ -121,7 +127,10 @@ public class AccountingInvoiceTerm {
         map.put("NET_20", AccountingInvoiceTermEnum.NET20);
         map.put("NET_25", AccountingInvoiceTermEnum.NET25);
         map.put("NET_30", AccountingInvoiceTermEnum.NET30);
+        map.put("NET_45", AccountingInvoiceTermEnum.NET45);
         map.put("NET_60", AccountingInvoiceTermEnum.NET60);
+        map.put("NET_90", AccountingInvoiceTermEnum.NET90);
+        map.put("OTHER", AccountingInvoiceTermEnum.OTHER);
         return map;
     }
     
@@ -135,7 +144,10 @@ public class AccountingInvoiceTerm {
         NET20("NET_20"),
         NET25("NET_25"),
         NET30("NET_30"),
-        NET60("NET_60"),;
+        NET45("NET_45"),
+        NET60("NET_60"),
+        NET90("NET_90"),
+        OTHER("OTHER"),;
 
         private final String value;
 

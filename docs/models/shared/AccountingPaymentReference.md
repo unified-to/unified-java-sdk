@@ -1,0 +1,10 @@
+# AccountingPaymentReference
+
+
+## Fields
+
+| Field                                                                                     | Type                                                                                      | Required                                                                                  | Description                                                                               |
+| ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
+| `allocatedAt`                                                                             | [OffsetDateTime](https://docs.oracle.com/javase/8/docs/api/java/time/OffsetDateTime.html) | :heavy_minus_sign:                                                                        | N/A                                                                                       |
+| `amount`                                                                                  | *Optional\<Double>*                                                                       | :heavy_minus_sign:                                                                        | N/A                                                                                       |
+| `paymentId`                                                                               | *Optional\<String>*                                                                       | :heavy_minus_sign:                                                                        | N/A                                                                                       |

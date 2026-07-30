@@ -14,6 +14,7 @@ import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
 import java.time.OffsetDateTime;
+import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.LazySingletonValue;
@@ -25,6 +26,14 @@ public class PaymentPayment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("account_id")
     private String accountId;
+
+    /**
+     * What this payment was applied to (invoices, bills, credit memos, etc.). Replaces separate
+     * invoice/bill payment endpoints.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("allocations")
+    private List<PaymentAllocation> allocations;
 
 
     @JsonInclude(Include.NON_ABSENT)
@@ -104,6 +113,7 @@ public class PaymentPayment {
     @JsonCreator
     public PaymentPayment(
             @JsonProperty("account_id") @Nullable String accountId,
+            @JsonProperty("allocations") @Nullable List<PaymentAllocation> allocations,
             @JsonProperty("bill_id") @Nullable String billId,
             @JsonProperty("contact_id") @Nullable String contactId,
             @JsonProperty("created_at") @Nullable OffsetDateTime createdAt,
@@ -120,6 +130,7 @@ public class PaymentPayment {
             @JsonProperty("type") @Nullable PaymentPaymentType type,
             @JsonProperty("updated_at") @Nullable OffsetDateTime updatedAt) {
         this.accountId = accountId;
+        this.allocations = allocations;
         this.billId = billId;
         this.contactId = contactId;
         this.createdAt = createdAt;
@@ -144,11 +155,19 @@ public class PaymentPayment {
             null, null, null,
             null, null, null,
             null, null, null,
-            null);
+            null, null);
     }
 
     public Optional<String> accountId() {
         return Optional.ofNullable(this.accountId);
+    }
+
+    /**
+     * What this payment was applied to (invoices, bills, credit memos, etc.). Replaces separate
+     * invoice/bill payment endpoints.
+     */
+    public Optional<List<PaymentAllocation>> allocations() {
+        return Optional.ofNullable(this.allocations);
     }
 
     public Optional<String> billId() {
@@ -218,6 +237,16 @@ public class PaymentPayment {
 
     public PaymentPayment withAccountId(@Nullable String accountId) {
         this.accountId = accountId;
+        return this;
+    }
+
+
+    /**
+     * What this payment was applied to (invoices, bills, credit memos, etc.). Replaces separate
+     * invoice/bill payment endpoints.
+     */
+    public PaymentPayment withAllocations(@Nullable List<PaymentAllocation> allocations) {
+        this.allocations = allocations;
         return this;
     }
 
@@ -323,6 +352,7 @@ public class PaymentPayment {
         PaymentPayment other = (PaymentPayment) o;
         return 
             Utils.enhancedDeepEquals(this.accountId, other.accountId) &&
+            Utils.enhancedDeepEquals(this.allocations, other.allocations) &&
             Utils.enhancedDeepEquals(this.billId, other.billId) &&
             Utils.enhancedDeepEquals(this.contactId, other.contactId) &&
             Utils.enhancedDeepEquals(this.createdAt, other.createdAt) &&
@@ -343,18 +373,19 @@ public class PaymentPayment {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            accountId, billId, contactId,
-            createdAt, currency, id,
-            invoiceId, linkId, notes,
-            organizationId, paymentMethod, raw,
-            reference, totalAmount, type,
-            updatedAt);
+            accountId, allocations, billId,
+            contactId, createdAt, currency,
+            id, invoiceId, linkId,
+            notes, organizationId, paymentMethod,
+            raw, reference, totalAmount,
+            type, updatedAt);
     }
     
     @Override
     public String toString() {
         return Utils.toString(PaymentPayment.class,
                 "accountId", accountId,
+                "allocations", allocations,
                 "billId", billId,
                 "contactId", contactId,
                 "createdAt", createdAt,
@@ -376,6 +407,8 @@ public class PaymentPayment {
     public final static class Builder {
 
         private String accountId;
+
+        private List<PaymentAllocation> allocations;
 
         private String billId;
 
@@ -413,6 +446,15 @@ public class PaymentPayment {
 
         public Builder accountId(@Nullable String accountId) {
             this.accountId = accountId;
+            return this;
+        }
+
+        /**
+         * What this payment was applied to (invoices, bills, credit memos, etc.). Replaces separate
+         * invoice/bill payment endpoints.
+         */
+        public Builder allocations(@Nullable List<PaymentAllocation> allocations) {
+            this.allocations = allocations;
             return this;
         }
 
@@ -493,12 +535,12 @@ public class PaymentPayment {
 
         public PaymentPayment build() {
             return new PaymentPayment(
-                accountId, billId, contactId,
-                createdAt, currency, id,
-                invoiceId, linkId, notes,
-                organizationId, paymentMethod, raw,
-                reference, totalAmount, type,
-                updatedAt);
+                accountId, allocations, billId,
+                contactId, createdAt, currency,
+                id, invoiceId, linkId,
+                notes, organizationId, paymentMethod,
+                raw, reference, totalAmount,
+                type, updatedAt);
         }
 
 

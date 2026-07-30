@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: cfc256ab-f291-4245-b909-5b9e9a6e6803
 management:
-  docChecksum: 80d7cdbe65fe311af91a91a99f56bf35
+  docChecksum: d7ef585232b169c854883e61b0e5e692
   docVersion: "1.0"
   speakeasyVersion: 1.791.0
   generationVersion: 2.924.0
-  releaseVersion: 0.48.2
-  configChecksum: b6ac75863e40033c601091c306331304
+  releaseVersion: 0.48.3
+  configChecksum: d3e39caef830165df7b63898104ad4c4
   repoURL: https://github.com/unified-to/unified-java-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-java-sdk
@@ -87,6 +87,9 @@ trackedFiles:
   docs/models/operations/CreateAdsAdQueryParamFields.md: {}
   docs/models/operations/CreateAdsAdRequest.md: {}
   docs/models/operations/CreateAdsAdResponse.md: {}
+  docs/models/operations/CreateAdsAssetQueryParamFields.md: {}
+  docs/models/operations/CreateAdsAssetRequest.md: {}
+  docs/models/operations/CreateAdsAssetResponse.md: {}
   docs/models/operations/CreateAdsCampaignQueryParamFields.md: {}
   docs/models/operations/CreateAdsCampaignRequest.md: {}
   docs/models/operations/CreateAdsCampaignResponse.md: {}
@@ -480,6 +483,9 @@ trackedFiles:
   docs/models/operations/GetAdsAdQueryParamFields.md: {}
   docs/models/operations/GetAdsAdRequest.md: {}
   docs/models/operations/GetAdsAdResponse.md: {}
+  docs/models/operations/GetAdsAssetQueryParamFields.md: {}
+  docs/models/operations/GetAdsAssetRequest.md: {}
+  docs/models/operations/GetAdsAssetResponse.md: {}
   docs/models/operations/GetAdsCampaignQueryParamFields.md: {}
   docs/models/operations/GetAdsCampaignRequest.md: {}
   docs/models/operations/GetAdsCampaignResponse.md: {}
@@ -945,6 +951,9 @@ trackedFiles:
   docs/models/operations/ListAdsAdsQueryParamFields.md: {}
   docs/models/operations/ListAdsAdsRequest.md: {}
   docs/models/operations/ListAdsAdsResponse.md: {}
+  docs/models/operations/ListAdsAssetsQueryParamFields.md: {}
+  docs/models/operations/ListAdsAssetsRequest.md: {}
+  docs/models/operations/ListAdsAssetsResponse.md: {}
   docs/models/operations/ListAdsCampaignsQueryParamFields.md: {}
   docs/models/operations/ListAdsCampaignsRequest.md: {}
   docs/models/operations/ListAdsCampaignsResponse.md: {}
@@ -2418,6 +2427,7 @@ trackedFiles:
   docs/models/shared/AccountingCategory.md:
     id: d08da7e93efb
     pristine_git_object: 53bc89a26e52dad4d63210582b770f605321d0d5
+  docs/models/shared/AccountingCategoryType.md: {}
   docs/models/shared/AccountingContact.md:
     id: 6faf0e762d7f
     pristine_git_object: 000b497bd60d7fb0ce183c5d5d79f377823fc0cd
@@ -2427,6 +2437,8 @@ trackedFiles:
   docs/models/shared/AccountingContactPaymentMethodType.md:
     id: 0182540944c3
     pristine_git_object: 9e3052f4bbb0f716f3787024987619d5376af14d
+  docs/models/shared/AccountingContactPaymentTerms.md: {}
+  docs/models/shared/AccountingCreditApplication.md: {}
   docs/models/shared/AccountingCreditmemo.md:
     id: be84de238ab3
     pristine_git_object: 82009910dfccea38c47271e39a5683a08793b3fb
@@ -2454,6 +2466,7 @@ trackedFiles:
   docs/models/shared/AccountingInvoicePaymentCollectionMethod.md:
     id: d1c27df772dc
     pristine_git_object: 72e757fd13f0ebeba3a1a256dcfa44dd64d5f8e7
+  docs/models/shared/AccountingInvoicePaymentTerms.md: {}
   docs/models/shared/AccountingInvoiceStatus.md:
     id: 5f6593e28c63
     pristine_git_object: cdc4fbd0c74a2e71ba895aa6b77db22dcfbdabae
@@ -2482,6 +2495,8 @@ trackedFiles:
   docs/models/shared/AccountingOrganization.md:
     id: 8f28de249c48
     pristine_git_object: f297989899c31e6f72f33a395f05b1598f7b2fec
+  docs/models/shared/AccountingOrganizationType.md: {}
+  docs/models/shared/AccountingPaymentReference.md: {}
   docs/models/shared/AccountingProfitloss.md:
     id: 269e88f616ac
     pristine_git_object: 12eb149044e2fda57ff3188eed1828f5a0d2e875
@@ -2556,6 +2571,8 @@ trackedFiles:
   docs/models/shared/AdsAdStatus.md:
     id: 6720aa275726
     pristine_git_object: 6ebe0ca4eb81f601542fe83bbf5534aab8b84113
+  docs/models/shared/AdsAsset.md: {}
+  docs/models/shared/AdsAssetType.md: {}
   docs/models/shared/AdsCampaign.md:
     id: 6ab1826eef10
     pristine_git_object: 820663a654716c6b04737ea707b471bc4fa48cff
@@ -2627,6 +2644,7 @@ trackedFiles:
   docs/models/shared/AnalyticsProperty.md: {}
   docs/models/shared/AnalyticsReport.md: {}
   docs/models/shared/AnalyticsReportMetrics.md: {}
+  docs/models/shared/AnalyticsReportMetricsDimension.md: {}
   docs/models/shared/AnalyticsReportMetricsType.md: {}
   docs/models/shared/AnalyticsSession.md: {}
   docs/models/shared/AnalyticsVisitor.md: {}
@@ -3837,6 +3855,8 @@ trackedFiles:
   docs/models/shared/Partnership.md:
     id: 0560e6881d5f
     pristine_git_object: 7e0af0b8cd06ca5ee49ffaf42c31c115b2d05596
+  docs/models/shared/PaymentAllocation.md: {}
+  docs/models/shared/PaymentAllocationObjectType.md: {}
   docs/models/shared/PaymentCollectionMethod.md:
     id: dfe4bf1d3be9
     pristine_git_object: a6c6c76f4c0a35ea70f5f62066ef1a10700aa168
@@ -3870,6 +3890,7 @@ trackedFiles:
   docs/models/shared/PaymentSubscriptionStatus.md:
     id: d5a86fcb2722
     pristine_git_object: dc8d2501f7f1553073bc701171cd1e093c8ac9a0
+  docs/models/shared/PaymentTerms.md: {}
   docs/models/shared/PaymentType.md:
     id: 01e5fa281169
     pristine_git_object: 019cad714ebc022e6e68d6d2413b996064132f53
@@ -4150,6 +4171,10 @@ trackedFiles:
   docs/models/shared/PropertyAdsReportMetricsCampaignTargetingPlacement.md:
     id: e7ac901afb59
     pristine_git_object: d9b7d382bb83c63eac1f66d06f46cab92b433941
+  docs/models/shared/PropertyAdsReportMetricsCreative.md: {}
+  docs/models/shared/PropertyAdsReportMetricsCreativeCreativeType.md: {}
+  docs/models/shared/PropertyAdsReportMetricsCreativeHostingSource.md: {}
+  docs/models/shared/PropertyAdsReportMetricsCreativeStatus.md: {}
   docs/models/shared/PropertyAdsReportMetricsGroup.md:
     id: 70785d32477d
     pristine_git_object: b072b2ab6d1b49157dc289772a2a62e9c0e29866
@@ -4250,6 +4275,21 @@ trackedFiles:
   docs/models/shared/PropertyAdsReportMetricsGroupType.md:
     id: fa314571b13a
     pristine_git_object: fa51a47ef13813f4eb1da2614f2d4f5ef1436363
+  docs/models/shared/PropertyAdsReportMetricsInsertionorder.md: {}
+  docs/models/shared/PropertyAdsReportMetricsInsertionorderBidStrategy.md: {}
+  docs/models/shared/PropertyAdsReportMetricsInsertionorderBidStrategyPerformanceGoalType.md: {}
+  docs/models/shared/PropertyAdsReportMetricsInsertionorderBidStrategyType.md: {}
+  docs/models/shared/PropertyAdsReportMetricsInsertionorderBidStrategyYoutubeAndPartnersType.md: {}
+  docs/models/shared/PropertyAdsReportMetricsInsertionorderBudgetUnit.md: {}
+  docs/models/shared/PropertyAdsReportMetricsInsertionorderFrequencyCap.md: {}
+  docs/models/shared/PropertyAdsReportMetricsInsertionorderFrequencyCapTimeUnit.md: {}
+  docs/models/shared/PropertyAdsReportMetricsInsertionorderKpi.md: {}
+  docs/models/shared/PropertyAdsReportMetricsInsertionorderKpiType.md: {}
+  docs/models/shared/PropertyAdsReportMetricsInsertionorderPacing.md: {}
+  docs/models/shared/PropertyAdsReportMetricsInsertionorderPacingPeriod.md: {}
+  docs/models/shared/PropertyAdsReportMetricsInsertionorderStatus.md: {}
+  docs/models/shared/PropertyAdsReportMetricsKeyword.md: {}
+  docs/models/shared/PropertyAdsReportMetricsPlacement.md: {}
   docs/models/shared/PropertyAnalyticsEventMetadata.md: {}
   docs/models/shared/PropertyAnalyticsVisitorMetadata.md: {}
   docs/models/shared/PropertyAtsActivityFrom.md:
@@ -5052,6 +5092,7 @@ trackedFiles:
   docs/models/shared/Webhook.md:
     id: cf4334c2eeef
     pristine_git_object: 74bc5ad748df7f0811885bd1ec22a7e09588954d
+  docs/models/shared/WebhookObjectType.md: {}
   docs/models/shared/WebhookType.md:
     id: d18bc384a2de
     pristine_git_object: 54d5ac20bee8ae7c38fc29038fa2a1ae2acdbfdb
@@ -5093,6 +5134,7 @@ trackedFiles:
   docs/sdks/assessment/README.md:
     id: 54c8061fbed1
     pristine_git_object: 5b39e53551580b69b0388c49ed9bae1e79dfec8e
+  docs/sdks/asset/README.md: {}
   docs/sdks/ats/README.md:
     id: 24fafa267f6c
     pristine_git_object: 8c82afc6d356a3fd7ce923b6de18a7a7b032eb28
@@ -5546,6 +5588,7 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/Assessment.java:
     id: 75cbdfc65952
     pristine_git_object: 071bf6eaf430487e748626232cec83bbb9f6729e
+  src/main/java/to/unified/unified_java_sdk/Asset.java: {}
   src/main/java/to/unified/unified_java_sdk/AsyncAccount.java:
     id: 9f960ca8b050
     pristine_git_object: 3d9b11846db4a78a0792b91435b718f9aa15987e
@@ -5575,6 +5618,7 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/AsyncAssessment.java:
     id: ca527c81ec67
     pristine_git_object: e8ac0e024bd51419d1b4d86e350de346a02d71f8
+  src/main/java/to/unified/unified_java_sdk/AsyncAsset.java: {}
   src/main/java/to/unified/unified_java_sdk/AsyncAts.java:
     id: 45b99fb62053
     pristine_git_object: 31e817f2061c87e56e08d79786dc4d22f5abf9ea
@@ -6414,6 +6458,7 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/models/operations//async/CreateAccountingTransactionRequestBuilder.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations//async/CreateAccountingVendorcreditRequestBuilder.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations//async/CreateAdsAdRequestBuilder.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations//async/CreateAdsAssetRequestBuilder.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations//async/CreateAdsCampaignRequestBuilder.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations//async/CreateAdsCreativeRequestBuilder.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations//async/CreateAdsGroupRequestBuilder.java: {}
@@ -6553,6 +6598,7 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/models/operations//async/GetAccountingTrialbalanceRequestBuilder.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations//async/GetAccountingVendorcreditRequestBuilder.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations//async/GetAdsAdRequestBuilder.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations//async/GetAdsAssetRequestBuilder.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations//async/GetAdsCampaignRequestBuilder.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations//async/GetAdsCreativeRequestBuilder.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations//async/GetAdsGroupRequestBuilder.java: {}
@@ -6717,6 +6763,7 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/models/operations//async/ListAccountingTrialbalancesRequestBuilder.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations//async/ListAccountingVendorcreditsRequestBuilder.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations//async/ListAdsAdsRequestBuilder.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations//async/ListAdsAssetsRequestBuilder.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations//async/ListAdsCampaignsRequestBuilder.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations//async/ListAdsCreativesRequestBuilder.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations//async/ListAdsGroupsRequestBuilder.java: {}
@@ -7319,6 +7366,10 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/models/operations/CreateAdsAdRequest.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/CreateAdsAdRequestBuilder.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/CreateAdsAdResponse.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/CreateAdsAssetQueryParamFields.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/CreateAdsAssetRequest.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/CreateAdsAssetRequestBuilder.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/CreateAdsAssetResponse.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/CreateAdsCampaignQueryParamFields.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/CreateAdsCampaignRequest.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/CreateAdsCampaignRequestBuilder.java: {}
@@ -7851,6 +7902,10 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/models/operations/GetAdsAdRequest.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/GetAdsAdRequestBuilder.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/GetAdsAdResponse.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/GetAdsAssetQueryParamFields.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/GetAdsAssetRequest.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/GetAdsAssetRequestBuilder.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/GetAdsAssetResponse.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/GetAdsCampaignQueryParamFields.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/GetAdsCampaignRequest.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/GetAdsCampaignRequestBuilder.java: {}
@@ -8480,6 +8535,10 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/models/operations/ListAdsAdsRequest.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/ListAdsAdsRequestBuilder.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/ListAdsAdsResponse.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/ListAdsAssetsQueryParamFields.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/ListAdsAssetsRequest.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/ListAdsAssetsRequestBuilder.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/ListAdsAssetsResponse.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/ListAdsCampaignsQueryParamFields.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/ListAdsCampaignsRequest.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/ListAdsCampaignsRequestBuilder.java: {}
@@ -10466,6 +10525,7 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/models/operations/async/CreateAccountingTransactionResponse.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/async/CreateAccountingVendorcreditResponse.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/async/CreateAdsAdResponse.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/async/CreateAdsAssetResponse.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/async/CreateAdsCampaignResponse.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/async/CreateAdsCreativeResponse.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/async/CreateAdsGroupResponse.java: {}
@@ -10605,6 +10665,7 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/models/operations/async/GetAccountingTrialbalanceResponse.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/async/GetAccountingVendorcreditResponse.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/async/GetAdsAdResponse.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/async/GetAdsAssetResponse.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/async/GetAdsCampaignResponse.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/async/GetAdsCreativeResponse.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/async/GetAdsGroupResponse.java: {}
@@ -10769,6 +10830,7 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/models/operations/async/ListAccountingTrialbalancesResponse.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/async/ListAccountingVendorcreditsResponse.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/async/ListAdsAdsResponse.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/async/ListAdsAssetsResponse.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/async/ListAdsCampaignsResponse.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/async/ListAdsCreativesResponse.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/async/ListAdsGroupsResponse.java: {}
@@ -11351,6 +11413,7 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/models/shared/AccountingCategory.java:
     id: 0c21fb653806
     pristine_git_object: 16767e4fe597b6ac8c659a2fbafb15025272e9b6
+  src/main/java/to/unified/unified_java_sdk/models/shared/AccountingCategoryType.java: {}
   src/main/java/to/unified/unified_java_sdk/models/shared/AccountingContact.java:
     id: 61491a9fcf50
     pristine_git_object: beb6581b714725fe8fa826296d5eaf021b18a3de
@@ -11360,6 +11423,8 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/models/shared/AccountingContactPaymentMethodType.java:
     id: 6e98b44752df
     pristine_git_object: 6257222b951967548ffaa7aa4e344f5fcb18a0e3
+  src/main/java/to/unified/unified_java_sdk/models/shared/AccountingContactPaymentTerms.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/shared/AccountingCreditApplication.java: {}
   src/main/java/to/unified/unified_java_sdk/models/shared/AccountingCreditmemo.java:
     id: dd11d10c1452
     pristine_git_object: c45444b78446f5e15c667252badb4299fca3278b
@@ -11387,6 +11452,7 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/models/shared/AccountingInvoicePaymentCollectionMethod.java:
     id: f2aa9d683f2a
     pristine_git_object: 254de87145a09a19abef2840f90000b21f756c20
+  src/main/java/to/unified/unified_java_sdk/models/shared/AccountingInvoicePaymentTerms.java: {}
   src/main/java/to/unified/unified_java_sdk/models/shared/AccountingInvoiceStatus.java:
     id: 88731f63fb75
     pristine_git_object: e0d61a86140cdfbb871c87415be6b63365afd68b
@@ -11415,6 +11481,8 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/models/shared/AccountingOrganization.java:
     id: 567449590b69
     pristine_git_object: 0706dc35e175f33f7b9407cef3c76e44fa39a3c8
+  src/main/java/to/unified/unified_java_sdk/models/shared/AccountingOrganizationType.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/shared/AccountingPaymentReference.java: {}
   src/main/java/to/unified/unified_java_sdk/models/shared/AccountingProfitloss.java:
     id: a4a9c412b5ca
     pristine_git_object: b44218a66476bcbebb13780de532445999c8d483
@@ -11489,6 +11557,8 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/models/shared/AdsAdStatus.java:
     id: 1e253e846be4
     pristine_git_object: 74e70431d1cdac35d10acfb1adaaa4544b3f1ff8
+  src/main/java/to/unified/unified_java_sdk/models/shared/AdsAsset.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/shared/AdsAssetType.java: {}
   src/main/java/to/unified/unified_java_sdk/models/shared/AdsCampaign.java:
     id: a7fce55eca8b
     pristine_git_object: 658a04912f76358ea98777d25c31c203b49dbd9c
@@ -11560,6 +11630,7 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/models/shared/AnalyticsProperty.java: {}
   src/main/java/to/unified/unified_java_sdk/models/shared/AnalyticsReport.java: {}
   src/main/java/to/unified/unified_java_sdk/models/shared/AnalyticsReportMetrics.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/shared/AnalyticsReportMetricsDimension.java: {}
   src/main/java/to/unified/unified_java_sdk/models/shared/AnalyticsReportMetricsType.java: {}
   src/main/java/to/unified/unified_java_sdk/models/shared/AnalyticsSession.java: {}
   src/main/java/to/unified/unified_java_sdk/models/shared/AnalyticsVisitor.java: {}
@@ -12770,6 +12841,8 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/models/shared/Partnership.java:
     id: bb5ec6e0c92c
     pristine_git_object: a26a82a2f594283d84a03bfd45d1f8ee24f03406
+  src/main/java/to/unified/unified_java_sdk/models/shared/PaymentAllocation.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/shared/PaymentAllocationObjectType.java: {}
   src/main/java/to/unified/unified_java_sdk/models/shared/PaymentCollectionMethod.java:
     id: 3dc236e20174
     pristine_git_object: 193df127c9c428042cb9e9f1e5e603628bd23212
@@ -12803,6 +12876,7 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/models/shared/PaymentSubscriptionStatus.java:
     id: 4a4a3efa4177
     pristine_git_object: 105b351e27d8bdaf54668babdb29d003cd8ccf81
+  src/main/java/to/unified/unified_java_sdk/models/shared/PaymentTerms.java: {}
   src/main/java/to/unified/unified_java_sdk/models/shared/PaymentType.java:
     id: 9a74168d38d4
     pristine_git_object: 298979466d6138df63bdf3849c23e8912fc22d61
@@ -13083,6 +13157,10 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/models/shared/PropertyAdsReportMetricsCampaignTargetingPlacement.java:
     id: 13bfdc804ab0
     pristine_git_object: 84114c787abef3754555488cb00ba5d74ee60da2
+  src/main/java/to/unified/unified_java_sdk/models/shared/PropertyAdsReportMetricsCreative.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/shared/PropertyAdsReportMetricsCreativeCreativeType.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/shared/PropertyAdsReportMetricsCreativeHostingSource.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/shared/PropertyAdsReportMetricsCreativeStatus.java: {}
   src/main/java/to/unified/unified_java_sdk/models/shared/PropertyAdsReportMetricsGroup.java:
     id: 55ce2eeba345
     pristine_git_object: 4a7ab6aca9cef095013090dfc8cc323dc4e2b38e
@@ -13183,6 +13261,23 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/models/shared/PropertyAdsReportMetricsGroupType.java:
     id: 044f43524be5
     pristine_git_object: 074cc76dc9dcccce2c5b0bf1c9df8b94da30cd51
+  src/main/java/to/unified/unified_java_sdk/models/shared/PropertyAdsReportMetricsInsertionorder.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/shared/PropertyAdsReportMetricsInsertionorderBidStrategy.java: {}
+  ? src/main/java/to/unified/unified_java_sdk/models/shared/PropertyAdsReportMetricsInsertionorderBidStrategyPerformanceGoalType.java
+  : {}
+  src/main/java/to/unified/unified_java_sdk/models/shared/PropertyAdsReportMetricsInsertionorderBidStrategyType.java: {}
+  ? src/main/java/to/unified/unified_java_sdk/models/shared/PropertyAdsReportMetricsInsertionorderBidStrategyYoutubeAndPartnersType.java
+  : {}
+  src/main/java/to/unified/unified_java_sdk/models/shared/PropertyAdsReportMetricsInsertionorderBudgetUnit.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/shared/PropertyAdsReportMetricsInsertionorderFrequencyCap.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/shared/PropertyAdsReportMetricsInsertionorderFrequencyCapTimeUnit.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/shared/PropertyAdsReportMetricsInsertionorderKpi.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/shared/PropertyAdsReportMetricsInsertionorderKpiType.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/shared/PropertyAdsReportMetricsInsertionorderPacing.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/shared/PropertyAdsReportMetricsInsertionorderPacingPeriod.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/shared/PropertyAdsReportMetricsInsertionorderStatus.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/shared/PropertyAdsReportMetricsKeyword.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/shared/PropertyAdsReportMetricsPlacement.java: {}
   src/main/java/to/unified/unified_java_sdk/models/shared/PropertyAnalyticsEventMetadata.java: {}
   src/main/java/to/unified/unified_java_sdk/models/shared/PropertyAnalyticsVisitorMetadata.java: {}
   src/main/java/to/unified/unified_java_sdk/models/shared/PropertyAtsActivityFrom.java:
@@ -13985,6 +14080,7 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/models/shared/Webhook.java:
     id: 43a793a4eb00
     pristine_git_object: 2805b545a8a242a1bc1accfe285bff4018079480
+  src/main/java/to/unified/unified_java_sdk/models/shared/WebhookObjectType.java: {}
   src/main/java/to/unified/unified_java_sdk/models/shared/WebhookType.java:
     id: 59d0f82b56f7
     pristine_git_object: 1d8dcf0fc79913ae30be9ef613437e2e9a0d7806
@@ -14012,6 +14108,7 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/operations/CreateAccountingTransaction.java: {}
   src/main/java/to/unified/unified_java_sdk/operations/CreateAccountingVendorcredit.java: {}
   src/main/java/to/unified/unified_java_sdk/operations/CreateAdsAd.java: {}
+  src/main/java/to/unified/unified_java_sdk/operations/CreateAdsAsset.java: {}
   src/main/java/to/unified/unified_java_sdk/operations/CreateAdsCampaign.java: {}
   src/main/java/to/unified/unified_java_sdk/operations/CreateAdsCreative.java: {}
   src/main/java/to/unified/unified_java_sdk/operations/CreateAdsGroup.java: {}
@@ -14151,6 +14248,7 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/operations/GetAccountingTrialbalance.java: {}
   src/main/java/to/unified/unified_java_sdk/operations/GetAccountingVendorcredit.java: {}
   src/main/java/to/unified/unified_java_sdk/operations/GetAdsAd.java: {}
+  src/main/java/to/unified/unified_java_sdk/operations/GetAdsAsset.java: {}
   src/main/java/to/unified/unified_java_sdk/operations/GetAdsCampaign.java: {}
   src/main/java/to/unified/unified_java_sdk/operations/GetAdsCreative.java: {}
   src/main/java/to/unified/unified_java_sdk/operations/GetAdsGroup.java: {}
@@ -14315,6 +14413,7 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/operations/ListAccountingTrialbalances.java: {}
   src/main/java/to/unified/unified_java_sdk/operations/ListAccountingVendorcredits.java: {}
   src/main/java/to/unified/unified_java_sdk/operations/ListAdsAds.java: {}
+  src/main/java/to/unified/unified_java_sdk/operations/ListAdsAssets.java: {}
   src/main/java/to/unified/unified_java_sdk/operations/ListAdsCampaigns.java: {}
   src/main/java/to/unified/unified_java_sdk/operations/ListAdsCreatives.java: {}
   src/main/java/to/unified/unified_java_sdk/operations/ListAdsGroups.java: {}
@@ -28499,12 +28598,36 @@ examples:
       responses:
         "200":
           text/plain: "<value>"
+  createAdsAsset:
+    speakeasy-default-create-ads-asset:
+      parameters:
+        path:
+          connection_id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  getAdsAsset:
+    speakeasy-default-get-ads-asset:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      responses:
+        "200":
+          application/json: {}
+  listAdsAssets:
+    speakeasy-default-list-ads-assets:
+      parameters:
+        path:
+          connection_id: "<id>"
+      responses:
+        "200":
+          application/json: [{}]
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: |
-  ## Java SDK Changes:
-  * `unified-to.saml.getUnifiedIntegrationSaml()`: **Added**
-  * `unified-to.login.getUnifiedIntegrationSaml()`: **Removed** (Breaking ⚠️)
+releaseNotes: "## Java SDK Changes:\n* `unified-to.ads.createAdsAsset()`: **Added**\n* `unified-to.ads.getAdsAsset()`: **Added**\n* `unified-to.ads.listAdsAssets()`: **Added**\n* `unified-to.asset.createAdsAsset()`: **Added**\n* `unified-to.asset.getAdsAsset()`: **Added**\n* `unified-to.asset.listAdsAssets()`: **Added**\n* `unified-to.accounting.createAccountingBill()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to.accounting.createAccountingCategory()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to.accounting.createAccountingContact()`: \n  *  `request` **Changed**\n  *  `response.paymentTerms` **Added**\n* `unified-to.accounting.createAccountingCreditmemo()`: \n  *  `request` **Changed**\n  *  `response.applications` **Added**\n* `unified-to.accounting.createAccountingExpense()`: \n  *  `request` **Changed**\n  *  `response.categoryIds` **Added**\n* `unified-to.accounting.createAccountingInvoice()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to.accounting.createAccountingJournal()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to.accounting.createAccountingOrder()`: \n  *  `request` **Changed**\n  *  `response.organizationId` **Added**\n* `unified-to.accounting.createAccountingPurchaseorder()`: \n  *  `request` **Changed**\n  *  `response.categoryIds` **Added**\n* `unified-to.accounting.createAccountingSalesorder()`: \n  *  `request` **Changed**\n  *  `response.categoryIds` **Added**\n* `unified-to.accounting.createAccountingTransaction()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to.accounting.createAccountingVendorcredit()`: \n  *  `request` **Changed**\n  *  `response.applications` **Added**\n* `unified-to.accounting.getAccountingBill()`: \n  *  `request.fields` **Changed**\n  *  `response` **Changed**\n* `unified-to.accounting.getAccountingCategory()`: \n  *  `request.fields` **Changed**\n  *  `response` **Changed**\n* `unified-to.accounting.getAccountingContact()`: \n  *  `request.fields` **Changed**\n  *  `response.paymentTerms` **Added**\n* `unified-to.accounting.getAccountingCreditmemo()`: \n  *  `request.fields` **Changed**\n  *  `response.applications` **Added**\n* `unified-to.accounting.getAccountingExpense()`: \n  *  `request.fields` **Changed**\n  *  `response.categoryIds` **Added**\n* `unified-to.accounting.getAccountingInvoice()`: \n  *  `request.fields` **Changed**\n  *  `response` **Changed**\n* `unified-to.accounting.getAccountingJournal()`: \n  *  `request.fields` **Changed**\n  *  `response` **Changed**\n* `unified-to.accounting.getAccountingOrder()`: \n  *  `request.fields` **Changed**\n  *  `response.organizationId` **Added**\n* `unified-to.accounting.getAccountingOrganization()`: \n  *  `request.fields` **Changed**\n  *  `response` **Changed**\n* `unified-to.accounting.getAccountingPurchaseorder()`: \n  *  `request.fields` **Changed**\n  *  `response.categoryIds` **Added**\n* `unified-to.accounting.getAccountingSalesorder()`: \n  *  `request.fields` **Changed**\n  *  `response.categoryIds` **Added**\n* `unified-to.accounting.getAccountingTransaction()`: \n  *  `request.fields` **Changed**\n  *  `response` **Changed**\n* `unified-to.accounting.getAccountingVendorcredit()`: \n  *  `request.fields` **Changed**\n  *  `response.applications` **Added**\n* `unified-to.accounting.listAccountingBills()`: \n  *  `request.fields` **Changed**\n  *  `response.[]` **Changed**\n* `unified-to.accounting.listAccountingCategories()`: \n  *  `request.fields` **Changed**\n  *  `response.[]` **Changed**\n* `unified-to.accounting.listAccountingContacts()`: \n  *  `request.fields` **Changed**\n  *  `response.[].paymentTerms` **Added**\n* `unified-to.accounting.listAccountingCreditmemoes()`: \n  *  `request.fields` **Changed**\n  *  `response.[].applications` **Added**\n* `unified-to.accounting.listAccountingExpenses()`: \n  *  `request.fields` **Changed**\n  *  `response.[].categoryIds` **Added**\n* `unified-to.accounting.listAccountingInvoices()`: \n  *  `request.fields` **Changed**\n  *  `response.[]` **Changed**\n* `unified-to.accounting.listAccountingJournals()`: \n  *  `request.fields` **Changed**\n  *  `response.[]` **Changed**\n* `unified-to.accounting.listAccountingOrders()`: \n  *  `request.fields` **Changed**\n  *  `response.[].organizationId` **Added**\n* `unified-to.accounting.listAccountingOrganizations()`: \n  *  `request.fields` **Changed**\n  *  `response.[]` **Changed**\n* `unified-to.accounting.listAccountingPurchaseorders()`: \n  *  `request.fields` **Changed**\n  *  `response.[].categoryIds` **Added**\n* `unified-to.accounting.listAccountingSalesorders()`: \n  *  `request.fields` **Changed**\n  *  `response.[].categoryIds` **Added**\n* `unified-to.accounting.listAccountingTransactions()`: \n  *  `request.fields` **Changed**\n  *  `response.[]` **Changed**\n* `unified-to.accounting.listAccountingVendorcredits()`: \n  *  `request.fields` **Changed**\n  *  `response.[].applications` **Added**\n* `unified-to.accounting.patchAccountingBill()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to.accounting.patchAccountingCategory()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to.accounting.patchAccountingContact()`: \n  *  `request` **Changed**\n  *  `response.paymentTerms` **Added**\n* `unified-to.accounting.patchAccountingCreditmemo()`: \n  *  `request` **Changed**\n  *  `response.applications` **Added**\n* `unified-to.accounting.patchAccountingExpense()`: \n  *  `request` **Changed**\n  *  `response.categoryIds` **Added**\n* `unified-to.accounting.patchAccountingInvoice()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to.accounting.patchAccountingJournal()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to.accounting.patchAccountingOrder()`: \n  *  `request` **Changed**\n  *  `response.organizationId` **Added**\n* `unified-to.accounting.patchAccountingPurchaseorder()`: \n  *  `request` **Changed**\n  *  `response.categoryIds` **Added**\n* `unified-to.accounting.patchAccountingSalesorder()`: \n  *  `request` **Changed**\n  *  `response.categoryIds` **Added**\n* `unified-to.accounting.patchAccountingTransaction()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to.accounting.patchAccountingVendorcredit()`: \n  *  `request` **Changed**\n  *  `response.applications` **Added**\n* `unified-to.accounting.updateAccountingBill()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to.accounting.updateAccountingCategory()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to.accounting.updateAccountingContact()`: \n  *  `request` **Changed**\n  *  `response.paymentTerms` **Added**\n* `unified-to.accounting.updateAccountingCreditmemo()`: \n  *  `request` **Changed**\n  *  `response.applications` **Added**\n* `unified-to.accounting.updateAccountingExpense()`: \n  *  `request` **Changed**\n  *  `response.categoryIds` **Added**\n* `unified-to.accounting.updateAccountingInvoice()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to.accounting.updateAccountingJournal()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to.accounting.updateAccountingOrder()`: \n  *  `request` **Changed**\n  *  `response.organizationId` **Added**\n* `unified-to.accounting.updateAccountingPurchaseorder()`: \n  *  `request` **Changed**\n  *  `response.categoryIds` **Added**\n* `unified-to.accounting.updateAccountingSalesorder()`: \n  *  `request` **Changed**\n  *  `response.categoryIds` **Added**\n* `unified-to.accounting.updateAccountingTransaction()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to.accounting.updateAccountingVendorcredit()`: \n  *  `request` **Changed**\n  *  `response.applications` **Added**\n* `unified-to.bill.createAccountingBill()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to.bill.getAccountingBill()`: \n  *  `request.fields` **Changed**\n  *  `response` **Changed**\n* `unified-to.bill.listAccountingBills()`: \n  *  `request.fields` **Changed**\n  *  `response.[]` **Changed**\n* `unified-to.bill.patchAccountingBill()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to.bill.updateAccountingBill()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to.category.createAccountingCategory()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to.category.getAccountingCategory()`: \n  *  `request.fields` **Changed**\n  *  `response` **Changed**\n* `unified-to.category.listAccountingCategories()`: \n  *  `request.fields` **Changed**\n  *  `response.[]` **Changed**\n* `unified-to.category.patchAccountingCategory()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to.category.updateAccountingCategory()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to.contact.createAccountingContact()`: \n  *  `request` **Changed**\n  *  `response.paymentTerms` **Added**\n* `unified-to.contact.getAccountingContact()`: \n  *  `request.fields` **Changed**\n  *  `response.paymentTerms` **Added**\n* `unified-to.contact.listAccountingContacts()`: \n  *  `request.fields` **Changed**\n  *  `response.[].paymentTerms` **Added**\n* `unified-to.contact.patchAccountingContact()`: \n  *  `request` **Changed**\n  *  `response.paymentTerms` **Added**\n* `unified-to.contact.updateAccountingContact()`: \n  *  `request` **Changed**\n  *  `response.paymentTerms` **Added**\n* `unified-to.creditmemo.createAccountingCreditmemo()`: \n  *  `request` **Changed**\n  *  `response.applications` **Added**\n* `unified-to.creditmemo.getAccountingCreditmemo()`: \n  *  `request.fields` **Changed**\n  *  `response.applications` **Added**\n* `unified-to.creditmemo.listAccountingCreditmemoes()`: \n  *  `request.fields` **Changed**\n  *  `response.[].applications` **Added**\n* `unified-to.creditmemo.patchAccountingCreditmemo()`: \n  *  `request` **Changed**\n  *  `response.applications` **Added**\n* `unified-to.creditmemo.updateAccountingCreditmemo()`: \n  *  `request` **Changed**\n  *  `response.applications` **Added**\n* `unified-to.expense.createAccountingExpense()`: \n  *  `request` **Changed**\n  *  `response.categoryIds` **Added**\n* `unified-to.expense.getAccountingExpense()`: \n  *  `request.fields` **Changed**\n  *  `response.categoryIds` **Added**\n* `unified-to.expense.listAccountingExpenses()`: \n  *  `request.fields` **Changed**\n  *  `response.[].categoryIds` **Added**\n* `unified-to.expense.patchAccountingExpense()`: \n  *  `request` **Changed**\n  *  `response.categoryIds` **Added**\n* `unified-to.expense.updateAccountingExpense()`: \n  *  `request` **Changed**\n  *  `response.categoryIds` **Added**\n* `unified-to.invoice.createAccountingInvoice()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to.invoice.getAccountingInvoice()`: \n  *  `request.fields` **Changed**\n  *  `response` **Changed**\n* `unified-to.invoice.listAccountingInvoices()`: \n  *  `request.fields` **Changed**\n  *  `response.[]` **Changed**\n* `unified-to.invoice.patchAccountingInvoice()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to.invoice.updateAccountingInvoice()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to.journal.createAccountingJournal()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to.journal.getAccountingJournal()`: \n  *  `request.fields` **Changed**\n  *  `response` **Changed**\n* `unified-to.journal.listAccountingJournals()`: \n  *  `request.fields` **Changed**\n  *  `response.[]` **Changed**\n* `unified-to.journal.patchAccountingJournal()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to.journal.updateAccountingJournal()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to.order.createAccountingOrder()`: \n  *  `request` **Changed**\n  *  `response.organizationId` **Added**\n* `unified-to.order.getAccountingOrder()`: \n  *  `request.fields` **Changed**\n  *  `response.organizationId` **Added**\n* `unified-to.order.listAccountingOrders()`: \n  *  `request.fields` **Changed**\n  *  `response.[].organizationId` **Added**\n* `unified-to.order.patchAccountingOrder()`: \n  *  `request` **Changed**\n  *  `response.organizationId` **Added**\n* `unified-to.order.updateAccountingOrder()`: \n  *  `request` **Changed**\n  *  `response.organizationId` **Added**\n* `unified-to.organization.getAccountingOrganization()`: \n  *  `request.fields` **Changed**\n  *  `response` **Changed**\n* `unified-to.organization.listAccountingOrganizations()`: \n  *  `request.fields` **Changed**\n  *  `response.[]` **Changed**\n* `unified-to.purchaseorder.createAccountingPurchaseorder()`: \n  *  `request` **Changed**\n  *  `response.categoryIds` **Added**\n* `unified-to.purchaseorder.getAccountingPurchaseorder()`: \n  *  `request.fields` **Changed**\n  *  `response.categoryIds` **Added**\n* `unified-to.purchaseorder.listAccountingPurchaseorders()`: \n  *  `request.fields` **Changed**\n  *  `response.[].categoryIds` **Added**\n* `unified-to.purchaseorder.patchAccountingPurchaseorder()`: \n  *  `request` **Changed**\n  *  `response.categoryIds` **Added**\n* `unified-to.purchaseorder.updateAccountingPurchaseorder()`: \n  *  `request` **Changed**\n  *  `response.categoryIds` **Added**\n* `unified-to.report.listAdsReports()`: \n  *  `request.dimension` **Added**\n  *  `response.[].metrics[]` **Changed**\n* `unified-to.salesorder.createAccountingSalesorder()`: \n  *  `request` **Changed**\n  *  `response.categoryIds` **Added**\n* `unified-to.salesorder.getAccountingSalesorder()`: \n  *  `request.fields` **Changed**\n  *  `response.categoryIds` **Added**\n* `unified-to.salesorder.listAccountingSalesorders()`: \n  *  `request.fields` **Changed**\n  *  `response.[].categoryIds` **Added**\n* `unified-to.salesorder.patchAccountingSalesorder()`: \n  *  `request` **Changed**\n  *  `response.categoryIds` **Added**\n* `unified-to.salesorder.updateAccountingSalesorder()`: \n  *  `request` **Changed**\n  *  `response.categoryIds` **Added**\n* `unified-to.transaction.createAccountingTransaction()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to.transaction.getAccountingTransaction()`: \n  *  `request.fields` **Changed**\n  *  `response` **Changed**\n* `unified-to.transaction.listAccountingTransactions()`: \n  *  `request.fields` **Changed**\n  *  `response.[]` **Changed**\n* `unified-to.transaction.patchAccountingTransaction()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to.transaction.updateAccountingTransaction()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to.vendorcredit.createAccountingVendorcredit()`: \n  *  `request` **Changed**\n  *  `response.applications` **Added**\n* `unified-to.vendorcredit.getAccountingVendorcredit()`: \n  *  `request.fields` **Changed**\n  *  `response.applications` **Added**\n* `unified-to.vendorcredit.listAccountingVendorcredits()`: \n  *  `request.fields` **Changed**\n  *  `response.[].applications` **Added**\n* `unified-to.vendorcredit.patchAccountingVendorcredit()`: \n  *  `request` **Changed**\n  *  `response.applications` **Added**\n* `unified-to.vendorcredit.updateAccountingVendorcredit()`: \n  *  `request` **Changed**\n  *  `response.applications` **Added**\n* `unified-to.ads.listAdsReports()`: \n  *  `request.dimension` **Added**\n  *  `response.[].metrics[]` **Changed**\n* `unified-to.comment.createTaskComment()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to.comment.getTaskComment()`: \n  *  `request.fields` **Changed**\n  *  `response` **Changed**\n* `unified-to.comment.listTaskComments()`: \n  *  `request` **Changed**\n  *  `response.[]` **Changed**\n* `unified-to.comment.patchTaskComment()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to.comment.updateTaskComment()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to.payment.createPaymentPayment()`: \n  *  `request` **Changed**\n  *  `response.allocations` **Added**\n* `unified-to.payment.getPaymentPayment()`: \n  *  `request.fields` **Changed**\n  *  `response.allocations` **Added**\n* `unified-to.payment.listPaymentPayments()`: \n  *  `request.fields` **Changed**\n  *  `response.[].allocations` **Added**\n* `unified-to.payment.patchPaymentPayment()`: \n  *  `request` **Changed**\n  *  `response.allocations` **Added**\n* `unified-to.payment.updatePaymentPayment()`: \n  *  `request` **Changed**\n  *  `response.allocations` **Added**\n* `unified-to.task.createTaskComment()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to.task.getTaskComment()`: \n  *  `request.fields` **Changed**\n  *  `response` **Changed**\n* `unified-to.task.listTaskComments()`: \n  *  `request` **Changed**\n  *  `response.[]` **Changed**\n* `unified-to.task.patchTaskComment()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to.task.updateTaskComment()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to.unified.createUnifiedConnection()`: \n  *  `request.permissions[]` **Changed**\n  *  `response.permissions[]` **Changed**\n* `unified-to.unified.createUnifiedWebhook()`: \n  *  `request.webhook.objectType.enum(adsAsset)` **Added**\n  *  `response.objectType.enum(adsAsset)` **Added**\n* `unified-to.unified.getUnifiedConnection()`:  `response.permissions[]` **Changed**\n* `unified-to.unified.getUnifiedWebhook()`:  `response.objectType.enum(adsAsset)` **Added**\n* `unified-to.unified.listUnifiedConnections()`:  `response.[].permissions[]` **Changed**\n* `unified-to.unified.listUnifiedWebhooks()`:  `response.[].objectType.enum(adsAsset)` **Added**\n* `unified-to.unified.patchUnifiedConnection()`: \n  *  `request.connection.permissions[]` **Changed**\n  *  `response.permissions[]` **Changed**\n* `unified-to.unified.patchUnifiedWebhook()`: \n  *  `request.webhook.objectType.enum(adsAsset)` **Added**\n  *  `response.objectType.enum(adsAsset)` **Added**\n* `unified-to.unified.updateUnifiedConnection()`: \n  *  `request.connection.permissions[]` **Changed**\n  *  `response.permissions[]` **Changed**\n* `unified-to.unified.updateUnifiedWebhook()`: \n  *  `request.webhook.objectType.enum(adsAsset)` **Added**\n  *  `response.objectType.enum(adsAsset)` **Added**\n* `unified-to.connection.createUnifiedConnection()`: \n  *  `request.permissions[]` **Changed**\n  *  `response.permissions[]` **Changed**\n* `unified-to.connection.getUnifiedConnection()`:  `response.permissions[]` **Changed**\n* `unified-to.connection.listUnifiedConnections()`:  `response.[].permissions[]` **Changed**\n* `unified-to.connection.patchUnifiedConnection()`: \n  *  `request.connection.permissions[]` **Changed**\n  *  `response.permissions[]` **Changed**\n* `unified-to.connection.updateUnifiedConnection()`: \n  *  `request.connection.permissions[]` **Changed**\n  *  `response.permissions[]` **Changed**\n* `unified-to.webhook.createUnifiedWebhook()`: \n  *  `request.webhook.objectType.enum(adsAsset)` **Added**\n  *  `response.objectType.enum(adsAsset)` **Added**\n* `unified-to.webhook.getUnifiedWebhook()`:  `response.objectType.enum(adsAsset)` **Added**\n* `unified-to.webhook.listUnifiedWebhooks()`:  `response.[].objectType.enum(adsAsset)` **Added**\n* `unified-to.webhook.patchUnifiedWebhook()`: \n  *  `request.webhook.objectType.enum(adsAsset)` **Added**\n  *  `response.objectType.enum(adsAsset)` **Added**\n* `unified-to.webhook.updateUnifiedWebhook()`: \n  *  `request.webhook.objectType.enum(adsAsset)` **Added**\n  *  `response.objectType.enum(adsAsset)` **Added**\n"
 generatedFiles:
   - .gitattributes
   - USAGE.md

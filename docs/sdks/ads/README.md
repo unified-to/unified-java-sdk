@@ -5,12 +5,14 @@
 ### Available Operations
 
 * [createAdsAd](#createadsad) - Create an ad
+* [createAdsAsset](#createadsasset) - Create an asset
 * [createAdsCampaign](#createadscampaign) - Create a campaign
 * [createAdsCreative](#createadscreative) - Create a creative
 * [createAdsGroup](#createadsgroup) - Create a group
 * [createAdsInsertionorder](#createadsinsertionorder) - Create an insertionorder
 * [createAdsOrganization](#createadsorganization) - Create an organization
 * [getAdsAd](#getadsad) - Retrieve an ad
+* [getAdsAsset](#getadsasset) - Retrieve an asset
 * [getAdsCampaign](#getadscampaign) - Retrieve a campaign
 * [getAdsCreative](#getadscreative) - Retrieve a creative
 * [getAdsGroup](#getadsgroup) - Retrieve a group
@@ -19,6 +21,7 @@
 * [getAdsPromoted](#getadspromoted) - Retrieve a promoted
 * [getAdsTarget](#getadstarget) - Retrieve a target
 * [listAdsAds](#listadsads) - List all ads
+* [listAdsAssets](#listadsassets) - List all assets
 * [listAdsCampaigns](#listadscampaigns) - List all campaigns
 * [listAdsCreatives](#listadscreatives) - List all creatives
 * [listAdsGroups](#listadsgroups) - List all groups
@@ -99,6 +102,66 @@ public class Application {
 ### Response
 
 **[CreateAdsAdResponse](../../models/operations/CreateAdsAdResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## createAdsAsset
+
+Create an asset
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="createAdsAsset" method="post" path="/ads/{connection_id}/asset" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.CreateAdsAssetRequest;
+import to.unified.unified_java_sdk.models.operations.CreateAdsAssetResponse;
+import to.unified.unified_java_sdk.models.shared.AdsAsset;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        CreateAdsAssetRequest req = CreateAdsAssetRequest.builder()
+                .adsAsset(AdsAsset.builder()
+                    .build())
+                .connectionId("<id>")
+                .build();
+
+        CreateAdsAssetResponse res = sdk.ads().createAdsAsset()
+                .request(req)
+                .call();
+
+        if (res.adsAsset().isPresent()) {
+            System.out.println(res.adsAsset().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                 | Type                                                                      | Required                                                                  | Description                                                               |
+| ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
+| `request`                                                                 | [CreateAdsAssetRequest](../../models/operations/CreateAdsAssetRequest.md) | :heavy_check_mark:                                                        | The request object to use for the request.                                |
+
+### Response
+
+**[CreateAdsAssetResponse](../../models/operations/CreateAdsAssetResponse.md)**
 
 ### Errors
 
@@ -457,6 +520,64 @@ public class Application {
 ### Response
 
 **[GetAdsAdResponse](../../models/operations/GetAdsAdResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## getAdsAsset
+
+Retrieve an asset
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="getAdsAsset" method="get" path="/ads/{connection_id}/asset/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.GetAdsAssetRequest;
+import to.unified.unified_java_sdk.models.operations.GetAdsAssetResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        GetAdsAssetRequest req = GetAdsAssetRequest.builder()
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        GetAdsAssetResponse res = sdk.ads().getAdsAsset()
+                .request(req)
+                .call();
+
+        if (res.adsAsset().isPresent()) {
+            System.out.println(res.adsAsset().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                           | Type                                                                | Required                                                            | Description                                                         |
+| ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- |
+| `request`                                                           | [GetAdsAssetRequest](../../models/operations/GetAdsAssetRequest.md) | :heavy_check_mark:                                                  | The request object to use for the request.                          |
+
+### Response
+
+**[GetAdsAssetResponse](../../models/operations/GetAdsAssetResponse.md)**
 
 ### Errors
 
@@ -920,6 +1041,63 @@ public class Application {
 ### Response
 
 **[ListAdsAdsResponse](../../models/operations/ListAdsAdsResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## listAdsAssets
+
+List all assets
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="listAdsAssets" method="get" path="/ads/{connection_id}/asset" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.ListAdsAssetsRequest;
+import to.unified.unified_java_sdk.models.operations.ListAdsAssetsResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        ListAdsAssetsRequest req = ListAdsAssetsRequest.builder()
+                .connectionId("<id>")
+                .build();
+
+        ListAdsAssetsResponse res = sdk.ads().listAdsAssets()
+                .request(req)
+                .call();
+
+        if (res.adsAssets().isPresent()) {
+            System.out.println(res.adsAssets().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                               | Type                                                                    | Required                                                                | Description                                                             |
+| ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- |
+| `request`                                                               | [ListAdsAssetsRequest](../../models/operations/ListAdsAssetsRequest.md) | :heavy_check_mark:                                                      | The request object to use for the request.                              |
+
+### Response
+
+**[ListAdsAssetsResponse](../../models/operations/ListAdsAssetsResponse.md)**
 
 ### Errors
 

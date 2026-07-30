@@ -25,6 +25,13 @@ public class AccountingVendorcredit {
     @JsonProperty("account_id")
     private String accountId;
 
+    /**
+     * What this vendor credit was applied to (invoices/bills). Writable inline on create/update.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("applications")
+    private List<AccountingCreditApplication> applications;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("apply_amount")
@@ -108,6 +115,7 @@ public class AccountingVendorcredit {
     @JsonCreator
     public AccountingVendorcredit(
             @JsonProperty("account_id") @Nullable String accountId,
+            @JsonProperty("applications") @Nullable List<AccountingCreditApplication> applications,
             @JsonProperty("apply_amount") @Nullable Double applyAmount,
             @JsonProperty("balance_amount") @Nullable Double balanceAmount,
             @JsonProperty("bill_id") @Nullable String billId,
@@ -125,6 +133,7 @@ public class AccountingVendorcredit {
             @JsonProperty("total_amount") @Nullable Double totalAmount,
             @JsonProperty("updated_at") @Nullable OffsetDateTime updatedAt) {
         this.accountId = accountId;
+        this.applications = applications;
         this.applyAmount = applyAmount;
         this.balanceAmount = balanceAmount;
         this.billId = billId;
@@ -149,11 +158,18 @@ public class AccountingVendorcredit {
             null, null, null,
             null, null, null,
             null, null, null,
-            null, null);
+            null, null, null);
     }
 
     public Optional<String> accountId() {
         return Optional.ofNullable(this.accountId);
+    }
+
+    /**
+     * What this vendor credit was applied to (invoices/bills). Writable inline on create/update.
+     */
+    public Optional<List<AccountingCreditApplication>> applications() {
+        return Optional.ofNullable(this.applications);
     }
 
     public Optional<Double> applyAmount() {
@@ -227,6 +243,15 @@ public class AccountingVendorcredit {
 
     public AccountingVendorcredit withAccountId(@Nullable String accountId) {
         this.accountId = accountId;
+        return this;
+    }
+
+
+    /**
+     * What this vendor credit was applied to (invoices/bills). Writable inline on create/update.
+     */
+    public AccountingVendorcredit withApplications(@Nullable List<AccountingCreditApplication> applications) {
+        this.applications = applications;
         return this;
     }
 
@@ -338,6 +363,7 @@ public class AccountingVendorcredit {
         AccountingVendorcredit other = (AccountingVendorcredit) o;
         return 
             Utils.enhancedDeepEquals(this.accountId, other.accountId) &&
+            Utils.enhancedDeepEquals(this.applications, other.applications) &&
             Utils.enhancedDeepEquals(this.applyAmount, other.applyAmount) &&
             Utils.enhancedDeepEquals(this.balanceAmount, other.balanceAmount) &&
             Utils.enhancedDeepEquals(this.billId, other.billId) &&
@@ -359,18 +385,19 @@ public class AccountingVendorcredit {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            accountId, applyAmount, balanceAmount,
-            billId, contactId, createdAt,
-            currency, dueAt, id,
-            lineitems, notes, organizationId,
-            postedAt, raw, status,
-            totalAmount, updatedAt);
+            accountId, applications, applyAmount,
+            balanceAmount, billId, contactId,
+            createdAt, currency, dueAt,
+            id, lineitems, notes,
+            organizationId, postedAt, raw,
+            status, totalAmount, updatedAt);
     }
     
     @Override
     public String toString() {
         return Utils.toString(AccountingVendorcredit.class,
                 "accountId", accountId,
+                "applications", applications,
                 "applyAmount", applyAmount,
                 "balanceAmount", balanceAmount,
                 "billId", billId,
@@ -393,6 +420,8 @@ public class AccountingVendorcredit {
     public final static class Builder {
 
         private String accountId;
+
+        private List<AccountingCreditApplication> applications;
 
         private Double applyAmount;
 
@@ -432,6 +461,14 @@ public class AccountingVendorcredit {
 
         public Builder accountId(@Nullable String accountId) {
             this.accountId = accountId;
+            return this;
+        }
+
+        /**
+         * What this vendor credit was applied to (invoices/bills). Writable inline on create/update.
+         */
+        public Builder applications(@Nullable List<AccountingCreditApplication> applications) {
+            this.applications = applications;
             return this;
         }
 
@@ -517,12 +554,12 @@ public class AccountingVendorcredit {
 
         public AccountingVendorcredit build() {
             return new AccountingVendorcredit(
-                accountId, applyAmount, balanceAmount,
-                billId, contactId, createdAt,
-                currency, dueAt, id,
-                lineitems, notes, organizationId,
-                postedAt, raw, status,
-                totalAmount, updatedAt);
+                accountId, applications, applyAmount,
+                balanceAmount, billId, contactId,
+                createdAt, currency, dueAt,
+                id, lineitems, notes,
+                organizationId, postedAt, raw,
+                status, totalAmount, updatedAt);
         }
 
     }

@@ -59,6 +59,8 @@ public class AsyncUnifiedTo {
 
     private final AsyncAd ad;
 
+    private final AsyncAsset asset;
+
     private final AsyncCampaign campaign;
 
     private final AsyncCreative creative;
@@ -421,6 +423,10 @@ public class AsyncUnifiedTo {
 
     public AsyncAd ad() {
         return ad;
+    }
+
+    public AsyncAsset asset() {
+        return asset;
     }
 
     public AsyncCampaign campaign() {
@@ -996,6 +1002,7 @@ public class AsyncUnifiedTo {
         this.vendorcredit = new AsyncVendorcredit(syncSDK.vendorcredit(), sdkConfiguration);
         this.ads = new AsyncAds(syncSDK.ads(), sdkConfiguration);
         this.ad = new AsyncAd(syncSDK.ad(), sdkConfiguration);
+        this.asset = new AsyncAsset(syncSDK.asset(), sdkConfiguration);
         this.campaign = new AsyncCampaign(syncSDK.campaign(), sdkConfiguration);
         this.creative = new AsyncCreative(syncSDK.creative(), sdkConfiguration);
         this.group = new AsyncGroup(syncSDK.group(), sdkConfiguration);

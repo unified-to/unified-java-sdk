@@ -8,6 +8,7 @@ import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.annotation.Nullable;
+import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
@@ -25,8 +26,18 @@ public class TaskComment {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("has_children")
+    private Boolean hasChildren;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     private String id;
+
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("parent_id")
+    private String parentId;
 
 
     @JsonInclude(Include.NON_ABSENT)
@@ -61,7 +72,9 @@ public class TaskComment {
     @JsonCreator
     public TaskComment(
             @JsonProperty("created_at") @Nullable OffsetDateTime createdAt,
+            @JsonProperty("has_children") @Nullable Boolean hasChildren,
             @JsonProperty("id") @Nullable String id,
+            @JsonProperty("parent_id") @Nullable String parentId,
             @JsonProperty("raw") @Nullable Map<String, Object> raw,
             @JsonProperty("task_id") @Nullable String taskId,
             @JsonProperty("text") @Nullable String text,
@@ -69,7 +82,9 @@ public class TaskComment {
             @JsonProperty("user_id") @Nullable String userId,
             @JsonProperty("user_name") @Nullable String userName) {
         this.createdAt = createdAt;
+        this.hasChildren = hasChildren;
         this.id = id;
+        this.parentId = parentId;
         this.raw = raw;
         this.taskId = taskId;
         this.text = text;
@@ -81,15 +96,24 @@ public class TaskComment {
     public TaskComment() {
         this(null, null, null,
             null, null, null,
-            null, null);
+            null, null, null,
+            null);
     }
 
     public Optional<OffsetDateTime> createdAt() {
         return Optional.ofNullable(this.createdAt);
     }
 
+    public Optional<Boolean> hasChildren() {
+        return Optional.ofNullable(this.hasChildren);
+    }
+
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
+    }
+
+    public Optional<String> parentId() {
+        return Optional.ofNullable(this.parentId);
     }
 
     public Optional<Map<String, Object>> raw() {
@@ -127,8 +151,20 @@ public class TaskComment {
     }
 
 
+    public TaskComment withHasChildren(@Nullable Boolean hasChildren) {
+        this.hasChildren = hasChildren;
+        return this;
+    }
+
+
     public TaskComment withId(@Nullable String id) {
         this.id = id;
+        return this;
+    }
+
+
+    public TaskComment withParentId(@Nullable String parentId) {
+        this.parentId = parentId;
         return this;
     }
 
@@ -180,7 +216,9 @@ public class TaskComment {
         TaskComment other = (TaskComment) o;
         return 
             Utils.enhancedDeepEquals(this.createdAt, other.createdAt) &&
+            Utils.enhancedDeepEquals(this.hasChildren, other.hasChildren) &&
             Utils.enhancedDeepEquals(this.id, other.id) &&
+            Utils.enhancedDeepEquals(this.parentId, other.parentId) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
             Utils.enhancedDeepEquals(this.taskId, other.taskId) &&
             Utils.enhancedDeepEquals(this.text, other.text) &&
@@ -192,16 +230,19 @@ public class TaskComment {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            createdAt, id, raw,
-            taskId, text, updatedAt,
-            userId, userName);
+            createdAt, hasChildren, id,
+            parentId, raw, taskId,
+            text, updatedAt, userId,
+            userName);
     }
     
     @Override
     public String toString() {
         return Utils.toString(TaskComment.class,
                 "createdAt", createdAt,
+                "hasChildren", hasChildren,
                 "id", id,
+                "parentId", parentId,
                 "raw", raw,
                 "taskId", taskId,
                 "text", text,
@@ -215,7 +256,11 @@ public class TaskComment {
 
         private OffsetDateTime createdAt;
 
+        private Boolean hasChildren;
+
         private String id;
+
+        private String parentId;
 
         private Map<String, Object> raw;
 
@@ -238,8 +283,18 @@ public class TaskComment {
             return this;
         }
 
+        public Builder hasChildren(@Nullable Boolean hasChildren) {
+            this.hasChildren = hasChildren;
+            return this;
+        }
+
         public Builder id(@Nullable String id) {
             this.id = id;
+            return this;
+        }
+
+        public Builder parentId(@Nullable String parentId) {
+            this.parentId = parentId;
             return this;
         }
 
@@ -275,9 +330,10 @@ public class TaskComment {
 
         public TaskComment build() {
             return new TaskComment(
-                createdAt, id, raw,
-                taskId, text, updatedAt,
-                userId, userName);
+                createdAt, hasChildren, id,
+                parentId, raw, taskId,
+                text, updatedAt, userId,
+                userName);
         }
 
     }

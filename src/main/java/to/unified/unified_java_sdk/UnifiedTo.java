@@ -110,6 +110,9 @@ public class UnifiedTo {
     private final Ad ad;
 
 
+    private final Asset asset;
+
+
     private final Campaign campaign;
 
 
@@ -630,6 +633,11 @@ public class UnifiedTo {
 
     public Ad ad() {
         return ad;
+    }
+
+
+    public Asset asset() {
+        return asset;
     }
 
 
@@ -1472,6 +1480,7 @@ public class UnifiedTo {
         this.vendorcredit = new Vendorcredit(sdkConfiguration);
         this.ads = new Ads(sdkConfiguration);
         this.ad = new Ad(sdkConfiguration);
+        this.asset = new Asset(sdkConfiguration);
         this.campaign = new Campaign(sdkConfiguration);
         this.creative = new Creative(sdkConfiguration);
         this.group = new Group(sdkConfiguration);

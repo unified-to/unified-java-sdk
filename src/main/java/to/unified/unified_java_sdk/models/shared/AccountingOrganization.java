@@ -8,6 +8,7 @@ import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.annotation.Nullable;
+import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Object;
 import java.lang.Override;
@@ -46,6 +47,11 @@ public class AccountingOrganization {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("is_elimination")
+    private Boolean isElimination;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("legal_name")
     private String legalName;
 
@@ -81,6 +87,11 @@ public class AccountingOrganization {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("type")
+    private AccountingOrganizationType type;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     private OffsetDateTime updatedAt;
 
@@ -96,6 +107,7 @@ public class AccountingOrganization {
             @JsonProperty("currency") @Nullable String currency,
             @JsonProperty("fiscal_year_end_month") @Nullable Double fiscalYearEndMonth,
             @JsonProperty("id") @Nullable String id,
+            @JsonProperty("is_elimination") @Nullable Boolean isElimination,
             @JsonProperty("legal_name") @Nullable String legalName,
             @JsonProperty("name") @Nullable String name,
             @JsonProperty("organization_code") @Nullable String organizationCode,
@@ -103,6 +115,7 @@ public class AccountingOrganization {
             @JsonProperty("raw") @Nullable Map<String, Object> raw,
             @JsonProperty("tax_number") @Nullable String taxNumber,
             @JsonProperty("timezone") @Nullable String timezone,
+            @JsonProperty("type") @Nullable AccountingOrganizationType type,
             @JsonProperty("updated_at") @Nullable OffsetDateTime updatedAt,
             @JsonProperty("website") @Nullable String website) {
         this.address = address;
@@ -110,6 +123,7 @@ public class AccountingOrganization {
         this.currency = currency;
         this.fiscalYearEndMonth = fiscalYearEndMonth;
         this.id = id;
+        this.isElimination = isElimination;
         this.legalName = legalName;
         this.name = name;
         this.organizationCode = organizationCode;
@@ -117,6 +131,7 @@ public class AccountingOrganization {
         this.raw = raw;
         this.taxNumber = taxNumber;
         this.timezone = timezone;
+        this.type = type;
         this.updatedAt = updatedAt;
         this.website = website;
     }
@@ -126,7 +141,8 @@ public class AccountingOrganization {
             null, null, null,
             null, null, null,
             null, null, null,
-            null, null);
+            null, null, null,
+            null);
     }
 
     public Optional<PropertyAccountingOrganizationAddress> address() {
@@ -147,6 +163,10 @@ public class AccountingOrganization {
 
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
+    }
+
+    public Optional<Boolean> isElimination() {
+        return Optional.ofNullable(this.isElimination);
     }
 
     public Optional<String> legalName() {
@@ -175,6 +195,10 @@ public class AccountingOrganization {
 
     public Optional<String> timezone() {
         return Optional.ofNullable(this.timezone);
+    }
+
+    public Optional<AccountingOrganizationType> type() {
+        return Optional.ofNullable(this.type);
     }
 
     public Optional<OffsetDateTime> updatedAt() {
@@ -216,6 +240,12 @@ public class AccountingOrganization {
 
     public AccountingOrganization withId(@Nullable String id) {
         this.id = id;
+        return this;
+    }
+
+
+    public AccountingOrganization withIsElimination(@Nullable Boolean isElimination) {
+        this.isElimination = isElimination;
         return this;
     }
 
@@ -262,6 +292,12 @@ public class AccountingOrganization {
     }
 
 
+    public AccountingOrganization withType(@Nullable AccountingOrganizationType type) {
+        this.type = type;
+        return this;
+    }
+
+
     public AccountingOrganization withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -289,6 +325,7 @@ public class AccountingOrganization {
             Utils.enhancedDeepEquals(this.currency, other.currency) &&
             Utils.enhancedDeepEquals(this.fiscalYearEndMonth, other.fiscalYearEndMonth) &&
             Utils.enhancedDeepEquals(this.id, other.id) &&
+            Utils.enhancedDeepEquals(this.isElimination, other.isElimination) &&
             Utils.enhancedDeepEquals(this.legalName, other.legalName) &&
             Utils.enhancedDeepEquals(this.name, other.name) &&
             Utils.enhancedDeepEquals(this.organizationCode, other.organizationCode) &&
@@ -296,6 +333,7 @@ public class AccountingOrganization {
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
             Utils.enhancedDeepEquals(this.taxNumber, other.taxNumber) &&
             Utils.enhancedDeepEquals(this.timezone, other.timezone) &&
+            Utils.enhancedDeepEquals(this.type, other.type) &&
             Utils.enhancedDeepEquals(this.updatedAt, other.updatedAt) &&
             Utils.enhancedDeepEquals(this.website, other.website);
     }
@@ -304,10 +342,11 @@ public class AccountingOrganization {
     public int hashCode() {
         return Utils.enhancedHash(
             address, createdAt, currency,
-            fiscalYearEndMonth, id, legalName,
-            name, organizationCode, parentId,
-            raw, taxNumber, timezone,
-            updatedAt, website);
+            fiscalYearEndMonth, id, isElimination,
+            legalName, name, organizationCode,
+            parentId, raw, taxNumber,
+            timezone, type, updatedAt,
+            website);
     }
     
     @Override
@@ -318,6 +357,7 @@ public class AccountingOrganization {
                 "currency", currency,
                 "fiscalYearEndMonth", fiscalYearEndMonth,
                 "id", id,
+                "isElimination", isElimination,
                 "legalName", legalName,
                 "name", name,
                 "organizationCode", organizationCode,
@@ -325,6 +365,7 @@ public class AccountingOrganization {
                 "raw", raw,
                 "taxNumber", taxNumber,
                 "timezone", timezone,
+                "type", type,
                 "updatedAt", updatedAt,
                 "website", website);
     }
@@ -342,6 +383,8 @@ public class AccountingOrganization {
 
         private String id;
 
+        private Boolean isElimination;
+
         private String legalName;
 
         private String name;
@@ -355,6 +398,8 @@ public class AccountingOrganization {
         private String taxNumber;
 
         private String timezone;
+
+        private AccountingOrganizationType type;
 
         private OffsetDateTime updatedAt;
 
@@ -386,6 +431,11 @@ public class AccountingOrganization {
 
         public Builder id(@Nullable String id) {
             this.id = id;
+            return this;
+        }
+
+        public Builder isElimination(@Nullable Boolean isElimination) {
+            this.isElimination = isElimination;
             return this;
         }
 
@@ -424,6 +474,11 @@ public class AccountingOrganization {
             return this;
         }
 
+        public Builder type(@Nullable AccountingOrganizationType type) {
+            this.type = type;
+            return this;
+        }
+
         public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;
@@ -437,10 +492,11 @@ public class AccountingOrganization {
         public AccountingOrganization build() {
             return new AccountingOrganization(
                 address, createdAt, currency,
-                fiscalYearEndMonth, id, legalName,
-                name, organizationCode, parentId,
-                raw, taxNumber, timezone,
-                updatedAt, website);
+                fiscalYearEndMonth, id, isElimination,
+                legalName, name, organizationCode,
+                parentId, raw, taxNumber,
+                timezone, type, updatedAt,
+                website);
         }
 
     }

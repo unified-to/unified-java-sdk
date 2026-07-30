@@ -43,6 +43,11 @@ public class AccountingBill {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("category_ids")
+    private List<String> categoryIds;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contact_id")
     private String contactId;
 
@@ -100,6 +105,18 @@ public class AccountingBill {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payment_collection_method")
     private PaymentCollectionMethod paymentCollectionMethod;
+
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("payment_terms")
+    private PaymentTerms paymentTerms;
+
+    /**
+     * read-only reciprocal of PaymentPayment.allocations; payments applied to this invoice
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("payments")
+    private List<AccountingPaymentReference> payments;
 
 
     @JsonInclude(Include.NON_ABSENT)
@@ -167,6 +184,7 @@ public class AccountingBill {
             @JsonProperty("balance_amount") @Nullable Double balanceAmount,
             @JsonProperty("bill_number") @Nullable String billNumber,
             @JsonProperty("cancelled_at") @Nullable OffsetDateTime cancelledAt,
+            @JsonProperty("category_ids") @Nullable List<String> categoryIds,
             @JsonProperty("contact_id") @Nullable String contactId,
             @JsonProperty("created_at") @Nullable OffsetDateTime createdAt,
             @JsonProperty("currency") @Nullable String currency,
@@ -179,6 +197,8 @@ public class AccountingBill {
             @JsonProperty("paid_amount") @Nullable Double paidAmount,
             @JsonProperty("paid_at") @Nullable OffsetDateTime paidAt,
             @JsonProperty("payment_collection_method") @Nullable PaymentCollectionMethod paymentCollectionMethod,
+            @JsonProperty("payment_terms") @Nullable PaymentTerms paymentTerms,
+            @JsonProperty("payments") @Nullable List<AccountingPaymentReference> payments,
             @JsonProperty("posted_at") @Nullable OffsetDateTime postedAt,
             @JsonProperty("raw") @Nullable Map<String, Object> raw,
             @JsonProperty("refund_amount") @Nullable Double refundAmount,
@@ -195,6 +215,7 @@ public class AccountingBill {
         this.balanceAmount = balanceAmount;
         this.billNumber = billNumber;
         this.cancelledAt = cancelledAt;
+        this.categoryIds = categoryIds;
         this.contactId = contactId;
         this.createdAt = createdAt;
         this.currency = currency;
@@ -207,6 +228,8 @@ public class AccountingBill {
         this.paidAmount = paidAmount;
         this.paidAt = paidAt;
         this.paymentCollectionMethod = paymentCollectionMethod;
+        this.paymentTerms = paymentTerms;
+        this.payments = payments;
         this.postedAt = postedAt;
         this.raw = raw;
         this.refundAmount = refundAmount;
@@ -223,6 +246,7 @@ public class AccountingBill {
     
     public AccountingBill() {
         this(null, null, null,
+            null, null, null,
             null, null, null,
             null, null, null,
             null, null, null,
@@ -248,6 +272,10 @@ public class AccountingBill {
 
     public Optional<OffsetDateTime> cancelledAt() {
         return Optional.ofNullable(this.cancelledAt);
+    }
+
+    public Optional<List<String>> categoryIds() {
+        return Optional.ofNullable(this.categoryIds);
     }
 
     public Optional<String> contactId() {
@@ -296,6 +324,17 @@ public class AccountingBill {
 
     public Optional<PaymentCollectionMethod> paymentCollectionMethod() {
         return Optional.ofNullable(this.paymentCollectionMethod);
+    }
+
+    public Optional<PaymentTerms> paymentTerms() {
+        return Optional.ofNullable(this.paymentTerms);
+    }
+
+    /**
+     * read-only reciprocal of PaymentPayment.allocations; payments applied to this invoice
+     */
+    public Optional<List<AccountingPaymentReference>> payments() {
+        return Optional.ofNullable(this.payments);
     }
 
     public Optional<OffsetDateTime> postedAt() {
@@ -375,6 +414,12 @@ public class AccountingBill {
     }
 
 
+    public AccountingBill withCategoryIds(@Nullable List<String> categoryIds) {
+        this.categoryIds = categoryIds;
+        return this;
+    }
+
+
     public AccountingBill withContactId(@Nullable String contactId) {
         this.contactId = contactId;
         return this;
@@ -443,6 +488,21 @@ public class AccountingBill {
 
     public AccountingBill withPaymentCollectionMethod(@Nullable PaymentCollectionMethod paymentCollectionMethod) {
         this.paymentCollectionMethod = paymentCollectionMethod;
+        return this;
+    }
+
+
+    public AccountingBill withPaymentTerms(@Nullable PaymentTerms paymentTerms) {
+        this.paymentTerms = paymentTerms;
+        return this;
+    }
+
+
+    /**
+     * read-only reciprocal of PaymentPayment.allocations; payments applied to this invoice
+     */
+    public AccountingBill withPayments(@Nullable List<AccountingPaymentReference> payments) {
+        this.payments = payments;
         return this;
     }
 
@@ -533,6 +593,7 @@ public class AccountingBill {
             Utils.enhancedDeepEquals(this.balanceAmount, other.balanceAmount) &&
             Utils.enhancedDeepEquals(this.billNumber, other.billNumber) &&
             Utils.enhancedDeepEquals(this.cancelledAt, other.cancelledAt) &&
+            Utils.enhancedDeepEquals(this.categoryIds, other.categoryIds) &&
             Utils.enhancedDeepEquals(this.contactId, other.contactId) &&
             Utils.enhancedDeepEquals(this.createdAt, other.createdAt) &&
             Utils.enhancedDeepEquals(this.currency, other.currency) &&
@@ -545,6 +606,8 @@ public class AccountingBill {
             Utils.enhancedDeepEquals(this.paidAmount, other.paidAmount) &&
             Utils.enhancedDeepEquals(this.paidAt, other.paidAt) &&
             Utils.enhancedDeepEquals(this.paymentCollectionMethod, other.paymentCollectionMethod) &&
+            Utils.enhancedDeepEquals(this.paymentTerms, other.paymentTerms) &&
+            Utils.enhancedDeepEquals(this.payments, other.payments) &&
             Utils.enhancedDeepEquals(this.postedAt, other.postedAt) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
             Utils.enhancedDeepEquals(this.refundAmount, other.refundAmount) &&
@@ -563,11 +626,12 @@ public class AccountingBill {
     public int hashCode() {
         return Utils.enhancedHash(
             attachments, balanceAmount, billNumber,
-            cancelledAt, contactId, createdAt,
-            currency, discountAmount, dueAt,
-            id, lineitems, notes,
-            organizationId, paidAmount, paidAt,
-            paymentCollectionMethod, postedAt, raw,
+            cancelledAt, categoryIds, contactId,
+            createdAt, currency, discountAmount,
+            dueAt, id, lineitems,
+            notes, organizationId, paidAmount,
+            paidAt, paymentCollectionMethod, paymentTerms,
+            payments, postedAt, raw,
             refundAmount, refundReason, refundedAt,
             send, status, taxAmount,
             term, totalAmount, updatedAt,
@@ -581,6 +645,7 @@ public class AccountingBill {
                 "balanceAmount", balanceAmount,
                 "billNumber", billNumber,
                 "cancelledAt", cancelledAt,
+                "categoryIds", categoryIds,
                 "contactId", contactId,
                 "createdAt", createdAt,
                 "currency", currency,
@@ -593,6 +658,8 @@ public class AccountingBill {
                 "paidAmount", paidAmount,
                 "paidAt", paidAt,
                 "paymentCollectionMethod", paymentCollectionMethod,
+                "paymentTerms", paymentTerms,
+                "payments", payments,
                 "postedAt", postedAt,
                 "raw", raw,
                 "refundAmount", refundAmount,
@@ -618,6 +685,8 @@ public class AccountingBill {
 
         private OffsetDateTime cancelledAt;
 
+        private List<String> categoryIds;
+
         private String contactId;
 
         private OffsetDateTime createdAt;
@@ -641,6 +710,10 @@ public class AccountingBill {
         private OffsetDateTime paidAt;
 
         private PaymentCollectionMethod paymentCollectionMethod;
+
+        private PaymentTerms paymentTerms;
+
+        private List<AccountingPaymentReference> payments;
 
         private OffsetDateTime postedAt;
 
@@ -687,6 +760,11 @@ public class AccountingBill {
 
         public Builder cancelledAt(@Nullable OffsetDateTime cancelledAt) {
             this.cancelledAt = cancelledAt;
+            return this;
+        }
+
+        public Builder categoryIds(@Nullable List<String> categoryIds) {
+            this.categoryIds = categoryIds;
             return this;
         }
 
@@ -747,6 +825,19 @@ public class AccountingBill {
 
         public Builder paymentCollectionMethod(@Nullable PaymentCollectionMethod paymentCollectionMethod) {
             this.paymentCollectionMethod = paymentCollectionMethod;
+            return this;
+        }
+
+        public Builder paymentTerms(@Nullable PaymentTerms paymentTerms) {
+            this.paymentTerms = paymentTerms;
+            return this;
+        }
+
+        /**
+         * read-only reciprocal of PaymentPayment.allocations; payments applied to this invoice
+         */
+        public Builder payments(@Nullable List<AccountingPaymentReference> payments) {
+            this.payments = payments;
             return this;
         }
 
@@ -813,11 +904,12 @@ public class AccountingBill {
         public AccountingBill build() {
             return new AccountingBill(
                 attachments, balanceAmount, billNumber,
-                cancelledAt, contactId, createdAt,
-                currency, discountAmount, dueAt,
-                id, lineitems, notes,
-                organizationId, paidAmount, paidAt,
-                paymentCollectionMethod, postedAt, raw,
+                cancelledAt, categoryIds, contactId,
+                createdAt, currency, discountAmount,
+                dueAt, id, lineitems,
+                notes, organizationId, paidAmount,
+                paidAt, paymentCollectionMethod, paymentTerms,
+                payments, postedAt, raw,
                 refundAmount, refundReason, refundedAt,
                 send, status, taxAmount,
                 term, totalAmount, updatedAt,

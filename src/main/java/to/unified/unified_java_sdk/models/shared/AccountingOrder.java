@@ -57,6 +57,11 @@ public class AccountingOrder {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("organization_id")
+    private String organizationId;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("posted_at")
     private OffsetDateTime postedAt;
 
@@ -99,6 +104,7 @@ public class AccountingOrder {
             @JsonProperty("currency") @Nullable String currency,
             @JsonProperty("id") @Nullable String id,
             @JsonProperty("lineitems") @Nullable List<AccountingLineitem> lineitems,
+            @JsonProperty("organization_id") @Nullable String organizationId,
             @JsonProperty("posted_at") @Nullable OffsetDateTime postedAt,
             @JsonProperty("raw") @Nullable Map<String, Object> raw,
             @JsonProperty("shipping_address") @Nullable PropertyAccountingOrderShippingAddress shippingAddress,
@@ -113,6 +119,7 @@ public class AccountingOrder {
         this.currency = currency;
         this.id = id;
         this.lineitems = lineitems;
+        this.organizationId = organizationId;
         this.postedAt = postedAt;
         this.raw = raw;
         this.shippingAddress = shippingAddress;
@@ -127,7 +134,7 @@ public class AccountingOrder {
             null, null, null,
             null, null, null,
             null, null, null,
-            null, null);
+            null, null, null);
     }
 
     public Optional<String> accountId() {
@@ -156,6 +163,10 @@ public class AccountingOrder {
 
     public Optional<List<AccountingLineitem>> lineitems() {
         return Optional.ofNullable(this.lineitems);
+    }
+
+    public Optional<String> organizationId() {
+        return Optional.ofNullable(this.organizationId);
     }
 
     public Optional<OffsetDateTime> postedAt() {
@@ -233,6 +244,12 @@ public class AccountingOrder {
     }
 
 
+    public AccountingOrder withOrganizationId(@Nullable String organizationId) {
+        this.organizationId = organizationId;
+        return this;
+    }
+
+
     public AccountingOrder withPostedAt(@Nullable OffsetDateTime postedAt) {
         this.postedAt = postedAt;
         return this;
@@ -292,6 +309,7 @@ public class AccountingOrder {
             Utils.enhancedDeepEquals(this.currency, other.currency) &&
             Utils.enhancedDeepEquals(this.id, other.id) &&
             Utils.enhancedDeepEquals(this.lineitems, other.lineitems) &&
+            Utils.enhancedDeepEquals(this.organizationId, other.organizationId) &&
             Utils.enhancedDeepEquals(this.postedAt, other.postedAt) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
             Utils.enhancedDeepEquals(this.shippingAddress, other.shippingAddress) &&
@@ -306,9 +324,9 @@ public class AccountingOrder {
         return Utils.enhancedHash(
             accountId, billingAddress, contactId,
             createdAt, currency, id,
-            lineitems, postedAt, raw,
-            shippingAddress, status, totalAmount,
-            type, updatedAt);
+            lineitems, organizationId, postedAt,
+            raw, shippingAddress, status,
+            totalAmount, type, updatedAt);
     }
     
     @Override
@@ -321,6 +339,7 @@ public class AccountingOrder {
                 "currency", currency,
                 "id", id,
                 "lineitems", lineitems,
+                "organizationId", organizationId,
                 "postedAt", postedAt,
                 "raw", raw,
                 "shippingAddress", shippingAddress,
@@ -346,6 +365,8 @@ public class AccountingOrder {
         private String id;
 
         private List<AccountingLineitem> lineitems;
+
+        private String organizationId;
 
         private OffsetDateTime postedAt;
 
@@ -400,6 +421,11 @@ public class AccountingOrder {
             return this;
         }
 
+        public Builder organizationId(@Nullable String organizationId) {
+            this.organizationId = organizationId;
+            return this;
+        }
+
         public Builder postedAt(@Nullable OffsetDateTime postedAt) {
             this.postedAt = postedAt;
             return this;
@@ -439,9 +465,9 @@ public class AccountingOrder {
             return new AccountingOrder(
                 accountId, billingAddress, contactId,
                 createdAt, currency, id,
-                lineitems, postedAt, raw,
-                shippingAddress, status, totalAmount,
-                type, updatedAt);
+                lineitems, organizationId, postedAt,
+                raw, shippingAddress, status,
+                totalAmount, type, updatedAt);
         }
 
     }

@@ -250,6 +250,8 @@ public class PropertyConnectionPermissions {
     public static final PropertyConnectionPermissions ADS_ORGANIZATION_WRITE = new PropertyConnectionPermissions("ads_organization_write");
     public static final PropertyConnectionPermissions ADS_CREATIVE_READ = new PropertyConnectionPermissions("ads_creative_read");
     public static final PropertyConnectionPermissions ADS_CREATIVE_WRITE = new PropertyConnectionPermissions("ads_creative_write");
+    public static final PropertyConnectionPermissions ADS_ASSET_READ = new PropertyConnectionPermissions("ads_asset_read");
+    public static final PropertyConnectionPermissions ADS_ASSET_WRITE = new PropertyConnectionPermissions("ads_asset_write");
     public static final PropertyConnectionPermissions ADS_INSERTIONORDER_READ = new PropertyConnectionPermissions("ads_insertionorder_read");
     public static final PropertyConnectionPermissions ADS_INSERTIONORDER_WRITE = new PropertyConnectionPermissions("ads_insertionorder_write");
     public static final PropertyConnectionPermissions ADS_TARGET_READ = new PropertyConnectionPermissions("ads_target_read");
@@ -611,6 +613,8 @@ public class PropertyConnectionPermissions {
         map.put("ads_organization_write", ADS_ORGANIZATION_WRITE);
         map.put("ads_creative_read", ADS_CREATIVE_READ);
         map.put("ads_creative_write", ADS_CREATIVE_WRITE);
+        map.put("ads_asset_read", ADS_ASSET_READ);
+        map.put("ads_asset_write", ADS_ASSET_WRITE);
         map.put("ads_insertionorder_read", ADS_INSERTIONORDER_READ);
         map.put("ads_insertionorder_write", ADS_INSERTIONORDER_WRITE);
         map.put("ads_target_read", ADS_TARGET_READ);
@@ -904,6 +908,8 @@ public class PropertyConnectionPermissions {
         map.put("ads_organization_write", PropertyConnectionPermissionsEnum.ADS_ORGANIZATION_WRITE);
         map.put("ads_creative_read", PropertyConnectionPermissionsEnum.ADS_CREATIVE_READ);
         map.put("ads_creative_write", PropertyConnectionPermissionsEnum.ADS_CREATIVE_WRITE);
+        map.put("ads_asset_read", PropertyConnectionPermissionsEnum.ADS_ASSET_READ);
+        map.put("ads_asset_write", PropertyConnectionPermissionsEnum.ADS_ASSET_WRITE);
         map.put("ads_insertionorder_read", PropertyConnectionPermissionsEnum.ADS_INSERTIONORDER_READ);
         map.put("ads_insertionorder_write", PropertyConnectionPermissionsEnum.ADS_INSERTIONORDER_WRITE);
         map.put("ads_target_read", PropertyConnectionPermissionsEnum.ADS_TARGET_READ);
@@ -1198,6 +1204,8 @@ public class PropertyConnectionPermissions {
         ADS_ORGANIZATION_WRITE("ads_organization_write"),
         ADS_CREATIVE_READ("ads_creative_read"),
         ADS_CREATIVE_WRITE("ads_creative_write"),
+        ADS_ASSET_READ("ads_asset_read"),
+        ADS_ASSET_WRITE("ads_asset_write"),
         ADS_INSERTIONORDER_READ("ads_insertionorder_read"),
         ADS_INSERTIONORDER_WRITE("ads_insertionorder_write"),
         ADS_TARGET_READ("ads_target_read"),

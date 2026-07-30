@@ -21,6 +21,13 @@ import to.unified.unified_java_sdk.utils.Utils;
 
 
 public class AccountingCreditmemo {
+    /**
+     * What this credit memo was applied to (invoices/bills). Writable inline on create/update.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("applications")
+    private List<AccountingCreditApplication> applications;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("apply_amount")
@@ -168,6 +175,7 @@ public class AccountingCreditmemo {
 
     @JsonCreator
     public AccountingCreditmemo(
+            @JsonProperty("applications") @Nullable List<AccountingCreditApplication> applications,
             @JsonProperty("apply_amount") @Nullable Double applyAmount,
             @JsonProperty("attachments") @Nullable List<AccountingAttachment> attachments,
             @JsonProperty("balance_amount") @Nullable Double balanceAmount,
@@ -197,6 +205,7 @@ public class AccountingCreditmemo {
             @JsonProperty("total_amount") @Nullable Double totalAmount,
             @JsonProperty("updated_at") @Nullable OffsetDateTime updatedAt,
             @JsonProperty("url") @Nullable String url) {
+        this.applications = applications;
         this.applyAmount = applyAmount;
         this.attachments = attachments;
         this.balanceAmount = balanceAmount;
@@ -238,7 +247,14 @@ public class AccountingCreditmemo {
             null, null, null,
             null, null, null,
             null, null, null,
-            null, null);
+            null, null, null);
+    }
+
+    /**
+     * What this credit memo was applied to (invoices/bills). Writable inline on create/update.
+     */
+    public Optional<List<AccountingCreditApplication>> applications() {
+        return Optional.ofNullable(this.applications);
     }
 
     public Optional<Double> applyAmount() {
@@ -359,6 +375,15 @@ public class AccountingCreditmemo {
 
     public static Builder builder() {
         return new Builder();
+    }
+
+
+    /**
+     * What this credit memo was applied to (invoices/bills). Writable inline on create/update.
+     */
+    public AccountingCreditmemo withApplications(@Nullable List<AccountingCreditApplication> applications) {
+        this.applications = applications;
+        return this;
     }
 
 
@@ -546,6 +571,7 @@ public class AccountingCreditmemo {
         }
         AccountingCreditmemo other = (AccountingCreditmemo) o;
         return 
+            Utils.enhancedDeepEquals(this.applications, other.applications) &&
             Utils.enhancedDeepEquals(this.applyAmount, other.applyAmount) &&
             Utils.enhancedDeepEquals(this.attachments, other.attachments) &&
             Utils.enhancedDeepEquals(this.balanceAmount, other.balanceAmount) &&
@@ -580,21 +606,22 @@ public class AccountingCreditmemo {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            applyAmount, attachments, balanceAmount,
-            cancelledAt, contactId, createdAt,
-            creditmemoNumber, currency, discountAmount,
-            dueAt, id, invoiceId,
-            lineitems, notes, organizationId,
-            paidAmount, paidAt, paymentCollectionMethod,
-            postedAt, raw, refundAmount,
-            refundReason, refundedAt, send,
-            status, taxAmount, totalAmount,
-            updatedAt, url);
+            applications, applyAmount, attachments,
+            balanceAmount, cancelledAt, contactId,
+            createdAt, creditmemoNumber, currency,
+            discountAmount, dueAt, id,
+            invoiceId, lineitems, notes,
+            organizationId, paidAmount, paidAt,
+            paymentCollectionMethod, postedAt, raw,
+            refundAmount, refundReason, refundedAt,
+            send, status, taxAmount,
+            totalAmount, updatedAt, url);
     }
     
     @Override
     public String toString() {
         return Utils.toString(AccountingCreditmemo.class,
+                "applications", applications,
                 "applyAmount", applyAmount,
                 "attachments", attachments,
                 "balanceAmount", balanceAmount,
@@ -628,6 +655,8 @@ public class AccountingCreditmemo {
 
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
+
+        private List<AccountingCreditApplication> applications;
 
         private Double applyAmount;
 
@@ -689,6 +718,14 @@ public class AccountingCreditmemo {
 
         private Builder() {
           // force use of static builder() method
+        }
+
+        /**
+         * What this credit memo was applied to (invoices/bills). Writable inline on create/update.
+         */
+        public Builder applications(@Nullable List<AccountingCreditApplication> applications) {
+            this.applications = applications;
+            return this;
         }
 
         public Builder applyAmount(@Nullable Double applyAmount) {
@@ -838,16 +875,16 @@ public class AccountingCreditmemo {
 
         public AccountingCreditmemo build() {
             return new AccountingCreditmemo(
-                applyAmount, attachments, balanceAmount,
-                cancelledAt, contactId, createdAt,
-                creditmemoNumber, currency, discountAmount,
-                dueAt, id, invoiceId,
-                lineitems, notes, organizationId,
-                paidAmount, paidAt, paymentCollectionMethod,
-                postedAt, raw, refundAmount,
-                refundReason, refundedAt, send,
-                status, taxAmount, totalAmount,
-                updatedAt, url);
+                applications, applyAmount, attachments,
+                balanceAmount, cancelledAt, contactId,
+                createdAt, creditmemoNumber, currency,
+                discountAmount, dueAt, id,
+                invoiceId, lineitems, notes,
+                organizationId, paidAmount, paidAt,
+                paymentCollectionMethod, postedAt, raw,
+                refundAmount, refundReason, refundedAt,
+                send, status, taxAmount,
+                totalAmount, updatedAt, url);
         }
 
     }

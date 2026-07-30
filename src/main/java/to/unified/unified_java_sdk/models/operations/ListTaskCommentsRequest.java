@@ -41,6 +41,12 @@ public class ListTaskCommentsRequest {
     private String order;
 
     /**
+     * The parent ID to filter by
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=parent_id")
+    private String parentId;
+
+    /**
      * Query string to search. eg. email address or name
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=query")
@@ -78,6 +84,7 @@ public class ListTaskCommentsRequest {
             @Nullable Double limit,
             @Nullable Double offset,
             @Nullable String order,
+            @Nullable String parentId,
             @Nullable String query,
             @Nullable String raw,
             @Nullable String sort,
@@ -89,6 +96,7 @@ public class ListTaskCommentsRequest {
         this.limit = limit;
         this.offset = offset;
         this.order = order;
+        this.parentId = parentId;
         this.query = query;
         this.raw = raw;
         this.sort = sort;
@@ -101,7 +109,7 @@ public class ListTaskCommentsRequest {
         this(connectionId, null, null,
             null, null, null,
             null, null, null,
-            null);
+            null, null);
     }
 
     /**
@@ -128,6 +136,13 @@ public class ListTaskCommentsRequest {
 
     public Optional<String> order() {
         return Optional.ofNullable(this.order);
+    }
+
+    /**
+     * The parent ID to filter by
+     */
+    public Optional<String> parentId() {
+        return Optional.ofNullable(this.parentId);
     }
 
     /**
@@ -207,6 +222,15 @@ public class ListTaskCommentsRequest {
 
 
     /**
+     * The parent ID to filter by
+     */
+    public ListTaskCommentsRequest withParentId(@Nullable String parentId) {
+        this.parentId = parentId;
+        return this;
+    }
+
+
+    /**
      * Query string to search. eg. email address or name
      */
     public ListTaskCommentsRequest withQuery(@Nullable String query) {
@@ -266,6 +290,7 @@ public class ListTaskCommentsRequest {
             Utils.enhancedDeepEquals(this.limit, other.limit) &&
             Utils.enhancedDeepEquals(this.offset, other.offset) &&
             Utils.enhancedDeepEquals(this.order, other.order) &&
+            Utils.enhancedDeepEquals(this.parentId, other.parentId) &&
             Utils.enhancedDeepEquals(this.query, other.query) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
             Utils.enhancedDeepEquals(this.sort, other.sort) &&
@@ -277,9 +302,9 @@ public class ListTaskCommentsRequest {
     public int hashCode() {
         return Utils.enhancedHash(
             connectionId, fields, limit,
-            offset, order, query,
-            raw, sort, taskId,
-            updatedGte);
+            offset, order, parentId,
+            query, raw, sort,
+            taskId, updatedGte);
     }
     
     @Override
@@ -290,6 +315,7 @@ public class ListTaskCommentsRequest {
                 "limit", limit,
                 "offset", offset,
                 "order", order,
+                "parentId", parentId,
                 "query", query,
                 "raw", raw,
                 "sort", sort,
@@ -309,6 +335,8 @@ public class ListTaskCommentsRequest {
         private Double offset;
 
         private String order;
+
+        private String parentId;
 
         private String query;
 
@@ -356,6 +384,14 @@ public class ListTaskCommentsRequest {
         }
 
         /**
+         * The parent ID to filter by
+         */
+        public Builder parentId(@Nullable String parentId) {
+            this.parentId = parentId;
+            return this;
+        }
+
+        /**
          * Query string to search. eg. email address or name
          */
         public Builder query(@Nullable String query) {
@@ -398,9 +434,9 @@ public class ListTaskCommentsRequest {
         public ListTaskCommentsRequest build() {
             return new ListTaskCommentsRequest(
                 connectionId, fields, limit,
-                offset, order, query,
-                raw, sort, taskId,
-                updatedGte);
+                offset, order, parentId,
+                query, raw, sort,
+                taskId, updatedGte);
         }
 
     }

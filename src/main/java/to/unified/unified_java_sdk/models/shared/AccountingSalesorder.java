@@ -32,6 +32,11 @@ public class AccountingSalesorder {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("category_ids")
+    private List<String> categoryIds;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contact_id")
     private String contactId;
 
@@ -104,6 +109,7 @@ public class AccountingSalesorder {
     public AccountingSalesorder(
             @JsonProperty("account_id") @Nullable String accountId,
             @JsonProperty("billing_address") @Nullable PropertyAccountingSalesorderBillingAddress billingAddress,
+            @JsonProperty("category_ids") @Nullable List<String> categoryIds,
             @JsonProperty("contact_id") @Nullable String contactId,
             @JsonProperty("created_at") @Nullable OffsetDateTime createdAt,
             @JsonProperty("currency") @Nullable String currency,
@@ -120,6 +126,7 @@ public class AccountingSalesorder {
             @JsonProperty("updated_at") @Nullable OffsetDateTime updatedAt) {
         this.accountId = accountId;
         this.billingAddress = billingAddress;
+        this.categoryIds = categoryIds;
         this.contactId = contactId;
         this.createdAt = createdAt;
         this.currency = currency;
@@ -142,7 +149,7 @@ public class AccountingSalesorder {
             null, null, null,
             null, null, null,
             null, null, null,
-            null);
+            null, null);
     }
 
     public Optional<String> accountId() {
@@ -151,6 +158,10 @@ public class AccountingSalesorder {
 
     public Optional<PropertyAccountingSalesorderBillingAddress> billingAddress() {
         return Optional.ofNullable(this.billingAddress);
+    }
+
+    public Optional<List<String>> categoryIds() {
+        return Optional.ofNullable(this.categoryIds);
     }
 
     public Optional<String> contactId() {
@@ -222,6 +233,12 @@ public class AccountingSalesorder {
 
     public AccountingSalesorder withBillingAddress(@Nullable PropertyAccountingSalesorderBillingAddress billingAddress) {
         this.billingAddress = billingAddress;
+        return this;
+    }
+
+
+    public AccountingSalesorder withCategoryIds(@Nullable List<String> categoryIds) {
+        this.categoryIds = categoryIds;
         return this;
     }
 
@@ -322,6 +339,7 @@ public class AccountingSalesorder {
         return 
             Utils.enhancedDeepEquals(this.accountId, other.accountId) &&
             Utils.enhancedDeepEquals(this.billingAddress, other.billingAddress) &&
+            Utils.enhancedDeepEquals(this.categoryIds, other.categoryIds) &&
             Utils.enhancedDeepEquals(this.contactId, other.contactId) &&
             Utils.enhancedDeepEquals(this.createdAt, other.createdAt) &&
             Utils.enhancedDeepEquals(this.currency, other.currency) &&
@@ -341,12 +359,12 @@ public class AccountingSalesorder {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            accountId, billingAddress, contactId,
-            createdAt, currency, fees,
-            id, lineitems, organizationId,
-            postedAt, raw, salesChannel,
-            shippingAddress, status, totalAmount,
-            updatedAt);
+            accountId, billingAddress, categoryIds,
+            contactId, createdAt, currency,
+            fees, id, lineitems,
+            organizationId, postedAt, raw,
+            salesChannel, shippingAddress, status,
+            totalAmount, updatedAt);
     }
     
     @Override
@@ -354,6 +372,7 @@ public class AccountingSalesorder {
         return Utils.toString(AccountingSalesorder.class,
                 "accountId", accountId,
                 "billingAddress", billingAddress,
+                "categoryIds", categoryIds,
                 "contactId", contactId,
                 "createdAt", createdAt,
                 "currency", currency,
@@ -376,6 +395,8 @@ public class AccountingSalesorder {
         private String accountId;
 
         private PropertyAccountingSalesorderBillingAddress billingAddress;
+
+        private List<String> categoryIds;
 
         private String contactId;
 
@@ -416,6 +437,11 @@ public class AccountingSalesorder {
 
         public Builder billingAddress(@Nullable PropertyAccountingSalesorderBillingAddress billingAddress) {
             this.billingAddress = billingAddress;
+            return this;
+        }
+
+        public Builder categoryIds(@Nullable List<String> categoryIds) {
+            this.categoryIds = categoryIds;
             return this;
         }
 
@@ -491,12 +517,12 @@ public class AccountingSalesorder {
 
         public AccountingSalesorder build() {
             return new AccountingSalesorder(
-                accountId, billingAddress, contactId,
-                createdAt, currency, fees,
-                id, lineitems, organizationId,
-                postedAt, raw, salesChannel,
-                shippingAddress, status, totalAmount,
-                updatedAt);
+                accountId, billingAddress, categoryIds,
+                contactId, createdAt, currency,
+                fees, id, lineitems,
+                organizationId, postedAt, raw,
+                salesChannel, shippingAddress, status,
+                totalAmount, updatedAt);
         }
 
     }

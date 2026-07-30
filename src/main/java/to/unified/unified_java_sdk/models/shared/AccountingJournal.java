@@ -22,6 +22,16 @@ import to.unified.unified_java_sdk.utils.Utils;
 public class AccountingJournal {
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("attachments")
+    private List<AccountingAttachment> attachments;
+
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("category_ids")
+    private List<String> categoryIds;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private OffsetDateTime createdAt;
 
@@ -89,6 +99,8 @@ public class AccountingJournal {
 
     @JsonCreator
     public AccountingJournal(
+            @JsonProperty("attachments") @Nullable List<AccountingAttachment> attachments,
+            @JsonProperty("category_ids") @Nullable List<String> categoryIds,
             @JsonProperty("created_at") @Nullable OffsetDateTime createdAt,
             @JsonProperty("currency") @Nullable String currency,
             @JsonProperty("description") @Nullable String description,
@@ -102,6 +114,8 @@ public class AccountingJournal {
             @JsonProperty("tax_amount") @Nullable Double taxAmount,
             @JsonProperty("taxrate_id") @Nullable String taxrateId,
             @JsonProperty("updated_at") @Nullable OffsetDateTime updatedAt) {
+        this.attachments = attachments;
+        this.categoryIds = categoryIds;
         this.createdAt = createdAt;
         this.currency = currency;
         this.description = description;
@@ -122,7 +136,15 @@ public class AccountingJournal {
             null, null, null,
             null, null, null,
             null, null, null,
-            null);
+            null, null, null);
+    }
+
+    public Optional<List<AccountingAttachment>> attachments() {
+        return Optional.ofNullable(this.attachments);
+    }
+
+    public Optional<List<String>> categoryIds() {
+        return Optional.ofNullable(this.categoryIds);
     }
 
     public Optional<OffsetDateTime> createdAt() {
@@ -182,6 +204,18 @@ public class AccountingJournal {
 
     public static Builder builder() {
         return new Builder();
+    }
+
+
+    public AccountingJournal withAttachments(@Nullable List<AccountingAttachment> attachments) {
+        this.attachments = attachments;
+        return this;
+    }
+
+
+    public AccountingJournal withCategoryIds(@Nullable List<String> categoryIds) {
+        this.categoryIds = categoryIds;
+        return this;
     }
 
 
@@ -276,6 +310,8 @@ public class AccountingJournal {
         }
         AccountingJournal other = (AccountingJournal) o;
         return 
+            Utils.enhancedDeepEquals(this.attachments, other.attachments) &&
+            Utils.enhancedDeepEquals(this.categoryIds, other.categoryIds) &&
             Utils.enhancedDeepEquals(this.createdAt, other.createdAt) &&
             Utils.enhancedDeepEquals(this.currency, other.currency) &&
             Utils.enhancedDeepEquals(this.description, other.description) &&
@@ -294,16 +330,18 @@ public class AccountingJournal {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            createdAt, currency, description,
-            id, lineitems, organizationId,
-            postedAt, raw, reference,
-            source, taxAmount, taxrateId,
-            updatedAt);
+            attachments, categoryIds, createdAt,
+            currency, description, id,
+            lineitems, organizationId, postedAt,
+            raw, reference, source,
+            taxAmount, taxrateId, updatedAt);
     }
     
     @Override
     public String toString() {
         return Utils.toString(AccountingJournal.class,
+                "attachments", attachments,
+                "categoryIds", categoryIds,
                 "createdAt", createdAt,
                 "currency", currency,
                 "description", description,
@@ -321,6 +359,10 @@ public class AccountingJournal {
 
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
+
+        private List<AccountingAttachment> attachments;
+
+        private List<String> categoryIds;
 
         private OffsetDateTime createdAt;
 
@@ -350,6 +392,16 @@ public class AccountingJournal {
 
         private Builder() {
           // force use of static builder() method
+        }
+
+        public Builder attachments(@Nullable List<AccountingAttachment> attachments) {
+            this.attachments = attachments;
+            return this;
+        }
+
+        public Builder categoryIds(@Nullable List<String> categoryIds) {
+            this.categoryIds = categoryIds;
+            return this;
         }
 
         public Builder createdAt(@Nullable OffsetDateTime createdAt) {
@@ -422,11 +474,11 @@ public class AccountingJournal {
 
         public AccountingJournal build() {
             return new AccountingJournal(
-                createdAt, currency, description,
-                id, lineitems, organizationId,
-                postedAt, raw, reference,
-                source, taxAmount, taxrateId,
-                updatedAt);
+                attachments, categoryIds, createdAt,
+                currency, description, id,
+                lineitems, organizationId, postedAt,
+                raw, reference, source,
+                taxAmount, taxrateId, updatedAt);
         }
 
     }

@@ -43,7 +43,7 @@ public class Application {
                 .webhook(Webhook.builder()
                     .connectionId("<id>")
                     .event(Event.CREATED)
-                    .objectType(ObjectType.ATS_SCORECARD)
+                    .objectType(WebhookObjectType.ATS_SCORECARD)
                     .build())
                 .build();
 
@@ -212,7 +212,7 @@ public class Application {
                 .webhook(Webhook.builder()
                     .connectionId("<id>")
                     .event(Event.UPDATED)
-                    .objectType(ObjectType.TICKETING_TICKET)
+                    .objectType(WebhookObjectType.TICKETING_TICKET)
                     .build())
                 .id("<id>")
                 .build();
@@ -384,7 +384,7 @@ public class Application {
                 .webhook(Webhook.builder()
                     .connectionId("<id>")
                     .event(Event.DELETED)
-                    .objectType(ObjectType.MESSAGING_CHANNEL)
+                    .objectType(WebhookObjectType.MESSAGING_CHANNEL)
                     .build())
                 .id("<id>")
                 .build();

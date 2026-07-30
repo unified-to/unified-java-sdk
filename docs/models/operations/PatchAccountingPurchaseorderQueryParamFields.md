@@ -26,4 +26,5 @@ PatchAccountingPurchaseorderQueryParamFields value = PatchAccountingPurchaseorde
 | `STATUS`           | status             |
 | `LINEITEMS`        | lineitems          |
 | `ORGANIZATION_ID`  | organization_id    |
+| `CATEGORY_IDS`     | category_ids       |
 | `RAW`              | raw                |

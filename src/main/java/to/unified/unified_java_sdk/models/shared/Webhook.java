@@ -117,7 +117,7 @@ public class Webhook {
 
 
     @JsonProperty("object_type")
-    private ObjectType objectType;
+    private WebhookObjectType objectType;
 
 
     @JsonInclude(Include.NON_ABSENT)
@@ -166,7 +166,7 @@ public class Webhook {
             @JsonProperty("is_beta") @Nullable Boolean isBeta,
             @JsonProperty("is_healthy") @Nullable Boolean isHealthy,
             @JsonProperty("is_paused") @Nullable Boolean isPaused,
-            @JsonProperty("object_type") @Nonnull ObjectType objectType,
+            @JsonProperty("object_type") @Nonnull WebhookObjectType objectType,
             @JsonProperty("page_max_limit") @Nullable Double pageMaxLimit,
             @JsonProperty("runs") @Nullable List<String> runs,
             @JsonProperty("updated_at") @Nullable OffsetDateTime updatedAt,
@@ -205,7 +205,7 @@ public class Webhook {
     public Webhook(
             @Nonnull String connectionId,
             @Nonnull Event event,
-            @Nonnull ObjectType objectType) {
+            @Nonnull WebhookObjectType objectType) {
         this(null, connectionId, null,
             null, null, null,
             null, null, event,
@@ -288,7 +288,7 @@ public class Webhook {
         return Optional.ofNullable(this.isPaused);
     }
 
-    public ObjectType objectType() {
+    public WebhookObjectType objectType() {
         return this.objectType;
     }
 
@@ -428,7 +428,7 @@ public class Webhook {
     }
 
 
-    public Webhook withObjectType(@Nonnull ObjectType objectType) {
+    public Webhook withObjectType(@Nonnull WebhookObjectType objectType) {
         this.objectType = Utils.checkNotNull(objectType, "objectType");
         return this;
     }
@@ -584,7 +584,7 @@ public class Webhook {
 
         private Boolean isPaused;
 
-        private ObjectType objectType;
+        private WebhookObjectType objectType;
 
         private Double pageMaxLimit;
 
@@ -690,7 +690,7 @@ public class Webhook {
             return this;
         }
 
-        public Builder objectType(@Nonnull ObjectType objectType) {
+        public Builder objectType(@Nonnull WebhookObjectType objectType) {
             this.objectType = Utils.checkNotNull(objectType, "objectType");
             return this;
         }

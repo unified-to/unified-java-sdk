@@ -11,6 +11,7 @@ import jakarta.annotation.Nullable;
 import java.lang.Double;
 import java.lang.Override;
 import java.lang.String;
+import java.util.List;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
@@ -20,6 +21,11 @@ public class AccountingTransactionLineItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("account_id")
     private String accountId;
+
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("category_ids")
+    private List<String> categoryIds;
 
 
     @JsonInclude(Include.NON_ABSENT)
@@ -59,6 +65,7 @@ public class AccountingTransactionLineItem {
     @JsonCreator
     public AccountingTransactionLineItem(
             @JsonProperty("account_id") @Nullable String accountId,
+            @JsonProperty("category_ids") @Nullable List<String> categoryIds,
             @JsonProperty("description") @Nullable String description,
             @JsonProperty("id") @Nullable String id,
             @JsonProperty("name") @Nullable String name,
@@ -67,6 +74,7 @@ public class AccountingTransactionLineItem {
             @JsonProperty("unit_amount") @Nullable Double unitAmount,
             @JsonProperty("unit_quantity") @Nullable Double unitQuantity) {
         this.accountId = accountId;
+        this.categoryIds = categoryIds;
         this.description = description;
         this.id = id;
         this.name = name;
@@ -79,11 +87,15 @@ public class AccountingTransactionLineItem {
     public AccountingTransactionLineItem() {
         this(null, null, null,
             null, null, null,
-            null, null);
+            null, null, null);
     }
 
     public Optional<String> accountId() {
         return Optional.ofNullable(this.accountId);
+    }
+
+    public Optional<List<String>> categoryIds() {
+        return Optional.ofNullable(this.categoryIds);
     }
 
     public Optional<String> description() {
@@ -121,6 +133,12 @@ public class AccountingTransactionLineItem {
 
     public AccountingTransactionLineItem withAccountId(@Nullable String accountId) {
         this.accountId = accountId;
+        return this;
+    }
+
+
+    public AccountingTransactionLineItem withCategoryIds(@Nullable List<String> categoryIds) {
+        this.categoryIds = categoryIds;
         return this;
     }
 
@@ -178,6 +196,7 @@ public class AccountingTransactionLineItem {
         AccountingTransactionLineItem other = (AccountingTransactionLineItem) o;
         return 
             Utils.enhancedDeepEquals(this.accountId, other.accountId) &&
+            Utils.enhancedDeepEquals(this.categoryIds, other.categoryIds) &&
             Utils.enhancedDeepEquals(this.description, other.description) &&
             Utils.enhancedDeepEquals(this.id, other.id) &&
             Utils.enhancedDeepEquals(this.name, other.name) &&
@@ -190,15 +209,16 @@ public class AccountingTransactionLineItem {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            accountId, description, id,
-            name, objectType, totalAmount,
-            unitAmount, unitQuantity);
+            accountId, categoryIds, description,
+            id, name, objectType,
+            totalAmount, unitAmount, unitQuantity);
     }
     
     @Override
     public String toString() {
         return Utils.toString(AccountingTransactionLineItem.class,
                 "accountId", accountId,
+                "categoryIds", categoryIds,
                 "description", description,
                 "id", id,
                 "name", name,
@@ -212,6 +232,8 @@ public class AccountingTransactionLineItem {
     public final static class Builder {
 
         private String accountId;
+
+        private List<String> categoryIds;
 
         private String description;
 
@@ -233,6 +255,11 @@ public class AccountingTransactionLineItem {
 
         public Builder accountId(@Nullable String accountId) {
             this.accountId = accountId;
+            return this;
+        }
+
+        public Builder categoryIds(@Nullable List<String> categoryIds) {
+            this.categoryIds = categoryIds;
             return this;
         }
 
@@ -273,9 +300,9 @@ public class AccountingTransactionLineItem {
 
         public AccountingTransactionLineItem build() {
             return new AccountingTransactionLineItem(
-                accountId, description, id,
-                name, objectType, totalAmount,
-                unitAmount, unitQuantity);
+                accountId, categoryIds, description,
+                id, name, objectType,
+                totalAmount, unitAmount, unitQuantity);
         }
 
     }

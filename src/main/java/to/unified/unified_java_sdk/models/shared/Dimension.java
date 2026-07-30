@@ -21,25 +21,9 @@ import java.util.Optional;
 public class Dimension {
 
     public static final Dimension DATE = new Dimension("DATE");
-    public static final Dimension HOUR = new Dimension("HOUR");
-    public static final Dimension DAY_OF_WEEK = new Dimension("DAY_OF_WEEK");
-    public static final Dimension WEEK = new Dimension("WEEK");
-    public static final Dimension MONTH = new Dimension("MONTH");
-    public static final Dimension YEAR = new Dimension("YEAR");
-    public static final Dimension PAGE = new Dimension("PAGE");
-    public static final Dimension PAGE_TITLE = new Dimension("PAGE_TITLE");
-    public static final Dimension EVENT_NAME = new Dimension("EVENT_NAME");
-    public static final Dimension SOURCE = new Dimension("SOURCE");
-    public static final Dimension MEDIUM = new Dimension("MEDIUM");
-    public static final Dimension CAMPAIGN = new Dimension("CAMPAIGN");
-    public static final Dimension COUNTRY = new Dimension("COUNTRY");
-    public static final Dimension CITY = new Dimension("CITY");
-    public static final Dimension DEVICE_TYPE = new Dimension("DEVICE_TYPE");
-    public static final Dimension BROWSER = new Dimension("BROWSER");
-    public static final Dimension OS = new Dimension("OS");
-    public static final Dimension USER_TYPE = new Dimension("USER_TYPE");
-    public static final Dimension LANDING_PAGE = new Dimension("LANDING_PAGE");
-    public static final Dimension VIDEO = new Dimension("VIDEO");
+    public static final Dimension PLATFORM = new Dimension("PLATFORM");
+    public static final Dimension PLATFORM_POSITION = new Dimension("PLATFORM_POSITION");
+    public static final Dimension DEVICE = new Dimension("DEVICE");
 
     // This map will grow whenever a Color gets created with a new
     // unrecognized value (a potential memory leak if the user is not
@@ -114,50 +98,18 @@ public class Dimension {
     private static final Map<String, Dimension> createValuesMap() {
         Map<String, Dimension> map = new LinkedHashMap<>();
         map.put("DATE", DATE);
-        map.put("HOUR", HOUR);
-        map.put("DAY_OF_WEEK", DAY_OF_WEEK);
-        map.put("WEEK", WEEK);
-        map.put("MONTH", MONTH);
-        map.put("YEAR", YEAR);
-        map.put("PAGE", PAGE);
-        map.put("PAGE_TITLE", PAGE_TITLE);
-        map.put("EVENT_NAME", EVENT_NAME);
-        map.put("SOURCE", SOURCE);
-        map.put("MEDIUM", MEDIUM);
-        map.put("CAMPAIGN", CAMPAIGN);
-        map.put("COUNTRY", COUNTRY);
-        map.put("CITY", CITY);
-        map.put("DEVICE_TYPE", DEVICE_TYPE);
-        map.put("BROWSER", BROWSER);
-        map.put("OS", OS);
-        map.put("USER_TYPE", USER_TYPE);
-        map.put("LANDING_PAGE", LANDING_PAGE);
-        map.put("VIDEO", VIDEO);
+        map.put("PLATFORM", PLATFORM);
+        map.put("PLATFORM_POSITION", PLATFORM_POSITION);
+        map.put("DEVICE", DEVICE);
         return map;
     }
 
     private static final Map<String, DimensionEnum> createEnumsMap() {
         Map<String, DimensionEnum> map = new HashMap<>();
         map.put("DATE", DimensionEnum.DATE);
-        map.put("HOUR", DimensionEnum.HOUR);
-        map.put("DAY_OF_WEEK", DimensionEnum.DAY_OF_WEEK);
-        map.put("WEEK", DimensionEnum.WEEK);
-        map.put("MONTH", DimensionEnum.MONTH);
-        map.put("YEAR", DimensionEnum.YEAR);
-        map.put("PAGE", DimensionEnum.PAGE);
-        map.put("PAGE_TITLE", DimensionEnum.PAGE_TITLE);
-        map.put("EVENT_NAME", DimensionEnum.EVENT_NAME);
-        map.put("SOURCE", DimensionEnum.SOURCE);
-        map.put("MEDIUM", DimensionEnum.MEDIUM);
-        map.put("CAMPAIGN", DimensionEnum.CAMPAIGN);
-        map.put("COUNTRY", DimensionEnum.COUNTRY);
-        map.put("CITY", DimensionEnum.CITY);
-        map.put("DEVICE_TYPE", DimensionEnum.DEVICE_TYPE);
-        map.put("BROWSER", DimensionEnum.BROWSER);
-        map.put("OS", DimensionEnum.OS);
-        map.put("USER_TYPE", DimensionEnum.USER_TYPE);
-        map.put("LANDING_PAGE", DimensionEnum.LANDING_PAGE);
-        map.put("VIDEO", DimensionEnum.VIDEO);
+        map.put("PLATFORM", DimensionEnum.PLATFORM);
+        map.put("PLATFORM_POSITION", DimensionEnum.PLATFORM_POSITION);
+        map.put("DEVICE", DimensionEnum.DEVICE);
         return map;
     }
     
@@ -165,25 +117,9 @@ public class Dimension {
     public enum DimensionEnum {
 
         DATE("DATE"),
-        HOUR("HOUR"),
-        DAY_OF_WEEK("DAY_OF_WEEK"),
-        WEEK("WEEK"),
-        MONTH("MONTH"),
-        YEAR("YEAR"),
-        PAGE("PAGE"),
-        PAGE_TITLE("PAGE_TITLE"),
-        EVENT_NAME("EVENT_NAME"),
-        SOURCE("SOURCE"),
-        MEDIUM("MEDIUM"),
-        CAMPAIGN("CAMPAIGN"),
-        COUNTRY("COUNTRY"),
-        CITY("CITY"),
-        DEVICE_TYPE("DEVICE_TYPE"),
-        BROWSER("BROWSER"),
-        OS("OS"),
-        USER_TYPE("USER_TYPE"),
-        LANDING_PAGE("LANDING_PAGE"),
-        VIDEO("VIDEO"),;
+        PLATFORM("PLATFORM"),
+        PLATFORM_POSITION("PLATFORM_POSITION"),
+        DEVICE("DEVICE"),;
 
         private final String value;
 

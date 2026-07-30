@@ -1,0 +1,29 @@
+# PaymentTerms
+
+## Example Usage
+
+```java
+import to.unified.unified_java_sdk.models.shared.PaymentTerms;
+
+PaymentTerms value = PaymentTerms.ON_RECEIPT;
+
+// Open enum: use .of() to create instances from custom string values
+PaymentTerms custom = PaymentTerms.of("custom_value");
+```
+
+
+## Values
+
+| Name         | Value        |
+| ------------ | ------------ |
+| `ON_RECEIPT` | ON_RECEIPT   |
+| `NET7`       | NET_7        |
+| `NET10`      | NET_10       |
+| `NET15`      | NET_15       |
+| `NET20`      | NET_20       |
+| `NET25`      | NET_25       |
+| `NET30`      | NET_30       |
+| `NET45`      | NET_45       |
+| `NET60`      | NET_60       |
+| `NET90`      | NET_90       |
+| `OTHER`      | OTHER        |

@@ -27,6 +27,11 @@ public class AccountingTransaction {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("category_ids")
+    private List<String> categoryIds;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contacts")
     private List<AccountingTransactionContact> contacts;
 
@@ -118,6 +123,7 @@ public class AccountingTransaction {
     @JsonCreator
     public AccountingTransaction(
             @JsonProperty("account_id") @Nullable String accountId,
+            @JsonProperty("category_ids") @Nullable List<String> categoryIds,
             @JsonProperty("contacts") @Nullable List<AccountingTransactionContact> contacts,
             @JsonProperty("created_at") @Nullable OffsetDateTime createdAt,
             @JsonProperty("currency") @Nullable String currency,
@@ -137,6 +143,7 @@ public class AccountingTransaction {
             @JsonProperty("type") @Nullable String type,
             @JsonProperty("updated_at") @Nullable OffsetDateTime updatedAt) {
         this.accountId = accountId;
+        this.categoryIds = categoryIds;
         this.contacts = contacts;
         this.createdAt = createdAt;
         this.currency = currency;
@@ -164,11 +171,15 @@ public class AccountingTransaction {
             null, null, null,
             null, null, null,
             null, null, null,
-            null);
+            null, null);
     }
 
     public Optional<String> accountId() {
         return Optional.ofNullable(this.accountId);
+    }
+
+    public Optional<List<String>> categoryIds() {
+        return Optional.ofNullable(this.categoryIds);
     }
 
     public Optional<List<AccountingTransactionContact>> contacts() {
@@ -250,6 +261,12 @@ public class AccountingTransaction {
 
     public AccountingTransaction withAccountId(@Nullable String accountId) {
         this.accountId = accountId;
+        return this;
+    }
+
+
+    public AccountingTransaction withCategoryIds(@Nullable List<String> categoryIds) {
+        this.categoryIds = categoryIds;
         return this;
     }
 
@@ -373,6 +390,7 @@ public class AccountingTransaction {
         AccountingTransaction other = (AccountingTransaction) o;
         return 
             Utils.enhancedDeepEquals(this.accountId, other.accountId) &&
+            Utils.enhancedDeepEquals(this.categoryIds, other.categoryIds) &&
             Utils.enhancedDeepEquals(this.contacts, other.contacts) &&
             Utils.enhancedDeepEquals(this.createdAt, other.createdAt) &&
             Utils.enhancedDeepEquals(this.currency, other.currency) &&
@@ -396,19 +414,20 @@ public class AccountingTransaction {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            accountId, contacts, createdAt,
-            currency, customerMessage, id,
-            lineitems, memo, organizationId,
-            paymentMethod, paymentTerms, raw,
-            reference, splitAccountId, subTotalAmount,
-            taxAmount, totalAmount, type,
-            updatedAt);
+            accountId, categoryIds, contacts,
+            createdAt, currency, customerMessage,
+            id, lineitems, memo,
+            organizationId, paymentMethod, paymentTerms,
+            raw, reference, splitAccountId,
+            subTotalAmount, taxAmount, totalAmount,
+            type, updatedAt);
     }
     
     @Override
     public String toString() {
         return Utils.toString(AccountingTransaction.class,
                 "accountId", accountId,
+                "categoryIds", categoryIds,
                 "contacts", contacts,
                 "createdAt", createdAt,
                 "currency", currency,
@@ -433,6 +452,8 @@ public class AccountingTransaction {
     public final static class Builder {
 
         private String accountId;
+
+        private List<String> categoryIds;
 
         private List<AccountingTransactionContact> contacts;
 
@@ -476,6 +497,11 @@ public class AccountingTransaction {
 
         public Builder accountId(@Nullable String accountId) {
             this.accountId = accountId;
+            return this;
+        }
+
+        public Builder categoryIds(@Nullable List<String> categoryIds) {
+            this.categoryIds = categoryIds;
             return this;
         }
 
@@ -571,13 +597,13 @@ public class AccountingTransaction {
 
         public AccountingTransaction build() {
             return new AccountingTransaction(
-                accountId, contacts, createdAt,
-                currency, customerMessage, id,
-                lineitems, memo, organizationId,
-                paymentMethod, paymentTerms, raw,
-                reference, splitAccountId, subTotalAmount,
-                taxAmount, totalAmount, type,
-                updatedAt);
+                accountId, categoryIds, contacts,
+                createdAt, currency, customerMessage,
+                id, lineitems, memo,
+                organizationId, paymentMethod, paymentTerms,
+                raw, reference, splitAccountId,
+                subTotalAmount, taxAmount, totalAmount,
+                type, updatedAt);
         }
 
     }

@@ -27,7 +27,10 @@ public class Term {
     public static final Term NET20 = new Term("NET_20");
     public static final Term NET25 = new Term("NET_25");
     public static final Term NET30 = new Term("NET_30");
+    public static final Term NET45 = new Term("NET_45");
     public static final Term NET60 = new Term("NET_60");
+    public static final Term NET90 = new Term("NET_90");
+    public static final Term OTHER = new Term("OTHER");
 
     // This map will grow whenever a Color gets created with a new
     // unrecognized value (a potential memory leak if the user is not
@@ -108,7 +111,10 @@ public class Term {
         map.put("NET_20", NET20);
         map.put("NET_25", NET25);
         map.put("NET_30", NET30);
+        map.put("NET_45", NET45);
         map.put("NET_60", NET60);
+        map.put("NET_90", NET90);
+        map.put("OTHER", OTHER);
         return map;
     }
 
@@ -121,7 +127,10 @@ public class Term {
         map.put("NET_20", TermEnum.NET20);
         map.put("NET_25", TermEnum.NET25);
         map.put("NET_30", TermEnum.NET30);
+        map.put("NET_45", TermEnum.NET45);
         map.put("NET_60", TermEnum.NET60);
+        map.put("NET_90", TermEnum.NET90);
+        map.put("OTHER", TermEnum.OTHER);
         return map;
     }
     
@@ -135,7 +144,10 @@ public class Term {
         NET20("NET_20"),
         NET25("NET_25"),
         NET30("NET_30"),
-        NET60("NET_60"),;
+        NET45("NET_45"),
+        NET60("NET_60"),
+        NET90("NET_90"),
+        OTHER("OTHER"),;
 
         private final String value;
 

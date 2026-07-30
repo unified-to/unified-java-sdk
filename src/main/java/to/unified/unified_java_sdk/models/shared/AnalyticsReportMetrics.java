@@ -19,7 +19,7 @@ public class AnalyticsReportMetrics {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dimension")
-    private Dimension dimension;
+    private AnalyticsReportMetricsDimension dimension;
 
 
     @JsonInclude(Include.NON_ABSENT)
@@ -38,7 +38,7 @@ public class AnalyticsReportMetrics {
 
     @JsonCreator
     public AnalyticsReportMetrics(
-            @JsonProperty("dimension") @Nullable Dimension dimension,
+            @JsonProperty("dimension") @Nullable AnalyticsReportMetricsDimension dimension,
             @JsonProperty("dimension_value") @Nullable String dimensionValue,
             @JsonProperty("type") @Nullable AnalyticsReportMetricsType type,
             @JsonProperty("value") @Nullable Double value) {
@@ -53,7 +53,7 @@ public class AnalyticsReportMetrics {
             null);
     }
 
-    public Optional<Dimension> dimension() {
+    public Optional<AnalyticsReportMetricsDimension> dimension() {
         return Optional.ofNullable(this.dimension);
     }
 
@@ -74,7 +74,7 @@ public class AnalyticsReportMetrics {
     }
 
 
-    public AnalyticsReportMetrics withDimension(@Nullable Dimension dimension) {
+    public AnalyticsReportMetrics withDimension(@Nullable AnalyticsReportMetricsDimension dimension) {
         this.dimension = dimension;
         return this;
     }
@@ -133,7 +133,7 @@ public class AnalyticsReportMetrics {
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
 
-        private Dimension dimension;
+        private AnalyticsReportMetricsDimension dimension;
 
         private String dimensionValue;
 
@@ -145,7 +145,7 @@ public class AnalyticsReportMetrics {
           // force use of static builder() method
         }
 
-        public Builder dimension(@Nullable Dimension dimension) {
+        public Builder dimension(@Nullable AnalyticsReportMetricsDimension dimension) {
             this.dimension = dimension;
             return this;
         }

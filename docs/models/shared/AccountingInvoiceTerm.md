@@ -23,4 +23,7 @@ AccountingInvoiceTerm custom = AccountingInvoiceTerm.of("custom_value");
 | `NET20`      | NET_20       |
 | `NET25`      | NET_25       |
 | `NET30`      | NET_30       |
+| `NET45`      | NET_45       |
 | `NET60`      | NET_60       |
+| `NET90`      | NET_90       |
+| `OTHER`      | OTHER        |

@@ -16,6 +16,9 @@ public enum ListAccountingCategoriesQueryParamFields {
     DESCRIPTION("description"),
     IS_ACTIVE("is_active"),
     PARENT_ID("parent_id"),
+    TYPE("type"),
+    CODE("code"),
+    ORGANIZATION_ID("organization_id"),
     RAW("raw");
 
     @JsonValue

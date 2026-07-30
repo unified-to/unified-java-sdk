@@ -30,6 +30,7 @@ public enum GetAccountingInvoiceQueryParamFields {
     NOTES("notes"),
     REFUND_REASON("refund_reason"),
     TERM("term"),
+    PAYMENT_TERMS("payment_terms"),
     LINEITEMS("lineitems"),
     STATUS("status"),
     URL("url"),
@@ -38,6 +39,8 @@ public enum GetAccountingInvoiceQueryParamFields {
     ATTACHMENTS("attachments"),
     SEND("send"),
     ORGANIZATION_ID("organization_id"),
+    PAYMENTS("payments"),
+    CATEGORY_IDS("category_ids"),
     RAW("raw");
 
     @JsonValue

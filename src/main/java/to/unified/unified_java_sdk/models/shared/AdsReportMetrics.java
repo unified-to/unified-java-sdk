@@ -28,8 +28,38 @@ public class AdsReportMetrics {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("creative")
+    private PropertyAdsReportMetricsCreative creative;
+
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("dimension")
+    private Dimension dimension;
+
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("dimension_value")
+    private String dimensionValue;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("group")
     private PropertyAdsReportMetricsGroup group;
+
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("insertionorder")
+    private PropertyAdsReportMetricsInsertionorder insertionorder;
+
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("keyword")
+    private PropertyAdsReportMetricsKeyword keyword;
+
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("placement")
+    private PropertyAdsReportMetricsPlacement placement;
 
 
     @JsonInclude(Include.NON_ABSENT)
@@ -45,18 +75,32 @@ public class AdsReportMetrics {
     public AdsReportMetrics(
             @JsonProperty("ad") @Nullable PropertyAdsReportMetricsAd ad,
             @JsonProperty("campaign") @Nullable PropertyAdsReportMetricsCampaign campaign,
+            @JsonProperty("creative") @Nullable PropertyAdsReportMetricsCreative creative,
+            @JsonProperty("dimension") @Nullable Dimension dimension,
+            @JsonProperty("dimension_value") @Nullable String dimensionValue,
             @JsonProperty("group") @Nullable PropertyAdsReportMetricsGroup group,
+            @JsonProperty("insertionorder") @Nullable PropertyAdsReportMetricsInsertionorder insertionorder,
+            @JsonProperty("keyword") @Nullable PropertyAdsReportMetricsKeyword keyword,
+            @JsonProperty("placement") @Nullable PropertyAdsReportMetricsPlacement placement,
             @JsonProperty("type") @Nullable AdsReportMetricsType type,
             @JsonProperty("value") @Nullable Double value) {
         this.ad = ad;
         this.campaign = campaign;
+        this.creative = creative;
+        this.dimension = dimension;
+        this.dimensionValue = dimensionValue;
         this.group = group;
+        this.insertionorder = insertionorder;
+        this.keyword = keyword;
+        this.placement = placement;
         this.type = type;
         this.value = value;
     }
     
     public AdsReportMetrics() {
         this(null, null, null,
+            null, null, null,
+            null, null, null,
             null, null);
     }
 
@@ -68,8 +112,32 @@ public class AdsReportMetrics {
         return Optional.ofNullable(this.campaign);
     }
 
+    public Optional<PropertyAdsReportMetricsCreative> creative() {
+        return Optional.ofNullable(this.creative);
+    }
+
+    public Optional<Dimension> dimension() {
+        return Optional.ofNullable(this.dimension);
+    }
+
+    public Optional<String> dimensionValue() {
+        return Optional.ofNullable(this.dimensionValue);
+    }
+
     public Optional<PropertyAdsReportMetricsGroup> group() {
         return Optional.ofNullable(this.group);
+    }
+
+    public Optional<PropertyAdsReportMetricsInsertionorder> insertionorder() {
+        return Optional.ofNullable(this.insertionorder);
+    }
+
+    public Optional<PropertyAdsReportMetricsKeyword> keyword() {
+        return Optional.ofNullable(this.keyword);
+    }
+
+    public Optional<PropertyAdsReportMetricsPlacement> placement() {
+        return Optional.ofNullable(this.placement);
     }
 
     public Optional<AdsReportMetricsType> type() {
@@ -97,8 +165,44 @@ public class AdsReportMetrics {
     }
 
 
+    public AdsReportMetrics withCreative(@Nullable PropertyAdsReportMetricsCreative creative) {
+        this.creative = creative;
+        return this;
+    }
+
+
+    public AdsReportMetrics withDimension(@Nullable Dimension dimension) {
+        this.dimension = dimension;
+        return this;
+    }
+
+
+    public AdsReportMetrics withDimensionValue(@Nullable String dimensionValue) {
+        this.dimensionValue = dimensionValue;
+        return this;
+    }
+
+
     public AdsReportMetrics withGroup(@Nullable PropertyAdsReportMetricsGroup group) {
         this.group = group;
+        return this;
+    }
+
+
+    public AdsReportMetrics withInsertionorder(@Nullable PropertyAdsReportMetricsInsertionorder insertionorder) {
+        this.insertionorder = insertionorder;
+        return this;
+    }
+
+
+    public AdsReportMetrics withKeyword(@Nullable PropertyAdsReportMetricsKeyword keyword) {
+        this.keyword = keyword;
+        return this;
+    }
+
+
+    public AdsReportMetrics withPlacement(@Nullable PropertyAdsReportMetricsPlacement placement) {
+        this.placement = placement;
         return this;
     }
 
@@ -127,7 +231,13 @@ public class AdsReportMetrics {
         return 
             Utils.enhancedDeepEquals(this.ad, other.ad) &&
             Utils.enhancedDeepEquals(this.campaign, other.campaign) &&
+            Utils.enhancedDeepEquals(this.creative, other.creative) &&
+            Utils.enhancedDeepEquals(this.dimension, other.dimension) &&
+            Utils.enhancedDeepEquals(this.dimensionValue, other.dimensionValue) &&
             Utils.enhancedDeepEquals(this.group, other.group) &&
+            Utils.enhancedDeepEquals(this.insertionorder, other.insertionorder) &&
+            Utils.enhancedDeepEquals(this.keyword, other.keyword) &&
+            Utils.enhancedDeepEquals(this.placement, other.placement) &&
             Utils.enhancedDeepEquals(this.type, other.type) &&
             Utils.enhancedDeepEquals(this.value, other.value);
     }
@@ -135,7 +245,9 @@ public class AdsReportMetrics {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            ad, campaign, group,
+            ad, campaign, creative,
+            dimension, dimensionValue, group,
+            insertionorder, keyword, placement,
             type, value);
     }
     
@@ -144,7 +256,13 @@ public class AdsReportMetrics {
         return Utils.toString(AdsReportMetrics.class,
                 "ad", ad,
                 "campaign", campaign,
+                "creative", creative,
+                "dimension", dimension,
+                "dimensionValue", dimensionValue,
                 "group", group,
+                "insertionorder", insertionorder,
+                "keyword", keyword,
+                "placement", placement,
                 "type", type,
                 "value", value);
     }
@@ -156,7 +274,19 @@ public class AdsReportMetrics {
 
         private PropertyAdsReportMetricsCampaign campaign;
 
+        private PropertyAdsReportMetricsCreative creative;
+
+        private Dimension dimension;
+
+        private String dimensionValue;
+
         private PropertyAdsReportMetricsGroup group;
+
+        private PropertyAdsReportMetricsInsertionorder insertionorder;
+
+        private PropertyAdsReportMetricsKeyword keyword;
+
+        private PropertyAdsReportMetricsPlacement placement;
 
         private AdsReportMetricsType type;
 
@@ -176,8 +306,38 @@ public class AdsReportMetrics {
             return this;
         }
 
+        public Builder creative(@Nullable PropertyAdsReportMetricsCreative creative) {
+            this.creative = creative;
+            return this;
+        }
+
+        public Builder dimension(@Nullable Dimension dimension) {
+            this.dimension = dimension;
+            return this;
+        }
+
+        public Builder dimensionValue(@Nullable String dimensionValue) {
+            this.dimensionValue = dimensionValue;
+            return this;
+        }
+
         public Builder group(@Nullable PropertyAdsReportMetricsGroup group) {
             this.group = group;
+            return this;
+        }
+
+        public Builder insertionorder(@Nullable PropertyAdsReportMetricsInsertionorder insertionorder) {
+            this.insertionorder = insertionorder;
+            return this;
+        }
+
+        public Builder keyword(@Nullable PropertyAdsReportMetricsKeyword keyword) {
+            this.keyword = keyword;
+            return this;
+        }
+
+        public Builder placement(@Nullable PropertyAdsReportMetricsPlacement placement) {
+            this.placement = placement;
             return this;
         }
 
@@ -193,7 +353,9 @@ public class AdsReportMetrics {
 
         public AdsReportMetrics build() {
             return new AdsReportMetrics(
-                ad, campaign, group,
+                ad, campaign, creative,
+                dimension, dimensionValue, group,
+                insertionorder, keyword, placement,
                 type, value);
         }
 

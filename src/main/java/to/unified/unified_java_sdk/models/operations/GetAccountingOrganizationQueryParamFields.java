@@ -22,6 +22,8 @@ public enum GetAccountingOrganizationQueryParamFields {
     PARENT_ID("parent_id"),
     FISCAL_YEAR_END_MONTH("fiscal_year_end_month"),
     ORGANIZATION_CODE("organization_code"),
+    TYPE("type"),
+    IS_ELIMINATION("is_elimination"),
     RAW("raw");
 
     @JsonValue

@@ -21,6 +21,11 @@ import to.unified.unified_java_sdk.utils.Utils;
 public class AccountingCategory {
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("code")
+    private String code;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private OffsetDateTime createdAt;
 
@@ -46,6 +51,11 @@ public class AccountingCategory {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("organization_id")
+    private String organizationId;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parent_id")
     private String parentId;
 
@@ -56,33 +66,49 @@ public class AccountingCategory {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("type")
+    private AccountingCategoryType type;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     private OffsetDateTime updatedAt;
 
     @JsonCreator
     public AccountingCategory(
+            @JsonProperty("code") @Nullable String code,
             @JsonProperty("created_at") @Nullable OffsetDateTime createdAt,
             @JsonProperty("description") @Nullable String description,
             @JsonProperty("id") @Nullable String id,
             @JsonProperty("is_active") @Nullable Boolean isActive,
             @JsonProperty("name") @Nullable String name,
+            @JsonProperty("organization_id") @Nullable String organizationId,
             @JsonProperty("parent_id") @Nullable String parentId,
             @JsonProperty("raw") @Nullable Map<String, Object> raw,
+            @JsonProperty("type") @Nullable AccountingCategoryType type,
             @JsonProperty("updated_at") @Nullable OffsetDateTime updatedAt) {
+        this.code = code;
         this.createdAt = createdAt;
         this.description = description;
         this.id = id;
         this.isActive = isActive;
         this.name = name;
+        this.organizationId = organizationId;
         this.parentId = parentId;
         this.raw = raw;
+        this.type = type;
         this.updatedAt = updatedAt;
     }
     
     public AccountingCategory() {
         this(null, null, null,
             null, null, null,
+            null, null, null,
             null, null);
+    }
+
+    public Optional<String> code() {
+        return Optional.ofNullable(this.code);
     }
 
     public Optional<OffsetDateTime> createdAt() {
@@ -105,6 +131,10 @@ public class AccountingCategory {
         return Optional.ofNullable(this.name);
     }
 
+    public Optional<String> organizationId() {
+        return Optional.ofNullable(this.organizationId);
+    }
+
     public Optional<String> parentId() {
         return Optional.ofNullable(this.parentId);
     }
@@ -113,12 +143,22 @@ public class AccountingCategory {
         return Optional.ofNullable(this.raw);
     }
 
+    public Optional<AccountingCategoryType> type() {
+        return Optional.ofNullable(this.type);
+    }
+
     public Optional<OffsetDateTime> updatedAt() {
         return Optional.ofNullable(this.updatedAt);
     }
 
     public static Builder builder() {
         return new Builder();
+    }
+
+
+    public AccountingCategory withCode(@Nullable String code) {
+        this.code = code;
+        return this;
     }
 
 
@@ -152,6 +192,12 @@ public class AccountingCategory {
     }
 
 
+    public AccountingCategory withOrganizationId(@Nullable String organizationId) {
+        this.organizationId = organizationId;
+        return this;
+    }
+
+
     public AccountingCategory withParentId(@Nullable String parentId) {
         this.parentId = parentId;
         return this;
@@ -160,6 +206,12 @@ public class AccountingCategory {
 
     public AccountingCategory withRaw(@Nullable Map<String, Object> raw) {
         this.raw = raw;
+        return this;
+    }
+
+
+    public AccountingCategory withType(@Nullable AccountingCategoryType type) {
+        this.type = type;
         return this;
     }
 
@@ -180,39 +232,48 @@ public class AccountingCategory {
         }
         AccountingCategory other = (AccountingCategory) o;
         return 
+            Utils.enhancedDeepEquals(this.code, other.code) &&
             Utils.enhancedDeepEquals(this.createdAt, other.createdAt) &&
             Utils.enhancedDeepEquals(this.description, other.description) &&
             Utils.enhancedDeepEquals(this.id, other.id) &&
             Utils.enhancedDeepEquals(this.isActive, other.isActive) &&
             Utils.enhancedDeepEquals(this.name, other.name) &&
+            Utils.enhancedDeepEquals(this.organizationId, other.organizationId) &&
             Utils.enhancedDeepEquals(this.parentId, other.parentId) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
+            Utils.enhancedDeepEquals(this.type, other.type) &&
             Utils.enhancedDeepEquals(this.updatedAt, other.updatedAt);
     }
     
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            createdAt, description, id,
-            isActive, name, parentId,
-            raw, updatedAt);
+            code, createdAt, description,
+            id, isActive, name,
+            organizationId, parentId, raw,
+            type, updatedAt);
     }
     
     @Override
     public String toString() {
         return Utils.toString(AccountingCategory.class,
+                "code", code,
                 "createdAt", createdAt,
                 "description", description,
                 "id", id,
                 "isActive", isActive,
                 "name", name,
+                "organizationId", organizationId,
                 "parentId", parentId,
                 "raw", raw,
+                "type", type,
                 "updatedAt", updatedAt);
     }
 
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
+
+        private String code;
 
         private OffsetDateTime createdAt;
 
@@ -224,14 +285,23 @@ public class AccountingCategory {
 
         private String name;
 
+        private String organizationId;
+
         private String parentId;
 
         private Map<String, Object> raw;
+
+        private AccountingCategoryType type;
 
         private OffsetDateTime updatedAt;
 
         private Builder() {
           // force use of static builder() method
+        }
+
+        public Builder code(@Nullable String code) {
+            this.code = code;
+            return this;
         }
 
         public Builder createdAt(@Nullable OffsetDateTime createdAt) {
@@ -259,6 +329,11 @@ public class AccountingCategory {
             return this;
         }
 
+        public Builder organizationId(@Nullable String organizationId) {
+            this.organizationId = organizationId;
+            return this;
+        }
+
         public Builder parentId(@Nullable String parentId) {
             this.parentId = parentId;
             return this;
@@ -269,6 +344,11 @@ public class AccountingCategory {
             return this;
         }
 
+        public Builder type(@Nullable AccountingCategoryType type) {
+            this.type = type;
+            return this;
+        }
+
         public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;
@@ -276,9 +356,10 @@ public class AccountingCategory {
 
         public AccountingCategory build() {
             return new AccountingCategory(
-                createdAt, description, id,
-                isActive, name, parentId,
-                raw, updatedAt);
+                code, createdAt, description,
+                id, isActive, name,
+                organizationId, parentId, raw,
+                type, updatedAt);
         }
 
     }

@@ -9,6 +9,9 @@ import jakarta.annotation.Nonnull;
 import to.unified.unified_java_sdk.models.operations.CreateAdsAdRequest;
 import to.unified.unified_java_sdk.models.operations.CreateAdsAdRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateAdsAdResponse;
+import to.unified.unified_java_sdk.models.operations.CreateAdsAssetRequest;
+import to.unified.unified_java_sdk.models.operations.CreateAdsAssetRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.CreateAdsAssetResponse;
 import to.unified.unified_java_sdk.models.operations.CreateAdsCampaignRequest;
 import to.unified.unified_java_sdk.models.operations.CreateAdsCampaignRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateAdsCampaignResponse;
@@ -27,6 +30,9 @@ import to.unified.unified_java_sdk.models.operations.CreateAdsOrganizationRespon
 import to.unified.unified_java_sdk.models.operations.GetAdsAdRequest;
 import to.unified.unified_java_sdk.models.operations.GetAdsAdRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.GetAdsAdResponse;
+import to.unified.unified_java_sdk.models.operations.GetAdsAssetRequest;
+import to.unified.unified_java_sdk.models.operations.GetAdsAssetRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetAdsAssetResponse;
 import to.unified.unified_java_sdk.models.operations.GetAdsCampaignRequest;
 import to.unified.unified_java_sdk.models.operations.GetAdsCampaignRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.GetAdsCampaignResponse;
@@ -51,6 +57,9 @@ import to.unified.unified_java_sdk.models.operations.GetAdsTargetResponse;
 import to.unified.unified_java_sdk.models.operations.ListAdsAdsRequest;
 import to.unified.unified_java_sdk.models.operations.ListAdsAdsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.ListAdsAdsResponse;
+import to.unified.unified_java_sdk.models.operations.ListAdsAssetsRequest;
+import to.unified.unified_java_sdk.models.operations.ListAdsAssetsRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListAdsAssetsResponse;
 import to.unified.unified_java_sdk.models.operations.ListAdsCampaignsRequest;
 import to.unified.unified_java_sdk.models.operations.ListAdsCampaignsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.ListAdsCampaignsResponse;
@@ -130,12 +139,14 @@ import to.unified.unified_java_sdk.models.operations.UpdateAdsOrganizationReques
 import to.unified.unified_java_sdk.models.operations.UpdateAdsOrganizationRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.UpdateAdsOrganizationResponse;
 import to.unified.unified_java_sdk.operations.CreateAdsAd;
+import to.unified.unified_java_sdk.operations.CreateAdsAsset;
 import to.unified.unified_java_sdk.operations.CreateAdsCampaign;
 import to.unified.unified_java_sdk.operations.CreateAdsCreative;
 import to.unified.unified_java_sdk.operations.CreateAdsGroup;
 import to.unified.unified_java_sdk.operations.CreateAdsInsertionorder;
 import to.unified.unified_java_sdk.operations.CreateAdsOrganization;
 import to.unified.unified_java_sdk.operations.GetAdsAd;
+import to.unified.unified_java_sdk.operations.GetAdsAsset;
 import to.unified.unified_java_sdk.operations.GetAdsCampaign;
 import to.unified.unified_java_sdk.operations.GetAdsCreative;
 import to.unified.unified_java_sdk.operations.GetAdsGroup;
@@ -144,6 +155,7 @@ import to.unified.unified_java_sdk.operations.GetAdsOrganization;
 import to.unified.unified_java_sdk.operations.GetAdsPromoted;
 import to.unified.unified_java_sdk.operations.GetAdsTarget;
 import to.unified.unified_java_sdk.operations.ListAdsAds;
+import to.unified.unified_java_sdk.operations.ListAdsAssets;
 import to.unified.unified_java_sdk.operations.ListAdsCampaigns;
 import to.unified.unified_java_sdk.operations.ListAdsCreatives;
 import to.unified.unified_java_sdk.operations.ListAdsGroups;
@@ -211,6 +223,28 @@ public class Ads {
     public CreateAdsAdResponse createAdsAd(@Nonnull CreateAdsAdRequest request) {
         RequestOperation<CreateAdsAdRequest, CreateAdsAdResponse> operation
               = new CreateAdsAd.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Create an asset
+     * 
+     * @return The call builder
+     */
+    public CreateAdsAssetRequestBuilder createAdsAsset() {
+        return new CreateAdsAssetRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Create an asset
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateAdsAssetResponse createAdsAsset(@Nonnull CreateAdsAssetRequest request) {
+        RequestOperation<CreateAdsAssetRequest, CreateAdsAssetResponse> operation
+              = new CreateAdsAsset.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -343,6 +377,28 @@ public class Ads {
     public GetAdsAdResponse getAdsAd(@Nonnull GetAdsAdRequest request) {
         RequestOperation<GetAdsAdRequest, GetAdsAdResponse> operation
               = new GetAdsAd.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Retrieve an asset
+     * 
+     * @return The call builder
+     */
+    public GetAdsAssetRequestBuilder getAdsAsset() {
+        return new GetAdsAssetRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Retrieve an asset
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetAdsAssetResponse getAdsAsset(@Nonnull GetAdsAssetRequest request) {
+        RequestOperation<GetAdsAssetRequest, GetAdsAssetResponse> operation
+              = new GetAdsAsset.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -519,6 +575,28 @@ public class Ads {
     public ListAdsAdsResponse listAdsAds(@Nonnull ListAdsAdsRequest request) {
         RequestOperation<ListAdsAdsRequest, ListAdsAdsResponse> operation
               = new ListAdsAds.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * List all assets
+     * 
+     * @return The call builder
+     */
+    public ListAdsAssetsRequestBuilder listAdsAssets() {
+        return new ListAdsAssetsRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * List all assets
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListAdsAssetsResponse listAdsAssets(@Nonnull ListAdsAssetsRequest request) {
+        RequestOperation<ListAdsAssetsRequest, ListAdsAssetsResponse> operation
+              = new ListAdsAssets.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

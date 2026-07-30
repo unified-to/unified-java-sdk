@@ -21,6 +21,8 @@ public enum GetAccountingJournalQueryParamFields {
     POSTED_AT("posted_at"),
     SOURCE("source"),
     ORGANIZATION_ID("organization_id"),
+    CATEGORY_IDS("category_ids"),
+    ATTACHMENTS("attachments"),
     RAW("raw");
 
     @JsonValue
