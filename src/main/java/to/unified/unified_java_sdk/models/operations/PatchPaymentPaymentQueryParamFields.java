@@ -24,8 +24,8 @@ public enum PatchPaymentPaymentQueryParamFields {
     ACCOUNT_ID("account_id"),
     REFERENCE("reference"),
     ORGANIZATION_ID("organization_id"),
-    ALLOCATIONS("allocations"),
-    RAW("raw");
+    RAW("raw"),
+    ALLOCATIONS("allocations");
 
     @JsonValue
     private final String value;

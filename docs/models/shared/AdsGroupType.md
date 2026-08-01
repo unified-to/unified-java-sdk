@@ -29,3 +29,6 @@ AdsGroupType custom = AdsGroupType.of("custom_value");
 | `SEARCH`     | SEARCH       |
 | `AUDIO`      | AUDIO        |
 | `YOUTUBE`    | YOUTUBE      |
+| `NATIVE`     | NATIVE       |
+| `CTV`        | CTV          |
+| `DOOH`       | DOOH         |

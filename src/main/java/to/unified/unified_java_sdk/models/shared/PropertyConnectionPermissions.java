@@ -274,6 +274,7 @@ public class PropertyConnectionPermissions {
     public static final PropertyConnectionPermissions SHIPPING_LABEL_WRITE = new PropertyConnectionPermissions("shipping_label_write");
     public static final PropertyConnectionPermissions SHIPPING_TRACKING_READ = new PropertyConnectionPermissions("shipping_tracking_read");
     public static final PropertyConnectionPermissions SHIPPING_RATE_READ = new PropertyConnectionPermissions("shipping_rate_read");
+    public static final PropertyConnectionPermissions SHIPPING_RATE_WRITE = new PropertyConnectionPermissions("shipping_rate_write");
     public static final PropertyConnectionPermissions SHIPPING_CARRIER_READ = new PropertyConnectionPermissions("shipping_carrier_read");
     public static final PropertyConnectionPermissions SIGNING_DOCUMENT_READ = new PropertyConnectionPermissions("signing_document_read");
     public static final PropertyConnectionPermissions SIGNING_DOCUMENT_WRITE = new PropertyConnectionPermissions("signing_document_write");
@@ -637,6 +638,7 @@ public class PropertyConnectionPermissions {
         map.put("shipping_label_write", SHIPPING_LABEL_WRITE);
         map.put("shipping_tracking_read", SHIPPING_TRACKING_READ);
         map.put("shipping_rate_read", SHIPPING_RATE_READ);
+        map.put("shipping_rate_write", SHIPPING_RATE_WRITE);
         map.put("shipping_carrier_read", SHIPPING_CARRIER_READ);
         map.put("signing_document_read", SIGNING_DOCUMENT_READ);
         map.put("signing_document_write", SIGNING_DOCUMENT_WRITE);
@@ -932,6 +934,7 @@ public class PropertyConnectionPermissions {
         map.put("shipping_label_write", PropertyConnectionPermissionsEnum.SHIPPING_LABEL_WRITE);
         map.put("shipping_tracking_read", PropertyConnectionPermissionsEnum.SHIPPING_TRACKING_READ);
         map.put("shipping_rate_read", PropertyConnectionPermissionsEnum.SHIPPING_RATE_READ);
+        map.put("shipping_rate_write", PropertyConnectionPermissionsEnum.SHIPPING_RATE_WRITE);
         map.put("shipping_carrier_read", PropertyConnectionPermissionsEnum.SHIPPING_CARRIER_READ);
         map.put("signing_document_read", PropertyConnectionPermissionsEnum.SIGNING_DOCUMENT_READ);
         map.put("signing_document_write", PropertyConnectionPermissionsEnum.SIGNING_DOCUMENT_WRITE);
@@ -1228,6 +1231,7 @@ public class PropertyConnectionPermissions {
         SHIPPING_LABEL_WRITE("shipping_label_write"),
         SHIPPING_TRACKING_READ("shipping_tracking_read"),
         SHIPPING_RATE_READ("shipping_rate_read"),
+        SHIPPING_RATE_WRITE("shipping_rate_write"),
         SHIPPING_CARRIER_READ("shipping_carrier_read"),
         SIGNING_DOCUMENT_READ("signing_document_read"),
         SIGNING_DOCUMENT_WRITE("signing_document_write"),

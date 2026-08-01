@@ -33,6 +33,9 @@ public class PropertyAdsReportMetricsGroupType {
     public static final PropertyAdsReportMetricsGroupType SEARCH = new PropertyAdsReportMetricsGroupType("SEARCH");
     public static final PropertyAdsReportMetricsGroupType AUDIO = new PropertyAdsReportMetricsGroupType("AUDIO");
     public static final PropertyAdsReportMetricsGroupType YOUTUBE = new PropertyAdsReportMetricsGroupType("YOUTUBE");
+    public static final PropertyAdsReportMetricsGroupType NATIVE = new PropertyAdsReportMetricsGroupType("NATIVE");
+    public static final PropertyAdsReportMetricsGroupType CTV = new PropertyAdsReportMetricsGroupType("CTV");
+    public static final PropertyAdsReportMetricsGroupType DOOH = new PropertyAdsReportMetricsGroupType("DOOH");
 
     // This map will grow whenever a Color gets created with a new
     // unrecognized value (a potential memory leak if the user is not
@@ -119,6 +122,9 @@ public class PropertyAdsReportMetricsGroupType {
         map.put("SEARCH", SEARCH);
         map.put("AUDIO", AUDIO);
         map.put("YOUTUBE", YOUTUBE);
+        map.put("NATIVE", NATIVE);
+        map.put("CTV", CTV);
+        map.put("DOOH", DOOH);
         return map;
     }
 
@@ -137,6 +143,9 @@ public class PropertyAdsReportMetricsGroupType {
         map.put("SEARCH", PropertyAdsReportMetricsGroupTypeEnum.SEARCH);
         map.put("AUDIO", PropertyAdsReportMetricsGroupTypeEnum.AUDIO);
         map.put("YOUTUBE", PropertyAdsReportMetricsGroupTypeEnum.YOUTUBE);
+        map.put("NATIVE", PropertyAdsReportMetricsGroupTypeEnum.NATIVE);
+        map.put("CTV", PropertyAdsReportMetricsGroupTypeEnum.CTV);
+        map.put("DOOH", PropertyAdsReportMetricsGroupTypeEnum.DOOH);
         return map;
     }
     
@@ -155,7 +164,10 @@ public class PropertyAdsReportMetricsGroupType {
         DISPLAY("DISPLAY"),
         SEARCH("SEARCH"),
         AUDIO("AUDIO"),
-        YOUTUBE("YOUTUBE"),;
+        YOUTUBE("YOUTUBE"),
+        NATIVE("NATIVE"),
+        CTV("CTV"),
+        DOOH("DOOH"),;
 
         private final String value;
 

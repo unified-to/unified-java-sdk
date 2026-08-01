@@ -37,6 +37,11 @@ public class PropertyAdsReportMetricsCampaign {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("budget_unit")
+    private PropertyAdsReportMetricsCampaignBudgetUnit budgetUnit;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("campaign_budget_identifier")
     private String campaignBudgetIdentifier;
 
@@ -135,6 +140,7 @@ public class PropertyAdsReportMetricsCampaign {
             @JsonProperty("advertising_channel_type") @Nullable PropertyAdsReportMetricsCampaignAdvertisingChannelType advertisingChannelType,
             @JsonProperty("budget_amount") @Nullable Double budgetAmount,
             @JsonProperty("budget_period") @Nullable PropertyAdsReportMetricsCampaignBudgetPeriod budgetPeriod,
+            @JsonProperty("budget_unit") @Nullable PropertyAdsReportMetricsCampaignBudgetUnit budgetUnit,
             @JsonProperty("campaign_budget_identifier") @Nullable String campaignBudgetIdentifier,
             @JsonProperty("category") @Nullable String category,
             @JsonProperty("created_at") @Nullable OffsetDateTime createdAt,
@@ -157,6 +163,7 @@ public class PropertyAdsReportMetricsCampaign {
         this.advertisingChannelType = advertisingChannelType;
         this.budgetAmount = budgetAmount;
         this.budgetPeriod = budgetPeriod;
+        this.budgetUnit = budgetUnit;
         this.campaignBudgetIdentifier = campaignBudgetIdentifier;
         this.category = category;
         this.createdAt = createdAt;
@@ -186,7 +193,7 @@ public class PropertyAdsReportMetricsCampaign {
             null, null, null,
             null, null, null,
             null, null, null,
-            null);
+            null, null);
     }
 
     public Optional<PropertyAdsReportMetricsCampaignAdvertisingChannelType> advertisingChannelType() {
@@ -199,6 +206,10 @@ public class PropertyAdsReportMetricsCampaign {
 
     public Optional<PropertyAdsReportMetricsCampaignBudgetPeriod> budgetPeriod() {
         return Optional.ofNullable(this.budgetPeriod);
+    }
+
+    public Optional<PropertyAdsReportMetricsCampaignBudgetUnit> budgetUnit() {
+        return Optional.ofNullable(this.budgetUnit);
     }
 
     public Optional<String> campaignBudgetIdentifier() {
@@ -296,6 +307,12 @@ public class PropertyAdsReportMetricsCampaign {
 
     public PropertyAdsReportMetricsCampaign withBudgetPeriod(@Nullable PropertyAdsReportMetricsCampaignBudgetPeriod budgetPeriod) {
         this.budgetPeriod = budgetPeriod;
+        return this;
+    }
+
+
+    public PropertyAdsReportMetricsCampaign withBudgetUnit(@Nullable PropertyAdsReportMetricsCampaignBudgetUnit budgetUnit) {
+        this.budgetUnit = budgetUnit;
         return this;
     }
 
@@ -427,6 +444,7 @@ public class PropertyAdsReportMetricsCampaign {
             Utils.enhancedDeepEquals(this.advertisingChannelType, other.advertisingChannelType) &&
             Utils.enhancedDeepEquals(this.budgetAmount, other.budgetAmount) &&
             Utils.enhancedDeepEquals(this.budgetPeriod, other.budgetPeriod) &&
+            Utils.enhancedDeepEquals(this.budgetUnit, other.budgetUnit) &&
             Utils.enhancedDeepEquals(this.campaignBudgetIdentifier, other.campaignBudgetIdentifier) &&
             Utils.enhancedDeepEquals(this.category, other.category) &&
             Utils.enhancedDeepEquals(this.createdAt, other.createdAt) &&
@@ -452,13 +470,13 @@ public class PropertyAdsReportMetricsCampaign {
     public int hashCode() {
         return Utils.enhancedHash(
             advertisingChannelType, budgetAmount, budgetPeriod,
-            campaignBudgetIdentifier, category, createdAt,
-            currency, effectiveStatus, endAt,
-            frequencyCap, goal, hasEuPoliticalAds,
-            id, name, organizationId,
-            plannedSpendAmount, raw, startAt,
-            status, targeting, totalSpendAmount,
-            updatedAt);
+            budgetUnit, campaignBudgetIdentifier, category,
+            createdAt, currency, effectiveStatus,
+            endAt, frequencyCap, goal,
+            hasEuPoliticalAds, id, name,
+            organizationId, plannedSpendAmount, raw,
+            startAt, status, targeting,
+            totalSpendAmount, updatedAt);
     }
     
     @Override
@@ -467,6 +485,7 @@ public class PropertyAdsReportMetricsCampaign {
                 "advertisingChannelType", advertisingChannelType,
                 "budgetAmount", budgetAmount,
                 "budgetPeriod", budgetPeriod,
+                "budgetUnit", budgetUnit,
                 "campaignBudgetIdentifier", campaignBudgetIdentifier,
                 "category", category,
                 "createdAt", createdAt,
@@ -496,6 +515,8 @@ public class PropertyAdsReportMetricsCampaign {
         private Double budgetAmount;
 
         private PropertyAdsReportMetricsCampaignBudgetPeriod budgetPeriod;
+
+        private PropertyAdsReportMetricsCampaignBudgetUnit budgetUnit;
 
         private String campaignBudgetIdentifier;
 
@@ -551,6 +572,11 @@ public class PropertyAdsReportMetricsCampaign {
 
         public Builder budgetPeriod(@Nullable PropertyAdsReportMetricsCampaignBudgetPeriod budgetPeriod) {
             this.budgetPeriod = budgetPeriod;
+            return this;
+        }
+
+        public Builder budgetUnit(@Nullable PropertyAdsReportMetricsCampaignBudgetUnit budgetUnit) {
+            this.budgetUnit = budgetUnit;
             return this;
         }
 
@@ -652,13 +678,13 @@ public class PropertyAdsReportMetricsCampaign {
         public PropertyAdsReportMetricsCampaign build() {
             return new PropertyAdsReportMetricsCampaign(
                 advertisingChannelType, budgetAmount, budgetPeriod,
-                campaignBudgetIdentifier, category, createdAt,
-                currency, effectiveStatus, endAt,
-                frequencyCap, goal, hasEuPoliticalAds,
-                id, name, organizationId,
-                plannedSpendAmount, raw, startAt,
-                status, targeting, totalSpendAmount,
-                updatedAt);
+                budgetUnit, campaignBudgetIdentifier, category,
+                createdAt, currency, effectiveStatus,
+                endAt, frequencyCap, goal,
+                hasEuPoliticalAds, id, name,
+                organizationId, plannedSpendAmount, raw,
+                startAt, status, targeting,
+                totalSpendAmount, updatedAt);
         }
 
     }

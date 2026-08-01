@@ -33,6 +33,9 @@ public class AdsGroupType {
     public static final AdsGroupType SEARCH = new AdsGroupType("SEARCH");
     public static final AdsGroupType AUDIO = new AdsGroupType("AUDIO");
     public static final AdsGroupType YOUTUBE = new AdsGroupType("YOUTUBE");
+    public static final AdsGroupType NATIVE = new AdsGroupType("NATIVE");
+    public static final AdsGroupType CTV = new AdsGroupType("CTV");
+    public static final AdsGroupType DOOH = new AdsGroupType("DOOH");
 
     // This map will grow whenever a Color gets created with a new
     // unrecognized value (a potential memory leak if the user is not
@@ -119,6 +122,9 @@ public class AdsGroupType {
         map.put("SEARCH", SEARCH);
         map.put("AUDIO", AUDIO);
         map.put("YOUTUBE", YOUTUBE);
+        map.put("NATIVE", NATIVE);
+        map.put("CTV", CTV);
+        map.put("DOOH", DOOH);
         return map;
     }
 
@@ -137,6 +143,9 @@ public class AdsGroupType {
         map.put("SEARCH", AdsGroupTypeEnum.SEARCH);
         map.put("AUDIO", AdsGroupTypeEnum.AUDIO);
         map.put("YOUTUBE", AdsGroupTypeEnum.YOUTUBE);
+        map.put("NATIVE", AdsGroupTypeEnum.NATIVE);
+        map.put("CTV", AdsGroupTypeEnum.CTV);
+        map.put("DOOH", AdsGroupTypeEnum.DOOH);
         return map;
     }
     
@@ -155,7 +164,10 @@ public class AdsGroupType {
         DISPLAY("DISPLAY"),
         SEARCH("SEARCH"),
         AUDIO("AUDIO"),
-        YOUTUBE("YOUTUBE"),;
+        YOUTUBE("YOUTUBE"),
+        NATIVE("NATIVE"),
+        CTV("CTV"),
+        DOOH("DOOH"),;
 
         private final String value;
 

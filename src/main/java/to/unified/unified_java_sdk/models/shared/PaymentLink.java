@@ -43,6 +43,11 @@ public class PaymentLink {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("description")
+    private String description;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     private String id;
 
@@ -92,6 +97,7 @@ public class PaymentLink {
             @JsonProperty("contact_id") @Nullable String contactId,
             @JsonProperty("created_at") @Nullable OffsetDateTime createdAt,
             @JsonProperty("currency") @Nullable String currency,
+            @JsonProperty("description") @Nullable String description,
             @JsonProperty("id") @Nullable String id,
             @JsonProperty("is_active") @Nullable Boolean isActive,
             @JsonProperty("is_chargeable_now") @Nullable Boolean isChargeableNow,
@@ -105,6 +111,7 @@ public class PaymentLink {
         this.contactId = contactId;
         this.createdAt = createdAt;
         this.currency = currency;
+        this.description = description;
         this.id = id;
         this.isActive = isActive;
         this.isChargeableNow = isChargeableNow;
@@ -121,7 +128,7 @@ public class PaymentLink {
             null, null, null,
             null, null, null,
             null, null, null,
-            null);
+            null, null);
     }
 
     public Optional<Double> amount() {
@@ -138,6 +145,10 @@ public class PaymentLink {
 
     public Optional<String> currency() {
         return Optional.ofNullable(this.currency);
+    }
+
+    public Optional<String> description() {
+        return Optional.ofNullable(this.description);
     }
 
     public Optional<String> id() {
@@ -201,6 +212,12 @@ public class PaymentLink {
 
     public PaymentLink withCurrency(@Nullable String currency) {
         this.currency = currency;
+        return this;
+    }
+
+
+    public PaymentLink withDescription(@Nullable String description) {
+        this.description = description;
         return this;
     }
 
@@ -273,6 +290,7 @@ public class PaymentLink {
             Utils.enhancedDeepEquals(this.contactId, other.contactId) &&
             Utils.enhancedDeepEquals(this.createdAt, other.createdAt) &&
             Utils.enhancedDeepEquals(this.currency, other.currency) &&
+            Utils.enhancedDeepEquals(this.description, other.description) &&
             Utils.enhancedDeepEquals(this.id, other.id) &&
             Utils.enhancedDeepEquals(this.isActive, other.isActive) &&
             Utils.enhancedDeepEquals(this.isChargeableNow, other.isChargeableNow) &&
@@ -288,10 +306,10 @@ public class PaymentLink {
     public int hashCode() {
         return Utils.enhancedHash(
             amount, contactId, createdAt,
-            currency, id, isActive,
-            isChargeableNow, lineitems, paymentId,
-            raw, successUrl, updatedAt,
-            url);
+            currency, description, id,
+            isActive, isChargeableNow, lineitems,
+            paymentId, raw, successUrl,
+            updatedAt, url);
     }
     
     @Override
@@ -301,6 +319,7 @@ public class PaymentLink {
                 "contactId", contactId,
                 "createdAt", createdAt,
                 "currency", currency,
+                "description", description,
                 "id", id,
                 "isActive", isActive,
                 "isChargeableNow", isChargeableNow,
@@ -322,6 +341,8 @@ public class PaymentLink {
         private OffsetDateTime createdAt;
 
         private String currency;
+
+        private String description;
 
         private String id;
 
@@ -362,6 +383,11 @@ public class PaymentLink {
 
         public Builder currency(@Nullable String currency) {
             this.currency = currency;
+            return this;
+        }
+
+        public Builder description(@Nullable String description) {
+            this.description = description;
             return this;
         }
 
@@ -413,10 +439,10 @@ public class PaymentLink {
         public PaymentLink build() {
             return new PaymentLink(
                 amount, contactId, createdAt,
-                currency, id, isActive,
-                isChargeableNow, lineitems, paymentId,
-                raw, successUrl, updatedAt,
-                url);
+                currency, description, id,
+                isActive, isChargeableNow, lineitems,
+                paymentId, raw, successUrl,
+                updatedAt, url);
         }
 
     }

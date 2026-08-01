@@ -33,6 +33,9 @@ public class AdType {
     public static final AdType SEARCH = new AdType("SEARCH");
     public static final AdType AUDIO = new AdType("AUDIO");
     public static final AdType YOUTUBE = new AdType("YOUTUBE");
+    public static final AdType NATIVE = new AdType("NATIVE");
+    public static final AdType CTV = new AdType("CTV");
+    public static final AdType DOOH = new AdType("DOOH");
 
     // This map will grow whenever a Color gets created with a new
     // unrecognized value (a potential memory leak if the user is not
@@ -119,6 +122,9 @@ public class AdType {
         map.put("SEARCH", SEARCH);
         map.put("AUDIO", AUDIO);
         map.put("YOUTUBE", YOUTUBE);
+        map.put("NATIVE", NATIVE);
+        map.put("CTV", CTV);
+        map.put("DOOH", DOOH);
         return map;
     }
 
@@ -137,6 +143,9 @@ public class AdType {
         map.put("SEARCH", AdTypeEnum.SEARCH);
         map.put("AUDIO", AdTypeEnum.AUDIO);
         map.put("YOUTUBE", AdTypeEnum.YOUTUBE);
+        map.put("NATIVE", AdTypeEnum.NATIVE);
+        map.put("CTV", AdTypeEnum.CTV);
+        map.put("DOOH", AdTypeEnum.DOOH);
         return map;
     }
     
@@ -155,7 +164,10 @@ public class AdType {
         DISPLAY("DISPLAY"),
         SEARCH("SEARCH"),
         AUDIO("AUDIO"),
-        YOUTUBE("YOUTUBE"),;
+        YOUTUBE("YOUTUBE"),
+        NATIVE("NATIVE"),
+        CTV("CTV"),
+        DOOH("DOOH"),;
 
         private final String value;
 

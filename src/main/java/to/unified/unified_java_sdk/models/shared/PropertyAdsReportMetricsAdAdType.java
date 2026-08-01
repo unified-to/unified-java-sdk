@@ -33,6 +33,9 @@ public class PropertyAdsReportMetricsAdAdType {
     public static final PropertyAdsReportMetricsAdAdType SEARCH = new PropertyAdsReportMetricsAdAdType("SEARCH");
     public static final PropertyAdsReportMetricsAdAdType AUDIO = new PropertyAdsReportMetricsAdAdType("AUDIO");
     public static final PropertyAdsReportMetricsAdAdType YOUTUBE = new PropertyAdsReportMetricsAdAdType("YOUTUBE");
+    public static final PropertyAdsReportMetricsAdAdType NATIVE = new PropertyAdsReportMetricsAdAdType("NATIVE");
+    public static final PropertyAdsReportMetricsAdAdType CTV = new PropertyAdsReportMetricsAdAdType("CTV");
+    public static final PropertyAdsReportMetricsAdAdType DOOH = new PropertyAdsReportMetricsAdAdType("DOOH");
 
     // This map will grow whenever a Color gets created with a new
     // unrecognized value (a potential memory leak if the user is not
@@ -119,6 +122,9 @@ public class PropertyAdsReportMetricsAdAdType {
         map.put("SEARCH", SEARCH);
         map.put("AUDIO", AUDIO);
         map.put("YOUTUBE", YOUTUBE);
+        map.put("NATIVE", NATIVE);
+        map.put("CTV", CTV);
+        map.put("DOOH", DOOH);
         return map;
     }
 
@@ -137,6 +143,9 @@ public class PropertyAdsReportMetricsAdAdType {
         map.put("SEARCH", PropertyAdsReportMetricsAdAdTypeEnum.SEARCH);
         map.put("AUDIO", PropertyAdsReportMetricsAdAdTypeEnum.AUDIO);
         map.put("YOUTUBE", PropertyAdsReportMetricsAdAdTypeEnum.YOUTUBE);
+        map.put("NATIVE", PropertyAdsReportMetricsAdAdTypeEnum.NATIVE);
+        map.put("CTV", PropertyAdsReportMetricsAdAdTypeEnum.CTV);
+        map.put("DOOH", PropertyAdsReportMetricsAdAdTypeEnum.DOOH);
         return map;
     }
     
@@ -155,7 +164,10 @@ public class PropertyAdsReportMetricsAdAdType {
         DISPLAY("DISPLAY"),
         SEARCH("SEARCH"),
         AUDIO("AUDIO"),
-        YOUTUBE("YOUTUBE"),;
+        YOUTUBE("YOUTUBE"),
+        NATIVE("NATIVE"),
+        CTV("CTV"),
+        DOOH("DOOH"),;
 
         private final String value;
 

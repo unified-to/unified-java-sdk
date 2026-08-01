@@ -25,6 +25,11 @@ public class Issue {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("customer_note")
+    private String customerNote;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     private String id;
 
@@ -77,6 +82,7 @@ public class Issue {
     @JsonCreator
     public Issue(
             @JsonProperty("created_at") @Nullable String createdAt,
+            @JsonProperty("customer_note") @Nullable String customerNote,
             @JsonProperty("id") @Nullable String id,
             @JsonProperty("importance") @Nullable Double importance,
             @JsonProperty("resolution_time") @Nullable Double resolutionTime,
@@ -89,6 +95,7 @@ public class Issue {
             @JsonProperty("url") @Nullable String url,
             @JsonProperty("workspace_id") @Nonnull String workspaceId) {
         this.createdAt = createdAt;
+        this.customerNote = customerNote;
         this.id = id;
         this.importance = importance;
         this.resolutionTime = resolutionTime;
@@ -112,13 +119,18 @@ public class Issue {
             @Nonnull String title,
             @Nonnull String workspaceId) {
         this(null, null, null,
-            null, null, status,
-            ticketRef, title, null,
-            null, null, workspaceId);
+            null, null, null,
+            status, ticketRef, title,
+            null, null, null,
+            workspaceId);
     }
 
     public Optional<String> createdAt() {
         return Optional.ofNullable(this.createdAt);
+    }
+
+    public Optional<String> customerNote() {
+        return Optional.ofNullable(this.customerNote);
     }
 
     public Optional<String> id() {
@@ -172,6 +184,12 @@ public class Issue {
 
     public Issue withCreatedAt(@Nullable String createdAt) {
         this.createdAt = createdAt;
+        return this;
+    }
+
+
+    public Issue withCustomerNote(@Nullable String customerNote) {
+        this.customerNote = customerNote;
         return this;
     }
 
@@ -253,6 +271,7 @@ public class Issue {
         Issue other = (Issue) o;
         return 
             Utils.enhancedDeepEquals(this.createdAt, other.createdAt) &&
+            Utils.enhancedDeepEquals(this.customerNote, other.customerNote) &&
             Utils.enhancedDeepEquals(this.id, other.id) &&
             Utils.enhancedDeepEquals(this.importance, other.importance) &&
             Utils.enhancedDeepEquals(this.resolutionTime, other.resolutionTime) &&
@@ -269,16 +288,18 @@ public class Issue {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            createdAt, id, importance,
-            resolutionTime, size, status,
-            ticketRef, title, type,
-            updatedAt, url, workspaceId);
+            createdAt, customerNote, id,
+            importance, resolutionTime, size,
+            status, ticketRef, title,
+            type, updatedAt, url,
+            workspaceId);
     }
     
     @Override
     public String toString() {
         return Utils.toString(Issue.class,
                 "createdAt", createdAt,
+                "customerNote", customerNote,
                 "id", id,
                 "importance", importance,
                 "resolutionTime", resolutionTime,
@@ -296,6 +317,8 @@ public class Issue {
     public final static class Builder {
 
         private String createdAt;
+
+        private String customerNote;
 
         private String id;
 
@@ -325,6 +348,11 @@ public class Issue {
 
         public Builder createdAt(@Nullable String createdAt) {
             this.createdAt = createdAt;
+            return this;
+        }
+
+        public Builder customerNote(@Nullable String customerNote) {
+            this.customerNote = customerNote;
             return this;
         }
 
@@ -385,10 +413,11 @@ public class Issue {
 
         public Issue build() {
             return new Issue(
-                createdAt, id, importance,
-                resolutionTime, size, status,
-                ticketRef, title, type,
-                updatedAt, url, workspaceId);
+                createdAt, customerNote, id,
+                importance, resolutionTime, size,
+                status, ticketRef, title,
+                type, updatedAt, url,
+                workspaceId);
         }
 
     }

@@ -61,7 +61,7 @@ public class AdsGroup {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("budget_unit")
-    private BudgetUnit budgetUnit;
+    private AdsGroupBudgetUnit budgetUnit;
 
 
     @JsonInclude(Include.NON_ABSENT)
@@ -182,7 +182,7 @@ public class AdsGroup {
             @JsonProperty("budget_amount") @Nullable Double budgetAmount,
             @JsonProperty("budget_max_amount") @Nullable Double budgetMaxAmount,
             @JsonProperty("budget_period") @Nullable AdsGroupBudgetPeriod budgetPeriod,
-            @JsonProperty("budget_unit") @Nullable BudgetUnit budgetUnit,
+            @JsonProperty("budget_unit") @Nullable AdsGroupBudgetUnit budgetUnit,
             @JsonProperty("campaign_id") @Nullable String campaignId,
             @JsonProperty("created_at") @Nullable OffsetDateTime createdAt,
             @JsonProperty("creative_ids") @Nullable List<String> creativeIds,
@@ -281,7 +281,7 @@ public class AdsGroup {
         return Optional.ofNullable(this.budgetPeriod);
     }
 
-    public Optional<BudgetUnit> budgetUnit() {
+    public Optional<AdsGroupBudgetUnit> budgetUnit() {
         return Optional.ofNullable(this.budgetUnit);
     }
 
@@ -423,7 +423,7 @@ public class AdsGroup {
     }
 
 
-    public AdsGroup withBudgetUnit(@Nullable BudgetUnit budgetUnit) {
+    public AdsGroup withBudgetUnit(@Nullable AdsGroupBudgetUnit budgetUnit) {
         this.budgetUnit = budgetUnit;
         return this;
     }
@@ -670,7 +670,7 @@ public class AdsGroup {
 
         private AdsGroupBudgetPeriod budgetPeriod;
 
-        private BudgetUnit budgetUnit;
+        private AdsGroupBudgetUnit budgetUnit;
 
         private String campaignId;
 
@@ -758,7 +758,7 @@ public class AdsGroup {
             return this;
         }
 
-        public Builder budgetUnit(@Nullable BudgetUnit budgetUnit) {
+        public Builder budgetUnit(@Nullable AdsGroupBudgetUnit budgetUnit) {
             this.budgetUnit = budgetUnit;
             return this;
         }

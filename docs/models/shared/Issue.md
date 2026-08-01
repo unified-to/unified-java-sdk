@@ -6,6 +6,7 @@
 | Field                                             | Type                                              | Required                                          | Description                                       |
 | ------------------------------------------------- | ------------------------------------------------- | ------------------------------------------------- | ------------------------------------------------- |
 | `createdAt`                                       | *Optional\<String>*                               | :heavy_minus_sign:                                | N/A                                               |
+| `customerNote`                                    | *Optional\<String>*                               | :heavy_minus_sign:                                | N/A                                               |
 | `id`                                              | *Optional\<String>*                               | :heavy_minus_sign:                                | N/A                                               |
 | `importance`                                      | *Optional\<Double>*                               | :heavy_minus_sign:                                | N/A                                               |
 | `resolutionTime`                                  | *Optional\<Double>*                               | :heavy_minus_sign:                                | N/A                                               |

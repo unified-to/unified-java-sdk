@@ -33,6 +33,9 @@ public class PropertyAdsReportMetricsCampaignAdvertisingChannelType {
     public static final PropertyAdsReportMetricsCampaignAdvertisingChannelType SEARCH = new PropertyAdsReportMetricsCampaignAdvertisingChannelType("SEARCH");
     public static final PropertyAdsReportMetricsCampaignAdvertisingChannelType AUDIO = new PropertyAdsReportMetricsCampaignAdvertisingChannelType("AUDIO");
     public static final PropertyAdsReportMetricsCampaignAdvertisingChannelType YOUTUBE = new PropertyAdsReportMetricsCampaignAdvertisingChannelType("YOUTUBE");
+    public static final PropertyAdsReportMetricsCampaignAdvertisingChannelType NATIVE = new PropertyAdsReportMetricsCampaignAdvertisingChannelType("NATIVE");
+    public static final PropertyAdsReportMetricsCampaignAdvertisingChannelType CTV = new PropertyAdsReportMetricsCampaignAdvertisingChannelType("CTV");
+    public static final PropertyAdsReportMetricsCampaignAdvertisingChannelType DOOH = new PropertyAdsReportMetricsCampaignAdvertisingChannelType("DOOH");
 
     // This map will grow whenever a Color gets created with a new
     // unrecognized value (a potential memory leak if the user is not
@@ -119,6 +122,9 @@ public class PropertyAdsReportMetricsCampaignAdvertisingChannelType {
         map.put("SEARCH", SEARCH);
         map.put("AUDIO", AUDIO);
         map.put("YOUTUBE", YOUTUBE);
+        map.put("NATIVE", NATIVE);
+        map.put("CTV", CTV);
+        map.put("DOOH", DOOH);
         return map;
     }
 
@@ -137,6 +143,9 @@ public class PropertyAdsReportMetricsCampaignAdvertisingChannelType {
         map.put("SEARCH", PropertyAdsReportMetricsCampaignAdvertisingChannelTypeEnum.SEARCH);
         map.put("AUDIO", PropertyAdsReportMetricsCampaignAdvertisingChannelTypeEnum.AUDIO);
         map.put("YOUTUBE", PropertyAdsReportMetricsCampaignAdvertisingChannelTypeEnum.YOUTUBE);
+        map.put("NATIVE", PropertyAdsReportMetricsCampaignAdvertisingChannelTypeEnum.NATIVE);
+        map.put("CTV", PropertyAdsReportMetricsCampaignAdvertisingChannelTypeEnum.CTV);
+        map.put("DOOH", PropertyAdsReportMetricsCampaignAdvertisingChannelTypeEnum.DOOH);
         return map;
     }
     
@@ -155,7 +164,10 @@ public class PropertyAdsReportMetricsCampaignAdvertisingChannelType {
         DISPLAY("DISPLAY"),
         SEARCH("SEARCH"),
         AUDIO("AUDIO"),
-        YOUTUBE("YOUTUBE"),;
+        YOUTUBE("YOUTUBE"),
+        NATIVE("NATIVE"),
+        CTV("CTV"),
+        DOOH("DOOH"),;
 
         private final String value;
 

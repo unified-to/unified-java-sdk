@@ -37,6 +37,11 @@ public class AdsCampaign {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("budget_unit")
+    private BudgetUnit budgetUnit;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("campaign_budget_identifier")
     private String campaignBudgetIdentifier;
 
@@ -135,6 +140,7 @@ public class AdsCampaign {
             @JsonProperty("advertising_channel_type") @Nullable AdvertisingChannelType advertisingChannelType,
             @JsonProperty("budget_amount") @Nullable Double budgetAmount,
             @JsonProperty("budget_period") @Nullable BudgetPeriod budgetPeriod,
+            @JsonProperty("budget_unit") @Nullable BudgetUnit budgetUnit,
             @JsonProperty("campaign_budget_identifier") @Nullable String campaignBudgetIdentifier,
             @JsonProperty("category") @Nullable String category,
             @JsonProperty("created_at") @Nullable OffsetDateTime createdAt,
@@ -157,6 +163,7 @@ public class AdsCampaign {
         this.advertisingChannelType = advertisingChannelType;
         this.budgetAmount = budgetAmount;
         this.budgetPeriod = budgetPeriod;
+        this.budgetUnit = budgetUnit;
         this.campaignBudgetIdentifier = campaignBudgetIdentifier;
         this.category = category;
         this.createdAt = createdAt;
@@ -186,7 +193,7 @@ public class AdsCampaign {
             null, null, null,
             null, null, null,
             null, null, null,
-            null);
+            null, null);
     }
 
     public Optional<AdvertisingChannelType> advertisingChannelType() {
@@ -199,6 +206,10 @@ public class AdsCampaign {
 
     public Optional<BudgetPeriod> budgetPeriod() {
         return Optional.ofNullable(this.budgetPeriod);
+    }
+
+    public Optional<BudgetUnit> budgetUnit() {
+        return Optional.ofNullable(this.budgetUnit);
     }
 
     public Optional<String> campaignBudgetIdentifier() {
@@ -296,6 +307,12 @@ public class AdsCampaign {
 
     public AdsCampaign withBudgetPeriod(@Nullable BudgetPeriod budgetPeriod) {
         this.budgetPeriod = budgetPeriod;
+        return this;
+    }
+
+
+    public AdsCampaign withBudgetUnit(@Nullable BudgetUnit budgetUnit) {
+        this.budgetUnit = budgetUnit;
         return this;
     }
 
@@ -427,6 +444,7 @@ public class AdsCampaign {
             Utils.enhancedDeepEquals(this.advertisingChannelType, other.advertisingChannelType) &&
             Utils.enhancedDeepEquals(this.budgetAmount, other.budgetAmount) &&
             Utils.enhancedDeepEquals(this.budgetPeriod, other.budgetPeriod) &&
+            Utils.enhancedDeepEquals(this.budgetUnit, other.budgetUnit) &&
             Utils.enhancedDeepEquals(this.campaignBudgetIdentifier, other.campaignBudgetIdentifier) &&
             Utils.enhancedDeepEquals(this.category, other.category) &&
             Utils.enhancedDeepEquals(this.createdAt, other.createdAt) &&
@@ -452,13 +470,13 @@ public class AdsCampaign {
     public int hashCode() {
         return Utils.enhancedHash(
             advertisingChannelType, budgetAmount, budgetPeriod,
-            campaignBudgetIdentifier, category, createdAt,
-            currency, effectiveStatus, endAt,
-            frequencyCap, goal, hasEuPoliticalAds,
-            id, name, organizationId,
-            plannedSpendAmount, raw, startAt,
-            status, targeting, totalSpendAmount,
-            updatedAt);
+            budgetUnit, campaignBudgetIdentifier, category,
+            createdAt, currency, effectiveStatus,
+            endAt, frequencyCap, goal,
+            hasEuPoliticalAds, id, name,
+            organizationId, plannedSpendAmount, raw,
+            startAt, status, targeting,
+            totalSpendAmount, updatedAt);
     }
     
     @Override
@@ -467,6 +485,7 @@ public class AdsCampaign {
                 "advertisingChannelType", advertisingChannelType,
                 "budgetAmount", budgetAmount,
                 "budgetPeriod", budgetPeriod,
+                "budgetUnit", budgetUnit,
                 "campaignBudgetIdentifier", campaignBudgetIdentifier,
                 "category", category,
                 "createdAt", createdAt,
@@ -496,6 +515,8 @@ public class AdsCampaign {
         private Double budgetAmount;
 
         private BudgetPeriod budgetPeriod;
+
+        private BudgetUnit budgetUnit;
 
         private String campaignBudgetIdentifier;
 
@@ -551,6 +572,11 @@ public class AdsCampaign {
 
         public Builder budgetPeriod(@Nullable BudgetPeriod budgetPeriod) {
             this.budgetPeriod = budgetPeriod;
+            return this;
+        }
+
+        public Builder budgetUnit(@Nullable BudgetUnit budgetUnit) {
+            this.budgetUnit = budgetUnit;
             return this;
         }
 
@@ -652,13 +678,13 @@ public class AdsCampaign {
         public AdsCampaign build() {
             return new AdsCampaign(
                 advertisingChannelType, budgetAmount, budgetPeriod,
-                campaignBudgetIdentifier, category, createdAt,
-                currency, effectiveStatus, endAt,
-                frequencyCap, goal, hasEuPoliticalAds,
-                id, name, organizationId,
-                plannedSpendAmount, raw, startAt,
-                status, targeting, totalSpendAmount,
-                updatedAt);
+                budgetUnit, campaignBudgetIdentifier, category,
+                createdAt, currency, effectiveStatus,
+                endAt, frequencyCap, goal,
+                hasEuPoliticalAds, id, name,
+                organizationId, plannedSpendAmount, raw,
+                startAt, status, targeting,
+                totalSpendAmount, updatedAt);
         }
 
     }

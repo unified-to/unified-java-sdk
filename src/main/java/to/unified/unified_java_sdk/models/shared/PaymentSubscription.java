@@ -117,6 +117,11 @@ public class PaymentSubscription {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("total_amount")
+    private Double totalAmount;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     private OffsetDateTime updatedAt;
 
@@ -141,6 +146,7 @@ public class PaymentSubscription {
             @JsonProperty("raw") @Nullable Map<String, Object> raw,
             @JsonProperty("start_at") @Nullable OffsetDateTime startAt,
             @JsonProperty("status") @Nullable PaymentSubscriptionStatus status,
+            @JsonProperty("total_amount") @Nullable Double totalAmount,
             @JsonProperty("updated_at") @Nullable OffsetDateTime updatedAt) {
         this.canceledAt = canceledAt;
         this.contactId = contactId;
@@ -161,6 +167,7 @@ public class PaymentSubscription {
         this.raw = raw;
         this.startAt = startAt;
         this.status = status;
+        this.totalAmount = totalAmount;
         this.updatedAt = updatedAt;
     }
     
@@ -171,7 +178,7 @@ public class PaymentSubscription {
             null, null, null,
             null, null, null,
             null, null, null,
-            null, null);
+            null, null, null);
     }
 
     public Optional<OffsetDateTime> canceledAt() {
@@ -248,6 +255,10 @@ public class PaymentSubscription {
 
     public Optional<PaymentSubscriptionStatus> status() {
         return Optional.ofNullable(this.status);
+    }
+
+    public Optional<Double> totalAmount() {
+        return Optional.ofNullable(this.totalAmount);
     }
 
     public Optional<OffsetDateTime> updatedAt() {
@@ -373,6 +384,12 @@ public class PaymentSubscription {
     }
 
 
+    public PaymentSubscription withTotalAmount(@Nullable Double totalAmount) {
+        this.totalAmount = totalAmount;
+        return this;
+    }
+
+
     public PaymentSubscription withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -408,6 +425,7 @@ public class PaymentSubscription {
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
             Utils.enhancedDeepEquals(this.startAt, other.startAt) &&
             Utils.enhancedDeepEquals(this.status, other.status) &&
+            Utils.enhancedDeepEquals(this.totalAmount, other.totalAmount) &&
             Utils.enhancedDeepEquals(this.updatedAt, other.updatedAt);
     }
     
@@ -420,7 +438,7 @@ public class PaymentSubscription {
             endAt, id, interval,
             intervalUnit, invoiceId, lineitems,
             month, raw, startAt,
-            status, updatedAt);
+            status, totalAmount, updatedAt);
     }
     
     @Override
@@ -445,6 +463,7 @@ public class PaymentSubscription {
                 "raw", raw,
                 "startAt", startAt,
                 "status", status,
+                "totalAmount", totalAmount,
                 "updatedAt", updatedAt);
     }
 
@@ -488,6 +507,8 @@ public class PaymentSubscription {
         private OffsetDateTime startAt;
 
         private PaymentSubscriptionStatus status;
+
+        private Double totalAmount;
 
         private OffsetDateTime updatedAt;
 
@@ -590,6 +611,11 @@ public class PaymentSubscription {
             return this;
         }
 
+        public Builder totalAmount(@Nullable Double totalAmount) {
+            this.totalAmount = totalAmount;
+            return this;
+        }
+
         public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;
@@ -603,7 +629,7 @@ public class PaymentSubscription {
                 endAt, id, interval,
                 intervalUnit, invoiceId, lineitems,
                 month, raw, startAt,
-                status, updatedAt);
+                status, totalAmount, updatedAt);
         }
 
     }
