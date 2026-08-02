@@ -23,6 +23,7 @@ public class HrisTimeoffStatus {
     public static final HrisTimeoffStatus APPROVED = new HrisTimeoffStatus("APPROVED");
     public static final HrisTimeoffStatus PENDING = new HrisTimeoffStatus("PENDING");
     public static final HrisTimeoffStatus DENIED = new HrisTimeoffStatus("DENIED");
+    public static final HrisTimeoffStatus CANCELLED = new HrisTimeoffStatus("CANCELLED");
 
     // This map will grow whenever a Color gets created with a new
     // unrecognized value (a potential memory leak if the user is not
@@ -99,6 +100,7 @@ public class HrisTimeoffStatus {
         map.put("APPROVED", APPROVED);
         map.put("PENDING", PENDING);
         map.put("DENIED", DENIED);
+        map.put("CANCELLED", CANCELLED);
         return map;
     }
 
@@ -107,6 +109,7 @@ public class HrisTimeoffStatus {
         map.put("APPROVED", HrisTimeoffStatusEnum.APPROVED);
         map.put("PENDING", HrisTimeoffStatusEnum.PENDING);
         map.put("DENIED", HrisTimeoffStatusEnum.DENIED);
+        map.put("CANCELLED", HrisTimeoffStatusEnum.CANCELLED);
         return map;
     }
     
@@ -115,7 +118,8 @@ public class HrisTimeoffStatus {
 
         APPROVED("APPROVED"),
         PENDING("PENDING"),
-        DENIED("DENIED"),;
+        DENIED("DENIED"),
+        CANCELLED("CANCELLED"),;
 
         private final String value;
 

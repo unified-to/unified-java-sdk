@@ -14,8 +14,9 @@ HrisTimeoffStatus custom = HrisTimeoffStatus.of("custom_value");
 
 ## Values
 
-| Name       | Value      |
-| ---------- | ---------- |
-| `APPROVED` | APPROVED   |
-| `PENDING`  | PENDING    |
-| `DENIED`   | DENIED     |
+| Name        | Value       |
+| ----------- | ----------- |
+| `APPROVED`  | APPROVED    |
+| `PENDING`   | PENDING     |
+| `DENIED`    | DENIED      |
+| `CANCELLED` | CANCELLED   |

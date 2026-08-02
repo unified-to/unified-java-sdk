@@ -29,6 +29,12 @@ public class ListCommerceInventoriesRequest {
     private List<ListCommerceInventoriesQueryParamFields> fields;
 
     /**
+     * The item ID to filter by (reference to CommerceItem)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=item_id")
+    private String itemId;
+
+    /**
      * The item variant ID to filter by (reference to CommerceCommerceItemvariant)
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=item_variant_id")
@@ -81,6 +87,7 @@ public class ListCommerceInventoriesRequest {
     public ListCommerceInventoriesRequest(
             @Nonnull String connectionId,
             @Nullable List<ListCommerceInventoriesQueryParamFields> fields,
+            @Nullable String itemId,
             @Nullable String itemVariantId,
             @Nullable Double limit,
             @Nullable String locationId,
@@ -93,6 +100,7 @@ public class ListCommerceInventoriesRequest {
         this.connectionId = Optional.ofNullable(connectionId)
             .orElseThrow(() -> new IllegalArgumentException("connectionId cannot be null"));
         this.fields = fields;
+        this.itemId = itemId;
         this.itemVariantId = itemVariantId;
         this.limit = limit;
         this.locationId = locationId;
@@ -109,7 +117,7 @@ public class ListCommerceInventoriesRequest {
         this(connectionId, null, null,
             null, null, null,
             null, null, null,
-            null, null);
+            null, null, null);
     }
 
     /**
@@ -124,6 +132,13 @@ public class ListCommerceInventoriesRequest {
      */
     public Optional<List<ListCommerceInventoriesQueryParamFields>> fields() {
         return Optional.ofNullable(this.fields);
+    }
+
+    /**
+     * The item ID to filter by (reference to CommerceItem)
+     */
+    public Optional<String> itemId() {
+        return Optional.ofNullable(this.itemId);
     }
 
     /**
@@ -199,6 +214,15 @@ public class ListCommerceInventoriesRequest {
      */
     public ListCommerceInventoriesRequest withFields(@Nullable List<ListCommerceInventoriesQueryParamFields> fields) {
         this.fields = fields;
+        return this;
+    }
+
+
+    /**
+     * The item ID to filter by (reference to CommerceItem)
+     */
+    public ListCommerceInventoriesRequest withItemId(@Nullable String itemId) {
+        this.itemId = itemId;
         return this;
     }
 
@@ -287,6 +311,7 @@ public class ListCommerceInventoriesRequest {
         return 
             Utils.enhancedDeepEquals(this.connectionId, other.connectionId) &&
             Utils.enhancedDeepEquals(this.fields, other.fields) &&
+            Utils.enhancedDeepEquals(this.itemId, other.itemId) &&
             Utils.enhancedDeepEquals(this.itemVariantId, other.itemVariantId) &&
             Utils.enhancedDeepEquals(this.limit, other.limit) &&
             Utils.enhancedDeepEquals(this.locationId, other.locationId) &&
@@ -301,10 +326,10 @@ public class ListCommerceInventoriesRequest {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            connectionId, fields, itemVariantId,
-            limit, locationId, offset,
-            order, query, raw,
-            sort, updatedGte);
+            connectionId, fields, itemId,
+            itemVariantId, limit, locationId,
+            offset, order, query,
+            raw, sort, updatedGte);
     }
     
     @Override
@@ -312,6 +337,7 @@ public class ListCommerceInventoriesRequest {
         return Utils.toString(ListCommerceInventoriesRequest.class,
                 "connectionId", connectionId,
                 "fields", fields,
+                "itemId", itemId,
                 "itemVariantId", itemVariantId,
                 "limit", limit,
                 "locationId", locationId,
@@ -329,6 +355,8 @@ public class ListCommerceInventoriesRequest {
         private String connectionId;
 
         private List<ListCommerceInventoriesQueryParamFields> fields;
+
+        private String itemId;
 
         private String itemVariantId;
 
@@ -365,6 +393,14 @@ public class ListCommerceInventoriesRequest {
          */
         public Builder fields(@Nullable List<ListCommerceInventoriesQueryParamFields> fields) {
             this.fields = fields;
+            return this;
+        }
+
+        /**
+         * The item ID to filter by (reference to CommerceItem)
+         */
+        public Builder itemId(@Nullable String itemId) {
+            this.itemId = itemId;
             return this;
         }
 
@@ -433,10 +469,10 @@ public class ListCommerceInventoriesRequest {
 
         public ListCommerceInventoriesRequest build() {
             return new ListCommerceInventoriesRequest(
-                connectionId, fields, itemVariantId,
-                limit, locationId, offset,
-                order, query, raw,
-                sort, updatedGte);
+                connectionId, fields, itemId,
+                itemVariantId, limit, locationId,
+                offset, order, query,
+                raw, sort, updatedGte);
         }
 
     }
