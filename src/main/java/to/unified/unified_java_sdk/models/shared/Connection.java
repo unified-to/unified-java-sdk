@@ -83,6 +83,11 @@ public class Connection {
     private OffsetDateTime lastUnhealthyAt;
 
 
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("last_unhealthy_code")
+    private String lastUnhealthyCode;
+
+
     @JsonProperty("permissions")
     private List<PropertyConnectionPermissions> permissions;
 
@@ -119,6 +124,7 @@ public class Connection {
             @JsonProperty("is_paused") @Nullable Boolean isPaused,
             @JsonProperty("last_healthy_at") @Nullable OffsetDateTime lastHealthyAt,
             @JsonProperty("last_unhealthy_at") @Nullable OffsetDateTime lastUnhealthyAt,
+            @JsonProperty("last_unhealthy_code") @Nullable String lastUnhealthyCode,
             @JsonProperty("permissions") @Nonnull List<PropertyConnectionPermissions> permissions,
             @JsonProperty("secretsmanager_id") @Nullable String secretsmanagerId,
             @JsonProperty("secretsmanager_key") @Nullable String secretsmanagerKey,
@@ -138,6 +144,7 @@ public class Connection {
         this.isPaused = isPaused;
         this.lastHealthyAt = lastHealthyAt;
         this.lastUnhealthyAt = lastUnhealthyAt;
+        this.lastUnhealthyCode = lastUnhealthyCode;
         this.permissions = Optional.ofNullable(permissions)
             .orElseThrow(() -> new IllegalArgumentException("permissions cannot be null"));
         this.secretsmanagerId = secretsmanagerId;
@@ -153,9 +160,9 @@ public class Connection {
         this(null, categories, null,
             null, null, null,
             null, integrationType, null,
-            null, null, permissions,
             null, null, null,
-            null);
+            permissions, null, null,
+            null, null);
     }
 
     /**
@@ -206,6 +213,10 @@ public class Connection {
 
     public Optional<OffsetDateTime> lastUnhealthyAt() {
         return Optional.ofNullable(this.lastUnhealthyAt);
+    }
+
+    public Optional<String> lastUnhealthyCode() {
+        return Optional.ofNullable(this.lastUnhealthyCode);
     }
 
     public List<PropertyConnectionPermissions> permissions() {
@@ -305,6 +316,12 @@ public class Connection {
     }
 
 
+    public Connection withLastUnhealthyCode(@Nullable String lastUnhealthyCode) {
+        this.lastUnhealthyCode = lastUnhealthyCode;
+        return this;
+    }
+
+
     public Connection withPermissions(@Nonnull List<PropertyConnectionPermissions> permissions) {
         this.permissions = Utils.checkNotNull(permissions, "permissions");
         return this;
@@ -356,6 +373,7 @@ public class Connection {
             Utils.enhancedDeepEquals(this.isPaused, other.isPaused) &&
             Utils.enhancedDeepEquals(this.lastHealthyAt, other.lastHealthyAt) &&
             Utils.enhancedDeepEquals(this.lastUnhealthyAt, other.lastUnhealthyAt) &&
+            Utils.enhancedDeepEquals(this.lastUnhealthyCode, other.lastUnhealthyCode) &&
             Utils.enhancedDeepEquals(this.permissions, other.permissions) &&
             Utils.enhancedDeepEquals(this.secretsmanagerId, other.secretsmanagerId) &&
             Utils.enhancedDeepEquals(this.secretsmanagerKey, other.secretsmanagerKey) &&
@@ -369,9 +387,9 @@ public class Connection {
             auth, categories, createdAt,
             environment, externalXref, id,
             integrationName, integrationType, isPaused,
-            lastHealthyAt, lastUnhealthyAt, permissions,
-            secretsmanagerId, secretsmanagerKey, updatedAt,
-            workspaceId);
+            lastHealthyAt, lastUnhealthyAt, lastUnhealthyCode,
+            permissions, secretsmanagerId, secretsmanagerKey,
+            updatedAt, workspaceId);
     }
     
     @Override
@@ -388,6 +406,7 @@ public class Connection {
                 "isPaused", isPaused,
                 "lastHealthyAt", lastHealthyAt,
                 "lastUnhealthyAt", lastUnhealthyAt,
+                "lastUnhealthyCode", lastUnhealthyCode,
                 "permissions", permissions,
                 "secretsmanagerId", secretsmanagerId,
                 "secretsmanagerKey", secretsmanagerKey,
@@ -419,6 +438,8 @@ public class Connection {
         private OffsetDateTime lastHealthyAt;
 
         private OffsetDateTime lastUnhealthyAt;
+
+        private String lastUnhealthyCode;
 
         private List<PropertyConnectionPermissions> permissions;
 
@@ -495,6 +516,11 @@ public class Connection {
             return this;
         }
 
+        public Builder lastUnhealthyCode(@Nullable String lastUnhealthyCode) {
+            this.lastUnhealthyCode = lastUnhealthyCode;
+            return this;
+        }
+
         public Builder permissions(@Nonnull List<PropertyConnectionPermissions> permissions) {
             this.permissions = Utils.checkNotNull(permissions, "permissions");
             return this;
@@ -525,9 +551,9 @@ public class Connection {
                 auth, categories, createdAt,
                 environment, externalXref, id,
                 integrationName, integrationType, isPaused,
-                lastHealthyAt, lastUnhealthyAt, permissions,
-                secretsmanagerId, secretsmanagerKey, updatedAt,
-                workspaceId);
+                lastHealthyAt, lastUnhealthyAt, lastUnhealthyCode,
+                permissions, secretsmanagerId, secretsmanagerKey,
+                updatedAt, workspaceId);
         }
 
 
