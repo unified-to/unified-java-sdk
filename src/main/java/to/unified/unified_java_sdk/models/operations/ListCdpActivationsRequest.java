@@ -58,7 +58,9 @@ public class ListCdpActivationsRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=raw")
     private String raw;
 
-
+    /**
+     * The segment ID to filter by
+     */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=segment_id")
     private String segmentId;
 
@@ -154,6 +156,9 @@ public class ListCdpActivationsRequest {
         return Optional.ofNullable(this.raw);
     }
 
+    /**
+     * The segment ID to filter by
+     */
     public Optional<String> segmentId() {
         return Optional.ofNullable(this.segmentId);
     }
@@ -237,6 +242,9 @@ public class ListCdpActivationsRequest {
     }
 
 
+    /**
+     * The segment ID to filter by
+     */
     public ListCdpActivationsRequest withSegmentId(@Nullable String segmentId) {
         this.segmentId = segmentId;
         return this;
@@ -390,6 +398,9 @@ public class ListCdpActivationsRequest {
             return this;
         }
 
+        /**
+         * The segment ID to filter by
+         */
         public Builder segmentId(@Nullable String segmentId) {
             this.segmentId = segmentId;
             return this;
