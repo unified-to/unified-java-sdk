@@ -6,29 +6,53 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import to.unified.unified_java_sdk.models.operations.CreateAccountingProjectRequest;
+import to.unified.unified_java_sdk.models.operations.CreateAccountingProjectRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.CreateAccountingProjectResponse;
 import to.unified.unified_java_sdk.models.operations.CreateTaskProjectRequest;
 import to.unified.unified_java_sdk.models.operations.CreateTaskProjectRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateTaskProjectResponse;
+import to.unified.unified_java_sdk.models.operations.GetAccountingProjectRequest;
+import to.unified.unified_java_sdk.models.operations.GetAccountingProjectRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetAccountingProjectResponse;
 import to.unified.unified_java_sdk.models.operations.GetTaskProjectRequest;
 import to.unified.unified_java_sdk.models.operations.GetTaskProjectRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.GetTaskProjectResponse;
+import to.unified.unified_java_sdk.models.operations.ListAccountingProjectsRequest;
+import to.unified.unified_java_sdk.models.operations.ListAccountingProjectsRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListAccountingProjectsResponse;
 import to.unified.unified_java_sdk.models.operations.ListTaskProjectsRequest;
 import to.unified.unified_java_sdk.models.operations.ListTaskProjectsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.ListTaskProjectsResponse;
+import to.unified.unified_java_sdk.models.operations.PatchAccountingProjectRequest;
+import to.unified.unified_java_sdk.models.operations.PatchAccountingProjectRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.PatchAccountingProjectResponse;
 import to.unified.unified_java_sdk.models.operations.PatchTaskProjectRequest;
 import to.unified.unified_java_sdk.models.operations.PatchTaskProjectRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.PatchTaskProjectResponse;
+import to.unified.unified_java_sdk.models.operations.RemoveAccountingProjectRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveAccountingProjectRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.RemoveAccountingProjectResponse;
 import to.unified.unified_java_sdk.models.operations.RemoveTaskProjectRequest;
 import to.unified.unified_java_sdk.models.operations.RemoveTaskProjectRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.RemoveTaskProjectResponse;
+import to.unified.unified_java_sdk.models.operations.UpdateAccountingProjectRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateAccountingProjectRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.UpdateAccountingProjectResponse;
 import to.unified.unified_java_sdk.models.operations.UpdateTaskProjectRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateTaskProjectRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.UpdateTaskProjectResponse;
+import to.unified.unified_java_sdk.operations.CreateAccountingProject;
 import to.unified.unified_java_sdk.operations.CreateTaskProject;
+import to.unified.unified_java_sdk.operations.GetAccountingProject;
 import to.unified.unified_java_sdk.operations.GetTaskProject;
+import to.unified.unified_java_sdk.operations.ListAccountingProjects;
 import to.unified.unified_java_sdk.operations.ListTaskProjects;
+import to.unified.unified_java_sdk.operations.PatchAccountingProject;
 import to.unified.unified_java_sdk.operations.PatchTaskProject;
+import to.unified.unified_java_sdk.operations.RemoveAccountingProject;
 import to.unified.unified_java_sdk.operations.RemoveTaskProject;
+import to.unified.unified_java_sdk.operations.UpdateAccountingProject;
 import to.unified.unified_java_sdk.operations.UpdateTaskProject;
 import to.unified.unified_java_sdk.utils.Headers;
 
@@ -57,6 +81,28 @@ public class Project {
      * 
      * @return The call builder
      */
+    public CreateAccountingProjectRequestBuilder createAccountingProject() {
+        return new CreateAccountingProjectRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Create a project
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateAccountingProjectResponse createAccountingProject(@Nonnull CreateAccountingProjectRequest request) {
+        RequestOperation<CreateAccountingProjectRequest, CreateAccountingProjectResponse> operation
+              = new CreateAccountingProject.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Create a project
+     * 
+     * @return The call builder
+     */
     public CreateTaskProjectRequestBuilder createTaskProject() {
         return new CreateTaskProjectRequestBuilder(sdkConfiguration);
     }
@@ -71,6 +117,28 @@ public class Project {
     public CreateTaskProjectResponse createTaskProject(@Nonnull CreateTaskProjectRequest request) {
         RequestOperation<CreateTaskProjectRequest, CreateTaskProjectResponse> operation
               = new CreateTaskProject.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Retrieve a project
+     * 
+     * @return The call builder
+     */
+    public GetAccountingProjectRequestBuilder getAccountingProject() {
+        return new GetAccountingProjectRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Retrieve a project
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetAccountingProjectResponse getAccountingProject(@Nonnull GetAccountingProjectRequest request) {
+        RequestOperation<GetAccountingProjectRequest, GetAccountingProjectResponse> operation
+              = new GetAccountingProject.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -101,6 +169,28 @@ public class Project {
      * 
      * @return The call builder
      */
+    public ListAccountingProjectsRequestBuilder listAccountingProjects() {
+        return new ListAccountingProjectsRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * List all projects
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListAccountingProjectsResponse listAccountingProjects(@Nonnull ListAccountingProjectsRequest request) {
+        RequestOperation<ListAccountingProjectsRequest, ListAccountingProjectsResponse> operation
+              = new ListAccountingProjects.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * List all projects
+     * 
+     * @return The call builder
+     */
     public ListTaskProjectsRequestBuilder listTaskProjects() {
         return new ListTaskProjectsRequestBuilder(sdkConfiguration);
     }
@@ -115,6 +205,28 @@ public class Project {
     public ListTaskProjectsResponse listTaskProjects(@Nonnull ListTaskProjectsRequest request) {
         RequestOperation<ListTaskProjectsRequest, ListTaskProjectsResponse> operation
               = new ListTaskProjects.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Update a project
+     * 
+     * @return The call builder
+     */
+    public PatchAccountingProjectRequestBuilder patchAccountingProject() {
+        return new PatchAccountingProjectRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Update a project
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchAccountingProjectResponse patchAccountingProject(@Nonnull PatchAccountingProjectRequest request) {
+        RequestOperation<PatchAccountingProjectRequest, PatchAccountingProjectResponse> operation
+              = new PatchAccountingProject.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -145,6 +257,28 @@ public class Project {
      * 
      * @return The call builder
      */
+    public RemoveAccountingProjectRequestBuilder removeAccountingProject() {
+        return new RemoveAccountingProjectRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Remove a project
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveAccountingProjectResponse removeAccountingProject(@Nonnull RemoveAccountingProjectRequest request) {
+        RequestOperation<RemoveAccountingProjectRequest, RemoveAccountingProjectResponse> operation
+              = new RemoveAccountingProject.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Remove a project
+     * 
+     * @return The call builder
+     */
     public RemoveTaskProjectRequestBuilder removeTaskProject() {
         return new RemoveTaskProjectRequestBuilder(sdkConfiguration);
     }
@@ -159,6 +293,28 @@ public class Project {
     public RemoveTaskProjectResponse removeTaskProject(@Nonnull RemoveTaskProjectRequest request) {
         RequestOperation<RemoveTaskProjectRequest, RemoveTaskProjectResponse> operation
               = new RemoveTaskProject.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Update a project
+     * 
+     * @return The call builder
+     */
+    public UpdateAccountingProjectRequestBuilder updateAccountingProject() {
+        return new UpdateAccountingProjectRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Update a project
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateAccountingProjectResponse updateAccountingProject(@Nonnull UpdateAccountingProjectRequest request) {
+        RequestOperation<UpdateAccountingProjectRequest, UpdateAccountingProjectResponse> operation
+              = new UpdateAccountingProject.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

@@ -30,4 +30,5 @@ UpdateStorageFileQueryParamFields value = UpdateStorageFileQueryParamFields.ID;
 | `VERSION`      | version        |
 | `WEB_URL`      | web_url        |
 | `REFERENCES`   | references     |
+| `TAGS`         | tags           |
 | `RAW`          | raw            |

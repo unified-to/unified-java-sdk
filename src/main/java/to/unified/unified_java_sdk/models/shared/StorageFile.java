@@ -87,6 +87,11 @@ public class StorageFile {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("tags")
+    private List<String> tags;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     private StorageFileType type;
 
@@ -125,6 +130,7 @@ public class StorageFile {
             @JsonProperty("raw") @Nullable Map<String, Object> raw,
             @JsonProperty("references") @Nullable List<StorageReference> references,
             @JsonProperty("size") @Nullable Double size,
+            @JsonProperty("tags") @Nullable List<String> tags,
             @JsonProperty("type") @Nullable StorageFileType type,
             @JsonProperty("updated_at") @Nullable OffsetDateTime updatedAt,
             @JsonProperty("user_id") @Nullable String userId,
@@ -143,6 +149,7 @@ public class StorageFile {
         this.raw = raw;
         this.references = references;
         this.size = size;
+        this.tags = tags;
         this.type = type;
         this.updatedAt = updatedAt;
         this.userId = userId;
@@ -156,7 +163,8 @@ public class StorageFile {
             null, null, null,
             null, null, null,
             null, null, null,
-            null, null, null);
+            null, null, null,
+            null);
     }
 
     public Optional<OffsetDateTime> createdAt() {
@@ -209,6 +217,10 @@ public class StorageFile {
 
     public Optional<Double> size() {
         return Optional.ofNullable(this.size);
+    }
+
+    public Optional<List<String>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     public Optional<StorageFileType> type() {
@@ -314,6 +326,12 @@ public class StorageFile {
     }
 
 
+    public StorageFile withTags(@Nullable List<String> tags) {
+        this.tags = tags;
+        return this;
+    }
+
+
     public StorageFile withType(@Nullable StorageFileType type) {
         this.type = type;
         return this;
@@ -367,6 +385,7 @@ public class StorageFile {
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
             Utils.enhancedDeepEquals(this.references, other.references) &&
             Utils.enhancedDeepEquals(this.size, other.size) &&
+            Utils.enhancedDeepEquals(this.tags, other.tags) &&
             Utils.enhancedDeepEquals(this.type, other.type) &&
             Utils.enhancedDeepEquals(this.updatedAt, other.updatedAt) &&
             Utils.enhancedDeepEquals(this.userId, other.userId) &&
@@ -381,8 +400,9 @@ public class StorageFile {
             downloadUrl, hash, id,
             mimeType, name, parentId,
             permissions, raw, references,
-            size, type, updatedAt,
-            userId, version, webUrl);
+            size, tags, type,
+            updatedAt, userId, version,
+            webUrl);
     }
     
     @Override
@@ -401,6 +421,7 @@ public class StorageFile {
                 "raw", raw,
                 "references", references,
                 "size", size,
+                "tags", tags,
                 "type", type,
                 "updatedAt", updatedAt,
                 "userId", userId,
@@ -436,6 +457,8 @@ public class StorageFile {
         private List<StorageReference> references;
 
         private Double size;
+
+        private List<String> tags;
 
         private StorageFileType type;
 
@@ -516,6 +539,11 @@ public class StorageFile {
             return this;
         }
 
+        public Builder tags(@Nullable List<String> tags) {
+            this.tags = tags;
+            return this;
+        }
+
         public Builder type(@Nullable StorageFileType type) {
             this.type = type;
             return this;
@@ -547,8 +575,9 @@ public class StorageFile {
                 downloadUrl, hash, id,
                 mimeType, name, parentId,
                 permissions, raw, references,
-                size, type, updatedAt,
-                userId, version, webUrl);
+                size, tags, type,
+                updatedAt, userId, version,
+                webUrl);
         }
 
     }

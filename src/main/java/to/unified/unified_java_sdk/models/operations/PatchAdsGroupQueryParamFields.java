@@ -38,6 +38,8 @@ public enum PatchAdsGroupQueryParamFields {
     BILLING_EVENT("billing_event"),
     CURRENCY("currency"),
     PROMOTED("promoted"),
+    LANGUAGE_LOCALE("language_locale"),
+    CREATIVE_SELECTION("creative_selection"),
     RAW("raw");
 
     @JsonValue

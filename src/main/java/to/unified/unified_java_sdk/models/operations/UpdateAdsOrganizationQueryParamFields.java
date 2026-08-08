@@ -16,6 +16,9 @@ public enum UpdateAdsOrganizationQueryParamFields {
     CURRENCY("currency"),
     TIMEZONE("timezone"),
     PARENT_ID("parent_id"),
+    STATUS("status"),
+    ACCOUNT_NUMBER("account_number"),
+    MANAGERS("managers"),
     RAW("raw");
 
     @JsonValue

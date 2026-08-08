@@ -13,12 +13,16 @@
 * [createAccountingInvoice](#createaccountinginvoice) - Create an invoice
 * [createAccountingJournal](#createaccountingjournal) - Create a journal
 * [createAccountingOrder](#createaccountingorder) - Create an order
+* [createAccountingProject](#createaccountingproject) - Create a project
 * [createAccountingPurchaseorder](#createaccountingpurchaseorder) - Create a purchaseorder
+* [createAccountingQuote](#createaccountingquote) - Create a quote
 * [createAccountingSalesorder](#createaccountingsalesorder) - Create a salesorder
 * [createAccountingTaxrate](#createaccountingtaxrate) - Create a taxrate
 * [createAccountingTransaction](#createaccountingtransaction) - Create a transaction
 * [createAccountingVendorcredit](#createaccountingvendorcredit) - Create a vendorcredit
 * [getAccountingAccount](#getaccountingaccount) - Retrieve an account
+* [getAccountingAgedpayable](#getaccountingagedpayable) - Retrieve an agedpayable
+* [getAccountingAgedreceivable](#getaccountingagedreceivable) - Retrieve an agedreceivable
 * [getAccountingBalancesheet](#getaccountingbalancesheet) - Retrieve a balancesheet
 * [getAccountingBill](#getaccountingbill) - Retrieve a bill
 * [getAccountingCashflow](#getaccountingcashflow) - Retrieve a cashflow
@@ -31,7 +35,9 @@
 * [getAccountingOrder](#getaccountingorder) - Retrieve an order
 * [getAccountingOrganization](#getaccountingorganization) - Retrieve an organization
 * [getAccountingProfitloss](#getaccountingprofitloss) - Retrieve a profitloss
+* [getAccountingProject](#getaccountingproject) - Retrieve a project
 * [getAccountingPurchaseorder](#getaccountingpurchaseorder) - Retrieve a purchaseorder
+* [getAccountingQuote](#getaccountingquote) - Retrieve a quote
 * [getAccountingReport](#getaccountingreport) - Retrieve a report
 * [getAccountingSalesorder](#getaccountingsalesorder) - Retrieve a salesorder
 * [getAccountingTaxrate](#getaccountingtaxrate) - Retrieve a taxrate
@@ -39,6 +45,8 @@
 * [getAccountingTrialbalance](#getaccountingtrialbalance) - Retrieve a trialbalance
 * [getAccountingVendorcredit](#getaccountingvendorcredit) - Retrieve a vendorcredit
 * [listAccountingAccounts](#listaccountingaccounts) - List all accounts
+* [listAccountingAgedpayables](#listaccountingagedpayables) - List all agedpayables
+* [listAccountingAgedreceivables](#listaccountingagedreceivables) - List all agedreceivables
 * [listAccountingBalancesheets](#listaccountingbalancesheets) - List all balancesheets
 * [listAccountingBills](#listaccountingbills) - List all bills
 * [listAccountingCashflows](#listaccountingcashflows) - List all cashflows
@@ -51,7 +59,9 @@
 * [listAccountingOrders](#listaccountingorders) - List all orders
 * [listAccountingOrganizations](#listaccountingorganizations) - List all organizations
 * [listAccountingProfitlosses](#listaccountingprofitlosses) - List all profitlosses
+* [listAccountingProjects](#listaccountingprojects) - List all projects
 * [listAccountingPurchaseorders](#listaccountingpurchaseorders) - List all purchaseorders
+* [listAccountingQuotes](#listaccountingquotes) - List all quotes
 * [listAccountingReports](#listaccountingreports) - List all reports
 * [listAccountingSalesorders](#listaccountingsalesorders) - List all salesorders
 * [listAccountingTaxrates](#listaccountingtaxrates) - List all taxrates
@@ -67,7 +77,9 @@
 * [patchAccountingInvoice](#patchaccountinginvoice) - Update an invoice
 * [patchAccountingJournal](#patchaccountingjournal) - Update a journal
 * [patchAccountingOrder](#patchaccountingorder) - Update an order
+* [patchAccountingProject](#patchaccountingproject) - Update a project
 * [patchAccountingPurchaseorder](#patchaccountingpurchaseorder) - Update a purchaseorder
+* [patchAccountingQuote](#patchaccountingquote) - Update a quote
 * [patchAccountingSalesorder](#patchaccountingsalesorder) - Update a salesorder
 * [patchAccountingTaxrate](#patchaccountingtaxrate) - Update a taxrate
 * [patchAccountingTransaction](#patchaccountingtransaction) - Update a transaction
@@ -81,7 +93,9 @@
 * [removeAccountingInvoice](#removeaccountinginvoice) - Remove an invoice
 * [removeAccountingJournal](#removeaccountingjournal) - Remove a journal
 * [removeAccountingOrder](#removeaccountingorder) - Remove an order
+* [removeAccountingProject](#removeaccountingproject) - Remove a project
 * [removeAccountingPurchaseorder](#removeaccountingpurchaseorder) - Remove a purchaseorder
+* [removeAccountingQuote](#removeaccountingquote) - Remove a quote
 * [removeAccountingSalesorder](#removeaccountingsalesorder) - Remove a salesorder
 * [removeAccountingTaxrate](#removeaccountingtaxrate) - Remove a taxrate
 * [removeAccountingTransaction](#removeaccountingtransaction) - Remove a transaction
@@ -95,7 +109,9 @@
 * [updateAccountingInvoice](#updateaccountinginvoice) - Update an invoice
 * [updateAccountingJournal](#updateaccountingjournal) - Update a journal
 * [updateAccountingOrder](#updateaccountingorder) - Update an order
+* [updateAccountingProject](#updateaccountingproject) - Update a project
 * [updateAccountingPurchaseorder](#updateaccountingpurchaseorder) - Update a purchaseorder
+* [updateAccountingQuote](#updateaccountingquote) - Update a quote
 * [updateAccountingSalesorder](#updateaccountingsalesorder) - Update a salesorder
 * [updateAccountingTaxrate](#updateaccountingtaxrate) - Update a taxrate
 * [updateAccountingTransaction](#updateaccountingtransaction) - Update a transaction
@@ -641,6 +657,66 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
+## createAccountingProject
+
+Create a project
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="createAccountingProject" method="post" path="/accounting/{connection_id}/project" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.CreateAccountingProjectRequest;
+import to.unified.unified_java_sdk.models.operations.CreateAccountingProjectResponse;
+import to.unified.unified_java_sdk.models.shared.AccountingProject;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        CreateAccountingProjectRequest req = CreateAccountingProjectRequest.builder()
+                .accountingProject(AccountingProject.builder()
+                    .build())
+                .connectionId("<id>")
+                .build();
+
+        CreateAccountingProjectResponse res = sdk.accounting().createAccountingProject()
+                .request(req)
+                .call();
+
+        if (res.accountingProject().isPresent()) {
+            System.out.println(res.accountingProject().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                   | Type                                                                                        | Required                                                                                    | Description                                                                                 |
+| ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
+| `request`                                                                                   | [CreateAccountingProjectRequest](../../models/operations/CreateAccountingProjectRequest.md) | :heavy_check_mark:                                                                          | The request object to use for the request.                                                  |
+
+### Response
+
+**[CreateAccountingProjectResponse](../../models/operations/CreateAccountingProjectResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
 ## createAccountingPurchaseorder
 
 Create a purchaseorder
@@ -694,6 +770,66 @@ public class Application {
 ### Response
 
 **[CreateAccountingPurchaseorderResponse](../../models/operations/CreateAccountingPurchaseorderResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## createAccountingQuote
+
+Create a quote
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="createAccountingQuote" method="post" path="/accounting/{connection_id}/quote" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.CreateAccountingQuoteRequest;
+import to.unified.unified_java_sdk.models.operations.CreateAccountingQuoteResponse;
+import to.unified.unified_java_sdk.models.shared.AccountingQuote;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        CreateAccountingQuoteRequest req = CreateAccountingQuoteRequest.builder()
+                .accountingQuote(AccountingQuote.builder()
+                    .build())
+                .connectionId("<id>")
+                .build();
+
+        CreateAccountingQuoteResponse res = sdk.accounting().createAccountingQuote()
+                .request(req)
+                .call();
+
+        if (res.accountingQuote().isPresent()) {
+            System.out.println(res.accountingQuote().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
+| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| `request`                                                                               | [CreateAccountingQuoteRequest](../../models/operations/CreateAccountingQuoteRequest.md) | :heavy_check_mark:                                                                      | The request object to use for the request.                                              |
+
+### Response
+
+**[CreateAccountingQuoteResponse](../../models/operations/CreateAccountingQuoteResponse.md)**
 
 ### Errors
 
@@ -992,6 +1128,122 @@ public class Application {
 ### Response
 
 **[GetAccountingAccountResponse](../../models/operations/GetAccountingAccountResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## getAccountingAgedpayable
+
+Retrieve an agedpayable
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="getAccountingAgedpayable" method="get" path="/accounting/{connection_id}/agedpayable/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.GetAccountingAgedpayableRequest;
+import to.unified.unified_java_sdk.models.operations.GetAccountingAgedpayableResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        GetAccountingAgedpayableRequest req = GetAccountingAgedpayableRequest.builder()
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        GetAccountingAgedpayableResponse res = sdk.accounting().getAccountingAgedpayable()
+                .request(req)
+                .call();
+
+        if (res.accountingAgedpayable().isPresent()) {
+            System.out.println(res.accountingAgedpayable().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                     | Type                                                                                          | Required                                                                                      | Description                                                                                   |
+| --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
+| `request`                                                                                     | [GetAccountingAgedpayableRequest](../../models/operations/GetAccountingAgedpayableRequest.md) | :heavy_check_mark:                                                                            | The request object to use for the request.                                                    |
+
+### Response
+
+**[GetAccountingAgedpayableResponse](../../models/operations/GetAccountingAgedpayableResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## getAccountingAgedreceivable
+
+Retrieve an agedreceivable
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="getAccountingAgedreceivable" method="get" path="/accounting/{connection_id}/agedreceivable/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.GetAccountingAgedreceivableRequest;
+import to.unified.unified_java_sdk.models.operations.GetAccountingAgedreceivableResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        GetAccountingAgedreceivableRequest req = GetAccountingAgedreceivableRequest.builder()
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        GetAccountingAgedreceivableResponse res = sdk.accounting().getAccountingAgedreceivable()
+                .request(req)
+                .call();
+
+        if (res.accountingAgedreceivable().isPresent()) {
+            System.out.println(res.accountingAgedreceivable().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                           | Type                                                                                                | Required                                                                                            | Description                                                                                         |
+| --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
+| `request`                                                                                           | [GetAccountingAgedreceivableRequest](../../models/operations/GetAccountingAgedreceivableRequest.md) | :heavy_check_mark:                                                                                  | The request object to use for the request.                                                          |
+
+### Response
+
+**[GetAccountingAgedreceivableResponse](../../models/operations/GetAccountingAgedreceivableResponse.md)**
 
 ### Errors
 
@@ -1695,6 +1947,64 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
+## getAccountingProject
+
+Retrieve a project
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="getAccountingProject" method="get" path="/accounting/{connection_id}/project/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.GetAccountingProjectRequest;
+import to.unified.unified_java_sdk.models.operations.GetAccountingProjectResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        GetAccountingProjectRequest req = GetAccountingProjectRequest.builder()
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        GetAccountingProjectResponse res = sdk.accounting().getAccountingProject()
+                .request(req)
+                .call();
+
+        if (res.accountingProject().isPresent()) {
+            System.out.println(res.accountingProject().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                             | Type                                                                                  | Required                                                                              | Description                                                                           |
+| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| `request`                                                                             | [GetAccountingProjectRequest](../../models/operations/GetAccountingProjectRequest.md) | :heavy_check_mark:                                                                    | The request object to use for the request.                                            |
+
+### Response
+
+**[GetAccountingProjectResponse](../../models/operations/GetAccountingProjectResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
 ## getAccountingPurchaseorder
 
 Retrieve a purchaseorder
@@ -1746,6 +2056,64 @@ public class Application {
 ### Response
 
 **[GetAccountingPurchaseorderResponse](../../models/operations/GetAccountingPurchaseorderResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## getAccountingQuote
+
+Retrieve a quote
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="getAccountingQuote" method="get" path="/accounting/{connection_id}/quote/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.GetAccountingQuoteRequest;
+import to.unified.unified_java_sdk.models.operations.GetAccountingQuoteResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        GetAccountingQuoteRequest req = GetAccountingQuoteRequest.builder()
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        GetAccountingQuoteResponse res = sdk.accounting().getAccountingQuote()
+                .request(req)
+                .call();
+
+        if (res.accountingQuote().isPresent()) {
+            System.out.println(res.accountingQuote().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
+| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| `request`                                                                         | [GetAccountingQuoteRequest](../../models/operations/GetAccountingQuoteRequest.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
+
+### Response
+
+**[GetAccountingQuoteResponse](../../models/operations/GetAccountingQuoteResponse.md)**
 
 ### Errors
 
@@ -2151,6 +2519,120 @@ public class Application {
 ### Response
 
 **[ListAccountingAccountsResponse](../../models/operations/ListAccountingAccountsResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## listAccountingAgedpayables
+
+List all agedpayables
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="listAccountingAgedpayables" method="get" path="/accounting/{connection_id}/agedpayable" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.ListAccountingAgedpayablesRequest;
+import to.unified.unified_java_sdk.models.operations.ListAccountingAgedpayablesResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        ListAccountingAgedpayablesRequest req = ListAccountingAgedpayablesRequest.builder()
+                .connectionId("<id>")
+                .build();
+
+        ListAccountingAgedpayablesResponse res = sdk.accounting().listAccountingAgedpayables()
+                .request(req)
+                .call();
+
+        if (res.accountingAgedpayables().isPresent()) {
+            System.out.println(res.accountingAgedpayables().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                         | Type                                                                                              | Required                                                                                          | Description                                                                                       |
+| ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
+| `request`                                                                                         | [ListAccountingAgedpayablesRequest](../../models/operations/ListAccountingAgedpayablesRequest.md) | :heavy_check_mark:                                                                                | The request object to use for the request.                                                        |
+
+### Response
+
+**[ListAccountingAgedpayablesResponse](../../models/operations/ListAccountingAgedpayablesResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## listAccountingAgedreceivables
+
+List all agedreceivables
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="listAccountingAgedreceivables" method="get" path="/accounting/{connection_id}/agedreceivable" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.ListAccountingAgedreceivablesRequest;
+import to.unified.unified_java_sdk.models.operations.ListAccountingAgedreceivablesResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        ListAccountingAgedreceivablesRequest req = ListAccountingAgedreceivablesRequest.builder()
+                .connectionId("<id>")
+                .build();
+
+        ListAccountingAgedreceivablesResponse res = sdk.accounting().listAccountingAgedreceivables()
+                .request(req)
+                .call();
+
+        if (res.accountingAgedreceivables().isPresent()) {
+            System.out.println(res.accountingAgedreceivables().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                               | Type                                                                                                    | Required                                                                                                | Description                                                                                             |
+| ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                               | [ListAccountingAgedreceivablesRequest](../../models/operations/ListAccountingAgedreceivablesRequest.md) | :heavy_check_mark:                                                                                      | The request object to use for the request.                                                              |
+
+### Response
+
+**[ListAccountingAgedreceivablesResponse](../../models/operations/ListAccountingAgedreceivablesResponse.md)**
 
 ### Errors
 
@@ -2842,6 +3324,63 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
+## listAccountingProjects
+
+List all projects
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="listAccountingProjects" method="get" path="/accounting/{connection_id}/project" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.ListAccountingProjectsRequest;
+import to.unified.unified_java_sdk.models.operations.ListAccountingProjectsResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        ListAccountingProjectsRequest req = ListAccountingProjectsRequest.builder()
+                .connectionId("<id>")
+                .build();
+
+        ListAccountingProjectsResponse res = sdk.accounting().listAccountingProjects()
+                .request(req)
+                .call();
+
+        if (res.accountingProjects().isPresent()) {
+            System.out.println(res.accountingProjects().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                 | Type                                                                                      | Required                                                                                  | Description                                                                               |
+| ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
+| `request`                                                                                 | [ListAccountingProjectsRequest](../../models/operations/ListAccountingProjectsRequest.md) | :heavy_check_mark:                                                                        | The request object to use for the request.                                                |
+
+### Response
+
+**[ListAccountingProjectsResponse](../../models/operations/ListAccountingProjectsResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
 ## listAccountingPurchaseorders
 
 List all purchaseorders
@@ -2892,6 +3431,63 @@ public class Application {
 ### Response
 
 **[ListAccountingPurchaseordersResponse](../../models/operations/ListAccountingPurchaseordersResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## listAccountingQuotes
+
+List all quotes
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="listAccountingQuotes" method="get" path="/accounting/{connection_id}/quote" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.ListAccountingQuotesRequest;
+import to.unified.unified_java_sdk.models.operations.ListAccountingQuotesResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        ListAccountingQuotesRequest req = ListAccountingQuotesRequest.builder()
+                .connectionId("<id>")
+                .build();
+
+        ListAccountingQuotesResponse res = sdk.accounting().listAccountingQuotes()
+                .request(req)
+                .call();
+
+        if (res.accountingQuotes().isPresent()) {
+            System.out.println(res.accountingQuotes().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                             | Type                                                                                  | Required                                                                              | Description                                                                           |
+| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| `request`                                                                             | [ListAccountingQuotesRequest](../../models/operations/ListAccountingQuotesRequest.md) | :heavy_check_mark:                                                                    | The request object to use for the request.                                            |
+
+### Response
+
+**[ListAccountingQuotesResponse](../../models/operations/ListAccountingQuotesResponse.md)**
 
 ### Errors
 
@@ -3790,6 +4386,67 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
+## patchAccountingProject
+
+Update a project
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="patchAccountingProject" method="patch" path="/accounting/{connection_id}/project/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.PatchAccountingProjectRequest;
+import to.unified.unified_java_sdk.models.operations.PatchAccountingProjectResponse;
+import to.unified.unified_java_sdk.models.shared.AccountingProject;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        PatchAccountingProjectRequest req = PatchAccountingProjectRequest.builder()
+                .accountingProject(AccountingProject.builder()
+                    .build())
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        PatchAccountingProjectResponse res = sdk.accounting().patchAccountingProject()
+                .request(req)
+                .call();
+
+        if (res.accountingProject().isPresent()) {
+            System.out.println(res.accountingProject().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                 | Type                                                                                      | Required                                                                                  | Description                                                                               |
+| ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
+| `request`                                                                                 | [PatchAccountingProjectRequest](../../models/operations/PatchAccountingProjectRequest.md) | :heavy_check_mark:                                                                        | The request object to use for the request.                                                |
+
+### Response
+
+**[PatchAccountingProjectResponse](../../models/operations/PatchAccountingProjectResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
 ## patchAccountingPurchaseorder
 
 Update a purchaseorder
@@ -3844,6 +4501,67 @@ public class Application {
 ### Response
 
 **[PatchAccountingPurchaseorderResponse](../../models/operations/PatchAccountingPurchaseorderResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## patchAccountingQuote
+
+Update a quote
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="patchAccountingQuote" method="patch" path="/accounting/{connection_id}/quote/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.PatchAccountingQuoteRequest;
+import to.unified.unified_java_sdk.models.operations.PatchAccountingQuoteResponse;
+import to.unified.unified_java_sdk.models.shared.AccountingQuote;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        PatchAccountingQuoteRequest req = PatchAccountingQuoteRequest.builder()
+                .accountingQuote(AccountingQuote.builder()
+                    .build())
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        PatchAccountingQuoteResponse res = sdk.accounting().patchAccountingQuote()
+                .request(req)
+                .call();
+
+        if (res.accountingQuote().isPresent()) {
+            System.out.println(res.accountingQuote().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                             | Type                                                                                  | Required                                                                              | Description                                                                           |
+| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| `request`                                                                             | [PatchAccountingQuoteRequest](../../models/operations/PatchAccountingQuoteRequest.md) | :heavy_check_mark:                                                                    | The request object to use for the request.                                            |
+
+### Response
+
+**[PatchAccountingQuoteResponse](../../models/operations/PatchAccountingQuoteResponse.md)**
 
 ### Errors
 
@@ -4599,6 +5317,62 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
+## removeAccountingProject
+
+Remove a project
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="removeAccountingProject" method="delete" path="/accounting/{connection_id}/project/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.RemoveAccountingProjectRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveAccountingProjectResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        RemoveAccountingProjectRequest req = RemoveAccountingProjectRequest.builder()
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        RemoveAccountingProjectResponse res = sdk.accounting().removeAccountingProject()
+                .request(req)
+                .call();
+
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                   | Type                                                                                        | Required                                                                                    | Description                                                                                 |
+| ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
+| `request`                                                                                   | [RemoveAccountingProjectRequest](../../models/operations/RemoveAccountingProjectRequest.md) | :heavy_check_mark:                                                                          | The request object to use for the request.                                                  |
+
+### Response
+
+**[RemoveAccountingProjectResponse](../../models/operations/RemoveAccountingProjectResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
 ## removeAccountingPurchaseorder
 
 Remove a purchaseorder
@@ -4648,6 +5422,62 @@ public class Application {
 ### Response
 
 **[RemoveAccountingPurchaseorderResponse](../../models/operations/RemoveAccountingPurchaseorderResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## removeAccountingQuote
+
+Remove a quote
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="removeAccountingQuote" method="delete" path="/accounting/{connection_id}/quote/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.RemoveAccountingQuoteRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveAccountingQuoteResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        RemoveAccountingQuoteRequest req = RemoveAccountingQuoteRequest.builder()
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        RemoveAccountingQuoteResponse res = sdk.accounting().removeAccountingQuote()
+                .request(req)
+                .call();
+
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
+| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| `request`                                                                               | [RemoveAccountingQuoteRequest](../../models/operations/RemoveAccountingQuoteRequest.md) | :heavy_check_mark:                                                                      | The request object to use for the request.                                              |
+
+### Response
+
+**[RemoveAccountingQuoteResponse](../../models/operations/RemoveAccountingQuoteResponse.md)**
 
 ### Errors
 
@@ -5428,6 +6258,67 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
+## updateAccountingProject
+
+Update a project
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="updateAccountingProject" method="put" path="/accounting/{connection_id}/project/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.UpdateAccountingProjectRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateAccountingProjectResponse;
+import to.unified.unified_java_sdk.models.shared.AccountingProject;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        UpdateAccountingProjectRequest req = UpdateAccountingProjectRequest.builder()
+                .accountingProject(AccountingProject.builder()
+                    .build())
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        UpdateAccountingProjectResponse res = sdk.accounting().updateAccountingProject()
+                .request(req)
+                .call();
+
+        if (res.accountingProject().isPresent()) {
+            System.out.println(res.accountingProject().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                   | Type                                                                                        | Required                                                                                    | Description                                                                                 |
+| ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
+| `request`                                                                                   | [UpdateAccountingProjectRequest](../../models/operations/UpdateAccountingProjectRequest.md) | :heavy_check_mark:                                                                          | The request object to use for the request.                                                  |
+
+### Response
+
+**[UpdateAccountingProjectResponse](../../models/operations/UpdateAccountingProjectResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
 ## updateAccountingPurchaseorder
 
 Update a purchaseorder
@@ -5482,6 +6373,67 @@ public class Application {
 ### Response
 
 **[UpdateAccountingPurchaseorderResponse](../../models/operations/UpdateAccountingPurchaseorderResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## updateAccountingQuote
+
+Update a quote
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="updateAccountingQuote" method="put" path="/accounting/{connection_id}/quote/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.UpdateAccountingQuoteRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateAccountingQuoteResponse;
+import to.unified.unified_java_sdk.models.shared.AccountingQuote;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        UpdateAccountingQuoteRequest req = UpdateAccountingQuoteRequest.builder()
+                .accountingQuote(AccountingQuote.builder()
+                    .build())
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        UpdateAccountingQuoteResponse res = sdk.accounting().updateAccountingQuote()
+                .request(req)
+                .call();
+
+        if (res.accountingQuote().isPresent()) {
+            System.out.println(res.accountingQuote().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
+| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| `request`                                                                               | [UpdateAccountingQuoteRequest](../../models/operations/UpdateAccountingQuoteRequest.md) | :heavy_check_mark:                                                                      | The request object to use for the request.                                              |
+
+### Response
+
+**[UpdateAccountingQuoteResponse](../../models/operations/UpdateAccountingQuoteResponse.md)**
 
 ### Errors
 

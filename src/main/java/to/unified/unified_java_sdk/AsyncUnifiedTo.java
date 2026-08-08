@@ -17,6 +17,10 @@ public class AsyncUnifiedTo {
 
     private final AsyncAccount account;
 
+    private final AsyncAgedpayable agedpayable;
+
+    private final AsyncAgedreceivable agedreceivable;
+
     private final AsyncBalancesheet balancesheet;
 
     private final AsyncBill bill;
@@ -41,7 +45,11 @@ public class AsyncUnifiedTo {
 
     private final AsyncProfitloss profitloss;
 
+    private final AsyncProject project;
+
     private final AsyncPurchaseorder purchaseorder;
+
+    private final AsyncQuote quote;
 
     private final AsyncReport report;
 
@@ -293,8 +301,6 @@ public class AsyncUnifiedTo {
 
     private final AsyncChange change;
 
-    private final AsyncProject project;
-
     private final AsyncTicketing ticketing;
 
     private final AsyncCustomer customer;
@@ -339,6 +345,14 @@ public class AsyncUnifiedTo {
 
     public AsyncAccount account() {
         return account;
+    }
+
+    public AsyncAgedpayable agedpayable() {
+        return agedpayable;
+    }
+
+    public AsyncAgedreceivable agedreceivable() {
+        return agedreceivable;
     }
 
     public AsyncBalancesheet balancesheet() {
@@ -389,8 +403,16 @@ public class AsyncUnifiedTo {
         return profitloss;
     }
 
+    public AsyncProject project() {
+        return project;
+    }
+
     public AsyncPurchaseorder purchaseorder() {
         return purchaseorder;
+    }
+
+    public AsyncQuote quote() {
+        return quote;
     }
 
     public AsyncReport report() {
@@ -893,10 +915,6 @@ public class AsyncUnifiedTo {
         return change;
     }
 
-    public AsyncProject project() {
-        return project;
-    }
-
     public AsyncTicketing ticketing() {
         return ticketing;
     }
@@ -981,6 +999,8 @@ public class AsyncUnifiedTo {
         this.sdkConfiguration = sdkConfiguration;
         this.accounting = new AsyncAccounting(syncSDK.accounting(), sdkConfiguration);
         this.account = new AsyncAccount(syncSDK.account(), sdkConfiguration);
+        this.agedpayable = new AsyncAgedpayable(syncSDK.agedpayable(), sdkConfiguration);
+        this.agedreceivable = new AsyncAgedreceivable(syncSDK.agedreceivable(), sdkConfiguration);
         this.balancesheet = new AsyncBalancesheet(syncSDK.balancesheet(), sdkConfiguration);
         this.bill = new AsyncBill(syncSDK.bill(), sdkConfiguration);
         this.cashflow = new AsyncCashflow(syncSDK.cashflow(), sdkConfiguration);
@@ -993,7 +1013,9 @@ public class AsyncUnifiedTo {
         this.order = new AsyncOrder(syncSDK.order(), sdkConfiguration);
         this.organization = new AsyncOrganization(syncSDK.organization(), sdkConfiguration);
         this.profitloss = new AsyncProfitloss(syncSDK.profitloss(), sdkConfiguration);
+        this.project = new AsyncProject(syncSDK.project(), sdkConfiguration);
         this.purchaseorder = new AsyncPurchaseorder(syncSDK.purchaseorder(), sdkConfiguration);
+        this.quote = new AsyncQuote(syncSDK.quote(), sdkConfiguration);
         this.report = new AsyncReport(syncSDK.report(), sdkConfiguration);
         this.salesorder = new AsyncSalesorder(syncSDK.salesorder(), sdkConfiguration);
         this.taxrate = new AsyncTaxrate(syncSDK.taxrate(), sdkConfiguration);
@@ -1119,7 +1141,6 @@ public class AsyncUnifiedTo {
         this.file = new AsyncFile(syncSDK.file(), sdkConfiguration);
         this.task = new AsyncTask(syncSDK.task(), sdkConfiguration);
         this.change = new AsyncChange(syncSDK.change(), sdkConfiguration);
-        this.project = new AsyncProject(syncSDK.project(), sdkConfiguration);
         this.ticketing = new AsyncTicketing(syncSDK.ticketing(), sdkConfiguration);
         this.customer = new AsyncCustomer(syncSDK.customer(), sdkConfiguration);
         this.note = new AsyncNote(syncSDK.note(), sdkConfiguration);

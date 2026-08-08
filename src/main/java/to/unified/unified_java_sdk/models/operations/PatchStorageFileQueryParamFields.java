@@ -26,6 +26,7 @@ public enum PatchStorageFileQueryParamFields {
     VERSION("version"),
     WEB_URL("web_url"),
     REFERENCES("references"),
+    TAGS("tags"),
     RAW("raw");
 
     @JsonValue

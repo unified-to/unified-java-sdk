@@ -28,6 +28,7 @@ CreateAdsCreativeQueryParamFields value = CreateAdsCreativeQueryParamFields.ID;
 | `HEIGHT`                       | height                         |
 | `ASSET_URLS`                   | asset_urls                     |
 | `LINK_URL`                     | link_url                       |
+| `URL_TAGS`                     | url_tags                       |
 | `BODY`                         | body                           |
 | `TITLE`                        | title                          |
 | `CTA`                          | cta                            |
@@ -40,4 +41,5 @@ CreateAdsCreativeQueryParamFields value = CreateAdsCreativeQueryParamFields.ID;
 | `PATH1`                        | path1                          |
 | `PATH2`                        | path2                          |
 | `DATA`                         | data                           |
+| `LABELS`                       | labels                         |
 | `RAW`                          | raw                            |

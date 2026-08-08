@@ -47,6 +47,12 @@ public class UnifiedTo {
     private final Account account;
 
 
+    private final Agedpayable agedpayable;
+
+
+    private final Agedreceivable agedreceivable;
+
+
     private final Balancesheet balancesheet;
 
 
@@ -83,7 +89,13 @@ public class UnifiedTo {
     private final Profitloss profitloss;
 
 
+    private final Project project;
+
+
     private final Purchaseorder purchaseorder;
+
+
+    private final Quote quote;
 
 
     private final Report report;
@@ -461,9 +473,6 @@ public class UnifiedTo {
     private final Change change;
 
 
-    private final Project project;
-
-
     private final Ticketing ticketing;
 
 
@@ -531,6 +540,16 @@ public class UnifiedTo {
     }
 
 
+    public Agedpayable agedpayable() {
+        return agedpayable;
+    }
+
+
+    public Agedreceivable agedreceivable() {
+        return agedreceivable;
+    }
+
+
     public Balancesheet balancesheet() {
         return balancesheet;
     }
@@ -591,8 +610,18 @@ public class UnifiedTo {
     }
 
 
+    public Project project() {
+        return project;
+    }
+
+
     public Purchaseorder purchaseorder() {
         return purchaseorder;
+    }
+
+
+    public Quote quote() {
+        return quote;
     }
 
 
@@ -1221,11 +1250,6 @@ public class UnifiedTo {
     }
 
 
-    public Project project() {
-        return project;
-    }
-
-
     public Ticketing ticketing() {
         return ticketing;
     }
@@ -1459,6 +1483,8 @@ public class UnifiedTo {
         sdkConfiguration.initialize();
         this.accounting = new Accounting(sdkConfiguration);
         this.account = new Account(sdkConfiguration);
+        this.agedpayable = new Agedpayable(sdkConfiguration);
+        this.agedreceivable = new Agedreceivable(sdkConfiguration);
         this.balancesheet = new Balancesheet(sdkConfiguration);
         this.bill = new Bill(sdkConfiguration);
         this.cashflow = new Cashflow(sdkConfiguration);
@@ -1471,7 +1497,9 @@ public class UnifiedTo {
         this.order = new Order(sdkConfiguration);
         this.organization = new Organization(sdkConfiguration);
         this.profitloss = new Profitloss(sdkConfiguration);
+        this.project = new Project(sdkConfiguration);
         this.purchaseorder = new Purchaseorder(sdkConfiguration);
+        this.quote = new Quote(sdkConfiguration);
         this.report = new Report(sdkConfiguration);
         this.salesorder = new Salesorder(sdkConfiguration);
         this.taxrate = new Taxrate(sdkConfiguration);
@@ -1597,7 +1625,6 @@ public class UnifiedTo {
         this.file = new File(sdkConfiguration);
         this.task = new Task(sdkConfiguration);
         this.change = new Change(sdkConfiguration);
-        this.project = new Project(sdkConfiguration);
         this.ticketing = new Ticketing(sdkConfiguration);
         this.customer = new Customer(sdkConfiguration);
         this.note = new Note(sdkConfiguration);

@@ -31,6 +31,7 @@ public enum PatchAdsCampaignQueryParamFields {
     CURRENCY("currency"),
     CATEGORY("category"),
     HAS_EU_POLITICAL_ADS("has_eu_political_ads"),
+    LABELS("labels"),
     RAW("raw");
 
     @JsonValue

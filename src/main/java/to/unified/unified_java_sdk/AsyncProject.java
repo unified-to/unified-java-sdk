@@ -7,29 +7,53 @@ import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOper
 
 import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
+import to.unified.unified_java_sdk.models.operations.CreateAccountingProjectRequest;
 import to.unified.unified_java_sdk.models.operations.CreateTaskProjectRequest;
+import to.unified.unified_java_sdk.models.operations.GetAccountingProjectRequest;
 import to.unified.unified_java_sdk.models.operations.GetTaskProjectRequest;
+import to.unified.unified_java_sdk.models.operations.ListAccountingProjectsRequest;
 import to.unified.unified_java_sdk.models.operations.ListTaskProjectsRequest;
+import to.unified.unified_java_sdk.models.operations.PatchAccountingProjectRequest;
 import to.unified.unified_java_sdk.models.operations.PatchTaskProjectRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveAccountingProjectRequest;
 import to.unified.unified_java_sdk.models.operations.RemoveTaskProjectRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateAccountingProjectRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateTaskProjectRequest;
+import to.unified.unified_java_sdk.models.operations.async.CreateAccountingProjectRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.CreateAccountingProjectResponse;
 import to.unified.unified_java_sdk.models.operations.async.CreateTaskProjectRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.CreateTaskProjectResponse;
+import to.unified.unified_java_sdk.models.operations.async.GetAccountingProjectRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetAccountingProjectResponse;
 import to.unified.unified_java_sdk.models.operations.async.GetTaskProjectRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.GetTaskProjectResponse;
+import to.unified.unified_java_sdk.models.operations.async.ListAccountingProjectsRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListAccountingProjectsResponse;
 import to.unified.unified_java_sdk.models.operations.async.ListTaskProjectsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.ListTaskProjectsResponse;
+import to.unified.unified_java_sdk.models.operations.async.PatchAccountingProjectRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.PatchAccountingProjectResponse;
 import to.unified.unified_java_sdk.models.operations.async.PatchTaskProjectRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.PatchTaskProjectResponse;
+import to.unified.unified_java_sdk.models.operations.async.RemoveAccountingProjectRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.RemoveAccountingProjectResponse;
 import to.unified.unified_java_sdk.models.operations.async.RemoveTaskProjectRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.RemoveTaskProjectResponse;
+import to.unified.unified_java_sdk.models.operations.async.UpdateAccountingProjectRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.UpdateAccountingProjectResponse;
 import to.unified.unified_java_sdk.models.operations.async.UpdateTaskProjectRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.UpdateTaskProjectResponse;
+import to.unified.unified_java_sdk.operations.CreateAccountingProject;
 import to.unified.unified_java_sdk.operations.CreateTaskProject;
+import to.unified.unified_java_sdk.operations.GetAccountingProject;
 import to.unified.unified_java_sdk.operations.GetTaskProject;
+import to.unified.unified_java_sdk.operations.ListAccountingProjects;
 import to.unified.unified_java_sdk.operations.ListTaskProjects;
+import to.unified.unified_java_sdk.operations.PatchAccountingProject;
 import to.unified.unified_java_sdk.operations.PatchTaskProject;
+import to.unified.unified_java_sdk.operations.RemoveAccountingProject;
 import to.unified.unified_java_sdk.operations.RemoveTaskProject;
+import to.unified.unified_java_sdk.operations.UpdateAccountingProject;
 import to.unified.unified_java_sdk.operations.UpdateTaskProject;
 import to.unified.unified_java_sdk.utils.Headers;
 
@@ -59,6 +83,29 @@ public class AsyncProject {
      * 
      * @return The async call builder
      */
+    public CreateAccountingProjectRequestBuilder createAccountingProject() {
+        return new CreateAccountingProjectRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Create a project
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<CreateAccountingProjectResponse>} - The async response
+     */
+    public CompletableFuture<CreateAccountingProjectResponse> createAccountingProject(@Nonnull CreateAccountingProjectRequest request) {
+        AsyncRequestOperation<CreateAccountingProjectRequest, CreateAccountingProjectResponse> operation
+              = new CreateAccountingProject.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * Create a project
+     * 
+     * @return The async call builder
+     */
     public CreateTaskProjectRequestBuilder createTaskProject() {
         return new CreateTaskProjectRequestBuilder(sdkConfiguration);
     }
@@ -72,6 +119,29 @@ public class AsyncProject {
     public CompletableFuture<CreateTaskProjectResponse> createTaskProject(@Nonnull CreateTaskProjectRequest request) {
         AsyncRequestOperation<CreateTaskProjectRequest, CreateTaskProjectResponse> operation
               = new CreateTaskProject.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * Retrieve a project
+     * 
+     * @return The async call builder
+     */
+    public GetAccountingProjectRequestBuilder getAccountingProject() {
+        return new GetAccountingProjectRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Retrieve a project
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<GetAccountingProjectResponse>} - The async response
+     */
+    public CompletableFuture<GetAccountingProjectResponse> getAccountingProject(@Nonnull GetAccountingProjectRequest request) {
+        AsyncRequestOperation<GetAccountingProjectRequest, GetAccountingProjectResponse> operation
+              = new GetAccountingProject.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -105,6 +175,29 @@ public class AsyncProject {
      * 
      * @return The async call builder
      */
+    public ListAccountingProjectsRequestBuilder listAccountingProjects() {
+        return new ListAccountingProjectsRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * List all projects
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<ListAccountingProjectsResponse>} - The async response
+     */
+    public CompletableFuture<ListAccountingProjectsResponse> listAccountingProjects(@Nonnull ListAccountingProjectsRequest request) {
+        AsyncRequestOperation<ListAccountingProjectsRequest, ListAccountingProjectsResponse> operation
+              = new ListAccountingProjects.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * List all projects
+     * 
+     * @return The async call builder
+     */
     public ListTaskProjectsRequestBuilder listTaskProjects() {
         return new ListTaskProjectsRequestBuilder(sdkConfiguration);
     }
@@ -118,6 +211,29 @@ public class AsyncProject {
     public CompletableFuture<ListTaskProjectsResponse> listTaskProjects(@Nonnull ListTaskProjectsRequest request) {
         AsyncRequestOperation<ListTaskProjectsRequest, ListTaskProjectsResponse> operation
               = new ListTaskProjects.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * Update a project
+     * 
+     * @return The async call builder
+     */
+    public PatchAccountingProjectRequestBuilder patchAccountingProject() {
+        return new PatchAccountingProjectRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Update a project
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<PatchAccountingProjectResponse>} - The async response
+     */
+    public CompletableFuture<PatchAccountingProjectResponse> patchAccountingProject(@Nonnull PatchAccountingProjectRequest request) {
+        AsyncRequestOperation<PatchAccountingProjectRequest, PatchAccountingProjectResponse> operation
+              = new PatchAccountingProject.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -151,6 +267,29 @@ public class AsyncProject {
      * 
      * @return The async call builder
      */
+    public RemoveAccountingProjectRequestBuilder removeAccountingProject() {
+        return new RemoveAccountingProjectRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Remove a project
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<RemoveAccountingProjectResponse>} - The async response
+     */
+    public CompletableFuture<RemoveAccountingProjectResponse> removeAccountingProject(@Nonnull RemoveAccountingProjectRequest request) {
+        AsyncRequestOperation<RemoveAccountingProjectRequest, RemoveAccountingProjectResponse> operation
+              = new RemoveAccountingProject.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * Remove a project
+     * 
+     * @return The async call builder
+     */
     public RemoveTaskProjectRequestBuilder removeTaskProject() {
         return new RemoveTaskProjectRequestBuilder(sdkConfiguration);
     }
@@ -164,6 +303,29 @@ public class AsyncProject {
     public CompletableFuture<RemoveTaskProjectResponse> removeTaskProject(@Nonnull RemoveTaskProjectRequest request) {
         AsyncRequestOperation<RemoveTaskProjectRequest, RemoveTaskProjectResponse> operation
               = new RemoveTaskProject.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * Update a project
+     * 
+     * @return The async call builder
+     */
+    public UpdateAccountingProjectRequestBuilder updateAccountingProject() {
+        return new UpdateAccountingProjectRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Update a project
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<UpdateAccountingProjectResponse>} - The async response
+     */
+    public CompletableFuture<UpdateAccountingProjectResponse> updateAccountingProject(@Nonnull UpdateAccountingProjectRequest request) {
+        AsyncRequestOperation<UpdateAccountingProjectRequest, UpdateAccountingProjectResponse> operation
+              = new UpdateAccountingProject.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

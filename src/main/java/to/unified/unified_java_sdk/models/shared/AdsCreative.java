@@ -99,6 +99,11 @@ public class AdsCreative {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("labels")
+    private List<String> labels;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("link_url")
     private String linkUrl;
 
@@ -154,6 +159,11 @@ public class AdsCreative {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("url_tags")
+    private String urlTags;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vast_tag_url")
     private String vastTagUrl;
 
@@ -179,6 +189,7 @@ public class AdsCreative {
             @JsonProperty("hosting_source") @Nullable HostingSource hostingSource,
             @JsonProperty("id") @Nullable String id,
             @JsonProperty("item_id") @Nullable String itemId,
+            @JsonProperty("labels") @Nullable List<String> labels,
             @JsonProperty("link_url") @Nullable String linkUrl,
             @JsonProperty("name") @Nullable String name,
             @JsonProperty("organization_id") @Nullable String organizationId,
@@ -190,6 +201,7 @@ public class AdsCreative {
             @JsonProperty("third_party_tag") @Nullable String thirdPartyTag,
             @JsonProperty("title") @Nullable String title,
             @JsonProperty("updated_at") @Nullable OffsetDateTime updatedAt,
+            @JsonProperty("url_tags") @Nullable String urlTags,
             @JsonProperty("vast_tag_url") @Nullable String vastTagUrl,
             @JsonProperty("width") @Nullable Double width) {
         this.assetUrls = assetUrls;
@@ -207,6 +219,7 @@ public class AdsCreative {
         this.hostingSource = hostingSource;
         this.id = id;
         this.itemId = itemId;
+        this.labels = labels;
         this.linkUrl = linkUrl;
         this.name = name;
         this.organizationId = organizationId;
@@ -218,6 +231,7 @@ public class AdsCreative {
         this.thirdPartyTag = thirdPartyTag;
         this.title = title;
         this.updatedAt = updatedAt;
+        this.urlTags = urlTags;
         this.vastTagUrl = vastTagUrl;
         this.width = width;
     }
@@ -232,7 +246,7 @@ public class AdsCreative {
             null, null, null,
             null, null, null,
             null, null, null,
-            null);
+            null, null, null);
     }
 
     /**
@@ -298,6 +312,10 @@ public class AdsCreative {
         return Optional.ofNullable(this.itemId);
     }
 
+    public Optional<List<String>> labels() {
+        return Optional.ofNullable(this.labels);
+    }
+
     public Optional<String> linkUrl() {
         return Optional.ofNullable(this.linkUrl);
     }
@@ -340,6 +358,10 @@ public class AdsCreative {
 
     public Optional<OffsetDateTime> updatedAt() {
         return Optional.ofNullable(this.updatedAt);
+    }
+
+    public Optional<String> urlTags() {
+        return Optional.ofNullable(this.urlTags);
     }
 
     public Optional<String> vastTagUrl() {
@@ -448,6 +470,12 @@ public class AdsCreative {
     }
 
 
+    public AdsCreative withLabels(@Nullable List<String> labels) {
+        this.labels = labels;
+        return this;
+    }
+
+
     public AdsCreative withLinkUrl(@Nullable String linkUrl) {
         this.linkUrl = linkUrl;
         return this;
@@ -514,6 +542,12 @@ public class AdsCreative {
     }
 
 
+    public AdsCreative withUrlTags(@Nullable String urlTags) {
+        this.urlTags = urlTags;
+        return this;
+    }
+
+
     public AdsCreative withVastTagUrl(@Nullable String vastTagUrl) {
         this.vastTagUrl = vastTagUrl;
         return this;
@@ -551,6 +585,7 @@ public class AdsCreative {
             Utils.enhancedDeepEquals(this.hostingSource, other.hostingSource) &&
             Utils.enhancedDeepEquals(this.id, other.id) &&
             Utils.enhancedDeepEquals(this.itemId, other.itemId) &&
+            Utils.enhancedDeepEquals(this.labels, other.labels) &&
             Utils.enhancedDeepEquals(this.linkUrl, other.linkUrl) &&
             Utils.enhancedDeepEquals(this.name, other.name) &&
             Utils.enhancedDeepEquals(this.organizationId, other.organizationId) &&
@@ -562,6 +597,7 @@ public class AdsCreative {
             Utils.enhancedDeepEquals(this.thirdPartyTag, other.thirdPartyTag) &&
             Utils.enhancedDeepEquals(this.title, other.title) &&
             Utils.enhancedDeepEquals(this.updatedAt, other.updatedAt) &&
+            Utils.enhancedDeepEquals(this.urlTags, other.urlTags) &&
             Utils.enhancedDeepEquals(this.vastTagUrl, other.vastTagUrl) &&
             Utils.enhancedDeepEquals(this.width, other.width);
     }
@@ -574,11 +610,11 @@ public class AdsCreative {
             data, externalAdReference, externalCreativeReference,
             externalPlacementReference, groupId, height,
             hostingSource, id, itemId,
-            linkUrl, name, organizationId,
-            path1, path2, promoted,
-            raw, status, thirdPartyTag,
-            title, updatedAt, vastTagUrl,
-            width);
+            labels, linkUrl, name,
+            organizationId, path1, path2,
+            promoted, raw, status,
+            thirdPartyTag, title, updatedAt,
+            urlTags, vastTagUrl, width);
     }
     
     @Override
@@ -599,6 +635,7 @@ public class AdsCreative {
                 "hostingSource", hostingSource,
                 "id", id,
                 "itemId", itemId,
+                "labels", labels,
                 "linkUrl", linkUrl,
                 "name", name,
                 "organizationId", organizationId,
@@ -610,6 +647,7 @@ public class AdsCreative {
                 "thirdPartyTag", thirdPartyTag,
                 "title", title,
                 "updatedAt", updatedAt,
+                "urlTags", urlTags,
                 "vastTagUrl", vastTagUrl,
                 "width", width);
     }
@@ -647,6 +685,8 @@ public class AdsCreative {
 
         private String itemId;
 
+        private List<String> labels;
+
         private String linkUrl;
 
         private String name;
@@ -668,6 +708,8 @@ public class AdsCreative {
         private String title;
 
         private OffsetDateTime updatedAt;
+
+        private String urlTags;
 
         private String vastTagUrl;
 
@@ -755,6 +797,11 @@ public class AdsCreative {
             return this;
         }
 
+        public Builder labels(@Nullable List<String> labels) {
+            this.labels = labels;
+            return this;
+        }
+
         public Builder linkUrl(@Nullable String linkUrl) {
             this.linkUrl = linkUrl;
             return this;
@@ -810,6 +857,11 @@ public class AdsCreative {
             return this;
         }
 
+        public Builder urlTags(@Nullable String urlTags) {
+            this.urlTags = urlTags;
+            return this;
+        }
+
         public Builder vastTagUrl(@Nullable String vastTagUrl) {
             this.vastTagUrl = vastTagUrl;
             return this;
@@ -827,11 +879,11 @@ public class AdsCreative {
                 data, externalAdReference, externalCreativeReference,
                 externalPlacementReference, groupId, height,
                 hostingSource, id, itemId,
-                linkUrl, name, organizationId,
-                path1, path2, promoted,
-                raw, status, thirdPartyTag,
-                title, updatedAt, vastTagUrl,
-                width);
+                labels, linkUrl, name,
+                organizationId, path1, path2,
+                promoted, raw, status,
+                thirdPartyTag, title, updatedAt,
+                urlTags, vastTagUrl, width);
         }
 
     }

@@ -45,4 +45,5 @@ GetAccountingInvoiceQueryParamFields value = GetAccountingInvoiceQueryParamField
 | `ORGANIZATION_ID`           | organization_id             |
 | `PAYMENTS`                  | payments                    |
 | `CATEGORY_IDS`              | category_ids                |
+| `PROJECT_ID`                | project_id                  |
 | `RAW`                       | raw                         |

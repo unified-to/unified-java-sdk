@@ -12,12 +12,18 @@ import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
 import java.time.OffsetDateTime;
+import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
 
 public class AdsOrganization {
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("account_number")
+    private String accountNumber;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
@@ -32,6 +38,13 @@ public class AdsOrganization {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     private String id;
+
+    /**
+     * Manager/agency chain, top-most manager first, closest manager last (SA360 manager/sub_manager)
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("managers")
+    private List<AdsManager> managers;
 
 
     @JsonInclude(Include.NON_ABSENT)
@@ -50,6 +63,11 @@ public class AdsOrganization {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("status")
+    private AdsOrganizationStatus status;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timezone")
     private String timezone;
 
@@ -60,20 +78,26 @@ public class AdsOrganization {
 
     @JsonCreator
     public AdsOrganization(
+            @JsonProperty("account_number") @Nullable String accountNumber,
             @JsonProperty("created_at") @Nullable OffsetDateTime createdAt,
             @JsonProperty("currency") @Nullable String currency,
             @JsonProperty("id") @Nullable String id,
+            @JsonProperty("managers") @Nullable List<AdsManager> managers,
             @JsonProperty("name") @Nullable String name,
             @JsonProperty("parent_id") @Nullable String parentId,
             @JsonProperty("raw") @Nullable Map<String, Object> raw,
+            @JsonProperty("status") @Nullable AdsOrganizationStatus status,
             @JsonProperty("timezone") @Nullable String timezone,
             @JsonProperty("updated_at") @Nullable OffsetDateTime updatedAt) {
+        this.accountNumber = accountNumber;
         this.createdAt = createdAt;
         this.currency = currency;
         this.id = id;
+        this.managers = managers;
         this.name = name;
         this.parentId = parentId;
         this.raw = raw;
+        this.status = status;
         this.timezone = timezone;
         this.updatedAt = updatedAt;
     }
@@ -81,7 +105,12 @@ public class AdsOrganization {
     public AdsOrganization() {
         this(null, null, null,
             null, null, null,
+            null, null, null,
             null, null);
+    }
+
+    public Optional<String> accountNumber() {
+        return Optional.ofNullable(this.accountNumber);
     }
 
     public Optional<OffsetDateTime> createdAt() {
@@ -96,6 +125,13 @@ public class AdsOrganization {
         return Optional.ofNullable(this.id);
     }
 
+    /**
+     * Manager/agency chain, top-most manager first, closest manager last (SA360 manager/sub_manager)
+     */
+    public Optional<List<AdsManager>> managers() {
+        return Optional.ofNullable(this.managers);
+    }
+
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -108,6 +144,10 @@ public class AdsOrganization {
         return Optional.ofNullable(this.raw);
     }
 
+    public Optional<AdsOrganizationStatus> status() {
+        return Optional.ofNullable(this.status);
+    }
+
     public Optional<String> timezone() {
         return Optional.ofNullable(this.timezone);
     }
@@ -118,6 +158,12 @@ public class AdsOrganization {
 
     public static Builder builder() {
         return new Builder();
+    }
+
+
+    public AdsOrganization withAccountNumber(@Nullable String accountNumber) {
+        this.accountNumber = accountNumber;
+        return this;
     }
 
 
@@ -139,6 +185,15 @@ public class AdsOrganization {
     }
 
 
+    /**
+     * Manager/agency chain, top-most manager first, closest manager last (SA360 manager/sub_manager)
+     */
+    public AdsOrganization withManagers(@Nullable List<AdsManager> managers) {
+        this.managers = managers;
+        return this;
+    }
+
+
     public AdsOrganization withName(@Nullable String name) {
         this.name = name;
         return this;
@@ -153,6 +208,12 @@ public class AdsOrganization {
 
     public AdsOrganization withRaw(@Nullable Map<String, Object> raw) {
         this.raw = raw;
+        return this;
+    }
+
+
+    public AdsOrganization withStatus(@Nullable AdsOrganizationStatus status) {
+        this.status = status;
         return this;
     }
 
@@ -179,12 +240,15 @@ public class AdsOrganization {
         }
         AdsOrganization other = (AdsOrganization) o;
         return 
+            Utils.enhancedDeepEquals(this.accountNumber, other.accountNumber) &&
             Utils.enhancedDeepEquals(this.createdAt, other.createdAt) &&
             Utils.enhancedDeepEquals(this.currency, other.currency) &&
             Utils.enhancedDeepEquals(this.id, other.id) &&
+            Utils.enhancedDeepEquals(this.managers, other.managers) &&
             Utils.enhancedDeepEquals(this.name, other.name) &&
             Utils.enhancedDeepEquals(this.parentId, other.parentId) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
+            Utils.enhancedDeepEquals(this.status, other.status) &&
             Utils.enhancedDeepEquals(this.timezone, other.timezone) &&
             Utils.enhancedDeepEquals(this.updatedAt, other.updatedAt);
     }
@@ -192,20 +256,24 @@ public class AdsOrganization {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            createdAt, currency, id,
-            name, parentId, raw,
+            accountNumber, createdAt, currency,
+            id, managers, name,
+            parentId, raw, status,
             timezone, updatedAt);
     }
     
     @Override
     public String toString() {
         return Utils.toString(AdsOrganization.class,
+                "accountNumber", accountNumber,
                 "createdAt", createdAt,
                 "currency", currency,
                 "id", id,
+                "managers", managers,
                 "name", name,
                 "parentId", parentId,
                 "raw", raw,
+                "status", status,
                 "timezone", timezone,
                 "updatedAt", updatedAt);
     }
@@ -213,11 +281,15 @@ public class AdsOrganization {
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
 
+        private String accountNumber;
+
         private OffsetDateTime createdAt;
 
         private String currency;
 
         private String id;
+
+        private List<AdsManager> managers;
 
         private String name;
 
@@ -225,12 +297,19 @@ public class AdsOrganization {
 
         private Map<String, Object> raw;
 
+        private AdsOrganizationStatus status;
+
         private String timezone;
 
         private OffsetDateTime updatedAt;
 
         private Builder() {
           // force use of static builder() method
+        }
+
+        public Builder accountNumber(@Nullable String accountNumber) {
+            this.accountNumber = accountNumber;
+            return this;
         }
 
         public Builder createdAt(@Nullable OffsetDateTime createdAt) {
@@ -245,6 +324,14 @@ public class AdsOrganization {
 
         public Builder id(@Nullable String id) {
             this.id = id;
+            return this;
+        }
+
+        /**
+         * Manager/agency chain, top-most manager first, closest manager last (SA360 manager/sub_manager)
+         */
+        public Builder managers(@Nullable List<AdsManager> managers) {
+            this.managers = managers;
             return this;
         }
 
@@ -263,6 +350,11 @@ public class AdsOrganization {
             return this;
         }
 
+        public Builder status(@Nullable AdsOrganizationStatus status) {
+            this.status = status;
+            return this;
+        }
+
         public Builder timezone(@Nullable String timezone) {
             this.timezone = timezone;
             return this;
@@ -275,8 +367,9 @@ public class AdsOrganization {
 
         public AdsOrganization build() {
             return new AdsOrganization(
-                createdAt, currency, id,
-                name, parentId, raw,
+                accountNumber, createdAt, currency,
+                id, managers, name,
+                parentId, raw, status,
                 timezone, updatedAt);
         }
 

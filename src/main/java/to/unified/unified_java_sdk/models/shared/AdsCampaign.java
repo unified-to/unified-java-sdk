@@ -14,6 +14,7 @@ import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
 import java.time.OffsetDateTime;
+import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
@@ -92,6 +93,11 @@ public class AdsCampaign {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("labels")
+    private List<String> labels;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     private String name;
 
@@ -151,6 +157,7 @@ public class AdsCampaign {
             @JsonProperty("goal") @Nullable Goal goal,
             @JsonProperty("has_eu_political_ads") @Nullable Boolean hasEuPoliticalAds,
             @JsonProperty("id") @Nullable String id,
+            @JsonProperty("labels") @Nullable List<String> labels,
             @JsonProperty("name") @Nullable String name,
             @JsonProperty("organization_id") @Nullable String organizationId,
             @JsonProperty("planned_spend_amount") @Nullable Double plannedSpendAmount,
@@ -174,6 +181,7 @@ public class AdsCampaign {
         this.goal = goal;
         this.hasEuPoliticalAds = hasEuPoliticalAds;
         this.id = id;
+        this.labels = labels;
         this.name = name;
         this.organizationId = organizationId;
         this.plannedSpendAmount = plannedSpendAmount;
@@ -193,7 +201,7 @@ public class AdsCampaign {
             null, null, null,
             null, null, null,
             null, null, null,
-            null, null);
+            null, null, null);
     }
 
     public Optional<AdvertisingChannelType> advertisingChannelType() {
@@ -250,6 +258,10 @@ public class AdsCampaign {
 
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
+    }
+
+    public Optional<List<String>> labels() {
+        return Optional.ofNullable(this.labels);
     }
 
     public Optional<String> name() {
@@ -377,6 +389,12 @@ public class AdsCampaign {
     }
 
 
+    public AdsCampaign withLabels(@Nullable List<String> labels) {
+        this.labels = labels;
+        return this;
+    }
+
+
     public AdsCampaign withName(@Nullable String name) {
         this.name = name;
         return this;
@@ -455,6 +473,7 @@ public class AdsCampaign {
             Utils.enhancedDeepEquals(this.goal, other.goal) &&
             Utils.enhancedDeepEquals(this.hasEuPoliticalAds, other.hasEuPoliticalAds) &&
             Utils.enhancedDeepEquals(this.id, other.id) &&
+            Utils.enhancedDeepEquals(this.labels, other.labels) &&
             Utils.enhancedDeepEquals(this.name, other.name) &&
             Utils.enhancedDeepEquals(this.organizationId, other.organizationId) &&
             Utils.enhancedDeepEquals(this.plannedSpendAmount, other.plannedSpendAmount) &&
@@ -473,10 +492,10 @@ public class AdsCampaign {
             budgetUnit, campaignBudgetIdentifier, category,
             createdAt, currency, effectiveStatus,
             endAt, frequencyCap, goal,
-            hasEuPoliticalAds, id, name,
-            organizationId, plannedSpendAmount, raw,
-            startAt, status, targeting,
-            totalSpendAmount, updatedAt);
+            hasEuPoliticalAds, id, labels,
+            name, organizationId, plannedSpendAmount,
+            raw, startAt, status,
+            targeting, totalSpendAmount, updatedAt);
     }
     
     @Override
@@ -496,6 +515,7 @@ public class AdsCampaign {
                 "goal", goal,
                 "hasEuPoliticalAds", hasEuPoliticalAds,
                 "id", id,
+                "labels", labels,
                 "name", name,
                 "organizationId", organizationId,
                 "plannedSpendAmount", plannedSpendAmount,
@@ -537,6 +557,8 @@ public class AdsCampaign {
         private Boolean hasEuPoliticalAds;
 
         private String id;
+
+        private List<String> labels;
 
         private String name;
 
@@ -630,6 +652,11 @@ public class AdsCampaign {
             return this;
         }
 
+        public Builder labels(@Nullable List<String> labels) {
+            this.labels = labels;
+            return this;
+        }
+
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
@@ -681,10 +708,10 @@ public class AdsCampaign {
                 budgetUnit, campaignBudgetIdentifier, category,
                 createdAt, currency, effectiveStatus,
                 endAt, frequencyCap, goal,
-                hasEuPoliticalAds, id, name,
-                organizationId, plannedSpendAmount, raw,
-                startAt, status, targeting,
-                totalSpendAmount, updatedAt);
+                hasEuPoliticalAds, id, labels,
+                name, organizationId, plannedSpendAmount,
+                raw, startAt, status,
+                targeting, totalSpendAmount, updatedAt);
         }
 
     }

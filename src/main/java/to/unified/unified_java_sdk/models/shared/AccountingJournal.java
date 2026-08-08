@@ -69,6 +69,11 @@ public class AccountingJournal {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("project_id")
+    private String projectId;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
     private Map<String, Object> raw;
 
@@ -108,6 +113,7 @@ public class AccountingJournal {
             @JsonProperty("lineitems") @Nullable List<AccountingJournalLineitem> lineitems,
             @JsonProperty("organization_id") @Nullable String organizationId,
             @JsonProperty("posted_at") @Nullable OffsetDateTime postedAt,
+            @JsonProperty("project_id") @Nullable String projectId,
             @JsonProperty("raw") @Nullable Map<String, Object> raw,
             @JsonProperty("reference") @Nullable String reference,
             @JsonProperty("source") @Nullable String source,
@@ -123,6 +129,7 @@ public class AccountingJournal {
         this.lineitems = lineitems;
         this.organizationId = organizationId;
         this.postedAt = postedAt;
+        this.projectId = projectId;
         this.raw = raw;
         this.reference = reference;
         this.source = source;
@@ -136,7 +143,8 @@ public class AccountingJournal {
             null, null, null,
             null, null, null,
             null, null, null,
-            null, null, null);
+            null, null, null,
+            null);
     }
 
     public Optional<List<AccountingAttachment>> attachments() {
@@ -176,6 +184,10 @@ public class AccountingJournal {
 
     public Optional<OffsetDateTime> postedAt() {
         return Optional.ofNullable(this.postedAt);
+    }
+
+    public Optional<String> projectId() {
+        return Optional.ofNullable(this.projectId);
     }
 
     public Optional<Map<String, Object>> raw() {
@@ -264,6 +276,12 @@ public class AccountingJournal {
     }
 
 
+    public AccountingJournal withProjectId(@Nullable String projectId) {
+        this.projectId = projectId;
+        return this;
+    }
+
+
     public AccountingJournal withRaw(@Nullable Map<String, Object> raw) {
         this.raw = raw;
         return this;
@@ -319,6 +337,7 @@ public class AccountingJournal {
             Utils.enhancedDeepEquals(this.lineitems, other.lineitems) &&
             Utils.enhancedDeepEquals(this.organizationId, other.organizationId) &&
             Utils.enhancedDeepEquals(this.postedAt, other.postedAt) &&
+            Utils.enhancedDeepEquals(this.projectId, other.projectId) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
             Utils.enhancedDeepEquals(this.reference, other.reference) &&
             Utils.enhancedDeepEquals(this.source, other.source) &&
@@ -333,8 +352,9 @@ public class AccountingJournal {
             attachments, categoryIds, createdAt,
             currency, description, id,
             lineitems, organizationId, postedAt,
-            raw, reference, source,
-            taxAmount, taxrateId, updatedAt);
+            projectId, raw, reference,
+            source, taxAmount, taxrateId,
+            updatedAt);
     }
     
     @Override
@@ -349,6 +369,7 @@ public class AccountingJournal {
                 "lineitems", lineitems,
                 "organizationId", organizationId,
                 "postedAt", postedAt,
+                "projectId", projectId,
                 "raw", raw,
                 "reference", reference,
                 "source", source,
@@ -377,6 +398,8 @@ public class AccountingJournal {
         private String organizationId;
 
         private OffsetDateTime postedAt;
+
+        private String projectId;
 
         private Map<String, Object> raw;
 
@@ -442,6 +465,11 @@ public class AccountingJournal {
             return this;
         }
 
+        public Builder projectId(@Nullable String projectId) {
+            this.projectId = projectId;
+            return this;
+        }
+
         public Builder raw(@Nullable Map<String, Object> raw) {
             this.raw = raw;
             return this;
@@ -477,8 +505,9 @@ public class AccountingJournal {
                 attachments, categoryIds, createdAt,
                 currency, description, id,
                 lineitems, organizationId, postedAt,
-                raw, reference, source,
-                taxAmount, taxrateId, updatedAt);
+                projectId, raw, reference,
+                source, taxAmount, taxrateId,
+                updatedAt);
         }
 
     }

@@ -40,6 +40,10 @@ public class WebhookObjectType {
     public static final WebhookObjectType ACCOUNTING_CATEGORY = new WebhookObjectType("accounting_category");
     public static final WebhookObjectType ACCOUNTING_EXPENSE = new WebhookObjectType("accounting_expense");
     public static final WebhookObjectType ACCOUNTING_CASHFLOW = new WebhookObjectType("accounting_cashflow");
+    public static final WebhookObjectType ACCOUNTING_QUOTE = new WebhookObjectType("accounting_quote");
+    public static final WebhookObjectType ACCOUNTING_AGEDRECEIVABLE = new WebhookObjectType("accounting_agedreceivable");
+    public static final WebhookObjectType ACCOUNTING_AGEDPAYABLE = new WebhookObjectType("accounting_agedpayable");
+    public static final WebhookObjectType ACCOUNTING_PROJECT = new WebhookObjectType("accounting_project");
     public static final WebhookObjectType PAYMENT_PAYMENT = new WebhookObjectType("payment_payment");
     public static final WebhookObjectType PAYMENT_LINK = new WebhookObjectType("payment_link");
     public static final WebhookObjectType PAYMENT_PAYOUT = new WebhookObjectType("payment_payout");
@@ -270,6 +274,10 @@ public class WebhookObjectType {
         map.put("accounting_category", ACCOUNTING_CATEGORY);
         map.put("accounting_expense", ACCOUNTING_EXPENSE);
         map.put("accounting_cashflow", ACCOUNTING_CASHFLOW);
+        map.put("accounting_quote", ACCOUNTING_QUOTE);
+        map.put("accounting_agedreceivable", ACCOUNTING_AGEDRECEIVABLE);
+        map.put("accounting_agedpayable", ACCOUNTING_AGEDPAYABLE);
+        map.put("accounting_project", ACCOUNTING_PROJECT);
         map.put("payment_payment", PAYMENT_PAYMENT);
         map.put("payment_link", PAYMENT_LINK);
         map.put("payment_payout", PAYMENT_PAYOUT);
@@ -432,6 +440,10 @@ public class WebhookObjectType {
         map.put("accounting_category", WebhookObjectTypeEnum.ACCOUNTING_CATEGORY);
         map.put("accounting_expense", WebhookObjectTypeEnum.ACCOUNTING_EXPENSE);
         map.put("accounting_cashflow", WebhookObjectTypeEnum.ACCOUNTING_CASHFLOW);
+        map.put("accounting_quote", WebhookObjectTypeEnum.ACCOUNTING_QUOTE);
+        map.put("accounting_agedreceivable", WebhookObjectTypeEnum.ACCOUNTING_AGEDRECEIVABLE);
+        map.put("accounting_agedpayable", WebhookObjectTypeEnum.ACCOUNTING_AGEDPAYABLE);
+        map.put("accounting_project", WebhookObjectTypeEnum.ACCOUNTING_PROJECT);
         map.put("payment_payment", WebhookObjectTypeEnum.PAYMENT_PAYMENT);
         map.put("payment_link", WebhookObjectTypeEnum.PAYMENT_LINK);
         map.put("payment_payout", WebhookObjectTypeEnum.PAYMENT_PAYOUT);
@@ -595,6 +607,10 @@ public class WebhookObjectType {
         ACCOUNTING_CATEGORY("accounting_category"),
         ACCOUNTING_EXPENSE("accounting_expense"),
         ACCOUNTING_CASHFLOW("accounting_cashflow"),
+        ACCOUNTING_QUOTE("accounting_quote"),
+        ACCOUNTING_AGEDRECEIVABLE("accounting_agedreceivable"),
+        ACCOUNTING_AGEDPAYABLE("accounting_agedpayable"),
+        ACCOUNTING_PROJECT("accounting_project"),
         PAYMENT_PAYMENT("payment_payment"),
         PAYMENT_LINK("payment_link"),
         PAYMENT_PAYOUT("payment_payout"),

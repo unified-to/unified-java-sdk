@@ -80,6 +80,11 @@ public class AdsGroup {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("creative_selection")
+    private CreativeSelection creativeSelection;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currency")
     private String currency;
 
@@ -112,6 +117,11 @@ public class AdsGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("insertionorder_id")
     private String insertionorderId;
+
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("language_locale")
+    private String languageLocale;
 
 
     @JsonInclude(Include.NON_ABSENT)
@@ -186,6 +196,7 @@ public class AdsGroup {
             @JsonProperty("campaign_id") @Nullable String campaignId,
             @JsonProperty("created_at") @Nullable OffsetDateTime createdAt,
             @JsonProperty("creative_ids") @Nullable List<String> creativeIds,
+            @JsonProperty("creative_selection") @Nullable CreativeSelection creativeSelection,
             @JsonProperty("currency") @Nullable String currency,
             @JsonProperty("effective_status") @Nullable AdsGroupEffectiveStatus effectiveStatus,
             @JsonProperty("end_at") @Nullable OffsetDateTime endAt,
@@ -193,6 +204,7 @@ public class AdsGroup {
             @JsonProperty("has_eu_political_ads") @Nullable Boolean hasEuPoliticalAds,
             @JsonProperty("id") @Nullable String id,
             @JsonProperty("insertionorder_id") @Nullable String insertionorderId,
+            @JsonProperty("language_locale") @Nullable String languageLocale,
             @JsonProperty("name") @Nullable String name,
             @JsonProperty("optimization_goal") @Nullable OptimizationGoal optimizationGoal,
             @JsonProperty("organization_id") @Nullable String organizationId,
@@ -216,6 +228,7 @@ public class AdsGroup {
         this.campaignId = campaignId;
         this.createdAt = createdAt;
         this.creativeIds = creativeIds;
+        this.creativeSelection = creativeSelection;
         this.currency = currency;
         this.effectiveStatus = effectiveStatus;
         this.endAt = endAt;
@@ -223,6 +236,7 @@ public class AdsGroup {
         this.hasEuPoliticalAds = hasEuPoliticalAds;
         this.id = id;
         this.insertionorderId = insertionorderId;
+        this.languageLocale = languageLocale;
         this.name = name;
         this.optimizationGoal = optimizationGoal;
         this.organizationId = organizationId;
@@ -247,7 +261,8 @@ public class AdsGroup {
             null, null, null,
             null, null, null,
             null, null, null,
-            null, null, null);
+            null, null, null,
+            null, null);
     }
 
     public Optional<Double> bidAmount() {
@@ -297,6 +312,10 @@ public class AdsGroup {
         return Optional.ofNullable(this.creativeIds);
     }
 
+    public Optional<CreativeSelection> creativeSelection() {
+        return Optional.ofNullable(this.creativeSelection);
+    }
+
     public Optional<String> currency() {
         return Optional.ofNullable(this.currency);
     }
@@ -323,6 +342,10 @@ public class AdsGroup {
 
     public Optional<String> insertionorderId() {
         return Optional.ofNullable(this.insertionorderId);
+    }
+
+    public Optional<String> languageLocale() {
+        return Optional.ofNullable(this.languageLocale);
     }
 
     public Optional<String> name() {
@@ -447,6 +470,12 @@ public class AdsGroup {
     }
 
 
+    public AdsGroup withCreativeSelection(@Nullable CreativeSelection creativeSelection) {
+        this.creativeSelection = creativeSelection;
+        return this;
+    }
+
+
     public AdsGroup withCurrency(@Nullable String currency) {
         this.currency = currency;
         return this;
@@ -485,6 +514,12 @@ public class AdsGroup {
 
     public AdsGroup withInsertionorderId(@Nullable String insertionorderId) {
         this.insertionorderId = insertionorderId;
+        return this;
+    }
+
+
+    public AdsGroup withLanguageLocale(@Nullable String languageLocale) {
+        this.languageLocale = languageLocale;
         return this;
     }
 
@@ -582,6 +617,7 @@ public class AdsGroup {
             Utils.enhancedDeepEquals(this.campaignId, other.campaignId) &&
             Utils.enhancedDeepEquals(this.createdAt, other.createdAt) &&
             Utils.enhancedDeepEquals(this.creativeIds, other.creativeIds) &&
+            Utils.enhancedDeepEquals(this.creativeSelection, other.creativeSelection) &&
             Utils.enhancedDeepEquals(this.currency, other.currency) &&
             Utils.enhancedDeepEquals(this.effectiveStatus, other.effectiveStatus) &&
             Utils.enhancedDeepEquals(this.endAt, other.endAt) &&
@@ -589,6 +625,7 @@ public class AdsGroup {
             Utils.enhancedDeepEquals(this.hasEuPoliticalAds, other.hasEuPoliticalAds) &&
             Utils.enhancedDeepEquals(this.id, other.id) &&
             Utils.enhancedDeepEquals(this.insertionorderId, other.insertionorderId) &&
+            Utils.enhancedDeepEquals(this.languageLocale, other.languageLocale) &&
             Utils.enhancedDeepEquals(this.name, other.name) &&
             Utils.enhancedDeepEquals(this.optimizationGoal, other.optimizationGoal) &&
             Utils.enhancedDeepEquals(this.organizationId, other.organizationId) &&
@@ -609,13 +646,14 @@ public class AdsGroup {
             bidAmount, bidStrategy, billingEvent,
             budgetAllocationType, budgetAmount, budgetMaxAmount,
             budgetPeriod, budgetUnit, campaignId,
-            createdAt, creativeIds, currency,
-            effectiveStatus, endAt, frequencyCap,
-            hasEuPoliticalAds, id, insertionorderId,
-            name, optimizationGoal, organizationId,
-            pacing, parentId, promoted,
-            raw, startAt, status,
-            targeting, type, updatedAt);
+            createdAt, creativeIds, creativeSelection,
+            currency, effectiveStatus, endAt,
+            frequencyCap, hasEuPoliticalAds, id,
+            insertionorderId, languageLocale, name,
+            optimizationGoal, organizationId, pacing,
+            parentId, promoted, raw,
+            startAt, status, targeting,
+            type, updatedAt);
     }
     
     @Override
@@ -632,6 +670,7 @@ public class AdsGroup {
                 "campaignId", campaignId,
                 "createdAt", createdAt,
                 "creativeIds", creativeIds,
+                "creativeSelection", creativeSelection,
                 "currency", currency,
                 "effectiveStatus", effectiveStatus,
                 "endAt", endAt,
@@ -639,6 +678,7 @@ public class AdsGroup {
                 "hasEuPoliticalAds", hasEuPoliticalAds,
                 "id", id,
                 "insertionorderId", insertionorderId,
+                "languageLocale", languageLocale,
                 "name", name,
                 "optimizationGoal", optimizationGoal,
                 "organizationId", organizationId,
@@ -678,6 +718,8 @@ public class AdsGroup {
 
         private List<String> creativeIds;
 
+        private CreativeSelection creativeSelection;
+
         private String currency;
 
         private AdsGroupEffectiveStatus effectiveStatus;
@@ -691,6 +733,8 @@ public class AdsGroup {
         private String id;
 
         private String insertionorderId;
+
+        private String languageLocale;
 
         private String name;
 
@@ -778,6 +822,11 @@ public class AdsGroup {
             return this;
         }
 
+        public Builder creativeSelection(@Nullable CreativeSelection creativeSelection) {
+            this.creativeSelection = creativeSelection;
+            return this;
+        }
+
         public Builder currency(@Nullable String currency) {
             this.currency = currency;
             return this;
@@ -810,6 +859,11 @@ public class AdsGroup {
 
         public Builder insertionorderId(@Nullable String insertionorderId) {
             this.insertionorderId = insertionorderId;
+            return this;
+        }
+
+        public Builder languageLocale(@Nullable String languageLocale) {
+            this.languageLocale = languageLocale;
             return this;
         }
 
@@ -878,13 +932,14 @@ public class AdsGroup {
                 bidAmount, bidStrategy, billingEvent,
                 budgetAllocationType, budgetAmount, budgetMaxAmount,
                 budgetPeriod, budgetUnit, campaignId,
-                createdAt, creativeIds, currency,
-                effectiveStatus, endAt, frequencyCap,
-                hasEuPoliticalAds, id, insertionorderId,
-                name, optimizationGoal, organizationId,
-                pacing, parentId, promoted,
-                raw, startAt, status,
-                targeting, type, updatedAt);
+                createdAt, creativeIds, creativeSelection,
+                currency, effectiveStatus, endAt,
+                frequencyCap, hasEuPoliticalAds, id,
+                insertionorderId, languageLocale, name,
+                optimizationGoal, organizationId, pacing,
+                parentId, promoted, raw,
+                startAt, status, targeting,
+                type, updatedAt);
         }
 
     }

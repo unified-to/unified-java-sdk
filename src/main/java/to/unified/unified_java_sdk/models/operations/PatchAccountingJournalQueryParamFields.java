@@ -22,6 +22,7 @@ public enum PatchAccountingJournalQueryParamFields {
     SOURCE("source"),
     ORGANIZATION_ID("organization_id"),
     CATEGORY_IDS("category_ids"),
+    PROJECT_ID("project_id"),
     ATTACHMENTS("attachments"),
     RAW("raw");
 

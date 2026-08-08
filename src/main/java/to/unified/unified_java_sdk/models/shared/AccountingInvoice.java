@@ -125,6 +125,11 @@ public class AccountingInvoice {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("project_id")
+    private String projectId;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
     private Map<String, Object> raw;
 
@@ -210,6 +215,7 @@ public class AccountingInvoice {
             @JsonProperty("payment_terms") @Nullable AccountingInvoicePaymentTerms paymentTerms,
             @JsonProperty("payments") @Nullable List<AccountingPaymentReference> payments,
             @JsonProperty("posted_at") @Nullable OffsetDateTime postedAt,
+            @JsonProperty("project_id") @Nullable String projectId,
             @JsonProperty("raw") @Nullable Map<String, Object> raw,
             @JsonProperty("reference") @Nullable String reference,
             @JsonProperty("refund_amount") @Nullable Double refundAmount,
@@ -243,6 +249,7 @@ public class AccountingInvoice {
         this.paymentTerms = paymentTerms;
         this.payments = payments;
         this.postedAt = postedAt;
+        this.projectId = projectId;
         this.raw = raw;
         this.reference = reference;
         this.refundAmount = refundAmount;
@@ -269,7 +276,8 @@ public class AccountingInvoice {
             null, null, null,
             null, null, null,
             null, null, null,
-            null, null, null);
+            null, null, null,
+            null);
     }
 
     public Optional<List<AccountingAttachment>> attachments() {
@@ -353,6 +361,10 @@ public class AccountingInvoice {
 
     public Optional<OffsetDateTime> postedAt() {
         return Optional.ofNullable(this.postedAt);
+    }
+
+    public Optional<String> projectId() {
+        return Optional.ofNullable(this.projectId);
     }
 
     public Optional<Map<String, Object>> raw() {
@@ -535,6 +547,12 @@ public class AccountingInvoice {
     }
 
 
+    public AccountingInvoice withProjectId(@Nullable String projectId) {
+        this.projectId = projectId;
+        return this;
+    }
+
+
     public AccountingInvoice withRaw(@Nullable Map<String, Object> raw) {
         this.raw = raw;
         return this;
@@ -643,6 +661,7 @@ public class AccountingInvoice {
             Utils.enhancedDeepEquals(this.paymentTerms, other.paymentTerms) &&
             Utils.enhancedDeepEquals(this.payments, other.payments) &&
             Utils.enhancedDeepEquals(this.postedAt, other.postedAt) &&
+            Utils.enhancedDeepEquals(this.projectId, other.projectId) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
             Utils.enhancedDeepEquals(this.reference, other.reference) &&
             Utils.enhancedDeepEquals(this.refundAmount, other.refundAmount) &&
@@ -667,11 +686,12 @@ public class AccountingInvoice {
             id, invoiceNumber, lineitems,
             notes, organizationId, paidAmount,
             paidAt, paymentCollectionMethod, paymentTerms,
-            payments, postedAt, raw,
-            reference, refundAmount, refundReason,
-            refundedAt, send, status,
-            taxAmount, term, totalAmount,
-            type, updatedAt, url);
+            payments, postedAt, projectId,
+            raw, reference, refundAmount,
+            refundReason, refundedAt, send,
+            status, taxAmount, term,
+            totalAmount, type, updatedAt,
+            url);
     }
     
     @Override
@@ -697,6 +717,7 @@ public class AccountingInvoice {
                 "paymentTerms", paymentTerms,
                 "payments", payments,
                 "postedAt", postedAt,
+                "projectId", projectId,
                 "raw", raw,
                 "reference", reference,
                 "refundAmount", refundAmount,
@@ -754,6 +775,8 @@ public class AccountingInvoice {
         private List<AccountingPaymentReference> payments;
 
         private OffsetDateTime postedAt;
+
+        private String projectId;
 
         private Map<String, Object> raw;
 
@@ -888,6 +911,11 @@ public class AccountingInvoice {
             return this;
         }
 
+        public Builder projectId(@Nullable String projectId) {
+            this.projectId = projectId;
+            return this;
+        }
+
         public Builder raw(@Nullable Map<String, Object> raw) {
             this.raw = raw;
             return this;
@@ -961,11 +989,12 @@ public class AccountingInvoice {
                 id, invoiceNumber, lineitems,
                 notes, organizationId, paidAmount,
                 paidAt, paymentCollectionMethod, paymentTerms,
-                payments, postedAt, raw,
-                reference, refundAmount, refundReason,
-                refundedAt, send, status,
-                taxAmount, term, totalAmount,
-                type, updatedAt, url);
+                payments, postedAt, projectId,
+                raw, reference, refundAmount,
+                refundReason, refundedAt, send,
+                status, taxAmount, term,
+                totalAmount, type, updatedAt,
+                url);
         }
 
     }

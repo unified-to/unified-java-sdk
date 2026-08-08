@@ -82,6 +82,11 @@ public class AccountingTransaction {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("project_id")
+    private String projectId;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
     private Map<String, Object> raw;
 
@@ -134,6 +139,7 @@ public class AccountingTransaction {
             @JsonProperty("organization_id") @Nullable String organizationId,
             @JsonProperty("payment_method") @Nullable String paymentMethod,
             @JsonProperty("payment_terms") @Nullable String paymentTerms,
+            @JsonProperty("project_id") @Nullable String projectId,
             @JsonProperty("raw") @Nullable Map<String, Object> raw,
             @JsonProperty("reference") @Nullable String reference,
             @JsonProperty("split_account_id") @Nullable String splitAccountId,
@@ -154,6 +160,7 @@ public class AccountingTransaction {
         this.organizationId = organizationId;
         this.paymentMethod = paymentMethod;
         this.paymentTerms = paymentTerms;
+        this.projectId = projectId;
         this.raw = raw;
         this.reference = reference;
         this.splitAccountId = splitAccountId;
@@ -171,7 +178,7 @@ public class AccountingTransaction {
             null, null, null,
             null, null, null,
             null, null, null,
-            null, null);
+            null, null, null);
     }
 
     public Optional<String> accountId() {
@@ -220,6 +227,10 @@ public class AccountingTransaction {
 
     public Optional<String> paymentTerms() {
         return Optional.ofNullable(this.paymentTerms);
+    }
+
+    public Optional<String> projectId() {
+        return Optional.ofNullable(this.projectId);
     }
 
     public Optional<Map<String, Object>> raw() {
@@ -331,6 +342,12 @@ public class AccountingTransaction {
     }
 
 
+    public AccountingTransaction withProjectId(@Nullable String projectId) {
+        this.projectId = projectId;
+        return this;
+    }
+
+
     public AccountingTransaction withRaw(@Nullable Map<String, Object> raw) {
         this.raw = raw;
         return this;
@@ -401,6 +418,7 @@ public class AccountingTransaction {
             Utils.enhancedDeepEquals(this.organizationId, other.organizationId) &&
             Utils.enhancedDeepEquals(this.paymentMethod, other.paymentMethod) &&
             Utils.enhancedDeepEquals(this.paymentTerms, other.paymentTerms) &&
+            Utils.enhancedDeepEquals(this.projectId, other.projectId) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
             Utils.enhancedDeepEquals(this.reference, other.reference) &&
             Utils.enhancedDeepEquals(this.splitAccountId, other.splitAccountId) &&
@@ -418,9 +436,9 @@ public class AccountingTransaction {
             createdAt, currency, customerMessage,
             id, lineitems, memo,
             organizationId, paymentMethod, paymentTerms,
-            raw, reference, splitAccountId,
-            subTotalAmount, taxAmount, totalAmount,
-            type, updatedAt);
+            projectId, raw, reference,
+            splitAccountId, subTotalAmount, taxAmount,
+            totalAmount, type, updatedAt);
     }
     
     @Override
@@ -438,6 +456,7 @@ public class AccountingTransaction {
                 "organizationId", organizationId,
                 "paymentMethod", paymentMethod,
                 "paymentTerms", paymentTerms,
+                "projectId", projectId,
                 "raw", raw,
                 "reference", reference,
                 "splitAccountId", splitAccountId,
@@ -474,6 +493,8 @@ public class AccountingTransaction {
         private String paymentMethod;
 
         private String paymentTerms;
+
+        private String projectId;
 
         private Map<String, Object> raw;
 
@@ -555,6 +576,11 @@ public class AccountingTransaction {
             return this;
         }
 
+        public Builder projectId(@Nullable String projectId) {
+            this.projectId = projectId;
+            return this;
+        }
+
         public Builder raw(@Nullable Map<String, Object> raw) {
             this.raw = raw;
             return this;
@@ -601,9 +627,9 @@ public class AccountingTransaction {
                 createdAt, currency, customerMessage,
                 id, lineitems, memo,
                 organizationId, paymentMethod, paymentTerms,
-                raw, reference, splitAccountId,
-                subTotalAmount, taxAmount, totalAmount,
-                type, updatedAt);
+                projectId, raw, reference,
+                splitAccountId, subTotalAmount, taxAmount,
+                totalAmount, type, updatedAt);
         }
 
     }
