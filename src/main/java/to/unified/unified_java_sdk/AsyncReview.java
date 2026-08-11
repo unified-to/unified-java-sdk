@@ -9,7 +9,9 @@ import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.CreateCommerceReviewRequest;
 import to.unified.unified_java_sdk.models.operations.GetCommerceReviewRequest;
+import to.unified.unified_java_sdk.models.operations.GetPerformanceReviewRequest;
 import to.unified.unified_java_sdk.models.operations.ListCommerceReviewsRequest;
+import to.unified.unified_java_sdk.models.operations.ListPerformanceReviewsRequest;
 import to.unified.unified_java_sdk.models.operations.PatchCommerceReviewRequest;
 import to.unified.unified_java_sdk.models.operations.RemoveCommerceReviewRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateCommerceReviewRequest;
@@ -17,8 +19,12 @@ import to.unified.unified_java_sdk.models.operations.async.CreateCommerceReviewR
 import to.unified.unified_java_sdk.models.operations.async.CreateCommerceReviewResponse;
 import to.unified.unified_java_sdk.models.operations.async.GetCommerceReviewRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.GetCommerceReviewResponse;
+import to.unified.unified_java_sdk.models.operations.async.GetPerformanceReviewRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetPerformanceReviewResponse;
 import to.unified.unified_java_sdk.models.operations.async.ListCommerceReviewsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.ListCommerceReviewsResponse;
+import to.unified.unified_java_sdk.models.operations.async.ListPerformanceReviewsRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListPerformanceReviewsResponse;
 import to.unified.unified_java_sdk.models.operations.async.PatchCommerceReviewRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.PatchCommerceReviewResponse;
 import to.unified.unified_java_sdk.models.operations.async.RemoveCommerceReviewRequestBuilder;
@@ -27,7 +33,9 @@ import to.unified.unified_java_sdk.models.operations.async.UpdateCommerceReviewR
 import to.unified.unified_java_sdk.models.operations.async.UpdateCommerceReviewResponse;
 import to.unified.unified_java_sdk.operations.CreateCommerceReview;
 import to.unified.unified_java_sdk.operations.GetCommerceReview;
+import to.unified.unified_java_sdk.operations.GetPerformanceReview;
 import to.unified.unified_java_sdk.operations.ListCommerceReviews;
+import to.unified.unified_java_sdk.operations.ListPerformanceReviews;
 import to.unified.unified_java_sdk.operations.PatchCommerceReview;
 import to.unified.unified_java_sdk.operations.RemoveCommerceReview;
 import to.unified.unified_java_sdk.operations.UpdateCommerceReview;
@@ -101,6 +109,29 @@ public class AsyncReview {
 
 
     /**
+     * Retrieve a review
+     * 
+     * @return The async call builder
+     */
+    public GetPerformanceReviewRequestBuilder getPerformanceReview() {
+        return new GetPerformanceReviewRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Retrieve a review
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<GetPerformanceReviewResponse>} - The async response
+     */
+    public CompletableFuture<GetPerformanceReviewResponse> getPerformanceReview(@Nonnull GetPerformanceReviewRequest request) {
+        AsyncRequestOperation<GetPerformanceReviewRequest, GetPerformanceReviewResponse> operation
+              = new GetPerformanceReview.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
      * List all reviews
      * 
      * @return The async call builder
@@ -118,6 +149,29 @@ public class AsyncReview {
     public CompletableFuture<ListCommerceReviewsResponse> listCommerceReviews(@Nonnull ListCommerceReviewsRequest request) {
         AsyncRequestOperation<ListCommerceReviewsRequest, ListCommerceReviewsResponse> operation
               = new ListCommerceReviews.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * List all reviews
+     * 
+     * @return The async call builder
+     */
+    public ListPerformanceReviewsRequestBuilder listPerformanceReviews() {
+        return new ListPerformanceReviewsRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * List all reviews
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<ListPerformanceReviewsResponse>} - The async response
+     */
+    public CompletableFuture<ListPerformanceReviewsResponse> listPerformanceReviews(@Nonnull ListPerformanceReviewsRequest request) {
+        AsyncRequestOperation<ListPerformanceReviewsRequest, ListPerformanceReviewsResponse> operation
+              = new ListPerformanceReviews.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

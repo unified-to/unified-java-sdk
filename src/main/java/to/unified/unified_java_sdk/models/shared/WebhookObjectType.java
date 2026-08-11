@@ -181,6 +181,10 @@ public class WebhookObjectType {
     public static final WebhookObjectType CDP_SOURCE = new WebhookObjectType("cdp_source");
     public static final WebhookObjectType CDP_DESTINATION = new WebhookObjectType("cdp_destination");
     public static final WebhookObjectType CDP_ACTIVATION = new WebhookObjectType("cdp_activation");
+    public static final WebhookObjectType PERFORMANCE_CYCLE = new WebhookObjectType("performance_cycle");
+    public static final WebhookObjectType PERFORMANCE_REVIEW = new WebhookObjectType("performance_review");
+    public static final WebhookObjectType PERFORMANCE_GOAL = new WebhookObjectType("performance_goal");
+    public static final WebhookObjectType PERFORMANCE_FEEDBACK = new WebhookObjectType("performance_feedback");
 
     // This map will grow whenever a Color gets created with a new
     // unrecognized value (a potential memory leak if the user is not
@@ -415,6 +419,10 @@ public class WebhookObjectType {
         map.put("cdp_source", CDP_SOURCE);
         map.put("cdp_destination", CDP_DESTINATION);
         map.put("cdp_activation", CDP_ACTIVATION);
+        map.put("performance_cycle", PERFORMANCE_CYCLE);
+        map.put("performance_review", PERFORMANCE_REVIEW);
+        map.put("performance_goal", PERFORMANCE_GOAL);
+        map.put("performance_feedback", PERFORMANCE_FEEDBACK);
         return map;
     }
 
@@ -581,6 +589,10 @@ public class WebhookObjectType {
         map.put("cdp_source", WebhookObjectTypeEnum.CDP_SOURCE);
         map.put("cdp_destination", WebhookObjectTypeEnum.CDP_DESTINATION);
         map.put("cdp_activation", WebhookObjectTypeEnum.CDP_ACTIVATION);
+        map.put("performance_cycle", WebhookObjectTypeEnum.PERFORMANCE_CYCLE);
+        map.put("performance_review", WebhookObjectTypeEnum.PERFORMANCE_REVIEW);
+        map.put("performance_goal", WebhookObjectTypeEnum.PERFORMANCE_GOAL);
+        map.put("performance_feedback", WebhookObjectTypeEnum.PERFORMANCE_FEEDBACK);
         return map;
     }
     
@@ -747,7 +759,11 @@ public class WebhookObjectType {
         CDP_EVENT("cdp_event"),
         CDP_SOURCE("cdp_source"),
         CDP_DESTINATION("cdp_destination"),
-        CDP_ACTIVATION("cdp_activation"),;
+        CDP_ACTIVATION("cdp_activation"),
+        PERFORMANCE_CYCLE("performance_cycle"),
+        PERFORMANCE_REVIEW("performance_review"),
+        PERFORMANCE_GOAL("performance_goal"),
+        PERFORMANCE_FEEDBACK("performance_feedback"),;
 
         private final String value;
 

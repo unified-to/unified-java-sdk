@@ -46,3 +46,4 @@ Categories value = Categories.PASSTHROUGH;
 | `CLUBS`        | clubs          |
 | `DATASTORE`    | datastore      |
 | `CDP`          | cdp            |
+| `PERFORMANCE`  | performance    |

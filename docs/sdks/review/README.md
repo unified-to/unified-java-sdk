@@ -6,7 +6,9 @@
 
 * [createCommerceReview](#createcommercereview) - Create a review
 * [getCommerceReview](#getcommercereview) - Retrieve a review
+* [getPerformanceReview](#getperformancereview) - Retrieve a review
 * [listCommerceReviews](#listcommercereviews) - List all reviews
+* [listPerformanceReviews](#listperformancereviews) - List all reviews
 * [patchCommerceReview](#patchcommercereview) - Update a review
 * [removeCommerceReview](#removecommercereview) - Remove a review
 * [updateCommerceReview](#updatecommercereview) - Update a review
@@ -129,6 +131,64 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
+## getPerformanceReview
+
+Retrieve a review
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="getPerformanceReview" method="get" path="/performance/{connection_id}/review/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.GetPerformanceReviewRequest;
+import to.unified.unified_java_sdk.models.operations.GetPerformanceReviewResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        GetPerformanceReviewRequest req = GetPerformanceReviewRequest.builder()
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        GetPerformanceReviewResponse res = sdk.review().getPerformanceReview()
+                .request(req)
+                .call();
+
+        if (res.performanceReview().isPresent()) {
+            System.out.println(res.performanceReview().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                             | Type                                                                                  | Required                                                                              | Description                                                                           |
+| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| `request`                                                                             | [GetPerformanceReviewRequest](../../models/operations/GetPerformanceReviewRequest.md) | :heavy_check_mark:                                                                    | The request object to use for the request.                                            |
+
+### Response
+
+**[GetPerformanceReviewResponse](../../models/operations/GetPerformanceReviewResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
 ## listCommerceReviews
 
 List all reviews
@@ -179,6 +239,63 @@ public class Application {
 ### Response
 
 **[ListCommerceReviewsResponse](../../models/operations/ListCommerceReviewsResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## listPerformanceReviews
+
+List all reviews
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="listPerformanceReviews" method="get" path="/performance/{connection_id}/review" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.ListPerformanceReviewsRequest;
+import to.unified.unified_java_sdk.models.operations.ListPerformanceReviewsResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        ListPerformanceReviewsRequest req = ListPerformanceReviewsRequest.builder()
+                .connectionId("<id>")
+                .build();
+
+        ListPerformanceReviewsResponse res = sdk.review().listPerformanceReviews()
+                .request(req)
+                .call();
+
+        if (res.performanceReviews().isPresent()) {
+            System.out.println(res.performanceReviews().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                 | Type                                                                                      | Required                                                                                  | Description                                                                               |
+| ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
+| `request`                                                                                 | [ListPerformanceReviewsRequest](../../models/operations/ListPerformanceReviewsRequest.md) | :heavy_check_mark:                                                                        | The request object to use for the request.                                                |
+
+### Response
+
+**[ListPerformanceReviewsResponse](../../models/operations/ListPerformanceReviewsResponse.md)**
 
 ### Errors
 

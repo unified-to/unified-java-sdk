@@ -413,6 +413,18 @@ public class UnifiedTo {
     private final Subscription subscription;
 
 
+    private final Performance performance;
+
+
+    private final Cycle cycle;
+
+
+    private final Feedback feedback;
+
+
+    private final Goal goal;
+
+
     private final Repo repo;
 
 
@@ -1150,6 +1162,26 @@ public class UnifiedTo {
     }
 
 
+    public Performance performance() {
+        return performance;
+    }
+
+
+    public Cycle cycle() {
+        return cycle;
+    }
+
+
+    public Feedback feedback() {
+        return feedback;
+    }
+
+
+    public Goal goal() {
+        return goal;
+    }
+
+
     public Repo repo() {
         return repo;
     }
@@ -1605,6 +1637,10 @@ public class UnifiedTo {
         this.payout = new Payout(sdkConfiguration);
         this.refund = new Refund(sdkConfiguration);
         this.subscription = new Subscription(sdkConfiguration);
+        this.performance = new Performance(sdkConfiguration);
+        this.cycle = new Cycle(sdkConfiguration);
+        this.feedback = new Feedback(sdkConfiguration);
+        this.goal = new Goal(sdkConfiguration);
         this.repo = new Repo(sdkConfiguration);
         this.branch = new Branch(sdkConfiguration);
         this.commit = new Commit(sdkConfiguration);

@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: cfc256ab-f291-4245-b909-5b9e9a6e6803
 management:
-  docChecksum: 87ccafd787d7294827ae4367912d6eb3
+  docChecksum: f777b241309109355222be0cf2e25ccf
   docVersion: "1.0"
-  speakeasyVersion: 1.792.0
-  generationVersion: 2.927.0
-  releaseVersion: 0.48.8
-  configChecksum: ae262dde0b725ea9a5246ff3c70aa71b
+  speakeasyVersion: 1.793.0
+  generationVersion: 2.928.0
+  releaseVersion: 0.48.9
+  configChecksum: 5eeac25ed0e035f8881b5d8093c70b22
   repoURL: https://github.com/unified-to/unified-java-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-java-sdk
@@ -333,6 +333,12 @@ trackedFiles:
   docs/models/operations/CreatePaymentSubscriptionQueryParamFields.md: {}
   docs/models/operations/CreatePaymentSubscriptionRequest.md: {}
   docs/models/operations/CreatePaymentSubscriptionResponse.md: {}
+  docs/models/operations/CreatePerformanceFeedbackQueryParamFields.md: {}
+  docs/models/operations/CreatePerformanceFeedbackRequest.md: {}
+  docs/models/operations/CreatePerformanceFeedbackResponse.md: {}
+  docs/models/operations/CreatePerformanceGoalQueryParamFields.md: {}
+  docs/models/operations/CreatePerformanceGoalRequest.md: {}
+  docs/models/operations/CreatePerformanceGoalResponse.md: {}
   docs/models/operations/CreateRepoBranchQueryParamFields.md: {}
   docs/models/operations/CreateRepoBranchRequest.md: {}
   docs/models/operations/CreateRepoBranchResponse.md: {}
@@ -773,6 +779,18 @@ trackedFiles:
   docs/models/operations/GetPaymentSubscriptionQueryParamFields.md: {}
   docs/models/operations/GetPaymentSubscriptionRequest.md: {}
   docs/models/operations/GetPaymentSubscriptionResponse.md: {}
+  docs/models/operations/GetPerformanceCycleQueryParamFields.md: {}
+  docs/models/operations/GetPerformanceCycleRequest.md: {}
+  docs/models/operations/GetPerformanceCycleResponse.md: {}
+  docs/models/operations/GetPerformanceFeedbackQueryParamFields.md: {}
+  docs/models/operations/GetPerformanceFeedbackRequest.md: {}
+  docs/models/operations/GetPerformanceFeedbackResponse.md: {}
+  docs/models/operations/GetPerformanceGoalQueryParamFields.md: {}
+  docs/models/operations/GetPerformanceGoalRequest.md: {}
+  docs/models/operations/GetPerformanceGoalResponse.md: {}
+  docs/models/operations/GetPerformanceReviewQueryParamFields.md: {}
+  docs/models/operations/GetPerformanceReviewRequest.md: {}
+  docs/models/operations/GetPerformanceReviewResponse.md: {}
   docs/models/operations/GetRepoBranchQueryParamFields.md: {}
   docs/models/operations/GetRepoBranchRequest.md: {}
   docs/models/operations/GetRepoBranchResponse.md: {}
@@ -1280,6 +1298,18 @@ trackedFiles:
   docs/models/operations/ListPaymentSubscriptionsQueryParamFields.md: {}
   docs/models/operations/ListPaymentSubscriptionsRequest.md: {}
   docs/models/operations/ListPaymentSubscriptionsResponse.md: {}
+  docs/models/operations/ListPerformanceCyclesQueryParamFields.md: {}
+  docs/models/operations/ListPerformanceCyclesRequest.md: {}
+  docs/models/operations/ListPerformanceCyclesResponse.md: {}
+  docs/models/operations/ListPerformanceFeedbacksQueryParamFields.md: {}
+  docs/models/operations/ListPerformanceFeedbacksRequest.md: {}
+  docs/models/operations/ListPerformanceFeedbacksResponse.md: {}
+  docs/models/operations/ListPerformanceGoalsQueryParamFields.md: {}
+  docs/models/operations/ListPerformanceGoalsRequest.md: {}
+  docs/models/operations/ListPerformanceGoalsResponse.md: {}
+  docs/models/operations/ListPerformanceReviewsQueryParamFields.md: {}
+  docs/models/operations/ListPerformanceReviewsRequest.md: {}
+  docs/models/operations/ListPerformanceReviewsResponse.md: {}
   docs/models/operations/ListRepoBranchesQueryParamFields.md: {}
   docs/models/operations/ListRepoBranchesRequest.md: {}
   docs/models/operations/ListRepoBranchesResponse.md: {}
@@ -1699,6 +1729,9 @@ trackedFiles:
   docs/models/operations/PatchPaymentSubscriptionQueryParamFields.md: {}
   docs/models/operations/PatchPaymentSubscriptionRequest.md: {}
   docs/models/operations/PatchPaymentSubscriptionResponse.md: {}
+  docs/models/operations/PatchPerformanceGoalQueryParamFields.md: {}
+  docs/models/operations/PatchPerformanceGoalRequest.md: {}
+  docs/models/operations/PatchPerformanceGoalResponse.md: {}
   docs/models/operations/PatchRepoBranchQueryParamFields.md: {}
   docs/models/operations/PatchRepoBranchRequest.md: {}
   docs/models/operations/PatchRepoBranchResponse.md: {}
@@ -1982,6 +2015,8 @@ trackedFiles:
   docs/models/operations/RemovePaymentPaymentResponse.md: {}
   docs/models/operations/RemovePaymentSubscriptionRequest.md: {}
   docs/models/operations/RemovePaymentSubscriptionResponse.md: {}
+  docs/models/operations/RemovePerformanceGoalRequest.md: {}
+  docs/models/operations/RemovePerformanceGoalResponse.md: {}
   docs/models/operations/RemoveRepoBranchRequest.md: {}
   docs/models/operations/RemoveRepoBranchResponse.md: {}
   docs/models/operations/RemoveRepoCommitRequest.md: {}
@@ -2338,6 +2373,9 @@ trackedFiles:
   docs/models/operations/UpdatePaymentSubscriptionQueryParamFields.md: {}
   docs/models/operations/UpdatePaymentSubscriptionRequest.md: {}
   docs/models/operations/UpdatePaymentSubscriptionResponse.md: {}
+  docs/models/operations/UpdatePerformanceGoalQueryParamFields.md: {}
+  docs/models/operations/UpdatePerformanceGoalRequest.md: {}
+  docs/models/operations/UpdatePerformanceGoalResponse.md: {}
   docs/models/operations/UpdateRepoBranchQueryParamFields.md: {}
   docs/models/operations/UpdateRepoBranchRequest.md: {}
   docs/models/operations/UpdateRepoBranchResponse.md: {}
@@ -3546,6 +3584,7 @@ trackedFiles:
   docs/models/shared/ListCustomerId.md:
     id: 8b52816bc6cc
     pristine_git_object: e890ff4cec7e060f74700b20aa475915b42f6916
+  docs/models/shared/ListCycleId.md: {}
   docs/models/shared/ListDatabaseId.md: {}
   docs/models/shared/ListDealId.md:
     id: 0fa75ceed952
@@ -3955,9 +3994,23 @@ trackedFiles:
   docs/models/shared/PaymentType.md:
     id: 01e5fa281169
     pristine_git_object: 019cad714ebc022e6e68d6d2413b996064132f53
+  docs/models/shared/PerformanceCycle.md: {}
+  docs/models/shared/PerformanceCycleStatus.md: {}
+  docs/models/shared/PerformanceCycleType.md: {}
+  docs/models/shared/PerformanceFeedback.md: {}
+  docs/models/shared/PerformanceFeedbackType.md: {}
+  docs/models/shared/PerformanceGoal.md: {}
+  docs/models/shared/PerformanceGoalMilestone.md: {}
+  docs/models/shared/PerformanceGoalSchemasType.md: {}
+  docs/models/shared/PerformanceGoalStatus.md: {}
   docs/models/shared/PerformanceGoalType.md:
     id: 7b9652e47374
     pristine_git_object: 5693689446445e6463e7527fa54146f02e6b9bfb
+  docs/models/shared/PerformanceReview.md: {}
+  docs/models/shared/PerformanceReviewQuestion.md: {}
+  docs/models/shared/PerformanceReviewQuestionType.md: {}
+  docs/models/shared/PerformanceReviewStatus.md: {}
+  docs/models/shared/PerformanceReviewType.md: {}
   docs/models/shared/Period.md:
     id: feae571d73d2
     pristine_git_object: 0e362dd0a2dd9810b19e0b002557d92dca9834a5
@@ -5030,6 +5083,7 @@ trackedFiles:
   docs/models/shared/VirtualWebhookCustomerId.md:
     id: 3b884b12f6a0
     pristine_git_object: 4e15869dbc2b29736b87e9430f3e0daac9ebe891
+  docs/models/shared/VirtualWebhookCycleId.md: {}
   docs/models/shared/VirtualWebhookDatabaseId.md: {}
   docs/models/shared/VirtualWebhookDealId.md:
     id: f91420f36ab3
@@ -5301,6 +5355,7 @@ trackedFiles:
   docs/sdks/customer/README.md:
     id: 4bbe8dbe3afa
     pristine_git_object: 4503ca15b54b608bae0ff6307acb37cc1e9c223f
+  docs/sdks/cycle/README.md: {}
   docs/sdks/database/README.md: {}
   docs/sdks/datastore/README.md: {}
   docs/sdks/deal/README.md:
@@ -5334,6 +5389,7 @@ trackedFiles:
   docs/sdks/expense/README.md:
     id: 8bba157370c0
     pristine_git_object: 0a1c8c4a135e4fc43d160853eb34e718d0d687b6
+  docs/sdks/feedback/README.md: {}
   docs/sdks/file/README.md:
     id: 2e0e7ec90c9f
     pristine_git_object: d545c859ca071adcdea6031d196353bd3952c9bb
@@ -5346,6 +5402,7 @@ trackedFiles:
   docs/sdks/genai/README.md:
     id: 03644f9125fa
     pristine_git_object: 1a495882fbeea542bf5d70270ff15dceb3dcb2d9
+  docs/sdks/goal/README.md: {}
   docs/sdks/group/README.md:
     id: dd48bfd789de
     pristine_git_object: 3e04d5e8e4b7e2b57dcbe8dfbc0038ea12167aa4
@@ -5454,6 +5511,7 @@ trackedFiles:
   docs/sdks/payslip/README.md:
     id: 3299cdcb2868
     pristine_git_object: 6101e2c5eccd4df2f7692a680092ff30e0cce087
+  docs/sdks/performance/README.md: {}
   docs/sdks/person/README.md:
     id: 70383a375a14
     pristine_git_object: 8cf164d7497f28833c9dae47d6e59ae374d943bc
@@ -5790,6 +5848,7 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/AsyncCustomer.java:
     id: e5d453543159
     pristine_git_object: 4e65d298cf4beb27a0f3caa0847414746ffd6df0
+  src/main/java/to/unified/unified_java_sdk/AsyncCycle.java: {}
   src/main/java/to/unified/unified_java_sdk/AsyncDatabase.java: {}
   src/main/java/to/unified/unified_java_sdk/AsyncDatastore.java: {}
   src/main/java/to/unified/unified_java_sdk/AsyncDeal.java:
@@ -5823,6 +5882,7 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/AsyncExpense.java:
     id: 978cfaf5eaf1
     pristine_git_object: eacf4d3d9138e6171d5382dbbd6249e2b7cb4c5f
+  src/main/java/to/unified/unified_java_sdk/AsyncFeedback.java: {}
   src/main/java/to/unified/unified_java_sdk/AsyncFile.java:
     id: d355c00d89da
     pristine_git_object: 0468afe21270a883006534f6ec9eec58b8705293
@@ -5835,6 +5895,7 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/AsyncGenai.java:
     id: 23d9aa0a6c16
     pristine_git_object: 3b56c9ca6564e47b7bb9866a33ccc1e5ebedff4a
+  src/main/java/to/unified/unified_java_sdk/AsyncGoal.java: {}
   src/main/java/to/unified/unified_java_sdk/AsyncGroup.java:
     id: ae1833e402d6
     pristine_git_object: 83f131dadeae7ba6573d91e87b06ea44cb366923
@@ -5943,6 +6004,7 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/AsyncPayslip.java:
     id: 88045b83f9b8
     pristine_git_object: d14a0d925f82e38f3fe8f3cc670ebd9890ba0629
+  src/main/java/to/unified/unified_java_sdk/AsyncPerformance.java: {}
   src/main/java/to/unified/unified_java_sdk/AsyncPerson.java:
     id: d06e58f17884
     pristine_git_object: d0e47acb2317963e3ee09997ce05d541e462a394
@@ -6194,6 +6256,7 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/Customer.java:
     id: e9cb15ad24a5
     pristine_git_object: 046caeb015d93409f4bf59a069aaf744ba940ffe
+  src/main/java/to/unified/unified_java_sdk/Cycle.java: {}
   src/main/java/to/unified/unified_java_sdk/Database.java: {}
   src/main/java/to/unified/unified_java_sdk/Datastore.java: {}
   src/main/java/to/unified/unified_java_sdk/Deal.java:
@@ -6227,6 +6290,7 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/Expense.java:
     id: fdaf9eb80a62
     pristine_git_object: 3f393e4af3283622c2dd480f91cd40f5b13b9109
+  src/main/java/to/unified/unified_java_sdk/Feedback.java: {}
   src/main/java/to/unified/unified_java_sdk/File.java:
     id: 6f72a5041fbf
     pristine_git_object: dc461ee5280278dbba23dec4cda97ad1896c337d
@@ -6239,6 +6303,7 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/Genai.java:
     id: a68b5483ca68
     pristine_git_object: 8232263b2e8a7b3a46b3804a238a70cfc6ee7157
+  src/main/java/to/unified/unified_java_sdk/Goal.java: {}
   src/main/java/to/unified/unified_java_sdk/Group.java:
     id: e86420c981d9
     pristine_git_object: 87e0766f8b3100f52e071c5dbdbfa143a26e29c7
@@ -6347,6 +6412,7 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/Payslip.java:
     id: 9b899f413f4f
     pristine_git_object: f006587766b8d1dff9dd5316eb9ca84761f4c3f0
+  src/main/java/to/unified/unified_java_sdk/Performance.java: {}
   src/main/java/to/unified/unified_java_sdk/Person.java:
     id: e6defa607472
     pristine_git_object: fd479f6bca43ce4cbe421ef8c5228daafdf584d8
@@ -6616,6 +6682,8 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/models/operations//async/CreatePaymentLinkRequestBuilder.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations//async/CreatePaymentPaymentRequestBuilder.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations//async/CreatePaymentSubscriptionRequestBuilder.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations//async/CreatePerformanceFeedbackRequestBuilder.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations//async/CreatePerformanceGoalRequestBuilder.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations//async/CreateRepoBranchRequestBuilder.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations//async/CreateRepoCommitRequestBuilder.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations//async/CreateRepoOrganizationRequestBuilder.java: {}
@@ -6770,6 +6838,10 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/models/operations//async/GetPaymentPayoutRequestBuilder.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations//async/GetPaymentRefundRequestBuilder.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations//async/GetPaymentSubscriptionRequestBuilder.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations//async/GetPerformanceCycleRequestBuilder.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations//async/GetPerformanceFeedbackRequestBuilder.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations//async/GetPerformanceGoalRequestBuilder.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations//async/GetPerformanceReviewRequestBuilder.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations//async/GetRepoBranchRequestBuilder.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations//async/GetRepoCommitRequestBuilder.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations//async/GetRepoOrganizationRequestBuilder.java: {}
@@ -6949,6 +7021,10 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/models/operations//async/ListPaymentPayoutsRequestBuilder.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations//async/ListPaymentRefundsRequestBuilder.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations//async/ListPaymentSubscriptionsRequestBuilder.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations//async/ListPerformanceCyclesRequestBuilder.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations//async/ListPerformanceFeedbacksRequestBuilder.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations//async/ListPerformanceGoalsRequestBuilder.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations//async/ListPerformanceReviewsRequestBuilder.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations//async/ListRepoBranchesRequestBuilder.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations//async/ListRepoCommitsRequestBuilder.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations//async/ListRepoOrganizationsRequestBuilder.java: {}
@@ -7099,6 +7175,7 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/models/operations//async/PatchPaymentLinkRequestBuilder.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations//async/PatchPaymentPaymentRequestBuilder.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations//async/PatchPaymentSubscriptionRequestBuilder.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations//async/PatchPerformanceGoalRequestBuilder.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations//async/PatchRepoBranchRequestBuilder.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations//async/PatchRepoCommitRequestBuilder.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations//async/PatchRepoOrganizationRequestBuilder.java: {}
@@ -7227,6 +7304,7 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/models/operations//async/RemovePaymentLinkRequestBuilder.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations//async/RemovePaymentPaymentRequestBuilder.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations//async/RemovePaymentSubscriptionRequestBuilder.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations//async/RemovePerformanceGoalRequestBuilder.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations//async/RemoveRepoBranchRequestBuilder.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations//async/RemoveRepoCommitRequestBuilder.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations//async/RemoveRepoOrganizationRequestBuilder.java: {}
@@ -7359,6 +7437,7 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/models/operations//async/UpdatePaymentLinkRequestBuilder.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations//async/UpdatePaymentPaymentRequestBuilder.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations//async/UpdatePaymentSubscriptionRequestBuilder.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations//async/UpdatePerformanceGoalRequestBuilder.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations//async/UpdateRepoBranchRequestBuilder.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations//async/UpdateRepoCommitRequestBuilder.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations//async/UpdateRepoOrganizationRequestBuilder.java: {}
@@ -7786,6 +7865,14 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/models/operations/CreatePaymentSubscriptionRequest.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/CreatePaymentSubscriptionRequestBuilder.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/CreatePaymentSubscriptionResponse.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/CreatePerformanceFeedbackQueryParamFields.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/CreatePerformanceFeedbackRequest.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/CreatePerformanceFeedbackRequestBuilder.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/CreatePerformanceFeedbackResponse.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/CreatePerformanceGoalQueryParamFields.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/CreatePerformanceGoalRequest.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/CreatePerformanceGoalRequestBuilder.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/CreatePerformanceGoalResponse.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/CreateRepoBranchQueryParamFields.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/CreateRepoBranchRequest.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/CreateRepoBranchRequestBuilder.java: {}
@@ -8380,6 +8467,22 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/models/operations/GetPaymentSubscriptionRequest.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/GetPaymentSubscriptionRequestBuilder.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/GetPaymentSubscriptionResponse.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/GetPerformanceCycleQueryParamFields.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/GetPerformanceCycleRequest.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/GetPerformanceCycleRequestBuilder.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/GetPerformanceCycleResponse.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/GetPerformanceFeedbackQueryParamFields.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/GetPerformanceFeedbackRequest.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/GetPerformanceFeedbackRequestBuilder.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/GetPerformanceFeedbackResponse.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/GetPerformanceGoalQueryParamFields.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/GetPerformanceGoalRequest.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/GetPerformanceGoalRequestBuilder.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/GetPerformanceGoalResponse.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/GetPerformanceReviewQueryParamFields.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/GetPerformanceReviewRequest.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/GetPerformanceReviewRequestBuilder.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/GetPerformanceReviewResponse.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/GetRepoBranchQueryParamFields.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/GetRepoBranchRequest.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/GetRepoBranchRequestBuilder.java: {}
@@ -9066,6 +9169,22 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/models/operations/ListPaymentSubscriptionsRequest.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/ListPaymentSubscriptionsRequestBuilder.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/ListPaymentSubscriptionsResponse.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/ListPerformanceCyclesQueryParamFields.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/ListPerformanceCyclesRequest.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/ListPerformanceCyclesRequestBuilder.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/ListPerformanceCyclesResponse.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/ListPerformanceFeedbacksQueryParamFields.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/ListPerformanceFeedbacksRequest.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/ListPerformanceFeedbacksRequestBuilder.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/ListPerformanceFeedbacksResponse.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/ListPerformanceGoalsQueryParamFields.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/ListPerformanceGoalsRequest.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/ListPerformanceGoalsRequestBuilder.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/ListPerformanceGoalsResponse.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/ListPerformanceReviewsQueryParamFields.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/ListPerformanceReviewsRequest.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/ListPerformanceReviewsRequestBuilder.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/ListPerformanceReviewsResponse.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/ListRepoBranchesQueryParamFields.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/ListRepoBranchesRequest.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/ListRepoBranchesRequestBuilder.java: {}
@@ -9635,6 +9754,10 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/models/operations/PatchPaymentSubscriptionRequest.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/PatchPaymentSubscriptionRequestBuilder.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/PatchPaymentSubscriptionResponse.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/PatchPerformanceGoalQueryParamFields.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/PatchPerformanceGoalRequest.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/PatchPerformanceGoalRequestBuilder.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/PatchPerformanceGoalResponse.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/PatchRepoBranchQueryParamFields.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/PatchRepoBranchRequest.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/PatchRepoBranchRequestBuilder.java: {}
@@ -10046,6 +10169,9 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/models/operations/RemovePaymentSubscriptionRequest.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/RemovePaymentSubscriptionRequestBuilder.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/RemovePaymentSubscriptionResponse.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/RemovePerformanceGoalRequest.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/RemovePerformanceGoalRequestBuilder.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/RemovePerformanceGoalResponse.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/RemoveRepoBranchRequest.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/RemoveRepoBranchRequestBuilder.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/RemoveRepoBranchResponse.java: {}
@@ -10534,6 +10660,10 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/models/operations/UpdatePaymentSubscriptionRequest.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/UpdatePaymentSubscriptionRequestBuilder.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/UpdatePaymentSubscriptionResponse.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/UpdatePerformanceGoalQueryParamFields.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/UpdatePerformanceGoalRequest.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/UpdatePerformanceGoalRequestBuilder.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/UpdatePerformanceGoalResponse.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/UpdateRepoBranchQueryParamFields.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/UpdateRepoBranchRequest.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/UpdateRepoBranchRequestBuilder.java: {}
@@ -10761,6 +10891,8 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/models/operations/async/CreatePaymentLinkResponse.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/async/CreatePaymentPaymentResponse.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/async/CreatePaymentSubscriptionResponse.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/async/CreatePerformanceFeedbackResponse.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/async/CreatePerformanceGoalResponse.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/async/CreateRepoBranchResponse.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/async/CreateRepoCommitResponse.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/async/CreateRepoOrganizationResponse.java: {}
@@ -10915,6 +11047,10 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/models/operations/async/GetPaymentPayoutResponse.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/async/GetPaymentRefundResponse.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/async/GetPaymentSubscriptionResponse.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/async/GetPerformanceCycleResponse.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/async/GetPerformanceFeedbackResponse.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/async/GetPerformanceGoalResponse.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/async/GetPerformanceReviewResponse.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/async/GetRepoBranchResponse.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/async/GetRepoCommitResponse.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/async/GetRepoOrganizationResponse.java: {}
@@ -11094,6 +11230,10 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/models/operations/async/ListPaymentPayoutsResponse.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/async/ListPaymentRefundsResponse.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/async/ListPaymentSubscriptionsResponse.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/async/ListPerformanceCyclesResponse.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/async/ListPerformanceFeedbacksResponse.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/async/ListPerformanceGoalsResponse.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/async/ListPerformanceReviewsResponse.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/async/ListRepoBranchesResponse.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/async/ListRepoCommitsResponse.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/async/ListRepoOrganizationsResponse.java: {}
@@ -11244,6 +11384,7 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/models/operations/async/PatchPaymentLinkResponse.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/async/PatchPaymentPaymentResponse.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/async/PatchPaymentSubscriptionResponse.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/async/PatchPerformanceGoalResponse.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/async/PatchRepoBranchResponse.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/async/PatchRepoCommitResponse.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/async/PatchRepoOrganizationResponse.java: {}
@@ -11372,6 +11513,7 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/models/operations/async/RemovePaymentLinkResponse.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/async/RemovePaymentPaymentResponse.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/async/RemovePaymentSubscriptionResponse.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/async/RemovePerformanceGoalResponse.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/async/RemoveRepoBranchResponse.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/async/RemoveRepoCommitResponse.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/async/RemoveRepoOrganizationResponse.java: {}
@@ -11504,6 +11646,7 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/models/operations/async/UpdatePaymentLinkResponse.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/async/UpdatePaymentPaymentResponse.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/async/UpdatePaymentSubscriptionResponse.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/async/UpdatePerformanceGoalResponse.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/async/UpdateRepoBranchResponse.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/async/UpdateRepoCommitResponse.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/async/UpdateRepoOrganizationResponse.java: {}
@@ -12655,6 +12798,7 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/models/shared/ListCustomerId.java:
     id: 9b9a01c6b713
     pristine_git_object: 588421d10f1ad09dca99aac80f50b0ac5ea193e4
+  src/main/java/to/unified/unified_java_sdk/models/shared/ListCycleId.java: {}
   src/main/java/to/unified/unified_java_sdk/models/shared/ListDatabaseId.java: {}
   src/main/java/to/unified/unified_java_sdk/models/shared/ListDealId.java:
     id: 4304ec4848d9
@@ -13064,9 +13208,23 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/models/shared/PaymentType.java:
     id: 9a74168d38d4
     pristine_git_object: 298979466d6138df63bdf3849c23e8912fc22d61
+  src/main/java/to/unified/unified_java_sdk/models/shared/PerformanceCycle.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/shared/PerformanceCycleStatus.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/shared/PerformanceCycleType.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/shared/PerformanceFeedback.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/shared/PerformanceFeedbackType.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/shared/PerformanceGoal.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/shared/PerformanceGoalMilestone.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/shared/PerformanceGoalSchemasType.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/shared/PerformanceGoalStatus.java: {}
   src/main/java/to/unified/unified_java_sdk/models/shared/PerformanceGoalType.java:
     id: 2ac1a32b57a6
     pristine_git_object: ddf87cdff2d1e971ec919dc1400b9bb134c06735
+  src/main/java/to/unified/unified_java_sdk/models/shared/PerformanceReview.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/shared/PerformanceReviewQuestion.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/shared/PerformanceReviewQuestionType.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/shared/PerformanceReviewStatus.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/shared/PerformanceReviewType.java: {}
   src/main/java/to/unified/unified_java_sdk/models/shared/Period.java:
     id: 87b1523dd478
     pristine_git_object: 5b7eda275585295b3fdba2886bc9211f61eeea88
@@ -14141,6 +14299,7 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/models/shared/VirtualWebhookCustomerId.java:
     id: 2ec648a7d64b
     pristine_git_object: ab1794de1a69a2b29a6ca6788ddd39005d365df2
+  src/main/java/to/unified/unified_java_sdk/models/shared/VirtualWebhookCycleId.java: {}
   src/main/java/to/unified/unified_java_sdk/models/shared/VirtualWebhookDatabaseId.java: {}
   src/main/java/to/unified/unified_java_sdk/models/shared/VirtualWebhookDealId.java:
     id: ab178ec3f800
@@ -14380,6 +14539,8 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/operations/CreatePaymentLink.java: {}
   src/main/java/to/unified/unified_java_sdk/operations/CreatePaymentPayment.java: {}
   src/main/java/to/unified/unified_java_sdk/operations/CreatePaymentSubscription.java: {}
+  src/main/java/to/unified/unified_java_sdk/operations/CreatePerformanceFeedback.java: {}
+  src/main/java/to/unified/unified_java_sdk/operations/CreatePerformanceGoal.java: {}
   src/main/java/to/unified/unified_java_sdk/operations/CreateRepoBranch.java: {}
   src/main/java/to/unified/unified_java_sdk/operations/CreateRepoCommit.java: {}
   src/main/java/to/unified/unified_java_sdk/operations/CreateRepoOrganization.java: {}
@@ -14534,6 +14695,10 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/operations/GetPaymentPayout.java: {}
   src/main/java/to/unified/unified_java_sdk/operations/GetPaymentRefund.java: {}
   src/main/java/to/unified/unified_java_sdk/operations/GetPaymentSubscription.java: {}
+  src/main/java/to/unified/unified_java_sdk/operations/GetPerformanceCycle.java: {}
+  src/main/java/to/unified/unified_java_sdk/operations/GetPerformanceFeedback.java: {}
+  src/main/java/to/unified/unified_java_sdk/operations/GetPerformanceGoal.java: {}
+  src/main/java/to/unified/unified_java_sdk/operations/GetPerformanceReview.java: {}
   src/main/java/to/unified/unified_java_sdk/operations/GetRepoBranch.java: {}
   src/main/java/to/unified/unified_java_sdk/operations/GetRepoCommit.java: {}
   src/main/java/to/unified/unified_java_sdk/operations/GetRepoOrganization.java: {}
@@ -14713,6 +14878,10 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/operations/ListPaymentPayouts.java: {}
   src/main/java/to/unified/unified_java_sdk/operations/ListPaymentRefunds.java: {}
   src/main/java/to/unified/unified_java_sdk/operations/ListPaymentSubscriptions.java: {}
+  src/main/java/to/unified/unified_java_sdk/operations/ListPerformanceCycles.java: {}
+  src/main/java/to/unified/unified_java_sdk/operations/ListPerformanceFeedbacks.java: {}
+  src/main/java/to/unified/unified_java_sdk/operations/ListPerformanceGoals.java: {}
+  src/main/java/to/unified/unified_java_sdk/operations/ListPerformanceReviews.java: {}
   src/main/java/to/unified/unified_java_sdk/operations/ListRepoBranches.java: {}
   src/main/java/to/unified/unified_java_sdk/operations/ListRepoCommits.java: {}
   src/main/java/to/unified/unified_java_sdk/operations/ListRepoOrganizations.java: {}
@@ -14866,6 +15035,7 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/operations/PatchPaymentLink.java: {}
   src/main/java/to/unified/unified_java_sdk/operations/PatchPaymentPayment.java: {}
   src/main/java/to/unified/unified_java_sdk/operations/PatchPaymentSubscription.java: {}
+  src/main/java/to/unified/unified_java_sdk/operations/PatchPerformanceGoal.java: {}
   src/main/java/to/unified/unified_java_sdk/operations/PatchRepoBranch.java: {}
   src/main/java/to/unified/unified_java_sdk/operations/PatchRepoCommit.java: {}
   src/main/java/to/unified/unified_java_sdk/operations/PatchRepoOrganization.java: {}
@@ -14994,6 +15164,7 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/operations/RemovePaymentLink.java: {}
   src/main/java/to/unified/unified_java_sdk/operations/RemovePaymentPayment.java: {}
   src/main/java/to/unified/unified_java_sdk/operations/RemovePaymentSubscription.java: {}
+  src/main/java/to/unified/unified_java_sdk/operations/RemovePerformanceGoal.java: {}
   src/main/java/to/unified/unified_java_sdk/operations/RemoveRepoBranch.java: {}
   src/main/java/to/unified/unified_java_sdk/operations/RemoveRepoCommit.java: {}
   src/main/java/to/unified/unified_java_sdk/operations/RemoveRepoOrganization.java: {}
@@ -15126,6 +15297,7 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/operations/UpdatePaymentLink.java: {}
   src/main/java/to/unified/unified_java_sdk/operations/UpdatePaymentPayment.java: {}
   src/main/java/to/unified/unified_java_sdk/operations/UpdatePaymentSubscription.java: {}
+  src/main/java/to/unified/unified_java_sdk/operations/UpdatePerformanceGoal.java: {}
   src/main/java/to/unified/unified_java_sdk/operations/UpdateRepoBranch.java: {}
   src/main/java/to/unified/unified_java_sdk/operations/UpdateRepoCommit.java: {}
   src/main/java/to/unified/unified_java_sdk/operations/UpdateRepoOrganization.java: {}
@@ -28974,9 +29146,125 @@ examples:
       responses:
         "200":
           application/json: {}
+  getPerformanceReview:
+    speakeasy-default-get-performance-review:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      responses:
+        "200":
+          application/json: {"user_id": "<id>"}
+  listPerformanceReviews:
+    speakeasy-default-list-performance-reviews:
+      parameters:
+        path:
+          connection_id: "<id>"
+      responses:
+        "200":
+          application/json: [{"user_id": "<id>"}]
+  createPerformanceFeedback:
+    speakeasy-default-create-performance-feedback:
+      parameters:
+        path:
+          connection_id: "<id>"
+      requestBody:
+        application/json: {"user_id": "<id>"}
+      responses:
+        "200":
+          application/json: {"user_id": "<id>"}
+  createPerformanceGoal:
+    speakeasy-default-create-performance-goal:
+      parameters:
+        path:
+          connection_id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  getPerformanceCycle:
+    speakeasy-default-get-performance-cycle:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      responses:
+        "200":
+          application/json: {}
+  getPerformanceFeedback:
+    speakeasy-default-get-performance-feedback:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      responses:
+        "200":
+          application/json: {"user_id": "<id>"}
+  getPerformanceGoal:
+    speakeasy-default-get-performance-goal:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      responses:
+        "200":
+          application/json: {}
+  listPerformanceCycles:
+    speakeasy-default-list-performance-cycles:
+      parameters:
+        path:
+          connection_id: "<id>"
+      responses:
+        "200":
+          application/json: [{}]
+  listPerformanceFeedbacks:
+    speakeasy-default-list-performance-feedbacks:
+      parameters:
+        path:
+          connection_id: "<id>"
+      responses:
+        "200":
+          application/json: [{"user_id": "<id>"}]
+  listPerformanceGoals:
+    speakeasy-default-list-performance-goals:
+      parameters:
+        path:
+          connection_id: "<id>"
+      responses:
+        "200":
+          application/json: [{}]
+  patchPerformanceGoal:
+    speakeasy-default-patch-performance-goal:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  removePerformanceGoal:
+    speakeasy-default-remove-performance-goal:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+  updatePerformanceGoal:
+    speakeasy-default-update-performance-goal:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: "## Java SDK Changes:\n* `unified-to.unified.listUnifiedIntegrationWorkspaces()`:  `response.[].support.Map<IntegrationSupport>` **Changed** (Breaking ⚠️)\n* `unified-to.unified.listUnifiedIntegrations()`:  `response.[].support.Map<IntegrationSupport>` **Changed** (Breaking ⚠️)\n* `unified-to.integration.listUnifiedIntegrationWorkspaces()`:  `response.[].support.Map<IntegrationSupport>` **Changed** (Breaking ⚠️)\n* `unified-to.integration.listUnifiedIntegrations()`:  `response.[].support.Map<IntegrationSupport>` **Changed** (Breaking ⚠️)\n* `unified-to.accounting.createAccountingProject()`: **Added**\n* `unified-to.accounting.createAccountingQuote()`: **Added**\n* `unified-to.accounting.getAccountingAgedpayable()`: **Added**\n* `unified-to.accounting.getAccountingAgedreceivable()`: **Added**\n* `unified-to.accounting.getAccountingProject()`: **Added**\n* `unified-to.accounting.getAccountingQuote()`: **Added**\n* `unified-to.accounting.listAccountingAgedpayables()`: **Added**\n* `unified-to.accounting.listAccountingAgedreceivables()`: **Added**\n* `unified-to.accounting.listAccountingProjects()`: **Added**\n* `unified-to.accounting.listAccountingQuotes()`: **Added**\n* `unified-to.accounting.patchAccountingProject()`: **Added**\n* `unified-to.accounting.patchAccountingQuote()`: **Added**\n* `unified-to.accounting.removeAccountingProject()`: **Added**\n* `unified-to.accounting.removeAccountingQuote()`: **Added**\n* `unified-to.accounting.updateAccountingProject()`: **Added**\n* `unified-to.accounting.updateAccountingQuote()`: **Added**\n* `unified-to.agedpayable.getAccountingAgedpayable()`: **Added**\n* `unified-to.agedpayable.listAccountingAgedpayables()`: **Added**\n* `unified-to.agedreceivable.getAccountingAgedreceivable()`: **Added**\n* `unified-to.agedreceivable.listAccountingAgedreceivables()`: **Added**\n* `unified-to.project.createAccountingProject()`: **Added**\n* `unified-to.project.getAccountingProject()`: **Added**\n* `unified-to.project.listAccountingProjects()`: **Added**\n* `unified-to.project.patchAccountingProject()`: **Added**\n* `unified-to.project.removeAccountingProject()`: **Added**\n* `unified-to.project.updateAccountingProject()`: **Added**\n* `unified-to.quote.createAccountingQuote()`: **Added**\n* `unified-to.quote.getAccountingQuote()`: **Added**\n* `unified-to.quote.listAccountingQuotes()`: **Added**\n* `unified-to.quote.patchAccountingQuote()`: **Added**\n* `unified-to.quote.removeAccountingQuote()`: **Added**\n* `unified-to.quote.updateAccountingQuote()`: **Added**\n* `unified-to.accounting.createAccountingBill()`: \n  *  `request` **Changed**\n  *  `response.projectId` **Added**\n* `unified-to.accounting.createAccountingExpense()`: \n  *  `request` **Changed**\n  *  `response.projectId` **Added**\n* `unified-to.accounting.createAccountingInvoice()`: \n  *  `request` **Changed**\n  *  `response.projectId` **Added**\n* `unified-to.accounting.createAccountingJournal()`: \n  *  `request` **Changed**\n  *  `response.projectId` **Added**\n* `unified-to.accounting.createAccountingTransaction()`: \n  *  `request` **Changed**\n  *  `response.projectId` **Added**\n* `unified-to.accounting.getAccountingBill()`: \n  *  `request.fields` **Changed**\n  *  `response.projectId` **Added**\n* `unified-to.accounting.getAccountingExpense()`: \n  *  `request.fields` **Changed**\n  *  `response.projectId` **Added**\n* `unified-to.accounting.getAccountingInvoice()`: \n  *  `request.fields` **Changed**\n  *  `response.projectId` **Added**\n* `unified-to.accounting.getAccountingJournal()`: \n  *  `request.fields` **Changed**\n  *  `response.projectId` **Added**\n* `unified-to.accounting.getAccountingTransaction()`: \n  *  `request.fields` **Changed**\n  *  `response.projectId` **Added**\n* `unified-to.accounting.listAccountingBills()`: \n  *  `request.fields` **Changed**\n  *  `response.[].projectId` **Added**\n* `unified-to.accounting.listAccountingExpenses()`: \n  *  `request.fields` **Changed**\n  *  `response.[].projectId` **Added**\n* `unified-to.accounting.listAccountingInvoices()`: \n  *  `request.fields` **Changed**\n  *  `response.[].projectId` **Added**\n* `unified-to.accounting.listAccountingJournals()`: \n  *  `request.fields` **Changed**\n  *  `response.[].projectId` **Added**\n* `unified-to.accounting.listAccountingTransactions()`: \n  *  `request.fields` **Changed**\n  *  `response.[].projectId` **Added**\n* `unified-to.accounting.patchAccountingBill()`: \n  *  `request` **Changed**\n  *  `response.projectId` **Added**\n* `unified-to.accounting.patchAccountingExpense()`: \n  *  `request` **Changed**\n  *  `response.projectId` **Added**\n* `unified-to.accounting.patchAccountingInvoice()`: \n  *  `request` **Changed**\n  *  `response.projectId` **Added**\n* `unified-to.accounting.patchAccountingJournal()`: \n  *  `request` **Changed**\n  *  `response.projectId` **Added**\n* `unified-to.accounting.patchAccountingTransaction()`: \n  *  `request` **Changed**\n  *  `response.projectId` **Added**\n* `unified-to.accounting.updateAccountingBill()`: \n  *  `request` **Changed**\n  *  `response.projectId` **Added**\n* `unified-to.accounting.updateAccountingExpense()`: \n  *  `request` **Changed**\n  *  `response.projectId` **Added**\n* `unified-to.accounting.updateAccountingInvoice()`: \n  *  `request` **Changed**\n  *  `response.projectId` **Added**\n* `unified-to.accounting.updateAccountingJournal()`: \n  *  `request` **Changed**\n  *  `response.projectId` **Added**\n* `unified-to.accounting.updateAccountingTransaction()`: \n  *  `request` **Changed**\n  *  `response.projectId` **Added**\n* `unified-to.bill.createAccountingBill()`: \n  *  `request` **Changed**\n  *  `response.projectId` **Added**\n* `unified-to.bill.getAccountingBill()`: \n  *  `request.fields` **Changed**\n  *  `response.projectId` **Added**\n* `unified-to.bill.listAccountingBills()`: \n  *  `request.fields` **Changed**\n  *  `response.[].projectId` **Added**\n* `unified-to.bill.patchAccountingBill()`: \n  *  `request` **Changed**\n  *  `response.projectId` **Added**\n* `unified-to.bill.updateAccountingBill()`: \n  *  `request` **Changed**\n  *  `response.projectId` **Added**\n* `unified-to.expense.createAccountingExpense()`: \n  *  `request` **Changed**\n  *  `response.projectId` **Added**\n* `unified-to.expense.getAccountingExpense()`: \n  *  `request.fields` **Changed**\n  *  `response.projectId` **Added**\n* `unified-to.expense.listAccountingExpenses()`: \n  *  `request.fields` **Changed**\n  *  `response.[].projectId` **Added**\n* `unified-to.expense.patchAccountingExpense()`: \n  *  `request` **Changed**\n  *  `response.projectId` **Added**\n* `unified-to.expense.updateAccountingExpense()`: \n  *  `request` **Changed**\n  *  `response.projectId` **Added**\n* `unified-to.invoice.createAccountingInvoice()`: \n  *  `request` **Changed**\n  *  `response.projectId` **Added**\n* `unified-to.invoice.getAccountingInvoice()`: \n  *  `request.fields` **Changed**\n  *  `response.projectId` **Added**\n* `unified-to.invoice.listAccountingInvoices()`: \n  *  `request.fields` **Changed**\n  *  `response.[].projectId` **Added**\n* `unified-to.invoice.patchAccountingInvoice()`: \n  *  `request` **Changed**\n  *  `response.projectId` **Added**\n* `unified-to.invoice.updateAccountingInvoice()`: \n  *  `request` **Changed**\n  *  `response.projectId` **Added**\n* `unified-to.journal.createAccountingJournal()`: \n  *  `request` **Changed**\n  *  `response.projectId` **Added**\n* `unified-to.journal.getAccountingJournal()`: \n  *  `request.fields` **Changed**\n  *  `response.projectId` **Added**\n* `unified-to.journal.listAccountingJournals()`: \n  *  `request.fields` **Changed**\n  *  `response.[].projectId` **Added**\n* `unified-to.journal.patchAccountingJournal()`: \n  *  `request` **Changed**\n  *  `response.projectId` **Added**\n* `unified-to.journal.updateAccountingJournal()`: \n  *  `request` **Changed**\n  *  `response.projectId` **Added**\n* `unified-to.organization.createAdsOrganization()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to.organization.getAdsOrganization()`: \n  *  `request.fields` **Changed**\n  *  `response` **Changed**\n* `unified-to.organization.listAdsOrganizations()`: \n  *  `request.fields` **Changed**\n  *  `response.[]` **Changed**\n* `unified-to.organization.patchAdsOrganization()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to.organization.updateAdsOrganization()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to.report.listAdsReports()`:  `response.[].metrics[]` **Changed**\n* `unified-to.transaction.createAccountingTransaction()`: \n  *  `request` **Changed**\n  *  `response.projectId` **Added**\n* `unified-to.transaction.getAccountingTransaction()`: \n  *  `request.fields` **Changed**\n  *  `response.projectId` **Added**\n* `unified-to.transaction.listAccountingTransactions()`: \n  *  `request.fields` **Changed**\n  *  `response.[].projectId` **Added**\n* `unified-to.transaction.patchAccountingTransaction()`: \n  *  `request` **Changed**\n  *  `response.projectId` **Added**\n* `unified-to.transaction.updateAccountingTransaction()`: \n  *  `request` **Changed**\n  *  `response.projectId` **Added**\n* `unified-to.ads.createAdsCampaign()`: \n  *  `request` **Changed**\n  *  `response.labels` **Added**\n* `unified-to.ads.createAdsCreative()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to.ads.createAdsGroup()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to.ads.createAdsOrganization()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to.ads.getAdsCampaign()`: \n  *  `request.fields` **Changed**\n  *  `response.labels` **Added**\n* `unified-to.ads.getAdsCreative()`: \n  *  `request.fields` **Changed**\n  *  `response` **Changed**\n* `unified-to.ads.getAdsGroup()`: \n  *  `request.fields` **Changed**\n  *  `response` **Changed**\n* `unified-to.ads.getAdsOrganization()`: \n  *  `request.fields` **Changed**\n  *  `response` **Changed**\n* `unified-to.ads.listAdsCampaigns()`: \n  *  `request.fields` **Changed**\n  *  `response.[].labels` **Added**\n* `unified-to.ads.listAdsCreatives()`: \n  *  `request.fields` **Changed**\n  *  `response.[]` **Changed**\n* `unified-to.ads.listAdsGroups()`: \n  *  `request.fields` **Changed**\n  *  `response.[]` **Changed**\n* `unified-to.ads.listAdsOrganizations()`: \n  *  `request.fields` **Changed**\n  *  `response.[]` **Changed**\n* `unified-to.ads.listAdsReports()`:  `response.[].metrics[]` **Changed**\n* `unified-to.ads.patchAdsCampaign()`: \n  *  `request` **Changed**\n  *  `response.labels` **Added**\n* `unified-to.ads.patchAdsCreative()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to.ads.patchAdsGroup()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to.ads.patchAdsOrganization()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to.ads.updateAdsCampaign()`: \n  *  `request` **Changed**\n  *  `response.labels` **Added**\n* `unified-to.ads.updateAdsCreative()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to.ads.updateAdsGroup()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to.ads.updateAdsOrganization()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to.campaign.createAdsCampaign()`: \n  *  `request` **Changed**\n  *  `response.labels` **Added**\n* `unified-to.campaign.getAdsCampaign()`: \n  *  `request.fields` **Changed**\n  *  `response.labels` **Added**\n* `unified-to.campaign.listAdsCampaigns()`: \n  *  `request.fields` **Changed**\n  *  `response.[].labels` **Added**\n* `unified-to.campaign.patchAdsCampaign()`: \n  *  `request` **Changed**\n  *  `response.labels` **Added**\n* `unified-to.campaign.updateAdsCampaign()`: \n  *  `request` **Changed**\n  *  `response.labels` **Added**\n* `unified-to.creative.createAdsCreative()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to.creative.getAdsCreative()`: \n  *  `request.fields` **Changed**\n  *  `response` **Changed**\n* `unified-to.creative.listAdsCreatives()`: \n  *  `request.fields` **Changed**\n  *  `response.[]` **Changed**\n* `unified-to.creative.patchAdsCreative()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to.creative.updateAdsCreative()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to.group.createAdsGroup()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to.group.getAdsGroup()`: \n  *  `request.fields` **Changed**\n  *  `response` **Changed**\n* `unified-to.group.listAdsGroups()`: \n  *  `request.fields` **Changed**\n  *  `response.[]` **Changed**\n* `unified-to.group.patchAdsGroup()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to.group.updateAdsGroup()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to.storage.createStorageFile()`: \n  *  `request` **Changed**\n  *  `response.tags` **Added**\n* `unified-to.storage.getStorageFile()`: \n  *  `request.fields` **Changed**\n  *  `response.tags` **Added**\n* `unified-to.storage.listStorageFiles()`: \n  *  `request.fields` **Changed**\n  *  `response.[].tags` **Added**\n* `unified-to.storage.patchStorageFile()`: \n  *  `request` **Changed**\n  *  `response.tags` **Added**\n* `unified-to.storage.updateStorageFile()`: \n  *  `request` **Changed**\n  *  `response.tags` **Added**\n* `unified-to.file.createStorageFile()`: \n  *  `request` **Changed**\n  *  `response.tags` **Added**\n* `unified-to.file.getStorageFile()`: \n  *  `request.fields` **Changed**\n  *  `response.tags` **Added**\n* `unified-to.file.listStorageFiles()`: \n  *  `request.fields` **Changed**\n  *  `response.[].tags` **Added**\n* `unified-to.file.patchStorageFile()`: \n  *  `request` **Changed**\n  *  `response.tags` **Added**\n* `unified-to.file.updateStorageFile()`: \n  *  `request` **Changed**\n  *  `response.tags` **Added**\n* `unified-to.unified.createUnifiedConnection()`: \n  *  `request.permissions[]` **Changed**\n  *  `response.permissions[]` **Changed**\n* `unified-to.unified.createUnifiedWebhook()`: \n  *  `request.webhook.objectType` **Changed**\n  *  `response.objectType` **Changed**\n* `unified-to.unified.getUnifiedConnection()`:  `response.permissions[]` **Changed**\n* `unified-to.unified.getUnifiedWebhook()`:  `response.objectType` **Changed**\n* `unified-to.unified.listUnifiedConnections()`:  `response.[].permissions[]` **Changed**\n* `unified-to.unified.listUnifiedWebhooks()`:  `response.[].objectType` **Changed**\n* `unified-to.unified.patchUnifiedConnection()`: \n  *  `request.connection.permissions[]` **Changed**\n  *  `response.permissions[]` **Changed**\n* `unified-to.unified.patchUnifiedWebhook()`: \n  *  `request.webhook.objectType` **Changed**\n  *  `response.objectType` **Changed**\n* `unified-to.unified.updateUnifiedConnection()`: \n  *  `request.connection.permissions[]` **Changed**\n  *  `response.permissions[]` **Changed**\n* `unified-to.unified.updateUnifiedWebhook()`: \n  *  `request.webhook.objectType` **Changed**\n  *  `response.objectType` **Changed**\n* `unified-to.connection.createUnifiedConnection()`: \n  *  `request.permissions[]` **Changed**\n  *  `response.permissions[]` **Changed**\n* `unified-to.connection.getUnifiedConnection()`:  `response.permissions[]` **Changed**\n* `unified-to.connection.listUnifiedConnections()`:  `response.[].permissions[]` **Changed**\n* `unified-to.connection.patchUnifiedConnection()`: \n  *  `request.connection.permissions[]` **Changed**\n  *  `response.permissions[]` **Changed**\n* `unified-to.connection.updateUnifiedConnection()`: \n  *  `request.connection.permissions[]` **Changed**\n  *  `response.permissions[]` **Changed**\n* `unified-to.webhook.createUnifiedWebhook()`: \n  *  `request.webhook.objectType` **Changed**\n  *  `response.objectType` **Changed**\n* `unified-to.webhook.getUnifiedWebhook()`:  `response.objectType` **Changed**\n* `unified-to.webhook.listUnifiedWebhooks()`:  `response.[].objectType` **Changed**\n* `unified-to.webhook.patchUnifiedWebhook()`: \n  *  `request.webhook.objectType` **Changed**\n  *  `response.objectType` **Changed**\n* `unified-to.webhook.updateUnifiedWebhook()`: \n  *  `request.webhook.objectType` **Changed**\n  *  `response.objectType` **Changed**\n"
+releaseNotes: "## Java SDK Changes:\n* `unified-to.accounting.listAccountingProjects()`: \n  *  `request.isActive` **Removed** (Breaking ⚠️)\n* `unified-to.project.listAccountingProjects()`: \n  *  `request.isActive` **Removed** (Breaking ⚠️)\n* `unified-to.review.getPerformanceReview()`: **Added**\n* `unified-to.review.listPerformanceReviews()`: **Added**\n* `unified-to.performance.createPerformanceFeedback()`: **Added**\n* `unified-to.performance.createPerformanceGoal()`: **Added**\n* `unified-to.performance.getPerformanceCycle()`: **Added**\n* `unified-to.performance.getPerformanceFeedback()`: **Added**\n* `unified-to.performance.getPerformanceGoal()`: **Added**\n* `unified-to.performance.getPerformanceReview()`: **Added**\n* `unified-to.performance.listPerformanceCycles()`: **Added**\n* `unified-to.performance.listPerformanceFeedbacks()`: **Added**\n* `unified-to.performance.listPerformanceGoals()`: **Added**\n* `unified-to.performance.listPerformanceReviews()`: **Added**\n* `unified-to.performance.patchPerformanceGoal()`: **Added**\n* `unified-to.performance.removePerformanceGoal()`: **Added**\n* `unified-to.performance.updatePerformanceGoal()`: **Added**\n* `unified-to.cycle.getPerformanceCycle()`: **Added**\n* `unified-to.cycle.listPerformanceCycles()`: **Added**\n* `unified-to.feedback.createPerformanceFeedback()`: **Added**\n* `unified-to.feedback.getPerformanceFeedback()`: **Added**\n* `unified-to.feedback.listPerformanceFeedbacks()`: **Added**\n* `unified-to.goal.createPerformanceGoal()`: **Added**\n* `unified-to.goal.getPerformanceGoal()`: **Added**\n* `unified-to.goal.listPerformanceGoals()`: **Added**\n* `unified-to.goal.patchPerformanceGoal()`: **Added**\n* `unified-to.goal.removePerformanceGoal()`: **Added**\n* `unified-to.goal.updatePerformanceGoal()`: **Added**\n* `unified-to.hris.createHrisEmployee()`: \n  *  `request.hrisEmployee.employeeRoles[]` **Changed**\n  *  `response.employeeRoles[]` **Changed**\n* `unified-to.hris.getHrisEmployee()`:  `response.employeeRoles[]` **Changed**\n* `unified-to.hris.listHrisEmployees()`:  `response.[].employeeRoles[]` **Changed**\n* `unified-to.hris.patchHrisEmployee()`: \n  *  `request.hrisEmployee.employeeRoles[]` **Changed**\n  *  `response.employeeRoles[]` **Changed**\n* `unified-to.hris.updateHrisEmployee()`: \n  *  `request.hrisEmployee.employeeRoles[]` **Changed**\n  *  `response.employeeRoles[]` **Changed**\n* `unified-to.employee.createHrisEmployee()`: \n  *  `request.hrisEmployee.employeeRoles[]` **Changed**\n  *  `response.employeeRoles[]` **Changed**\n* `unified-to.employee.getHrisEmployee()`:  `response.employeeRoles[]` **Changed**\n* `unified-to.employee.listHrisEmployees()`:  `response.[].employeeRoles[]` **Changed**\n* `unified-to.employee.patchHrisEmployee()`: \n  *  `request.hrisEmployee.employeeRoles[]` **Changed**\n  *  `response.employeeRoles[]` **Changed**\n* `unified-to.employee.updateHrisEmployee()`: \n  *  `request.hrisEmployee.employeeRoles[]` **Changed**\n  *  `response.employeeRoles[]` **Changed**\n* `unified-to.unified.createUnifiedConnection()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to.unified.createUnifiedWebhook()`: \n  *  `request.webhook.objectType` **Changed**\n  *  `response.objectType` **Changed**\n* `unified-to.unified.getUnifiedConnection()`:  `response` **Changed**\n* `unified-to.unified.getUnifiedWebhook()`:  `response.objectType` **Changed**\n* `unified-to.unified.listUnifiedConnections()`: \n  *  `request.categories` **Changed**\n  *  `response.[]` **Changed**\n* `unified-to.unified.listUnifiedIntegrationWorkspaces()`: \n  *  `request.categories` **Changed**\n  *  `response.[]` **Changed**\n* `unified-to.unified.listUnifiedIntegrations()`: \n  *  `request.categories` **Changed**\n  *  `response.[]` **Changed**\n* `unified-to.unified.listUnifiedWebhooks()`:  `response.[].objectType` **Changed**\n* `unified-to.unified.patchUnifiedConnection()`: \n  *  `request.connection` **Changed**\n  *  `response` **Changed**\n* `unified-to.unified.patchUnifiedWebhook()`: \n  *  `request.webhook.objectType` **Changed**\n  *  `response.objectType` **Changed**\n* `unified-to.unified.updateUnifiedConnection()`: \n  *  `request.connection` **Changed**\n  *  `response` **Changed**\n* `unified-to.unified.updateUnifiedWebhook()`: \n  *  `request.webhook.objectType` **Changed**\n  *  `response.objectType` **Changed**\n* `unified-to.connection.createUnifiedConnection()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to.connection.getUnifiedConnection()`:  `response` **Changed**\n* `unified-to.connection.listUnifiedConnections()`: \n  *  `request.categories` **Changed**\n  *  `response.[]` **Changed**\n* `unified-to.connection.patchUnifiedConnection()`: \n  *  `request.connection` **Changed**\n  *  `response` **Changed**\n* `unified-to.connection.updateUnifiedConnection()`: \n  *  `request.connection` **Changed**\n  *  `response` **Changed**\n* `unified-to.integration.listUnifiedIntegrationWorkspaces()`: \n  *  `request.categories` **Changed**\n  *  `response.[]` **Changed**\n* `unified-to.integration.listUnifiedIntegrations()`: \n  *  `request.categories` **Changed**\n  *  `response.[]` **Changed**\n* `unified-to.webhook.createUnifiedWebhook()`: \n  *  `request.webhook.objectType` **Changed**\n  *  `response.objectType` **Changed**\n* `unified-to.webhook.getUnifiedWebhook()`:  `response.objectType` **Changed**\n* `unified-to.webhook.listUnifiedWebhooks()`:  `response.[].objectType` **Changed**\n* `unified-to.webhook.patchUnifiedWebhook()`: \n  *  `request.webhook.objectType` **Changed**\n  *  `response.objectType` **Changed**\n* `unified-to.webhook.updateUnifiedWebhook()`: \n  *  `request.webhook.objectType` **Changed**\n  *  `response.objectType` **Changed**\n"
 generatedFiles:
   - .gitattributes
   - USAGE.md

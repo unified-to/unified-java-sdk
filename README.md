@@ -39,7 +39,7 @@ The samples below show how a published SDK artifact is used:
 
 Gradle:
 ```groovy
-implementation 'to.unified:unified-java-sdk:0.48.8'
+implementation 'to.unified:unified-java-sdk:0.48.9'
 ```
 
 Maven:
@@ -47,7 +47,7 @@ Maven:
 <dependency>
     <groupId>to.unified</groupId>
     <artifactId>unified-java-sdk</artifactId>
-    <version>0.48.8</version>
+    <version>0.48.9</version>
 </dependency>
 ```
 
@@ -940,6 +940,11 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 * [removeTicketingCustomer](docs/sdks/customer/README.md#removeticketingcustomer) - Remove a customer
 * [updateTicketingCustomer](docs/sdks/customer/README.md#updateticketingcustomer) - Update a customer
 
+### [Cycle](docs/sdks/cycle/README.md)
+
+* [getPerformanceCycle](docs/sdks/cycle/README.md#getperformancecycle) - Retrieve a cycle
+* [listPerformanceCycles](docs/sdks/cycle/README.md#listperformancecycles) - List all cycles
+
 ### [Database](docs/sdks/database/README.md)
 
 * [createDatastoreDatabase](docs/sdks/database/README.md#createdatastoredatabase) - Create a database
@@ -1089,6 +1094,12 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 * [removeAccountingExpense](docs/sdks/expense/README.md#removeaccountingexpense) - Remove an expense
 * [updateAccountingExpense](docs/sdks/expense/README.md#updateaccountingexpense) - Update an expense
 
+### [Feedback](docs/sdks/feedback/README.md)
+
+* [createPerformanceFeedback](docs/sdks/feedback/README.md#createperformancefeedback) - Create a feedback
+* [getPerformanceFeedback](docs/sdks/feedback/README.md#getperformancefeedback) - Retrieve a feedback
+* [listPerformanceFeedbacks](docs/sdks/feedback/README.md#listperformancefeedbacks) - List all feedbacks
+
 ### [File](docs/sdks/file/README.md)
 
 * [createStorageFile](docs/sdks/file/README.md#createstoragefile) - Create a file
@@ -1124,6 +1135,15 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 * [createGenaiPrompt](docs/sdks/genai/README.md#creategenaiprompt) - Create a prompt
 * [getGenaiModel](docs/sdks/genai/README.md#getgenaimodel) - Retrieve a model
 * [listGenaiModels](docs/sdks/genai/README.md#listgenaimodels) - List all models
+
+### [Goal](docs/sdks/goal/README.md)
+
+* [createPerformanceGoal](docs/sdks/goal/README.md#createperformancegoal) - Create a goal
+* [getPerformanceGoal](docs/sdks/goal/README.md#getperformancegoal) - Retrieve a goal
+* [listPerformanceGoals](docs/sdks/goal/README.md#listperformancegoals) - List all goals
+* [patchPerformanceGoal](docs/sdks/goal/README.md#patchperformancegoal) - Update a goal
+* [removePerformanceGoal](docs/sdks/goal/README.md#removeperformancegoal) - Remove a goal
+* [updatePerformanceGoal](docs/sdks/goal/README.md#updateperformancegoal) - Update a goal
 
 ### [Group](docs/sdks/group/README.md)
 
@@ -1618,6 +1638,22 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 * [getHrisPayslip](docs/sdks/payslip/README.md#gethrispayslip) - Retrieve a payslip
 * [listHrisPayslips](docs/sdks/payslip/README.md#listhrispayslips) - List all payslips
 
+### [Performance](docs/sdks/performance/README.md)
+
+* [createPerformanceFeedback](docs/sdks/performance/README.md#createperformancefeedback) - Create a feedback
+* [createPerformanceGoal](docs/sdks/performance/README.md#createperformancegoal) - Create a goal
+* [getPerformanceCycle](docs/sdks/performance/README.md#getperformancecycle) - Retrieve a cycle
+* [getPerformanceFeedback](docs/sdks/performance/README.md#getperformancefeedback) - Retrieve a feedback
+* [getPerformanceGoal](docs/sdks/performance/README.md#getperformancegoal) - Retrieve a goal
+* [getPerformanceReview](docs/sdks/performance/README.md#getperformancereview) - Retrieve a review
+* [listPerformanceCycles](docs/sdks/performance/README.md#listperformancecycles) - List all cycles
+* [listPerformanceFeedbacks](docs/sdks/performance/README.md#listperformancefeedbacks) - List all feedbacks
+* [listPerformanceGoals](docs/sdks/performance/README.md#listperformancegoals) - List all goals
+* [listPerformanceReviews](docs/sdks/performance/README.md#listperformancereviews) - List all reviews
+* [patchPerformanceGoal](docs/sdks/performance/README.md#patchperformancegoal) - Update a goal
+* [removePerformanceGoal](docs/sdks/performance/README.md#removeperformancegoal) - Remove a goal
+* [updatePerformanceGoal](docs/sdks/performance/README.md#updateperformancegoal) - Update a goal
+
 ### [Person](docs/sdks/person/README.md)
 
 * [listEnrichPeople](docs/sdks/person/README.md#listenrichpeople) - Retrieve enrichment information for a person
@@ -1814,7 +1850,9 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 
 * [createCommerceReview](docs/sdks/review/README.md#createcommercereview) - Create a review
 * [getCommerceReview](docs/sdks/review/README.md#getcommercereview) - Retrieve a review
+* [getPerformanceReview](docs/sdks/review/README.md#getperformancereview) - Retrieve a review
 * [listCommerceReviews](docs/sdks/review/README.md#listcommercereviews) - List all reviews
+* [listPerformanceReviews](docs/sdks/review/README.md#listperformancereviews) - List all reviews
 * [patchCommerceReview](docs/sdks/review/README.md#patchcommercereview) - Update a review
 * [removeCommerceReview](docs/sdks/review/README.md#removecommercereview) - Remove a review
 * [updateCommerceReview](docs/sdks/review/README.md#updatecommercereview) - Update a review

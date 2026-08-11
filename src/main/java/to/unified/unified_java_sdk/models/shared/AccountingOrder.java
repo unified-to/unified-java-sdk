@@ -18,7 +18,11 @@ import java.util.Map;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
-
+/**
+ * AccountingOrder
+ * 
+ * <p>&#64;deprecated; use AccountingSalesorder or AccountingPurchaseorder
+ */
 public class AccountingOrder {
 
     @JsonInclude(Include.NON_ABSENT)

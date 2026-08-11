@@ -12,9 +12,15 @@ import to.unified.unified_java_sdk.models.operations.CreateCommerceReviewRespons
 import to.unified.unified_java_sdk.models.operations.GetCommerceReviewRequest;
 import to.unified.unified_java_sdk.models.operations.GetCommerceReviewRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.GetCommerceReviewResponse;
+import to.unified.unified_java_sdk.models.operations.GetPerformanceReviewRequest;
+import to.unified.unified_java_sdk.models.operations.GetPerformanceReviewRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetPerformanceReviewResponse;
 import to.unified.unified_java_sdk.models.operations.ListCommerceReviewsRequest;
 import to.unified.unified_java_sdk.models.operations.ListCommerceReviewsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.ListCommerceReviewsResponse;
+import to.unified.unified_java_sdk.models.operations.ListPerformanceReviewsRequest;
+import to.unified.unified_java_sdk.models.operations.ListPerformanceReviewsRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListPerformanceReviewsResponse;
 import to.unified.unified_java_sdk.models.operations.PatchCommerceReviewRequest;
 import to.unified.unified_java_sdk.models.operations.PatchCommerceReviewRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.PatchCommerceReviewResponse;
@@ -26,7 +32,9 @@ import to.unified.unified_java_sdk.models.operations.UpdateCommerceReviewRequest
 import to.unified.unified_java_sdk.models.operations.UpdateCommerceReviewResponse;
 import to.unified.unified_java_sdk.operations.CreateCommerceReview;
 import to.unified.unified_java_sdk.operations.GetCommerceReview;
+import to.unified.unified_java_sdk.operations.GetPerformanceReview;
 import to.unified.unified_java_sdk.operations.ListCommerceReviews;
+import to.unified.unified_java_sdk.operations.ListPerformanceReviews;
 import to.unified.unified_java_sdk.operations.PatchCommerceReview;
 import to.unified.unified_java_sdk.operations.RemoveCommerceReview;
 import to.unified.unified_java_sdk.operations.UpdateCommerceReview;
@@ -97,6 +105,28 @@ public class Review {
     }
 
     /**
+     * Retrieve a review
+     * 
+     * @return The call builder
+     */
+    public GetPerformanceReviewRequestBuilder getPerformanceReview() {
+        return new GetPerformanceReviewRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Retrieve a review
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetPerformanceReviewResponse getPerformanceReview(@Nonnull GetPerformanceReviewRequest request) {
+        RequestOperation<GetPerformanceReviewRequest, GetPerformanceReviewResponse> operation
+              = new GetPerformanceReview.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
      * List all reviews
      * 
      * @return The call builder
@@ -115,6 +145,28 @@ public class Review {
     public ListCommerceReviewsResponse listCommerceReviews(@Nonnull ListCommerceReviewsRequest request) {
         RequestOperation<ListCommerceReviewsRequest, ListCommerceReviewsResponse> operation
               = new ListCommerceReviews.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * List all reviews
+     * 
+     * @return The call builder
+     */
+    public ListPerformanceReviewsRequestBuilder listPerformanceReviews() {
+        return new ListPerformanceReviewsRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * List all reviews
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListPerformanceReviewsResponse listPerformanceReviews(@Nonnull ListPerformanceReviewsRequest request) {
+        RequestOperation<ListPerformanceReviewsRequest, ListPerformanceReviewsResponse> operation
+              = new ListPerformanceReviews.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

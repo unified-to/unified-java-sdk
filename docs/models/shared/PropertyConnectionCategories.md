@@ -49,3 +49,4 @@ PropertyConnectionCategories custom = PropertyConnectionCategories.of("custom_va
 | `CLUBS`        | clubs          |
 | `DATASTORE`    | datastore      |
 | `CDP`          | cdp            |
+| `PERFORMANCE`  | performance    |

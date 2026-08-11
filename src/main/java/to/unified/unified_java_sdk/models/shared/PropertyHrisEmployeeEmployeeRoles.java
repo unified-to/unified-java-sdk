@@ -25,6 +25,8 @@ public class PropertyHrisEmployeeEmployeeRoles {
     public static final PropertyHrisEmployeeEmployeeRoles RECRUITER = new PropertyHrisEmployeeEmployeeRoles("RECRUITER");
     public static final PropertyHrisEmployeeEmployeeRoles SALESREP = new PropertyHrisEmployeeEmployeeRoles("SALESREP");
     public static final PropertyHrisEmployeeEmployeeRoles INTERVIEWER = new PropertyHrisEmployeeEmployeeRoles("INTERVIEWER");
+    public static final PropertyHrisEmployeeEmployeeRoles USER = new PropertyHrisEmployeeEmployeeRoles("USER");
+    public static final PropertyHrisEmployeeEmployeeRoles EMPLOYEE = new PropertyHrisEmployeeEmployeeRoles("EMPLOYEE");
 
     // This map will grow whenever a Color gets created with a new
     // unrecognized value (a potential memory leak if the user is not
@@ -103,6 +105,8 @@ public class PropertyHrisEmployeeEmployeeRoles {
         map.put("RECRUITER", RECRUITER);
         map.put("SALESREP", SALESREP);
         map.put("INTERVIEWER", INTERVIEWER);
+        map.put("USER", USER);
+        map.put("EMPLOYEE", EMPLOYEE);
         return map;
     }
 
@@ -113,6 +117,8 @@ public class PropertyHrisEmployeeEmployeeRoles {
         map.put("RECRUITER", PropertyHrisEmployeeEmployeeRolesEnum.RECRUITER);
         map.put("SALESREP", PropertyHrisEmployeeEmployeeRolesEnum.SALESREP);
         map.put("INTERVIEWER", PropertyHrisEmployeeEmployeeRolesEnum.INTERVIEWER);
+        map.put("USER", PropertyHrisEmployeeEmployeeRolesEnum.USER);
+        map.put("EMPLOYEE", PropertyHrisEmployeeEmployeeRolesEnum.EMPLOYEE);
         return map;
     }
     
@@ -123,7 +129,9 @@ public class PropertyHrisEmployeeEmployeeRoles {
         MANAGER("MANAGER"),
         RECRUITER("RECRUITER"),
         SALESREP("SALESREP"),
-        INTERVIEWER("INTERVIEWER"),;
+        INTERVIEWER("INTERVIEWER"),
+        USER("USER"),
+        EMPLOYEE("EMPLOYEE"),;
 
         private final String value;
 

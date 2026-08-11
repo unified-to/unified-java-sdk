@@ -177,3 +177,7 @@ WebhookObjectType custom = WebhookObjectType.of("custom_value");
 | `CDP_SOURCE`                | cdp_source                  |
 | `CDP_DESTINATION`           | cdp_destination             |
 | `CDP_ACTIVATION`            | cdp_activation              |
+| `PERFORMANCE_CYCLE`         | performance_cycle           |
+| `PERFORMANCE_REVIEW`        | performance_review          |
+| `PERFORMANCE_GOAL`          | performance_goal            |
+| `PERFORMANCE_FEEDBACK`      | performance_feedback        |

@@ -53,6 +53,7 @@ public class PropertyIntegrationCategories {
     public static final PropertyIntegrationCategories CLUBS = new PropertyIntegrationCategories("clubs");
     public static final PropertyIntegrationCategories DATASTORE = new PropertyIntegrationCategories("datastore");
     public static final PropertyIntegrationCategories CDP = new PropertyIntegrationCategories("cdp");
+    public static final PropertyIntegrationCategories PERFORMANCE = new PropertyIntegrationCategories("performance");
 
     // This map will grow whenever a Color gets created with a new
     // unrecognized value (a potential memory leak if the user is not
@@ -159,6 +160,7 @@ public class PropertyIntegrationCategories {
         map.put("clubs", CLUBS);
         map.put("datastore", DATASTORE);
         map.put("cdp", CDP);
+        map.put("performance", PERFORMANCE);
         return map;
     }
 
@@ -197,6 +199,7 @@ public class PropertyIntegrationCategories {
         map.put("clubs", PropertyIntegrationCategoriesEnum.CLUBS);
         map.put("datastore", PropertyIntegrationCategoriesEnum.DATASTORE);
         map.put("cdp", PropertyIntegrationCategoriesEnum.CDP);
+        map.put("performance", PropertyIntegrationCategoriesEnum.PERFORMANCE);
         return map;
     }
     
@@ -235,7 +238,8 @@ public class PropertyIntegrationCategories {
         SIGNING("signing"),
         CLUBS("clubs"),
         DATASTORE("datastore"),
-        CDP("cdp"),;
+        CDP("cdp"),
+        PERFORMANCE("performance"),;
 
         private final String value;
 

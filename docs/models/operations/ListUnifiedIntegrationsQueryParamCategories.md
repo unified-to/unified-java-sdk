@@ -46,3 +46,4 @@ ListUnifiedIntegrationsQueryParamCategories value = ListUnifiedIntegrationsQuery
 | `CLUBS`        | clubs          |
 | `DATASTORE`    | datastore      |
 | `CDP`          | cdp            |
+| `PERFORMANCE`  | performance    |

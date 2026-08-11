@@ -21,3 +21,5 @@ PropertyHrisEmployeeEmployeeRoles custom = PropertyHrisEmployeeEmployeeRoles.of(
 | `RECRUITER`   | RECRUITER     |
 | `SALESREP`    | SALESREP      |
 | `INTERVIEWER` | INTERVIEWER   |
+| `USER`        | USER          |
+| `EMPLOYEE`    | EMPLOYEE      |

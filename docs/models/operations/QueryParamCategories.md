@@ -46,3 +46,4 @@ QueryParamCategories value = QueryParamCategories.PASSTHROUGH;
 | `CLUBS`        | clubs          |
 | `DATASTORE`    | datastore      |
 | `CDP`          | cdp            |
+| `PERFORMANCE`  | performance    |

@@ -317,6 +317,13 @@ public class PropertyConnectionPermissions {
     public static final PropertyConnectionPermissions CDP_DESTINATION_WRITE = new PropertyConnectionPermissions("cdp_destination_write");
     public static final PropertyConnectionPermissions CDP_ACTIVATION_READ = new PropertyConnectionPermissions("cdp_activation_read");
     public static final PropertyConnectionPermissions CDP_ACTIVATION_WRITE = new PropertyConnectionPermissions("cdp_activation_write");
+    public static final PropertyConnectionPermissions PERFORMANCE_CYCLE_READ = new PropertyConnectionPermissions("performance_cycle_read");
+    public static final PropertyConnectionPermissions PERFORMANCE_REVIEW_READ = new PropertyConnectionPermissions("performance_review_read");
+    public static final PropertyConnectionPermissions PERFORMANCE_REVIEW_WRITE = new PropertyConnectionPermissions("performance_review_write");
+    public static final PropertyConnectionPermissions PERFORMANCE_GOAL_READ = new PropertyConnectionPermissions("performance_goal_read");
+    public static final PropertyConnectionPermissions PERFORMANCE_GOAL_WRITE = new PropertyConnectionPermissions("performance_goal_write");
+    public static final PropertyConnectionPermissions PERFORMANCE_FEEDBACK_READ = new PropertyConnectionPermissions("performance_feedback_read");
+    public static final PropertyConnectionPermissions PERFORMANCE_FEEDBACK_WRITE = new PropertyConnectionPermissions("performance_feedback_write");
 
     // This map will grow whenever a Color gets created with a new
     // unrecognized value (a potential memory leak if the user is not
@@ -687,6 +694,13 @@ public class PropertyConnectionPermissions {
         map.put("cdp_destination_write", CDP_DESTINATION_WRITE);
         map.put("cdp_activation_read", CDP_ACTIVATION_READ);
         map.put("cdp_activation_write", CDP_ACTIVATION_WRITE);
+        map.put("performance_cycle_read", PERFORMANCE_CYCLE_READ);
+        map.put("performance_review_read", PERFORMANCE_REVIEW_READ);
+        map.put("performance_review_write", PERFORMANCE_REVIEW_WRITE);
+        map.put("performance_goal_read", PERFORMANCE_GOAL_READ);
+        map.put("performance_goal_write", PERFORMANCE_GOAL_WRITE);
+        map.put("performance_feedback_read", PERFORMANCE_FEEDBACK_READ);
+        map.put("performance_feedback_write", PERFORMANCE_FEEDBACK_WRITE);
         return map;
     }
 
@@ -989,6 +1003,13 @@ public class PropertyConnectionPermissions {
         map.put("cdp_destination_write", PropertyConnectionPermissionsEnum.CDP_DESTINATION_WRITE);
         map.put("cdp_activation_read", PropertyConnectionPermissionsEnum.CDP_ACTIVATION_READ);
         map.put("cdp_activation_write", PropertyConnectionPermissionsEnum.CDP_ACTIVATION_WRITE);
+        map.put("performance_cycle_read", PropertyConnectionPermissionsEnum.PERFORMANCE_CYCLE_READ);
+        map.put("performance_review_read", PropertyConnectionPermissionsEnum.PERFORMANCE_REVIEW_READ);
+        map.put("performance_review_write", PropertyConnectionPermissionsEnum.PERFORMANCE_REVIEW_WRITE);
+        map.put("performance_goal_read", PropertyConnectionPermissionsEnum.PERFORMANCE_GOAL_READ);
+        map.put("performance_goal_write", PropertyConnectionPermissionsEnum.PERFORMANCE_GOAL_WRITE);
+        map.put("performance_feedback_read", PropertyConnectionPermissionsEnum.PERFORMANCE_FEEDBACK_READ);
+        map.put("performance_feedback_write", PropertyConnectionPermissionsEnum.PERFORMANCE_FEEDBACK_WRITE);
         return map;
     }
     
@@ -1291,7 +1312,14 @@ public class PropertyConnectionPermissions {
         CDP_DESTINATION_READ("cdp_destination_read"),
         CDP_DESTINATION_WRITE("cdp_destination_write"),
         CDP_ACTIVATION_READ("cdp_activation_read"),
-        CDP_ACTIVATION_WRITE("cdp_activation_write"),;
+        CDP_ACTIVATION_WRITE("cdp_activation_write"),
+        PERFORMANCE_CYCLE_READ("performance_cycle_read"),
+        PERFORMANCE_REVIEW_READ("performance_review_read"),
+        PERFORMANCE_REVIEW_WRITE("performance_review_write"),
+        PERFORMANCE_GOAL_READ("performance_goal_read"),
+        PERFORMANCE_GOAL_WRITE("performance_goal_write"),
+        PERFORMANCE_FEEDBACK_READ("performance_feedback_read"),
+        PERFORMANCE_FEEDBACK_WRITE("performance_feedback_write"),;
 
         private final String value;
 

@@ -16,7 +16,9 @@ import to.unified.unified_java_sdk.utils.Utils;
 
 
 public class CreateAccountingOrderRequest {
-
+    /**
+     * &#64;deprecated; use AccountingSalesorder or AccountingPurchaseorder
+     */
     @SpeakeasyMetadata("request:mediaType=application/json")
     private AccountingOrder accountingOrder;
 
@@ -61,6 +63,9 @@ public class CreateAccountingOrderRequest {
             null);
     }
 
+    /**
+     * &#64;deprecated; use AccountingSalesorder or AccountingPurchaseorder
+     */
     public AccountingOrder accountingOrder() {
         return this.accountingOrder;
     }
@@ -93,6 +98,9 @@ public class CreateAccountingOrderRequest {
     }
 
 
+    /**
+     * &#64;deprecated; use AccountingSalesorder or AccountingPurchaseorder
+     */
     public CreateAccountingOrderRequest withAccountingOrder(@Nonnull AccountingOrder accountingOrder) {
         this.accountingOrder = Utils.checkNotNull(accountingOrder, "accountingOrder");
         return this;
@@ -175,6 +183,9 @@ public class CreateAccountingOrderRequest {
           // force use of static builder() method
         }
 
+        /**
+         * &#64;deprecated; use AccountingSalesorder or AccountingPurchaseorder
+         */
         public Builder accountingOrder(@Nonnull AccountingOrder accountingOrder) {
             this.accountingOrder = Utils.checkNotNull(accountingOrder, "accountingOrder");
             return this;

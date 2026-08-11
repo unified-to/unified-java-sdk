@@ -35,10 +35,6 @@ public class ListAccountingProjectsRequest {
     private List<ListAccountingProjectsQueryParamFields> fields;
 
 
-    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=is_active")
-    private String isActive;
-
-
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     private Double limit;
 
@@ -96,7 +92,6 @@ public class ListAccountingProjectsRequest {
             @Nonnull String connectionId,
             @Nullable String contactId,
             @Nullable List<ListAccountingProjectsQueryParamFields> fields,
-            @Nullable String isActive,
             @Nullable Double limit,
             @Nullable Double offset,
             @Nullable String order,
@@ -111,7 +106,6 @@ public class ListAccountingProjectsRequest {
             .orElseThrow(() -> new IllegalArgumentException("connectionId cannot be null"));
         this.contactId = contactId;
         this.fields = fields;
-        this.isActive = isActive;
         this.limit = limit;
         this.offset = offset;
         this.order = order;
@@ -130,7 +124,7 @@ public class ListAccountingProjectsRequest {
             null, null, null,
             null, null, null,
             null, null, null,
-            null, null);
+            null);
     }
 
     /**
@@ -152,10 +146,6 @@ public class ListAccountingProjectsRequest {
      */
     public Optional<List<ListAccountingProjectsQueryParamFields>> fields() {
         return Optional.ofNullable(this.fields);
-    }
-
-    public Optional<String> isActive() {
-        return Optional.ofNullable(this.isActive);
     }
 
     public Optional<Double> limit() {
@@ -244,12 +234,6 @@ public class ListAccountingProjectsRequest {
      */
     public ListAccountingProjectsRequest withFields(@Nullable List<ListAccountingProjectsQueryParamFields> fields) {
         this.fields = fields;
-        return this;
-    }
-
-
-    public ListAccountingProjectsRequest withIsActive(@Nullable String isActive) {
-        this.isActive = isActive;
         return this;
     }
 
@@ -345,7 +329,6 @@ public class ListAccountingProjectsRequest {
             Utils.enhancedDeepEquals(this.connectionId, other.connectionId) &&
             Utils.enhancedDeepEquals(this.contactId, other.contactId) &&
             Utils.enhancedDeepEquals(this.fields, other.fields) &&
-            Utils.enhancedDeepEquals(this.isActive, other.isActive) &&
             Utils.enhancedDeepEquals(this.limit, other.limit) &&
             Utils.enhancedDeepEquals(this.offset, other.offset) &&
             Utils.enhancedDeepEquals(this.order, other.order) &&
@@ -362,10 +345,10 @@ public class ListAccountingProjectsRequest {
     public int hashCode() {
         return Utils.enhancedHash(
             connectionId, contactId, fields,
-            isActive, limit, offset,
-            order, orgId, parentId,
-            query, raw, sort,
-            status, updatedGte);
+            limit, offset, order,
+            orgId, parentId, query,
+            raw, sort, status,
+            updatedGte);
     }
     
     @Override
@@ -374,7 +357,6 @@ public class ListAccountingProjectsRequest {
                 "connectionId", connectionId,
                 "contactId", contactId,
                 "fields", fields,
-                "isActive", isActive,
                 "limit", limit,
                 "offset", offset,
                 "order", order,
@@ -395,8 +377,6 @@ public class ListAccountingProjectsRequest {
         private String contactId;
 
         private List<ListAccountingProjectsQueryParamFields> fields;
-
-        private String isActive;
 
         private Double limit;
 
@@ -443,11 +423,6 @@ public class ListAccountingProjectsRequest {
          */
         public Builder fields(@Nullable List<ListAccountingProjectsQueryParamFields> fields) {
             this.fields = fields;
-            return this;
-        }
-
-        public Builder isActive(@Nullable String isActive) {
-            this.isActive = isActive;
             return this;
         }
 
@@ -522,10 +497,10 @@ public class ListAccountingProjectsRequest {
         public ListAccountingProjectsRequest build() {
             return new ListAccountingProjectsRequest(
                 connectionId, contactId, fields,
-                isActive, limit, offset,
-                order, orgId, parentId,
-                query, raw, sort,
-                status, updatedGte);
+                limit, offset, order,
+                orgId, parentId, query,
+                raw, sort, status,
+                updatedGte);
         }
 
     }

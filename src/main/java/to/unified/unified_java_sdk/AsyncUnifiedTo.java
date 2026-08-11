@@ -261,6 +261,14 @@ public class AsyncUnifiedTo {
 
     private final AsyncSubscription subscription;
 
+    private final AsyncPerformance performance;
+
+    private final AsyncCycle cycle;
+
+    private final AsyncFeedback feedback;
+
+    private final AsyncGoal goal;
+
     private final AsyncRepo repo;
 
     private final AsyncBranch branch;
@@ -835,6 +843,22 @@ public class AsyncUnifiedTo {
         return subscription;
     }
 
+    public AsyncPerformance performance() {
+        return performance;
+    }
+
+    public AsyncCycle cycle() {
+        return cycle;
+    }
+
+    public AsyncFeedback feedback() {
+        return feedback;
+    }
+
+    public AsyncGoal goal() {
+        return goal;
+    }
+
     public AsyncRepo repo() {
         return repo;
     }
@@ -1121,6 +1145,10 @@ public class AsyncUnifiedTo {
         this.payout = new AsyncPayout(syncSDK.payout(), sdkConfiguration);
         this.refund = new AsyncRefund(syncSDK.refund(), sdkConfiguration);
         this.subscription = new AsyncSubscription(syncSDK.subscription(), sdkConfiguration);
+        this.performance = new AsyncPerformance(syncSDK.performance(), sdkConfiguration);
+        this.cycle = new AsyncCycle(syncSDK.cycle(), sdkConfiguration);
+        this.feedback = new AsyncFeedback(syncSDK.feedback(), sdkConfiguration);
+        this.goal = new AsyncGoal(syncSDK.goal(), sdkConfiguration);
         this.repo = new AsyncRepo(syncSDK.repo(), sdkConfiguration);
         this.branch = new AsyncBranch(syncSDK.branch(), sdkConfiguration);
         this.commit = new AsyncCommit(syncSDK.commit(), sdkConfiguration);
