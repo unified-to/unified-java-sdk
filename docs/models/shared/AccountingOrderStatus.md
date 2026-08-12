@@ -25,3 +25,6 @@ AccountingOrderStatus custom = AccountingOrderStatus.of("custom_value");
 | `REFUNDED`           | REFUNDED             |
 | `SUBMITTED`          | SUBMITTED            |
 | `DELETED`            | DELETED              |
+| `OPEN`               | OPEN                 |
+| `COMPLETED`          | COMPLETED            |
+| `CANCELED`           | CANCELED             |

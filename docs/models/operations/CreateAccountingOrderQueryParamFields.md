@@ -27,4 +27,5 @@ CreateAccountingOrderQueryParamFields value = CreateAccountingOrderQueryParamFie
 | `STATUS`           | status             |
 | `LINEITEMS`        | lineitems          |
 | `ORGANIZATION_ID`  | organization_id    |
+| `METADATA`         | metadata           |
 | `RAW`              | raw                |

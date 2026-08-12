@@ -27,6 +27,8 @@ public class AccountingFeeType {
     public static final AccountingFeeType GIFT_WRAP = new AccountingFeeType("GIFT_WRAP");
     public static final AccountingFeeType COD = new AccountingFeeType("COD");
     public static final AccountingFeeType SURCHARGE = new AccountingFeeType("SURCHARGE");
+    public static final AccountingFeeType TIP = new AccountingFeeType("TIP");
+    public static final AccountingFeeType SERVICE_CHARGE = new AccountingFeeType("SERVICE_CHARGE");
     public static final AccountingFeeType OTHER = new AccountingFeeType("OTHER");
 
     // This map will grow whenever a Color gets created with a new
@@ -108,6 +110,8 @@ public class AccountingFeeType {
         map.put("GIFT_WRAP", GIFT_WRAP);
         map.put("COD", COD);
         map.put("SURCHARGE", SURCHARGE);
+        map.put("TIP", TIP);
+        map.put("SERVICE_CHARGE", SERVICE_CHARGE);
         map.put("OTHER", OTHER);
         return map;
     }
@@ -121,6 +125,8 @@ public class AccountingFeeType {
         map.put("GIFT_WRAP", AccountingFeeTypeEnum.GIFT_WRAP);
         map.put("COD", AccountingFeeTypeEnum.COD);
         map.put("SURCHARGE", AccountingFeeTypeEnum.SURCHARGE);
+        map.put("TIP", AccountingFeeTypeEnum.TIP);
+        map.put("SERVICE_CHARGE", AccountingFeeTypeEnum.SERVICE_CHARGE);
         map.put("OTHER", AccountingFeeTypeEnum.OTHER);
         return map;
     }
@@ -135,6 +141,8 @@ public class AccountingFeeType {
         GIFT_WRAP("GIFT_WRAP"),
         COD("COD"),
         SURCHARGE("SURCHARGE"),
+        TIP("TIP"),
+        SERVICE_CHARGE("SERVICE_CHARGE"),
         OTHER("OTHER"),;
 
         private final String value;

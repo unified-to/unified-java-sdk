@@ -18,12 +18,12 @@ public class AtsMetadata {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("extra_data")
-    private ExtraData extraData;
+    private AtsMetadataExtraData extraData;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("format")
-    private Format format;
+    private AtsMetadataFormat format;
 
 
     @JsonInclude(Include.NON_ABSENT)
@@ -43,16 +43,16 @@ public class AtsMetadata {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
-    private Value value;
+    private AtsMetadataValue value;
 
     @JsonCreator
     public AtsMetadata(
-            @JsonProperty("extra_data") @Nullable ExtraData extraData,
-            @JsonProperty("format") @Nullable Format format,
+            @JsonProperty("extra_data") @Nullable AtsMetadataExtraData extraData,
+            @JsonProperty("format") @Nullable AtsMetadataFormat format,
             @JsonProperty("id") @Nullable String id,
             @JsonProperty("namespace") @Nullable String namespace,
             @JsonProperty("slug") @Nullable String slug,
-            @JsonProperty("value") @Nullable Value value) {
+            @JsonProperty("value") @Nullable AtsMetadataValue value) {
         this.extraData = extraData;
         this.format = format;
         this.id = id;
@@ -66,11 +66,11 @@ public class AtsMetadata {
             null, null, null);
     }
 
-    public Optional<ExtraData> extraData() {
+    public Optional<AtsMetadataExtraData> extraData() {
         return Optional.ofNullable(this.extraData);
     }
 
-    public Optional<Format> format() {
+    public Optional<AtsMetadataFormat> format() {
         return Optional.ofNullable(this.format);
     }
 
@@ -86,7 +86,7 @@ public class AtsMetadata {
         return Optional.ofNullable(this.slug);
     }
 
-    public Optional<Value> value() {
+    public Optional<AtsMetadataValue> value() {
         return Optional.ofNullable(this.value);
     }
 
@@ -95,13 +95,13 @@ public class AtsMetadata {
     }
 
 
-    public AtsMetadata withExtraData(@Nullable ExtraData extraData) {
+    public AtsMetadata withExtraData(@Nullable AtsMetadataExtraData extraData) {
         this.extraData = extraData;
         return this;
     }
 
 
-    public AtsMetadata withFormat(@Nullable Format format) {
+    public AtsMetadata withFormat(@Nullable AtsMetadataFormat format) {
         this.format = format;
         return this;
     }
@@ -125,7 +125,7 @@ public class AtsMetadata {
     }
 
 
-    public AtsMetadata withValue(@Nullable Value value) {
+    public AtsMetadata withValue(@Nullable AtsMetadataValue value) {
         this.value = value;
         return this;
     }
@@ -170,9 +170,9 @@ public class AtsMetadata {
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
 
-        private ExtraData extraData;
+        private AtsMetadataExtraData extraData;
 
-        private Format format;
+        private AtsMetadataFormat format;
 
         private String id;
 
@@ -180,18 +180,18 @@ public class AtsMetadata {
 
         private String slug;
 
-        private Value value;
+        private AtsMetadataValue value;
 
         private Builder() {
           // force use of static builder() method
         }
 
-        public Builder extraData(@Nullable ExtraData extraData) {
+        public Builder extraData(@Nullable AtsMetadataExtraData extraData) {
             this.extraData = extraData;
             return this;
         }
 
-        public Builder format(@Nullable Format format) {
+        public Builder format(@Nullable AtsMetadataFormat format) {
             this.format = format;
             return this;
         }
@@ -211,7 +211,7 @@ public class AtsMetadata {
             return this;
         }
 
-        public Builder value(@Nullable Value value) {
+        public Builder value(@Nullable AtsMetadataValue value) {
             this.value = value;
             return this;
         }

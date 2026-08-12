@@ -23,6 +23,7 @@ public enum CreateAccountingOrderQueryParamFields {
     STATUS("status"),
     LINEITEMS("lineitems"),
     ORGANIZATION_ID("organization_id"),
+    METADATA("metadata"),
     RAW("raw");
 
     @JsonValue

@@ -14,6 +14,7 @@ import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
 import java.time.OffsetDateTime;
+import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
@@ -39,6 +40,11 @@ public class AccountingTaxrate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_active")
     private Boolean isActive;
+
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("metadata")
+    private List<AccountingMetadata> metadata;
 
 
     @JsonInclude(Include.NON_ABSENT)
@@ -71,6 +77,7 @@ public class AccountingTaxrate {
             @JsonProperty("description") @Nullable String description,
             @JsonProperty("id") @Nullable String id,
             @JsonProperty("is_active") @Nullable Boolean isActive,
+            @JsonProperty("metadata") @Nullable List<AccountingMetadata> metadata,
             @JsonProperty("name") @Nullable String name,
             @JsonProperty("organization_id") @Nullable String organizationId,
             @JsonProperty("rate") @Nullable Double rate,
@@ -80,6 +87,7 @@ public class AccountingTaxrate {
         this.description = description;
         this.id = id;
         this.isActive = isActive;
+        this.metadata = metadata;
         this.name = name;
         this.organizationId = organizationId;
         this.rate = rate;
@@ -90,7 +98,8 @@ public class AccountingTaxrate {
     public AccountingTaxrate() {
         this(null, null, null,
             null, null, null,
-            null, null, null);
+            null, null, null,
+            null);
     }
 
     public Optional<OffsetDateTime> createdAt() {
@@ -107,6 +116,10 @@ public class AccountingTaxrate {
 
     public Optional<Boolean> isActive() {
         return Optional.ofNullable(this.isActive);
+    }
+
+    public Optional<List<AccountingMetadata>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     public Optional<String> name() {
@@ -158,6 +171,12 @@ public class AccountingTaxrate {
     }
 
 
+    public AccountingTaxrate withMetadata(@Nullable List<AccountingMetadata> metadata) {
+        this.metadata = metadata;
+        return this;
+    }
+
+
     public AccountingTaxrate withName(@Nullable String name) {
         this.name = name;
         return this;
@@ -202,6 +221,7 @@ public class AccountingTaxrate {
             Utils.enhancedDeepEquals(this.description, other.description) &&
             Utils.enhancedDeepEquals(this.id, other.id) &&
             Utils.enhancedDeepEquals(this.isActive, other.isActive) &&
+            Utils.enhancedDeepEquals(this.metadata, other.metadata) &&
             Utils.enhancedDeepEquals(this.name, other.name) &&
             Utils.enhancedDeepEquals(this.organizationId, other.organizationId) &&
             Utils.enhancedDeepEquals(this.rate, other.rate) &&
@@ -213,8 +233,9 @@ public class AccountingTaxrate {
     public int hashCode() {
         return Utils.enhancedHash(
             createdAt, description, id,
-            isActive, name, organizationId,
-            rate, raw, updatedAt);
+            isActive, metadata, name,
+            organizationId, rate, raw,
+            updatedAt);
     }
     
     @Override
@@ -224,6 +245,7 @@ public class AccountingTaxrate {
                 "description", description,
                 "id", id,
                 "isActive", isActive,
+                "metadata", metadata,
                 "name", name,
                 "organizationId", organizationId,
                 "rate", rate,
@@ -241,6 +263,8 @@ public class AccountingTaxrate {
         private String id;
 
         private Boolean isActive;
+
+        private List<AccountingMetadata> metadata;
 
         private String name;
 
@@ -276,6 +300,11 @@ public class AccountingTaxrate {
             return this;
         }
 
+        public Builder metadata(@Nullable List<AccountingMetadata> metadata) {
+            this.metadata = metadata;
+            return this;
+        }
+
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
@@ -304,8 +333,9 @@ public class AccountingTaxrate {
         public AccountingTaxrate build() {
             return new AccountingTaxrate(
                 createdAt, description, id,
-                isActive, name, organizationId,
-                rate, raw, updatedAt);
+                isActive, metadata, name,
+                organizationId, rate, raw,
+                updatedAt);
         }
 
     }

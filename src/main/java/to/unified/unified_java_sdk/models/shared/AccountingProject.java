@@ -133,6 +133,11 @@ public class AccountingProject {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("metadata")
+    private List<AccountingMetadata> metadata;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minutes_logged")
     private Double minutesLogged;
 
@@ -210,6 +215,7 @@ public class AccountingProject {
             @JsonProperty("is_billable") @Nullable Boolean isBillable,
             @JsonProperty("location_id") @Nullable String locationId,
             @JsonProperty("manager_user_id") @Nullable String managerUserId,
+            @JsonProperty("metadata") @Nullable List<AccountingMetadata> metadata,
             @JsonProperty("minutes_logged") @Nullable Double minutesLogged,
             @JsonProperty("minutes_to_be_invoiced") @Nullable Double minutesToBeInvoiced,
             @JsonProperty("name") @Nullable String name,
@@ -243,6 +249,7 @@ public class AccountingProject {
         this.isBillable = isBillable;
         this.locationId = locationId;
         this.managerUserId = managerUserId;
+        this.metadata = metadata;
         this.minutesLogged = minutesLogged;
         this.minutesToBeInvoiced = minutesToBeInvoiced;
         this.name = name;
@@ -267,7 +274,8 @@ public class AccountingProject {
             null, null, null,
             null, null, null,
             null, null, null,
-            null, null, null);
+            null, null, null,
+            null);
     }
 
     public Optional<Double> actualCostAmount() {
@@ -356,6 +364,10 @@ public class AccountingProject {
 
     public Optional<String> managerUserId() {
         return Optional.ofNullable(this.managerUserId);
+    }
+
+    public Optional<List<AccountingMetadata>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     public Optional<Double> minutesLogged() {
@@ -539,6 +551,12 @@ public class AccountingProject {
     }
 
 
+    public AccountingProject withMetadata(@Nullable List<AccountingMetadata> metadata) {
+        this.metadata = metadata;
+        return this;
+    }
+
+
     public AccountingProject withMinutesLogged(@Nullable Double minutesLogged) {
         this.minutesLogged = minutesLogged;
         return this;
@@ -637,6 +655,7 @@ public class AccountingProject {
             Utils.enhancedDeepEquals(this.isBillable, other.isBillable) &&
             Utils.enhancedDeepEquals(this.locationId, other.locationId) &&
             Utils.enhancedDeepEquals(this.managerUserId, other.managerUserId) &&
+            Utils.enhancedDeepEquals(this.metadata, other.metadata) &&
             Utils.enhancedDeepEquals(this.minutesLogged, other.minutesLogged) &&
             Utils.enhancedDeepEquals(this.minutesToBeInvoiced, other.minutesToBeInvoiced) &&
             Utils.enhancedDeepEquals(this.name, other.name) &&
@@ -660,10 +679,11 @@ public class AccountingProject {
             endedAt, estimateAmount, estimatedCostAmount,
             expenseAmount, id, invoicedAmount,
             isActive, isBillable, locationId,
-            managerUserId, minutesLogged, minutesToBeInvoiced,
-            name, organizationId, parentId,
-            percentComplete, raw, startedAt,
-            status, toBeInvoicedAmount, updatedAt);
+            managerUserId, metadata, minutesLogged,
+            minutesToBeInvoiced, name, organizationId,
+            parentId, percentComplete, raw,
+            startedAt, status, toBeInvoicedAmount,
+            updatedAt);
     }
     
     @Override
@@ -691,6 +711,7 @@ public class AccountingProject {
                 "isBillable", isBillable,
                 "locationId", locationId,
                 "managerUserId", managerUserId,
+                "metadata", metadata,
                 "minutesLogged", minutesLogged,
                 "minutesToBeInvoiced", minutesToBeInvoiced,
                 "name", name,
@@ -750,6 +771,8 @@ public class AccountingProject {
         private String locationId;
 
         private String managerUserId;
+
+        private List<AccountingMetadata> metadata;
 
         private Double minutesLogged;
 
@@ -887,6 +910,11 @@ public class AccountingProject {
             return this;
         }
 
+        public Builder metadata(@Nullable List<AccountingMetadata> metadata) {
+            this.metadata = metadata;
+            return this;
+        }
+
         public Builder minutesLogged(@Nullable Double minutesLogged) {
             this.minutesLogged = minutesLogged;
             return this;
@@ -951,10 +979,11 @@ public class AccountingProject {
                 endedAt, estimateAmount, estimatedCostAmount,
                 expenseAmount, id, invoicedAmount,
                 isActive, isBillable, locationId,
-                managerUserId, minutesLogged, minutesToBeInvoiced,
-                name, organizationId, parentId,
-                percentComplete, raw, startedAt,
-                status, toBeInvoicedAmount, updatedAt);
+                managerUserId, metadata, minutesLogged,
+                minutesToBeInvoiced, name, organizationId,
+                parentId, percentComplete, raw,
+                startedAt, status, toBeInvoicedAmount,
+                updatedAt);
         }
 
     }

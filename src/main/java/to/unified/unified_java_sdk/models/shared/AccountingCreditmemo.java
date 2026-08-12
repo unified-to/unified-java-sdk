@@ -95,6 +95,11 @@ public class AccountingCreditmemo {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("metadata")
+    private List<AccountingMetadata> metadata;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notes")
     private String notes;
 
@@ -189,6 +194,7 @@ public class AccountingCreditmemo {
             @JsonProperty("id") @Nullable String id,
             @JsonProperty("invoice_id") @Nullable String invoiceId,
             @JsonProperty("lineitems") @Nullable List<AccountingLineitem> lineitems,
+            @JsonProperty("metadata") @Nullable List<AccountingMetadata> metadata,
             @JsonProperty("notes") @Nullable String notes,
             @JsonProperty("organization_id") @Nullable String organizationId,
             @JsonProperty("paid_amount") @Nullable Double paidAmount,
@@ -219,6 +225,7 @@ public class AccountingCreditmemo {
         this.id = id;
         this.invoiceId = invoiceId;
         this.lineitems = lineitems;
+        this.metadata = metadata;
         this.notes = notes;
         this.organizationId = organizationId;
         this.paidAmount = paidAmount;
@@ -247,7 +254,8 @@ public class AccountingCreditmemo {
             null, null, null,
             null, null, null,
             null, null, null,
-            null, null, null);
+            null, null, null,
+            null);
     }
 
     /**
@@ -307,6 +315,10 @@ public class AccountingCreditmemo {
 
     public Optional<List<AccountingLineitem>> lineitems() {
         return Optional.ofNullable(this.lineitems);
+    }
+
+    public Optional<List<AccountingMetadata>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     public Optional<String> notes() {
@@ -465,6 +477,12 @@ public class AccountingCreditmemo {
     }
 
 
+    public AccountingCreditmemo withMetadata(@Nullable List<AccountingMetadata> metadata) {
+        this.metadata = metadata;
+        return this;
+    }
+
+
     public AccountingCreditmemo withNotes(@Nullable String notes) {
         this.notes = notes;
         return this;
@@ -585,6 +603,7 @@ public class AccountingCreditmemo {
             Utils.enhancedDeepEquals(this.id, other.id) &&
             Utils.enhancedDeepEquals(this.invoiceId, other.invoiceId) &&
             Utils.enhancedDeepEquals(this.lineitems, other.lineitems) &&
+            Utils.enhancedDeepEquals(this.metadata, other.metadata) &&
             Utils.enhancedDeepEquals(this.notes, other.notes) &&
             Utils.enhancedDeepEquals(this.organizationId, other.organizationId) &&
             Utils.enhancedDeepEquals(this.paidAmount, other.paidAmount) &&
@@ -610,12 +629,13 @@ public class AccountingCreditmemo {
             balanceAmount, cancelledAt, contactId,
             createdAt, creditmemoNumber, currency,
             discountAmount, dueAt, id,
-            invoiceId, lineitems, notes,
-            organizationId, paidAmount, paidAt,
-            paymentCollectionMethod, postedAt, raw,
-            refundAmount, refundReason, refundedAt,
-            send, status, taxAmount,
-            totalAmount, updatedAt, url);
+            invoiceId, lineitems, metadata,
+            notes, organizationId, paidAmount,
+            paidAt, paymentCollectionMethod, postedAt,
+            raw, refundAmount, refundReason,
+            refundedAt, send, status,
+            taxAmount, totalAmount, updatedAt,
+            url);
     }
     
     @Override
@@ -635,6 +655,7 @@ public class AccountingCreditmemo {
                 "id", id,
                 "invoiceId", invoiceId,
                 "lineitems", lineitems,
+                "metadata", metadata,
                 "notes", notes,
                 "organizationId", organizationId,
                 "paidAmount", paidAmount,
@@ -683,6 +704,8 @@ public class AccountingCreditmemo {
         private String invoiceId;
 
         private List<AccountingLineitem> lineitems;
+
+        private List<AccountingMetadata> metadata;
 
         private String notes;
 
@@ -793,6 +816,11 @@ public class AccountingCreditmemo {
             return this;
         }
 
+        public Builder metadata(@Nullable List<AccountingMetadata> metadata) {
+            this.metadata = metadata;
+            return this;
+        }
+
         public Builder notes(@Nullable String notes) {
             this.notes = notes;
             return this;
@@ -879,12 +907,13 @@ public class AccountingCreditmemo {
                 balanceAmount, cancelledAt, contactId,
                 createdAt, creditmemoNumber, currency,
                 discountAmount, dueAt, id,
-                invoiceId, lineitems, notes,
-                organizationId, paidAmount, paidAt,
-                paymentCollectionMethod, postedAt, raw,
-                refundAmount, refundReason, refundedAt,
-                send, status, taxAmount,
-                totalAmount, updatedAt, url);
+                invoiceId, lineitems, metadata,
+                notes, organizationId, paidAmount,
+                paidAt, paymentCollectionMethod, postedAt,
+                raw, refundAmount, refundReason,
+                refundedAt, send, status,
+                taxAmount, totalAmount, updatedAt,
+                url);
         }
 
     }

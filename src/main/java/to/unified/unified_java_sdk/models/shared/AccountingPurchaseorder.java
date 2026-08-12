@@ -62,6 +62,11 @@ public class AccountingPurchaseorder {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("metadata")
+    private List<AccountingMetadata> metadata;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("organization_id")
     private String organizationId;
 
@@ -105,6 +110,7 @@ public class AccountingPurchaseorder {
             @JsonProperty("currency") @Nullable String currency,
             @JsonProperty("id") @Nullable String id,
             @JsonProperty("lineitems") @Nullable List<AccountingLineitem> lineitems,
+            @JsonProperty("metadata") @Nullable List<AccountingMetadata> metadata,
             @JsonProperty("organization_id") @Nullable String organizationId,
             @JsonProperty("posted_at") @Nullable OffsetDateTime postedAt,
             @JsonProperty("raw") @Nullable Map<String, Object> raw,
@@ -120,6 +126,7 @@ public class AccountingPurchaseorder {
         this.currency = currency;
         this.id = id;
         this.lineitems = lineitems;
+        this.metadata = metadata;
         this.organizationId = organizationId;
         this.postedAt = postedAt;
         this.raw = raw;
@@ -134,7 +141,8 @@ public class AccountingPurchaseorder {
             null, null, null,
             null, null, null,
             null, null, null,
-            null, null, null);
+            null, null, null,
+            null);
     }
 
     public Optional<String> accountId() {
@@ -167,6 +175,10 @@ public class AccountingPurchaseorder {
 
     public Optional<List<AccountingLineitem>> lineitems() {
         return Optional.ofNullable(this.lineitems);
+    }
+
+    public Optional<List<AccountingMetadata>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     public Optional<String> organizationId() {
@@ -250,6 +262,12 @@ public class AccountingPurchaseorder {
     }
 
 
+    public AccountingPurchaseorder withMetadata(@Nullable List<AccountingMetadata> metadata) {
+        this.metadata = metadata;
+        return this;
+    }
+
+
     public AccountingPurchaseorder withOrganizationId(@Nullable String organizationId) {
         this.organizationId = organizationId;
         return this;
@@ -310,6 +328,7 @@ public class AccountingPurchaseorder {
             Utils.enhancedDeepEquals(this.currency, other.currency) &&
             Utils.enhancedDeepEquals(this.id, other.id) &&
             Utils.enhancedDeepEquals(this.lineitems, other.lineitems) &&
+            Utils.enhancedDeepEquals(this.metadata, other.metadata) &&
             Utils.enhancedDeepEquals(this.organizationId, other.organizationId) &&
             Utils.enhancedDeepEquals(this.postedAt, other.postedAt) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
@@ -324,9 +343,10 @@ public class AccountingPurchaseorder {
         return Utils.enhancedHash(
             accountId, billingAddress, categoryIds,
             contactId, createdAt, currency,
-            id, lineitems, organizationId,
-            postedAt, raw, shippingAddress,
-            status, totalAmount, updatedAt);
+            id, lineitems, metadata,
+            organizationId, postedAt, raw,
+            shippingAddress, status, totalAmount,
+            updatedAt);
     }
     
     @Override
@@ -340,6 +360,7 @@ public class AccountingPurchaseorder {
                 "currency", currency,
                 "id", id,
                 "lineitems", lineitems,
+                "metadata", metadata,
                 "organizationId", organizationId,
                 "postedAt", postedAt,
                 "raw", raw,
@@ -367,6 +388,8 @@ public class AccountingPurchaseorder {
         private String id;
 
         private List<AccountingLineitem> lineitems;
+
+        private List<AccountingMetadata> metadata;
 
         private String organizationId;
 
@@ -426,6 +449,11 @@ public class AccountingPurchaseorder {
             return this;
         }
 
+        public Builder metadata(@Nullable List<AccountingMetadata> metadata) {
+            this.metadata = metadata;
+            return this;
+        }
+
         public Builder organizationId(@Nullable String organizationId) {
             this.organizationId = organizationId;
             return this;
@@ -465,9 +493,10 @@ public class AccountingPurchaseorder {
             return new AccountingPurchaseorder(
                 accountId, billingAddress, categoryIds,
                 contactId, createdAt, currency,
-                id, lineitems, organizationId,
-                postedAt, raw, shippingAddress,
-                status, totalAmount, updatedAt);
+                id, lineitems, metadata,
+                organizationId, postedAt, raw,
+                shippingAddress, status, totalAmount,
+                updatedAt);
         }
 
     }

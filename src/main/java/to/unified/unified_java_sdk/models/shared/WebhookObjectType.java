@@ -86,6 +86,7 @@ public class WebhookObjectType {
     public static final WebhookObjectType HRIS_LOCATION = new WebhookObjectType("hris_location");
     public static final WebhookObjectType HRIS_DEVICE = new WebhookObjectType("hris_device");
     public static final WebhookObjectType HRIS_TIMESHIFT = new WebhookObjectType("hris_timeshift");
+    public static final WebhookObjectType HRIS_ATTENDANCE = new WebhookObjectType("hris_attendance");
     public static final WebhookObjectType HRIS_DEDUCTION = new WebhookObjectType("hris_deduction");
     public static final WebhookObjectType HRIS_BENEFIT = new WebhookObjectType("hris_benefit");
     public static final WebhookObjectType HRIS_BANKACCOUNT = new WebhookObjectType("hris_bankaccount");
@@ -324,6 +325,7 @@ public class WebhookObjectType {
         map.put("hris_location", HRIS_LOCATION);
         map.put("hris_device", HRIS_DEVICE);
         map.put("hris_timeshift", HRIS_TIMESHIFT);
+        map.put("hris_attendance", HRIS_ATTENDANCE);
         map.put("hris_deduction", HRIS_DEDUCTION);
         map.put("hris_benefit", HRIS_BENEFIT);
         map.put("hris_bankaccount", HRIS_BANKACCOUNT);
@@ -494,6 +496,7 @@ public class WebhookObjectType {
         map.put("hris_location", WebhookObjectTypeEnum.HRIS_LOCATION);
         map.put("hris_device", WebhookObjectTypeEnum.HRIS_DEVICE);
         map.put("hris_timeshift", WebhookObjectTypeEnum.HRIS_TIMESHIFT);
+        map.put("hris_attendance", WebhookObjectTypeEnum.HRIS_ATTENDANCE);
         map.put("hris_deduction", WebhookObjectTypeEnum.HRIS_DEDUCTION);
         map.put("hris_benefit", WebhookObjectTypeEnum.HRIS_BENEFIT);
         map.put("hris_bankaccount", WebhookObjectTypeEnum.HRIS_BANKACCOUNT);
@@ -665,6 +668,7 @@ public class WebhookObjectType {
         HRIS_LOCATION("hris_location"),
         HRIS_DEVICE("hris_device"),
         HRIS_TIMESHIFT("hris_timeshift"),
+        HRIS_ATTENDANCE("hris_attendance"),
         HRIS_DEDUCTION("hris_deduction"),
         HRIS_BENEFIT("hris_benefit"),
         HRIS_BANKACCOUNT("hris_bankaccount"),

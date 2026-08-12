@@ -84,6 +84,11 @@ public class AccountingExpense {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("metadata")
+    private List<AccountingMetadata> metadata;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     private String name;
 
@@ -166,6 +171,7 @@ public class AccountingExpense {
             @JsonProperty("external_number") @Nullable String externalNumber,
             @JsonProperty("id") @Nullable String id,
             @JsonProperty("lineitems") @Nullable List<AccountingLineitem> lineitems,
+            @JsonProperty("metadata") @Nullable List<AccountingMetadata> metadata,
             @JsonProperty("name") @Nullable String name,
             @JsonProperty("organization_id") @Nullable String organizationId,
             @JsonProperty("payment_method") @Nullable String paymentMethod,
@@ -192,6 +198,7 @@ public class AccountingExpense {
         this.externalNumber = externalNumber;
         this.id = id;
         this.lineitems = lineitems;
+        this.metadata = metadata;
         this.name = name;
         this.organizationId = organizationId;
         this.paymentMethod = paymentMethod;
@@ -217,7 +224,7 @@ public class AccountingExpense {
             null, null, null,
             null, null, null,
             null, null, null,
-            null, null);
+            null, null, null);
     }
 
     public Optional<String> accountId() {
@@ -269,6 +276,10 @@ public class AccountingExpense {
 
     public Optional<List<AccountingLineitem>> lineitems() {
         return Optional.ofNullable(this.lineitems);
+    }
+
+    public Optional<List<AccountingMetadata>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     public Optional<String> name() {
@@ -407,6 +418,12 @@ public class AccountingExpense {
     }
 
 
+    public AccountingExpense withMetadata(@Nullable List<AccountingMetadata> metadata) {
+        this.metadata = metadata;
+        return this;
+    }
+
+
     public AccountingExpense withName(@Nullable String name) {
         this.name = name;
         return this;
@@ -513,6 +530,7 @@ public class AccountingExpense {
             Utils.enhancedDeepEquals(this.externalNumber, other.externalNumber) &&
             Utils.enhancedDeepEquals(this.id, other.id) &&
             Utils.enhancedDeepEquals(this.lineitems, other.lineitems) &&
+            Utils.enhancedDeepEquals(this.metadata, other.metadata) &&
             Utils.enhancedDeepEquals(this.name, other.name) &&
             Utils.enhancedDeepEquals(this.organizationId, other.organizationId) &&
             Utils.enhancedDeepEquals(this.paymentMethod, other.paymentMethod) &&
@@ -536,11 +554,11 @@ public class AccountingExpense {
             approverUsers, attachments, categoryIds,
             contactId, createdAt, currency,
             externalNumber, id, lineitems,
-            name, organizationId, paymentMethod,
-            postedAt, projectId, raw,
-            reimbursedAmount, reimbursedAt, status,
-            taxAmount, totalAmount, updatedAt,
-            userId, users);
+            metadata, name, organizationId,
+            paymentMethod, postedAt, projectId,
+            raw, reimbursedAmount, reimbursedAt,
+            status, taxAmount, totalAmount,
+            updatedAt, userId, users);
     }
     
     @Override
@@ -558,6 +576,7 @@ public class AccountingExpense {
                 "externalNumber", externalNumber,
                 "id", id,
                 "lineitems", lineitems,
+                "metadata", metadata,
                 "name", name,
                 "organizationId", organizationId,
                 "paymentMethod", paymentMethod,
@@ -600,6 +619,8 @@ public class AccountingExpense {
         private String id;
 
         private List<AccountingLineitem> lineitems;
+
+        private List<AccountingMetadata> metadata;
 
         private String name;
 
@@ -696,6 +717,11 @@ public class AccountingExpense {
             return this;
         }
 
+        public Builder metadata(@Nullable List<AccountingMetadata> metadata) {
+            this.metadata = metadata;
+            return this;
+        }
+
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
@@ -772,11 +798,11 @@ public class AccountingExpense {
                 approverUsers, attachments, categoryIds,
                 contactId, createdAt, currency,
                 externalNumber, id, lineitems,
-                name, organizationId, paymentMethod,
-                postedAt, projectId, raw,
-                reimbursedAmount, reimbursedAt, status,
-                taxAmount, totalAmount, updatedAt,
-                userId, users);
+                metadata, name, organizationId,
+                paymentMethod, postedAt, projectId,
+                raw, reimbursedAmount, reimbursedAt,
+                status, taxAmount, totalAmount,
+                updatedAt, userId, users);
         }
 
     }

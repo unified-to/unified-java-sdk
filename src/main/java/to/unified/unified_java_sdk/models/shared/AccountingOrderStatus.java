@@ -29,6 +29,9 @@ public class AccountingOrderStatus {
     public static final AccountingOrderStatus REFUNDED = new AccountingOrderStatus("REFUNDED");
     public static final AccountingOrderStatus SUBMITTED = new AccountingOrderStatus("SUBMITTED");
     public static final AccountingOrderStatus DELETED = new AccountingOrderStatus("DELETED");
+    public static final AccountingOrderStatus OPEN = new AccountingOrderStatus("OPEN");
+    public static final AccountingOrderStatus COMPLETED = new AccountingOrderStatus("COMPLETED");
+    public static final AccountingOrderStatus CANCELED = new AccountingOrderStatus("CANCELED");
 
     // This map will grow whenever a Color gets created with a new
     // unrecognized value (a potential memory leak if the user is not
@@ -111,6 +114,9 @@ public class AccountingOrderStatus {
         map.put("REFUNDED", REFUNDED);
         map.put("SUBMITTED", SUBMITTED);
         map.put("DELETED", DELETED);
+        map.put("OPEN", OPEN);
+        map.put("COMPLETED", COMPLETED);
+        map.put("CANCELED", CANCELED);
         return map;
     }
 
@@ -125,6 +131,9 @@ public class AccountingOrderStatus {
         map.put("REFUNDED", AccountingOrderStatusEnum.REFUNDED);
         map.put("SUBMITTED", AccountingOrderStatusEnum.SUBMITTED);
         map.put("DELETED", AccountingOrderStatusEnum.DELETED);
+        map.put("OPEN", AccountingOrderStatusEnum.OPEN);
+        map.put("COMPLETED", AccountingOrderStatusEnum.COMPLETED);
+        map.put("CANCELED", AccountingOrderStatusEnum.CANCELED);
         return map;
     }
     
@@ -139,7 +148,10 @@ public class AccountingOrderStatus {
         PARTIALLY_REFUNDED("PARTIALLY_REFUNDED"),
         REFUNDED("REFUNDED"),
         SUBMITTED("SUBMITTED"),
-        DELETED("DELETED"),;
+        DELETED("DELETED"),
+        OPEN("OPEN"),
+        COMPLETED("COMPLETED"),
+        CANCELED("CANCELED"),;
 
         private final String value;
 

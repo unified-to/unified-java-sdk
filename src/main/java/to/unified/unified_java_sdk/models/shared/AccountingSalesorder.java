@@ -37,6 +37,11 @@ public class AccountingSalesorder {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("closed_at")
+    private OffsetDateTime closedAt;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contact_id")
     private String contactId;
 
@@ -52,8 +57,33 @@ public class AccountingSalesorder {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("device_id")
+    private String deviceId;
+
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("discount_amount")
+    private Double discountAmount;
+
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("employee_user_id")
+    private String employeeUserId;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fees")
     private List<AccountingFee> fees;
+
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("fulfillment_type")
+    private FulfillmentType fulfillmentType;
+
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("guest_count")
+    private Double guestCount;
 
 
     @JsonInclude(Include.NON_ABSENT)
@@ -67,8 +97,30 @@ public class AccountingSalesorder {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("location_id")
+    private String locationId;
+
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("metadata")
+    private List<AccountingMetadata> metadata;
+
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("order_number")
+    private String orderNumber;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("organization_id")
     private String organizationId;
+
+    /**
+     * read-only reciprocal of PaymentPayment.allocations; payments applied to this sales order
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("payments")
+    private List<AccountingPaymentReference> payments;
 
 
     @JsonInclude(Include.NON_ABSENT)
@@ -82,8 +134,18 @@ public class AccountingSalesorder {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("refunded_amount")
+    private Double refundedAmount;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sales_channel")
     private String salesChannel;
+
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("service_charge_amount")
+    private Double serviceChargeAmount;
 
 
     @JsonInclude(Include.NON_ABSENT)
@@ -94,6 +156,26 @@ public class AccountingSalesorder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     private AccountingSalesorderStatus status;
+
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("subscription_id")
+    private String subscriptionId;
+
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("subtotal_amount")
+    private Double subtotalAmount;
+
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("tax_amount")
+    private Double taxAmount;
+
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("tip_amount")
+    private Double tipAmount;
 
 
     @JsonInclude(Include.NON_ABSENT)
@@ -110,35 +192,67 @@ public class AccountingSalesorder {
             @JsonProperty("account_id") @Nullable String accountId,
             @JsonProperty("billing_address") @Nullable PropertyAccountingSalesorderBillingAddress billingAddress,
             @JsonProperty("category_ids") @Nullable List<String> categoryIds,
+            @JsonProperty("closed_at") @Nullable OffsetDateTime closedAt,
             @JsonProperty("contact_id") @Nullable String contactId,
             @JsonProperty("created_at") @Nullable OffsetDateTime createdAt,
             @JsonProperty("currency") @Nullable String currency,
+            @JsonProperty("device_id") @Nullable String deviceId,
+            @JsonProperty("discount_amount") @Nullable Double discountAmount,
+            @JsonProperty("employee_user_id") @Nullable String employeeUserId,
             @JsonProperty("fees") @Nullable List<AccountingFee> fees,
+            @JsonProperty("fulfillment_type") @Nullable FulfillmentType fulfillmentType,
+            @JsonProperty("guest_count") @Nullable Double guestCount,
             @JsonProperty("id") @Nullable String id,
             @JsonProperty("lineitems") @Nullable List<AccountingLineitem> lineitems,
+            @JsonProperty("location_id") @Nullable String locationId,
+            @JsonProperty("metadata") @Nullable List<AccountingMetadata> metadata,
+            @JsonProperty("order_number") @Nullable String orderNumber,
             @JsonProperty("organization_id") @Nullable String organizationId,
+            @JsonProperty("payments") @Nullable List<AccountingPaymentReference> payments,
             @JsonProperty("posted_at") @Nullable OffsetDateTime postedAt,
             @JsonProperty("raw") @Nullable Map<String, Object> raw,
+            @JsonProperty("refunded_amount") @Nullable Double refundedAmount,
             @JsonProperty("sales_channel") @Nullable String salesChannel,
+            @JsonProperty("service_charge_amount") @Nullable Double serviceChargeAmount,
             @JsonProperty("shipping_address") @Nullable PropertyAccountingSalesorderShippingAddress shippingAddress,
             @JsonProperty("status") @Nullable AccountingSalesorderStatus status,
+            @JsonProperty("subscription_id") @Nullable String subscriptionId,
+            @JsonProperty("subtotal_amount") @Nullable Double subtotalAmount,
+            @JsonProperty("tax_amount") @Nullable Double taxAmount,
+            @JsonProperty("tip_amount") @Nullable Double tipAmount,
             @JsonProperty("total_amount") @Nullable Double totalAmount,
             @JsonProperty("updated_at") @Nullable OffsetDateTime updatedAt) {
         this.accountId = accountId;
         this.billingAddress = billingAddress;
         this.categoryIds = categoryIds;
+        this.closedAt = closedAt;
         this.contactId = contactId;
         this.createdAt = createdAt;
         this.currency = currency;
+        this.deviceId = deviceId;
+        this.discountAmount = discountAmount;
+        this.employeeUserId = employeeUserId;
         this.fees = fees;
+        this.fulfillmentType = fulfillmentType;
+        this.guestCount = guestCount;
         this.id = id;
         this.lineitems = lineitems;
+        this.locationId = locationId;
+        this.metadata = metadata;
+        this.orderNumber = orderNumber;
         this.organizationId = organizationId;
+        this.payments = payments;
         this.postedAt = postedAt;
         this.raw = raw;
+        this.refundedAmount = refundedAmount;
         this.salesChannel = salesChannel;
+        this.serviceChargeAmount = serviceChargeAmount;
         this.shippingAddress = shippingAddress;
         this.status = status;
+        this.subscriptionId = subscriptionId;
+        this.subtotalAmount = subtotalAmount;
+        this.taxAmount = taxAmount;
+        this.tipAmount = tipAmount;
         this.totalAmount = totalAmount;
         this.updatedAt = updatedAt;
     }
@@ -149,7 +263,12 @@ public class AccountingSalesorder {
             null, null, null,
             null, null, null,
             null, null, null,
-            null, null);
+            null, null, null,
+            null, null, null,
+            null, null, null,
+            null, null, null,
+            null, null, null,
+            null, null, null);
     }
 
     public Optional<String> accountId() {
@@ -164,6 +283,10 @@ public class AccountingSalesorder {
         return Optional.ofNullable(this.categoryIds);
     }
 
+    public Optional<OffsetDateTime> closedAt() {
+        return Optional.ofNullable(this.closedAt);
+    }
+
     public Optional<String> contactId() {
         return Optional.ofNullable(this.contactId);
     }
@@ -176,8 +299,28 @@ public class AccountingSalesorder {
         return Optional.ofNullable(this.currency);
     }
 
+    public Optional<String> deviceId() {
+        return Optional.ofNullable(this.deviceId);
+    }
+
+    public Optional<Double> discountAmount() {
+        return Optional.ofNullable(this.discountAmount);
+    }
+
+    public Optional<String> employeeUserId() {
+        return Optional.ofNullable(this.employeeUserId);
+    }
+
     public Optional<List<AccountingFee>> fees() {
         return Optional.ofNullable(this.fees);
+    }
+
+    public Optional<FulfillmentType> fulfillmentType() {
+        return Optional.ofNullable(this.fulfillmentType);
+    }
+
+    public Optional<Double> guestCount() {
+        return Optional.ofNullable(this.guestCount);
     }
 
     public Optional<String> id() {
@@ -188,8 +331,27 @@ public class AccountingSalesorder {
         return Optional.ofNullable(this.lineitems);
     }
 
+    public Optional<String> locationId() {
+        return Optional.ofNullable(this.locationId);
+    }
+
+    public Optional<List<AccountingMetadata>> metadata() {
+        return Optional.ofNullable(this.metadata);
+    }
+
+    public Optional<String> orderNumber() {
+        return Optional.ofNullable(this.orderNumber);
+    }
+
     public Optional<String> organizationId() {
         return Optional.ofNullable(this.organizationId);
+    }
+
+    /**
+     * read-only reciprocal of PaymentPayment.allocations; payments applied to this sales order
+     */
+    public Optional<List<AccountingPaymentReference>> payments() {
+        return Optional.ofNullable(this.payments);
     }
 
     public Optional<OffsetDateTime> postedAt() {
@@ -200,8 +362,16 @@ public class AccountingSalesorder {
         return Optional.ofNullable(this.raw);
     }
 
+    public Optional<Double> refundedAmount() {
+        return Optional.ofNullable(this.refundedAmount);
+    }
+
     public Optional<String> salesChannel() {
         return Optional.ofNullable(this.salesChannel);
+    }
+
+    public Optional<Double> serviceChargeAmount() {
+        return Optional.ofNullable(this.serviceChargeAmount);
     }
 
     public Optional<PropertyAccountingSalesorderShippingAddress> shippingAddress() {
@@ -210,6 +380,22 @@ public class AccountingSalesorder {
 
     public Optional<AccountingSalesorderStatus> status() {
         return Optional.ofNullable(this.status);
+    }
+
+    public Optional<String> subscriptionId() {
+        return Optional.ofNullable(this.subscriptionId);
+    }
+
+    public Optional<Double> subtotalAmount() {
+        return Optional.ofNullable(this.subtotalAmount);
+    }
+
+    public Optional<Double> taxAmount() {
+        return Optional.ofNullable(this.taxAmount);
+    }
+
+    public Optional<Double> tipAmount() {
+        return Optional.ofNullable(this.tipAmount);
     }
 
     public Optional<Double> totalAmount() {
@@ -243,6 +429,12 @@ public class AccountingSalesorder {
     }
 
 
+    public AccountingSalesorder withClosedAt(@Nullable OffsetDateTime closedAt) {
+        this.closedAt = closedAt;
+        return this;
+    }
+
+
     public AccountingSalesorder withContactId(@Nullable String contactId) {
         this.contactId = contactId;
         return this;
@@ -261,8 +453,38 @@ public class AccountingSalesorder {
     }
 
 
+    public AccountingSalesorder withDeviceId(@Nullable String deviceId) {
+        this.deviceId = deviceId;
+        return this;
+    }
+
+
+    public AccountingSalesorder withDiscountAmount(@Nullable Double discountAmount) {
+        this.discountAmount = discountAmount;
+        return this;
+    }
+
+
+    public AccountingSalesorder withEmployeeUserId(@Nullable String employeeUserId) {
+        this.employeeUserId = employeeUserId;
+        return this;
+    }
+
+
     public AccountingSalesorder withFees(@Nullable List<AccountingFee> fees) {
         this.fees = fees;
+        return this;
+    }
+
+
+    public AccountingSalesorder withFulfillmentType(@Nullable FulfillmentType fulfillmentType) {
+        this.fulfillmentType = fulfillmentType;
+        return this;
+    }
+
+
+    public AccountingSalesorder withGuestCount(@Nullable Double guestCount) {
+        this.guestCount = guestCount;
         return this;
     }
 
@@ -279,8 +501,35 @@ public class AccountingSalesorder {
     }
 
 
+    public AccountingSalesorder withLocationId(@Nullable String locationId) {
+        this.locationId = locationId;
+        return this;
+    }
+
+
+    public AccountingSalesorder withMetadata(@Nullable List<AccountingMetadata> metadata) {
+        this.metadata = metadata;
+        return this;
+    }
+
+
+    public AccountingSalesorder withOrderNumber(@Nullable String orderNumber) {
+        this.orderNumber = orderNumber;
+        return this;
+    }
+
+
     public AccountingSalesorder withOrganizationId(@Nullable String organizationId) {
         this.organizationId = organizationId;
+        return this;
+    }
+
+
+    /**
+     * read-only reciprocal of PaymentPayment.allocations; payments applied to this sales order
+     */
+    public AccountingSalesorder withPayments(@Nullable List<AccountingPaymentReference> payments) {
+        this.payments = payments;
         return this;
     }
 
@@ -297,8 +546,20 @@ public class AccountingSalesorder {
     }
 
 
+    public AccountingSalesorder withRefundedAmount(@Nullable Double refundedAmount) {
+        this.refundedAmount = refundedAmount;
+        return this;
+    }
+
+
     public AccountingSalesorder withSalesChannel(@Nullable String salesChannel) {
         this.salesChannel = salesChannel;
+        return this;
+    }
+
+
+    public AccountingSalesorder withServiceChargeAmount(@Nullable Double serviceChargeAmount) {
+        this.serviceChargeAmount = serviceChargeAmount;
         return this;
     }
 
@@ -311,6 +572,30 @@ public class AccountingSalesorder {
 
     public AccountingSalesorder withStatus(@Nullable AccountingSalesorderStatus status) {
         this.status = status;
+        return this;
+    }
+
+
+    public AccountingSalesorder withSubscriptionId(@Nullable String subscriptionId) {
+        this.subscriptionId = subscriptionId;
+        return this;
+    }
+
+
+    public AccountingSalesorder withSubtotalAmount(@Nullable Double subtotalAmount) {
+        this.subtotalAmount = subtotalAmount;
+        return this;
+    }
+
+
+    public AccountingSalesorder withTaxAmount(@Nullable Double taxAmount) {
+        this.taxAmount = taxAmount;
+        return this;
+    }
+
+
+    public AccountingSalesorder withTipAmount(@Nullable Double tipAmount) {
+        this.tipAmount = tipAmount;
         return this;
     }
 
@@ -340,18 +625,34 @@ public class AccountingSalesorder {
             Utils.enhancedDeepEquals(this.accountId, other.accountId) &&
             Utils.enhancedDeepEquals(this.billingAddress, other.billingAddress) &&
             Utils.enhancedDeepEquals(this.categoryIds, other.categoryIds) &&
+            Utils.enhancedDeepEquals(this.closedAt, other.closedAt) &&
             Utils.enhancedDeepEquals(this.contactId, other.contactId) &&
             Utils.enhancedDeepEquals(this.createdAt, other.createdAt) &&
             Utils.enhancedDeepEquals(this.currency, other.currency) &&
+            Utils.enhancedDeepEquals(this.deviceId, other.deviceId) &&
+            Utils.enhancedDeepEquals(this.discountAmount, other.discountAmount) &&
+            Utils.enhancedDeepEquals(this.employeeUserId, other.employeeUserId) &&
             Utils.enhancedDeepEquals(this.fees, other.fees) &&
+            Utils.enhancedDeepEquals(this.fulfillmentType, other.fulfillmentType) &&
+            Utils.enhancedDeepEquals(this.guestCount, other.guestCount) &&
             Utils.enhancedDeepEquals(this.id, other.id) &&
             Utils.enhancedDeepEquals(this.lineitems, other.lineitems) &&
+            Utils.enhancedDeepEquals(this.locationId, other.locationId) &&
+            Utils.enhancedDeepEquals(this.metadata, other.metadata) &&
+            Utils.enhancedDeepEquals(this.orderNumber, other.orderNumber) &&
             Utils.enhancedDeepEquals(this.organizationId, other.organizationId) &&
+            Utils.enhancedDeepEquals(this.payments, other.payments) &&
             Utils.enhancedDeepEquals(this.postedAt, other.postedAt) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
+            Utils.enhancedDeepEquals(this.refundedAmount, other.refundedAmount) &&
             Utils.enhancedDeepEquals(this.salesChannel, other.salesChannel) &&
+            Utils.enhancedDeepEquals(this.serviceChargeAmount, other.serviceChargeAmount) &&
             Utils.enhancedDeepEquals(this.shippingAddress, other.shippingAddress) &&
             Utils.enhancedDeepEquals(this.status, other.status) &&
+            Utils.enhancedDeepEquals(this.subscriptionId, other.subscriptionId) &&
+            Utils.enhancedDeepEquals(this.subtotalAmount, other.subtotalAmount) &&
+            Utils.enhancedDeepEquals(this.taxAmount, other.taxAmount) &&
+            Utils.enhancedDeepEquals(this.tipAmount, other.tipAmount) &&
             Utils.enhancedDeepEquals(this.totalAmount, other.totalAmount) &&
             Utils.enhancedDeepEquals(this.updatedAt, other.updatedAt);
     }
@@ -360,11 +661,16 @@ public class AccountingSalesorder {
     public int hashCode() {
         return Utils.enhancedHash(
             accountId, billingAddress, categoryIds,
-            contactId, createdAt, currency,
-            fees, id, lineitems,
-            organizationId, postedAt, raw,
-            salesChannel, shippingAddress, status,
-            totalAmount, updatedAt);
+            closedAt, contactId, createdAt,
+            currency, deviceId, discountAmount,
+            employeeUserId, fees, fulfillmentType,
+            guestCount, id, lineitems,
+            locationId, metadata, orderNumber,
+            organizationId, payments, postedAt,
+            raw, refundedAmount, salesChannel,
+            serviceChargeAmount, shippingAddress, status,
+            subscriptionId, subtotalAmount, taxAmount,
+            tipAmount, totalAmount, updatedAt);
     }
     
     @Override
@@ -373,18 +679,34 @@ public class AccountingSalesorder {
                 "accountId", accountId,
                 "billingAddress", billingAddress,
                 "categoryIds", categoryIds,
+                "closedAt", closedAt,
                 "contactId", contactId,
                 "createdAt", createdAt,
                 "currency", currency,
+                "deviceId", deviceId,
+                "discountAmount", discountAmount,
+                "employeeUserId", employeeUserId,
                 "fees", fees,
+                "fulfillmentType", fulfillmentType,
+                "guestCount", guestCount,
                 "id", id,
                 "lineitems", lineitems,
+                "locationId", locationId,
+                "metadata", metadata,
+                "orderNumber", orderNumber,
                 "organizationId", organizationId,
+                "payments", payments,
                 "postedAt", postedAt,
                 "raw", raw,
+                "refundedAmount", refundedAmount,
                 "salesChannel", salesChannel,
+                "serviceChargeAmount", serviceChargeAmount,
                 "shippingAddress", shippingAddress,
                 "status", status,
+                "subscriptionId", subscriptionId,
+                "subtotalAmount", subtotalAmount,
+                "taxAmount", taxAmount,
+                "tipAmount", tipAmount,
                 "totalAmount", totalAmount,
                 "updatedAt", updatedAt);
     }
@@ -398,29 +720,61 @@ public class AccountingSalesorder {
 
         private List<String> categoryIds;
 
+        private OffsetDateTime closedAt;
+
         private String contactId;
 
         private OffsetDateTime createdAt;
 
         private String currency;
 
+        private String deviceId;
+
+        private Double discountAmount;
+
+        private String employeeUserId;
+
         private List<AccountingFee> fees;
+
+        private FulfillmentType fulfillmentType;
+
+        private Double guestCount;
 
         private String id;
 
         private List<AccountingLineitem> lineitems;
 
+        private String locationId;
+
+        private List<AccountingMetadata> metadata;
+
+        private String orderNumber;
+
         private String organizationId;
+
+        private List<AccountingPaymentReference> payments;
 
         private OffsetDateTime postedAt;
 
         private Map<String, Object> raw;
 
+        private Double refundedAmount;
+
         private String salesChannel;
+
+        private Double serviceChargeAmount;
 
         private PropertyAccountingSalesorderShippingAddress shippingAddress;
 
         private AccountingSalesorderStatus status;
+
+        private String subscriptionId;
+
+        private Double subtotalAmount;
+
+        private Double taxAmount;
+
+        private Double tipAmount;
 
         private Double totalAmount;
 
@@ -445,6 +799,11 @@ public class AccountingSalesorder {
             return this;
         }
 
+        public Builder closedAt(@Nullable OffsetDateTime closedAt) {
+            this.closedAt = closedAt;
+            return this;
+        }
+
         public Builder contactId(@Nullable String contactId) {
             this.contactId = contactId;
             return this;
@@ -460,8 +819,33 @@ public class AccountingSalesorder {
             return this;
         }
 
+        public Builder deviceId(@Nullable String deviceId) {
+            this.deviceId = deviceId;
+            return this;
+        }
+
+        public Builder discountAmount(@Nullable Double discountAmount) {
+            this.discountAmount = discountAmount;
+            return this;
+        }
+
+        public Builder employeeUserId(@Nullable String employeeUserId) {
+            this.employeeUserId = employeeUserId;
+            return this;
+        }
+
         public Builder fees(@Nullable List<AccountingFee> fees) {
             this.fees = fees;
+            return this;
+        }
+
+        public Builder fulfillmentType(@Nullable FulfillmentType fulfillmentType) {
+            this.fulfillmentType = fulfillmentType;
+            return this;
+        }
+
+        public Builder guestCount(@Nullable Double guestCount) {
+            this.guestCount = guestCount;
             return this;
         }
 
@@ -475,8 +859,31 @@ public class AccountingSalesorder {
             return this;
         }
 
+        public Builder locationId(@Nullable String locationId) {
+            this.locationId = locationId;
+            return this;
+        }
+
+        public Builder metadata(@Nullable List<AccountingMetadata> metadata) {
+            this.metadata = metadata;
+            return this;
+        }
+
+        public Builder orderNumber(@Nullable String orderNumber) {
+            this.orderNumber = orderNumber;
+            return this;
+        }
+
         public Builder organizationId(@Nullable String organizationId) {
             this.organizationId = organizationId;
+            return this;
+        }
+
+        /**
+         * read-only reciprocal of PaymentPayment.allocations; payments applied to this sales order
+         */
+        public Builder payments(@Nullable List<AccountingPaymentReference> payments) {
+            this.payments = payments;
             return this;
         }
 
@@ -490,8 +897,18 @@ public class AccountingSalesorder {
             return this;
         }
 
+        public Builder refundedAmount(@Nullable Double refundedAmount) {
+            this.refundedAmount = refundedAmount;
+            return this;
+        }
+
         public Builder salesChannel(@Nullable String salesChannel) {
             this.salesChannel = salesChannel;
+            return this;
+        }
+
+        public Builder serviceChargeAmount(@Nullable Double serviceChargeAmount) {
+            this.serviceChargeAmount = serviceChargeAmount;
             return this;
         }
 
@@ -502,6 +919,26 @@ public class AccountingSalesorder {
 
         public Builder status(@Nullable AccountingSalesorderStatus status) {
             this.status = status;
+            return this;
+        }
+
+        public Builder subscriptionId(@Nullable String subscriptionId) {
+            this.subscriptionId = subscriptionId;
+            return this;
+        }
+
+        public Builder subtotalAmount(@Nullable Double subtotalAmount) {
+            this.subtotalAmount = subtotalAmount;
+            return this;
+        }
+
+        public Builder taxAmount(@Nullable Double taxAmount) {
+            this.taxAmount = taxAmount;
+            return this;
+        }
+
+        public Builder tipAmount(@Nullable Double tipAmount) {
+            this.tipAmount = tipAmount;
             return this;
         }
 
@@ -518,11 +955,16 @@ public class AccountingSalesorder {
         public AccountingSalesorder build() {
             return new AccountingSalesorder(
                 accountId, billingAddress, categoryIds,
-                contactId, createdAt, currency,
-                fees, id, lineitems,
-                organizationId, postedAt, raw,
-                salesChannel, shippingAddress, status,
-                totalAmount, updatedAt);
+                closedAt, contactId, createdAt,
+                currency, deviceId, discountAmount,
+                employeeUserId, fees, fulfillmentType,
+                guestCount, id, lineitems,
+                locationId, metadata, orderNumber,
+                organizationId, payments, postedAt,
+                raw, refundedAmount, salesChannel,
+                serviceChargeAmount, shippingAddress, status,
+                subscriptionId, subtotalAmount, taxAmount,
+                tipAmount, totalAmount, updatedAt);
         }
 
     }

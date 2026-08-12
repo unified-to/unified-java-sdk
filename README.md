@@ -39,7 +39,7 @@ The samples below show how a published SDK artifact is used:
 
 Gradle:
 ```groovy
-implementation 'to.unified:unified-java-sdk:0.48.9'
+implementation 'to.unified:unified-java-sdk:0.48.10'
 ```
 
 Maven:
@@ -47,7 +47,7 @@ Maven:
 <dependency>
     <groupId>to.unified</groupId>
     <artifactId>unified-java-sdk</artifactId>
-    <version>0.48.9</version>
+    <version>0.48.10</version>
 </dependency>
 ```
 
@@ -491,6 +491,15 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 * [updateAtsInterview](docs/sdks/ats/README.md#updateatsinterview) - Update an interview
 * [updateAtsJob](docs/sdks/ats/README.md#updateatsjob) - Update a job
 * [updateAtsScorecard](docs/sdks/ats/README.md#updateatsscorecard) - Update a scorecard
+
+### [Attendance](docs/sdks/attendance/README.md)
+
+* [createHrisAttendance](docs/sdks/attendance/README.md#createhrisattendance) - Create an attendance
+* [getHrisAttendance](docs/sdks/attendance/README.md#gethrisattendance) - Retrieve an attendance
+* [listHrisAttendances](docs/sdks/attendance/README.md#listhrisattendances) - List all attendances
+* [patchHrisAttendance](docs/sdks/attendance/README.md#patchhrisattendance) - Update an attendance
+* [removeHrisAttendance](docs/sdks/attendance/README.md#removehrisattendance) - Remove an attendance
+* [updateHrisAttendance](docs/sdks/attendance/README.md#updatehrisattendance) - Update an attendance
 
 ### [Auth](docs/sdks/auth/README.md)
 
@@ -1170,6 +1179,7 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 
 ### [Hris](docs/sdks/hris/README.md)
 
+* [createHrisAttendance](docs/sdks/hris/README.md#createhrisattendance) - Create an attendance
 * [createHrisBankaccount](docs/sdks/hris/README.md#createhrisbankaccount) - Create a bankaccount
 * [createHrisBenefit](docs/sdks/hris/README.md#createhrisbenefit) - Create a benefit
 * [createHrisCompany](docs/sdks/hris/README.md#createhriscompany) - Create a company
@@ -1181,6 +1191,7 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 * [createHrisLocation](docs/sdks/hris/README.md#createhrislocation) - Create a location
 * [createHrisTimeoff](docs/sdks/hris/README.md#createhristimeoff) - Create a timeoff
 * [createHrisTimeshift](docs/sdks/hris/README.md#createhristimeshift) - Create a timeshift
+* [getHrisAttendance](docs/sdks/hris/README.md#gethrisattendance) - Retrieve an attendance
 * [getHrisBankaccount](docs/sdks/hris/README.md#gethrisbankaccount) - Retrieve a bankaccount
 * [getHrisBenefit](docs/sdks/hris/README.md#gethrisbenefit) - Retrieve a benefit
 * [getHrisCompany](docs/sdks/hris/README.md#gethriscompany) - Retrieve a company
@@ -1194,6 +1205,7 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 * [getHrisTaxonomy](docs/sdks/hris/README.md#gethristaxonomy) - Retrieve a taxonomy
 * [getHrisTimeoff](docs/sdks/hris/README.md#gethristimeoff) - Retrieve a timeoff
 * [getHrisTimeshift](docs/sdks/hris/README.md#gethristimeshift) - Retrieve a timeshift
+* [listHrisAttendances](docs/sdks/hris/README.md#listhrisattendances) - List all attendances
 * [listHrisBankaccounts](docs/sdks/hris/README.md#listhrisbankaccounts) - List all bankaccounts
 * [listHrisBenefits](docs/sdks/hris/README.md#listhrisbenefits) - List all benefits
 * [listHrisCompanies](docs/sdks/hris/README.md#listhriscompanies) - List all companies
@@ -1207,6 +1219,7 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 * [listHrisTaxonomies](docs/sdks/hris/README.md#listhristaxonomies) - List all taxonomies
 * [listHrisTimeoffs](docs/sdks/hris/README.md#listhristimeoffs) - List all timeoffs
 * [listHrisTimeshifts](docs/sdks/hris/README.md#listhristimeshifts) - List all timeshifts
+* [patchHrisAttendance](docs/sdks/hris/README.md#patchhrisattendance) - Update an attendance
 * [patchHrisBankaccount](docs/sdks/hris/README.md#patchhrisbankaccount) - Update a bankaccount
 * [patchHrisBenefit](docs/sdks/hris/README.md#patchhrisbenefit) - Update a benefit
 * [patchHrisCompany](docs/sdks/hris/README.md#patchhriscompany) - Update a company
@@ -1218,6 +1231,7 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 * [patchHrisLocation](docs/sdks/hris/README.md#patchhrislocation) - Update a location
 * [patchHrisTimeoff](docs/sdks/hris/README.md#patchhristimeoff) - Update a timeoff
 * [patchHrisTimeshift](docs/sdks/hris/README.md#patchhristimeshift) - Update a timeshift
+* [removeHrisAttendance](docs/sdks/hris/README.md#removehrisattendance) - Remove an attendance
 * [removeHrisBankaccount](docs/sdks/hris/README.md#removehrisbankaccount) - Remove a bankaccount
 * [removeHrisBenefit](docs/sdks/hris/README.md#removehrisbenefit) - Remove a benefit
 * [removeHrisCompany](docs/sdks/hris/README.md#removehriscompany) - Remove a company
@@ -1229,6 +1243,7 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 * [removeHrisLocation](docs/sdks/hris/README.md#removehrislocation) - Remove a location
 * [removeHrisTimeoff](docs/sdks/hris/README.md#removehristimeoff) - Remove a timeoff
 * [removeHrisTimeshift](docs/sdks/hris/README.md#removehristimeshift) - Remove a timeshift
+* [updateHrisAttendance](docs/sdks/hris/README.md#updatehrisattendance) - Update an attendance
 * [updateHrisBankaccount](docs/sdks/hris/README.md#updatehrisbankaccount) - Update a bankaccount
 * [updateHrisBenefit](docs/sdks/hris/README.md#updatehrisbenefit) - Update a benefit
 * [updateHrisCompany](docs/sdks/hris/README.md#updatehriscompany) - Update a company

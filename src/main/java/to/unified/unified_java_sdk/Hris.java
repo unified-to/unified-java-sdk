@@ -6,6 +6,9 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import to.unified.unified_java_sdk.models.operations.CreateHrisAttendanceRequest;
+import to.unified.unified_java_sdk.models.operations.CreateHrisAttendanceRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.CreateHrisAttendanceResponse;
 import to.unified.unified_java_sdk.models.operations.CreateHrisBankaccountRequest;
 import to.unified.unified_java_sdk.models.operations.CreateHrisBankaccountRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateHrisBankaccountResponse;
@@ -39,6 +42,9 @@ import to.unified.unified_java_sdk.models.operations.CreateHrisTimeoffResponse;
 import to.unified.unified_java_sdk.models.operations.CreateHrisTimeshiftRequest;
 import to.unified.unified_java_sdk.models.operations.CreateHrisTimeshiftRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateHrisTimeshiftResponse;
+import to.unified.unified_java_sdk.models.operations.GetHrisAttendanceRequest;
+import to.unified.unified_java_sdk.models.operations.GetHrisAttendanceRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetHrisAttendanceResponse;
 import to.unified.unified_java_sdk.models.operations.GetHrisBankaccountRequest;
 import to.unified.unified_java_sdk.models.operations.GetHrisBankaccountRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.GetHrisBankaccountResponse;
@@ -78,6 +84,9 @@ import to.unified.unified_java_sdk.models.operations.GetHrisTimeoffResponse;
 import to.unified.unified_java_sdk.models.operations.GetHrisTimeshiftRequest;
 import to.unified.unified_java_sdk.models.operations.GetHrisTimeshiftRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.GetHrisTimeshiftResponse;
+import to.unified.unified_java_sdk.models.operations.ListHrisAttendancesRequest;
+import to.unified.unified_java_sdk.models.operations.ListHrisAttendancesRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListHrisAttendancesResponse;
 import to.unified.unified_java_sdk.models.operations.ListHrisBankaccountsRequest;
 import to.unified.unified_java_sdk.models.operations.ListHrisBankaccountsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.ListHrisBankaccountsResponse;
@@ -117,6 +126,9 @@ import to.unified.unified_java_sdk.models.operations.ListHrisTimeoffsResponse;
 import to.unified.unified_java_sdk.models.operations.ListHrisTimeshiftsRequest;
 import to.unified.unified_java_sdk.models.operations.ListHrisTimeshiftsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.ListHrisTimeshiftsResponse;
+import to.unified.unified_java_sdk.models.operations.PatchHrisAttendanceRequest;
+import to.unified.unified_java_sdk.models.operations.PatchHrisAttendanceRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.PatchHrisAttendanceResponse;
 import to.unified.unified_java_sdk.models.operations.PatchHrisBankaccountRequest;
 import to.unified.unified_java_sdk.models.operations.PatchHrisBankaccountRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.PatchHrisBankaccountResponse;
@@ -150,6 +162,9 @@ import to.unified.unified_java_sdk.models.operations.PatchHrisTimeoffResponse;
 import to.unified.unified_java_sdk.models.operations.PatchHrisTimeshiftRequest;
 import to.unified.unified_java_sdk.models.operations.PatchHrisTimeshiftRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.PatchHrisTimeshiftResponse;
+import to.unified.unified_java_sdk.models.operations.RemoveHrisAttendanceRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveHrisAttendanceRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.RemoveHrisAttendanceResponse;
 import to.unified.unified_java_sdk.models.operations.RemoveHrisBankaccountRequest;
 import to.unified.unified_java_sdk.models.operations.RemoveHrisBankaccountRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.RemoveHrisBankaccountResponse;
@@ -183,6 +198,9 @@ import to.unified.unified_java_sdk.models.operations.RemoveHrisTimeoffResponse;
 import to.unified.unified_java_sdk.models.operations.RemoveHrisTimeshiftRequest;
 import to.unified.unified_java_sdk.models.operations.RemoveHrisTimeshiftRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.RemoveHrisTimeshiftResponse;
+import to.unified.unified_java_sdk.models.operations.UpdateHrisAttendanceRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateHrisAttendanceRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.UpdateHrisAttendanceResponse;
 import to.unified.unified_java_sdk.models.operations.UpdateHrisBankaccountRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateHrisBankaccountRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.UpdateHrisBankaccountResponse;
@@ -216,6 +234,7 @@ import to.unified.unified_java_sdk.models.operations.UpdateHrisTimeoffResponse;
 import to.unified.unified_java_sdk.models.operations.UpdateHrisTimeshiftRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateHrisTimeshiftRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.UpdateHrisTimeshiftResponse;
+import to.unified.unified_java_sdk.operations.CreateHrisAttendance;
 import to.unified.unified_java_sdk.operations.CreateHrisBankaccount;
 import to.unified.unified_java_sdk.operations.CreateHrisBenefit;
 import to.unified.unified_java_sdk.operations.CreateHrisCompany;
@@ -227,6 +246,7 @@ import to.unified.unified_java_sdk.operations.CreateHrisGroup;
 import to.unified.unified_java_sdk.operations.CreateHrisLocation;
 import to.unified.unified_java_sdk.operations.CreateHrisTimeoff;
 import to.unified.unified_java_sdk.operations.CreateHrisTimeshift;
+import to.unified.unified_java_sdk.operations.GetHrisAttendance;
 import to.unified.unified_java_sdk.operations.GetHrisBankaccount;
 import to.unified.unified_java_sdk.operations.GetHrisBenefit;
 import to.unified.unified_java_sdk.operations.GetHrisCompany;
@@ -240,6 +260,7 @@ import to.unified.unified_java_sdk.operations.GetHrisPayslip;
 import to.unified.unified_java_sdk.operations.GetHrisTaxonomy;
 import to.unified.unified_java_sdk.operations.GetHrisTimeoff;
 import to.unified.unified_java_sdk.operations.GetHrisTimeshift;
+import to.unified.unified_java_sdk.operations.ListHrisAttendances;
 import to.unified.unified_java_sdk.operations.ListHrisBankaccounts;
 import to.unified.unified_java_sdk.operations.ListHrisBenefits;
 import to.unified.unified_java_sdk.operations.ListHrisCompanies;
@@ -253,6 +274,7 @@ import to.unified.unified_java_sdk.operations.ListHrisPayslips;
 import to.unified.unified_java_sdk.operations.ListHrisTaxonomies;
 import to.unified.unified_java_sdk.operations.ListHrisTimeoffs;
 import to.unified.unified_java_sdk.operations.ListHrisTimeshifts;
+import to.unified.unified_java_sdk.operations.PatchHrisAttendance;
 import to.unified.unified_java_sdk.operations.PatchHrisBankaccount;
 import to.unified.unified_java_sdk.operations.PatchHrisBenefit;
 import to.unified.unified_java_sdk.operations.PatchHrisCompany;
@@ -264,6 +286,7 @@ import to.unified.unified_java_sdk.operations.PatchHrisGroup;
 import to.unified.unified_java_sdk.operations.PatchHrisLocation;
 import to.unified.unified_java_sdk.operations.PatchHrisTimeoff;
 import to.unified.unified_java_sdk.operations.PatchHrisTimeshift;
+import to.unified.unified_java_sdk.operations.RemoveHrisAttendance;
 import to.unified.unified_java_sdk.operations.RemoveHrisBankaccount;
 import to.unified.unified_java_sdk.operations.RemoveHrisBenefit;
 import to.unified.unified_java_sdk.operations.RemoveHrisCompany;
@@ -275,6 +298,7 @@ import to.unified.unified_java_sdk.operations.RemoveHrisGroup;
 import to.unified.unified_java_sdk.operations.RemoveHrisLocation;
 import to.unified.unified_java_sdk.operations.RemoveHrisTimeoff;
 import to.unified.unified_java_sdk.operations.RemoveHrisTimeshift;
+import to.unified.unified_java_sdk.operations.UpdateHrisAttendance;
 import to.unified.unified_java_sdk.operations.UpdateHrisBankaccount;
 import to.unified.unified_java_sdk.operations.UpdateHrisBenefit;
 import to.unified.unified_java_sdk.operations.UpdateHrisCompany;
@@ -306,6 +330,28 @@ public class Hris {
      */
     public AsyncHris async() {
         return asyncSDK;
+    }
+
+    /**
+     * Create an attendance
+     * 
+     * @return The call builder
+     */
+    public CreateHrisAttendanceRequestBuilder createHrisAttendance() {
+        return new CreateHrisAttendanceRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Create an attendance
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateHrisAttendanceResponse createHrisAttendance(@Nonnull CreateHrisAttendanceRequest request) {
+        RequestOperation<CreateHrisAttendanceRequest, CreateHrisAttendanceResponse> operation
+              = new CreateHrisAttendance.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
     }
 
     /**
@@ -547,6 +593,28 @@ public class Hris {
     public CreateHrisTimeshiftResponse createHrisTimeshift(@Nonnull CreateHrisTimeshiftRequest request) {
         RequestOperation<CreateHrisTimeshiftRequest, CreateHrisTimeshiftResponse> operation
               = new CreateHrisTimeshift.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Retrieve an attendance
+     * 
+     * @return The call builder
+     */
+    public GetHrisAttendanceRequestBuilder getHrisAttendance() {
+        return new GetHrisAttendanceRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Retrieve an attendance
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetHrisAttendanceResponse getHrisAttendance(@Nonnull GetHrisAttendanceRequest request) {
+        RequestOperation<GetHrisAttendanceRequest, GetHrisAttendanceResponse> operation
+              = new GetHrisAttendance.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -837,6 +905,28 @@ public class Hris {
     }
 
     /**
+     * List all attendances
+     * 
+     * @return The call builder
+     */
+    public ListHrisAttendancesRequestBuilder listHrisAttendances() {
+        return new ListHrisAttendancesRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * List all attendances
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListHrisAttendancesResponse listHrisAttendances(@Nonnull ListHrisAttendancesRequest request) {
+        RequestOperation<ListHrisAttendancesRequest, ListHrisAttendancesResponse> operation
+              = new ListHrisAttendances.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
      * List all bankaccounts
      * 
      * @return The call builder
@@ -1123,6 +1213,28 @@ public class Hris {
     }
 
     /**
+     * Update an attendance
+     * 
+     * @return The call builder
+     */
+    public PatchHrisAttendanceRequestBuilder patchHrisAttendance() {
+        return new PatchHrisAttendanceRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Update an attendance
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchHrisAttendanceResponse patchHrisAttendance(@Nonnull PatchHrisAttendanceRequest request) {
+        RequestOperation<PatchHrisAttendanceRequest, PatchHrisAttendanceResponse> operation
+              = new PatchHrisAttendance.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
      * Update a bankaccount
      * 
      * @return The call builder
@@ -1365,6 +1477,28 @@ public class Hris {
     }
 
     /**
+     * Remove an attendance
+     * 
+     * @return The call builder
+     */
+    public RemoveHrisAttendanceRequestBuilder removeHrisAttendance() {
+        return new RemoveHrisAttendanceRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Remove an attendance
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveHrisAttendanceResponse removeHrisAttendance(@Nonnull RemoveHrisAttendanceRequest request) {
+        RequestOperation<RemoveHrisAttendanceRequest, RemoveHrisAttendanceResponse> operation
+              = new RemoveHrisAttendance.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
      * Remove a bankaccount
      * 
      * @return The call builder
@@ -1603,6 +1737,28 @@ public class Hris {
     public RemoveHrisTimeshiftResponse removeHrisTimeshift(@Nonnull RemoveHrisTimeshiftRequest request) {
         RequestOperation<RemoveHrisTimeshiftRequest, RemoveHrisTimeshiftResponse> operation
               = new RemoveHrisTimeshift.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Update an attendance
+     * 
+     * @return The call builder
+     */
+    public UpdateHrisAttendanceRequestBuilder updateHrisAttendance() {
+        return new UpdateHrisAttendanceRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Update an attendance
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateHrisAttendanceResponse updateHrisAttendance(@Nonnull UpdateHrisAttendanceRequest request) {
+        RequestOperation<UpdateHrisAttendanceRequest, UpdateHrisAttendanceResponse> operation
+              = new UpdateHrisAttendance.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

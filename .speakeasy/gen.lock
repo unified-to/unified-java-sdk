@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: cfc256ab-f291-4245-b909-5b9e9a6e6803
 management:
-  docChecksum: f777b241309109355222be0cf2e25ccf
+  docChecksum: d36ed43c30a913e487dea4d78c125ad4
   docVersion: "1.0"
-  speakeasyVersion: 1.793.0
+  speakeasyVersion: 1.793.1
   generationVersion: 2.928.0
-  releaseVersion: 0.48.9
-  configChecksum: 5eeac25ed0e035f8881b5d8093c70b22
+  releaseVersion: 0.48.10
+  configChecksum: 757de4bbe3ed3fb1bb369a158bc4985c
   repoURL: https://github.com/unified-to/unified-java-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-java-sdk
@@ -239,6 +239,9 @@ trackedFiles:
   docs/models/operations/CreateGenaiPromptQueryParamFields.md: {}
   docs/models/operations/CreateGenaiPromptRequest.md: {}
   docs/models/operations/CreateGenaiPromptResponse.md: {}
+  docs/models/operations/CreateHrisAttendanceQueryParamFields.md: {}
+  docs/models/operations/CreateHrisAttendanceRequest.md: {}
+  docs/models/operations/CreateHrisAttendanceResponse.md: {}
   docs/models/operations/CreateHrisBankaccountQueryParamFields.md: {}
   docs/models/operations/CreateHrisBankaccountRequest.md: {}
   docs/models/operations/CreateHrisBankaccountResponse.md: {}
@@ -677,6 +680,9 @@ trackedFiles:
   docs/models/operations/GetGenaiModelQueryParamFields.md: {}
   docs/models/operations/GetGenaiModelRequest.md: {}
   docs/models/operations/GetGenaiModelResponse.md: {}
+  docs/models/operations/GetHrisAttendanceQueryParamFields.md: {}
+  docs/models/operations/GetHrisAttendanceRequest.md: {}
+  docs/models/operations/GetHrisAttendanceResponse.md: {}
   docs/models/operations/GetHrisBankaccountQueryParamFields.md: {}
   docs/models/operations/GetHrisBankaccountRequest.md: {}
   docs/models/operations/GetHrisBankaccountResponse.md: {}
@@ -1191,6 +1197,9 @@ trackedFiles:
   docs/models/operations/ListGenaiModelsQueryParamFields.md: {}
   docs/models/operations/ListGenaiModelsRequest.md: {}
   docs/models/operations/ListGenaiModelsResponse.md: {}
+  docs/models/operations/ListHrisAttendancesQueryParamFields.md: {}
+  docs/models/operations/ListHrisAttendancesRequest.md: {}
+  docs/models/operations/ListHrisAttendancesResponse.md: {}
   docs/models/operations/ListHrisBankaccountsQueryParamFields.md: {}
   docs/models/operations/ListHrisBankaccountsRequest.md: {}
   docs/models/operations/ListHrisBankaccountsResponse.md: {}
@@ -1632,6 +1641,9 @@ trackedFiles:
   docs/models/operations/PatchFormsFormQueryParamFields.md: {}
   docs/models/operations/PatchFormsFormRequest.md: {}
   docs/models/operations/PatchFormsFormResponse.md: {}
+  docs/models/operations/PatchHrisAttendanceQueryParamFields.md: {}
+  docs/models/operations/PatchHrisAttendanceRequest.md: {}
+  docs/models/operations/PatchHrisAttendanceResponse.md: {}
   docs/models/operations/PatchHrisBankaccountQueryParamFields.md: {}
   docs/models/operations/PatchHrisBankaccountRequest.md: {}
   docs/models/operations/PatchHrisBankaccountResponse.md: {}
@@ -1953,6 +1965,8 @@ trackedFiles:
   docs/models/operations/RemoveDatastoreTableResponse.md: {}
   docs/models/operations/RemoveFormsFormRequest.md: {}
   docs/models/operations/RemoveFormsFormResponse.md: {}
+  docs/models/operations/RemoveHrisAttendanceRequest.md: {}
+  docs/models/operations/RemoveHrisAttendanceResponse.md: {}
   docs/models/operations/RemoveHrisBankaccountRequest.md: {}
   docs/models/operations/RemoveHrisBankaccountResponse.md: {}
   docs/models/operations/RemoveHrisBenefitRequest.md: {}
@@ -2276,6 +2290,9 @@ trackedFiles:
   docs/models/operations/UpdateFormsFormQueryParamFields.md: {}
   docs/models/operations/UpdateFormsFormRequest.md: {}
   docs/models/operations/UpdateFormsFormResponse.md: {}
+  docs/models/operations/UpdateHrisAttendanceQueryParamFields.md: {}
+  docs/models/operations/UpdateHrisAttendanceRequest.md: {}
+  docs/models/operations/UpdateHrisAttendanceResponse.md: {}
   docs/models/operations/UpdateHrisBankaccountQueryParamFields.md: {}
   docs/models/operations/UpdateHrisBankaccountRequest.md: {}
   docs/models/operations/UpdateHrisBankaccountResponse.md: {}
@@ -2571,6 +2588,9 @@ trackedFiles:
   docs/models/shared/AccountingLineitem.md:
     id: e4e2704f3f86
     pristine_git_object: 32e5dd67f67f7cddfacf5ba29dfe64831fc51b76
+  docs/models/shared/AccountingMetadata.md: {}
+  docs/models/shared/AccountingMetadata1.md: {}
+  docs/models/shared/AccountingMetadata5.md: {}
   docs/models/shared/AccountingOrder.md:
     id: 85c032353848
     pristine_git_object: ee1bae02b93a6290011e3b9ccf86705c27b2f979
@@ -2882,6 +2902,11 @@ trackedFiles:
   docs/models/shared/AtsMetadata5.md:
     id: d4396dd40c7b
     pristine_git_object: fa8b06e3fe664ed34664cb5cbb5a2d0ed333bac5
+  docs/models/shared/AtsMetadataExtraData.md: {}
+  docs/models/shared/AtsMetadataFormat.md: {}
+  docs/models/shared/AtsMetadataSchemas1.md: {}
+  docs/models/shared/AtsMetadataSchemas5.md: {}
+  docs/models/shared/AtsMetadataValue.md: {}
   docs/models/shared/AtsOffer.md:
     id: e5277371b9ab
     pristine_git_object: 8fcc7fbde1546f9591dbc69986972b48c55249c3
@@ -3295,6 +3320,7 @@ trackedFiles:
   docs/models/shared/FromWebhook.md:
     id: 67ff0bf6476f
     pristine_git_object: 5b24078798c3f79ab1dc7adb4d6fe1894c61f4ce
+  docs/models/shared/FulfillmentType.md: {}
   docs/models/shared/GenaiContent.md:
     id: 9ebe732fbf8f
     pristine_git_object: 782e2952fa00bcd1632b06f28758a93073f5e59b
@@ -3320,6 +3346,9 @@ trackedFiles:
   docs/models/shared/HostingSource.md:
     id: 57deec051afb
     pristine_git_object: 239b2aeb05f5e33c2c088d9de33755b127b18a7e
+  docs/models/shared/HrisAttendance.md: {}
+  docs/models/shared/HrisAttendanceBreak.md: {}
+  docs/models/shared/HrisAttendanceStatus.md: {}
   docs/models/shared/HrisBankaccount.md:
     id: 2238cd3b6ee6
     pristine_git_object: 685c267e297e4890f71359ca3b86abadba9af08a
@@ -3969,6 +3998,7 @@ trackedFiles:
   docs/models/shared/PaymentPayment.md:
     id: bba55f0a22b7
     pristine_git_object: ca3720a81ec6cfd3a2d37d7be6fb0cba5e2a9b75
+  docs/models/shared/PaymentPaymentStatus.md: {}
   docs/models/shared/PaymentPaymentType.md:
     id: 7bce80ba988b
     pristine_git_object: ccfebebdde3b1d43ae455e420666a1d9857eed3a
@@ -4527,6 +4557,7 @@ trackedFiles:
   docs/models/shared/PropertyEnrichPersonAddress.md:
     id: 5c5173bef8cf
     pristine_git_object: be84b150c45ceb168ca675465e9c9d2f333fdf63
+  docs/models/shared/PropertyHrisAttendanceAddress.md: {}
   docs/models/shared/PropertyHrisCompanyAddress.md:
     id: f5fb80ede3e9
     pristine_git_object: 4381a03e40d1876a38f35296adedbbf607dfdc45
@@ -4927,6 +4958,7 @@ trackedFiles:
   docs/models/shared/TaxesPaidBy.md:
     id: 0f748465a56d
     pristine_git_object: c347fb0382517214fc49065194a6996ac56255bf
+  docs/models/shared/TenderType.md: {}
   docs/models/shared/Term.md: {}
   docs/models/shared/TicketingCategory.md:
     id: 73e36a99788b
@@ -5260,6 +5292,7 @@ trackedFiles:
   docs/sdks/ats/README.md:
     id: 24fafa267f6c
     pristine_git_object: 8c82afc6d356a3fd7ce923b6de18a7a7b032eb28
+  docs/sdks/attendance/README.md: {}
   docs/sdks/auth/README.md:
     id: e9724f17945f
     pristine_git_object: e72d6a7ed8c2c78c596a6d9e4061aadee83a359a
@@ -5753,6 +5786,7 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/AsyncAts.java:
     id: 45b99fb62053
     pristine_git_object: 31e817f2061c87e56e08d79786dc4d22f5abf9ea
+  src/main/java/to/unified/unified_java_sdk/AsyncAttendance.java: {}
   src/main/java/to/unified/unified_java_sdk/AsyncAuth.java:
     id: a8bac3032f18
     pristine_git_object: 575179b15c4592549248c1c67443881f621897b2
@@ -6161,6 +6195,7 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/Ats.java:
     id: e780a9c651bc
     pristine_git_object: d30ed882664eb4af430e618ff536b00b7ba9aea0
+  src/main/java/to/unified/unified_java_sdk/Attendance.java: {}
   src/main/java/to/unified/unified_java_sdk/Auth.java:
     id: cf39f3cd50d4
     pristine_git_object: 79dac77da88e388c167e454140da725158e53598
@@ -6650,6 +6685,7 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/models/operations//async/CreateFormsFormRequestBuilder.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations//async/CreateGenaiEmbeddingRequestBuilder.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations//async/CreateGenaiPromptRequestBuilder.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations//async/CreateHrisAttendanceRequestBuilder.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations//async/CreateHrisBankaccountRequestBuilder.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations//async/CreateHrisBenefitRequestBuilder.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations//async/CreateHrisCompanyRequestBuilder.java: {}
@@ -6804,6 +6840,7 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/models/operations//async/GetFormsFormRequestBuilder.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations//async/GetFormsSubmissionRequestBuilder.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations//async/GetGenaiModelRequestBuilder.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations//async/GetHrisAttendanceRequestBuilder.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations//async/GetHrisBankaccountRequestBuilder.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations//async/GetHrisBenefitRequestBuilder.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations//async/GetHrisCompanyRequestBuilder.java: {}
@@ -6985,6 +7022,7 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/models/operations//async/ListFormsFormsRequestBuilder.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations//async/ListFormsSubmissionsRequestBuilder.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations//async/ListGenaiModelsRequestBuilder.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations//async/ListHrisAttendancesRequestBuilder.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations//async/ListHrisBankaccountsRequestBuilder.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations//async/ListHrisBenefitsRequestBuilder.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations//async/ListHrisCompaniesRequestBuilder.java: {}
@@ -7142,6 +7180,7 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/models/operations//async/PatchDatastoreRecordRequestBuilder.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations//async/PatchDatastoreTableRequestBuilder.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations//async/PatchFormsFormRequestBuilder.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations//async/PatchHrisAttendanceRequestBuilder.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations//async/PatchHrisBankaccountRequestBuilder.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations//async/PatchHrisBenefitRequestBuilder.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations//async/PatchHrisCompanyRequestBuilder.java: {}
@@ -7273,6 +7312,7 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/models/operations//async/RemoveDatastoreRecordRequestBuilder.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations//async/RemoveDatastoreTableRequestBuilder.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations//async/RemoveFormsFormRequestBuilder.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations//async/RemoveHrisAttendanceRequestBuilder.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations//async/RemoveHrisBankaccountRequestBuilder.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations//async/RemoveHrisBenefitRequestBuilder.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations//async/RemoveHrisCompanyRequestBuilder.java: {}
@@ -7404,6 +7444,7 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/models/operations//async/UpdateDatastoreRecordRequestBuilder.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations//async/UpdateDatastoreTableRequestBuilder.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations//async/UpdateFormsFormRequestBuilder.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations//async/UpdateHrisAttendanceRequestBuilder.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations//async/UpdateHrisBankaccountRequestBuilder.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations//async/UpdateHrisBenefitRequestBuilder.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations//async/UpdateHrisCompanyRequestBuilder.java: {}
@@ -7739,6 +7780,10 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/models/operations/CreateGenaiPromptRequest.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/CreateGenaiPromptRequestBuilder.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/CreateGenaiPromptResponse.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/CreateHrisAttendanceQueryParamFields.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/CreateHrisAttendanceRequest.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/CreateHrisAttendanceRequestBuilder.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/CreateHrisAttendanceResponse.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/CreateHrisBankaccountQueryParamFields.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/CreateHrisBankaccountRequest.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/CreateHrisBankaccountRequestBuilder.java: {}
@@ -8331,6 +8376,10 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/models/operations/GetGenaiModelRequest.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/GetGenaiModelRequestBuilder.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/GetGenaiModelResponse.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/GetHrisAttendanceQueryParamFields.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/GetHrisAttendanceRequest.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/GetHrisAttendanceRequestBuilder.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/GetHrisAttendanceResponse.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/GetHrisBankaccountQueryParamFields.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/GetHrisBankaccountRequest.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/GetHrisBankaccountRequestBuilder.java: {}
@@ -9026,6 +9075,10 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/models/operations/ListGenaiModelsRequest.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/ListGenaiModelsRequestBuilder.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/ListGenaiModelsResponse.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/ListHrisAttendancesQueryParamFields.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/ListHrisAttendancesRequest.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/ListHrisAttendancesRequestBuilder.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/ListHrisAttendancesResponse.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/ListHrisBankaccountsQueryParamFields.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/ListHrisBankaccountsRequest.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/ListHrisBankaccountsRequestBuilder.java: {}
@@ -9624,6 +9677,10 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/models/operations/PatchFormsFormRequest.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/PatchFormsFormRequestBuilder.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/PatchFormsFormResponse.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/PatchHrisAttendanceQueryParamFields.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/PatchHrisAttendanceRequest.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/PatchHrisAttendanceRequestBuilder.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/PatchHrisAttendanceResponse.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/PatchHrisBankaccountQueryParamFields.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/PatchHrisBankaccountRequest.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/PatchHrisBankaccountRequestBuilder.java: {}
@@ -10076,6 +10133,9 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/models/operations/RemoveFormsFormRequest.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/RemoveFormsFormRequestBuilder.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/RemoveFormsFormResponse.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/RemoveHrisAttendanceRequest.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/RemoveHrisAttendanceRequestBuilder.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/RemoveHrisAttendanceResponse.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/RemoveHrisBankaccountRequest.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/RemoveHrisBankaccountRequestBuilder.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/RemoveHrisBankaccountResponse.java: {}
@@ -10530,6 +10590,10 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/models/operations/UpdateFormsFormRequest.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/UpdateFormsFormRequestBuilder.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/UpdateFormsFormResponse.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/UpdateHrisAttendanceQueryParamFields.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/UpdateHrisAttendanceRequest.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/UpdateHrisAttendanceRequestBuilder.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/UpdateHrisAttendanceResponse.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/UpdateHrisBankaccountQueryParamFields.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/UpdateHrisBankaccountRequest.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/UpdateHrisBankaccountRequestBuilder.java: {}
@@ -10859,6 +10923,7 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/models/operations/async/CreateFormsFormResponse.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/async/CreateGenaiEmbeddingResponse.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/async/CreateGenaiPromptResponse.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/async/CreateHrisAttendanceResponse.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/async/CreateHrisBankaccountResponse.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/async/CreateHrisBenefitResponse.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/async/CreateHrisCompanyResponse.java: {}
@@ -11013,6 +11078,7 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/models/operations/async/GetFormsFormResponse.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/async/GetFormsSubmissionResponse.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/async/GetGenaiModelResponse.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/async/GetHrisAttendanceResponse.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/async/GetHrisBankaccountResponse.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/async/GetHrisBenefitResponse.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/async/GetHrisCompanyResponse.java: {}
@@ -11194,6 +11260,7 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/models/operations/async/ListFormsFormsResponse.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/async/ListFormsSubmissionsResponse.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/async/ListGenaiModelsResponse.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/async/ListHrisAttendancesResponse.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/async/ListHrisBankaccountsResponse.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/async/ListHrisBenefitsResponse.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/async/ListHrisCompaniesResponse.java: {}
@@ -11351,6 +11418,7 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/models/operations/async/PatchDatastoreRecordResponse.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/async/PatchDatastoreTableResponse.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/async/PatchFormsFormResponse.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/async/PatchHrisAttendanceResponse.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/async/PatchHrisBankaccountResponse.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/async/PatchHrisBenefitResponse.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/async/PatchHrisCompanyResponse.java: {}
@@ -11482,6 +11550,7 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/models/operations/async/RemoveDatastoreRecordResponse.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/async/RemoveDatastoreTableResponse.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/async/RemoveFormsFormResponse.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/async/RemoveHrisAttendanceResponse.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/async/RemoveHrisBankaccountResponse.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/async/RemoveHrisBenefitResponse.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/async/RemoveHrisCompanyResponse.java: {}
@@ -11613,6 +11682,7 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/models/operations/async/UpdateDatastoreRecordResponse.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/async/UpdateDatastoreTableResponse.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/async/UpdateFormsFormResponse.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/async/UpdateHrisAttendanceResponse.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/async/UpdateHrisBankaccountResponse.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/async/UpdateHrisBenefitResponse.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/async/UpdateHrisCompanyResponse.java: {}
@@ -11785,6 +11855,9 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/models/shared/AccountingLineitem.java:
     id: dededddca87b
     pristine_git_object: 6920999924f7c7422588c950ffd0bea7dc8d2ff3
+  src/main/java/to/unified/unified_java_sdk/models/shared/AccountingMetadata.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/shared/AccountingMetadata1.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/shared/AccountingMetadata5.java: {}
   src/main/java/to/unified/unified_java_sdk/models/shared/AccountingOrder.java:
     id: 307d1fc12d3a
     pristine_git_object: f6cd4e772a1185efb9861b1933d2c1addf1beb9b
@@ -12096,6 +12169,11 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/models/shared/AtsMetadata5.java:
     id: d1728a1e1225
     pristine_git_object: 8554c65db59ff9f2e17aea94e5f56cb64a25424a
+  src/main/java/to/unified/unified_java_sdk/models/shared/AtsMetadataExtraData.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/shared/AtsMetadataFormat.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/shared/AtsMetadataSchemas1.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/shared/AtsMetadataSchemas5.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/shared/AtsMetadataValue.java: {}
   src/main/java/to/unified/unified_java_sdk/models/shared/AtsOffer.java:
     id: b955c11a4523
     pristine_git_object: d4f01b5ba212e228c4ff310c7d94188ce8c01d3b
@@ -12509,6 +12587,7 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/models/shared/FromWebhook.java:
     id: 46b90d64afd5
     pristine_git_object: 40dc91f77b82c54d37e30d41407422dc0374bad6
+  src/main/java/to/unified/unified_java_sdk/models/shared/FulfillmentType.java: {}
   src/main/java/to/unified/unified_java_sdk/models/shared/GenaiContent.java:
     id: eecc5266e525
     pristine_git_object: 801cf5e1c45bee8b1840585f2c1edca1e5e7b4fd
@@ -12534,6 +12613,9 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/models/shared/HostingSource.java:
     id: 852887719a5f
     pristine_git_object: 08b5e0c1c471942385840a918bbfa0c84468a9dd
+  src/main/java/to/unified/unified_java_sdk/models/shared/HrisAttendance.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/shared/HrisAttendanceBreak.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/shared/HrisAttendanceStatus.java: {}
   src/main/java/to/unified/unified_java_sdk/models/shared/HrisBankaccount.java:
     id: 6dc59cec84eb
     pristine_git_object: 6e5f7d283add54bf466476a4eb9d546e465915a9
@@ -13183,6 +13265,7 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/models/shared/PaymentPayment.java:
     id: 8cdbc74f5767
     pristine_git_object: dd2a7eb3e4bca016bbc80bbed08f8cefac662ae0
+  src/main/java/to/unified/unified_java_sdk/models/shared/PaymentPaymentStatus.java: {}
   src/main/java/to/unified/unified_java_sdk/models/shared/PaymentPaymentType.java:
     id: 2c7f5d8abc9d
     pristine_git_object: dbf5229bd0731fc5639afd4cfd5cca5155df2225
@@ -13743,6 +13826,7 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/models/shared/PropertyEnrichPersonAddress.java:
     id: 62279d94c2d3
     pristine_git_object: 0fa41b35f2425b2e30e0b41784a03d105aa2e017
+  src/main/java/to/unified/unified_java_sdk/models/shared/PropertyHrisAttendanceAddress.java: {}
   src/main/java/to/unified/unified_java_sdk/models/shared/PropertyHrisCompanyAddress.java:
     id: be8c2e6b1b0b
     pristine_git_object: 7c7a2ff9a5e2e8abe14516962a3f99ac84066635
@@ -14143,6 +14227,7 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/models/shared/TaxesPaidBy.java:
     id: b4866e72c051
     pristine_git_object: 269997e845e28b1a2de39ec1f95b551fc564ad6d
+  src/main/java/to/unified/unified_java_sdk/models/shared/TenderType.java: {}
   src/main/java/to/unified/unified_java_sdk/models/shared/Term.java: {}
   src/main/java/to/unified/unified_java_sdk/models/shared/TicketingCategory.java:
     id: 71ab81e7bae7
@@ -14507,6 +14592,7 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/operations/CreateFormsForm.java: {}
   src/main/java/to/unified/unified_java_sdk/operations/CreateGenaiEmbedding.java: {}
   src/main/java/to/unified/unified_java_sdk/operations/CreateGenaiPrompt.java: {}
+  src/main/java/to/unified/unified_java_sdk/operations/CreateHrisAttendance.java: {}
   src/main/java/to/unified/unified_java_sdk/operations/CreateHrisBankaccount.java: {}
   src/main/java/to/unified/unified_java_sdk/operations/CreateHrisBenefit.java: {}
   src/main/java/to/unified/unified_java_sdk/operations/CreateHrisCompany.java: {}
@@ -14661,6 +14747,7 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/operations/GetFormsForm.java: {}
   src/main/java/to/unified/unified_java_sdk/operations/GetFormsSubmission.java: {}
   src/main/java/to/unified/unified_java_sdk/operations/GetGenaiModel.java: {}
+  src/main/java/to/unified/unified_java_sdk/operations/GetHrisAttendance.java: {}
   src/main/java/to/unified/unified_java_sdk/operations/GetHrisBankaccount.java: {}
   src/main/java/to/unified/unified_java_sdk/operations/GetHrisBenefit.java: {}
   src/main/java/to/unified/unified_java_sdk/operations/GetHrisCompany.java: {}
@@ -14842,6 +14929,7 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/operations/ListFormsForms.java: {}
   src/main/java/to/unified/unified_java_sdk/operations/ListFormsSubmissions.java: {}
   src/main/java/to/unified/unified_java_sdk/operations/ListGenaiModels.java: {}
+  src/main/java/to/unified/unified_java_sdk/operations/ListHrisAttendances.java: {}
   src/main/java/to/unified/unified_java_sdk/operations/ListHrisBankaccounts.java: {}
   src/main/java/to/unified/unified_java_sdk/operations/ListHrisBenefits.java: {}
   src/main/java/to/unified/unified_java_sdk/operations/ListHrisCompanies.java: {}
@@ -15002,6 +15090,7 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/operations/PatchDatastoreRecord.java: {}
   src/main/java/to/unified/unified_java_sdk/operations/PatchDatastoreTable.java: {}
   src/main/java/to/unified/unified_java_sdk/operations/PatchFormsForm.java: {}
+  src/main/java/to/unified/unified_java_sdk/operations/PatchHrisAttendance.java: {}
   src/main/java/to/unified/unified_java_sdk/operations/PatchHrisBankaccount.java: {}
   src/main/java/to/unified/unified_java_sdk/operations/PatchHrisBenefit.java: {}
   src/main/java/to/unified/unified_java_sdk/operations/PatchHrisCompany.java: {}
@@ -15133,6 +15222,7 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/operations/RemoveDatastoreRecord.java: {}
   src/main/java/to/unified/unified_java_sdk/operations/RemoveDatastoreTable.java: {}
   src/main/java/to/unified/unified_java_sdk/operations/RemoveFormsForm.java: {}
+  src/main/java/to/unified/unified_java_sdk/operations/RemoveHrisAttendance.java: {}
   src/main/java/to/unified/unified_java_sdk/operations/RemoveHrisBankaccount.java: {}
   src/main/java/to/unified/unified_java_sdk/operations/RemoveHrisBenefit.java: {}
   src/main/java/to/unified/unified_java_sdk/operations/RemoveHrisCompany.java: {}
@@ -15264,6 +15354,7 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/operations/UpdateDatastoreRecord.java: {}
   src/main/java/to/unified/unified_java_sdk/operations/UpdateDatastoreTable.java: {}
   src/main/java/to/unified/unified_java_sdk/operations/UpdateFormsForm.java: {}
+  src/main/java/to/unified/unified_java_sdk/operations/UpdateHrisAttendance.java: {}
   src/main/java/to/unified/unified_java_sdk/operations/UpdateHrisBankaccount.java: {}
   src/main/java/to/unified/unified_java_sdk/operations/UpdateHrisBenefit.java: {}
   src/main/java/to/unified/unified_java_sdk/operations/UpdateHrisCompany.java: {}
@@ -29262,9 +29353,64 @@ examples:
       responses:
         "200":
           application/json: {}
+  createHrisAttendance:
+    speakeasy-default-create-hris-attendance:
+      parameters:
+        path:
+          connection_id: "<id>"
+      requestBody:
+        application/json: {"employee_user_id": "<id>", "end_at": "2026-07-01T14:10:09.942Z", "start_at": "2026-03-31T03:51:43.280Z"}
+      responses:
+        "200":
+          application/json: {"employee_user_id": "<id>", "end_at": "2025-02-26T14:26:30.939Z", "start_at": "2024-05-07T11:59:04.560Z"}
+  getHrisAttendance:
+    speakeasy-default-get-hris-attendance:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      responses:
+        "200":
+          application/json: {"employee_user_id": "<id>", "end_at": "2025-07-21T21:50:35.928Z", "start_at": "2025-06-20T02:50:25.238Z"}
+  listHrisAttendances:
+    speakeasy-default-list-hris-attendances:
+      parameters:
+        path:
+          connection_id: "<id>"
+      responses:
+        "200":
+          application/json: [{"employee_user_id": "<id>", "end_at": "2026-04-08T08:38:41.327Z", "start_at": "2025-03-31T01:03:05.799Z"}]
+  patchHrisAttendance:
+    speakeasy-default-patch-hris-attendance:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {"employee_user_id": "<id>", "end_at": "2024-09-28T22:23:28.906Z", "start_at": "2025-01-18T09:17:09.936Z"}
+      responses:
+        "200":
+          application/json: {"employee_user_id": "<id>", "end_at": "2024-05-07T22:29:38.093Z", "start_at": "2025-01-28T03:44:11.402Z"}
+  removeHrisAttendance:
+    speakeasy-default-remove-hris-attendance:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+  updateHrisAttendance:
+    speakeasy-default-update-hris-attendance:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {"employee_user_id": "<id>", "end_at": "2024-07-06T19:51:15.352Z", "start_at": "2024-05-22T08:12:53.996Z"}
+      responses:
+        "200":
+          application/json: {"employee_user_id": "<id>", "end_at": "2025-02-07T06:39:13.305Z", "start_at": "2025-09-24T00:00:27.827Z"}
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: "## Java SDK Changes:\n* `unified-to.accounting.listAccountingProjects()`: \n  *  `request.isActive` **Removed** (Breaking ⚠️)\n* `unified-to.project.listAccountingProjects()`: \n  *  `request.isActive` **Removed** (Breaking ⚠️)\n* `unified-to.review.getPerformanceReview()`: **Added**\n* `unified-to.review.listPerformanceReviews()`: **Added**\n* `unified-to.performance.createPerformanceFeedback()`: **Added**\n* `unified-to.performance.createPerformanceGoal()`: **Added**\n* `unified-to.performance.getPerformanceCycle()`: **Added**\n* `unified-to.performance.getPerformanceFeedback()`: **Added**\n* `unified-to.performance.getPerformanceGoal()`: **Added**\n* `unified-to.performance.getPerformanceReview()`: **Added**\n* `unified-to.performance.listPerformanceCycles()`: **Added**\n* `unified-to.performance.listPerformanceFeedbacks()`: **Added**\n* `unified-to.performance.listPerformanceGoals()`: **Added**\n* `unified-to.performance.listPerformanceReviews()`: **Added**\n* `unified-to.performance.patchPerformanceGoal()`: **Added**\n* `unified-to.performance.removePerformanceGoal()`: **Added**\n* `unified-to.performance.updatePerformanceGoal()`: **Added**\n* `unified-to.cycle.getPerformanceCycle()`: **Added**\n* `unified-to.cycle.listPerformanceCycles()`: **Added**\n* `unified-to.feedback.createPerformanceFeedback()`: **Added**\n* `unified-to.feedback.getPerformanceFeedback()`: **Added**\n* `unified-to.feedback.listPerformanceFeedbacks()`: **Added**\n* `unified-to.goal.createPerformanceGoal()`: **Added**\n* `unified-to.goal.getPerformanceGoal()`: **Added**\n* `unified-to.goal.listPerformanceGoals()`: **Added**\n* `unified-to.goal.patchPerformanceGoal()`: **Added**\n* `unified-to.goal.removePerformanceGoal()`: **Added**\n* `unified-to.goal.updatePerformanceGoal()`: **Added**\n* `unified-to.hris.createHrisEmployee()`: \n  *  `request.hrisEmployee.employeeRoles[]` **Changed**\n  *  `response.employeeRoles[]` **Changed**\n* `unified-to.hris.getHrisEmployee()`:  `response.employeeRoles[]` **Changed**\n* `unified-to.hris.listHrisEmployees()`:  `response.[].employeeRoles[]` **Changed**\n* `unified-to.hris.patchHrisEmployee()`: \n  *  `request.hrisEmployee.employeeRoles[]` **Changed**\n  *  `response.employeeRoles[]` **Changed**\n* `unified-to.hris.updateHrisEmployee()`: \n  *  `request.hrisEmployee.employeeRoles[]` **Changed**\n  *  `response.employeeRoles[]` **Changed**\n* `unified-to.employee.createHrisEmployee()`: \n  *  `request.hrisEmployee.employeeRoles[]` **Changed**\n  *  `response.employeeRoles[]` **Changed**\n* `unified-to.employee.getHrisEmployee()`:  `response.employeeRoles[]` **Changed**\n* `unified-to.employee.listHrisEmployees()`:  `response.[].employeeRoles[]` **Changed**\n* `unified-to.employee.patchHrisEmployee()`: \n  *  `request.hrisEmployee.employeeRoles[]` **Changed**\n  *  `response.employeeRoles[]` **Changed**\n* `unified-to.employee.updateHrisEmployee()`: \n  *  `request.hrisEmployee.employeeRoles[]` **Changed**\n  *  `response.employeeRoles[]` **Changed**\n* `unified-to.unified.createUnifiedConnection()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to.unified.createUnifiedWebhook()`: \n  *  `request.webhook.objectType` **Changed**\n  *  `response.objectType` **Changed**\n* `unified-to.unified.getUnifiedConnection()`:  `response` **Changed**\n* `unified-to.unified.getUnifiedWebhook()`:  `response.objectType` **Changed**\n* `unified-to.unified.listUnifiedConnections()`: \n  *  `request.categories` **Changed**\n  *  `response.[]` **Changed**\n* `unified-to.unified.listUnifiedIntegrationWorkspaces()`: \n  *  `request.categories` **Changed**\n  *  `response.[]` **Changed**\n* `unified-to.unified.listUnifiedIntegrations()`: \n  *  `request.categories` **Changed**\n  *  `response.[]` **Changed**\n* `unified-to.unified.listUnifiedWebhooks()`:  `response.[].objectType` **Changed**\n* `unified-to.unified.patchUnifiedConnection()`: \n  *  `request.connection` **Changed**\n  *  `response` **Changed**\n* `unified-to.unified.patchUnifiedWebhook()`: \n  *  `request.webhook.objectType` **Changed**\n  *  `response.objectType` **Changed**\n* `unified-to.unified.updateUnifiedConnection()`: \n  *  `request.connection` **Changed**\n  *  `response` **Changed**\n* `unified-to.unified.updateUnifiedWebhook()`: \n  *  `request.webhook.objectType` **Changed**\n  *  `response.objectType` **Changed**\n* `unified-to.connection.createUnifiedConnection()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to.connection.getUnifiedConnection()`:  `response` **Changed**\n* `unified-to.connection.listUnifiedConnections()`: \n  *  `request.categories` **Changed**\n  *  `response.[]` **Changed**\n* `unified-to.connection.patchUnifiedConnection()`: \n  *  `request.connection` **Changed**\n  *  `response` **Changed**\n* `unified-to.connection.updateUnifiedConnection()`: \n  *  `request.connection` **Changed**\n  *  `response` **Changed**\n* `unified-to.integration.listUnifiedIntegrationWorkspaces()`: \n  *  `request.categories` **Changed**\n  *  `response.[]` **Changed**\n* `unified-to.integration.listUnifiedIntegrations()`: \n  *  `request.categories` **Changed**\n  *  `response.[]` **Changed**\n* `unified-to.webhook.createUnifiedWebhook()`: \n  *  `request.webhook.objectType` **Changed**\n  *  `response.objectType` **Changed**\n* `unified-to.webhook.getUnifiedWebhook()`:  `response.objectType` **Changed**\n* `unified-to.webhook.listUnifiedWebhooks()`:  `response.[].objectType` **Changed**\n* `unified-to.webhook.patchUnifiedWebhook()`: \n  *  `request.webhook.objectType` **Changed**\n  *  `response.objectType` **Changed**\n* `unified-to.webhook.updateUnifiedWebhook()`: \n  *  `request.webhook.objectType` **Changed**\n  *  `response.objectType` **Changed**\n"
+releaseNotes: "## Java SDK Changes:\n* `unified-to.hris.createHrisAttendance()`: **Added**\n* `unified-to.hris.getHrisAttendance()`: **Added**\n* `unified-to.hris.listHrisAttendances()`: **Added**\n* `unified-to.hris.patchHrisAttendance()`: **Added**\n* `unified-to.hris.removeHrisAttendance()`: **Added**\n* `unified-to.hris.updateHrisAttendance()`: **Added**\n* `unified-to.attendance.createHrisAttendance()`: **Added**\n* `unified-to.attendance.getHrisAttendance()`: **Added**\n* `unified-to.attendance.listHrisAttendances()`: **Added**\n* `unified-to.attendance.patchHrisAttendance()`: **Added**\n* `unified-to.attendance.removeHrisAttendance()`: **Added**\n* `unified-to.attendance.updateHrisAttendance()`: **Added**\n* `unified-to.accounting.createAccountingBill()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to.accounting.createAccountingCategory()`: \n  *  `request` **Changed**\n  *  `response.metadata` **Added**\n* `unified-to.accounting.createAccountingCreditmemo()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to.accounting.createAccountingExpense()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to.accounting.createAccountingInvoice()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to.accounting.createAccountingOrder()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to.accounting.createAccountingProject()`: \n  *  `request` **Changed**\n  *  `response.metadata` **Added**\n* `unified-to.accounting.createAccountingPurchaseorder()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to.accounting.createAccountingQuote()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to.accounting.createAccountingSalesorder()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to.accounting.createAccountingTaxrate()`: \n  *  `request` **Changed**\n  *  `response.metadata` **Added**\n* `unified-to.accounting.createAccountingVendorcredit()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to.accounting.getAccountingBill()`: \n  *  `request.fields` **Changed**\n  *  `response` **Changed**\n* `unified-to.accounting.getAccountingCategory()`: \n  *  `request.fields` **Changed**\n  *  `response.metadata` **Added**\n* `unified-to.accounting.getAccountingCreditmemo()`: \n  *  `request.fields` **Changed**\n  *  `response` **Changed**\n* `unified-to.accounting.getAccountingExpense()`: \n  *  `request.fields` **Changed**\n  *  `response` **Changed**\n* `unified-to.accounting.getAccountingInvoice()`: \n  *  `request.fields` **Changed**\n  *  `response` **Changed**\n* `unified-to.accounting.getAccountingOrder()`: \n  *  `request.fields` **Changed**\n  *  `response` **Changed**\n* `unified-to.accounting.getAccountingProject()`: \n  *  `request.fields` **Changed**\n  *  `response.metadata` **Added**\n* `unified-to.accounting.getAccountingPurchaseorder()`: \n  *  `request.fields` **Changed**\n  *  `response` **Changed**\n* `unified-to.accounting.getAccountingQuote()`: \n  *  `request.fields` **Changed**\n  *  `response` **Changed**\n* `unified-to.accounting.getAccountingSalesorder()`: \n  *  `request.fields` **Changed**\n  *  `response` **Changed**\n* `unified-to.accounting.getAccountingTaxrate()`: \n  *  `request.fields` **Changed**\n  *  `response.metadata` **Added**\n* `unified-to.accounting.getAccountingVendorcredit()`: \n  *  `request.fields` **Changed**\n  *  `response` **Changed**\n* `unified-to.accounting.listAccountingBills()`: \n  *  `request.fields` **Changed**\n  *  `response.[]` **Changed**\n* `unified-to.accounting.listAccountingCategories()`: \n  *  `request.fields` **Changed**\n  *  `response.[].metadata` **Added**\n* `unified-to.accounting.listAccountingCreditmemoes()`: \n  *  `request.fields` **Changed**\n  *  `response.[]` **Changed**\n* `unified-to.accounting.listAccountingExpenses()`: \n  *  `request.fields` **Changed**\n  *  `response.[]` **Changed**\n* `unified-to.accounting.listAccountingInvoices()`: \n  *  `request.fields` **Changed**\n  *  `response.[]` **Changed**\n* `unified-to.accounting.listAccountingOrders()`: \n  *  `request.fields` **Changed**\n  *  `response.[]` **Changed**\n* `unified-to.accounting.listAccountingProjects()`: \n  *  `request.fields` **Changed**\n  *  `response.[].metadata` **Added**\n* `unified-to.accounting.listAccountingPurchaseorders()`: \n  *  `request.fields` **Changed**\n  *  `response.[]` **Changed**\n* `unified-to.accounting.listAccountingQuotes()`: \n  *  `request.fields` **Changed**\n  *  `response.[]` **Changed**\n* `unified-to.accounting.listAccountingSalesorders()`: \n  *  `request.fields` **Changed**\n  *  `response.[]` **Changed**\n* `unified-to.accounting.listAccountingTaxrates()`: \n  *  `request.fields` **Changed**\n  *  `response.[].metadata` **Added**\n* `unified-to.accounting.listAccountingVendorcredits()`: \n  *  `request.fields` **Changed**\n  *  `response.[]` **Changed**\n* `unified-to.accounting.patchAccountingBill()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to.accounting.patchAccountingCategory()`: \n  *  `request` **Changed**\n  *  `response.metadata` **Added**\n* `unified-to.accounting.patchAccountingCreditmemo()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to.accounting.patchAccountingExpense()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to.accounting.patchAccountingInvoice()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to.accounting.patchAccountingOrder()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to.accounting.patchAccountingProject()`: \n  *  `request` **Changed**\n  *  `response.metadata` **Added**\n* `unified-to.accounting.patchAccountingPurchaseorder()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to.accounting.patchAccountingQuote()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to.accounting.patchAccountingSalesorder()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to.accounting.patchAccountingTaxrate()`: \n  *  `request` **Changed**\n  *  `response.metadata` **Added**\n* `unified-to.accounting.patchAccountingVendorcredit()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to.accounting.updateAccountingBill()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to.accounting.updateAccountingCategory()`: \n  *  `request` **Changed**\n  *  `response.metadata` **Added**\n* `unified-to.accounting.updateAccountingCreditmemo()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to.accounting.updateAccountingExpense()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to.accounting.updateAccountingInvoice()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to.accounting.updateAccountingOrder()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to.accounting.updateAccountingProject()`: \n  *  `request` **Changed**\n  *  `response.metadata` **Added**\n* `unified-to.accounting.updateAccountingPurchaseorder()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to.accounting.updateAccountingQuote()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to.accounting.updateAccountingSalesorder()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to.accounting.updateAccountingTaxrate()`: \n  *  `request` **Changed**\n  *  `response.metadata` **Added**\n* `unified-to.accounting.updateAccountingVendorcredit()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to.bill.createAccountingBill()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to.bill.getAccountingBill()`: \n  *  `request.fields` **Changed**\n  *  `response` **Changed**\n* `unified-to.bill.listAccountingBills()`: \n  *  `request.fields` **Changed**\n  *  `response.[]` **Changed**\n* `unified-to.bill.patchAccountingBill()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to.bill.updateAccountingBill()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to.category.createAccountingCategory()`: \n  *  `request` **Changed**\n  *  `response.metadata` **Added**\n* `unified-to.category.getAccountingCategory()`: \n  *  `request.fields` **Changed**\n  *  `response.metadata` **Added**\n* `unified-to.category.listAccountingCategories()`: \n  *  `request.fields` **Changed**\n  *  `response.[].metadata` **Added**\n* `unified-to.category.patchAccountingCategory()`: \n  *  `request` **Changed**\n  *  `response.metadata` **Added**\n* `unified-to.category.updateAccountingCategory()`: \n  *  `request` **Changed**\n  *  `response.metadata` **Added**\n* `unified-to.creditmemo.createAccountingCreditmemo()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to.creditmemo.getAccountingCreditmemo()`: \n  *  `request.fields` **Changed**\n  *  `response` **Changed**\n* `unified-to.creditmemo.listAccountingCreditmemoes()`: \n  *  `request.fields` **Changed**\n  *  `response.[]` **Changed**\n* `unified-to.creditmemo.patchAccountingCreditmemo()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to.creditmemo.updateAccountingCreditmemo()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to.expense.createAccountingExpense()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to.expense.getAccountingExpense()`: \n  *  `request.fields` **Changed**\n  *  `response` **Changed**\n* `unified-to.expense.listAccountingExpenses()`: \n  *  `request.fields` **Changed**\n  *  `response.[]` **Changed**\n* `unified-to.expense.patchAccountingExpense()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to.expense.updateAccountingExpense()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to.invoice.createAccountingInvoice()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to.invoice.getAccountingInvoice()`: \n  *  `request.fields` **Changed**\n  *  `response` **Changed**\n* `unified-to.invoice.listAccountingInvoices()`: \n  *  `request.fields` **Changed**\n  *  `response.[]` **Changed**\n* `unified-to.invoice.patchAccountingInvoice()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to.invoice.updateAccountingInvoice()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to.order.createAccountingOrder()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to.order.getAccountingOrder()`: \n  *  `request.fields` **Changed**\n  *  `response` **Changed**\n* `unified-to.order.listAccountingOrders()`: \n  *  `request.fields` **Changed**\n  *  `response.[]` **Changed**\n* `unified-to.order.patchAccountingOrder()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to.order.updateAccountingOrder()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to.project.createAccountingProject()`: \n  *  `request` **Changed**\n  *  `response.metadata` **Added**\n* `unified-to.project.getAccountingProject()`: \n  *  `request.fields` **Changed**\n  *  `response.metadata` **Added**\n* `unified-to.project.listAccountingProjects()`: \n  *  `request.fields` **Changed**\n  *  `response.[].metadata` **Added**\n* `unified-to.project.patchAccountingProject()`: \n  *  `request` **Changed**\n  *  `response.metadata` **Added**\n* `unified-to.project.updateAccountingProject()`: \n  *  `request` **Changed**\n  *  `response.metadata` **Added**\n* `unified-to.purchaseorder.createAccountingPurchaseorder()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to.purchaseorder.getAccountingPurchaseorder()`: \n  *  `request.fields` **Changed**\n  *  `response` **Changed**\n* `unified-to.purchaseorder.listAccountingPurchaseorders()`: \n  *  `request.fields` **Changed**\n  *  `response.[]` **Changed**\n* `unified-to.purchaseorder.patchAccountingPurchaseorder()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to.purchaseorder.updateAccountingPurchaseorder()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to.quote.createAccountingQuote()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to.quote.getAccountingQuote()`: \n  *  `request.fields` **Changed**\n  *  `response` **Changed**\n* `unified-to.quote.listAccountingQuotes()`: \n  *  `request.fields` **Changed**\n  *  `response.[]` **Changed**\n* `unified-to.quote.patchAccountingQuote()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to.quote.updateAccountingQuote()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to.salesorder.createAccountingSalesorder()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to.salesorder.getAccountingSalesorder()`: \n  *  `request.fields` **Changed**\n  *  `response` **Changed**\n* `unified-to.salesorder.listAccountingSalesorders()`: \n  *  `request.fields` **Changed**\n  *  `response.[]` **Changed**\n* `unified-to.salesorder.patchAccountingSalesorder()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to.salesorder.updateAccountingSalesorder()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to.taxrate.createAccountingTaxrate()`: \n  *  `request` **Changed**\n  *  `response.metadata` **Added**\n* `unified-to.taxrate.getAccountingTaxrate()`: \n  *  `request.fields` **Changed**\n  *  `response.metadata` **Added**\n* `unified-to.taxrate.listAccountingTaxrates()`: \n  *  `request.fields` **Changed**\n  *  `response.[].metadata` **Added**\n* `unified-to.taxrate.patchAccountingTaxrate()`: \n  *  `request` **Changed**\n  *  `response.metadata` **Added**\n* `unified-to.taxrate.updateAccountingTaxrate()`: \n  *  `request` **Changed**\n  *  `response.metadata` **Added**\n* `unified-to.vendorcredit.createAccountingVendorcredit()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to.vendorcredit.getAccountingVendorcredit()`: \n  *  `request.fields` **Changed**\n  *  `response` **Changed**\n* `unified-to.vendorcredit.listAccountingVendorcredits()`: \n  *  `request.fields` **Changed**\n  *  `response.[]` **Changed**\n* `unified-to.vendorcredit.patchAccountingVendorcredit()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to.vendorcredit.updateAccountingVendorcredit()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to.payment.createPaymentPayment()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to.payment.getPaymentPayment()`: \n  *  `request.fields` **Changed**\n  *  `response` **Changed**\n* `unified-to.payment.listPaymentPayments()`: \n  *  `request.fields` **Changed**\n  *  `response.[]` **Changed**\n* `unified-to.payment.patchPaymentPayment()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to.payment.updatePaymentPayment()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to.unified.createUnifiedConnection()`: \n  *  `request.permissions[]` **Changed**\n  *  `response.permissions[]` **Changed**\n* `unified-to.unified.createUnifiedWebhook()`: \n  *  `request.webhook.objectType.enum(hrisAttendance)` **Added**\n  *  `response.objectType.enum(hrisAttendance)` **Added**\n* `unified-to.unified.getUnifiedConnection()`:  `response.permissions[]` **Changed**\n* `unified-to.unified.getUnifiedWebhook()`:  `response.objectType.enum(hrisAttendance)` **Added**\n* `unified-to.unified.listUnifiedConnections()`:  `response.[].permissions[]` **Changed**\n* `unified-to.unified.listUnifiedWebhooks()`:  `response.[].objectType.enum(hrisAttendance)` **Added**\n* `unified-to.unified.patchUnifiedConnection()`: \n  *  `request.connection.permissions[]` **Changed**\n  *  `response.permissions[]` **Changed**\n* `unified-to.unified.patchUnifiedWebhook()`: \n  *  `request.webhook.objectType.enum(hrisAttendance)` **Added**\n  *  `response.objectType.enum(hrisAttendance)` **Added**\n* `unified-to.unified.updateUnifiedConnection()`: \n  *  `request.connection.permissions[]` **Changed**\n  *  `response.permissions[]` **Changed**\n* `unified-to.unified.updateUnifiedWebhook()`: \n  *  `request.webhook.objectType.enum(hrisAttendance)` **Added**\n  *  `response.objectType.enum(hrisAttendance)` **Added**\n* `unified-to.connection.createUnifiedConnection()`: \n  *  `request.permissions[]` **Changed**\n  *  `response.permissions[]` **Changed**\n* `unified-to.connection.getUnifiedConnection()`:  `response.permissions[]` **Changed**\n* `unified-to.connection.listUnifiedConnections()`:  `response.[].permissions[]` **Changed**\n* `unified-to.connection.patchUnifiedConnection()`: \n  *  `request.connection.permissions[]` **Changed**\n  *  `response.permissions[]` **Changed**\n* `unified-to.connection.updateUnifiedConnection()`: \n  *  `request.connection.permissions[]` **Changed**\n  *  `response.permissions[]` **Changed**\n* `unified-to.webhook.createUnifiedWebhook()`: \n  *  `request.webhook.objectType.enum(hrisAttendance)` **Added**\n  *  `response.objectType.enum(hrisAttendance)` **Added**\n* `unified-to.webhook.getUnifiedWebhook()`:  `response.objectType.enum(hrisAttendance)` **Added**\n* `unified-to.webhook.listUnifiedWebhooks()`:  `response.[].objectType.enum(hrisAttendance)` **Added**\n* `unified-to.webhook.patchUnifiedWebhook()`: \n  *  `request.webhook.objectType.enum(hrisAttendance)` **Added**\n  *  `response.objectType.enum(hrisAttendance)` **Added**\n* `unified-to.webhook.updateUnifiedWebhook()`: \n  *  `request.webhook.objectType.enum(hrisAttendance)` **Added**\n  *  `response.objectType.enum(hrisAttendance)` **Added**\n"
 generatedFiles:
   - .gitattributes
   - USAGE.md

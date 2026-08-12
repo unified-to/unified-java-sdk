@@ -21,4 +21,5 @@ GetAccountingTaxrateQueryParamFields value = GetAccountingTaxrateQueryParamField
 | `RATE`            | rate              |
 | `IS_ACTIVE`       | is_active         |
 | `ORGANIZATION_ID` | organization_id   |
+| `METADATA`        | metadata          |
 | `RAW`             | raw               |

@@ -61,6 +61,11 @@ public class AccountingOrder {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("metadata")
+    private List<AccountingMetadata> metadata;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("organization_id")
     private String organizationId;
 
@@ -108,6 +113,7 @@ public class AccountingOrder {
             @JsonProperty("currency") @Nullable String currency,
             @JsonProperty("id") @Nullable String id,
             @JsonProperty("lineitems") @Nullable List<AccountingLineitem> lineitems,
+            @JsonProperty("metadata") @Nullable List<AccountingMetadata> metadata,
             @JsonProperty("organization_id") @Nullable String organizationId,
             @JsonProperty("posted_at") @Nullable OffsetDateTime postedAt,
             @JsonProperty("raw") @Nullable Map<String, Object> raw,
@@ -123,6 +129,7 @@ public class AccountingOrder {
         this.currency = currency;
         this.id = id;
         this.lineitems = lineitems;
+        this.metadata = metadata;
         this.organizationId = organizationId;
         this.postedAt = postedAt;
         this.raw = raw;
@@ -138,7 +145,8 @@ public class AccountingOrder {
             null, null, null,
             null, null, null,
             null, null, null,
-            null, null, null);
+            null, null, null,
+            null);
     }
 
     public Optional<String> accountId() {
@@ -167,6 +175,10 @@ public class AccountingOrder {
 
     public Optional<List<AccountingLineitem>> lineitems() {
         return Optional.ofNullable(this.lineitems);
+    }
+
+    public Optional<List<AccountingMetadata>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     public Optional<String> organizationId() {
@@ -248,6 +260,12 @@ public class AccountingOrder {
     }
 
 
+    public AccountingOrder withMetadata(@Nullable List<AccountingMetadata> metadata) {
+        this.metadata = metadata;
+        return this;
+    }
+
+
     public AccountingOrder withOrganizationId(@Nullable String organizationId) {
         this.organizationId = organizationId;
         return this;
@@ -313,6 +331,7 @@ public class AccountingOrder {
             Utils.enhancedDeepEquals(this.currency, other.currency) &&
             Utils.enhancedDeepEquals(this.id, other.id) &&
             Utils.enhancedDeepEquals(this.lineitems, other.lineitems) &&
+            Utils.enhancedDeepEquals(this.metadata, other.metadata) &&
             Utils.enhancedDeepEquals(this.organizationId, other.organizationId) &&
             Utils.enhancedDeepEquals(this.postedAt, other.postedAt) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
@@ -328,9 +347,10 @@ public class AccountingOrder {
         return Utils.enhancedHash(
             accountId, billingAddress, contactId,
             createdAt, currency, id,
-            lineitems, organizationId, postedAt,
-            raw, shippingAddress, status,
-            totalAmount, type, updatedAt);
+            lineitems, metadata, organizationId,
+            postedAt, raw, shippingAddress,
+            status, totalAmount, type,
+            updatedAt);
     }
     
     @Override
@@ -343,6 +363,7 @@ public class AccountingOrder {
                 "currency", currency,
                 "id", id,
                 "lineitems", lineitems,
+                "metadata", metadata,
                 "organizationId", organizationId,
                 "postedAt", postedAt,
                 "raw", raw,
@@ -369,6 +390,8 @@ public class AccountingOrder {
         private String id;
 
         private List<AccountingLineitem> lineitems;
+
+        private List<AccountingMetadata> metadata;
 
         private String organizationId;
 
@@ -425,6 +448,11 @@ public class AccountingOrder {
             return this;
         }
 
+        public Builder metadata(@Nullable List<AccountingMetadata> metadata) {
+            this.metadata = metadata;
+            return this;
+        }
+
         public Builder organizationId(@Nullable String organizationId) {
             this.organizationId = organizationId;
             return this;
@@ -469,9 +497,10 @@ public class AccountingOrder {
             return new AccountingOrder(
                 accountId, billingAddress, contactId,
                 createdAt, currency, id,
-                lineitems, organizationId, postedAt,
-                raw, shippingAddress, status,
-                totalAmount, type, updatedAt);
+                lineitems, metadata, organizationId,
+                postedAt, raw, shippingAddress,
+                status, totalAmount, type,
+                updatedAt);
         }
 
     }

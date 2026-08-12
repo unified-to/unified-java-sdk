@@ -79,6 +79,11 @@ public class AccountingVendorcredit {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("metadata")
+    private List<AccountingMetadata> metadata;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notes")
     private String notes;
 
@@ -125,6 +130,7 @@ public class AccountingVendorcredit {
             @JsonProperty("due_at") @Nullable OffsetDateTime dueAt,
             @JsonProperty("id") @Nullable String id,
             @JsonProperty("lineitems") @Nullable List<AccountingLineitem> lineitems,
+            @JsonProperty("metadata") @Nullable List<AccountingMetadata> metadata,
             @JsonProperty("notes") @Nullable String notes,
             @JsonProperty("organization_id") @Nullable String organizationId,
             @JsonProperty("posted_at") @Nullable OffsetDateTime postedAt,
@@ -143,6 +149,7 @@ public class AccountingVendorcredit {
         this.dueAt = dueAt;
         this.id = id;
         this.lineitems = lineitems;
+        this.metadata = metadata;
         this.notes = notes;
         this.organizationId = organizationId;
         this.postedAt = postedAt;
@@ -158,7 +165,8 @@ public class AccountingVendorcredit {
             null, null, null,
             null, null, null,
             null, null, null,
-            null, null, null);
+            null, null, null,
+            null);
     }
 
     public Optional<String> accountId() {
@@ -206,6 +214,10 @@ public class AccountingVendorcredit {
 
     public Optional<List<AccountingLineitem>> lineitems() {
         return Optional.ofNullable(this.lineitems);
+    }
+
+    public Optional<List<AccountingMetadata>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     public Optional<String> notes() {
@@ -310,6 +322,12 @@ public class AccountingVendorcredit {
     }
 
 
+    public AccountingVendorcredit withMetadata(@Nullable List<AccountingMetadata> metadata) {
+        this.metadata = metadata;
+        return this;
+    }
+
+
     public AccountingVendorcredit withNotes(@Nullable String notes) {
         this.notes = notes;
         return this;
@@ -373,6 +391,7 @@ public class AccountingVendorcredit {
             Utils.enhancedDeepEquals(this.dueAt, other.dueAt) &&
             Utils.enhancedDeepEquals(this.id, other.id) &&
             Utils.enhancedDeepEquals(this.lineitems, other.lineitems) &&
+            Utils.enhancedDeepEquals(this.metadata, other.metadata) &&
             Utils.enhancedDeepEquals(this.notes, other.notes) &&
             Utils.enhancedDeepEquals(this.organizationId, other.organizationId) &&
             Utils.enhancedDeepEquals(this.postedAt, other.postedAt) &&
@@ -388,9 +407,10 @@ public class AccountingVendorcredit {
             accountId, applications, applyAmount,
             balanceAmount, billId, contactId,
             createdAt, currency, dueAt,
-            id, lineitems, notes,
-            organizationId, postedAt, raw,
-            status, totalAmount, updatedAt);
+            id, lineitems, metadata,
+            notes, organizationId, postedAt,
+            raw, status, totalAmount,
+            updatedAt);
     }
     
     @Override
@@ -407,6 +427,7 @@ public class AccountingVendorcredit {
                 "dueAt", dueAt,
                 "id", id,
                 "lineitems", lineitems,
+                "metadata", metadata,
                 "notes", notes,
                 "organizationId", organizationId,
                 "postedAt", postedAt,
@@ -440,6 +461,8 @@ public class AccountingVendorcredit {
         private String id;
 
         private List<AccountingLineitem> lineitems;
+
+        private List<AccountingMetadata> metadata;
 
         private String notes;
 
@@ -517,6 +540,11 @@ public class AccountingVendorcredit {
             return this;
         }
 
+        public Builder metadata(@Nullable List<AccountingMetadata> metadata) {
+            this.metadata = metadata;
+            return this;
+        }
+
         public Builder notes(@Nullable String notes) {
             this.notes = notes;
             return this;
@@ -557,9 +585,10 @@ public class AccountingVendorcredit {
                 accountId, applications, applyAmount,
                 balanceAmount, billId, contactId,
                 createdAt, currency, dueAt,
-                id, lineitems, notes,
-                organizationId, postedAt, raw,
-                status, totalAmount, updatedAt);
+                id, lineitems, metadata,
+                notes, organizationId, postedAt,
+                raw, status, totalAmount,
+                updatedAt);
         }
 
     }

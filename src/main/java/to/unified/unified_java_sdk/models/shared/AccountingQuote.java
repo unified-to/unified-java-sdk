@@ -111,6 +111,11 @@ public class AccountingQuote {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("metadata")
+    private List<AccountingMetadata> metadata;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("organization_id")
     private String organizationId;
 
@@ -208,6 +213,7 @@ public class AccountingQuote {
             @JsonProperty("issued_at") @Nullable OffsetDateTime issuedAt,
             @JsonProperty("lineitems") @Nullable List<AccountingLineitem> lineitems,
             @JsonProperty("memo") @Nullable String memo,
+            @JsonProperty("metadata") @Nullable List<AccountingMetadata> metadata,
             @JsonProperty("organization_id") @Nullable String organizationId,
             @JsonProperty("payment_terms") @Nullable AccountingQuotePaymentTerms paymentTerms,
             @JsonProperty("project_id") @Nullable String projectId,
@@ -241,6 +247,7 @@ public class AccountingQuote {
         this.issuedAt = issuedAt;
         this.lineitems = lineitems;
         this.memo = memo;
+        this.metadata = metadata;
         this.organizationId = organizationId;
         this.paymentTerms = paymentTerms;
         this.projectId = projectId;
@@ -270,7 +277,8 @@ public class AccountingQuote {
             null, null, null,
             null, null, null,
             null, null, null,
-            null, null, null);
+            null, null, null,
+            null);
     }
 
     public Optional<OffsetDateTime> acceptedAt() {
@@ -345,6 +353,10 @@ public class AccountingQuote {
 
     public Optional<String> memo() {
         return Optional.ofNullable(this.memo);
+    }
+
+    public Optional<List<AccountingMetadata>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     public Optional<String> organizationId() {
@@ -524,6 +536,12 @@ public class AccountingQuote {
     }
 
 
+    public AccountingQuote withMetadata(@Nullable List<AccountingMetadata> metadata) {
+        this.metadata = metadata;
+        return this;
+    }
+
+
     public AccountingQuote withOrganizationId(@Nullable String organizationId) {
         this.organizationId = organizationId;
         return this;
@@ -647,6 +665,7 @@ public class AccountingQuote {
             Utils.enhancedDeepEquals(this.issuedAt, other.issuedAt) &&
             Utils.enhancedDeepEquals(this.lineitems, other.lineitems) &&
             Utils.enhancedDeepEquals(this.memo, other.memo) &&
+            Utils.enhancedDeepEquals(this.metadata, other.metadata) &&
             Utils.enhancedDeepEquals(this.organizationId, other.organizationId) &&
             Utils.enhancedDeepEquals(this.paymentTerms, other.paymentTerms) &&
             Utils.enhancedDeepEquals(this.projectId, other.projectId) &&
@@ -673,12 +692,13 @@ public class AccountingQuote {
             currencyRate, customerMessage, declinedAt,
             discountAmount, expiresAt, groupId,
             id, invoiceId, issuedAt,
-            lineitems, memo, organizationId,
-            paymentTerms, projectId, quoteNumber,
-            raw, reference, sentAt,
-            status, subTotalAmount, summary,
-            taxAmount, taxMode, title,
-            totalAmount, updatedAt, url);
+            lineitems, memo, metadata,
+            organizationId, paymentTerms, projectId,
+            quoteNumber, raw, reference,
+            sentAt, status, subTotalAmount,
+            summary, taxAmount, taxMode,
+            title, totalAmount, updatedAt,
+            url);
     }
     
     @Override
@@ -701,6 +721,7 @@ public class AccountingQuote {
                 "issuedAt", issuedAt,
                 "lineitems", lineitems,
                 "memo", memo,
+                "metadata", metadata,
                 "organizationId", organizationId,
                 "paymentTerms", paymentTerms,
                 "projectId", projectId,
@@ -755,6 +776,8 @@ public class AccountingQuote {
         private List<AccountingLineitem> lineitems;
 
         private String memo;
+
+        private List<AccountingMetadata> metadata;
 
         private String organizationId;
 
@@ -883,6 +906,11 @@ public class AccountingQuote {
             return this;
         }
 
+        public Builder metadata(@Nullable List<AccountingMetadata> metadata) {
+            this.metadata = metadata;
+            return this;
+        }
+
         public Builder organizationId(@Nullable String organizationId) {
             this.organizationId = organizationId;
             return this;
@@ -970,12 +998,13 @@ public class AccountingQuote {
                 currencyRate, customerMessage, declinedAt,
                 discountAmount, expiresAt, groupId,
                 id, invoiceId, issuedAt,
-                lineitems, memo, organizationId,
-                paymentTerms, projectId, quoteNumber,
-                raw, reference, sentAt,
-                status, subTotalAmount, summary,
-                taxAmount, taxMode, title,
-                totalAmount, updatedAt, url);
+                lineitems, memo, metadata,
+                organizationId, paymentTerms, projectId,
+                quoteNumber, raw, reference,
+                sentAt, status, subTotalAmount,
+                summary, taxAmount, taxMode,
+                title, totalAmount, updatedAt,
+                url);
         }
 
     }

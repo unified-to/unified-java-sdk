@@ -153,6 +153,8 @@ public class PropertyConnectionPermissions {
     public static final PropertyConnectionPermissions HRIS_TIMEOFF_WRITE = new PropertyConnectionPermissions("hris_timeoff_write");
     public static final PropertyConnectionPermissions HRIS_TIMESHIFT_READ = new PropertyConnectionPermissions("hris_timeshift_read");
     public static final PropertyConnectionPermissions HRIS_TIMESHIFT_WRITE = new PropertyConnectionPermissions("hris_timeshift_write");
+    public static final PropertyConnectionPermissions HRIS_ATTENDANCE_READ = new PropertyConnectionPermissions("hris_attendance_read");
+    public static final PropertyConnectionPermissions HRIS_ATTENDANCE_WRITE = new PropertyConnectionPermissions("hris_attendance_write");
     public static final PropertyConnectionPermissions HRIS_COMPANY_READ = new PropertyConnectionPermissions("hris_company_read");
     public static final PropertyConnectionPermissions HRIS_COMPANY_WRITE = new PropertyConnectionPermissions("hris_company_write");
     public static final PropertyConnectionPermissions HRIS_LOCATION_READ = new PropertyConnectionPermissions("hris_location_read");
@@ -530,6 +532,8 @@ public class PropertyConnectionPermissions {
         map.put("hris_timeoff_write", HRIS_TIMEOFF_WRITE);
         map.put("hris_timeshift_read", HRIS_TIMESHIFT_READ);
         map.put("hris_timeshift_write", HRIS_TIMESHIFT_WRITE);
+        map.put("hris_attendance_read", HRIS_ATTENDANCE_READ);
+        map.put("hris_attendance_write", HRIS_ATTENDANCE_WRITE);
         map.put("hris_company_read", HRIS_COMPANY_READ);
         map.put("hris_company_write", HRIS_COMPANY_WRITE);
         map.put("hris_location_read", HRIS_LOCATION_READ);
@@ -839,6 +843,8 @@ public class PropertyConnectionPermissions {
         map.put("hris_timeoff_write", PropertyConnectionPermissionsEnum.HRIS_TIMEOFF_WRITE);
         map.put("hris_timeshift_read", PropertyConnectionPermissionsEnum.HRIS_TIMESHIFT_READ);
         map.put("hris_timeshift_write", PropertyConnectionPermissionsEnum.HRIS_TIMESHIFT_WRITE);
+        map.put("hris_attendance_read", PropertyConnectionPermissionsEnum.HRIS_ATTENDANCE_READ);
+        map.put("hris_attendance_write", PropertyConnectionPermissionsEnum.HRIS_ATTENDANCE_WRITE);
         map.put("hris_company_read", PropertyConnectionPermissionsEnum.HRIS_COMPANY_READ);
         map.put("hris_company_write", PropertyConnectionPermissionsEnum.HRIS_COMPANY_WRITE);
         map.put("hris_location_read", PropertyConnectionPermissionsEnum.HRIS_LOCATION_READ);
@@ -1149,6 +1155,8 @@ public class PropertyConnectionPermissions {
         HRIS_TIMEOFF_WRITE("hris_timeoff_write"),
         HRIS_TIMESHIFT_READ("hris_timeshift_read"),
         HRIS_TIMESHIFT_WRITE("hris_timeshift_write"),
+        HRIS_ATTENDANCE_READ("hris_attendance_read"),
+        HRIS_ATTENDANCE_WRITE("hris_attendance_write"),
         HRIS_COMPANY_READ("hris_company_read"),
         HRIS_COMPANY_WRITE("hris_company_write"),
         HRIS_LOCATION_READ("hris_location_read"),

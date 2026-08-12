@@ -41,6 +41,7 @@ public enum GetAccountingQuoteQueryParamFields {
     CATEGORY_IDS("category_ids"),
     URL("url"),
     ORGANIZATION_ID("organization_id"),
+    METADATA("metadata"),
     RAW("raw");
 
     @JsonValue

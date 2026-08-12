@@ -25,3 +25,6 @@ AccountingPurchaseorderStatus custom = AccountingPurchaseorderStatus.of("custom_
 | `REFUNDED`           | REFUNDED             |
 | `SUBMITTED`          | SUBMITTED            |
 | `DELETED`            | DELETED              |
+| `OPEN`               | OPEN                 |
+| `COMPLETED`          | COMPLETED            |
+| `CANCELED`           | CANCELED             |

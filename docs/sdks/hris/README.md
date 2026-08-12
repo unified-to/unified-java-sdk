@@ -4,6 +4,7 @@
 
 ### Available Operations
 
+* [createHrisAttendance](#createhrisattendance) - Create an attendance
 * [createHrisBankaccount](#createhrisbankaccount) - Create a bankaccount
 * [createHrisBenefit](#createhrisbenefit) - Create a benefit
 * [createHrisCompany](#createhriscompany) - Create a company
@@ -15,6 +16,7 @@
 * [createHrisLocation](#createhrislocation) - Create a location
 * [createHrisTimeoff](#createhristimeoff) - Create a timeoff
 * [createHrisTimeshift](#createhristimeshift) - Create a timeshift
+* [getHrisAttendance](#gethrisattendance) - Retrieve an attendance
 * [getHrisBankaccount](#gethrisbankaccount) - Retrieve a bankaccount
 * [getHrisBenefit](#gethrisbenefit) - Retrieve a benefit
 * [getHrisCompany](#gethriscompany) - Retrieve a company
@@ -28,6 +30,7 @@
 * [getHrisTaxonomy](#gethristaxonomy) - Retrieve a taxonomy
 * [getHrisTimeoff](#gethristimeoff) - Retrieve a timeoff
 * [getHrisTimeshift](#gethristimeshift) - Retrieve a timeshift
+* [listHrisAttendances](#listhrisattendances) - List all attendances
 * [listHrisBankaccounts](#listhrisbankaccounts) - List all bankaccounts
 * [listHrisBenefits](#listhrisbenefits) - List all benefits
 * [listHrisCompanies](#listhriscompanies) - List all companies
@@ -41,6 +44,7 @@
 * [listHrisTaxonomies](#listhristaxonomies) - List all taxonomies
 * [listHrisTimeoffs](#listhristimeoffs) - List all timeoffs
 * [listHrisTimeshifts](#listhristimeshifts) - List all timeshifts
+* [patchHrisAttendance](#patchhrisattendance) - Update an attendance
 * [patchHrisBankaccount](#patchhrisbankaccount) - Update a bankaccount
 * [patchHrisBenefit](#patchhrisbenefit) - Update a benefit
 * [patchHrisCompany](#patchhriscompany) - Update a company
@@ -52,6 +56,7 @@
 * [patchHrisLocation](#patchhrislocation) - Update a location
 * [patchHrisTimeoff](#patchhristimeoff) - Update a timeoff
 * [patchHrisTimeshift](#patchhristimeshift) - Update a timeshift
+* [removeHrisAttendance](#removehrisattendance) - Remove an attendance
 * [removeHrisBankaccount](#removehrisbankaccount) - Remove a bankaccount
 * [removeHrisBenefit](#removehrisbenefit) - Remove a benefit
 * [removeHrisCompany](#removehriscompany) - Remove a company
@@ -63,6 +68,7 @@
 * [removeHrisLocation](#removehrislocation) - Remove a location
 * [removeHrisTimeoff](#removehristimeoff) - Remove a timeoff
 * [removeHrisTimeshift](#removehristimeshift) - Remove a timeshift
+* [updateHrisAttendance](#updatehrisattendance) - Update an attendance
 * [updateHrisBankaccount](#updatehrisbankaccount) - Update a bankaccount
 * [updateHrisBenefit](#updatehrisbenefit) - Update a benefit
 * [updateHrisCompany](#updatehriscompany) - Update a company
@@ -74,6 +80,70 @@
 * [updateHrisLocation](#updatehrislocation) - Update a location
 * [updateHrisTimeoff](#updatehristimeoff) - Update a timeoff
 * [updateHrisTimeshift](#updatehristimeshift) - Update a timeshift
+
+## createHrisAttendance
+
+Create an attendance
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="createHrisAttendance" method="post" path="/hris/{connection_id}/attendance" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import java.time.OffsetDateTime;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.CreateHrisAttendanceRequest;
+import to.unified.unified_java_sdk.models.operations.CreateHrisAttendanceResponse;
+import to.unified.unified_java_sdk.models.shared.HrisAttendance;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        CreateHrisAttendanceRequest req = CreateHrisAttendanceRequest.builder()
+                .hrisAttendance(HrisAttendance.builder()
+                    .employeeUserId("<id>")
+                    .endAt(OffsetDateTime.parse("2026-07-01T14:10:09.942Z"))
+                    .startAt(OffsetDateTime.parse("2026-03-31T03:51:43.280Z"))
+                    .build())
+                .connectionId("<id>")
+                .build();
+
+        CreateHrisAttendanceResponse res = sdk.hris().createHrisAttendance()
+                .request(req)
+                .call();
+
+        if (res.hrisAttendance().isPresent()) {
+            System.out.println(res.hrisAttendance().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                             | Type                                                                                  | Required                                                                              | Description                                                                           |
+| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| `request`                                                                             | [CreateHrisAttendanceRequest](../../models/operations/CreateHrisAttendanceRequest.md) | :heavy_check_mark:                                                                    | The request object to use for the request.                                            |
+
+### Response
+
+**[CreateHrisAttendanceResponse](../../models/operations/CreateHrisAttendanceResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## createHrisBankaccount
 
@@ -730,6 +800,64 @@ public class Application {
 ### Response
 
 **[CreateHrisTimeshiftResponse](../../models/operations/CreateHrisTimeshiftResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## getHrisAttendance
+
+Retrieve an attendance
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="getHrisAttendance" method="get" path="/hris/{connection_id}/attendance/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.GetHrisAttendanceRequest;
+import to.unified.unified_java_sdk.models.operations.GetHrisAttendanceResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        GetHrisAttendanceRequest req = GetHrisAttendanceRequest.builder()
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        GetHrisAttendanceResponse res = sdk.hris().getHrisAttendance()
+                .request(req)
+                .call();
+
+        if (res.hrisAttendance().isPresent()) {
+            System.out.println(res.hrisAttendance().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| `request`                                                                       | [GetHrisAttendanceRequest](../../models/operations/GetHrisAttendanceRequest.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
+
+### Response
+
+**[GetHrisAttendanceResponse](../../models/operations/GetHrisAttendanceResponse.md)**
 
 ### Errors
 
@@ -1491,6 +1619,63 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
+## listHrisAttendances
+
+List all attendances
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="listHrisAttendances" method="get" path="/hris/{connection_id}/attendance" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.ListHrisAttendancesRequest;
+import to.unified.unified_java_sdk.models.operations.ListHrisAttendancesResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        ListHrisAttendancesRequest req = ListHrisAttendancesRequest.builder()
+                .connectionId("<id>")
+                .build();
+
+        ListHrisAttendancesResponse res = sdk.hris().listHrisAttendances()
+                .request(req)
+                .call();
+
+        if (res.hrisAttendances().isPresent()) {
+            System.out.println(res.hrisAttendances().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                           | Type                                                                                | Required                                                                            | Description                                                                         |
+| ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| `request`                                                                           | [ListHrisAttendancesRequest](../../models/operations/ListHrisAttendancesRequest.md) | :heavy_check_mark:                                                                  | The request object to use for the request.                                          |
+
+### Response
+
+**[ListHrisAttendancesResponse](../../models/operations/ListHrisAttendancesResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
 ## listHrisBankaccounts
 
 List all bankaccounts
@@ -2232,6 +2417,71 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
+## patchHrisAttendance
+
+Update an attendance
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="patchHrisAttendance" method="patch" path="/hris/{connection_id}/attendance/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import java.time.OffsetDateTime;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.PatchHrisAttendanceRequest;
+import to.unified.unified_java_sdk.models.operations.PatchHrisAttendanceResponse;
+import to.unified.unified_java_sdk.models.shared.HrisAttendance;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        PatchHrisAttendanceRequest req = PatchHrisAttendanceRequest.builder()
+                .hrisAttendance(HrisAttendance.builder()
+                    .employeeUserId("<id>")
+                    .endAt(OffsetDateTime.parse("2024-09-28T22:23:28.906Z"))
+                    .startAt(OffsetDateTime.parse("2025-01-18T09:17:09.936Z"))
+                    .build())
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        PatchHrisAttendanceResponse res = sdk.hris().patchHrisAttendance()
+                .request(req)
+                .call();
+
+        if (res.hrisAttendance().isPresent()) {
+            System.out.println(res.hrisAttendance().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                           | Type                                                                                | Required                                                                            | Description                                                                         |
+| ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| `request`                                                                           | [PatchHrisAttendanceRequest](../../models/operations/PatchHrisAttendanceRequest.md) | :heavy_check_mark:                                                                  | The request object to use for the request.                                          |
+
+### Response
+
+**[PatchHrisAttendanceResponse](../../models/operations/PatchHrisAttendanceResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
 ## patchHrisBankaccount
 
 Update a bankaccount
@@ -2905,6 +3155,62 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
+## removeHrisAttendance
+
+Remove an attendance
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="removeHrisAttendance" method="delete" path="/hris/{connection_id}/attendance/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.RemoveHrisAttendanceRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveHrisAttendanceResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        RemoveHrisAttendanceRequest req = RemoveHrisAttendanceRequest.builder()
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        RemoveHrisAttendanceResponse res = sdk.hris().removeHrisAttendance()
+                .request(req)
+                .call();
+
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                             | Type                                                                                  | Required                                                                              | Description                                                                           |
+| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| `request`                                                                             | [RemoveHrisAttendanceRequest](../../models/operations/RemoveHrisAttendanceRequest.md) | :heavy_check_mark:                                                                    | The request object to use for the request.                                            |
+
+### Response
+
+**[RemoveHrisAttendanceResponse](../../models/operations/RemoveHrisAttendanceResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
 ## removeHrisBankaccount
 
 Remove a bankaccount
@@ -3514,6 +3820,71 @@ public class Application {
 ### Response
 
 **[RemoveHrisTimeshiftResponse](../../models/operations/RemoveHrisTimeshiftResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## updateHrisAttendance
+
+Update an attendance
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="updateHrisAttendance" method="put" path="/hris/{connection_id}/attendance/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import java.time.OffsetDateTime;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.UpdateHrisAttendanceRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateHrisAttendanceResponse;
+import to.unified.unified_java_sdk.models.shared.HrisAttendance;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        UpdateHrisAttendanceRequest req = UpdateHrisAttendanceRequest.builder()
+                .hrisAttendance(HrisAttendance.builder()
+                    .employeeUserId("<id>")
+                    .endAt(OffsetDateTime.parse("2024-07-06T19:51:15.352Z"))
+                    .startAt(OffsetDateTime.parse("2024-05-22T08:12:53.996Z"))
+                    .build())
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        UpdateHrisAttendanceResponse res = sdk.hris().updateHrisAttendance()
+                .request(req)
+                .call();
+
+        if (res.hrisAttendance().isPresent()) {
+            System.out.println(res.hrisAttendance().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                             | Type                                                                                  | Required                                                                              | Description                                                                           |
+| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| `request`                                                                             | [UpdateHrisAttendanceRequest](../../models/operations/UpdateHrisAttendanceRequest.md) | :heavy_check_mark:                                                                    | The request object to use for the request.                                            |
+
+### Response
+
+**[UpdateHrisAttendanceResponse](../../models/operations/UpdateHrisAttendanceResponse.md)**
 
 ### Errors
 

@@ -44,4 +44,5 @@ UpdateAccountingBillQueryParamFields value = UpdateAccountingBillQueryParamField
 | `PAYMENTS`                  | payments                    |
 | `CATEGORY_IDS`              | category_ids                |
 | `PROJECT_ID`                | project_id                  |
+| `METADATA`                  | metadata                    |
 | `RAW`                       | raw                         |

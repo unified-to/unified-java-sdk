@@ -83,6 +83,11 @@ public class AccountingBill {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("metadata")
+    private List<AccountingMetadata> metadata;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notes")
     private String notes;
 
@@ -197,6 +202,7 @@ public class AccountingBill {
             @JsonProperty("due_at") @Nullable OffsetDateTime dueAt,
             @JsonProperty("id") @Nullable String id,
             @JsonProperty("lineitems") @Nullable List<AccountingLineitem> lineitems,
+            @JsonProperty("metadata") @Nullable List<AccountingMetadata> metadata,
             @JsonProperty("notes") @Nullable String notes,
             @JsonProperty("organization_id") @Nullable String organizationId,
             @JsonProperty("paid_amount") @Nullable Double paidAmount,
@@ -229,6 +235,7 @@ public class AccountingBill {
         this.dueAt = dueAt;
         this.id = id;
         this.lineitems = lineitems;
+        this.metadata = metadata;
         this.notes = notes;
         this.organizationId = organizationId;
         this.paidAmount = paidAmount;
@@ -262,7 +269,7 @@ public class AccountingBill {
             null, null, null,
             null, null, null,
             null, null, null,
-            null, null);
+            null, null, null);
     }
 
     public Optional<List<AccountingAttachment>> attachments() {
@@ -311,6 +318,10 @@ public class AccountingBill {
 
     public Optional<List<AccountingLineitem>> lineitems() {
         return Optional.ofNullable(this.lineitems);
+    }
+
+    public Optional<List<AccountingMetadata>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     public Optional<String> notes() {
@@ -473,6 +484,12 @@ public class AccountingBill {
     }
 
 
+    public AccountingBill withMetadata(@Nullable List<AccountingMetadata> metadata) {
+        this.metadata = metadata;
+        return this;
+    }
+
+
     public AccountingBill withNotes(@Nullable String notes) {
         this.notes = notes;
         return this;
@@ -618,6 +635,7 @@ public class AccountingBill {
             Utils.enhancedDeepEquals(this.dueAt, other.dueAt) &&
             Utils.enhancedDeepEquals(this.id, other.id) &&
             Utils.enhancedDeepEquals(this.lineitems, other.lineitems) &&
+            Utils.enhancedDeepEquals(this.metadata, other.metadata) &&
             Utils.enhancedDeepEquals(this.notes, other.notes) &&
             Utils.enhancedDeepEquals(this.organizationId, other.organizationId) &&
             Utils.enhancedDeepEquals(this.paidAmount, other.paidAmount) &&
@@ -647,13 +665,13 @@ public class AccountingBill {
             cancelledAt, categoryIds, contactId,
             createdAt, currency, discountAmount,
             dueAt, id, lineitems,
-            notes, organizationId, paidAmount,
-            paidAt, paymentCollectionMethod, paymentTerms,
-            payments, postedAt, projectId,
-            raw, refundAmount, refundReason,
-            refundedAt, send, status,
-            taxAmount, term, totalAmount,
-            updatedAt, url);
+            metadata, notes, organizationId,
+            paidAmount, paidAt, paymentCollectionMethod,
+            paymentTerms, payments, postedAt,
+            projectId, raw, refundAmount,
+            refundReason, refundedAt, send,
+            status, taxAmount, term,
+            totalAmount, updatedAt, url);
     }
     
     @Override
@@ -671,6 +689,7 @@ public class AccountingBill {
                 "dueAt", dueAt,
                 "id", id,
                 "lineitems", lineitems,
+                "metadata", metadata,
                 "notes", notes,
                 "organizationId", organizationId,
                 "paidAmount", paidAmount,
@@ -719,6 +738,8 @@ public class AccountingBill {
         private String id;
 
         private List<AccountingLineitem> lineitems;
+
+        private List<AccountingMetadata> metadata;
 
         private String notes;
 
@@ -821,6 +842,11 @@ public class AccountingBill {
 
         public Builder lineitems(@Nullable List<AccountingLineitem> lineitems) {
             this.lineitems = lineitems;
+            return this;
+        }
+
+        public Builder metadata(@Nullable List<AccountingMetadata> metadata) {
+            this.metadata = metadata;
             return this;
         }
 
@@ -933,13 +959,13 @@ public class AccountingBill {
                 cancelledAt, categoryIds, contactId,
                 createdAt, currency, discountAmount,
                 dueAt, id, lineitems,
-                notes, organizationId, paidAmount,
-                paidAt, paymentCollectionMethod, paymentTerms,
-                payments, postedAt, projectId,
-                raw, refundAmount, refundReason,
-                refundedAt, send, status,
-                taxAmount, term, totalAmount,
-                updatedAt, url);
+                metadata, notes, organizationId,
+                paidAmount, paidAt, paymentCollectionMethod,
+                paymentTerms, payments, postedAt,
+                projectId, raw, refundAmount,
+                refundReason, refundedAt, send,
+                status, taxAmount, term,
+                totalAmount, updatedAt, url);
         }
 
     }

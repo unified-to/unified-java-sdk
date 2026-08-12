@@ -29,6 +29,9 @@ public class AccountingPurchaseorderStatus {
     public static final AccountingPurchaseorderStatus REFUNDED = new AccountingPurchaseorderStatus("REFUNDED");
     public static final AccountingPurchaseorderStatus SUBMITTED = new AccountingPurchaseorderStatus("SUBMITTED");
     public static final AccountingPurchaseorderStatus DELETED = new AccountingPurchaseorderStatus("DELETED");
+    public static final AccountingPurchaseorderStatus OPEN = new AccountingPurchaseorderStatus("OPEN");
+    public static final AccountingPurchaseorderStatus COMPLETED = new AccountingPurchaseorderStatus("COMPLETED");
+    public static final AccountingPurchaseorderStatus CANCELED = new AccountingPurchaseorderStatus("CANCELED");
 
     // This map will grow whenever a Color gets created with a new
     // unrecognized value (a potential memory leak if the user is not
@@ -111,6 +114,9 @@ public class AccountingPurchaseorderStatus {
         map.put("REFUNDED", REFUNDED);
         map.put("SUBMITTED", SUBMITTED);
         map.put("DELETED", DELETED);
+        map.put("OPEN", OPEN);
+        map.put("COMPLETED", COMPLETED);
+        map.put("CANCELED", CANCELED);
         return map;
     }
 
@@ -125,6 +131,9 @@ public class AccountingPurchaseorderStatus {
         map.put("REFUNDED", AccountingPurchaseorderStatusEnum.REFUNDED);
         map.put("SUBMITTED", AccountingPurchaseorderStatusEnum.SUBMITTED);
         map.put("DELETED", AccountingPurchaseorderStatusEnum.DELETED);
+        map.put("OPEN", AccountingPurchaseorderStatusEnum.OPEN);
+        map.put("COMPLETED", AccountingPurchaseorderStatusEnum.COMPLETED);
+        map.put("CANCELED", AccountingPurchaseorderStatusEnum.CANCELED);
         return map;
     }
     
@@ -139,7 +148,10 @@ public class AccountingPurchaseorderStatus {
         PARTIALLY_REFUNDED("PARTIALLY_REFUNDED"),
         REFUNDED("REFUNDED"),
         SUBMITTED("SUBMITTED"),
-        DELETED("DELETED"),;
+        DELETED("DELETED"),
+        OPEN("OPEN"),
+        COMPLETED("COMPLETED"),
+        CANCELED("CANCELED"),;
 
         private final String value;
 
