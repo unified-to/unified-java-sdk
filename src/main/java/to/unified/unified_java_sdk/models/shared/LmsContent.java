@@ -66,10 +66,17 @@ public class LmsContent {
     @JsonProperty("id")
     private String id;
 
-
+    /**
+     * &#64;deprecated; use instructors
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instructor_ids")
     private List<String> instructorIds;
+
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("instructors")
+    private List<LmsReference> instructors;
 
 
     @JsonInclude(Include.NON_ABSENT)
@@ -155,6 +162,7 @@ public class LmsContent {
             @JsonProperty("external_reference") @Nullable String externalReference,
             @JsonProperty("id") @Nullable String id,
             @JsonProperty("instructor_ids") @Nullable List<String> instructorIds,
+            @JsonProperty("instructors") @Nullable List<LmsReference> instructors,
             @JsonProperty("is_active") @Nullable Boolean isActive,
             @JsonProperty("languages") @Nullable List<String> languages,
             @JsonProperty("localizations") @Nullable List<LmsContentLocalization> localizations,
@@ -179,6 +187,7 @@ public class LmsContent {
         this.externalReference = externalReference;
         this.id = id;
         this.instructorIds = instructorIds;
+        this.instructors = instructors;
         this.isActive = isActive;
         this.languages = languages;
         this.localizations = localizations;
@@ -203,7 +212,8 @@ public class LmsContent {
             null, null, null,
             null, null, null,
             null, null, null,
-            null, null, null);
+            null, null, null,
+            null);
     }
 
     public Optional<List<String>> categories() {
@@ -242,8 +252,15 @@ public class LmsContent {
         return Optional.ofNullable(this.id);
     }
 
+    /**
+     * &#64;deprecated; use instructors
+     */
     public Optional<List<String>> instructorIds() {
         return Optional.ofNullable(this.instructorIds);
+    }
+
+    public Optional<List<LmsReference>> instructors() {
+        return Optional.ofNullable(this.instructors);
     }
 
     public Optional<Boolean> isActive() {
@@ -364,8 +381,17 @@ public class LmsContent {
     }
 
 
+    /**
+     * &#64;deprecated; use instructors
+     */
     public LmsContent withInstructorIds(@Nullable List<String> instructorIds) {
         this.instructorIds = instructorIds;
+        return this;
+    }
+
+
+    public LmsContent withInstructors(@Nullable List<LmsReference> instructors) {
+        this.instructors = instructors;
         return this;
     }
 
@@ -477,6 +503,7 @@ public class LmsContent {
             Utils.enhancedDeepEquals(this.externalReference, other.externalReference) &&
             Utils.enhancedDeepEquals(this.id, other.id) &&
             Utils.enhancedDeepEquals(this.instructorIds, other.instructorIds) &&
+            Utils.enhancedDeepEquals(this.instructors, other.instructors) &&
             Utils.enhancedDeepEquals(this.isActive, other.isActive) &&
             Utils.enhancedDeepEquals(this.languages, other.languages) &&
             Utils.enhancedDeepEquals(this.localizations, other.localizations) &&
@@ -499,11 +526,12 @@ public class LmsContent {
             categories, collectionIds, courseIds,
             createdAt, description, difficulty,
             durationMinutes, externalReference, id,
-            instructorIds, isActive, languages,
-            localizations, media, name,
-            providerName, publishedAt, raw,
-            shortDescription, skills, sortOrder,
-            subjects, tags, updatedAt);
+            instructorIds, instructors, isActive,
+            languages, localizations, media,
+            name, providerName, publishedAt,
+            raw, shortDescription, skills,
+            sortOrder, subjects, tags,
+            updatedAt);
     }
     
     @Override
@@ -519,6 +547,7 @@ public class LmsContent {
                 "externalReference", externalReference,
                 "id", id,
                 "instructorIds", instructorIds,
+                "instructors", instructors,
                 "isActive", isActive,
                 "languages", languages,
                 "localizations", localizations,
@@ -557,6 +586,8 @@ public class LmsContent {
         private String id;
 
         private List<String> instructorIds;
+
+        private List<LmsReference> instructors;
 
         private Boolean isActive;
 
@@ -635,8 +666,16 @@ public class LmsContent {
             return this;
         }
 
+        /**
+         * &#64;deprecated; use instructors
+         */
         public Builder instructorIds(@Nullable List<String> instructorIds) {
             this.instructorIds = instructorIds;
+            return this;
+        }
+
+        public Builder instructors(@Nullable List<LmsReference> instructors) {
+            this.instructors = instructors;
             return this;
         }
 
@@ -718,11 +757,12 @@ public class LmsContent {
                 categories, collectionIds, courseIds,
                 createdAt, description, difficulty,
                 durationMinutes, externalReference, id,
-                instructorIds, isActive, languages,
-                localizations, media, name,
-                providerName, publishedAt, raw,
-                shortDescription, skills, sortOrder,
-                subjects, tags, updatedAt);
+                instructorIds, instructors, isActive,
+                languages, localizations, media,
+                name, providerName, publishedAt,
+                raw, shortDescription, skills,
+                sortOrder, subjects, tags,
+                updatedAt);
         }
 
     }

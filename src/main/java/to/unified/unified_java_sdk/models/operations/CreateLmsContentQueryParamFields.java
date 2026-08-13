@@ -28,10 +28,11 @@ public enum CreateLmsContentQueryParamFields {
     SORT_ORDER("sort_order"),
     PROVIDER_NAME("provider_name"),
     SHORT_DESCRIPTION("short_description"),
-    PUBLISHED_AT("published_at"),
     LOCALIZATIONS("localizations"),
     INSTRUCTOR_IDS("instructor_ids"),
     COLLECTION_IDS("collection_ids"),
+    INSTRUCTORS("instructors"),
+    PUBLISHED_AT("published_at"),
     RAW("raw");
 
     @JsonValue

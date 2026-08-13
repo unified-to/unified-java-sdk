@@ -66,7 +66,7 @@ public class LmsCourse {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instructors")
-    private List<LmsInstructor> instructors;
+    private List<LmsReference> instructors;
 
 
     @JsonInclude(Include.NON_ABSENT)
@@ -128,7 +128,7 @@ public class LmsCourse {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("students")
-    private List<LmsStudent> students;
+    private List<LmsReference> students;
 
 
     @JsonInclude(Include.NON_ABSENT)
@@ -150,7 +150,7 @@ public class LmsCourse {
             @JsonProperty("duration_minutes") @Nullable Double durationMinutes,
             @JsonProperty("id") @Nullable String id,
             @JsonProperty("instructor_ids") @Nullable List<String> instructorIds,
-            @JsonProperty("instructors") @Nullable List<LmsInstructor> instructors,
+            @JsonProperty("instructors") @Nullable List<LmsReference> instructors,
             @JsonProperty("is_active") @Nullable Boolean isActive,
             @JsonProperty("is_private") @Nullable Boolean isPrivate,
             @JsonProperty("languages") @Nullable List<String> languages,
@@ -162,7 +162,7 @@ public class LmsCourse {
             @JsonProperty("raw") @Nullable Map<String, Object> raw,
             @JsonProperty("skills") @Nullable List<String> skills,
             @JsonProperty("student_ids") @Nullable List<String> studentIds,
-            @JsonProperty("students") @Nullable List<LmsStudent> students,
+            @JsonProperty("students") @Nullable List<LmsReference> students,
             @JsonProperty("time_estimate_minutes") @Nullable Double timeEstimateMinutes,
             @JsonProperty("updated_at") @Nullable OffsetDateTime updatedAt) {
         this.categories = categories;
@@ -236,7 +236,7 @@ public class LmsCourse {
         return Optional.ofNullable(this.instructorIds);
     }
 
-    public Optional<List<LmsInstructor>> instructors() {
+    public Optional<List<LmsReference>> instructors() {
         return Optional.ofNullable(this.instructors);
     }
 
@@ -287,7 +287,7 @@ public class LmsCourse {
         return Optional.ofNullable(this.studentIds);
     }
 
-    public Optional<List<LmsStudent>> students() {
+    public Optional<List<LmsReference>> students() {
         return Optional.ofNullable(this.students);
     }
 
@@ -355,7 +355,7 @@ public class LmsCourse {
     }
 
 
-    public LmsCourse withInstructors(@Nullable List<LmsInstructor> instructors) {
+    public LmsCourse withInstructors(@Nullable List<LmsReference> instructors) {
         this.instructors = instructors;
         return this;
     }
@@ -430,7 +430,7 @@ public class LmsCourse {
     }
 
 
-    public LmsCourse withStudents(@Nullable List<LmsStudent> students) {
+    public LmsCourse withStudents(@Nullable List<LmsReference> students) {
         this.students = students;
         return this;
     }
@@ -543,7 +543,7 @@ public class LmsCourse {
 
         private List<String> instructorIds;
 
-        private List<LmsInstructor> instructors;
+        private List<LmsReference> instructors;
 
         private Boolean isActive;
 
@@ -567,7 +567,7 @@ public class LmsCourse {
 
         private List<String> studentIds;
 
-        private List<LmsStudent> students;
+        private List<LmsReference> students;
 
         private Double timeEstimateMinutes;
 
@@ -620,7 +620,7 @@ public class LmsCourse {
             return this;
         }
 
-        public Builder instructors(@Nullable List<LmsInstructor> instructors) {
+        public Builder instructors(@Nullable List<LmsReference> instructors) {
             this.instructors = instructors;
             return this;
         }
@@ -683,7 +683,7 @@ public class LmsCourse {
             return this;
         }
 
-        public Builder students(@Nullable List<LmsStudent> students) {
+        public Builder students(@Nullable List<LmsReference> students) {
             this.students = students;
             return this;
         }

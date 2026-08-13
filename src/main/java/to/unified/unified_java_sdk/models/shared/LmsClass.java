@@ -39,10 +39,17 @@ public class LmsClass {
     @JsonProperty("id")
     private String id;
 
-
+    /**
+     * &#64;deprecated; use instructors
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instructor_ids")
     private List<String> instructorIds;
+
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("instructors")
+    private List<LmsReference> instructors;
 
 
     @JsonInclude(Include.NON_ABSENT)
@@ -64,10 +71,17 @@ public class LmsClass {
     @JsonProperty("raw")
     private Map<String, Object> raw;
 
-
+    /**
+     * &#64;deprecated; use students
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("student_ids")
     private List<String> studentIds;
+
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("students")
+    private List<LmsReference> students;
 
 
     @JsonInclude(Include.NON_ABSENT)
@@ -81,22 +95,26 @@ public class LmsClass {
             @JsonProperty("description") @Nullable String description,
             @JsonProperty("id") @Nullable String id,
             @JsonProperty("instructor_ids") @Nullable List<String> instructorIds,
+            @JsonProperty("instructors") @Nullable List<LmsReference> instructors,
             @JsonProperty("languages") @Nullable List<String> languages,
             @JsonProperty("media") @Nullable List<LmsMedia> media,
             @JsonProperty("name") @Nullable String name,
             @JsonProperty("raw") @Nullable Map<String, Object> raw,
             @JsonProperty("student_ids") @Nullable List<String> studentIds,
+            @JsonProperty("students") @Nullable List<LmsReference> students,
             @JsonProperty("updated_at") @Nullable OffsetDateTime updatedAt) {
         this.courseId = courseId;
         this.createdAt = createdAt;
         this.description = description;
         this.id = id;
         this.instructorIds = instructorIds;
+        this.instructors = instructors;
         this.languages = languages;
         this.media = media;
         this.name = name;
         this.raw = raw;
         this.studentIds = studentIds;
+        this.students = students;
         this.updatedAt = updatedAt;
     }
     
@@ -104,7 +122,8 @@ public class LmsClass {
         this(null, null, null,
             null, null, null,
             null, null, null,
-            null, null);
+            null, null, null,
+            null);
     }
 
     public Optional<String> courseId() {
@@ -123,8 +142,15 @@ public class LmsClass {
         return Optional.ofNullable(this.id);
     }
 
+    /**
+     * &#64;deprecated; use instructors
+     */
     public Optional<List<String>> instructorIds() {
         return Optional.ofNullable(this.instructorIds);
+    }
+
+    public Optional<List<LmsReference>> instructors() {
+        return Optional.ofNullable(this.instructors);
     }
 
     public Optional<List<String>> languages() {
@@ -143,8 +169,15 @@ public class LmsClass {
         return Optional.ofNullable(this.raw);
     }
 
+    /**
+     * &#64;deprecated; use students
+     */
     public Optional<List<String>> studentIds() {
         return Optional.ofNullable(this.studentIds);
+    }
+
+    public Optional<List<LmsReference>> students() {
+        return Optional.ofNullable(this.students);
     }
 
     public Optional<OffsetDateTime> updatedAt() {
@@ -180,8 +213,17 @@ public class LmsClass {
     }
 
 
+    /**
+     * &#64;deprecated; use instructors
+     */
     public LmsClass withInstructorIds(@Nullable List<String> instructorIds) {
         this.instructorIds = instructorIds;
+        return this;
+    }
+
+
+    public LmsClass withInstructors(@Nullable List<LmsReference> instructors) {
+        this.instructors = instructors;
         return this;
     }
 
@@ -210,8 +252,17 @@ public class LmsClass {
     }
 
 
+    /**
+     * &#64;deprecated; use students
+     */
     public LmsClass withStudentIds(@Nullable List<String> studentIds) {
         this.studentIds = studentIds;
+        return this;
+    }
+
+
+    public LmsClass withStudents(@Nullable List<LmsReference> students) {
+        this.students = students;
         return this;
     }
 
@@ -237,11 +288,13 @@ public class LmsClass {
             Utils.enhancedDeepEquals(this.description, other.description) &&
             Utils.enhancedDeepEquals(this.id, other.id) &&
             Utils.enhancedDeepEquals(this.instructorIds, other.instructorIds) &&
+            Utils.enhancedDeepEquals(this.instructors, other.instructors) &&
             Utils.enhancedDeepEquals(this.languages, other.languages) &&
             Utils.enhancedDeepEquals(this.media, other.media) &&
             Utils.enhancedDeepEquals(this.name, other.name) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
             Utils.enhancedDeepEquals(this.studentIds, other.studentIds) &&
+            Utils.enhancedDeepEquals(this.students, other.students) &&
             Utils.enhancedDeepEquals(this.updatedAt, other.updatedAt);
     }
     
@@ -249,9 +302,10 @@ public class LmsClass {
     public int hashCode() {
         return Utils.enhancedHash(
             courseId, createdAt, description,
-            id, instructorIds, languages,
-            media, name, raw,
-            studentIds, updatedAt);
+            id, instructorIds, instructors,
+            languages, media, name,
+            raw, studentIds, students,
+            updatedAt);
     }
     
     @Override
@@ -262,11 +316,13 @@ public class LmsClass {
                 "description", description,
                 "id", id,
                 "instructorIds", instructorIds,
+                "instructors", instructors,
                 "languages", languages,
                 "media", media,
                 "name", name,
                 "raw", raw,
                 "studentIds", studentIds,
+                "students", students,
                 "updatedAt", updatedAt);
     }
 
@@ -283,6 +339,8 @@ public class LmsClass {
 
         private List<String> instructorIds;
 
+        private List<LmsReference> instructors;
+
         private List<String> languages;
 
         private List<LmsMedia> media;
@@ -292,6 +350,8 @@ public class LmsClass {
         private Map<String, Object> raw;
 
         private List<String> studentIds;
+
+        private List<LmsReference> students;
 
         private OffsetDateTime updatedAt;
 
@@ -319,8 +379,16 @@ public class LmsClass {
             return this;
         }
 
+        /**
+         * &#64;deprecated; use instructors
+         */
         public Builder instructorIds(@Nullable List<String> instructorIds) {
             this.instructorIds = instructorIds;
+            return this;
+        }
+
+        public Builder instructors(@Nullable List<LmsReference> instructors) {
+            this.instructors = instructors;
             return this;
         }
 
@@ -344,8 +412,16 @@ public class LmsClass {
             return this;
         }
 
+        /**
+         * &#64;deprecated; use students
+         */
         public Builder studentIds(@Nullable List<String> studentIds) {
             this.studentIds = studentIds;
+            return this;
+        }
+
+        public Builder students(@Nullable List<LmsReference> students) {
+            this.students = students;
             return this;
         }
 
@@ -357,9 +433,10 @@ public class LmsClass {
         public LmsClass build() {
             return new LmsClass(
                 courseId, createdAt, description,
-                id, instructorIds, languages,
-                media, name, raw,
-                studentIds, updatedAt);
+                id, instructorIds, instructors,
+                languages, media, name,
+                raw, studentIds, students,
+                updatedAt);
         }
 
     }
