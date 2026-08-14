@@ -67,6 +67,10 @@ public class PropertyConnectionPermissions {
     public static final PropertyConnectionPermissions ACCOUNTING_AGEDPAYABLE_READ = new PropertyConnectionPermissions("accounting_agedpayable_read");
     public static final PropertyConnectionPermissions ACCOUNTING_PROJECT_READ = new PropertyConnectionPermissions("accounting_project_read");
     public static final PropertyConnectionPermissions ACCOUNTING_PROJECT_WRITE = new PropertyConnectionPermissions("accounting_project_write");
+    public static final PropertyConnectionPermissions ACCOUNTING_BANKFEEDACCOUNT_READ = new PropertyConnectionPermissions("accounting_bankfeedaccount_read");
+    public static final PropertyConnectionPermissions ACCOUNTING_BANKFEEDACCOUNT_WRITE = new PropertyConnectionPermissions("accounting_bankfeedaccount_write");
+    public static final PropertyConnectionPermissions ACCOUNTING_BANKFEEDTRANSACTION_READ = new PropertyConnectionPermissions("accounting_bankfeedtransaction_read");
+    public static final PropertyConnectionPermissions ACCOUNTING_BANKFEEDTRANSACTION_WRITE = new PropertyConnectionPermissions("accounting_bankfeedtransaction_write");
     public static final PropertyConnectionPermissions PAYMENT_PAYOUT_READ = new PropertyConnectionPermissions("payment_payout_read");
     public static final PropertyConnectionPermissions PAYMENT_REFUND_READ = new PropertyConnectionPermissions("payment_refund_read");
     public static final PropertyConnectionPermissions PAYMENT_LINK_READ = new PropertyConnectionPermissions("payment_link_read");
@@ -446,6 +450,10 @@ public class PropertyConnectionPermissions {
         map.put("accounting_agedpayable_read", ACCOUNTING_AGEDPAYABLE_READ);
         map.put("accounting_project_read", ACCOUNTING_PROJECT_READ);
         map.put("accounting_project_write", ACCOUNTING_PROJECT_WRITE);
+        map.put("accounting_bankfeedaccount_read", ACCOUNTING_BANKFEEDACCOUNT_READ);
+        map.put("accounting_bankfeedaccount_write", ACCOUNTING_BANKFEEDACCOUNT_WRITE);
+        map.put("accounting_bankfeedtransaction_read", ACCOUNTING_BANKFEEDTRANSACTION_READ);
+        map.put("accounting_bankfeedtransaction_write", ACCOUNTING_BANKFEEDTRANSACTION_WRITE);
         map.put("payment_payout_read", PAYMENT_PAYOUT_READ);
         map.put("payment_refund_read", PAYMENT_REFUND_READ);
         map.put("payment_link_read", PAYMENT_LINK_READ);
@@ -757,6 +765,10 @@ public class PropertyConnectionPermissions {
         map.put("accounting_agedpayable_read", PropertyConnectionPermissionsEnum.ACCOUNTING_AGEDPAYABLE_READ);
         map.put("accounting_project_read", PropertyConnectionPermissionsEnum.ACCOUNTING_PROJECT_READ);
         map.put("accounting_project_write", PropertyConnectionPermissionsEnum.ACCOUNTING_PROJECT_WRITE);
+        map.put("accounting_bankfeedaccount_read", PropertyConnectionPermissionsEnum.ACCOUNTING_BANKFEEDACCOUNT_READ);
+        map.put("accounting_bankfeedaccount_write", PropertyConnectionPermissionsEnum.ACCOUNTING_BANKFEEDACCOUNT_WRITE);
+        map.put("accounting_bankfeedtransaction_read", PropertyConnectionPermissionsEnum.ACCOUNTING_BANKFEEDTRANSACTION_READ);
+        map.put("accounting_bankfeedtransaction_write", PropertyConnectionPermissionsEnum.ACCOUNTING_BANKFEEDTRANSACTION_WRITE);
         map.put("payment_payout_read", PropertyConnectionPermissionsEnum.PAYMENT_PAYOUT_READ);
         map.put("payment_refund_read", PropertyConnectionPermissionsEnum.PAYMENT_REFUND_READ);
         map.put("payment_link_read", PropertyConnectionPermissionsEnum.PAYMENT_LINK_READ);
@@ -1069,6 +1081,10 @@ public class PropertyConnectionPermissions {
         ACCOUNTING_AGEDPAYABLE_READ("accounting_agedpayable_read"),
         ACCOUNTING_PROJECT_READ("accounting_project_read"),
         ACCOUNTING_PROJECT_WRITE("accounting_project_write"),
+        ACCOUNTING_BANKFEEDACCOUNT_READ("accounting_bankfeedaccount_read"),
+        ACCOUNTING_BANKFEEDACCOUNT_WRITE("accounting_bankfeedaccount_write"),
+        ACCOUNTING_BANKFEEDTRANSACTION_READ("accounting_bankfeedtransaction_read"),
+        ACCOUNTING_BANKFEEDTRANSACTION_WRITE("accounting_bankfeedtransaction_write"),
         PAYMENT_PAYOUT_READ("payment_payout_read"),
         PAYMENT_REFUND_READ("payment_refund_read"),
         PAYMENT_LINK_READ("payment_link_read"),

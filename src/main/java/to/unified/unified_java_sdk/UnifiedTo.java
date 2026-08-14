@@ -56,6 +56,12 @@ public class UnifiedTo {
     private final Balancesheet balancesheet;
 
 
+    private final Bankfeedaccount bankfeedaccount;
+
+
+    private final Bankfeedtransaction bankfeedtransaction;
+
+
     private final Bill bill;
 
 
@@ -567,6 +573,16 @@ public class UnifiedTo {
 
     public Balancesheet balancesheet() {
         return balancesheet;
+    }
+
+
+    public Bankfeedaccount bankfeedaccount() {
+        return bankfeedaccount;
+    }
+
+
+    public Bankfeedtransaction bankfeedtransaction() {
+        return bankfeedtransaction;
     }
 
 
@@ -1526,6 +1542,8 @@ public class UnifiedTo {
         this.agedpayable = new Agedpayable(sdkConfiguration);
         this.agedreceivable = new Agedreceivable(sdkConfiguration);
         this.balancesheet = new Balancesheet(sdkConfiguration);
+        this.bankfeedaccount = new Bankfeedaccount(sdkConfiguration);
+        this.bankfeedtransaction = new Bankfeedtransaction(sdkConfiguration);
         this.bill = new Bill(sdkConfiguration);
         this.cashflow = new Cashflow(sdkConfiguration);
         this.category = new Category(sdkConfiguration);

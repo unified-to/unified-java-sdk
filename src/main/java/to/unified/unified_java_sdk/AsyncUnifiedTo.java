@@ -23,6 +23,10 @@ public class AsyncUnifiedTo {
 
     private final AsyncBalancesheet balancesheet;
 
+    private final AsyncBankfeedaccount bankfeedaccount;
+
+    private final AsyncBankfeedtransaction bankfeedtransaction;
+
     private final AsyncBill bill;
 
     private final AsyncCashflow cashflow;
@@ -367,6 +371,14 @@ public class AsyncUnifiedTo {
 
     public AsyncBalancesheet balancesheet() {
         return balancesheet;
+    }
+
+    public AsyncBankfeedaccount bankfeedaccount() {
+        return bankfeedaccount;
+    }
+
+    public AsyncBankfeedtransaction bankfeedtransaction() {
+        return bankfeedtransaction;
     }
 
     public AsyncBill bill() {
@@ -1032,6 +1044,8 @@ public class AsyncUnifiedTo {
         this.agedpayable = new AsyncAgedpayable(syncSDK.agedpayable(), sdkConfiguration);
         this.agedreceivable = new AsyncAgedreceivable(syncSDK.agedreceivable(), sdkConfiguration);
         this.balancesheet = new AsyncBalancesheet(syncSDK.balancesheet(), sdkConfiguration);
+        this.bankfeedaccount = new AsyncBankfeedaccount(syncSDK.bankfeedaccount(), sdkConfiguration);
+        this.bankfeedtransaction = new AsyncBankfeedtransaction(syncSDK.bankfeedtransaction(), sdkConfiguration);
         this.bill = new AsyncBill(syncSDK.bill(), sdkConfiguration);
         this.cashflow = new AsyncCashflow(syncSDK.cashflow(), sdkConfiguration);
         this.category = new AsyncCategory(syncSDK.category(), sdkConfiguration);

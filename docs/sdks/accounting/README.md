@@ -5,6 +5,8 @@
 ### Available Operations
 
 * [createAccountingAccount](#createaccountingaccount) - Create an account
+* [createAccountingBankfeedaccount](#createaccountingbankfeedaccount) - Create a bankfeedaccount
+* [createAccountingBankfeedtransaction](#createaccountingbankfeedtransaction) - Create a bankfeedtransaction
 * [createAccountingBill](#createaccountingbill) - Create a bill
 * [createAccountingCategory](#createaccountingcategory) - Create a category
 * [createAccountingContact](#createaccountingcontact) - Create a contact
@@ -24,6 +26,8 @@
 * [getAccountingAgedpayable](#getaccountingagedpayable) - Retrieve an agedpayable
 * [getAccountingAgedreceivable](#getaccountingagedreceivable) - Retrieve an agedreceivable
 * [getAccountingBalancesheet](#getaccountingbalancesheet) - Retrieve a balancesheet
+* [getAccountingBankfeedaccount](#getaccountingbankfeedaccount) - Retrieve a bankfeedaccount
+* [getAccountingBankfeedtransaction](#getaccountingbankfeedtransaction) - Retrieve a bankfeedtransaction
 * [getAccountingBill](#getaccountingbill) - Retrieve a bill
 * [getAccountingCashflow](#getaccountingcashflow) - Retrieve a cashflow
 * [getAccountingCategory](#getaccountingcategory) - Retrieve a category
@@ -48,6 +52,8 @@
 * [listAccountingAgedpayables](#listaccountingagedpayables) - List all agedpayables
 * [listAccountingAgedreceivables](#listaccountingagedreceivables) - List all agedreceivables
 * [listAccountingBalancesheets](#listaccountingbalancesheets) - List all balancesheets
+* [listAccountingBankfeedaccounts](#listaccountingbankfeedaccounts) - List all bankfeedaccounts
+* [listAccountingBankfeedtransactions](#listaccountingbankfeedtransactions) - List all bankfeedtransactions
 * [listAccountingBills](#listaccountingbills) - List all bills
 * [listAccountingCashflows](#listaccountingcashflows) - List all cashflows
 * [listAccountingCategories](#listaccountingcategories) - List all categories
@@ -69,6 +75,8 @@
 * [listAccountingTrialbalances](#listaccountingtrialbalances) - List all trialbalances
 * [listAccountingVendorcredits](#listaccountingvendorcredits) - List all vendorcredits
 * [patchAccountingAccount](#patchaccountingaccount) - Update an account
+* [patchAccountingBankfeedaccount](#patchaccountingbankfeedaccount) - Update a bankfeedaccount
+* [patchAccountingBankfeedtransaction](#patchaccountingbankfeedtransaction) - Update a bankfeedtransaction
 * [patchAccountingBill](#patchaccountingbill) - Update a bill
 * [patchAccountingCategory](#patchaccountingcategory) - Update a category
 * [patchAccountingContact](#patchaccountingcontact) - Update a contact
@@ -85,6 +93,8 @@
 * [patchAccountingTransaction](#patchaccountingtransaction) - Update a transaction
 * [patchAccountingVendorcredit](#patchaccountingvendorcredit) - Update a vendorcredit
 * [removeAccountingAccount](#removeaccountingaccount) - Remove an account
+* [removeAccountingBankfeedaccount](#removeaccountingbankfeedaccount) - Remove a bankfeedaccount
+* [removeAccountingBankfeedtransaction](#removeaccountingbankfeedtransaction) - Remove a bankfeedtransaction
 * [removeAccountingBill](#removeaccountingbill) - Remove a bill
 * [removeAccountingCategory](#removeaccountingcategory) - Remove a category
 * [removeAccountingContact](#removeaccountingcontact) - Remove a contact
@@ -101,6 +111,8 @@
 * [removeAccountingTransaction](#removeaccountingtransaction) - Remove a transaction
 * [removeAccountingVendorcredit](#removeaccountingvendorcredit) - Remove a vendorcredit
 * [updateAccountingAccount](#updateaccountingaccount) - Update an account
+* [updateAccountingBankfeedaccount](#updateaccountingbankfeedaccount) - Update a bankfeedaccount
+* [updateAccountingBankfeedtransaction](#updateaccountingbankfeedtransaction) - Update a bankfeedtransaction
 * [updateAccountingBill](#updateaccountingbill) - Update a bill
 * [updateAccountingCategory](#updateaccountingcategory) - Update a category
 * [updateAccountingContact](#updateaccountingcontact) - Update a contact
@@ -170,6 +182,126 @@ public class Application {
 ### Response
 
 **[CreateAccountingAccountResponse](../../models/operations/CreateAccountingAccountResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## createAccountingBankfeedaccount
+
+Create a bankfeedaccount
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="createAccountingBankfeedaccount" method="post" path="/accounting/{connection_id}/bankfeedaccount" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.CreateAccountingBankfeedaccountRequest;
+import to.unified.unified_java_sdk.models.operations.CreateAccountingBankfeedaccountResponse;
+import to.unified.unified_java_sdk.models.shared.AccountingBankfeedaccount;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        CreateAccountingBankfeedaccountRequest req = CreateAccountingBankfeedaccountRequest.builder()
+                .accountingBankfeedaccount(AccountingBankfeedaccount.builder()
+                    .build())
+                .connectionId("<id>")
+                .build();
+
+        CreateAccountingBankfeedaccountResponse res = sdk.accounting().createAccountingBankfeedaccount()
+                .request(req)
+                .call();
+
+        if (res.accountingBankfeedaccount().isPresent()) {
+            System.out.println(res.accountingBankfeedaccount().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                   | Type                                                                                                        | Required                                                                                                    | Description                                                                                                 |
+| ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                   | [CreateAccountingBankfeedaccountRequest](../../models/operations/CreateAccountingBankfeedaccountRequest.md) | :heavy_check_mark:                                                                                          | The request object to use for the request.                                                                  |
+
+### Response
+
+**[CreateAccountingBankfeedaccountResponse](../../models/operations/CreateAccountingBankfeedaccountResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## createAccountingBankfeedtransaction
+
+Create a bankfeedtransaction
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="createAccountingBankfeedtransaction" method="post" path="/accounting/{connection_id}/bankfeedtransaction" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.CreateAccountingBankfeedtransactionRequest;
+import to.unified.unified_java_sdk.models.operations.CreateAccountingBankfeedtransactionResponse;
+import to.unified.unified_java_sdk.models.shared.AccountingBankfeedtransaction;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        CreateAccountingBankfeedtransactionRequest req = CreateAccountingBankfeedtransactionRequest.builder()
+                .accountingBankfeedtransaction(AccountingBankfeedtransaction.builder()
+                    .build())
+                .connectionId("<id>")
+                .build();
+
+        CreateAccountingBankfeedtransactionResponse res = sdk.accounting().createAccountingBankfeedtransaction()
+                .request(req)
+                .call();
+
+        if (res.accountingBankfeedtransaction().isPresent()) {
+            System.out.println(res.accountingBankfeedtransaction().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                           | Type                                                                                                                | Required                                                                                                            | Description                                                                                                         |
+| ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                           | [CreateAccountingBankfeedtransactionRequest](../../models/operations/CreateAccountingBankfeedtransactionRequest.md) | :heavy_check_mark:                                                                                                  | The request object to use for the request.                                                                          |
+
+### Response
+
+**[CreateAccountingBankfeedtransactionResponse](../../models/operations/CreateAccountingBankfeedtransactionResponse.md)**
 
 ### Errors
 
@@ -1302,6 +1434,122 @@ public class Application {
 ### Response
 
 **[GetAccountingBalancesheetResponse](../../models/operations/GetAccountingBalancesheetResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## getAccountingBankfeedaccount
+
+Retrieve a bankfeedaccount
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="getAccountingBankfeedaccount" method="get" path="/accounting/{connection_id}/bankfeedaccount/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.GetAccountingBankfeedaccountRequest;
+import to.unified.unified_java_sdk.models.operations.GetAccountingBankfeedaccountResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        GetAccountingBankfeedaccountRequest req = GetAccountingBankfeedaccountRequest.builder()
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        GetAccountingBankfeedaccountResponse res = sdk.accounting().getAccountingBankfeedaccount()
+                .request(req)
+                .call();
+
+        if (res.accountingBankfeedaccount().isPresent()) {
+            System.out.println(res.accountingBankfeedaccount().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                             | Type                                                                                                  | Required                                                                                              | Description                                                                                           |
+| ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
+| `request`                                                                                             | [GetAccountingBankfeedaccountRequest](../../models/operations/GetAccountingBankfeedaccountRequest.md) | :heavy_check_mark:                                                                                    | The request object to use for the request.                                                            |
+
+### Response
+
+**[GetAccountingBankfeedaccountResponse](../../models/operations/GetAccountingBankfeedaccountResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## getAccountingBankfeedtransaction
+
+Retrieve a bankfeedtransaction
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="getAccountingBankfeedtransaction" method="get" path="/accounting/{connection_id}/bankfeedtransaction/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.GetAccountingBankfeedtransactionRequest;
+import to.unified.unified_java_sdk.models.operations.GetAccountingBankfeedtransactionResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        GetAccountingBankfeedtransactionRequest req = GetAccountingBankfeedtransactionRequest.builder()
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        GetAccountingBankfeedtransactionResponse res = sdk.accounting().getAccountingBankfeedtransaction()
+                .request(req)
+                .call();
+
+        if (res.accountingBankfeedtransaction().isPresent()) {
+            System.out.println(res.accountingBankfeedtransaction().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                     | Type                                                                                                          | Required                                                                                                      | Description                                                                                                   |
+| ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                     | [GetAccountingBankfeedtransactionRequest](../../models/operations/GetAccountingBankfeedtransactionRequest.md) | :heavy_check_mark:                                                                                            | The request object to use for the request.                                                                    |
+
+### Response
+
+**[GetAccountingBankfeedtransactionResponse](../../models/operations/GetAccountingBankfeedtransactionResponse.md)**
 
 ### Errors
 
@@ -2697,6 +2945,120 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
+## listAccountingBankfeedaccounts
+
+List all bankfeedaccounts
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="listAccountingBankfeedaccounts" method="get" path="/accounting/{connection_id}/bankfeedaccount" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.ListAccountingBankfeedaccountsRequest;
+import to.unified.unified_java_sdk.models.operations.ListAccountingBankfeedaccountsResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        ListAccountingBankfeedaccountsRequest req = ListAccountingBankfeedaccountsRequest.builder()
+                .connectionId("<id>")
+                .build();
+
+        ListAccountingBankfeedaccountsResponse res = sdk.accounting().listAccountingBankfeedaccounts()
+                .request(req)
+                .call();
+
+        if (res.accountingBankfeedaccounts().isPresent()) {
+            System.out.println(res.accountingBankfeedaccounts().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                 | Type                                                                                                      | Required                                                                                                  | Description                                                                                               |
+| --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                 | [ListAccountingBankfeedaccountsRequest](../../models/operations/ListAccountingBankfeedaccountsRequest.md) | :heavy_check_mark:                                                                                        | The request object to use for the request.                                                                |
+
+### Response
+
+**[ListAccountingBankfeedaccountsResponse](../../models/operations/ListAccountingBankfeedaccountsResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## listAccountingBankfeedtransactions
+
+List all bankfeedtransactions
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="listAccountingBankfeedtransactions" method="get" path="/accounting/{connection_id}/bankfeedtransaction" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.ListAccountingBankfeedtransactionsRequest;
+import to.unified.unified_java_sdk.models.operations.ListAccountingBankfeedtransactionsResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        ListAccountingBankfeedtransactionsRequest req = ListAccountingBankfeedtransactionsRequest.builder()
+                .connectionId("<id>")
+                .build();
+
+        ListAccountingBankfeedtransactionsResponse res = sdk.accounting().listAccountingBankfeedtransactions()
+                .request(req)
+                .call();
+
+        if (res.accountingBankfeedtransactions().isPresent()) {
+            System.out.println(res.accountingBankfeedtransactions().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                         | Type                                                                                                              | Required                                                                                                          | Description                                                                                                       |
+| ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                         | [ListAccountingBankfeedtransactionsRequest](../../models/operations/ListAccountingBankfeedtransactionsRequest.md) | :heavy_check_mark:                                                                                                | The request object to use for the request.                                                                        |
+
+### Response
+
+**[ListAccountingBankfeedtransactionsResponse](../../models/operations/ListAccountingBankfeedtransactionsResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
 ## listAccountingBills
 
 List all bills
@@ -3898,6 +4260,128 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
+## patchAccountingBankfeedaccount
+
+Update a bankfeedaccount
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="patchAccountingBankfeedaccount" method="patch" path="/accounting/{connection_id}/bankfeedaccount/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.PatchAccountingBankfeedaccountRequest;
+import to.unified.unified_java_sdk.models.operations.PatchAccountingBankfeedaccountResponse;
+import to.unified.unified_java_sdk.models.shared.AccountingBankfeedaccount;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        PatchAccountingBankfeedaccountRequest req = PatchAccountingBankfeedaccountRequest.builder()
+                .accountingBankfeedaccount(AccountingBankfeedaccount.builder()
+                    .build())
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        PatchAccountingBankfeedaccountResponse res = sdk.accounting().patchAccountingBankfeedaccount()
+                .request(req)
+                .call();
+
+        if (res.accountingBankfeedaccount().isPresent()) {
+            System.out.println(res.accountingBankfeedaccount().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                 | Type                                                                                                      | Required                                                                                                  | Description                                                                                               |
+| --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                 | [PatchAccountingBankfeedaccountRequest](../../models/operations/PatchAccountingBankfeedaccountRequest.md) | :heavy_check_mark:                                                                                        | The request object to use for the request.                                                                |
+
+### Response
+
+**[PatchAccountingBankfeedaccountResponse](../../models/operations/PatchAccountingBankfeedaccountResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## patchAccountingBankfeedtransaction
+
+Update a bankfeedtransaction
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="patchAccountingBankfeedtransaction" method="patch" path="/accounting/{connection_id}/bankfeedtransaction/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.PatchAccountingBankfeedtransactionRequest;
+import to.unified.unified_java_sdk.models.operations.PatchAccountingBankfeedtransactionResponse;
+import to.unified.unified_java_sdk.models.shared.AccountingBankfeedtransaction;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        PatchAccountingBankfeedtransactionRequest req = PatchAccountingBankfeedtransactionRequest.builder()
+                .accountingBankfeedtransaction(AccountingBankfeedtransaction.builder()
+                    .build())
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        PatchAccountingBankfeedtransactionResponse res = sdk.accounting().patchAccountingBankfeedtransaction()
+                .request(req)
+                .call();
+
+        if (res.accountingBankfeedtransaction().isPresent()) {
+            System.out.println(res.accountingBankfeedtransaction().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                         | Type                                                                                                              | Required                                                                                                          | Description                                                                                                       |
+| ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                         | [PatchAccountingBankfeedtransactionRequest](../../models/operations/PatchAccountingBankfeedtransactionRequest.md) | :heavy_check_mark:                                                                                                | The request object to use for the request.                                                                        |
+
+### Response
+
+**[PatchAccountingBankfeedtransactionResponse](../../models/operations/PatchAccountingBankfeedtransactionResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
 ## patchAccountingBill
 
 Update a bill
@@ -4869,6 +5353,118 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
+## removeAccountingBankfeedaccount
+
+Remove a bankfeedaccount
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="removeAccountingBankfeedaccount" method="delete" path="/accounting/{connection_id}/bankfeedaccount/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.RemoveAccountingBankfeedaccountRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveAccountingBankfeedaccountResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        RemoveAccountingBankfeedaccountRequest req = RemoveAccountingBankfeedaccountRequest.builder()
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        RemoveAccountingBankfeedaccountResponse res = sdk.accounting().removeAccountingBankfeedaccount()
+                .request(req)
+                .call();
+
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                   | Type                                                                                                        | Required                                                                                                    | Description                                                                                                 |
+| ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                   | [RemoveAccountingBankfeedaccountRequest](../../models/operations/RemoveAccountingBankfeedaccountRequest.md) | :heavy_check_mark:                                                                                          | The request object to use for the request.                                                                  |
+
+### Response
+
+**[RemoveAccountingBankfeedaccountResponse](../../models/operations/RemoveAccountingBankfeedaccountResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## removeAccountingBankfeedtransaction
+
+Remove a bankfeedtransaction
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="removeAccountingBankfeedtransaction" method="delete" path="/accounting/{connection_id}/bankfeedtransaction/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.RemoveAccountingBankfeedtransactionRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveAccountingBankfeedtransactionResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        RemoveAccountingBankfeedtransactionRequest req = RemoveAccountingBankfeedtransactionRequest.builder()
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        RemoveAccountingBankfeedtransactionResponse res = sdk.accounting().removeAccountingBankfeedtransaction()
+                .request(req)
+                .call();
+
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                           | Type                                                                                                                | Required                                                                                                            | Description                                                                                                         |
+| ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                           | [RemoveAccountingBankfeedtransactionRequest](../../models/operations/RemoveAccountingBankfeedtransactionRequest.md) | :heavy_check_mark:                                                                                                  | The request object to use for the request.                                                                          |
+
+### Response
+
+**[RemoveAccountingBankfeedtransactionResponse](../../models/operations/RemoveAccountingBankfeedtransactionResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
 ## removeAccountingBill
 
 Remove a bill
@@ -5763,6 +6359,128 @@ public class Application {
 ### Response
 
 **[UpdateAccountingAccountResponse](../../models/operations/UpdateAccountingAccountResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## updateAccountingBankfeedaccount
+
+Update a bankfeedaccount
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="updateAccountingBankfeedaccount" method="put" path="/accounting/{connection_id}/bankfeedaccount/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.UpdateAccountingBankfeedaccountRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateAccountingBankfeedaccountResponse;
+import to.unified.unified_java_sdk.models.shared.AccountingBankfeedaccount;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        UpdateAccountingBankfeedaccountRequest req = UpdateAccountingBankfeedaccountRequest.builder()
+                .accountingBankfeedaccount(AccountingBankfeedaccount.builder()
+                    .build())
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        UpdateAccountingBankfeedaccountResponse res = sdk.accounting().updateAccountingBankfeedaccount()
+                .request(req)
+                .call();
+
+        if (res.accountingBankfeedaccount().isPresent()) {
+            System.out.println(res.accountingBankfeedaccount().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                   | Type                                                                                                        | Required                                                                                                    | Description                                                                                                 |
+| ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                   | [UpdateAccountingBankfeedaccountRequest](../../models/operations/UpdateAccountingBankfeedaccountRequest.md) | :heavy_check_mark:                                                                                          | The request object to use for the request.                                                                  |
+
+### Response
+
+**[UpdateAccountingBankfeedaccountResponse](../../models/operations/UpdateAccountingBankfeedaccountResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## updateAccountingBankfeedtransaction
+
+Update a bankfeedtransaction
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="updateAccountingBankfeedtransaction" method="put" path="/accounting/{connection_id}/bankfeedtransaction/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.UpdateAccountingBankfeedtransactionRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateAccountingBankfeedtransactionResponse;
+import to.unified.unified_java_sdk.models.shared.AccountingBankfeedtransaction;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        UpdateAccountingBankfeedtransactionRequest req = UpdateAccountingBankfeedtransactionRequest.builder()
+                .accountingBankfeedtransaction(AccountingBankfeedtransaction.builder()
+                    .build())
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        UpdateAccountingBankfeedtransactionResponse res = sdk.accounting().updateAccountingBankfeedtransaction()
+                .request(req)
+                .call();
+
+        if (res.accountingBankfeedtransaction().isPresent()) {
+            System.out.println(res.accountingBankfeedtransaction().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                           | Type                                                                                                                | Required                                                                                                            | Description                                                                                                         |
+| ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                           | [UpdateAccountingBankfeedtransactionRequest](../../models/operations/UpdateAccountingBankfeedtransactionRequest.md) | :heavy_check_mark:                                                                                                  | The request object to use for the request.                                                                          |
+
+### Response
+
+**[UpdateAccountingBankfeedtransactionResponse](../../models/operations/UpdateAccountingBankfeedtransactionResponse.md)**
 
 ### Errors
 

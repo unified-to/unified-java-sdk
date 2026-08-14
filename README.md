@@ -39,7 +39,7 @@ The samples below show how a published SDK artifact is used:
 
 Gradle:
 ```groovy
-implementation 'to.unified:unified-java-sdk:0.48.11'
+implementation 'to.unified:unified-java-sdk:0.48.12'
 ```
 
 Maven:
@@ -47,7 +47,7 @@ Maven:
 <dependency>
     <groupId>to.unified</groupId>
     <artifactId>unified-java-sdk</artifactId>
-    <version>0.48.11</version>
+    <version>0.48.12</version>
 </dependency>
 ```
 
@@ -180,6 +180,8 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 ### [Accounting](docs/sdks/accounting/README.md)
 
 * [createAccountingAccount](docs/sdks/accounting/README.md#createaccountingaccount) - Create an account
+* [createAccountingBankfeedaccount](docs/sdks/accounting/README.md#createaccountingbankfeedaccount) - Create a bankfeedaccount
+* [createAccountingBankfeedtransaction](docs/sdks/accounting/README.md#createaccountingbankfeedtransaction) - Create a bankfeedtransaction
 * [createAccountingBill](docs/sdks/accounting/README.md#createaccountingbill) - Create a bill
 * [createAccountingCategory](docs/sdks/accounting/README.md#createaccountingcategory) - Create a category
 * [createAccountingContact](docs/sdks/accounting/README.md#createaccountingcontact) - Create a contact
@@ -199,6 +201,8 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 * [getAccountingAgedpayable](docs/sdks/accounting/README.md#getaccountingagedpayable) - Retrieve an agedpayable
 * [getAccountingAgedreceivable](docs/sdks/accounting/README.md#getaccountingagedreceivable) - Retrieve an agedreceivable
 * [getAccountingBalancesheet](docs/sdks/accounting/README.md#getaccountingbalancesheet) - Retrieve a balancesheet
+* [getAccountingBankfeedaccount](docs/sdks/accounting/README.md#getaccountingbankfeedaccount) - Retrieve a bankfeedaccount
+* [getAccountingBankfeedtransaction](docs/sdks/accounting/README.md#getaccountingbankfeedtransaction) - Retrieve a bankfeedtransaction
 * [getAccountingBill](docs/sdks/accounting/README.md#getaccountingbill) - Retrieve a bill
 * [getAccountingCashflow](docs/sdks/accounting/README.md#getaccountingcashflow) - Retrieve a cashflow
 * [getAccountingCategory](docs/sdks/accounting/README.md#getaccountingcategory) - Retrieve a category
@@ -223,6 +227,8 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 * [listAccountingAgedpayables](docs/sdks/accounting/README.md#listaccountingagedpayables) - List all agedpayables
 * [listAccountingAgedreceivables](docs/sdks/accounting/README.md#listaccountingagedreceivables) - List all agedreceivables
 * [listAccountingBalancesheets](docs/sdks/accounting/README.md#listaccountingbalancesheets) - List all balancesheets
+* [listAccountingBankfeedaccounts](docs/sdks/accounting/README.md#listaccountingbankfeedaccounts) - List all bankfeedaccounts
+* [listAccountingBankfeedtransactions](docs/sdks/accounting/README.md#listaccountingbankfeedtransactions) - List all bankfeedtransactions
 * [listAccountingBills](docs/sdks/accounting/README.md#listaccountingbills) - List all bills
 * [listAccountingCashflows](docs/sdks/accounting/README.md#listaccountingcashflows) - List all cashflows
 * [listAccountingCategories](docs/sdks/accounting/README.md#listaccountingcategories) - List all categories
@@ -244,6 +250,8 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 * [listAccountingTrialbalances](docs/sdks/accounting/README.md#listaccountingtrialbalances) - List all trialbalances
 * [listAccountingVendorcredits](docs/sdks/accounting/README.md#listaccountingvendorcredits) - List all vendorcredits
 * [patchAccountingAccount](docs/sdks/accounting/README.md#patchaccountingaccount) - Update an account
+* [patchAccountingBankfeedaccount](docs/sdks/accounting/README.md#patchaccountingbankfeedaccount) - Update a bankfeedaccount
+* [patchAccountingBankfeedtransaction](docs/sdks/accounting/README.md#patchaccountingbankfeedtransaction) - Update a bankfeedtransaction
 * [patchAccountingBill](docs/sdks/accounting/README.md#patchaccountingbill) - Update a bill
 * [patchAccountingCategory](docs/sdks/accounting/README.md#patchaccountingcategory) - Update a category
 * [patchAccountingContact](docs/sdks/accounting/README.md#patchaccountingcontact) - Update a contact
@@ -260,6 +268,8 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 * [patchAccountingTransaction](docs/sdks/accounting/README.md#patchaccountingtransaction) - Update a transaction
 * [patchAccountingVendorcredit](docs/sdks/accounting/README.md#patchaccountingvendorcredit) - Update a vendorcredit
 * [removeAccountingAccount](docs/sdks/accounting/README.md#removeaccountingaccount) - Remove an account
+* [removeAccountingBankfeedaccount](docs/sdks/accounting/README.md#removeaccountingbankfeedaccount) - Remove a bankfeedaccount
+* [removeAccountingBankfeedtransaction](docs/sdks/accounting/README.md#removeaccountingbankfeedtransaction) - Remove a bankfeedtransaction
 * [removeAccountingBill](docs/sdks/accounting/README.md#removeaccountingbill) - Remove a bill
 * [removeAccountingCategory](docs/sdks/accounting/README.md#removeaccountingcategory) - Remove a category
 * [removeAccountingContact](docs/sdks/accounting/README.md#removeaccountingcontact) - Remove a contact
@@ -276,6 +286,8 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 * [removeAccountingTransaction](docs/sdks/accounting/README.md#removeaccountingtransaction) - Remove a transaction
 * [removeAccountingVendorcredit](docs/sdks/accounting/README.md#removeaccountingvendorcredit) - Remove a vendorcredit
 * [updateAccountingAccount](docs/sdks/accounting/README.md#updateaccountingaccount) - Update an account
+* [updateAccountingBankfeedaccount](docs/sdks/accounting/README.md#updateaccountingbankfeedaccount) - Update a bankfeedaccount
+* [updateAccountingBankfeedtransaction](docs/sdks/accounting/README.md#updateaccountingbankfeedtransaction) - Update a bankfeedtransaction
 * [updateAccountingBill](docs/sdks/accounting/README.md#updateaccountingbill) - Update a bill
 * [updateAccountingCategory](docs/sdks/accounting/README.md#updateaccountingcategory) - Update a category
 * [updateAccountingContact](docs/sdks/accounting/README.md#updateaccountingcontact) - Update a contact
@@ -524,6 +536,24 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 * [patchHrisBankaccount](docs/sdks/bankaccount/README.md#patchhrisbankaccount) - Update a bankaccount
 * [removeHrisBankaccount](docs/sdks/bankaccount/README.md#removehrisbankaccount) - Remove a bankaccount
 * [updateHrisBankaccount](docs/sdks/bankaccount/README.md#updatehrisbankaccount) - Update a bankaccount
+
+### [Bankfeedaccount](docs/sdks/bankfeedaccount/README.md)
+
+* [createAccountingBankfeedaccount](docs/sdks/bankfeedaccount/README.md#createaccountingbankfeedaccount) - Create a bankfeedaccount
+* [getAccountingBankfeedaccount](docs/sdks/bankfeedaccount/README.md#getaccountingbankfeedaccount) - Retrieve a bankfeedaccount
+* [listAccountingBankfeedaccounts](docs/sdks/bankfeedaccount/README.md#listaccountingbankfeedaccounts) - List all bankfeedaccounts
+* [patchAccountingBankfeedaccount](docs/sdks/bankfeedaccount/README.md#patchaccountingbankfeedaccount) - Update a bankfeedaccount
+* [removeAccountingBankfeedaccount](docs/sdks/bankfeedaccount/README.md#removeaccountingbankfeedaccount) - Remove a bankfeedaccount
+* [updateAccountingBankfeedaccount](docs/sdks/bankfeedaccount/README.md#updateaccountingbankfeedaccount) - Update a bankfeedaccount
+
+### [Bankfeedtransaction](docs/sdks/bankfeedtransaction/README.md)
+
+* [createAccountingBankfeedtransaction](docs/sdks/bankfeedtransaction/README.md#createaccountingbankfeedtransaction) - Create a bankfeedtransaction
+* [getAccountingBankfeedtransaction](docs/sdks/bankfeedtransaction/README.md#getaccountingbankfeedtransaction) - Retrieve a bankfeedtransaction
+* [listAccountingBankfeedtransactions](docs/sdks/bankfeedtransaction/README.md#listaccountingbankfeedtransactions) - List all bankfeedtransactions
+* [patchAccountingBankfeedtransaction](docs/sdks/bankfeedtransaction/README.md#patchaccountingbankfeedtransaction) - Update a bankfeedtransaction
+* [removeAccountingBankfeedtransaction](docs/sdks/bankfeedtransaction/README.md#removeaccountingbankfeedtransaction) - Remove a bankfeedtransaction
+* [updateAccountingBankfeedtransaction](docs/sdks/bankfeedtransaction/README.md#updateaccountingbankfeedtransaction) - Update a bankfeedtransaction
 
 ### [Benefit](docs/sdks/benefit/README.md)
 

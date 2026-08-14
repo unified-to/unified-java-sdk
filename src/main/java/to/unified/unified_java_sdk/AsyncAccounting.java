@@ -8,6 +8,8 @@ import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOper
 import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingAccountRequest;
+import to.unified.unified_java_sdk.models.operations.CreateAccountingBankfeedaccountRequest;
+import to.unified.unified_java_sdk.models.operations.CreateAccountingBankfeedtransactionRequest;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingBillRequest;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingCategoryRequest;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingContactRequest;
@@ -27,6 +29,8 @@ import to.unified.unified_java_sdk.models.operations.GetAccountingAccountRequest
 import to.unified.unified_java_sdk.models.operations.GetAccountingAgedpayableRequest;
 import to.unified.unified_java_sdk.models.operations.GetAccountingAgedreceivableRequest;
 import to.unified.unified_java_sdk.models.operations.GetAccountingBalancesheetRequest;
+import to.unified.unified_java_sdk.models.operations.GetAccountingBankfeedaccountRequest;
+import to.unified.unified_java_sdk.models.operations.GetAccountingBankfeedtransactionRequest;
 import to.unified.unified_java_sdk.models.operations.GetAccountingBillRequest;
 import to.unified.unified_java_sdk.models.operations.GetAccountingCashflowRequest;
 import to.unified.unified_java_sdk.models.operations.GetAccountingCategoryRequest;
@@ -51,6 +55,8 @@ import to.unified.unified_java_sdk.models.operations.ListAccountingAccountsReque
 import to.unified.unified_java_sdk.models.operations.ListAccountingAgedpayablesRequest;
 import to.unified.unified_java_sdk.models.operations.ListAccountingAgedreceivablesRequest;
 import to.unified.unified_java_sdk.models.operations.ListAccountingBalancesheetsRequest;
+import to.unified.unified_java_sdk.models.operations.ListAccountingBankfeedaccountsRequest;
+import to.unified.unified_java_sdk.models.operations.ListAccountingBankfeedtransactionsRequest;
 import to.unified.unified_java_sdk.models.operations.ListAccountingBillsRequest;
 import to.unified.unified_java_sdk.models.operations.ListAccountingCashflowsRequest;
 import to.unified.unified_java_sdk.models.operations.ListAccountingCategoriesRequest;
@@ -72,6 +78,8 @@ import to.unified.unified_java_sdk.models.operations.ListAccountingTransactionsR
 import to.unified.unified_java_sdk.models.operations.ListAccountingTrialbalancesRequest;
 import to.unified.unified_java_sdk.models.operations.ListAccountingVendorcreditsRequest;
 import to.unified.unified_java_sdk.models.operations.PatchAccountingAccountRequest;
+import to.unified.unified_java_sdk.models.operations.PatchAccountingBankfeedaccountRequest;
+import to.unified.unified_java_sdk.models.operations.PatchAccountingBankfeedtransactionRequest;
 import to.unified.unified_java_sdk.models.operations.PatchAccountingBillRequest;
 import to.unified.unified_java_sdk.models.operations.PatchAccountingCategoryRequest;
 import to.unified.unified_java_sdk.models.operations.PatchAccountingContactRequest;
@@ -88,6 +96,8 @@ import to.unified.unified_java_sdk.models.operations.PatchAccountingTaxrateReque
 import to.unified.unified_java_sdk.models.operations.PatchAccountingTransactionRequest;
 import to.unified.unified_java_sdk.models.operations.PatchAccountingVendorcreditRequest;
 import to.unified.unified_java_sdk.models.operations.RemoveAccountingAccountRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveAccountingBankfeedaccountRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveAccountingBankfeedtransactionRequest;
 import to.unified.unified_java_sdk.models.operations.RemoveAccountingBillRequest;
 import to.unified.unified_java_sdk.models.operations.RemoveAccountingCategoryRequest;
 import to.unified.unified_java_sdk.models.operations.RemoveAccountingContactRequest;
@@ -104,6 +114,8 @@ import to.unified.unified_java_sdk.models.operations.RemoveAccountingTaxrateRequ
 import to.unified.unified_java_sdk.models.operations.RemoveAccountingTransactionRequest;
 import to.unified.unified_java_sdk.models.operations.RemoveAccountingVendorcreditRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateAccountingAccountRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateAccountingBankfeedaccountRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateAccountingBankfeedtransactionRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateAccountingBillRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateAccountingCategoryRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateAccountingContactRequest;
@@ -121,6 +133,10 @@ import to.unified.unified_java_sdk.models.operations.UpdateAccountingTransaction
 import to.unified.unified_java_sdk.models.operations.UpdateAccountingVendorcreditRequest;
 import to.unified.unified_java_sdk.models.operations.async.CreateAccountingAccountRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.CreateAccountingAccountResponse;
+import to.unified.unified_java_sdk.models.operations.async.CreateAccountingBankfeedaccountRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.CreateAccountingBankfeedaccountResponse;
+import to.unified.unified_java_sdk.models.operations.async.CreateAccountingBankfeedtransactionRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.CreateAccountingBankfeedtransactionResponse;
 import to.unified.unified_java_sdk.models.operations.async.CreateAccountingBillRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.CreateAccountingBillResponse;
 import to.unified.unified_java_sdk.models.operations.async.CreateAccountingCategoryRequestBuilder;
@@ -159,6 +175,10 @@ import to.unified.unified_java_sdk.models.operations.async.GetAccountingAgedrece
 import to.unified.unified_java_sdk.models.operations.async.GetAccountingAgedreceivableResponse;
 import to.unified.unified_java_sdk.models.operations.async.GetAccountingBalancesheetRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.GetAccountingBalancesheetResponse;
+import to.unified.unified_java_sdk.models.operations.async.GetAccountingBankfeedaccountRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetAccountingBankfeedaccountResponse;
+import to.unified.unified_java_sdk.models.operations.async.GetAccountingBankfeedtransactionRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetAccountingBankfeedtransactionResponse;
 import to.unified.unified_java_sdk.models.operations.async.GetAccountingBillRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.GetAccountingBillResponse;
 import to.unified.unified_java_sdk.models.operations.async.GetAccountingCashflowRequestBuilder;
@@ -207,6 +227,10 @@ import to.unified.unified_java_sdk.models.operations.async.ListAccountingAgedrec
 import to.unified.unified_java_sdk.models.operations.async.ListAccountingAgedreceivablesResponse;
 import to.unified.unified_java_sdk.models.operations.async.ListAccountingBalancesheetsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.ListAccountingBalancesheetsResponse;
+import to.unified.unified_java_sdk.models.operations.async.ListAccountingBankfeedaccountsRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListAccountingBankfeedaccountsResponse;
+import to.unified.unified_java_sdk.models.operations.async.ListAccountingBankfeedtransactionsRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListAccountingBankfeedtransactionsResponse;
 import to.unified.unified_java_sdk.models.operations.async.ListAccountingBillsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.ListAccountingBillsResponse;
 import to.unified.unified_java_sdk.models.operations.async.ListAccountingCashflowsRequestBuilder;
@@ -249,6 +273,10 @@ import to.unified.unified_java_sdk.models.operations.async.ListAccountingVendorc
 import to.unified.unified_java_sdk.models.operations.async.ListAccountingVendorcreditsResponse;
 import to.unified.unified_java_sdk.models.operations.async.PatchAccountingAccountRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.PatchAccountingAccountResponse;
+import to.unified.unified_java_sdk.models.operations.async.PatchAccountingBankfeedaccountRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.PatchAccountingBankfeedaccountResponse;
+import to.unified.unified_java_sdk.models.operations.async.PatchAccountingBankfeedtransactionRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.PatchAccountingBankfeedtransactionResponse;
 import to.unified.unified_java_sdk.models.operations.async.PatchAccountingBillRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.PatchAccountingBillResponse;
 import to.unified.unified_java_sdk.models.operations.async.PatchAccountingCategoryRequestBuilder;
@@ -281,6 +309,10 @@ import to.unified.unified_java_sdk.models.operations.async.PatchAccountingVendor
 import to.unified.unified_java_sdk.models.operations.async.PatchAccountingVendorcreditResponse;
 import to.unified.unified_java_sdk.models.operations.async.RemoveAccountingAccountRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.RemoveAccountingAccountResponse;
+import to.unified.unified_java_sdk.models.operations.async.RemoveAccountingBankfeedaccountRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.RemoveAccountingBankfeedaccountResponse;
+import to.unified.unified_java_sdk.models.operations.async.RemoveAccountingBankfeedtransactionRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.RemoveAccountingBankfeedtransactionResponse;
 import to.unified.unified_java_sdk.models.operations.async.RemoveAccountingBillRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.RemoveAccountingBillResponse;
 import to.unified.unified_java_sdk.models.operations.async.RemoveAccountingCategoryRequestBuilder;
@@ -313,6 +345,10 @@ import to.unified.unified_java_sdk.models.operations.async.RemoveAccountingVendo
 import to.unified.unified_java_sdk.models.operations.async.RemoveAccountingVendorcreditResponse;
 import to.unified.unified_java_sdk.models.operations.async.UpdateAccountingAccountRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.UpdateAccountingAccountResponse;
+import to.unified.unified_java_sdk.models.operations.async.UpdateAccountingBankfeedaccountRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.UpdateAccountingBankfeedaccountResponse;
+import to.unified.unified_java_sdk.models.operations.async.UpdateAccountingBankfeedtransactionRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.UpdateAccountingBankfeedtransactionResponse;
 import to.unified.unified_java_sdk.models.operations.async.UpdateAccountingBillRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.UpdateAccountingBillResponse;
 import to.unified.unified_java_sdk.models.operations.async.UpdateAccountingCategoryRequestBuilder;
@@ -344,6 +380,8 @@ import to.unified.unified_java_sdk.models.operations.async.UpdateAccountingTrans
 import to.unified.unified_java_sdk.models.operations.async.UpdateAccountingVendorcreditRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.UpdateAccountingVendorcreditResponse;
 import to.unified.unified_java_sdk.operations.CreateAccountingAccount;
+import to.unified.unified_java_sdk.operations.CreateAccountingBankfeedaccount;
+import to.unified.unified_java_sdk.operations.CreateAccountingBankfeedtransaction;
 import to.unified.unified_java_sdk.operations.CreateAccountingBill;
 import to.unified.unified_java_sdk.operations.CreateAccountingCategory;
 import to.unified.unified_java_sdk.operations.CreateAccountingContact;
@@ -363,6 +401,8 @@ import to.unified.unified_java_sdk.operations.GetAccountingAccount;
 import to.unified.unified_java_sdk.operations.GetAccountingAgedpayable;
 import to.unified.unified_java_sdk.operations.GetAccountingAgedreceivable;
 import to.unified.unified_java_sdk.operations.GetAccountingBalancesheet;
+import to.unified.unified_java_sdk.operations.GetAccountingBankfeedaccount;
+import to.unified.unified_java_sdk.operations.GetAccountingBankfeedtransaction;
 import to.unified.unified_java_sdk.operations.GetAccountingBill;
 import to.unified.unified_java_sdk.operations.GetAccountingCashflow;
 import to.unified.unified_java_sdk.operations.GetAccountingCategory;
@@ -387,6 +427,8 @@ import to.unified.unified_java_sdk.operations.ListAccountingAccounts;
 import to.unified.unified_java_sdk.operations.ListAccountingAgedpayables;
 import to.unified.unified_java_sdk.operations.ListAccountingAgedreceivables;
 import to.unified.unified_java_sdk.operations.ListAccountingBalancesheets;
+import to.unified.unified_java_sdk.operations.ListAccountingBankfeedaccounts;
+import to.unified.unified_java_sdk.operations.ListAccountingBankfeedtransactions;
 import to.unified.unified_java_sdk.operations.ListAccountingBills;
 import to.unified.unified_java_sdk.operations.ListAccountingCashflows;
 import to.unified.unified_java_sdk.operations.ListAccountingCategories;
@@ -408,6 +450,8 @@ import to.unified.unified_java_sdk.operations.ListAccountingTransactions;
 import to.unified.unified_java_sdk.operations.ListAccountingTrialbalances;
 import to.unified.unified_java_sdk.operations.ListAccountingVendorcredits;
 import to.unified.unified_java_sdk.operations.PatchAccountingAccount;
+import to.unified.unified_java_sdk.operations.PatchAccountingBankfeedaccount;
+import to.unified.unified_java_sdk.operations.PatchAccountingBankfeedtransaction;
 import to.unified.unified_java_sdk.operations.PatchAccountingBill;
 import to.unified.unified_java_sdk.operations.PatchAccountingCategory;
 import to.unified.unified_java_sdk.operations.PatchAccountingContact;
@@ -424,6 +468,8 @@ import to.unified.unified_java_sdk.operations.PatchAccountingTaxrate;
 import to.unified.unified_java_sdk.operations.PatchAccountingTransaction;
 import to.unified.unified_java_sdk.operations.PatchAccountingVendorcredit;
 import to.unified.unified_java_sdk.operations.RemoveAccountingAccount;
+import to.unified.unified_java_sdk.operations.RemoveAccountingBankfeedaccount;
+import to.unified.unified_java_sdk.operations.RemoveAccountingBankfeedtransaction;
 import to.unified.unified_java_sdk.operations.RemoveAccountingBill;
 import to.unified.unified_java_sdk.operations.RemoveAccountingCategory;
 import to.unified.unified_java_sdk.operations.RemoveAccountingContact;
@@ -440,6 +486,8 @@ import to.unified.unified_java_sdk.operations.RemoveAccountingTaxrate;
 import to.unified.unified_java_sdk.operations.RemoveAccountingTransaction;
 import to.unified.unified_java_sdk.operations.RemoveAccountingVendorcredit;
 import to.unified.unified_java_sdk.operations.UpdateAccountingAccount;
+import to.unified.unified_java_sdk.operations.UpdateAccountingBankfeedaccount;
+import to.unified.unified_java_sdk.operations.UpdateAccountingBankfeedtransaction;
 import to.unified.unified_java_sdk.operations.UpdateAccountingBill;
 import to.unified.unified_java_sdk.operations.UpdateAccountingCategory;
 import to.unified.unified_java_sdk.operations.UpdateAccountingContact;
@@ -496,6 +544,52 @@ public class AsyncAccounting {
     public CompletableFuture<CreateAccountingAccountResponse> createAccountingAccount(@Nonnull CreateAccountingAccountRequest request) {
         AsyncRequestOperation<CreateAccountingAccountRequest, CreateAccountingAccountResponse> operation
               = new CreateAccountingAccount.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * Create a bankfeedaccount
+     * 
+     * @return The async call builder
+     */
+    public CreateAccountingBankfeedaccountRequestBuilder createAccountingBankfeedaccount() {
+        return new CreateAccountingBankfeedaccountRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Create a bankfeedaccount
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<CreateAccountingBankfeedaccountResponse>} - The async response
+     */
+    public CompletableFuture<CreateAccountingBankfeedaccountResponse> createAccountingBankfeedaccount(@Nonnull CreateAccountingBankfeedaccountRequest request) {
+        AsyncRequestOperation<CreateAccountingBankfeedaccountRequest, CreateAccountingBankfeedaccountResponse> operation
+              = new CreateAccountingBankfeedaccount.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * Create a bankfeedtransaction
+     * 
+     * @return The async call builder
+     */
+    public CreateAccountingBankfeedtransactionRequestBuilder createAccountingBankfeedtransaction() {
+        return new CreateAccountingBankfeedtransactionRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Create a bankfeedtransaction
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<CreateAccountingBankfeedtransactionResponse>} - The async response
+     */
+    public CompletableFuture<CreateAccountingBankfeedtransactionResponse> createAccountingBankfeedtransaction(@Nonnull CreateAccountingBankfeedtransactionRequest request) {
+        AsyncRequestOperation<CreateAccountingBankfeedtransactionRequest, CreateAccountingBankfeedtransactionResponse> operation
+              = new CreateAccountingBankfeedtransaction.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -933,6 +1027,52 @@ public class AsyncAccounting {
     public CompletableFuture<GetAccountingBalancesheetResponse> getAccountingBalancesheet(@Nonnull GetAccountingBalancesheetRequest request) {
         AsyncRequestOperation<GetAccountingBalancesheetRequest, GetAccountingBalancesheetResponse> operation
               = new GetAccountingBalancesheet.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * Retrieve a bankfeedaccount
+     * 
+     * @return The async call builder
+     */
+    public GetAccountingBankfeedaccountRequestBuilder getAccountingBankfeedaccount() {
+        return new GetAccountingBankfeedaccountRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Retrieve a bankfeedaccount
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<GetAccountingBankfeedaccountResponse>} - The async response
+     */
+    public CompletableFuture<GetAccountingBankfeedaccountResponse> getAccountingBankfeedaccount(@Nonnull GetAccountingBankfeedaccountRequest request) {
+        AsyncRequestOperation<GetAccountingBankfeedaccountRequest, GetAccountingBankfeedaccountResponse> operation
+              = new GetAccountingBankfeedaccount.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * Retrieve a bankfeedtransaction
+     * 
+     * @return The async call builder
+     */
+    public GetAccountingBankfeedtransactionRequestBuilder getAccountingBankfeedtransaction() {
+        return new GetAccountingBankfeedtransactionRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Retrieve a bankfeedtransaction
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<GetAccountingBankfeedtransactionResponse>} - The async response
+     */
+    public CompletableFuture<GetAccountingBankfeedtransactionResponse> getAccountingBankfeedtransaction(@Nonnull GetAccountingBankfeedtransactionRequest request) {
+        AsyncRequestOperation<GetAccountingBankfeedtransactionRequest, GetAccountingBankfeedtransactionResponse> operation
+              = new GetAccountingBankfeedtransaction.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -1491,6 +1631,52 @@ public class AsyncAccounting {
 
 
     /**
+     * List all bankfeedaccounts
+     * 
+     * @return The async call builder
+     */
+    public ListAccountingBankfeedaccountsRequestBuilder listAccountingBankfeedaccounts() {
+        return new ListAccountingBankfeedaccountsRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * List all bankfeedaccounts
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<ListAccountingBankfeedaccountsResponse>} - The async response
+     */
+    public CompletableFuture<ListAccountingBankfeedaccountsResponse> listAccountingBankfeedaccounts(@Nonnull ListAccountingBankfeedaccountsRequest request) {
+        AsyncRequestOperation<ListAccountingBankfeedaccountsRequest, ListAccountingBankfeedaccountsResponse> operation
+              = new ListAccountingBankfeedaccounts.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * List all bankfeedtransactions
+     * 
+     * @return The async call builder
+     */
+    public ListAccountingBankfeedtransactionsRequestBuilder listAccountingBankfeedtransactions() {
+        return new ListAccountingBankfeedtransactionsRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * List all bankfeedtransactions
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<ListAccountingBankfeedtransactionsResponse>} - The async response
+     */
+    public CompletableFuture<ListAccountingBankfeedtransactionsResponse> listAccountingBankfeedtransactions(@Nonnull ListAccountingBankfeedtransactionsRequest request) {
+        AsyncRequestOperation<ListAccountingBankfeedtransactionsRequest, ListAccountingBankfeedtransactionsResponse> operation
+              = new ListAccountingBankfeedtransactions.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
      * List all bills
      * 
      * @return The async call builder
@@ -1974,6 +2160,52 @@ public class AsyncAccounting {
 
 
     /**
+     * Update a bankfeedaccount
+     * 
+     * @return The async call builder
+     */
+    public PatchAccountingBankfeedaccountRequestBuilder patchAccountingBankfeedaccount() {
+        return new PatchAccountingBankfeedaccountRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Update a bankfeedaccount
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<PatchAccountingBankfeedaccountResponse>} - The async response
+     */
+    public CompletableFuture<PatchAccountingBankfeedaccountResponse> patchAccountingBankfeedaccount(@Nonnull PatchAccountingBankfeedaccountRequest request) {
+        AsyncRequestOperation<PatchAccountingBankfeedaccountRequest, PatchAccountingBankfeedaccountResponse> operation
+              = new PatchAccountingBankfeedaccount.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * Update a bankfeedtransaction
+     * 
+     * @return The async call builder
+     */
+    public PatchAccountingBankfeedtransactionRequestBuilder patchAccountingBankfeedtransaction() {
+        return new PatchAccountingBankfeedtransactionRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Update a bankfeedtransaction
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<PatchAccountingBankfeedtransactionResponse>} - The async response
+     */
+    public CompletableFuture<PatchAccountingBankfeedtransactionResponse> patchAccountingBankfeedtransaction(@Nonnull PatchAccountingBankfeedtransactionRequest request) {
+        AsyncRequestOperation<PatchAccountingBankfeedtransactionRequest, PatchAccountingBankfeedtransactionResponse> operation
+              = new PatchAccountingBankfeedtransaction.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
      * Update a bill
      * 
      * @return The async call builder
@@ -2342,6 +2574,52 @@ public class AsyncAccounting {
 
 
     /**
+     * Remove a bankfeedaccount
+     * 
+     * @return The async call builder
+     */
+    public RemoveAccountingBankfeedaccountRequestBuilder removeAccountingBankfeedaccount() {
+        return new RemoveAccountingBankfeedaccountRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Remove a bankfeedaccount
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<RemoveAccountingBankfeedaccountResponse>} - The async response
+     */
+    public CompletableFuture<RemoveAccountingBankfeedaccountResponse> removeAccountingBankfeedaccount(@Nonnull RemoveAccountingBankfeedaccountRequest request) {
+        AsyncRequestOperation<RemoveAccountingBankfeedaccountRequest, RemoveAccountingBankfeedaccountResponse> operation
+              = new RemoveAccountingBankfeedaccount.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * Remove a bankfeedtransaction
+     * 
+     * @return The async call builder
+     */
+    public RemoveAccountingBankfeedtransactionRequestBuilder removeAccountingBankfeedtransaction() {
+        return new RemoveAccountingBankfeedtransactionRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Remove a bankfeedtransaction
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<RemoveAccountingBankfeedtransactionResponse>} - The async response
+     */
+    public CompletableFuture<RemoveAccountingBankfeedtransactionResponse> removeAccountingBankfeedtransaction(@Nonnull RemoveAccountingBankfeedtransactionRequest request) {
+        AsyncRequestOperation<RemoveAccountingBankfeedtransactionRequest, RemoveAccountingBankfeedtransactionResponse> operation
+              = new RemoveAccountingBankfeedtransaction.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
      * Remove a bill
      * 
      * @return The async call builder
@@ -2704,6 +2982,52 @@ public class AsyncAccounting {
     public CompletableFuture<UpdateAccountingAccountResponse> updateAccountingAccount(@Nonnull UpdateAccountingAccountRequest request) {
         AsyncRequestOperation<UpdateAccountingAccountRequest, UpdateAccountingAccountResponse> operation
               = new UpdateAccountingAccount.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * Update a bankfeedaccount
+     * 
+     * @return The async call builder
+     */
+    public UpdateAccountingBankfeedaccountRequestBuilder updateAccountingBankfeedaccount() {
+        return new UpdateAccountingBankfeedaccountRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Update a bankfeedaccount
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<UpdateAccountingBankfeedaccountResponse>} - The async response
+     */
+    public CompletableFuture<UpdateAccountingBankfeedaccountResponse> updateAccountingBankfeedaccount(@Nonnull UpdateAccountingBankfeedaccountRequest request) {
+        AsyncRequestOperation<UpdateAccountingBankfeedaccountRequest, UpdateAccountingBankfeedaccountResponse> operation
+              = new UpdateAccountingBankfeedaccount.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * Update a bankfeedtransaction
+     * 
+     * @return The async call builder
+     */
+    public UpdateAccountingBankfeedtransactionRequestBuilder updateAccountingBankfeedtransaction() {
+        return new UpdateAccountingBankfeedtransactionRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Update a bankfeedtransaction
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<UpdateAccountingBankfeedtransactionResponse>} - The async response
+     */
+    public CompletableFuture<UpdateAccountingBankfeedtransactionResponse> updateAccountingBankfeedtransaction(@Nonnull UpdateAccountingBankfeedtransactionRequest request) {
+        AsyncRequestOperation<UpdateAccountingBankfeedtransactionRequest, UpdateAccountingBankfeedtransactionResponse> operation
+              = new UpdateAccountingBankfeedtransaction.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

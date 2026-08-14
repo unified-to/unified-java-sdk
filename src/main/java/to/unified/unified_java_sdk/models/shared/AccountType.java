@@ -22,6 +22,9 @@ public class AccountType {
 
     public static final AccountType CHECKING = new AccountType("CHECKING");
     public static final AccountType SAVINGS = new AccountType("SAVINGS");
+    public static final AccountType CREDIT_CARD = new AccountType("CREDIT_CARD");
+    public static final AccountType LOAN = new AccountType("LOAN");
+    public static final AccountType OTHER = new AccountType("OTHER");
 
     // This map will grow whenever a Color gets created with a new
     // unrecognized value (a potential memory leak if the user is not
@@ -97,6 +100,9 @@ public class AccountType {
         Map<String, AccountType> map = new LinkedHashMap<>();
         map.put("CHECKING", CHECKING);
         map.put("SAVINGS", SAVINGS);
+        map.put("CREDIT_CARD", CREDIT_CARD);
+        map.put("LOAN", LOAN);
+        map.put("OTHER", OTHER);
         return map;
     }
 
@@ -104,6 +110,9 @@ public class AccountType {
         Map<String, AccountTypeEnum> map = new HashMap<>();
         map.put("CHECKING", AccountTypeEnum.CHECKING);
         map.put("SAVINGS", AccountTypeEnum.SAVINGS);
+        map.put("CREDIT_CARD", AccountTypeEnum.CREDIT_CARD);
+        map.put("LOAN", AccountTypeEnum.LOAN);
+        map.put("OTHER", AccountTypeEnum.OTHER);
         return map;
     }
     
@@ -111,7 +120,10 @@ public class AccountType {
     public enum AccountTypeEnum {
 
         CHECKING("CHECKING"),
-        SAVINGS("SAVINGS"),;
+        SAVINGS("SAVINGS"),
+        CREDIT_CARD("CREDIT_CARD"),
+        LOAN("LOAN"),
+        OTHER("OTHER"),;
 
         private final String value;
 

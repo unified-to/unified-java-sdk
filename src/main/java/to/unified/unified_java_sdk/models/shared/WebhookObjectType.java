@@ -44,6 +44,8 @@ public class WebhookObjectType {
     public static final WebhookObjectType ACCOUNTING_AGEDRECEIVABLE = new WebhookObjectType("accounting_agedreceivable");
     public static final WebhookObjectType ACCOUNTING_AGEDPAYABLE = new WebhookObjectType("accounting_agedpayable");
     public static final WebhookObjectType ACCOUNTING_PROJECT = new WebhookObjectType("accounting_project");
+    public static final WebhookObjectType ACCOUNTING_BANKFEEDACCOUNT = new WebhookObjectType("accounting_bankfeedaccount");
+    public static final WebhookObjectType ACCOUNTING_BANKFEEDTRANSACTION = new WebhookObjectType("accounting_bankfeedtransaction");
     public static final WebhookObjectType PAYMENT_PAYMENT = new WebhookObjectType("payment_payment");
     public static final WebhookObjectType PAYMENT_LINK = new WebhookObjectType("payment_link");
     public static final WebhookObjectType PAYMENT_PAYOUT = new WebhookObjectType("payment_payout");
@@ -283,6 +285,8 @@ public class WebhookObjectType {
         map.put("accounting_agedreceivable", ACCOUNTING_AGEDRECEIVABLE);
         map.put("accounting_agedpayable", ACCOUNTING_AGEDPAYABLE);
         map.put("accounting_project", ACCOUNTING_PROJECT);
+        map.put("accounting_bankfeedaccount", ACCOUNTING_BANKFEEDACCOUNT);
+        map.put("accounting_bankfeedtransaction", ACCOUNTING_BANKFEEDTRANSACTION);
         map.put("payment_payment", PAYMENT_PAYMENT);
         map.put("payment_link", PAYMENT_LINK);
         map.put("payment_payout", PAYMENT_PAYOUT);
@@ -454,6 +458,8 @@ public class WebhookObjectType {
         map.put("accounting_agedreceivable", WebhookObjectTypeEnum.ACCOUNTING_AGEDRECEIVABLE);
         map.put("accounting_agedpayable", WebhookObjectTypeEnum.ACCOUNTING_AGEDPAYABLE);
         map.put("accounting_project", WebhookObjectTypeEnum.ACCOUNTING_PROJECT);
+        map.put("accounting_bankfeedaccount", WebhookObjectTypeEnum.ACCOUNTING_BANKFEEDACCOUNT);
+        map.put("accounting_bankfeedtransaction", WebhookObjectTypeEnum.ACCOUNTING_BANKFEEDTRANSACTION);
         map.put("payment_payment", WebhookObjectTypeEnum.PAYMENT_PAYMENT);
         map.put("payment_link", WebhookObjectTypeEnum.PAYMENT_LINK);
         map.put("payment_payout", WebhookObjectTypeEnum.PAYMENT_PAYOUT);
@@ -626,6 +632,8 @@ public class WebhookObjectType {
         ACCOUNTING_AGEDRECEIVABLE("accounting_agedreceivable"),
         ACCOUNTING_AGEDPAYABLE("accounting_agedpayable"),
         ACCOUNTING_PROJECT("accounting_project"),
+        ACCOUNTING_BANKFEEDACCOUNT("accounting_bankfeedaccount"),
+        ACCOUNTING_BANKFEEDTRANSACTION("accounting_bankfeedtransaction"),
         PAYMENT_PAYMENT("payment_payment"),
         PAYMENT_LINK("payment_link"),
         PAYMENT_PAYOUT("payment_payout"),

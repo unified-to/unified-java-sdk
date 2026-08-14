@@ -32,7 +32,7 @@ public class HrisBankaccount {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("account_type")
-    private AccountType accountType;
+    private HrisBankaccountAccountType accountType;
 
 
     @JsonInclude(Include.NON_ABSENT)
@@ -88,7 +88,7 @@ public class HrisBankaccount {
     public HrisBankaccount(
             @JsonProperty("account_number") @Nullable String accountNumber,
             @JsonProperty("account_number_last4") @Nullable String accountNumberLast4,
-            @JsonProperty("account_type") @Nullable AccountType accountType,
+            @JsonProperty("account_type") @Nullable HrisBankaccountAccountType accountType,
             @JsonProperty("bank_name") @Nullable String bankName,
             @JsonProperty("company_id") @Nullable String companyId,
             @JsonProperty("created_at") @Nullable OffsetDateTime createdAt,
@@ -130,7 +130,7 @@ public class HrisBankaccount {
         return Optional.ofNullable(this.accountNumberLast4);
     }
 
-    public Optional<AccountType> accountType() {
+    public Optional<HrisBankaccountAccountType> accountType() {
         return Optional.ofNullable(this.accountType);
     }
 
@@ -191,7 +191,7 @@ public class HrisBankaccount {
     }
 
 
-    public HrisBankaccount withAccountType(@Nullable AccountType accountType) {
+    public HrisBankaccount withAccountType(@Nullable HrisBankaccountAccountType accountType) {
         this.accountType = accountType;
         return this;
     }
@@ -317,7 +317,7 @@ public class HrisBankaccount {
 
         private String accountNumberLast4;
 
-        private AccountType accountType;
+        private HrisBankaccountAccountType accountType;
 
         private String bankName;
 
@@ -353,7 +353,7 @@ public class HrisBankaccount {
             return this;
         }
 
-        public Builder accountType(@Nullable AccountType accountType) {
+        public Builder accountType(@Nullable HrisBankaccountAccountType accountType) {
             this.accountType = accountType;
             return this;
         }
