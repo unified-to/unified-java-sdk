@@ -29,6 +29,7 @@ public class CreativeType {
     public static final CreativeType PUBLISHER_HOSTED = new CreativeType("PUBLISHER_HOSTED");
     public static final CreativeType ASSET_BASED = new CreativeType("ASSET_BASED");
     public static final CreativeType IMAGE = new CreativeType("IMAGE");
+    public static final CreativeType SHARE = new CreativeType("SHARE");
     public static final CreativeType DOCUMENT = new CreativeType("DOCUMENT");
 
     // This map will grow whenever a Color gets created with a new
@@ -112,6 +113,7 @@ public class CreativeType {
         map.put("PUBLISHER_HOSTED", PUBLISHER_HOSTED);
         map.put("ASSET_BASED", ASSET_BASED);
         map.put("IMAGE", IMAGE);
+        map.put("SHARE", SHARE);
         map.put("DOCUMENT", DOCUMENT);
         return map;
     }
@@ -127,6 +129,7 @@ public class CreativeType {
         map.put("PUBLISHER_HOSTED", CreativeTypeEnum.PUBLISHER_HOSTED);
         map.put("ASSET_BASED", CreativeTypeEnum.ASSET_BASED);
         map.put("IMAGE", CreativeTypeEnum.IMAGE);
+        map.put("SHARE", CreativeTypeEnum.SHARE);
         map.put("DOCUMENT", CreativeTypeEnum.DOCUMENT);
         return map;
     }
@@ -143,6 +146,7 @@ public class CreativeType {
         PUBLISHER_HOSTED("PUBLISHER_HOSTED"),
         ASSET_BASED("ASSET_BASED"),
         IMAGE("IMAGE"),
+        SHARE("SHARE"),
         DOCUMENT("DOCUMENT"),;
 
         private final String value;
