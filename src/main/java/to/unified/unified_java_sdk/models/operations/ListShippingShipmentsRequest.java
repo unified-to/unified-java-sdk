@@ -53,6 +53,12 @@ public class ListShippingShipmentsRequest {
     private String orderId;
 
     /**
+     * The org ID to filter by
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=org_id")
+    private String orgId;
+
+    /**
      * Query string to search. eg. email address or name
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=query")
@@ -86,6 +92,7 @@ public class ListShippingShipmentsRequest {
             @Nullable Double offset,
             @Nullable String order,
             @Nullable String orderId,
+            @Nullable String orgId,
             @Nullable String query,
             @Nullable String raw,
             @Nullable String sort,
@@ -98,6 +105,7 @@ public class ListShippingShipmentsRequest {
         this.offset = offset;
         this.order = order;
         this.orderId = orderId;
+        this.orgId = orgId;
         this.query = query;
         this.raw = raw;
         this.sort = sort;
@@ -109,7 +117,7 @@ public class ListShippingShipmentsRequest {
         this(null, connectionId, null,
             null, null, null,
             null, null, null,
-            null, null);
+            null, null, null);
     }
 
     /**
@@ -150,6 +158,13 @@ public class ListShippingShipmentsRequest {
      */
     public Optional<String> orderId() {
         return Optional.ofNullable(this.orderId);
+    }
+
+    /**
+     * The org ID to filter by
+     */
+    public Optional<String> orgId() {
+        return Optional.ofNullable(this.orgId);
     }
 
     /**
@@ -240,6 +255,15 @@ public class ListShippingShipmentsRequest {
 
 
     /**
+     * The org ID to filter by
+     */
+    public ListShippingShipmentsRequest withOrgId(@Nullable String orgId) {
+        this.orgId = orgId;
+        return this;
+    }
+
+
+    /**
      * Query string to search. eg. email address or name
      */
     public ListShippingShipmentsRequest withQuery(@Nullable String query) {
@@ -292,6 +316,7 @@ public class ListShippingShipmentsRequest {
             Utils.enhancedDeepEquals(this.offset, other.offset) &&
             Utils.enhancedDeepEquals(this.order, other.order) &&
             Utils.enhancedDeepEquals(this.orderId, other.orderId) &&
+            Utils.enhancedDeepEquals(this.orgId, other.orgId) &&
             Utils.enhancedDeepEquals(this.query, other.query) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
             Utils.enhancedDeepEquals(this.sort, other.sort) &&
@@ -303,8 +328,8 @@ public class ListShippingShipmentsRequest {
         return Utils.enhancedHash(
             carrierId, connectionId, fields,
             limit, offset, order,
-            orderId, query, raw,
-            sort, updatedGte);
+            orderId, orgId, query,
+            raw, sort, updatedGte);
     }
     
     @Override
@@ -317,6 +342,7 @@ public class ListShippingShipmentsRequest {
                 "offset", offset,
                 "order", order,
                 "orderId", orderId,
+                "orgId", orgId,
                 "query", query,
                 "raw", raw,
                 "sort", sort,
@@ -339,6 +365,8 @@ public class ListShippingShipmentsRequest {
         private String order;
 
         private String orderId;
+
+        private String orgId;
 
         private String query;
 
@@ -400,6 +428,14 @@ public class ListShippingShipmentsRequest {
         }
 
         /**
+         * The org ID to filter by
+         */
+        public Builder orgId(@Nullable String orgId) {
+            this.orgId = orgId;
+            return this;
+        }
+
+        /**
          * Query string to search. eg. email address or name
          */
         public Builder query(@Nullable String query) {
@@ -435,8 +471,8 @@ public class ListShippingShipmentsRequest {
             return new ListShippingShipmentsRequest(
                 carrierId, connectionId, fields,
                 limit, offset, order,
-                orderId, query, raw,
-                sort, updatedGte);
+                orderId, orgId, query,
+                raw, sort, updatedGte);
         }
 
     }

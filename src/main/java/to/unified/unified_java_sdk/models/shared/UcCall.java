@@ -52,6 +52,11 @@ public class UcCall {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("metadata")
+    private List<UcMetadata> metadata;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
     private Map<String, Object> raw;
 
@@ -100,6 +105,7 @@ public class UcCall {
             @JsonProperty("end_at") @Nullable OffsetDateTime endAt,
             @JsonProperty("id") @Nullable String id,
             @JsonProperty("is_private") @Nullable Boolean isPrivate,
+            @JsonProperty("metadata") @Nullable List<UcMetadata> metadata,
             @JsonProperty("raw") @Nullable Map<String, Object> raw,
             @JsonProperty("start_at") @Nullable OffsetDateTime startAt,
             @JsonProperty("telephone") @Nullable PropertyUcCallTelephone telephone,
@@ -114,6 +120,7 @@ public class UcCall {
         this.endAt = endAt;
         this.id = id;
         this.isPrivate = isPrivate;
+        this.metadata = metadata;
         this.raw = raw;
         this.startAt = startAt;
         this.telephone = telephone;
@@ -129,7 +136,7 @@ public class UcCall {
             null, null, null,
             null, null, null,
             null, null, null,
-            null, null);
+            null, null, null);
     }
 
     public Optional<String> contactId() {
@@ -154,6 +161,10 @@ public class UcCall {
 
     public Optional<Boolean> isPrivate() {
         return Optional.ofNullable(this.isPrivate);
+    }
+
+    public Optional<List<UcMetadata>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     public Optional<Map<String, Object>> raw() {
@@ -232,6 +243,12 @@ public class UcCall {
     }
 
 
+    public UcCall withMetadata(@Nullable List<UcMetadata> metadata) {
+        this.metadata = metadata;
+        return this;
+    }
+
+
     public UcCall withRaw(@Nullable Map<String, Object> raw) {
         this.raw = raw;
         return this;
@@ -299,6 +316,7 @@ public class UcCall {
             Utils.enhancedDeepEquals(this.endAt, other.endAt) &&
             Utils.enhancedDeepEquals(this.id, other.id) &&
             Utils.enhancedDeepEquals(this.isPrivate, other.isPrivate) &&
+            Utils.enhancedDeepEquals(this.metadata, other.metadata) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
             Utils.enhancedDeepEquals(this.startAt, other.startAt) &&
             Utils.enhancedDeepEquals(this.telephone, other.telephone) &&
@@ -314,9 +332,9 @@ public class UcCall {
         return Utils.enhancedHash(
             contactId, contacts, createdAt,
             endAt, id, isPrivate,
-            raw, startAt, telephone,
-            type, updatedAt, userId,
-            userName, userPhone);
+            metadata, raw, startAt,
+            telephone, type, updatedAt,
+            userId, userName, userPhone);
     }
     
     @Override
@@ -328,6 +346,7 @@ public class UcCall {
                 "endAt", endAt,
                 "id", id,
                 "isPrivate", isPrivate,
+                "metadata", metadata,
                 "raw", raw,
                 "startAt", startAt,
                 "telephone", telephone,
@@ -352,6 +371,8 @@ public class UcCall {
         private String id;
 
         private Boolean isPrivate;
+
+        private List<UcMetadata> metadata;
 
         private Map<String, Object> raw;
 
@@ -403,6 +424,11 @@ public class UcCall {
             return this;
         }
 
+        public Builder metadata(@Nullable List<UcMetadata> metadata) {
+            this.metadata = metadata;
+            return this;
+        }
+
         public Builder raw(@Nullable Map<String, Object> raw) {
             this.raw = raw;
             return this;
@@ -450,9 +476,9 @@ public class UcCall {
             return new UcCall(
                 contactId, contacts, createdAt,
                 endAt, id, isPrivate,
-                raw, startAt, telephone,
-                type, updatedAt, userId,
-                userName, userPhone);
+                metadata, raw, startAt,
+                telephone, type, updatedAt,
+                userId, userName, userPhone);
         }
 
     }

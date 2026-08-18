@@ -1,0 +1,13 @@
+# UcMetadata
+
+
+## Fields
+
+| Field                                                                        | Type                                                                         | Required                                                                     | Description                                                                  |
+| ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
+| `extraData`                                                                  | [Optional\<UcMetadataExtraData>](../../models/shared/UcMetadataExtraData.md) | :heavy_minus_sign:                                                           | N/A                                                                          |
+| `format`                                                                     | [Optional\<UcMetadataFormat>](../../models/shared/UcMetadataFormat.md)       | :heavy_minus_sign:                                                           | N/A                                                                          |
+| `id`                                                                         | *Optional\<String>*                                                          | :heavy_minus_sign:                                                           | N/A                                                                          |
+| `namespace`                                                                  | *Optional\<String>*                                                          | :heavy_minus_sign:                                                           | N/A                                                                          |
+| `slug`                                                                       | *Optional\<String>*                                                          | :heavy_minus_sign:                                                           | N/A                                                                          |
+| `value`                                                                      | [Optional\<UcMetadataValue>](../../models/shared/UcMetadataValue.md)         | :heavy_minus_sign:                                                           | N/A                                                                          |

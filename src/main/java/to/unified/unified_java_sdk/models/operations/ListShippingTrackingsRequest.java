@@ -41,6 +41,12 @@ public class ListShippingTrackingsRequest {
     private String order;
 
     /**
+     * The AccountingOrder ID to filter by
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=order_id")
+    private String orderId;
+
+    /**
      * Query string to search. eg. email address or name
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=query")
@@ -72,6 +78,7 @@ public class ListShippingTrackingsRequest {
             @Nullable Double limit,
             @Nullable Double offset,
             @Nullable String order,
+            @Nullable String orderId,
             @Nullable String query,
             @Nullable String raw,
             @Nullable String sort,
@@ -82,6 +89,7 @@ public class ListShippingTrackingsRequest {
         this.limit = limit;
         this.offset = offset;
         this.order = order;
+        this.orderId = orderId;
         this.query = query;
         this.raw = raw;
         this.sort = sort;
@@ -92,7 +100,8 @@ public class ListShippingTrackingsRequest {
             @Nonnull String connectionId) {
         this(connectionId, null, null,
             null, null, null,
-            null, null, null);
+            null, null, null,
+            null);
     }
 
     /**
@@ -119,6 +128,13 @@ public class ListShippingTrackingsRequest {
 
     public Optional<String> order() {
         return Optional.ofNullable(this.order);
+    }
+
+    /**
+     * The AccountingOrder ID to filter by
+     */
+    public Optional<String> orderId() {
+        return Optional.ofNullable(this.orderId);
     }
 
     /**
@@ -191,6 +207,15 @@ public class ListShippingTrackingsRequest {
 
 
     /**
+     * The AccountingOrder ID to filter by
+     */
+    public ListShippingTrackingsRequest withOrderId(@Nullable String orderId) {
+        this.orderId = orderId;
+        return this;
+    }
+
+
+    /**
      * Query string to search. eg. email address or name
      */
     public ListShippingTrackingsRequest withQuery(@Nullable String query) {
@@ -241,6 +266,7 @@ public class ListShippingTrackingsRequest {
             Utils.enhancedDeepEquals(this.limit, other.limit) &&
             Utils.enhancedDeepEquals(this.offset, other.offset) &&
             Utils.enhancedDeepEquals(this.order, other.order) &&
+            Utils.enhancedDeepEquals(this.orderId, other.orderId) &&
             Utils.enhancedDeepEquals(this.query, other.query) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
             Utils.enhancedDeepEquals(this.sort, other.sort) &&
@@ -251,8 +277,9 @@ public class ListShippingTrackingsRequest {
     public int hashCode() {
         return Utils.enhancedHash(
             connectionId, fields, limit,
-            offset, order, query,
-            raw, sort, updatedGte);
+            offset, order, orderId,
+            query, raw, sort,
+            updatedGte);
     }
     
     @Override
@@ -263,6 +290,7 @@ public class ListShippingTrackingsRequest {
                 "limit", limit,
                 "offset", offset,
                 "order", order,
+                "orderId", orderId,
                 "query", query,
                 "raw", raw,
                 "sort", sort,
@@ -281,6 +309,8 @@ public class ListShippingTrackingsRequest {
         private Double offset;
 
         private String order;
+
+        private String orderId;
 
         private String query;
 
@@ -326,6 +356,14 @@ public class ListShippingTrackingsRequest {
         }
 
         /**
+         * The AccountingOrder ID to filter by
+         */
+        public Builder orderId(@Nullable String orderId) {
+            this.orderId = orderId;
+            return this;
+        }
+
+        /**
          * Query string to search. eg. email address or name
          */
         public Builder query(@Nullable String query) {
@@ -360,8 +398,9 @@ public class ListShippingTrackingsRequest {
         public ListShippingTrackingsRequest build() {
             return new ListShippingTrackingsRequest(
                 connectionId, fields, limit,
-                offset, order, query,
-                raw, sort, updatedGte);
+                offset, order, orderId,
+                query, raw, sort,
+                updatedGte);
         }
 
     }

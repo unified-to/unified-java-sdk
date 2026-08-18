@@ -28,6 +28,11 @@ public class ShippingShipment {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("carrier_name")
+    private String carrierName;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private OffsetDateTime createdAt;
 
@@ -87,10 +92,22 @@ public class ShippingShipment {
     @JsonProperty("label_id")
     private String labelId;
 
+    /**
+     * Item-level fulfillment lines (what shipped); used by commerce-platform fulfillments
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("lineitems")
+    private List<ShippingShipmentLineitem> lineitems;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("order_id")
     private String orderId;
+
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("organization_id")
+    private String organizationId;
 
 
     @JsonInclude(Include.NON_ABSENT)
@@ -202,6 +219,11 @@ public class ShippingShipment {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("tracking_url")
+    private String trackingUrl;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     private OffsetDateTime updatedAt;
 
@@ -218,6 +240,7 @@ public class ShippingShipment {
     @JsonCreator
     public ShippingShipment(
             @JsonProperty("carrier_id") @Nullable String carrierId,
+            @JsonProperty("carrier_name") @Nullable String carrierName,
             @JsonProperty("created_at") @Nullable OffsetDateTime createdAt,
             @JsonProperty("customs") @Nullable PropertyShippingShipmentCustoms customs,
             @JsonProperty("from_address") @Nullable PropertyShippingShipmentFromAddress fromAddress,
@@ -229,7 +252,9 @@ public class ShippingShipment {
             @JsonProperty("is_return") @Nullable Boolean isReturn,
             @JsonProperty("is_signature_required") @Nullable Boolean isSignatureRequired,
             @JsonProperty("label_id") @Nullable String labelId,
+            @JsonProperty("lineitems") @Nullable List<ShippingShipmentLineitem> lineitems,
             @JsonProperty("order_id") @Nullable String orderId,
+            @JsonProperty("organization_id") @Nullable String organizationId,
             @JsonProperty("original_shipment_id") @Nullable String originalShipmentId,
             @JsonProperty("packages") @Nullable List<ShippingPackage> packages,
             @JsonProperty("rate_amount") @Nullable Double rateAmount,
@@ -250,10 +275,12 @@ public class ShippingShipment {
             @JsonProperty("status") @Nullable ShippingShipmentStatus status,
             @JsonProperty("to_address") @Nullable PropertyShippingShipmentToAddress toAddress,
             @JsonProperty("tracking_id") @Nullable String trackingId,
+            @JsonProperty("tracking_url") @Nullable String trackingUrl,
             @JsonProperty("updated_at") @Nullable OffsetDateTime updatedAt,
             @JsonProperty("warehouse_location_id") @Nullable String warehouseLocationId,
             @JsonProperty("warehouse_location_name") @Nullable String warehouseLocationName) {
         this.carrierId = carrierId;
+        this.carrierName = carrierName;
         this.createdAt = createdAt;
         this.customs = customs;
         this.fromAddress = fromAddress;
@@ -265,7 +292,9 @@ public class ShippingShipment {
         this.isReturn = isReturn;
         this.isSignatureRequired = isSignatureRequired;
         this.labelId = labelId;
+        this.lineitems = lineitems;
         this.orderId = orderId;
+        this.organizationId = organizationId;
         this.originalShipmentId = originalShipmentId;
         this.packages = packages;
         this.rateAmount = rateAmount;
@@ -286,6 +315,7 @@ public class ShippingShipment {
         this.status = status;
         this.toAddress = toAddress;
         this.trackingId = trackingId;
+        this.trackingUrl = trackingUrl;
         this.updatedAt = updatedAt;
         this.warehouseLocationId = warehouseLocationId;
         this.warehouseLocationName = warehouseLocationName;
@@ -303,11 +333,17 @@ public class ShippingShipment {
             null, null, null,
             null, null, null,
             null, null, null,
-            null, null, null);
+            null, null, null,
+            null, null, null,
+            null);
     }
 
     public Optional<String> carrierId() {
         return Optional.ofNullable(this.carrierId);
+    }
+
+    public Optional<String> carrierName() {
+        return Optional.ofNullable(this.carrierName);
     }
 
     public Optional<OffsetDateTime> createdAt() {
@@ -363,8 +399,19 @@ public class ShippingShipment {
         return Optional.ofNullable(this.labelId);
     }
 
+    /**
+     * Item-level fulfillment lines (what shipped); used by commerce-platform fulfillments
+     */
+    public Optional<List<ShippingShipmentLineitem>> lineitems() {
+        return Optional.ofNullable(this.lineitems);
+    }
+
     public Optional<String> orderId() {
         return Optional.ofNullable(this.orderId);
+    }
+
+    public Optional<String> organizationId() {
+        return Optional.ofNullable(this.organizationId);
     }
 
     public Optional<String> originalShipmentId() {
@@ -459,6 +506,10 @@ public class ShippingShipment {
         return Optional.ofNullable(this.trackingId);
     }
 
+    public Optional<String> trackingUrl() {
+        return Optional.ofNullable(this.trackingUrl);
+    }
+
     public Optional<OffsetDateTime> updatedAt() {
         return Optional.ofNullable(this.updatedAt);
     }
@@ -478,6 +529,12 @@ public class ShippingShipment {
 
     public ShippingShipment withCarrierId(@Nullable String carrierId) {
         this.carrierId = carrierId;
+        return this;
+    }
+
+
+    public ShippingShipment withCarrierName(@Nullable String carrierName) {
+        this.carrierName = carrierName;
         return this;
     }
 
@@ -557,8 +614,23 @@ public class ShippingShipment {
     }
 
 
+    /**
+     * Item-level fulfillment lines (what shipped); used by commerce-platform fulfillments
+     */
+    public ShippingShipment withLineitems(@Nullable List<ShippingShipmentLineitem> lineitems) {
+        this.lineitems = lineitems;
+        return this;
+    }
+
+
     public ShippingShipment withOrderId(@Nullable String orderId) {
         this.orderId = orderId;
+        return this;
+    }
+
+
+    public ShippingShipment withOrganizationId(@Nullable String organizationId) {
+        this.organizationId = organizationId;
         return this;
     }
 
@@ -695,6 +767,12 @@ public class ShippingShipment {
     }
 
 
+    public ShippingShipment withTrackingUrl(@Nullable String trackingUrl) {
+        this.trackingUrl = trackingUrl;
+        return this;
+    }
+
+
     public ShippingShipment withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -724,6 +802,7 @@ public class ShippingShipment {
         ShippingShipment other = (ShippingShipment) o;
         return 
             Utils.enhancedDeepEquals(this.carrierId, other.carrierId) &&
+            Utils.enhancedDeepEquals(this.carrierName, other.carrierName) &&
             Utils.enhancedDeepEquals(this.createdAt, other.createdAt) &&
             Utils.enhancedDeepEquals(this.customs, other.customs) &&
             Utils.enhancedDeepEquals(this.fromAddress, other.fromAddress) &&
@@ -735,7 +814,9 @@ public class ShippingShipment {
             Utils.enhancedDeepEquals(this.isReturn, other.isReturn) &&
             Utils.enhancedDeepEquals(this.isSignatureRequired, other.isSignatureRequired) &&
             Utils.enhancedDeepEquals(this.labelId, other.labelId) &&
+            Utils.enhancedDeepEquals(this.lineitems, other.lineitems) &&
             Utils.enhancedDeepEquals(this.orderId, other.orderId) &&
+            Utils.enhancedDeepEquals(this.organizationId, other.organizationId) &&
             Utils.enhancedDeepEquals(this.originalShipmentId, other.originalShipmentId) &&
             Utils.enhancedDeepEquals(this.packages, other.packages) &&
             Utils.enhancedDeepEquals(this.rateAmount, other.rateAmount) &&
@@ -756,6 +837,7 @@ public class ShippingShipment {
             Utils.enhancedDeepEquals(this.status, other.status) &&
             Utils.enhancedDeepEquals(this.toAddress, other.toAddress) &&
             Utils.enhancedDeepEquals(this.trackingId, other.trackingId) &&
+            Utils.enhancedDeepEquals(this.trackingUrl, other.trackingUrl) &&
             Utils.enhancedDeepEquals(this.updatedAt, other.updatedAt) &&
             Utils.enhancedDeepEquals(this.warehouseLocationId, other.warehouseLocationId) &&
             Utils.enhancedDeepEquals(this.warehouseLocationName, other.warehouseLocationName);
@@ -764,24 +846,27 @@ public class ShippingShipment {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            carrierId, createdAt, customs,
-            fromAddress, id, insurance,
-            isAdultSignatureRequired, isInternational, isRateGuaranteed,
-            isReturn, isSignatureRequired, labelId,
-            orderId, originalShipmentId, packages,
+            carrierId, carrierName, createdAt,
+            customs, fromAddress, id,
+            insurance, isAdultSignatureRequired, isInternational,
+            isRateGuaranteed, isReturn, isSignatureRequired,
+            labelId, lineitems, orderId,
+            organizationId, originalShipmentId, packages,
             rateAmount, rateCurrency, rateEstimatedDays,
             rateEstimatedDeliveryAt, rateId, rateServiceName,
             raw, referenceNumber, returnAddress,
             returnAuthorizationNumber, returnReason, returnType,
             serviceCode, shippedAt, specialInstructions,
             status, toAddress, trackingId,
-            updatedAt, warehouseLocationId, warehouseLocationName);
+            trackingUrl, updatedAt, warehouseLocationId,
+            warehouseLocationName);
     }
     
     @Override
     public String toString() {
         return Utils.toString(ShippingShipment.class,
                 "carrierId", carrierId,
+                "carrierName", carrierName,
                 "createdAt", createdAt,
                 "customs", customs,
                 "fromAddress", fromAddress,
@@ -793,7 +878,9 @@ public class ShippingShipment {
                 "isReturn", isReturn,
                 "isSignatureRequired", isSignatureRequired,
                 "labelId", labelId,
+                "lineitems", lineitems,
                 "orderId", orderId,
+                "organizationId", organizationId,
                 "originalShipmentId", originalShipmentId,
                 "packages", packages,
                 "rateAmount", rateAmount,
@@ -814,6 +901,7 @@ public class ShippingShipment {
                 "status", status,
                 "toAddress", toAddress,
                 "trackingId", trackingId,
+                "trackingUrl", trackingUrl,
                 "updatedAt", updatedAt,
                 "warehouseLocationId", warehouseLocationId,
                 "warehouseLocationName", warehouseLocationName);
@@ -823,6 +911,8 @@ public class ShippingShipment {
     public final static class Builder {
 
         private String carrierId;
+
+        private String carrierName;
 
         private OffsetDateTime createdAt;
 
@@ -846,7 +936,11 @@ public class ShippingShipment {
 
         private String labelId;
 
+        private List<ShippingShipmentLineitem> lineitems;
+
         private String orderId;
+
+        private String organizationId;
 
         private String originalShipmentId;
 
@@ -888,6 +982,8 @@ public class ShippingShipment {
 
         private String trackingId;
 
+        private String trackingUrl;
+
         private OffsetDateTime updatedAt;
 
         private String warehouseLocationId;
@@ -900,6 +996,11 @@ public class ShippingShipment {
 
         public Builder carrierId(@Nullable String carrierId) {
             this.carrierId = carrierId;
+            return this;
+        }
+
+        public Builder carrierName(@Nullable String carrierName) {
+            this.carrierName = carrierName;
             return this;
         }
 
@@ -967,8 +1068,21 @@ public class ShippingShipment {
             return this;
         }
 
+        /**
+         * Item-level fulfillment lines (what shipped); used by commerce-platform fulfillments
+         */
+        public Builder lineitems(@Nullable List<ShippingShipmentLineitem> lineitems) {
+            this.lineitems = lineitems;
+            return this;
+        }
+
         public Builder orderId(@Nullable String orderId) {
             this.orderId = orderId;
+            return this;
+        }
+
+        public Builder organizationId(@Nullable String organizationId) {
+            this.organizationId = organizationId;
             return this;
         }
 
@@ -1084,6 +1198,11 @@ public class ShippingShipment {
             return this;
         }
 
+        public Builder trackingUrl(@Nullable String trackingUrl) {
+            this.trackingUrl = trackingUrl;
+            return this;
+        }
+
         public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;
@@ -1101,18 +1220,20 @@ public class ShippingShipment {
 
         public ShippingShipment build() {
             return new ShippingShipment(
-                carrierId, createdAt, customs,
-                fromAddress, id, insurance,
-                isAdultSignatureRequired, isInternational, isRateGuaranteed,
-                isReturn, isSignatureRequired, labelId,
-                orderId, originalShipmentId, packages,
+                carrierId, carrierName, createdAt,
+                customs, fromAddress, id,
+                insurance, isAdultSignatureRequired, isInternational,
+                isRateGuaranteed, isReturn, isSignatureRequired,
+                labelId, lineitems, orderId,
+                organizationId, originalShipmentId, packages,
                 rateAmount, rateCurrency, rateEstimatedDays,
                 rateEstimatedDeliveryAt, rateId, rateServiceName,
                 raw, referenceNumber, returnAddress,
                 returnAuthorizationNumber, returnReason, returnType,
                 serviceCode, shippedAt, specialInstructions,
                 status, toAddress, trackingId,
-                updatedAt, warehouseLocationId, warehouseLocationName);
+                trackingUrl, updatedAt, warehouseLocationId,
+                warehouseLocationName);
         }
 
     }
