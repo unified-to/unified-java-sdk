@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: cfc256ab-f291-4245-b909-5b9e9a6e6803
 management:
-  docChecksum: 886b4ea0644bd8b8175e53cfbdd19e43
+  docChecksum: f1b21bdacc13bdae2d4bb40a40b83aba
   docVersion: "1.0"
   speakeasyVersion: 1.795.0
   generationVersion: 2.931.0
-  releaseVersion: 0.49.2
-  configChecksum: cf8a91d357892777f975518579f76b7f
+  releaseVersion: 0.49.3
+  configChecksum: 23401dc22a3fef40ab73d4377daf4761
   repoURL: https://github.com/unified-to/unified-java-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-java-sdk
@@ -29676,7 +29676,7 @@ examples:
           application/json: {}
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: "## Java SDK Changes:\n* `unified-to.ats.listAtsApplicationstatuses()`: \n  *  `request.jobId` **Added**\n* `unified-to.applicationstatus.listAtsApplicationstatuses()`: \n  *  `request.jobId` **Added**\n"
+releaseNotes: "## Java SDK Changes:\n* `unified-to.location.listHrisLocations()`: \n  *  `request.parentId` **Added**\n* `unified-to.hris.listHrisLocations()`: \n  *  `request.parentId` **Added**\n"
 generatedFiles:
   - .gitattributes
   - USAGE.md

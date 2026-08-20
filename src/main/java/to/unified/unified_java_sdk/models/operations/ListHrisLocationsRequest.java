@@ -47,6 +47,12 @@ public class ListHrisLocationsRequest {
     private String order;
 
     /**
+     * The parent ID to filter by
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=parent_id")
+    private String parentId;
+
+    /**
      * Query string to search. eg. email address or name
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=query")
@@ -79,6 +85,7 @@ public class ListHrisLocationsRequest {
             @Nullable Double limit,
             @Nullable Double offset,
             @Nullable String order,
+            @Nullable String parentId,
             @Nullable String query,
             @Nullable String raw,
             @Nullable String sort,
@@ -90,6 +97,7 @@ public class ListHrisLocationsRequest {
         this.limit = limit;
         this.offset = offset;
         this.order = order;
+        this.parentId = parentId;
         this.query = query;
         this.raw = raw;
         this.sort = sort;
@@ -101,7 +109,7 @@ public class ListHrisLocationsRequest {
         this(null, connectionId, null,
             null, null, null,
             null, null, null,
-            null);
+            null, null);
     }
 
     /**
@@ -135,6 +143,13 @@ public class ListHrisLocationsRequest {
 
     public Optional<String> order() {
         return Optional.ofNullable(this.order);
+    }
+
+    /**
+     * The parent ID to filter by
+     */
+    public Optional<String> parentId() {
+        return Optional.ofNullable(this.parentId);
     }
 
     /**
@@ -216,6 +231,15 @@ public class ListHrisLocationsRequest {
 
 
     /**
+     * The parent ID to filter by
+     */
+    public ListHrisLocationsRequest withParentId(@Nullable String parentId) {
+        this.parentId = parentId;
+        return this;
+    }
+
+
+    /**
      * Query string to search. eg. email address or name
      */
     public ListHrisLocationsRequest withQuery(@Nullable String query) {
@@ -267,6 +291,7 @@ public class ListHrisLocationsRequest {
             Utils.enhancedDeepEquals(this.limit, other.limit) &&
             Utils.enhancedDeepEquals(this.offset, other.offset) &&
             Utils.enhancedDeepEquals(this.order, other.order) &&
+            Utils.enhancedDeepEquals(this.parentId, other.parentId) &&
             Utils.enhancedDeepEquals(this.query, other.query) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
             Utils.enhancedDeepEquals(this.sort, other.sort) &&
@@ -278,8 +303,8 @@ public class ListHrisLocationsRequest {
         return Utils.enhancedHash(
             companyId, connectionId, fields,
             limit, offset, order,
-            query, raw, sort,
-            updatedGte);
+            parentId, query, raw,
+            sort, updatedGte);
     }
     
     @Override
@@ -291,6 +316,7 @@ public class ListHrisLocationsRequest {
                 "limit", limit,
                 "offset", offset,
                 "order", order,
+                "parentId", parentId,
                 "query", query,
                 "raw", raw,
                 "sort", sort,
@@ -311,6 +337,8 @@ public class ListHrisLocationsRequest {
         private Double offset;
 
         private String order;
+
+        private String parentId;
 
         private String query;
 
@@ -364,6 +392,14 @@ public class ListHrisLocationsRequest {
         }
 
         /**
+         * The parent ID to filter by
+         */
+        public Builder parentId(@Nullable String parentId) {
+            this.parentId = parentId;
+            return this;
+        }
+
+        /**
          * Query string to search. eg. email address or name
          */
         public Builder query(@Nullable String query) {
@@ -399,8 +435,8 @@ public class ListHrisLocationsRequest {
             return new ListHrisLocationsRequest(
                 companyId, connectionId, fields,
                 limit, offset, order,
-                query, raw, sort,
-                updatedGte);
+                parentId, query, raw,
+                sort, updatedGte);
         }
 
     }
