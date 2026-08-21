@@ -25,6 +25,12 @@ public class SecretsManagerType {
     public static final SecretsManagerType GCP = new SecretsManagerType("gcp");
     public static final SecretsManagerType HASHICORP = new SecretsManagerType("hashicorp");
     public static final SecretsManagerType COMPOSIO = new SecretsManagerType("composio");
+    public static final SecretsManagerType ONEPASSWORD = new SecretsManagerType("1password");
+    public static final SecretsManagerType BITWARDEN = new SecretsManagerType("bitwarden");
+    public static final SecretsManagerType DOPPLER = new SecretsManagerType("doppler");
+    public static final SecretsManagerType AKEYLESS = new SecretsManagerType("akeyless");
+    public static final SecretsManagerType PIPEDREAM = new SecretsManagerType("pipedream");
+    public static final SecretsManagerType ALIBABACLOUD = new SecretsManagerType("alibabacloud");
 
     // This map will grow whenever a Color gets created with a new
     // unrecognized value (a potential memory leak if the user is not
@@ -103,6 +109,12 @@ public class SecretsManagerType {
         map.put("gcp", GCP);
         map.put("hashicorp", HASHICORP);
         map.put("composio", COMPOSIO);
+        map.put("1password", ONEPASSWORD);
+        map.put("bitwarden", BITWARDEN);
+        map.put("doppler", DOPPLER);
+        map.put("akeyless", AKEYLESS);
+        map.put("pipedream", PIPEDREAM);
+        map.put("alibabacloud", ALIBABACLOUD);
         return map;
     }
 
@@ -113,6 +125,12 @@ public class SecretsManagerType {
         map.put("gcp", SecretsManagerTypeEnum.GCP);
         map.put("hashicorp", SecretsManagerTypeEnum.HASHICORP);
         map.put("composio", SecretsManagerTypeEnum.COMPOSIO);
+        map.put("1password", SecretsManagerTypeEnum.ONEPASSWORD);
+        map.put("bitwarden", SecretsManagerTypeEnum.BITWARDEN);
+        map.put("doppler", SecretsManagerTypeEnum.DOPPLER);
+        map.put("akeyless", SecretsManagerTypeEnum.AKEYLESS);
+        map.put("pipedream", SecretsManagerTypeEnum.PIPEDREAM);
+        map.put("alibabacloud", SecretsManagerTypeEnum.ALIBABACLOUD);
         return map;
     }
     
@@ -123,7 +141,13 @@ public class SecretsManagerType {
         AZURE("azure"),
         GCP("gcp"),
         HASHICORP("hashicorp"),
-        COMPOSIO("composio"),;
+        COMPOSIO("composio"),
+        ONEPASSWORD("1password"),
+        BITWARDEN("bitwarden"),
+        DOPPLER("doppler"),
+        AKEYLESS("akeyless"),
+        PIPEDREAM("pipedream"),
+        ALIBABACLOUD("alibabacloud"),;
 
         private final String value;
 

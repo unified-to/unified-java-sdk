@@ -77,6 +77,10 @@ public class ListHrisTimeoffsRequest {
     private String startGte;
 
 
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status")
+    private String status;
+
+
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type")
     private String type;
 
@@ -106,6 +110,7 @@ public class ListHrisTimeoffsRequest {
             @Nullable String raw,
             @Nullable String sort,
             @Nullable String startGte,
+            @Nullable String status,
             @Nullable String type,
             @Nullable String updatedGte,
             @Nullable String userId) {
@@ -121,6 +126,7 @@ public class ListHrisTimeoffsRequest {
         this.raw = raw;
         this.sort = sort;
         this.startGte = startGte;
+        this.status = status;
         this.type = type;
         this.updatedGte = updatedGte;
         this.userId = userId;
@@ -132,7 +138,7 @@ public class ListHrisTimeoffsRequest {
             null, null, null,
             null, null, null,
             null, null, null,
-            null, null);
+            null, null, null);
     }
 
     /**
@@ -200,6 +206,10 @@ public class ListHrisTimeoffsRequest {
      */
     public Optional<String> startGte() {
         return Optional.ofNullable(this.startGte);
+    }
+
+    public Optional<String> status() {
+        return Optional.ofNullable(this.status);
     }
 
     public Optional<String> type() {
@@ -315,6 +325,12 @@ public class ListHrisTimeoffsRequest {
     }
 
 
+    public ListHrisTimeoffsRequest withStatus(@Nullable String status) {
+        this.status = status;
+        return this;
+    }
+
+
     public ListHrisTimeoffsRequest withType(@Nullable String type) {
         this.type = type;
         return this;
@@ -361,6 +377,7 @@ public class ListHrisTimeoffsRequest {
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
             Utils.enhancedDeepEquals(this.sort, other.sort) &&
             Utils.enhancedDeepEquals(this.startGte, other.startGte) &&
+            Utils.enhancedDeepEquals(this.status, other.status) &&
             Utils.enhancedDeepEquals(this.type, other.type) &&
             Utils.enhancedDeepEquals(this.updatedGte, other.updatedGte) &&
             Utils.enhancedDeepEquals(this.userId, other.userId);
@@ -372,8 +389,8 @@ public class ListHrisTimeoffsRequest {
             companyId, connectionId, endLt,
             fields, limit, offset,
             order, query, raw,
-            sort, startGte, type,
-            updatedGte, userId);
+            sort, startGte, status,
+            type, updatedGte, userId);
     }
     
     @Override
@@ -390,6 +407,7 @@ public class ListHrisTimeoffsRequest {
                 "raw", raw,
                 "sort", sort,
                 "startGte", startGte,
+                "status", status,
                 "type", type,
                 "updatedGte", updatedGte,
                 "userId", userId);
@@ -419,6 +437,8 @@ public class ListHrisTimeoffsRequest {
         private String sort;
 
         private String startGte;
+
+        private String status;
 
         private String type;
 
@@ -508,6 +528,11 @@ public class ListHrisTimeoffsRequest {
             return this;
         }
 
+        public Builder status(@Nullable String status) {
+            this.status = status;
+            return this;
+        }
+
         public Builder type(@Nullable String type) {
             this.type = type;
             return this;
@@ -535,8 +560,8 @@ public class ListHrisTimeoffsRequest {
                 companyId, connectionId, endLt,
                 fields, limit, offset,
                 order, query, raw,
-                sort, startGte, type,
-                updatedGte, userId);
+                sort, startGte, status,
+                type, updatedGte, userId);
         }
 
     }

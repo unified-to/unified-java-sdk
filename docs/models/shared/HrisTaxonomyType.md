@@ -22,3 +22,4 @@ HrisTaxonomyType custom = HrisTaxonomyType.of("custom_value");
 | `ABILITY`       | ABILITY         |
 | `CERTIFICATION` | CERTIFICATION   |
 | `ROLE`          | ROLE            |
+| `HOLIDAY`       | HOLIDAY         |

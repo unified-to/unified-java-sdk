@@ -26,6 +26,7 @@ public class HrisTaxonomyType {
     public static final HrisTaxonomyType ABILITY = new HrisTaxonomyType("ABILITY");
     public static final HrisTaxonomyType CERTIFICATION = new HrisTaxonomyType("CERTIFICATION");
     public static final HrisTaxonomyType ROLE = new HrisTaxonomyType("ROLE");
+    public static final HrisTaxonomyType HOLIDAY = new HrisTaxonomyType("HOLIDAY");
 
     // This map will grow whenever a Color gets created with a new
     // unrecognized value (a potential memory leak if the user is not
@@ -105,6 +106,7 @@ public class HrisTaxonomyType {
         map.put("ABILITY", ABILITY);
         map.put("CERTIFICATION", CERTIFICATION);
         map.put("ROLE", ROLE);
+        map.put("HOLIDAY", HOLIDAY);
         return map;
     }
 
@@ -116,6 +118,7 @@ public class HrisTaxonomyType {
         map.put("ABILITY", HrisTaxonomyTypeEnum.ABILITY);
         map.put("CERTIFICATION", HrisTaxonomyTypeEnum.CERTIFICATION);
         map.put("ROLE", HrisTaxonomyTypeEnum.ROLE);
+        map.put("HOLIDAY", HrisTaxonomyTypeEnum.HOLIDAY);
         return map;
     }
     
@@ -127,7 +130,8 @@ public class HrisTaxonomyType {
         COMPETENCE("COMPETENCE"),
         ABILITY("ABILITY"),
         CERTIFICATION("CERTIFICATION"),
-        ROLE("ROLE"),;
+        ROLE("ROLE"),
+        HOLIDAY("HOLIDAY"),;
 
         private final String value;
 

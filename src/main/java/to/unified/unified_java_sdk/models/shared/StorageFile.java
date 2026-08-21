@@ -85,7 +85,9 @@ public class StorageFile {
     @JsonProperty("size")
     private Double size;
 
-
+    /**
+     * labels
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     private List<String> tags;
@@ -219,6 +221,9 @@ public class StorageFile {
         return Optional.ofNullable(this.size);
     }
 
+    /**
+     * labels
+     */
     public Optional<List<String>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -326,6 +331,9 @@ public class StorageFile {
     }
 
 
+    /**
+     * labels
+     */
     public StorageFile withTags(@Nullable List<String> tags) {
         this.tags = tags;
         return this;
@@ -539,6 +547,9 @@ public class StorageFile {
             return this;
         }
 
+        /**
+         * labels
+         */
         public Builder tags(@Nullable List<String> tags) {
             this.tags = tags;
             return this;
