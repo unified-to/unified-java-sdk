@@ -68,7 +68,7 @@ public class Webhook {
 
 
     @JsonProperty("event")
-    private Event event;
+    private WebhookEvent event;
 
 
     @JsonInclude(Include.NON_ABSENT)
@@ -156,7 +156,7 @@ public class Webhook {
             @JsonProperty("db_type") @Nullable DbType dbType,
             @JsonProperty("db_url") @Nullable String dbUrl,
             @JsonProperty("environment") @Nullable String environment,
-            @JsonProperty("event") @Nonnull Event event,
+            @JsonProperty("event") @Nonnull WebhookEvent event,
             @JsonProperty("fields") @Nullable String fields,
             @JsonProperty("filters") @Nullable Map<String, String> filters,
             @JsonProperty("hook_url") @Nullable String hookUrl,
@@ -204,7 +204,7 @@ public class Webhook {
     
     public Webhook(
             @Nonnull String connectionId,
-            @Nonnull Event event,
+            @Nonnull WebhookEvent event,
             @Nonnull WebhookObjectType objectType) {
         this(null, connectionId, null,
             null, null, null,
@@ -248,7 +248,7 @@ public class Webhook {
         return Optional.ofNullable(this.environment);
     }
 
-    public Event event() {
+    public WebhookEvent event() {
         return this.event;
     }
 
@@ -368,7 +368,7 @@ public class Webhook {
     }
 
 
-    public Webhook withEvent(@Nonnull Event event) {
+    public Webhook withEvent(@Nonnull WebhookEvent event) {
         this.event = Utils.checkNotNull(event, "event");
         return this;
     }
@@ -564,7 +564,7 @@ public class Webhook {
 
         private String environment;
 
-        private Event event;
+        private WebhookEvent event;
 
         private String fields;
 
@@ -640,7 +640,7 @@ public class Webhook {
             return this;
         }
 
-        public Builder event(@Nonnull Event event) {
+        public Builder event(@Nonnull WebhookEvent event) {
             this.event = Utils.checkNotNull(event, "event");
             return this;
         }

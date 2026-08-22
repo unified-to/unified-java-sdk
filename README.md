@@ -39,7 +39,7 @@ The samples below show how a published SDK artifact is used:
 
 Gradle:
 ```groovy
-implementation 'to.unified:unified-java-sdk:0.49.4'
+implementation 'to.unified:unified-java-sdk:0.49.5'
 ```
 
 Maven:
@@ -47,7 +47,7 @@ Maven:
 <dependency>
     <groupId>to.unified</groupId>
     <artifactId>unified-java-sdk</artifactId>
-    <version>0.49.4</version>
+    <version>0.49.5</version>
 </dependency>
 ```
 
@@ -1589,6 +1589,10 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 * [removeTicketingNote](docs/sdks/note/README.md#removeticketingnote) - Remove a note
 * [updateTicketingNote](docs/sdks/note/README.md#updateticketingnote) - Update a note
 
+### [Notification](docs/sdks/notification/README.md)
+
+* [listUnifiedNotifications](docs/sdks/notification/README.md#listunifiednotifications) - List event notifications
+
 ### [Order](docs/sdks/order/README.md)
 
 * [createAccountingOrder](docs/sdks/order/README.md#createaccountingorder) - Create an order
@@ -2244,6 +2248,7 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 * [listUnifiedIntegrationWorkspaces](docs/sdks/unified/README.md#listunifiedintegrationworkspaces) - Returns all activated integrations in a workspace
 * [listUnifiedIntegrations](docs/sdks/unified/README.md#listunifiedintegrations) - Returns all integrations
 * [listUnifiedIssues](docs/sdks/unified/README.md#listunifiedissues) - List support issues
+* [listUnifiedNotifications](docs/sdks/unified/README.md#listunifiednotifications) - List event notifications
 * [listUnifiedWebhooks](docs/sdks/unified/README.md#listunifiedwebhooks) - Returns all registered webhooks
 * [listUnifiedWorkspaceSecretsmanagers](docs/sdks/unified/README.md#listunifiedworkspacesecretsmanagers) - List secrets managers
 * [patchUnifiedConnection](docs/sdks/unified/README.md#patchunifiedconnection) - Update connection

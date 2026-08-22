@@ -53,6 +53,9 @@ import to.unified.unified_java_sdk.models.operations.ListUnifiedIntegrationsResp
 import to.unified.unified_java_sdk.models.operations.ListUnifiedIssuesRequest;
 import to.unified.unified_java_sdk.models.operations.ListUnifiedIssuesRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.ListUnifiedIssuesResponse;
+import to.unified.unified_java_sdk.models.operations.ListUnifiedNotificationsRequest;
+import to.unified.unified_java_sdk.models.operations.ListUnifiedNotificationsRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListUnifiedNotificationsResponse;
 import to.unified.unified_java_sdk.models.operations.ListUnifiedWebhooksRequest;
 import to.unified.unified_java_sdk.models.operations.ListUnifiedWebhooksRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.ListUnifiedWebhooksResponse;
@@ -107,6 +110,7 @@ import to.unified.unified_java_sdk.operations.ListUnifiedEnvironments;
 import to.unified.unified_java_sdk.operations.ListUnifiedIntegrationWorkspaces;
 import to.unified.unified_java_sdk.operations.ListUnifiedIntegrations;
 import to.unified.unified_java_sdk.operations.ListUnifiedIssues;
+import to.unified.unified_java_sdk.operations.ListUnifiedNotifications;
 import to.unified.unified_java_sdk.operations.ListUnifiedWebhooks;
 import to.unified.unified_java_sdk.operations.ListUnifiedWorkspaceSecretsmanagers;
 import to.unified.unified_java_sdk.operations.PatchUnifiedConnection;
@@ -511,6 +515,28 @@ public class Unified {
     public ListUnifiedIssuesResponse listUnifiedIssues(@Nonnull ListUnifiedIssuesRequest request) {
         RequestOperation<ListUnifiedIssuesRequest, ListUnifiedIssuesResponse> operation
               = new ListUnifiedIssues.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * List event notifications
+     * 
+     * @return The call builder
+     */
+    public ListUnifiedNotificationsRequestBuilder listUnifiedNotifications() {
+        return new ListUnifiedNotificationsRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * List event notifications
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListUnifiedNotificationsResponse listUnifiedNotifications(@Nonnull ListUnifiedNotificationsRequest request) {
+        RequestOperation<ListUnifiedNotificationsRequest, ListUnifiedNotificationsResponse> operation
+              = new ListUnifiedNotifications.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

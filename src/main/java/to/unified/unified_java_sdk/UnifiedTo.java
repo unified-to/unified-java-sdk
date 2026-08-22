@@ -539,6 +539,9 @@ public class UnifiedTo {
     private final Issue issue;
 
 
+    private final Notification notification;
+
+
     private final Webhook webhook;
 
 
@@ -1381,6 +1384,11 @@ public class UnifiedTo {
     }
 
 
+    public Notification notification() {
+        return notification;
+    }
+
+
     public Webhook webhook() {
         return webhook;
     }
@@ -1703,6 +1711,7 @@ public class UnifiedTo {
         this.login = new Login(sdkConfiguration);
         this.saml = new Saml(sdkConfiguration);
         this.issue = new Issue(sdkConfiguration);
+        this.notification = new Notification(sdkConfiguration);
         this.webhook = new Webhook(sdkConfiguration);
         this.secretsmanager = new Secretsmanager(sdkConfiguration);
         this.verification = new Verification(sdkConfiguration);

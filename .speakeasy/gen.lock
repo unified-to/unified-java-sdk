@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: cfc256ab-f291-4245-b909-5b9e9a6e6803
 management:
-  docChecksum: ac3e4c504e331816bec27ab0719fcbcb
+  docChecksum: 623c5de1acc3efd5e2bcb209ebf54b0d
   docVersion: "1.0"
   speakeasyVersion: 1.795.1
   generationVersion: 2.932.9
-  releaseVersion: 0.49.4
-  configChecksum: 22dda01742f35c5ba2d44c380af07b0e
+  releaseVersion: 0.49.5
+  configChecksum: 22ec490fd9b222a72846e3fabc85f698
   repoURL: https://github.com/unified-to/unified-java-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-java-sdk
@@ -1460,6 +1460,8 @@ trackedFiles:
   docs/models/operations/ListUnifiedIssuesResponse.md:
     id: 23b01e5f6151
     pristine_git_object: 595e2831a20938c503244dd959609e3e23d47432
+  docs/models/operations/ListUnifiedNotificationsRequest.md: {}
+  docs/models/operations/ListUnifiedNotificationsResponse.md: {}
   docs/models/operations/ListUnifiedWebhooksRequest.md:
     id: 95dfda59cb2b
     pristine_git_object: 53989c4fd6360c05134689bacdebf5c32d84d4bc
@@ -4007,6 +4009,7 @@ trackedFiles:
   docs/models/shared/NonDeliveryOption.md:
     id: 21e357f990ce
     pristine_git_object: bf6554b8234c86503e5249fe348af3299714d3bf
+  docs/models/shared/Notification.md: {}
   docs/models/shared/ObjectType.md:
     id: aadea85dc693
     pristine_git_object: b267501b6394355e328aef8efc64d3bb3aa341a4
@@ -5295,6 +5298,7 @@ trackedFiles:
   docs/models/shared/Webhook.md:
     id: cf4334c2eeef
     pristine_git_object: 74bc5ad748df7f0811885bd1ec22a7e09588954d
+  docs/models/shared/WebhookEvent.md: {}
   docs/models/shared/WebhookObjectType.md: {}
   docs/models/shared/WebhookType.md:
     id: d18bc384a2de
@@ -5573,6 +5577,7 @@ trackedFiles:
   docs/sdks/note/README.md:
     id: b3d46a33d2ab
     pristine_git_object: 813e893d5f9c18390bc1dda6171182a0aa36f63e
+  docs/sdks/notification/README.md: {}
   docs/sdks/order/README.md:
     id: 9463f6b17ea6
     pristine_git_object: 71d9f3cbdf196f529c42c8a11f914617cce9b565
@@ -6069,6 +6074,7 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/AsyncNote.java:
     id: a3a906a3c155
     pristine_git_object: eea1424eab72b18c4271a8d73766c1e7fe0747e9
+  src/main/java/to/unified/unified_java_sdk/AsyncNotification.java: {}
   src/main/java/to/unified/unified_java_sdk/AsyncOrder.java:
     id: 6929eaf6bd9f
     pristine_git_object: 5042dbb4444b233e40ffdf6bdcd6d0a0a92fb236
@@ -6480,6 +6486,7 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/Note.java:
     id: 2567ee873e35
     pristine_git_object: 53202f2c6dc2522cb2442faf26b88db56a8553a7
+  src/main/java/to/unified/unified_java_sdk/Notification.java: {}
   src/main/java/to/unified/unified_java_sdk/Order.java:
     id: fd9dd694e6ea
     pristine_git_object: 2ce242363ef01f88989799768d472f698c4879c1
@@ -7175,6 +7182,7 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/models/operations//async/ListUnifiedIssuesRequestBuilder.java:
     id: 5c5798d78a96
     pristine_git_object: 366af162bada3aeee011b8a507f7ab67b05c660f
+  src/main/java/to/unified/unified_java_sdk/models/operations//async/ListUnifiedNotificationsRequestBuilder.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations//async/ListUnifiedWebhooksRequestBuilder.java:
     id: f1867960ffa5
     pristine_git_object: f64f185ea4ca5d8e2fd4f1fc8397153a1d0d2962
@@ -9503,6 +9511,9 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/models/operations/ListUnifiedIssuesResponse.java:
     id: 426d50fa1ac2
     pristine_git_object: 56ce314e1c4b1f09e315b4bc88d1d7cc2b233a4f
+  src/main/java/to/unified/unified_java_sdk/models/operations/ListUnifiedNotificationsRequest.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/ListUnifiedNotificationsRequestBuilder.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/ListUnifiedNotificationsResponse.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/ListUnifiedWebhooksRequest.java:
     id: 01b9b77890e2
     pristine_git_object: 24e7457fcf7ab1353ec76dd645fef51eab6bb34a
@@ -11471,6 +11482,7 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/models/operations/async/ListUnifiedIssuesResponse.java:
     id: 6cd3d515913b
     pristine_git_object: 81fa655fdd3089aaf79d61fb776ca04f7dbdc770
+  src/main/java/to/unified/unified_java_sdk/models/operations/async/ListUnifiedNotificationsResponse.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/async/ListUnifiedWebhooksResponse.java:
     id: 1ae80828b363
     pristine_git_object: 4103206ee85700980f2d5e6b8f996743e3c226b4
@@ -13367,6 +13379,7 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/models/shared/NonDeliveryOption.java:
     id: 740093e9326a
     pristine_git_object: 797c963e18c7ea6040b13f43c4e016de7b0102d7
+  src/main/java/to/unified/unified_java_sdk/models/shared/Notification.java: {}
   src/main/java/to/unified/unified_java_sdk/models/shared/ObjectType.java:
     id: d20c4867606e
     pristine_git_object: df14ea789abf908f34f550eb37cf9a7fd0addb9c
@@ -14657,6 +14670,7 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/models/shared/Webhook.java:
     id: 43a793a4eb00
     pristine_git_object: 2805b545a8a242a1bc1accfe285bff4018079480
+  src/main/java/to/unified/unified_java_sdk/models/shared/WebhookEvent.java: {}
   src/main/java/to/unified/unified_java_sdk/models/shared/WebhookObjectType.java: {}
   src/main/java/to/unified/unified_java_sdk/models/shared/WebhookType.java:
     id: 59d0f82b56f7
@@ -15169,6 +15183,7 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/operations/ListUnifiedIssues.java:
     id: 3de72e120b13
     pristine_git_object: f9b2d3be50501460c4da204cfd58f8f64fa66a35
+  src/main/java/to/unified/unified_java_sdk/operations/ListUnifiedNotifications.java: {}
   src/main/java/to/unified/unified_java_sdk/operations/ListUnifiedWebhooks.java:
     id: 03b04a0a7896
     pristine_git_object: bbef6910b62587b70d624551de052cbd076b2243
@@ -29674,9 +29689,17 @@ examples:
       responses:
         "200":
           application/json: {}
+  listUnifiedNotifications:
+    speakeasy-default-list-unified-notifications:
+      responses:
+        "200":
+          application/json: [{}]
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: "## Java SDK Changes:\n* `unified-to.hris.getHrisTaxonomy()`:  `response.type.enum(holiday)` **Added**\n* `unified-to.hris.listHrisTaxonomies()`:  `response.[].type.enum(holiday)` **Added**\n* `unified-to.hris.listHrisTimeoffs()`: \n  *  `request.status` **Added**\n* `unified-to.taxonomy.getHrisTaxonomy()`:  `response.type.enum(holiday)` **Added**\n* `unified-to.taxonomy.listHrisTaxonomies()`:  `response.[].type.enum(holiday)` **Added**\n* `unified-to.timeoff.listHrisTimeoffs()`: \n  *  `request.status` **Added**\n* `unified-to.unified.createUnifiedWorkspaceSecretsmanager()`: \n  *  `request.type` **Changed**\n  *  `response.type` **Changed**\n* `unified-to.unified.getUnifiedWorkspaceSecretsmanager()`:  `response.type` **Changed**\n* `unified-to.unified.listUnifiedWorkspaceSecretsmanagers()`:  `response.[].type` **Changed**\n* `unified-to.secretsmanager.createUnifiedWorkspaceSecretsmanager()`: \n  *  `request.type` **Changed**\n  *  `response.type` **Changed**\n* `unified-to.secretsmanager.getUnifiedWorkspaceSecretsmanager()`:  `response.type` **Changed**\n* `unified-to.secretsmanager.listUnifiedWorkspaceSecretsmanagers()`:  `response.[].type` **Changed**\n"
+releaseNotes: |
+  ## Java SDK Changes:
+  * `unified-to.unified.listUnifiedNotifications()`: **Added**
+  * `unified-to.notification.listUnifiedNotifications()`: **Added**
 generatedFiles:
   - .gitattributes
   - USAGE.md

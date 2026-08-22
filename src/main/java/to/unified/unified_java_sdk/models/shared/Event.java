@@ -20,9 +20,26 @@ import java.util.Optional;
  */
 public class Event {
 
-    public static final Event UPDATED = new Event("updated");
-    public static final Event CREATED = new Event("created");
-    public static final Event DELETED = new Event("deleted");
+    public static final Event USER_CREATED = new Event("USER_CREATED");
+    public static final Event USER_DELETED = new Event("USER_DELETED");
+    public static final Event CONNECTION_HEALTHY = new Event("CONNECTION_HEALTHY");
+    public static final Event CONNECTION_UNHEALTHY = new Event("CONNECTION_UNHEALTHY");
+    public static final Event CONNECTION_CREATED = new Event("CONNECTION_CREATED");
+    public static final Event CONNECTION_UPDATED = new Event("CONNECTION_UPDATED");
+    public static final Event CONNECTION_DELETED = new Event("CONNECTION_DELETED");
+    public static final Event CONNECTION_PAUSED = new Event("CONNECTION_PAUSED");
+    public static final Event CONNECTION_UNPAUSED = new Event("CONNECTION_UNPAUSED");
+    public static final Event INTEGRATION_ACTIVATED = new Event("INTEGRATION_ACTIVATED");
+    public static final Event INTEGRATION_DEACTIVATED = new Event("INTEGRATION_DEACTIVATED");
+    public static final Event INTEGRATION_UPDATED = new Event("INTEGRATION_UPDATED");
+    public static final Event WORKSPACE_UPDATED = new Event("WORKSPACE_UPDATED");
+    public static final Event WORKSPACE_OVER_LIMIT = new Event("WORKSPACE_OVER_LIMIT");
+    public static final Event WORKSPACE80_PERCENT_LIMIT = new Event("WORKSPACE_80PERCENT_LIMIT");
+    public static final Event WEBHOOK_CREATED = new Event("WEBHOOK_CREATED");
+    public static final Event WEBHOOK_DELETED = new Event("WEBHOOK_DELETED");
+    public static final Event WEBHOOK_UNHEALTHY = new Event("WEBHOOK_UNHEALTHY");
+    public static final Event WEBHOOK_PAUSED = new Event("WEBHOOK_PAUSED");
+    public static final Event WEBHOOK_UNPAUSED = new Event("WEBHOOK_UNPAUSED");
 
     // This map will grow whenever a Color gets created with a new
     // unrecognized value (a potential memory leak if the user is not
@@ -96,26 +113,77 @@ public class Event {
 
     private static final Map<String, Event> createValuesMap() {
         Map<String, Event> map = new LinkedHashMap<>();
-        map.put("updated", UPDATED);
-        map.put("created", CREATED);
-        map.put("deleted", DELETED);
+        map.put("USER_CREATED", USER_CREATED);
+        map.put("USER_DELETED", USER_DELETED);
+        map.put("CONNECTION_HEALTHY", CONNECTION_HEALTHY);
+        map.put("CONNECTION_UNHEALTHY", CONNECTION_UNHEALTHY);
+        map.put("CONNECTION_CREATED", CONNECTION_CREATED);
+        map.put("CONNECTION_UPDATED", CONNECTION_UPDATED);
+        map.put("CONNECTION_DELETED", CONNECTION_DELETED);
+        map.put("CONNECTION_PAUSED", CONNECTION_PAUSED);
+        map.put("CONNECTION_UNPAUSED", CONNECTION_UNPAUSED);
+        map.put("INTEGRATION_ACTIVATED", INTEGRATION_ACTIVATED);
+        map.put("INTEGRATION_DEACTIVATED", INTEGRATION_DEACTIVATED);
+        map.put("INTEGRATION_UPDATED", INTEGRATION_UPDATED);
+        map.put("WORKSPACE_UPDATED", WORKSPACE_UPDATED);
+        map.put("WORKSPACE_OVER_LIMIT", WORKSPACE_OVER_LIMIT);
+        map.put("WORKSPACE_80PERCENT_LIMIT", WORKSPACE80_PERCENT_LIMIT);
+        map.put("WEBHOOK_CREATED", WEBHOOK_CREATED);
+        map.put("WEBHOOK_DELETED", WEBHOOK_DELETED);
+        map.put("WEBHOOK_UNHEALTHY", WEBHOOK_UNHEALTHY);
+        map.put("WEBHOOK_PAUSED", WEBHOOK_PAUSED);
+        map.put("WEBHOOK_UNPAUSED", WEBHOOK_UNPAUSED);
         return map;
     }
 
     private static final Map<String, EventEnum> createEnumsMap() {
         Map<String, EventEnum> map = new HashMap<>();
-        map.put("updated", EventEnum.UPDATED);
-        map.put("created", EventEnum.CREATED);
-        map.put("deleted", EventEnum.DELETED);
+        map.put("USER_CREATED", EventEnum.USER_CREATED);
+        map.put("USER_DELETED", EventEnum.USER_DELETED);
+        map.put("CONNECTION_HEALTHY", EventEnum.CONNECTION_HEALTHY);
+        map.put("CONNECTION_UNHEALTHY", EventEnum.CONNECTION_UNHEALTHY);
+        map.put("CONNECTION_CREATED", EventEnum.CONNECTION_CREATED);
+        map.put("CONNECTION_UPDATED", EventEnum.CONNECTION_UPDATED);
+        map.put("CONNECTION_DELETED", EventEnum.CONNECTION_DELETED);
+        map.put("CONNECTION_PAUSED", EventEnum.CONNECTION_PAUSED);
+        map.put("CONNECTION_UNPAUSED", EventEnum.CONNECTION_UNPAUSED);
+        map.put("INTEGRATION_ACTIVATED", EventEnum.INTEGRATION_ACTIVATED);
+        map.put("INTEGRATION_DEACTIVATED", EventEnum.INTEGRATION_DEACTIVATED);
+        map.put("INTEGRATION_UPDATED", EventEnum.INTEGRATION_UPDATED);
+        map.put("WORKSPACE_UPDATED", EventEnum.WORKSPACE_UPDATED);
+        map.put("WORKSPACE_OVER_LIMIT", EventEnum.WORKSPACE_OVER_LIMIT);
+        map.put("WORKSPACE_80PERCENT_LIMIT", EventEnum.WORKSPACE80_PERCENT_LIMIT);
+        map.put("WEBHOOK_CREATED", EventEnum.WEBHOOK_CREATED);
+        map.put("WEBHOOK_DELETED", EventEnum.WEBHOOK_DELETED);
+        map.put("WEBHOOK_UNHEALTHY", EventEnum.WEBHOOK_UNHEALTHY);
+        map.put("WEBHOOK_PAUSED", EventEnum.WEBHOOK_PAUSED);
+        map.put("WEBHOOK_UNPAUSED", EventEnum.WEBHOOK_UNPAUSED);
         return map;
     }
     
     
     public enum EventEnum {
 
-        UPDATED("updated"),
-        CREATED("created"),
-        DELETED("deleted"),;
+        USER_CREATED("USER_CREATED"),
+        USER_DELETED("USER_DELETED"),
+        CONNECTION_HEALTHY("CONNECTION_HEALTHY"),
+        CONNECTION_UNHEALTHY("CONNECTION_UNHEALTHY"),
+        CONNECTION_CREATED("CONNECTION_CREATED"),
+        CONNECTION_UPDATED("CONNECTION_UPDATED"),
+        CONNECTION_DELETED("CONNECTION_DELETED"),
+        CONNECTION_PAUSED("CONNECTION_PAUSED"),
+        CONNECTION_UNPAUSED("CONNECTION_UNPAUSED"),
+        INTEGRATION_ACTIVATED("INTEGRATION_ACTIVATED"),
+        INTEGRATION_DEACTIVATED("INTEGRATION_DEACTIVATED"),
+        INTEGRATION_UPDATED("INTEGRATION_UPDATED"),
+        WORKSPACE_UPDATED("WORKSPACE_UPDATED"),
+        WORKSPACE_OVER_LIMIT("WORKSPACE_OVER_LIMIT"),
+        WORKSPACE80_PERCENT_LIMIT("WORKSPACE_80PERCENT_LIMIT"),
+        WEBHOOK_CREATED("WEBHOOK_CREATED"),
+        WEBHOOK_DELETED("WEBHOOK_DELETED"),
+        WEBHOOK_UNHEALTHY("WEBHOOK_UNHEALTHY"),
+        WEBHOOK_PAUSED("WEBHOOK_PAUSED"),
+        WEBHOOK_UNPAUSED("WEBHOOK_UNPAUSED"),;
 
         private final String value;
 
