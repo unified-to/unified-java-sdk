@@ -15,6 +15,7 @@
 * [createAccountingInvoice](#createaccountinginvoice) - Create an invoice
 * [createAccountingJournal](#createaccountingjournal) - Create a journal
 * [createAccountingOrder](#createaccountingorder) - Create an order
+* [createAccountingPaymentterm](#createaccountingpaymentterm) - Create a paymentterm
 * [createAccountingProject](#createaccountingproject) - Create a project
 * [createAccountingPurchaseorder](#createaccountingpurchaseorder) - Create a purchaseorder
 * [createAccountingQuote](#createaccountingquote) - Create a quote
@@ -38,6 +39,7 @@
 * [getAccountingJournal](#getaccountingjournal) - Retrieve a journal
 * [getAccountingOrder](#getaccountingorder) - Retrieve an order
 * [getAccountingOrganization](#getaccountingorganization) - Retrieve an organization
+* [getAccountingPaymentterm](#getaccountingpaymentterm) - Retrieve a paymentterm
 * [getAccountingProfitloss](#getaccountingprofitloss) - Retrieve a profitloss
 * [getAccountingProject](#getaccountingproject) - Retrieve a project
 * [getAccountingPurchaseorder](#getaccountingpurchaseorder) - Retrieve a purchaseorder
@@ -64,6 +66,7 @@
 * [listAccountingJournals](#listaccountingjournals) - List all journals
 * [listAccountingOrders](#listaccountingorders) - List all orders
 * [listAccountingOrganizations](#listaccountingorganizations) - List all organizations
+* [listAccountingPaymentterms](#listaccountingpaymentterms) - List all paymentterms
 * [listAccountingProfitlosses](#listaccountingprofitlosses) - List all profitlosses
 * [listAccountingProjects](#listaccountingprojects) - List all projects
 * [listAccountingPurchaseorders](#listaccountingpurchaseorders) - List all purchaseorders
@@ -85,6 +88,7 @@
 * [patchAccountingInvoice](#patchaccountinginvoice) - Update an invoice
 * [patchAccountingJournal](#patchaccountingjournal) - Update a journal
 * [patchAccountingOrder](#patchaccountingorder) - Update an order
+* [patchAccountingPaymentterm](#patchaccountingpaymentterm) - Update a paymentterm
 * [patchAccountingProject](#patchaccountingproject) - Update a project
 * [patchAccountingPurchaseorder](#patchaccountingpurchaseorder) - Update a purchaseorder
 * [patchAccountingQuote](#patchaccountingquote) - Update a quote
@@ -103,6 +107,7 @@
 * [removeAccountingInvoice](#removeaccountinginvoice) - Remove an invoice
 * [removeAccountingJournal](#removeaccountingjournal) - Remove a journal
 * [removeAccountingOrder](#removeaccountingorder) - Remove an order
+* [removeAccountingPaymentterm](#removeaccountingpaymentterm) - Remove a paymentterm
 * [removeAccountingProject](#removeaccountingproject) - Remove a project
 * [removeAccountingPurchaseorder](#removeaccountingpurchaseorder) - Remove a purchaseorder
 * [removeAccountingQuote](#removeaccountingquote) - Remove a quote
@@ -121,6 +126,7 @@
 * [updateAccountingInvoice](#updateaccountinginvoice) - Update an invoice
 * [updateAccountingJournal](#updateaccountingjournal) - Update a journal
 * [updateAccountingOrder](#updateaccountingorder) - Update an order
+* [updateAccountingPaymentterm](#updateaccountingpaymentterm) - Update a paymentterm
 * [updateAccountingProject](#updateaccountingproject) - Update a project
 * [updateAccountingPurchaseorder](#updateaccountingpurchaseorder) - Update a purchaseorder
 * [updateAccountingQuote](#updateaccountingquote) - Update a quote
@@ -782,6 +788,66 @@ public class Application {
 ### Response
 
 **[CreateAccountingOrderResponse](../../models/operations/CreateAccountingOrderResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## createAccountingPaymentterm
+
+Create a paymentterm
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="createAccountingPaymentterm" method="post" path="/accounting/{connection_id}/paymentterm" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.CreateAccountingPaymenttermRequest;
+import to.unified.unified_java_sdk.models.operations.CreateAccountingPaymenttermResponse;
+import to.unified.unified_java_sdk.models.shared.AccountingPaymentterm;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        CreateAccountingPaymenttermRequest req = CreateAccountingPaymenttermRequest.builder()
+                .accountingPaymentterm(AccountingPaymentterm.builder()
+                    .build())
+                .connectionId("<id>")
+                .build();
+
+        CreateAccountingPaymenttermResponse res = sdk.accounting().createAccountingPaymentterm()
+                .request(req)
+                .call();
+
+        if (res.accountingPaymentterm().isPresent()) {
+            System.out.println(res.accountingPaymentterm().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                           | Type                                                                                                | Required                                                                                            | Description                                                                                         |
+| --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
+| `request`                                                                                           | [CreateAccountingPaymenttermRequest](../../models/operations/CreateAccountingPaymenttermRequest.md) | :heavy_check_mark:                                                                                  | The request object to use for the request.                                                          |
+
+### Response
+
+**[CreateAccountingPaymenttermResponse](../../models/operations/CreateAccountingPaymenttermResponse.md)**
 
 ### Errors
 
@@ -2130,6 +2196,64 @@ public class Application {
 ### Response
 
 **[GetAccountingOrganizationResponse](../../models/operations/GetAccountingOrganizationResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## getAccountingPaymentterm
+
+Retrieve a paymentterm
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="getAccountingPaymentterm" method="get" path="/accounting/{connection_id}/paymentterm/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.GetAccountingPaymenttermRequest;
+import to.unified.unified_java_sdk.models.operations.GetAccountingPaymenttermResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        GetAccountingPaymenttermRequest req = GetAccountingPaymenttermRequest.builder()
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        GetAccountingPaymenttermResponse res = sdk.accounting().getAccountingPaymentterm()
+                .request(req)
+                .call();
+
+        if (res.accountingPaymentterm().isPresent()) {
+            System.out.println(res.accountingPaymentterm().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                     | Type                                                                                          | Required                                                                                      | Description                                                                                   |
+| --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
+| `request`                                                                                     | [GetAccountingPaymenttermRequest](../../models/operations/GetAccountingPaymenttermRequest.md) | :heavy_check_mark:                                                                            | The request object to use for the request.                                                    |
+
+### Response
+
+**[GetAccountingPaymenttermResponse](../../models/operations/GetAccountingPaymenttermResponse.md)**
 
 ### Errors
 
@@ -3629,6 +3753,63 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
+## listAccountingPaymentterms
+
+List all paymentterms
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="listAccountingPaymentterms" method="get" path="/accounting/{connection_id}/paymentterm" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.ListAccountingPaymenttermsRequest;
+import to.unified.unified_java_sdk.models.operations.ListAccountingPaymenttermsResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        ListAccountingPaymenttermsRequest req = ListAccountingPaymenttermsRequest.builder()
+                .connectionId("<id>")
+                .build();
+
+        ListAccountingPaymenttermsResponse res = sdk.accounting().listAccountingPaymentterms()
+                .request(req)
+                .call();
+
+        if (res.accountingPaymentterms().isPresent()) {
+            System.out.println(res.accountingPaymentterms().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                         | Type                                                                                              | Required                                                                                          | Description                                                                                       |
+| ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
+| `request`                                                                                         | [ListAccountingPaymenttermsRequest](../../models/operations/ListAccountingPaymenttermsRequest.md) | :heavy_check_mark:                                                                                | The request object to use for the request.                                                        |
+
+### Response
+
+**[ListAccountingPaymenttermsResponse](../../models/operations/ListAccountingPaymenttermsResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
 ## listAccountingProfitlosses
 
 List all profitlosses
@@ -4870,6 +5051,67 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
+## patchAccountingPaymentterm
+
+Update a paymentterm
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="patchAccountingPaymentterm" method="patch" path="/accounting/{connection_id}/paymentterm/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.PatchAccountingPaymenttermRequest;
+import to.unified.unified_java_sdk.models.operations.PatchAccountingPaymenttermResponse;
+import to.unified.unified_java_sdk.models.shared.AccountingPaymentterm;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        PatchAccountingPaymenttermRequest req = PatchAccountingPaymenttermRequest.builder()
+                .accountingPaymentterm(AccountingPaymentterm.builder()
+                    .build())
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        PatchAccountingPaymenttermResponse res = sdk.accounting().patchAccountingPaymentterm()
+                .request(req)
+                .call();
+
+        if (res.accountingPaymentterm().isPresent()) {
+            System.out.println(res.accountingPaymentterm().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                         | Type                                                                                              | Required                                                                                          | Description                                                                                       |
+| ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
+| `request`                                                                                         | [PatchAccountingPaymenttermRequest](../../models/operations/PatchAccountingPaymenttermRequest.md) | :heavy_check_mark:                                                                                | The request object to use for the request.                                                        |
+
+### Response
+
+**[PatchAccountingPaymenttermResponse](../../models/operations/PatchAccountingPaymenttermResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
 ## patchAccountingProject
 
 Update a project
@@ -5906,6 +6148,62 @@ public class Application {
 ### Response
 
 **[RemoveAccountingOrderResponse](../../models/operations/RemoveAccountingOrderResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## removeAccountingPaymentterm
+
+Remove a paymentterm
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="removeAccountingPaymentterm" method="delete" path="/accounting/{connection_id}/paymentterm/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.RemoveAccountingPaymenttermRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveAccountingPaymenttermResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        RemoveAccountingPaymenttermRequest req = RemoveAccountingPaymenttermRequest.builder()
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        RemoveAccountingPaymenttermResponse res = sdk.accounting().removeAccountingPaymentterm()
+                .request(req)
+                .call();
+
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                           | Type                                                                                                | Required                                                                                            | Description                                                                                         |
+| --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
+| `request`                                                                                           | [RemoveAccountingPaymenttermRequest](../../models/operations/RemoveAccountingPaymenttermRequest.md) | :heavy_check_mark:                                                                                  | The request object to use for the request.                                                          |
+
+### Response
+
+**[RemoveAccountingPaymenttermResponse](../../models/operations/RemoveAccountingPaymenttermResponse.md)**
 
 ### Errors
 
@@ -6969,6 +7267,67 @@ public class Application {
 ### Response
 
 **[UpdateAccountingOrderResponse](../../models/operations/UpdateAccountingOrderResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## updateAccountingPaymentterm
+
+Update a paymentterm
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="updateAccountingPaymentterm" method="put" path="/accounting/{connection_id}/paymentterm/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.UpdateAccountingPaymenttermRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateAccountingPaymenttermResponse;
+import to.unified.unified_java_sdk.models.shared.AccountingPaymentterm;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        UpdateAccountingPaymenttermRequest req = UpdateAccountingPaymenttermRequest.builder()
+                .accountingPaymentterm(AccountingPaymentterm.builder()
+                    .build())
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        UpdateAccountingPaymenttermResponse res = sdk.accounting().updateAccountingPaymentterm()
+                .request(req)
+                .call();
+
+        if (res.accountingPaymentterm().isPresent()) {
+            System.out.println(res.accountingPaymentterm().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                           | Type                                                                                                | Required                                                                                            | Description                                                                                         |
+| --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
+| `request`                                                                                           | [UpdateAccountingPaymenttermRequest](../../models/operations/UpdateAccountingPaymenttermRequest.md) | :heavy_check_mark:                                                                                  | The request object to use for the request.                                                          |
+
+### Response
+
+**[UpdateAccountingPaymenttermResponse](../../models/operations/UpdateAccountingPaymenttermResponse.md)**
 
 ### Errors
 

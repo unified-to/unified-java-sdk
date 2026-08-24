@@ -40,6 +40,8 @@ public class PropertyConnectionPermissions {
     public static final PropertyConnectionPermissions ACCOUNTING_EXPENSE_WRITE = new PropertyConnectionPermissions("accounting_expense_write");
     public static final PropertyConnectionPermissions ACCOUNTING_TAXRATE_READ = new PropertyConnectionPermissions("accounting_taxrate_read");
     public static final PropertyConnectionPermissions ACCOUNTING_TAXRATE_WRITE = new PropertyConnectionPermissions("accounting_taxrate_write");
+    public static final PropertyConnectionPermissions ACCOUNTING_PAYMENTTERM_READ = new PropertyConnectionPermissions("accounting_paymentterm_read");
+    public static final PropertyConnectionPermissions ACCOUNTING_PAYMENTTERM_WRITE = new PropertyConnectionPermissions("accounting_paymentterm_write");
     public static final PropertyConnectionPermissions ACCOUNTING_ORGANIZATION_READ = new PropertyConnectionPermissions("accounting_organization_read");
     public static final PropertyConnectionPermissions ACCOUNTING_ORDER_READ = new PropertyConnectionPermissions("accounting_order_read");
     public static final PropertyConnectionPermissions ACCOUNTING_ORDER_WRITE = new PropertyConnectionPermissions("accounting_order_write");
@@ -423,6 +425,8 @@ public class PropertyConnectionPermissions {
         map.put("accounting_expense_write", ACCOUNTING_EXPENSE_WRITE);
         map.put("accounting_taxrate_read", ACCOUNTING_TAXRATE_READ);
         map.put("accounting_taxrate_write", ACCOUNTING_TAXRATE_WRITE);
+        map.put("accounting_paymentterm_read", ACCOUNTING_PAYMENTTERM_READ);
+        map.put("accounting_paymentterm_write", ACCOUNTING_PAYMENTTERM_WRITE);
         map.put("accounting_organization_read", ACCOUNTING_ORGANIZATION_READ);
         map.put("accounting_order_read", ACCOUNTING_ORDER_READ);
         map.put("accounting_order_write", ACCOUNTING_ORDER_WRITE);
@@ -738,6 +742,8 @@ public class PropertyConnectionPermissions {
         map.put("accounting_expense_write", PropertyConnectionPermissionsEnum.ACCOUNTING_EXPENSE_WRITE);
         map.put("accounting_taxrate_read", PropertyConnectionPermissionsEnum.ACCOUNTING_TAXRATE_READ);
         map.put("accounting_taxrate_write", PropertyConnectionPermissionsEnum.ACCOUNTING_TAXRATE_WRITE);
+        map.put("accounting_paymentterm_read", PropertyConnectionPermissionsEnum.ACCOUNTING_PAYMENTTERM_READ);
+        map.put("accounting_paymentterm_write", PropertyConnectionPermissionsEnum.ACCOUNTING_PAYMENTTERM_WRITE);
         map.put("accounting_organization_read", PropertyConnectionPermissionsEnum.ACCOUNTING_ORGANIZATION_READ);
         map.put("accounting_order_read", PropertyConnectionPermissionsEnum.ACCOUNTING_ORDER_READ);
         map.put("accounting_order_write", PropertyConnectionPermissionsEnum.ACCOUNTING_ORDER_WRITE);
@@ -1054,6 +1060,8 @@ public class PropertyConnectionPermissions {
         ACCOUNTING_EXPENSE_WRITE("accounting_expense_write"),
         ACCOUNTING_TAXRATE_READ("accounting_taxrate_read"),
         ACCOUNTING_TAXRATE_WRITE("accounting_taxrate_write"),
+        ACCOUNTING_PAYMENTTERM_READ("accounting_paymentterm_read"),
+        ACCOUNTING_PAYMENTTERM_WRITE("accounting_paymentterm_write"),
         ACCOUNTING_ORGANIZATION_READ("accounting_organization_read"),
         ACCOUNTING_ORDER_READ("accounting_order_read"),
         ACCOUNTING_ORDER_WRITE("accounting_order_write"),

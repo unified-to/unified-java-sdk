@@ -29,6 +29,7 @@ public class WebhookObjectType {
     public static final WebhookObjectType ACCOUNTING_VENDORCREDIT = new WebhookObjectType("accounting_vendorcredit");
     public static final WebhookObjectType ACCOUNTING_CREDITMEMO = new WebhookObjectType("accounting_creditmemo");
     public static final WebhookObjectType ACCOUNTING_TAXRATE = new WebhookObjectType("accounting_taxrate");
+    public static final WebhookObjectType ACCOUNTING_PAYMENTTERM = new WebhookObjectType("accounting_paymentterm");
     public static final WebhookObjectType ACCOUNTING_ORGANIZATION = new WebhookObjectType("accounting_organization");
     public static final WebhookObjectType ACCOUNTING_ORDER = new WebhookObjectType("accounting_order");
     public static final WebhookObjectType ACCOUNTING_SALESORDER = new WebhookObjectType("accounting_salesorder");
@@ -270,6 +271,7 @@ public class WebhookObjectType {
         map.put("accounting_vendorcredit", ACCOUNTING_VENDORCREDIT);
         map.put("accounting_creditmemo", ACCOUNTING_CREDITMEMO);
         map.put("accounting_taxrate", ACCOUNTING_TAXRATE);
+        map.put("accounting_paymentterm", ACCOUNTING_PAYMENTTERM);
         map.put("accounting_organization", ACCOUNTING_ORGANIZATION);
         map.put("accounting_order", ACCOUNTING_ORDER);
         map.put("accounting_salesorder", ACCOUNTING_SALESORDER);
@@ -443,6 +445,7 @@ public class WebhookObjectType {
         map.put("accounting_vendorcredit", WebhookObjectTypeEnum.ACCOUNTING_VENDORCREDIT);
         map.put("accounting_creditmemo", WebhookObjectTypeEnum.ACCOUNTING_CREDITMEMO);
         map.put("accounting_taxrate", WebhookObjectTypeEnum.ACCOUNTING_TAXRATE);
+        map.put("accounting_paymentterm", WebhookObjectTypeEnum.ACCOUNTING_PAYMENTTERM);
         map.put("accounting_organization", WebhookObjectTypeEnum.ACCOUNTING_ORGANIZATION);
         map.put("accounting_order", WebhookObjectTypeEnum.ACCOUNTING_ORDER);
         map.put("accounting_salesorder", WebhookObjectTypeEnum.ACCOUNTING_SALESORDER);
@@ -617,6 +620,7 @@ public class WebhookObjectType {
         ACCOUNTING_VENDORCREDIT("accounting_vendorcredit"),
         ACCOUNTING_CREDITMEMO("accounting_creditmemo"),
         ACCOUNTING_TAXRATE("accounting_taxrate"),
+        ACCOUNTING_PAYMENTTERM("accounting_paymentterm"),
         ACCOUNTING_ORGANIZATION("accounting_organization"),
         ACCOUNTING_ORDER("accounting_order"),
         ACCOUNTING_SALESORDER("accounting_salesorder"),

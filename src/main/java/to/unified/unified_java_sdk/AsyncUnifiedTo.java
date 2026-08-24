@@ -47,6 +47,8 @@ public class AsyncUnifiedTo {
 
     private final AsyncOrganization organization;
 
+    private final AsyncPaymentterm paymentterm;
+
     private final AsyncProfitloss profitloss;
 
     private final AsyncProject project;
@@ -421,6 +423,10 @@ public class AsyncUnifiedTo {
 
     public AsyncOrganization organization() {
         return organization;
+    }
+
+    public AsyncPaymentterm paymentterm() {
+        return paymentterm;
     }
 
     public AsyncProfitloss profitloss() {
@@ -1062,6 +1068,7 @@ public class AsyncUnifiedTo {
         this.journal = new AsyncJournal(syncSDK.journal(), sdkConfiguration);
         this.order = new AsyncOrder(syncSDK.order(), sdkConfiguration);
         this.organization = new AsyncOrganization(syncSDK.organization(), sdkConfiguration);
+        this.paymentterm = new AsyncPaymentterm(syncSDK.paymentterm(), sdkConfiguration);
         this.profitloss = new AsyncProfitloss(syncSDK.profitloss(), sdkConfiguration);
         this.project = new AsyncProject(syncSDK.project(), sdkConfiguration);
         this.purchaseorder = new AsyncPurchaseorder(syncSDK.purchaseorder(), sdkConfiguration);

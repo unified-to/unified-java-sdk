@@ -92,6 +92,9 @@ public class UnifiedTo {
     private final Organization organization;
 
 
+    private final Paymentterm paymentterm;
+
+
     private final Profitloss profitloss;
 
 
@@ -636,6 +639,11 @@ public class UnifiedTo {
 
     public Organization organization() {
         return organization;
+    }
+
+
+    public Paymentterm paymentterm() {
+        return paymentterm;
     }
 
 
@@ -1562,6 +1570,7 @@ public class UnifiedTo {
         this.journal = new Journal(sdkConfiguration);
         this.order = new Order(sdkConfiguration);
         this.organization = new Organization(sdkConfiguration);
+        this.paymentterm = new Paymentterm(sdkConfiguration);
         this.profitloss = new Profitloss(sdkConfiguration);
         this.project = new Project(sdkConfiguration);
         this.purchaseorder = new Purchaseorder(sdkConfiguration);

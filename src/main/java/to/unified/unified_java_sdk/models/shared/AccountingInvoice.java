@@ -125,6 +125,11 @@ public class AccountingInvoice {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("paymentterm_id")
+    private String paymenttermId;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("posted_at")
     private OffsetDateTime postedAt;
 
@@ -220,6 +225,7 @@ public class AccountingInvoice {
             @JsonProperty("payment_collection_method") @Nullable AccountingInvoicePaymentCollectionMethod paymentCollectionMethod,
             @JsonProperty("payment_terms") @Nullable AccountingInvoicePaymentTerms paymentTerms,
             @JsonProperty("payments") @Nullable List<AccountingPaymentReference> payments,
+            @JsonProperty("paymentterm_id") @Nullable String paymenttermId,
             @JsonProperty("posted_at") @Nullable OffsetDateTime postedAt,
             @JsonProperty("project_id") @Nullable String projectId,
             @JsonProperty("raw") @Nullable Map<String, Object> raw,
@@ -255,6 +261,7 @@ public class AccountingInvoice {
         this.paymentCollectionMethod = paymentCollectionMethod;
         this.paymentTerms = paymentTerms;
         this.payments = payments;
+        this.paymenttermId = paymenttermId;
         this.postedAt = postedAt;
         this.projectId = projectId;
         this.raw = raw;
@@ -284,7 +291,7 @@ public class AccountingInvoice {
             null, null, null,
             null, null, null,
             null, null, null,
-            null, null);
+            null, null, null);
     }
 
     public Optional<List<AccountingAttachment>> attachments() {
@@ -368,6 +375,10 @@ public class AccountingInvoice {
      */
     public Optional<List<AccountingPaymentReference>> payments() {
         return Optional.ofNullable(this.payments);
+    }
+
+    public Optional<String> paymenttermId() {
+        return Optional.ofNullable(this.paymenttermId);
     }
 
     public Optional<OffsetDateTime> postedAt() {
@@ -558,6 +569,12 @@ public class AccountingInvoice {
     }
 
 
+    public AccountingInvoice withPaymenttermId(@Nullable String paymenttermId) {
+        this.paymenttermId = paymenttermId;
+        return this;
+    }
+
+
     public AccountingInvoice withPostedAt(@Nullable OffsetDateTime postedAt) {
         this.postedAt = postedAt;
         return this;
@@ -678,6 +695,7 @@ public class AccountingInvoice {
             Utils.enhancedDeepEquals(this.paymentCollectionMethod, other.paymentCollectionMethod) &&
             Utils.enhancedDeepEquals(this.paymentTerms, other.paymentTerms) &&
             Utils.enhancedDeepEquals(this.payments, other.payments) &&
+            Utils.enhancedDeepEquals(this.paymenttermId, other.paymenttermId) &&
             Utils.enhancedDeepEquals(this.postedAt, other.postedAt) &&
             Utils.enhancedDeepEquals(this.projectId, other.projectId) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
@@ -704,12 +722,12 @@ public class AccountingInvoice {
             id, invoiceNumber, lineitems,
             metadata, notes, organizationId,
             paidAmount, paidAt, paymentCollectionMethod,
-            paymentTerms, payments, postedAt,
-            projectId, raw, reference,
-            refundAmount, refundReason, refundedAt,
-            send, status, taxAmount,
-            term, totalAmount, type,
-            updatedAt, url);
+            paymentTerms, payments, paymenttermId,
+            postedAt, projectId, raw,
+            reference, refundAmount, refundReason,
+            refundedAt, send, status,
+            taxAmount, term, totalAmount,
+            type, updatedAt, url);
     }
     
     @Override
@@ -735,6 +753,7 @@ public class AccountingInvoice {
                 "paymentCollectionMethod", paymentCollectionMethod,
                 "paymentTerms", paymentTerms,
                 "payments", payments,
+                "paymenttermId", paymenttermId,
                 "postedAt", postedAt,
                 "projectId", projectId,
                 "raw", raw,
@@ -794,6 +813,8 @@ public class AccountingInvoice {
         private AccountingInvoicePaymentTerms paymentTerms;
 
         private List<AccountingPaymentReference> payments;
+
+        private String paymenttermId;
 
         private OffsetDateTime postedAt;
 
@@ -932,6 +953,11 @@ public class AccountingInvoice {
             return this;
         }
 
+        public Builder paymenttermId(@Nullable String paymenttermId) {
+            this.paymenttermId = paymenttermId;
+            return this;
+        }
+
         public Builder postedAt(@Nullable OffsetDateTime postedAt) {
             this.postedAt = postedAt;
             return this;
@@ -1015,12 +1041,12 @@ public class AccountingInvoice {
                 id, invoiceNumber, lineitems,
                 metadata, notes, organizationId,
                 paidAmount, paidAt, paymentCollectionMethod,
-                paymentTerms, payments, postedAt,
-                projectId, raw, reference,
-                refundAmount, refundReason, refundedAt,
-                send, status, taxAmount,
-                term, totalAmount, type,
-                updatedAt, url);
+                paymentTerms, payments, paymenttermId,
+                postedAt, projectId, raw,
+                reference, refundAmount, refundReason,
+                refundedAt, send, status,
+                taxAmount, term, totalAmount,
+                type, updatedAt, url);
         }
 
     }

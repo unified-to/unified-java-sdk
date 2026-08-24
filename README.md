@@ -39,7 +39,7 @@ The samples below show how a published SDK artifact is used:
 
 Gradle:
 ```groovy
-implementation 'to.unified:unified-java-sdk:0.49.5'
+implementation 'to.unified:unified-java-sdk:0.49.6'
 ```
 
 Maven:
@@ -47,7 +47,7 @@ Maven:
 <dependency>
     <groupId>to.unified</groupId>
     <artifactId>unified-java-sdk</artifactId>
-    <version>0.49.5</version>
+    <version>0.49.6</version>
 </dependency>
 ```
 
@@ -190,6 +190,7 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 * [createAccountingInvoice](docs/sdks/accounting/README.md#createaccountinginvoice) - Create an invoice
 * [createAccountingJournal](docs/sdks/accounting/README.md#createaccountingjournal) - Create a journal
 * [createAccountingOrder](docs/sdks/accounting/README.md#createaccountingorder) - Create an order
+* [createAccountingPaymentterm](docs/sdks/accounting/README.md#createaccountingpaymentterm) - Create a paymentterm
 * [createAccountingProject](docs/sdks/accounting/README.md#createaccountingproject) - Create a project
 * [createAccountingPurchaseorder](docs/sdks/accounting/README.md#createaccountingpurchaseorder) - Create a purchaseorder
 * [createAccountingQuote](docs/sdks/accounting/README.md#createaccountingquote) - Create a quote
@@ -213,6 +214,7 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 * [getAccountingJournal](docs/sdks/accounting/README.md#getaccountingjournal) - Retrieve a journal
 * [getAccountingOrder](docs/sdks/accounting/README.md#getaccountingorder) - Retrieve an order
 * [getAccountingOrganization](docs/sdks/accounting/README.md#getaccountingorganization) - Retrieve an organization
+* [getAccountingPaymentterm](docs/sdks/accounting/README.md#getaccountingpaymentterm) - Retrieve a paymentterm
 * [getAccountingProfitloss](docs/sdks/accounting/README.md#getaccountingprofitloss) - Retrieve a profitloss
 * [getAccountingProject](docs/sdks/accounting/README.md#getaccountingproject) - Retrieve a project
 * [getAccountingPurchaseorder](docs/sdks/accounting/README.md#getaccountingpurchaseorder) - Retrieve a purchaseorder
@@ -239,6 +241,7 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 * [listAccountingJournals](docs/sdks/accounting/README.md#listaccountingjournals) - List all journals
 * [listAccountingOrders](docs/sdks/accounting/README.md#listaccountingorders) - List all orders
 * [listAccountingOrganizations](docs/sdks/accounting/README.md#listaccountingorganizations) - List all organizations
+* [listAccountingPaymentterms](docs/sdks/accounting/README.md#listaccountingpaymentterms) - List all paymentterms
 * [listAccountingProfitlosses](docs/sdks/accounting/README.md#listaccountingprofitlosses) - List all profitlosses
 * [listAccountingProjects](docs/sdks/accounting/README.md#listaccountingprojects) - List all projects
 * [listAccountingPurchaseorders](docs/sdks/accounting/README.md#listaccountingpurchaseorders) - List all purchaseorders
@@ -260,6 +263,7 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 * [patchAccountingInvoice](docs/sdks/accounting/README.md#patchaccountinginvoice) - Update an invoice
 * [patchAccountingJournal](docs/sdks/accounting/README.md#patchaccountingjournal) - Update a journal
 * [patchAccountingOrder](docs/sdks/accounting/README.md#patchaccountingorder) - Update an order
+* [patchAccountingPaymentterm](docs/sdks/accounting/README.md#patchaccountingpaymentterm) - Update a paymentterm
 * [patchAccountingProject](docs/sdks/accounting/README.md#patchaccountingproject) - Update a project
 * [patchAccountingPurchaseorder](docs/sdks/accounting/README.md#patchaccountingpurchaseorder) - Update a purchaseorder
 * [patchAccountingQuote](docs/sdks/accounting/README.md#patchaccountingquote) - Update a quote
@@ -278,6 +282,7 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 * [removeAccountingInvoice](docs/sdks/accounting/README.md#removeaccountinginvoice) - Remove an invoice
 * [removeAccountingJournal](docs/sdks/accounting/README.md#removeaccountingjournal) - Remove a journal
 * [removeAccountingOrder](docs/sdks/accounting/README.md#removeaccountingorder) - Remove an order
+* [removeAccountingPaymentterm](docs/sdks/accounting/README.md#removeaccountingpaymentterm) - Remove a paymentterm
 * [removeAccountingProject](docs/sdks/accounting/README.md#removeaccountingproject) - Remove a project
 * [removeAccountingPurchaseorder](docs/sdks/accounting/README.md#removeaccountingpurchaseorder) - Remove a purchaseorder
 * [removeAccountingQuote](docs/sdks/accounting/README.md#removeaccountingquote) - Remove a quote
@@ -296,6 +301,7 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 * [updateAccountingInvoice](docs/sdks/accounting/README.md#updateaccountinginvoice) - Update an invoice
 * [updateAccountingJournal](docs/sdks/accounting/README.md#updateaccountingjournal) - Update a journal
 * [updateAccountingOrder](docs/sdks/accounting/README.md#updateaccountingorder) - Update an order
+* [updateAccountingPaymentterm](docs/sdks/accounting/README.md#updateaccountingpaymentterm) - Update a paymentterm
 * [updateAccountingProject](docs/sdks/accounting/README.md#updateaccountingproject) - Update a project
 * [updateAccountingPurchaseorder](docs/sdks/accounting/README.md#updateaccountingpurchaseorder) - Update a purchaseorder
 * [updateAccountingQuote](docs/sdks/accounting/README.md#updateaccountingquote) - Update a quote
@@ -1676,6 +1682,15 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 * [updatePaymentLink](docs/sdks/payment/README.md#updatepaymentlink) - Update a link
 * [updatePaymentPayment](docs/sdks/payment/README.md#updatepaymentpayment) - Update a payment
 * [updatePaymentSubscription](docs/sdks/payment/README.md#updatepaymentsubscription) - Update a subscription
+
+### [Paymentterm](docs/sdks/paymentterm/README.md)
+
+* [createAccountingPaymentterm](docs/sdks/paymentterm/README.md#createaccountingpaymentterm) - Create a paymentterm
+* [getAccountingPaymentterm](docs/sdks/paymentterm/README.md#getaccountingpaymentterm) - Retrieve a paymentterm
+* [listAccountingPaymentterms](docs/sdks/paymentterm/README.md#listaccountingpaymentterms) - List all paymentterms
+* [patchAccountingPaymentterm](docs/sdks/paymentterm/README.md#patchaccountingpaymentterm) - Update a paymentterm
+* [removeAccountingPaymentterm](docs/sdks/paymentterm/README.md#removeaccountingpaymentterm) - Remove a paymentterm
+* [updateAccountingPaymentterm](docs/sdks/paymentterm/README.md#updateaccountingpaymentterm) - Update a paymentterm
 
 ### [Payout](docs/sdks/payout/README.md)
 

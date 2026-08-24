@@ -109,6 +109,11 @@ public class AccountingContact {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("paymentterm_id")
+    private String paymenttermId;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("portal_url")
     private String portalUrl;
 
@@ -161,6 +166,7 @@ public class AccountingContact {
             @JsonProperty("organization_id") @Nullable String organizationId,
             @JsonProperty("payment_methods") @Nullable List<AccountingContactPaymentMethod> paymentMethods,
             @JsonProperty("payment_terms") @Nullable AccountingContactPaymentTerms paymentTerms,
+            @JsonProperty("paymentterm_id") @Nullable String paymenttermId,
             @JsonProperty("portal_url") @Nullable String portalUrl,
             @JsonProperty("raw") @Nullable Map<String, Object> raw,
             @JsonProperty("shipping_address") @Nullable PropertyAccountingContactShippingAddress shippingAddress,
@@ -186,6 +192,7 @@ public class AccountingContact {
         this.organizationId = organizationId;
         this.paymentMethods = paymentMethods;
         this.paymentTerms = paymentTerms;
+        this.paymenttermId = paymenttermId;
         this.portalUrl = portalUrl;
         this.raw = raw;
         this.shippingAddress = shippingAddress;
@@ -203,7 +210,8 @@ public class AccountingContact {
             null, null, null,
             null, null, null,
             null, null, null,
-            null, null, null);
+            null, null, null,
+            null);
     }
 
     public Optional<List<AccountingAssociatedContact>> associatedContacts() {
@@ -272,6 +280,10 @@ public class AccountingContact {
 
     public Optional<AccountingContactPaymentTerms> paymentTerms() {
         return Optional.ofNullable(this.paymentTerms);
+    }
+
+    public Optional<String> paymenttermId() {
+        return Optional.ofNullable(this.paymenttermId);
     }
 
     public Optional<String> portalUrl() {
@@ -409,6 +421,12 @@ public class AccountingContact {
     }
 
 
+    public AccountingContact withPaymenttermId(@Nullable String paymenttermId) {
+        this.paymenttermId = paymenttermId;
+        return this;
+    }
+
+
     public AccountingContact withPortalUrl(@Nullable String portalUrl) {
         this.portalUrl = portalUrl;
         return this;
@@ -478,6 +496,7 @@ public class AccountingContact {
             Utils.enhancedDeepEquals(this.organizationId, other.organizationId) &&
             Utils.enhancedDeepEquals(this.paymentMethods, other.paymentMethods) &&
             Utils.enhancedDeepEquals(this.paymentTerms, other.paymentTerms) &&
+            Utils.enhancedDeepEquals(this.paymenttermId, other.paymenttermId) &&
             Utils.enhancedDeepEquals(this.portalUrl, other.portalUrl) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
             Utils.enhancedDeepEquals(this.shippingAddress, other.shippingAddress) &&
@@ -495,9 +514,10 @@ public class AccountingContact {
             firstName, id, identification,
             isActive, isCustomer, isSupplier,
             lastName, name, organizationId,
-            paymentMethods, paymentTerms, portalUrl,
-            raw, shippingAddress, taxExemption,
-            taxNumber, telephones, updatedAt);
+            paymentMethods, paymentTerms, paymenttermId,
+            portalUrl, raw, shippingAddress,
+            taxExemption, taxNumber, telephones,
+            updatedAt);
     }
     
     @Override
@@ -520,6 +540,7 @@ public class AccountingContact {
                 "organizationId", organizationId,
                 "paymentMethods", paymentMethods,
                 "paymentTerms", paymentTerms,
+                "paymenttermId", paymenttermId,
                 "portalUrl", portalUrl,
                 "raw", raw,
                 "shippingAddress", shippingAddress,
@@ -565,6 +586,8 @@ public class AccountingContact {
         private List<AccountingContactPaymentMethod> paymentMethods;
 
         private AccountingContactPaymentTerms paymentTerms;
+
+        private String paymenttermId;
 
         private String portalUrl;
 
@@ -669,6 +692,11 @@ public class AccountingContact {
             return this;
         }
 
+        public Builder paymenttermId(@Nullable String paymenttermId) {
+            this.paymenttermId = paymenttermId;
+            return this;
+        }
+
         public Builder portalUrl(@Nullable String portalUrl) {
             this.portalUrl = portalUrl;
             return this;
@@ -711,9 +739,10 @@ public class AccountingContact {
                 firstName, id, identification,
                 isActive, isCustomer, isSupplier,
                 lastName, name, organizationId,
-                paymentMethods, paymentTerms, portalUrl,
-                raw, shippingAddress, taxExemption,
-                taxNumber, telephones, updatedAt);
+                paymentMethods, paymentTerms, paymenttermId,
+                portalUrl, raw, shippingAddress,
+                taxExemption, taxNumber, telephones,
+                updatedAt);
         }
 
 
