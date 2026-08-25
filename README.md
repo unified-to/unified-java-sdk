@@ -39,7 +39,7 @@ The samples below show how a published SDK artifact is used:
 
 Gradle:
 ```groovy
-implementation 'to.unified:unified-java-sdk:0.49.6'
+implementation 'to.unified:unified-java-sdk:0.49.7'
 ```
 
 Maven:
@@ -47,7 +47,7 @@ Maven:
 <dependency>
     <groupId>to.unified</groupId>
     <artifactId>unified-java-sdk</artifactId>
-    <version>0.49.6</version>
+    <version>0.49.7</version>
 </dependency>
 ```
 
@@ -1301,6 +1301,11 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 * [removeAdsInsertionorder](docs/sdks/insertionorder/README.md#removeadsinsertionorder) - Remove an insertionorder
 * [updateAdsInsertionorder](docs/sdks/insertionorder/README.md#updateadsinsertionorder) - Update an insertionorder
 
+### [Insight](docs/sdks/insight/README.md)
+
+* [getSocialInsight](docs/sdks/insight/README.md#getsocialinsight) - Retrieve an insight
+* [listSocialInsights](docs/sdks/insight/README.md#listsocialinsights) - List all insights
+
 ### [Instructor](docs/sdks/instructor/README.md)
 
 * [createLmsInstructor](docs/sdks/instructor/README.md#createlmsinstructor) - Create an instructor
@@ -1735,11 +1740,22 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 * [removeCrmPipeline](docs/sdks/pipeline/README.md#removecrmpipeline) - Remove a pipeline
 * [updateCrmPipeline](docs/sdks/pipeline/README.md#updatecrmpipeline) - Update a pipeline
 
+### [Post](docs/sdks/post/README.md)
+
+* [createSocialPost](docs/sdks/post/README.md#createsocialpost) - Create a post
+* [getSocialPost](docs/sdks/post/README.md#getsocialpost) - Retrieve a post
+* [listSocialPosts](docs/sdks/post/README.md#listsocialposts) - List all posts
+* [patchSocialPost](docs/sdks/post/README.md#patchsocialpost) - Update a post
+* [removeSocialPost](docs/sdks/post/README.md#removesocialpost) - Remove a post
+* [updateSocialPost](docs/sdks/post/README.md#updatesocialpost) - Update a post
+
 ### [Profile](docs/sdks/profile/README.md)
 
 * [createCdpProfile](docs/sdks/profile/README.md#createcdpprofile) - Create a profile
 * [getCdpProfile](docs/sdks/profile/README.md#getcdpprofile) - Retrieve a profile
+* [getSocialProfile](docs/sdks/profile/README.md#getsocialprofile) - Retrieve a profile
 * [listCdpProfiles](docs/sdks/profile/README.md#listcdpprofiles) - List all profiles
+* [listSocialProfiles](docs/sdks/profile/README.md#listsocialprofiles) - List all profiles
 * [patchCdpProfile](docs/sdks/profile/README.md#patchcdpprofile) - Update a profile
 * [removeCdpProfile](docs/sdks/profile/README.md#removecdpprofile) - Remove a profile
 * [updateCdpProfile](docs/sdks/profile/README.md#updatecdpprofile) - Update a profile
@@ -1915,11 +1931,15 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 * [createCommerceReview](docs/sdks/review/README.md#createcommercereview) - Create a review
 * [getCommerceReview](docs/sdks/review/README.md#getcommercereview) - Retrieve a review
 * [getPerformanceReview](docs/sdks/review/README.md#getperformancereview) - Retrieve a review
+* [getSocialReview](docs/sdks/review/README.md#getsocialreview) - Retrieve a review
 * [listCommerceReviews](docs/sdks/review/README.md#listcommercereviews) - List all reviews
 * [listPerformanceReviews](docs/sdks/review/README.md#listperformancereviews) - List all reviews
+* [listSocialReviews](docs/sdks/review/README.md#listsocialreviews) - List all reviews
 * [patchCommerceReview](docs/sdks/review/README.md#patchcommercereview) - Update a review
+* [patchSocialReview](docs/sdks/review/README.md#patchsocialreview) - Update a review
 * [removeCommerceReview](docs/sdks/review/README.md#removecommercereview) - Remove a review
 * [updateCommerceReview](docs/sdks/review/README.md#updatecommercereview) - Update a review
+* [updateSocialReview](docs/sdks/review/README.md#updatesocialreview) - Update a review
 
 ### [Saleschannel](docs/sdks/saleschannel/README.md)
 
@@ -2042,6 +2062,23 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 * [removeSigningSignatory](docs/sdks/signing/README.md#removesigningsignatory) - Remove a signatory
 * [updateSigningDocument](docs/sdks/signing/README.md#updatesigningdocument) - Update a document
 * [updateSigningSignatory](docs/sdks/signing/README.md#updatesigningsignatory) - Update a signatory
+
+### [Social](docs/sdks/social/README.md)
+
+* [createSocialPost](docs/sdks/social/README.md#createsocialpost) - Create a post
+* [getSocialInsight](docs/sdks/social/README.md#getsocialinsight) - Retrieve an insight
+* [getSocialPost](docs/sdks/social/README.md#getsocialpost) - Retrieve a post
+* [getSocialProfile](docs/sdks/social/README.md#getsocialprofile) - Retrieve a profile
+* [getSocialReview](docs/sdks/social/README.md#getsocialreview) - Retrieve a review
+* [listSocialInsights](docs/sdks/social/README.md#listsocialinsights) - List all insights
+* [listSocialPosts](docs/sdks/social/README.md#listsocialposts) - List all posts
+* [listSocialProfiles](docs/sdks/social/README.md#listsocialprofiles) - List all profiles
+* [listSocialReviews](docs/sdks/social/README.md#listsocialreviews) - List all reviews
+* [patchSocialPost](docs/sdks/social/README.md#patchsocialpost) - Update a post
+* [patchSocialReview](docs/sdks/social/README.md#patchsocialreview) - Update a review
+* [removeSocialPost](docs/sdks/social/README.md#removesocialpost) - Remove a post
+* [updateSocialPost](docs/sdks/social/README.md#updatesocialpost) - Update a post
+* [updateSocialReview](docs/sdks/social/README.md#updatesocialreview) - Update a review
 
 ### [Source](docs/sdks/source/README.md)
 

@@ -15,29 +15,45 @@ import to.unified.unified_java_sdk.models.operations.GetCommerceReviewResponse;
 import to.unified.unified_java_sdk.models.operations.GetPerformanceReviewRequest;
 import to.unified.unified_java_sdk.models.operations.GetPerformanceReviewRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.GetPerformanceReviewResponse;
+import to.unified.unified_java_sdk.models.operations.GetSocialReviewRequest;
+import to.unified.unified_java_sdk.models.operations.GetSocialReviewRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetSocialReviewResponse;
 import to.unified.unified_java_sdk.models.operations.ListCommerceReviewsRequest;
 import to.unified.unified_java_sdk.models.operations.ListCommerceReviewsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.ListCommerceReviewsResponse;
 import to.unified.unified_java_sdk.models.operations.ListPerformanceReviewsRequest;
 import to.unified.unified_java_sdk.models.operations.ListPerformanceReviewsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.ListPerformanceReviewsResponse;
+import to.unified.unified_java_sdk.models.operations.ListSocialReviewsRequest;
+import to.unified.unified_java_sdk.models.operations.ListSocialReviewsRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListSocialReviewsResponse;
 import to.unified.unified_java_sdk.models.operations.PatchCommerceReviewRequest;
 import to.unified.unified_java_sdk.models.operations.PatchCommerceReviewRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.PatchCommerceReviewResponse;
+import to.unified.unified_java_sdk.models.operations.PatchSocialReviewRequest;
+import to.unified.unified_java_sdk.models.operations.PatchSocialReviewRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.PatchSocialReviewResponse;
 import to.unified.unified_java_sdk.models.operations.RemoveCommerceReviewRequest;
 import to.unified.unified_java_sdk.models.operations.RemoveCommerceReviewRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.RemoveCommerceReviewResponse;
 import to.unified.unified_java_sdk.models.operations.UpdateCommerceReviewRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateCommerceReviewRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.UpdateCommerceReviewResponse;
+import to.unified.unified_java_sdk.models.operations.UpdateSocialReviewRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateSocialReviewRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.UpdateSocialReviewResponse;
 import to.unified.unified_java_sdk.operations.CreateCommerceReview;
 import to.unified.unified_java_sdk.operations.GetCommerceReview;
 import to.unified.unified_java_sdk.operations.GetPerformanceReview;
+import to.unified.unified_java_sdk.operations.GetSocialReview;
 import to.unified.unified_java_sdk.operations.ListCommerceReviews;
 import to.unified.unified_java_sdk.operations.ListPerformanceReviews;
+import to.unified.unified_java_sdk.operations.ListSocialReviews;
 import to.unified.unified_java_sdk.operations.PatchCommerceReview;
+import to.unified.unified_java_sdk.operations.PatchSocialReview;
 import to.unified.unified_java_sdk.operations.RemoveCommerceReview;
 import to.unified.unified_java_sdk.operations.UpdateCommerceReview;
+import to.unified.unified_java_sdk.operations.UpdateSocialReview;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -127,6 +143,28 @@ public class Review {
     }
 
     /**
+     * Retrieve a review
+     * 
+     * @return The call builder
+     */
+    public GetSocialReviewRequestBuilder getSocialReview() {
+        return new GetSocialReviewRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Retrieve a review
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetSocialReviewResponse getSocialReview(@Nonnull GetSocialReviewRequest request) {
+        RequestOperation<GetSocialReviewRequest, GetSocialReviewResponse> operation
+              = new GetSocialReview.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
      * List all reviews
      * 
      * @return The call builder
@@ -171,6 +209,28 @@ public class Review {
     }
 
     /**
+     * List all reviews
+     * 
+     * @return The call builder
+     */
+    public ListSocialReviewsRequestBuilder listSocialReviews() {
+        return new ListSocialReviewsRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * List all reviews
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListSocialReviewsResponse listSocialReviews(@Nonnull ListSocialReviewsRequest request) {
+        RequestOperation<ListSocialReviewsRequest, ListSocialReviewsResponse> operation
+              = new ListSocialReviews.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
      * Update a review
      * 
      * @return The call builder
@@ -189,6 +249,28 @@ public class Review {
     public PatchCommerceReviewResponse patchCommerceReview(@Nonnull PatchCommerceReviewRequest request) {
         RequestOperation<PatchCommerceReviewRequest, PatchCommerceReviewResponse> operation
               = new PatchCommerceReview.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Update a review
+     * 
+     * @return The call builder
+     */
+    public PatchSocialReviewRequestBuilder patchSocialReview() {
+        return new PatchSocialReviewRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Update a review
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchSocialReviewResponse patchSocialReview(@Nonnull PatchSocialReviewRequest request) {
+        RequestOperation<PatchSocialReviewRequest, PatchSocialReviewResponse> operation
+              = new PatchSocialReview.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -233,6 +315,28 @@ public class Review {
     public UpdateCommerceReviewResponse updateCommerceReview(@Nonnull UpdateCommerceReviewRequest request) {
         RequestOperation<UpdateCommerceReviewRequest, UpdateCommerceReviewResponse> operation
               = new UpdateCommerceReview.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Update a review
+     * 
+     * @return The call builder
+     */
+    public UpdateSocialReviewRequestBuilder updateSocialReview() {
+        return new UpdateSocialReviewRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Update a review
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateSocialReviewResponse updateSocialReview(@Nonnull UpdateSocialReviewRequest request) {
+        RequestOperation<UpdateSocialReviewRequest, UpdateSocialReviewResponse> operation
+              = new UpdateSocialReview.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

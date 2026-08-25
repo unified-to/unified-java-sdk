@@ -7,11 +7,15 @@
 * [createCommerceReview](#createcommercereview) - Create a review
 * [getCommerceReview](#getcommercereview) - Retrieve a review
 * [getPerformanceReview](#getperformancereview) - Retrieve a review
+* [getSocialReview](#getsocialreview) - Retrieve a review
 * [listCommerceReviews](#listcommercereviews) - List all reviews
 * [listPerformanceReviews](#listperformancereviews) - List all reviews
+* [listSocialReviews](#listsocialreviews) - List all reviews
 * [patchCommerceReview](#patchcommercereview) - Update a review
+* [patchSocialReview](#patchsocialreview) - Update a review
 * [removeCommerceReview](#removecommercereview) - Remove a review
 * [updateCommerceReview](#updatecommercereview) - Update a review
+* [updateSocialReview](#updatesocialreview) - Update a review
 
 ## createCommerceReview
 
@@ -189,6 +193,64 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
+## getSocialReview
+
+Retrieve a review
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="getSocialReview" method="get" path="/social/{connection_id}/review/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.GetSocialReviewRequest;
+import to.unified.unified_java_sdk.models.operations.GetSocialReviewResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        GetSocialReviewRequest req = GetSocialReviewRequest.builder()
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        GetSocialReviewResponse res = sdk.review().getSocialReview()
+                .request(req)
+                .call();
+
+        if (res.socialReview().isPresent()) {
+            System.out.println(res.socialReview().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                   | Type                                                                        | Required                                                                    | Description                                                                 |
+| --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| `request`                                                                   | [GetSocialReviewRequest](../../models/operations/GetSocialReviewRequest.md) | :heavy_check_mark:                                                          | The request object to use for the request.                                  |
+
+### Response
+
+**[GetSocialReviewResponse](../../models/operations/GetSocialReviewResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
 ## listCommerceReviews
 
 List all reviews
@@ -303,6 +365,63 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
+## listSocialReviews
+
+List all reviews
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="listSocialReviews" method="get" path="/social/{connection_id}/review" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.ListSocialReviewsRequest;
+import to.unified.unified_java_sdk.models.operations.ListSocialReviewsResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        ListSocialReviewsRequest req = ListSocialReviewsRequest.builder()
+                .connectionId("<id>")
+                .build();
+
+        ListSocialReviewsResponse res = sdk.review().listSocialReviews()
+                .request(req)
+                .call();
+
+        if (res.socialReviews().isPresent()) {
+            System.out.println(res.socialReviews().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| `request`                                                                       | [ListSocialReviewsRequest](../../models/operations/ListSocialReviewsRequest.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
+
+### Response
+
+**[ListSocialReviewsResponse](../../models/operations/ListSocialReviewsResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
 ## patchCommerceReview
 
 Update a review
@@ -357,6 +476,67 @@ public class Application {
 ### Response
 
 **[PatchCommerceReviewResponse](../../models/operations/PatchCommerceReviewResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## patchSocialReview
+
+Update a review
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="patchSocialReview" method="patch" path="/social/{connection_id}/review/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.PatchSocialReviewRequest;
+import to.unified.unified_java_sdk.models.operations.PatchSocialReviewResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.SocialReview;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        PatchSocialReviewRequest req = PatchSocialReviewRequest.builder()
+                .socialReview(SocialReview.builder()
+                    .build())
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        PatchSocialReviewResponse res = sdk.review().patchSocialReview()
+                .request(req)
+                .call();
+
+        if (res.socialReview().isPresent()) {
+            System.out.println(res.socialReview().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| `request`                                                                       | [PatchSocialReviewRequest](../../models/operations/PatchSocialReviewRequest.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
+
+### Response
+
+**[PatchSocialReviewResponse](../../models/operations/PatchSocialReviewResponse.md)**
 
 ### Errors
 
@@ -474,6 +654,67 @@ public class Application {
 ### Response
 
 **[UpdateCommerceReviewResponse](../../models/operations/UpdateCommerceReviewResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## updateSocialReview
+
+Update a review
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="updateSocialReview" method="put" path="/social/{connection_id}/review/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.UpdateSocialReviewRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateSocialReviewResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.SocialReview;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        UpdateSocialReviewRequest req = UpdateSocialReviewRequest.builder()
+                .socialReview(SocialReview.builder()
+                    .build())
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        UpdateSocialReviewResponse res = sdk.review().updateSocialReview()
+                .request(req)
+                .call();
+
+        if (res.socialReview().isPresent()) {
+            System.out.println(res.socialReview().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
+| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| `request`                                                                         | [UpdateSocialReviewRequest](../../models/operations/UpdateSocialReviewRequest.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
+
+### Response
+
+**[UpdateSocialReviewResponse](../../models/operations/UpdateSocialReviewResponse.md)**
 
 ### Errors
 

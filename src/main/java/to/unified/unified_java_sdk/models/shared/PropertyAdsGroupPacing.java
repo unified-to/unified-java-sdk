@@ -29,7 +29,7 @@ public class PropertyAdsGroupPacing {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("period")
-    private Period period;
+    private PropertyAdsGroupPacingPeriod period;
 
 
     @JsonInclude(Include.NON_ABSENT)
@@ -40,7 +40,7 @@ public class PropertyAdsGroupPacing {
     public PropertyAdsGroupPacing(
             @JsonProperty("daily_max_amount") @Nullable Double dailyMaxAmount,
             @JsonProperty("daily_max_impressions") @Nullable Double dailyMaxImpressions,
-            @JsonProperty("period") @Nullable Period period,
+            @JsonProperty("period") @Nullable PropertyAdsGroupPacingPeriod period,
             @JsonProperty("type") @Nullable String type) {
         this.dailyMaxAmount = dailyMaxAmount;
         this.dailyMaxImpressions = dailyMaxImpressions;
@@ -61,7 +61,7 @@ public class PropertyAdsGroupPacing {
         return Optional.ofNullable(this.dailyMaxImpressions);
     }
 
-    public Optional<Period> period() {
+    public Optional<PropertyAdsGroupPacingPeriod> period() {
         return Optional.ofNullable(this.period);
     }
 
@@ -86,7 +86,7 @@ public class PropertyAdsGroupPacing {
     }
 
 
-    public PropertyAdsGroupPacing withPeriod(@Nullable Period period) {
+    public PropertyAdsGroupPacing withPeriod(@Nullable PropertyAdsGroupPacingPeriod period) {
         this.period = period;
         return this;
     }
@@ -137,7 +137,7 @@ public class PropertyAdsGroupPacing {
 
         private Double dailyMaxImpressions;
 
-        private Period period;
+        private PropertyAdsGroupPacingPeriod period;
 
         private String type;
 
@@ -155,7 +155,7 @@ public class PropertyAdsGroupPacing {
             return this;
         }
 
-        public Builder period(@Nullable Period period) {
+        public Builder period(@Nullable PropertyAdsGroupPacingPeriod period) {
             this.period = period;
             return this;
         }

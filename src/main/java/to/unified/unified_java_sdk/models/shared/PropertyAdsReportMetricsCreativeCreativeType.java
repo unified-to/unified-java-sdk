@@ -29,8 +29,8 @@ public class PropertyAdsReportMetricsCreativeCreativeType {
     public static final PropertyAdsReportMetricsCreativeCreativeType PUBLISHER_HOSTED = new PropertyAdsReportMetricsCreativeCreativeType("PUBLISHER_HOSTED");
     public static final PropertyAdsReportMetricsCreativeCreativeType ASSET_BASED = new PropertyAdsReportMetricsCreativeCreativeType("ASSET_BASED");
     public static final PropertyAdsReportMetricsCreativeCreativeType IMAGE = new PropertyAdsReportMetricsCreativeCreativeType("IMAGE");
-    public static final PropertyAdsReportMetricsCreativeCreativeType SHARE = new PropertyAdsReportMetricsCreativeCreativeType("SHARE");
     public static final PropertyAdsReportMetricsCreativeCreativeType DOCUMENT = new PropertyAdsReportMetricsCreativeCreativeType("DOCUMENT");
+    public static final PropertyAdsReportMetricsCreativeCreativeType SHARE = new PropertyAdsReportMetricsCreativeCreativeType("SHARE");
 
     // This map will grow whenever a Color gets created with a new
     // unrecognized value (a potential memory leak if the user is not
@@ -113,8 +113,8 @@ public class PropertyAdsReportMetricsCreativeCreativeType {
         map.put("PUBLISHER_HOSTED", PUBLISHER_HOSTED);
         map.put("ASSET_BASED", ASSET_BASED);
         map.put("IMAGE", IMAGE);
-        map.put("SHARE", SHARE);
         map.put("DOCUMENT", DOCUMENT);
+        map.put("SHARE", SHARE);
         return map;
     }
 
@@ -129,8 +129,8 @@ public class PropertyAdsReportMetricsCreativeCreativeType {
         map.put("PUBLISHER_HOSTED", PropertyAdsReportMetricsCreativeCreativeTypeEnum.PUBLISHER_HOSTED);
         map.put("ASSET_BASED", PropertyAdsReportMetricsCreativeCreativeTypeEnum.ASSET_BASED);
         map.put("IMAGE", PropertyAdsReportMetricsCreativeCreativeTypeEnum.IMAGE);
-        map.put("SHARE", PropertyAdsReportMetricsCreativeCreativeTypeEnum.SHARE);
         map.put("DOCUMENT", PropertyAdsReportMetricsCreativeCreativeTypeEnum.DOCUMENT);
+        map.put("SHARE", PropertyAdsReportMetricsCreativeCreativeTypeEnum.SHARE);
         return map;
     }
     
@@ -146,8 +146,8 @@ public class PropertyAdsReportMetricsCreativeCreativeType {
         PUBLISHER_HOSTED("PUBLISHER_HOSTED"),
         ASSET_BASED("ASSET_BASED"),
         IMAGE("IMAGE"),
-        SHARE("SHARE"),
-        DOCUMENT("DOCUMENT"),;
+        DOCUMENT("DOCUMENT"),
+        SHARE("SHARE"),;
 
         private final String value;
 

@@ -12,9 +12,15 @@ import to.unified.unified_java_sdk.models.operations.CreateCdpProfileResponse;
 import to.unified.unified_java_sdk.models.operations.GetCdpProfileRequest;
 import to.unified.unified_java_sdk.models.operations.GetCdpProfileRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.GetCdpProfileResponse;
+import to.unified.unified_java_sdk.models.operations.GetSocialProfileRequest;
+import to.unified.unified_java_sdk.models.operations.GetSocialProfileRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetSocialProfileResponse;
 import to.unified.unified_java_sdk.models.operations.ListCdpProfilesRequest;
 import to.unified.unified_java_sdk.models.operations.ListCdpProfilesRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.ListCdpProfilesResponse;
+import to.unified.unified_java_sdk.models.operations.ListSocialProfilesRequest;
+import to.unified.unified_java_sdk.models.operations.ListSocialProfilesRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListSocialProfilesResponse;
 import to.unified.unified_java_sdk.models.operations.PatchCdpProfileRequest;
 import to.unified.unified_java_sdk.models.operations.PatchCdpProfileRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.PatchCdpProfileResponse;
@@ -26,7 +32,9 @@ import to.unified.unified_java_sdk.models.operations.UpdateCdpProfileRequestBuil
 import to.unified.unified_java_sdk.models.operations.UpdateCdpProfileResponse;
 import to.unified.unified_java_sdk.operations.CreateCdpProfile;
 import to.unified.unified_java_sdk.operations.GetCdpProfile;
+import to.unified.unified_java_sdk.operations.GetSocialProfile;
 import to.unified.unified_java_sdk.operations.ListCdpProfiles;
+import to.unified.unified_java_sdk.operations.ListSocialProfiles;
 import to.unified.unified_java_sdk.operations.PatchCdpProfile;
 import to.unified.unified_java_sdk.operations.RemoveCdpProfile;
 import to.unified.unified_java_sdk.operations.UpdateCdpProfile;
@@ -97,6 +105,28 @@ public class Profile {
     }
 
     /**
+     * Retrieve a profile
+     * 
+     * @return The call builder
+     */
+    public GetSocialProfileRequestBuilder getSocialProfile() {
+        return new GetSocialProfileRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Retrieve a profile
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetSocialProfileResponse getSocialProfile(@Nonnull GetSocialProfileRequest request) {
+        RequestOperation<GetSocialProfileRequest, GetSocialProfileResponse> operation
+              = new GetSocialProfile.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
      * List all profiles
      * 
      * @return The call builder
@@ -115,6 +145,28 @@ public class Profile {
     public ListCdpProfilesResponse listCdpProfiles(@Nonnull ListCdpProfilesRequest request) {
         RequestOperation<ListCdpProfilesRequest, ListCdpProfilesResponse> operation
               = new ListCdpProfiles.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * List all profiles
+     * 
+     * @return The call builder
+     */
+    public ListSocialProfilesRequestBuilder listSocialProfiles() {
+        return new ListSocialProfilesRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * List all profiles
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListSocialProfilesResponse listSocialProfiles(@Nonnull ListSocialProfilesRequest request) {
+        RequestOperation<ListSocialProfilesRequest, ListSocialProfilesResponse> operation
+              = new ListSocialProfiles.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

@@ -189,6 +189,10 @@ public class WebhookObjectType {
     public static final WebhookObjectType PERFORMANCE_REVIEW = new WebhookObjectType("performance_review");
     public static final WebhookObjectType PERFORMANCE_GOAL = new WebhookObjectType("performance_goal");
     public static final WebhookObjectType PERFORMANCE_FEEDBACK = new WebhookObjectType("performance_feedback");
+    public static final WebhookObjectType SOCIAL_POST = new WebhookObjectType("social_post");
+    public static final WebhookObjectType SOCIAL_PROFILE = new WebhookObjectType("social_profile");
+    public static final WebhookObjectType SOCIAL_REVIEW = new WebhookObjectType("social_review");
+    public static final WebhookObjectType SOCIAL_INSIGHT = new WebhookObjectType("social_insight");
 
     // This map will grow whenever a Color gets created with a new
     // unrecognized value (a potential memory leak if the user is not
@@ -431,6 +435,10 @@ public class WebhookObjectType {
         map.put("performance_review", PERFORMANCE_REVIEW);
         map.put("performance_goal", PERFORMANCE_GOAL);
         map.put("performance_feedback", PERFORMANCE_FEEDBACK);
+        map.put("social_post", SOCIAL_POST);
+        map.put("social_profile", SOCIAL_PROFILE);
+        map.put("social_review", SOCIAL_REVIEW);
+        map.put("social_insight", SOCIAL_INSIGHT);
         return map;
     }
 
@@ -605,6 +613,10 @@ public class WebhookObjectType {
         map.put("performance_review", WebhookObjectTypeEnum.PERFORMANCE_REVIEW);
         map.put("performance_goal", WebhookObjectTypeEnum.PERFORMANCE_GOAL);
         map.put("performance_feedback", WebhookObjectTypeEnum.PERFORMANCE_FEEDBACK);
+        map.put("social_post", WebhookObjectTypeEnum.SOCIAL_POST);
+        map.put("social_profile", WebhookObjectTypeEnum.SOCIAL_PROFILE);
+        map.put("social_review", WebhookObjectTypeEnum.SOCIAL_REVIEW);
+        map.put("social_insight", WebhookObjectTypeEnum.SOCIAL_INSIGHT);
         return map;
     }
     
@@ -779,7 +791,11 @@ public class WebhookObjectType {
         PERFORMANCE_CYCLE("performance_cycle"),
         PERFORMANCE_REVIEW("performance_review"),
         PERFORMANCE_GOAL("performance_goal"),
-        PERFORMANCE_FEEDBACK("performance_feedback"),;
+        PERFORMANCE_FEEDBACK("performance_feedback"),
+        SOCIAL_POST("social_post"),
+        SOCIAL_PROFILE("social_profile"),
+        SOCIAL_REVIEW("social_review"),
+        SOCIAL_INSIGHT("social_insight"),;
 
         private final String value;
 

@@ -50,3 +50,4 @@ PropertyIntegrationCategories custom = PropertyIntegrationCategories.of("custom_
 | `DATASTORE`    | datastore      |
 | `CDP`          | cdp            |
 | `PERFORMANCE`  | performance    |
+| `SOCIAL`       | social         |

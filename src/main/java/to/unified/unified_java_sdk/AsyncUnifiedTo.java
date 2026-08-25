@@ -309,6 +309,12 @@ public class AsyncUnifiedTo {
 
     private final AsyncTemplate template;
 
+    private final AsyncSocial social;
+
+    private final AsyncInsight insight;
+
+    private final AsyncPost post;
+
     private final AsyncStorage storage;
 
     private final AsyncFile file;
@@ -949,6 +955,18 @@ public class AsyncUnifiedTo {
         return template;
     }
 
+    public AsyncSocial social() {
+        return social;
+    }
+
+    public AsyncInsight insight() {
+        return insight;
+    }
+
+    public AsyncPost post() {
+        return post;
+    }
+
     public AsyncStorage storage() {
         return storage;
     }
@@ -1199,6 +1217,9 @@ public class AsyncUnifiedTo {
         this.signing = new AsyncSigning(syncSDK.signing(), sdkConfiguration);
         this.signatory = new AsyncSignatory(syncSDK.signatory(), sdkConfiguration);
         this.template = new AsyncTemplate(syncSDK.template(), sdkConfiguration);
+        this.social = new AsyncSocial(syncSDK.social(), sdkConfiguration);
+        this.insight = new AsyncInsight(syncSDK.insight(), sdkConfiguration);
+        this.post = new AsyncPost(syncSDK.post(), sdkConfiguration);
         this.storage = new AsyncStorage(syncSDK.storage(), sdkConfiguration);
         this.file = new AsyncFile(syncSDK.file(), sdkConfiguration);
         this.task = new AsyncTask(syncSDK.task(), sdkConfiguration);

@@ -5,6 +5,7 @@ package to.unified.unified_java_sdk.models.operations;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import jakarta.annotation.Nullable;
+import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Override;
 import java.lang.String;
@@ -35,6 +36,12 @@ public class ListUnifiedWebhooksRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=integration_type")
     private String integrationType;
+
+    /**
+     * Filter by health. Omit to return all.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=is_healthy")
+    private Boolean isHealthy;
 
 
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
@@ -71,6 +78,7 @@ public class ListUnifiedWebhooksRequest {
             @Nullable String createdLte,
             @Nullable String env,
             @Nullable String integrationType,
+            @Nullable Boolean isHealthy,
             @Nullable Double limit,
             @Nullable String object,
             @Nullable Double offset,
@@ -81,6 +89,7 @@ public class ListUnifiedWebhooksRequest {
         this.createdLte = createdLte;
         this.env = env;
         this.integrationType = integrationType;
+        this.isHealthy = isHealthy;
         this.limit = limit;
         this.object = object;
         this.offset = offset;
@@ -93,7 +102,7 @@ public class ListUnifiedWebhooksRequest {
         this(null, null, null,
             null, null, null,
             null, null, null,
-            null);
+            null, null);
     }
 
     /**
@@ -119,6 +128,13 @@ public class ListUnifiedWebhooksRequest {
      */
     public Optional<String> integrationType() {
         return Optional.ofNullable(this.integrationType);
+    }
+
+    /**
+     * Filter by health. Omit to return all.
+     */
+    public Optional<Boolean> isHealthy() {
+        return Optional.ofNullable(this.isHealthy);
     }
 
     public Optional<Double> limit() {
@@ -190,6 +206,15 @@ public class ListUnifiedWebhooksRequest {
     }
 
 
+    /**
+     * Filter by health. Omit to return all.
+     */
+    public ListUnifiedWebhooksRequest withIsHealthy(@Nullable Boolean isHealthy) {
+        this.isHealthy = isHealthy;
+        return this;
+    }
+
+
     public ListUnifiedWebhooksRequest withLimit(@Nullable Double limit) {
         this.limit = limit;
         return this;
@@ -247,6 +272,7 @@ public class ListUnifiedWebhooksRequest {
             Utils.enhancedDeepEquals(this.createdLte, other.createdLte) &&
             Utils.enhancedDeepEquals(this.env, other.env) &&
             Utils.enhancedDeepEquals(this.integrationType, other.integrationType) &&
+            Utils.enhancedDeepEquals(this.isHealthy, other.isHealthy) &&
             Utils.enhancedDeepEquals(this.limit, other.limit) &&
             Utils.enhancedDeepEquals(this.object, other.object) &&
             Utils.enhancedDeepEquals(this.offset, other.offset) &&
@@ -259,9 +285,9 @@ public class ListUnifiedWebhooksRequest {
     public int hashCode() {
         return Utils.enhancedHash(
             connectionId, createdLte, env,
-            integrationType, limit, object,
-            offset, order, sort,
-            updatedGte);
+            integrationType, isHealthy, limit,
+            object, offset, order,
+            sort, updatedGte);
     }
     
     @Override
@@ -271,6 +297,7 @@ public class ListUnifiedWebhooksRequest {
                 "createdLte", createdLte,
                 "env", env,
                 "integrationType", integrationType,
+                "isHealthy", isHealthy,
                 "limit", limit,
                 "object", object,
                 "offset", offset,
@@ -289,6 +316,8 @@ public class ListUnifiedWebhooksRequest {
         private String env;
 
         private String integrationType;
+
+        private Boolean isHealthy;
 
         private Double limit;
 
@@ -335,6 +364,14 @@ public class ListUnifiedWebhooksRequest {
             return this;
         }
 
+        /**
+         * Filter by health. Omit to return all.
+         */
+        public Builder isHealthy(@Nullable Boolean isHealthy) {
+            this.isHealthy = isHealthy;
+            return this;
+        }
+
         public Builder limit(@Nullable Double limit) {
             this.limit = limit;
             return this;
@@ -375,9 +412,9 @@ public class ListUnifiedWebhooksRequest {
         public ListUnifiedWebhooksRequest build() {
             return new ListUnifiedWebhooksRequest(
                 connectionId, createdLte, env,
-                integrationType, limit, object,
-                offset, order, sort,
-                updatedGte);
+                integrationType, isHealthy, limit,
+                object, offset, order,
+                sort, updatedGte);
         }
 
     }

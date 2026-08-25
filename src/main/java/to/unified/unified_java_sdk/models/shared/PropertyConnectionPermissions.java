@@ -332,6 +332,14 @@ public class PropertyConnectionPermissions {
     public static final PropertyConnectionPermissions PERFORMANCE_GOAL_WRITE = new PropertyConnectionPermissions("performance_goal_write");
     public static final PropertyConnectionPermissions PERFORMANCE_FEEDBACK_READ = new PropertyConnectionPermissions("performance_feedback_read");
     public static final PropertyConnectionPermissions PERFORMANCE_FEEDBACK_WRITE = new PropertyConnectionPermissions("performance_feedback_write");
+    public static final PropertyConnectionPermissions SOCIAL_POST_READ = new PropertyConnectionPermissions("social_post_read");
+    public static final PropertyConnectionPermissions SOCIAL_POST_WRITE = new PropertyConnectionPermissions("social_post_write");
+    public static final PropertyConnectionPermissions SOCIAL_PROFILE_READ = new PropertyConnectionPermissions("social_profile_read");
+    public static final PropertyConnectionPermissions SOCIAL_PROFILE_WRITE = new PropertyConnectionPermissions("social_profile_write");
+    public static final PropertyConnectionPermissions SOCIAL_REVIEW_READ = new PropertyConnectionPermissions("social_review_read");
+    public static final PropertyConnectionPermissions SOCIAL_REVIEW_WRITE = new PropertyConnectionPermissions("social_review_write");
+    public static final PropertyConnectionPermissions SOCIAL_INSIGHT_READ = new PropertyConnectionPermissions("social_insight_read");
+    public static final PropertyConnectionPermissions SOCIAL_INSIGHT_WRITE = new PropertyConnectionPermissions("social_insight_write");
 
     // This map will grow whenever a Color gets created with a new
     // unrecognized value (a potential memory leak if the user is not
@@ -717,6 +725,14 @@ public class PropertyConnectionPermissions {
         map.put("performance_goal_write", PERFORMANCE_GOAL_WRITE);
         map.put("performance_feedback_read", PERFORMANCE_FEEDBACK_READ);
         map.put("performance_feedback_write", PERFORMANCE_FEEDBACK_WRITE);
+        map.put("social_post_read", SOCIAL_POST_READ);
+        map.put("social_post_write", SOCIAL_POST_WRITE);
+        map.put("social_profile_read", SOCIAL_PROFILE_READ);
+        map.put("social_profile_write", SOCIAL_PROFILE_WRITE);
+        map.put("social_review_read", SOCIAL_REVIEW_READ);
+        map.put("social_review_write", SOCIAL_REVIEW_WRITE);
+        map.put("social_insight_read", SOCIAL_INSIGHT_READ);
+        map.put("social_insight_write", SOCIAL_INSIGHT_WRITE);
         return map;
     }
 
@@ -1034,6 +1050,14 @@ public class PropertyConnectionPermissions {
         map.put("performance_goal_write", PropertyConnectionPermissionsEnum.PERFORMANCE_GOAL_WRITE);
         map.put("performance_feedback_read", PropertyConnectionPermissionsEnum.PERFORMANCE_FEEDBACK_READ);
         map.put("performance_feedback_write", PropertyConnectionPermissionsEnum.PERFORMANCE_FEEDBACK_WRITE);
+        map.put("social_post_read", PropertyConnectionPermissionsEnum.SOCIAL_POST_READ);
+        map.put("social_post_write", PropertyConnectionPermissionsEnum.SOCIAL_POST_WRITE);
+        map.put("social_profile_read", PropertyConnectionPermissionsEnum.SOCIAL_PROFILE_READ);
+        map.put("social_profile_write", PropertyConnectionPermissionsEnum.SOCIAL_PROFILE_WRITE);
+        map.put("social_review_read", PropertyConnectionPermissionsEnum.SOCIAL_REVIEW_READ);
+        map.put("social_review_write", PropertyConnectionPermissionsEnum.SOCIAL_REVIEW_WRITE);
+        map.put("social_insight_read", PropertyConnectionPermissionsEnum.SOCIAL_INSIGHT_READ);
+        map.put("social_insight_write", PropertyConnectionPermissionsEnum.SOCIAL_INSIGHT_WRITE);
         return map;
     }
     
@@ -1351,7 +1375,15 @@ public class PropertyConnectionPermissions {
         PERFORMANCE_GOAL_READ("performance_goal_read"),
         PERFORMANCE_GOAL_WRITE("performance_goal_write"),
         PERFORMANCE_FEEDBACK_READ("performance_feedback_read"),
-        PERFORMANCE_FEEDBACK_WRITE("performance_feedback_write"),;
+        PERFORMANCE_FEEDBACK_WRITE("performance_feedback_write"),
+        SOCIAL_POST_READ("social_post_read"),
+        SOCIAL_POST_WRITE("social_post_write"),
+        SOCIAL_PROFILE_READ("social_profile_read"),
+        SOCIAL_PROFILE_WRITE("social_profile_write"),
+        SOCIAL_REVIEW_READ("social_review_read"),
+        SOCIAL_REVIEW_WRITE("social_review_write"),
+        SOCIAL_INSIGHT_READ("social_insight_read"),
+        SOCIAL_INSIGHT_WRITE("social_insight_write"),;
 
         private final String value;
 

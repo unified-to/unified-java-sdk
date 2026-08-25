@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: cfc256ab-f291-4245-b909-5b9e9a6e6803
 management:
-  docChecksum: 5dbddde50faa6ee0fd800190b2c34aca
+  docChecksum: b24485f3e853704aed2b16d046ca7585
   docVersion: "1.0"
-  speakeasyVersion: 1.795.1
+  speakeasyVersion: 1.795.3
   generationVersion: 2.932.9
-  releaseVersion: 0.49.6
-  configChecksum: 844c00a5b5185b932c0ce4f8099a8f03
+  releaseVersion: 0.49.7
+  configChecksum: 2bafdc56204848e8213ec4242d60c233
   repoURL: https://github.com/unified-to/unified-java-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-java-sdk
@@ -393,6 +393,9 @@ trackedFiles:
   docs/models/operations/CreateSigningSignatoryQueryParamFields.md: {}
   docs/models/operations/CreateSigningSignatoryRequest.md: {}
   docs/models/operations/CreateSigningSignatoryResponse.md: {}
+  docs/models/operations/CreateSocialPostQueryParamFields.md: {}
+  docs/models/operations/CreateSocialPostRequest.md: {}
+  docs/models/operations/CreateSocialPostResponse.md: {}
   docs/models/operations/CreateStorageFileQueryParamFields.md: {}
   docs/models/operations/CreateStorageFileRequest.md: {}
   docs/models/operations/CreateStorageFileResponse.md: {}
@@ -863,6 +866,18 @@ trackedFiles:
   docs/models/operations/GetSigningTemplateQueryParamFields.md: {}
   docs/models/operations/GetSigningTemplateRequest.md: {}
   docs/models/operations/GetSigningTemplateResponse.md: {}
+  docs/models/operations/GetSocialInsightQueryParamFields.md: {}
+  docs/models/operations/GetSocialInsightRequest.md: {}
+  docs/models/operations/GetSocialInsightResponse.md: {}
+  docs/models/operations/GetSocialPostQueryParamFields.md: {}
+  docs/models/operations/GetSocialPostRequest.md: {}
+  docs/models/operations/GetSocialPostResponse.md: {}
+  docs/models/operations/GetSocialProfileQueryParamFields.md: {}
+  docs/models/operations/GetSocialProfileRequest.md: {}
+  docs/models/operations/GetSocialProfileResponse.md: {}
+  docs/models/operations/GetSocialReviewQueryParamFields.md: {}
+  docs/models/operations/GetSocialReviewRequest.md: {}
+  docs/models/operations/GetSocialReviewResponse.md: {}
   docs/models/operations/GetStorageFileQueryParamFields.md: {}
   docs/models/operations/GetStorageFileRequest.md: {}
   docs/models/operations/GetStorageFileResponse.md: {}
@@ -1394,6 +1409,18 @@ trackedFiles:
   docs/models/operations/ListSigningTemplatesQueryParamFields.md: {}
   docs/models/operations/ListSigningTemplatesRequest.md: {}
   docs/models/operations/ListSigningTemplatesResponse.md: {}
+  docs/models/operations/ListSocialInsightsQueryParamFields.md: {}
+  docs/models/operations/ListSocialInsightsRequest.md: {}
+  docs/models/operations/ListSocialInsightsResponse.md: {}
+  docs/models/operations/ListSocialPostsQueryParamFields.md: {}
+  docs/models/operations/ListSocialPostsRequest.md: {}
+  docs/models/operations/ListSocialPostsResponse.md: {}
+  docs/models/operations/ListSocialProfilesQueryParamFields.md: {}
+  docs/models/operations/ListSocialProfilesRequest.md: {}
+  docs/models/operations/ListSocialProfilesResponse.md: {}
+  docs/models/operations/ListSocialReviewsQueryParamFields.md: {}
+  docs/models/operations/ListSocialReviewsRequest.md: {}
+  docs/models/operations/ListSocialReviewsResponse.md: {}
   docs/models/operations/ListStorageFilesQueryParamFields.md: {}
   docs/models/operations/ListStorageFilesRequest.md: {}
   docs/models/operations/ListStorageFilesResponse.md: {}
@@ -1821,6 +1848,12 @@ trackedFiles:
   docs/models/operations/PatchSigningSignatoryQueryParamFields.md: {}
   docs/models/operations/PatchSigningSignatoryRequest.md: {}
   docs/models/operations/PatchSigningSignatoryResponse.md: {}
+  docs/models/operations/PatchSocialPostQueryParamFields.md: {}
+  docs/models/operations/PatchSocialPostRequest.md: {}
+  docs/models/operations/PatchSocialPostResponse.md: {}
+  docs/models/operations/PatchSocialReviewQueryParamFields.md: {}
+  docs/models/operations/PatchSocialReviewRequest.md: {}
+  docs/models/operations/PatchSocialReviewResponse.md: {}
   docs/models/operations/PatchStorageFileQueryParamFields.md: {}
   docs/models/operations/PatchStorageFileRequest.md: {}
   docs/models/operations/PatchStorageFileResponse.md: {}
@@ -2105,6 +2138,8 @@ trackedFiles:
   docs/models/operations/RemoveSigningDocumentResponse.md: {}
   docs/models/operations/RemoveSigningSignatoryRequest.md: {}
   docs/models/operations/RemoveSigningSignatoryResponse.md: {}
+  docs/models/operations/RemoveSocialPostRequest.md: {}
+  docs/models/operations/RemoveSocialPostResponse.md: {}
   docs/models/operations/RemoveStorageFileRequest.md: {}
   docs/models/operations/RemoveStorageFileResponse.md: {}
   docs/models/operations/RemoveTaskCommentRequest.md: {}
@@ -2485,6 +2520,12 @@ trackedFiles:
   docs/models/operations/UpdateSigningSignatoryQueryParamFields.md: {}
   docs/models/operations/UpdateSigningSignatoryRequest.md: {}
   docs/models/operations/UpdateSigningSignatoryResponse.md: {}
+  docs/models/operations/UpdateSocialPostQueryParamFields.md: {}
+  docs/models/operations/UpdateSocialPostRequest.md: {}
+  docs/models/operations/UpdateSocialPostResponse.md: {}
+  docs/models/operations/UpdateSocialReviewQueryParamFields.md: {}
+  docs/models/operations/UpdateSocialReviewRequest.md: {}
+  docs/models/operations/UpdateSocialReviewResponse.md: {}
   docs/models/operations/UpdateStorageFileQueryParamFields.md: {}
   docs/models/operations/UpdateStorageFileRequest.md: {}
   docs/models/operations/UpdateStorageFileResponse.md: {}
@@ -3777,6 +3818,7 @@ trackedFiles:
   docs/models/shared/ListPipelineId.md:
     id: f3c309ab6cae
     pristine_git_object: 0b983de04d291f54cc9ca5a096f6bfa1dec4e52e
+  docs/models/shared/ListPostId.md: {}
   docs/models/shared/ListProfileId.md: {}
   docs/models/shared/ListProjectId.md:
     id: abff21328258
@@ -3965,6 +4007,7 @@ trackedFiles:
   docs/models/shared/MetadataMetadataFormat.md:
     id: 465470d01ee6
     pristine_git_object: a10cc03a9a2f80679fda4383c9896dafebd4b268
+  docs/models/shared/Metric.md: {}
   docs/models/shared/Mode.md:
     id: cba7b10cad6b
     pristine_git_object: c2e30eec25031c00a174dbe53cf28faf77143507
@@ -4158,6 +4201,8 @@ trackedFiles:
   docs/models/shared/PropertyAdsCampaignFrequencyCap.md:
     id: 1623e0076721
     pristine_git_object: 5313445cf4671db6f217359cf048d3b3950e140d
+  docs/models/shared/PropertyAdsCampaignKpi.md: {}
+  docs/models/shared/PropertyAdsCampaignKpiType.md: {}
   docs/models/shared/PropertyAdsCampaignTargeting.md:
     id: 507587c2f002
     pristine_git_object: 2f856a31e037d5474fd7f23801db079eddd67497
@@ -4218,6 +4263,7 @@ trackedFiles:
   docs/models/shared/PropertyAdsGroupPacing.md:
     id: f1aafa116b8f
     pristine_git_object: 2652e47f46ffce375b920a9975b6eb170d833d16
+  docs/models/shared/PropertyAdsGroupPacingPeriod.md: {}
   docs/models/shared/PropertyAdsGroupTargeting.md:
     id: d1c5168aae64
     pristine_git_object: 2cfaeadb8e051c42a52e6dcb130a36ea034e7921
@@ -4328,6 +4374,8 @@ trackedFiles:
   docs/models/shared/PropertyAdsReportMetricsCampaignGoal.md:
     id: 8b64a93d92eb
     pristine_git_object: 4c2e8fac66b2fb410500a76a6539139b206e5e35
+  docs/models/shared/PropertyAdsReportMetricsCampaignKpi.md: {}
+  docs/models/shared/PropertyAdsReportMetricsCampaignKpiType.md: {}
   docs/models/shared/PropertyAdsReportMetricsCampaignStatus.md:
     id: a9433d46e623
     pristine_git_object: 193a84659bad5cdfb9e2e0cfbf0e552fcdfeab04
@@ -4757,6 +4805,12 @@ trackedFiles:
   docs/models/shared/PropertyShippingTrackingEventLocationAddress.md:
     id: eb33dff87e4a
     pristine_git_object: d14e85c3d410e2951c56fc1d4865c23c0412fc37
+  docs/models/shared/PropertySocialPostCallToAction.md: {}
+  docs/models/shared/PropertySocialPostCallToActionType.md: {}
+  docs/models/shared/PropertySocialPostMetrics.md: {}
+  docs/models/shared/PropertySocialProfileAddress.md: {}
+  docs/models/shared/PropertySocialProfileMetrics.md: {}
+  docs/models/shared/PropertySocialReviewReply.md: {}
   docs/models/shared/PropertyStoragePermissionRoles.md:
     id: 471ea7ea61e7
     pristine_git_object: 499e295389d5bf722bd6389cec988a12ba012062
@@ -4955,6 +5009,14 @@ trackedFiles:
   docs/models/shared/SizeUnit.md:
     id: 9ca415b2c84b
     pristine_git_object: d6af77b0352cf4916d26ffefb38ffa2720dd8114
+  docs/models/shared/SocialInsight.md: {}
+  docs/models/shared/SocialMedia.md: {}
+  docs/models/shared/SocialMediaType.md: {}
+  docs/models/shared/SocialPost.md: {}
+  docs/models/shared/SocialPostStatus.md: {}
+  docs/models/shared/SocialPostType.md: {}
+  docs/models/shared/SocialProfile.md: {}
+  docs/models/shared/SocialReview.md: {}
   docs/models/shared/SortOrder.md: {}
   docs/models/shared/SportType.md: {}
   docs/models/shared/Status.md:
@@ -5266,6 +5328,7 @@ trackedFiles:
   docs/models/shared/VirtualWebhookPipelineId.md:
     id: 0a99e01a47c3
     pristine_git_object: 26e2aefda3c21cba088b5bf82c9f99a67e570764
+  docs/models/shared/VirtualWebhookPostId.md: {}
   docs/models/shared/VirtualWebhookProfileId.md: {}
   docs/models/shared/VirtualWebhookProjectId.md:
     id: 9ec76d64448e
@@ -5522,6 +5585,7 @@ trackedFiles:
   docs/sdks/insertionorder/README.md:
     id: 72e4049753b2
     pristine_git_object: df9fe371cc25014e4e4ace346fd8af7d0eb9b619
+  docs/sdks/insight/README.md: {}
   docs/sdks/instructor/README.md:
     id: cc938a24e891
     pristine_git_object: f9ae7dbb2197473bbe2266eb51b61fb43bc0ed23
@@ -5631,6 +5695,7 @@ trackedFiles:
   docs/sdks/pipeline/README.md:
     id: e4ed78a43760
     pristine_git_object: c365ddb2ae3e2c821d3d2a9229d4a03befd02f38
+  docs/sdks/post/README.md: {}
   docs/sdks/profile/README.md: {}
   docs/sdks/profitloss/README.md:
     id: ec0607bf8fc7
@@ -5705,6 +5770,7 @@ trackedFiles:
     pristine_git_object: defe77cd678198347097fe614869f2036a94cc28
   docs/sdks/signatory/README.md: {}
   docs/sdks/signing/README.md: {}
+  docs/sdks/social/README.md: {}
   docs/sdks/source/README.md: {}
   docs/sdks/space/README.md:
     id: b3ce86241634
@@ -6020,6 +6086,7 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/AsyncInsertionorder.java:
     id: 86e99fc44016
     pristine_git_object: fa990ad0a5d605dd61b141902fcf7e68a6021afe
+  src/main/java/to/unified/unified_java_sdk/AsyncInsight.java: {}
   src/main/java/to/unified/unified_java_sdk/AsyncInstructor.java:
     id: b97b56ea38d6
     pristine_git_object: c3f327efb66d04baf316ced0270541f5c1b51e19
@@ -6129,6 +6196,7 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/AsyncPipeline.java:
     id: 57280103363c
     pristine_git_object: 73c7cba80f6f4392013990f26f18c91bda713e7b
+  src/main/java/to/unified/unified_java_sdk/AsyncPost.java: {}
   src/main/java/to/unified/unified_java_sdk/AsyncProfile.java: {}
   src/main/java/to/unified/unified_java_sdk/AsyncProfitloss.java:
     id: a02dadd91f82
@@ -6203,6 +6271,7 @@ trackedFiles:
     pristine_git_object: 38a0acc4f08beea299cc574d746fb7dc0c07ea89
   src/main/java/to/unified/unified_java_sdk/AsyncSignatory.java: {}
   src/main/java/to/unified/unified_java_sdk/AsyncSigning.java: {}
+  src/main/java/to/unified/unified_java_sdk/AsyncSocial.java: {}
   src/main/java/to/unified/unified_java_sdk/AsyncSource.java: {}
   src/main/java/to/unified/unified_java_sdk/AsyncSpace.java:
     id: ce2637d9d93c
@@ -6433,6 +6502,7 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/Insertionorder.java:
     id: 2994db8cbdf1
     pristine_git_object: 971fe90c8fde282e515755784ffb516ffcdd0e3c
+  src/main/java/to/unified/unified_java_sdk/Insight.java: {}
   src/main/java/to/unified/unified_java_sdk/Instructor.java:
     id: e6fee55e5d19
     pristine_git_object: abd2d195b00118de58ed33eaf23c6ce15b2fb6c8
@@ -6542,6 +6612,7 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/Pipeline.java:
     id: c8c0eeef3aeb
     pristine_git_object: 116399a20c928fcf6b8b060cf0f951f12a1a820e
+  src/main/java/to/unified/unified_java_sdk/Post.java: {}
   src/main/java/to/unified/unified_java_sdk/Profile.java: {}
   src/main/java/to/unified/unified_java_sdk/Profitloss.java:
     id: cd43161136dc
@@ -6622,6 +6693,7 @@ trackedFiles:
     pristine_git_object: b96cd280300760fb75815bdfa7f057ce0f4abc02
   src/main/java/to/unified/unified_java_sdk/Signatory.java: {}
   src/main/java/to/unified/unified_java_sdk/Signing.java: {}
+  src/main/java/to/unified/unified_java_sdk/Social.java: {}
   src/main/java/to/unified/unified_java_sdk/Source.java: {}
   src/main/java/to/unified/unified_java_sdk/Space.java:
     id: e8d78ce3384e
@@ -6826,6 +6898,7 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/models/operations//async/CreateShippingShipmentRequestBuilder.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations//async/CreateSigningDocumentRequestBuilder.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations//async/CreateSigningSignatoryRequestBuilder.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations//async/CreateSocialPostRequestBuilder.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations//async/CreateStorageFileRequestBuilder.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations//async/CreateTaskCommentRequestBuilder.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations//async/CreateTaskProjectRequestBuilder.java: {}
@@ -6990,6 +7063,10 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/models/operations//async/GetSigningDocumentRequestBuilder.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations//async/GetSigningSignatoryRequestBuilder.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations//async/GetSigningTemplateRequestBuilder.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations//async/GetSocialInsightRequestBuilder.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations//async/GetSocialPostRequestBuilder.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations//async/GetSocialProfileRequestBuilder.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations//async/GetSocialReviewRequestBuilder.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations//async/GetStorageFileRequestBuilder.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations//async/GetTaskChangeRequestBuilder.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations//async/GetTaskCommentRequestBuilder.java: {}
@@ -7177,6 +7254,10 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/models/operations//async/ListSigningDocumentsRequestBuilder.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations//async/ListSigningSignatoriesRequestBuilder.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations//async/ListSigningTemplatesRequestBuilder.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations//async/ListSocialInsightsRequestBuilder.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations//async/ListSocialPostsRequestBuilder.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations//async/ListSocialProfilesRequestBuilder.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations//async/ListSocialReviewsRequestBuilder.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations//async/ListStorageFilesRequestBuilder.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations//async/ListTaskChangesRequestBuilder.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations//async/ListTaskCommentsRequestBuilder.java: {}
@@ -7330,6 +7411,8 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/models/operations//async/PatchShippingShipmentRequestBuilder.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations//async/PatchSigningDocumentRequestBuilder.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations//async/PatchSigningSignatoryRequestBuilder.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations//async/PatchSocialPostRequestBuilder.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations//async/PatchSocialReviewRequestBuilder.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations//async/PatchStorageFileRequestBuilder.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations//async/PatchTaskCommentRequestBuilder.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations//async/PatchTaskProjectRequestBuilder.java: {}
@@ -7463,6 +7546,7 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/models/operations//async/RemoveShippingShipmentRequestBuilder.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations//async/RemoveSigningDocumentRequestBuilder.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations//async/RemoveSigningSignatoryRequestBuilder.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations//async/RemoveSocialPostRequestBuilder.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations//async/RemoveStorageFileRequestBuilder.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations//async/RemoveTaskCommentRequestBuilder.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations//async/RemoveTaskProjectRequestBuilder.java: {}
@@ -7600,6 +7684,8 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/models/operations//async/UpdateShippingShipmentRequestBuilder.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations//async/UpdateSigningDocumentRequestBuilder.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations//async/UpdateSigningSignatoryRequestBuilder.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations//async/UpdateSocialPostRequestBuilder.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations//async/UpdateSocialReviewRequestBuilder.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations//async/UpdateStorageFileRequestBuilder.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations//async/UpdateTaskCommentRequestBuilder.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations//async/UpdateTaskProjectRequestBuilder.java: {}
@@ -8094,6 +8180,10 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/models/operations/CreateSigningSignatoryRequest.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/CreateSigningSignatoryRequestBuilder.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/CreateSigningSignatoryResponse.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/CreateSocialPostQueryParamFields.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/CreateSocialPostRequest.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/CreateSocialPostRequestBuilder.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/CreateSocialPostResponse.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/CreateStorageFileQueryParamFields.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/CreateStorageFileRequest.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/CreateStorageFileRequestBuilder.java: {}
@@ -8728,6 +8818,22 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/models/operations/GetSigningTemplateRequest.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/GetSigningTemplateRequestBuilder.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/GetSigningTemplateResponse.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/GetSocialInsightQueryParamFields.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/GetSocialInsightRequest.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/GetSocialInsightRequestBuilder.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/GetSocialInsightResponse.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/GetSocialPostQueryParamFields.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/GetSocialPostRequest.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/GetSocialPostRequestBuilder.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/GetSocialPostResponse.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/GetSocialProfileQueryParamFields.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/GetSocialProfileRequest.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/GetSocialProfileRequestBuilder.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/GetSocialProfileResponse.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/GetSocialReviewQueryParamFields.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/GetSocialReviewRequest.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/GetSocialReviewRequestBuilder.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/GetSocialReviewResponse.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/GetStorageFileQueryParamFields.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/GetStorageFileRequest.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/GetStorageFileRequestBuilder.java: {}
@@ -9446,6 +9552,22 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/models/operations/ListSigningTemplatesRequest.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/ListSigningTemplatesRequestBuilder.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/ListSigningTemplatesResponse.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/ListSocialInsightsQueryParamFields.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/ListSocialInsightsRequest.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/ListSocialInsightsRequestBuilder.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/ListSocialInsightsResponse.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/ListSocialPostsQueryParamFields.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/ListSocialPostsRequest.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/ListSocialPostsRequestBuilder.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/ListSocialPostsResponse.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/ListSocialProfilesQueryParamFields.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/ListSocialProfilesRequest.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/ListSocialProfilesRequestBuilder.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/ListSocialProfilesResponse.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/ListSocialReviewsQueryParamFields.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/ListSocialReviewsRequest.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/ListSocialReviewsRequestBuilder.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/ListSocialReviewsResponse.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/ListStorageFilesQueryParamFields.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/ListStorageFilesRequest.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/ListStorageFilesRequestBuilder.java: {}
@@ -10026,6 +10148,14 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/models/operations/PatchSigningSignatoryRequest.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/PatchSigningSignatoryRequestBuilder.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/PatchSigningSignatoryResponse.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/PatchSocialPostQueryParamFields.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/PatchSocialPostRequest.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/PatchSocialPostRequestBuilder.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/PatchSocialPostResponse.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/PatchSocialReviewQueryParamFields.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/PatchSocialReviewRequest.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/PatchSocialReviewRequestBuilder.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/PatchSocialReviewResponse.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/PatchStorageFileQueryParamFields.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/PatchStorageFileRequest.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/PatchStorageFileRequestBuilder.java: {}
@@ -10443,6 +10573,9 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/models/operations/RemoveSigningSignatoryRequest.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/RemoveSigningSignatoryRequestBuilder.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/RemoveSigningSignatoryResponse.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/RemoveSocialPostRequest.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/RemoveSocialPostRequestBuilder.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/RemoveSocialPostResponse.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/RemoveStorageFileRequest.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/RemoveStorageFileRequestBuilder.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/RemoveStorageFileResponse.java: {}
@@ -10960,6 +11093,14 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/models/operations/UpdateSigningSignatoryRequest.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/UpdateSigningSignatoryRequestBuilder.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/UpdateSigningSignatoryResponse.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/UpdateSocialPostQueryParamFields.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/UpdateSocialPostRequest.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/UpdateSocialPostRequestBuilder.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/UpdateSocialPostResponse.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/UpdateSocialReviewQueryParamFields.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/UpdateSocialReviewRequest.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/UpdateSocialReviewRequestBuilder.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/UpdateSocialReviewResponse.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/UpdateStorageFileQueryParamFields.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/UpdateStorageFileRequest.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/UpdateStorageFileRequestBuilder.java: {}
@@ -11155,6 +11296,7 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/models/operations/async/CreateShippingShipmentResponse.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/async/CreateSigningDocumentResponse.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/async/CreateSigningSignatoryResponse.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/async/CreateSocialPostResponse.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/async/CreateStorageFileResponse.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/async/CreateTaskCommentResponse.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/async/CreateTaskProjectResponse.java: {}
@@ -11319,6 +11461,10 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/models/operations/async/GetSigningDocumentResponse.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/async/GetSigningSignatoryResponse.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/async/GetSigningTemplateResponse.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/async/GetSocialInsightResponse.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/async/GetSocialPostResponse.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/async/GetSocialProfileResponse.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/async/GetSocialReviewResponse.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/async/GetStorageFileResponse.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/async/GetTaskChangeResponse.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/async/GetTaskCommentResponse.java: {}
@@ -11506,6 +11652,10 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/models/operations/async/ListSigningDocumentsResponse.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/async/ListSigningSignatoriesResponse.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/async/ListSigningTemplatesResponse.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/async/ListSocialInsightsResponse.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/async/ListSocialPostsResponse.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/async/ListSocialProfilesResponse.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/async/ListSocialReviewsResponse.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/async/ListStorageFilesResponse.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/async/ListTaskChangesResponse.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/async/ListTaskCommentsResponse.java: {}
@@ -11659,6 +11809,8 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/models/operations/async/PatchShippingShipmentResponse.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/async/PatchSigningDocumentResponse.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/async/PatchSigningSignatoryResponse.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/async/PatchSocialPostResponse.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/async/PatchSocialReviewResponse.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/async/PatchStorageFileResponse.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/async/PatchTaskCommentResponse.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/async/PatchTaskProjectResponse.java: {}
@@ -11792,6 +11944,7 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/models/operations/async/RemoveShippingShipmentResponse.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/async/RemoveSigningDocumentResponse.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/async/RemoveSigningSignatoryResponse.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/async/RemoveSocialPostResponse.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/async/RemoveStorageFileResponse.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/async/RemoveTaskCommentResponse.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/async/RemoveTaskProjectResponse.java: {}
@@ -11929,6 +12082,8 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/models/operations/async/UpdateShippingShipmentResponse.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/async/UpdateSigningDocumentResponse.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/async/UpdateSigningSignatoryResponse.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/async/UpdateSocialPostResponse.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/operations/async/UpdateSocialReviewResponse.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/async/UpdateStorageFileResponse.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/async/UpdateTaskCommentResponse.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/async/UpdateTaskProjectResponse.java: {}
@@ -13188,6 +13343,7 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/models/shared/ListPipelineId.java:
     id: 941324c899b6
     pristine_git_object: 338ca3e54803d6aa858bc58e60d1d0a9d7f0456b
+  src/main/java/to/unified/unified_java_sdk/models/shared/ListPostId.java: {}
   src/main/java/to/unified/unified_java_sdk/models/shared/ListProfileId.java: {}
   src/main/java/to/unified/unified_java_sdk/models/shared/ListProjectId.java:
     id: 1f2874e205bf
@@ -13376,6 +13532,7 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/models/shared/MetadataMetadataFormat.java:
     id: 9b1738b00be5
     pristine_git_object: ecec787509d790c11800ae7d10823d1b38e1c7a6
+  src/main/java/to/unified/unified_java_sdk/models/shared/Metric.java: {}
   src/main/java/to/unified/unified_java_sdk/models/shared/Mode.java:
     id: c803bdf1b74f
     pristine_git_object: 78cc29c21dd7f38db508e0dacffe70de7b5b99ce
@@ -13569,6 +13726,8 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/models/shared/PropertyAdsCampaignFrequencyCap.java:
     id: 0f4758359b0b
     pristine_git_object: 15818dc9aba2c606aca8e6b32db18289ff335a34
+  src/main/java/to/unified/unified_java_sdk/models/shared/PropertyAdsCampaignKpi.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/shared/PropertyAdsCampaignKpiType.java: {}
   src/main/java/to/unified/unified_java_sdk/models/shared/PropertyAdsCampaignTargeting.java:
     id: 599fb6d64985
     pristine_git_object: 60ab2064682000269f4ba691c788405bbfcc01d2
@@ -13629,6 +13788,7 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/models/shared/PropertyAdsGroupPacing.java:
     id: 0460061fdc55
     pristine_git_object: 76898e7969973d6729f5dc51492af08e0aa8dc47
+  src/main/java/to/unified/unified_java_sdk/models/shared/PropertyAdsGroupPacingPeriod.java: {}
   src/main/java/to/unified/unified_java_sdk/models/shared/PropertyAdsGroupTargeting.java:
     id: 5fee57e12b0b
     pristine_git_object: 4e9a611e32a5920e94a38ba50208d03e760cbccb
@@ -13739,6 +13899,8 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/models/shared/PropertyAdsReportMetricsCampaignGoal.java:
     id: 1ca7bb01f02a
     pristine_git_object: eae92fb5230a996a51be71ecd30ccc117d752033
+  src/main/java/to/unified/unified_java_sdk/models/shared/PropertyAdsReportMetricsCampaignKpi.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/shared/PropertyAdsReportMetricsCampaignKpiType.java: {}
   src/main/java/to/unified/unified_java_sdk/models/shared/PropertyAdsReportMetricsCampaignStatus.java:
     id: 6315e8ea380c
     pristine_git_object: 13a8cc767e32ec81bbeae6945382a0d2f7dccefc
@@ -14170,6 +14332,12 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/models/shared/PropertyShippingTrackingEventLocationAddress.java:
     id: e6a5280fffd1
     pristine_git_object: 50448476afed64e06b34b757fd54dae0643e367f
+  src/main/java/to/unified/unified_java_sdk/models/shared/PropertySocialPostCallToAction.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/shared/PropertySocialPostCallToActionType.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/shared/PropertySocialPostMetrics.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/shared/PropertySocialProfileAddress.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/shared/PropertySocialProfileMetrics.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/shared/PropertySocialReviewReply.java: {}
   src/main/java/to/unified/unified_java_sdk/models/shared/PropertyStoragePermissionRoles.java:
     id: f4877b3d58d3
     pristine_git_object: 102cef9f7e6f6a29ab3cb9a6dcfcea35ad3fe50b
@@ -14368,6 +14536,14 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/models/shared/SizeUnit.java:
     id: 33c67a4c1d51
     pristine_git_object: 61dbfd68fd414d3c46f21c679bd75ecbcf89a948
+  src/main/java/to/unified/unified_java_sdk/models/shared/SocialInsight.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/shared/SocialMedia.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/shared/SocialMediaType.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/shared/SocialPost.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/shared/SocialPostStatus.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/shared/SocialPostType.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/shared/SocialProfile.java: {}
+  src/main/java/to/unified/unified_java_sdk/models/shared/SocialReview.java: {}
   src/main/java/to/unified/unified_java_sdk/models/shared/SortOrder.java: {}
   src/main/java/to/unified/unified_java_sdk/models/shared/SportType.java: {}
   src/main/java/to/unified/unified_java_sdk/models/shared/Status.java:
@@ -14679,6 +14855,7 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/models/shared/VirtualWebhookPipelineId.java:
     id: a6c226b1973c
     pristine_git_object: 3789b78dd7f331e1cf19871c075ca78a0fcf05be
+  src/main/java/to/unified/unified_java_sdk/models/shared/VirtualWebhookPostId.java: {}
   src/main/java/to/unified/unified_java_sdk/models/shared/VirtualWebhookProfileId.java: {}
   src/main/java/to/unified/unified_java_sdk/models/shared/VirtualWebhookProjectId.java:
     id: c03fafe2b568
@@ -14865,6 +15042,7 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/operations/CreateShippingShipment.java: {}
   src/main/java/to/unified/unified_java_sdk/operations/CreateSigningDocument.java: {}
   src/main/java/to/unified/unified_java_sdk/operations/CreateSigningSignatory.java: {}
+  src/main/java/to/unified/unified_java_sdk/operations/CreateSocialPost.java: {}
   src/main/java/to/unified/unified_java_sdk/operations/CreateStorageFile.java: {}
   src/main/java/to/unified/unified_java_sdk/operations/CreateTaskComment.java: {}
   src/main/java/to/unified/unified_java_sdk/operations/CreateTaskProject.java: {}
@@ -15029,6 +15207,10 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/operations/GetSigningDocument.java: {}
   src/main/java/to/unified/unified_java_sdk/operations/GetSigningSignatory.java: {}
   src/main/java/to/unified/unified_java_sdk/operations/GetSigningTemplate.java: {}
+  src/main/java/to/unified/unified_java_sdk/operations/GetSocialInsight.java: {}
+  src/main/java/to/unified/unified_java_sdk/operations/GetSocialPost.java: {}
+  src/main/java/to/unified/unified_java_sdk/operations/GetSocialProfile.java: {}
+  src/main/java/to/unified/unified_java_sdk/operations/GetSocialReview.java: {}
   src/main/java/to/unified/unified_java_sdk/operations/GetStorageFile.java: {}
   src/main/java/to/unified/unified_java_sdk/operations/GetTaskChange.java: {}
   src/main/java/to/unified/unified_java_sdk/operations/GetTaskComment.java: {}
@@ -15216,6 +15398,10 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/operations/ListSigningDocuments.java: {}
   src/main/java/to/unified/unified_java_sdk/operations/ListSigningSignatories.java: {}
   src/main/java/to/unified/unified_java_sdk/operations/ListSigningTemplates.java: {}
+  src/main/java/to/unified/unified_java_sdk/operations/ListSocialInsights.java: {}
+  src/main/java/to/unified/unified_java_sdk/operations/ListSocialPosts.java: {}
+  src/main/java/to/unified/unified_java_sdk/operations/ListSocialProfiles.java: {}
+  src/main/java/to/unified/unified_java_sdk/operations/ListSocialReviews.java: {}
   src/main/java/to/unified/unified_java_sdk/operations/ListStorageFiles.java: {}
   src/main/java/to/unified/unified_java_sdk/operations/ListTaskChanges.java: {}
   src/main/java/to/unified/unified_java_sdk/operations/ListTaskComments.java: {}
@@ -15372,6 +15558,8 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/operations/PatchShippingShipment.java: {}
   src/main/java/to/unified/unified_java_sdk/operations/PatchSigningDocument.java: {}
   src/main/java/to/unified/unified_java_sdk/operations/PatchSigningSignatory.java: {}
+  src/main/java/to/unified/unified_java_sdk/operations/PatchSocialPost.java: {}
+  src/main/java/to/unified/unified_java_sdk/operations/PatchSocialReview.java: {}
   src/main/java/to/unified/unified_java_sdk/operations/PatchStorageFile.java: {}
   src/main/java/to/unified/unified_java_sdk/operations/PatchTaskComment.java: {}
   src/main/java/to/unified/unified_java_sdk/operations/PatchTaskProject.java: {}
@@ -15505,6 +15693,7 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/operations/RemoveShippingShipment.java: {}
   src/main/java/to/unified/unified_java_sdk/operations/RemoveSigningDocument.java: {}
   src/main/java/to/unified/unified_java_sdk/operations/RemoveSigningSignatory.java: {}
+  src/main/java/to/unified/unified_java_sdk/operations/RemoveSocialPost.java: {}
   src/main/java/to/unified/unified_java_sdk/operations/RemoveStorageFile.java: {}
   src/main/java/to/unified/unified_java_sdk/operations/RemoveTaskComment.java: {}
   src/main/java/to/unified/unified_java_sdk/operations/RemoveTaskProject.java: {}
@@ -15642,6 +15831,8 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/operations/UpdateShippingShipment.java: {}
   src/main/java/to/unified/unified_java_sdk/operations/UpdateSigningDocument.java: {}
   src/main/java/to/unified/unified_java_sdk/operations/UpdateSigningSignatory.java: {}
+  src/main/java/to/unified/unified_java_sdk/operations/UpdateSocialPost.java: {}
+  src/main/java/to/unified/unified_java_sdk/operations/UpdateSocialReview.java: {}
   src/main/java/to/unified/unified_java_sdk/operations/UpdateStorageFile.java: {}
   src/main/java/to/unified/unified_java_sdk/operations/UpdateTaskComment.java: {}
   src/main/java/to/unified/unified_java_sdk/operations/UpdateTaskProject.java: {}
@@ -29816,9 +30007,137 @@ examples:
       responses:
         "200":
           application/json: {}
+  getSocialProfile:
+    speakeasy-default-get-social-profile:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      responses:
+        "200":
+          application/json: {}
+  listSocialProfiles:
+    speakeasy-default-list-social-profiles:
+      parameters:
+        path:
+          connection_id: "<id>"
+      responses:
+        "200":
+          application/json: [{}]
+  getSocialReview:
+    speakeasy-default-get-social-review:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      responses:
+        "200":
+          application/json: {}
+  listSocialReviews:
+    speakeasy-default-list-social-reviews:
+      parameters:
+        path:
+          connection_id: "<id>"
+      responses:
+        "200":
+          application/json: [{}]
+  patchSocialReview:
+    speakeasy-default-patch-social-review:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  updateSocialReview:
+    speakeasy-default-update-social-review:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  createSocialPost:
+    speakeasy-default-create-social-post:
+      parameters:
+        path:
+          connection_id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  getSocialInsight:
+    speakeasy-default-get-social-insight:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      responses:
+        "200":
+          application/json: {}
+  getSocialPost:
+    speakeasy-default-get-social-post:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      responses:
+        "200":
+          application/json: {}
+  listSocialInsights:
+    speakeasy-default-list-social-insights:
+      parameters:
+        path:
+          connection_id: "<id>"
+      responses:
+        "200":
+          application/json: [{}]
+  listSocialPosts:
+    speakeasy-default-list-social-posts:
+      parameters:
+        path:
+          connection_id: "<id>"
+      responses:
+        "200":
+          application/json: [{}]
+  patchSocialPost:
+    speakeasy-default-patch-social-post:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  removeSocialPost:
+    speakeasy-default-remove-social-post:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+  updateSocialPost:
+    speakeasy-default-update-social-post:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: "## Java SDK Changes:\n* `unified-to.accounting.createAccountingPaymentterm()`: **Added**\n* `unified-to.accounting.getAccountingPaymentterm()`: **Added**\n* `unified-to.accounting.listAccountingPaymentterms()`: **Added**\n* `unified-to.accounting.patchAccountingPaymentterm()`: **Added**\n* `unified-to.accounting.removeAccountingPaymentterm()`: **Added**\n* `unified-to.accounting.updateAccountingPaymentterm()`: **Added**\n* `unified-to.paymentterm.createAccountingPaymentterm()`: **Added**\n* `unified-to.paymentterm.getAccountingPaymentterm()`: **Added**\n* `unified-to.paymentterm.listAccountingPaymentterms()`: **Added**\n* `unified-to.paymentterm.patchAccountingPaymentterm()`: **Added**\n* `unified-to.paymentterm.removeAccountingPaymentterm()`: **Added**\n* `unified-to.paymentterm.updateAccountingPaymentterm()`: **Added**\n* `unified-to.accounting.createAccountingBill()`: \n  *  `request` **Changed**\n  *  `response.paymenttermId` **Added**\n* `unified-to.accounting.createAccountingContact()`: \n  *  `request` **Changed**\n  *  `response.paymenttermId` **Added**\n* `unified-to.accounting.createAccountingInvoice()`: \n  *  `request` **Changed**\n  *  `response.paymenttermId` **Added**\n* `unified-to.accounting.getAccountingBill()`: \n  *  `request.fields` **Changed**\n  *  `response.paymenttermId` **Added**\n* `unified-to.accounting.getAccountingContact()`: \n  *  `request.fields` **Changed**\n  *  `response.paymenttermId` **Added**\n* `unified-to.accounting.getAccountingInvoice()`: \n  *  `request.fields` **Changed**\n  *  `response.paymenttermId` **Added**\n* `unified-to.accounting.listAccountingBills()`: \n  *  `request.fields` **Changed**\n  *  `response.[].paymenttermId` **Added**\n* `unified-to.accounting.listAccountingContacts()`: \n  *  `request.fields` **Changed**\n  *  `response.[].paymenttermId` **Added**\n* `unified-to.accounting.listAccountingInvoices()`: \n  *  `request.fields` **Changed**\n  *  `response.[].paymenttermId` **Added**\n* `unified-to.accounting.patchAccountingBill()`: \n  *  `request` **Changed**\n  *  `response.paymenttermId` **Added**\n* `unified-to.accounting.patchAccountingContact()`: \n  *  `request` **Changed**\n  *  `response.paymenttermId` **Added**\n* `unified-to.accounting.patchAccountingInvoice()`: \n  *  `request` **Changed**\n  *  `response.paymenttermId` **Added**\n* `unified-to.accounting.updateAccountingBill()`: \n  *  `request` **Changed**\n  *  `response.paymenttermId` **Added**\n* `unified-to.accounting.updateAccountingContact()`: \n  *  `request` **Changed**\n  *  `response.paymenttermId` **Added**\n* `unified-to.accounting.updateAccountingInvoice()`: \n  *  `request` **Changed**\n  *  `response.paymenttermId` **Added**\n* `unified-to.bill.createAccountingBill()`: \n  *  `request` **Changed**\n  *  `response.paymenttermId` **Added**\n* `unified-to.bill.getAccountingBill()`: \n  *  `request.fields` **Changed**\n  *  `response.paymenttermId` **Added**\n* `unified-to.bill.listAccountingBills()`: \n  *  `request.fields` **Changed**\n  *  `response.[].paymenttermId` **Added**\n* `unified-to.bill.patchAccountingBill()`: \n  *  `request` **Changed**\n  *  `response.paymenttermId` **Added**\n* `unified-to.bill.updateAccountingBill()`: \n  *  `request` **Changed**\n  *  `response.paymenttermId` **Added**\n* `unified-to.contact.createAccountingContact()`: \n  *  `request` **Changed**\n  *  `response.paymenttermId` **Added**\n* `unified-to.contact.getAccountingContact()`: \n  *  `request.fields` **Changed**\n  *  `response.paymenttermId` **Added**\n* `unified-to.contact.listAccountingContacts()`: \n  *  `request.fields` **Changed**\n  *  `response.[].paymenttermId` **Added**\n* `unified-to.contact.patchAccountingContact()`: \n  *  `request` **Changed**\n  *  `response.paymenttermId` **Added**\n* `unified-to.contact.updateAccountingContact()`: \n  *  `request` **Changed**\n  *  `response.paymenttermId` **Added**\n* `unified-to.invoice.createAccountingInvoice()`: \n  *  `request` **Changed**\n  *  `response.paymenttermId` **Added**\n* `unified-to.invoice.getAccountingInvoice()`: \n  *  `request.fields` **Changed**\n  *  `response.paymenttermId` **Added**\n* `unified-to.invoice.listAccountingInvoices()`: \n  *  `request.fields` **Changed**\n  *  `response.[].paymenttermId` **Added**\n* `unified-to.invoice.patchAccountingInvoice()`: \n  *  `request` **Changed**\n  *  `response.paymenttermId` **Added**\n* `unified-to.invoice.updateAccountingInvoice()`: \n  *  `request` **Changed**\n  *  `response.paymenttermId` **Added**\n* `unified-to.unified.createUnifiedConnection()`: \n  *  `request.permissions[]` **Changed**\n  *  `response.permissions[]` **Changed**\n* `unified-to.unified.createUnifiedWebhook()`: \n  *  `request.webhook.objectType.enum(accountingPaymentterm)` **Added**\n  *  `response.objectType.enum(accountingPaymentterm)` **Added**\n* `unified-to.unified.getUnifiedConnection()`:  `response.permissions[]` **Changed**\n* `unified-to.unified.getUnifiedWebhook()`:  `response.objectType.enum(accountingPaymentterm)` **Added**\n* `unified-to.unified.listUnifiedConnections()`:  `response.[].permissions[]` **Changed**\n* `unified-to.unified.listUnifiedWebhooks()`:  `response.[].objectType.enum(accountingPaymentterm)` **Added**\n* `unified-to.unified.patchUnifiedConnection()`: \n  *  `request.connection.permissions[]` **Changed**\n  *  `response.permissions[]` **Changed**\n* `unified-to.unified.patchUnifiedWebhook()`: \n  *  `request.webhook.objectType.enum(accountingPaymentterm)` **Added**\n  *  `response.objectType.enum(accountingPaymentterm)` **Added**\n* `unified-to.unified.updateUnifiedConnection()`: \n  *  `request.connection.permissions[]` **Changed**\n  *  `response.permissions[]` **Changed**\n* `unified-to.unified.updateUnifiedWebhook()`: \n  *  `request.webhook.objectType.enum(accountingPaymentterm)` **Added**\n  *  `response.objectType.enum(accountingPaymentterm)` **Added**\n* `unified-to.connection.createUnifiedConnection()`: \n  *  `request.permissions[]` **Changed**\n  *  `response.permissions[]` **Changed**\n* `unified-to.connection.getUnifiedConnection()`:  `response.permissions[]` **Changed**\n* `unified-to.connection.listUnifiedConnections()`:  `response.[].permissions[]` **Changed**\n* `unified-to.connection.patchUnifiedConnection()`: \n  *  `request.connection.permissions[]` **Changed**\n  *  `response.permissions[]` **Changed**\n* `unified-to.connection.updateUnifiedConnection()`: \n  *  `request.connection.permissions[]` **Changed**\n  *  `response.permissions[]` **Changed**\n* `unified-to.webhook.createUnifiedWebhook()`: \n  *  `request.webhook.objectType.enum(accountingPaymentterm)` **Added**\n  *  `response.objectType.enum(accountingPaymentterm)` **Added**\n* `unified-to.webhook.getUnifiedWebhook()`:  `response.objectType.enum(accountingPaymentterm)` **Added**\n* `unified-to.webhook.listUnifiedWebhooks()`:  `response.[].objectType.enum(accountingPaymentterm)` **Added**\n* `unified-to.webhook.patchUnifiedWebhook()`: \n  *  `request.webhook.objectType.enum(accountingPaymentterm)` **Added**\n  *  `response.objectType.enum(accountingPaymentterm)` **Added**\n* `unified-to.webhook.updateUnifiedWebhook()`: \n  *  `request.webhook.objectType.enum(accountingPaymentterm)` **Added**\n  *  `response.objectType.enum(accountingPaymentterm)` **Added**\n"
+releaseNotes: "## Java SDK Changes:\n* `unified-to.profile.getSocialProfile()`: **Added**\n* `unified-to.profile.listSocialProfiles()`: **Added**\n* `unified-to.review.getSocialReview()`: **Added**\n* `unified-to.review.listSocialReviews()`: **Added**\n* `unified-to.review.patchSocialReview()`: **Added**\n* `unified-to.review.updateSocialReview()`: **Added**\n* `unified-to.social.createSocialPost()`: **Added**\n* `unified-to.social.getSocialInsight()`: **Added**\n* `unified-to.social.getSocialPost()`: **Added**\n* `unified-to.social.getSocialProfile()`: **Added**\n* `unified-to.social.getSocialReview()`: **Added**\n* `unified-to.social.listSocialInsights()`: **Added**\n* `unified-to.social.listSocialPosts()`: **Added**\n* `unified-to.social.listSocialProfiles()`: **Added**\n* `unified-to.social.listSocialReviews()`: **Added**\n* `unified-to.social.patchSocialPost()`: **Added**\n* `unified-to.social.patchSocialReview()`: **Added**\n* `unified-to.social.removeSocialPost()`: **Added**\n* `unified-to.social.updateSocialPost()`: **Added**\n* `unified-to.social.updateSocialReview()`: **Added**\n* `unified-to.insight.getSocialInsight()`: **Added**\n* `unified-to.insight.listSocialInsights()`: **Added**\n* `unified-to.post.createSocialPost()`: **Added**\n* `unified-to.post.getSocialPost()`: **Added**\n* `unified-to.post.listSocialPosts()`: **Added**\n* `unified-to.post.patchSocialPost()`: **Added**\n* `unified-to.post.removeSocialPost()`: **Added**\n* `unified-to.post.updateSocialPost()`: **Added**\n* `unified-to.report.listAdsReports()`:  `response.[].metrics[].campaign.kpi` **Added**\n* `unified-to.ads.createAdsCampaign()`: \n  *  `request` **Changed**\n  *  `response.kpi` **Added**\n* `unified-to.ads.getAdsCampaign()`: \n  *  `request.fields` **Changed**\n  *  `response.kpi` **Added**\n* `unified-to.ads.listAdsCampaigns()`: \n  *  `request.fields` **Changed**\n  *  `response.[].kpi` **Added**\n* `unified-to.ads.listAdsReports()`:  `response.[].metrics[].campaign.kpi` **Added**\n* `unified-to.ads.patchAdsCampaign()`: \n  *  `request` **Changed**\n  *  `response.kpi` **Added**\n* `unified-to.ads.updateAdsCampaign()`: \n  *  `request` **Changed**\n  *  `response.kpi` **Added**\n* `unified-to.campaign.createAdsCampaign()`: \n  *  `request` **Changed**\n  *  `response.kpi` **Added**\n* `unified-to.campaign.getAdsCampaign()`: \n  *  `request.fields` **Changed**\n  *  `response.kpi` **Added**\n* `unified-to.campaign.listAdsCampaigns()`: \n  *  `request.fields` **Changed**\n  *  `response.[].kpi` **Added**\n* `unified-to.campaign.patchAdsCampaign()`: \n  *  `request` **Changed**\n  *  `response.kpi` **Added**\n* `unified-to.campaign.updateAdsCampaign()`: \n  *  `request` **Changed**\n  *  `response.kpi` **Added**\n* `unified-to.ats.createAtsJob()`: \n  *  `request` **Changed**\n  *  `response.industry` **Added**\n* `unified-to.ats.getAtsJob()`: \n  *  `request.fields` **Changed**\n  *  `response.industry` **Added**\n* `unified-to.ats.listAtsJobs()`: \n  *  `request.fields` **Changed**\n  *  `response.[].industry` **Added**\n* `unified-to.ats.patchAtsJob()`: \n  *  `request` **Changed**\n  *  `response.industry` **Added**\n* `unified-to.ats.updateAtsJob()`: \n  *  `request` **Changed**\n  *  `response.industry` **Added**\n* `unified-to.job.createAtsJob()`: \n  *  `request` **Changed**\n  *  `response.industry` **Added**\n* `unified-to.job.getAtsJob()`: \n  *  `request.fields` **Changed**\n  *  `response.industry` **Added**\n* `unified-to.job.listAtsJobs()`: \n  *  `request.fields` **Changed**\n  *  `response.[].industry` **Added**\n* `unified-to.job.patchAtsJob()`: \n  *  `request` **Changed**\n  *  `response.industry` **Added**\n* `unified-to.job.updateAtsJob()`: \n  *  `request` **Changed**\n  *  `response.industry` **Added**\n* `unified-to.unified.createUnifiedConnection()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to.unified.createUnifiedWebhook()`: \n  *  `request.webhook.objectType` **Changed**\n  *  `response.objectType` **Changed**\n* `unified-to.unified.getUnifiedConnection()`:  `response` **Changed**\n* `unified-to.unified.getUnifiedWebhook()`:  `response.objectType` **Changed**\n* `unified-to.unified.listUnifiedConnections()`: \n  *  `request.categories` **Changed**\n  *  `response.[]` **Changed**\n* `unified-to.unified.listUnifiedIntegrationWorkspaces()`: \n  *  `request.categories` **Changed**\n  *  `response.[]` **Changed**\n* `unified-to.unified.listUnifiedIntegrations()`: \n  *  `request.categories` **Changed**\n  *  `response.[]` **Changed**\n* `unified-to.unified.listUnifiedWebhooks()`: \n  *  `request.isHealthy` **Added**\n  *  `response.[].objectType` **Changed**\n* `unified-to.unified.patchUnifiedConnection()`: \n  *  `request.connection` **Changed**\n  *  `response` **Changed**\n* `unified-to.unified.patchUnifiedWebhook()`: \n  *  `request.webhook.objectType` **Changed**\n  *  `response.objectType` **Changed**\n* `unified-to.unified.updateUnifiedConnection()`: \n  *  `request.connection` **Changed**\n  *  `response` **Changed**\n* `unified-to.unified.updateUnifiedWebhook()`: \n  *  `request.webhook.objectType` **Changed**\n  *  `response.objectType` **Changed**\n* `unified-to.connection.createUnifiedConnection()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to.connection.getUnifiedConnection()`:  `response` **Changed**\n* `unified-to.connection.listUnifiedConnections()`: \n  *  `request.categories` **Changed**\n  *  `response.[]` **Changed**\n* `unified-to.connection.patchUnifiedConnection()`: \n  *  `request.connection` **Changed**\n  *  `response` **Changed**\n* `unified-to.connection.updateUnifiedConnection()`: \n  *  `request.connection` **Changed**\n  *  `response` **Changed**\n* `unified-to.integration.listUnifiedIntegrationWorkspaces()`: \n  *  `request.categories` **Changed**\n  *  `response.[]` **Changed**\n* `unified-to.integration.listUnifiedIntegrations()`: \n  *  `request.categories` **Changed**\n  *  `response.[]` **Changed**\n* `unified-to.webhook.createUnifiedWebhook()`: \n  *  `request.webhook.objectType` **Changed**\n  *  `response.objectType` **Changed**\n* `unified-to.webhook.getUnifiedWebhook()`:  `response.objectType` **Changed**\n* `unified-to.webhook.listUnifiedWebhooks()`: \n  *  `request.isHealthy` **Added**\n  *  `response.[].objectType` **Changed**\n* `unified-to.webhook.patchUnifiedWebhook()`: \n  *  `request.webhook.objectType` **Changed**\n  *  `response.objectType` **Changed**\n* `unified-to.webhook.updateUnifiedWebhook()`: \n  *  `request.webhook.objectType` **Changed**\n  *  `response.objectType` **Changed**\n"
 generatedFiles:
   - .gitattributes
   - USAGE.md

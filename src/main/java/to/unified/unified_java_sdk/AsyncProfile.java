@@ -9,7 +9,9 @@ import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.CreateCdpProfileRequest;
 import to.unified.unified_java_sdk.models.operations.GetCdpProfileRequest;
+import to.unified.unified_java_sdk.models.operations.GetSocialProfileRequest;
 import to.unified.unified_java_sdk.models.operations.ListCdpProfilesRequest;
+import to.unified.unified_java_sdk.models.operations.ListSocialProfilesRequest;
 import to.unified.unified_java_sdk.models.operations.PatchCdpProfileRequest;
 import to.unified.unified_java_sdk.models.operations.RemoveCdpProfileRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateCdpProfileRequest;
@@ -17,8 +19,12 @@ import to.unified.unified_java_sdk.models.operations.async.CreateCdpProfileReque
 import to.unified.unified_java_sdk.models.operations.async.CreateCdpProfileResponse;
 import to.unified.unified_java_sdk.models.operations.async.GetCdpProfileRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.GetCdpProfileResponse;
+import to.unified.unified_java_sdk.models.operations.async.GetSocialProfileRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetSocialProfileResponse;
 import to.unified.unified_java_sdk.models.operations.async.ListCdpProfilesRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.ListCdpProfilesResponse;
+import to.unified.unified_java_sdk.models.operations.async.ListSocialProfilesRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListSocialProfilesResponse;
 import to.unified.unified_java_sdk.models.operations.async.PatchCdpProfileRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.PatchCdpProfileResponse;
 import to.unified.unified_java_sdk.models.operations.async.RemoveCdpProfileRequestBuilder;
@@ -27,7 +33,9 @@ import to.unified.unified_java_sdk.models.operations.async.UpdateCdpProfileReque
 import to.unified.unified_java_sdk.models.operations.async.UpdateCdpProfileResponse;
 import to.unified.unified_java_sdk.operations.CreateCdpProfile;
 import to.unified.unified_java_sdk.operations.GetCdpProfile;
+import to.unified.unified_java_sdk.operations.GetSocialProfile;
 import to.unified.unified_java_sdk.operations.ListCdpProfiles;
+import to.unified.unified_java_sdk.operations.ListSocialProfiles;
 import to.unified.unified_java_sdk.operations.PatchCdpProfile;
 import to.unified.unified_java_sdk.operations.RemoveCdpProfile;
 import to.unified.unified_java_sdk.operations.UpdateCdpProfile;
@@ -101,6 +109,29 @@ public class AsyncProfile {
 
 
     /**
+     * Retrieve a profile
+     * 
+     * @return The async call builder
+     */
+    public GetSocialProfileRequestBuilder getSocialProfile() {
+        return new GetSocialProfileRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Retrieve a profile
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<GetSocialProfileResponse>} - The async response
+     */
+    public CompletableFuture<GetSocialProfileResponse> getSocialProfile(@Nonnull GetSocialProfileRequest request) {
+        AsyncRequestOperation<GetSocialProfileRequest, GetSocialProfileResponse> operation
+              = new GetSocialProfile.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
      * List all profiles
      * 
      * @return The async call builder
@@ -118,6 +149,29 @@ public class AsyncProfile {
     public CompletableFuture<ListCdpProfilesResponse> listCdpProfiles(@Nonnull ListCdpProfilesRequest request) {
         AsyncRequestOperation<ListCdpProfilesRequest, ListCdpProfilesResponse> operation
               = new ListCdpProfiles.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * List all profiles
+     * 
+     * @return The async call builder
+     */
+    public ListSocialProfilesRequestBuilder listSocialProfiles() {
+        return new ListSocialProfilesRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * List all profiles
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<ListSocialProfilesResponse>} - The async response
+     */
+    public CompletableFuture<ListSocialProfilesResponse> listSocialProfiles(@Nonnull ListSocialProfilesRequest request) {
+        AsyncRequestOperation<ListSocialProfilesRequest, ListSocialProfilesResponse> operation
+              = new ListSocialProfiles.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

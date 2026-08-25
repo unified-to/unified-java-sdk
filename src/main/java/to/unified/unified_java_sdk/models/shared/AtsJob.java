@@ -80,6 +80,11 @@ public class AtsJob {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("industry")
+    private String industry;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("language_locale")
     private String languageLocale;
 
@@ -180,6 +185,7 @@ public class AtsJob {
             @JsonProperty("hiring_manager_ids") @Nullable List<String> hiringManagerIds,
             @JsonProperty("hiring_managers") @Nullable List<AtsReference> hiringManagers,
             @JsonProperty("id") @Nullable String id,
+            @JsonProperty("industry") @Nullable String industry,
             @JsonProperty("language_locale") @Nullable String languageLocale,
             @JsonProperty("metadata") @Nullable List<AtsMetadata> metadata,
             @JsonProperty("minimum_degree") @Nullable String minimumDegree,
@@ -208,6 +214,7 @@ public class AtsJob {
         this.hiringManagerIds = hiringManagerIds;
         this.hiringManagers = hiringManagers;
         this.id = id;
+        this.industry = industry;
         this.languageLocale = languageLocale;
         this.metadata = metadata;
         this.minimumDegree = minimumDegree;
@@ -237,7 +244,7 @@ public class AtsJob {
             null, null, null,
             null, null, null,
             null, null, null,
-            null);
+            null, null);
     }
 
     public Optional<List<AtsAddress>> addresses() {
@@ -285,6 +292,10 @@ public class AtsJob {
 
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
+    }
+
+    public Optional<String> industry() {
+        return Optional.ofNullable(this.industry);
     }
 
     public Optional<String> languageLocale() {
@@ -435,6 +446,12 @@ public class AtsJob {
     }
 
 
+    public AtsJob withIndustry(@Nullable String industry) {
+        this.industry = industry;
+        return this;
+    }
+
+
     public AtsJob withLanguageLocale(@Nullable String languageLocale) {
         this.languageLocale = languageLocale;
         return this;
@@ -564,6 +581,7 @@ public class AtsJob {
             Utils.enhancedDeepEquals(this.hiringManagerIds, other.hiringManagerIds) &&
             Utils.enhancedDeepEquals(this.hiringManagers, other.hiringManagers) &&
             Utils.enhancedDeepEquals(this.id, other.id) &&
+            Utils.enhancedDeepEquals(this.industry, other.industry) &&
             Utils.enhancedDeepEquals(this.languageLocale, other.languageLocale) &&
             Utils.enhancedDeepEquals(this.metadata, other.metadata) &&
             Utils.enhancedDeepEquals(this.minimumDegree, other.minimumDegree) &&
@@ -589,13 +607,13 @@ public class AtsJob {
             addresses, closedAt, companyId,
             compensation, createdAt, description,
             employmentType, groups, hiringManagerIds,
-            hiringManagers, id, languageLocale,
-            metadata, minimumDegree, minimumExperienceYears,
-            name, numberOfOpenings, openings,
-            postings, publicJobUrls, questions,
-            raw, recruiterIds, remote,
-            skills, status, updatedAt,
-            userId);
+            hiringManagers, id, industry,
+            languageLocale, metadata, minimumDegree,
+            minimumExperienceYears, name, numberOfOpenings,
+            openings, postings, publicJobUrls,
+            questions, raw, recruiterIds,
+            remote, skills, status,
+            updatedAt, userId);
     }
     
     @Override
@@ -612,6 +630,7 @@ public class AtsJob {
                 "hiringManagerIds", hiringManagerIds,
                 "hiringManagers", hiringManagers,
                 "id", id,
+                "industry", industry,
                 "languageLocale", languageLocale,
                 "metadata", metadata,
                 "minimumDegree", minimumDegree,
@@ -655,6 +674,8 @@ public class AtsJob {
         private List<AtsReference> hiringManagers;
 
         private String id;
+
+        private String industry;
 
         private String languageLocale;
 
@@ -749,6 +770,11 @@ public class AtsJob {
 
         public Builder id(@Nullable String id) {
             this.id = id;
+            return this;
+        }
+
+        public Builder industry(@Nullable String industry) {
+            this.industry = industry;
             return this;
         }
 
@@ -848,13 +874,13 @@ public class AtsJob {
                 addresses, closedAt, companyId,
                 compensation, createdAt, description,
                 employmentType, groups, hiringManagerIds,
-                hiringManagers, id, languageLocale,
-                metadata, minimumDegree, minimumExperienceYears,
-                name, numberOfOpenings, openings,
-                postings, publicJobUrls, questions,
-                raw, recruiterIds, remote,
-                skills, status, updatedAt,
-                userId);
+                hiringManagers, id, industry,
+                languageLocale, metadata, minimumDegree,
+                minimumExperienceYears, name, numberOfOpenings,
+                openings, postings, publicJobUrls,
+                questions, raw, recruiterIds,
+                remote, skills, status,
+                updatedAt, userId);
         }
 
     }

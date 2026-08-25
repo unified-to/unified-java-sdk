@@ -485,6 +485,15 @@ public class UnifiedTo {
     private final Template template;
 
 
+    private final Social social;
+
+
+    private final Insight insight;
+
+
+    private final Post post;
+
+
     private final Storage storage;
 
 
@@ -1297,6 +1306,21 @@ public class UnifiedTo {
     }
 
 
+    public Social social() {
+        return social;
+    }
+
+
+    public Insight insight() {
+        return insight;
+    }
+
+
+    public Post post() {
+        return post;
+    }
+
+
     public Storage storage() {
         return storage;
     }
@@ -1701,6 +1725,9 @@ public class UnifiedTo {
         this.signing = new Signing(sdkConfiguration);
         this.signatory = new Signatory(sdkConfiguration);
         this.template = new Template(sdkConfiguration);
+        this.social = new Social(sdkConfiguration);
+        this.insight = new Insight(sdkConfiguration);
+        this.post = new Post(sdkConfiguration);
         this.storage = new Storage(sdkConfiguration);
         this.file = new File(sdkConfiguration);
         this.task = new Task(sdkConfiguration);

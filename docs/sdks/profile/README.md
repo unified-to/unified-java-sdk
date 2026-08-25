@@ -6,7 +6,9 @@
 
 * [createCdpProfile](#createcdpprofile) - Create a profile
 * [getCdpProfile](#getcdpprofile) - Retrieve a profile
+* [getSocialProfile](#getsocialprofile) - Retrieve a profile
 * [listCdpProfiles](#listcdpprofiles) - List all profiles
+* [listSocialProfiles](#listsocialprofiles) - List all profiles
 * [patchCdpProfile](#patchcdpprofile) - Update a profile
 * [removeCdpProfile](#removecdpprofile) - Remove a profile
 * [updateCdpProfile](#updatecdpprofile) - Update a profile
@@ -129,6 +131,64 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
+## getSocialProfile
+
+Retrieve a profile
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="getSocialProfile" method="get" path="/social/{connection_id}/profile/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.GetSocialProfileRequest;
+import to.unified.unified_java_sdk.models.operations.GetSocialProfileResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        GetSocialProfileRequest req = GetSocialProfileRequest.builder()
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        GetSocialProfileResponse res = sdk.profile().getSocialProfile()
+                .request(req)
+                .call();
+
+        if (res.socialProfile().isPresent()) {
+            System.out.println(res.socialProfile().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
+| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| `request`                                                                     | [GetSocialProfileRequest](../../models/operations/GetSocialProfileRequest.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
+
+### Response
+
+**[GetSocialProfileResponse](../../models/operations/GetSocialProfileResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
 ## listCdpProfiles
 
 List all profiles
@@ -179,6 +239,63 @@ public class Application {
 ### Response
 
 **[ListCdpProfilesResponse](../../models/operations/ListCdpProfilesResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## listSocialProfiles
+
+List all profiles
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="listSocialProfiles" method="get" path="/social/{connection_id}/profile" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.ListSocialProfilesRequest;
+import to.unified.unified_java_sdk.models.operations.ListSocialProfilesResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        ListSocialProfilesRequest req = ListSocialProfilesRequest.builder()
+                .connectionId("<id>")
+                .build();
+
+        ListSocialProfilesResponse res = sdk.profile().listSocialProfiles()
+                .request(req)
+                .call();
+
+        if (res.socialProfiles().isPresent()) {
+            System.out.println(res.socialProfiles().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
+| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| `request`                                                                         | [ListSocialProfilesRequest](../../models/operations/ListSocialProfilesRequest.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
+
+### Response
+
+**[ListSocialProfilesResponse](../../models/operations/ListSocialProfilesResponse.md)**
 
 ### Errors
 

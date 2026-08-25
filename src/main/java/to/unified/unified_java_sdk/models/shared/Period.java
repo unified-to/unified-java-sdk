@@ -20,9 +20,12 @@ import java.util.Optional;
  */
 public class Period {
 
-    public static final Period UNSPECIFIED = new Period("UNSPECIFIED");
-    public static final Period DAILY = new Period("DAILY");
-    public static final Period FLIGHT = new Period("FLIGHT");
+    public static final Period DAY = new Period("DAY");
+    public static final Period WEEK = new Period("WEEK");
+    public static final Period MONTH = new Period("MONTH");
+    public static final Period LIFETIME = new Period("LIFETIME");
+    public static final Period TOTAL = new Period("TOTAL");
+    public static final Period OTHER = new Period("OTHER");
 
     // This map will grow whenever a Color gets created with a new
     // unrecognized value (a potential memory leak if the user is not
@@ -96,26 +99,35 @@ public class Period {
 
     private static final Map<String, Period> createValuesMap() {
         Map<String, Period> map = new LinkedHashMap<>();
-        map.put("UNSPECIFIED", UNSPECIFIED);
-        map.put("DAILY", DAILY);
-        map.put("FLIGHT", FLIGHT);
+        map.put("DAY", DAY);
+        map.put("WEEK", WEEK);
+        map.put("MONTH", MONTH);
+        map.put("LIFETIME", LIFETIME);
+        map.put("TOTAL", TOTAL);
+        map.put("OTHER", OTHER);
         return map;
     }
 
     private static final Map<String, PeriodEnum> createEnumsMap() {
         Map<String, PeriodEnum> map = new HashMap<>();
-        map.put("UNSPECIFIED", PeriodEnum.UNSPECIFIED);
-        map.put("DAILY", PeriodEnum.DAILY);
-        map.put("FLIGHT", PeriodEnum.FLIGHT);
+        map.put("DAY", PeriodEnum.DAY);
+        map.put("WEEK", PeriodEnum.WEEK);
+        map.put("MONTH", PeriodEnum.MONTH);
+        map.put("LIFETIME", PeriodEnum.LIFETIME);
+        map.put("TOTAL", PeriodEnum.TOTAL);
+        map.put("OTHER", PeriodEnum.OTHER);
         return map;
     }
     
     
     public enum PeriodEnum {
 
-        UNSPECIFIED("UNSPECIFIED"),
-        DAILY("DAILY"),
-        FLIGHT("FLIGHT"),;
+        DAY("DAY"),
+        WEEK("WEEK"),
+        MONTH("MONTH"),
+        LIFETIME("LIFETIME"),
+        TOTAL("TOTAL"),
+        OTHER("OTHER"),;
 
         private final String value;
 

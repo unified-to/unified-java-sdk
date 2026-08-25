@@ -50,3 +50,4 @@ PropertyConnectionCategories custom = PropertyConnectionCategories.of("custom_va
 | `DATASTORE`    | datastore      |
 | `CDP`          | cdp            |
 | `PERFORMANCE`  | performance    |
+| `SOCIAL`       | social         |

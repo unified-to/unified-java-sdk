@@ -93,6 +93,11 @@ public class AdsCampaign {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("kpi")
+    private PropertyAdsCampaignKpi kpi;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     private List<String> labels;
 
@@ -157,6 +162,7 @@ public class AdsCampaign {
             @JsonProperty("goal") @Nullable Goal goal,
             @JsonProperty("has_eu_political_ads") @Nullable Boolean hasEuPoliticalAds,
             @JsonProperty("id") @Nullable String id,
+            @JsonProperty("kpi") @Nullable PropertyAdsCampaignKpi kpi,
             @JsonProperty("labels") @Nullable List<String> labels,
             @JsonProperty("name") @Nullable String name,
             @JsonProperty("organization_id") @Nullable String organizationId,
@@ -181,6 +187,7 @@ public class AdsCampaign {
         this.goal = goal;
         this.hasEuPoliticalAds = hasEuPoliticalAds;
         this.id = id;
+        this.kpi = kpi;
         this.labels = labels;
         this.name = name;
         this.organizationId = organizationId;
@@ -201,7 +208,8 @@ public class AdsCampaign {
             null, null, null,
             null, null, null,
             null, null, null,
-            null, null, null);
+            null, null, null,
+            null);
     }
 
     public Optional<AdvertisingChannelType> advertisingChannelType() {
@@ -258,6 +266,10 @@ public class AdsCampaign {
 
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
+    }
+
+    public Optional<PropertyAdsCampaignKpi> kpi() {
+        return Optional.ofNullable(this.kpi);
     }
 
     public Optional<List<String>> labels() {
@@ -389,6 +401,12 @@ public class AdsCampaign {
     }
 
 
+    public AdsCampaign withKpi(@Nullable PropertyAdsCampaignKpi kpi) {
+        this.kpi = kpi;
+        return this;
+    }
+
+
     public AdsCampaign withLabels(@Nullable List<String> labels) {
         this.labels = labels;
         return this;
@@ -473,6 +491,7 @@ public class AdsCampaign {
             Utils.enhancedDeepEquals(this.goal, other.goal) &&
             Utils.enhancedDeepEquals(this.hasEuPoliticalAds, other.hasEuPoliticalAds) &&
             Utils.enhancedDeepEquals(this.id, other.id) &&
+            Utils.enhancedDeepEquals(this.kpi, other.kpi) &&
             Utils.enhancedDeepEquals(this.labels, other.labels) &&
             Utils.enhancedDeepEquals(this.name, other.name) &&
             Utils.enhancedDeepEquals(this.organizationId, other.organizationId) &&
@@ -492,10 +511,11 @@ public class AdsCampaign {
             budgetUnit, campaignBudgetIdentifier, category,
             createdAt, currency, effectiveStatus,
             endAt, frequencyCap, goal,
-            hasEuPoliticalAds, id, labels,
-            name, organizationId, plannedSpendAmount,
-            raw, startAt, status,
-            targeting, totalSpendAmount, updatedAt);
+            hasEuPoliticalAds, id, kpi,
+            labels, name, organizationId,
+            plannedSpendAmount, raw, startAt,
+            status, targeting, totalSpendAmount,
+            updatedAt);
     }
     
     @Override
@@ -515,6 +535,7 @@ public class AdsCampaign {
                 "goal", goal,
                 "hasEuPoliticalAds", hasEuPoliticalAds,
                 "id", id,
+                "kpi", kpi,
                 "labels", labels,
                 "name", name,
                 "organizationId", organizationId,
@@ -557,6 +578,8 @@ public class AdsCampaign {
         private Boolean hasEuPoliticalAds;
 
         private String id;
+
+        private PropertyAdsCampaignKpi kpi;
 
         private List<String> labels;
 
@@ -652,6 +675,11 @@ public class AdsCampaign {
             return this;
         }
 
+        public Builder kpi(@Nullable PropertyAdsCampaignKpi kpi) {
+            this.kpi = kpi;
+            return this;
+        }
+
         public Builder labels(@Nullable List<String> labels) {
             this.labels = labels;
             return this;
@@ -708,10 +736,11 @@ public class AdsCampaign {
                 budgetUnit, campaignBudgetIdentifier, category,
                 createdAt, currency, effectiveStatus,
                 endAt, frequencyCap, goal,
-                hasEuPoliticalAds, id, labels,
-                name, organizationId, plannedSpendAmount,
-                raw, startAt, status,
-                targeting, totalSpendAmount, updatedAt);
+                hasEuPoliticalAds, id, kpi,
+                labels, name, organizationId,
+                plannedSpendAmount, raw, startAt,
+                status, targeting, totalSpendAmount,
+                updatedAt);
         }
 
     }

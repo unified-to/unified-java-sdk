@@ -1,0 +1,14 @@
+# SocialMedia
+
+
+## Fields
+
+| Field                                                                | Type                                                                 | Required                                                             | Description                                                          |
+| -------------------------------------------------------------------- | -------------------------------------------------------------------- | -------------------------------------------------------------------- | -------------------------------------------------------------------- |
+| `alt`                                                                | *Optional\<String>*                                                  | :heavy_minus_sign:                                                   | N/A                                                                  |
+| `height`                                                             | *Optional\<Double>*                                                  | :heavy_minus_sign:                                                   | N/A                                                                  |
+| `id`                                                                 | *Optional\<String>*                                                  | :heavy_minus_sign:                                                   | N/A                                                                  |
+| `position`                                                           | *Optional\<Double>*                                                  | :heavy_minus_sign:                                                   | N/A                                                                  |
+| `type`                                                               | [Optional\<SocialMediaType>](../../models/shared/SocialMediaType.md) | :heavy_minus_sign:                                                   | N/A                                                                  |
+| `url`                                                                | *String*                                                             | :heavy_check_mark:                                                   | N/A                                                                  |
+| `width`                                                              | *Optional\<Double>*                                                  | :heavy_minus_sign:                                                   | N/A                                                                  |
