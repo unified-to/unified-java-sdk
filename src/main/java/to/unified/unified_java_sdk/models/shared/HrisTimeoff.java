@@ -73,6 +73,11 @@ public class HrisTimeoff {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("original_type")
+    private String originalType;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
     private Map<String, Object> raw;
 
@@ -117,6 +122,7 @@ public class HrisTimeoff {
             @JsonProperty("end_at") @Nullable OffsetDateTime endAt,
             @JsonProperty("id") @Nullable String id,
             @JsonProperty("is_paid") @Nullable Boolean isPaid,
+            @JsonProperty("original_type") @Nullable String originalType,
             @JsonProperty("raw") @Nullable Map<String, Object> raw,
             @JsonProperty("reason") @Nullable String reason,
             @JsonProperty("start_at") @Nullable OffsetDateTime startAt,
@@ -134,6 +140,7 @@ public class HrisTimeoff {
         this.endAt = endAt;
         this.id = id;
         this.isPaid = isPaid;
+        this.originalType = originalType;
         this.raw = raw;
         this.reason = reason;
         this.startAt = startAt;
@@ -151,7 +158,7 @@ public class HrisTimeoff {
             null, null, null,
             null, null, null,
             null, null, null,
-            null, userId);
+            null, null, userId);
     }
 
     public Optional<OffsetDateTime> approvedAt() {
@@ -192,6 +199,10 @@ public class HrisTimeoff {
 
     public Optional<Boolean> isPaid() {
         return Optional.ofNullable(this.isPaid);
+    }
+
+    public Optional<String> originalType() {
+        return Optional.ofNullable(this.originalType);
     }
 
     public Optional<Map<String, Object>> raw() {
@@ -287,6 +298,12 @@ public class HrisTimeoff {
     }
 
 
+    public HrisTimeoff withOriginalType(@Nullable String originalType) {
+        this.originalType = originalType;
+        return this;
+    }
+
+
     public HrisTimeoff withRaw(@Nullable Map<String, Object> raw) {
         this.raw = raw;
         return this;
@@ -349,6 +366,7 @@ public class HrisTimeoff {
             Utils.enhancedDeepEquals(this.endAt, other.endAt) &&
             Utils.enhancedDeepEquals(this.id, other.id) &&
             Utils.enhancedDeepEquals(this.isPaid, other.isPaid) &&
+            Utils.enhancedDeepEquals(this.originalType, other.originalType) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
             Utils.enhancedDeepEquals(this.reason, other.reason) &&
             Utils.enhancedDeepEquals(this.startAt, other.startAt) &&
@@ -364,9 +382,9 @@ public class HrisTimeoff {
             approvedAt, approverUserId, comments,
             companyId, createdAt, duration,
             durationType, endAt, id,
-            isPaid, raw, reason,
-            startAt, status, type,
-            updatedAt, userId);
+            isPaid, originalType, raw,
+            reason, startAt, status,
+            type, updatedAt, userId);
     }
     
     @Override
@@ -382,6 +400,7 @@ public class HrisTimeoff {
                 "endAt", endAt,
                 "id", id,
                 "isPaid", isPaid,
+                "originalType", originalType,
                 "raw", raw,
                 "reason", reason,
                 "startAt", startAt,
@@ -413,6 +432,8 @@ public class HrisTimeoff {
         private String id;
 
         private Boolean isPaid;
+
+        private String originalType;
 
         private Map<String, Object> raw;
 
@@ -482,6 +503,11 @@ public class HrisTimeoff {
             return this;
         }
 
+        public Builder originalType(@Nullable String originalType) {
+            this.originalType = originalType;
+            return this;
+        }
+
         public Builder raw(@Nullable Map<String, Object> raw) {
             this.raw = raw;
             return this;
@@ -522,9 +548,9 @@ public class HrisTimeoff {
                 approvedAt, approverUserId, comments,
                 companyId, createdAt, duration,
                 durationType, endAt, id,
-                isPaid, raw, reason,
-                startAt, status, type,
-                updatedAt, userId);
+                isPaid, originalType, raw,
+                reason, startAt, status,
+                type, updatedAt, userId);
         }
 
     }

@@ -17,7 +17,7 @@ import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
 
-public class CrmPicklist {
+public class CrmTaxonomy {
 
     @JsonProperty("id")
     private String id;
@@ -40,15 +40,15 @@ public class CrmPicklist {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
-    private CrmPicklistType type;
+    private CrmTaxonomyType type;
 
     @JsonCreator
-    public CrmPicklist(
+    public CrmTaxonomy(
             @JsonProperty("id") @Nonnull String id,
             @JsonProperty("label") @Nullable String label,
             @JsonProperty("name") @Nullable String name,
             @JsonProperty("raw") @Nullable Map<String, Object> raw,
-            @JsonProperty("type") @Nullable CrmPicklistType type) {
+            @JsonProperty("type") @Nullable CrmTaxonomyType type) {
         this.id = Optional.ofNullable(id)
             .orElseThrow(() -> new IllegalArgumentException("id cannot be null"));
         this.label = label;
@@ -57,7 +57,7 @@ public class CrmPicklist {
         this.type = type;
     }
     
-    public CrmPicklist(
+    public CrmTaxonomy(
             @Nonnull String id) {
         this(id, null, null,
             null, null);
@@ -79,7 +79,7 @@ public class CrmPicklist {
         return Optional.ofNullable(this.raw);
     }
 
-    public Optional<CrmPicklistType> type() {
+    public Optional<CrmTaxonomyType> type() {
         return Optional.ofNullable(this.type);
     }
 
@@ -88,31 +88,31 @@ public class CrmPicklist {
     }
 
 
-    public CrmPicklist withId(@Nonnull String id) {
+    public CrmTaxonomy withId(@Nonnull String id) {
         this.id = Utils.checkNotNull(id, "id");
         return this;
     }
 
 
-    public CrmPicklist withLabel(@Nullable String label) {
+    public CrmTaxonomy withLabel(@Nullable String label) {
         this.label = label;
         return this;
     }
 
 
-    public CrmPicklist withName(@Nullable String name) {
+    public CrmTaxonomy withName(@Nullable String name) {
         this.name = name;
         return this;
     }
 
 
-    public CrmPicklist withRaw(@Nullable Map<String, Object> raw) {
+    public CrmTaxonomy withRaw(@Nullable Map<String, Object> raw) {
         this.raw = raw;
         return this;
     }
 
 
-    public CrmPicklist withType(@Nullable CrmPicklistType type) {
+    public CrmTaxonomy withType(@Nullable CrmTaxonomyType type) {
         this.type = type;
         return this;
     }
@@ -126,7 +126,7 @@ public class CrmPicklist {
         if (o == null || getClass() != o.getClass()) {
             return false;
         }
-        CrmPicklist other = (CrmPicklist) o;
+        CrmTaxonomy other = (CrmTaxonomy) o;
         return 
             Utils.enhancedDeepEquals(this.id, other.id) &&
             Utils.enhancedDeepEquals(this.label, other.label) &&
@@ -144,7 +144,7 @@ public class CrmPicklist {
     
     @Override
     public String toString() {
-        return Utils.toString(CrmPicklist.class,
+        return Utils.toString(CrmTaxonomy.class,
                 "id", id,
                 "label", label,
                 "name", name,
@@ -163,7 +163,7 @@ public class CrmPicklist {
 
         private Map<String, Object> raw;
 
-        private CrmPicklistType type;
+        private CrmTaxonomyType type;
 
         private Builder() {
           // force use of static builder() method
@@ -189,13 +189,13 @@ public class CrmPicklist {
             return this;
         }
 
-        public Builder type(@Nullable CrmPicklistType type) {
+        public Builder type(@Nullable CrmTaxonomyType type) {
             this.type = type;
             return this;
         }
 
-        public CrmPicklist build() {
-            return new CrmPicklist(
+        public CrmTaxonomy build() {
+            return new CrmTaxonomy(
                 id, label, name,
                 raw, type);
         }

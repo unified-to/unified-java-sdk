@@ -8,7 +8,7 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 
-public enum ListCrmPicklistsQueryParamFields {
+public enum ListCrmTaxonomiesQueryParamFields {
     ID("id"),
     NAME("name"),
     LABEL("label"),
@@ -18,7 +18,7 @@ public enum ListCrmPicklistsQueryParamFields {
     @JsonValue
     private final String value;
 
-    ListCrmPicklistsQueryParamFields(String value) {
+    ListCrmTaxonomiesQueryParamFields(String value) {
         this.value = value;
     }
     
@@ -26,8 +26,8 @@ public enum ListCrmPicklistsQueryParamFields {
         return value;
     }
     
-    public static Optional<ListCrmPicklistsQueryParamFields> fromValue(String value) {
-        for (ListCrmPicklistsQueryParamFields o: ListCrmPicklistsQueryParamFields.values()) {
+    public static Optional<ListCrmTaxonomiesQueryParamFields> fromValue(String value) {
+        for (ListCrmTaxonomiesQueryParamFields o: ListCrmTaxonomiesQueryParamFields.values()) {
             if (Objects.deepEquals(o.value, value)) {
                 return Optional.of(o);
             }

@@ -8,12 +8,16 @@ import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOper
 import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.GetHrisTaxonomyRequest;
+import to.unified.unified_java_sdk.models.operations.ListCrmTaxonomiesRequest;
 import to.unified.unified_java_sdk.models.operations.ListHrisTaxonomiesRequest;
 import to.unified.unified_java_sdk.models.operations.async.GetHrisTaxonomyRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.GetHrisTaxonomyResponse;
+import to.unified.unified_java_sdk.models.operations.async.ListCrmTaxonomiesRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListCrmTaxonomiesResponse;
 import to.unified.unified_java_sdk.models.operations.async.ListHrisTaxonomiesRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.ListHrisTaxonomiesResponse;
 import to.unified.unified_java_sdk.operations.GetHrisTaxonomy;
+import to.unified.unified_java_sdk.operations.ListCrmTaxonomies;
 import to.unified.unified_java_sdk.operations.ListHrisTaxonomies;
 import to.unified.unified_java_sdk.utils.Headers;
 
@@ -56,6 +60,29 @@ public class AsyncTaxonomy {
     public CompletableFuture<GetHrisTaxonomyResponse> getHrisTaxonomy(@Nonnull GetHrisTaxonomyRequest request) {
         AsyncRequestOperation<GetHrisTaxonomyRequest, GetHrisTaxonomyResponse> operation
               = new GetHrisTaxonomy.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * List all taxonomies
+     * 
+     * @return The async call builder
+     */
+    public ListCrmTaxonomiesRequestBuilder listCrmTaxonomies() {
+        return new ListCrmTaxonomiesRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * List all taxonomies
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<ListCrmTaxonomiesResponse>} - The async response
+     */
+    public CompletableFuture<ListCrmTaxonomiesResponse> listCrmTaxonomies(@Nonnull ListCrmTaxonomiesRequest request) {
+        AsyncRequestOperation<ListCrmTaxonomiesRequest, ListCrmTaxonomiesResponse> operation
+              = new ListCrmTaxonomies.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

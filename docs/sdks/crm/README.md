@@ -21,8 +21,8 @@
 * [listCrmDeals](#listcrmdeals) - List all deals
 * [listCrmEvents](#listcrmevents) - List all events
 * [listCrmLeads](#listcrmleads) - List all leads
-* [listCrmPicklists](#listcrmpicklists) - List all picklists
 * [listCrmPipelines](#listcrmpipelines) - List all pipelines
+* [listCrmTaxonomies](#listcrmtaxonomies) - List all taxonomies
 * [patchCrmCompany](#patchcrmcompany) - Update a company
 * [patchCrmContact](#patchcrmcontact) - Update a contact
 * [patchCrmDeal](#patchcrmdeal) - Update a deal
@@ -1035,63 +1035,6 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## listCrmPicklists
-
-List all picklists
-
-### Example Usage
-
-<!-- UsageSnippet language="java" operationID="listCrmPicklists" method="get" path="/crm/{connection_id}/picklist" -->
-```java
-package hello.world;
-
-import java.lang.Exception;
-import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.ListCrmPicklistsRequest;
-import to.unified.unified_java_sdk.models.operations.ListCrmPicklistsResponse;
-import to.unified.unified_java_sdk.models.shared.Security;
-
-public class Application {
-
-    public static void main(String[] args) throws Exception {
-
-        UnifiedTo sdk = UnifiedTo.builder()
-                .security(Security.builder()
-                    .jwt(System.getenv().getOrDefault("JWT", ""))
-                    .build())
-            .build();
-
-        ListCrmPicklistsRequest req = ListCrmPicklistsRequest.builder()
-                .connectionId("<id>")
-                .build();
-
-        ListCrmPicklistsResponse res = sdk.crm().listCrmPicklists()
-                .request(req)
-                .call();
-
-        if (res.crmPicklists().isPresent()) {
-            System.out.println(res.crmPicklists().get());
-        }
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
-| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
-| `request`                                                                     | [ListCrmPicklistsRequest](../../models/operations/ListCrmPicklistsRequest.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
-
-### Response
-
-**[ListCrmPicklistsResponse](../../models/operations/ListCrmPicklistsResponse.md)**
-
-### Errors
-
-| Error Type             | Status Code            | Content Type           |
-| ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
-
 ## listCrmPipelines
 
 List all pipelines
@@ -1142,6 +1085,63 @@ public class Application {
 ### Response
 
 **[ListCrmPipelinesResponse](../../models/operations/ListCrmPipelinesResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## listCrmTaxonomies
+
+List all taxonomies
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="listCrmTaxonomies" method="get" path="/crm/{connection_id}/taxonomy" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.ListCrmTaxonomiesRequest;
+import to.unified.unified_java_sdk.models.operations.ListCrmTaxonomiesResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        ListCrmTaxonomiesRequest req = ListCrmTaxonomiesRequest.builder()
+                .connectionId("<id>")
+                .build();
+
+        ListCrmTaxonomiesResponse res = sdk.crm().listCrmTaxonomies()
+                .request(req)
+                .call();
+
+        if (res.crmTaxonomies().isPresent()) {
+            System.out.println(res.crmTaxonomies().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| `request`                                                                       | [ListCrmTaxonomiesRequest](../../models/operations/ListCrmTaxonomiesRequest.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
+
+### Response
+
+**[ListCrmTaxonomiesResponse](../../models/operations/ListCrmTaxonomiesResponse.md)**
 
 ### Errors
 

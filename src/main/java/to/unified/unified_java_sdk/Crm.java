@@ -57,12 +57,12 @@ import to.unified.unified_java_sdk.models.operations.ListCrmEventsResponse;
 import to.unified.unified_java_sdk.models.operations.ListCrmLeadsRequest;
 import to.unified.unified_java_sdk.models.operations.ListCrmLeadsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.ListCrmLeadsResponse;
-import to.unified.unified_java_sdk.models.operations.ListCrmPicklistsRequest;
-import to.unified.unified_java_sdk.models.operations.ListCrmPicklistsRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.ListCrmPicklistsResponse;
 import to.unified.unified_java_sdk.models.operations.ListCrmPipelinesRequest;
 import to.unified.unified_java_sdk.models.operations.ListCrmPipelinesRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.ListCrmPipelinesResponse;
+import to.unified.unified_java_sdk.models.operations.ListCrmTaxonomiesRequest;
+import to.unified.unified_java_sdk.models.operations.ListCrmTaxonomiesRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListCrmTaxonomiesResponse;
 import to.unified.unified_java_sdk.models.operations.PatchCrmCompanyRequest;
 import to.unified.unified_java_sdk.models.operations.PatchCrmCompanyRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.PatchCrmCompanyResponse;
@@ -134,8 +134,8 @@ import to.unified.unified_java_sdk.operations.ListCrmContacts;
 import to.unified.unified_java_sdk.operations.ListCrmDeals;
 import to.unified.unified_java_sdk.operations.ListCrmEvents;
 import to.unified.unified_java_sdk.operations.ListCrmLeads;
-import to.unified.unified_java_sdk.operations.ListCrmPicklists;
 import to.unified.unified_java_sdk.operations.ListCrmPipelines;
+import to.unified.unified_java_sdk.operations.ListCrmTaxonomies;
 import to.unified.unified_java_sdk.operations.PatchCrmCompany;
 import to.unified.unified_java_sdk.operations.PatchCrmContact;
 import to.unified.unified_java_sdk.operations.PatchCrmDeal;
@@ -551,28 +551,6 @@ public class Crm {
     }
 
     /**
-     * List all picklists
-     * 
-     * @return The call builder
-     */
-    public ListCrmPicklistsRequestBuilder listCrmPicklists() {
-        return new ListCrmPicklistsRequestBuilder(sdkConfiguration);
-    }
-
-    /**
-     * List all picklists
-     * 
-     * @param request The request object containing all the parameters for the API call.
-     * @return The response from the API call
-     * @throws RuntimeException subclass if the API call fails
-     */
-    public ListCrmPicklistsResponse listCrmPicklists(@Nonnull ListCrmPicklistsRequest request) {
-        RequestOperation<ListCrmPicklistsRequest, ListCrmPicklistsResponse> operation
-              = new ListCrmPicklists.Sync(sdkConfiguration, _headers);
-        return operation.handleResponse(operation.doRequest(request));
-    }
-
-    /**
      * List all pipelines
      * 
      * @return The call builder
@@ -591,6 +569,28 @@ public class Crm {
     public ListCrmPipelinesResponse listCrmPipelines(@Nonnull ListCrmPipelinesRequest request) {
         RequestOperation<ListCrmPipelinesRequest, ListCrmPipelinesResponse> operation
               = new ListCrmPipelines.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * List all taxonomies
+     * 
+     * @return The call builder
+     */
+    public ListCrmTaxonomiesRequestBuilder listCrmTaxonomies() {
+        return new ListCrmTaxonomiesRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * List all taxonomies
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListCrmTaxonomiesResponse listCrmTaxonomies(@Nonnull ListCrmTaxonomiesRequest request) {
+        RequestOperation<ListCrmTaxonomiesRequest, ListCrmTaxonomiesResponse> operation
+              = new ListCrmTaxonomies.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

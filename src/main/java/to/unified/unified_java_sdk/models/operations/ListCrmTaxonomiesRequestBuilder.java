@@ -7,29 +7,29 @@ import static to.unified.unified_java_sdk.operations.Operations.RequestOperation
 
 import jakarta.annotation.Nonnull;
 import to.unified.unified_java_sdk.SDKConfiguration;
-import to.unified.unified_java_sdk.operations.ListCrmPicklists;
+import to.unified.unified_java_sdk.operations.ListCrmTaxonomies;
 import to.unified.unified_java_sdk.utils.Headers;
 import to.unified.unified_java_sdk.utils.Utils;
 
-public class ListCrmPicklistsRequestBuilder {
+public class ListCrmTaxonomiesRequestBuilder {
     private final SDKConfiguration sdkConfiguration;
     private final Headers _headers = new Headers();
-    private ListCrmPicklistsRequest request;
+    private ListCrmTaxonomiesRequest request;
 
-    public ListCrmPicklistsRequestBuilder(SDKConfiguration sdkConfiguration) {
+    public ListCrmTaxonomiesRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
     }
 
-    public ListCrmPicklistsRequestBuilder request(@Nonnull ListCrmPicklistsRequest request) {
+    public ListCrmTaxonomiesRequestBuilder request(@Nonnull ListCrmTaxonomiesRequest request) {
         this.request = Utils.checkNotNull(request, "request");
         return this;
     }
 
-    private ListCrmPicklistsRequest _buildRequest() {
+    private ListCrmTaxonomiesRequest _buildRequest() {
         return this.request;
     }
     
-    public ListCrmPicklistsRequestBuilder header(String name, String value) {
+    public ListCrmTaxonomiesRequestBuilder header(String name, String value) {
         Utils.checkNotNull(name, "name");
         Utils.checkNotNull(value, "value");
         this._headers.add(name, value);
@@ -41,9 +41,9 @@ public class ListCrmPicklistsRequestBuilder {
     *
     * @return The response from the server.
     */
-    public ListCrmPicklistsResponse call() {
-        RequestOperation<ListCrmPicklistsRequest, ListCrmPicklistsResponse> operation
-              = new ListCrmPicklists.Sync(sdkConfiguration, _headers);
+    public ListCrmTaxonomiesResponse call() {
+        RequestOperation<ListCrmTaxonomiesRequest, ListCrmTaxonomiesResponse> operation
+              = new ListCrmTaxonomies.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(this._buildRequest()));
     }
 }

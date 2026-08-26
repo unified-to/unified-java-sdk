@@ -22,9 +22,9 @@ import java.util.function.Function;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.SecuritySource;
 import to.unified.unified_java_sdk.models.errors.SDKError;
-import to.unified.unified_java_sdk.models.operations.ListCrmPicklistsRequest;
-import to.unified.unified_java_sdk.models.operations.ListCrmPicklistsResponse;
-import to.unified.unified_java_sdk.models.shared.CrmPicklist;
+import to.unified.unified_java_sdk.models.operations.ListCrmTaxonomiesRequest;
+import to.unified.unified_java_sdk.models.operations.ListCrmTaxonomiesResponse;
+import to.unified.unified_java_sdk.models.shared.CrmTaxonomy;
 import to.unified.unified_java_sdk.utils.Blob;
 import to.unified.unified_java_sdk.utils.HTTPClient;
 import to.unified.unified_java_sdk.utils.HTTPRequest;
@@ -35,7 +35,7 @@ import to.unified.unified_java_sdk.utils.Hook.BeforeRequestContextImpl;
 import to.unified.unified_java_sdk.utils.Utils;
 
 
-public class ListCrmPicklists {
+public class ListCrmTaxonomies {
 
     static abstract class Base {
         final SDKConfiguration sdkConfiguration;
@@ -60,7 +60,7 @@ public class ListCrmPicklists {
             return new BeforeRequestContextImpl(
                     this.sdkConfiguration,
                     this.baseUrl,
-                    "listCrmPicklists",
+                    "listCrmTaxonomies",
                     java.util.Optional.empty(),
                     securitySource());
         }
@@ -69,7 +69,7 @@ public class ListCrmPicklists {
             return new AfterSuccessContextImpl(
                     this.sdkConfiguration,
                     this.baseUrl,
-                    "listCrmPicklists",
+                    "listCrmTaxonomies",
                     java.util.Optional.empty(),
                     securitySource());
         }
@@ -78,7 +78,7 @@ public class ListCrmPicklists {
             return new AfterErrorContextImpl(
                     this.sdkConfiguration,
                     this.baseUrl,
-                    "listCrmPicklists",
+                    "listCrmTaxonomies",
                     java.util.Optional.empty(),
                     securitySource());
         }
@@ -86,7 +86,7 @@ public class ListCrmPicklists {
             String url = Utils.generateURL(
                     klass,
                     this.baseUrl,
-                    "/crm/{connection_id}/picklist",
+                    "/crm/{connection_id}/taxonomy",
                     request, null);
             HTTPRequest req = new HTTPRequest(url, "GET");
             req.addHeader("Accept", "application/json")
@@ -104,13 +104,13 @@ public class ListCrmPicklists {
     }
 
     public static class Sync extends Base
-            implements RequestOperation<ListCrmPicklistsRequest, ListCrmPicklistsResponse> {
+            implements RequestOperation<ListCrmTaxonomiesRequest, ListCrmTaxonomiesResponse> {
         public Sync(@Nonnull SDKConfiguration sdkConfiguration, Headers _headers) {
             super(sdkConfiguration, _headers);
         }
 
-        private HttpRequest onBuildRequest(ListCrmPicklistsRequest request) throws Exception {
-            HttpRequest req = buildRequest(request, ListCrmPicklistsRequest.class);
+        private HttpRequest onBuildRequest(ListCrmTaxonomiesRequest request) throws Exception {
+            HttpRequest req = buildRequest(request, ListCrmTaxonomiesRequest.class);
             return sdkConfiguration.hooks().beforeRequest(createBeforeRequestContext(), req);
         }
 
@@ -126,7 +126,7 @@ public class ListCrmPicklists {
         }
 
         @Override
-        public HttpResponse<InputStream> doRequest(ListCrmPicklistsRequest request) {
+        public HttpResponse<InputStream> doRequest(ListCrmTaxonomiesRequest request) {
             HttpRequest r = unchecked(() -> onBuildRequest(request)).get();
             HttpResponse<InputStream> httpRes;
             try {
@@ -145,23 +145,23 @@ public class ListCrmPicklists {
 
 
         @Override
-        public ListCrmPicklistsResponse handleResponse(HttpResponse<InputStream> response) {
+        public ListCrmTaxonomiesResponse handleResponse(HttpResponse<InputStream> response) {
             String contentType = response
                     .headers()
                     .firstValue("Content-Type")
                     .orElse("application/octet-stream");
-            ListCrmPicklistsResponse.Builder resBuilder =
-                    ListCrmPicklistsResponse
+            ListCrmTaxonomiesResponse.Builder resBuilder =
+                    ListCrmTaxonomiesResponse
                             .builder()
                             .contentType(contentType)
                             .statusCode(response.statusCode())
                             .rawResponse(response);
 
-            ListCrmPicklistsResponse res = resBuilder.build();
+            ListCrmTaxonomiesResponse res = resBuilder.build();
             
             if (Utils.statusCodeMatches(response.statusCode(), "200")) {
                 if (Utils.contentTypeMatches(contentType, "application/json")) {
-                    return res.withCrmPicklists(Utils.unmarshal(response, new TypeReference<List<CrmPicklist>>() {}));
+                    return res.withCrmTaxonomies(Utils.unmarshal(response, new TypeReference<List<CrmTaxonomy>>() {}));
                 } else {
                     throw SDKError.from("Unexpected content-type received: " + contentType, response);
                 }
@@ -178,14 +178,14 @@ public class ListCrmPicklists {
         }
     }
     public static class Async extends Base
-            implements AsyncRequestOperation<ListCrmPicklistsRequest, to.unified.unified_java_sdk.models.operations.async.ListCrmPicklistsResponse> {
+            implements AsyncRequestOperation<ListCrmTaxonomiesRequest, to.unified.unified_java_sdk.models.operations.async.ListCrmTaxonomiesResponse> {
 
         public Async(@Nonnull SDKConfiguration sdkConfiguration, Headers _headers) {
             super(sdkConfiguration, _headers);
         }
 
-        private CompletableFuture<HttpRequest> onBuildRequest(ListCrmPicklistsRequest request) throws Exception {
-            HttpRequest req = buildRequest(request, ListCrmPicklistsRequest.class);
+        private CompletableFuture<HttpRequest> onBuildRequest(ListCrmTaxonomiesRequest request) throws Exception {
+            HttpRequest req = buildRequest(request, ListCrmTaxonomiesRequest.class);
             return this.sdkConfiguration.asyncHooks().beforeRequest(createBeforeRequestContext(), req);
         }
 
@@ -198,7 +198,7 @@ public class ListCrmPicklists {
         }
 
         @Override
-        public CompletableFuture<HttpResponse<Blob>> doRequest(ListCrmPicklistsRequest request) {
+        public CompletableFuture<HttpResponse<Blob>> doRequest(ListCrmTaxonomiesRequest request) {
             return unchecked(() -> onBuildRequest(request)).get().thenCompose(client::sendAsync)
                     .handle((resp, err) -> {
                         if (err != null) {
@@ -214,25 +214,25 @@ public class ListCrmPicklists {
         }
 
         @Override
-        public CompletableFuture<to.unified.unified_java_sdk.models.operations.async.ListCrmPicklistsResponse> handleResponse(
+        public CompletableFuture<to.unified.unified_java_sdk.models.operations.async.ListCrmTaxonomiesResponse> handleResponse(
                 HttpResponse<Blob> response) {
             String contentType = response
                     .headers()
                     .firstValue("Content-Type")
                     .orElse("application/octet-stream");
-            to.unified.unified_java_sdk.models.operations.async.ListCrmPicklistsResponse.Builder resBuilder =
-                    to.unified.unified_java_sdk.models.operations.async.ListCrmPicklistsResponse
+            to.unified.unified_java_sdk.models.operations.async.ListCrmTaxonomiesResponse.Builder resBuilder =
+                    to.unified.unified_java_sdk.models.operations.async.ListCrmTaxonomiesResponse
                             .builder()
                             .contentType(contentType)
                             .statusCode(response.statusCode())
                             .rawResponse(response);
 
-            to.unified.unified_java_sdk.models.operations.async.ListCrmPicklistsResponse res = resBuilder.build();
+            to.unified.unified_java_sdk.models.operations.async.ListCrmTaxonomiesResponse res = resBuilder.build();
             
             if (Utils.statusCodeMatches(response.statusCode(), "200")) {
                 if (Utils.contentTypeMatches(contentType, "application/json")) {
-                    return Utils.unmarshalAsync(response, new TypeReference<List<CrmPicklist>>() {})
-                            .thenApply(res::withCrmPicklists);
+                    return Utils.unmarshalAsync(response, new TypeReference<List<CrmTaxonomy>>() {})
+                            .thenApply(res::withCrmTaxonomies);
                 } else {
                     return Utils.createAsyncApiError(response, "Unexpected content-type received: " + contentType);
                 }

@@ -281,10 +281,10 @@ public class UnifiedTo {
     private final Lead lead;
 
 
-    private final Picklist picklist;
-
-
     private final Pipeline pipeline;
+
+
+    private final Taxonomy taxonomy;
 
 
     private final Datastore datastore;
@@ -351,9 +351,6 @@ public class UnifiedTo {
 
 
     private final Payslip payslip;
-
-
-    private final Taxonomy taxonomy;
 
 
     private final Timeoff timeoff;
@@ -966,13 +963,13 @@ public class UnifiedTo {
     }
 
 
-    public Picklist picklist() {
-        return picklist;
+    public Pipeline pipeline() {
+        return pipeline;
     }
 
 
-    public Pipeline pipeline() {
-        return pipeline;
+    public Taxonomy taxonomy() {
+        return taxonomy;
     }
 
 
@@ -1083,11 +1080,6 @@ public class UnifiedTo {
 
     public Payslip payslip() {
         return payslip;
-    }
-
-
-    public Taxonomy taxonomy() {
-        return taxonomy;
     }
 
 
@@ -1657,8 +1649,8 @@ public class UnifiedTo {
         this.crm = new Crm(sdkConfiguration);
         this.deal = new Deal(sdkConfiguration);
         this.lead = new Lead(sdkConfiguration);
-        this.picklist = new Picklist(sdkConfiguration);
         this.pipeline = new Pipeline(sdkConfiguration);
+        this.taxonomy = new Taxonomy(sdkConfiguration);
         this.datastore = new Datastore(sdkConfiguration);
         this.database = new Database(sdkConfiguration);
         this.query = new Query(sdkConfiguration);
@@ -1681,7 +1673,6 @@ public class UnifiedTo {
         this.device = new Device(sdkConfiguration);
         this.employee = new Employee(sdkConfiguration);
         this.payslip = new Payslip(sdkConfiguration);
-        this.taxonomy = new Taxonomy(sdkConfiguration);
         this.timeoff = new Timeoff(sdkConfiguration);
         this.timeshift = new Timeshift(sdkConfiguration);
         this.kms = new Kms(sdkConfiguration);

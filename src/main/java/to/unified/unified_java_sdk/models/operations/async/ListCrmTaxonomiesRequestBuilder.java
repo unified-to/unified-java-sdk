@@ -8,30 +8,30 @@ import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOper
 import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.SDKConfiguration;
-import to.unified.unified_java_sdk.models.operations.ListCrmPicklistsRequest;
-import to.unified.unified_java_sdk.operations.ListCrmPicklists;
+import to.unified.unified_java_sdk.models.operations.ListCrmTaxonomiesRequest;
+import to.unified.unified_java_sdk.operations.ListCrmTaxonomies;
 import to.unified.unified_java_sdk.utils.Headers;
 import to.unified.unified_java_sdk.utils.Utils;
 
-public class ListCrmPicklistsRequestBuilder {
+public class ListCrmTaxonomiesRequestBuilder {
     private final SDKConfiguration sdkConfiguration;
     private final Headers _headers = new Headers();
-    private ListCrmPicklistsRequest request;
+    private ListCrmTaxonomiesRequest request;
 
-    public ListCrmPicklistsRequestBuilder(SDKConfiguration sdkConfiguration) {
+    public ListCrmTaxonomiesRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
     }
 
-    public ListCrmPicklistsRequestBuilder request(@Nonnull ListCrmPicklistsRequest request) {
+    public ListCrmTaxonomiesRequestBuilder request(@Nonnull ListCrmTaxonomiesRequest request) {
         this.request = Utils.checkNotNull(request, "request");
         return this;
     }
 
-    private ListCrmPicklistsRequest _buildRequest() {
+    private ListCrmTaxonomiesRequest _buildRequest() {
         return this.request;
     }
     
-    public ListCrmPicklistsRequestBuilder header(String name, String value) {
+    public ListCrmTaxonomiesRequestBuilder header(String name, String value) {
         Utils.checkNotNull(name, "name");
         Utils.checkNotNull(value, "value");
         this._headers.add(name, value);
@@ -43,9 +43,9 @@ public class ListCrmPicklistsRequestBuilder {
     *
     * @return The response from the server.
     */
-    public CompletableFuture<ListCrmPicklistsResponse> call() {
-        AsyncRequestOperation<ListCrmPicklistsRequest, ListCrmPicklistsResponse> operation
-              = new ListCrmPicklists.Async(sdkConfiguration, _headers);
+    public CompletableFuture<ListCrmTaxonomiesResponse> call() {
+        AsyncRequestOperation<ListCrmTaxonomiesRequest, ListCrmTaxonomiesResponse> operation
+              = new ListCrmTaxonomies.Async(sdkConfiguration, _headers);
         return operation.doRequest(this._buildRequest())
             .thenCompose(operation::handleResponse);
     }

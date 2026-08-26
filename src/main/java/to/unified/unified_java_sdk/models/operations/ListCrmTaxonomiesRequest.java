@@ -15,7 +15,7 @@ import to.unified.unified_java_sdk.utils.SpeakeasyMetadata;
 import to.unified.unified_java_sdk.utils.Utils;
 
 
-public class ListCrmPicklistsRequest {
+public class ListCrmTaxonomiesRequest {
     /**
      * ID of the connection
      */
@@ -26,7 +26,7 @@ public class ListCrmPicklistsRequest {
      * Fields to return
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
-    private List<ListCrmPicklistsQueryParamFields> fields;
+    private List<ListCrmTaxonomiesQueryParamFields> fields;
 
 
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
@@ -70,9 +70,9 @@ public class ListCrmPicklistsRequest {
     private String updatedGte;
 
     @JsonCreator
-    public ListCrmPicklistsRequest(
+    public ListCrmTaxonomiesRequest(
             @Nonnull String connectionId,
-            @Nullable List<ListCrmPicklistsQueryParamFields> fields,
+            @Nullable List<ListCrmTaxonomiesQueryParamFields> fields,
             @Nullable Double limit,
             @Nullable Double offset,
             @Nullable String order,
@@ -94,7 +94,7 @@ public class ListCrmPicklistsRequest {
         this.updatedGte = updatedGte;
     }
     
-    public ListCrmPicklistsRequest(
+    public ListCrmTaxonomiesRequest(
             @Nonnull String connectionId) {
         this(connectionId, null, null,
             null, null, null,
@@ -112,7 +112,7 @@ public class ListCrmPicklistsRequest {
     /**
      * Fields to return
      */
-    public Optional<List<ListCrmPicklistsQueryParamFields>> fields() {
+    public Optional<List<ListCrmTaxonomiesQueryParamFields>> fields() {
         return Optional.ofNullable(this.fields);
     }
 
@@ -168,7 +168,7 @@ public class ListCrmPicklistsRequest {
     /**
      * ID of the connection
      */
-    public ListCrmPicklistsRequest withConnectionId(@Nonnull String connectionId) {
+    public ListCrmTaxonomiesRequest withConnectionId(@Nonnull String connectionId) {
         this.connectionId = Utils.checkNotNull(connectionId, "connectionId");
         return this;
     }
@@ -177,25 +177,25 @@ public class ListCrmPicklistsRequest {
     /**
      * Fields to return
      */
-    public ListCrmPicklistsRequest withFields(@Nullable List<ListCrmPicklistsQueryParamFields> fields) {
+    public ListCrmTaxonomiesRequest withFields(@Nullable List<ListCrmTaxonomiesQueryParamFields> fields) {
         this.fields = fields;
         return this;
     }
 
 
-    public ListCrmPicklistsRequest withLimit(@Nullable Double limit) {
+    public ListCrmTaxonomiesRequest withLimit(@Nullable Double limit) {
         this.limit = limit;
         return this;
     }
 
 
-    public ListCrmPicklistsRequest withOffset(@Nullable Double offset) {
+    public ListCrmTaxonomiesRequest withOffset(@Nullable Double offset) {
         this.offset = offset;
         return this;
     }
 
 
-    public ListCrmPicklistsRequest withOrder(@Nullable String order) {
+    public ListCrmTaxonomiesRequest withOrder(@Nullable String order) {
         this.order = order;
         return this;
     }
@@ -204,7 +204,7 @@ public class ListCrmPicklistsRequest {
     /**
      * Query string to search. eg. email address or name
      */
-    public ListCrmPicklistsRequest withQuery(@Nullable String query) {
+    public ListCrmTaxonomiesRequest withQuery(@Nullable String query) {
         this.query = query;
         return this;
     }
@@ -215,19 +215,19 @@ public class ListCrmPicklistsRequest {
      * 
      * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
-    public ListCrmPicklistsRequest withRaw(@Nullable String raw) {
+    public ListCrmTaxonomiesRequest withRaw(@Nullable String raw) {
         this.raw = raw;
         return this;
     }
 
 
-    public ListCrmPicklistsRequest withSort(@Nullable String sort) {
+    public ListCrmTaxonomiesRequest withSort(@Nullable String sort) {
         this.sort = sort;
         return this;
     }
 
 
-    public ListCrmPicklistsRequest withType(@Nullable String type) {
+    public ListCrmTaxonomiesRequest withType(@Nullable String type) {
         this.type = type;
         return this;
     }
@@ -237,7 +237,7 @@ public class ListCrmPicklistsRequest {
      * Return only results whose updated date is equal or greater to this value (ISO-8601 /
      * YYYY-MM-DDTHH:MM:SSZ format)
      */
-    public ListCrmPicklistsRequest withUpdatedGte(@Nullable String updatedGte) {
+    public ListCrmTaxonomiesRequest withUpdatedGte(@Nullable String updatedGte) {
         this.updatedGte = updatedGte;
         return this;
     }
@@ -251,7 +251,7 @@ public class ListCrmPicklistsRequest {
         if (o == null || getClass() != o.getClass()) {
             return false;
         }
-        ListCrmPicklistsRequest other = (ListCrmPicklistsRequest) o;
+        ListCrmTaxonomiesRequest other = (ListCrmTaxonomiesRequest) o;
         return 
             Utils.enhancedDeepEquals(this.connectionId, other.connectionId) &&
             Utils.enhancedDeepEquals(this.fields, other.fields) &&
@@ -276,7 +276,7 @@ public class ListCrmPicklistsRequest {
     
     @Override
     public String toString() {
-        return Utils.toString(ListCrmPicklistsRequest.class,
+        return Utils.toString(ListCrmTaxonomiesRequest.class,
                 "connectionId", connectionId,
                 "fields", fields,
                 "limit", limit,
@@ -294,7 +294,7 @@ public class ListCrmPicklistsRequest {
 
         private String connectionId;
 
-        private List<ListCrmPicklistsQueryParamFields> fields;
+        private List<ListCrmTaxonomiesQueryParamFields> fields;
 
         private Double limit;
 
@@ -327,7 +327,7 @@ public class ListCrmPicklistsRequest {
         /**
          * Fields to return
          */
-        public Builder fields(@Nullable List<ListCrmPicklistsQueryParamFields> fields) {
+        public Builder fields(@Nullable List<ListCrmTaxonomiesQueryParamFields> fields) {
             this.fields = fields;
             return this;
         }
@@ -384,8 +384,8 @@ public class ListCrmPicklistsRequest {
             return this;
         }
 
-        public ListCrmPicklistsRequest build() {
-            return new ListCrmPicklistsRequest(
+        public ListCrmTaxonomiesRequest build() {
+            return new ListCrmTaxonomiesRequest(
                 connectionId, fields, limit,
                 offset, order, query,
                 raw, sort, type,

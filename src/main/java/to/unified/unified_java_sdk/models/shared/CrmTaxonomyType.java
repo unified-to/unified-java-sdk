@@ -18,35 +18,35 @@ import java.util.Optional;
  * without runtime errors. Instances are immutable singletons with reference equality.
  * Use {@code asEnum()} for switch expressions.
  */
-public class CrmPicklistType {
+public class CrmTaxonomyType {
 
-    public static final CrmPicklistType INDUSTRY = new CrmPicklistType("INDUSTRY");
+    public static final CrmTaxonomyType INDUSTRY = new CrmTaxonomyType("INDUSTRY");
 
     // This map will grow whenever a Color gets created with a new
     // unrecognized value (a potential memory leak if the user is not
     // careful). Keep this field lower case to avoid clashing with
     // generated member names which will always be upper cased (Java
     // convention)
-    private static final Map<String, CrmPicklistType> values = createValuesMap();
-    private static final Map<String, CrmPicklistTypeEnum> enums = createEnumsMap();
+    private static final Map<String, CrmTaxonomyType> values = createValuesMap();
+    private static final Map<String, CrmTaxonomyTypeEnum> enums = createEnumsMap();
 
     private final String value;
 
-    private CrmPicklistType(String value) {
+    private CrmTaxonomyType(String value) {
         this.value = value;
     }
 
     /**
-     * Returns a CrmPicklistType with the given value. For a specific value the 
+     * Returns a CrmTaxonomyType with the given value. For a specific value the 
      * returned object will always be a singleton so reference equality 
      * is satisfied when the values are the same.
      * 
-     * @param value value to be wrapped as CrmPicklistType
+     * @param value value to be wrapped as CrmTaxonomyType
      */ 
     @JsonCreator
-    public static CrmPicklistType of(String value) {
-        synchronized (CrmPicklistType.class) {
-            return values.computeIfAbsent(value, v -> new CrmPicklistType(v));
+    public static CrmTaxonomyType of(String value) {
+        synchronized (CrmTaxonomyType.class) {
+            return values.computeIfAbsent(value, v -> new CrmTaxonomyType(v));
         }
     }
 
@@ -55,7 +55,7 @@ public class CrmPicklistType {
         return value;
     }
 
-    public Optional<CrmPicklistTypeEnum> asEnum() {
+    public Optional<CrmTaxonomyTypeEnum> asEnum() {
         return Optional.ofNullable(enums.getOrDefault(value, null));
     }
 
@@ -76,42 +76,42 @@ public class CrmPicklistType {
             return false;
         if (getClass() != obj.getClass())
             return false;
-        CrmPicklistType other = (CrmPicklistType) obj;
+        CrmTaxonomyType other = (CrmTaxonomyType) obj;
         return Objects.equals(value, other.value);
     }
 
     @Override
     public String toString() {
-        return "CrmPicklistType [value=" + value + "]";
+        return "CrmTaxonomyType [value=" + value + "]";
     }
 
     // return an array just like an enum
-    public static CrmPicklistType[] values() {
-        synchronized (CrmPicklistType.class) {
-            return values.values().toArray(new CrmPicklistType[] {});
+    public static CrmTaxonomyType[] values() {
+        synchronized (CrmTaxonomyType.class) {
+            return values.values().toArray(new CrmTaxonomyType[] {});
         }
     }
 
-    private static final Map<String, CrmPicklistType> createValuesMap() {
-        Map<String, CrmPicklistType> map = new LinkedHashMap<>();
+    private static final Map<String, CrmTaxonomyType> createValuesMap() {
+        Map<String, CrmTaxonomyType> map = new LinkedHashMap<>();
         map.put("INDUSTRY", INDUSTRY);
         return map;
     }
 
-    private static final Map<String, CrmPicklistTypeEnum> createEnumsMap() {
-        Map<String, CrmPicklistTypeEnum> map = new HashMap<>();
-        map.put("INDUSTRY", CrmPicklistTypeEnum.INDUSTRY);
+    private static final Map<String, CrmTaxonomyTypeEnum> createEnumsMap() {
+        Map<String, CrmTaxonomyTypeEnum> map = new HashMap<>();
+        map.put("INDUSTRY", CrmTaxonomyTypeEnum.INDUSTRY);
         return map;
     }
     
     
-    public enum CrmPicklistTypeEnum {
+    public enum CrmTaxonomyTypeEnum {
 
         INDUSTRY("INDUSTRY"),;
 
         private final String value;
 
-        private CrmPicklistTypeEnum(String value) {
+        private CrmTaxonomyTypeEnum(String value) {
             this.value = value;
         }
 

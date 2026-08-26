@@ -1,14 +1,14 @@
-# CrmPicklistType
+# CrmTaxonomyType
 
 ## Example Usage
 
 ```java
-import to.unified.unified_java_sdk.models.shared.CrmPicklistType;
+import to.unified.unified_java_sdk.models.shared.CrmTaxonomyType;
 
-CrmPicklistType value = CrmPicklistType.INDUSTRY;
+CrmTaxonomyType value = CrmTaxonomyType.INDUSTRY;
 
 // Open enum: use .of() to create instances from custom string values
-CrmPicklistType custom = CrmPicklistType.of("custom_value");
+CrmTaxonomyType custom = CrmTaxonomyType.of("custom_value");
 ```
 
 

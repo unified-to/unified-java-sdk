@@ -12,12 +12,12 @@ import java.lang.String;
 import java.net.http.HttpResponse;
 import java.util.List;
 import java.util.Optional;
-import to.unified.unified_java_sdk.models.shared.CrmPicklist;
+import to.unified.unified_java_sdk.models.shared.CrmTaxonomy;
 import to.unified.unified_java_sdk.utils.Response;
 import to.unified.unified_java_sdk.utils.Utils;
 
 
-public class ListCrmPicklistsResponse implements Response {
+public class ListCrmTaxonomiesResponse implements Response {
     /**
      * HTTP response content type for this operation
      */
@@ -26,7 +26,7 @@ public class ListCrmPicklistsResponse implements Response {
     /**
      * Successful
      */
-    private List<CrmPicklist> crmPicklists;
+    private List<CrmTaxonomy> crmTaxonomies;
 
     /**
      * HTTP response status code for this operation
@@ -39,20 +39,20 @@ public class ListCrmPicklistsResponse implements Response {
     private HttpResponse<InputStream> rawResponse;
 
     @JsonCreator
-    public ListCrmPicklistsResponse(
+    public ListCrmTaxonomiesResponse(
             @Nonnull String contentType,
-            @Nullable List<CrmPicklist> crmPicklists,
+            @Nullable List<CrmTaxonomy> crmTaxonomies,
             int statusCode,
             @Nonnull HttpResponse<InputStream> rawResponse) {
         this.contentType = Optional.ofNullable(contentType)
             .orElseThrow(() -> new IllegalArgumentException("contentType cannot be null"));
-        this.crmPicklists = crmPicklists;
+        this.crmTaxonomies = crmTaxonomies;
         this.statusCode = statusCode;
         this.rawResponse = Optional.ofNullable(rawResponse)
             .orElseThrow(() -> new IllegalArgumentException("rawResponse cannot be null"));
     }
     
-    public ListCrmPicklistsResponse(
+    public ListCrmTaxonomiesResponse(
             @Nonnull String contentType,
             int statusCode,
             @Nonnull HttpResponse<InputStream> rawResponse) {
@@ -70,8 +70,8 @@ public class ListCrmPicklistsResponse implements Response {
     /**
      * Successful
      */
-    public Optional<List<CrmPicklist>> crmPicklists() {
-        return Optional.ofNullable(this.crmPicklists);
+    public Optional<List<CrmTaxonomy>> crmTaxonomies() {
+        return Optional.ofNullable(this.crmTaxonomies);
     }
 
     /**
@@ -96,7 +96,7 @@ public class ListCrmPicklistsResponse implements Response {
     /**
      * HTTP response content type for this operation
      */
-    public ListCrmPicklistsResponse withContentType(@Nonnull String contentType) {
+    public ListCrmTaxonomiesResponse withContentType(@Nonnull String contentType) {
         this.contentType = Utils.checkNotNull(contentType, "contentType");
         return this;
     }
@@ -105,8 +105,8 @@ public class ListCrmPicklistsResponse implements Response {
     /**
      * Successful
      */
-    public ListCrmPicklistsResponse withCrmPicklists(@Nullable List<CrmPicklist> crmPicklists) {
-        this.crmPicklists = crmPicklists;
+    public ListCrmTaxonomiesResponse withCrmTaxonomies(@Nullable List<CrmTaxonomy> crmTaxonomies) {
+        this.crmTaxonomies = crmTaxonomies;
         return this;
     }
 
@@ -114,7 +114,7 @@ public class ListCrmPicklistsResponse implements Response {
     /**
      * HTTP response status code for this operation
      */
-    public ListCrmPicklistsResponse withStatusCode(int statusCode) {
+    public ListCrmTaxonomiesResponse withStatusCode(int statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -123,7 +123,7 @@ public class ListCrmPicklistsResponse implements Response {
     /**
      * Raw HTTP response; suitable for custom response parsing
      */
-    public ListCrmPicklistsResponse withRawResponse(@Nonnull HttpResponse<InputStream> rawResponse) {
+    public ListCrmTaxonomiesResponse withRawResponse(@Nonnull HttpResponse<InputStream> rawResponse) {
         this.rawResponse = Utils.checkNotNull(rawResponse, "rawResponse");
         return this;
     }
@@ -137,10 +137,10 @@ public class ListCrmPicklistsResponse implements Response {
         if (o == null || getClass() != o.getClass()) {
             return false;
         }
-        ListCrmPicklistsResponse other = (ListCrmPicklistsResponse) o;
+        ListCrmTaxonomiesResponse other = (ListCrmTaxonomiesResponse) o;
         return 
             Utils.enhancedDeepEquals(this.contentType, other.contentType) &&
-            Utils.enhancedDeepEquals(this.crmPicklists, other.crmPicklists) &&
+            Utils.enhancedDeepEquals(this.crmTaxonomies, other.crmTaxonomies) &&
             Utils.enhancedDeepEquals(this.statusCode, other.statusCode) &&
             Utils.enhancedDeepEquals(this.rawResponse, other.rawResponse);
     }
@@ -148,15 +148,15 @@ public class ListCrmPicklistsResponse implements Response {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            contentType, crmPicklists, statusCode,
+            contentType, crmTaxonomies, statusCode,
             rawResponse);
     }
     
     @Override
     public String toString() {
-        return Utils.toString(ListCrmPicklistsResponse.class,
+        return Utils.toString(ListCrmTaxonomiesResponse.class,
                 "contentType", contentType,
-                "crmPicklists", crmPicklists,
+                "crmTaxonomies", crmTaxonomies,
                 "statusCode", statusCode,
                 "rawResponse", rawResponse);
     }
@@ -166,7 +166,7 @@ public class ListCrmPicklistsResponse implements Response {
 
         private String contentType;
 
-        private List<CrmPicklist> crmPicklists;
+        private List<CrmTaxonomy> crmTaxonomies;
 
         private int statusCode;
 
@@ -187,8 +187,8 @@ public class ListCrmPicklistsResponse implements Response {
         /**
          * Successful
          */
-        public Builder crmPicklists(@Nullable List<CrmPicklist> crmPicklists) {
-            this.crmPicklists = crmPicklists;
+        public Builder crmTaxonomies(@Nullable List<CrmTaxonomy> crmTaxonomies) {
+            this.crmTaxonomies = crmTaxonomies;
             return this;
         }
 
@@ -208,9 +208,9 @@ public class ListCrmPicklistsResponse implements Response {
             return this;
         }
 
-        public ListCrmPicklistsResponse build() {
-            return new ListCrmPicklistsResponse(
-                contentType, crmPicklists, statusCode,
+        public ListCrmTaxonomiesResponse build() {
+            return new ListCrmTaxonomiesResponse(
+                contentType, crmTaxonomies, statusCode,
                 rawResponse);
         }
 

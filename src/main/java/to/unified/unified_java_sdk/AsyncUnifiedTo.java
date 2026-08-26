@@ -173,9 +173,9 @@ public class AsyncUnifiedTo {
 
     private final AsyncLead lead;
 
-    private final AsyncPicklist picklist;
-
     private final AsyncPipeline pipeline;
+
+    private final AsyncTaxonomy taxonomy;
 
     private final AsyncDatastore datastore;
 
@@ -220,8 +220,6 @@ public class AsyncUnifiedTo {
     private final AsyncEmployee employee;
 
     private final AsyncPayslip payslip;
-
-    private final AsyncTaxonomy taxonomy;
 
     private final AsyncTimeoff timeoff;
 
@@ -683,12 +681,12 @@ public class AsyncUnifiedTo {
         return lead;
     }
 
-    public AsyncPicklist picklist() {
-        return picklist;
-    }
-
     public AsyncPipeline pipeline() {
         return pipeline;
+    }
+
+    public AsyncTaxonomy taxonomy() {
+        return taxonomy;
     }
 
     public AsyncDatastore datastore() {
@@ -777,10 +775,6 @@ public class AsyncUnifiedTo {
 
     public AsyncPayslip payslip() {
         return payslip;
-    }
-
-    public AsyncTaxonomy taxonomy() {
-        return taxonomy;
     }
 
     public AsyncTimeoff timeoff() {
@@ -1149,8 +1143,8 @@ public class AsyncUnifiedTo {
         this.crm = new AsyncCrm(syncSDK.crm(), sdkConfiguration);
         this.deal = new AsyncDeal(syncSDK.deal(), sdkConfiguration);
         this.lead = new AsyncLead(syncSDK.lead(), sdkConfiguration);
-        this.picklist = new AsyncPicklist(syncSDK.picklist(), sdkConfiguration);
         this.pipeline = new AsyncPipeline(syncSDK.pipeline(), sdkConfiguration);
+        this.taxonomy = new AsyncTaxonomy(syncSDK.taxonomy(), sdkConfiguration);
         this.datastore = new AsyncDatastore(syncSDK.datastore(), sdkConfiguration);
         this.database = new AsyncDatabase(syncSDK.database(), sdkConfiguration);
         this.query = new AsyncQuery(syncSDK.query(), sdkConfiguration);
@@ -1173,7 +1167,6 @@ public class AsyncUnifiedTo {
         this.device = new AsyncDevice(syncSDK.device(), sdkConfiguration);
         this.employee = new AsyncEmployee(syncSDK.employee(), sdkConfiguration);
         this.payslip = new AsyncPayslip(syncSDK.payslip(), sdkConfiguration);
-        this.taxonomy = new AsyncTaxonomy(syncSDK.taxonomy(), sdkConfiguration);
         this.timeoff = new AsyncTimeoff(syncSDK.timeoff(), sdkConfiguration);
         this.timeshift = new AsyncTimeshift(syncSDK.timeshift(), sdkConfiguration);
         this.kms = new AsyncKms(syncSDK.kms(), sdkConfiguration);

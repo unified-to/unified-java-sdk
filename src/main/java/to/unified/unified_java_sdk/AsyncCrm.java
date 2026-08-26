@@ -24,8 +24,8 @@ import to.unified.unified_java_sdk.models.operations.ListCrmContactsRequest;
 import to.unified.unified_java_sdk.models.operations.ListCrmDealsRequest;
 import to.unified.unified_java_sdk.models.operations.ListCrmEventsRequest;
 import to.unified.unified_java_sdk.models.operations.ListCrmLeadsRequest;
-import to.unified.unified_java_sdk.models.operations.ListCrmPicklistsRequest;
 import to.unified.unified_java_sdk.models.operations.ListCrmPipelinesRequest;
+import to.unified.unified_java_sdk.models.operations.ListCrmTaxonomiesRequest;
 import to.unified.unified_java_sdk.models.operations.PatchCrmCompanyRequest;
 import to.unified.unified_java_sdk.models.operations.PatchCrmContactRequest;
 import to.unified.unified_java_sdk.models.operations.PatchCrmDealRequest;
@@ -78,10 +78,10 @@ import to.unified.unified_java_sdk.models.operations.async.ListCrmEventsRequestB
 import to.unified.unified_java_sdk.models.operations.async.ListCrmEventsResponse;
 import to.unified.unified_java_sdk.models.operations.async.ListCrmLeadsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.ListCrmLeadsResponse;
-import to.unified.unified_java_sdk.models.operations.async.ListCrmPicklistsRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.ListCrmPicklistsResponse;
 import to.unified.unified_java_sdk.models.operations.async.ListCrmPipelinesRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.ListCrmPipelinesResponse;
+import to.unified.unified_java_sdk.models.operations.async.ListCrmTaxonomiesRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListCrmTaxonomiesResponse;
 import to.unified.unified_java_sdk.models.operations.async.PatchCrmCompanyRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.PatchCrmCompanyResponse;
 import to.unified.unified_java_sdk.models.operations.async.PatchCrmContactRequestBuilder;
@@ -135,8 +135,8 @@ import to.unified.unified_java_sdk.operations.ListCrmContacts;
 import to.unified.unified_java_sdk.operations.ListCrmDeals;
 import to.unified.unified_java_sdk.operations.ListCrmEvents;
 import to.unified.unified_java_sdk.operations.ListCrmLeads;
-import to.unified.unified_java_sdk.operations.ListCrmPicklists;
 import to.unified.unified_java_sdk.operations.ListCrmPipelines;
+import to.unified.unified_java_sdk.operations.ListCrmTaxonomies;
 import to.unified.unified_java_sdk.operations.PatchCrmCompany;
 import to.unified.unified_java_sdk.operations.PatchCrmContact;
 import to.unified.unified_java_sdk.operations.PatchCrmDeal;
@@ -570,29 +570,6 @@ public class AsyncCrm {
 
 
     /**
-     * List all picklists
-     * 
-     * @return The async call builder
-     */
-    public ListCrmPicklistsRequestBuilder listCrmPicklists() {
-        return new ListCrmPicklistsRequestBuilder(sdkConfiguration);
-    }
-
-    /**
-     * List all picklists
-     * 
-     * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<ListCrmPicklistsResponse>} - The async response
-     */
-    public CompletableFuture<ListCrmPicklistsResponse> listCrmPicklists(@Nonnull ListCrmPicklistsRequest request) {
-        AsyncRequestOperation<ListCrmPicklistsRequest, ListCrmPicklistsResponse> operation
-              = new ListCrmPicklists.Async(sdkConfiguration, _headers);
-        return operation.doRequest(request)
-            .thenCompose(operation::handleResponse);
-    }
-
-
-    /**
      * List all pipelines
      * 
      * @return The async call builder
@@ -610,6 +587,29 @@ public class AsyncCrm {
     public CompletableFuture<ListCrmPipelinesResponse> listCrmPipelines(@Nonnull ListCrmPipelinesRequest request) {
         AsyncRequestOperation<ListCrmPipelinesRequest, ListCrmPipelinesResponse> operation
               = new ListCrmPipelines.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * List all taxonomies
+     * 
+     * @return The async call builder
+     */
+    public ListCrmTaxonomiesRequestBuilder listCrmTaxonomies() {
+        return new ListCrmTaxonomiesRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * List all taxonomies
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<ListCrmTaxonomiesResponse>} - The async response
+     */
+    public CompletableFuture<ListCrmTaxonomiesResponse> listCrmTaxonomies(@Nonnull ListCrmTaxonomiesRequest request) {
+        AsyncRequestOperation<ListCrmTaxonomiesRequest, ListCrmTaxonomiesResponse> operation
+              = new ListCrmTaxonomies.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

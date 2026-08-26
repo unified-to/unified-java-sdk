@@ -80,7 +80,7 @@ public class WebhookObjectType {
     public static final WebhookObjectType CRM_EVENT = new WebhookObjectType("crm_event");
     public static final WebhookObjectType CRM_LEAD = new WebhookObjectType("crm_lead");
     public static final WebhookObjectType CRM_PIPELINE = new WebhookObjectType("crm_pipeline");
-    public static final WebhookObjectType CRM_PICKLIST = new WebhookObjectType("crm_picklist");
+    public static final WebhookObjectType CRM_TAXONOMY = new WebhookObjectType("crm_taxonomy");
     public static final WebhookObjectType HRIS_EMPLOYEE = new WebhookObjectType("hris_employee");
     public static final WebhookObjectType HRIS_GROUP = new WebhookObjectType("hris_group");
     public static final WebhookObjectType HRIS_PAYSLIP = new WebhookObjectType("hris_payslip");
@@ -326,7 +326,7 @@ public class WebhookObjectType {
         map.put("crm_event", CRM_EVENT);
         map.put("crm_lead", CRM_LEAD);
         map.put("crm_pipeline", CRM_PIPELINE);
-        map.put("crm_picklist", CRM_PICKLIST);
+        map.put("crm_taxonomy", CRM_TAXONOMY);
         map.put("hris_employee", HRIS_EMPLOYEE);
         map.put("hris_group", HRIS_GROUP);
         map.put("hris_payslip", HRIS_PAYSLIP);
@@ -504,7 +504,7 @@ public class WebhookObjectType {
         map.put("crm_event", WebhookObjectTypeEnum.CRM_EVENT);
         map.put("crm_lead", WebhookObjectTypeEnum.CRM_LEAD);
         map.put("crm_pipeline", WebhookObjectTypeEnum.CRM_PIPELINE);
-        map.put("crm_picklist", WebhookObjectTypeEnum.CRM_PICKLIST);
+        map.put("crm_taxonomy", WebhookObjectTypeEnum.CRM_TAXONOMY);
         map.put("hris_employee", WebhookObjectTypeEnum.HRIS_EMPLOYEE);
         map.put("hris_group", WebhookObjectTypeEnum.HRIS_GROUP);
         map.put("hris_payslip", WebhookObjectTypeEnum.HRIS_PAYSLIP);
@@ -683,7 +683,7 @@ public class WebhookObjectType {
         CRM_EVENT("crm_event"),
         CRM_LEAD("crm_lead"),
         CRM_PIPELINE("crm_pipeline"),
-        CRM_PICKLIST("crm_picklist"),
+        CRM_TAXONOMY("crm_taxonomy"),
         HRIS_EMPLOYEE("hris_employee"),
         HRIS_GROUP("hris_group"),
         HRIS_PAYSLIP("hris_payslip"),

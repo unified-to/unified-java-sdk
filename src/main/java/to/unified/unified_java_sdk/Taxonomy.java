@@ -9,10 +9,14 @@ import jakarta.annotation.Nonnull;
 import to.unified.unified_java_sdk.models.operations.GetHrisTaxonomyRequest;
 import to.unified.unified_java_sdk.models.operations.GetHrisTaxonomyRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.GetHrisTaxonomyResponse;
+import to.unified.unified_java_sdk.models.operations.ListCrmTaxonomiesRequest;
+import to.unified.unified_java_sdk.models.operations.ListCrmTaxonomiesRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListCrmTaxonomiesResponse;
 import to.unified.unified_java_sdk.models.operations.ListHrisTaxonomiesRequest;
 import to.unified.unified_java_sdk.models.operations.ListHrisTaxonomiesRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.ListHrisTaxonomiesResponse;
 import to.unified.unified_java_sdk.operations.GetHrisTaxonomy;
+import to.unified.unified_java_sdk.operations.ListCrmTaxonomies;
 import to.unified.unified_java_sdk.operations.ListHrisTaxonomies;
 import to.unified.unified_java_sdk.utils.Headers;
 
@@ -55,6 +59,28 @@ public class Taxonomy {
     public GetHrisTaxonomyResponse getHrisTaxonomy(@Nonnull GetHrisTaxonomyRequest request) {
         RequestOperation<GetHrisTaxonomyRequest, GetHrisTaxonomyResponse> operation
               = new GetHrisTaxonomy.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * List all taxonomies
+     * 
+     * @return The call builder
+     */
+    public ListCrmTaxonomiesRequestBuilder listCrmTaxonomies() {
+        return new ListCrmTaxonomiesRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * List all taxonomies
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListCrmTaxonomiesResponse listCrmTaxonomies(@Nonnull ListCrmTaxonomiesRequest request) {
+        RequestOperation<ListCrmTaxonomiesRequest, ListCrmTaxonomiesResponse> operation
+              = new ListCrmTaxonomies.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

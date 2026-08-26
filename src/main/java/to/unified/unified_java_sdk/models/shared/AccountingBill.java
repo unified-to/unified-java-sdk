@@ -73,6 +73,11 @@ public class AccountingBill {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("extended_notes")
+    private List<AccountingExtendedNote> extendedNotes;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     private String id;
 
@@ -205,6 +210,7 @@ public class AccountingBill {
             @JsonProperty("currency") @Nullable String currency,
             @JsonProperty("discount_amount") @Nullable Double discountAmount,
             @JsonProperty("due_at") @Nullable OffsetDateTime dueAt,
+            @JsonProperty("extended_notes") @Nullable List<AccountingExtendedNote> extendedNotes,
             @JsonProperty("id") @Nullable String id,
             @JsonProperty("lineitems") @Nullable List<AccountingLineitem> lineitems,
             @JsonProperty("metadata") @Nullable List<AccountingMetadata> metadata,
@@ -239,6 +245,7 @@ public class AccountingBill {
         this.currency = currency;
         this.discountAmount = discountAmount;
         this.dueAt = dueAt;
+        this.extendedNotes = extendedNotes;
         this.id = id;
         this.lineitems = lineitems;
         this.metadata = metadata;
@@ -277,7 +284,7 @@ public class AccountingBill {
             null, null, null,
             null, null, null,
             null, null, null,
-            null);
+            null, null);
     }
 
     public Optional<List<AccountingAttachment>> attachments() {
@@ -318,6 +325,10 @@ public class AccountingBill {
 
     public Optional<OffsetDateTime> dueAt() {
         return Optional.ofNullable(this.dueAt);
+    }
+
+    public Optional<List<AccountingExtendedNote>> extendedNotes() {
+        return Optional.ofNullable(this.extendedNotes);
     }
 
     public Optional<String> id() {
@@ -480,6 +491,12 @@ public class AccountingBill {
 
     public AccountingBill withDueAt(@Nullable OffsetDateTime dueAt) {
         this.dueAt = dueAt;
+        return this;
+    }
+
+
+    public AccountingBill withExtendedNotes(@Nullable List<AccountingExtendedNote> extendedNotes) {
+        this.extendedNotes = extendedNotes;
         return this;
     }
 
@@ -651,6 +668,7 @@ public class AccountingBill {
             Utils.enhancedDeepEquals(this.currency, other.currency) &&
             Utils.enhancedDeepEquals(this.discountAmount, other.discountAmount) &&
             Utils.enhancedDeepEquals(this.dueAt, other.dueAt) &&
+            Utils.enhancedDeepEquals(this.extendedNotes, other.extendedNotes) &&
             Utils.enhancedDeepEquals(this.id, other.id) &&
             Utils.enhancedDeepEquals(this.lineitems, other.lineitems) &&
             Utils.enhancedDeepEquals(this.metadata, other.metadata) &&
@@ -683,15 +701,15 @@ public class AccountingBill {
             attachments, balanceAmount, billNumber,
             cancelledAt, categoryIds, contactId,
             createdAt, currency, discountAmount,
-            dueAt, id, lineitems,
-            metadata, notes, organizationId,
-            paidAmount, paidAt, paymentCollectionMethod,
-            paymentTerms, payments, paymenttermId,
-            postedAt, projectId, raw,
-            refundAmount, refundReason, refundedAt,
-            send, status, taxAmount,
-            term, totalAmount, updatedAt,
-            url);
+            dueAt, extendedNotes, id,
+            lineitems, metadata, notes,
+            organizationId, paidAmount, paidAt,
+            paymentCollectionMethod, paymentTerms, payments,
+            paymenttermId, postedAt, projectId,
+            raw, refundAmount, refundReason,
+            refundedAt, send, status,
+            taxAmount, term, totalAmount,
+            updatedAt, url);
     }
     
     @Override
@@ -707,6 +725,7 @@ public class AccountingBill {
                 "currency", currency,
                 "discountAmount", discountAmount,
                 "dueAt", dueAt,
+                "extendedNotes", extendedNotes,
                 "id", id,
                 "lineitems", lineitems,
                 "metadata", metadata,
@@ -755,6 +774,8 @@ public class AccountingBill {
         private Double discountAmount;
 
         private OffsetDateTime dueAt;
+
+        private List<AccountingExtendedNote> extendedNotes;
 
         private String id;
 
@@ -855,6 +876,11 @@ public class AccountingBill {
 
         public Builder dueAt(@Nullable OffsetDateTime dueAt) {
             this.dueAt = dueAt;
+            return this;
+        }
+
+        public Builder extendedNotes(@Nullable List<AccountingExtendedNote> extendedNotes) {
+            this.extendedNotes = extendedNotes;
             return this;
         }
 
@@ -986,15 +1012,15 @@ public class AccountingBill {
                 attachments, balanceAmount, billNumber,
                 cancelledAt, categoryIds, contactId,
                 createdAt, currency, discountAmount,
-                dueAt, id, lineitems,
-                metadata, notes, organizationId,
-                paidAmount, paidAt, paymentCollectionMethod,
-                paymentTerms, payments, paymenttermId,
-                postedAt, projectId, raw,
-                refundAmount, refundReason, refundedAt,
-                send, status, taxAmount,
-                term, totalAmount, updatedAt,
-                url);
+                dueAt, extendedNotes, id,
+                lineitems, metadata, notes,
+                organizationId, paidAmount, paidAt,
+                paymentCollectionMethod, paymentTerms, payments,
+                paymenttermId, postedAt, projectId,
+                raw, refundAmount, refundReason,
+                refundedAt, send, status,
+                taxAmount, term, totalAmount,
+                updatedAt, url);
         }
 
     }

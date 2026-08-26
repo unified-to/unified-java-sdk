@@ -132,7 +132,7 @@ public class PropertyConnectionPermissions {
     public static final PropertyConnectionPermissions CRM_LEAD_WRITE = new PropertyConnectionPermissions("crm_lead_write");
     public static final PropertyConnectionPermissions CRM_PIPELINE_READ = new PropertyConnectionPermissions("crm_pipeline_read");
     public static final PropertyConnectionPermissions CRM_PIPELINE_WRITE = new PropertyConnectionPermissions("crm_pipeline_write");
-    public static final PropertyConnectionPermissions CRM_PICKLIST_READ = new PropertyConnectionPermissions("crm_picklist_read");
+    public static final PropertyConnectionPermissions CRM_TAXONOMY_READ = new PropertyConnectionPermissions("crm_taxonomy_read");
     public static final PropertyConnectionPermissions MARTECH_LIST_READ = new PropertyConnectionPermissions("martech_list_read");
     public static final PropertyConnectionPermissions MARTECH_LIST_WRITE = new PropertyConnectionPermissions("martech_list_write");
     public static final PropertyConnectionPermissions MARTECH_MEMBER_READ = new PropertyConnectionPermissions("martech_member_read");
@@ -525,7 +525,7 @@ public class PropertyConnectionPermissions {
         map.put("crm_lead_write", CRM_LEAD_WRITE);
         map.put("crm_pipeline_read", CRM_PIPELINE_READ);
         map.put("crm_pipeline_write", CRM_PIPELINE_WRITE);
-        map.put("crm_picklist_read", CRM_PICKLIST_READ);
+        map.put("crm_taxonomy_read", CRM_TAXONOMY_READ);
         map.put("martech_list_read", MARTECH_LIST_READ);
         map.put("martech_list_write", MARTECH_LIST_WRITE);
         map.put("martech_member_read", MARTECH_MEMBER_READ);
@@ -850,7 +850,7 @@ public class PropertyConnectionPermissions {
         map.put("crm_lead_write", PropertyConnectionPermissionsEnum.CRM_LEAD_WRITE);
         map.put("crm_pipeline_read", PropertyConnectionPermissionsEnum.CRM_PIPELINE_READ);
         map.put("crm_pipeline_write", PropertyConnectionPermissionsEnum.CRM_PIPELINE_WRITE);
-        map.put("crm_picklist_read", PropertyConnectionPermissionsEnum.CRM_PICKLIST_READ);
+        map.put("crm_taxonomy_read", PropertyConnectionPermissionsEnum.CRM_TAXONOMY_READ);
         map.put("martech_list_read", PropertyConnectionPermissionsEnum.MARTECH_LIST_READ);
         map.put("martech_list_write", PropertyConnectionPermissionsEnum.MARTECH_LIST_WRITE);
         map.put("martech_member_read", PropertyConnectionPermissionsEnum.MARTECH_MEMBER_READ);
@@ -1176,7 +1176,7 @@ public class PropertyConnectionPermissions {
         CRM_LEAD_WRITE("crm_lead_write"),
         CRM_PIPELINE_READ("crm_pipeline_read"),
         CRM_PIPELINE_WRITE("crm_pipeline_write"),
-        CRM_PICKLIST_READ("crm_picklist_read"),
+        CRM_TAXONOMY_READ("crm_taxonomy_read"),
         MARTECH_LIST_READ("martech_list_read"),
         MARTECH_LIST_WRITE("martech_list_write"),
         MARTECH_MEMBER_READ("martech_member_read"),
