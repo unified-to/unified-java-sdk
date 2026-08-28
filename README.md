@@ -39,7 +39,7 @@ The samples below show how a published SDK artifact is used:
 
 Gradle:
 ```groovy
-implementation 'to.unified:unified-java-sdk:0.49.8'
+implementation 'to.unified:unified-java-sdk:0.49.9'
 ```
 
 Maven:
@@ -47,7 +47,7 @@ Maven:
 <dependency>
     <groupId>to.unified</groupId>
     <artifactId>unified-java-sdk</artifactId>
-    <version>0.49.8</version>
+    <version>0.49.9</version>
 </dependency>
 ```
 
@@ -443,7 +443,9 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 
 ### [Assessment](docs/sdks/assessment/README.md)
 
+* [createAssessmentOrder](docs/sdks/assessment/README.md#createassessmentorder) - Create an order
 * [createAssessmentPackage](docs/sdks/assessment/README.md#createassessmentpackage) - Create an assessment package
+* [getAssessmentOrder](docs/sdks/assessment/README.md#getassessmentorder) - Retrieve an order
 * [getAssessmentPackage](docs/sdks/assessment/README.md#getassessmentpackage) - Get an assessment package
 * [listAssessmentPackages](docs/sdks/assessment/README.md#listassessmentpackages) - List assessment packages
 * [patchAssessmentOrder](docs/sdks/assessment/README.md#patchassessmentorder) - Update an order
@@ -1607,7 +1609,9 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 ### [Order](docs/sdks/order/README.md)
 
 * [createAccountingOrder](docs/sdks/order/README.md#createaccountingorder) - Create an order
+* [createAssessmentOrder](docs/sdks/order/README.md#createassessmentorder) - Create an order
 * [getAccountingOrder](docs/sdks/order/README.md#getaccountingorder) - Retrieve an order
+* [getAssessmentOrder](docs/sdks/order/README.md#getassessmentorder) - Retrieve an order
 * [listAccountingOrders](docs/sdks/order/README.md#listaccountingorders) - List all orders
 * [patchAccountingOrder](docs/sdks/order/README.md#patchaccountingorder) - Update an order
 * [patchAssessmentOrder](docs/sdks/order/README.md#patchassessmentorder) - Update an order

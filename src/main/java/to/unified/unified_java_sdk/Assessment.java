@@ -6,9 +6,15 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import to.unified.unified_java_sdk.models.operations.CreateAssessmentOrderRequest;
+import to.unified.unified_java_sdk.models.operations.CreateAssessmentOrderRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.CreateAssessmentOrderResponse;
 import to.unified.unified_java_sdk.models.operations.CreateAssessmentPackageRequest;
 import to.unified.unified_java_sdk.models.operations.CreateAssessmentPackageRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateAssessmentPackageResponse;
+import to.unified.unified_java_sdk.models.operations.GetAssessmentOrderRequest;
+import to.unified.unified_java_sdk.models.operations.GetAssessmentOrderRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetAssessmentOrderResponse;
 import to.unified.unified_java_sdk.models.operations.GetAssessmentPackageRequest;
 import to.unified.unified_java_sdk.models.operations.GetAssessmentPackageRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.GetAssessmentPackageResponse;
@@ -30,7 +36,9 @@ import to.unified.unified_java_sdk.models.operations.UpdateAssessmentOrderRespon
 import to.unified.unified_java_sdk.models.operations.UpdateAssessmentPackageRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateAssessmentPackageRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.UpdateAssessmentPackageResponse;
+import to.unified.unified_java_sdk.operations.CreateAssessmentOrder;
 import to.unified.unified_java_sdk.operations.CreateAssessmentPackage;
+import to.unified.unified_java_sdk.operations.GetAssessmentOrder;
 import to.unified.unified_java_sdk.operations.GetAssessmentPackage;
 import to.unified.unified_java_sdk.operations.ListAssessmentPackages;
 import to.unified.unified_java_sdk.operations.PatchAssessmentOrder;
@@ -61,6 +69,28 @@ public class Assessment {
     }
 
     /**
+     * Create an order
+     * 
+     * @return The call builder
+     */
+    public CreateAssessmentOrderRequestBuilder createAssessmentOrder() {
+        return new CreateAssessmentOrderRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Create an order
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateAssessmentOrderResponse createAssessmentOrder(@Nonnull CreateAssessmentOrderRequest request) {
+        RequestOperation<CreateAssessmentOrderRequest, CreateAssessmentOrderResponse> operation
+              = new CreateAssessmentOrder.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
      * Create an assessment package
      * 
      * @return The call builder
@@ -79,6 +109,28 @@ public class Assessment {
     public CreateAssessmentPackageResponse createAssessmentPackage(@Nonnull CreateAssessmentPackageRequest request) {
         RequestOperation<CreateAssessmentPackageRequest, CreateAssessmentPackageResponse> operation
               = new CreateAssessmentPackage.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Retrieve an order
+     * 
+     * @return The call builder
+     */
+    public GetAssessmentOrderRequestBuilder getAssessmentOrder() {
+        return new GetAssessmentOrderRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Retrieve an order
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetAssessmentOrderResponse getAssessmentOrder(@Nonnull GetAssessmentOrderRequest request) {
+        RequestOperation<GetAssessmentOrderRequest, GetAssessmentOrderResponse> operation
+              = new GetAssessmentOrder.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

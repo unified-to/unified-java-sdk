@@ -7,7 +7,9 @@ import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOper
 
 import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
+import to.unified.unified_java_sdk.models.operations.CreateAssessmentOrderRequest;
 import to.unified.unified_java_sdk.models.operations.CreateAssessmentPackageRequest;
+import to.unified.unified_java_sdk.models.operations.GetAssessmentOrderRequest;
 import to.unified.unified_java_sdk.models.operations.GetAssessmentPackageRequest;
 import to.unified.unified_java_sdk.models.operations.ListAssessmentPackagesRequest;
 import to.unified.unified_java_sdk.models.operations.PatchAssessmentOrderRequest;
@@ -15,8 +17,12 @@ import to.unified.unified_java_sdk.models.operations.PatchAssessmentPackageReque
 import to.unified.unified_java_sdk.models.operations.RemoveAssessmentPackageRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateAssessmentOrderRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateAssessmentPackageRequest;
+import to.unified.unified_java_sdk.models.operations.async.CreateAssessmentOrderRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.CreateAssessmentOrderResponse;
 import to.unified.unified_java_sdk.models.operations.async.CreateAssessmentPackageRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.CreateAssessmentPackageResponse;
+import to.unified.unified_java_sdk.models.operations.async.GetAssessmentOrderRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetAssessmentOrderResponse;
 import to.unified.unified_java_sdk.models.operations.async.GetAssessmentPackageRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.GetAssessmentPackageResponse;
 import to.unified.unified_java_sdk.models.operations.async.ListAssessmentPackagesRequestBuilder;
@@ -31,7 +37,9 @@ import to.unified.unified_java_sdk.models.operations.async.UpdateAssessmentOrder
 import to.unified.unified_java_sdk.models.operations.async.UpdateAssessmentOrderResponse;
 import to.unified.unified_java_sdk.models.operations.async.UpdateAssessmentPackageRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.UpdateAssessmentPackageResponse;
+import to.unified.unified_java_sdk.operations.CreateAssessmentOrder;
 import to.unified.unified_java_sdk.operations.CreateAssessmentPackage;
+import to.unified.unified_java_sdk.operations.GetAssessmentOrder;
 import to.unified.unified_java_sdk.operations.GetAssessmentPackage;
 import to.unified.unified_java_sdk.operations.ListAssessmentPackages;
 import to.unified.unified_java_sdk.operations.PatchAssessmentOrder;
@@ -63,6 +71,29 @@ public class AsyncAssessment {
 
 
     /**
+     * Create an order
+     * 
+     * @return The async call builder
+     */
+    public CreateAssessmentOrderRequestBuilder createAssessmentOrder() {
+        return new CreateAssessmentOrderRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Create an order
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<CreateAssessmentOrderResponse>} - The async response
+     */
+    public CompletableFuture<CreateAssessmentOrderResponse> createAssessmentOrder(@Nonnull CreateAssessmentOrderRequest request) {
+        AsyncRequestOperation<CreateAssessmentOrderRequest, CreateAssessmentOrderResponse> operation
+              = new CreateAssessmentOrder.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
      * Create an assessment package
      * 
      * @return The async call builder
@@ -80,6 +111,29 @@ public class AsyncAssessment {
     public CompletableFuture<CreateAssessmentPackageResponse> createAssessmentPackage(@Nonnull CreateAssessmentPackageRequest request) {
         AsyncRequestOperation<CreateAssessmentPackageRequest, CreateAssessmentPackageResponse> operation
               = new CreateAssessmentPackage.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * Retrieve an order
+     * 
+     * @return The async call builder
+     */
+    public GetAssessmentOrderRequestBuilder getAssessmentOrder() {
+        return new GetAssessmentOrderRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Retrieve an order
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<GetAssessmentOrderResponse>} - The async response
+     */
+    public CompletableFuture<GetAssessmentOrderResponse> getAssessmentOrder(@Nonnull GetAssessmentOrderRequest request) {
+        AsyncRequestOperation<GetAssessmentOrderRequest, GetAssessmentOrderResponse> operation
+              = new GetAssessmentOrder.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

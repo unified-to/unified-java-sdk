@@ -5,7 +5,9 @@
 ### Available Operations
 
 * [createAccountingOrder](#createaccountingorder) - Create an order
+* [createAssessmentOrder](#createassessmentorder) - Create an order
 * [getAccountingOrder](#getaccountingorder) - Retrieve an order
+* [getAssessmentOrder](#getassessmentorder) - Retrieve an order
 * [listAccountingOrders](#listaccountingorders) - List all orders
 * [patchAccountingOrder](#patchaccountingorder) - Update an order
 * [patchAssessmentOrder](#patchassessmentorder) - Update an order
@@ -73,6 +75,68 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
+## createAssessmentOrder
+
+Create an order
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="createAssessmentOrder" method="post" path="/assessment/{connection_id}/order" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.CreateAssessmentOrderRequest;
+import to.unified.unified_java_sdk.models.operations.CreateAssessmentOrderResponse;
+import to.unified.unified_java_sdk.models.shared.AssessmentOrder;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        CreateAssessmentOrderRequest req = CreateAssessmentOrderRequest.builder()
+                .assessmentOrder(AssessmentOrder.builder()
+                    .connectionId("<id>")
+                    .workspaceId("<id>")
+                    .build())
+                .connectionId("<id>")
+                .build();
+
+        CreateAssessmentOrderResponse res = sdk.order().createAssessmentOrder()
+                .request(req)
+                .call();
+
+        if (res.assessmentOrder().isPresent()) {
+            System.out.println(res.assessmentOrder().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
+| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| `request`                                                                               | [CreateAssessmentOrderRequest](../../models/operations/CreateAssessmentOrderRequest.md) | :heavy_check_mark:                                                                      | The request object to use for the request.                                              |
+
+### Response
+
+**[CreateAssessmentOrderResponse](../../models/operations/CreateAssessmentOrderResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
 ## getAccountingOrder
 
 Retrieve an order
@@ -124,6 +188,64 @@ public class Application {
 ### Response
 
 **[GetAccountingOrderResponse](../../models/operations/GetAccountingOrderResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## getAssessmentOrder
+
+Retrieve an order
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="getAssessmentOrder" method="get" path="/assessment/{connection_id}/order/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.GetAssessmentOrderRequest;
+import to.unified.unified_java_sdk.models.operations.GetAssessmentOrderResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        GetAssessmentOrderRequest req = GetAssessmentOrderRequest.builder()
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        GetAssessmentOrderResponse res = sdk.order().getAssessmentOrder()
+                .request(req)
+                .call();
+
+        if (res.assessmentOrder().isPresent()) {
+            System.out.println(res.assessmentOrder().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
+| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| `request`                                                                         | [GetAssessmentOrderRequest](../../models/operations/GetAssessmentOrderRequest.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
+
+### Response
+
+**[GetAssessmentOrderResponse](../../models/operations/GetAssessmentOrderResponse.md)**
 
 ### Errors
 
