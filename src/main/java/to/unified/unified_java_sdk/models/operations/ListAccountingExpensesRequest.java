@@ -17,6 +17,12 @@ import to.unified.unified_java_sdk.utils.Utils;
 
 public class ListAccountingExpensesRequest {
     /**
+     * The expense approver user/employee ID to filter by (reference to HrisEmployee)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=approver_user_id")
+    private String approverUserId;
+
+    /**
      * The category ID to filter by (reference to AccountingCategory)
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=category_id")
@@ -115,6 +121,7 @@ public class ListAccountingExpensesRequest {
 
     @JsonCreator
     public ListAccountingExpensesRequest(
+            @Nullable String approverUserId,
             @Nullable String categoryId,
             @Nonnull String connectionId,
             @Nullable String contactId,
@@ -132,6 +139,7 @@ public class ListAccountingExpensesRequest {
             @Nullable String status,
             @Nullable String updatedGte,
             @Nullable String userId) {
+        this.approverUserId = approverUserId;
         this.categoryId = categoryId;
         this.connectionId = Optional.ofNullable(connectionId)
             .orElseThrow(() -> new IllegalArgumentException("connectionId cannot be null"));
@@ -154,12 +162,19 @@ public class ListAccountingExpensesRequest {
     
     public ListAccountingExpensesRequest(
             @Nonnull String connectionId) {
-        this(null, connectionId, null,
+        this(null, null, connectionId,
             null, null, null,
             null, null, null,
             null, null, null,
             null, null, null,
-            null, null);
+            null, null, null);
+    }
+
+    /**
+     * The expense approver user/employee ID to filter by (reference to HrisEmployee)
+     */
+    public Optional<String> approverUserId() {
+        return Optional.ofNullable(this.approverUserId);
     }
 
     /**
@@ -274,6 +289,15 @@ public class ListAccountingExpensesRequest {
 
     public static Builder builder() {
         return new Builder();
+    }
+
+
+    /**
+     * The expense approver user/employee ID to filter by (reference to HrisEmployee)
+     */
+    public ListAccountingExpensesRequest withApproverUserId(@Nullable String approverUserId) {
+        this.approverUserId = approverUserId;
+        return this;
     }
 
 
@@ -431,6 +455,7 @@ public class ListAccountingExpensesRequest {
         }
         ListAccountingExpensesRequest other = (ListAccountingExpensesRequest) o;
         return 
+            Utils.enhancedDeepEquals(this.approverUserId, other.approverUserId) &&
             Utils.enhancedDeepEquals(this.categoryId, other.categoryId) &&
             Utils.enhancedDeepEquals(this.connectionId, other.connectionId) &&
             Utils.enhancedDeepEquals(this.contactId, other.contactId) &&
@@ -453,17 +478,18 @@ public class ListAccountingExpensesRequest {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            categoryId, connectionId, contactId,
-            endLt, fields, groupId,
-            limit, offset, order,
-            orgId, query, raw,
-            sort, startGte, status,
-            updatedGte, userId);
+            approverUserId, categoryId, connectionId,
+            contactId, endLt, fields,
+            groupId, limit, offset,
+            order, orgId, query,
+            raw, sort, startGte,
+            status, updatedGte, userId);
     }
     
     @Override
     public String toString() {
         return Utils.toString(ListAccountingExpensesRequest.class,
+                "approverUserId", approverUserId,
                 "categoryId", categoryId,
                 "connectionId", connectionId,
                 "contactId", contactId,
@@ -485,6 +511,8 @@ public class ListAccountingExpensesRequest {
 
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
+
+        private String approverUserId;
 
         private String categoryId;
 
@@ -522,6 +550,14 @@ public class ListAccountingExpensesRequest {
 
         private Builder() {
           // force use of static builder() method
+        }
+
+        /**
+         * The expense approver user/employee ID to filter by (reference to HrisEmployee)
+         */
+        public Builder approverUserId(@Nullable String approverUserId) {
+            this.approverUserId = approverUserId;
+            return this;
         }
 
         /**
@@ -653,12 +689,12 @@ public class ListAccountingExpensesRequest {
 
         public ListAccountingExpensesRequest build() {
             return new ListAccountingExpensesRequest(
-                categoryId, connectionId, contactId,
-                endLt, fields, groupId,
-                limit, offset, order,
-                orgId, query, raw,
-                sort, startGte, status,
-                updatedGte, userId);
+                approverUserId, categoryId, connectionId,
+                contactId, endLt, fields,
+                groupId, limit, offset,
+                order, orgId, query,
+                raw, sort, startGte,
+                status, updatedGte, userId);
         }
 
     }

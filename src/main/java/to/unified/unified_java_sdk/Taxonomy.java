@@ -6,6 +6,9 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import to.unified.unified_java_sdk.models.operations.CreateHrisTaxonomyRequest;
+import to.unified.unified_java_sdk.models.operations.CreateHrisTaxonomyRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.CreateHrisTaxonomyResponse;
 import to.unified.unified_java_sdk.models.operations.GetHrisTaxonomyRequest;
 import to.unified.unified_java_sdk.models.operations.GetHrisTaxonomyRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.GetHrisTaxonomyResponse;
@@ -15,6 +18,7 @@ import to.unified.unified_java_sdk.models.operations.ListCrmTaxonomiesResponse;
 import to.unified.unified_java_sdk.models.operations.ListHrisTaxonomiesRequest;
 import to.unified.unified_java_sdk.models.operations.ListHrisTaxonomiesRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.ListHrisTaxonomiesResponse;
+import to.unified.unified_java_sdk.operations.CreateHrisTaxonomy;
 import to.unified.unified_java_sdk.operations.GetHrisTaxonomy;
 import to.unified.unified_java_sdk.operations.ListCrmTaxonomies;
 import to.unified.unified_java_sdk.operations.ListHrisTaxonomies;
@@ -38,6 +42,28 @@ public class Taxonomy {
      */
     public AsyncTaxonomy async() {
         return asyncSDK;
+    }
+
+    /**
+     * Create a taxonomy
+     * 
+     * @return The call builder
+     */
+    public CreateHrisTaxonomyRequestBuilder createHrisTaxonomy() {
+        return new CreateHrisTaxonomyRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Create a taxonomy
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateHrisTaxonomyResponse createHrisTaxonomy(@Nonnull CreateHrisTaxonomyRequest request) {
+        RequestOperation<CreateHrisTaxonomyRequest, CreateHrisTaxonomyResponse> operation
+              = new CreateHrisTaxonomy.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
     }
 
     /**

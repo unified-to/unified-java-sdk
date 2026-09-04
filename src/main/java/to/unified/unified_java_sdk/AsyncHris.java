@@ -17,6 +17,7 @@ import to.unified.unified_java_sdk.models.operations.CreateHrisDocumentRequest;
 import to.unified.unified_java_sdk.models.operations.CreateHrisEmployeeRequest;
 import to.unified.unified_java_sdk.models.operations.CreateHrisGroupRequest;
 import to.unified.unified_java_sdk.models.operations.CreateHrisLocationRequest;
+import to.unified.unified_java_sdk.models.operations.CreateHrisTaxonomyRequest;
 import to.unified.unified_java_sdk.models.operations.CreateHrisTimeoffRequest;
 import to.unified.unified_java_sdk.models.operations.CreateHrisTimeshiftRequest;
 import to.unified.unified_java_sdk.models.operations.GetHrisAttendanceRequest;
@@ -103,6 +104,8 @@ import to.unified.unified_java_sdk.models.operations.async.CreateHrisGroupReques
 import to.unified.unified_java_sdk.models.operations.async.CreateHrisGroupResponse;
 import to.unified.unified_java_sdk.models.operations.async.CreateHrisLocationRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.CreateHrisLocationResponse;
+import to.unified.unified_java_sdk.models.operations.async.CreateHrisTaxonomyRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.CreateHrisTaxonomyResponse;
 import to.unified.unified_java_sdk.models.operations.async.CreateHrisTimeoffRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.CreateHrisTimeoffResponse;
 import to.unified.unified_java_sdk.models.operations.async.CreateHrisTimeshiftRequestBuilder;
@@ -245,6 +248,7 @@ import to.unified.unified_java_sdk.operations.CreateHrisDocument;
 import to.unified.unified_java_sdk.operations.CreateHrisEmployee;
 import to.unified.unified_java_sdk.operations.CreateHrisGroup;
 import to.unified.unified_java_sdk.operations.CreateHrisLocation;
+import to.unified.unified_java_sdk.operations.CreateHrisTaxonomy;
 import to.unified.unified_java_sdk.operations.CreateHrisTimeoff;
 import to.unified.unified_java_sdk.operations.CreateHrisTimeshift;
 import to.unified.unified_java_sdk.operations.GetHrisAttendance;
@@ -559,6 +563,29 @@ public class AsyncHris {
     public CompletableFuture<CreateHrisLocationResponse> createHrisLocation(@Nonnull CreateHrisLocationRequest request) {
         AsyncRequestOperation<CreateHrisLocationRequest, CreateHrisLocationResponse> operation
               = new CreateHrisLocation.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * Create a taxonomy
+     * 
+     * @return The async call builder
+     */
+    public CreateHrisTaxonomyRequestBuilder createHrisTaxonomy() {
+        return new CreateHrisTaxonomyRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Create a taxonomy
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<CreateHrisTaxonomyResponse>} - The async response
+     */
+    public CompletableFuture<CreateHrisTaxonomyResponse> createHrisTaxonomy(@Nonnull CreateHrisTaxonomyRequest request) {
+        AsyncRequestOperation<CreateHrisTaxonomyRequest, CreateHrisTaxonomyResponse> operation
+              = new CreateHrisTaxonomy.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

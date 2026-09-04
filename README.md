@@ -39,7 +39,7 @@ The samples below show how a published SDK artifact is used:
 
 Gradle:
 ```groovy
-implementation 'to.unified:unified-java-sdk:0.49.9'
+implementation 'to.unified:unified-java-sdk:0.49.10'
 ```
 
 Maven:
@@ -47,7 +47,7 @@ Maven:
 <dependency>
     <groupId>to.unified</groupId>
     <artifactId>unified-java-sdk</artifactId>
-    <version>0.49.9</version>
+    <version>0.49.10</version>
 </dependency>
 ```
 
@@ -1227,6 +1227,7 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 * [createHrisEmployee](docs/sdks/hris/README.md#createhrisemployee) - Create an employee
 * [createHrisGroup](docs/sdks/hris/README.md#createhrisgroup) - Create a group
 * [createHrisLocation](docs/sdks/hris/README.md#createhrislocation) - Create a location
+* [createHrisTaxonomy](docs/sdks/hris/README.md#createhristaxonomy) - Create a taxonomy
 * [createHrisTimeoff](docs/sdks/hris/README.md#createhristimeoff) - Create a timeoff
 * [createHrisTimeshift](docs/sdks/hris/README.md#createhristimeshift) - Create a timeshift
 * [getHrisAttendance](docs/sdks/hris/README.md#gethrisattendance) - Retrieve an attendance
@@ -2169,6 +2170,7 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 
 ### [Taxonomy](docs/sdks/taxonomy/README.md)
 
+* [createHrisTaxonomy](docs/sdks/taxonomy/README.md#createhristaxonomy) - Create a taxonomy
 * [getHrisTaxonomy](docs/sdks/taxonomy/README.md#gethristaxonomy) - Retrieve a taxonomy
 * [listCrmTaxonomies](docs/sdks/taxonomy/README.md#listcrmtaxonomies) - List all taxonomies
 * [listHrisTaxonomies](docs/sdks/taxonomy/README.md#listhristaxonomies) - List all taxonomies

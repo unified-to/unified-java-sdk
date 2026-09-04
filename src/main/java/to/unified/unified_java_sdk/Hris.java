@@ -36,6 +36,9 @@ import to.unified.unified_java_sdk.models.operations.CreateHrisGroupResponse;
 import to.unified.unified_java_sdk.models.operations.CreateHrisLocationRequest;
 import to.unified.unified_java_sdk.models.operations.CreateHrisLocationRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateHrisLocationResponse;
+import to.unified.unified_java_sdk.models.operations.CreateHrisTaxonomyRequest;
+import to.unified.unified_java_sdk.models.operations.CreateHrisTaxonomyRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.CreateHrisTaxonomyResponse;
 import to.unified.unified_java_sdk.models.operations.CreateHrisTimeoffRequest;
 import to.unified.unified_java_sdk.models.operations.CreateHrisTimeoffRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateHrisTimeoffResponse;
@@ -244,6 +247,7 @@ import to.unified.unified_java_sdk.operations.CreateHrisDocument;
 import to.unified.unified_java_sdk.operations.CreateHrisEmployee;
 import to.unified.unified_java_sdk.operations.CreateHrisGroup;
 import to.unified.unified_java_sdk.operations.CreateHrisLocation;
+import to.unified.unified_java_sdk.operations.CreateHrisTaxonomy;
 import to.unified.unified_java_sdk.operations.CreateHrisTimeoff;
 import to.unified.unified_java_sdk.operations.CreateHrisTimeshift;
 import to.unified.unified_java_sdk.operations.GetHrisAttendance;
@@ -549,6 +553,28 @@ public class Hris {
     public CreateHrisLocationResponse createHrisLocation(@Nonnull CreateHrisLocationRequest request) {
         RequestOperation<CreateHrisLocationRequest, CreateHrisLocationResponse> operation
               = new CreateHrisLocation.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Create a taxonomy
+     * 
+     * @return The call builder
+     */
+    public CreateHrisTaxonomyRequestBuilder createHrisTaxonomy() {
+        return new CreateHrisTaxonomyRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Create a taxonomy
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateHrisTaxonomyResponse createHrisTaxonomy(@Nonnull CreateHrisTaxonomyRequest request) {
+        RequestOperation<CreateHrisTaxonomyRequest, CreateHrisTaxonomyResponse> operation
+              = new CreateHrisTaxonomy.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

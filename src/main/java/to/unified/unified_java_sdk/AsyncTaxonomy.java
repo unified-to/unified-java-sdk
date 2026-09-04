@@ -7,15 +7,19 @@ import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOper
 
 import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
+import to.unified.unified_java_sdk.models.operations.CreateHrisTaxonomyRequest;
 import to.unified.unified_java_sdk.models.operations.GetHrisTaxonomyRequest;
 import to.unified.unified_java_sdk.models.operations.ListCrmTaxonomiesRequest;
 import to.unified.unified_java_sdk.models.operations.ListHrisTaxonomiesRequest;
+import to.unified.unified_java_sdk.models.operations.async.CreateHrisTaxonomyRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.CreateHrisTaxonomyResponse;
 import to.unified.unified_java_sdk.models.operations.async.GetHrisTaxonomyRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.GetHrisTaxonomyResponse;
 import to.unified.unified_java_sdk.models.operations.async.ListCrmTaxonomiesRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.ListCrmTaxonomiesResponse;
 import to.unified.unified_java_sdk.models.operations.async.ListHrisTaxonomiesRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.ListHrisTaxonomiesResponse;
+import to.unified.unified_java_sdk.operations.CreateHrisTaxonomy;
 import to.unified.unified_java_sdk.operations.GetHrisTaxonomy;
 import to.unified.unified_java_sdk.operations.ListCrmTaxonomies;
 import to.unified.unified_java_sdk.operations.ListHrisTaxonomies;
@@ -39,6 +43,29 @@ public class AsyncTaxonomy {
      */
     public Taxonomy sync() {
         return syncSDK;
+    }
+
+
+    /**
+     * Create a taxonomy
+     * 
+     * @return The async call builder
+     */
+    public CreateHrisTaxonomyRequestBuilder createHrisTaxonomy() {
+        return new CreateHrisTaxonomyRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Create a taxonomy
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<CreateHrisTaxonomyResponse>} - The async response
+     */
+    public CompletableFuture<CreateHrisTaxonomyResponse> createHrisTaxonomy(@Nonnull CreateHrisTaxonomyRequest request) {
+        AsyncRequestOperation<CreateHrisTaxonomyRequest, CreateHrisTaxonomyResponse> operation
+              = new CreateHrisTaxonomy.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
     }
 
 
