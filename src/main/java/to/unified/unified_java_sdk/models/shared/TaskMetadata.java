@@ -32,11 +32,6 @@ public class TaskMetadata {
 
 
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("key")
-    private String key;
-
-
-    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("namespace")
     private String namespace;
 
@@ -44,11 +39,6 @@ public class TaskMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("slug")
     private String slug;
-
-
-    @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("type")
-    private String type;
 
 
     @JsonInclude(Include.NON_ABSENT)
@@ -60,25 +50,20 @@ public class TaskMetadata {
             @JsonProperty("extra_data") @Nullable TaskMetadataExtraData extraData,
             @JsonProperty("format") @Nullable TaskMetadataFormat format,
             @JsonProperty("id") @Nullable String id,
-            @JsonProperty("key") @Nullable String key,
             @JsonProperty("namespace") @Nullable String namespace,
             @JsonProperty("slug") @Nullable String slug,
-            @JsonProperty("type") @Nullable String type,
             @JsonProperty("value") @Nullable TaskMetadataValue value) {
         this.extraData = extraData;
         this.format = format;
         this.id = id;
-        this.key = key;
         this.namespace = namespace;
         this.slug = slug;
-        this.type = type;
         this.value = value;
     }
     
     public TaskMetadata() {
         this(null, null, null,
-            null, null, null,
-            null, null);
+            null, null, null);
     }
 
     public Optional<TaskMetadataExtraData> extraData() {
@@ -93,20 +78,12 @@ public class TaskMetadata {
         return Optional.ofNullable(this.id);
     }
 
-    public Optional<String> key() {
-        return Optional.ofNullable(this.key);
-    }
-
     public Optional<String> namespace() {
         return Optional.ofNullable(this.namespace);
     }
 
     public Optional<String> slug() {
         return Optional.ofNullable(this.slug);
-    }
-
-    public Optional<String> type() {
-        return Optional.ofNullable(this.type);
     }
 
     public Optional<TaskMetadataValue> value() {
@@ -136,12 +113,6 @@ public class TaskMetadata {
     }
 
 
-    public TaskMetadata withKey(@Nullable String key) {
-        this.key = key;
-        return this;
-    }
-
-
     public TaskMetadata withNamespace(@Nullable String namespace) {
         this.namespace = namespace;
         return this;
@@ -150,12 +121,6 @@ public class TaskMetadata {
 
     public TaskMetadata withSlug(@Nullable String slug) {
         this.slug = slug;
-        return this;
-    }
-
-
-    public TaskMetadata withType(@Nullable String type) {
-        this.type = type;
         return this;
     }
 
@@ -179,10 +144,8 @@ public class TaskMetadata {
             Utils.enhancedDeepEquals(this.extraData, other.extraData) &&
             Utils.enhancedDeepEquals(this.format, other.format) &&
             Utils.enhancedDeepEquals(this.id, other.id) &&
-            Utils.enhancedDeepEquals(this.key, other.key) &&
             Utils.enhancedDeepEquals(this.namespace, other.namespace) &&
             Utils.enhancedDeepEquals(this.slug, other.slug) &&
-            Utils.enhancedDeepEquals(this.type, other.type) &&
             Utils.enhancedDeepEquals(this.value, other.value);
     }
     
@@ -190,8 +153,7 @@ public class TaskMetadata {
     public int hashCode() {
         return Utils.enhancedHash(
             extraData, format, id,
-            key, namespace, slug,
-            type, value);
+            namespace, slug, value);
     }
     
     @Override
@@ -200,10 +162,8 @@ public class TaskMetadata {
                 "extraData", extraData,
                 "format", format,
                 "id", id,
-                "key", key,
                 "namespace", namespace,
                 "slug", slug,
-                "type", type,
                 "value", value);
     }
 
@@ -216,13 +176,9 @@ public class TaskMetadata {
 
         private String id;
 
-        private String key;
-
         private String namespace;
 
         private String slug;
-
-        private String type;
 
         private TaskMetadataValue value;
 
@@ -245,11 +201,6 @@ public class TaskMetadata {
             return this;
         }
 
-        public Builder key(@Nullable String key) {
-            this.key = key;
-            return this;
-        }
-
         public Builder namespace(@Nullable String namespace) {
             this.namespace = namespace;
             return this;
@@ -257,11 +208,6 @@ public class TaskMetadata {
 
         public Builder slug(@Nullable String slug) {
             this.slug = slug;
-            return this;
-        }
-
-        public Builder type(@Nullable String type) {
-            this.type = type;
             return this;
         }
 
@@ -273,8 +219,7 @@ public class TaskMetadata {
         public TaskMetadata build() {
             return new TaskMetadata(
                 extraData, format, id,
-                key, namespace, slug,
-                type, value);
+                namespace, slug, value);
         }
 
     }

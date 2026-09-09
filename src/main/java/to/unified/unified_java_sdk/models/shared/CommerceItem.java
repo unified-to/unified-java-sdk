@@ -27,13 +27,6 @@ public class CommerceItem {
     private String accountId;
 
     /**
-     * &#64;deprecated; use collections instead
-     */
-    @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("collection_ids")
-    private List<String> collectionIds;
-
-    /**
      * points to Collection with id, name, and type fields
      */
     @JsonInclude(Include.NON_ABSENT)
@@ -190,7 +183,6 @@ public class CommerceItem {
     @JsonCreator
     public CommerceItem(
             @JsonProperty("account_id") @Nullable String accountId,
-            @JsonProperty("collection_ids") @Nullable List<String> collectionIds,
             @JsonProperty("collections") @Nullable List<CommerceReference> collections,
             @JsonProperty("created_at") @Nullable OffsetDateTime createdAt,
             @JsonProperty("description") @Nullable String description,
@@ -222,7 +214,6 @@ public class CommerceItem {
             @JsonProperty("weight") @Nullable Double weight,
             @JsonProperty("weight_unit") @Nullable WeightUnit weightUnit) {
         this.accountId = accountId;
-        this.collectionIds = collectionIds;
         this.collections = collections;
         this.createdAt = createdAt;
         this.description = description;
@@ -266,18 +257,11 @@ public class CommerceItem {
             null, null, null,
             null, null, null,
             null, null, null,
-            null, null);
+            null);
     }
 
     public Optional<String> accountId() {
         return Optional.ofNullable(this.accountId);
-    }
-
-    /**
-     * &#64;deprecated; use collections instead
-     */
-    public Optional<List<String>> collectionIds() {
-        return Optional.ofNullable(this.collectionIds);
     }
 
     /**
@@ -413,15 +397,6 @@ public class CommerceItem {
 
     public CommerceItem withAccountId(@Nullable String accountId) {
         this.accountId = accountId;
-        return this;
-    }
-
-
-    /**
-     * &#64;deprecated; use collections instead
-     */
-    public CommerceItem withCollectionIds(@Nullable List<String> collectionIds) {
-        this.collectionIds = collectionIds;
         return this;
     }
 
@@ -623,7 +598,6 @@ public class CommerceItem {
         CommerceItem other = (CommerceItem) o;
         return 
             Utils.enhancedDeepEquals(this.accountId, other.accountId) &&
-            Utils.enhancedDeepEquals(this.collectionIds, other.collectionIds) &&
             Utils.enhancedDeepEquals(this.collections, other.collections) &&
             Utils.enhancedDeepEquals(this.createdAt, other.createdAt) &&
             Utils.enhancedDeepEquals(this.description, other.description) &&
@@ -659,24 +633,23 @@ public class CommerceItem {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            accountId, collectionIds, collections,
-            createdAt, description, duration,
-            globalCode, id, inventoryId,
-            isActive, isFeatured, isTaxable,
-            isVisible, locationId, media,
-            metadata, name, prices,
-            publicDescription, publicName, raw,
-            requiresShipping, slug, tags,
-            taxrateId, totalStock, type,
-            updatedAt, variants, vendorName,
-            weight, weightUnit);
+            accountId, collections, createdAt,
+            description, duration, globalCode,
+            id, inventoryId, isActive,
+            isFeatured, isTaxable, isVisible,
+            locationId, media, metadata,
+            name, prices, publicDescription,
+            publicName, raw, requiresShipping,
+            slug, tags, taxrateId,
+            totalStock, type, updatedAt,
+            variants, vendorName, weight,
+            weightUnit);
     }
     
     @Override
     public String toString() {
         return Utils.toString(CommerceItem.class,
                 "accountId", accountId,
-                "collectionIds", collectionIds,
                 "collections", collections,
                 "createdAt", createdAt,
                 "description", description,
@@ -713,8 +686,6 @@ public class CommerceItem {
     public final static class Builder {
 
         private String accountId;
-
-        private List<String> collectionIds;
 
         private List<CommerceReference> collections;
 
@@ -782,14 +753,6 @@ public class CommerceItem {
 
         public Builder accountId(@Nullable String accountId) {
             this.accountId = accountId;
-            return this;
-        }
-
-        /**
-         * &#64;deprecated; use collections instead
-         */
-        public Builder collectionIds(@Nullable List<String> collectionIds) {
-            this.collectionIds = collectionIds;
             return this;
         }
 
@@ -951,17 +914,17 @@ public class CommerceItem {
 
         public CommerceItem build() {
             return new CommerceItem(
-                accountId, collectionIds, collections,
-                createdAt, description, duration,
-                globalCode, id, inventoryId,
-                isActive, isFeatured, isTaxable,
-                isVisible, locationId, media,
-                metadata, name, prices,
-                publicDescription, publicName, raw,
-                requiresShipping, slug, tags,
-                taxrateId, totalStock, type,
-                updatedAt, variants, vendorName,
-                weight, weightUnit);
+                accountId, collections, createdAt,
+                description, duration, globalCode,
+                id, inventoryId, isActive,
+                isFeatured, isTaxable, isVisible,
+                locationId, media, metadata,
+                name, prices, publicDescription,
+                publicName, raw, requiresShipping,
+                slug, tags, taxrateId,
+                totalStock, type, updatedAt,
+                variants, vendorName, weight,
+                weightUnit);
         }
 
     }

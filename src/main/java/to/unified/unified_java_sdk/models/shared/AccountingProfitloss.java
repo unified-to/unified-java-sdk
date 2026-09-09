@@ -25,13 +25,6 @@ public class AccountingProfitloss {
     @JsonProperty("category_ids")
     private List<String> categoryIds;
 
-    /**
-     * &#64;deprecated – use cost_of_goods_sold_sections instead
-     */
-    @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("cost_of_goods_sold")
-    private List<AccountingProfitlossCategory> costOfGoodsSold;
-
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cost_of_goods_sold_sections")
@@ -57,13 +50,6 @@ public class AccountingProfitloss {
     @JsonProperty("end_at")
     private OffsetDateTime endAt;
 
-    /**
-     * &#64;deprecated – use expenses_sections instead
-     */
-    @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("expenses")
-    private List<AccountingProfitlossCategory> expenses;
-
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expenses_sections")
@@ -76,20 +62,8 @@ public class AccountingProfitloss {
 
 
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("gross_profit_amount")
-    private Double grossProfitAmount;
-
-
-    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     private String id;
-
-    /**
-     * &#64;deprecated – use income_sections instead
-     */
-    @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("income")
-    private List<AccountingProfitlossCategory> income;
 
 
     @JsonInclude(Include.NON_ABSENT)
@@ -113,11 +87,6 @@ public class AccountingProfitloss {
 
 
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("net_profit_amount")
-    private Double netProfitAmount;
-
-
-    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
     private Map<String, Object> raw;
 
@@ -134,44 +103,34 @@ public class AccountingProfitloss {
     @JsonCreator
     public AccountingProfitloss(
             @JsonProperty("category_ids") @Nullable List<String> categoryIds,
-            @JsonProperty("cost_of_goods_sold") @Nullable List<AccountingProfitlossCategory> costOfGoodsSold,
             @JsonProperty("cost_of_goods_sold_sections") @Nullable List<AccountingProfitlossSection> costOfGoodsSoldSections,
             @JsonProperty("cost_of_goods_sold_total_amount") @Nullable Double costOfGoodsSoldTotalAmount,
             @JsonProperty("created_at") @Nullable OffsetDateTime createdAt,
             @JsonProperty("currency") @Nullable String currency,
             @JsonProperty("end_at") @Nullable OffsetDateTime endAt,
-            @JsonProperty("expenses") @Nullable List<AccountingProfitlossCategory> expenses,
             @JsonProperty("expenses_sections") @Nullable List<AccountingProfitlossSection> expensesSections,
             @JsonProperty("expenses_total_amount") @Nullable Double expensesTotalAmount,
-            @JsonProperty("gross_profit_amount") @Nullable Double grossProfitAmount,
             @JsonProperty("id") @Nullable String id,
-            @JsonProperty("income") @Nullable List<AccountingProfitlossCategory> income,
             @JsonProperty("income_sections") @Nullable List<AccountingProfitlossSection> incomeSections,
             @JsonProperty("income_total_amount") @Nullable Double incomeTotalAmount,
             @JsonProperty("name") @Nullable String name,
             @JsonProperty("net_income_amount") @Nullable Double netIncomeAmount,
-            @JsonProperty("net_profit_amount") @Nullable Double netProfitAmount,
             @JsonProperty("raw") @Nullable Map<String, Object> raw,
             @JsonProperty("start_at") @Nullable OffsetDateTime startAt,
             @JsonProperty("updated_at") @Nullable OffsetDateTime updatedAt) {
         this.categoryIds = categoryIds;
-        this.costOfGoodsSold = costOfGoodsSold;
         this.costOfGoodsSoldSections = costOfGoodsSoldSections;
         this.costOfGoodsSoldTotalAmount = costOfGoodsSoldTotalAmount;
         this.createdAt = createdAt;
         this.currency = currency;
         this.endAt = endAt;
-        this.expenses = expenses;
         this.expensesSections = expensesSections;
         this.expensesTotalAmount = expensesTotalAmount;
-        this.grossProfitAmount = grossProfitAmount;
         this.id = id;
-        this.income = income;
         this.incomeSections = incomeSections;
         this.incomeTotalAmount = incomeTotalAmount;
         this.name = name;
         this.netIncomeAmount = netIncomeAmount;
-        this.netProfitAmount = netProfitAmount;
         this.raw = raw;
         this.startAt = startAt;
         this.updatedAt = updatedAt;
@@ -183,19 +142,11 @@ public class AccountingProfitloss {
             null, null, null,
             null, null, null,
             null, null, null,
-            null, null, null,
-            null, null, null);
+            null);
     }
 
     public Optional<List<String>> categoryIds() {
         return Optional.ofNullable(this.categoryIds);
-    }
-
-    /**
-     * &#64;deprecated – use cost_of_goods_sold_sections instead
-     */
-    public Optional<List<AccountingProfitlossCategory>> costOfGoodsSold() {
-        return Optional.ofNullable(this.costOfGoodsSold);
     }
 
     public Optional<List<AccountingProfitlossSection>> costOfGoodsSoldSections() {
@@ -218,13 +169,6 @@ public class AccountingProfitloss {
         return Optional.ofNullable(this.endAt);
     }
 
-    /**
-     * &#64;deprecated – use expenses_sections instead
-     */
-    public Optional<List<AccountingProfitlossCategory>> expenses() {
-        return Optional.ofNullable(this.expenses);
-    }
-
     public Optional<List<AccountingProfitlossSection>> expensesSections() {
         return Optional.ofNullable(this.expensesSections);
     }
@@ -233,19 +177,8 @@ public class AccountingProfitloss {
         return Optional.ofNullable(this.expensesTotalAmount);
     }
 
-    public Optional<Double> grossProfitAmount() {
-        return Optional.ofNullable(this.grossProfitAmount);
-    }
-
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
-    }
-
-    /**
-     * &#64;deprecated – use income_sections instead
-     */
-    public Optional<List<AccountingProfitlossCategory>> income() {
-        return Optional.ofNullable(this.income);
     }
 
     public Optional<List<AccountingProfitlossSection>> incomeSections() {
@@ -262,10 +195,6 @@ public class AccountingProfitloss {
 
     public Optional<Double> netIncomeAmount() {
         return Optional.ofNullable(this.netIncomeAmount);
-    }
-
-    public Optional<Double> netProfitAmount() {
-        return Optional.ofNullable(this.netProfitAmount);
     }
 
     public Optional<Map<String, Object>> raw() {
@@ -287,15 +216,6 @@ public class AccountingProfitloss {
 
     public AccountingProfitloss withCategoryIds(@Nullable List<String> categoryIds) {
         this.categoryIds = categoryIds;
-        return this;
-    }
-
-
-    /**
-     * &#64;deprecated – use cost_of_goods_sold_sections instead
-     */
-    public AccountingProfitloss withCostOfGoodsSold(@Nullable List<AccountingProfitlossCategory> costOfGoodsSold) {
-        this.costOfGoodsSold = costOfGoodsSold;
         return this;
     }
 
@@ -330,15 +250,6 @@ public class AccountingProfitloss {
     }
 
 
-    /**
-     * &#64;deprecated – use expenses_sections instead
-     */
-    public AccountingProfitloss withExpenses(@Nullable List<AccountingProfitlossCategory> expenses) {
-        this.expenses = expenses;
-        return this;
-    }
-
-
     public AccountingProfitloss withExpensesSections(@Nullable List<AccountingProfitlossSection> expensesSections) {
         this.expensesSections = expensesSections;
         return this;
@@ -351,23 +262,8 @@ public class AccountingProfitloss {
     }
 
 
-    public AccountingProfitloss withGrossProfitAmount(@Nullable Double grossProfitAmount) {
-        this.grossProfitAmount = grossProfitAmount;
-        return this;
-    }
-
-
     public AccountingProfitloss withId(@Nullable String id) {
         this.id = id;
-        return this;
-    }
-
-
-    /**
-     * &#64;deprecated – use income_sections instead
-     */
-    public AccountingProfitloss withIncome(@Nullable List<AccountingProfitlossCategory> income) {
-        this.income = income;
         return this;
     }
 
@@ -392,12 +288,6 @@ public class AccountingProfitloss {
 
     public AccountingProfitloss withNetIncomeAmount(@Nullable Double netIncomeAmount) {
         this.netIncomeAmount = netIncomeAmount;
-        return this;
-    }
-
-
-    public AccountingProfitloss withNetProfitAmount(@Nullable Double netProfitAmount) {
-        this.netProfitAmount = netProfitAmount;
         return this;
     }
 
@@ -431,23 +321,18 @@ public class AccountingProfitloss {
         AccountingProfitloss other = (AccountingProfitloss) o;
         return 
             Utils.enhancedDeepEquals(this.categoryIds, other.categoryIds) &&
-            Utils.enhancedDeepEquals(this.costOfGoodsSold, other.costOfGoodsSold) &&
             Utils.enhancedDeepEquals(this.costOfGoodsSoldSections, other.costOfGoodsSoldSections) &&
             Utils.enhancedDeepEquals(this.costOfGoodsSoldTotalAmount, other.costOfGoodsSoldTotalAmount) &&
             Utils.enhancedDeepEquals(this.createdAt, other.createdAt) &&
             Utils.enhancedDeepEquals(this.currency, other.currency) &&
             Utils.enhancedDeepEquals(this.endAt, other.endAt) &&
-            Utils.enhancedDeepEquals(this.expenses, other.expenses) &&
             Utils.enhancedDeepEquals(this.expensesSections, other.expensesSections) &&
             Utils.enhancedDeepEquals(this.expensesTotalAmount, other.expensesTotalAmount) &&
-            Utils.enhancedDeepEquals(this.grossProfitAmount, other.grossProfitAmount) &&
             Utils.enhancedDeepEquals(this.id, other.id) &&
-            Utils.enhancedDeepEquals(this.income, other.income) &&
             Utils.enhancedDeepEquals(this.incomeSections, other.incomeSections) &&
             Utils.enhancedDeepEquals(this.incomeTotalAmount, other.incomeTotalAmount) &&
             Utils.enhancedDeepEquals(this.name, other.name) &&
             Utils.enhancedDeepEquals(this.netIncomeAmount, other.netIncomeAmount) &&
-            Utils.enhancedDeepEquals(this.netProfitAmount, other.netProfitAmount) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
             Utils.enhancedDeepEquals(this.startAt, other.startAt) &&
             Utils.enhancedDeepEquals(this.updatedAt, other.updatedAt);
@@ -456,36 +341,30 @@ public class AccountingProfitloss {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            categoryIds, costOfGoodsSold, costOfGoodsSoldSections,
-            costOfGoodsSoldTotalAmount, createdAt, currency,
-            endAt, expenses, expensesSections,
-            expensesTotalAmount, grossProfitAmount, id,
-            income, incomeSections, incomeTotalAmount,
-            name, netIncomeAmount, netProfitAmount,
-            raw, startAt, updatedAt);
+            categoryIds, costOfGoodsSoldSections, costOfGoodsSoldTotalAmount,
+            createdAt, currency, endAt,
+            expensesSections, expensesTotalAmount, id,
+            incomeSections, incomeTotalAmount, name,
+            netIncomeAmount, raw, startAt,
+            updatedAt);
     }
     
     @Override
     public String toString() {
         return Utils.toString(AccountingProfitloss.class,
                 "categoryIds", categoryIds,
-                "costOfGoodsSold", costOfGoodsSold,
                 "costOfGoodsSoldSections", costOfGoodsSoldSections,
                 "costOfGoodsSoldTotalAmount", costOfGoodsSoldTotalAmount,
                 "createdAt", createdAt,
                 "currency", currency,
                 "endAt", endAt,
-                "expenses", expenses,
                 "expensesSections", expensesSections,
                 "expensesTotalAmount", expensesTotalAmount,
-                "grossProfitAmount", grossProfitAmount,
                 "id", id,
-                "income", income,
                 "incomeSections", incomeSections,
                 "incomeTotalAmount", incomeTotalAmount,
                 "name", name,
                 "netIncomeAmount", netIncomeAmount,
-                "netProfitAmount", netProfitAmount,
                 "raw", raw,
                 "startAt", startAt,
                 "updatedAt", updatedAt);
@@ -495,8 +374,6 @@ public class AccountingProfitloss {
     public final static class Builder {
 
         private List<String> categoryIds;
-
-        private List<AccountingProfitlossCategory> costOfGoodsSold;
 
         private List<AccountingProfitlossSection> costOfGoodsSoldSections;
 
@@ -508,17 +385,11 @@ public class AccountingProfitloss {
 
         private OffsetDateTime endAt;
 
-        private List<AccountingProfitlossCategory> expenses;
-
         private List<AccountingProfitlossSection> expensesSections;
 
         private Double expensesTotalAmount;
 
-        private Double grossProfitAmount;
-
         private String id;
-
-        private List<AccountingProfitlossCategory> income;
 
         private List<AccountingProfitlossSection> incomeSections;
 
@@ -527,8 +398,6 @@ public class AccountingProfitloss {
         private String name;
 
         private Double netIncomeAmount;
-
-        private Double netProfitAmount;
 
         private Map<String, Object> raw;
 
@@ -542,14 +411,6 @@ public class AccountingProfitloss {
 
         public Builder categoryIds(@Nullable List<String> categoryIds) {
             this.categoryIds = categoryIds;
-            return this;
-        }
-
-        /**
-         * &#64;deprecated – use cost_of_goods_sold_sections instead
-         */
-        public Builder costOfGoodsSold(@Nullable List<AccountingProfitlossCategory> costOfGoodsSold) {
-            this.costOfGoodsSold = costOfGoodsSold;
             return this;
         }
 
@@ -578,14 +439,6 @@ public class AccountingProfitloss {
             return this;
         }
 
-        /**
-         * &#64;deprecated – use expenses_sections instead
-         */
-        public Builder expenses(@Nullable List<AccountingProfitlossCategory> expenses) {
-            this.expenses = expenses;
-            return this;
-        }
-
         public Builder expensesSections(@Nullable List<AccountingProfitlossSection> expensesSections) {
             this.expensesSections = expensesSections;
             return this;
@@ -596,21 +449,8 @@ public class AccountingProfitloss {
             return this;
         }
 
-        public Builder grossProfitAmount(@Nullable Double grossProfitAmount) {
-            this.grossProfitAmount = grossProfitAmount;
-            return this;
-        }
-
         public Builder id(@Nullable String id) {
             this.id = id;
-            return this;
-        }
-
-        /**
-         * &#64;deprecated – use income_sections instead
-         */
-        public Builder income(@Nullable List<AccountingProfitlossCategory> income) {
-            this.income = income;
             return this;
         }
 
@@ -634,11 +474,6 @@ public class AccountingProfitloss {
             return this;
         }
 
-        public Builder netProfitAmount(@Nullable Double netProfitAmount) {
-            this.netProfitAmount = netProfitAmount;
-            return this;
-        }
-
         public Builder raw(@Nullable Map<String, Object> raw) {
             this.raw = raw;
             return this;
@@ -656,13 +491,12 @@ public class AccountingProfitloss {
 
         public AccountingProfitloss build() {
             return new AccountingProfitloss(
-                categoryIds, costOfGoodsSold, costOfGoodsSoldSections,
-                costOfGoodsSoldTotalAmount, createdAt, currency,
-                endAt, expenses, expensesSections,
-                expensesTotalAmount, grossProfitAmount, id,
-                income, incomeSections, incomeTotalAmount,
-                name, netIncomeAmount, netProfitAmount,
-                raw, startAt, updatedAt);
+                categoryIds, costOfGoodsSoldSections, costOfGoodsSoldTotalAmount,
+                createdAt, currency, endAt,
+                expensesSections, expensesTotalAmount, id,
+                incomeSections, incomeTotalAmount, name,
+                netIncomeAmount, raw, startAt,
+                updatedAt);
         }
 
     }

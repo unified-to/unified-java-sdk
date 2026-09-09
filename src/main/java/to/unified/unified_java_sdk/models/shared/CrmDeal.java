@@ -61,6 +61,11 @@ public class CrmDeal {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("description")
+    private String description;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     private String id;
 
@@ -81,16 +86,6 @@ public class CrmDeal {
 
 
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("pipeline")
-    private String pipeline;
-
-
-    @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("pipeline_id")
-    private String pipelineId;
-
-
-    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pipelines")
     private List<CrmReference> pipelines;
 
@@ -108,16 +103,6 @@ public class CrmDeal {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("source")
     private String source;
-
-
-    @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("stage")
-    private String stage;
-
-
-    @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("stage_id")
-    private String stageId;
 
 
     @JsonInclude(Include.NON_ABSENT)
@@ -153,18 +138,15 @@ public class CrmDeal {
             @JsonProperty("contact_ids") @Nullable List<String> contactIds,
             @JsonProperty("created_at") @Nullable OffsetDateTime createdAt,
             @JsonProperty("currency") @Nullable String currency,
+            @JsonProperty("description") @Nullable String description,
             @JsonProperty("id") @Nullable String id,
             @JsonProperty("lost_reason") @Nullable String lostReason,
             @JsonProperty("metadata") @Nullable List<CrmMetadata> metadata,
             @JsonProperty("name") @Nullable String name,
-            @JsonProperty("pipeline") @Nullable String pipeline,
-            @JsonProperty("pipeline_id") @Nullable String pipelineId,
             @JsonProperty("pipelines") @Nullable List<CrmReference> pipelines,
             @JsonProperty("probability") @Nullable Double probability,
             @JsonProperty("raw") @Nullable Map<String, Object> raw,
             @JsonProperty("source") @Nullable String source,
-            @JsonProperty("stage") @Nullable String stage,
-            @JsonProperty("stage_id") @Nullable String stageId,
             @JsonProperty("stages") @Nullable List<CrmReference> stages,
             @JsonProperty("tags") @Nullable List<String> tags,
             @JsonProperty("updated_at") @Nullable OffsetDateTime updatedAt,
@@ -177,18 +159,15 @@ public class CrmDeal {
         this.contactIds = contactIds;
         this.createdAt = createdAt;
         this.currency = currency;
+        this.description = description;
         this.id = id;
         this.lostReason = lostReason;
         this.metadata = metadata;
         this.name = name;
-        this.pipeline = pipeline;
-        this.pipelineId = pipelineId;
         this.pipelines = pipelines;
         this.probability = probability;
         this.raw = raw;
         this.source = source;
-        this.stage = stage;
-        this.stageId = stageId;
         this.stages = stages;
         this.tags = tags;
         this.updatedAt = updatedAt;
@@ -198,7 +177,6 @@ public class CrmDeal {
     
     public CrmDeal() {
         this(null, null, null,
-            null, null, null,
             null, null, null,
             null, null, null,
             null, null, null,
@@ -235,6 +213,10 @@ public class CrmDeal {
         return Optional.ofNullable(this.currency);
     }
 
+    public Optional<String> description() {
+        return Optional.ofNullable(this.description);
+    }
+
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
@@ -251,14 +233,6 @@ public class CrmDeal {
         return Optional.ofNullable(this.name);
     }
 
-    public Optional<String> pipeline() {
-        return Optional.ofNullable(this.pipeline);
-    }
-
-    public Optional<String> pipelineId() {
-        return Optional.ofNullable(this.pipelineId);
-    }
-
     public Optional<List<CrmReference>> pipelines() {
         return Optional.ofNullable(this.pipelines);
     }
@@ -273,14 +247,6 @@ public class CrmDeal {
 
     public Optional<String> source() {
         return Optional.ofNullable(this.source);
-    }
-
-    public Optional<String> stage() {
-        return Optional.ofNullable(this.stage);
-    }
-
-    public Optional<String> stageId() {
-        return Optional.ofNullable(this.stageId);
     }
 
     public Optional<List<CrmReference>> stages() {
@@ -350,6 +316,12 @@ public class CrmDeal {
     }
 
 
+    public CrmDeal withDescription(@Nullable String description) {
+        this.description = description;
+        return this;
+    }
+
+
     public CrmDeal withId(@Nullable String id) {
         this.id = id;
         return this;
@@ -374,18 +346,6 @@ public class CrmDeal {
     }
 
 
-    public CrmDeal withPipeline(@Nullable String pipeline) {
-        this.pipeline = pipeline;
-        return this;
-    }
-
-
-    public CrmDeal withPipelineId(@Nullable String pipelineId) {
-        this.pipelineId = pipelineId;
-        return this;
-    }
-
-
     public CrmDeal withPipelines(@Nullable List<CrmReference> pipelines) {
         this.pipelines = pipelines;
         return this;
@@ -406,18 +366,6 @@ public class CrmDeal {
 
     public CrmDeal withSource(@Nullable String source) {
         this.source = source;
-        return this;
-    }
-
-
-    public CrmDeal withStage(@Nullable String stage) {
-        this.stage = stage;
-        return this;
-    }
-
-
-    public CrmDeal withStageId(@Nullable String stageId) {
-        this.stageId = stageId;
         return this;
     }
 
@@ -469,18 +417,15 @@ public class CrmDeal {
             Utils.enhancedDeepEquals(this.contactIds, other.contactIds) &&
             Utils.enhancedDeepEquals(this.createdAt, other.createdAt) &&
             Utils.enhancedDeepEquals(this.currency, other.currency) &&
+            Utils.enhancedDeepEquals(this.description, other.description) &&
             Utils.enhancedDeepEquals(this.id, other.id) &&
             Utils.enhancedDeepEquals(this.lostReason, other.lostReason) &&
             Utils.enhancedDeepEquals(this.metadata, other.metadata) &&
             Utils.enhancedDeepEquals(this.name, other.name) &&
-            Utils.enhancedDeepEquals(this.pipeline, other.pipeline) &&
-            Utils.enhancedDeepEquals(this.pipelineId, other.pipelineId) &&
             Utils.enhancedDeepEquals(this.pipelines, other.pipelines) &&
             Utils.enhancedDeepEquals(this.probability, other.probability) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
             Utils.enhancedDeepEquals(this.source, other.source) &&
-            Utils.enhancedDeepEquals(this.stage, other.stage) &&
-            Utils.enhancedDeepEquals(this.stageId, other.stageId) &&
             Utils.enhancedDeepEquals(this.stages, other.stages) &&
             Utils.enhancedDeepEquals(this.tags, other.tags) &&
             Utils.enhancedDeepEquals(this.updatedAt, other.updatedAt) &&
@@ -493,11 +438,10 @@ public class CrmDeal {
         return Utils.enhancedHash(
             amount, closedAt, closingAt,
             companyIds, contactIds, createdAt,
-            currency, id, lostReason,
-            metadata, name, pipeline,
-            pipelineId, pipelines, probability,
-            raw, source, stage,
-            stageId, stages, tags,
+            currency, description, id,
+            lostReason, metadata, name,
+            pipelines, probability, raw,
+            source, stages, tags,
             updatedAt, userId, wonReason);
     }
     
@@ -511,18 +455,15 @@ public class CrmDeal {
                 "contactIds", contactIds,
                 "createdAt", createdAt,
                 "currency", currency,
+                "description", description,
                 "id", id,
                 "lostReason", lostReason,
                 "metadata", metadata,
                 "name", name,
-                "pipeline", pipeline,
-                "pipelineId", pipelineId,
                 "pipelines", pipelines,
                 "probability", probability,
                 "raw", raw,
                 "source", source,
-                "stage", stage,
-                "stageId", stageId,
                 "stages", stages,
                 "tags", tags,
                 "updatedAt", updatedAt,
@@ -547,6 +488,8 @@ public class CrmDeal {
 
         private String currency;
 
+        private String description;
+
         private String id;
 
         private String lostReason;
@@ -555,10 +498,6 @@ public class CrmDeal {
 
         private String name;
 
-        private String pipeline;
-
-        private String pipelineId;
-
         private List<CrmReference> pipelines;
 
         private Double probability;
@@ -566,10 +505,6 @@ public class CrmDeal {
         private Map<String, Object> raw;
 
         private String source;
-
-        private String stage;
-
-        private String stageId;
 
         private List<CrmReference> stages;
 
@@ -620,6 +555,11 @@ public class CrmDeal {
             return this;
         }
 
+        public Builder description(@Nullable String description) {
+            this.description = description;
+            return this;
+        }
+
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
@@ -640,16 +580,6 @@ public class CrmDeal {
             return this;
         }
 
-        public Builder pipeline(@Nullable String pipeline) {
-            this.pipeline = pipeline;
-            return this;
-        }
-
-        public Builder pipelineId(@Nullable String pipelineId) {
-            this.pipelineId = pipelineId;
-            return this;
-        }
-
         public Builder pipelines(@Nullable List<CrmReference> pipelines) {
             this.pipelines = pipelines;
             return this;
@@ -667,16 +597,6 @@ public class CrmDeal {
 
         public Builder source(@Nullable String source) {
             this.source = source;
-            return this;
-        }
-
-        public Builder stage(@Nullable String stage) {
-            this.stage = stage;
-            return this;
-        }
-
-        public Builder stageId(@Nullable String stageId) {
-            this.stageId = stageId;
             return this;
         }
 
@@ -709,11 +629,10 @@ public class CrmDeal {
             return new CrmDeal(
                 amount, closedAt, closingAt,
                 companyIds, contactIds, createdAt,
-                currency, id, lostReason,
-                metadata, name, pipeline,
-                pipelineId, pipelines, probability,
-                raw, source, stage,
-                stageId, stages, tags,
+                currency, description, id,
+                lostReason, metadata, name,
+                pipelines, probability, raw,
+                source, stages, tags,
                 updatedAt, userId, wonReason);
         }
 

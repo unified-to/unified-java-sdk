@@ -26,21 +26,6 @@ public class UcRecording {
 
 
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("contact_id")
-    private String contactId;
-
-
-    @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("contact_name")
-    private String contactName;
-
-
-    @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("contact_phone")
-    private String contactPhone;
-
-
-    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contacts")
     private List<UcContact> contacts;
 
@@ -112,9 +97,6 @@ public class UcRecording {
     @JsonCreator
     public UcRecording(
             @JsonProperty("call_id") @Nullable String callId,
-            @JsonProperty("contact_id") @Nullable String contactId,
-            @JsonProperty("contact_name") @Nullable String contactName,
-            @JsonProperty("contact_phone") @Nullable String contactPhone,
             @JsonProperty("contacts") @Nullable List<UcContact> contacts,
             @JsonProperty("created_at") @Nullable OffsetDateTime createdAt,
             @JsonProperty("end_at") @Nullable OffsetDateTime endAt,
@@ -130,9 +112,6 @@ public class UcRecording {
             @JsonProperty("user_phone") @Nullable String userPhone,
             @JsonProperty("web_url") @Nullable String webUrl) {
         this.callId = callId;
-        this.contactId = contactId;
-        this.contactName = contactName;
-        this.contactPhone = contactPhone;
         this.contacts = contacts;
         this.createdAt = createdAt;
         this.endAt = endAt;
@@ -154,24 +133,11 @@ public class UcRecording {
             null, null, null,
             null, null, null,
             null, null, null,
-            null, null, null,
             null, null, null);
     }
 
     public Optional<String> callId() {
         return Optional.ofNullable(this.callId);
-    }
-
-    public Optional<String> contactId() {
-        return Optional.ofNullable(this.contactId);
-    }
-
-    public Optional<String> contactName() {
-        return Optional.ofNullable(this.contactName);
-    }
-
-    public Optional<String> contactPhone() {
-        return Optional.ofNullable(this.contactPhone);
     }
 
     public Optional<List<UcContact>> contacts() {
@@ -237,24 +203,6 @@ public class UcRecording {
 
     public UcRecording withCallId(@Nullable String callId) {
         this.callId = callId;
-        return this;
-    }
-
-
-    public UcRecording withContactId(@Nullable String contactId) {
-        this.contactId = contactId;
-        return this;
-    }
-
-
-    public UcRecording withContactName(@Nullable String contactName) {
-        this.contactName = contactName;
-        return this;
-    }
-
-
-    public UcRecording withContactPhone(@Nullable String contactPhone) {
-        this.contactPhone = contactPhone;
         return this;
     }
 
@@ -354,9 +302,6 @@ public class UcRecording {
         UcRecording other = (UcRecording) o;
         return 
             Utils.enhancedDeepEquals(this.callId, other.callId) &&
-            Utils.enhancedDeepEquals(this.contactId, other.contactId) &&
-            Utils.enhancedDeepEquals(this.contactName, other.contactName) &&
-            Utils.enhancedDeepEquals(this.contactPhone, other.contactPhone) &&
             Utils.enhancedDeepEquals(this.contacts, other.contacts) &&
             Utils.enhancedDeepEquals(this.createdAt, other.createdAt) &&
             Utils.enhancedDeepEquals(this.endAt, other.endAt) &&
@@ -376,8 +321,7 @@ public class UcRecording {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            callId, contactId, contactName,
-            contactPhone, contacts, createdAt,
+            callId, contacts, createdAt,
             endAt, expiresAt, id,
             media, raw, startAt,
             type, updatedAt, userId,
@@ -388,9 +332,6 @@ public class UcRecording {
     public String toString() {
         return Utils.toString(UcRecording.class,
                 "callId", callId,
-                "contactId", contactId,
-                "contactName", contactName,
-                "contactPhone", contactPhone,
                 "contacts", contacts,
                 "createdAt", createdAt,
                 "endAt", endAt,
@@ -411,12 +352,6 @@ public class UcRecording {
     public final static class Builder {
 
         private String callId;
-
-        private String contactId;
-
-        private String contactName;
-
-        private String contactPhone;
 
         private List<UcContact> contacts;
 
@@ -452,21 +387,6 @@ public class UcRecording {
 
         public Builder callId(@Nullable String callId) {
             this.callId = callId;
-            return this;
-        }
-
-        public Builder contactId(@Nullable String contactId) {
-            this.contactId = contactId;
-            return this;
-        }
-
-        public Builder contactName(@Nullable String contactName) {
-            this.contactName = contactName;
-            return this;
-        }
-
-        public Builder contactPhone(@Nullable String contactPhone) {
-            this.contactPhone = contactPhone;
             return this;
         }
 
@@ -542,8 +462,7 @@ public class UcRecording {
 
         public UcRecording build() {
             return new UcRecording(
-                callId, contactId, contactName,
-                contactPhone, contacts, createdAt,
+                callId, contacts, createdAt,
                 endAt, expiresAt, id,
                 media, raw, startAt,
                 type, updatedAt, userId,

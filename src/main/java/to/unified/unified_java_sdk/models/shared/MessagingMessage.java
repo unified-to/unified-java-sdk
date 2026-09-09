@@ -37,18 +37,6 @@ public class MessagingMessage {
     @JsonProperty("buttons")
     private List<MessagingButton> buttons;
 
-
-    @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("channel_id")
-    private String channelId;
-
-    /**
-     * &#64;deprecated; use channels instead
-     */
-    @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("channel_ids")
-    private List<String> channelIds;
-
     /**
      * Represents the names of all channels to which the message is sent. Identifies the channels where the
      * message is posted.
@@ -140,11 +128,6 @@ public class MessagingMessage {
 
 
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("root_message_id")
-    private String rootMessageId;
-
-
-    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subject")
     private String subject;
 
@@ -163,8 +146,6 @@ public class MessagingMessage {
             @JsonProperty("attachments") @Nullable List<MessagingAttachment> attachments,
             @JsonProperty("author_member") @Nullable PropertyMessagingMessageAuthorMember authorMember,
             @JsonProperty("buttons") @Nullable List<MessagingButton> buttons,
-            @JsonProperty("channel_id") @Nullable String channelId,
-            @JsonProperty("channel_ids") @Nullable List<String> channelIds,
             @JsonProperty("channels") @Nullable List<MessagingReference> channels,
             @JsonProperty("created_at") @Nullable OffsetDateTime createdAt,
             @JsonProperty("destination_members") @Nullable List<MessagingMember> destinationMembers,
@@ -181,15 +162,12 @@ public class MessagingMessage {
             @JsonProperty("raw") @Nullable Map<String, Object> raw,
             @JsonProperty("reactions") @Nullable List<MessagingReaction> reactions,
             @JsonProperty("reference") @Nullable String reference,
-            @JsonProperty("root_message_id") @Nullable String rootMessageId,
             @JsonProperty("subject") @Nullable String subject,
             @JsonProperty("updated_at") @Nullable OffsetDateTime updatedAt,
             @JsonProperty("web_url") @Nullable String webUrl) {
         this.attachments = attachments;
         this.authorMember = authorMember;
         this.buttons = buttons;
-        this.channelId = channelId;
-        this.channelIds = channelIds;
         this.channels = channels;
         this.createdAt = createdAt;
         this.destinationMembers = destinationMembers;
@@ -206,7 +184,6 @@ public class MessagingMessage {
         this.raw = raw;
         this.reactions = reactions;
         this.reference = reference;
-        this.rootMessageId = rootMessageId;
         this.subject = subject;
         this.updatedAt = updatedAt;
         this.webUrl = webUrl;
@@ -214,7 +191,6 @@ public class MessagingMessage {
     
     public MessagingMessage() {
         this(null, null, null,
-            null, null, null,
             null, null, null,
             null, null, null,
             null, null, null,
@@ -237,17 +213,6 @@ public class MessagingMessage {
 
     public Optional<List<MessagingButton>> buttons() {
         return Optional.ofNullable(this.buttons);
-    }
-
-    public Optional<String> channelId() {
-        return Optional.ofNullable(this.channelId);
-    }
-
-    /**
-     * &#64;deprecated; use channels instead
-     */
-    public Optional<List<String>> channelIds() {
-        return Optional.ofNullable(this.channelIds);
     }
 
     /**
@@ -327,10 +292,6 @@ public class MessagingMessage {
         return Optional.ofNullable(this.reference);
     }
 
-    public Optional<String> rootMessageId() {
-        return Optional.ofNullable(this.rootMessageId);
-    }
-
     public Optional<String> subject() {
         return Optional.ofNullable(this.subject);
     }
@@ -365,21 +326,6 @@ public class MessagingMessage {
 
     public MessagingMessage withButtons(@Nullable List<MessagingButton> buttons) {
         this.buttons = buttons;
-        return this;
-    }
-
-
-    public MessagingMessage withChannelId(@Nullable String channelId) {
-        this.channelId = channelId;
-        return this;
-    }
-
-
-    /**
-     * &#64;deprecated; use channels instead
-     */
-    public MessagingMessage withChannelIds(@Nullable List<String> channelIds) {
-        this.channelIds = channelIds;
         return this;
     }
 
@@ -493,12 +439,6 @@ public class MessagingMessage {
     }
 
 
-    public MessagingMessage withRootMessageId(@Nullable String rootMessageId) {
-        this.rootMessageId = rootMessageId;
-        return this;
-    }
-
-
     public MessagingMessage withSubject(@Nullable String subject) {
         this.subject = subject;
         return this;
@@ -530,8 +470,6 @@ public class MessagingMessage {
             Utils.enhancedDeepEquals(this.attachments, other.attachments) &&
             Utils.enhancedDeepEquals(this.authorMember, other.authorMember) &&
             Utils.enhancedDeepEquals(this.buttons, other.buttons) &&
-            Utils.enhancedDeepEquals(this.channelId, other.channelId) &&
-            Utils.enhancedDeepEquals(this.channelIds, other.channelIds) &&
             Utils.enhancedDeepEquals(this.channels, other.channels) &&
             Utils.enhancedDeepEquals(this.createdAt, other.createdAt) &&
             Utils.enhancedDeepEquals(this.destinationMembers, other.destinationMembers) &&
@@ -548,7 +486,6 @@ public class MessagingMessage {
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
             Utils.enhancedDeepEquals(this.reactions, other.reactions) &&
             Utils.enhancedDeepEquals(this.reference, other.reference) &&
-            Utils.enhancedDeepEquals(this.rootMessageId, other.rootMessageId) &&
             Utils.enhancedDeepEquals(this.subject, other.subject) &&
             Utils.enhancedDeepEquals(this.updatedAt, other.updatedAt) &&
             Utils.enhancedDeepEquals(this.webUrl, other.webUrl);
@@ -558,13 +495,12 @@ public class MessagingMessage {
     public int hashCode() {
         return Utils.enhancedHash(
             attachments, authorMember, buttons,
-            channelId, channelIds, channels,
-            createdAt, destinationMembers, hasChildren,
-            hiddenMembers, id, isUnread,
-            mentionedMembers, message, messageHtml,
-            messageMarkdown, messageThreadIdentifier, parentId,
-            raw, reactions, reference,
-            rootMessageId, subject, updatedAt,
+            channels, createdAt, destinationMembers,
+            hasChildren, hiddenMembers, id,
+            isUnread, mentionedMembers, message,
+            messageHtml, messageMarkdown, messageThreadIdentifier,
+            parentId, raw, reactions,
+            reference, subject, updatedAt,
             webUrl);
     }
     
@@ -574,8 +510,6 @@ public class MessagingMessage {
                 "attachments", attachments,
                 "authorMember", authorMember,
                 "buttons", buttons,
-                "channelId", channelId,
-                "channelIds", channelIds,
                 "channels", channels,
                 "createdAt", createdAt,
                 "destinationMembers", destinationMembers,
@@ -592,7 +526,6 @@ public class MessagingMessage {
                 "raw", raw,
                 "reactions", reactions,
                 "reference", reference,
-                "rootMessageId", rootMessageId,
                 "subject", subject,
                 "updatedAt", updatedAt,
                 "webUrl", webUrl);
@@ -606,10 +539,6 @@ public class MessagingMessage {
         private PropertyMessagingMessageAuthorMember authorMember;
 
         private List<MessagingButton> buttons;
-
-        private String channelId;
-
-        private List<String> channelIds;
 
         private List<MessagingReference> channels;
 
@@ -643,8 +572,6 @@ public class MessagingMessage {
 
         private String reference;
 
-        private String rootMessageId;
-
         private String subject;
 
         private OffsetDateTime updatedAt;
@@ -670,19 +597,6 @@ public class MessagingMessage {
 
         public Builder buttons(@Nullable List<MessagingButton> buttons) {
             this.buttons = buttons;
-            return this;
-        }
-
-        public Builder channelId(@Nullable String channelId) {
-            this.channelId = channelId;
-            return this;
-        }
-
-        /**
-         * &#64;deprecated; use channels instead
-         */
-        public Builder channelIds(@Nullable List<String> channelIds) {
-            this.channelIds = channelIds;
             return this;
         }
 
@@ -779,11 +693,6 @@ public class MessagingMessage {
             return this;
         }
 
-        public Builder rootMessageId(@Nullable String rootMessageId) {
-            this.rootMessageId = rootMessageId;
-            return this;
-        }
-
         public Builder subject(@Nullable String subject) {
             this.subject = subject;
             return this;
@@ -802,13 +711,12 @@ public class MessagingMessage {
         public MessagingMessage build() {
             return new MessagingMessage(
                 attachments, authorMember, buttons,
-                channelId, channelIds, channels,
-                createdAt, destinationMembers, hasChildren,
-                hiddenMembers, id, isUnread,
-                mentionedMembers, message, messageHtml,
-                messageMarkdown, messageThreadIdentifier, parentId,
-                raw, reactions, reference,
-                rootMessageId, subject, updatedAt,
+                channels, createdAt, destinationMembers,
+                hasChildren, hiddenMembers, id,
+                isUnread, mentionedMembers, message,
+                messageHtml, messageMarkdown, messageThreadIdentifier,
+                parentId, raw, reactions,
+                reference, subject, updatedAt,
                 webUrl);
         }
 

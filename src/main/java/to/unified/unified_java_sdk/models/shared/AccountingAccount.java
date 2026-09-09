@@ -52,11 +52,6 @@ public class AccountingAccount {
 
 
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("group")
-    private String group;
-
-
-    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     private String id;
 
@@ -87,23 +82,8 @@ public class AccountingAccount {
 
 
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("section")
-    private String section;
-
-
-    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     private Status status;
-
-
-    @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("subgroup")
-    private String subgroup;
-
-
-    @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("subsection")
-    private String subsection;
 
 
     @JsonInclude(Include.NON_ABSENT)
@@ -127,17 +107,13 @@ public class AccountingAccount {
             @JsonProperty("currency") @Nullable String currency,
             @JsonProperty("customer_defined_code") @Nullable String customerDefinedCode,
             @JsonProperty("description") @Nullable String description,
-            @JsonProperty("group") @Nullable String group,
             @JsonProperty("id") @Nullable String id,
             @JsonProperty("is_payable") @Nullable Boolean isPayable,
             @JsonProperty("name") @Nullable String name,
             @JsonProperty("organization_id") @Nullable String organizationId,
             @JsonProperty("parent_id") @Nullable String parentId,
             @JsonProperty("raw") @Nullable Map<String, Object> raw,
-            @JsonProperty("section") @Nullable String section,
             @JsonProperty("status") @Nullable Status status,
-            @JsonProperty("subgroup") @Nullable String subgroup,
-            @JsonProperty("subsection") @Nullable String subsection,
             @JsonProperty("taxonomy") @Nullable List<AccountingAccountTaxonomy> taxonomy,
             @JsonProperty("type") @Nullable Type type,
             @JsonProperty("updated_at") @Nullable OffsetDateTime updatedAt) {
@@ -146,17 +122,13 @@ public class AccountingAccount {
         this.currency = currency;
         this.customerDefinedCode = customerDefinedCode;
         this.description = description;
-        this.group = group;
         this.id = id;
         this.isPayable = isPayable;
         this.name = name;
         this.organizationId = organizationId;
         this.parentId = parentId;
         this.raw = raw;
-        this.section = section;
         this.status = status;
-        this.subgroup = subgroup;
-        this.subsection = subsection;
         this.taxonomy = taxonomy;
         this.type = type;
         this.updatedAt = updatedAt;
@@ -167,9 +139,7 @@ public class AccountingAccount {
             null, null, null,
             null, null, null,
             null, null, null,
-            null, null, null,
-            null, null, null,
-            null);
+            null, null, null);
     }
 
     public Optional<Double> balance() {
@@ -190,10 +160,6 @@ public class AccountingAccount {
 
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
-    }
-
-    public Optional<String> group() {
-        return Optional.ofNullable(this.group);
     }
 
     public Optional<String> id() {
@@ -220,20 +186,8 @@ public class AccountingAccount {
         return Optional.ofNullable(this.raw);
     }
 
-    public Optional<String> section() {
-        return Optional.ofNullable(this.section);
-    }
-
     public Optional<Status> status() {
         return Optional.ofNullable(this.status);
-    }
-
-    public Optional<String> subgroup() {
-        return Optional.ofNullable(this.subgroup);
-    }
-
-    public Optional<String> subsection() {
-        return Optional.ofNullable(this.subsection);
     }
 
     public Optional<List<AccountingAccountTaxonomy>> taxonomy() {
@@ -283,12 +237,6 @@ public class AccountingAccount {
     }
 
 
-    public AccountingAccount withGroup(@Nullable String group) {
-        this.group = group;
-        return this;
-    }
-
-
     public AccountingAccount withId(@Nullable String id) {
         this.id = id;
         return this;
@@ -325,26 +273,8 @@ public class AccountingAccount {
     }
 
 
-    public AccountingAccount withSection(@Nullable String section) {
-        this.section = section;
-        return this;
-    }
-
-
     public AccountingAccount withStatus(@Nullable Status status) {
         this.status = status;
-        return this;
-    }
-
-
-    public AccountingAccount withSubgroup(@Nullable String subgroup) {
-        this.subgroup = subgroup;
-        return this;
-    }
-
-
-    public AccountingAccount withSubsection(@Nullable String subsection) {
-        this.subsection = subsection;
         return this;
     }
 
@@ -382,17 +312,13 @@ public class AccountingAccount {
             Utils.enhancedDeepEquals(this.currency, other.currency) &&
             Utils.enhancedDeepEquals(this.customerDefinedCode, other.customerDefinedCode) &&
             Utils.enhancedDeepEquals(this.description, other.description) &&
-            Utils.enhancedDeepEquals(this.group, other.group) &&
             Utils.enhancedDeepEquals(this.id, other.id) &&
             Utils.enhancedDeepEquals(this.isPayable, other.isPayable) &&
             Utils.enhancedDeepEquals(this.name, other.name) &&
             Utils.enhancedDeepEquals(this.organizationId, other.organizationId) &&
             Utils.enhancedDeepEquals(this.parentId, other.parentId) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
-            Utils.enhancedDeepEquals(this.section, other.section) &&
             Utils.enhancedDeepEquals(this.status, other.status) &&
-            Utils.enhancedDeepEquals(this.subgroup, other.subgroup) &&
-            Utils.enhancedDeepEquals(this.subsection, other.subsection) &&
             Utils.enhancedDeepEquals(this.taxonomy, other.taxonomy) &&
             Utils.enhancedDeepEquals(this.type, other.type) &&
             Utils.enhancedDeepEquals(this.updatedAt, other.updatedAt);
@@ -402,12 +328,10 @@ public class AccountingAccount {
     public int hashCode() {
         return Utils.enhancedHash(
             balance, createdAt, currency,
-            customerDefinedCode, description, group,
-            id, isPayable, name,
-            organizationId, parentId, raw,
-            section, status, subgroup,
-            subsection, taxonomy, type,
-            updatedAt);
+            customerDefinedCode, description, id,
+            isPayable, name, organizationId,
+            parentId, raw, status,
+            taxonomy, type, updatedAt);
     }
     
     @Override
@@ -418,17 +342,13 @@ public class AccountingAccount {
                 "currency", currency,
                 "customerDefinedCode", customerDefinedCode,
                 "description", description,
-                "group", group,
                 "id", id,
                 "isPayable", isPayable,
                 "name", name,
                 "organizationId", organizationId,
                 "parentId", parentId,
                 "raw", raw,
-                "section", section,
                 "status", status,
-                "subgroup", subgroup,
-                "subsection", subsection,
                 "taxonomy", taxonomy,
                 "type", type,
                 "updatedAt", updatedAt);
@@ -447,8 +367,6 @@ public class AccountingAccount {
 
         private String description;
 
-        private String group;
-
         private String id;
 
         private Boolean isPayable;
@@ -461,13 +379,7 @@ public class AccountingAccount {
 
         private Map<String, Object> raw;
 
-        private String section;
-
         private Status status;
-
-        private String subgroup;
-
-        private String subsection;
 
         private List<AccountingAccountTaxonomy> taxonomy;
 
@@ -504,11 +416,6 @@ public class AccountingAccount {
             return this;
         }
 
-        public Builder group(@Nullable String group) {
-            this.group = group;
-            return this;
-        }
-
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
@@ -539,23 +446,8 @@ public class AccountingAccount {
             return this;
         }
 
-        public Builder section(@Nullable String section) {
-            this.section = section;
-            return this;
-        }
-
         public Builder status(@Nullable Status status) {
             this.status = status;
-            return this;
-        }
-
-        public Builder subgroup(@Nullable String subgroup) {
-            this.subgroup = subgroup;
-            return this;
-        }
-
-        public Builder subsection(@Nullable String subsection) {
-            this.subsection = subsection;
             return this;
         }
 
@@ -577,12 +469,10 @@ public class AccountingAccount {
         public AccountingAccount build() {
             return new AccountingAccount(
                 balance, createdAt, currency,
-                customerDefinedCode, description, group,
-                id, isPayable, name,
-                organizationId, parentId, raw,
-                section, status, subgroup,
-                subsection, taxonomy, type,
-                updatedAt);
+                customerDefinedCode, description, id,
+                isPayable, name, organizationId,
+                parentId, raw, status,
+                taxonomy, type, updatedAt);
         }
 
     }

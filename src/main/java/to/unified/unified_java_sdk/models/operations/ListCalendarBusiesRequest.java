@@ -17,7 +17,8 @@ import to.unified.unified_java_sdk.utils.Utils;
 
 public class ListCalendarBusiesRequest {
     /**
-     * The calendar ID to filter by (reference to CalendarCalendar)
+     * The calendar ID to get availability for. Typically user's email or user ID. (reference to
+     * CalendarCalendar)
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=calendar_id")
     private String calendarId;
@@ -130,7 +131,8 @@ public class ListCalendarBusiesRequest {
     }
 
     /**
-     * The calendar ID to filter by (reference to CalendarCalendar)
+     * The calendar ID to get availability for. Typically user's email or user ID. (reference to
+     * CalendarCalendar)
      */
     public Optional<String> calendarId() {
         return Optional.ofNullable(this.calendarId);
@@ -217,7 +219,8 @@ public class ListCalendarBusiesRequest {
 
 
     /**
-     * The calendar ID to filter by (reference to CalendarCalendar)
+     * The calendar ID to get availability for. Typically user's email or user ID. (reference to
+     * CalendarCalendar)
      */
     public ListCalendarBusiesRequest withCalendarId(@Nullable String calendarId) {
         this.calendarId = calendarId;
@@ -411,7 +414,8 @@ public class ListCalendarBusiesRequest {
         }
 
         /**
-         * The calendar ID to filter by (reference to CalendarCalendar)
+         * The calendar ID to get availability for. Typically user's email or user ID. (reference to
+         * CalendarCalendar)
          */
         public Builder calendarId(@Nullable String calendarId) {
             this.calendarId = calendarId;

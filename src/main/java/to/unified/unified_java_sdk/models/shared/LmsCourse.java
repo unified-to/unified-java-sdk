@@ -56,13 +56,6 @@ public class LmsCourse {
     @JsonProperty("id")
     private String id;
 
-    /**
-     * &#64;deprecated; use instructors
-     */
-    @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("instructor_ids")
-    private List<String> instructorIds;
-
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instructors")
@@ -118,13 +111,6 @@ public class LmsCourse {
     @JsonProperty("skills")
     private List<String> skills;
 
-    /**
-     * &#64;deprecated; use students
-     */
-    @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("student_ids")
-    private List<String> studentIds;
-
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("students")
@@ -149,7 +135,6 @@ public class LmsCourse {
             @JsonProperty("description") @Nullable String description,
             @JsonProperty("duration_minutes") @Nullable Double durationMinutes,
             @JsonProperty("id") @Nullable String id,
-            @JsonProperty("instructor_ids") @Nullable List<String> instructorIds,
             @JsonProperty("instructors") @Nullable List<LmsReference> instructors,
             @JsonProperty("is_active") @Nullable Boolean isActive,
             @JsonProperty("is_private") @Nullable Boolean isPrivate,
@@ -161,7 +146,6 @@ public class LmsCourse {
             @JsonProperty("published_at") @Nullable OffsetDateTime publishedAt,
             @JsonProperty("raw") @Nullable Map<String, Object> raw,
             @JsonProperty("skills") @Nullable List<String> skills,
-            @JsonProperty("student_ids") @Nullable List<String> studentIds,
             @JsonProperty("students") @Nullable List<LmsReference> students,
             @JsonProperty("time_estimate_minutes") @Nullable Double timeEstimateMinutes,
             @JsonProperty("updated_at") @Nullable OffsetDateTime updatedAt) {
@@ -172,7 +156,6 @@ public class LmsCourse {
         this.description = description;
         this.durationMinutes = durationMinutes;
         this.id = id;
-        this.instructorIds = instructorIds;
         this.instructors = instructors;
         this.isActive = isActive;
         this.isPrivate = isPrivate;
@@ -184,7 +167,6 @@ public class LmsCourse {
         this.publishedAt = publishedAt;
         this.raw = raw;
         this.skills = skills;
-        this.studentIds = studentIds;
         this.students = students;
         this.timeEstimateMinutes = timeEstimateMinutes;
         this.updatedAt = updatedAt;
@@ -197,8 +179,7 @@ public class LmsCourse {
             null, null, null,
             null, null, null,
             null, null, null,
-            null, null, null,
-            null, null);
+            null, null, null);
     }
 
     public Optional<List<String>> categories() {
@@ -227,13 +208,6 @@ public class LmsCourse {
 
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
-    }
-
-    /**
-     * &#64;deprecated; use instructors
-     */
-    public Optional<List<String>> instructorIds() {
-        return Optional.ofNullable(this.instructorIds);
     }
 
     public Optional<List<LmsReference>> instructors() {
@@ -278,13 +252,6 @@ public class LmsCourse {
 
     public Optional<List<String>> skills() {
         return Optional.ofNullable(this.skills);
-    }
-
-    /**
-     * &#64;deprecated; use students
-     */
-    public Optional<List<String>> studentIds() {
-        return Optional.ofNullable(this.studentIds);
     }
 
     public Optional<List<LmsReference>> students() {
@@ -342,15 +309,6 @@ public class LmsCourse {
 
     public LmsCourse withId(@Nullable String id) {
         this.id = id;
-        return this;
-    }
-
-
-    /**
-     * &#64;deprecated; use instructors
-     */
-    public LmsCourse withInstructorIds(@Nullable List<String> instructorIds) {
-        this.instructorIds = instructorIds;
         return this;
     }
 
@@ -421,15 +379,6 @@ public class LmsCourse {
     }
 
 
-    /**
-     * &#64;deprecated; use students
-     */
-    public LmsCourse withStudentIds(@Nullable List<String> studentIds) {
-        this.studentIds = studentIds;
-        return this;
-    }
-
-
     public LmsCourse withStudents(@Nullable List<LmsReference> students) {
         this.students = students;
         return this;
@@ -465,7 +414,6 @@ public class LmsCourse {
             Utils.enhancedDeepEquals(this.description, other.description) &&
             Utils.enhancedDeepEquals(this.durationMinutes, other.durationMinutes) &&
             Utils.enhancedDeepEquals(this.id, other.id) &&
-            Utils.enhancedDeepEquals(this.instructorIds, other.instructorIds) &&
             Utils.enhancedDeepEquals(this.instructors, other.instructors) &&
             Utils.enhancedDeepEquals(this.isActive, other.isActive) &&
             Utils.enhancedDeepEquals(this.isPrivate, other.isPrivate) &&
@@ -477,7 +425,6 @@ public class LmsCourse {
             Utils.enhancedDeepEquals(this.publishedAt, other.publishedAt) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
             Utils.enhancedDeepEquals(this.skills, other.skills) &&
-            Utils.enhancedDeepEquals(this.studentIds, other.studentIds) &&
             Utils.enhancedDeepEquals(this.students, other.students) &&
             Utils.enhancedDeepEquals(this.timeEstimateMinutes, other.timeEstimateMinutes) &&
             Utils.enhancedDeepEquals(this.updatedAt, other.updatedAt);
@@ -488,12 +435,11 @@ public class LmsCourse {
         return Utils.enhancedHash(
             categories, contentIds, createdAt,
             currency, description, durationMinutes,
-            id, instructorIds, instructors,
-            isActive, isPrivate, languages,
-            media, name, priceAmount,
-            providerName, publishedAt, raw,
-            skills, studentIds, students,
-            timeEstimateMinutes, updatedAt);
+            id, instructors, isActive,
+            isPrivate, languages, media,
+            name, priceAmount, providerName,
+            publishedAt, raw, skills,
+            students, timeEstimateMinutes, updatedAt);
     }
     
     @Override
@@ -506,7 +452,6 @@ public class LmsCourse {
                 "description", description,
                 "durationMinutes", durationMinutes,
                 "id", id,
-                "instructorIds", instructorIds,
                 "instructors", instructors,
                 "isActive", isActive,
                 "isPrivate", isPrivate,
@@ -518,7 +463,6 @@ public class LmsCourse {
                 "publishedAt", publishedAt,
                 "raw", raw,
                 "skills", skills,
-                "studentIds", studentIds,
                 "students", students,
                 "timeEstimateMinutes", timeEstimateMinutes,
                 "updatedAt", updatedAt);
@@ -541,8 +485,6 @@ public class LmsCourse {
 
         private String id;
 
-        private List<String> instructorIds;
-
         private List<LmsReference> instructors;
 
         private Boolean isActive;
@@ -564,8 +506,6 @@ public class LmsCourse {
         private Map<String, Object> raw;
 
         private List<String> skills;
-
-        private List<String> studentIds;
 
         private List<LmsReference> students;
 
@@ -609,14 +549,6 @@ public class LmsCourse {
 
         public Builder id(@Nullable String id) {
             this.id = id;
-            return this;
-        }
-
-        /**
-         * &#64;deprecated; use instructors
-         */
-        public Builder instructorIds(@Nullable List<String> instructorIds) {
-            this.instructorIds = instructorIds;
             return this;
         }
 
@@ -675,14 +607,6 @@ public class LmsCourse {
             return this;
         }
 
-        /**
-         * &#64;deprecated; use students
-         */
-        public Builder studentIds(@Nullable List<String> studentIds) {
-            this.studentIds = studentIds;
-            return this;
-        }
-
         public Builder students(@Nullable List<LmsReference> students) {
             this.students = students;
             return this;
@@ -702,12 +626,11 @@ public class LmsCourse {
             return new LmsCourse(
                 categories, contentIds, createdAt,
                 currency, description, durationMinutes,
-                id, instructorIds, instructors,
-                isActive, isPrivate, languages,
-                media, name, priceAmount,
-                providerName, publishedAt, raw,
-                skills, studentIds, students,
-                timeEstimateMinutes, updatedAt);
+                id, instructors, isActive,
+                isPrivate, languages, media,
+                name, priceAmount, providerName,
+                publishedAt, raw, skills,
+                students, timeEstimateMinutes, updatedAt);
         }
 
     }
