@@ -34,7 +34,6 @@ public class WebhookObjectType {
     public static final WebhookObjectType ACCOUNTING_ORDER = new WebhookObjectType("accounting_order");
     public static final WebhookObjectType ACCOUNTING_SALESORDER = new WebhookObjectType("accounting_salesorder");
     public static final WebhookObjectType ACCOUNTING_PURCHASEORDER = new WebhookObjectType("accounting_purchaseorder");
-    public static final WebhookObjectType ACCOUNTING_REPORT = new WebhookObjectType("accounting_report");
     public static final WebhookObjectType ACCOUNTING_BALANCESHEET = new WebhookObjectType("accounting_balancesheet");
     public static final WebhookObjectType ACCOUNTING_PROFITLOSS = new WebhookObjectType("accounting_profitloss");
     public static final WebhookObjectType ACCOUNTING_TRIALBALANCE = new WebhookObjectType("accounting_trialbalance");
@@ -280,7 +279,6 @@ public class WebhookObjectType {
         map.put("accounting_order", ACCOUNTING_ORDER);
         map.put("accounting_salesorder", ACCOUNTING_SALESORDER);
         map.put("accounting_purchaseorder", ACCOUNTING_PURCHASEORDER);
-        map.put("accounting_report", ACCOUNTING_REPORT);
         map.put("accounting_balancesheet", ACCOUNTING_BALANCESHEET);
         map.put("accounting_profitloss", ACCOUNTING_PROFITLOSS);
         map.put("accounting_trialbalance", ACCOUNTING_TRIALBALANCE);
@@ -458,7 +456,6 @@ public class WebhookObjectType {
         map.put("accounting_order", WebhookObjectTypeEnum.ACCOUNTING_ORDER);
         map.put("accounting_salesorder", WebhookObjectTypeEnum.ACCOUNTING_SALESORDER);
         map.put("accounting_purchaseorder", WebhookObjectTypeEnum.ACCOUNTING_PURCHASEORDER);
-        map.put("accounting_report", WebhookObjectTypeEnum.ACCOUNTING_REPORT);
         map.put("accounting_balancesheet", WebhookObjectTypeEnum.ACCOUNTING_BALANCESHEET);
         map.put("accounting_profitloss", WebhookObjectTypeEnum.ACCOUNTING_PROFITLOSS);
         map.put("accounting_trialbalance", WebhookObjectTypeEnum.ACCOUNTING_TRIALBALANCE);
@@ -637,7 +634,6 @@ public class WebhookObjectType {
         ACCOUNTING_ORDER("accounting_order"),
         ACCOUNTING_SALESORDER("accounting_salesorder"),
         ACCOUNTING_PURCHASEORDER("accounting_purchaseorder"),
-        ACCOUNTING_REPORT("accounting_report"),
         ACCOUNTING_BALANCESHEET("accounting_balancesheet"),
         ACCOUNTING_PROFITLOSS("accounting_profitloss"),
         ACCOUNTING_TRIALBALANCE("accounting_trialbalance"),

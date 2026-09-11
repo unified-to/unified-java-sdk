@@ -34,7 +34,6 @@ ListCommerceItemsQueryParamFields value = ListCommerceItemsQueryParamFields.ID;
 | `PRICES`             | prices               |
 | `INVENTORY_ID`       | inventory_id         |
 | `TOTAL_STOCK`        | total_stock          |
-| `VARIANTS`           | variants             |
 | `TAGS`               | tags                 |
 | `MEDIA`              | media                |
 | `ACCOUNT_ID`         | account_id           |

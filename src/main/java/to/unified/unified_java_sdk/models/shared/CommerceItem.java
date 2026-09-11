@@ -158,13 +158,6 @@ public class CommerceItem {
     @JsonProperty("updated_at")
     private OffsetDateTime updatedAt;
 
-    /**
-     * first variant is the default variant
-     */
-    @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("variants")
-    private List<CommerceItemvariant> variants;
-
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vendor_name")
@@ -209,7 +202,6 @@ public class CommerceItem {
             @JsonProperty("total_stock") @Nullable Double totalStock,
             @JsonProperty("type") @Nullable String type,
             @JsonProperty("updated_at") @Nullable OffsetDateTime updatedAt,
-            @JsonProperty("variants") @Nullable List<CommerceItemvariant> variants,
             @JsonProperty("vendor_name") @Nullable String vendorName,
             @JsonProperty("weight") @Nullable Double weight,
             @JsonProperty("weight_unit") @Nullable WeightUnit weightUnit) {
@@ -240,7 +232,6 @@ public class CommerceItem {
         this.totalStock = totalStock;
         this.type = type;
         this.updatedAt = updatedAt;
-        this.variants = variants;
         this.vendorName = vendorName;
         this.weight = weight;
         this.weightUnit = weightUnit;
@@ -256,8 +247,7 @@ public class CommerceItem {
             null, null, null,
             null, null, null,
             null, null, null,
-            null, null, null,
-            null);
+            null, null, null);
     }
 
     public Optional<String> accountId() {
@@ -369,13 +359,6 @@ public class CommerceItem {
 
     public Optional<OffsetDateTime> updatedAt() {
         return Optional.ofNullable(this.updatedAt);
-    }
-
-    /**
-     * first variant is the default variant
-     */
-    public Optional<List<CommerceItemvariant>> variants() {
-        return Optional.ofNullable(this.variants);
     }
 
     public Optional<String> vendorName() {
@@ -560,15 +543,6 @@ public class CommerceItem {
     }
 
 
-    /**
-     * first variant is the default variant
-     */
-    public CommerceItem withVariants(@Nullable List<CommerceItemvariant> variants) {
-        this.variants = variants;
-        return this;
-    }
-
-
     public CommerceItem withVendorName(@Nullable String vendorName) {
         this.vendorName = vendorName;
         return this;
@@ -624,7 +598,6 @@ public class CommerceItem {
             Utils.enhancedDeepEquals(this.totalStock, other.totalStock) &&
             Utils.enhancedDeepEquals(this.type, other.type) &&
             Utils.enhancedDeepEquals(this.updatedAt, other.updatedAt) &&
-            Utils.enhancedDeepEquals(this.variants, other.variants) &&
             Utils.enhancedDeepEquals(this.vendorName, other.vendorName) &&
             Utils.enhancedDeepEquals(this.weight, other.weight) &&
             Utils.enhancedDeepEquals(this.weightUnit, other.weightUnit);
@@ -642,8 +615,7 @@ public class CommerceItem {
             publicName, raw, requiresShipping,
             slug, tags, taxrateId,
             totalStock, type, updatedAt,
-            variants, vendorName, weight,
-            weightUnit);
+            vendorName, weight, weightUnit);
     }
     
     @Override
@@ -676,7 +648,6 @@ public class CommerceItem {
                 "totalStock", totalStock,
                 "type", type,
                 "updatedAt", updatedAt,
-                "variants", variants,
                 "vendorName", vendorName,
                 "weight", weight,
                 "weightUnit", weightUnit);
@@ -738,8 +709,6 @@ public class CommerceItem {
         private String type;
 
         private OffsetDateTime updatedAt;
-
-        private List<CommerceItemvariant> variants;
 
         private String vendorName;
 
@@ -889,14 +858,6 @@ public class CommerceItem {
             return this;
         }
 
-        /**
-         * first variant is the default variant
-         */
-        public Builder variants(@Nullable List<CommerceItemvariant> variants) {
-            this.variants = variants;
-            return this;
-        }
-
         public Builder vendorName(@Nullable String vendorName) {
             this.vendorName = vendorName;
             return this;
@@ -923,8 +884,7 @@ public class CommerceItem {
                 publicName, raw, requiresShipping,
                 slug, tags, taxrateId,
                 totalStock, type, updatedAt,
-                variants, vendorName, weight,
-                weightUnit);
+                vendorName, weight, weightUnit);
         }
 
     }

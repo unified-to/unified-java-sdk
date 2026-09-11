@@ -107,9 +107,6 @@ public class UnifiedTo {
     private final Quote quote;
 
 
-    private final Report report;
-
-
     private final Salesorder salesorder;
 
 
@@ -147,6 +144,9 @@ public class UnifiedTo {
 
 
     private final Promoted promoted;
+
+
+    private final Report report;
 
 
     private final Target target;
@@ -673,11 +673,6 @@ public class UnifiedTo {
     }
 
 
-    public Report report() {
-        return report;
-    }
-
-
     public Salesorder salesorder() {
         return salesorder;
     }
@@ -740,6 +735,11 @@ public class UnifiedTo {
 
     public Promoted promoted() {
         return promoted;
+    }
+
+
+    public Report report() {
+        return report;
     }
 
 
@@ -1591,7 +1591,6 @@ public class UnifiedTo {
         this.project = new Project(sdkConfiguration);
         this.purchaseorder = new Purchaseorder(sdkConfiguration);
         this.quote = new Quote(sdkConfiguration);
-        this.report = new Report(sdkConfiguration);
         this.salesorder = new Salesorder(sdkConfiguration);
         this.taxrate = new Taxrate(sdkConfiguration);
         this.transaction = new Transaction(sdkConfiguration);
@@ -1605,6 +1604,7 @@ public class UnifiedTo {
         this.group = new Group(sdkConfiguration);
         this.insertionorder = new Insertionorder(sdkConfiguration);
         this.promoted = new Promoted(sdkConfiguration);
+        this.report = new Report(sdkConfiguration);
         this.target = new Target(sdkConfiguration);
         this.analytics = new Analytics(sdkConfiguration);
         this.event = new Event(sdkConfiguration);

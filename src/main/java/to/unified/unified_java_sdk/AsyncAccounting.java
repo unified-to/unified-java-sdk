@@ -47,7 +47,6 @@ import to.unified.unified_java_sdk.models.operations.GetAccountingProfitlossRequ
 import to.unified.unified_java_sdk.models.operations.GetAccountingProjectRequest;
 import to.unified.unified_java_sdk.models.operations.GetAccountingPurchaseorderRequest;
 import to.unified.unified_java_sdk.models.operations.GetAccountingQuoteRequest;
-import to.unified.unified_java_sdk.models.operations.GetAccountingReportRequest;
 import to.unified.unified_java_sdk.models.operations.GetAccountingSalesorderRequest;
 import to.unified.unified_java_sdk.models.operations.GetAccountingTaxrateRequest;
 import to.unified.unified_java_sdk.models.operations.GetAccountingTransactionRequest;
@@ -74,7 +73,6 @@ import to.unified.unified_java_sdk.models.operations.ListAccountingProfitlossesR
 import to.unified.unified_java_sdk.models.operations.ListAccountingProjectsRequest;
 import to.unified.unified_java_sdk.models.operations.ListAccountingPurchaseordersRequest;
 import to.unified.unified_java_sdk.models.operations.ListAccountingQuotesRequest;
-import to.unified.unified_java_sdk.models.operations.ListAccountingReportsRequest;
 import to.unified.unified_java_sdk.models.operations.ListAccountingSalesordersRequest;
 import to.unified.unified_java_sdk.models.operations.ListAccountingTaxratesRequest;
 import to.unified.unified_java_sdk.models.operations.ListAccountingTransactionsRequest;
@@ -217,8 +215,6 @@ import to.unified.unified_java_sdk.models.operations.async.GetAccountingPurchase
 import to.unified.unified_java_sdk.models.operations.async.GetAccountingPurchaseorderResponse;
 import to.unified.unified_java_sdk.models.operations.async.GetAccountingQuoteRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.GetAccountingQuoteResponse;
-import to.unified.unified_java_sdk.models.operations.async.GetAccountingReportRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.GetAccountingReportResponse;
 import to.unified.unified_java_sdk.models.operations.async.GetAccountingSalesorderRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.GetAccountingSalesorderResponse;
 import to.unified.unified_java_sdk.models.operations.async.GetAccountingTaxrateRequestBuilder;
@@ -271,8 +267,6 @@ import to.unified.unified_java_sdk.models.operations.async.ListAccountingPurchas
 import to.unified.unified_java_sdk.models.operations.async.ListAccountingPurchaseordersResponse;
 import to.unified.unified_java_sdk.models.operations.async.ListAccountingQuotesRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.ListAccountingQuotesResponse;
-import to.unified.unified_java_sdk.models.operations.async.ListAccountingReportsRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.ListAccountingReportsResponse;
 import to.unified.unified_java_sdk.models.operations.async.ListAccountingSalesordersRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.ListAccountingSalesordersResponse;
 import to.unified.unified_java_sdk.models.operations.async.ListAccountingTaxratesRequestBuilder;
@@ -437,7 +431,6 @@ import to.unified.unified_java_sdk.operations.GetAccountingProfitloss;
 import to.unified.unified_java_sdk.operations.GetAccountingProject;
 import to.unified.unified_java_sdk.operations.GetAccountingPurchaseorder;
 import to.unified.unified_java_sdk.operations.GetAccountingQuote;
-import to.unified.unified_java_sdk.operations.GetAccountingReport;
 import to.unified.unified_java_sdk.operations.GetAccountingSalesorder;
 import to.unified.unified_java_sdk.operations.GetAccountingTaxrate;
 import to.unified.unified_java_sdk.operations.GetAccountingTransaction;
@@ -464,7 +457,6 @@ import to.unified.unified_java_sdk.operations.ListAccountingProfitlosses;
 import to.unified.unified_java_sdk.operations.ListAccountingProjects;
 import to.unified.unified_java_sdk.operations.ListAccountingPurchaseorders;
 import to.unified.unified_java_sdk.operations.ListAccountingQuotes;
-import to.unified.unified_java_sdk.operations.ListAccountingReports;
 import to.unified.unified_java_sdk.operations.ListAccountingSalesorders;
 import to.unified.unified_java_sdk.operations.ListAccountingTaxrates;
 import to.unified.unified_java_sdk.operations.ListAccountingTransactions;
@@ -1471,29 +1463,6 @@ public class AsyncAccounting {
 
 
     /**
-     * Retrieve a report
-     * 
-     * @return The async call builder
-     */
-    public GetAccountingReportRequestBuilder getAccountingReport() {
-        return new GetAccountingReportRequestBuilder(sdkConfiguration);
-    }
-
-    /**
-     * Retrieve a report
-     * 
-     * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<GetAccountingReportResponse>} - The async response
-     */
-    public CompletableFuture<GetAccountingReportResponse> getAccountingReport(@Nonnull GetAccountingReportRequest request) {
-        AsyncRequestOperation<GetAccountingReportRequest, GetAccountingReportResponse> operation
-              = new GetAccountingReport.Async(sdkConfiguration, _headers);
-        return operation.doRequest(request)
-            .thenCompose(operation::handleResponse);
-    }
-
-
-    /**
      * Retrieve a salesorder
      * 
      * @return The async call builder
@@ -2086,29 +2055,6 @@ public class AsyncAccounting {
     public CompletableFuture<ListAccountingQuotesResponse> listAccountingQuotes(@Nonnull ListAccountingQuotesRequest request) {
         AsyncRequestOperation<ListAccountingQuotesRequest, ListAccountingQuotesResponse> operation
               = new ListAccountingQuotes.Async(sdkConfiguration, _headers);
-        return operation.doRequest(request)
-            .thenCompose(operation::handleResponse);
-    }
-
-
-    /**
-     * List all reports
-     * 
-     * @return The async call builder
-     */
-    public ListAccountingReportsRequestBuilder listAccountingReports() {
-        return new ListAccountingReportsRequestBuilder(sdkConfiguration);
-    }
-
-    /**
-     * List all reports
-     * 
-     * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<ListAccountingReportsResponse>} - The async response
-     */
-    public CompletableFuture<ListAccountingReportsResponse> listAccountingReports(@Nonnull ListAccountingReportsRequest request) {
-        AsyncRequestOperation<ListAccountingReportsRequest, ListAccountingReportsResponse> operation
-              = new ListAccountingReports.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

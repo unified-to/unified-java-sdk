@@ -126,9 +126,6 @@ import to.unified.unified_java_sdk.models.operations.GetAccountingPurchaseorderR
 import to.unified.unified_java_sdk.models.operations.GetAccountingQuoteRequest;
 import to.unified.unified_java_sdk.models.operations.GetAccountingQuoteRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.GetAccountingQuoteResponse;
-import to.unified.unified_java_sdk.models.operations.GetAccountingReportRequest;
-import to.unified.unified_java_sdk.models.operations.GetAccountingReportRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.GetAccountingReportResponse;
 import to.unified.unified_java_sdk.models.operations.GetAccountingSalesorderRequest;
 import to.unified.unified_java_sdk.models.operations.GetAccountingSalesorderRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.GetAccountingSalesorderResponse;
@@ -207,9 +204,6 @@ import to.unified.unified_java_sdk.models.operations.ListAccountingPurchaseorder
 import to.unified.unified_java_sdk.models.operations.ListAccountingQuotesRequest;
 import to.unified.unified_java_sdk.models.operations.ListAccountingQuotesRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.ListAccountingQuotesResponse;
-import to.unified.unified_java_sdk.models.operations.ListAccountingReportsRequest;
-import to.unified.unified_java_sdk.models.operations.ListAccountingReportsRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.ListAccountingReportsResponse;
 import to.unified.unified_java_sdk.models.operations.ListAccountingSalesordersRequest;
 import to.unified.unified_java_sdk.models.operations.ListAccountingSalesordersRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.ListAccountingSalesordersResponse;
@@ -436,7 +430,6 @@ import to.unified.unified_java_sdk.operations.GetAccountingProfitloss;
 import to.unified.unified_java_sdk.operations.GetAccountingProject;
 import to.unified.unified_java_sdk.operations.GetAccountingPurchaseorder;
 import to.unified.unified_java_sdk.operations.GetAccountingQuote;
-import to.unified.unified_java_sdk.operations.GetAccountingReport;
 import to.unified.unified_java_sdk.operations.GetAccountingSalesorder;
 import to.unified.unified_java_sdk.operations.GetAccountingTaxrate;
 import to.unified.unified_java_sdk.operations.GetAccountingTransaction;
@@ -463,7 +456,6 @@ import to.unified.unified_java_sdk.operations.ListAccountingProfitlosses;
 import to.unified.unified_java_sdk.operations.ListAccountingProjects;
 import to.unified.unified_java_sdk.operations.ListAccountingPurchaseorders;
 import to.unified.unified_java_sdk.operations.ListAccountingQuotes;
-import to.unified.unified_java_sdk.operations.ListAccountingReports;
 import to.unified.unified_java_sdk.operations.ListAccountingSalesorders;
 import to.unified.unified_java_sdk.operations.ListAccountingTaxrates;
 import to.unified.unified_java_sdk.operations.ListAccountingTransactions;
@@ -1429,28 +1421,6 @@ public class Accounting {
     }
 
     /**
-     * Retrieve a report
-     * 
-     * @return The call builder
-     */
-    public GetAccountingReportRequestBuilder getAccountingReport() {
-        return new GetAccountingReportRequestBuilder(sdkConfiguration);
-    }
-
-    /**
-     * Retrieve a report
-     * 
-     * @param request The request object containing all the parameters for the API call.
-     * @return The response from the API call
-     * @throws RuntimeException subclass if the API call fails
-     */
-    public GetAccountingReportResponse getAccountingReport(@Nonnull GetAccountingReportRequest request) {
-        RequestOperation<GetAccountingReportRequest, GetAccountingReportResponse> operation
-              = new GetAccountingReport.Sync(sdkConfiguration, _headers);
-        return operation.handleResponse(operation.doRequest(request));
-    }
-
-    /**
      * Retrieve a salesorder
      * 
      * @return The call builder
@@ -2019,28 +1989,6 @@ public class Accounting {
     public ListAccountingQuotesResponse listAccountingQuotes(@Nonnull ListAccountingQuotesRequest request) {
         RequestOperation<ListAccountingQuotesRequest, ListAccountingQuotesResponse> operation
               = new ListAccountingQuotes.Sync(sdkConfiguration, _headers);
-        return operation.handleResponse(operation.doRequest(request));
-    }
-
-    /**
-     * List all reports
-     * 
-     * @return The call builder
-     */
-    public ListAccountingReportsRequestBuilder listAccountingReports() {
-        return new ListAccountingReportsRequestBuilder(sdkConfiguration);
-    }
-
-    /**
-     * List all reports
-     * 
-     * @param request The request object containing all the parameters for the API call.
-     * @return The response from the API call
-     * @throws RuntimeException subclass if the API call fails
-     */
-    public ListAccountingReportsResponse listAccountingReports(@Nonnull ListAccountingReportsRequest request) {
-        RequestOperation<ListAccountingReportsRequest, ListAccountingReportsResponse> operation
-              = new ListAccountingReports.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

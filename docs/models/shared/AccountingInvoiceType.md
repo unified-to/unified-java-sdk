@@ -5,7 +5,7 @@
 ```java
 import to.unified.unified_java_sdk.models.shared.AccountingInvoiceType;
 
-AccountingInvoiceType value = AccountingInvoiceType.BILL;
+AccountingInvoiceType value = AccountingInvoiceType.INVOICE;
 
 // Open enum: use .of() to create instances from custom string values
 AccountingInvoiceType custom = AccountingInvoiceType.of("custom_value");
@@ -16,6 +16,5 @@ AccountingInvoiceType custom = AccountingInvoiceType.of("custom_value");
 
 | Name         | Value        |
 | ------------ | ------------ |
-| `BILL`       | BILL         |
 | `INVOICE`    | INVOICE      |
 | `CREDITMEMO` | CREDITMEMO   |

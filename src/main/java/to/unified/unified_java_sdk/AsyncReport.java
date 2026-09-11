@@ -7,23 +7,15 @@ import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOper
 
 import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
-import to.unified.unified_java_sdk.models.operations.GetAccountingReportRequest;
-import to.unified.unified_java_sdk.models.operations.ListAccountingReportsRequest;
 import to.unified.unified_java_sdk.models.operations.ListAdsReportsRequest;
 import to.unified.unified_java_sdk.models.operations.ListAnalyticsReportsRequest;
 import to.unified.unified_java_sdk.models.operations.ListMartechReportsRequest;
-import to.unified.unified_java_sdk.models.operations.async.GetAccountingReportRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.GetAccountingReportResponse;
-import to.unified.unified_java_sdk.models.operations.async.ListAccountingReportsRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.ListAccountingReportsResponse;
 import to.unified.unified_java_sdk.models.operations.async.ListAdsReportsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.ListAdsReportsResponse;
 import to.unified.unified_java_sdk.models.operations.async.ListAnalyticsReportsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.ListAnalyticsReportsResponse;
 import to.unified.unified_java_sdk.models.operations.async.ListMartechReportsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.ListMartechReportsResponse;
-import to.unified.unified_java_sdk.operations.GetAccountingReport;
-import to.unified.unified_java_sdk.operations.ListAccountingReports;
 import to.unified.unified_java_sdk.operations.ListAdsReports;
 import to.unified.unified_java_sdk.operations.ListAnalyticsReports;
 import to.unified.unified_java_sdk.operations.ListMartechReports;
@@ -47,52 +39,6 @@ public class AsyncReport {
      */
     public Report sync() {
         return syncSDK;
-    }
-
-
-    /**
-     * Retrieve a report
-     * 
-     * @return The async call builder
-     */
-    public GetAccountingReportRequestBuilder getAccountingReport() {
-        return new GetAccountingReportRequestBuilder(sdkConfiguration);
-    }
-
-    /**
-     * Retrieve a report
-     * 
-     * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<GetAccountingReportResponse>} - The async response
-     */
-    public CompletableFuture<GetAccountingReportResponse> getAccountingReport(@Nonnull GetAccountingReportRequest request) {
-        AsyncRequestOperation<GetAccountingReportRequest, GetAccountingReportResponse> operation
-              = new GetAccountingReport.Async(sdkConfiguration, _headers);
-        return operation.doRequest(request)
-            .thenCompose(operation::handleResponse);
-    }
-
-
-    /**
-     * List all reports
-     * 
-     * @return The async call builder
-     */
-    public ListAccountingReportsRequestBuilder listAccountingReports() {
-        return new ListAccountingReportsRequestBuilder(sdkConfiguration);
-    }
-
-    /**
-     * List all reports
-     * 
-     * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<ListAccountingReportsResponse>} - The async response
-     */
-    public CompletableFuture<ListAccountingReportsResponse> listAccountingReports(@Nonnull ListAccountingReportsRequest request) {
-        AsyncRequestOperation<ListAccountingReportsRequest, ListAccountingReportsResponse> operation
-              = new ListAccountingReports.Async(sdkConfiguration, _headers);
-        return operation.doRequest(request)
-            .thenCompose(operation::handleResponse);
     }
 
 

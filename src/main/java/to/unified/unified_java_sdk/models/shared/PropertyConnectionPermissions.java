@@ -49,8 +49,6 @@ public class PropertyConnectionPermissions {
     public static final PropertyConnectionPermissions ACCOUNTING_PURCHASEORDER_WRITE = new PropertyConnectionPermissions("accounting_purchaseorder_write");
     public static final PropertyConnectionPermissions ACCOUNTING_SALESORDER_READ = new PropertyConnectionPermissions("accounting_salesorder_read");
     public static final PropertyConnectionPermissions ACCOUNTING_SALESORDER_WRITE = new PropertyConnectionPermissions("accounting_salesorder_write");
-    public static final PropertyConnectionPermissions ACCOUNTING_REPORT_READ = new PropertyConnectionPermissions("accounting_report_read");
-    public static final PropertyConnectionPermissions ACCOUNTING_REPORT_WRITE = new PropertyConnectionPermissions("accounting_report_write");
     public static final PropertyConnectionPermissions ACCOUNTING_TRIALBALANCE_READ = new PropertyConnectionPermissions("accounting_trialbalance_read");
     public static final PropertyConnectionPermissions ACCOUNTING_TRIALBALANCE_WRITE = new PropertyConnectionPermissions("accounting_trialbalance_write");
     public static final PropertyConnectionPermissions ACCOUNTING_PROFITLOSS_READ = new PropertyConnectionPermissions("accounting_profitloss_read");
@@ -442,8 +440,6 @@ public class PropertyConnectionPermissions {
         map.put("accounting_purchaseorder_write", ACCOUNTING_PURCHASEORDER_WRITE);
         map.put("accounting_salesorder_read", ACCOUNTING_SALESORDER_READ);
         map.put("accounting_salesorder_write", ACCOUNTING_SALESORDER_WRITE);
-        map.put("accounting_report_read", ACCOUNTING_REPORT_READ);
-        map.put("accounting_report_write", ACCOUNTING_REPORT_WRITE);
         map.put("accounting_trialbalance_read", ACCOUNTING_TRIALBALANCE_READ);
         map.put("accounting_trialbalance_write", ACCOUNTING_TRIALBALANCE_WRITE);
         map.put("accounting_profitloss_read", ACCOUNTING_PROFITLOSS_READ);
@@ -767,8 +763,6 @@ public class PropertyConnectionPermissions {
         map.put("accounting_purchaseorder_write", PropertyConnectionPermissionsEnum.ACCOUNTING_PURCHASEORDER_WRITE);
         map.put("accounting_salesorder_read", PropertyConnectionPermissionsEnum.ACCOUNTING_SALESORDER_READ);
         map.put("accounting_salesorder_write", PropertyConnectionPermissionsEnum.ACCOUNTING_SALESORDER_WRITE);
-        map.put("accounting_report_read", PropertyConnectionPermissionsEnum.ACCOUNTING_REPORT_READ);
-        map.put("accounting_report_write", PropertyConnectionPermissionsEnum.ACCOUNTING_REPORT_WRITE);
         map.put("accounting_trialbalance_read", PropertyConnectionPermissionsEnum.ACCOUNTING_TRIALBALANCE_READ);
         map.put("accounting_trialbalance_write", PropertyConnectionPermissionsEnum.ACCOUNTING_TRIALBALANCE_WRITE);
         map.put("accounting_profitloss_read", PropertyConnectionPermissionsEnum.ACCOUNTING_PROFITLOSS_READ);
@@ -1093,8 +1087,6 @@ public class PropertyConnectionPermissions {
         ACCOUNTING_PURCHASEORDER_WRITE("accounting_purchaseorder_write"),
         ACCOUNTING_SALESORDER_READ("accounting_salesorder_read"),
         ACCOUNTING_SALESORDER_WRITE("accounting_salesorder_write"),
-        ACCOUNTING_REPORT_READ("accounting_report_read"),
-        ACCOUNTING_REPORT_WRITE("accounting_report_write"),
         ACCOUNTING_TRIALBALANCE_READ("accounting_trialbalance_read"),
         ACCOUNTING_TRIALBALANCE_WRITE("accounting_trialbalance_write"),
         ACCOUNTING_PROFITLOSS_READ("accounting_profitloss_read"),

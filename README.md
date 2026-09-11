@@ -39,7 +39,7 @@ The samples below show how a published SDK artifact is used:
 
 Gradle:
 ```groovy
-implementation 'to.unified:unified-java-sdk:0.49.11'
+implementation 'to.unified:unified-java-sdk:0.49.12'
 ```
 
 Maven:
@@ -47,7 +47,7 @@ Maven:
 <dependency>
     <groupId>to.unified</groupId>
     <artifactId>unified-java-sdk</artifactId>
-    <version>0.49.11</version>
+    <version>0.49.12</version>
 </dependency>
 ```
 
@@ -219,7 +219,6 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 * [getAccountingProject](docs/sdks/accounting/README.md#getaccountingproject) - Retrieve a project
 * [getAccountingPurchaseorder](docs/sdks/accounting/README.md#getaccountingpurchaseorder) - Retrieve a purchaseorder
 * [getAccountingQuote](docs/sdks/accounting/README.md#getaccountingquote) - Retrieve a quote
-* [getAccountingReport](docs/sdks/accounting/README.md#getaccountingreport) - Retrieve a report
 * [getAccountingSalesorder](docs/sdks/accounting/README.md#getaccountingsalesorder) - Retrieve a salesorder
 * [getAccountingTaxrate](docs/sdks/accounting/README.md#getaccountingtaxrate) - Retrieve a taxrate
 * [getAccountingTransaction](docs/sdks/accounting/README.md#getaccountingtransaction) - Retrieve a transaction
@@ -246,7 +245,6 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 * [listAccountingProjects](docs/sdks/accounting/README.md#listaccountingprojects) - List all projects
 * [listAccountingPurchaseorders](docs/sdks/accounting/README.md#listaccountingpurchaseorders) - List all purchaseorders
 * [listAccountingQuotes](docs/sdks/accounting/README.md#listaccountingquotes) - List all quotes
-* [listAccountingReports](docs/sdks/accounting/README.md#listaccountingreports) - List all reports
 * [listAccountingSalesorders](docs/sdks/accounting/README.md#listaccountingsalesorders) - List all salesorders
 * [listAccountingTaxrates](docs/sdks/accounting/README.md#listaccountingtaxrates) - List all taxrates
 * [listAccountingTransactions](docs/sdks/accounting/README.md#listaccountingtransactions) - List all transactions
@@ -1894,8 +1892,6 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 
 ### [Report](docs/sdks/report/README.md)
 
-* [getAccountingReport](docs/sdks/report/README.md#getaccountingreport) - Retrieve a report
-* [listAccountingReports](docs/sdks/report/README.md#listaccountingreports) - List all reports
 * [listAdsReports](docs/sdks/report/README.md#listadsreports) - List all reports
 * [listAnalyticsReports](docs/sdks/report/README.md#listanalyticsreports) - List all reports
 * [listMartechReports](docs/sdks/report/README.md#listmartechreports) - List all reports

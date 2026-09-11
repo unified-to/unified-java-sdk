@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: cfc256ab-f291-4245-b909-5b9e9a6e6803
 management:
-  docChecksum: 0d6ce61374059ad32a939916e4bd0c06
+  docChecksum: 2603dd36aa034d8cef9a411c0f95cad1
   docVersion: "1.0"
   speakeasyVersion: 1.796.4
   generationVersion: 2.935.1
-  releaseVersion: 0.49.11
-  configChecksum: 7f8c98b1d243416c980cf357272a5d31
+  releaseVersion: 0.49.12
+  configChecksum: 372a9eada418acb5bb9c7b686ef766a8
   repoURL: https://github.com/unified-to/unified-java-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-java-sdk
@@ -516,9 +516,6 @@ trackedFiles:
   docs/models/operations/GetAccountingQuoteQueryParamFields.md: {}
   docs/models/operations/GetAccountingQuoteRequest.md: {}
   docs/models/operations/GetAccountingQuoteResponse.md: {}
-  docs/models/operations/GetAccountingReportQueryParamFields.md: {}
-  docs/models/operations/GetAccountingReportRequest.md: {}
-  docs/models/operations/GetAccountingReportResponse.md: {}
   docs/models/operations/GetAccountingSalesorderQueryParamFields.md: {}
   docs/models/operations/GetAccountingSalesorderRequest.md: {}
   docs/models/operations/GetAccountingSalesorderResponse.md: {}
@@ -1035,9 +1032,6 @@ trackedFiles:
   docs/models/operations/ListAccountingQuotesQueryParamFields.md: {}
   docs/models/operations/ListAccountingQuotesRequest.md: {}
   docs/models/operations/ListAccountingQuotesResponse.md: {}
-  docs/models/operations/ListAccountingReportsQueryParamFields.md: {}
-  docs/models/operations/ListAccountingReportsRequest.md: {}
-  docs/models/operations/ListAccountingReportsResponse.md: {}
   docs/models/operations/ListAccountingSalesordersQueryParamFields.md: {}
   docs/models/operations/ListAccountingSalesordersRequest.md: {}
   docs/models/operations/ListAccountingSalesordersResponse.md: {}
@@ -2738,12 +2732,6 @@ trackedFiles:
   docs/models/shared/AccountingReference.md:
     id: fe06dbcbce6c
     pristine_git_object: e78ce84218763e80c6bac145136e3cf3344e9a97
-  docs/models/shared/AccountingReport.md:
-    id: 2ef69b8364a2
-    pristine_git_object: f44fed7f3552c8e45f8c19595bdfde52d697f347
-  docs/models/shared/AccountingReportType.md:
-    id: 5698083bda45
-    pristine_git_object: e97bd0a71b6065cc650acca95fbd3940386808e6
   docs/models/shared/AccountingSalesorder.md:
     id: 95b4c3998adc
     pristine_git_object: d812dd554b08e84352c3c464c86489d94794c3fa
@@ -4189,15 +4177,6 @@ trackedFiles:
   docs/models/shared/PropertyAccountingPurchaseorderShippingAddress.md:
     id: 6e96a3713a2b
     pristine_git_object: f280a237292d81e7ad54509ab7b7399ccfbe42d2
-  docs/models/shared/PropertyAccountingReportBalanceSheet.md:
-    id: 5a6e2d6b2a07
-    pristine_git_object: 1e08e2553c8298e585e5910ee0499ef16d7772d0
-  docs/models/shared/PropertyAccountingReportProfitAndLoss.md:
-    id: c01db50ec47b
-    pristine_git_object: 30374d5a4496b61f792454063951984118893dd6
-  docs/models/shared/PropertyAccountingReportTrialBalance.md:
-    id: 75411e60eb1c
-    pristine_git_object: 18024a5c6ab3423670797f25200398e8e1b4841e
   docs/models/shared/PropertyAccountingSalesorderBillingAddress.md:
     id: fca449bfc23a
     pristine_git_object: f337dd1348cdf26b27f96af70cdb3d87e8a2c44b
@@ -6949,7 +6928,6 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/models/operations//async/GetAccountingProjectRequestBuilder.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations//async/GetAccountingPurchaseorderRequestBuilder.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations//async/GetAccountingQuoteRequestBuilder.java: {}
-  src/main/java/to/unified/unified_java_sdk/models/operations//async/GetAccountingReportRequestBuilder.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations//async/GetAccountingSalesorderRequestBuilder.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations//async/GetAccountingTaxrateRequestBuilder.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations//async/GetAccountingTransactionRequestBuilder.java: {}
@@ -7131,7 +7109,6 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/models/operations//async/ListAccountingProjectsRequestBuilder.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations//async/ListAccountingPurchaseordersRequestBuilder.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations//async/ListAccountingQuotesRequestBuilder.java: {}
-  src/main/java/to/unified/unified_java_sdk/models/operations//async/ListAccountingReportsRequestBuilder.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations//async/ListAccountingSalesordersRequestBuilder.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations//async/ListAccountingTaxratesRequestBuilder.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations//async/ListAccountingTransactionsRequestBuilder.java: {}
@@ -8357,10 +8334,6 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/models/operations/GetAccountingQuoteRequest.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/GetAccountingQuoteRequestBuilder.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/GetAccountingQuoteResponse.java: {}
-  src/main/java/to/unified/unified_java_sdk/models/operations/GetAccountingReportQueryParamFields.java: {}
-  src/main/java/to/unified/unified_java_sdk/models/operations/GetAccountingReportRequest.java: {}
-  src/main/java/to/unified/unified_java_sdk/models/operations/GetAccountingReportRequestBuilder.java: {}
-  src/main/java/to/unified/unified_java_sdk/models/operations/GetAccountingReportResponse.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/GetAccountingSalesorderQueryParamFields.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/GetAccountingSalesorderRequest.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/GetAccountingSalesorderRequestBuilder.java: {}
@@ -9058,10 +9031,6 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/models/operations/ListAccountingQuotesRequest.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/ListAccountingQuotesRequestBuilder.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/ListAccountingQuotesResponse.java: {}
-  src/main/java/to/unified/unified_java_sdk/models/operations/ListAccountingReportsQueryParamFields.java: {}
-  src/main/java/to/unified/unified_java_sdk/models/operations/ListAccountingReportsRequest.java: {}
-  src/main/java/to/unified/unified_java_sdk/models/operations/ListAccountingReportsRequestBuilder.java: {}
-  src/main/java/to/unified/unified_java_sdk/models/operations/ListAccountingReportsResponse.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/ListAccountingSalesordersQueryParamFields.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/ListAccountingSalesordersRequest.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/ListAccountingSalesordersRequestBuilder.java: {}
@@ -11362,7 +11331,6 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/models/operations/async/GetAccountingProjectResponse.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/async/GetAccountingPurchaseorderResponse.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/async/GetAccountingQuoteResponse.java: {}
-  src/main/java/to/unified/unified_java_sdk/models/operations/async/GetAccountingReportResponse.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/async/GetAccountingSalesorderResponse.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/async/GetAccountingTaxrateResponse.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/async/GetAccountingTransactionResponse.java: {}
@@ -11544,7 +11512,6 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/models/operations/async/ListAccountingProjectsResponse.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/async/ListAccountingPurchaseordersResponse.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/async/ListAccountingQuotesResponse.java: {}
-  src/main/java/to/unified/unified_java_sdk/models/operations/async/ListAccountingReportsResponse.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/async/ListAccountingSalesordersResponse.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/async/ListAccountingTaxratesResponse.java: {}
   src/main/java/to/unified/unified_java_sdk/models/operations/async/ListAccountingTransactionsResponse.java: {}
@@ -12277,12 +12244,6 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/models/shared/AccountingReference.java:
     id: 2acbdbacb239
     pristine_git_object: b0897ef463d146019f55b95ff11576e39f7b14af
-  src/main/java/to/unified/unified_java_sdk/models/shared/AccountingReport.java:
-    id: 17dadde28ffa
-    pristine_git_object: 1090c026e3595aa85d6d09636ed9c7bde21af0d2
-  src/main/java/to/unified/unified_java_sdk/models/shared/AccountingReportType.java:
-    id: 2d6cf399292e
-    pristine_git_object: 5dbb41693f90e9dc4708e8f2e24f5c0ffab03968
   src/main/java/to/unified/unified_java_sdk/models/shared/AccountingSalesorder.java:
     id: 9875ff58fc28
     pristine_git_object: 9b459ee2f0d8f73fe1e7b49300ef8b72063a61c6
@@ -13728,15 +13689,6 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/models/shared/PropertyAccountingPurchaseorderShippingAddress.java:
     id: 06a12dc1cb01
     pristine_git_object: 690e0e27b11c166f9c2d692a68ed8f614c312c94
-  src/main/java/to/unified/unified_java_sdk/models/shared/PropertyAccountingReportBalanceSheet.java:
-    id: b531131607d1
-    pristine_git_object: 320f491e88b6ced864f33ee3676b3404a751b148
-  src/main/java/to/unified/unified_java_sdk/models/shared/PropertyAccountingReportProfitAndLoss.java:
-    id: 4da80c3f3b06
-    pristine_git_object: 8cc70e736a19fe772b2d2a2dce3ad7db331252c7
-  src/main/java/to/unified/unified_java_sdk/models/shared/PropertyAccountingReportTrialBalance.java:
-    id: 75d63b9480dd
-    pristine_git_object: 107efd6bf0dba966cd382542d91c89942aedcea2
   src/main/java/to/unified/unified_java_sdk/models/shared/PropertyAccountingSalesorderBillingAddress.java:
     id: 905e3d7fb095
     pristine_git_object: 2e4896a667f637244fe13497385ac818ca0b4a0b
@@ -15110,7 +15062,6 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/operations/GetAccountingProject.java: {}
   src/main/java/to/unified/unified_java_sdk/operations/GetAccountingPurchaseorder.java: {}
   src/main/java/to/unified/unified_java_sdk/operations/GetAccountingQuote.java: {}
-  src/main/java/to/unified/unified_java_sdk/operations/GetAccountingReport.java: {}
   src/main/java/to/unified/unified_java_sdk/operations/GetAccountingSalesorder.java: {}
   src/main/java/to/unified/unified_java_sdk/operations/GetAccountingTaxrate.java: {}
   src/main/java/to/unified/unified_java_sdk/operations/GetAccountingTransaction.java: {}
@@ -15292,7 +15243,6 @@ trackedFiles:
   src/main/java/to/unified/unified_java_sdk/operations/ListAccountingProjects.java: {}
   src/main/java/to/unified/unified_java_sdk/operations/ListAccountingPurchaseorders.java: {}
   src/main/java/to/unified/unified_java_sdk/operations/ListAccountingQuotes.java: {}
-  src/main/java/to/unified/unified_java_sdk/operations/ListAccountingReports.java: {}
   src/main/java/to/unified/unified_java_sdk/operations/ListAccountingSalesorders.java: {}
   src/main/java/to/unified/unified_java_sdk/operations/ListAccountingTaxrates.java: {}
   src/main/java/to/unified/unified_java_sdk/operations/ListAccountingTransactions.java: {}
@@ -30199,7 +30149,7 @@ examples:
           application/json: {}
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: "## Java SDK Changes:\n* `unified-to.accounting.createAccountingAccount()`: \n  *  `request` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `unified-to.accounting.getAccountingAccount()`: \n  *  `request.fields` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `unified-to.accounting.getAccountingProfitloss()`: \n  *  `request.fields` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `unified-to.accounting.getAccountingReport()`:  `response.profitAndLoss` **Changed** (Breaking ⚠️)\n* `unified-to.accounting.listAccountingAccounts()`: \n  *  `request.fields` **Changed** (Breaking ⚠️)\n  *  `response.[]` **Changed** (Breaking ⚠️)\n* `unified-to.accounting.listAccountingProfitlosses()`: \n  *  `request.fields` **Changed** (Breaking ⚠️)\n  *  `response.[]` **Changed** (Breaking ⚠️)\n* `unified-to.accounting.listAccountingReports()`:  `response.[].profitAndLoss` **Changed** (Breaking ⚠️)\n* `unified-to.accounting.patchAccountingAccount()`: \n  *  `request` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `unified-to.accounting.updateAccountingAccount()`: \n  *  `request` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `unified-to.account.createAccountingAccount()`: \n  *  `request` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `unified-to.account.getAccountingAccount()`: \n  *  `request.fields` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `unified-to.account.listAccountingAccounts()`: \n  *  `request.fields` **Changed** (Breaking ⚠️)\n  *  `response.[]` **Changed** (Breaking ⚠️)\n* `unified-to.account.patchAccountingAccount()`: \n  *  `request` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `unified-to.account.updateAccountingAccount()`: \n  *  `request` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `unified-to.profitloss.getAccountingProfitloss()`: \n  *  `request.fields` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `unified-to.profitloss.listAccountingProfitlosses()`: \n  *  `request.fields` **Changed** (Breaking ⚠️)\n  *  `response.[]` **Changed** (Breaking ⚠️)\n* `unified-to.project.createTaskProject()`: \n  *  `request.taskProject.metadata[]` **Changed** (Breaking ⚠️)\n  *  `response.metadata[]` **Changed** (Breaking ⚠️)\n* `unified-to.project.getTaskProject()`:  `response.metadata[]` **Changed** (Breaking ⚠️)\n* `unified-to.project.listTaskProjects()`:  `response.[].metadata[]` **Changed** (Breaking ⚠️)\n* `unified-to.project.patchTaskProject()`: \n  *  `request.taskProject.metadata[]` **Changed** (Breaking ⚠️)\n  *  `response.metadata[]` **Changed** (Breaking ⚠️)\n* `unified-to.project.updateTaskProject()`: \n  *  `request.taskProject.metadata[]` **Changed** (Breaking ⚠️)\n  *  `response.metadata[]` **Changed** (Breaking ⚠️)\n* `unified-to.report.getAccountingReport()`:  `response.profitAndLoss` **Changed** (Breaking ⚠️)\n* `unified-to.report.listAccountingReports()`:  `response.[].profitAndLoss` **Changed** (Breaking ⚠️)\n* `unified-to.event.patchMessagingEvent()`: \n  *  `request.messagingEvent.message` **Changed** (Breaking ⚠️)\n  *  `response.message` **Changed** (Breaking ⚠️)\n* `unified-to.event.updateMessagingEvent()`: \n  *  `request.messagingEvent.message` **Changed** (Breaking ⚠️)\n  *  `response.message` **Changed** (Breaking ⚠️)\n* `unified-to.recording.createUcRecording()`: \n  *  `request` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `unified-to.recording.getUcRecording()`: \n  *  `request.fields` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `unified-to.recording.listUcRecordings()`: \n  *  `request.fields` **Changed** (Breaking ⚠️)\n  *  `response.[]` **Changed** (Breaking ⚠️)\n* `unified-to.recording.patchUcRecording()`: \n  *  `request` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `unified-to.recording.updateUcRecording()`: \n  *  `request` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `unified-to.commerce.createCommerceItem()`: \n  *  `request` **Changed** (Breaking ⚠️)\n  *  `response.collectionIds` **Removed** (Breaking ⚠️)\n* `unified-to.commerce.getCommerceItem()`: \n  *  `request.fields` **Changed** (Breaking ⚠️)\n  *  `response.collectionIds` **Removed** (Breaking ⚠️)\n* `unified-to.commerce.listCommerceItems()`: \n  *  `request.fields` **Changed** (Breaking ⚠️)\n  *  `response.[].collectionIds` **Removed** (Breaking ⚠️)\n* `unified-to.commerce.patchCommerceItem()`: \n  *  `request` **Changed** (Breaking ⚠️)\n  *  `response.collectionIds` **Removed** (Breaking ⚠️)\n* `unified-to.commerce.updateCommerceItem()`: \n  *  `request` **Changed** (Breaking ⚠️)\n  *  `response.collectionIds` **Removed** (Breaking ⚠️)\n* `unified-to.item.createCommerceItem()`: \n  *  `request` **Changed** (Breaking ⚠️)\n  *  `response.collectionIds` **Removed** (Breaking ⚠️)\n* `unified-to.item.getCommerceItem()`: \n  *  `request.fields` **Changed** (Breaking ⚠️)\n  *  `response.collectionIds` **Removed** (Breaking ⚠️)\n* `unified-to.item.listCommerceItems()`: \n  *  `request.fields` **Changed** (Breaking ⚠️)\n  *  `response.[].collectionIds` **Removed** (Breaking ⚠️)\n* `unified-to.item.patchCommerceItem()`: \n  *  `request` **Changed** (Breaking ⚠️)\n  *  `response.collectionIds` **Removed** (Breaking ⚠️)\n* `unified-to.item.updateCommerceItem()`: \n  *  `request` **Changed** (Breaking ⚠️)\n  *  `response.collectionIds` **Removed** (Breaking ⚠️)\n* `unified-to.crm.createCrmDeal()`: \n  *  `request` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `unified-to.crm.getCrmDeal()`: \n  *  `request.fields` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `unified-to.crm.listCrmDeals()`: \n  *  `request.fields` **Changed** (Breaking ⚠️)\n  *  `response.[]` **Changed** (Breaking ⚠️)\n* `unified-to.crm.patchCrmDeal()`: \n  *  `request` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `unified-to.crm.updateCrmDeal()`: \n  *  `request` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `unified-to.deal.createCrmDeal()`: \n  *  `request` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `unified-to.deal.getCrmDeal()`: \n  *  `request.fields` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `unified-to.deal.listCrmDeals()`: \n  *  `request.fields` **Changed** (Breaking ⚠️)\n  *  `response.[]` **Changed** (Breaking ⚠️)\n* `unified-to.deal.patchCrmDeal()`: \n  *  `request` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `unified-to.deal.updateCrmDeal()`: \n  *  `request` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `unified-to.lms.createLmsClass()`: \n  *  `request` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `unified-to.lms.createLmsContent()`: \n  *  `request` **Changed** (Breaking ⚠️)\n  *  `response.instructorIds` **Removed** (Breaking ⚠️)\n* `unified-to.lms.createLmsCourse()`: \n  *  `request` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `unified-to.lms.getLmsClass()`: \n  *  `request.fields` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `unified-to.lms.getLmsContent()`: \n  *  `request.fields` **Changed** (Breaking ⚠️)\n  *  `response.instructorIds` **Removed** (Breaking ⚠️)\n* `unified-to.lms.getLmsCourse()`: \n  *  `request.fields` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `unified-to.lms.listLmsClasses()`: \n  *  `request.fields` **Changed** (Breaking ⚠️)\n  *  `response.[]` **Changed** (Breaking ⚠️)\n* `unified-to.lms.listLmsContents()`: \n  *  `request.fields` **Changed** (Breaking ⚠️)\n  *  `response.[].instructorIds` **Removed** (Breaking ⚠️)\n* `unified-to.lms.listLmsCourses()`: \n  *  `request.fields` **Changed** (Breaking ⚠️)\n  *  `response.[]` **Changed** (Breaking ⚠️)\n* `unified-to.lms.patchLmsClass()`: \n  *  `request` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `unified-to.lms.patchLmsContent()`: \n  *  `request` **Changed** (Breaking ⚠️)\n  *  `response.instructorIds` **Removed** (Breaking ⚠️)\n* `unified-to.lms.patchLmsCourse()`: \n  *  `request` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `unified-to.lms.updateLmsClass()`: \n  *  `request` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `unified-to.lms.updateLmsContent()`: \n  *  `request` **Changed** (Breaking ⚠️)\n  *  `response.instructorIds` **Removed** (Breaking ⚠️)\n* `unified-to.lms.updateLmsCourse()`: \n  *  `request` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `unified-to.class.createLmsClass()`: \n  *  `request` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `unified-to.class.getLmsClass()`: \n  *  `request.fields` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `unified-to.class.listLmsClasses()`: \n  *  `request.fields` **Changed** (Breaking ⚠️)\n  *  `response.[]` **Changed** (Breaking ⚠️)\n* `unified-to.class.patchLmsClass()`: \n  *  `request` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `unified-to.class.updateLmsClass()`: \n  *  `request` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `unified-to.content.createLmsContent()`: \n  *  `request` **Changed** (Breaking ⚠️)\n  *  `response.instructorIds` **Removed** (Breaking ⚠️)\n* `unified-to.content.getLmsContent()`: \n  *  `request.fields` **Changed** (Breaking ⚠️)\n  *  `response.instructorIds` **Removed** (Breaking ⚠️)\n* `unified-to.content.listLmsContents()`: \n  *  `request.fields` **Changed** (Breaking ⚠️)\n  *  `response.[].instructorIds` **Removed** (Breaking ⚠️)\n* `unified-to.content.patchLmsContent()`: \n  *  `request` **Changed** (Breaking ⚠️)\n  *  `response.instructorIds` **Removed** (Breaking ⚠️)\n* `unified-to.content.updateLmsContent()`: \n  *  `request` **Changed** (Breaking ⚠️)\n  *  `response.instructorIds` **Removed** (Breaking ⚠️)\n* `unified-to.course.createLmsCourse()`: \n  *  `request` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `unified-to.course.getLmsCourse()`: \n  *  `request.fields` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `unified-to.course.listLmsCourses()`: \n  *  `request.fields` **Changed** (Breaking ⚠️)\n  *  `response.[]` **Changed** (Breaking ⚠️)\n* `unified-to.course.patchLmsCourse()`: \n  *  `request` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `unified-to.course.updateLmsCourse()`: \n  *  `request` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `unified-to.messaging.createMessagingMessage()`: \n  *  `request` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `unified-to.messaging.getMessagingMessage()`: \n  *  `request.fields` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `unified-to.messaging.listMessagingMessages()`: \n  *  `request.fields` **Changed** (Breaking ⚠️)\n  *  `response.[]` **Changed** (Breaking ⚠️)\n* `unified-to.messaging.patchMessagingEvent()`: \n  *  `request.messagingEvent.message` **Changed** (Breaking ⚠️)\n  *  `response.message` **Changed** (Breaking ⚠️)\n* `unified-to.messaging.patchMessagingMessage()`: \n  *  `request` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `unified-to.messaging.updateMessagingEvent()`: \n  *  `request.messagingEvent.message` **Changed** (Breaking ⚠️)\n  *  `response.message` **Changed** (Breaking ⚠️)\n* `unified-to.messaging.updateMessagingMessage()`: \n  *  `request` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `unified-to.message.createMessagingMessage()`: \n  *  `request` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `unified-to.message.getMessagingMessage()`: \n  *  `request.fields` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `unified-to.message.listMessagingMessages()`: \n  *  `request.fields` **Changed** (Breaking ⚠️)\n  *  `response.[]` **Changed** (Breaking ⚠️)\n* `unified-to.message.patchMessagingMessage()`: \n  *  `request` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `unified-to.message.updateMessagingMessage()`: \n  *  `request` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `unified-to.task.createTaskProject()`: \n  *  `request.taskProject.metadata[]` **Changed** (Breaking ⚠️)\n  *  `response.metadata[]` **Changed** (Breaking ⚠️)\n* `unified-to.task.createTaskTask()`: \n  *  `request.taskTask.metadata[]` **Changed** (Breaking ⚠️)\n  *  `response.metadata[]` **Changed** (Breaking ⚠️)\n* `unified-to.task.getTaskProject()`:  `response.metadata[]` **Changed** (Breaking ⚠️)\n* `unified-to.task.getTaskTask()`:  `response.metadata[]` **Changed** (Breaking ⚠️)\n* `unified-to.task.listTaskProjects()`:  `response.[].metadata[]` **Changed** (Breaking ⚠️)\n* `unified-to.task.listTaskTasks()`:  `response.[].metadata[]` **Changed** (Breaking ⚠️)\n* `unified-to.task.patchTaskProject()`: \n  *  `request.taskProject.metadata[]` **Changed** (Breaking ⚠️)\n  *  `response.metadata[]` **Changed** (Breaking ⚠️)\n* `unified-to.task.patchTaskTask()`: \n  *  `request.taskTask.metadata[]` **Changed** (Breaking ⚠️)\n  *  `response.metadata[]` **Changed** (Breaking ⚠️)\n* `unified-to.task.updateTaskProject()`: \n  *  `request.taskProject.metadata[]` **Changed** (Breaking ⚠️)\n  *  `response.metadata[]` **Changed** (Breaking ⚠️)\n* `unified-to.task.updateTaskTask()`: \n  *  `request.taskTask.metadata[]` **Changed** (Breaking ⚠️)\n  *  `response.metadata[]` **Changed** (Breaking ⚠️)\n* `unified-to.uc.createUcRecording()`: \n  *  `request` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `unified-to.uc.getUcRecording()`: \n  *  `request.fields` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `unified-to.uc.listUcRecordings()`: \n  *  `request.fields` **Changed** (Breaking ⚠️)\n  *  `response.[]` **Changed** (Breaking ⚠️)\n* `unified-to.uc.patchUcRecording()`: \n  *  `request` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `unified-to.uc.updateUcRecording()`: \n  *  `request` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n"
+releaseNotes: "## Java SDK Changes:\n* `unified-to.item.patchCommerceItem()`: \n  *  `request` **Changed** (Breaking ⚠️)\n  *  `response.variants` **Removed** (Breaking ⚠️)\n* `unified-to.unified.patchUnifiedWebhook()`: \n  *  `request.webhook.objectType.enum(accountingReport)` **Removed** (Breaking ⚠️)\n  *  `response.objectType.enum(accountingReport)` **Removed** (Breaking ⚠️)\n* `unified-to.webhook.updateUnifiedWebhook()`: \n  *  `request.webhook.objectType.enum(accountingReport)` **Removed** (Breaking ⚠️)\n  *  `response.objectType.enum(accountingReport)` **Removed** (Breaking ⚠️)\n* `unified-to.webhook.patchUnifiedWebhook()`: \n  *  `request.webhook.objectType.enum(accountingReport)` **Removed** (Breaking ⚠️)\n  *  `response.objectType.enum(accountingReport)` **Removed** (Breaking ⚠️)\n* `unified-to.accounting.createAccountingInvoice()`: \n  *  `request.accountingInvoice.type.enum(bill)` **Removed** (Breaking ⚠️)\n  *  `response.type.enum(bill)` **Removed** (Breaking ⚠️)\n* `unified-to.accounting.getAccountingInvoice()`:  `response.type.enum(bill)` **Removed** (Breaking ⚠️)\n* `unified-to.accounting.listAccountingInvoices()`:  `response.[].type.enum(bill)` **Removed** (Breaking ⚠️)\n* `unified-to.accounting.patchAccountingInvoice()`: \n  *  `request.accountingInvoice.type.enum(bill)` **Removed** (Breaking ⚠️)\n  *  `response.type.enum(bill)` **Removed** (Breaking ⚠️)\n* `unified-to.accounting.updateAccountingInvoice()`: \n  *  `request.accountingInvoice.type.enum(bill)` **Removed** (Breaking ⚠️)\n  *  `response.type.enum(bill)` **Removed** (Breaking ⚠️)\n* `unified-to.invoice.createAccountingInvoice()`: \n  *  `request.accountingInvoice.type.enum(bill)` **Removed** (Breaking ⚠️)\n  *  `response.type.enum(bill)` **Removed** (Breaking ⚠️)\n* `unified-to.invoice.getAccountingInvoice()`:  `response.type.enum(bill)` **Removed** (Breaking ⚠️)\n* `unified-to.invoice.listAccountingInvoices()`:  `response.[].type.enum(bill)` **Removed** (Breaking ⚠️)\n* `unified-to.invoice.patchAccountingInvoice()`: \n  *  `request.accountingInvoice.type.enum(bill)` **Removed** (Breaking ⚠️)\n  *  `response.type.enum(bill)` **Removed** (Breaking ⚠️)\n* `unified-to.invoice.updateAccountingInvoice()`: \n  *  `request.accountingInvoice.type.enum(bill)` **Removed** (Breaking ⚠️)\n  *  `response.type.enum(bill)` **Removed** (Breaking ⚠️)\n* `unified-to.commerce.createCommerceItem()`: \n  *  `request` **Changed** (Breaking ⚠️)\n  *  `response.variants` **Removed** (Breaking ⚠️)\n* `unified-to.commerce.getCommerceItem()`: \n  *  `request.fields` **Changed** (Breaking ⚠️)\n  *  `response.variants` **Removed** (Breaking ⚠️)\n* `unified-to.commerce.listCommerceItems()`: \n  *  `request.fields` **Changed** (Breaking ⚠️)\n  *  `response.[].variants` **Removed** (Breaking ⚠️)\n* `unified-to.commerce.patchCommerceItem()`: \n  *  `request` **Changed** (Breaking ⚠️)\n  *  `response.variants` **Removed** (Breaking ⚠️)\n* `unified-to.commerce.updateCommerceItem()`: \n  *  `request` **Changed** (Breaking ⚠️)\n  *  `response.variants` **Removed** (Breaking ⚠️)\n* `unified-to.item.createCommerceItem()`: \n  *  `request` **Changed** (Breaking ⚠️)\n  *  `response.variants` **Removed** (Breaking ⚠️)\n* `unified-to.webhook.listUnifiedWebhooks()`:  `response.[].objectType.enum(accountingReport)` **Removed** (Breaking ⚠️)\n* `unified-to.webhook.getUnifiedWebhook()`:  `response.objectType.enum(accountingReport)` **Removed** (Breaking ⚠️)\n* `unified-to.item.listCommerceItems()`: \n  *  `request.fields` **Changed** (Breaking ⚠️)\n  *  `response.[].variants` **Removed** (Breaking ⚠️)\n* `unified-to.item.updateCommerceItem()`: \n  *  `request` **Changed** (Breaking ⚠️)\n  *  `response.variants` **Removed** (Breaking ⚠️)\n* `unified-to.unified.createUnifiedConnection()`: \n  *  `request.permissions[]` **Changed** (Breaking ⚠️)\n  *  `response.permissions[]` **Changed** (Breaking ⚠️)\n* `unified-to.unified.createUnifiedWebhook()`: \n  *  `request.webhook.objectType.enum(accountingReport)` **Removed** (Breaking ⚠️)\n  *  `response.objectType.enum(accountingReport)` **Removed** (Breaking ⚠️)\n* `unified-to.unified.getUnifiedConnection()`:  `response.permissions[]` **Changed** (Breaking ⚠️)\n* `unified-to.unified.getUnifiedWebhook()`:  `response.objectType.enum(accountingReport)` **Removed** (Breaking ⚠️)\n* `unified-to.unified.listUnifiedConnections()`:  `response.[].permissions[]` **Changed** (Breaking ⚠️)\n* `unified-to.unified.listUnifiedWebhooks()`:  `response.[].objectType.enum(accountingReport)` **Removed** (Breaking ⚠️)\n* `unified-to.unified.patchUnifiedConnection()`: \n  *  `request.connection.permissions[]` **Changed** (Breaking ⚠️)\n  *  `response.permissions[]` **Changed** (Breaking ⚠️)\n* `unified-to.item.getCommerceItem()`: \n  *  `request.fields` **Changed** (Breaking ⚠️)\n  *  `response.variants` **Removed** (Breaking ⚠️)\n* `unified-to.unified.updateUnifiedConnection()`: \n  *  `request.connection.permissions[]` **Changed** (Breaking ⚠️)\n  *  `response.permissions[]` **Changed** (Breaking ⚠️)\n* `unified-to.unified.updateUnifiedWebhook()`: \n  *  `request.webhook.objectType.enum(accountingReport)` **Removed** (Breaking ⚠️)\n  *  `response.objectType.enum(accountingReport)` **Removed** (Breaking ⚠️)\n* `unified-to.connection.createUnifiedConnection()`: \n  *  `request.permissions[]` **Changed** (Breaking ⚠️)\n  *  `response.permissions[]` **Changed** (Breaking ⚠️)\n* `unified-to.connection.getUnifiedConnection()`:  `response.permissions[]` **Changed** (Breaking ⚠️)\n* `unified-to.connection.listUnifiedConnections()`:  `response.[].permissions[]` **Changed** (Breaking ⚠️)\n* `unified-to.connection.patchUnifiedConnection()`: \n  *  `request.connection.permissions[]` **Changed** (Breaking ⚠️)\n  *  `response.permissions[]` **Changed** (Breaking ⚠️)\n* `unified-to.connection.updateUnifiedConnection()`: \n  *  `request.connection.permissions[]` **Changed** (Breaking ⚠️)\n  *  `response.permissions[]` **Changed** (Breaking ⚠️)\n* `unified-to.webhook.createUnifiedWebhook()`: \n  *  `request.webhook.objectType.enum(accountingReport)` **Removed** (Breaking ⚠️)\n  *  `response.objectType.enum(accountingReport)` **Removed** (Breaking ⚠️)\n* `unified-to.accounting.listAccountingReports()`: **Removed** (Breaking ⚠️)\n* `unified-to.accounting.getAccountingReport()`: **Removed** (Breaking ⚠️)\n* `unified-to.report.listAccountingReports()`: **Removed** (Breaking ⚠️)\n* `unified-to.report.getAccountingReport()`: **Removed** (Breaking ⚠️)\n"
 generatedFiles:
   - .gitattributes
   - USAGE.md

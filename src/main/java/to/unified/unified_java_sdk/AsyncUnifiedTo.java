@@ -57,8 +57,6 @@ public class AsyncUnifiedTo {
 
     private final AsyncQuote quote;
 
-    private final AsyncReport report;
-
     private final AsyncSalesorder salesorder;
 
     private final AsyncTaxrate taxrate;
@@ -84,6 +82,8 @@ public class AsyncUnifiedTo {
     private final AsyncInsertionorder insertionorder;
 
     private final AsyncPromoted promoted;
+
+    private final AsyncReport report;
 
     private final AsyncTarget target;
 
@@ -449,10 +449,6 @@ public class AsyncUnifiedTo {
         return quote;
     }
 
-    public AsyncReport report() {
-        return report;
-    }
-
     public AsyncSalesorder salesorder() {
         return salesorder;
     }
@@ -503,6 +499,10 @@ public class AsyncUnifiedTo {
 
     public AsyncPromoted promoted() {
         return promoted;
+    }
+
+    public AsyncReport report() {
+        return report;
     }
 
     public AsyncTarget target() {
@@ -1085,7 +1085,6 @@ public class AsyncUnifiedTo {
         this.project = new AsyncProject(syncSDK.project(), sdkConfiguration);
         this.purchaseorder = new AsyncPurchaseorder(syncSDK.purchaseorder(), sdkConfiguration);
         this.quote = new AsyncQuote(syncSDK.quote(), sdkConfiguration);
-        this.report = new AsyncReport(syncSDK.report(), sdkConfiguration);
         this.salesorder = new AsyncSalesorder(syncSDK.salesorder(), sdkConfiguration);
         this.taxrate = new AsyncTaxrate(syncSDK.taxrate(), sdkConfiguration);
         this.transaction = new AsyncTransaction(syncSDK.transaction(), sdkConfiguration);
@@ -1099,6 +1098,7 @@ public class AsyncUnifiedTo {
         this.group = new AsyncGroup(syncSDK.group(), sdkConfiguration);
         this.insertionorder = new AsyncInsertionorder(syncSDK.insertionorder(), sdkConfiguration);
         this.promoted = new AsyncPromoted(syncSDK.promoted(), sdkConfiguration);
+        this.report = new AsyncReport(syncSDK.report(), sdkConfiguration);
         this.target = new AsyncTarget(syncSDK.target(), sdkConfiguration);
         this.analytics = new AsyncAnalytics(syncSDK.analytics(), sdkConfiguration);
         this.event = new AsyncEvent(syncSDK.event(), sdkConfiguration);

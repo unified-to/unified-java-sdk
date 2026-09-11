@@ -44,7 +44,6 @@
 * [getAccountingProject](#getaccountingproject) - Retrieve a project
 * [getAccountingPurchaseorder](#getaccountingpurchaseorder) - Retrieve a purchaseorder
 * [getAccountingQuote](#getaccountingquote) - Retrieve a quote
-* [getAccountingReport](#getaccountingreport) - Retrieve a report
 * [getAccountingSalesorder](#getaccountingsalesorder) - Retrieve a salesorder
 * [getAccountingTaxrate](#getaccountingtaxrate) - Retrieve a taxrate
 * [getAccountingTransaction](#getaccountingtransaction) - Retrieve a transaction
@@ -71,7 +70,6 @@
 * [listAccountingProjects](#listaccountingprojects) - List all projects
 * [listAccountingPurchaseorders](#listaccountingpurchaseorders) - List all purchaseorders
 * [listAccountingQuotes](#listaccountingquotes) - List all quotes
-* [listAccountingReports](#listaccountingreports) - List all reports
 * [listAccountingSalesorders](#listaccountingsalesorders) - List all salesorders
 * [listAccountingTaxrates](#listaccountingtaxrates) - List all taxrates
 * [listAccountingTransactions](#listaccountingtransactions) - List all transactions
@@ -2493,64 +2491,6 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## getAccountingReport
-
-Retrieve a report
-
-### Example Usage
-
-<!-- UsageSnippet language="java" operationID="getAccountingReport" method="get" path="/accounting/{connection_id}/report/{id}" -->
-```java
-package hello.world;
-
-import java.lang.Exception;
-import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.GetAccountingReportRequest;
-import to.unified.unified_java_sdk.models.operations.GetAccountingReportResponse;
-import to.unified.unified_java_sdk.models.shared.Security;
-
-public class Application {
-
-    public static void main(String[] args) throws Exception {
-
-        UnifiedTo sdk = UnifiedTo.builder()
-                .security(Security.builder()
-                    .jwt(System.getenv().getOrDefault("JWT", ""))
-                    .build())
-            .build();
-
-        GetAccountingReportRequest req = GetAccountingReportRequest.builder()
-                .connectionId("<id>")
-                .id("<id>")
-                .build();
-
-        GetAccountingReportResponse res = sdk.accounting().getAccountingReport()
-                .request(req)
-                .call();
-
-        if (res.accountingReport().isPresent()) {
-            System.out.println(res.accountingReport().get());
-        }
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                           | Type                                                                                | Required                                                                            | Description                                                                         |
-| ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
-| `request`                                                                           | [GetAccountingReportRequest](../../models/operations/GetAccountingReportRequest.md) | :heavy_check_mark:                                                                  | The request object to use for the request.                                          |
-
-### Response
-
-**[GetAccountingReportResponse](../../models/operations/GetAccountingReportResponse.md)**
-
-### Errors
-
-| Error Type             | Status Code            | Content Type           |
-| ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
-
 ## getAccountingSalesorder
 
 Retrieve a salesorder
@@ -4031,63 +3971,6 @@ public class Application {
 ### Response
 
 **[ListAccountingQuotesResponse](../../models/operations/ListAccountingQuotesResponse.md)**
-
-### Errors
-
-| Error Type             | Status Code            | Content Type           |
-| ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
-
-## listAccountingReports
-
-List all reports
-
-### Example Usage
-
-<!-- UsageSnippet language="java" operationID="listAccountingReports" method="get" path="/accounting/{connection_id}/report" -->
-```java
-package hello.world;
-
-import java.lang.Exception;
-import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.ListAccountingReportsRequest;
-import to.unified.unified_java_sdk.models.operations.ListAccountingReportsResponse;
-import to.unified.unified_java_sdk.models.shared.Security;
-
-public class Application {
-
-    public static void main(String[] args) throws Exception {
-
-        UnifiedTo sdk = UnifiedTo.builder()
-                .security(Security.builder()
-                    .jwt(System.getenv().getOrDefault("JWT", ""))
-                    .build())
-            .build();
-
-        ListAccountingReportsRequest req = ListAccountingReportsRequest.builder()
-                .connectionId("<id>")
-                .build();
-
-        ListAccountingReportsResponse res = sdk.accounting().listAccountingReports()
-                .request(req)
-                .call();
-
-        if (res.accountingReports().isPresent()) {
-            System.out.println(res.accountingReports().get());
-        }
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
-| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
-| `request`                                                                               | [ListAccountingReportsRequest](../../models/operations/ListAccountingReportsRequest.md) | :heavy_check_mark:                                                                      | The request object to use for the request.                                              |
-
-### Response
-
-**[ListAccountingReportsResponse](../../models/operations/ListAccountingReportsResponse.md)**
 
 ### Errors
 

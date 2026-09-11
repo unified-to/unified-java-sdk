@@ -20,7 +20,6 @@ import java.util.Optional;
  */
 public class AccountingInvoiceType {
 
-    public static final AccountingInvoiceType BILL = new AccountingInvoiceType("BILL");
     public static final AccountingInvoiceType INVOICE = new AccountingInvoiceType("INVOICE");
     public static final AccountingInvoiceType CREDITMEMO = new AccountingInvoiceType("CREDITMEMO");
 
@@ -96,7 +95,6 @@ public class AccountingInvoiceType {
 
     private static final Map<String, AccountingInvoiceType> createValuesMap() {
         Map<String, AccountingInvoiceType> map = new LinkedHashMap<>();
-        map.put("BILL", BILL);
         map.put("INVOICE", INVOICE);
         map.put("CREDITMEMO", CREDITMEMO);
         return map;
@@ -104,7 +102,6 @@ public class AccountingInvoiceType {
 
     private static final Map<String, AccountingInvoiceTypeEnum> createEnumsMap() {
         Map<String, AccountingInvoiceTypeEnum> map = new HashMap<>();
-        map.put("BILL", AccountingInvoiceTypeEnum.BILL);
         map.put("INVOICE", AccountingInvoiceTypeEnum.INVOICE);
         map.put("CREDITMEMO", AccountingInvoiceTypeEnum.CREDITMEMO);
         return map;
@@ -113,7 +110,6 @@ public class AccountingInvoiceType {
     
     public enum AccountingInvoiceTypeEnum {
 
-        BILL("BILL"),
         INVOICE("INVOICE"),
         CREDITMEMO("CREDITMEMO"),;
 

@@ -6,12 +6,6 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
-import to.unified.unified_java_sdk.models.operations.GetAccountingReportRequest;
-import to.unified.unified_java_sdk.models.operations.GetAccountingReportRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.GetAccountingReportResponse;
-import to.unified.unified_java_sdk.models.operations.ListAccountingReportsRequest;
-import to.unified.unified_java_sdk.models.operations.ListAccountingReportsRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.ListAccountingReportsResponse;
 import to.unified.unified_java_sdk.models.operations.ListAdsReportsRequest;
 import to.unified.unified_java_sdk.models.operations.ListAdsReportsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.ListAdsReportsResponse;
@@ -21,8 +15,6 @@ import to.unified.unified_java_sdk.models.operations.ListAnalyticsReportsRespons
 import to.unified.unified_java_sdk.models.operations.ListMartechReportsRequest;
 import to.unified.unified_java_sdk.models.operations.ListMartechReportsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.ListMartechReportsResponse;
-import to.unified.unified_java_sdk.operations.GetAccountingReport;
-import to.unified.unified_java_sdk.operations.ListAccountingReports;
 import to.unified.unified_java_sdk.operations.ListAdsReports;
 import to.unified.unified_java_sdk.operations.ListAnalyticsReports;
 import to.unified.unified_java_sdk.operations.ListMartechReports;
@@ -46,50 +38,6 @@ public class Report {
      */
     public AsyncReport async() {
         return asyncSDK;
-    }
-
-    /**
-     * Retrieve a report
-     * 
-     * @return The call builder
-     */
-    public GetAccountingReportRequestBuilder getAccountingReport() {
-        return new GetAccountingReportRequestBuilder(sdkConfiguration);
-    }
-
-    /**
-     * Retrieve a report
-     * 
-     * @param request The request object containing all the parameters for the API call.
-     * @return The response from the API call
-     * @throws RuntimeException subclass if the API call fails
-     */
-    public GetAccountingReportResponse getAccountingReport(@Nonnull GetAccountingReportRequest request) {
-        RequestOperation<GetAccountingReportRequest, GetAccountingReportResponse> operation
-              = new GetAccountingReport.Sync(sdkConfiguration, _headers);
-        return operation.handleResponse(operation.doRequest(request));
-    }
-
-    /**
-     * List all reports
-     * 
-     * @return The call builder
-     */
-    public ListAccountingReportsRequestBuilder listAccountingReports() {
-        return new ListAccountingReportsRequestBuilder(sdkConfiguration);
-    }
-
-    /**
-     * List all reports
-     * 
-     * @param request The request object containing all the parameters for the API call.
-     * @return The response from the API call
-     * @throws RuntimeException subclass if the API call fails
-     */
-    public ListAccountingReportsResponse listAccountingReports(@Nonnull ListAccountingReportsRequest request) {
-        RequestOperation<ListAccountingReportsRequest, ListAccountingReportsResponse> operation
-              = new ListAccountingReports.Sync(sdkConfiguration, _headers);
-        return operation.handleResponse(operation.doRequest(request));
     }
 
     /**
