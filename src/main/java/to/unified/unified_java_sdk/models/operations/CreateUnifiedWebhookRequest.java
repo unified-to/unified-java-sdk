@@ -23,7 +23,7 @@ public class CreateUnifiedWebhookRequest {
     private Webhook webhook;
 
     /**
-     * When set, all of the existing data will sent back to your server.
+     * When true, send existing/historic data. When false, no historic data is sent.
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_all")
     private Boolean includeAll;
@@ -50,7 +50,7 @@ public class CreateUnifiedWebhookRequest {
     }
 
     /**
-     * When set, all of the existing data will sent back to your server.
+     * When true, send existing/historic data. When false, no historic data is sent.
      */
     public Optional<Boolean> includeAll() {
         return Optional.ofNullable(this.includeAll);
@@ -71,7 +71,7 @@ public class CreateUnifiedWebhookRequest {
 
 
     /**
-     * When set, all of the existing data will sent back to your server.
+     * When true, send existing/historic data. When false, no historic data is sent.
      */
     public CreateUnifiedWebhookRequest withIncludeAll(@Nullable Boolean includeAll) {
         this.includeAll = includeAll;
@@ -126,7 +126,7 @@ public class CreateUnifiedWebhookRequest {
         }
 
         /**
-         * When set, all of the existing data will sent back to your server.
+         * When true, send existing/historic data. When false, no historic data is sent.
          */
         public Builder includeAll(@Nullable Boolean includeAll) {
             this.includeAll = includeAll;
