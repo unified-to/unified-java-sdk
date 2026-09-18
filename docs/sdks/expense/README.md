@@ -17,16 +17,17 @@ Create an expense
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createAccountingExpense" method="post" path="/accounting/{connection_id}/expense" -->
+<!-- UsageSnippet language="java" operationID="createAccountingExpense" method="post" path="/accounting/{connection_id}/expense" example="accounting_expense" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingExpenseRequest;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingExpenseResponse;
-import to.unified.unified_java_sdk.models.shared.AccountingExpense;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -40,6 +41,40 @@ public class Application {
 
         CreateAccountingExpenseRequest req = CreateAccountingExpenseRequest.builder()
                 .accountingExpense(AccountingExpense.builder()
+                    .approvedAt(OffsetDateTime.parse("2026-05-09T18:24:02.313Z"))
+                    .attachments(List.of(
+                        AccountingAttachment.builder()
+                            .downloadUrl("https://ripe-napkin.biz/")
+                            .id("bfba31e4-33ae-4dea-b8e5-edc2181608ec")
+                            .mimeType("annus")
+                            .name("cohibeo")
+                            .build()))
+                    .categoryIds(List.of())
+                    .createdAt(OffsetDateTime.parse("2020-06-11T03:39:37.305Z"))
+                    .currency("SSP")
+                    .externalNumber("necessitatibus")
+                    .id("049777da-55cf-41fb-866d-0a574a19b0eb")
+                    .lineitems(List.of(
+                        AccountingLineitem.builder()
+                            .id("f26d5412-51c5-4471-95e4-ce3041eb1194")
+                            .itemDescription("Innovative Table featuring left technology and Rubber construction")
+                            .itemName("Luxurious Cotton Pizza")
+                            .itemSku("978-0-8324-6620-5")
+                            .notes("Degusto conventus defendo valetudo.")
+                            .taxAmount(2501d)
+                            .totalAmount(168d)
+                            .unitAmount(3059d)
+                            .unitQuantity(1d)
+                            .build()))
+                    .metadata(List.of())
+                    .name("Refined Steel Shoes")
+                    .paymentMethod("CASH")
+                    .postedAt(OffsetDateTime.parse("2021-06-04T05:04:02.308Z"))
+                    .reimbursedAmount(1833d)
+                    .status(AccountingExpenseStatus.SUBMITTED)
+                    .taxAmount(2602d)
+                    .totalAmount(3580d)
+                    .updatedAt(OffsetDateTime.parse("2026-05-09T18:24:02.313Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -192,16 +227,17 @@ Update an expense
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchAccountingExpense" method="patch" path="/accounting/{connection_id}/expense/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchAccountingExpense" method="patch" path="/accounting/{connection_id}/expense/{id}" example="accounting_expense" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchAccountingExpenseRequest;
 import to.unified.unified_java_sdk.models.operations.PatchAccountingExpenseResponse;
-import to.unified.unified_java_sdk.models.shared.AccountingExpense;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -215,6 +251,40 @@ public class Application {
 
         PatchAccountingExpenseRequest req = PatchAccountingExpenseRequest.builder()
                 .accountingExpense(AccountingExpense.builder()
+                    .approvedAt(OffsetDateTime.parse("2026-05-09T18:24:02.349Z"))
+                    .attachments(List.of(
+                        AccountingAttachment.builder()
+                            .downloadUrl("https://ripe-napkin.biz/")
+                            .id("4298778d-022a-4392-aa3b-287ddb9df4eb")
+                            .mimeType("annus")
+                            .name("cohibeo")
+                            .build()))
+                    .categoryIds(List.of())
+                    .createdAt(OffsetDateTime.parse("2020-06-11T03:39:37.305Z"))
+                    .currency("SSP")
+                    .externalNumber("necessitatibus")
+                    .id("ed5c1758-1bcc-4ab8-b2d6-cf125fc1bd3b")
+                    .lineitems(List.of(
+                        AccountingLineitem.builder()
+                            .id("a4851a9b-120a-48e3-8f5b-ed20b4e6fb0c")
+                            .itemDescription("Innovative Table featuring left technology and Rubber construction")
+                            .itemName("Luxurious Cotton Pizza")
+                            .itemSku("978-0-8324-6620-5")
+                            .notes("Degusto conventus defendo valetudo.")
+                            .taxAmount(2501d)
+                            .totalAmount(168d)
+                            .unitAmount(3059d)
+                            .unitQuantity(1d)
+                            .build()))
+                    .metadata(List.of())
+                    .name("Refined Steel Shoes")
+                    .paymentMethod("CASH")
+                    .postedAt(OffsetDateTime.parse("2021-06-04T05:04:02.315Z"))
+                    .reimbursedAmount(1833d)
+                    .status(AccountingExpenseStatus.SUBMITTED)
+                    .taxAmount(2602d)
+                    .totalAmount(3580d)
+                    .updatedAt(OffsetDateTime.parse("2026-05-09T18:24:02.349Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -309,16 +379,17 @@ Update an expense
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateAccountingExpense" method="put" path="/accounting/{connection_id}/expense/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateAccountingExpense" method="put" path="/accounting/{connection_id}/expense/{id}" example="accounting_expense" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateAccountingExpenseRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateAccountingExpenseResponse;
-import to.unified.unified_java_sdk.models.shared.AccountingExpense;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -332,6 +403,40 @@ public class Application {
 
         UpdateAccountingExpenseRequest req = UpdateAccountingExpenseRequest.builder()
                 .accountingExpense(AccountingExpense.builder()
+                    .approvedAt(OffsetDateTime.parse("2026-05-09T18:24:02.349Z"))
+                    .attachments(List.of(
+                        AccountingAttachment.builder()
+                            .downloadUrl("https://ripe-napkin.biz/")
+                            .id("4298778d-022a-4392-aa3b-287ddb9df4eb")
+                            .mimeType("annus")
+                            .name("cohibeo")
+                            .build()))
+                    .categoryIds(List.of())
+                    .createdAt(OffsetDateTime.parse("2020-06-11T03:39:37.305Z"))
+                    .currency("SSP")
+                    .externalNumber("necessitatibus")
+                    .id("ed5c1758-1bcc-4ab8-b2d6-cf125fc1bd3b")
+                    .lineitems(List.of(
+                        AccountingLineitem.builder()
+                            .id("a4851a9b-120a-48e3-8f5b-ed20b4e6fb0c")
+                            .itemDescription("Innovative Table featuring left technology and Rubber construction")
+                            .itemName("Luxurious Cotton Pizza")
+                            .itemSku("978-0-8324-6620-5")
+                            .notes("Degusto conventus defendo valetudo.")
+                            .taxAmount(2501d)
+                            .totalAmount(168d)
+                            .unitAmount(3059d)
+                            .unitQuantity(1d)
+                            .build()))
+                    .metadata(List.of())
+                    .name("Refined Steel Shoes")
+                    .paymentMethod("CASH")
+                    .postedAt(OffsetDateTime.parse("2021-06-04T05:04:02.315Z"))
+                    .reimbursedAmount(1833d)
+                    .status(AccountingExpenseStatus.SUBMITTED)
+                    .taxAmount(2602d)
+                    .totalAmount(3580d)
+                    .updatedAt(OffsetDateTime.parse("2026-05-09T18:24:02.349Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

@@ -41,11 +41,12 @@ Create a branch
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createRepoBranch" method="post" path="/repo/{connection_id}/branch" -->
+<!-- UsageSnippet language="java" operationID="createRepoBranch" method="post" path="/repo/{connection_id}/branch" example="repo_branch" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateRepoBranchRequest;
 import to.unified.unified_java_sdk.models.operations.CreateRepoBranchResponse;
@@ -64,8 +65,11 @@ public class Application {
 
         CreateRepoBranchRequest req = CreateRepoBranchRequest.builder()
                 .repoBranch(RepoBranch.builder()
-                    .name("<value>")
+                    .name("voluptas")
                     .repoId("<id>")
+                    .createdAt(OffsetDateTime.parse("2019-02-24T09:33:48.540Z"))
+                    .id("597e1772-7923-4e1d-875c-e660983871be")
+                    .updatedAt(OffsetDateTime.parse("2020-01-03T14:15:11.083Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -103,11 +107,12 @@ Create a commit
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createRepoCommit" method="post" path="/repo/{connection_id}/commit" -->
+<!-- UsageSnippet language="java" operationID="createRepoCommit" method="post" path="/repo/{connection_id}/commit" example="repo_commit" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateRepoCommitRequest;
 import to.unified.unified_java_sdk.models.operations.CreateRepoCommitResponse;
@@ -127,6 +132,13 @@ public class Application {
         CreateRepoCommitRequest req = CreateRepoCommitRequest.builder()
                 .repoCommit(RepoCommit.builder()
                     .repoId("<id>")
+                    .createdAt(OffsetDateTime.parse("2020-07-12T16:20:42.520Z"))
+                    .id("537657d4-be2d-4530-82aa-c8046846968a")
+                    .linesAdded(313d)
+                    .linesChanged(659d)
+                    .linesDeleted(482d)
+                    .message("Auctus ascisco esse attollo clarus odio tum bis rerum.")
+                    .updatedAt(OffsetDateTime.parse("2023-05-16T02:59:38.478Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -164,11 +176,12 @@ Create an organization
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createRepoOrganization" method="post" path="/repo/{connection_id}/organization" -->
+<!-- UsageSnippet language="java" operationID="createRepoOrganization" method="post" path="/repo/{connection_id}/organization" example="repo_organization" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateRepoOrganizationRequest;
 import to.unified.unified_java_sdk.models.operations.CreateRepoOrganizationResponse;
@@ -187,6 +200,13 @@ public class Application {
 
         CreateRepoOrganizationRequest req = CreateRepoOrganizationRequest.builder()
                 .repoOrganization(RepoOrganization.builder()
+                    .avatarUrl("https://picsum.photos/seed/fGl6Lb/3157/3173")
+                    .createdAt(OffsetDateTime.parse("2022-07-07T00:18:40.748Z"))
+                    .description("Trepide defendo supra testimonium ager.")
+                    .id("94512032-1bb0-446e-b197-d5b971050f38")
+                    .name("Denesik - Lemke")
+                    .updatedAt(OffsetDateTime.parse("2023-08-12T23:35:02.193Z"))
+                    .webUrl("https://turbulent-overheard.biz")
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -224,16 +244,17 @@ Create a pullrequest
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createRepoPullrequest" method="post" path="/repo/{connection_id}/pullrequest" -->
+<!-- UsageSnippet language="java" operationID="createRepoPullrequest" method="post" path="/repo/{connection_id}/pullrequest" example="repo_pullrequest" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateRepoPullrequestRequest;
 import to.unified.unified_java_sdk.models.operations.CreateRepoPullrequestResponse;
-import to.unified.unified_java_sdk.models.shared.RepoPullrequest;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -247,6 +268,18 @@ public class Application {
 
         CreateRepoPullrequestRequest req = CreateRepoPullrequestRequest.builder()
                 .repoPullrequest(RepoPullrequest.builder()
+                    .closedAt(OffsetDateTime.parse("2025-04-11T21:29:15.705Z"))
+                    .createdAt(OffsetDateTime.parse("2023-02-27T09:37:13.663Z"))
+                    .id("a371259c-921a-4ab7-8890-66df1900e75a")
+                    .labels(List.of(
+                        "adhuc",
+                        "quaerat"))
+                    .notes("Coadunatio turbo curtus ceno consuasor aggero. Suggero adeo creptio tutamen vulnus aqua delicate adopto derelinquo caritas. Maiores vulgivagus succurro temporibus.")
+                    .sourceBranchId("microchip-navigate")
+                    .status(RepoPullrequestStatus.REJECTED)
+                    .targetBranchId("feed-reboot")
+                    .title("Cunae aegrus averto texo advoco bibo amet asporto.")
+                    .updatedAt(OffsetDateTime.parse("2024-12-30T23:43:16.473Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -284,11 +317,12 @@ Create a repository
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createRepoRepository" method="post" path="/repo/{connection_id}/repository" -->
+<!-- UsageSnippet language="java" operationID="createRepoRepository" method="post" path="/repo/{connection_id}/repository" example="repo_repository" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateRepoRepositoryRequest;
 import to.unified.unified_java_sdk.models.operations.CreateRepoRepositoryResponse;
@@ -307,7 +341,14 @@ public class Application {
 
         CreateRepoRepositoryRequest req = CreateRepoRepositoryRequest.builder()
                 .repoRepository(RepoRepository.builder()
-                    .name("<value>")
+                    .name("suggero")
+                    .createdAt(OffsetDateTime.parse("2023-06-12T09:42:00.080Z"))
+                    .description("Tribuo torqueo aetas ustulo illum.")
+                    .id("2b8e1ef3-d009-4d87-9a50-495da886c6d8")
+                    .isPrivate(false)
+                    .owner("Marcella Kuhic")
+                    .updatedAt(OffsetDateTime.parse("2024-02-23T00:27:33.873Z"))
+                    .webUrl("https://brown-phrase.info")
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -920,11 +961,12 @@ Update a branch
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchRepoBranch" method="patch" path="/repo/{connection_id}/branch/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchRepoBranch" method="patch" path="/repo/{connection_id}/branch/{id}" example="repo_branch" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchRepoBranchRequest;
 import to.unified.unified_java_sdk.models.operations.PatchRepoBranchResponse;
@@ -943,8 +985,11 @@ public class Application {
 
         PatchRepoBranchRequest req = PatchRepoBranchRequest.builder()
                 .repoBranch(RepoBranch.builder()
-                    .name("<value>")
+                    .name("voluptas")
                     .repoId("<id>")
+                    .createdAt(OffsetDateTime.parse("2019-02-24T09:33:48.540Z"))
+                    .id("51e88d6d-eb9f-4fa3-8e8e-75e0b3c0d48f")
+                    .updatedAt(OffsetDateTime.parse("2020-01-03T14:15:11.084Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -983,11 +1028,12 @@ Update a commit
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchRepoCommit" method="patch" path="/repo/{connection_id}/commit/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchRepoCommit" method="patch" path="/repo/{connection_id}/commit/{id}" example="repo_commit" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchRepoCommitRequest;
 import to.unified.unified_java_sdk.models.operations.PatchRepoCommitResponse;
@@ -1007,6 +1053,13 @@ public class Application {
         PatchRepoCommitRequest req = PatchRepoCommitRequest.builder()
                 .repoCommit(RepoCommit.builder()
                     .repoId("<id>")
+                    .createdAt(OffsetDateTime.parse("2020-07-12T16:20:42.520Z"))
+                    .id("2b617b64-dffb-430e-8378-1009b9baedcf")
+                    .linesAdded(313d)
+                    .linesChanged(659d)
+                    .linesDeleted(482d)
+                    .message("Auctus ascisco esse attollo clarus odio tum bis rerum.")
+                    .updatedAt(OffsetDateTime.parse("2023-05-16T02:59:38.482Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -1045,11 +1098,12 @@ Update an organization
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchRepoOrganization" method="patch" path="/repo/{connection_id}/organization/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchRepoOrganization" method="patch" path="/repo/{connection_id}/organization/{id}" example="repo_organization" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchRepoOrganizationRequest;
 import to.unified.unified_java_sdk.models.operations.PatchRepoOrganizationResponse;
@@ -1068,6 +1122,13 @@ public class Application {
 
         PatchRepoOrganizationRequest req = PatchRepoOrganizationRequest.builder()
                 .repoOrganization(RepoOrganization.builder()
+                    .avatarUrl("https://picsum.photos/seed/fGl6Lb/3157/3173")
+                    .createdAt(OffsetDateTime.parse("2022-07-07T00:18:40.748Z"))
+                    .description("Trepide defendo supra testimonium ager.")
+                    .id("9e3a01c3-1824-44f1-b5d3-55744e673e8a")
+                    .name("Denesik - Lemke")
+                    .updatedAt(OffsetDateTime.parse("2023-08-12T23:35:02.195Z"))
+                    .webUrl("https://turbulent-overheard.biz")
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -1106,16 +1167,17 @@ Update a pullrequest
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchRepoPullrequest" method="patch" path="/repo/{connection_id}/pullrequest/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchRepoPullrequest" method="patch" path="/repo/{connection_id}/pullrequest/{id}" example="repo_pullrequest" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchRepoPullrequestRequest;
 import to.unified.unified_java_sdk.models.operations.PatchRepoPullrequestResponse;
-import to.unified.unified_java_sdk.models.shared.RepoPullrequest;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -1129,6 +1191,18 @@ public class Application {
 
         PatchRepoPullrequestRequest req = PatchRepoPullrequestRequest.builder()
                 .repoPullrequest(RepoPullrequest.builder()
+                    .closedAt(OffsetDateTime.parse("2025-04-11T21:29:15.711Z"))
+                    .createdAt(OffsetDateTime.parse("2023-02-27T09:37:13.663Z"))
+                    .id("047c6837-52d0-4609-a236-614e474b832a")
+                    .labels(List.of(
+                        "adhuc",
+                        "quaerat"))
+                    .notes("Coadunatio turbo curtus ceno consuasor aggero. Suggero adeo creptio tutamen vulnus aqua delicate adopto derelinquo caritas. Maiores vulgivagus succurro temporibus.")
+                    .sourceBranchId("microchip-navigate")
+                    .status(RepoPullrequestStatus.REJECTED)
+                    .targetBranchId("feed-reboot")
+                    .title("Cunae aegrus averto texo advoco bibo amet asporto.")
+                    .updatedAt(OffsetDateTime.parse("2024-12-30T23:43:16.479Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -1167,11 +1241,12 @@ Update a repository
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchRepoRepository" method="patch" path="/repo/{connection_id}/repository/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchRepoRepository" method="patch" path="/repo/{connection_id}/repository/{id}" example="repo_repository" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchRepoRepositoryRequest;
 import to.unified.unified_java_sdk.models.operations.PatchRepoRepositoryResponse;
@@ -1190,7 +1265,14 @@ public class Application {
 
         PatchRepoRepositoryRequest req = PatchRepoRepositoryRequest.builder()
                 .repoRepository(RepoRepository.builder()
-                    .name("<value>")
+                    .name("suggero")
+                    .createdAt(OffsetDateTime.parse("2023-06-12T09:42:00.080Z"))
+                    .description("Tribuo torqueo aetas ustulo illum.")
+                    .id("e4cc1567-240f-4c9f-a71e-0c80a589eb73")
+                    .isPrivate(false)
+                    .owner("Marcella Kuhic")
+                    .updatedAt(OffsetDateTime.parse("2024-02-23T00:27:33.875Z"))
+                    .webUrl("https://brown-phrase.info")
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -1509,11 +1591,12 @@ Update a branch
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateRepoBranch" method="put" path="/repo/{connection_id}/branch/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateRepoBranch" method="put" path="/repo/{connection_id}/branch/{id}" example="repo_branch" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateRepoBranchRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateRepoBranchResponse;
@@ -1532,8 +1615,11 @@ public class Application {
 
         UpdateRepoBranchRequest req = UpdateRepoBranchRequest.builder()
                 .repoBranch(RepoBranch.builder()
-                    .name("<value>")
+                    .name("voluptas")
                     .repoId("<id>")
+                    .createdAt(OffsetDateTime.parse("2019-02-24T09:33:48.540Z"))
+                    .id("51e88d6d-eb9f-4fa3-8e8e-75e0b3c0d48f")
+                    .updatedAt(OffsetDateTime.parse("2020-01-03T14:15:11.084Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -1572,11 +1658,12 @@ Update a commit
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateRepoCommit" method="put" path="/repo/{connection_id}/commit/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateRepoCommit" method="put" path="/repo/{connection_id}/commit/{id}" example="repo_commit" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateRepoCommitRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateRepoCommitResponse;
@@ -1596,6 +1683,13 @@ public class Application {
         UpdateRepoCommitRequest req = UpdateRepoCommitRequest.builder()
                 .repoCommit(RepoCommit.builder()
                     .repoId("<id>")
+                    .createdAt(OffsetDateTime.parse("2020-07-12T16:20:42.520Z"))
+                    .id("2b617b64-dffb-430e-8378-1009b9baedcf")
+                    .linesAdded(313d)
+                    .linesChanged(659d)
+                    .linesDeleted(482d)
+                    .message("Auctus ascisco esse attollo clarus odio tum bis rerum.")
+                    .updatedAt(OffsetDateTime.parse("2023-05-16T02:59:38.482Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -1634,11 +1728,12 @@ Update an organization
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateRepoOrganization" method="put" path="/repo/{connection_id}/organization/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateRepoOrganization" method="put" path="/repo/{connection_id}/organization/{id}" example="repo_organization" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateRepoOrganizationRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateRepoOrganizationResponse;
@@ -1657,6 +1752,13 @@ public class Application {
 
         UpdateRepoOrganizationRequest req = UpdateRepoOrganizationRequest.builder()
                 .repoOrganization(RepoOrganization.builder()
+                    .avatarUrl("https://picsum.photos/seed/fGl6Lb/3157/3173")
+                    .createdAt(OffsetDateTime.parse("2022-07-07T00:18:40.748Z"))
+                    .description("Trepide defendo supra testimonium ager.")
+                    .id("9e3a01c3-1824-44f1-b5d3-55744e673e8a")
+                    .name("Denesik - Lemke")
+                    .updatedAt(OffsetDateTime.parse("2023-08-12T23:35:02.195Z"))
+                    .webUrl("https://turbulent-overheard.biz")
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -1695,16 +1797,17 @@ Update a pullrequest
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateRepoPullrequest" method="put" path="/repo/{connection_id}/pullrequest/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateRepoPullrequest" method="put" path="/repo/{connection_id}/pullrequest/{id}" example="repo_pullrequest" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateRepoPullrequestRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateRepoPullrequestResponse;
-import to.unified.unified_java_sdk.models.shared.RepoPullrequest;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -1718,6 +1821,18 @@ public class Application {
 
         UpdateRepoPullrequestRequest req = UpdateRepoPullrequestRequest.builder()
                 .repoPullrequest(RepoPullrequest.builder()
+                    .closedAt(OffsetDateTime.parse("2025-04-11T21:29:15.711Z"))
+                    .createdAt(OffsetDateTime.parse("2023-02-27T09:37:13.663Z"))
+                    .id("047c6837-52d0-4609-a236-614e474b832a")
+                    .labels(List.of(
+                        "adhuc",
+                        "quaerat"))
+                    .notes("Coadunatio turbo curtus ceno consuasor aggero. Suggero adeo creptio tutamen vulnus aqua delicate adopto derelinquo caritas. Maiores vulgivagus succurro temporibus.")
+                    .sourceBranchId("microchip-navigate")
+                    .status(RepoPullrequestStatus.REJECTED)
+                    .targetBranchId("feed-reboot")
+                    .title("Cunae aegrus averto texo advoco bibo amet asporto.")
+                    .updatedAt(OffsetDateTime.parse("2024-12-30T23:43:16.479Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -1756,11 +1871,12 @@ Update a repository
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateRepoRepository" method="put" path="/repo/{connection_id}/repository/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateRepoRepository" method="put" path="/repo/{connection_id}/repository/{id}" example="repo_repository" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateRepoRepositoryRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateRepoRepositoryResponse;
@@ -1779,7 +1895,14 @@ public class Application {
 
         UpdateRepoRepositoryRequest req = UpdateRepoRepositoryRequest.builder()
                 .repoRepository(RepoRepository.builder()
-                    .name("<value>")
+                    .name("suggero")
+                    .createdAt(OffsetDateTime.parse("2023-06-12T09:42:00.080Z"))
+                    .description("Tribuo torqueo aetas ustulo illum.")
+                    .id("e4cc1567-240f-4c9f-a71e-0c80a589eb73")
+                    .isPrivate(false)
+                    .owner("Marcella Kuhic")
+                    .updatedAt(OffsetDateTime.parse("2024-02-23T00:27:33.875Z"))
+                    .webUrl("https://brown-phrase.info")
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

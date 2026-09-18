@@ -48,16 +48,18 @@ Create a company
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createCrmCompany" method="post" path="/crm/{connection_id}/company" -->
+<!-- UsageSnippet language="java" operationID="createCrmCompany" method="post" path="/crm/{connection_id}/company" example="crm_company" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
+import java.util.Map;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateCrmCompanyRequest;
 import to.unified.unified_java_sdk.models.operations.CreateCrmCompanyResponse;
-import to.unified.unified_java_sdk.models.shared.CrmCompany;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -71,6 +73,73 @@ public class Application {
 
         CreateCrmCompanyRequest req = CreateCrmCompanyRequest.builder()
                 .crmCompany(CrmCompany.builder()
+                    .address(PropertyCrmCompanyAddress.builder()
+                        .address1("7261 Salisbury Road")
+                        .address2("Apt. 778")
+                        .city("Harrisburg")
+                        .countryCode("US")
+                        .postalCode("56293-3678")
+                        .region("Pennsylvania")
+                        .regionCode("ID")
+                        .build())
+                    .createdAt(OffsetDateTime.parse("2020-05-11T18:26:32.925Z"))
+                    .description("Balbus crapula spiculum.")
+                    .domains(List.of(
+                        "fussy-nerve.info",
+                        "sturdy-lobster.org",
+                        "greedy-offset.name"))
+                    .emails(List.of(
+                        CrmEmail.builder()
+                            .email("Sandrine_Jacobi@hotmail.com")
+                            .type(CrmEmailType.WORK)
+                            .build(),
+                        CrmEmail.builder()
+                            .email("Sandrine_Jacobi@gmail.com")
+                            .type(CrmEmailType.WORK)
+                            .build(),
+                        CrmEmail.builder()
+                            .email("Sandrine.Jacobi@yahoo.com")
+                            .type(CrmEmailType.OTHER)
+                            .build()))
+                    .employees(967d)
+                    .id("878a4579-b9a2-4c57-8199-2ead09812aa8")
+                    .industry("Infrastructure")
+                    .isActive(true)
+                    .linkUrls(List.of(
+                        "https://blue-license.org",
+                        "https://minor-formation.com",
+                        "https://ecstatic-hammock.com"))
+                    .metadata(List.of(
+                        CrmMetadata.builder()
+                            .extraData(CrmMetadataExtraData.of(Map.ofEntries(
+                                Map.entry("display_name", "Custom Property"))))
+                            .format(CrmMetadataFormat.TEXT)
+                            .id("011e5f4e-5ac6-4bab-bc6e-ad1927085f0f")
+                            .namespace("custom")
+                            .slug("custom_property")
+                            .value(CrmMetadataValue.of("esse"))
+                            .build()))
+                    .name("Goodwin and Sons")
+                    .tags(List.of(
+                        "quaerat",
+                        "valeo"))
+                    .telephones(List.of(
+                        CrmTelephone.builder()
+                            .telephone("(432) 849-2690")
+                            .type(CrmTelephoneType.MOBILE)
+                            .build(),
+                        CrmTelephone.builder()
+                            .telephone("(606) 871-2046")
+                            .type(CrmTelephoneType.OTHER)
+                            .build(),
+                        CrmTelephone.builder()
+                            .telephone("(842) 258-9395")
+                            .type(CrmTelephoneType.MOBILE)
+                            .build()))
+                    .timezone("Europe/San_Marino")
+                    .updatedAt(OffsetDateTime.parse("2025-02-06T12:34:04.282Z"))
+                    .websites(List.of(
+                        "https://wise-possession.org"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -108,16 +177,18 @@ Create a contact
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createCrmContact" method="post" path="/crm/{connection_id}/contact" -->
+<!-- UsageSnippet language="java" operationID="createCrmContact" method="post" path="/crm/{connection_id}/contact" example="crm_contact" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
+import java.util.Map;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateCrmContactRequest;
 import to.unified.unified_java_sdk.models.operations.CreateCrmContactResponse;
-import to.unified.unified_java_sdk.models.shared.CrmContact;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -131,6 +202,64 @@ public class Application {
 
         CreateCrmContactRequest req = CreateCrmContactRequest.builder()
                 .crmContact(CrmContact.builder()
+                    .address(PropertyCrmContactAddress.builder()
+                        .address1("518 Brannon Burg")
+                        .city("East Helenebury")
+                        .countryCode("US")
+                        .postalCode("92622-2406")
+                        .region("Vermont")
+                        .regionCode("AZ")
+                        .build())
+                    .company("Lowe - Jakubowski")
+                    .createdAt(OffsetDateTime.parse("2021-01-02T00:41:38.885Z"))
+                    .department("systematic")
+                    .emails(List.of(
+                        CrmEmail.builder()
+                            .email("Mohammad.Bartell45@hotmail.com")
+                            .type(CrmEmailType.HOME)
+                            .build(),
+                        CrmEmail.builder()
+                            .email("Mohammad.Bartell90@hotmail.com")
+                            .type(CrmEmailType.HOME)
+                            .build(),
+                        CrmEmail.builder()
+                            .email("Mohammad_Bartell@hotmail.com")
+                            .type(CrmEmailType.WORK)
+                            .build()))
+                    .firstName("Mohammad")
+                    .id("4b00e4e9-fd2c-4c85-904a-2f9fbb538aab")
+                    .imageUrl("https://picsum.photos/seed/zmbPeg/2905/378")
+                    .lastName("Bartell")
+                    .linkUrls(List.of(
+                        "https://limited-parade.info",
+                        "https://faint-papa.com/",
+                        "https://windy-accountability.name"))
+                    .metadata(List.of(
+                        CrmMetadata.builder()
+                            .extraData(CrmMetadataExtraData.of(Map.ofEntries(
+                                Map.entry("display_name", "Custom Property"))))
+                            .format(CrmMetadataFormat.TEXT)
+                            .id("f5133e22-9032-4da2-b390-6d9b7c942b49")
+                            .namespace("custom")
+                            .slug("custom_property")
+                            .value(CrmMetadataValue.of("autem"))
+                            .build()))
+                    .name("Mohammad Bartell")
+                    .telephones(List.of(
+                        CrmTelephone.builder()
+                            .telephone("(975) 986-1658")
+                            .type(CrmTelephoneType.WORK)
+                            .build(),
+                        CrmTelephone.builder()
+                            .telephone("(489) 332-3509")
+                            .type(CrmTelephoneType.HOME)
+                            .build(),
+                        CrmTelephone.builder()
+                            .telephone("(205) 880-8886")
+                            .type(CrmTelephoneType.HOME)
+                            .build()))
+                    .title("National Tactics Analyst")
+                    .updatedAt(OffsetDateTime.parse("2021-02-23T09:13:10.758Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -168,16 +297,18 @@ Create a deal
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createCrmDeal" method="post" path="/crm/{connection_id}/deal" -->
+<!-- UsageSnippet language="java" operationID="createCrmDeal" method="post" path="/crm/{connection_id}/deal" example="crm_deal" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
+import java.util.Map;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateCrmDealRequest;
 import to.unified.unified_java_sdk.models.operations.CreateCrmDealResponse;
-import to.unified.unified_java_sdk.models.shared.CrmDeal;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -191,6 +322,45 @@ public class Application {
 
         CreateCrmDealRequest req = CreateCrmDealRequest.builder()
                 .crmDeal(CrmDeal.builder()
+                    .amount(98162d)
+                    .closedAt(OffsetDateTime.parse("2024-03-03T13:46:56.203Z"))
+                    .closingAt(OffsetDateTime.parse("2025-08-09T21:47:04.909Z"))
+                    .createdAt(OffsetDateTime.parse("2023-07-04T12:48:48.470Z"))
+                    .currency("IQD")
+                    .description("Tabula cicuta sophismata comis tepidus sit cavus.")
+                    .id("fb9d739e-e46a-4253-80ea-9c4e45eb3f96")
+                    .metadata(List.of(
+                        CrmMetadata.builder()
+                            .extraData(CrmMetadataExtraData.of(Map.ofEntries(
+                                Map.entry("display_name", "Custom Property"))))
+                            .format(CrmMetadataFormat.TEXT)
+                            .id("3a2e4850-fb79-4e6a-958a-abab7bbc81dc")
+                            .namespace("custom")
+                            .slug("custom_property")
+                            .value(CrmMetadataValue.of("conatus"))
+                            .build()))
+                    .name("Frozen Silk Chicken")
+                    .pipelines(List.of(
+                        CrmReference.builder()
+                            .id("eff2b7cd-af8e-4f47-aa85-163272ccc4d9")
+                            .name("trans")
+                            .build()))
+                    .probability(65d)
+                    .source("cubo")
+                    .stages(List.of(
+                        CrmReference.builder()
+                            .id("1a391e21-a554-4075-9436-04b11d9c2f35")
+                            .name("tubineus")
+                            .build(),
+                        CrmReference.builder()
+                            .id("d764d0a0-f44d-482e-9090-04e20aedf149")
+                            .name("adfectus")
+                            .build()))
+                    .tags(List.of(
+                        "causa",
+                        "suus"))
+                    .updatedAt(OffsetDateTime.parse("2024-09-29T03:11:55.578Z"))
+                    .wonReason("Usque libero soleo.")
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -228,16 +398,16 @@ Create an event
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createCrmEvent" method="post" path="/crm/{connection_id}/event" -->
+<!-- UsageSnippet language="java" operationID="createCrmEvent" method="post" path="/crm/{connection_id}/event" example="crm_event" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateCrmEventRequest;
 import to.unified.unified_java_sdk.models.operations.CreateCrmEventResponse;
-import to.unified.unified_java_sdk.models.shared.CrmEvent;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -251,6 +421,15 @@ public class Application {
 
         CreateCrmEventRequest req = CreateCrmEventRequest.builder()
                 .crmEvent(CrmEvent.builder()
+                    .call(PropertyCrmEventCall.builder()
+                        .description("Arbitro aptus.")
+                        .duration(64d)
+                        .startAt(OffsetDateTime.parse("2024-11-17T19:36:18.647Z"))
+                        .build())
+                    .createdAt(OffsetDateTime.parse("2020-07-14T04:53:23.784Z"))
+                    .id("bc6b1939-6879-4e6a-a90b-2a4f3acae555")
+                    .type(CrmEventType.CALL)
+                    .updatedAt(OffsetDateTime.parse("2026-09-08T16:08:26.484Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -288,16 +467,18 @@ Create a lead
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createCrmLead" method="post" path="/crm/{connection_id}/lead" -->
+<!-- UsageSnippet language="java" operationID="createCrmLead" method="post" path="/crm/{connection_id}/lead" example="crm_lead" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
+import java.util.Map;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateCrmLeadRequest;
 import to.unified.unified_java_sdk.models.operations.CreateCrmLeadResponse;
-import to.unified.unified_java_sdk.models.shared.CrmLead;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -311,6 +492,55 @@ public class Application {
 
         CreateCrmLeadRequest req = CreateCrmLeadRequest.builder()
                 .crmLead(CrmLead.builder()
+                    .address(PropertyCrmLeadAddress.builder()
+                        .address1("528 Forest Road")
+                        .address2("Apt. 643")
+                        .city("Palm Springs")
+                        .countryCode("US")
+                        .postalCode("55624-6499")
+                        .region("New Jersey")
+                        .regionCode("LA")
+                        .build())
+                    .companyName("Tillman - Wiegand")
+                    .createdAt(OffsetDateTime.parse("2019-10-12T11:27:59.003Z"))
+                    .emails(List.of(
+                        CrmEmail.builder()
+                            .email("Velda.Sporer16@yahoo.com")
+                            .type(CrmEmailType.OTHER)
+                            .build(),
+                        CrmEmail.builder()
+                            .email("Velda.Sporer@yahoo.com")
+                            .type(CrmEmailType.HOME)
+                            .build()))
+                    .firstName("Velda")
+                    .id("5c399df0-ebd2-46ff-8824-c35785883216")
+                    .isActive(true)
+                    .lastName("Sporer")
+                    .linkUrls(List.of(
+                        "https://classic-sightseeing.com/"))
+                    .metadata(List.of(
+                        CrmMetadata.builder()
+                            .extraData(CrmMetadataExtraData.of(Map.ofEntries(
+                                Map.entry("display_name", "Custom Property"))))
+                            .format(CrmMetadataFormat.TEXT)
+                            .id("fbe45a6a-3689-4115-9e09-6d36f037697e")
+                            .namespace("custom")
+                            .slug("custom_property")
+                            .value(CrmMetadataValue.of("sublime"))
+                            .build()))
+                    .name("Velda Sporer")
+                    .source("aetas")
+                    .status("vesco")
+                    .telephones(List.of(
+                        CrmTelephone.builder()
+                            .telephone("(955) 643-9849")
+                            .type(CrmTelephoneType.OTHER)
+                            .build(),
+                        CrmTelephone.builder()
+                            .telephone("(621) 811-8800")
+                            .type(CrmTelephoneType.WORK)
+                            .build()))
+                    .updatedAt(OffsetDateTime.parse("2020-05-15T02:08:48.275Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -348,16 +578,17 @@ Create a pipeline
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createCrmPipeline" method="post" path="/crm/{connection_id}/pipeline" -->
+<!-- UsageSnippet language="java" operationID="createCrmPipeline" method="post" path="/crm/{connection_id}/pipeline" example="crm_pipeline" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateCrmPipelineRequest;
 import to.unified.unified_java_sdk.models.operations.CreateCrmPipelineResponse;
-import to.unified.unified_java_sdk.models.shared.CrmPipeline;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -371,6 +602,24 @@ public class Application {
 
         CreateCrmPipelineRequest req = CreateCrmPipelineRequest.builder()
                 .crmPipeline(CrmPipeline.builder()
+                    .createdAt(OffsetDateTime.parse("2022-12-28T13:45:38.446Z"))
+                    .dealProbability(99d)
+                    .displayOrder(8d)
+                    .id("0212937f-ae58-406d-83a3-81d26a8e6868")
+                    .isActive(true)
+                    .name("Small Steel Bacon")
+                    .stages(List.of(
+                        CrmStage.builder()
+                            .active(false)
+                            .createdAt(OffsetDateTime.parse("2022-12-28T13:45:38.446Z"))
+                            .dealProbability(84d)
+                            .displayOrder(72d)
+                            .id("9ca5b3e9-1498-4027-8f0a-c108c9557292")
+                            .isClosed(true)
+                            .name("Veniam.")
+                            .updatedAt(OffsetDateTime.parse("2025-09-16T09:59:54.930Z"))
+                            .build()))
+                    .updatedAt(OffsetDateTime.parse("2025-10-07T15:04:42.495Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -1155,16 +1404,18 @@ Update a company
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchCrmCompany" method="patch" path="/crm/{connection_id}/company/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchCrmCompany" method="patch" path="/crm/{connection_id}/company/{id}" example="crm_company" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
+import java.util.Map;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchCrmCompanyRequest;
 import to.unified.unified_java_sdk.models.operations.PatchCrmCompanyResponse;
-import to.unified.unified_java_sdk.models.shared.CrmCompany;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -1178,6 +1429,73 @@ public class Application {
 
         PatchCrmCompanyRequest req = PatchCrmCompanyRequest.builder()
                 .crmCompany(CrmCompany.builder()
+                    .address(PropertyCrmCompanyAddress.builder()
+                        .address1("7261 Salisbury Road")
+                        .address2("Apt. 778")
+                        .city("Harrisburg")
+                        .countryCode("US")
+                        .postalCode("56293-3678")
+                        .region("Pennsylvania")
+                        .regionCode("ID")
+                        .build())
+                    .createdAt(OffsetDateTime.parse("2020-05-11T18:26:32.925Z"))
+                    .description("Balbus crapula spiculum.")
+                    .domains(List.of(
+                        "fussy-nerve.info",
+                        "sturdy-lobster.org",
+                        "greedy-offset.name"))
+                    .emails(List.of(
+                        CrmEmail.builder()
+                            .email("Sandrine_Jacobi@hotmail.com")
+                            .type(CrmEmailType.WORK)
+                            .build(),
+                        CrmEmail.builder()
+                            .email("Sandrine_Jacobi@gmail.com")
+                            .type(CrmEmailType.WORK)
+                            .build(),
+                        CrmEmail.builder()
+                            .email("Sandrine.Jacobi@yahoo.com")
+                            .type(CrmEmailType.OTHER)
+                            .build()))
+                    .employees(967d)
+                    .id("8003016a-bd6c-4df3-a7c3-d668a5c955a0")
+                    .industry("Infrastructure")
+                    .isActive(true)
+                    .linkUrls(List.of(
+                        "https://blue-license.org",
+                        "https://minor-formation.com",
+                        "https://ecstatic-hammock.com"))
+                    .metadata(List.of(
+                        CrmMetadata.builder()
+                            .extraData(CrmMetadataExtraData.of(Map.ofEntries(
+                                Map.entry("display_name", "Custom Property"))))
+                            .format(CrmMetadataFormat.TEXT)
+                            .id("c0e84923-8a1c-4b7e-94a6-498d9d0416a4")
+                            .namespace("custom")
+                            .slug("custom_property")
+                            .value(CrmMetadataValue.of("esse"))
+                            .build()))
+                    .name("Goodwin and Sons")
+                    .tags(List.of(
+                        "quaerat",
+                        "valeo"))
+                    .telephones(List.of(
+                        CrmTelephone.builder()
+                            .telephone("(432) 849-2690")
+                            .type(CrmTelephoneType.MOBILE)
+                            .build(),
+                        CrmTelephone.builder()
+                            .telephone("(606) 871-2046")
+                            .type(CrmTelephoneType.OTHER)
+                            .build(),
+                        CrmTelephone.builder()
+                            .telephone("(842) 258-9395")
+                            .type(CrmTelephoneType.MOBILE)
+                            .build()))
+                    .timezone("Europe/San_Marino")
+                    .updatedAt(OffsetDateTime.parse("2025-02-06T12:34:04.305Z"))
+                    .websites(List.of(
+                        "https://wise-possession.org"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -1216,16 +1534,18 @@ Update a contact
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchCrmContact" method="patch" path="/crm/{connection_id}/contact/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchCrmContact" method="patch" path="/crm/{connection_id}/contact/{id}" example="crm_contact" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
+import java.util.Map;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchCrmContactRequest;
 import to.unified.unified_java_sdk.models.operations.PatchCrmContactResponse;
-import to.unified.unified_java_sdk.models.shared.CrmContact;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -1239,6 +1559,64 @@ public class Application {
 
         PatchCrmContactRequest req = PatchCrmContactRequest.builder()
                 .crmContact(CrmContact.builder()
+                    .address(PropertyCrmContactAddress.builder()
+                        .address1("518 Brannon Burg")
+                        .city("East Helenebury")
+                        .countryCode("US")
+                        .postalCode("92622-2406")
+                        .region("Vermont")
+                        .regionCode("AZ")
+                        .build())
+                    .company("Lowe - Jakubowski")
+                    .createdAt(OffsetDateTime.parse("2021-01-02T00:41:38.885Z"))
+                    .department("systematic")
+                    .emails(List.of(
+                        CrmEmail.builder()
+                            .email("Mohammad.Bartell45@hotmail.com")
+                            .type(CrmEmailType.HOME)
+                            .build(),
+                        CrmEmail.builder()
+                            .email("Mohammad.Bartell90@hotmail.com")
+                            .type(CrmEmailType.HOME)
+                            .build(),
+                        CrmEmail.builder()
+                            .email("Mohammad_Bartell@hotmail.com")
+                            .type(CrmEmailType.WORK)
+                            .build()))
+                    .firstName("Mohammad")
+                    .id("926522c8-4fea-4b31-870c-dbb458b14cb0")
+                    .imageUrl("https://picsum.photos/seed/zmbPeg/2905/378")
+                    .lastName("Bartell")
+                    .linkUrls(List.of(
+                        "https://limited-parade.info",
+                        "https://faint-papa.com/",
+                        "https://windy-accountability.name"))
+                    .metadata(List.of(
+                        CrmMetadata.builder()
+                            .extraData(CrmMetadataExtraData.of(Map.ofEntries(
+                                Map.entry("display_name", "Custom Property"))))
+                            .format(CrmMetadataFormat.TEXT)
+                            .id("24067b18-8e42-4ed3-bb17-00f11628302f")
+                            .namespace("custom")
+                            .slug("custom_property")
+                            .value(CrmMetadataValue.of("autem"))
+                            .build()))
+                    .name("Mohammad Bartell")
+                    .telephones(List.of(
+                        CrmTelephone.builder()
+                            .telephone("(975) 986-1658")
+                            .type(CrmTelephoneType.WORK)
+                            .build(),
+                        CrmTelephone.builder()
+                            .telephone("(489) 332-3509")
+                            .type(CrmTelephoneType.HOME)
+                            .build(),
+                        CrmTelephone.builder()
+                            .telephone("(205) 880-8886")
+                            .type(CrmTelephoneType.HOME)
+                            .build()))
+                    .title("National Tactics Analyst")
+                    .updatedAt(OffsetDateTime.parse("2021-02-23T09:13:10.759Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -1277,16 +1655,18 @@ Update a deal
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchCrmDeal" method="patch" path="/crm/{connection_id}/deal/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchCrmDeal" method="patch" path="/crm/{connection_id}/deal/{id}" example="crm_deal" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
+import java.util.Map;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchCrmDealRequest;
 import to.unified.unified_java_sdk.models.operations.PatchCrmDealResponse;
-import to.unified.unified_java_sdk.models.shared.CrmDeal;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -1300,6 +1680,45 @@ public class Application {
 
         PatchCrmDealRequest req = PatchCrmDealRequest.builder()
                 .crmDeal(CrmDeal.builder()
+                    .amount(98162d)
+                    .closedAt(OffsetDateTime.parse("2024-03-03T13:46:56.208Z"))
+                    .closingAt(OffsetDateTime.parse("2025-08-09T21:47:04.924Z"))
+                    .createdAt(OffsetDateTime.parse("2023-07-04T12:48:48.470Z"))
+                    .currency("IQD")
+                    .description("Tabula cicuta sophismata comis tepidus sit cavus.")
+                    .id("c48de371-a2f9-40ba-b242-a1d9ef638384")
+                    .metadata(List.of(
+                        CrmMetadata.builder()
+                            .extraData(CrmMetadataExtraData.of(Map.ofEntries(
+                                Map.entry("display_name", "Custom Property"))))
+                            .format(CrmMetadataFormat.TEXT)
+                            .id("a53745bd-9d25-4299-93c4-8902acfaa6d1")
+                            .namespace("custom")
+                            .slug("custom_property")
+                            .value(CrmMetadataValue.of("conatus"))
+                            .build()))
+                    .name("Frozen Silk Chicken")
+                    .pipelines(List.of(
+                        CrmReference.builder()
+                            .id("ddfef141-0d4a-4bac-9498-e7274d64f9e2")
+                            .name("trans")
+                            .build()))
+                    .probability(65d)
+                    .source("cubo")
+                    .stages(List.of(
+                        CrmReference.builder()
+                            .id("b0bc65e5-f455-4d31-bdc6-3190eefddc75")
+                            .name("tubineus")
+                            .build(),
+                        CrmReference.builder()
+                            .id("7c9945f4-ba0b-4acc-bbab-b05e748707bb")
+                            .name("adfectus")
+                            .build()))
+                    .tags(List.of(
+                        "causa",
+                        "suus"))
+                    .updatedAt(OffsetDateTime.parse("2024-09-29T03:11:55.587Z"))
+                    .wonReason("Usque libero soleo.")
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -1338,16 +1757,16 @@ Update an event
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchCrmEvent" method="patch" path="/crm/{connection_id}/event/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchCrmEvent" method="patch" path="/crm/{connection_id}/event/{id}" example="crm_event" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchCrmEventRequest;
 import to.unified.unified_java_sdk.models.operations.PatchCrmEventResponse;
-import to.unified.unified_java_sdk.models.shared.CrmEvent;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -1361,6 +1780,15 @@ public class Application {
 
         PatchCrmEventRequest req = PatchCrmEventRequest.builder()
                 .crmEvent(CrmEvent.builder()
+                    .call(PropertyCrmEventCall.builder()
+                        .description("Arbitro aptus.")
+                        .duration(64d)
+                        .startAt(OffsetDateTime.parse("2024-11-17T19:36:18.679Z"))
+                        .build())
+                    .createdAt(OffsetDateTime.parse("2020-07-14T04:53:23.784Z"))
+                    .id("17e150e0-763c-4553-8b13-2eb74d8d88fb")
+                    .type(CrmEventType.CALL)
+                    .updatedAt(OffsetDateTime.parse("2026-09-08T16:08:26.529Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -1399,16 +1827,18 @@ Update a lead
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchCrmLead" method="patch" path="/crm/{connection_id}/lead/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchCrmLead" method="patch" path="/crm/{connection_id}/lead/{id}" example="crm_lead" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
+import java.util.Map;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchCrmLeadRequest;
 import to.unified.unified_java_sdk.models.operations.PatchCrmLeadResponse;
-import to.unified.unified_java_sdk.models.shared.CrmLead;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -1422,6 +1852,55 @@ public class Application {
 
         PatchCrmLeadRequest req = PatchCrmLeadRequest.builder()
                 .crmLead(CrmLead.builder()
+                    .address(PropertyCrmLeadAddress.builder()
+                        .address1("528 Forest Road")
+                        .address2("Apt. 643")
+                        .city("Palm Springs")
+                        .countryCode("US")
+                        .postalCode("55624-6499")
+                        .region("New Jersey")
+                        .regionCode("LA")
+                        .build())
+                    .companyName("Tillman - Wiegand")
+                    .createdAt(OffsetDateTime.parse("2019-10-12T11:27:59.003Z"))
+                    .emails(List.of(
+                        CrmEmail.builder()
+                            .email("Velda.Sporer16@yahoo.com")
+                            .type(CrmEmailType.OTHER)
+                            .build(),
+                        CrmEmail.builder()
+                            .email("Velda.Sporer@yahoo.com")
+                            .type(CrmEmailType.HOME)
+                            .build()))
+                    .firstName("Velda")
+                    .id("8fc3f6b3-b14f-498f-8e14-f7301ba4adb4")
+                    .isActive(true)
+                    .lastName("Sporer")
+                    .linkUrls(List.of(
+                        "https://classic-sightseeing.com/"))
+                    .metadata(List.of(
+                        CrmMetadata.builder()
+                            .extraData(CrmMetadataExtraData.of(Map.ofEntries(
+                                Map.entry("display_name", "Custom Property"))))
+                            .format(CrmMetadataFormat.TEXT)
+                            .id("30eaaeae-9533-412b-bc42-a1d1a0441a29")
+                            .namespace("custom")
+                            .slug("custom_property")
+                            .value(CrmMetadataValue.of("sublime"))
+                            .build()))
+                    .name("Velda Sporer")
+                    .source("aetas")
+                    .status("vesco")
+                    .telephones(List.of(
+                        CrmTelephone.builder()
+                            .telephone("(955) 643-9849")
+                            .type(CrmTelephoneType.OTHER)
+                            .build(),
+                        CrmTelephone.builder()
+                            .telephone("(621) 811-8800")
+                            .type(CrmTelephoneType.WORK)
+                            .build()))
+                    .updatedAt(OffsetDateTime.parse("2020-05-15T02:08:48.278Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -1460,16 +1939,17 @@ Update a pipeline
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchCrmPipeline" method="patch" path="/crm/{connection_id}/pipeline/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchCrmPipeline" method="patch" path="/crm/{connection_id}/pipeline/{id}" example="crm_pipeline" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchCrmPipelineRequest;
 import to.unified.unified_java_sdk.models.operations.PatchCrmPipelineResponse;
-import to.unified.unified_java_sdk.models.shared.CrmPipeline;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -1483,6 +1963,24 @@ public class Application {
 
         PatchCrmPipelineRequest req = PatchCrmPipelineRequest.builder()
                 .crmPipeline(CrmPipeline.builder()
+                    .createdAt(OffsetDateTime.parse("2022-12-28T13:45:38.446Z"))
+                    .dealProbability(99d)
+                    .displayOrder(8d)
+                    .id("00265dd3-4115-4cab-b919-ae3bbd699676")
+                    .isActive(true)
+                    .name("Small Steel Bacon")
+                    .stages(List.of(
+                        CrmStage.builder()
+                            .active(false)
+                            .createdAt(OffsetDateTime.parse("2022-12-28T13:45:38.446Z"))
+                            .dealProbability(84d)
+                            .displayOrder(72d)
+                            .id("81c3d0ad-e2bd-4a7e-964c-2875e9eab41f")
+                            .isClosed(true)
+                            .name("Veniam.")
+                            .updatedAt(OffsetDateTime.parse("2025-09-16T09:59:54.936Z"))
+                            .build()))
+                    .updatedAt(OffsetDateTime.parse("2025-10-07T15:04:42.501Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -1857,16 +2355,18 @@ Update a company
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateCrmCompany" method="put" path="/crm/{connection_id}/company/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateCrmCompany" method="put" path="/crm/{connection_id}/company/{id}" example="crm_company" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
+import java.util.Map;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateCrmCompanyRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateCrmCompanyResponse;
-import to.unified.unified_java_sdk.models.shared.CrmCompany;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -1880,6 +2380,73 @@ public class Application {
 
         UpdateCrmCompanyRequest req = UpdateCrmCompanyRequest.builder()
                 .crmCompany(CrmCompany.builder()
+                    .address(PropertyCrmCompanyAddress.builder()
+                        .address1("7261 Salisbury Road")
+                        .address2("Apt. 778")
+                        .city("Harrisburg")
+                        .countryCode("US")
+                        .postalCode("56293-3678")
+                        .region("Pennsylvania")
+                        .regionCode("ID")
+                        .build())
+                    .createdAt(OffsetDateTime.parse("2020-05-11T18:26:32.925Z"))
+                    .description("Balbus crapula spiculum.")
+                    .domains(List.of(
+                        "fussy-nerve.info",
+                        "sturdy-lobster.org",
+                        "greedy-offset.name"))
+                    .emails(List.of(
+                        CrmEmail.builder()
+                            .email("Sandrine_Jacobi@hotmail.com")
+                            .type(CrmEmailType.WORK)
+                            .build(),
+                        CrmEmail.builder()
+                            .email("Sandrine_Jacobi@gmail.com")
+                            .type(CrmEmailType.WORK)
+                            .build(),
+                        CrmEmail.builder()
+                            .email("Sandrine.Jacobi@yahoo.com")
+                            .type(CrmEmailType.OTHER)
+                            .build()))
+                    .employees(967d)
+                    .id("8003016a-bd6c-4df3-a7c3-d668a5c955a0")
+                    .industry("Infrastructure")
+                    .isActive(true)
+                    .linkUrls(List.of(
+                        "https://blue-license.org",
+                        "https://minor-formation.com",
+                        "https://ecstatic-hammock.com"))
+                    .metadata(List.of(
+                        CrmMetadata.builder()
+                            .extraData(CrmMetadataExtraData.of(Map.ofEntries(
+                                Map.entry("display_name", "Custom Property"))))
+                            .format(CrmMetadataFormat.TEXT)
+                            .id("c0e84923-8a1c-4b7e-94a6-498d9d0416a4")
+                            .namespace("custom")
+                            .slug("custom_property")
+                            .value(CrmMetadataValue.of("esse"))
+                            .build()))
+                    .name("Goodwin and Sons")
+                    .tags(List.of(
+                        "quaerat",
+                        "valeo"))
+                    .telephones(List.of(
+                        CrmTelephone.builder()
+                            .telephone("(432) 849-2690")
+                            .type(CrmTelephoneType.MOBILE)
+                            .build(),
+                        CrmTelephone.builder()
+                            .telephone("(606) 871-2046")
+                            .type(CrmTelephoneType.OTHER)
+                            .build(),
+                        CrmTelephone.builder()
+                            .telephone("(842) 258-9395")
+                            .type(CrmTelephoneType.MOBILE)
+                            .build()))
+                    .timezone("Europe/San_Marino")
+                    .updatedAt(OffsetDateTime.parse("2025-02-06T12:34:04.305Z"))
+                    .websites(List.of(
+                        "https://wise-possession.org"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -1918,16 +2485,18 @@ Update a contact
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateCrmContact" method="put" path="/crm/{connection_id}/contact/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateCrmContact" method="put" path="/crm/{connection_id}/contact/{id}" example="crm_contact" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
+import java.util.Map;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateCrmContactRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateCrmContactResponse;
-import to.unified.unified_java_sdk.models.shared.CrmContact;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -1941,6 +2510,64 @@ public class Application {
 
         UpdateCrmContactRequest req = UpdateCrmContactRequest.builder()
                 .crmContact(CrmContact.builder()
+                    .address(PropertyCrmContactAddress.builder()
+                        .address1("518 Brannon Burg")
+                        .city("East Helenebury")
+                        .countryCode("US")
+                        .postalCode("92622-2406")
+                        .region("Vermont")
+                        .regionCode("AZ")
+                        .build())
+                    .company("Lowe - Jakubowski")
+                    .createdAt(OffsetDateTime.parse("2021-01-02T00:41:38.885Z"))
+                    .department("systematic")
+                    .emails(List.of(
+                        CrmEmail.builder()
+                            .email("Mohammad.Bartell45@hotmail.com")
+                            .type(CrmEmailType.HOME)
+                            .build(),
+                        CrmEmail.builder()
+                            .email("Mohammad.Bartell90@hotmail.com")
+                            .type(CrmEmailType.HOME)
+                            .build(),
+                        CrmEmail.builder()
+                            .email("Mohammad_Bartell@hotmail.com")
+                            .type(CrmEmailType.WORK)
+                            .build()))
+                    .firstName("Mohammad")
+                    .id("926522c8-4fea-4b31-870c-dbb458b14cb0")
+                    .imageUrl("https://picsum.photos/seed/zmbPeg/2905/378")
+                    .lastName("Bartell")
+                    .linkUrls(List.of(
+                        "https://limited-parade.info",
+                        "https://faint-papa.com/",
+                        "https://windy-accountability.name"))
+                    .metadata(List.of(
+                        CrmMetadata.builder()
+                            .extraData(CrmMetadataExtraData.of(Map.ofEntries(
+                                Map.entry("display_name", "Custom Property"))))
+                            .format(CrmMetadataFormat.TEXT)
+                            .id("24067b18-8e42-4ed3-bb17-00f11628302f")
+                            .namespace("custom")
+                            .slug("custom_property")
+                            .value(CrmMetadataValue.of("autem"))
+                            .build()))
+                    .name("Mohammad Bartell")
+                    .telephones(List.of(
+                        CrmTelephone.builder()
+                            .telephone("(975) 986-1658")
+                            .type(CrmTelephoneType.WORK)
+                            .build(),
+                        CrmTelephone.builder()
+                            .telephone("(489) 332-3509")
+                            .type(CrmTelephoneType.HOME)
+                            .build(),
+                        CrmTelephone.builder()
+                            .telephone("(205) 880-8886")
+                            .type(CrmTelephoneType.HOME)
+                            .build()))
+                    .title("National Tactics Analyst")
+                    .updatedAt(OffsetDateTime.parse("2021-02-23T09:13:10.759Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -1979,16 +2606,18 @@ Update a deal
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateCrmDeal" method="put" path="/crm/{connection_id}/deal/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateCrmDeal" method="put" path="/crm/{connection_id}/deal/{id}" example="crm_deal" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
+import java.util.Map;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateCrmDealRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateCrmDealResponse;
-import to.unified.unified_java_sdk.models.shared.CrmDeal;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -2002,6 +2631,45 @@ public class Application {
 
         UpdateCrmDealRequest req = UpdateCrmDealRequest.builder()
                 .crmDeal(CrmDeal.builder()
+                    .amount(98162d)
+                    .closedAt(OffsetDateTime.parse("2024-03-03T13:46:56.208Z"))
+                    .closingAt(OffsetDateTime.parse("2025-08-09T21:47:04.924Z"))
+                    .createdAt(OffsetDateTime.parse("2023-07-04T12:48:48.470Z"))
+                    .currency("IQD")
+                    .description("Tabula cicuta sophismata comis tepidus sit cavus.")
+                    .id("c48de371-a2f9-40ba-b242-a1d9ef638384")
+                    .metadata(List.of(
+                        CrmMetadata.builder()
+                            .extraData(CrmMetadataExtraData.of(Map.ofEntries(
+                                Map.entry("display_name", "Custom Property"))))
+                            .format(CrmMetadataFormat.TEXT)
+                            .id("a53745bd-9d25-4299-93c4-8902acfaa6d1")
+                            .namespace("custom")
+                            .slug("custom_property")
+                            .value(CrmMetadataValue.of("conatus"))
+                            .build()))
+                    .name("Frozen Silk Chicken")
+                    .pipelines(List.of(
+                        CrmReference.builder()
+                            .id("ddfef141-0d4a-4bac-9498-e7274d64f9e2")
+                            .name("trans")
+                            .build()))
+                    .probability(65d)
+                    .source("cubo")
+                    .stages(List.of(
+                        CrmReference.builder()
+                            .id("b0bc65e5-f455-4d31-bdc6-3190eefddc75")
+                            .name("tubineus")
+                            .build(),
+                        CrmReference.builder()
+                            .id("7c9945f4-ba0b-4acc-bbab-b05e748707bb")
+                            .name("adfectus")
+                            .build()))
+                    .tags(List.of(
+                        "causa",
+                        "suus"))
+                    .updatedAt(OffsetDateTime.parse("2024-09-29T03:11:55.587Z"))
+                    .wonReason("Usque libero soleo.")
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -2040,16 +2708,16 @@ Update an event
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateCrmEvent" method="put" path="/crm/{connection_id}/event/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateCrmEvent" method="put" path="/crm/{connection_id}/event/{id}" example="crm_event" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateCrmEventRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateCrmEventResponse;
-import to.unified.unified_java_sdk.models.shared.CrmEvent;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -2063,6 +2731,15 @@ public class Application {
 
         UpdateCrmEventRequest req = UpdateCrmEventRequest.builder()
                 .crmEvent(CrmEvent.builder()
+                    .call(PropertyCrmEventCall.builder()
+                        .description("Arbitro aptus.")
+                        .duration(64d)
+                        .startAt(OffsetDateTime.parse("2024-11-17T19:36:18.679Z"))
+                        .build())
+                    .createdAt(OffsetDateTime.parse("2020-07-14T04:53:23.784Z"))
+                    .id("17e150e0-763c-4553-8b13-2eb74d8d88fb")
+                    .type(CrmEventType.CALL)
+                    .updatedAt(OffsetDateTime.parse("2026-09-08T16:08:26.529Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -2101,16 +2778,18 @@ Update a lead
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateCrmLead" method="put" path="/crm/{connection_id}/lead/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateCrmLead" method="put" path="/crm/{connection_id}/lead/{id}" example="crm_lead" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
+import java.util.Map;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateCrmLeadRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateCrmLeadResponse;
-import to.unified.unified_java_sdk.models.shared.CrmLead;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -2124,6 +2803,55 @@ public class Application {
 
         UpdateCrmLeadRequest req = UpdateCrmLeadRequest.builder()
                 .crmLead(CrmLead.builder()
+                    .address(PropertyCrmLeadAddress.builder()
+                        .address1("528 Forest Road")
+                        .address2("Apt. 643")
+                        .city("Palm Springs")
+                        .countryCode("US")
+                        .postalCode("55624-6499")
+                        .region("New Jersey")
+                        .regionCode("LA")
+                        .build())
+                    .companyName("Tillman - Wiegand")
+                    .createdAt(OffsetDateTime.parse("2019-10-12T11:27:59.003Z"))
+                    .emails(List.of(
+                        CrmEmail.builder()
+                            .email("Velda.Sporer16@yahoo.com")
+                            .type(CrmEmailType.OTHER)
+                            .build(),
+                        CrmEmail.builder()
+                            .email("Velda.Sporer@yahoo.com")
+                            .type(CrmEmailType.HOME)
+                            .build()))
+                    .firstName("Velda")
+                    .id("8fc3f6b3-b14f-498f-8e14-f7301ba4adb4")
+                    .isActive(true)
+                    .lastName("Sporer")
+                    .linkUrls(List.of(
+                        "https://classic-sightseeing.com/"))
+                    .metadata(List.of(
+                        CrmMetadata.builder()
+                            .extraData(CrmMetadataExtraData.of(Map.ofEntries(
+                                Map.entry("display_name", "Custom Property"))))
+                            .format(CrmMetadataFormat.TEXT)
+                            .id("30eaaeae-9533-412b-bc42-a1d1a0441a29")
+                            .namespace("custom")
+                            .slug("custom_property")
+                            .value(CrmMetadataValue.of("sublime"))
+                            .build()))
+                    .name("Velda Sporer")
+                    .source("aetas")
+                    .status("vesco")
+                    .telephones(List.of(
+                        CrmTelephone.builder()
+                            .telephone("(955) 643-9849")
+                            .type(CrmTelephoneType.OTHER)
+                            .build(),
+                        CrmTelephone.builder()
+                            .telephone("(621) 811-8800")
+                            .type(CrmTelephoneType.WORK)
+                            .build()))
+                    .updatedAt(OffsetDateTime.parse("2020-05-15T02:08:48.278Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -2162,16 +2890,17 @@ Update a pipeline
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateCrmPipeline" method="put" path="/crm/{connection_id}/pipeline/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateCrmPipeline" method="put" path="/crm/{connection_id}/pipeline/{id}" example="crm_pipeline" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateCrmPipelineRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateCrmPipelineResponse;
-import to.unified.unified_java_sdk.models.shared.CrmPipeline;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -2185,6 +2914,24 @@ public class Application {
 
         UpdateCrmPipelineRequest req = UpdateCrmPipelineRequest.builder()
                 .crmPipeline(CrmPipeline.builder()
+                    .createdAt(OffsetDateTime.parse("2022-12-28T13:45:38.446Z"))
+                    .dealProbability(99d)
+                    .displayOrder(8d)
+                    .id("00265dd3-4115-4cab-b919-ae3bbd699676")
+                    .isActive(true)
+                    .name("Small Steel Bacon")
+                    .stages(List.of(
+                        CrmStage.builder()
+                            .active(false)
+                            .createdAt(OffsetDateTime.parse("2022-12-28T13:45:38.446Z"))
+                            .dealProbability(84d)
+                            .displayOrder(72d)
+                            .id("81c3d0ad-e2bd-4a7e-964c-2875e9eab41f")
+                            .isClosed(true)
+                            .name("Veniam.")
+                            .updatedAt(OffsetDateTime.parse("2025-09-16T09:59:54.936Z"))
+                            .build()))
+                    .updatedAt(OffsetDateTime.parse("2025-10-07T15:04:42.501Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

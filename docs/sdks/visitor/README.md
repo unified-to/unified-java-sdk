@@ -17,16 +17,17 @@ Create a visitor
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createAnalyticsVisitor" method="post" path="/analytics/{connection_id}/visitor" -->
+<!-- UsageSnippet language="java" operationID="createAnalyticsVisitor" method="post" path="/analytics/{connection_id}/visitor" example="analytics_visitor" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.Map;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateAnalyticsVisitorRequest;
 import to.unified.unified_java_sdk.models.operations.CreateAnalyticsVisitorResponse;
-import to.unified.unified_java_sdk.models.shared.AnalyticsVisitor;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -40,6 +41,17 @@ public class Application {
 
         CreateAnalyticsVisitorRequest req = CreateAnalyticsVisitorRequest.builder()
                 .analyticsVisitor(AnalyticsVisitor.builder()
+                    .createdAt(OffsetDateTime.parse("2020-04-16T20:29:48.281Z"))
+                    .email("Dallas_Mitchell@yahoo.com")
+                    .firstSeenAt(OffsetDateTime.parse("2020-04-16T20:29:48.281Z"))
+                    .id("420ee3a3-c06b-4e84-aeb3-75a564a396af")
+                    .lastSeenAt(OffsetDateTime.parse("2021-12-04T18:09:30.380Z"))
+                    .metadata(Map.ofEntries(
+                        Map.entry("segment", PropertyAnalyticsVisitorMetadata.builder()
+                            .build())))
+                    .name("Desiree O'Hara")
+                    .totalEvents(3639d)
+                    .updatedAt(OffsetDateTime.parse("2025-06-03T08:28:54.986Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -192,16 +204,17 @@ Update a visitor
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchAnalyticsVisitor" method="patch" path="/analytics/{connection_id}/visitor/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchAnalyticsVisitor" method="patch" path="/analytics/{connection_id}/visitor/{id}" example="analytics_visitor" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.Map;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchAnalyticsVisitorRequest;
 import to.unified.unified_java_sdk.models.operations.PatchAnalyticsVisitorResponse;
-import to.unified.unified_java_sdk.models.shared.AnalyticsVisitor;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -215,6 +228,17 @@ public class Application {
 
         PatchAnalyticsVisitorRequest req = PatchAnalyticsVisitorRequest.builder()
                 .analyticsVisitor(AnalyticsVisitor.builder()
+                    .createdAt(OffsetDateTime.parse("2020-04-16T20:29:48.281Z"))
+                    .email("Dallas_Mitchell@yahoo.com")
+                    .firstSeenAt(OffsetDateTime.parse("2020-04-16T20:29:48.281Z"))
+                    .id("0a544765-aa1c-4b18-b2ed-c837c06c1867")
+                    .lastSeenAt(OffsetDateTime.parse("2021-12-04T18:09:30.384Z"))
+                    .metadata(Map.ofEntries(
+                        Map.entry("segment", PropertyAnalyticsVisitorMetadata.builder()
+                            .build())))
+                    .name("Desiree O'Hara")
+                    .totalEvents(3639d)
+                    .updatedAt(OffsetDateTime.parse("2025-06-03T08:28:54.997Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -309,16 +333,17 @@ Update a visitor
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateAnalyticsVisitor" method="put" path="/analytics/{connection_id}/visitor/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateAnalyticsVisitor" method="put" path="/analytics/{connection_id}/visitor/{id}" example="analytics_visitor" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.Map;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateAnalyticsVisitorRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateAnalyticsVisitorResponse;
-import to.unified.unified_java_sdk.models.shared.AnalyticsVisitor;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -332,6 +357,17 @@ public class Application {
 
         UpdateAnalyticsVisitorRequest req = UpdateAnalyticsVisitorRequest.builder()
                 .analyticsVisitor(AnalyticsVisitor.builder()
+                    .createdAt(OffsetDateTime.parse("2020-04-16T20:29:48.281Z"))
+                    .email("Dallas_Mitchell@yahoo.com")
+                    .firstSeenAt(OffsetDateTime.parse("2020-04-16T20:29:48.281Z"))
+                    .id("0a544765-aa1c-4b18-b2ed-c837c06c1867")
+                    .lastSeenAt(OffsetDateTime.parse("2021-12-04T18:09:30.384Z"))
+                    .metadata(Map.ofEntries(
+                        Map.entry("segment", PropertyAnalyticsVisitorMetadata.builder()
+                            .build())))
+                    .name("Desiree O'Hara")
+                    .totalEvents(3639d)
+                    .updatedAt(OffsetDateTime.parse("2025-06-03T08:28:54.997Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

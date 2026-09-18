@@ -17,16 +17,17 @@ Create a purchaseorder
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createAccountingPurchaseorder" method="post" path="/accounting/{connection_id}/purchaseorder" -->
+<!-- UsageSnippet language="java" operationID="createAccountingPurchaseorder" method="post" path="/accounting/{connection_id}/purchaseorder" example="accounting_purchaseorder" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingPurchaseorderRequest;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingPurchaseorderResponse;
-import to.unified.unified_java_sdk.models.shared.AccountingPurchaseorder;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -40,6 +41,32 @@ public class Application {
 
         CreateAccountingPurchaseorderRequest req = CreateAccountingPurchaseorderRequest.builder()
                 .accountingPurchaseorder(AccountingPurchaseorder.builder()
+                    .billingAddress(PropertyAccountingPurchaseorderBillingAddress.builder()
+                        .address1("37214 Tanya Walks")
+                        .city("South Annabelleton")
+                        .countryCode("US")
+                        .postalCode("30337")
+                        .region("Nevada")
+                        .regionCode("MA")
+                        .build())
+                    .categoryIds(List.of())
+                    .createdAt(OffsetDateTime.parse("2020-12-12T07:17:47.021Z"))
+                    .currency("ZMW")
+                    .id("870e6384-1e12-4bea-9790-0e4ac7a373f1")
+                    .lineitems(List.of())
+                    .metadata(List.of())
+                    .postedAt(OffsetDateTime.parse("2025-04-25T03:32:03.967Z"))
+                    .shippingAddress(PropertyAccountingPurchaseorderShippingAddress.builder()
+                        .address1("649 Maggio Overpass")
+                        .city("Lake Jaylan")
+                        .countryCode("US")
+                        .postalCode("99211-6547")
+                        .region("North Carolina")
+                        .regionCode("ID")
+                        .build())
+                    .status(AccountingPurchaseorderStatus.PARTIALLY_REFUNDED)
+                    .totalAmount(0d)
+                    .updatedAt(OffsetDateTime.parse("2021-02-26T03:18:48.829Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -192,16 +219,17 @@ Update a purchaseorder
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchAccountingPurchaseorder" method="patch" path="/accounting/{connection_id}/purchaseorder/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchAccountingPurchaseorder" method="patch" path="/accounting/{connection_id}/purchaseorder/{id}" example="accounting_purchaseorder" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchAccountingPurchaseorderRequest;
 import to.unified.unified_java_sdk.models.operations.PatchAccountingPurchaseorderResponse;
-import to.unified.unified_java_sdk.models.shared.AccountingPurchaseorder;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -215,6 +243,32 @@ public class Application {
 
         PatchAccountingPurchaseorderRequest req = PatchAccountingPurchaseorderRequest.builder()
                 .accountingPurchaseorder(AccountingPurchaseorder.builder()
+                    .billingAddress(PropertyAccountingPurchaseorderBillingAddress.builder()
+                        .address1("37214 Tanya Walks")
+                        .city("South Annabelleton")
+                        .countryCode("US")
+                        .postalCode("30337")
+                        .region("Nevada")
+                        .regionCode("MA")
+                        .build())
+                    .categoryIds(List.of())
+                    .createdAt(OffsetDateTime.parse("2020-12-12T07:17:47.021Z"))
+                    .currency("ZMW")
+                    .id("54658ca1-f723-459d-901f-9dc45e6da571")
+                    .lineitems(List.of())
+                    .metadata(List.of())
+                    .postedAt(OffsetDateTime.parse("2025-04-25T03:32:03.994Z"))
+                    .shippingAddress(PropertyAccountingPurchaseorderShippingAddress.builder()
+                        .address1("649 Maggio Overpass")
+                        .city("Lake Jaylan")
+                        .countryCode("US")
+                        .postalCode("99211-6547")
+                        .region("North Carolina")
+                        .regionCode("ID")
+                        .build())
+                    .status(AccountingPurchaseorderStatus.PARTIALLY_REFUNDED)
+                    .totalAmount(0d)
+                    .updatedAt(OffsetDateTime.parse("2021-02-26T03:18:48.830Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -309,16 +363,17 @@ Update a purchaseorder
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateAccountingPurchaseorder" method="put" path="/accounting/{connection_id}/purchaseorder/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateAccountingPurchaseorder" method="put" path="/accounting/{connection_id}/purchaseorder/{id}" example="accounting_purchaseorder" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateAccountingPurchaseorderRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateAccountingPurchaseorderResponse;
-import to.unified.unified_java_sdk.models.shared.AccountingPurchaseorder;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -332,6 +387,32 @@ public class Application {
 
         UpdateAccountingPurchaseorderRequest req = UpdateAccountingPurchaseorderRequest.builder()
                 .accountingPurchaseorder(AccountingPurchaseorder.builder()
+                    .billingAddress(PropertyAccountingPurchaseorderBillingAddress.builder()
+                        .address1("37214 Tanya Walks")
+                        .city("South Annabelleton")
+                        .countryCode("US")
+                        .postalCode("30337")
+                        .region("Nevada")
+                        .regionCode("MA")
+                        .build())
+                    .categoryIds(List.of())
+                    .createdAt(OffsetDateTime.parse("2020-12-12T07:17:47.021Z"))
+                    .currency("ZMW")
+                    .id("54658ca1-f723-459d-901f-9dc45e6da571")
+                    .lineitems(List.of())
+                    .metadata(List.of())
+                    .postedAt(OffsetDateTime.parse("2025-04-25T03:32:03.994Z"))
+                    .shippingAddress(PropertyAccountingPurchaseorderShippingAddress.builder()
+                        .address1("649 Maggio Overpass")
+                        .city("Lake Jaylan")
+                        .countryCode("US")
+                        .postalCode("99211-6547")
+                        .region("North Carolina")
+                        .regionCode("ID")
+                        .build())
+                    .status(AccountingPurchaseorderStatus.PARTIALLY_REFUNDED)
+                    .totalAmount(0d)
+                    .updatedAt(OffsetDateTime.parse("2021-02-26T03:18:48.830Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

@@ -17,16 +17,18 @@ Create an employee
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createHrisEmployee" method="post" path="/hris/{connection_id}/employee" -->
+<!-- UsageSnippet language="java" operationID="createHrisEmployee" method="post" path="/hris/{connection_id}/employee" example="hris_employee" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
+import java.util.Map;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateHrisEmployeeRequest;
 import to.unified.unified_java_sdk.models.operations.CreateHrisEmployeeResponse;
-import to.unified.unified_java_sdk.models.shared.HrisEmployee;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -40,6 +42,110 @@ public class Application {
 
         CreateHrisEmployeeRequest req = CreateHrisEmployeeRequest.builder()
                 .hrisEmployee(HrisEmployee.builder()
+                    .address(PropertyHrisEmployeeAddress.builder()
+                        .address1("52008 Lansdowne Road")
+                        .address2("Apt. 101")
+                        .city("Connellyberg")
+                        .countryCode("US")
+                        .postalCode("18978")
+                        .region("South Dakota")
+                        .regionCode("NM")
+                        .build())
+                    .bio("sushi devotee, singer")
+                    .compensation(List.of(
+                        HrisCompensation.builder()
+                            .amount(69148d)
+                            .currency("CRC")
+                            .frequency(HrisCompensationFrequency.QUARTER)
+                            .notes("Tergeo laborum laboriosam tutis.")
+                            .type(HrisCompensationType.EQUITY)
+                            .build()))
+                    .createdAt(OffsetDateTime.parse("2019-09-16T15:08:53.262Z"))
+                    .currency("IDR")
+                    .dateOfBirth(OffsetDateTime.parse("2001-04-22"))
+                    .emails(List.of(
+                        HrisEmail.builder()
+                            .email("Zetta_Prohaska67@hotmail.com")
+                            .type(HrisEmailType.HOME)
+                            .build()))
+                    .employeeNumber("YuOt169CGu")
+                    .employmentStatus(EmploymentStatus.ACTIVE)
+                    .employmentType(HrisEmployeeEmploymentType.VOLUNTEER)
+                    .firstName("Zetta")
+                    .gender(HrisEmployeeGender.INTERSEX)
+                    .hasMfa(true)
+                    .hiredAt(OffsetDateTime.parse("2023-05-10T16:15:07.653Z"))
+                    .id("1dfdcf05-413d-4fb8-82f1-fe4ed9681c02")
+                    .imageUrl("https://loremflickr.com/3684/2116?lock=4686991638584456")
+                    .languageLocale("es")
+                    .lastName("Prohaska")
+                    .locations(List.of())
+                    .maritalStatus(MaritalStatus.MARRIED)
+                    .metadata(List.of(
+                        HrisMetadata.builder()
+                            .extraData(HrisMetadataExtraData.of(Map.ofEntries(
+                                Map.entry("display_name", "Custom Property"))))
+                            .format(HrisMetadataFormat.TEXT)
+                            .id("1af6cea0-5868-4220-b922-55797633b82d")
+                            .namespace("custom")
+                            .slug("custom_property")
+                            .value(HrisMetadataValue.of("tenetur"))
+                            .build()))
+                    .name("Zetta Prohaska")
+                    .pronouns("she/her")
+                    .relationships(List.of(
+                        HrisEmployeerelationship.builder()
+                            .emails(List.of(
+                                HrisEmail.builder()
+                                    .email("Deshaun.Sanford24@yahoo.com")
+                                    .build(),
+                                HrisEmail.builder()
+                                    .email("Rebeca.Dibbert11@hotmail.com")
+                                    .build(),
+                                HrisEmail.builder()
+                                    .email("Hester80@gmail.com")
+                                    .build()))
+                            .name("Automotive")
+                            .type(HrisEmployeerelationshipType.EMERGENCY)
+                            .build(),
+                        HrisEmployeerelationship.builder()
+                            .emails(List.of(
+                                HrisEmail.builder()
+                                    .email("Benedict_Wisozk83@hotmail.com")
+                                    .build(),
+                                HrisEmail.builder()
+                                    .email("Princess_Rath43@gmail.com")
+                                    .build(),
+                                HrisEmail.builder()
+                                    .email("Elmira92@yahoo.com")
+                                    .build()))
+                            .name("Music")
+                            .type(HrisEmployeerelationshipType.FRIEND)
+                            .build(),
+                        HrisEmployeerelationship.builder()
+                            .emails(List.of(
+                                HrisEmail.builder()
+                                    .email("Jane30@gmail.com")
+                                    .build()))
+                            .name("Jewelry")
+                            .type(HrisEmployeerelationshipType.SIBLING)
+                            .build()))
+                    .salutation("Miss")
+                    .ssnSin("yMRtj0Q3xO")
+                    .storageQuotaAllocated(3674489d)
+                    .storageQuotaAvailable(7748057d)
+                    .storageQuotaUsed(301727d)
+                    .telephones(List.of(
+                        HrisTelephone.builder()
+                            .telephone("(409) 801-3705")
+                            .type(HrisTelephoneType.FAX)
+                            .build()))
+                    .terminationReason("Communis adnuo damnatio atavus terebro acies canis cogito triumphus creber temptatio defendo cubo amissio paulatim corroboro.")
+                    .timeoffDaysTotal(12d)
+                    .timeoffDaysUsed(6d)
+                    .timezone("Africa/Harare")
+                    .title("Investor Paradigm Liaison")
+                    .updatedAt(OffsetDateTime.parse("2022-02-19T07:02:15.352Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -192,16 +298,18 @@ Update an employee
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchHrisEmployee" method="patch" path="/hris/{connection_id}/employee/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchHrisEmployee" method="patch" path="/hris/{connection_id}/employee/{id}" example="hris_employee" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
+import java.util.Map;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchHrisEmployeeRequest;
 import to.unified.unified_java_sdk.models.operations.PatchHrisEmployeeResponse;
-import to.unified.unified_java_sdk.models.shared.HrisEmployee;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -215,6 +323,110 @@ public class Application {
 
         PatchHrisEmployeeRequest req = PatchHrisEmployeeRequest.builder()
                 .hrisEmployee(HrisEmployee.builder()
+                    .address(PropertyHrisEmployeeAddress.builder()
+                        .address1("52008 Lansdowne Road")
+                        .address2("Apt. 101")
+                        .city("Connellyberg")
+                        .countryCode("US")
+                        .postalCode("18978")
+                        .region("South Dakota")
+                        .regionCode("NM")
+                        .build())
+                    .bio("sushi devotee, singer")
+                    .compensation(List.of(
+                        HrisCompensation.builder()
+                            .amount(69148d)
+                            .currency("CRC")
+                            .frequency(HrisCompensationFrequency.QUARTER)
+                            .notes("Tergeo laborum laboriosam tutis.")
+                            .type(HrisCompensationType.EQUITY)
+                            .build()))
+                    .createdAt(OffsetDateTime.parse("2019-09-16T15:08:53.262Z"))
+                    .currency("IDR")
+                    .dateOfBirth(OffsetDateTime.parse("2001-04-22"))
+                    .emails(List.of(
+                        HrisEmail.builder()
+                            .email("Zetta_Prohaska67@hotmail.com")
+                            .type(HrisEmailType.HOME)
+                            .build()))
+                    .employeeNumber("YuOt169CGu")
+                    .employmentStatus(EmploymentStatus.ACTIVE)
+                    .employmentType(HrisEmployeeEmploymentType.VOLUNTEER)
+                    .firstName("Zetta")
+                    .gender(HrisEmployeeGender.INTERSEX)
+                    .hasMfa(true)
+                    .hiredAt(OffsetDateTime.parse("2023-05-10T16:15:07.690Z"))
+                    .id("f48de0fa-eaf1-4dda-a822-85ff56964d2a")
+                    .imageUrl("https://loremflickr.com/3684/2116?lock=4686991638584456")
+                    .languageLocale("es")
+                    .lastName("Prohaska")
+                    .locations(List.of())
+                    .maritalStatus(MaritalStatus.MARRIED)
+                    .metadata(List.of(
+                        HrisMetadata.builder()
+                            .extraData(HrisMetadataExtraData.of(Map.ofEntries(
+                                Map.entry("display_name", "Custom Property"))))
+                            .format(HrisMetadataFormat.TEXT)
+                            .id("a70413d9-b815-4ba9-8f48-c242e3ecee27")
+                            .namespace("custom")
+                            .slug("custom_property")
+                            .value(HrisMetadataValue.of("tenetur"))
+                            .build()))
+                    .name("Zetta Prohaska")
+                    .pronouns("she/her")
+                    .relationships(List.of(
+                        HrisEmployeerelationship.builder()
+                            .emails(List.of(
+                                HrisEmail.builder()
+                                    .email("Deshaun.Sanford24@yahoo.com")
+                                    .build(),
+                                HrisEmail.builder()
+                                    .email("Rebeca.Dibbert11@hotmail.com")
+                                    .build(),
+                                HrisEmail.builder()
+                                    .email("Hester80@gmail.com")
+                                    .build()))
+                            .name("Automotive")
+                            .type(HrisEmployeerelationshipType.EMERGENCY)
+                            .build(),
+                        HrisEmployeerelationship.builder()
+                            .emails(List.of(
+                                HrisEmail.builder()
+                                    .email("Benedict_Wisozk83@hotmail.com")
+                                    .build(),
+                                HrisEmail.builder()
+                                    .email("Princess_Rath43@gmail.com")
+                                    .build(),
+                                HrisEmail.builder()
+                                    .email("Elmira92@yahoo.com")
+                                    .build()))
+                            .name("Music")
+                            .type(HrisEmployeerelationshipType.FRIEND)
+                            .build(),
+                        HrisEmployeerelationship.builder()
+                            .emails(List.of(
+                                HrisEmail.builder()
+                                    .email("Jane30@gmail.com")
+                                    .build()))
+                            .name("Jewelry")
+                            .type(HrisEmployeerelationshipType.SIBLING)
+                            .build()))
+                    .salutation("Miss")
+                    .ssnSin("yMRtj0Q3xO")
+                    .storageQuotaAllocated(3674489d)
+                    .storageQuotaAvailable(7748057d)
+                    .storageQuotaUsed(301727d)
+                    .telephones(List.of(
+                        HrisTelephone.builder()
+                            .telephone("(409) 801-3705")
+                            .type(HrisTelephoneType.FAX)
+                            .build()))
+                    .terminationReason("Communis adnuo damnatio atavus terebro acies canis cogito triumphus creber temptatio defendo cubo amissio paulatim corroboro.")
+                    .timeoffDaysTotal(12d)
+                    .timeoffDaysUsed(6d)
+                    .timezone("Africa/Harare")
+                    .title("Investor Paradigm Liaison")
+                    .updatedAt(OffsetDateTime.parse("2022-02-19T07:02:15.376Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -309,16 +521,18 @@ Update an employee
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateHrisEmployee" method="put" path="/hris/{connection_id}/employee/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateHrisEmployee" method="put" path="/hris/{connection_id}/employee/{id}" example="hris_employee" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
+import java.util.Map;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateHrisEmployeeRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateHrisEmployeeResponse;
-import to.unified.unified_java_sdk.models.shared.HrisEmployee;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -332,6 +546,110 @@ public class Application {
 
         UpdateHrisEmployeeRequest req = UpdateHrisEmployeeRequest.builder()
                 .hrisEmployee(HrisEmployee.builder()
+                    .address(PropertyHrisEmployeeAddress.builder()
+                        .address1("52008 Lansdowne Road")
+                        .address2("Apt. 101")
+                        .city("Connellyberg")
+                        .countryCode("US")
+                        .postalCode("18978")
+                        .region("South Dakota")
+                        .regionCode("NM")
+                        .build())
+                    .bio("sushi devotee, singer")
+                    .compensation(List.of(
+                        HrisCompensation.builder()
+                            .amount(69148d)
+                            .currency("CRC")
+                            .frequency(HrisCompensationFrequency.QUARTER)
+                            .notes("Tergeo laborum laboriosam tutis.")
+                            .type(HrisCompensationType.EQUITY)
+                            .build()))
+                    .createdAt(OffsetDateTime.parse("2019-09-16T15:08:53.262Z"))
+                    .currency("IDR")
+                    .dateOfBirth(OffsetDateTime.parse("2001-04-22"))
+                    .emails(List.of(
+                        HrisEmail.builder()
+                            .email("Zetta_Prohaska67@hotmail.com")
+                            .type(HrisEmailType.HOME)
+                            .build()))
+                    .employeeNumber("YuOt169CGu")
+                    .employmentStatus(EmploymentStatus.ACTIVE)
+                    .employmentType(HrisEmployeeEmploymentType.VOLUNTEER)
+                    .firstName("Zetta")
+                    .gender(HrisEmployeeGender.INTERSEX)
+                    .hasMfa(true)
+                    .hiredAt(OffsetDateTime.parse("2023-05-10T16:15:07.690Z"))
+                    .id("f48de0fa-eaf1-4dda-a822-85ff56964d2a")
+                    .imageUrl("https://loremflickr.com/3684/2116?lock=4686991638584456")
+                    .languageLocale("es")
+                    .lastName("Prohaska")
+                    .locations(List.of())
+                    .maritalStatus(MaritalStatus.MARRIED)
+                    .metadata(List.of(
+                        HrisMetadata.builder()
+                            .extraData(HrisMetadataExtraData.of(Map.ofEntries(
+                                Map.entry("display_name", "Custom Property"))))
+                            .format(HrisMetadataFormat.TEXT)
+                            .id("a70413d9-b815-4ba9-8f48-c242e3ecee27")
+                            .namespace("custom")
+                            .slug("custom_property")
+                            .value(HrisMetadataValue.of("tenetur"))
+                            .build()))
+                    .name("Zetta Prohaska")
+                    .pronouns("she/her")
+                    .relationships(List.of(
+                        HrisEmployeerelationship.builder()
+                            .emails(List.of(
+                                HrisEmail.builder()
+                                    .email("Deshaun.Sanford24@yahoo.com")
+                                    .build(),
+                                HrisEmail.builder()
+                                    .email("Rebeca.Dibbert11@hotmail.com")
+                                    .build(),
+                                HrisEmail.builder()
+                                    .email("Hester80@gmail.com")
+                                    .build()))
+                            .name("Automotive")
+                            .type(HrisEmployeerelationshipType.EMERGENCY)
+                            .build(),
+                        HrisEmployeerelationship.builder()
+                            .emails(List.of(
+                                HrisEmail.builder()
+                                    .email("Benedict_Wisozk83@hotmail.com")
+                                    .build(),
+                                HrisEmail.builder()
+                                    .email("Princess_Rath43@gmail.com")
+                                    .build(),
+                                HrisEmail.builder()
+                                    .email("Elmira92@yahoo.com")
+                                    .build()))
+                            .name("Music")
+                            .type(HrisEmployeerelationshipType.FRIEND)
+                            .build(),
+                        HrisEmployeerelationship.builder()
+                            .emails(List.of(
+                                HrisEmail.builder()
+                                    .email("Jane30@gmail.com")
+                                    .build()))
+                            .name("Jewelry")
+                            .type(HrisEmployeerelationshipType.SIBLING)
+                            .build()))
+                    .salutation("Miss")
+                    .ssnSin("yMRtj0Q3xO")
+                    .storageQuotaAllocated(3674489d)
+                    .storageQuotaAvailable(7748057d)
+                    .storageQuotaUsed(301727d)
+                    .telephones(List.of(
+                        HrisTelephone.builder()
+                            .telephone("(409) 801-3705")
+                            .type(HrisTelephoneType.FAX)
+                            .build()))
+                    .terminationReason("Communis adnuo damnatio atavus terebro acies canis cogito triumphus creber temptatio defendo cubo amissio paulatim corroboro.")
+                    .timeoffDaysTotal(12d)
+                    .timeoffDaysUsed(6d)
+                    .timezone("Africa/Harare")
+                    .title("Investor Paradigm Liaison")
+                    .updatedAt(OffsetDateTime.parse("2022-02-19T07:02:15.376Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

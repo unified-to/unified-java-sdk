@@ -31,7 +31,7 @@ Create a comment
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createUcComment" method="post" path="/uc/{connection_id}/comment" -->
+<!-- UsageSnippet language="java" operationID="createUcComment" method="post" path="/uc/{connection_id}/comment" example="uc_comment" -->
 ```java
 package hello.world;
 
@@ -54,6 +54,10 @@ public class Application {
 
         CreateUcCommentRequest req = CreateUcCommentRequest.builder()
                 .ucComment(UcComment.builder()
+                    .content("Vociferor vitiosus.")
+                    .createdAt("2023-04-02T23:42:31.571Z")
+                    .id("f6c71223-2280-4fde-a2f8-4750d07d5346")
+                    .updatedAt("2024-02-01T19:29:21.734Z")
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -91,16 +95,17 @@ Create a contact
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createUcContact" method="post" path="/uc/{connection_id}/contact" -->
+<!-- UsageSnippet language="java" operationID="createUcContact" method="post" path="/uc/{connection_id}/contact" example="uc_contact" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateUcContactRequest;
 import to.unified.unified_java_sdk.models.operations.CreateUcContactResponse;
-import to.unified.unified_java_sdk.models.shared.Security;
-import to.unified.unified_java_sdk.models.shared.UcContact;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -114,6 +119,32 @@ public class Application {
 
         CreateUcContactRequest req = CreateUcContactRequest.builder()
                 .ucContact(UcContact.builder()
+                    .company("Tillman Group")
+                    .createdAt(OffsetDateTime.parse("2019-10-28T11:06:56.460Z"))
+                    .emails(List.of(
+                        UcEmail.builder()
+                            .email("Luther_Rogahn32@yahoo.com")
+                            .type(UcEmailType.WORK)
+                            .build()))
+                    .firstName("Luther")
+                    .id("39e5f225-c2fe-448f-9931-c96c7bd540e7")
+                    .lastName("Rogahn")
+                    .name("Luther Rogahn")
+                    .telephones(List.of(
+                        UcTelephone.builder()
+                            .telephone("(809) 992-1681")
+                            .type(UcTelephoneType.FAX)
+                            .build(),
+                        UcTelephone.builder()
+                            .telephone("(868) 238-2746")
+                            .type(UcTelephoneType.HOME)
+                            .build(),
+                        UcTelephone.builder()
+                            .telephone("(219) 736-0357")
+                            .type(UcTelephoneType.MOBILE)
+                            .build()))
+                    .title("Chief Optimization Executive")
+                    .updatedAt(OffsetDateTime.parse("2023-11-18T22:30:46.346Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -151,16 +182,17 @@ Create a recording
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createUcRecording" method="post" path="/uc/{connection_id}/recording" -->
+<!-- UsageSnippet language="java" operationID="createUcRecording" method="post" path="/uc/{connection_id}/recording" example="uc_recording" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateUcRecordingRequest;
 import to.unified.unified_java_sdk.models.operations.CreateUcRecordingResponse;
-import to.unified.unified_java_sdk.models.shared.Security;
-import to.unified.unified_java_sdk.models.shared.UcRecording;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -174,6 +206,18 @@ public class Application {
 
         CreateUcRecordingRequest req = CreateUcRecordingRequest.builder()
                 .ucRecording(UcRecording.builder()
+                    .contacts(List.of())
+                    .createdAt(OffsetDateTime.parse("2022-09-17T19:41:46.956Z"))
+                    .endAt(OffsetDateTime.parse("2024-04-21T20:25:37.089Z"))
+                    .expiresAt(OffsetDateTime.parse("2026-03-28T16:21:59.272Z"))
+                    .id("f159e1de-c6df-4fca-b181-b2205dd29d42")
+                    .media(List.of())
+                    .startAt(OffsetDateTime.parse("2023-04-22T20:25:31.818Z"))
+                    .type(UcRecordingType.INBOUND)
+                    .updatedAt(OffsetDateTime.parse("2025-02-24T08:24:25.608Z"))
+                    .userName("Melyna Larson")
+                    .userPhone("1-915-327-0429 x509")
+                    .webUrl("https://spherical-comparison.org")
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -671,7 +715,7 @@ Update a comment
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchUcComment" method="patch" path="/uc/{connection_id}/comment/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchUcComment" method="patch" path="/uc/{connection_id}/comment/{id}" example="uc_comment" -->
 ```java
 package hello.world;
 
@@ -694,6 +738,10 @@ public class Application {
 
         PatchUcCommentRequest req = PatchUcCommentRequest.builder()
                 .ucComment(UcComment.builder()
+                    .content("Vociferor vitiosus.")
+                    .createdAt("2023-04-02T23:42:31.571Z")
+                    .id("f43b76fb-3830-472f-9736-ae94a1787acd")
+                    .updatedAt("2024-02-01T19:29:21.735Z")
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -732,16 +780,17 @@ Update a contact
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchUcContact" method="patch" path="/uc/{connection_id}/contact/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchUcContact" method="patch" path="/uc/{connection_id}/contact/{id}" example="uc_contact" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchUcContactRequest;
 import to.unified.unified_java_sdk.models.operations.PatchUcContactResponse;
-import to.unified.unified_java_sdk.models.shared.Security;
-import to.unified.unified_java_sdk.models.shared.UcContact;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -755,6 +804,32 @@ public class Application {
 
         PatchUcContactRequest req = PatchUcContactRequest.builder()
                 .ucContact(UcContact.builder()
+                    .company("Tillman Group")
+                    .createdAt(OffsetDateTime.parse("2019-10-28T11:06:56.460Z"))
+                    .emails(List.of(
+                        UcEmail.builder()
+                            .email("Luther_Rogahn32@yahoo.com")
+                            .type(UcEmailType.WORK)
+                            .build()))
+                    .firstName("Luther")
+                    .id("356575db-851d-45e5-bbd6-3069bcf46bdb")
+                    .lastName("Rogahn")
+                    .name("Luther Rogahn")
+                    .telephones(List.of(
+                        UcTelephone.builder()
+                            .telephone("(809) 992-1681")
+                            .type(UcTelephoneType.FAX)
+                            .build(),
+                        UcTelephone.builder()
+                            .telephone("(868) 238-2746")
+                            .type(UcTelephoneType.HOME)
+                            .build(),
+                        UcTelephone.builder()
+                            .telephone("(219) 736-0357")
+                            .type(UcTelephoneType.MOBILE)
+                            .build()))
+                    .title("Chief Optimization Executive")
+                    .updatedAt(OffsetDateTime.parse("2023-11-18T22:30:46.355Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -793,16 +868,17 @@ Update a recording
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchUcRecording" method="patch" path="/uc/{connection_id}/recording/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchUcRecording" method="patch" path="/uc/{connection_id}/recording/{id}" example="uc_recording" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchUcRecordingRequest;
 import to.unified.unified_java_sdk.models.operations.PatchUcRecordingResponse;
-import to.unified.unified_java_sdk.models.shared.Security;
-import to.unified.unified_java_sdk.models.shared.UcRecording;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -816,6 +892,18 @@ public class Application {
 
         PatchUcRecordingRequest req = PatchUcRecordingRequest.builder()
                 .ucRecording(UcRecording.builder()
+                    .contacts(List.of())
+                    .createdAt(OffsetDateTime.parse("2022-09-17T19:41:46.956Z"))
+                    .endAt(OffsetDateTime.parse("2024-04-21T20:25:37.108Z"))
+                    .expiresAt(OffsetDateTime.parse("2026-03-28T16:21:59.313Z"))
+                    .id("f852c6c7-c340-42b3-8b0b-bd899a5017c7")
+                    .media(List.of())
+                    .startAt(OffsetDateTime.parse("2023-04-22T20:25:31.825Z"))
+                    .type(UcRecordingType.INBOUND)
+                    .updatedAt(OffsetDateTime.parse("2025-02-24T08:24:25.637Z"))
+                    .userName("Melyna Larson")
+                    .userPhone("1-915-327-0429 x509")
+                    .webUrl("https://spherical-comparison.org")
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -1022,7 +1110,7 @@ Update a comment
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateUcComment" method="put" path="/uc/{connection_id}/comment/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateUcComment" method="put" path="/uc/{connection_id}/comment/{id}" example="uc_comment" -->
 ```java
 package hello.world;
 
@@ -1045,6 +1133,10 @@ public class Application {
 
         UpdateUcCommentRequest req = UpdateUcCommentRequest.builder()
                 .ucComment(UcComment.builder()
+                    .content("Vociferor vitiosus.")
+                    .createdAt("2023-04-02T23:42:31.571Z")
+                    .id("f43b76fb-3830-472f-9736-ae94a1787acd")
+                    .updatedAt("2024-02-01T19:29:21.735Z")
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -1083,16 +1175,17 @@ Update a contact
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateUcContact" method="put" path="/uc/{connection_id}/contact/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateUcContact" method="put" path="/uc/{connection_id}/contact/{id}" example="uc_contact" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateUcContactRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateUcContactResponse;
-import to.unified.unified_java_sdk.models.shared.Security;
-import to.unified.unified_java_sdk.models.shared.UcContact;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -1106,6 +1199,32 @@ public class Application {
 
         UpdateUcContactRequest req = UpdateUcContactRequest.builder()
                 .ucContact(UcContact.builder()
+                    .company("Tillman Group")
+                    .createdAt(OffsetDateTime.parse("2019-10-28T11:06:56.460Z"))
+                    .emails(List.of(
+                        UcEmail.builder()
+                            .email("Luther_Rogahn32@yahoo.com")
+                            .type(UcEmailType.WORK)
+                            .build()))
+                    .firstName("Luther")
+                    .id("356575db-851d-45e5-bbd6-3069bcf46bdb")
+                    .lastName("Rogahn")
+                    .name("Luther Rogahn")
+                    .telephones(List.of(
+                        UcTelephone.builder()
+                            .telephone("(809) 992-1681")
+                            .type(UcTelephoneType.FAX)
+                            .build(),
+                        UcTelephone.builder()
+                            .telephone("(868) 238-2746")
+                            .type(UcTelephoneType.HOME)
+                            .build(),
+                        UcTelephone.builder()
+                            .telephone("(219) 736-0357")
+                            .type(UcTelephoneType.MOBILE)
+                            .build()))
+                    .title("Chief Optimization Executive")
+                    .updatedAt(OffsetDateTime.parse("2023-11-18T22:30:46.355Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -1144,16 +1263,17 @@ Update a recording
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateUcRecording" method="put" path="/uc/{connection_id}/recording/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateUcRecording" method="put" path="/uc/{connection_id}/recording/{id}" example="uc_recording" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateUcRecordingRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateUcRecordingResponse;
-import to.unified.unified_java_sdk.models.shared.Security;
-import to.unified.unified_java_sdk.models.shared.UcRecording;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -1167,6 +1287,18 @@ public class Application {
 
         UpdateUcRecordingRequest req = UpdateUcRecordingRequest.builder()
                 .ucRecording(UcRecording.builder()
+                    .contacts(List.of())
+                    .createdAt(OffsetDateTime.parse("2022-09-17T19:41:46.956Z"))
+                    .endAt(OffsetDateTime.parse("2024-04-21T20:25:37.108Z"))
+                    .expiresAt(OffsetDateTime.parse("2026-03-28T16:21:59.313Z"))
+                    .id("f852c6c7-c340-42b3-8b0b-bd899a5017c7")
+                    .media(List.of())
+                    .startAt(OffsetDateTime.parse("2023-04-22T20:25:31.825Z"))
+                    .type(UcRecordingType.INBOUND)
+                    .updatedAt(OffsetDateTime.parse("2025-02-24T08:24:25.637Z"))
+                    .userName("Melyna Larson")
+                    .userPhone("1-915-327-0429 x509")
+                    .webUrl("https://spherical-comparison.org")
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

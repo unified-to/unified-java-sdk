@@ -28,16 +28,16 @@ Create a label
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createShippingLabel" method="post" path="/shipping/{connection_id}/label" -->
+<!-- UsageSnippet language="java" operationID="createShippingLabel" method="post" path="/shipping/{connection_id}/label" example="shipping_label" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateShippingLabelRequest;
 import to.unified.unified_java_sdk.models.operations.CreateShippingLabelResponse;
-import to.unified.unified_java_sdk.models.shared.Security;
-import to.unified.unified_java_sdk.models.shared.ShippingLabel;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -51,6 +51,17 @@ public class Application {
 
         CreateShippingLabelRequest req = CreateShippingLabelRequest.builder()
                 .shippingLabel(ShippingLabel.builder()
+                    .createdAt(OffsetDateTime.parse("2022-11-18T16:45:38.067Z"))
+                    .id("b1a2cbe7-daa0-4fe1-a4db-10b32f67618f")
+                    .isVoided(false)
+                    .labelCost(40.83653403213248)
+                    .labelCostCurrency("USD")
+                    .labelFormat(LabelFormat.PNG)
+                    .labelUrl("https://optimal-meadow.net")
+                    .serviceCode("GIz")
+                    .status(ShippingLabelStatus.EXCEPTION)
+                    .trackingNumber("zYv60FOIBUJ6")
+                    .updatedAt(OffsetDateTime.parse("2024-04-16T18:20:50.737Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -88,16 +99,17 @@ Create a rate
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createShippingRate" method="post" path="/shipping/{connection_id}/rate" -->
+<!-- UsageSnippet language="java" operationID="createShippingRate" method="post" path="/shipping/{connection_id}/rate" example="shipping_rate" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateShippingRateRequest;
 import to.unified.unified_java_sdk.models.operations.CreateShippingRateResponse;
-import to.unified.unified_java_sdk.models.shared.Security;
-import to.unified.unified_java_sdk.models.shared.ShippingRate;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -111,6 +123,22 @@ public class Application {
 
         CreateShippingRateRequest req = CreateShippingRateRequest.builder()
                 .shippingRate(ShippingRate.builder()
+                    .currency("USD")
+                    .id("08ea0d8f-f20c-4b47-9e57-6901e9b38266")
+                    .rates(List.of(
+                        ShippingRateRate.builder()
+                            .title("Turcotte Inc")
+                            .amount(54.679719475097954)
+                            .baseAmount(76.45537888631225)
+                            .currency("USD")
+                            .deliveryDays(8d)
+                            .description("Bos turpis pax amet dolorem sufficio demonstro complectus benevolentia rerum.")
+                            .estimatedDays(10d)
+                            .estimatedDeliveryEndAt(OffsetDateTime.parse("2024-01-31T23:12:25.475Z"))
+                            .isGuaranteed(true)
+                            .isNegotiatedRate(true)
+                            .taxAmount(2.2701712837442756)
+                            .build()))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -148,16 +176,16 @@ Create a shipment
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createShippingShipment" method="post" path="/shipping/{connection_id}/shipment" -->
+<!-- UsageSnippet language="java" operationID="createShippingShipment" method="post" path="/shipping/{connection_id}/shipment" example="shipping_shipment" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateShippingShipmentRequest;
 import to.unified.unified_java_sdk.models.operations.CreateShippingShipmentResponse;
-import to.unified.unified_java_sdk.models.shared.Security;
-import to.unified.unified_java_sdk.models.shared.ShippingShipment;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -171,6 +199,18 @@ public class Application {
 
         CreateShippingShipmentRequest req = CreateShippingShipmentRequest.builder()
                 .shippingShipment(ShippingShipment.builder()
+                    .carrierName("Bogisich, Franey and Koelpin")
+                    .createdAt(OffsetDateTime.parse("2022-09-12T03:11:28.960Z"))
+                    .id("aeba27e5-5821-4e2a-9407-bb494f9559b5")
+                    .rateAmount(8.86546263936907)
+                    .rateCurrency("USD")
+                    .rateEstimatedDays(8d)
+                    .rateServiceName("Fisher - Kilback")
+                    .serviceCode("F7U")
+                    .shippedAt(OffsetDateTime.parse("2025-08-24T18:20:41.033Z"))
+                    .status(ShippingShipmentStatus.PENDING)
+                    .trackingUrl("https://shallow-secrecy.info/")
+                    .updatedAt(OffsetDateTime.parse("2025-07-03T02:07:43.627Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -668,16 +708,16 @@ Update a label
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchShippingLabel" method="patch" path="/shipping/{connection_id}/label/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchShippingLabel" method="patch" path="/shipping/{connection_id}/label/{id}" example="shipping_label" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchShippingLabelRequest;
 import to.unified.unified_java_sdk.models.operations.PatchShippingLabelResponse;
-import to.unified.unified_java_sdk.models.shared.Security;
-import to.unified.unified_java_sdk.models.shared.ShippingLabel;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -691,6 +731,17 @@ public class Application {
 
         PatchShippingLabelRequest req = PatchShippingLabelRequest.builder()
                 .shippingLabel(ShippingLabel.builder()
+                    .createdAt(OffsetDateTime.parse("2022-11-18T16:45:38.067Z"))
+                    .id("0936a3b6-f849-46e3-a10d-946d76091c5d")
+                    .isVoided(false)
+                    .labelCost(40.83653403213248)
+                    .labelCostCurrency("USD")
+                    .labelFormat(LabelFormat.PNG)
+                    .labelUrl("https://optimal-meadow.net")
+                    .serviceCode("GIz")
+                    .status(ShippingLabelStatus.EXCEPTION)
+                    .trackingNumber("zYv60FOIBUJ6")
+                    .updatedAt(OffsetDateTime.parse("2024-04-16T18:20:50.742Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -729,16 +780,16 @@ Update a shipment
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchShippingShipment" method="patch" path="/shipping/{connection_id}/shipment/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchShippingShipment" method="patch" path="/shipping/{connection_id}/shipment/{id}" example="shipping_shipment" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchShippingShipmentRequest;
 import to.unified.unified_java_sdk.models.operations.PatchShippingShipmentResponse;
-import to.unified.unified_java_sdk.models.shared.Security;
-import to.unified.unified_java_sdk.models.shared.ShippingShipment;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -752,6 +803,18 @@ public class Application {
 
         PatchShippingShipmentRequest req = PatchShippingShipmentRequest.builder()
                 .shippingShipment(ShippingShipment.builder()
+                    .carrierName("Bogisich, Franey and Koelpin")
+                    .createdAt(OffsetDateTime.parse("2022-09-12T03:11:28.960Z"))
+                    .id("b84ec753-8607-467c-9c32-9aea0c5c1b27")
+                    .rateAmount(8.86546263936907)
+                    .rateCurrency("USD")
+                    .rateEstimatedDays(8d)
+                    .rateServiceName("Fisher - Kilback")
+                    .serviceCode("F7U")
+                    .shippedAt(OffsetDateTime.parse("2025-08-24T18:20:41.092Z"))
+                    .status(ShippingShipmentStatus.PENDING)
+                    .trackingUrl("https://shallow-secrecy.info/")
+                    .updatedAt(OffsetDateTime.parse("2025-07-03T02:07:43.683Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -902,16 +965,16 @@ Update a label
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateShippingLabel" method="put" path="/shipping/{connection_id}/label/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateShippingLabel" method="put" path="/shipping/{connection_id}/label/{id}" example="shipping_label" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateShippingLabelRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateShippingLabelResponse;
-import to.unified.unified_java_sdk.models.shared.Security;
-import to.unified.unified_java_sdk.models.shared.ShippingLabel;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -925,6 +988,17 @@ public class Application {
 
         UpdateShippingLabelRequest req = UpdateShippingLabelRequest.builder()
                 .shippingLabel(ShippingLabel.builder()
+                    .createdAt(OffsetDateTime.parse("2022-11-18T16:45:38.067Z"))
+                    .id("0936a3b6-f849-46e3-a10d-946d76091c5d")
+                    .isVoided(false)
+                    .labelCost(40.83653403213248)
+                    .labelCostCurrency("USD")
+                    .labelFormat(LabelFormat.PNG)
+                    .labelUrl("https://optimal-meadow.net")
+                    .serviceCode("GIz")
+                    .status(ShippingLabelStatus.EXCEPTION)
+                    .trackingNumber("zYv60FOIBUJ6")
+                    .updatedAt(OffsetDateTime.parse("2024-04-16T18:20:50.742Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -963,16 +1037,16 @@ Update a shipment
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateShippingShipment" method="put" path="/shipping/{connection_id}/shipment/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateShippingShipment" method="put" path="/shipping/{connection_id}/shipment/{id}" example="shipping_shipment" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateShippingShipmentRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateShippingShipmentResponse;
-import to.unified.unified_java_sdk.models.shared.Security;
-import to.unified.unified_java_sdk.models.shared.ShippingShipment;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -986,6 +1060,18 @@ public class Application {
 
         UpdateShippingShipmentRequest req = UpdateShippingShipmentRequest.builder()
                 .shippingShipment(ShippingShipment.builder()
+                    .carrierName("Bogisich, Franey and Koelpin")
+                    .createdAt(OffsetDateTime.parse("2022-09-12T03:11:28.960Z"))
+                    .id("b84ec753-8607-467c-9c32-9aea0c5c1b27")
+                    .rateAmount(8.86546263936907)
+                    .rateCurrency("USD")
+                    .rateEstimatedDays(8d)
+                    .rateServiceName("Fisher - Kilback")
+                    .serviceCode("F7U")
+                    .shippedAt(OffsetDateTime.parse("2025-08-24T18:20:41.092Z"))
+                    .status(ShippingShipmentStatus.PENDING)
+                    .trackingUrl("https://shallow-secrecy.info/")
+                    .updatedAt(OffsetDateTime.parse("2025-07-03T02:07:43.683Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

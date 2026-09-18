@@ -17,16 +17,17 @@ Create a request
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createVerificationRequest" method="post" path="/verification/{connection_id}/request" -->
+<!-- UsageSnippet language="java" operationID="createVerificationRequest" method="post" path="/verification/{connection_id}/request" example="verification_request" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateVerificationRequestRequest;
 import to.unified.unified_java_sdk.models.operations.CreateVerificationRequestResponse;
-import to.unified.unified_java_sdk.models.shared.Security;
-import to.unified.unified_java_sdk.models.shared.VerificationRequest;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -40,6 +41,17 @@ public class Application {
 
         CreateVerificationRequestRequest req = CreateVerificationRequestRequest.builder()
                 .verificationRequest(VerificationRequest.builder()
+                    .createdAt(OffsetDateTime.parse("2023-11-20T08:17:29.950Z"))
+                    .id("f7756dc2-2c83-421a-b2e4-dc10eefb914d")
+                    .parameters(List.of())
+                    .profileAddresses(List.of())
+                    .profileEmails(List.of())
+                    .profileTelephones(List.of())
+                    .responseDetails(List.of())
+                    .responseDownloadUrls(List.of())
+                    .responseSource("Implemented regional protocol")
+                    .responseStatus(VerificationRequestResponseStatus.PENDING)
+                    .updatedAt(OffsetDateTime.parse("2023-12-26T03:33:26.786Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -192,16 +204,17 @@ Update a request
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchVerificationRequest" method="patch" path="/verification/{connection_id}/request/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchVerificationRequest" method="patch" path="/verification/{connection_id}/request/{id}" example="verification_request" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchVerificationRequestRequest;
 import to.unified.unified_java_sdk.models.operations.PatchVerificationRequestResponse;
-import to.unified.unified_java_sdk.models.shared.Security;
-import to.unified.unified_java_sdk.models.shared.VerificationRequest;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -215,6 +228,17 @@ public class Application {
 
         PatchVerificationRequestRequest req = PatchVerificationRequestRequest.builder()
                 .verificationRequest(VerificationRequest.builder()
+                    .createdAt(OffsetDateTime.parse("2023-11-20T08:17:29.950Z"))
+                    .id("b3679484-2e6a-4545-b4f5-140c9f7b4ee6")
+                    .parameters(List.of())
+                    .profileAddresses(List.of())
+                    .profileEmails(List.of())
+                    .profileTelephones(List.of())
+                    .responseDetails(List.of())
+                    .responseDownloadUrls(List.of())
+                    .responseSource("Implemented regional protocol")
+                    .responseStatus(VerificationRequestResponseStatus.PENDING)
+                    .updatedAt(OffsetDateTime.parse("2023-12-26T03:33:26.787Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -309,16 +333,17 @@ Update a request
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateVerificationRequest" method="put" path="/verification/{connection_id}/request/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateVerificationRequest" method="put" path="/verification/{connection_id}/request/{id}" example="verification_request" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateVerificationRequestRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateVerificationRequestResponse;
-import to.unified.unified_java_sdk.models.shared.Security;
-import to.unified.unified_java_sdk.models.shared.VerificationRequest;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -332,6 +357,17 @@ public class Application {
 
         UpdateVerificationRequestRequest req = UpdateVerificationRequestRequest.builder()
                 .verificationRequest(VerificationRequest.builder()
+                    .createdAt(OffsetDateTime.parse("2023-11-20T08:17:29.950Z"))
+                    .id("b3679484-2e6a-4545-b4f5-140c9f7b4ee6")
+                    .parameters(List.of())
+                    .profileAddresses(List.of())
+                    .profileEmails(List.of())
+                    .profileTelephones(List.of())
+                    .responseDetails(List.of())
+                    .responseDownloadUrls(List.of())
+                    .responseSource("Implemented regional protocol")
+                    .responseStatus(VerificationRequestResponseStatus.PENDING)
+                    .updatedAt(OffsetDateTime.parse("2023-12-26T03:33:26.787Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

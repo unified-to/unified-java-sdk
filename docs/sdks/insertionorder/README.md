@@ -17,16 +17,16 @@ Create an insertionorder
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createAdsInsertionorder" method="post" path="/ads/{connection_id}/insertionorder" -->
+<!-- UsageSnippet language="java" operationID="createAdsInsertionorder" method="post" path="/ads/{connection_id}/insertionorder" example="ads_insertionorder" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateAdsInsertionorderRequest;
 import to.unified.unified_java_sdk.models.operations.CreateAdsInsertionorderResponse;
-import to.unified.unified_java_sdk.models.shared.AdsInsertionorder;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -40,6 +40,11 @@ public class Application {
 
         CreateAdsInsertionorderRequest req = CreateAdsInsertionorderRequest.builder()
                 .adsInsertionorder(AdsInsertionorder.builder()
+                    .createdAt(OffsetDateTime.parse("2021-04-10T06:57:36.611Z"))
+                    .id("d470068f-65ac-407c-8545-0d0e7170e34e")
+                    .name("Kunde, Smith and Reinger")
+                    .status(AdsInsertionorderStatus.UNSPECIFIED)
+                    .updatedAt(OffsetDateTime.parse("2021-04-28T12:31:22.446Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -192,16 +197,16 @@ Update an insertionorder
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchAdsInsertionorder" method="patch" path="/ads/{connection_id}/insertionorder/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchAdsInsertionorder" method="patch" path="/ads/{connection_id}/insertionorder/{id}" example="ads_insertionorder" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchAdsInsertionorderRequest;
 import to.unified.unified_java_sdk.models.operations.PatchAdsInsertionorderResponse;
-import to.unified.unified_java_sdk.models.shared.AdsInsertionorder;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -215,6 +220,11 @@ public class Application {
 
         PatchAdsInsertionorderRequest req = PatchAdsInsertionorderRequest.builder()
                 .adsInsertionorder(AdsInsertionorder.builder()
+                    .createdAt(OffsetDateTime.parse("2021-04-10T06:57:36.611Z"))
+                    .id("5f4c56e7-ed4c-4eaa-a1d7-4b18779f6cce")
+                    .name("Kunde, Smith and Reinger")
+                    .status(AdsInsertionorderStatus.UNSPECIFIED)
+                    .updatedAt(OffsetDateTime.parse("2021-04-28T12:31:22.446Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -309,16 +319,16 @@ Update an insertionorder
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateAdsInsertionorder" method="put" path="/ads/{connection_id}/insertionorder/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateAdsInsertionorder" method="put" path="/ads/{connection_id}/insertionorder/{id}" example="ads_insertionorder" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateAdsInsertionorderRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateAdsInsertionorderResponse;
-import to.unified.unified_java_sdk.models.shared.AdsInsertionorder;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -332,6 +342,11 @@ public class Application {
 
         UpdateAdsInsertionorderRequest req = UpdateAdsInsertionorderRequest.builder()
                 .adsInsertionorder(AdsInsertionorder.builder()
+                    .createdAt(OffsetDateTime.parse("2021-04-10T06:57:36.611Z"))
+                    .id("5f4c56e7-ed4c-4eaa-a1d7-4b18779f6cce")
+                    .name("Kunde, Smith and Reinger")
+                    .status(AdsInsertionorderStatus.UNSPECIFIED)
+                    .updatedAt(OffsetDateTime.parse("2021-04-28T12:31:22.446Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

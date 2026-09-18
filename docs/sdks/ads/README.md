@@ -55,16 +55,16 @@ Create an ad
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createAdsAd" method="post" path="/ads/{connection_id}/ad" -->
+<!-- UsageSnippet language="java" operationID="createAdsAd" method="post" path="/ads/{connection_id}/ad" example="ads_ad" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateAdsAdRequest;
 import to.unified.unified_java_sdk.models.operations.CreateAdsAdResponse;
-import to.unified.unified_java_sdk.models.shared.AdsAd;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -78,6 +78,17 @@ public class Application {
 
         CreateAdsAdRequest req = CreateAdsAdRequest.builder()
                 .adsAd(AdsAd.builder()
+                    .adCopy("Ascisco tolero caute sapiente. Valens unde comedo cursus crinis nobis thema. Cohaero nisi ullam tum unde ultio vilicus auditor capio.")
+                    .adType(AdType.SOCIAL)
+                    .advertiserName("Robel, Nader and Rau")
+                    .createdAt(OffsetDateTime.parse("2022-11-08T03:38:20.978Z"))
+                    .creativeAssetUrl("https://picsum.photos/seed/LwOzrpr9/948/2793")
+                    .description("Accedo vespillo carpo dolor decet stillicidium comptus tenuis.")
+                    .finalUrl("https://improbable-sanity.com")
+                    .id("6630dd45-9b8c-481f-8b7b-6e77084f0597")
+                    .name("Hermiston Group")
+                    .status(AdsAdStatus.ARCHIVED)
+                    .updatedAt(OffsetDateTime.parse("2024-06-05T02:38:36.051Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -115,16 +126,16 @@ Create an asset
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createAdsAsset" method="post" path="/ads/{connection_id}/asset" -->
+<!-- UsageSnippet language="java" operationID="createAdsAsset" method="post" path="/ads/{connection_id}/asset" example="ads_asset" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateAdsAssetRequest;
 import to.unified.unified_java_sdk.models.operations.CreateAdsAssetResponse;
-import to.unified.unified_java_sdk.models.shared.AdsAsset;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -138,6 +149,15 @@ public class Application {
 
         CreateAdsAssetRequest req = CreateAdsAssetRequest.builder()
                 .adsAsset(AdsAsset.builder()
+                    .createdAt(OffsetDateTime.parse("2020-03-27T20:14:38.603Z"))
+                    .height(400d)
+                    .id("9ce96283-25c4-4289-92f8-bb2dfdba3c58")
+                    .mimeType("IMAGE_PNG")
+                    .name("Lockman - DuBuque")
+                    .type(AdsAssetType.IMAGE)
+                    .updatedAt(OffsetDateTime.parse("2022-03-15T04:25:20.538Z"))
+                    .url("https://informal-perfection.com/")
+                    .width(600d)
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -175,16 +195,17 @@ Create a campaign
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createAdsCampaign" method="post" path="/ads/{connection_id}/campaign" -->
+<!-- UsageSnippet language="java" operationID="createAdsCampaign" method="post" path="/ads/{connection_id}/campaign" example="ads_campaign" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateAdsCampaignRequest;
 import to.unified.unified_java_sdk.models.operations.CreateAdsCampaignResponse;
-import to.unified.unified_java_sdk.models.shared.AdsCampaign;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -198,6 +219,23 @@ public class Application {
 
         CreateAdsCampaignRequest req = CreateAdsCampaignRequest.builder()
                 .adsCampaign(AdsCampaign.builder()
+                    .budgetAmount(8743.179536121897)
+                    .budgetPeriod(BudgetPeriod.MONTHLY)
+                    .category("CREDIT")
+                    .createdAt(OffsetDateTime.parse("2022-05-21T08:51:41.868Z"))
+                    .currency("USD")
+                    .effectiveStatus(EffectiveStatus.NOT_ELIGIBLE)
+                    .endAt(OffsetDateTime.parse("2025-05-09T08:19:05.015Z"))
+                    .id("812fa2fe-ecf0-4a07-af47-1f4eeb74cfdd")
+                    .labels(List.of(
+                        "comedo"))
+                    .name("Emard Inc")
+                    .startAt(OffsetDateTime.parse("2022-07-20T04:51:23.303Z"))
+                    .status(AdsCampaignStatus.PROCESSING_FAILED)
+                    .targeting(PropertyAdsCampaignTargeting.builder()
+                        .build())
+                    .totalSpendAmount(2349.8642875347286)
+                    .updatedAt(OffsetDateTime.parse("2025-12-05T13:35:57.497Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -235,16 +273,17 @@ Create a creative
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createAdsCreative" method="post" path="/ads/{connection_id}/creative" -->
+<!-- UsageSnippet language="java" operationID="createAdsCreative" method="post" path="/ads/{connection_id}/creative" example="ads_creative" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateAdsCreativeRequest;
 import to.unified.unified_java_sdk.models.operations.CreateAdsCreativeResponse;
-import to.unified.unified_java_sdk.models.shared.AdsCreative;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -258,6 +297,15 @@ public class Application {
 
         CreateAdsCreativeRequest req = CreateAdsCreativeRequest.builder()
                 .adsCreative(AdsCreative.builder()
+                    .createdAt(OffsetDateTime.parse("2020-02-17T11:24:51.093Z"))
+                    .id("5dd7b3ce-88d6-4c92-965d-a4f57ced5201")
+                    .labels(List.of(
+                        "coma",
+                        "accedo",
+                        "termes"))
+                    .name("Brekke, Bradtke and Robel")
+                    .status(AdsCreativeStatus.PAUSED)
+                    .updatedAt(OffsetDateTime.parse("2021-06-21T01:01:35.446Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -295,16 +343,16 @@ Create a group
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createAdsGroup" method="post" path="/ads/{connection_id}/group" -->
+<!-- UsageSnippet language="java" operationID="createAdsGroup" method="post" path="/ads/{connection_id}/group" example="ads_group" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateAdsGroupRequest;
 import to.unified.unified_java_sdk.models.operations.CreateAdsGroupResponse;
-import to.unified.unified_java_sdk.models.shared.AdsGroup;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -318,6 +366,21 @@ public class Application {
 
         CreateAdsGroupRequest req = CreateAdsGroupRequest.builder()
                 .adsGroup(AdsGroup.builder()
+                    .bidAmount(26.16030164062977)
+                    .budgetAmount(5099.175239447504)
+                    .budgetPeriod(AdsGroupBudgetPeriod.MONTHLY)
+                    .createdAt(OffsetDateTime.parse("2019-08-29T17:59:41.045Z"))
+                    .currency("USD")
+                    .effectiveStatus(AdsGroupEffectiveStatus.PAUSED)
+                    .endAt(OffsetDateTime.parse("2026-05-24T13:19:12.102Z"))
+                    .id("e888dea0-f654-41b9-92b4-9bed6e836d63")
+                    .languageLocale("fr-FR")
+                    .name("Stark - Baumbach")
+                    .startAt(OffsetDateTime.parse("2025-12-10T21:11:12.512Z"))
+                    .status(AdsGroupStatus.PROCESSING)
+                    .targeting(PropertyAdsGroupTargeting.builder()
+                        .build())
+                    .updatedAt(OffsetDateTime.parse("2022-01-02T16:46:00.565Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -355,16 +418,16 @@ Create an insertionorder
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createAdsInsertionorder" method="post" path="/ads/{connection_id}/insertionorder" -->
+<!-- UsageSnippet language="java" operationID="createAdsInsertionorder" method="post" path="/ads/{connection_id}/insertionorder" example="ads_insertionorder" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateAdsInsertionorderRequest;
 import to.unified.unified_java_sdk.models.operations.CreateAdsInsertionorderResponse;
-import to.unified.unified_java_sdk.models.shared.AdsInsertionorder;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -378,6 +441,11 @@ public class Application {
 
         CreateAdsInsertionorderRequest req = CreateAdsInsertionorderRequest.builder()
                 .adsInsertionorder(AdsInsertionorder.builder()
+                    .createdAt(OffsetDateTime.parse("2021-04-10T06:57:36.611Z"))
+                    .id("d470068f-65ac-407c-8545-0d0e7170e34e")
+                    .name("Kunde, Smith and Reinger")
+                    .status(AdsInsertionorderStatus.UNSPECIFIED)
+                    .updatedAt(OffsetDateTime.parse("2021-04-28T12:31:22.446Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -415,16 +483,17 @@ Create an organization
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createAdsOrganization" method="post" path="/ads/{connection_id}/organization" -->
+<!-- UsageSnippet language="java" operationID="createAdsOrganization" method="post" path="/ads/{connection_id}/organization" example="ads_organization" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateAdsOrganizationRequest;
 import to.unified.unified_java_sdk.models.operations.CreateAdsOrganizationResponse;
-import to.unified.unified_java_sdk.models.shared.AdsOrganization;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -438,6 +507,19 @@ public class Application {
 
         CreateAdsOrganizationRequest req = CreateAdsOrganizationRequest.builder()
                 .adsOrganization(AdsOrganization.builder()
+                    .accountNumber("LQUJx8zQBW")
+                    .createdAt(OffsetDateTime.parse("2020-07-23T21:47:11.440Z"))
+                    .currency("USD")
+                    .id("0ca7207a-a860-45e9-87da-94e04e0f06a4")
+                    .managers(List.of(
+                        AdsManager.builder()
+                            .id("e4fd87df-9f8b-4fa0-a77b-b7d18669e350")
+                            .name("Parker, Leannon and Gibson")
+                            .build()))
+                    .name("Ankunding Inc")
+                    .status(AdsOrganizationStatus.PROCESSING)
+                    .timezone("Europe/Chisinau")
+                    .updatedAt(OffsetDateTime.parse("2026-02-27T02:32:02.767Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -1567,16 +1649,16 @@ Update an ad
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchAdsAd" method="patch" path="/ads/{connection_id}/ad/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchAdsAd" method="patch" path="/ads/{connection_id}/ad/{id}" example="ads_ad" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchAdsAdRequest;
 import to.unified.unified_java_sdk.models.operations.PatchAdsAdResponse;
-import to.unified.unified_java_sdk.models.shared.AdsAd;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -1590,6 +1672,17 @@ public class Application {
 
         PatchAdsAdRequest req = PatchAdsAdRequest.builder()
                 .adsAd(AdsAd.builder()
+                    .adCopy("Ascisco tolero caute sapiente. Valens unde comedo cursus crinis nobis thema. Cohaero nisi ullam tum unde ultio vilicus auditor capio.")
+                    .adType(AdType.SOCIAL)
+                    .advertiserName("Robel, Nader and Rau")
+                    .createdAt(OffsetDateTime.parse("2022-11-08T03:38:20.978Z"))
+                    .creativeAssetUrl("https://picsum.photos/seed/LwOzrpr9/948/2793")
+                    .description("Accedo vespillo carpo dolor decet stillicidium comptus tenuis.")
+                    .finalUrl("https://improbable-sanity.com")
+                    .id("1ffc1063-d278-446e-8b5e-655ef73ce5f2")
+                    .name("Hermiston Group")
+                    .status(AdsAdStatus.ARCHIVED)
+                    .updatedAt(OffsetDateTime.parse("2024-06-05T02:38:36.059Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -1628,16 +1721,17 @@ Update a campaign
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchAdsCampaign" method="patch" path="/ads/{connection_id}/campaign/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchAdsCampaign" method="patch" path="/ads/{connection_id}/campaign/{id}" example="ads_campaign" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchAdsCampaignRequest;
 import to.unified.unified_java_sdk.models.operations.PatchAdsCampaignResponse;
-import to.unified.unified_java_sdk.models.shared.AdsCampaign;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -1651,6 +1745,23 @@ public class Application {
 
         PatchAdsCampaignRequest req = PatchAdsCampaignRequest.builder()
                 .adsCampaign(AdsCampaign.builder()
+                    .budgetAmount(8743.179536121897)
+                    .budgetPeriod(BudgetPeriod.MONTHLY)
+                    .category("CREDIT")
+                    .createdAt(OffsetDateTime.parse("2022-05-21T08:51:41.868Z"))
+                    .currency("USD")
+                    .effectiveStatus(EffectiveStatus.NOT_ELIGIBLE)
+                    .endAt(OffsetDateTime.parse("2025-05-09T08:19:05.103Z"))
+                    .id("304d62ba-35db-4c76-b39e-4fa4e93b7f71")
+                    .labels(List.of(
+                        "comedo"))
+                    .name("Emard Inc")
+                    .startAt(OffsetDateTime.parse("2022-07-20T04:51:23.308Z"))
+                    .status(AdsCampaignStatus.PROCESSING_FAILED)
+                    .targeting(PropertyAdsCampaignTargeting.builder()
+                        .build())
+                    .totalSpendAmount(2349.8642875347286)
+                    .updatedAt(OffsetDateTime.parse("2025-12-05T13:35:57.603Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -1689,16 +1800,17 @@ Update a creative
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchAdsCreative" method="patch" path="/ads/{connection_id}/creative/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchAdsCreative" method="patch" path="/ads/{connection_id}/creative/{id}" example="ads_creative" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchAdsCreativeRequest;
 import to.unified.unified_java_sdk.models.operations.PatchAdsCreativeResponse;
-import to.unified.unified_java_sdk.models.shared.AdsCreative;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -1712,6 +1824,15 @@ public class Application {
 
         PatchAdsCreativeRequest req = PatchAdsCreativeRequest.builder()
                 .adsCreative(AdsCreative.builder()
+                    .createdAt(OffsetDateTime.parse("2020-02-17T11:24:51.093Z"))
+                    .id("d118ec82-e89d-4441-8941-08ef9518487f")
+                    .labels(List.of(
+                        "coma",
+                        "accedo",
+                        "termes"))
+                    .name("Brekke, Bradtke and Robel")
+                    .status(AdsCreativeStatus.PAUSED)
+                    .updatedAt(OffsetDateTime.parse("2021-06-21T01:01:35.450Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -1750,16 +1871,16 @@ Update a group
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchAdsGroup" method="patch" path="/ads/{connection_id}/group/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchAdsGroup" method="patch" path="/ads/{connection_id}/group/{id}" example="ads_group" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchAdsGroupRequest;
 import to.unified.unified_java_sdk.models.operations.PatchAdsGroupResponse;
-import to.unified.unified_java_sdk.models.shared.AdsGroup;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -1773,6 +1894,21 @@ public class Application {
 
         PatchAdsGroupRequest req = PatchAdsGroupRequest.builder()
                 .adsGroup(AdsGroup.builder()
+                    .bidAmount(26.16030164062977)
+                    .budgetAmount(5099.175239447504)
+                    .budgetPeriod(AdsGroupBudgetPeriod.MONTHLY)
+                    .createdAt(OffsetDateTime.parse("2019-08-29T17:59:41.045Z"))
+                    .currency("USD")
+                    .effectiveStatus(AdsGroupEffectiveStatus.PAUSED)
+                    .endAt(OffsetDateTime.parse("2026-05-24T13:19:12.211Z"))
+                    .id("696ee368-be46-4fed-aede-f2ef993e2ea4")
+                    .languageLocale("fr-FR")
+                    .name("Stark - Baumbach")
+                    .startAt(OffsetDateTime.parse("2025-12-10T21:11:12.613Z"))
+                    .status(AdsGroupStatus.PROCESSING)
+                    .targeting(PropertyAdsGroupTargeting.builder()
+                        .build())
+                    .updatedAt(OffsetDateTime.parse("2022-01-02T16:46:00.603Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -1811,16 +1947,16 @@ Update an insertionorder
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchAdsInsertionorder" method="patch" path="/ads/{connection_id}/insertionorder/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchAdsInsertionorder" method="patch" path="/ads/{connection_id}/insertionorder/{id}" example="ads_insertionorder" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchAdsInsertionorderRequest;
 import to.unified.unified_java_sdk.models.operations.PatchAdsInsertionorderResponse;
-import to.unified.unified_java_sdk.models.shared.AdsInsertionorder;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -1834,6 +1970,11 @@ public class Application {
 
         PatchAdsInsertionorderRequest req = PatchAdsInsertionorderRequest.builder()
                 .adsInsertionorder(AdsInsertionorder.builder()
+                    .createdAt(OffsetDateTime.parse("2021-04-10T06:57:36.611Z"))
+                    .id("5f4c56e7-ed4c-4eaa-a1d7-4b18779f6cce")
+                    .name("Kunde, Smith and Reinger")
+                    .status(AdsInsertionorderStatus.UNSPECIFIED)
+                    .updatedAt(OffsetDateTime.parse("2021-04-28T12:31:22.446Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -1872,16 +2013,17 @@ Update an organization
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchAdsOrganization" method="patch" path="/ads/{connection_id}/organization/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchAdsOrganization" method="patch" path="/ads/{connection_id}/organization/{id}" example="ads_organization" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchAdsOrganizationRequest;
 import to.unified.unified_java_sdk.models.operations.PatchAdsOrganizationResponse;
-import to.unified.unified_java_sdk.models.shared.AdsOrganization;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -1895,6 +2037,19 @@ public class Application {
 
         PatchAdsOrganizationRequest req = PatchAdsOrganizationRequest.builder()
                 .adsOrganization(AdsOrganization.builder()
+                    .accountNumber("LQUJx8zQBW")
+                    .createdAt(OffsetDateTime.parse("2020-07-23T21:47:11.440Z"))
+                    .currency("USD")
+                    .id("6d20a695-fa80-4f8e-8b00-e3d1dd334cac")
+                    .managers(List.of(
+                        AdsManager.builder()
+                            .id("e4fd87df-9f8b-4fa0-a77b-b7d18669e350")
+                            .name("Parker, Leannon and Gibson")
+                            .build()))
+                    .name("Ankunding Inc")
+                    .status(AdsOrganizationStatus.PROCESSING)
+                    .timezone("Europe/Chisinau")
+                    .updatedAt(OffsetDateTime.parse("2026-02-27T02:32:02.778Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -2269,16 +2424,16 @@ Update an ad
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateAdsAd" method="put" path="/ads/{connection_id}/ad/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateAdsAd" method="put" path="/ads/{connection_id}/ad/{id}" example="ads_ad" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateAdsAdRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateAdsAdResponse;
-import to.unified.unified_java_sdk.models.shared.AdsAd;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -2292,6 +2447,17 @@ public class Application {
 
         UpdateAdsAdRequest req = UpdateAdsAdRequest.builder()
                 .adsAd(AdsAd.builder()
+                    .adCopy("Ascisco tolero caute sapiente. Valens unde comedo cursus crinis nobis thema. Cohaero nisi ullam tum unde ultio vilicus auditor capio.")
+                    .adType(AdType.SOCIAL)
+                    .advertiserName("Robel, Nader and Rau")
+                    .createdAt(OffsetDateTime.parse("2022-11-08T03:38:20.978Z"))
+                    .creativeAssetUrl("https://picsum.photos/seed/LwOzrpr9/948/2793")
+                    .description("Accedo vespillo carpo dolor decet stillicidium comptus tenuis.")
+                    .finalUrl("https://improbable-sanity.com")
+                    .id("1ffc1063-d278-446e-8b5e-655ef73ce5f2")
+                    .name("Hermiston Group")
+                    .status(AdsAdStatus.ARCHIVED)
+                    .updatedAt(OffsetDateTime.parse("2024-06-05T02:38:36.059Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -2330,16 +2496,17 @@ Update a campaign
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateAdsCampaign" method="put" path="/ads/{connection_id}/campaign/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateAdsCampaign" method="put" path="/ads/{connection_id}/campaign/{id}" example="ads_campaign" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateAdsCampaignRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateAdsCampaignResponse;
-import to.unified.unified_java_sdk.models.shared.AdsCampaign;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -2353,6 +2520,23 @@ public class Application {
 
         UpdateAdsCampaignRequest req = UpdateAdsCampaignRequest.builder()
                 .adsCampaign(AdsCampaign.builder()
+                    .budgetAmount(8743.179536121897)
+                    .budgetPeriod(BudgetPeriod.MONTHLY)
+                    .category("CREDIT")
+                    .createdAt(OffsetDateTime.parse("2022-05-21T08:51:41.868Z"))
+                    .currency("USD")
+                    .effectiveStatus(EffectiveStatus.NOT_ELIGIBLE)
+                    .endAt(OffsetDateTime.parse("2025-05-09T08:19:05.103Z"))
+                    .id("304d62ba-35db-4c76-b39e-4fa4e93b7f71")
+                    .labels(List.of(
+                        "comedo"))
+                    .name("Emard Inc")
+                    .startAt(OffsetDateTime.parse("2022-07-20T04:51:23.308Z"))
+                    .status(AdsCampaignStatus.PROCESSING_FAILED)
+                    .targeting(PropertyAdsCampaignTargeting.builder()
+                        .build())
+                    .totalSpendAmount(2349.8642875347286)
+                    .updatedAt(OffsetDateTime.parse("2025-12-05T13:35:57.603Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -2391,16 +2575,17 @@ Update a creative
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateAdsCreative" method="put" path="/ads/{connection_id}/creative/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateAdsCreative" method="put" path="/ads/{connection_id}/creative/{id}" example="ads_creative" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateAdsCreativeRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateAdsCreativeResponse;
-import to.unified.unified_java_sdk.models.shared.AdsCreative;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -2414,6 +2599,15 @@ public class Application {
 
         UpdateAdsCreativeRequest req = UpdateAdsCreativeRequest.builder()
                 .adsCreative(AdsCreative.builder()
+                    .createdAt(OffsetDateTime.parse("2020-02-17T11:24:51.093Z"))
+                    .id("d118ec82-e89d-4441-8941-08ef9518487f")
+                    .labels(List.of(
+                        "coma",
+                        "accedo",
+                        "termes"))
+                    .name("Brekke, Bradtke and Robel")
+                    .status(AdsCreativeStatus.PAUSED)
+                    .updatedAt(OffsetDateTime.parse("2021-06-21T01:01:35.450Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -2452,16 +2646,16 @@ Update a group
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateAdsGroup" method="put" path="/ads/{connection_id}/group/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateAdsGroup" method="put" path="/ads/{connection_id}/group/{id}" example="ads_group" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateAdsGroupRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateAdsGroupResponse;
-import to.unified.unified_java_sdk.models.shared.AdsGroup;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -2475,6 +2669,21 @@ public class Application {
 
         UpdateAdsGroupRequest req = UpdateAdsGroupRequest.builder()
                 .adsGroup(AdsGroup.builder()
+                    .bidAmount(26.16030164062977)
+                    .budgetAmount(5099.175239447504)
+                    .budgetPeriod(AdsGroupBudgetPeriod.MONTHLY)
+                    .createdAt(OffsetDateTime.parse("2019-08-29T17:59:41.045Z"))
+                    .currency("USD")
+                    .effectiveStatus(AdsGroupEffectiveStatus.PAUSED)
+                    .endAt(OffsetDateTime.parse("2026-05-24T13:19:12.211Z"))
+                    .id("696ee368-be46-4fed-aede-f2ef993e2ea4")
+                    .languageLocale("fr-FR")
+                    .name("Stark - Baumbach")
+                    .startAt(OffsetDateTime.parse("2025-12-10T21:11:12.613Z"))
+                    .status(AdsGroupStatus.PROCESSING)
+                    .targeting(PropertyAdsGroupTargeting.builder()
+                        .build())
+                    .updatedAt(OffsetDateTime.parse("2022-01-02T16:46:00.603Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -2513,16 +2722,16 @@ Update an insertionorder
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateAdsInsertionorder" method="put" path="/ads/{connection_id}/insertionorder/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateAdsInsertionorder" method="put" path="/ads/{connection_id}/insertionorder/{id}" example="ads_insertionorder" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateAdsInsertionorderRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateAdsInsertionorderResponse;
-import to.unified.unified_java_sdk.models.shared.AdsInsertionorder;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -2536,6 +2745,11 @@ public class Application {
 
         UpdateAdsInsertionorderRequest req = UpdateAdsInsertionorderRequest.builder()
                 .adsInsertionorder(AdsInsertionorder.builder()
+                    .createdAt(OffsetDateTime.parse("2021-04-10T06:57:36.611Z"))
+                    .id("5f4c56e7-ed4c-4eaa-a1d7-4b18779f6cce")
+                    .name("Kunde, Smith and Reinger")
+                    .status(AdsInsertionorderStatus.UNSPECIFIED)
+                    .updatedAt(OffsetDateTime.parse("2021-04-28T12:31:22.446Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -2574,16 +2788,17 @@ Update an organization
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateAdsOrganization" method="put" path="/ads/{connection_id}/organization/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateAdsOrganization" method="put" path="/ads/{connection_id}/organization/{id}" example="ads_organization" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateAdsOrganizationRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateAdsOrganizationResponse;
-import to.unified.unified_java_sdk.models.shared.AdsOrganization;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -2597,6 +2812,19 @@ public class Application {
 
         UpdateAdsOrganizationRequest req = UpdateAdsOrganizationRequest.builder()
                 .adsOrganization(AdsOrganization.builder()
+                    .accountNumber("LQUJx8zQBW")
+                    .createdAt(OffsetDateTime.parse("2020-07-23T21:47:11.440Z"))
+                    .currency("USD")
+                    .id("6d20a695-fa80-4f8e-8b00-e3d1dd334cac")
+                    .managers(List.of(
+                        AdsManager.builder()
+                            .id("e4fd87df-9f8b-4fa0-a77b-b7d18669e350")
+                            .name("Parker, Leannon and Gibson")
+                            .build()))
+                    .name("Ankunding Inc")
+                    .status(AdsOrganizationStatus.PROCESSING)
+                    .timezone("Europe/Chisinau")
+                    .updatedAt(OffsetDateTime.parse("2026-02-27T02:32:02.778Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

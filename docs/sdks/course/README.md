@@ -17,16 +17,17 @@ Create a course
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createLmsCourse" method="post" path="/lms/{connection_id}/course" -->
+<!-- UsageSnippet language="java" operationID="createLmsCourse" method="post" path="/lms/{connection_id}/course" example="lms_course" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateLmsCourseRequest;
 import to.unified.unified_java_sdk.models.operations.CreateLmsCourseResponse;
-import to.unified.unified_java_sdk.models.shared.LmsCourse;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -40,6 +41,43 @@ public class Application {
 
         CreateLmsCourseRequest req = CreateLmsCourseRequest.builder()
                 .lmsCourse(LmsCourse.builder()
+                    .categories(List.of(
+                        "tergiversatio",
+                        "tumultus"))
+                    .createdAt(OffsetDateTime.parse("2022-10-06T09:58:53.559Z"))
+                    .currency("FJD")
+                    .description("Vinco alias aut capitulus.")
+                    .durationMinutes(148d)
+                    .id("950aba61-f261-4a01-9c64-0ed9cde2416e")
+                    .instructors(List.of())
+                    .isActive(true)
+                    .isPrivate(false)
+                    .languages(List.of(
+                        "desparatus",
+                        "earum",
+                        "deripio"))
+                    .media(List.of(
+                        LmsMedia.builder()
+                            .content("Adeptio crudelis ipsum utrimque quae architecto. Cum eius conitor anser abutor error adsuesco abeo. Denego nihil caries aveho.")
+                            .description("Adipiscor.")
+                            .languages(List.of(
+                                "ms",
+                                "te"))
+                            .name("tandem")
+                            .thumbnailUrl("https://picsum.photos/seed/syTatRhK03/928/273")
+                            .type(LmsMediaType.OTHER)
+                            .url("https://picsum.photos/seed/fQAbsk/2472/1671")
+                            .build()))
+                    .name("comptus")
+                    .priceAmount(84d)
+                    .providerName("Homenick - Wunsch")
+                    .publishedAt(OffsetDateTime.parse("2023-12-30T03:35:03.902Z"))
+                    .skills(List.of(
+                        "adiuvo",
+                        "tam"))
+                    .students(List.of())
+                    .timeEstimateMinutes(100d)
+                    .updatedAt(OffsetDateTime.parse("2023-02-06T22:30:52.571Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -192,16 +230,17 @@ Update a course
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchLmsCourse" method="patch" path="/lms/{connection_id}/course/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchLmsCourse" method="patch" path="/lms/{connection_id}/course/{id}" example="lms_course" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchLmsCourseRequest;
 import to.unified.unified_java_sdk.models.operations.PatchLmsCourseResponse;
-import to.unified.unified_java_sdk.models.shared.LmsCourse;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -215,6 +254,43 @@ public class Application {
 
         PatchLmsCourseRequest req = PatchLmsCourseRequest.builder()
                 .lmsCourse(LmsCourse.builder()
+                    .categories(List.of(
+                        "tergiversatio",
+                        "tumultus"))
+                    .createdAt(OffsetDateTime.parse("2022-10-06T09:58:53.559Z"))
+                    .currency("FJD")
+                    .description("Vinco alias aut capitulus.")
+                    .durationMinutes(148d)
+                    .id("f50e97ee-407a-40a1-911f-7d1283bbb122")
+                    .instructors(List.of())
+                    .isActive(true)
+                    .isPrivate(false)
+                    .languages(List.of(
+                        "desparatus",
+                        "earum",
+                        "deripio"))
+                    .media(List.of(
+                        LmsMedia.builder()
+                            .content("Adeptio crudelis ipsum utrimque quae architecto. Cum eius conitor anser abutor error adsuesco abeo. Denego nihil caries aveho.")
+                            .description("Adipiscor.")
+                            .languages(List.of(
+                                "ms",
+                                "te"))
+                            .name("tandem")
+                            .thumbnailUrl("https://picsum.photos/seed/syTatRhK03/928/273")
+                            .type(LmsMediaType.OTHER)
+                            .url("https://picsum.photos/seed/fQAbsk/2472/1671")
+                            .build()))
+                    .name("comptus")
+                    .priceAmount(84d)
+                    .providerName("Homenick - Wunsch")
+                    .publishedAt(OffsetDateTime.parse("2023-12-30T03:35:03.902Z"))
+                    .skills(List.of(
+                        "adiuvo",
+                        "tam"))
+                    .students(List.of())
+                    .timeEstimateMinutes(100d)
+                    .updatedAt(OffsetDateTime.parse("2023-02-06T22:30:52.572Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -309,16 +385,17 @@ Update a course
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateLmsCourse" method="put" path="/lms/{connection_id}/course/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateLmsCourse" method="put" path="/lms/{connection_id}/course/{id}" example="lms_course" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateLmsCourseRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateLmsCourseResponse;
-import to.unified.unified_java_sdk.models.shared.LmsCourse;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -332,6 +409,43 @@ public class Application {
 
         UpdateLmsCourseRequest req = UpdateLmsCourseRequest.builder()
                 .lmsCourse(LmsCourse.builder()
+                    .categories(List.of(
+                        "tergiversatio",
+                        "tumultus"))
+                    .createdAt(OffsetDateTime.parse("2022-10-06T09:58:53.559Z"))
+                    .currency("FJD")
+                    .description("Vinco alias aut capitulus.")
+                    .durationMinutes(148d)
+                    .id("f50e97ee-407a-40a1-911f-7d1283bbb122")
+                    .instructors(List.of())
+                    .isActive(true)
+                    .isPrivate(false)
+                    .languages(List.of(
+                        "desparatus",
+                        "earum",
+                        "deripio"))
+                    .media(List.of(
+                        LmsMedia.builder()
+                            .content("Adeptio crudelis ipsum utrimque quae architecto. Cum eius conitor anser abutor error adsuesco abeo. Denego nihil caries aveho.")
+                            .description("Adipiscor.")
+                            .languages(List.of(
+                                "ms",
+                                "te"))
+                            .name("tandem")
+                            .thumbnailUrl("https://picsum.photos/seed/syTatRhK03/928/273")
+                            .type(LmsMediaType.OTHER)
+                            .url("https://picsum.photos/seed/fQAbsk/2472/1671")
+                            .build()))
+                    .name("comptus")
+                    .priceAmount(84d)
+                    .providerName("Homenick - Wunsch")
+                    .publishedAt(OffsetDateTime.parse("2023-12-30T03:35:03.902Z"))
+                    .skills(List.of(
+                        "adiuvo",
+                        "tam"))
+                    .students(List.of())
+                    .timeEstimateMinutes(100d)
+                    .updatedAt(OffsetDateTime.parse("2023-02-06T22:30:52.572Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

@@ -17,16 +17,18 @@ Create a job
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createAtsJob" method="post" path="/ats/{connection_id}/job" -->
+<!-- UsageSnippet language="java" operationID="createAtsJob" method="post" path="/ats/{connection_id}/job" example="ats_job" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
+import java.util.Map;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateAtsJobRequest;
 import to.unified.unified_java_sdk.models.operations.CreateAtsJobResponse;
-import to.unified.unified_java_sdk.models.shared.AtsJob;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -40,6 +42,119 @@ public class Application {
 
         CreateAtsJobRequest req = CreateAtsJobRequest.builder()
                 .atsJob(AtsJob.builder()
+                    .addresses(List.of(
+                        AtsAddress.builder()
+                            .address1("98097 Carlo Trail")
+                            .city("South Judd")
+                            .countryCode("US")
+                            .postalCode("89776-0669")
+                            .region("Mississippi")
+                            .regionCode("FL")
+                            .build()))
+                    .compensation(List.of(
+                        AtsCompensation.builder()
+                            .currency("AUD")
+                            .frequency(Frequency.DAY)
+                            .max(174303d)
+                            .min(174042d)
+                            .type(AtsCompensationType.BONUS)
+                            .build(),
+                        AtsCompensation.builder()
+                            .currency("MZN")
+                            .frequency(Frequency.MONTH)
+                            .max(171171d)
+                            .min(151975d)
+                            .type(AtsCompensationType.SALARY)
+                            .build()))
+                    .createdAt(OffsetDateTime.parse("2023-06-16T12:51:44.518Z"))
+                    .description("Global")
+                    .employmentType(EmploymentType.FREELANCE)
+                    .hiringManagers(List.of(
+                        AtsReference.builder()
+                            .id("fd9852e3-9035-4f42-beb3-bbf4e4022122")
+                            .name("Eloise Mueller PhD")
+                            .build()))
+                    .id("66ab0110-f43b-4a2e-ac77-00ee9ed7d453")
+                    .industry("Gorgeous Plastic Computer")
+                    .languageLocale("en")
+                    .metadata(List.of(
+                        AtsMetadata.builder()
+                            .extraData(AtsMetadataExtraData.of(Map.ofEntries(
+                                Map.entry("display_name", "Custom Property"))))
+                            .format(AtsMetadataFormat.TEXT)
+                            .id("fe031341-9e80-483c-9552-147da99d959e")
+                            .namespace("custom")
+                            .slug("custom_property")
+                            .value(AtsMetadataValue.of("acceptus"))
+                            .build()))
+                    .minimumDegree("Bachelor")
+                    .minimumExperienceYears(3d)
+                    .name("Forward Brand Producer")
+                    .numberOfOpenings(1d)
+                    .openings(List.of(
+                        AtsJobOpening.builder()
+                            .closeReason("Admoveo trado textilis.")
+                            .openedAt(OffsetDateTime.parse("2026-05-09T12:56:29.780Z"))
+                            .status(AtsJobOpeningStatus.OPEN)
+                            .build()))
+                    .postings(List.of(
+                        AtsJobPosting.builder()
+                            .address(PropertyAtsJobPostingAddress.builder()
+                                .address1("8460 Nils Trace")
+                                .city("West Mervinburgh")
+                                .countryCode("US")
+                                .postalCode("14162")
+                                .region("Maine")
+                                .regionCode("MO")
+                                .build())
+                            .createdAt(OffsetDateTime.parse("2026-07-02T04:14:45.189Z"))
+                            .description("Deduco cultellus alii terebro depono thesaurus.")
+                            .id("f6101769-deb3-4721-978c-d205638870ee")
+                            .isActive(false)
+                            .location("6788 Oxford Road")
+                            .name("Forward Security Orchestrator")
+                            .postingUrl("https://ajar-metabolite.net/")
+                            .updatedAt(OffsetDateTime.parse("2026-07-27T18:35:01.326Z"))
+                            .build()))
+                    .publicJobUrls(List.of(
+                        "https://trustworthy-elver.info",
+                        "https://parched-dash.info"))
+                    .questions(List.of(
+                        AtsJobQuestion.builder()
+                            .question("Sodalitas nemo natus attonbitus reprehenderit voro depono constans vehemens ante.")
+                            .type(AtsJobQuestionType.TEXT)
+                            .description("Trepide provident taceo rem.")
+                            .id("289f27c0-311c-41e5-ad9d-cbe2097332c2")
+                            .options(List.of(
+                                "censura",
+                                "tum"))
+                            .prompt("Spectaculum mollitia arcus compello.")
+                            .required(true)
+                            .build(),
+                        AtsJobQuestion.builder()
+                            .question("Vinitor sodalitas desino sollers viduo volo.")
+                            .type(AtsJobQuestionType.TEXT)
+                            .id("b3a0b53b-38f3-4e8d-84b9-f413a900d79b")
+                            .options(List.of(
+                                "odit"))
+                            .prompt("Similique absque temeritas celebrer enim.")
+                            .required(false)
+                            .build(),
+                        AtsJobQuestion.builder()
+                            .question("Subiungo ambitus neque talis amitto terreo alienus quae vulticulus.")
+                            .type(AtsJobQuestionType.TEXT)
+                            .description("Abstergo possimus quibusdam deinde amoveo.")
+                            .id("568be61d-060e-4d8c-a8ab-8a17cb25edf3")
+                            .options(List.of(
+                                "vallum"))
+                            .prompt("Ara thermae aetas vivo constans victoria volo carbo vehemens praesentium.")
+                            .required(false)
+                            .build()))
+                    .skills(List.of(
+                        "amiculum",
+                        "crux"))
+                    .status(AtsJobStatus.ARCHIVED)
+                    .updatedAt(OffsetDateTime.parse("2026-01-31T18:22:08.370Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -192,16 +307,18 @@ Update a job
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchAtsJob" method="patch" path="/ats/{connection_id}/job/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchAtsJob" method="patch" path="/ats/{connection_id}/job/{id}" example="ats_job" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
+import java.util.Map;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchAtsJobRequest;
 import to.unified.unified_java_sdk.models.operations.PatchAtsJobResponse;
-import to.unified.unified_java_sdk.models.shared.AtsJob;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -215,6 +332,119 @@ public class Application {
 
         PatchAtsJobRequest req = PatchAtsJobRequest.builder()
                 .atsJob(AtsJob.builder()
+                    .addresses(List.of(
+                        AtsAddress.builder()
+                            .address1("98097 Carlo Trail")
+                            .city("South Judd")
+                            .countryCode("US")
+                            .postalCode("89776-0669")
+                            .region("Mississippi")
+                            .regionCode("FL")
+                            .build()))
+                    .compensation(List.of(
+                        AtsCompensation.builder()
+                            .currency("AUD")
+                            .frequency(Frequency.DAY)
+                            .max(174303d)
+                            .min(174042d)
+                            .type(AtsCompensationType.BONUS)
+                            .build(),
+                        AtsCompensation.builder()
+                            .currency("MZN")
+                            .frequency(Frequency.MONTH)
+                            .max(171171d)
+                            .min(151975d)
+                            .type(AtsCompensationType.SALARY)
+                            .build()))
+                    .createdAt(OffsetDateTime.parse("2023-06-16T12:51:44.518Z"))
+                    .description("Global")
+                    .employmentType(EmploymentType.FREELANCE)
+                    .hiringManagers(List.of(
+                        AtsReference.builder()
+                            .id("fd9852e3-9035-4f42-beb3-bbf4e4022122")
+                            .name("Eloise Mueller PhD")
+                            .build()))
+                    .id("5cfa40e8-1d71-4a46-bae3-5176a66056a5")
+                    .industry("Gorgeous Plastic Computer")
+                    .languageLocale("en")
+                    .metadata(List.of(
+                        AtsMetadata.builder()
+                            .extraData(AtsMetadataExtraData.of(Map.ofEntries(
+                                Map.entry("display_name", "Custom Property"))))
+                            .format(AtsMetadataFormat.TEXT)
+                            .id("60b94c73-9f9e-4396-a602-910042160eed")
+                            .namespace("custom")
+                            .slug("custom_property")
+                            .value(AtsMetadataValue.of("acceptus"))
+                            .build()))
+                    .minimumDegree("Bachelor")
+                    .minimumExperienceYears(3d)
+                    .name("Forward Brand Producer")
+                    .numberOfOpenings(1d)
+                    .openings(List.of(
+                        AtsJobOpening.builder()
+                            .closeReason("Admoveo trado textilis.")
+                            .openedAt(OffsetDateTime.parse("2026-05-09T12:56:29.822Z"))
+                            .status(AtsJobOpeningStatus.OPEN)
+                            .build()))
+                    .postings(List.of(
+                        AtsJobPosting.builder()
+                            .address(PropertyAtsJobPostingAddress.builder()
+                                .address1("8460 Nils Trace")
+                                .city("West Mervinburgh")
+                                .countryCode("US")
+                                .postalCode("14162")
+                                .region("Maine")
+                                .regionCode("MO")
+                                .build())
+                            .createdAt(OffsetDateTime.parse("2026-07-02T04:14:45.234Z"))
+                            .description("Deduco cultellus alii terebro depono thesaurus.")
+                            .id("f6101769-deb3-4721-978c-d205638870ee")
+                            .isActive(false)
+                            .location("6788 Oxford Road")
+                            .name("Forward Security Orchestrator")
+                            .postingUrl("https://ajar-metabolite.net/")
+                            .updatedAt(OffsetDateTime.parse("2026-07-27T18:35:01.372Z"))
+                            .build()))
+                    .publicJobUrls(List.of(
+                        "https://trustworthy-elver.info",
+                        "https://parched-dash.info"))
+                    .questions(List.of(
+                        AtsJobQuestion.builder()
+                            .question("Sodalitas nemo natus attonbitus reprehenderit voro depono constans vehemens ante.")
+                            .type(AtsJobQuestionType.TEXT)
+                            .description("Trepide provident taceo rem.")
+                            .id("289f27c0-311c-41e5-ad9d-cbe2097332c2")
+                            .options(List.of(
+                                "censura",
+                                "tum"))
+                            .prompt("Spectaculum mollitia arcus compello.")
+                            .required(true)
+                            .build(),
+                        AtsJobQuestion.builder()
+                            .question("Vinitor sodalitas desino sollers viduo volo.")
+                            .type(AtsJobQuestionType.TEXT)
+                            .id("b3a0b53b-38f3-4e8d-84b9-f413a900d79b")
+                            .options(List.of(
+                                "odit"))
+                            .prompt("Similique absque temeritas celebrer enim.")
+                            .required(false)
+                            .build(),
+                        AtsJobQuestion.builder()
+                            .question("Subiungo ambitus neque talis amitto terreo alienus quae vulticulus.")
+                            .type(AtsJobQuestionType.TEXT)
+                            .description("Abstergo possimus quibusdam deinde amoveo.")
+                            .id("568be61d-060e-4d8c-a8ab-8a17cb25edf3")
+                            .options(List.of(
+                                "vallum"))
+                            .prompt("Ara thermae aetas vivo constans victoria volo carbo vehemens praesentium.")
+                            .required(false)
+                            .build()))
+                    .skills(List.of(
+                        "amiculum",
+                        "crux"))
+                    .status(AtsJobStatus.ARCHIVED)
+                    .updatedAt(OffsetDateTime.parse("2026-01-31T18:22:08.408Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -309,16 +539,18 @@ Update a job
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateAtsJob" method="put" path="/ats/{connection_id}/job/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateAtsJob" method="put" path="/ats/{connection_id}/job/{id}" example="ats_job" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
+import java.util.Map;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateAtsJobRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateAtsJobResponse;
-import to.unified.unified_java_sdk.models.shared.AtsJob;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -332,6 +564,119 @@ public class Application {
 
         UpdateAtsJobRequest req = UpdateAtsJobRequest.builder()
                 .atsJob(AtsJob.builder()
+                    .addresses(List.of(
+                        AtsAddress.builder()
+                            .address1("98097 Carlo Trail")
+                            .city("South Judd")
+                            .countryCode("US")
+                            .postalCode("89776-0669")
+                            .region("Mississippi")
+                            .regionCode("FL")
+                            .build()))
+                    .compensation(List.of(
+                        AtsCompensation.builder()
+                            .currency("AUD")
+                            .frequency(Frequency.DAY)
+                            .max(174303d)
+                            .min(174042d)
+                            .type(AtsCompensationType.BONUS)
+                            .build(),
+                        AtsCompensation.builder()
+                            .currency("MZN")
+                            .frequency(Frequency.MONTH)
+                            .max(171171d)
+                            .min(151975d)
+                            .type(AtsCompensationType.SALARY)
+                            .build()))
+                    .createdAt(OffsetDateTime.parse("2023-06-16T12:51:44.518Z"))
+                    .description("Global")
+                    .employmentType(EmploymentType.FREELANCE)
+                    .hiringManagers(List.of(
+                        AtsReference.builder()
+                            .id("fd9852e3-9035-4f42-beb3-bbf4e4022122")
+                            .name("Eloise Mueller PhD")
+                            .build()))
+                    .id("5cfa40e8-1d71-4a46-bae3-5176a66056a5")
+                    .industry("Gorgeous Plastic Computer")
+                    .languageLocale("en")
+                    .metadata(List.of(
+                        AtsMetadata.builder()
+                            .extraData(AtsMetadataExtraData.of(Map.ofEntries(
+                                Map.entry("display_name", "Custom Property"))))
+                            .format(AtsMetadataFormat.TEXT)
+                            .id("60b94c73-9f9e-4396-a602-910042160eed")
+                            .namespace("custom")
+                            .slug("custom_property")
+                            .value(AtsMetadataValue.of("acceptus"))
+                            .build()))
+                    .minimumDegree("Bachelor")
+                    .minimumExperienceYears(3d)
+                    .name("Forward Brand Producer")
+                    .numberOfOpenings(1d)
+                    .openings(List.of(
+                        AtsJobOpening.builder()
+                            .closeReason("Admoveo trado textilis.")
+                            .openedAt(OffsetDateTime.parse("2026-05-09T12:56:29.822Z"))
+                            .status(AtsJobOpeningStatus.OPEN)
+                            .build()))
+                    .postings(List.of(
+                        AtsJobPosting.builder()
+                            .address(PropertyAtsJobPostingAddress.builder()
+                                .address1("8460 Nils Trace")
+                                .city("West Mervinburgh")
+                                .countryCode("US")
+                                .postalCode("14162")
+                                .region("Maine")
+                                .regionCode("MO")
+                                .build())
+                            .createdAt(OffsetDateTime.parse("2026-07-02T04:14:45.234Z"))
+                            .description("Deduco cultellus alii terebro depono thesaurus.")
+                            .id("f6101769-deb3-4721-978c-d205638870ee")
+                            .isActive(false)
+                            .location("6788 Oxford Road")
+                            .name("Forward Security Orchestrator")
+                            .postingUrl("https://ajar-metabolite.net/")
+                            .updatedAt(OffsetDateTime.parse("2026-07-27T18:35:01.372Z"))
+                            .build()))
+                    .publicJobUrls(List.of(
+                        "https://trustworthy-elver.info",
+                        "https://parched-dash.info"))
+                    .questions(List.of(
+                        AtsJobQuestion.builder()
+                            .question("Sodalitas nemo natus attonbitus reprehenderit voro depono constans vehemens ante.")
+                            .type(AtsJobQuestionType.TEXT)
+                            .description("Trepide provident taceo rem.")
+                            .id("289f27c0-311c-41e5-ad9d-cbe2097332c2")
+                            .options(List.of(
+                                "censura",
+                                "tum"))
+                            .prompt("Spectaculum mollitia arcus compello.")
+                            .required(true)
+                            .build(),
+                        AtsJobQuestion.builder()
+                            .question("Vinitor sodalitas desino sollers viduo volo.")
+                            .type(AtsJobQuestionType.TEXT)
+                            .id("b3a0b53b-38f3-4e8d-84b9-f413a900d79b")
+                            .options(List.of(
+                                "odit"))
+                            .prompt("Similique absque temeritas celebrer enim.")
+                            .required(false)
+                            .build(),
+                        AtsJobQuestion.builder()
+                            .question("Subiungo ambitus neque talis amitto terreo alienus quae vulticulus.")
+                            .type(AtsJobQuestionType.TEXT)
+                            .description("Abstergo possimus quibusdam deinde amoveo.")
+                            .id("568be61d-060e-4d8c-a8ab-8a17cb25edf3")
+                            .options(List.of(
+                                "vallum"))
+                            .prompt("Ara thermae aetas vivo constans victoria volo carbo vehemens praesentium.")
+                            .required(false)
+                            .build()))
+                    .skills(List.of(
+                        "amiculum",
+                        "crux"))
+                    .status(AtsJobStatus.ARCHIVED)
+                    .updatedAt(OffsetDateTime.parse("2026-01-31T18:22:08.408Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

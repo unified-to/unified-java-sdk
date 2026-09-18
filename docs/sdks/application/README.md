@@ -17,16 +17,18 @@ Create an application
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createAtsApplication" method="post" path="/ats/{connection_id}/application" -->
+<!-- UsageSnippet language="java" operationID="createAtsApplication" method="post" path="/ats/{connection_id}/application" example="ats_application" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
+import java.util.Map;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateAtsApplicationRequest;
 import to.unified.unified_java_sdk.models.operations.CreateAtsApplicationResponse;
-import to.unified.unified_java_sdk.models.shared.AtsApplication;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -40,6 +42,29 @@ public class Application {
 
         CreateAtsApplicationRequest req = CreateAtsApplicationRequest.builder()
                 .atsApplication(AtsApplication.builder()
+                    .answers(List.of())
+                    .appliedAt(OffsetDateTime.parse("2025-09-08T08:48:32.240Z"))
+                    .createdAt(OffsetDateTime.parse("2023-10-17T07:19:48.787Z"))
+                    .hiredAt(OffsetDateTime.parse("2026-04-14T14:34:12.048Z"))
+                    .id("85d62f00-b2a0-42db-8c72-8ee24f2b01fd")
+                    .metadata(List.of(
+                        AtsMetadata.builder()
+                            .extraData(AtsMetadataExtraData.of(Map.ofEntries(
+                            )))
+                            .format(AtsMetadataFormat.TEXT)
+                            .id("a1302a79-0341-40e6-b91a-daeb95584617")
+                            .namespace("application")
+                            .slug("despecto")
+                            .value(AtsMetadataValue.of("Argentum decretum cultellus aveho distinctio verecundia stella depono."))
+                            .build()))
+                    .offers(List.of())
+                    .originalStatus("vomica")
+                    .originalSubstatus("allatus")
+                    .rejectedAt(OffsetDateTime.parse("2026-09-08T19:51:38.295Z"))
+                    .rejectedReason("Cometes amplitudo videlicet talio.")
+                    .source("credo")
+                    .status(AtsApplicationStatus.REVIEWING)
+                    .updatedAt(OffsetDateTime.parse("2026-09-15T11:10:10.512Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -192,16 +217,18 @@ Update an application
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchAtsApplication" method="patch" path="/ats/{connection_id}/application/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchAtsApplication" method="patch" path="/ats/{connection_id}/application/{id}" example="ats_application" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
+import java.util.Map;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchAtsApplicationRequest;
 import to.unified.unified_java_sdk.models.operations.PatchAtsApplicationResponse;
-import to.unified.unified_java_sdk.models.shared.AtsApplication;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -215,6 +242,29 @@ public class Application {
 
         PatchAtsApplicationRequest req = PatchAtsApplicationRequest.builder()
                 .atsApplication(AtsApplication.builder()
+                    .answers(List.of())
+                    .appliedAt(OffsetDateTime.parse("2025-09-08T08:48:32.256Z"))
+                    .createdAt(OffsetDateTime.parse("2023-10-17T07:19:48.787Z"))
+                    .hiredAt(OffsetDateTime.parse("2026-04-14T14:34:12.068Z"))
+                    .id("b1876d77-92f7-4377-8a74-00bdf3ad20d2")
+                    .metadata(List.of(
+                        AtsMetadata.builder()
+                            .extraData(AtsMetadataExtraData.of(Map.ofEntries(
+                            )))
+                            .format(AtsMetadataFormat.TEXT)
+                            .id("a1302a79-0341-40e6-b91a-daeb95584617")
+                            .namespace("application")
+                            .slug("despecto")
+                            .value(AtsMetadataValue.of("Argentum decretum cultellus aveho distinctio verecundia stella depono."))
+                            .build()))
+                    .offers(List.of())
+                    .originalStatus("vomica")
+                    .originalSubstatus("allatus")
+                    .rejectedAt(OffsetDateTime.parse("2026-09-08T19:51:38.319Z"))
+                    .rejectedReason("Cometes amplitudo videlicet talio.")
+                    .source("credo")
+                    .status(AtsApplicationStatus.REVIEWING)
+                    .updatedAt(OffsetDateTime.parse("2026-09-15T11:10:10.536Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -309,16 +359,18 @@ Update an application
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateAtsApplication" method="put" path="/ats/{connection_id}/application/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateAtsApplication" method="put" path="/ats/{connection_id}/application/{id}" example="ats_application" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
+import java.util.Map;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateAtsApplicationRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateAtsApplicationResponse;
-import to.unified.unified_java_sdk.models.shared.AtsApplication;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -332,6 +384,29 @@ public class Application {
 
         UpdateAtsApplicationRequest req = UpdateAtsApplicationRequest.builder()
                 .atsApplication(AtsApplication.builder()
+                    .answers(List.of())
+                    .appliedAt(OffsetDateTime.parse("2025-09-08T08:48:32.256Z"))
+                    .createdAt(OffsetDateTime.parse("2023-10-17T07:19:48.787Z"))
+                    .hiredAt(OffsetDateTime.parse("2026-04-14T14:34:12.068Z"))
+                    .id("b1876d77-92f7-4377-8a74-00bdf3ad20d2")
+                    .metadata(List.of(
+                        AtsMetadata.builder()
+                            .extraData(AtsMetadataExtraData.of(Map.ofEntries(
+                            )))
+                            .format(AtsMetadataFormat.TEXT)
+                            .id("a1302a79-0341-40e6-b91a-daeb95584617")
+                            .namespace("application")
+                            .slug("despecto")
+                            .value(AtsMetadataValue.of("Argentum decretum cultellus aveho distinctio verecundia stella depono."))
+                            .build()))
+                    .offers(List.of())
+                    .originalStatus("vomica")
+                    .originalSubstatus("allatus")
+                    .rejectedAt(OffsetDateTime.parse("2026-09-08T19:51:38.319Z"))
+                    .rejectedReason("Cometes amplitudo videlicet talio.")
+                    .source("credo")
+                    .status(AtsApplicationStatus.REVIEWING)
+                    .updatedAt(OffsetDateTime.parse("2026-09-15T11:10:10.536Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

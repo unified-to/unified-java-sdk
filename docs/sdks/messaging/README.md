@@ -25,11 +25,13 @@ Create a channel
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createMessagingChannel" method="post" path="/messaging/{connection_id}/channel" -->
+<!-- UsageSnippet language="java" operationID="createMessagingChannel" method="post" path="/messaging/{connection_id}/channel" example="messaging_channel" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateMessagingChannelRequest;
 import to.unified.unified_java_sdk.models.operations.CreateMessagingChannelResponse;
@@ -48,6 +50,16 @@ public class Application {
 
         CreateMessagingChannelRequest req = CreateMessagingChannelRequest.builder()
                 .messagingChannel(MessagingChannel.builder()
+                    .createdAt(OffsetDateTime.parse("2023-10-05T02:09:22.795Z"))
+                    .description("Dolores tutis.")
+                    .hasSubchannels(true)
+                    .id("021b0aa2-c26f-46af-9ab5-aa8b3668976b")
+                    .isActive(false)
+                    .isPrivate(true)
+                    .members(List.of())
+                    .name("tego")
+                    .updatedAt(OffsetDateTime.parse("2026-04-23T02:24:13.912Z"))
+                    .webUrl("https://svelte-rule.name/")
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -85,16 +97,17 @@ Create a message
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createMessagingMessage" method="post" path="/messaging/{connection_id}/message" -->
+<!-- UsageSnippet language="java" operationID="createMessagingMessage" method="post" path="/messaging/{connection_id}/message" example="messaging_message" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateMessagingMessageRequest;
 import to.unified.unified_java_sdk.models.operations.CreateMessagingMessageResponse;
-import to.unified.unified_java_sdk.models.shared.MessagingMessage;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -108,6 +121,35 @@ public class Application {
 
         CreateMessagingMessageRequest req = CreateMessagingMessageRequest.builder()
                 .messagingMessage(MessagingMessage.builder()
+                    .attachments(List.of(
+                        MessagingAttachment.builder()
+                            .contentIdentifier("1c72f1d5-f6e4-4ed8-a96a-02a4102f79f4")
+                            .contentType("coaegresco")
+                            .downloadUrl("https://rotating-advertisement.org")
+                            .filename("super")
+                            .messageId("222cedb6-3d1c-47ba-982b-2520c268f506")
+                            .size(327d)
+                            .build()))
+                    .buttons(List.of(
+                        MessagingButton.builder()
+                            .id("337e2909-4d4a-4452-8eee-916bebb29ae2")
+                            .text("denuo")
+                            .build()))
+                    .createdAt(OffsetDateTime.parse("2021-11-26T09:26:33.973Z"))
+                    .destinationMembers(List.of())
+                    .hasChildren(true)
+                    .hiddenMembers(List.of())
+                    .id("222cedb6-3d1c-47ba-982b-2520c268f506")
+                    .isUnread(false)
+                    .mentionedMembers(List.of())
+                    .message("Sum utique aliquid.")
+                    .messageHtml("Articulus tardus tergiversatio.")
+                    .messageMarkdown("Territo uterque tergo curiositas.")
+                    .reactions(List.of())
+                    .reference("571483f2-d95b-4f06-8b78-d35e7046bb74")
+                    .subject("Cernuus optio cohaero summisse in.")
+                    .updatedAt(OffsetDateTime.parse("2023-07-06T11:13:40.621Z"))
+                    .webUrl("https://grumpy-kit.net")
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -375,11 +417,13 @@ Update a channel
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchMessagingChannel" method="patch" path="/messaging/{connection_id}/channel/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchMessagingChannel" method="patch" path="/messaging/{connection_id}/channel/{id}" example="messaging_channel" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchMessagingChannelRequest;
 import to.unified.unified_java_sdk.models.operations.PatchMessagingChannelResponse;
@@ -398,6 +442,16 @@ public class Application {
 
         PatchMessagingChannelRequest req = PatchMessagingChannelRequest.builder()
                 .messagingChannel(MessagingChannel.builder()
+                    .createdAt(OffsetDateTime.parse("2023-10-05T02:09:22.795Z"))
+                    .description("Dolores tutis.")
+                    .hasSubchannels(true)
+                    .id("40af066d-f89e-46da-9bb2-81ff7f2f83a9")
+                    .isActive(false)
+                    .isPrivate(true)
+                    .members(List.of())
+                    .name("tego")
+                    .updatedAt(OffsetDateTime.parse("2026-04-23T02:24:13.920Z"))
+                    .webUrl("https://svelte-rule.name/")
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -436,16 +490,16 @@ Update an event
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchMessagingEvent" method="patch" path="/messaging/{connection_id}/event/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchMessagingEvent" method="patch" path="/messaging/{connection_id}/event/{id}" example="messaging_event" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchMessagingEventRequest;
 import to.unified.unified_java_sdk.models.operations.PatchMessagingEventResponse;
-import to.unified.unified_java_sdk.models.shared.MessagingEvent;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -459,6 +513,14 @@ public class Application {
 
         PatchMessagingEventRequest req = PatchMessagingEventRequest.builder()
                 .messagingEvent(MessagingEvent.builder()
+                    .channel(PropertyMessagingEventChannel.builder()
+                        .id("")
+                        .name("")
+                        .build())
+                    .createdAt(OffsetDateTime.parse("2019-05-30T19:44:46.461Z"))
+                    .id("edcbbf0d-0281-47f1-a49d-9cf2a55c7d48")
+                    .isReplacingOriginal(false)
+                    .type(MessagingEventType.BUTTON_CLICK)
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -497,16 +559,17 @@ Update a message
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchMessagingMessage" method="patch" path="/messaging/{connection_id}/message/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchMessagingMessage" method="patch" path="/messaging/{connection_id}/message/{id}" example="messaging_message" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchMessagingMessageRequest;
 import to.unified.unified_java_sdk.models.operations.PatchMessagingMessageResponse;
-import to.unified.unified_java_sdk.models.shared.MessagingMessage;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -520,6 +583,35 @@ public class Application {
 
         PatchMessagingMessageRequest req = PatchMessagingMessageRequest.builder()
                 .messagingMessage(MessagingMessage.builder()
+                    .attachments(List.of(
+                        MessagingAttachment.builder()
+                            .contentIdentifier("1a2fed76-5d16-4c7f-8c90-b8124cfe267b")
+                            .contentType("coaegresco")
+                            .downloadUrl("https://rotating-advertisement.org")
+                            .filename("super")
+                            .messageId("5dcf9147-6192-40ad-bfd6-c02931e4722f")
+                            .size(327d)
+                            .build()))
+                    .buttons(List.of(
+                        MessagingButton.builder()
+                            .id("11857e5d-8b5b-44bd-ab54-af6df290a21b")
+                            .text("denuo")
+                            .build()))
+                    .createdAt(OffsetDateTime.parse("2021-11-26T09:26:33.973Z"))
+                    .destinationMembers(List.of())
+                    .hasChildren(true)
+                    .hiddenMembers(List.of())
+                    .id("5dcf9147-6192-40ad-bfd6-c02931e4722f")
+                    .isUnread(false)
+                    .mentionedMembers(List.of())
+                    .message("Sum utique aliquid.")
+                    .messageHtml("Articulus tardus tergiversatio.")
+                    .messageMarkdown("Territo uterque tergo curiositas.")
+                    .reactions(List.of())
+                    .reference("571483f2-d95b-4f06-8b78-d35e7046bb74")
+                    .subject("Cernuus optio cohaero summisse in.")
+                    .updatedAt(OffsetDateTime.parse("2023-07-06T11:13:40.638Z"))
+                    .webUrl("https://grumpy-kit.net")
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -670,11 +762,13 @@ Update a channel
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateMessagingChannel" method="put" path="/messaging/{connection_id}/channel/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateMessagingChannel" method="put" path="/messaging/{connection_id}/channel/{id}" example="messaging_channel" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateMessagingChannelRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateMessagingChannelResponse;
@@ -693,6 +787,16 @@ public class Application {
 
         UpdateMessagingChannelRequest req = UpdateMessagingChannelRequest.builder()
                 .messagingChannel(MessagingChannel.builder()
+                    .createdAt(OffsetDateTime.parse("2023-10-05T02:09:22.795Z"))
+                    .description("Dolores tutis.")
+                    .hasSubchannels(true)
+                    .id("40af066d-f89e-46da-9bb2-81ff7f2f83a9")
+                    .isActive(false)
+                    .isPrivate(true)
+                    .members(List.of())
+                    .name("tego")
+                    .updatedAt(OffsetDateTime.parse("2026-04-23T02:24:13.920Z"))
+                    .webUrl("https://svelte-rule.name/")
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -731,16 +835,16 @@ Update an event
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateMessagingEvent" method="put" path="/messaging/{connection_id}/event/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateMessagingEvent" method="put" path="/messaging/{connection_id}/event/{id}" example="messaging_event" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateMessagingEventRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateMessagingEventResponse;
-import to.unified.unified_java_sdk.models.shared.MessagingEvent;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -754,6 +858,14 @@ public class Application {
 
         UpdateMessagingEventRequest req = UpdateMessagingEventRequest.builder()
                 .messagingEvent(MessagingEvent.builder()
+                    .channel(PropertyMessagingEventChannel.builder()
+                        .id("")
+                        .name("")
+                        .build())
+                    .createdAt(OffsetDateTime.parse("2019-05-30T19:44:46.461Z"))
+                    .id("edcbbf0d-0281-47f1-a49d-9cf2a55c7d48")
+                    .isReplacingOriginal(false)
+                    .type(MessagingEventType.BUTTON_CLICK)
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -792,16 +904,17 @@ Update a message
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateMessagingMessage" method="put" path="/messaging/{connection_id}/message/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateMessagingMessage" method="put" path="/messaging/{connection_id}/message/{id}" example="messaging_message" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateMessagingMessageRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateMessagingMessageResponse;
-import to.unified.unified_java_sdk.models.shared.MessagingMessage;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -815,6 +928,35 @@ public class Application {
 
         UpdateMessagingMessageRequest req = UpdateMessagingMessageRequest.builder()
                 .messagingMessage(MessagingMessage.builder()
+                    .attachments(List.of(
+                        MessagingAttachment.builder()
+                            .contentIdentifier("1a2fed76-5d16-4c7f-8c90-b8124cfe267b")
+                            .contentType("coaegresco")
+                            .downloadUrl("https://rotating-advertisement.org")
+                            .filename("super")
+                            .messageId("5dcf9147-6192-40ad-bfd6-c02931e4722f")
+                            .size(327d)
+                            .build()))
+                    .buttons(List.of(
+                        MessagingButton.builder()
+                            .id("11857e5d-8b5b-44bd-ab54-af6df290a21b")
+                            .text("denuo")
+                            .build()))
+                    .createdAt(OffsetDateTime.parse("2021-11-26T09:26:33.973Z"))
+                    .destinationMembers(List.of())
+                    .hasChildren(true)
+                    .hiddenMembers(List.of())
+                    .id("5dcf9147-6192-40ad-bfd6-c02931e4722f")
+                    .isUnread(false)
+                    .mentionedMembers(List.of())
+                    .message("Sum utique aliquid.")
+                    .messageHtml("Articulus tardus tergiversatio.")
+                    .messageMarkdown("Territo uterque tergo curiositas.")
+                    .reactions(List.of())
+                    .reference("571483f2-d95b-4f06-8b78-d35e7046bb74")
+                    .subject("Cernuus optio cohaero summisse in.")
+                    .updatedAt(OffsetDateTime.parse("2023-07-06T11:13:40.638Z"))
+                    .webUrl("https://grumpy-kit.net")
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

@@ -17,16 +17,17 @@ Create an instructor
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createLmsInstructor" method="post" path="/lms/{connection_id}/instructor" -->
+<!-- UsageSnippet language="java" operationID="createLmsInstructor" method="post" path="/lms/{connection_id}/instructor" example="lms_instructor" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateLmsInstructorRequest;
 import to.unified.unified_java_sdk.models.operations.CreateLmsInstructorResponse;
-import to.unified.unified_java_sdk.models.shared.LmsInstructor;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -40,6 +41,24 @@ public class Application {
 
         CreateLmsInstructorRequest req = CreateLmsInstructorRequest.builder()
                 .lmsInstructor(LmsInstructor.builder()
+                    .createdAt(OffsetDateTime.parse("2021-10-12T16:38:54.979Z"))
+                    .emails(List.of(
+                        LmsEmail.builder()
+                            .build(),
+                        LmsEmail.builder()
+                            .build()))
+                    .firstName("Deangelo")
+                    .id("dfe83772-691a-4931-8ea8-97260a0c5abf")
+                    .imageUrl("https://avatars.githubusercontent.com/u/20232618")
+                    .lastName("Ritchie")
+                    .name("Deangelo Ritchie")
+                    .telephones(List.of(
+                        LmsTelephone.builder()
+                            .telephone("(352) 551-7989")
+                            .type(LmsTelephoneType.HOME)
+                            .build()))
+                    .title("Product Solutions Engineer")
+                    .updatedAt(OffsetDateTime.parse("2025-06-29T14:07:16.774Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -192,16 +211,17 @@ Update an instructor
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchLmsInstructor" method="patch" path="/lms/{connection_id}/instructor/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchLmsInstructor" method="patch" path="/lms/{connection_id}/instructor/{id}" example="lms_instructor" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchLmsInstructorRequest;
 import to.unified.unified_java_sdk.models.operations.PatchLmsInstructorResponse;
-import to.unified.unified_java_sdk.models.shared.LmsInstructor;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -215,6 +235,24 @@ public class Application {
 
         PatchLmsInstructorRequest req = PatchLmsInstructorRequest.builder()
                 .lmsInstructor(LmsInstructor.builder()
+                    .createdAt(OffsetDateTime.parse("2021-10-12T16:38:54.979Z"))
+                    .emails(List.of(
+                        LmsEmail.builder()
+                            .build(),
+                        LmsEmail.builder()
+                            .build()))
+                    .firstName("Deangelo")
+                    .id("b4d5bd82-fbdc-49d8-9af8-7010a6150a16")
+                    .imageUrl("https://avatars.githubusercontent.com/u/20232618")
+                    .lastName("Ritchie")
+                    .name("Deangelo Ritchie")
+                    .telephones(List.of(
+                        LmsTelephone.builder()
+                            .telephone("(352) 551-7989")
+                            .type(LmsTelephoneType.HOME)
+                            .build()))
+                    .title("Product Solutions Engineer")
+                    .updatedAt(OffsetDateTime.parse("2025-06-29T14:07:16.781Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -309,16 +347,17 @@ Update an instructor
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateLmsInstructor" method="put" path="/lms/{connection_id}/instructor/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateLmsInstructor" method="put" path="/lms/{connection_id}/instructor/{id}" example="lms_instructor" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateLmsInstructorRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateLmsInstructorResponse;
-import to.unified.unified_java_sdk.models.shared.LmsInstructor;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -332,6 +371,24 @@ public class Application {
 
         UpdateLmsInstructorRequest req = UpdateLmsInstructorRequest.builder()
                 .lmsInstructor(LmsInstructor.builder()
+                    .createdAt(OffsetDateTime.parse("2021-10-12T16:38:54.979Z"))
+                    .emails(List.of(
+                        LmsEmail.builder()
+                            .build(),
+                        LmsEmail.builder()
+                            .build()))
+                    .firstName("Deangelo")
+                    .id("b4d5bd82-fbdc-49d8-9af8-7010a6150a16")
+                    .imageUrl("https://avatars.githubusercontent.com/u/20232618")
+                    .lastName("Ritchie")
+                    .name("Deangelo Ritchie")
+                    .telephones(List.of(
+                        LmsTelephone.builder()
+                            .telephone("(352) 551-7989")
+                            .type(LmsTelephoneType.HOME)
+                            .build()))
+                    .title("Product Solutions Engineer")
+                    .updatedAt(OffsetDateTime.parse("2025-06-29T14:07:16.781Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

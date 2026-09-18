@@ -25,16 +25,18 @@ Create an activity
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createAtsActivity" method="post" path="/ats/{connection_id}/activity" -->
+<!-- UsageSnippet language="java" operationID="createAtsActivity" method="post" path="/ats/{connection_id}/activity" example="ats_activity" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
+import java.util.Map;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateAtsActivityRequest;
 import to.unified.unified_java_sdk.models.operations.CreateAtsActivityResponse;
-import to.unified.unified_java_sdk.models.shared.AtsActivity;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -48,6 +50,71 @@ public class Application {
 
         CreateAtsActivityRequest req = CreateAtsActivityRequest.builder()
                 .atsActivity(AtsActivity.builder()
+                    .bcc(List.of(
+                        AtsEmail.builder()
+                            .email("Mabel_Schuppe-Schowalter42@hotmail.com")
+                            .name("Rochelle Franey-Bechtelar")
+                            .type(AtsEmailType.HOME)
+                            .build()))
+                    .cc(List.of(
+                        AtsEmail.builder()
+                            .email("Sasha24@hotmail.com")
+                            .name("Dr. Elbert Kuvalis")
+                            .type(AtsEmailType.HOME)
+                            .build(),
+                        AtsEmail.builder()
+                            .email("Rosetta_Donnelly@gmail.com")
+                            .name("Ramon Daniel")
+                            .type(AtsEmailType.OTHER)
+                            .build(),
+                        AtsEmail.builder()
+                            .email("Kathryne_Jast@yahoo.com")
+                            .name("Christian Jacobson")
+                            .type(AtsEmailType.OTHER)
+                            .build(),
+                        AtsEmail.builder()
+                            .email("Eldred95@yahoo.com")
+                            .name("Edna Bogan")
+                            .type(AtsEmailType.OTHER)
+                            .build()))
+                    .createdAt(OffsetDateTime.parse("2022-08-07T03:16:43.865Z"))
+                    .description("Amplus.")
+                    .from(PropertyAtsActivityFrom.builder()
+                        .email("Norwood.Wiza47@yahoo.com")
+                        .name("Toby Grant")
+                        .type(PropertyAtsActivityFromType.OTHER)
+                        .build())
+                    .id("34ae8842-dcf7-45f0-9cdc-100db1b422ed")
+                    .isPrivate(false)
+                    .metadata(List.of(
+                        AtsMetadata.builder()
+                            .extraData(AtsMetadataExtraData.of(Map.ofEntries(
+                            )))
+                            .format(AtsMetadataFormat.TEXT)
+                            .id("fd2b6fa7-74c6-44bf-81a4-e535ef6f7c90")
+                            .namespace("activity")
+                            .slug("acer")
+                            .value(AtsMetadataValue.of("Pauci eius cena adamo summisse arguo pectus communis arcesso tergeo."))
+                            .build(),
+                        AtsMetadata.builder()
+                            .extraData(AtsMetadataExtraData.of(Map.ofEntries(
+                            )))
+                            .format(AtsMetadataFormat.TEXT)
+                            .id("897647b8-f316-4d78-a7bd-41bf9028f3f8")
+                            .namespace("activity")
+                            .slug("tremo")
+                            .value(AtsMetadataValue.of("Amita delectus dicta temptatio utroque ex."))
+                            .build()))
+                    .subType("TASK")
+                    .title("Senior Interactions Manager")
+                    .to(List.of(
+                        AtsEmail.builder()
+                            .email("Sister91@hotmail.com")
+                            .name("Eddie Nienow PhD")
+                            .type(AtsEmailType.WORK)
+                            .build()))
+                    .type(AtsActivityType.TASK)
+                    .updatedAt(OffsetDateTime.parse("2026-03-06T13:34:25.451Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -85,11 +152,12 @@ Create an activity
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createLmsActivity" method="post" path="/lms/{connection_id}/activity" -->
+<!-- UsageSnippet language="java" operationID="createLmsActivity" method="post" path="/lms/{connection_id}/activity" example="lms_activity" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateLmsActivityRequest;
 import to.unified.unified_java_sdk.models.operations.CreateLmsActivityResponse;
@@ -108,6 +176,15 @@ public class Application {
 
         CreateLmsActivityRequest req = CreateLmsActivityRequest.builder()
                 .lmsActivity(LmsActivity.builder()
+                    .assignedGrade("summopere")
+                    .completedAt(OffsetDateTime.parse("2025-04-12T21:08:39.423Z"))
+                    .createdAt(OffsetDateTime.parse("2020-10-17T01:25:21.745Z"))
+                    .durationMinutes(55d)
+                    .id("3c4a7fe6-f616-4cb1-b6f1-b07ad7470920")
+                    .isCompleted(true)
+                    .progressPercentage(100d)
+                    .startedAt(OffsetDateTime.parse("2023-12-24T04:54:05.825Z"))
+                    .updatedAt(OffsetDateTime.parse("2022-01-23T21:45:04.318Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -490,16 +567,18 @@ Update an activity
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchAtsActivity" method="patch" path="/ats/{connection_id}/activity/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchAtsActivity" method="patch" path="/ats/{connection_id}/activity/{id}" example="ats_activity" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
+import java.util.Map;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchAtsActivityRequest;
 import to.unified.unified_java_sdk.models.operations.PatchAtsActivityResponse;
-import to.unified.unified_java_sdk.models.shared.AtsActivity;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -513,6 +592,71 @@ public class Application {
 
         PatchAtsActivityRequest req = PatchAtsActivityRequest.builder()
                 .atsActivity(AtsActivity.builder()
+                    .bcc(List.of(
+                        AtsEmail.builder()
+                            .email("Mabel_Schuppe-Schowalter42@hotmail.com")
+                            .name("Rochelle Franey-Bechtelar")
+                            .type(AtsEmailType.HOME)
+                            .build()))
+                    .cc(List.of(
+                        AtsEmail.builder()
+                            .email("Sasha24@hotmail.com")
+                            .name("Dr. Elbert Kuvalis")
+                            .type(AtsEmailType.HOME)
+                            .build(),
+                        AtsEmail.builder()
+                            .email("Rosetta_Donnelly@gmail.com")
+                            .name("Ramon Daniel")
+                            .type(AtsEmailType.OTHER)
+                            .build(),
+                        AtsEmail.builder()
+                            .email("Kathryne_Jast@yahoo.com")
+                            .name("Christian Jacobson")
+                            .type(AtsEmailType.OTHER)
+                            .build(),
+                        AtsEmail.builder()
+                            .email("Eldred95@yahoo.com")
+                            .name("Edna Bogan")
+                            .type(AtsEmailType.OTHER)
+                            .build()))
+                    .createdAt(OffsetDateTime.parse("2022-08-07T03:16:43.865Z"))
+                    .description("Amplus.")
+                    .from(PropertyAtsActivityFrom.builder()
+                        .email("Norwood.Wiza47@yahoo.com")
+                        .name("Toby Grant")
+                        .type(PropertyAtsActivityFromType.OTHER)
+                        .build())
+                    .id("689be512-24fa-4780-ac65-f4994fa849b7")
+                    .isPrivate(false)
+                    .metadata(List.of(
+                        AtsMetadata.builder()
+                            .extraData(AtsMetadataExtraData.of(Map.ofEntries(
+                            )))
+                            .format(AtsMetadataFormat.TEXT)
+                            .id("ea8212f7-8ed7-40cb-98a8-770a6000e86a")
+                            .namespace("activity")
+                            .slug("acer")
+                            .value(AtsMetadataValue.of("Pauci eius cena adamo summisse arguo pectus communis arcesso tergeo."))
+                            .build(),
+                        AtsMetadata.builder()
+                            .extraData(AtsMetadataExtraData.of(Map.ofEntries(
+                            )))
+                            .format(AtsMetadataFormat.TEXT)
+                            .id("c3da64cc-3932-4c45-b713-1f3eef03925a")
+                            .namespace("activity")
+                            .slug("tremo")
+                            .value(AtsMetadataValue.of("Amita delectus dicta temptatio utroque ex."))
+                            .build()))
+                    .subType("TASK")
+                    .title("Senior Interactions Manager")
+                    .to(List.of(
+                        AtsEmail.builder()
+                            .email("Sister91@hotmail.com")
+                            .name("Eddie Nienow PhD")
+                            .type(AtsEmailType.WORK)
+                            .build()))
+                    .type(AtsActivityType.TASK)
+                    .updatedAt(OffsetDateTime.parse("2026-03-06T13:34:25.485Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -551,11 +695,12 @@ Update an activity
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchLmsActivity" method="patch" path="/lms/{connection_id}/activity/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchLmsActivity" method="patch" path="/lms/{connection_id}/activity/{id}" example="lms_activity" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchLmsActivityRequest;
 import to.unified.unified_java_sdk.models.operations.PatchLmsActivityResponse;
@@ -574,6 +719,15 @@ public class Application {
 
         PatchLmsActivityRequest req = PatchLmsActivityRequest.builder()
                 .lmsActivity(LmsActivity.builder()
+                    .assignedGrade("summopere")
+                    .completedAt(OffsetDateTime.parse("2025-04-12T21:08:39.427Z"))
+                    .createdAt(OffsetDateTime.parse("2020-10-17T01:25:21.745Z"))
+                    .durationMinutes(55d)
+                    .id("69bd1cd5-438e-4eea-83f8-ada458c5ea2f")
+                    .isCompleted(true)
+                    .progressPercentage(100d)
+                    .startedAt(OffsetDateTime.parse("2023-12-24T04:54:05.825Z"))
+                    .updatedAt(OffsetDateTime.parse("2022-01-23T21:45:04.320Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -724,16 +878,18 @@ Update an activity
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateAtsActivity" method="put" path="/ats/{connection_id}/activity/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateAtsActivity" method="put" path="/ats/{connection_id}/activity/{id}" example="ats_activity" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
+import java.util.Map;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateAtsActivityRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateAtsActivityResponse;
-import to.unified.unified_java_sdk.models.shared.AtsActivity;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -747,6 +903,71 @@ public class Application {
 
         UpdateAtsActivityRequest req = UpdateAtsActivityRequest.builder()
                 .atsActivity(AtsActivity.builder()
+                    .bcc(List.of(
+                        AtsEmail.builder()
+                            .email("Mabel_Schuppe-Schowalter42@hotmail.com")
+                            .name("Rochelle Franey-Bechtelar")
+                            .type(AtsEmailType.HOME)
+                            .build()))
+                    .cc(List.of(
+                        AtsEmail.builder()
+                            .email("Sasha24@hotmail.com")
+                            .name("Dr. Elbert Kuvalis")
+                            .type(AtsEmailType.HOME)
+                            .build(),
+                        AtsEmail.builder()
+                            .email("Rosetta_Donnelly@gmail.com")
+                            .name("Ramon Daniel")
+                            .type(AtsEmailType.OTHER)
+                            .build(),
+                        AtsEmail.builder()
+                            .email("Kathryne_Jast@yahoo.com")
+                            .name("Christian Jacobson")
+                            .type(AtsEmailType.OTHER)
+                            .build(),
+                        AtsEmail.builder()
+                            .email("Eldred95@yahoo.com")
+                            .name("Edna Bogan")
+                            .type(AtsEmailType.OTHER)
+                            .build()))
+                    .createdAt(OffsetDateTime.parse("2022-08-07T03:16:43.865Z"))
+                    .description("Amplus.")
+                    .from(PropertyAtsActivityFrom.builder()
+                        .email("Norwood.Wiza47@yahoo.com")
+                        .name("Toby Grant")
+                        .type(PropertyAtsActivityFromType.OTHER)
+                        .build())
+                    .id("689be512-24fa-4780-ac65-f4994fa849b7")
+                    .isPrivate(false)
+                    .metadata(List.of(
+                        AtsMetadata.builder()
+                            .extraData(AtsMetadataExtraData.of(Map.ofEntries(
+                            )))
+                            .format(AtsMetadataFormat.TEXT)
+                            .id("ea8212f7-8ed7-40cb-98a8-770a6000e86a")
+                            .namespace("activity")
+                            .slug("acer")
+                            .value(AtsMetadataValue.of("Pauci eius cena adamo summisse arguo pectus communis arcesso tergeo."))
+                            .build(),
+                        AtsMetadata.builder()
+                            .extraData(AtsMetadataExtraData.of(Map.ofEntries(
+                            )))
+                            .format(AtsMetadataFormat.TEXT)
+                            .id("c3da64cc-3932-4c45-b713-1f3eef03925a")
+                            .namespace("activity")
+                            .slug("tremo")
+                            .value(AtsMetadataValue.of("Amita delectus dicta temptatio utroque ex."))
+                            .build()))
+                    .subType("TASK")
+                    .title("Senior Interactions Manager")
+                    .to(List.of(
+                        AtsEmail.builder()
+                            .email("Sister91@hotmail.com")
+                            .name("Eddie Nienow PhD")
+                            .type(AtsEmailType.WORK)
+                            .build()))
+                    .type(AtsActivityType.TASK)
+                    .updatedAt(OffsetDateTime.parse("2026-03-06T13:34:25.485Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -785,11 +1006,12 @@ Update an activity
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateLmsActivity" method="put" path="/lms/{connection_id}/activity/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateLmsActivity" method="put" path="/lms/{connection_id}/activity/{id}" example="lms_activity" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateLmsActivityRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateLmsActivityResponse;
@@ -808,6 +1030,15 @@ public class Application {
 
         UpdateLmsActivityRequest req = UpdateLmsActivityRequest.builder()
                 .lmsActivity(LmsActivity.builder()
+                    .assignedGrade("summopere")
+                    .completedAt(OffsetDateTime.parse("2025-04-12T21:08:39.427Z"))
+                    .createdAt(OffsetDateTime.parse("2020-10-17T01:25:21.745Z"))
+                    .durationMinutes(55d)
+                    .id("69bd1cd5-438e-4eea-83f8-ada458c5ea2f")
+                    .isCompleted(true)
+                    .progressPercentage(100d)
+                    .startedAt(OffsetDateTime.parse("2023-12-24T04:54:05.825Z"))
+                    .updatedAt(OffsetDateTime.parse("2022-01-23T21:45:04.320Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

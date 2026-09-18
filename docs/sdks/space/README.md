@@ -17,11 +17,12 @@ Create a space
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createKmsSpace" method="post" path="/kms/{connection_id}/space" -->
+<!-- UsageSnippet language="java" operationID="createKmsSpace" method="post" path="/kms/{connection_id}/space" example="kms_space" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateKmsSpaceRequest;
 import to.unified.unified_java_sdk.models.operations.CreateKmsSpaceResponse;
@@ -40,6 +41,12 @@ public class Application {
 
         CreateKmsSpaceRequest req = CreateKmsSpaceRequest.builder()
                 .kmsSpace(KmsSpace.builder()
+                    .createdAt(OffsetDateTime.parse("2022-10-31T00:56:54.246Z"))
+                    .description("Acer.")
+                    .id("72f6d852-9f5b-447f-928a-dd6a6ca5a5f6")
+                    .isActive(false)
+                    .name("into nor afore")
+                    .updatedAt(OffsetDateTime.parse("2025-12-03T15:52:28.170Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -192,11 +199,12 @@ Update a space
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchKmsSpace" method="patch" path="/kms/{connection_id}/space/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchKmsSpace" method="patch" path="/kms/{connection_id}/space/{id}" example="kms_space" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchKmsSpaceRequest;
 import to.unified.unified_java_sdk.models.operations.PatchKmsSpaceResponse;
@@ -215,6 +223,12 @@ public class Application {
 
         PatchKmsSpaceRequest req = PatchKmsSpaceRequest.builder()
                 .kmsSpace(KmsSpace.builder()
+                    .createdAt(OffsetDateTime.parse("2022-10-31T00:56:54.246Z"))
+                    .description("Acer.")
+                    .id("4ef3edbc-fbf3-4572-ba45-0d74d5f1788b")
+                    .isActive(false)
+                    .name("into nor afore")
+                    .updatedAt(OffsetDateTime.parse("2025-12-03T15:52:28.175Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -309,11 +323,12 @@ Update a space
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateKmsSpace" method="put" path="/kms/{connection_id}/space/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateKmsSpace" method="put" path="/kms/{connection_id}/space/{id}" example="kms_space" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateKmsSpaceRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateKmsSpaceResponse;
@@ -332,6 +347,12 @@ public class Application {
 
         UpdateKmsSpaceRequest req = UpdateKmsSpaceRequest.builder()
                 .kmsSpace(KmsSpace.builder()
+                    .createdAt(OffsetDateTime.parse("2022-10-31T00:56:54.246Z"))
+                    .description("Acer.")
+                    .id("4ef3edbc-fbf3-4572-ba45-0d74d5f1788b")
+                    .isActive(false)
+                    .name("into nor afore")
+                    .updatedAt(OffsetDateTime.parse("2025-12-03T15:52:28.175Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

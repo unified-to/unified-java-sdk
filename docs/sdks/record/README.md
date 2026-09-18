@@ -17,11 +17,12 @@ Create a record
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createDatastoreRecord" method="post" path="/datastore/{connection_id}/record" -->
+<!-- UsageSnippet language="java" operationID="createDatastoreRecord" method="post" path="/datastore/{connection_id}/record" example="datastore_record" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
 import java.util.Map;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateDatastoreRecordRequest;
@@ -43,6 +44,10 @@ public class Application {
                 .datastoreRecord(DatastoreRecord.builder()
                     .fields(Map.ofEntries(
                     ))
+                    .createdAt(OffsetDateTime.parse("2022-07-10T04:42:03.076Z"))
+                    .id("83da1f22-b6e0-4c15-b368-0120600e09ae")
+                    .rowNumber(33d)
+                    .updatedAt(OffsetDateTime.parse("2025-02-12T16:24:34.144Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -195,11 +200,12 @@ Update a record
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchDatastoreRecord" method="patch" path="/datastore/{connection_id}/record/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchDatastoreRecord" method="patch" path="/datastore/{connection_id}/record/{id}" example="datastore_record" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
 import java.util.Map;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchDatastoreRecordRequest;
@@ -221,6 +227,10 @@ public class Application {
                 .datastoreRecord(DatastoreRecord.builder()
                     .fields(Map.ofEntries(
                     ))
+                    .createdAt(OffsetDateTime.parse("2022-07-10T04:42:03.076Z"))
+                    .id("3cf612c8-52e2-46e9-849b-2e77ec060dfd")
+                    .rowNumber(33d)
+                    .updatedAt(OffsetDateTime.parse("2025-02-12T16:24:34.149Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -315,11 +325,12 @@ Update a record
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateDatastoreRecord" method="put" path="/datastore/{connection_id}/record/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateDatastoreRecord" method="put" path="/datastore/{connection_id}/record/{id}" example="datastore_record" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
 import java.util.Map;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateDatastoreRecordRequest;
@@ -341,6 +352,10 @@ public class Application {
                 .datastoreRecord(DatastoreRecord.builder()
                     .fields(Map.ofEntries(
                     ))
+                    .createdAt(OffsetDateTime.parse("2022-07-10T04:42:03.076Z"))
+                    .id("3cf612c8-52e2-46e9-849b-2e77ec060dfd")
+                    .rowNumber(33d)
+                    .updatedAt(OffsetDateTime.parse("2025-02-12T16:24:34.149Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

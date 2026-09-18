@@ -17,11 +17,13 @@ Create a device
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createHrisDevice" method="post" path="/hris/{connection_id}/device" -->
+<!-- UsageSnippet language="java" operationID="createHrisDevice" method="post" path="/hris/{connection_id}/device" example="hris_device" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateHrisDeviceRequest;
 import to.unified.unified_java_sdk.models.operations.CreateHrisDeviceResponse;
@@ -40,6 +42,23 @@ public class Application {
 
         CreateHrisDeviceRequest req = CreateHrisDeviceRequest.builder()
                 .hrisDevice(HrisDevice.builder()
+                    .adminUserIds(List.of())
+                    .assetTag("dpho9OuFNG")
+                    .createdAt(OffsetDateTime.parse("2019-04-04T17:11:40.322Z"))
+                    .hasAntivirus(false)
+                    .hasFirewall(true)
+                    .hasHdEncrypted(true)
+                    .hasPasswordManager(true)
+                    .hasScreenlock(true)
+                    .id("bcac94b2-e48a-44d8-85bb-72b920f6ac73")
+                    .isMissing(false)
+                    .manufacturer("Sanford - Hamill")
+                    .model("Refined")
+                    .name("cross_contamination_if.rar")
+                    .os("monitor")
+                    .osVersion("1.12.16")
+                    .updatedAt(OffsetDateTime.parse("2023-05-21T00:56:51.337Z"))
+                    .version("2.20.17")
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -192,11 +211,13 @@ Update a device
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchHrisDevice" method="patch" path="/hris/{connection_id}/device/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchHrisDevice" method="patch" path="/hris/{connection_id}/device/{id}" example="hris_device" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchHrisDeviceRequest;
 import to.unified.unified_java_sdk.models.operations.PatchHrisDeviceResponse;
@@ -215,6 +236,23 @@ public class Application {
 
         PatchHrisDeviceRequest req = PatchHrisDeviceRequest.builder()
                 .hrisDevice(HrisDevice.builder()
+                    .adminUserIds(List.of())
+                    .assetTag("dpho9OuFNG")
+                    .createdAt(OffsetDateTime.parse("2019-04-04T17:11:40.322Z"))
+                    .hasAntivirus(false)
+                    .hasFirewall(true)
+                    .hasHdEncrypted(true)
+                    .hasPasswordManager(true)
+                    .hasScreenlock(true)
+                    .id("74d52d31-891f-476a-a3b5-8c9f384a35b9")
+                    .isMissing(false)
+                    .manufacturer("Sanford - Hamill")
+                    .model("Refined")
+                    .name("cross_contamination_if.rar")
+                    .os("monitor")
+                    .osVersion("1.12.16")
+                    .updatedAt(OffsetDateTime.parse("2023-05-21T00:56:51.342Z"))
+                    .version("2.20.17")
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -309,11 +347,13 @@ Update a device
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateHrisDevice" method="put" path="/hris/{connection_id}/device/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateHrisDevice" method="put" path="/hris/{connection_id}/device/{id}" example="hris_device" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateHrisDeviceRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateHrisDeviceResponse;
@@ -332,6 +372,23 @@ public class Application {
 
         UpdateHrisDeviceRequest req = UpdateHrisDeviceRequest.builder()
                 .hrisDevice(HrisDevice.builder()
+                    .adminUserIds(List.of())
+                    .assetTag("dpho9OuFNG")
+                    .createdAt(OffsetDateTime.parse("2019-04-04T17:11:40.322Z"))
+                    .hasAntivirus(false)
+                    .hasFirewall(true)
+                    .hasHdEncrypted(true)
+                    .hasPasswordManager(true)
+                    .hasScreenlock(true)
+                    .id("74d52d31-891f-476a-a3b5-8c9f384a35b9")
+                    .isMissing(false)
+                    .manufacturer("Sanford - Hamill")
+                    .model("Refined")
+                    .name("cross_contamination_if.rar")
+                    .os("monitor")
+                    .osVersion("1.12.16")
+                    .updatedAt(OffsetDateTime.parse("2023-05-21T00:56:51.342Z"))
+                    .version("2.20.17")
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

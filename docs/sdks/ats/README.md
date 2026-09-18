@@ -60,16 +60,18 @@ Create an activity
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createAtsActivity" method="post" path="/ats/{connection_id}/activity" -->
+<!-- UsageSnippet language="java" operationID="createAtsActivity" method="post" path="/ats/{connection_id}/activity" example="ats_activity" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
+import java.util.Map;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateAtsActivityRequest;
 import to.unified.unified_java_sdk.models.operations.CreateAtsActivityResponse;
-import to.unified.unified_java_sdk.models.shared.AtsActivity;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -83,6 +85,71 @@ public class Application {
 
         CreateAtsActivityRequest req = CreateAtsActivityRequest.builder()
                 .atsActivity(AtsActivity.builder()
+                    .bcc(List.of(
+                        AtsEmail.builder()
+                            .email("Mabel_Schuppe-Schowalter42@hotmail.com")
+                            .name("Rochelle Franey-Bechtelar")
+                            .type(AtsEmailType.HOME)
+                            .build()))
+                    .cc(List.of(
+                        AtsEmail.builder()
+                            .email("Sasha24@hotmail.com")
+                            .name("Dr. Elbert Kuvalis")
+                            .type(AtsEmailType.HOME)
+                            .build(),
+                        AtsEmail.builder()
+                            .email("Rosetta_Donnelly@gmail.com")
+                            .name("Ramon Daniel")
+                            .type(AtsEmailType.OTHER)
+                            .build(),
+                        AtsEmail.builder()
+                            .email("Kathryne_Jast@yahoo.com")
+                            .name("Christian Jacobson")
+                            .type(AtsEmailType.OTHER)
+                            .build(),
+                        AtsEmail.builder()
+                            .email("Eldred95@yahoo.com")
+                            .name("Edna Bogan")
+                            .type(AtsEmailType.OTHER)
+                            .build()))
+                    .createdAt(OffsetDateTime.parse("2022-08-07T03:16:43.865Z"))
+                    .description("Amplus.")
+                    .from(PropertyAtsActivityFrom.builder()
+                        .email("Norwood.Wiza47@yahoo.com")
+                        .name("Toby Grant")
+                        .type(PropertyAtsActivityFromType.OTHER)
+                        .build())
+                    .id("34ae8842-dcf7-45f0-9cdc-100db1b422ed")
+                    .isPrivate(false)
+                    .metadata(List.of(
+                        AtsMetadata.builder()
+                            .extraData(AtsMetadataExtraData.of(Map.ofEntries(
+                            )))
+                            .format(AtsMetadataFormat.TEXT)
+                            .id("fd2b6fa7-74c6-44bf-81a4-e535ef6f7c90")
+                            .namespace("activity")
+                            .slug("acer")
+                            .value(AtsMetadataValue.of("Pauci eius cena adamo summisse arguo pectus communis arcesso tergeo."))
+                            .build(),
+                        AtsMetadata.builder()
+                            .extraData(AtsMetadataExtraData.of(Map.ofEntries(
+                            )))
+                            .format(AtsMetadataFormat.TEXT)
+                            .id("897647b8-f316-4d78-a7bd-41bf9028f3f8")
+                            .namespace("activity")
+                            .slug("tremo")
+                            .value(AtsMetadataValue.of("Amita delectus dicta temptatio utroque ex."))
+                            .build()))
+                    .subType("TASK")
+                    .title("Senior Interactions Manager")
+                    .to(List.of(
+                        AtsEmail.builder()
+                            .email("Sister91@hotmail.com")
+                            .name("Eddie Nienow PhD")
+                            .type(AtsEmailType.WORK)
+                            .build()))
+                    .type(AtsActivityType.TASK)
+                    .updatedAt(OffsetDateTime.parse("2026-03-06T13:34:25.451Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -120,16 +187,18 @@ Create an application
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createAtsApplication" method="post" path="/ats/{connection_id}/application" -->
+<!-- UsageSnippet language="java" operationID="createAtsApplication" method="post" path="/ats/{connection_id}/application" example="ats_application" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
+import java.util.Map;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateAtsApplicationRequest;
 import to.unified.unified_java_sdk.models.operations.CreateAtsApplicationResponse;
-import to.unified.unified_java_sdk.models.shared.AtsApplication;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -143,6 +212,29 @@ public class Application {
 
         CreateAtsApplicationRequest req = CreateAtsApplicationRequest.builder()
                 .atsApplication(AtsApplication.builder()
+                    .answers(List.of())
+                    .appliedAt(OffsetDateTime.parse("2025-09-08T08:48:32.240Z"))
+                    .createdAt(OffsetDateTime.parse("2023-10-17T07:19:48.787Z"))
+                    .hiredAt(OffsetDateTime.parse("2026-04-14T14:34:12.048Z"))
+                    .id("85d62f00-b2a0-42db-8c72-8ee24f2b01fd")
+                    .metadata(List.of(
+                        AtsMetadata.builder()
+                            .extraData(AtsMetadataExtraData.of(Map.ofEntries(
+                            )))
+                            .format(AtsMetadataFormat.TEXT)
+                            .id("a1302a79-0341-40e6-b91a-daeb95584617")
+                            .namespace("application")
+                            .slug("despecto")
+                            .value(AtsMetadataValue.of("Argentum decretum cultellus aveho distinctio verecundia stella depono."))
+                            .build()))
+                    .offers(List.of())
+                    .originalStatus("vomica")
+                    .originalSubstatus("allatus")
+                    .rejectedAt(OffsetDateTime.parse("2026-09-08T19:51:38.295Z"))
+                    .rejectedReason("Cometes amplitudo videlicet talio.")
+                    .source("credo")
+                    .status(AtsApplicationStatus.REVIEWING)
+                    .updatedAt(OffsetDateTime.parse("2026-09-15T11:10:10.512Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -180,16 +272,18 @@ Create a candidate
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createAtsCandidate" method="post" path="/ats/{connection_id}/candidate" -->
+<!-- UsageSnippet language="java" operationID="createAtsCandidate" method="post" path="/ats/{connection_id}/candidate" example="ats_candidate" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
+import java.util.Map;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateAtsCandidateRequest;
 import to.unified.unified_java_sdk.models.operations.CreateAtsCandidateResponse;
-import to.unified.unified_java_sdk.models.shared.AtsCandidate;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -203,6 +297,80 @@ public class Application {
 
         CreateAtsCandidateRequest req = CreateAtsCandidateRequest.builder()
                 .atsCandidate(AtsCandidate.builder()
+                    .address(PropertyAtsCandidateAddress.builder()
+                        .address1("802 Roberts Squares")
+                        .address2("Suite 550")
+                        .city("Lake Raeganside")
+                        .countryCode("US")
+                        .postalCode("44530-0054")
+                        .region("Tennessee")
+                        .regionCode("NV")
+                        .build())
+                    .companyName("Ferry, Legros and Feest")
+                    .createdAt(OffsetDateTime.parse("2023-10-16T05:42:56.049Z"))
+                    .education(List.of(
+                        AtsCandidateEducation.builder()
+                            .degree("mouser throughout")
+                            .endAt(OffsetDateTime.parse("1992-11-28T20:23:20.311Z"))
+                            .fieldOfStudy("solutio")
+                            .institution("Heller - Lubowitz")
+                            .level("phd")
+                            .startAt(OffsetDateTime.parse("2001-03-26T08:12:11.510Z"))
+                            .build()))
+                    .emails(List.of(
+                        AtsEmail.builder()
+                            .email("Ardith.Beatty@hotmail.com")
+                            .name("Opal Lindgren")
+                            .type(AtsEmailType.WORK)
+                            .build(),
+                        AtsEmail.builder()
+                            .email("Ardith_Beatty@gmail.com")
+                            .name("Kristi Nader")
+                            .type(AtsEmailType.OTHER)
+                            .build()))
+                    .experiences(List.of(
+                        AtsCandidateExperience.builder()
+                            .companyName("Donnelly, Buckridge and Steuber")
+                            .endAt(OffsetDateTime.parse("1978-06-20T02:53:48.383Z"))
+                            .startAt(OffsetDateTime.parse("1980-02-06T17:16:53.798Z"))
+                            .title("Principal Brand Strategist")
+                            .build()))
+                    .firstName("Ardith")
+                    .id("59cebc0f-3274-48fe-b456-efe66f9ff211")
+                    .imageUrl("https://loremflickr.com/40/3693?lock=5634712403880328")
+                    .jobIds(List.of())
+                    .lastName("Beatty")
+                    .linkUrls(List.of(
+                        "https://sizzling-legislature.com",
+                        "https://soupy-interchange.net",
+                        "https://troubled-substitution.info"))
+                    .metadata(List.of(
+                        AtsMetadata.builder()
+                            .extraData(AtsMetadataExtraData.of(Map.ofEntries(
+                            )))
+                            .format(AtsMetadataFormat.TEXT)
+                            .id("6b842011-54cc-4549-9976-9af27f096a6d")
+                            .namespace("custom")
+                            .slug("custom_field")
+                            .value(AtsMetadataValue.of("cariosus"))
+                            .build()))
+                    .name("Ardith Beatty")
+                    .origin(Origin.SOURCED)
+                    .skills(List.of(
+                        "vita",
+                        "cohors"))
+                    .sources(List.of(
+                        "tactus"))
+                    .tags(List.of(
+                        "aliquid"))
+                    .telephones(List.of(
+                        AtsTelephone.builder()
+                            .telephone("(779) 296-5994")
+                            .type(AtsTelephoneType.HOME)
+                            .build()))
+                    .title("Principal Implementation Analyst")
+                    .updatedAt(OffsetDateTime.parse("2024-04-22T21:06:56.351Z"))
+                    .webUrl("https://expert-lender.name/")
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -240,11 +408,12 @@ Create a company
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createAtsCompany" method="post" path="/ats/{connection_id}/company" -->
+<!-- UsageSnippet language="java" operationID="createAtsCompany" method="post" path="/ats/{connection_id}/company" example="ats_company" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateAtsCompanyRequest;
 import to.unified.unified_java_sdk.models.operations.CreateAtsCompanyResponse;
@@ -263,6 +432,12 @@ public class Application {
 
         CreateAtsCompanyRequest req = CreateAtsCompanyRequest.builder()
                 .atsCompany(AtsCompany.builder()
+                    .createdAt(OffsetDateTime.parse("2019-04-22T03:50:02.920Z"))
+                    .id("56afd204-7f7a-49b5-99da-923b6a432b67")
+                    .name("Gulgowski, Dibbert and Wilderman")
+                    .phone("1-602-210-4548")
+                    .updatedAt(OffsetDateTime.parse("2020-09-24T19:30:24.553Z"))
+                    .websiteUrl("https://somber-substitution.com/")
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -300,16 +475,16 @@ Create a document
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createAtsDocument" method="post" path="/ats/{connection_id}/document" -->
+<!-- UsageSnippet language="java" operationID="createAtsDocument" method="post" path="/ats/{connection_id}/document" example="ats_document" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateAtsDocumentRequest;
 import to.unified.unified_java_sdk.models.operations.CreateAtsDocumentResponse;
-import to.unified.unified_java_sdk.models.shared.AtsDocument;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -323,6 +498,12 @@ public class Application {
 
         CreateAtsDocumentRequest req = CreateAtsDocumentRequest.builder()
                 .atsDocument(AtsDocument.builder()
+                    .createdAt(OffsetDateTime.parse("2021-08-20T08:00:27.437Z"))
+                    .documentUrl("https://vengeful-lashes.biz")
+                    .filename("bah_white_frantically.bz")
+                    .id("8aa6ddb8-a765-430a-b6cb-cbdbc0120932")
+                    .type(AtsDocumentType.RESUME)
+                    .updatedAt(OffsetDateTime.parse("2022-11-28T22:09:41.296Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -360,16 +541,16 @@ Create an interview
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createAtsInterview" method="post" path="/ats/{connection_id}/interview" -->
+<!-- UsageSnippet language="java" operationID="createAtsInterview" method="post" path="/ats/{connection_id}/interview" example="ats_interview" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateAtsInterviewRequest;
 import to.unified.unified_java_sdk.models.operations.CreateAtsInterviewResponse;
-import to.unified.unified_java_sdk.models.shared.AtsInterview;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -383,6 +564,14 @@ public class Application {
 
         CreateAtsInterviewRequest req = CreateAtsInterviewRequest.builder()
                 .atsInterview(AtsInterview.builder()
+                    .createdAt(OffsetDateTime.parse("2021-11-28T03:14:47.774Z"))
+                    .endAt(OffsetDateTime.parse("2025-09-23T08:18:31.424Z"))
+                    .externalEventXref("22437263-a3c4-4bef-9da5-8a0a2814ab05")
+                    .id("97378090-9e36-41ba-b377-0bf55ead9114")
+                    .location("26596 Halle Trafficway")
+                    .startAt(OffsetDateTime.parse("2025-05-19T06:26:28.146Z"))
+                    .status(AtsInterviewStatus.SCHEDULED)
+                    .updatedAt(OffsetDateTime.parse("2026-02-04T00:38:00.419Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -420,16 +609,18 @@ Create a job
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createAtsJob" method="post" path="/ats/{connection_id}/job" -->
+<!-- UsageSnippet language="java" operationID="createAtsJob" method="post" path="/ats/{connection_id}/job" example="ats_job" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
+import java.util.Map;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateAtsJobRequest;
 import to.unified.unified_java_sdk.models.operations.CreateAtsJobResponse;
-import to.unified.unified_java_sdk.models.shared.AtsJob;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -443,6 +634,119 @@ public class Application {
 
         CreateAtsJobRequest req = CreateAtsJobRequest.builder()
                 .atsJob(AtsJob.builder()
+                    .addresses(List.of(
+                        AtsAddress.builder()
+                            .address1("98097 Carlo Trail")
+                            .city("South Judd")
+                            .countryCode("US")
+                            .postalCode("89776-0669")
+                            .region("Mississippi")
+                            .regionCode("FL")
+                            .build()))
+                    .compensation(List.of(
+                        AtsCompensation.builder()
+                            .currency("AUD")
+                            .frequency(Frequency.DAY)
+                            .max(174303d)
+                            .min(174042d)
+                            .type(AtsCompensationType.BONUS)
+                            .build(),
+                        AtsCompensation.builder()
+                            .currency("MZN")
+                            .frequency(Frequency.MONTH)
+                            .max(171171d)
+                            .min(151975d)
+                            .type(AtsCompensationType.SALARY)
+                            .build()))
+                    .createdAt(OffsetDateTime.parse("2023-06-16T12:51:44.518Z"))
+                    .description("Global")
+                    .employmentType(EmploymentType.FREELANCE)
+                    .hiringManagers(List.of(
+                        AtsReference.builder()
+                            .id("fd9852e3-9035-4f42-beb3-bbf4e4022122")
+                            .name("Eloise Mueller PhD")
+                            .build()))
+                    .id("66ab0110-f43b-4a2e-ac77-00ee9ed7d453")
+                    .industry("Gorgeous Plastic Computer")
+                    .languageLocale("en")
+                    .metadata(List.of(
+                        AtsMetadata.builder()
+                            .extraData(AtsMetadataExtraData.of(Map.ofEntries(
+                                Map.entry("display_name", "Custom Property"))))
+                            .format(AtsMetadataFormat.TEXT)
+                            .id("fe031341-9e80-483c-9552-147da99d959e")
+                            .namespace("custom")
+                            .slug("custom_property")
+                            .value(AtsMetadataValue.of("acceptus"))
+                            .build()))
+                    .minimumDegree("Bachelor")
+                    .minimumExperienceYears(3d)
+                    .name("Forward Brand Producer")
+                    .numberOfOpenings(1d)
+                    .openings(List.of(
+                        AtsJobOpening.builder()
+                            .closeReason("Admoveo trado textilis.")
+                            .openedAt(OffsetDateTime.parse("2026-05-09T12:56:29.780Z"))
+                            .status(AtsJobOpeningStatus.OPEN)
+                            .build()))
+                    .postings(List.of(
+                        AtsJobPosting.builder()
+                            .address(PropertyAtsJobPostingAddress.builder()
+                                .address1("8460 Nils Trace")
+                                .city("West Mervinburgh")
+                                .countryCode("US")
+                                .postalCode("14162")
+                                .region("Maine")
+                                .regionCode("MO")
+                                .build())
+                            .createdAt(OffsetDateTime.parse("2026-07-02T04:14:45.189Z"))
+                            .description("Deduco cultellus alii terebro depono thesaurus.")
+                            .id("f6101769-deb3-4721-978c-d205638870ee")
+                            .isActive(false)
+                            .location("6788 Oxford Road")
+                            .name("Forward Security Orchestrator")
+                            .postingUrl("https://ajar-metabolite.net/")
+                            .updatedAt(OffsetDateTime.parse("2026-07-27T18:35:01.326Z"))
+                            .build()))
+                    .publicJobUrls(List.of(
+                        "https://trustworthy-elver.info",
+                        "https://parched-dash.info"))
+                    .questions(List.of(
+                        AtsJobQuestion.builder()
+                            .question("Sodalitas nemo natus attonbitus reprehenderit voro depono constans vehemens ante.")
+                            .type(AtsJobQuestionType.TEXT)
+                            .description("Trepide provident taceo rem.")
+                            .id("289f27c0-311c-41e5-ad9d-cbe2097332c2")
+                            .options(List.of(
+                                "censura",
+                                "tum"))
+                            .prompt("Spectaculum mollitia arcus compello.")
+                            .required(true)
+                            .build(),
+                        AtsJobQuestion.builder()
+                            .question("Vinitor sodalitas desino sollers viduo volo.")
+                            .type(AtsJobQuestionType.TEXT)
+                            .id("b3a0b53b-38f3-4e8d-84b9-f413a900d79b")
+                            .options(List.of(
+                                "odit"))
+                            .prompt("Similique absque temeritas celebrer enim.")
+                            .required(false)
+                            .build(),
+                        AtsJobQuestion.builder()
+                            .question("Subiungo ambitus neque talis amitto terreo alienus quae vulticulus.")
+                            .type(AtsJobQuestionType.TEXT)
+                            .description("Abstergo possimus quibusdam deinde amoveo.")
+                            .id("568be61d-060e-4d8c-a8ab-8a17cb25edf3")
+                            .options(List.of(
+                                "vallum"))
+                            .prompt("Ara thermae aetas vivo constans victoria volo carbo vehemens praesentium.")
+                            .required(false)
+                            .build()))
+                    .skills(List.of(
+                        "amiculum",
+                        "crux"))
+                    .status(AtsJobStatus.ARCHIVED)
+                    .updatedAt(OffsetDateTime.parse("2026-01-31T18:22:08.370Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -480,16 +784,17 @@ Create a scorecard
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createAtsScorecard" method="post" path="/ats/{connection_id}/scorecard" -->
+<!-- UsageSnippet language="java" operationID="createAtsScorecard" method="post" path="/ats/{connection_id}/scorecard" example="ats_scorecard" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateAtsScorecardRequest;
 import to.unified.unified_java_sdk.models.operations.CreateAtsScorecardResponse;
-import to.unified.unified_java_sdk.models.shared.AtsScorecard;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -503,6 +808,21 @@ public class Application {
 
         CreateAtsScorecardRequest req = CreateAtsScorecardRequest.builder()
                 .atsScorecard(AtsScorecard.builder()
+                    .comment("Maiores enim.")
+                    .createdAt(OffsetDateTime.parse("2022-02-20T17:09:45.498Z"))
+                    .id("47bb49f0-71b5-4a4f-9469-1344ea1e4870")
+                    .questions(List.of(
+                        AtsScorecardQuestion.builder()
+                            .text("Aliquam.")
+                            .description("Sulum textor eveniet facere vita.")
+                            .build(),
+                        AtsScorecardQuestion.builder()
+                            .text("Pecto vulpes libero vomer comburo.")
+                            .answer("Decretum.")
+                            .description("Conatus cicuta doloremque statua bonus.")
+                            .build()))
+                    .recommendation(Recommendation.STRONG_YES)
+                    .updatedAt(OffsetDateTime.parse("2023-05-27T11:10:32.892Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -1517,16 +1837,18 @@ Update an activity
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchAtsActivity" method="patch" path="/ats/{connection_id}/activity/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchAtsActivity" method="patch" path="/ats/{connection_id}/activity/{id}" example="ats_activity" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
+import java.util.Map;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchAtsActivityRequest;
 import to.unified.unified_java_sdk.models.operations.PatchAtsActivityResponse;
-import to.unified.unified_java_sdk.models.shared.AtsActivity;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -1540,6 +1862,71 @@ public class Application {
 
         PatchAtsActivityRequest req = PatchAtsActivityRequest.builder()
                 .atsActivity(AtsActivity.builder()
+                    .bcc(List.of(
+                        AtsEmail.builder()
+                            .email("Mabel_Schuppe-Schowalter42@hotmail.com")
+                            .name("Rochelle Franey-Bechtelar")
+                            .type(AtsEmailType.HOME)
+                            .build()))
+                    .cc(List.of(
+                        AtsEmail.builder()
+                            .email("Sasha24@hotmail.com")
+                            .name("Dr. Elbert Kuvalis")
+                            .type(AtsEmailType.HOME)
+                            .build(),
+                        AtsEmail.builder()
+                            .email("Rosetta_Donnelly@gmail.com")
+                            .name("Ramon Daniel")
+                            .type(AtsEmailType.OTHER)
+                            .build(),
+                        AtsEmail.builder()
+                            .email("Kathryne_Jast@yahoo.com")
+                            .name("Christian Jacobson")
+                            .type(AtsEmailType.OTHER)
+                            .build(),
+                        AtsEmail.builder()
+                            .email("Eldred95@yahoo.com")
+                            .name("Edna Bogan")
+                            .type(AtsEmailType.OTHER)
+                            .build()))
+                    .createdAt(OffsetDateTime.parse("2022-08-07T03:16:43.865Z"))
+                    .description("Amplus.")
+                    .from(PropertyAtsActivityFrom.builder()
+                        .email("Norwood.Wiza47@yahoo.com")
+                        .name("Toby Grant")
+                        .type(PropertyAtsActivityFromType.OTHER)
+                        .build())
+                    .id("689be512-24fa-4780-ac65-f4994fa849b7")
+                    .isPrivate(false)
+                    .metadata(List.of(
+                        AtsMetadata.builder()
+                            .extraData(AtsMetadataExtraData.of(Map.ofEntries(
+                            )))
+                            .format(AtsMetadataFormat.TEXT)
+                            .id("ea8212f7-8ed7-40cb-98a8-770a6000e86a")
+                            .namespace("activity")
+                            .slug("acer")
+                            .value(AtsMetadataValue.of("Pauci eius cena adamo summisse arguo pectus communis arcesso tergeo."))
+                            .build(),
+                        AtsMetadata.builder()
+                            .extraData(AtsMetadataExtraData.of(Map.ofEntries(
+                            )))
+                            .format(AtsMetadataFormat.TEXT)
+                            .id("c3da64cc-3932-4c45-b713-1f3eef03925a")
+                            .namespace("activity")
+                            .slug("tremo")
+                            .value(AtsMetadataValue.of("Amita delectus dicta temptatio utroque ex."))
+                            .build()))
+                    .subType("TASK")
+                    .title("Senior Interactions Manager")
+                    .to(List.of(
+                        AtsEmail.builder()
+                            .email("Sister91@hotmail.com")
+                            .name("Eddie Nienow PhD")
+                            .type(AtsEmailType.WORK)
+                            .build()))
+                    .type(AtsActivityType.TASK)
+                    .updatedAt(OffsetDateTime.parse("2026-03-06T13:34:25.485Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -1578,16 +1965,18 @@ Update an application
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchAtsApplication" method="patch" path="/ats/{connection_id}/application/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchAtsApplication" method="patch" path="/ats/{connection_id}/application/{id}" example="ats_application" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
+import java.util.Map;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchAtsApplicationRequest;
 import to.unified.unified_java_sdk.models.operations.PatchAtsApplicationResponse;
-import to.unified.unified_java_sdk.models.shared.AtsApplication;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -1601,6 +1990,29 @@ public class Application {
 
         PatchAtsApplicationRequest req = PatchAtsApplicationRequest.builder()
                 .atsApplication(AtsApplication.builder()
+                    .answers(List.of())
+                    .appliedAt(OffsetDateTime.parse("2025-09-08T08:48:32.256Z"))
+                    .createdAt(OffsetDateTime.parse("2023-10-17T07:19:48.787Z"))
+                    .hiredAt(OffsetDateTime.parse("2026-04-14T14:34:12.068Z"))
+                    .id("b1876d77-92f7-4377-8a74-00bdf3ad20d2")
+                    .metadata(List.of(
+                        AtsMetadata.builder()
+                            .extraData(AtsMetadataExtraData.of(Map.ofEntries(
+                            )))
+                            .format(AtsMetadataFormat.TEXT)
+                            .id("a1302a79-0341-40e6-b91a-daeb95584617")
+                            .namespace("application")
+                            .slug("despecto")
+                            .value(AtsMetadataValue.of("Argentum decretum cultellus aveho distinctio verecundia stella depono."))
+                            .build()))
+                    .offers(List.of())
+                    .originalStatus("vomica")
+                    .originalSubstatus("allatus")
+                    .rejectedAt(OffsetDateTime.parse("2026-09-08T19:51:38.319Z"))
+                    .rejectedReason("Cometes amplitudo videlicet talio.")
+                    .source("credo")
+                    .status(AtsApplicationStatus.REVIEWING)
+                    .updatedAt(OffsetDateTime.parse("2026-09-15T11:10:10.536Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -1639,16 +2051,18 @@ Update a candidate
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchAtsCandidate" method="patch" path="/ats/{connection_id}/candidate/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchAtsCandidate" method="patch" path="/ats/{connection_id}/candidate/{id}" example="ats_candidate" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
+import java.util.Map;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchAtsCandidateRequest;
 import to.unified.unified_java_sdk.models.operations.PatchAtsCandidateResponse;
-import to.unified.unified_java_sdk.models.shared.AtsCandidate;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -1662,6 +2076,80 @@ public class Application {
 
         PatchAtsCandidateRequest req = PatchAtsCandidateRequest.builder()
                 .atsCandidate(AtsCandidate.builder()
+                    .address(PropertyAtsCandidateAddress.builder()
+                        .address1("802 Roberts Squares")
+                        .address2("Suite 550")
+                        .city("Lake Raeganside")
+                        .countryCode("US")
+                        .postalCode("44530-0054")
+                        .region("Tennessee")
+                        .regionCode("NV")
+                        .build())
+                    .companyName("Ferry, Legros and Feest")
+                    .createdAt(OffsetDateTime.parse("2023-10-16T05:42:56.049Z"))
+                    .education(List.of(
+                        AtsCandidateEducation.builder()
+                            .degree("mouser throughout")
+                            .endAt(OffsetDateTime.parse("1992-11-28T20:23:20.311Z"))
+                            .fieldOfStudy("solutio")
+                            .institution("Heller - Lubowitz")
+                            .level("phd")
+                            .startAt(OffsetDateTime.parse("2001-03-26T08:12:11.510Z"))
+                            .build()))
+                    .emails(List.of(
+                        AtsEmail.builder()
+                            .email("Ardith.Beatty@hotmail.com")
+                            .name("Opal Lindgren")
+                            .type(AtsEmailType.WORK)
+                            .build(),
+                        AtsEmail.builder()
+                            .email("Ardith_Beatty@gmail.com")
+                            .name("Kristi Nader")
+                            .type(AtsEmailType.OTHER)
+                            .build()))
+                    .experiences(List.of(
+                        AtsCandidateExperience.builder()
+                            .companyName("Donnelly, Buckridge and Steuber")
+                            .endAt(OffsetDateTime.parse("1978-06-20T02:53:48.383Z"))
+                            .startAt(OffsetDateTime.parse("1980-02-06T17:16:53.798Z"))
+                            .title("Principal Brand Strategist")
+                            .build()))
+                    .firstName("Ardith")
+                    .id("367e2ce4-a89b-4076-a673-be58f32632cd")
+                    .imageUrl("https://loremflickr.com/40/3693?lock=5634712403880328")
+                    .jobIds(List.of())
+                    .lastName("Beatty")
+                    .linkUrls(List.of(
+                        "https://sizzling-legislature.com",
+                        "https://soupy-interchange.net",
+                        "https://troubled-substitution.info"))
+                    .metadata(List.of(
+                        AtsMetadata.builder()
+                            .extraData(AtsMetadataExtraData.of(Map.ofEntries(
+                            )))
+                            .format(AtsMetadataFormat.TEXT)
+                            .id("e2322a08-cbd8-4098-ad0d-5fc62c5f6334")
+                            .namespace("custom")
+                            .slug("custom_field")
+                            .value(AtsMetadataValue.of("cariosus"))
+                            .build()))
+                    .name("Ardith Beatty")
+                    .origin(Origin.SOURCED)
+                    .skills(List.of(
+                        "vita",
+                        "cohors"))
+                    .sources(List.of(
+                        "tactus"))
+                    .tags(List.of(
+                        "aliquid"))
+                    .telephones(List.of(
+                        AtsTelephone.builder()
+                            .telephone("(779) 296-5994")
+                            .type(AtsTelephoneType.HOME)
+                            .build()))
+                    .title("Principal Implementation Analyst")
+                    .updatedAt(OffsetDateTime.parse("2024-04-22T21:06:56.360Z"))
+                    .webUrl("https://expert-lender.name/")
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -1700,11 +2188,12 @@ Update a company
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchAtsCompany" method="patch" path="/ats/{connection_id}/company/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchAtsCompany" method="patch" path="/ats/{connection_id}/company/{id}" example="ats_company" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchAtsCompanyRequest;
 import to.unified.unified_java_sdk.models.operations.PatchAtsCompanyResponse;
@@ -1723,6 +2212,12 @@ public class Application {
 
         PatchAtsCompanyRequest req = PatchAtsCompanyRequest.builder()
                 .atsCompany(AtsCompany.builder()
+                    .createdAt(OffsetDateTime.parse("2019-04-22T03:50:02.920Z"))
+                    .id("690c8c51-afd0-48c0-af3f-6cbe5db597c6")
+                    .name("Gulgowski, Dibbert and Wilderman")
+                    .phone("1-602-210-4548")
+                    .updatedAt(OffsetDateTime.parse("2020-09-24T19:30:24.557Z"))
+                    .websiteUrl("https://somber-substitution.com/")
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -1761,16 +2256,16 @@ Update a document
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchAtsDocument" method="patch" path="/ats/{connection_id}/document/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchAtsDocument" method="patch" path="/ats/{connection_id}/document/{id}" example="ats_document" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchAtsDocumentRequest;
 import to.unified.unified_java_sdk.models.operations.PatchAtsDocumentResponse;
-import to.unified.unified_java_sdk.models.shared.AtsDocument;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -1784,6 +2279,12 @@ public class Application {
 
         PatchAtsDocumentRequest req = PatchAtsDocumentRequest.builder()
                 .atsDocument(AtsDocument.builder()
+                    .createdAt(OffsetDateTime.parse("2021-08-20T08:00:27.437Z"))
+                    .documentUrl("https://vengeful-lashes.biz")
+                    .filename("bah_white_frantically.bz")
+                    .id("a9316274-2e60-4f01-8b33-73b6249fd4ca")
+                    .type(AtsDocumentType.RESUME)
+                    .updatedAt(OffsetDateTime.parse("2022-11-28T22:09:41.297Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -1822,16 +2323,16 @@ Update an interview
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchAtsInterview" method="patch" path="/ats/{connection_id}/interview/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchAtsInterview" method="patch" path="/ats/{connection_id}/interview/{id}" example="ats_interview" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchAtsInterviewRequest;
 import to.unified.unified_java_sdk.models.operations.PatchAtsInterviewResponse;
-import to.unified.unified_java_sdk.models.shared.AtsInterview;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -1845,6 +2346,14 @@ public class Application {
 
         PatchAtsInterviewRequest req = PatchAtsInterviewRequest.builder()
                 .atsInterview(AtsInterview.builder()
+                    .createdAt(OffsetDateTime.parse("2021-11-28T03:14:47.774Z"))
+                    .endAt(OffsetDateTime.parse("2025-09-23T08:18:31.430Z"))
+                    .externalEventXref("d69449a5-d6ad-4010-a31f-49b8e650458b")
+                    .id("342cb8a4-20e4-4c9a-afd7-ca235b04f094")
+                    .location("26596 Halle Trafficway")
+                    .startAt(OffsetDateTime.parse("2025-05-19T06:26:28.151Z"))
+                    .status(AtsInterviewStatus.SCHEDULED)
+                    .updatedAt(OffsetDateTime.parse("2026-02-04T00:38:00.426Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -1883,16 +2392,18 @@ Update a job
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchAtsJob" method="patch" path="/ats/{connection_id}/job/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchAtsJob" method="patch" path="/ats/{connection_id}/job/{id}" example="ats_job" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
+import java.util.Map;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchAtsJobRequest;
 import to.unified.unified_java_sdk.models.operations.PatchAtsJobResponse;
-import to.unified.unified_java_sdk.models.shared.AtsJob;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -1906,6 +2417,119 @@ public class Application {
 
         PatchAtsJobRequest req = PatchAtsJobRequest.builder()
                 .atsJob(AtsJob.builder()
+                    .addresses(List.of(
+                        AtsAddress.builder()
+                            .address1("98097 Carlo Trail")
+                            .city("South Judd")
+                            .countryCode("US")
+                            .postalCode("89776-0669")
+                            .region("Mississippi")
+                            .regionCode("FL")
+                            .build()))
+                    .compensation(List.of(
+                        AtsCompensation.builder()
+                            .currency("AUD")
+                            .frequency(Frequency.DAY)
+                            .max(174303d)
+                            .min(174042d)
+                            .type(AtsCompensationType.BONUS)
+                            .build(),
+                        AtsCompensation.builder()
+                            .currency("MZN")
+                            .frequency(Frequency.MONTH)
+                            .max(171171d)
+                            .min(151975d)
+                            .type(AtsCompensationType.SALARY)
+                            .build()))
+                    .createdAt(OffsetDateTime.parse("2023-06-16T12:51:44.518Z"))
+                    .description("Global")
+                    .employmentType(EmploymentType.FREELANCE)
+                    .hiringManagers(List.of(
+                        AtsReference.builder()
+                            .id("fd9852e3-9035-4f42-beb3-bbf4e4022122")
+                            .name("Eloise Mueller PhD")
+                            .build()))
+                    .id("5cfa40e8-1d71-4a46-bae3-5176a66056a5")
+                    .industry("Gorgeous Plastic Computer")
+                    .languageLocale("en")
+                    .metadata(List.of(
+                        AtsMetadata.builder()
+                            .extraData(AtsMetadataExtraData.of(Map.ofEntries(
+                                Map.entry("display_name", "Custom Property"))))
+                            .format(AtsMetadataFormat.TEXT)
+                            .id("60b94c73-9f9e-4396-a602-910042160eed")
+                            .namespace("custom")
+                            .slug("custom_property")
+                            .value(AtsMetadataValue.of("acceptus"))
+                            .build()))
+                    .minimumDegree("Bachelor")
+                    .minimumExperienceYears(3d)
+                    .name("Forward Brand Producer")
+                    .numberOfOpenings(1d)
+                    .openings(List.of(
+                        AtsJobOpening.builder()
+                            .closeReason("Admoveo trado textilis.")
+                            .openedAt(OffsetDateTime.parse("2026-05-09T12:56:29.822Z"))
+                            .status(AtsJobOpeningStatus.OPEN)
+                            .build()))
+                    .postings(List.of(
+                        AtsJobPosting.builder()
+                            .address(PropertyAtsJobPostingAddress.builder()
+                                .address1("8460 Nils Trace")
+                                .city("West Mervinburgh")
+                                .countryCode("US")
+                                .postalCode("14162")
+                                .region("Maine")
+                                .regionCode("MO")
+                                .build())
+                            .createdAt(OffsetDateTime.parse("2026-07-02T04:14:45.234Z"))
+                            .description("Deduco cultellus alii terebro depono thesaurus.")
+                            .id("f6101769-deb3-4721-978c-d205638870ee")
+                            .isActive(false)
+                            .location("6788 Oxford Road")
+                            .name("Forward Security Orchestrator")
+                            .postingUrl("https://ajar-metabolite.net/")
+                            .updatedAt(OffsetDateTime.parse("2026-07-27T18:35:01.372Z"))
+                            .build()))
+                    .publicJobUrls(List.of(
+                        "https://trustworthy-elver.info",
+                        "https://parched-dash.info"))
+                    .questions(List.of(
+                        AtsJobQuestion.builder()
+                            .question("Sodalitas nemo natus attonbitus reprehenderit voro depono constans vehemens ante.")
+                            .type(AtsJobQuestionType.TEXT)
+                            .description("Trepide provident taceo rem.")
+                            .id("289f27c0-311c-41e5-ad9d-cbe2097332c2")
+                            .options(List.of(
+                                "censura",
+                                "tum"))
+                            .prompt("Spectaculum mollitia arcus compello.")
+                            .required(true)
+                            .build(),
+                        AtsJobQuestion.builder()
+                            .question("Vinitor sodalitas desino sollers viduo volo.")
+                            .type(AtsJobQuestionType.TEXT)
+                            .id("b3a0b53b-38f3-4e8d-84b9-f413a900d79b")
+                            .options(List.of(
+                                "odit"))
+                            .prompt("Similique absque temeritas celebrer enim.")
+                            .required(false)
+                            .build(),
+                        AtsJobQuestion.builder()
+                            .question("Subiungo ambitus neque talis amitto terreo alienus quae vulticulus.")
+                            .type(AtsJobQuestionType.TEXT)
+                            .description("Abstergo possimus quibusdam deinde amoveo.")
+                            .id("568be61d-060e-4d8c-a8ab-8a17cb25edf3")
+                            .options(List.of(
+                                "vallum"))
+                            .prompt("Ara thermae aetas vivo constans victoria volo carbo vehemens praesentium.")
+                            .required(false)
+                            .build()))
+                    .skills(List.of(
+                        "amiculum",
+                        "crux"))
+                    .status(AtsJobStatus.ARCHIVED)
+                    .updatedAt(OffsetDateTime.parse("2026-01-31T18:22:08.408Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -1944,16 +2568,17 @@ Update a scorecard
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchAtsScorecard" method="patch" path="/ats/{connection_id}/scorecard/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchAtsScorecard" method="patch" path="/ats/{connection_id}/scorecard/{id}" example="ats_scorecard" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchAtsScorecardRequest;
 import to.unified.unified_java_sdk.models.operations.PatchAtsScorecardResponse;
-import to.unified.unified_java_sdk.models.shared.AtsScorecard;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -1967,6 +2592,21 @@ public class Application {
 
         PatchAtsScorecardRequest req = PatchAtsScorecardRequest.builder()
                 .atsScorecard(AtsScorecard.builder()
+                    .comment("Maiores enim.")
+                    .createdAt(OffsetDateTime.parse("2022-02-20T17:09:45.498Z"))
+                    .id("324dfa59-f358-4841-a28e-b7836ff6d9e4")
+                    .questions(List.of(
+                        AtsScorecardQuestion.builder()
+                            .text("Aliquam.")
+                            .description("Sulum textor eveniet facere vita.")
+                            .build(),
+                        AtsScorecardQuestion.builder()
+                            .text("Pecto vulpes libero vomer comburo.")
+                            .answer("Decretum.")
+                            .description("Conatus cicuta doloremque statua bonus.")
+                            .build()))
+                    .recommendation(Recommendation.STRONG_YES)
+                    .updatedAt(OffsetDateTime.parse("2023-05-27T11:10:32.894Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -2453,16 +3093,18 @@ Update an activity
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateAtsActivity" method="put" path="/ats/{connection_id}/activity/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateAtsActivity" method="put" path="/ats/{connection_id}/activity/{id}" example="ats_activity" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
+import java.util.Map;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateAtsActivityRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateAtsActivityResponse;
-import to.unified.unified_java_sdk.models.shared.AtsActivity;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -2476,6 +3118,71 @@ public class Application {
 
         UpdateAtsActivityRequest req = UpdateAtsActivityRequest.builder()
                 .atsActivity(AtsActivity.builder()
+                    .bcc(List.of(
+                        AtsEmail.builder()
+                            .email("Mabel_Schuppe-Schowalter42@hotmail.com")
+                            .name("Rochelle Franey-Bechtelar")
+                            .type(AtsEmailType.HOME)
+                            .build()))
+                    .cc(List.of(
+                        AtsEmail.builder()
+                            .email("Sasha24@hotmail.com")
+                            .name("Dr. Elbert Kuvalis")
+                            .type(AtsEmailType.HOME)
+                            .build(),
+                        AtsEmail.builder()
+                            .email("Rosetta_Donnelly@gmail.com")
+                            .name("Ramon Daniel")
+                            .type(AtsEmailType.OTHER)
+                            .build(),
+                        AtsEmail.builder()
+                            .email("Kathryne_Jast@yahoo.com")
+                            .name("Christian Jacobson")
+                            .type(AtsEmailType.OTHER)
+                            .build(),
+                        AtsEmail.builder()
+                            .email("Eldred95@yahoo.com")
+                            .name("Edna Bogan")
+                            .type(AtsEmailType.OTHER)
+                            .build()))
+                    .createdAt(OffsetDateTime.parse("2022-08-07T03:16:43.865Z"))
+                    .description("Amplus.")
+                    .from(PropertyAtsActivityFrom.builder()
+                        .email("Norwood.Wiza47@yahoo.com")
+                        .name("Toby Grant")
+                        .type(PropertyAtsActivityFromType.OTHER)
+                        .build())
+                    .id("689be512-24fa-4780-ac65-f4994fa849b7")
+                    .isPrivate(false)
+                    .metadata(List.of(
+                        AtsMetadata.builder()
+                            .extraData(AtsMetadataExtraData.of(Map.ofEntries(
+                            )))
+                            .format(AtsMetadataFormat.TEXT)
+                            .id("ea8212f7-8ed7-40cb-98a8-770a6000e86a")
+                            .namespace("activity")
+                            .slug("acer")
+                            .value(AtsMetadataValue.of("Pauci eius cena adamo summisse arguo pectus communis arcesso tergeo."))
+                            .build(),
+                        AtsMetadata.builder()
+                            .extraData(AtsMetadataExtraData.of(Map.ofEntries(
+                            )))
+                            .format(AtsMetadataFormat.TEXT)
+                            .id("c3da64cc-3932-4c45-b713-1f3eef03925a")
+                            .namespace("activity")
+                            .slug("tremo")
+                            .value(AtsMetadataValue.of("Amita delectus dicta temptatio utroque ex."))
+                            .build()))
+                    .subType("TASK")
+                    .title("Senior Interactions Manager")
+                    .to(List.of(
+                        AtsEmail.builder()
+                            .email("Sister91@hotmail.com")
+                            .name("Eddie Nienow PhD")
+                            .type(AtsEmailType.WORK)
+                            .build()))
+                    .type(AtsActivityType.TASK)
+                    .updatedAt(OffsetDateTime.parse("2026-03-06T13:34:25.485Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -2514,16 +3221,18 @@ Update an application
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateAtsApplication" method="put" path="/ats/{connection_id}/application/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateAtsApplication" method="put" path="/ats/{connection_id}/application/{id}" example="ats_application" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
+import java.util.Map;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateAtsApplicationRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateAtsApplicationResponse;
-import to.unified.unified_java_sdk.models.shared.AtsApplication;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -2537,6 +3246,29 @@ public class Application {
 
         UpdateAtsApplicationRequest req = UpdateAtsApplicationRequest.builder()
                 .atsApplication(AtsApplication.builder()
+                    .answers(List.of())
+                    .appliedAt(OffsetDateTime.parse("2025-09-08T08:48:32.256Z"))
+                    .createdAt(OffsetDateTime.parse("2023-10-17T07:19:48.787Z"))
+                    .hiredAt(OffsetDateTime.parse("2026-04-14T14:34:12.068Z"))
+                    .id("b1876d77-92f7-4377-8a74-00bdf3ad20d2")
+                    .metadata(List.of(
+                        AtsMetadata.builder()
+                            .extraData(AtsMetadataExtraData.of(Map.ofEntries(
+                            )))
+                            .format(AtsMetadataFormat.TEXT)
+                            .id("a1302a79-0341-40e6-b91a-daeb95584617")
+                            .namespace("application")
+                            .slug("despecto")
+                            .value(AtsMetadataValue.of("Argentum decretum cultellus aveho distinctio verecundia stella depono."))
+                            .build()))
+                    .offers(List.of())
+                    .originalStatus("vomica")
+                    .originalSubstatus("allatus")
+                    .rejectedAt(OffsetDateTime.parse("2026-09-08T19:51:38.319Z"))
+                    .rejectedReason("Cometes amplitudo videlicet talio.")
+                    .source("credo")
+                    .status(AtsApplicationStatus.REVIEWING)
+                    .updatedAt(OffsetDateTime.parse("2026-09-15T11:10:10.536Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -2575,16 +3307,18 @@ Update a candidate
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateAtsCandidate" method="put" path="/ats/{connection_id}/candidate/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateAtsCandidate" method="put" path="/ats/{connection_id}/candidate/{id}" example="ats_candidate" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
+import java.util.Map;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateAtsCandidateRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateAtsCandidateResponse;
-import to.unified.unified_java_sdk.models.shared.AtsCandidate;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -2598,6 +3332,80 @@ public class Application {
 
         UpdateAtsCandidateRequest req = UpdateAtsCandidateRequest.builder()
                 .atsCandidate(AtsCandidate.builder()
+                    .address(PropertyAtsCandidateAddress.builder()
+                        .address1("802 Roberts Squares")
+                        .address2("Suite 550")
+                        .city("Lake Raeganside")
+                        .countryCode("US")
+                        .postalCode("44530-0054")
+                        .region("Tennessee")
+                        .regionCode("NV")
+                        .build())
+                    .companyName("Ferry, Legros and Feest")
+                    .createdAt(OffsetDateTime.parse("2023-10-16T05:42:56.049Z"))
+                    .education(List.of(
+                        AtsCandidateEducation.builder()
+                            .degree("mouser throughout")
+                            .endAt(OffsetDateTime.parse("1992-11-28T20:23:20.311Z"))
+                            .fieldOfStudy("solutio")
+                            .institution("Heller - Lubowitz")
+                            .level("phd")
+                            .startAt(OffsetDateTime.parse("2001-03-26T08:12:11.510Z"))
+                            .build()))
+                    .emails(List.of(
+                        AtsEmail.builder()
+                            .email("Ardith.Beatty@hotmail.com")
+                            .name("Opal Lindgren")
+                            .type(AtsEmailType.WORK)
+                            .build(),
+                        AtsEmail.builder()
+                            .email("Ardith_Beatty@gmail.com")
+                            .name("Kristi Nader")
+                            .type(AtsEmailType.OTHER)
+                            .build()))
+                    .experiences(List.of(
+                        AtsCandidateExperience.builder()
+                            .companyName("Donnelly, Buckridge and Steuber")
+                            .endAt(OffsetDateTime.parse("1978-06-20T02:53:48.383Z"))
+                            .startAt(OffsetDateTime.parse("1980-02-06T17:16:53.798Z"))
+                            .title("Principal Brand Strategist")
+                            .build()))
+                    .firstName("Ardith")
+                    .id("367e2ce4-a89b-4076-a673-be58f32632cd")
+                    .imageUrl("https://loremflickr.com/40/3693?lock=5634712403880328")
+                    .jobIds(List.of())
+                    .lastName("Beatty")
+                    .linkUrls(List.of(
+                        "https://sizzling-legislature.com",
+                        "https://soupy-interchange.net",
+                        "https://troubled-substitution.info"))
+                    .metadata(List.of(
+                        AtsMetadata.builder()
+                            .extraData(AtsMetadataExtraData.of(Map.ofEntries(
+                            )))
+                            .format(AtsMetadataFormat.TEXT)
+                            .id("e2322a08-cbd8-4098-ad0d-5fc62c5f6334")
+                            .namespace("custom")
+                            .slug("custom_field")
+                            .value(AtsMetadataValue.of("cariosus"))
+                            .build()))
+                    .name("Ardith Beatty")
+                    .origin(Origin.SOURCED)
+                    .skills(List.of(
+                        "vita",
+                        "cohors"))
+                    .sources(List.of(
+                        "tactus"))
+                    .tags(List.of(
+                        "aliquid"))
+                    .telephones(List.of(
+                        AtsTelephone.builder()
+                            .telephone("(779) 296-5994")
+                            .type(AtsTelephoneType.HOME)
+                            .build()))
+                    .title("Principal Implementation Analyst")
+                    .updatedAt(OffsetDateTime.parse("2024-04-22T21:06:56.360Z"))
+                    .webUrl("https://expert-lender.name/")
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -2636,11 +3444,12 @@ Update a company
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateAtsCompany" method="put" path="/ats/{connection_id}/company/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateAtsCompany" method="put" path="/ats/{connection_id}/company/{id}" example="ats_company" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateAtsCompanyRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateAtsCompanyResponse;
@@ -2659,6 +3468,12 @@ public class Application {
 
         UpdateAtsCompanyRequest req = UpdateAtsCompanyRequest.builder()
                 .atsCompany(AtsCompany.builder()
+                    .createdAt(OffsetDateTime.parse("2019-04-22T03:50:02.920Z"))
+                    .id("690c8c51-afd0-48c0-af3f-6cbe5db597c6")
+                    .name("Gulgowski, Dibbert and Wilderman")
+                    .phone("1-602-210-4548")
+                    .updatedAt(OffsetDateTime.parse("2020-09-24T19:30:24.557Z"))
+                    .websiteUrl("https://somber-substitution.com/")
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -2697,16 +3512,16 @@ Update a document
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateAtsDocument" method="put" path="/ats/{connection_id}/document/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateAtsDocument" method="put" path="/ats/{connection_id}/document/{id}" example="ats_document" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateAtsDocumentRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateAtsDocumentResponse;
-import to.unified.unified_java_sdk.models.shared.AtsDocument;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -2720,6 +3535,12 @@ public class Application {
 
         UpdateAtsDocumentRequest req = UpdateAtsDocumentRequest.builder()
                 .atsDocument(AtsDocument.builder()
+                    .createdAt(OffsetDateTime.parse("2021-08-20T08:00:27.437Z"))
+                    .documentUrl("https://vengeful-lashes.biz")
+                    .filename("bah_white_frantically.bz")
+                    .id("a9316274-2e60-4f01-8b33-73b6249fd4ca")
+                    .type(AtsDocumentType.RESUME)
+                    .updatedAt(OffsetDateTime.parse("2022-11-28T22:09:41.297Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -2758,16 +3579,16 @@ Update an interview
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateAtsInterview" method="put" path="/ats/{connection_id}/interview/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateAtsInterview" method="put" path="/ats/{connection_id}/interview/{id}" example="ats_interview" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateAtsInterviewRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateAtsInterviewResponse;
-import to.unified.unified_java_sdk.models.shared.AtsInterview;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -2781,6 +3602,14 @@ public class Application {
 
         UpdateAtsInterviewRequest req = UpdateAtsInterviewRequest.builder()
                 .atsInterview(AtsInterview.builder()
+                    .createdAt(OffsetDateTime.parse("2021-11-28T03:14:47.774Z"))
+                    .endAt(OffsetDateTime.parse("2025-09-23T08:18:31.430Z"))
+                    .externalEventXref("d69449a5-d6ad-4010-a31f-49b8e650458b")
+                    .id("342cb8a4-20e4-4c9a-afd7-ca235b04f094")
+                    .location("26596 Halle Trafficway")
+                    .startAt(OffsetDateTime.parse("2025-05-19T06:26:28.151Z"))
+                    .status(AtsInterviewStatus.SCHEDULED)
+                    .updatedAt(OffsetDateTime.parse("2026-02-04T00:38:00.426Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -2819,16 +3648,18 @@ Update a job
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateAtsJob" method="put" path="/ats/{connection_id}/job/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateAtsJob" method="put" path="/ats/{connection_id}/job/{id}" example="ats_job" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
+import java.util.Map;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateAtsJobRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateAtsJobResponse;
-import to.unified.unified_java_sdk.models.shared.AtsJob;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -2842,6 +3673,119 @@ public class Application {
 
         UpdateAtsJobRequest req = UpdateAtsJobRequest.builder()
                 .atsJob(AtsJob.builder()
+                    .addresses(List.of(
+                        AtsAddress.builder()
+                            .address1("98097 Carlo Trail")
+                            .city("South Judd")
+                            .countryCode("US")
+                            .postalCode("89776-0669")
+                            .region("Mississippi")
+                            .regionCode("FL")
+                            .build()))
+                    .compensation(List.of(
+                        AtsCompensation.builder()
+                            .currency("AUD")
+                            .frequency(Frequency.DAY)
+                            .max(174303d)
+                            .min(174042d)
+                            .type(AtsCompensationType.BONUS)
+                            .build(),
+                        AtsCompensation.builder()
+                            .currency("MZN")
+                            .frequency(Frequency.MONTH)
+                            .max(171171d)
+                            .min(151975d)
+                            .type(AtsCompensationType.SALARY)
+                            .build()))
+                    .createdAt(OffsetDateTime.parse("2023-06-16T12:51:44.518Z"))
+                    .description("Global")
+                    .employmentType(EmploymentType.FREELANCE)
+                    .hiringManagers(List.of(
+                        AtsReference.builder()
+                            .id("fd9852e3-9035-4f42-beb3-bbf4e4022122")
+                            .name("Eloise Mueller PhD")
+                            .build()))
+                    .id("5cfa40e8-1d71-4a46-bae3-5176a66056a5")
+                    .industry("Gorgeous Plastic Computer")
+                    .languageLocale("en")
+                    .metadata(List.of(
+                        AtsMetadata.builder()
+                            .extraData(AtsMetadataExtraData.of(Map.ofEntries(
+                                Map.entry("display_name", "Custom Property"))))
+                            .format(AtsMetadataFormat.TEXT)
+                            .id("60b94c73-9f9e-4396-a602-910042160eed")
+                            .namespace("custom")
+                            .slug("custom_property")
+                            .value(AtsMetadataValue.of("acceptus"))
+                            .build()))
+                    .minimumDegree("Bachelor")
+                    .minimumExperienceYears(3d)
+                    .name("Forward Brand Producer")
+                    .numberOfOpenings(1d)
+                    .openings(List.of(
+                        AtsJobOpening.builder()
+                            .closeReason("Admoveo trado textilis.")
+                            .openedAt(OffsetDateTime.parse("2026-05-09T12:56:29.822Z"))
+                            .status(AtsJobOpeningStatus.OPEN)
+                            .build()))
+                    .postings(List.of(
+                        AtsJobPosting.builder()
+                            .address(PropertyAtsJobPostingAddress.builder()
+                                .address1("8460 Nils Trace")
+                                .city("West Mervinburgh")
+                                .countryCode("US")
+                                .postalCode("14162")
+                                .region("Maine")
+                                .regionCode("MO")
+                                .build())
+                            .createdAt(OffsetDateTime.parse("2026-07-02T04:14:45.234Z"))
+                            .description("Deduco cultellus alii terebro depono thesaurus.")
+                            .id("f6101769-deb3-4721-978c-d205638870ee")
+                            .isActive(false)
+                            .location("6788 Oxford Road")
+                            .name("Forward Security Orchestrator")
+                            .postingUrl("https://ajar-metabolite.net/")
+                            .updatedAt(OffsetDateTime.parse("2026-07-27T18:35:01.372Z"))
+                            .build()))
+                    .publicJobUrls(List.of(
+                        "https://trustworthy-elver.info",
+                        "https://parched-dash.info"))
+                    .questions(List.of(
+                        AtsJobQuestion.builder()
+                            .question("Sodalitas nemo natus attonbitus reprehenderit voro depono constans vehemens ante.")
+                            .type(AtsJobQuestionType.TEXT)
+                            .description("Trepide provident taceo rem.")
+                            .id("289f27c0-311c-41e5-ad9d-cbe2097332c2")
+                            .options(List.of(
+                                "censura",
+                                "tum"))
+                            .prompt("Spectaculum mollitia arcus compello.")
+                            .required(true)
+                            .build(),
+                        AtsJobQuestion.builder()
+                            .question("Vinitor sodalitas desino sollers viduo volo.")
+                            .type(AtsJobQuestionType.TEXT)
+                            .id("b3a0b53b-38f3-4e8d-84b9-f413a900d79b")
+                            .options(List.of(
+                                "odit"))
+                            .prompt("Similique absque temeritas celebrer enim.")
+                            .required(false)
+                            .build(),
+                        AtsJobQuestion.builder()
+                            .question("Subiungo ambitus neque talis amitto terreo alienus quae vulticulus.")
+                            .type(AtsJobQuestionType.TEXT)
+                            .description("Abstergo possimus quibusdam deinde amoveo.")
+                            .id("568be61d-060e-4d8c-a8ab-8a17cb25edf3")
+                            .options(List.of(
+                                "vallum"))
+                            .prompt("Ara thermae aetas vivo constans victoria volo carbo vehemens praesentium.")
+                            .required(false)
+                            .build()))
+                    .skills(List.of(
+                        "amiculum",
+                        "crux"))
+                    .status(AtsJobStatus.ARCHIVED)
+                    .updatedAt(OffsetDateTime.parse("2026-01-31T18:22:08.408Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -2880,16 +3824,17 @@ Update a scorecard
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateAtsScorecard" method="put" path="/ats/{connection_id}/scorecard/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateAtsScorecard" method="put" path="/ats/{connection_id}/scorecard/{id}" example="ats_scorecard" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateAtsScorecardRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateAtsScorecardResponse;
-import to.unified.unified_java_sdk.models.shared.AtsScorecard;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -2903,6 +3848,21 @@ public class Application {
 
         UpdateAtsScorecardRequest req = UpdateAtsScorecardRequest.builder()
                 .atsScorecard(AtsScorecard.builder()
+                    .comment("Maiores enim.")
+                    .createdAt(OffsetDateTime.parse("2022-02-20T17:09:45.498Z"))
+                    .id("324dfa59-f358-4841-a28e-b7836ff6d9e4")
+                    .questions(List.of(
+                        AtsScorecardQuestion.builder()
+                            .text("Aliquam.")
+                            .description("Sulum textor eveniet facere vita.")
+                            .build(),
+                        AtsScorecardQuestion.builder()
+                            .text("Pecto vulpes libero vomer comburo.")
+                            .answer("Decretum.")
+                            .description("Conatus cicuta doloremque statua bonus.")
+                            .build()))
+                    .recommendation(Recommendation.STRONG_YES)
+                    .updatedAt(OffsetDateTime.parse("2023-05-27T11:10:32.894Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

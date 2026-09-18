@@ -17,16 +17,17 @@ Create a file
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createStorageFile" method="post" path="/storage/{connection_id}/file" -->
+<!-- UsageSnippet language="java" operationID="createStorageFile" method="post" path="/storage/{connection_id}/file" example="storage_file" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateStorageFileRequest;
 import to.unified.unified_java_sdk.models.operations.CreateStorageFileResponse;
-import to.unified.unified_java_sdk.models.shared.Security;
-import to.unified.unified_java_sdk.models.shared.StorageFile;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -40,6 +41,32 @@ public class Application {
 
         CreateStorageFileRequest req = CreateStorageFileRequest.builder()
                 .storageFile(StorageFile.builder()
+                    .createdAt(OffsetDateTime.parse("2021-09-12T16:48:23.774Z"))
+                    .data("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgYmFzZVByb2ZpbGU9ImZ1bGwiIHdpZHRoPSI4MzIiIGhlaWdodD0iMTg2MSI+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0iIzFmYzM1NSIvPjx0ZXh0IHg9IjQxNiIgeT0iOTMwLjUiIGZvbnQtc2l6ZT0iMjAiIGFsaWdubWVudC1iYXNlbGluZT0ibWlkZGxlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSJ3aGl0ZSI+ODMyeDE4NjE8L3RleHQ+PC9zdmc+")
+                    .description("Crastinus cupiditate debilito cimentarius virgo.")
+                    .downloadUrl("https://stingy-casement.name/")
+                    .hash("fe6a659e-75cd-4079-9b76-351f9af2205a")
+                    .id("53dc27e2-0030-4501-8b1b-6e9e4b170adb")
+                    .mimeType("FOLDER")
+                    .name("softly.tiff")
+                    .references(List.of(
+                        StorageReference.builder()
+                            .id("ab705f3b-e368-4a94-8b22-d5f693c14a76")
+                            .name("tamisium viduo odio cauda")
+                            .type("accounting_bill")
+                            .build(),
+                        StorageReference.builder()
+                            .id("9f0f694e-b6f4-4c12-b5f6-ab08d4e81140")
+                            .name("quia")
+                            .type("accounting_expense")
+                            .build()))
+                    .size(10276d)
+                    .tags(List.of(
+                        "spoliatio"))
+                    .type(StorageFileType.FILE)
+                    .updatedAt(OffsetDateTime.parse("2023-01-27T11:58:12.326Z"))
+                    .version("1")
+                    .webUrl("https://sandy-distinction.info/")
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -192,16 +219,17 @@ Update a file
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchStorageFile" method="patch" path="/storage/{connection_id}/file/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchStorageFile" method="patch" path="/storage/{connection_id}/file/{id}" example="storage_file" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchStorageFileRequest;
 import to.unified.unified_java_sdk.models.operations.PatchStorageFileResponse;
-import to.unified.unified_java_sdk.models.shared.Security;
-import to.unified.unified_java_sdk.models.shared.StorageFile;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -215,6 +243,32 @@ public class Application {
 
         PatchStorageFileRequest req = PatchStorageFileRequest.builder()
                 .storageFile(StorageFile.builder()
+                    .createdAt(OffsetDateTime.parse("2021-09-12T16:48:23.774Z"))
+                    .data("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgYmFzZVByb2ZpbGU9ImZ1bGwiIHdpZHRoPSI4MzIiIGhlaWdodD0iMTg2MSI+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0iIzFmYzM1NSIvPjx0ZXh0IHg9IjQxNiIgeT0iOTMwLjUiIGZvbnQtc2l6ZT0iMjAiIGFsaWdubWVudC1iYXNlbGluZT0ibWlkZGxlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSJ3aGl0ZSI+ODMyeDE4NjE8L3RleHQ+PC9zdmc+")
+                    .description("Crastinus cupiditate debilito cimentarius virgo.")
+                    .downloadUrl("https://stingy-casement.name/")
+                    .hash("fe6a659e-75cd-4079-9b76-351f9af2205a")
+                    .id("d475f153-100a-4257-a6ad-70f276ab57ff")
+                    .mimeType("FOLDER")
+                    .name("softly.tiff")
+                    .references(List.of(
+                        StorageReference.builder()
+                            .id("ab705f3b-e368-4a94-8b22-d5f693c14a76")
+                            .name("tamisium viduo odio cauda")
+                            .type("accounting_bill")
+                            .build(),
+                        StorageReference.builder()
+                            .id("9f0f694e-b6f4-4c12-b5f6-ab08d4e81140")
+                            .name("quia")
+                            .type("accounting_expense")
+                            .build()))
+                    .size(10276d)
+                    .tags(List.of(
+                        "spoliatio"))
+                    .type(StorageFileType.FILE)
+                    .updatedAt(OffsetDateTime.parse("2023-01-27T11:58:12.331Z"))
+                    .version("1")
+                    .webUrl("https://sandy-distinction.info/")
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -309,16 +363,17 @@ Update a file
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateStorageFile" method="put" path="/storage/{connection_id}/file/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateStorageFile" method="put" path="/storage/{connection_id}/file/{id}" example="storage_file" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateStorageFileRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateStorageFileResponse;
-import to.unified.unified_java_sdk.models.shared.Security;
-import to.unified.unified_java_sdk.models.shared.StorageFile;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -332,6 +387,32 @@ public class Application {
 
         UpdateStorageFileRequest req = UpdateStorageFileRequest.builder()
                 .storageFile(StorageFile.builder()
+                    .createdAt(OffsetDateTime.parse("2021-09-12T16:48:23.774Z"))
+                    .data("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgYmFzZVByb2ZpbGU9ImZ1bGwiIHdpZHRoPSI4MzIiIGhlaWdodD0iMTg2MSI+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0iIzFmYzM1NSIvPjx0ZXh0IHg9IjQxNiIgeT0iOTMwLjUiIGZvbnQtc2l6ZT0iMjAiIGFsaWdubWVudC1iYXNlbGluZT0ibWlkZGxlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSJ3aGl0ZSI+ODMyeDE4NjE8L3RleHQ+PC9zdmc+")
+                    .description("Crastinus cupiditate debilito cimentarius virgo.")
+                    .downloadUrl("https://stingy-casement.name/")
+                    .hash("fe6a659e-75cd-4079-9b76-351f9af2205a")
+                    .id("d475f153-100a-4257-a6ad-70f276ab57ff")
+                    .mimeType("FOLDER")
+                    .name("softly.tiff")
+                    .references(List.of(
+                        StorageReference.builder()
+                            .id("ab705f3b-e368-4a94-8b22-d5f693c14a76")
+                            .name("tamisium viduo odio cauda")
+                            .type("accounting_bill")
+                            .build(),
+                        StorageReference.builder()
+                            .id("9f0f694e-b6f4-4c12-b5f6-ab08d4e81140")
+                            .name("quia")
+                            .type("accounting_expense")
+                            .build()))
+                    .size(10276d)
+                    .tags(List.of(
+                        "spoliatio"))
+                    .type(StorageFileType.FILE)
+                    .updatedAt(OffsetDateTime.parse("2023-01-27T11:58:12.331Z"))
+                    .version("1")
+                    .webUrl("https://sandy-distinction.info/")
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

@@ -31,16 +31,16 @@ Create a group
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createAdsGroup" method="post" path="/ads/{connection_id}/group" -->
+<!-- UsageSnippet language="java" operationID="createAdsGroup" method="post" path="/ads/{connection_id}/group" example="ads_group" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateAdsGroupRequest;
 import to.unified.unified_java_sdk.models.operations.CreateAdsGroupResponse;
-import to.unified.unified_java_sdk.models.shared.AdsGroup;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -54,6 +54,21 @@ public class Application {
 
         CreateAdsGroupRequest req = CreateAdsGroupRequest.builder()
                 .adsGroup(AdsGroup.builder()
+                    .bidAmount(26.16030164062977)
+                    .budgetAmount(5099.175239447504)
+                    .budgetPeriod(AdsGroupBudgetPeriod.MONTHLY)
+                    .createdAt(OffsetDateTime.parse("2019-08-29T17:59:41.045Z"))
+                    .currency("USD")
+                    .effectiveStatus(AdsGroupEffectiveStatus.PAUSED)
+                    .endAt(OffsetDateTime.parse("2026-05-24T13:19:12.102Z"))
+                    .id("e888dea0-f654-41b9-92b4-9bed6e836d63")
+                    .languageLocale("fr-FR")
+                    .name("Stark - Baumbach")
+                    .startAt(OffsetDateTime.parse("2025-12-10T21:11:12.512Z"))
+                    .status(AdsGroupStatus.PROCESSING)
+                    .targeting(PropertyAdsGroupTargeting.builder()
+                        .build())
+                    .updatedAt(OffsetDateTime.parse("2022-01-02T16:46:00.565Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -91,16 +106,16 @@ Create a group
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createHrisGroup" method="post" path="/hris/{connection_id}/group" -->
+<!-- UsageSnippet language="java" operationID="createHrisGroup" method="post" path="/hris/{connection_id}/group" example="hris_group" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateHrisGroupRequest;
 import to.unified.unified_java_sdk.models.operations.CreateHrisGroupResponse;
-import to.unified.unified_java_sdk.models.shared.HrisGroup;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -114,6 +129,13 @@ public class Application {
 
         CreateHrisGroupRequest req = CreateHrisGroupRequest.builder()
                 .hrisGroup(HrisGroup.builder()
+                    .createdAt(OffsetDateTime.parse("2023-11-01T13:13:40.714Z"))
+                    .description("Absorbeo casso.")
+                    .id("929982e7-4f14-49ea-83cc-de83a6e8059c")
+                    .isActive(false)
+                    .name("Games")
+                    .type(HrisGroupType.BUSINESS_UNIT)
+                    .updatedAt(OffsetDateTime.parse("2026-04-23T14:25:48.389Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -672,16 +694,16 @@ Update a group
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchAdsGroup" method="patch" path="/ads/{connection_id}/group/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchAdsGroup" method="patch" path="/ads/{connection_id}/group/{id}" example="ads_group" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchAdsGroupRequest;
 import to.unified.unified_java_sdk.models.operations.PatchAdsGroupResponse;
-import to.unified.unified_java_sdk.models.shared.AdsGroup;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -695,6 +717,21 @@ public class Application {
 
         PatchAdsGroupRequest req = PatchAdsGroupRequest.builder()
                 .adsGroup(AdsGroup.builder()
+                    .bidAmount(26.16030164062977)
+                    .budgetAmount(5099.175239447504)
+                    .budgetPeriod(AdsGroupBudgetPeriod.MONTHLY)
+                    .createdAt(OffsetDateTime.parse("2019-08-29T17:59:41.045Z"))
+                    .currency("USD")
+                    .effectiveStatus(AdsGroupEffectiveStatus.PAUSED)
+                    .endAt(OffsetDateTime.parse("2026-05-24T13:19:12.211Z"))
+                    .id("696ee368-be46-4fed-aede-f2ef993e2ea4")
+                    .languageLocale("fr-FR")
+                    .name("Stark - Baumbach")
+                    .startAt(OffsetDateTime.parse("2025-12-10T21:11:12.613Z"))
+                    .status(AdsGroupStatus.PROCESSING)
+                    .targeting(PropertyAdsGroupTargeting.builder()
+                        .build())
+                    .updatedAt(OffsetDateTime.parse("2022-01-02T16:46:00.603Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -733,16 +770,16 @@ Update a group
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchHrisGroup" method="patch" path="/hris/{connection_id}/group/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchHrisGroup" method="patch" path="/hris/{connection_id}/group/{id}" example="hris_group" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchHrisGroupRequest;
 import to.unified.unified_java_sdk.models.operations.PatchHrisGroupResponse;
-import to.unified.unified_java_sdk.models.shared.HrisGroup;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -756,6 +793,13 @@ public class Application {
 
         PatchHrisGroupRequest req = PatchHrisGroupRequest.builder()
                 .hrisGroup(HrisGroup.builder()
+                    .createdAt(OffsetDateTime.parse("2023-11-01T13:13:40.714Z"))
+                    .description("Absorbeo casso.")
+                    .id("e6f510a5-a158-4c0b-ac94-6d68578b4e95")
+                    .isActive(false)
+                    .name("Games")
+                    .type(HrisGroupType.BUSINESS_UNIT)
+                    .updatedAt(OffsetDateTime.parse("2026-04-23T14:25:48.395Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -1024,16 +1068,16 @@ Update a group
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateAdsGroup" method="put" path="/ads/{connection_id}/group/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateAdsGroup" method="put" path="/ads/{connection_id}/group/{id}" example="ads_group" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateAdsGroupRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateAdsGroupResponse;
-import to.unified.unified_java_sdk.models.shared.AdsGroup;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -1047,6 +1091,21 @@ public class Application {
 
         UpdateAdsGroupRequest req = UpdateAdsGroupRequest.builder()
                 .adsGroup(AdsGroup.builder()
+                    .bidAmount(26.16030164062977)
+                    .budgetAmount(5099.175239447504)
+                    .budgetPeriod(AdsGroupBudgetPeriod.MONTHLY)
+                    .createdAt(OffsetDateTime.parse("2019-08-29T17:59:41.045Z"))
+                    .currency("USD")
+                    .effectiveStatus(AdsGroupEffectiveStatus.PAUSED)
+                    .endAt(OffsetDateTime.parse("2026-05-24T13:19:12.211Z"))
+                    .id("696ee368-be46-4fed-aede-f2ef993e2ea4")
+                    .languageLocale("fr-FR")
+                    .name("Stark - Baumbach")
+                    .startAt(OffsetDateTime.parse("2025-12-10T21:11:12.613Z"))
+                    .status(AdsGroupStatus.PROCESSING)
+                    .targeting(PropertyAdsGroupTargeting.builder()
+                        .build())
+                    .updatedAt(OffsetDateTime.parse("2022-01-02T16:46:00.603Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -1085,16 +1144,16 @@ Update a group
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateHrisGroup" method="put" path="/hris/{connection_id}/group/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateHrisGroup" method="put" path="/hris/{connection_id}/group/{id}" example="hris_group" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateHrisGroupRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateHrisGroupResponse;
-import to.unified.unified_java_sdk.models.shared.HrisGroup;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -1108,6 +1167,13 @@ public class Application {
 
         UpdateHrisGroupRequest req = UpdateHrisGroupRequest.builder()
                 .hrisGroup(HrisGroup.builder()
+                    .createdAt(OffsetDateTime.parse("2023-11-01T13:13:40.714Z"))
+                    .description("Absorbeo casso.")
+                    .id("e6f510a5-a158-4c0b-ac94-6d68578b4e95")
+                    .isActive(false)
+                    .name("Games")
+                    .type(HrisGroupType.BUSINESS_UNIT)
+                    .updatedAt(OffsetDateTime.parse("2026-04-23T14:25:48.395Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

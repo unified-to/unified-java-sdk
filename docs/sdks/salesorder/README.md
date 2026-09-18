@@ -17,16 +17,17 @@ Create a salesorder
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createAccountingSalesorder" method="post" path="/accounting/{connection_id}/salesorder" -->
+<!-- UsageSnippet language="java" operationID="createAccountingSalesorder" method="post" path="/accounting/{connection_id}/salesorder" example="accounting_salesorder" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingSalesorderRequest;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingSalesorderResponse;
-import to.unified.unified_java_sdk.models.shared.AccountingSalesorder;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -40,6 +41,53 @@ public class Application {
 
         CreateAccountingSalesorderRequest req = CreateAccountingSalesorderRequest.builder()
                 .accountingSalesorder(AccountingSalesorder.builder()
+                    .billingAddress(PropertyAccountingSalesorderBillingAddress.builder()
+                        .address1("26530 Stroman Rest")
+                        .address2("Suite 801")
+                        .city("Pocatello")
+                        .countryCode("US")
+                        .postalCode("05015-8546")
+                        .region("Louisiana")
+                        .regionCode("MO")
+                        .build())
+                    .categoryIds(List.of())
+                    .closedAt(OffsetDateTime.parse("2023-08-16T21:47:45.013Z"))
+                    .createdAt(OffsetDateTime.parse("2022-01-17T16:11:50.310Z"))
+                    .currency("ANG")
+                    .discountAmount(99d)
+                    .employeeUserId("4a6b8990-c85a-499f-82d0-5011c3c95a0b")
+                    .fees(List.of(
+                        AccountingFee.builder()
+                            .amount(519d)
+                            .type(AccountingFeeType.PROMOTION)
+                            .currency("XCD")
+                            .build()))
+                    .fulfillmentType(FulfillmentType.TAKEOUT)
+                    .guestCount(8d)
+                    .id("4b4b8374-641e-4c7b-84dc-48bb2da0c7fe")
+                    .lineitems(List.of())
+                    .metadata(List.of())
+                    .orderNumber("988187")
+                    .payments(List.of())
+                    .postedAt(OffsetDateTime.parse("2026-01-11T02:11:41.222Z"))
+                    .refundedAmount(0d)
+                    .salesChannel("Harvey, Collier and Weimann")
+                    .serviceChargeAmount(63d)
+                    .shippingAddress(PropertyAccountingSalesorderShippingAddress.builder()
+                        .address1("9878 Bradley Mill")
+                        .address2("Apt. 215")
+                        .city("Port Matildestad")
+                        .countryCode("US")
+                        .postalCode("07989-2148")
+                        .region("Arkansas")
+                        .regionCode("AK")
+                        .build())
+                    .status(AccountingSalesorderStatus.REFUNDED)
+                    .subtotalAmount(0d)
+                    .taxAmount(63d)
+                    .tipAmount(34d)
+                    .totalAmount(0d)
+                    .updatedAt(OffsetDateTime.parse("2022-02-10T18:49:09.489Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -192,16 +240,17 @@ Update a salesorder
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchAccountingSalesorder" method="patch" path="/accounting/{connection_id}/salesorder/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchAccountingSalesorder" method="patch" path="/accounting/{connection_id}/salesorder/{id}" example="accounting_salesorder" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchAccountingSalesorderRequest;
 import to.unified.unified_java_sdk.models.operations.PatchAccountingSalesorderResponse;
-import to.unified.unified_java_sdk.models.shared.AccountingSalesorder;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -215,6 +264,53 @@ public class Application {
 
         PatchAccountingSalesorderRequest req = PatchAccountingSalesorderRequest.builder()
                 .accountingSalesorder(AccountingSalesorder.builder()
+                    .billingAddress(PropertyAccountingSalesorderBillingAddress.builder()
+                        .address1("26530 Stroman Rest")
+                        .address2("Suite 801")
+                        .city("Pocatello")
+                        .countryCode("US")
+                        .postalCode("05015-8546")
+                        .region("Louisiana")
+                        .regionCode("MO")
+                        .build())
+                    .categoryIds(List.of())
+                    .closedAt(OffsetDateTime.parse("2023-08-16T21:47:45.033Z"))
+                    .createdAt(OffsetDateTime.parse("2022-01-17T16:11:50.310Z"))
+                    .currency("ANG")
+                    .discountAmount(99d)
+                    .employeeUserId("4a6b8990-c85a-499f-82d0-5011c3c95a0b")
+                    .fees(List.of(
+                        AccountingFee.builder()
+                            .amount(519d)
+                            .type(AccountingFeeType.PROMOTION)
+                            .currency("XCD")
+                            .build()))
+                    .fulfillmentType(FulfillmentType.TAKEOUT)
+                    .guestCount(8d)
+                    .id("7a2572c0-20e2-47d3-9ebd-99ebd81b6655")
+                    .lineitems(List.of())
+                    .metadata(List.of())
+                    .orderNumber("988187")
+                    .payments(List.of())
+                    .postedAt(OffsetDateTime.parse("2026-01-11T02:11:41.271Z"))
+                    .refundedAmount(0d)
+                    .salesChannel("Harvey, Collier and Weimann")
+                    .serviceChargeAmount(63d)
+                    .shippingAddress(PropertyAccountingSalesorderShippingAddress.builder()
+                        .address1("9878 Bradley Mill")
+                        .address2("Apt. 215")
+                        .city("Port Matildestad")
+                        .countryCode("US")
+                        .postalCode("07989-2148")
+                        .region("Arkansas")
+                        .regionCode("AK")
+                        .build())
+                    .status(AccountingSalesorderStatus.REFUNDED)
+                    .subtotalAmount(0d)
+                    .taxAmount(63d)
+                    .tipAmount(34d)
+                    .totalAmount(0d)
+                    .updatedAt(OffsetDateTime.parse("2022-02-10T18:49:09.490Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -309,16 +405,17 @@ Update a salesorder
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateAccountingSalesorder" method="put" path="/accounting/{connection_id}/salesorder/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateAccountingSalesorder" method="put" path="/accounting/{connection_id}/salesorder/{id}" example="accounting_salesorder" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateAccountingSalesorderRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateAccountingSalesorderResponse;
-import to.unified.unified_java_sdk.models.shared.AccountingSalesorder;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -332,6 +429,53 @@ public class Application {
 
         UpdateAccountingSalesorderRequest req = UpdateAccountingSalesorderRequest.builder()
                 .accountingSalesorder(AccountingSalesorder.builder()
+                    .billingAddress(PropertyAccountingSalesorderBillingAddress.builder()
+                        .address1("26530 Stroman Rest")
+                        .address2("Suite 801")
+                        .city("Pocatello")
+                        .countryCode("US")
+                        .postalCode("05015-8546")
+                        .region("Louisiana")
+                        .regionCode("MO")
+                        .build())
+                    .categoryIds(List.of())
+                    .closedAt(OffsetDateTime.parse("2023-08-16T21:47:45.033Z"))
+                    .createdAt(OffsetDateTime.parse("2022-01-17T16:11:50.310Z"))
+                    .currency("ANG")
+                    .discountAmount(99d)
+                    .employeeUserId("4a6b8990-c85a-499f-82d0-5011c3c95a0b")
+                    .fees(List.of(
+                        AccountingFee.builder()
+                            .amount(519d)
+                            .type(AccountingFeeType.PROMOTION)
+                            .currency("XCD")
+                            .build()))
+                    .fulfillmentType(FulfillmentType.TAKEOUT)
+                    .guestCount(8d)
+                    .id("7a2572c0-20e2-47d3-9ebd-99ebd81b6655")
+                    .lineitems(List.of())
+                    .metadata(List.of())
+                    .orderNumber("988187")
+                    .payments(List.of())
+                    .postedAt(OffsetDateTime.parse("2026-01-11T02:11:41.271Z"))
+                    .refundedAmount(0d)
+                    .salesChannel("Harvey, Collier and Weimann")
+                    .serviceChargeAmount(63d)
+                    .shippingAddress(PropertyAccountingSalesorderShippingAddress.builder()
+                        .address1("9878 Bradley Mill")
+                        .address2("Apt. 215")
+                        .city("Port Matildestad")
+                        .countryCode("US")
+                        .postalCode("07989-2148")
+                        .region("Arkansas")
+                        .regionCode("AK")
+                        .build())
+                    .status(AccountingSalesorderStatus.REFUNDED)
+                    .subtotalAmount(0d)
+                    .taxAmount(63d)
+                    .tipAmount(34d)
+                    .totalAmount(0d)
+                    .updatedAt(OffsetDateTime.parse("2022-02-10T18:49:09.490Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

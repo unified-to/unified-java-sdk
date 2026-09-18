@@ -17,11 +17,12 @@ Create a note
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createTicketingNote" method="post" path="/ticketing/{connection_id}/note" -->
+<!-- UsageSnippet language="java" operationID="createTicketingNote" method="post" path="/ticketing/{connection_id}/note" example="ticketing_note" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateTicketingNoteRequest;
 import to.unified.unified_java_sdk.models.operations.CreateTicketingNoteResponse;
@@ -40,6 +41,10 @@ public class Application {
 
         CreateTicketingNoteRequest req = CreateTicketingNoteRequest.builder()
                 .ticketingNote(TicketingNote.builder()
+                    .createdAt(OffsetDateTime.parse("2019-07-23T15:05:03.241Z"))
+                    .description("Civitas absum adipisci vitiosus recusandae tristis dedico libero comminor cena. Spes virgo absorbeo defluo nostrum.")
+                    .id("4cee47af-266b-4309-8b76-7cebe1a0cd2c")
+                    .updatedAt(OffsetDateTime.parse("2024-09-05T15:39:07.495Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -192,11 +197,12 @@ Update a note
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchTicketingNote" method="patch" path="/ticketing/{connection_id}/note/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchTicketingNote" method="patch" path="/ticketing/{connection_id}/note/{id}" example="ticketing_note" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchTicketingNoteRequest;
 import to.unified.unified_java_sdk.models.operations.PatchTicketingNoteResponse;
@@ -215,6 +221,10 @@ public class Application {
 
         PatchTicketingNoteRequest req = PatchTicketingNoteRequest.builder()
                 .ticketingNote(TicketingNote.builder()
+                    .createdAt(OffsetDateTime.parse("2019-07-23T15:05:03.241Z"))
+                    .description("Civitas absum adipisci vitiosus recusandae tristis dedico libero comminor cena. Spes virgo absorbeo defluo nostrum.")
+                    .id("4b86cac9-cf45-4def-83fb-f740e3de8c6e")
+                    .updatedAt(OffsetDateTime.parse("2024-09-05T15:39:07.501Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -309,11 +319,12 @@ Update a note
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateTicketingNote" method="put" path="/ticketing/{connection_id}/note/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateTicketingNote" method="put" path="/ticketing/{connection_id}/note/{id}" example="ticketing_note" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateTicketingNoteRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateTicketingNoteResponse;
@@ -332,6 +343,10 @@ public class Application {
 
         UpdateTicketingNoteRequest req = UpdateTicketingNoteRequest.builder()
                 .ticketingNote(TicketingNote.builder()
+                    .createdAt(OffsetDateTime.parse("2019-07-23T15:05:03.241Z"))
+                    .description("Civitas absum adipisci vitiosus recusandae tristis dedico libero comminor cena. Spes virgo absorbeo defluo nostrum.")
+                    .id("4b86cac9-cf45-4def-83fb-f740e3de8c6e")
+                    .updatedAt(OffsetDateTime.parse("2024-09-05T15:39:07.501Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

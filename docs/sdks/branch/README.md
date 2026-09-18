@@ -17,11 +17,12 @@ Create a branch
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createRepoBranch" method="post" path="/repo/{connection_id}/branch" -->
+<!-- UsageSnippet language="java" operationID="createRepoBranch" method="post" path="/repo/{connection_id}/branch" example="repo_branch" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateRepoBranchRequest;
 import to.unified.unified_java_sdk.models.operations.CreateRepoBranchResponse;
@@ -40,8 +41,11 @@ public class Application {
 
         CreateRepoBranchRequest req = CreateRepoBranchRequest.builder()
                 .repoBranch(RepoBranch.builder()
-                    .name("<value>")
+                    .name("voluptas")
                     .repoId("<id>")
+                    .createdAt(OffsetDateTime.parse("2019-02-24T09:33:48.540Z"))
+                    .id("597e1772-7923-4e1d-875c-e660983871be")
+                    .updatedAt(OffsetDateTime.parse("2020-01-03T14:15:11.083Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -194,11 +198,12 @@ Update a branch
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchRepoBranch" method="patch" path="/repo/{connection_id}/branch/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchRepoBranch" method="patch" path="/repo/{connection_id}/branch/{id}" example="repo_branch" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchRepoBranchRequest;
 import to.unified.unified_java_sdk.models.operations.PatchRepoBranchResponse;
@@ -217,8 +222,11 @@ public class Application {
 
         PatchRepoBranchRequest req = PatchRepoBranchRequest.builder()
                 .repoBranch(RepoBranch.builder()
-                    .name("<value>")
+                    .name("voluptas")
                     .repoId("<id>")
+                    .createdAt(OffsetDateTime.parse("2019-02-24T09:33:48.540Z"))
+                    .id("51e88d6d-eb9f-4fa3-8e8e-75e0b3c0d48f")
+                    .updatedAt(OffsetDateTime.parse("2020-01-03T14:15:11.084Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -313,11 +321,12 @@ Update a branch
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateRepoBranch" method="put" path="/repo/{connection_id}/branch/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateRepoBranch" method="put" path="/repo/{connection_id}/branch/{id}" example="repo_branch" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateRepoBranchRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateRepoBranchResponse;
@@ -336,8 +345,11 @@ public class Application {
 
         UpdateRepoBranchRequest req = UpdateRepoBranchRequest.builder()
                 .repoBranch(RepoBranch.builder()
-                    .name("<value>")
+                    .name("voluptas")
                     .repoId("<id>")
+                    .createdAt(OffsetDateTime.parse("2019-02-24T09:33:48.540Z"))
+                    .id("51e88d6d-eb9f-4fa3-8e8e-75e0b3c0d48f")
+                    .updatedAt(OffsetDateTime.parse("2020-01-03T14:15:11.084Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

@@ -3,11 +3,12 @@
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingAccountRequest;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingAccountResponse;
-import to.unified.unified_java_sdk.models.shared.AccountingAccount;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -21,6 +22,28 @@ public class Application {
 
         CreateAccountingAccountRequest req = CreateAccountingAccountRequest.builder()
                 .accountingAccount(AccountingAccount.builder()
+                    .balance(12092d)
+                    .createdAt(OffsetDateTime.parse("2022-07-03T17:57:07.391Z"))
+                    .currency("BOB")
+                    .customerDefinedCode("quo")
+                    .description("Spoliatio comedo vilitas harum cupiditate.")
+                    .id("35991572-6b6d-4a7b-a883-101be82c839d")
+                    .isPayable(true)
+                    .name("Electronic Aluminum Tuna")
+                    .status(Status.ARCHIVED)
+                    .taxonomy(List.of(
+                        AccountingAccountTaxonomy.builder()
+                            .type(AccountingAccountTaxonomyType.SUBGROUP)
+                            .value("iste")
+                            .originalType("vesper")
+                            .build(),
+                        AccountingAccountTaxonomy.builder()
+                            .type(AccountingAccountTaxonomyType.SUBGROUP)
+                            .value("peccatus")
+                            .originalType("adamo")
+                            .build()))
+                    .type(Type.BANK)
+                    .updatedAt(OffsetDateTime.parse("2023-01-03T03:11:26.602Z"))
                     .build())
                 .connectionId("<id>")
                 .build();

@@ -17,16 +17,16 @@ Create a deduction
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createHrisDeduction" method="post" path="/hris/{connection_id}/deduction" -->
+<!-- UsageSnippet language="java" operationID="createHrisDeduction" method="post" path="/hris/{connection_id}/deduction" example="hris_deduction" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateHrisDeductionRequest;
 import to.unified.unified_java_sdk.models.operations.CreateHrisDeductionResponse;
-import to.unified.unified_java_sdk.models.shared.HrisDeduction;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -40,6 +40,17 @@ public class Application {
 
         CreateHrisDeductionRequest req = CreateHrisDeductionRequest.builder()
                 .hrisDeduction(HrisDeduction.builder()
+                    .amount(139655d)
+                    .coverageLevel(HrisDeductionCoverageLevel.EMPLOYEE_ONLY)
+                    .createdAt(OffsetDateTime.parse("2020-02-05T01:46:31.384Z"))
+                    .endAt(OffsetDateTime.parse("2026-05-22T22:53:01.272Z"))
+                    .frequency(HrisDeductionFrequency.MONTH)
+                    .id("53b67e29-3fbf-4518-9dc8-46caa54fd502")
+                    .isActive(false)
+                    .notes("Carmen desidero.")
+                    .startAt(OffsetDateTime.parse("2025-02-18T04:38:44.652Z"))
+                    .type(HrisDeductionType.FIXED)
+                    .updatedAt(OffsetDateTime.parse("2024-03-01T23:42:32.713Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -192,16 +203,16 @@ Update a deduction
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchHrisDeduction" method="patch" path="/hris/{connection_id}/deduction/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchHrisDeduction" method="patch" path="/hris/{connection_id}/deduction/{id}" example="hris_deduction" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchHrisDeductionRequest;
 import to.unified.unified_java_sdk.models.operations.PatchHrisDeductionResponse;
-import to.unified.unified_java_sdk.models.shared.HrisDeduction;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -215,6 +226,17 @@ public class Application {
 
         PatchHrisDeductionRequest req = PatchHrisDeductionRequest.builder()
                 .hrisDeduction(HrisDeduction.builder()
+                    .amount(139655d)
+                    .coverageLevel(HrisDeductionCoverageLevel.EMPLOYEE_ONLY)
+                    .createdAt(OffsetDateTime.parse("2020-02-05T01:46:31.384Z"))
+                    .endAt(OffsetDateTime.parse("2026-05-22T22:53:01.279Z"))
+                    .frequency(HrisDeductionFrequency.MONTH)
+                    .id("97cd633a-aa8b-4099-b8f8-f1467cc7eb2c")
+                    .isActive(false)
+                    .notes("Carmen desidero.")
+                    .startAt(OffsetDateTime.parse("2025-02-18T04:38:44.658Z"))
+                    .type(HrisDeductionType.FIXED)
+                    .updatedAt(OffsetDateTime.parse("2024-03-01T23:42:32.717Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -309,16 +331,16 @@ Update a deduction
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateHrisDeduction" method="put" path="/hris/{connection_id}/deduction/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateHrisDeduction" method="put" path="/hris/{connection_id}/deduction/{id}" example="hris_deduction" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateHrisDeductionRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateHrisDeductionResponse;
-import to.unified.unified_java_sdk.models.shared.HrisDeduction;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -332,6 +354,17 @@ public class Application {
 
         UpdateHrisDeductionRequest req = UpdateHrisDeductionRequest.builder()
                 .hrisDeduction(HrisDeduction.builder()
+                    .amount(139655d)
+                    .coverageLevel(HrisDeductionCoverageLevel.EMPLOYEE_ONLY)
+                    .createdAt(OffsetDateTime.parse("2020-02-05T01:46:31.384Z"))
+                    .endAt(OffsetDateTime.parse("2026-05-22T22:53:01.279Z"))
+                    .frequency(HrisDeductionFrequency.MONTH)
+                    .id("97cd633a-aa8b-4099-b8f8-f1467cc7eb2c")
+                    .isActive(false)
+                    .notes("Carmen desidero.")
+                    .startAt(OffsetDateTime.parse("2025-02-18T04:38:44.658Z"))
+                    .type(HrisDeductionType.FIXED)
+                    .updatedAt(OffsetDateTime.parse("2024-03-01T23:42:32.717Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

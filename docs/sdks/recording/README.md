@@ -19,16 +19,17 @@ Create a recording
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createUcRecording" method="post" path="/uc/{connection_id}/recording" -->
+<!-- UsageSnippet language="java" operationID="createUcRecording" method="post" path="/uc/{connection_id}/recording" example="uc_recording" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateUcRecordingRequest;
 import to.unified.unified_java_sdk.models.operations.CreateUcRecordingResponse;
-import to.unified.unified_java_sdk.models.shared.Security;
-import to.unified.unified_java_sdk.models.shared.UcRecording;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -42,6 +43,18 @@ public class Application {
 
         CreateUcRecordingRequest req = CreateUcRecordingRequest.builder()
                 .ucRecording(UcRecording.builder()
+                    .contacts(List.of())
+                    .createdAt(OffsetDateTime.parse("2022-09-17T19:41:46.956Z"))
+                    .endAt(OffsetDateTime.parse("2024-04-21T20:25:37.089Z"))
+                    .expiresAt(OffsetDateTime.parse("2026-03-28T16:21:59.272Z"))
+                    .id("f159e1de-c6df-4fca-b181-b2205dd29d42")
+                    .media(List.of())
+                    .startAt(OffsetDateTime.parse("2023-04-22T20:25:31.818Z"))
+                    .type(UcRecordingType.INBOUND)
+                    .updatedAt(OffsetDateTime.parse("2025-02-24T08:24:25.608Z"))
+                    .userName("Melyna Larson")
+                    .userPhone("1-915-327-0429 x509")
+                    .webUrl("https://spherical-comparison.org")
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -309,16 +322,17 @@ Update a recording
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchUcRecording" method="patch" path="/uc/{connection_id}/recording/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchUcRecording" method="patch" path="/uc/{connection_id}/recording/{id}" example="uc_recording" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchUcRecordingRequest;
 import to.unified.unified_java_sdk.models.operations.PatchUcRecordingResponse;
-import to.unified.unified_java_sdk.models.shared.Security;
-import to.unified.unified_java_sdk.models.shared.UcRecording;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -332,6 +346,18 @@ public class Application {
 
         PatchUcRecordingRequest req = PatchUcRecordingRequest.builder()
                 .ucRecording(UcRecording.builder()
+                    .contacts(List.of())
+                    .createdAt(OffsetDateTime.parse("2022-09-17T19:41:46.956Z"))
+                    .endAt(OffsetDateTime.parse("2024-04-21T20:25:37.108Z"))
+                    .expiresAt(OffsetDateTime.parse("2026-03-28T16:21:59.313Z"))
+                    .id("f852c6c7-c340-42b3-8b0b-bd899a5017c7")
+                    .media(List.of())
+                    .startAt(OffsetDateTime.parse("2023-04-22T20:25:31.825Z"))
+                    .type(UcRecordingType.INBOUND)
+                    .updatedAt(OffsetDateTime.parse("2025-02-24T08:24:25.637Z"))
+                    .userName("Melyna Larson")
+                    .userPhone("1-915-327-0429 x509")
+                    .webUrl("https://spherical-comparison.org")
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -426,16 +452,17 @@ Update a recording
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateUcRecording" method="put" path="/uc/{connection_id}/recording/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateUcRecording" method="put" path="/uc/{connection_id}/recording/{id}" example="uc_recording" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateUcRecordingRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateUcRecordingResponse;
-import to.unified.unified_java_sdk.models.shared.Security;
-import to.unified.unified_java_sdk.models.shared.UcRecording;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -449,6 +476,18 @@ public class Application {
 
         UpdateUcRecordingRequest req = UpdateUcRecordingRequest.builder()
                 .ucRecording(UcRecording.builder()
+                    .contacts(List.of())
+                    .createdAt(OffsetDateTime.parse("2022-09-17T19:41:46.956Z"))
+                    .endAt(OffsetDateTime.parse("2024-04-21T20:25:37.108Z"))
+                    .expiresAt(OffsetDateTime.parse("2026-03-28T16:21:59.313Z"))
+                    .id("f852c6c7-c340-42b3-8b0b-bd899a5017c7")
+                    .media(List.of())
+                    .startAt(OffsetDateTime.parse("2023-04-22T20:25:31.825Z"))
+                    .type(UcRecordingType.INBOUND)
+                    .updatedAt(OffsetDateTime.parse("2025-02-24T08:24:25.637Z"))
+                    .userName("Melyna Larson")
+                    .userPhone("1-915-327-0429 x509")
+                    .webUrl("https://spherical-comparison.org")
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

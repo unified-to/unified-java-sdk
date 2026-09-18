@@ -30,16 +30,17 @@ Create a campaign
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createMartechCampaign" method="post" path="/martech/{connection_id}/campaign" -->
+<!-- UsageSnippet language="java" operationID="createMartechCampaign" method="post" path="/martech/{connection_id}/campaign" example="martech_campaign" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateMartechCampaignRequest;
 import to.unified.unified_java_sdk.models.operations.CreateMartechCampaignResponse;
-import to.unified.unified_java_sdk.models.shared.MarketingCampaign;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -53,6 +54,20 @@ public class Application {
 
         CreateMartechCampaignRequest req = CreateMartechCampaignRequest.builder()
                 .marketingCampaign(MarketingCampaign.builder()
+                    .createdAt(OffsetDateTime.parse("2023-08-01T22:29:12.121Z"))
+                    .fromEmail("Nick.Beahan@hotmail.com")
+                    .fromName("Javier Rempel")
+                    .id("1d47a766-5cc6-4e40-959e-2dc9f36995c1")
+                    .listIds(List.of(
+                        "bde5cab9-cf2f-4ed5-adab-b33c88bac5af"))
+                    .name("Consequatur atqui sustineo.")
+                    .previewText("Bellicus tener cinis causa cavus toties.")
+                    .replyToEmail("Antwan.Abshire@hotmail.com")
+                    .sendAt(OffsetDateTime.parse("2023-03-28T12:33:25.052Z"))
+                    .status(MarketingCampaignStatus.SENT)
+                    .subjectLine("Depromo depulso turpis teres apparatus placeat ventus tolero cunctatio.")
+                    .type("plaintext")
+                    .updatedAt(OffsetDateTime.parse("2023-12-17T22:11:31.702Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -90,16 +105,16 @@ Create a list
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createMartechList" method="post" path="/martech/{connection_id}/list" -->
+<!-- UsageSnippet language="java" operationID="createMartechList" method="post" path="/martech/{connection_id}/list" example="martech_list" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateMartechListRequest;
 import to.unified.unified_java_sdk.models.operations.CreateMartechListResponse;
-import to.unified.unified_java_sdk.models.shared.MarketingList;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -113,6 +128,26 @@ public class Application {
 
         CreateMartechListRequest req = CreateMartechListRequest.builder()
                 .marketingList(MarketingList.builder()
+                    .address(PropertyMarketingListAddress.builder()
+                        .address1("922 Elmore Manor")
+                        .address2("Suite 925")
+                        .city("Deerfield Beach")
+                        .country("Bahrain")
+                        .postalCode("30765-6471")
+                        .region("FL")
+                        .build())
+                    .createdAt(OffsetDateTime.parse("2019-09-18T02:01:36.950Z"))
+                    .description("Currus.")
+                    .id("8d9f0783-8b3b-4844-871c-a335856a11fa")
+                    .isActive(true)
+                    .language("it")
+                    .name("Annette Nolan")
+                    .senderCompany("Hickle - Homenick")
+                    .senderEmail("Matt_Steuber@hotmail.com")
+                    .senderName("Salvatore Roob")
+                    .senderPhone("896-328-1153 x4957")
+                    .subject("Tenetur thymum circumvenio triumphus celo.")
+                    .updatedAt(OffsetDateTime.parse("2022-08-30T12:23:12.884Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -150,16 +185,17 @@ Create a member
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createMartechMember" method="post" path="/martech/{connection_id}/member" -->
+<!-- UsageSnippet language="java" operationID="createMartechMember" method="post" path="/martech/{connection_id}/member" example="martech_member" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateMartechMemberRequest;
 import to.unified.unified_java_sdk.models.operations.CreateMartechMemberResponse;
-import to.unified.unified_java_sdk.models.shared.MarketingMember;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -173,6 +209,30 @@ public class Application {
 
         CreateMartechMemberRequest req = CreateMartechMemberRequest.builder()
                 .marketingMember(MarketingMember.builder()
+                    .company("Miller - Franecki")
+                    .createdAt(OffsetDateTime.parse("2022-04-15T15:32:38.496Z"))
+                    .emails(List.of(
+                        MarketingEmail.builder()
+                            .email("Thalia.Abernathy61@gmail.com")
+                            .type(MarketingEmailType.HOME)
+                            .build(),
+                        MarketingEmail.builder()
+                            .email("Maymie59@hotmail.com")
+                            .type(MarketingEmailType.HOME)
+                            .build(),
+                        MarketingEmail.builder()
+                            .email("Coty27@hotmail.com")
+                            .type(MarketingEmailType.WORK)
+                            .build()))
+                    .firstName("Jude")
+                    .id("a0a955df-e281-46e9-af34-0bcaf970081d")
+                    .lastName("Leffler")
+                    .name("Jude Leffler")
+                    .status(MarketingMemberStatus.UNSUBSCRIBED)
+                    .tags(List.of(
+                        "vinco",
+                        "ceno"))
+                    .updatedAt(OffsetDateTime.parse("2025-06-15T05:07:12.559Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -612,16 +672,17 @@ Update a campaign
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchMartechCampaign" method="patch" path="/martech/{connection_id}/campaign/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchMartechCampaign" method="patch" path="/martech/{connection_id}/campaign/{id}" example="martech_campaign" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchMartechCampaignRequest;
 import to.unified.unified_java_sdk.models.operations.PatchMartechCampaignResponse;
-import to.unified.unified_java_sdk.models.shared.MarketingCampaign;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -635,6 +696,20 @@ public class Application {
 
         PatchMartechCampaignRequest req = PatchMartechCampaignRequest.builder()
                 .marketingCampaign(MarketingCampaign.builder()
+                    .createdAt(OffsetDateTime.parse("2023-08-01T22:29:12.121Z"))
+                    .fromEmail("Nick.Beahan@hotmail.com")
+                    .fromName("Javier Rempel")
+                    .id("a65cd827-3a78-44a7-846e-2bca453f14c1")
+                    .listIds(List.of(
+                        "bde5cab9-cf2f-4ed5-adab-b33c88bac5af"))
+                    .name("Consequatur atqui sustineo.")
+                    .previewText("Bellicus tener cinis causa cavus toties.")
+                    .replyToEmail("Antwan.Abshire@hotmail.com")
+                    .sendAt(OffsetDateTime.parse("2023-03-28T12:33:25.052Z"))
+                    .status(MarketingCampaignStatus.SENT)
+                    .subjectLine("Depromo depulso turpis teres apparatus placeat ventus tolero cunctatio.")
+                    .type("plaintext")
+                    .updatedAt(OffsetDateTime.parse("2023-12-17T22:11:31.702Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -673,16 +748,16 @@ Update a list
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchMartechList" method="patch" path="/martech/{connection_id}/list/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchMartechList" method="patch" path="/martech/{connection_id}/list/{id}" example="martech_list" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchMartechListRequest;
 import to.unified.unified_java_sdk.models.operations.PatchMartechListResponse;
-import to.unified.unified_java_sdk.models.shared.MarketingList;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -696,6 +771,26 @@ public class Application {
 
         PatchMartechListRequest req = PatchMartechListRequest.builder()
                 .marketingList(MarketingList.builder()
+                    .address(PropertyMarketingListAddress.builder()
+                        .address1("922 Elmore Manor")
+                        .address2("Suite 925")
+                        .city("Deerfield Beach")
+                        .country("Bahrain")
+                        .postalCode("30765-6471")
+                        .region("FL")
+                        .build())
+                    .createdAt(OffsetDateTime.parse("2019-09-18T02:01:36.950Z"))
+                    .description("Currus.")
+                    .id("bb5014f1-fa07-4257-8cb4-383e4c685d06")
+                    .isActive(true)
+                    .language("it")
+                    .name("Annette Nolan")
+                    .senderCompany("Hickle - Homenick")
+                    .senderEmail("Matt_Steuber@hotmail.com")
+                    .senderName("Salvatore Roob")
+                    .senderPhone("896-328-1153 x4957")
+                    .subject("Tenetur thymum circumvenio triumphus celo.")
+                    .updatedAt(OffsetDateTime.parse("2022-08-30T12:23:12.891Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -734,16 +829,17 @@ Update a member
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchMartechMember" method="patch" path="/martech/{connection_id}/member/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchMartechMember" method="patch" path="/martech/{connection_id}/member/{id}" example="martech_member" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchMartechMemberRequest;
 import to.unified.unified_java_sdk.models.operations.PatchMartechMemberResponse;
-import to.unified.unified_java_sdk.models.shared.MarketingMember;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -757,6 +853,30 @@ public class Application {
 
         PatchMartechMemberRequest req = PatchMartechMemberRequest.builder()
                 .marketingMember(MarketingMember.builder()
+                    .company("Miller - Franecki")
+                    .createdAt(OffsetDateTime.parse("2022-04-15T15:32:38.496Z"))
+                    .emails(List.of(
+                        MarketingEmail.builder()
+                            .email("Thalia.Abernathy61@gmail.com")
+                            .type(MarketingEmailType.HOME)
+                            .build(),
+                        MarketingEmail.builder()
+                            .email("Maymie59@hotmail.com")
+                            .type(MarketingEmailType.HOME)
+                            .build(),
+                        MarketingEmail.builder()
+                            .email("Coty27@hotmail.com")
+                            .type(MarketingEmailType.WORK)
+                            .build()))
+                    .firstName("Jude")
+                    .id("5cfa6758-bd0c-4077-8934-7357d115348d")
+                    .lastName("Leffler")
+                    .name("Jude Leffler")
+                    .status(MarketingMemberStatus.UNSUBSCRIBED)
+                    .tags(List.of(
+                        "vinco",
+                        "ceno"))
+                    .updatedAt(OffsetDateTime.parse("2025-06-15T05:07:12.567Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -963,16 +1083,17 @@ Update a campaign
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateMartechCampaign" method="put" path="/martech/{connection_id}/campaign/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateMartechCampaign" method="put" path="/martech/{connection_id}/campaign/{id}" example="martech_campaign" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateMartechCampaignRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateMartechCampaignResponse;
-import to.unified.unified_java_sdk.models.shared.MarketingCampaign;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -986,6 +1107,20 @@ public class Application {
 
         UpdateMartechCampaignRequest req = UpdateMartechCampaignRequest.builder()
                 .marketingCampaign(MarketingCampaign.builder()
+                    .createdAt(OffsetDateTime.parse("2023-08-01T22:29:12.121Z"))
+                    .fromEmail("Nick.Beahan@hotmail.com")
+                    .fromName("Javier Rempel")
+                    .id("a65cd827-3a78-44a7-846e-2bca453f14c1")
+                    .listIds(List.of(
+                        "bde5cab9-cf2f-4ed5-adab-b33c88bac5af"))
+                    .name("Consequatur atqui sustineo.")
+                    .previewText("Bellicus tener cinis causa cavus toties.")
+                    .replyToEmail("Antwan.Abshire@hotmail.com")
+                    .sendAt(OffsetDateTime.parse("2023-03-28T12:33:25.052Z"))
+                    .status(MarketingCampaignStatus.SENT)
+                    .subjectLine("Depromo depulso turpis teres apparatus placeat ventus tolero cunctatio.")
+                    .type("plaintext")
+                    .updatedAt(OffsetDateTime.parse("2023-12-17T22:11:31.702Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -1024,16 +1159,16 @@ Update a list
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateMartechList" method="put" path="/martech/{connection_id}/list/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateMartechList" method="put" path="/martech/{connection_id}/list/{id}" example="martech_list" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateMartechListRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateMartechListResponse;
-import to.unified.unified_java_sdk.models.shared.MarketingList;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -1047,6 +1182,26 @@ public class Application {
 
         UpdateMartechListRequest req = UpdateMartechListRequest.builder()
                 .marketingList(MarketingList.builder()
+                    .address(PropertyMarketingListAddress.builder()
+                        .address1("922 Elmore Manor")
+                        .address2("Suite 925")
+                        .city("Deerfield Beach")
+                        .country("Bahrain")
+                        .postalCode("30765-6471")
+                        .region("FL")
+                        .build())
+                    .createdAt(OffsetDateTime.parse("2019-09-18T02:01:36.950Z"))
+                    .description("Currus.")
+                    .id("bb5014f1-fa07-4257-8cb4-383e4c685d06")
+                    .isActive(true)
+                    .language("it")
+                    .name("Annette Nolan")
+                    .senderCompany("Hickle - Homenick")
+                    .senderEmail("Matt_Steuber@hotmail.com")
+                    .senderName("Salvatore Roob")
+                    .senderPhone("896-328-1153 x4957")
+                    .subject("Tenetur thymum circumvenio triumphus celo.")
+                    .updatedAt(OffsetDateTime.parse("2022-08-30T12:23:12.891Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -1085,16 +1240,17 @@ Update a member
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateMartechMember" method="put" path="/martech/{connection_id}/member/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateMartechMember" method="put" path="/martech/{connection_id}/member/{id}" example="martech_member" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateMartechMemberRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateMartechMemberResponse;
-import to.unified.unified_java_sdk.models.shared.MarketingMember;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -1108,6 +1264,30 @@ public class Application {
 
         UpdateMartechMemberRequest req = UpdateMartechMemberRequest.builder()
                 .marketingMember(MarketingMember.builder()
+                    .company("Miller - Franecki")
+                    .createdAt(OffsetDateTime.parse("2022-04-15T15:32:38.496Z"))
+                    .emails(List.of(
+                        MarketingEmail.builder()
+                            .email("Thalia.Abernathy61@gmail.com")
+                            .type(MarketingEmailType.HOME)
+                            .build(),
+                        MarketingEmail.builder()
+                            .email("Maymie59@hotmail.com")
+                            .type(MarketingEmailType.HOME)
+                            .build(),
+                        MarketingEmail.builder()
+                            .email("Coty27@hotmail.com")
+                            .type(MarketingEmailType.WORK)
+                            .build()))
+                    .firstName("Jude")
+                    .id("5cfa6758-bd0c-4077-8934-7357d115348d")
+                    .lastName("Leffler")
+                    .name("Jude Leffler")
+                    .status(MarketingMemberStatus.UNSUBSCRIBED)
+                    .tags(List.of(
+                        "vinco",
+                        "ceno"))
+                    .updatedAt(OffsetDateTime.parse("2025-06-15T05:07:12.567Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

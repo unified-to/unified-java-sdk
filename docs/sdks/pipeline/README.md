@@ -17,16 +17,17 @@ Create a pipeline
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createCrmPipeline" method="post" path="/crm/{connection_id}/pipeline" -->
+<!-- UsageSnippet language="java" operationID="createCrmPipeline" method="post" path="/crm/{connection_id}/pipeline" example="crm_pipeline" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateCrmPipelineRequest;
 import to.unified.unified_java_sdk.models.operations.CreateCrmPipelineResponse;
-import to.unified.unified_java_sdk.models.shared.CrmPipeline;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -40,6 +41,24 @@ public class Application {
 
         CreateCrmPipelineRequest req = CreateCrmPipelineRequest.builder()
                 .crmPipeline(CrmPipeline.builder()
+                    .createdAt(OffsetDateTime.parse("2022-12-28T13:45:38.446Z"))
+                    .dealProbability(99d)
+                    .displayOrder(8d)
+                    .id("0212937f-ae58-406d-83a3-81d26a8e6868")
+                    .isActive(true)
+                    .name("Small Steel Bacon")
+                    .stages(List.of(
+                        CrmStage.builder()
+                            .active(false)
+                            .createdAt(OffsetDateTime.parse("2022-12-28T13:45:38.446Z"))
+                            .dealProbability(84d)
+                            .displayOrder(72d)
+                            .id("9ca5b3e9-1498-4027-8f0a-c108c9557292")
+                            .isClosed(true)
+                            .name("Veniam.")
+                            .updatedAt(OffsetDateTime.parse("2025-09-16T09:59:54.930Z"))
+                            .build()))
+                    .updatedAt(OffsetDateTime.parse("2025-10-07T15:04:42.495Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -192,16 +211,17 @@ Update a pipeline
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchCrmPipeline" method="patch" path="/crm/{connection_id}/pipeline/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchCrmPipeline" method="patch" path="/crm/{connection_id}/pipeline/{id}" example="crm_pipeline" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchCrmPipelineRequest;
 import to.unified.unified_java_sdk.models.operations.PatchCrmPipelineResponse;
-import to.unified.unified_java_sdk.models.shared.CrmPipeline;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -215,6 +235,24 @@ public class Application {
 
         PatchCrmPipelineRequest req = PatchCrmPipelineRequest.builder()
                 .crmPipeline(CrmPipeline.builder()
+                    .createdAt(OffsetDateTime.parse("2022-12-28T13:45:38.446Z"))
+                    .dealProbability(99d)
+                    .displayOrder(8d)
+                    .id("00265dd3-4115-4cab-b919-ae3bbd699676")
+                    .isActive(true)
+                    .name("Small Steel Bacon")
+                    .stages(List.of(
+                        CrmStage.builder()
+                            .active(false)
+                            .createdAt(OffsetDateTime.parse("2022-12-28T13:45:38.446Z"))
+                            .dealProbability(84d)
+                            .displayOrder(72d)
+                            .id("81c3d0ad-e2bd-4a7e-964c-2875e9eab41f")
+                            .isClosed(true)
+                            .name("Veniam.")
+                            .updatedAt(OffsetDateTime.parse("2025-09-16T09:59:54.936Z"))
+                            .build()))
+                    .updatedAt(OffsetDateTime.parse("2025-10-07T15:04:42.501Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -309,16 +347,17 @@ Update a pipeline
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateCrmPipeline" method="put" path="/crm/{connection_id}/pipeline/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateCrmPipeline" method="put" path="/crm/{connection_id}/pipeline/{id}" example="crm_pipeline" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateCrmPipelineRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateCrmPipelineResponse;
-import to.unified.unified_java_sdk.models.shared.CrmPipeline;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -332,6 +371,24 @@ public class Application {
 
         UpdateCrmPipelineRequest req = UpdateCrmPipelineRequest.builder()
                 .crmPipeline(CrmPipeline.builder()
+                    .createdAt(OffsetDateTime.parse("2022-12-28T13:45:38.446Z"))
+                    .dealProbability(99d)
+                    .displayOrder(8d)
+                    .id("00265dd3-4115-4cab-b919-ae3bbd699676")
+                    .isActive(true)
+                    .name("Small Steel Bacon")
+                    .stages(List.of(
+                        CrmStage.builder()
+                            .active(false)
+                            .createdAt(OffsetDateTime.parse("2022-12-28T13:45:38.446Z"))
+                            .dealProbability(84d)
+                            .displayOrder(72d)
+                            .id("81c3d0ad-e2bd-4a7e-964c-2875e9eab41f")
+                            .isClosed(true)
+                            .name("Veniam.")
+                            .updatedAt(OffsetDateTime.parse("2025-09-16T09:59:54.936Z"))
+                            .build()))
+                    .updatedAt(OffsetDateTime.parse("2025-10-07T15:04:42.501Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

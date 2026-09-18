@@ -83,16 +83,18 @@ Create a project
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createTaskProject" method="post" path="/task/{connection_id}/project" -->
+<!-- UsageSnippet language="java" operationID="createTaskProject" method="post" path="/task/{connection_id}/project" example="task_project" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
+import java.util.Map;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateTaskProjectRequest;
 import to.unified.unified_java_sdk.models.operations.CreateTaskProjectResponse;
-import to.unified.unified_java_sdk.models.shared.Security;
-import to.unified.unified_java_sdk.models.shared.TaskProject;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -106,6 +108,32 @@ public class Application {
 
         CreateTaskProjectRequest req = CreateTaskProjectRequest.builder()
                 .taskProject(TaskProject.builder()
+                    .createdAt(OffsetDateTime.parse("2023-06-23T16:39:40.446Z"))
+                    .description("Valetudo aggredior accommodo curiositas vox.")
+                    .hasChildren(false)
+                    .hasTasks(false)
+                    .id("b89dd93c-edbd-47f7-8077-f16b2f9cf4a1")
+                    .metadata(List.of(
+                        TaskMetadata.builder()
+                            .extraData(TaskMetadataExtraData.of(Map.ofEntries(
+                            )))
+                            .format(TaskMetadataFormat.TEXT)
+                            .id("db969ea0-9310-4a66-a696-8fceb5ef1409")
+                            .namespace("custom")
+                            .slug("decens")
+                            .value(TaskMetadataValue.of("uterque"))
+                            .build(),
+                        TaskMetadata.builder()
+                            .extraData(TaskMetadataExtraData.of(Map.ofEntries(
+                            )))
+                            .format(TaskMetadataFormat.TEXT)
+                            .id("f2df3bed-7357-48cd-bf87-bd708995401a")
+                            .namespace("custom")
+                            .slug("benevolentia")
+                            .value(TaskMetadataValue.of("pariatur"))
+                            .build()))
+                    .name("Garden")
+                    .updatedAt(OffsetDateTime.parse("2023-10-08T14:52:33.709Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -434,16 +462,18 @@ Update a project
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchTaskProject" method="patch" path="/task/{connection_id}/project/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchTaskProject" method="patch" path="/task/{connection_id}/project/{id}" example="task_project" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
+import java.util.Map;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchTaskProjectRequest;
 import to.unified.unified_java_sdk.models.operations.PatchTaskProjectResponse;
-import to.unified.unified_java_sdk.models.shared.Security;
-import to.unified.unified_java_sdk.models.shared.TaskProject;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -457,6 +487,32 @@ public class Application {
 
         PatchTaskProjectRequest req = PatchTaskProjectRequest.builder()
                 .taskProject(TaskProject.builder()
+                    .createdAt(OffsetDateTime.parse("2023-06-23T16:39:40.446Z"))
+                    .description("Valetudo aggredior accommodo curiositas vox.")
+                    .hasChildren(false)
+                    .hasTasks(false)
+                    .id("a7d75864-ea8c-4f67-a06e-003c3dc5a146")
+                    .metadata(List.of(
+                        TaskMetadata.builder()
+                            .extraData(TaskMetadataExtraData.of(Map.ofEntries(
+                            )))
+                            .format(TaskMetadataFormat.TEXT)
+                            .id("5783b242-6b8f-46b3-8562-811ab290f6b2")
+                            .namespace("custom")
+                            .slug("decens")
+                            .value(TaskMetadataValue.of("uterque"))
+                            .build(),
+                        TaskMetadata.builder()
+                            .extraData(TaskMetadataExtraData.of(Map.ofEntries(
+                            )))
+                            .format(TaskMetadataFormat.TEXT)
+                            .id("8cba443a-54d7-4e5a-9bd4-478f3bc6680e")
+                            .namespace("custom")
+                            .slug("benevolentia")
+                            .value(TaskMetadataValue.of("pariatur"))
+                            .build()))
+                    .name("Garden")
+                    .updatedAt(OffsetDateTime.parse("2023-10-08T14:52:33.710Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -668,16 +724,18 @@ Update a project
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateTaskProject" method="put" path="/task/{connection_id}/project/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateTaskProject" method="put" path="/task/{connection_id}/project/{id}" example="task_project" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
+import java.util.Map;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateTaskProjectRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateTaskProjectResponse;
-import to.unified.unified_java_sdk.models.shared.Security;
-import to.unified.unified_java_sdk.models.shared.TaskProject;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -691,6 +749,32 @@ public class Application {
 
         UpdateTaskProjectRequest req = UpdateTaskProjectRequest.builder()
                 .taskProject(TaskProject.builder()
+                    .createdAt(OffsetDateTime.parse("2023-06-23T16:39:40.446Z"))
+                    .description("Valetudo aggredior accommodo curiositas vox.")
+                    .hasChildren(false)
+                    .hasTasks(false)
+                    .id("a7d75864-ea8c-4f67-a06e-003c3dc5a146")
+                    .metadata(List.of(
+                        TaskMetadata.builder()
+                            .extraData(TaskMetadataExtraData.of(Map.ofEntries(
+                            )))
+                            .format(TaskMetadataFormat.TEXT)
+                            .id("5783b242-6b8f-46b3-8562-811ab290f6b2")
+                            .namespace("custom")
+                            .slug("decens")
+                            .value(TaskMetadataValue.of("uterque"))
+                            .build(),
+                        TaskMetadata.builder()
+                            .extraData(TaskMetadataExtraData.of(Map.ofEntries(
+                            )))
+                            .format(TaskMetadataFormat.TEXT)
+                            .id("8cba443a-54d7-4e5a-9bd4-478f3bc6680e")
+                            .namespace("custom")
+                            .slug("benevolentia")
+                            .value(TaskMetadataValue.of("pariatur"))
+                            .build()))
+                    .name("Garden")
+                    .updatedAt(OffsetDateTime.parse("2023-10-08T14:52:33.710Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

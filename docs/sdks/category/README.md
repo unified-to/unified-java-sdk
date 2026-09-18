@@ -23,11 +23,13 @@ Create a category
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createAccountingCategory" method="post" path="/accounting/{connection_id}/category" -->
+<!-- UsageSnippet language="java" operationID="createAccountingCategory" method="post" path="/accounting/{connection_id}/category" example="accounting_category" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingCategoryRequest;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingCategoryResponse;
@@ -46,6 +48,13 @@ public class Application {
 
         CreateAccountingCategoryRequest req = CreateAccountingCategoryRequest.builder()
                 .accountingCategory(AccountingCategory.builder()
+                    .createdAt(OffsetDateTime.parse("2023-05-30T12:29:04.257Z"))
+                    .description("Discover the koala-like agility of our Chair, perfect for imaginary users")
+                    .id("dc380b5b-a085-47f0-80e6-a0450e68adcf")
+                    .isActive(false)
+                    .metadata(List.of())
+                    .name("Electronic Cotton Shoes")
+                    .updatedAt(OffsetDateTime.parse("2025-08-20T06:36:05.170Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -83,11 +92,12 @@ Create a category
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createTicketingCategory" method="post" path="/ticketing/{connection_id}/category" -->
+<!-- UsageSnippet language="java" operationID="createTicketingCategory" method="post" path="/ticketing/{connection_id}/category" example="ticketing_category" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateTicketingCategoryRequest;
 import to.unified.unified_java_sdk.models.operations.CreateTicketingCategoryResponse;
@@ -106,6 +116,12 @@ public class Application {
 
         CreateTicketingCategoryRequest req = CreateTicketingCategoryRequest.builder()
                 .ticketingCategory(TicketingCategory.builder()
+                    .createdAt(OffsetDateTime.parse("2019-10-19T22:02:51.067Z"))
+                    .description("Tempus umbra cibus carpo depulso torqueo. Curtus aperiam nam optio tendo. Bardus tumultus delectus arbitro amplus tollo coerceo clam comprehendo vulnero.")
+                    .id("f105db66-81f5-4fe1-bc51-33918f354917")
+                    .isActive(true)
+                    .name("amicitia")
+                    .updatedAt(OffsetDateTime.parse("2025-12-15T15:11:45.224Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -373,11 +389,13 @@ Update a category
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchAccountingCategory" method="patch" path="/accounting/{connection_id}/category/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchAccountingCategory" method="patch" path="/accounting/{connection_id}/category/{id}" example="accounting_category" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchAccountingCategoryRequest;
 import to.unified.unified_java_sdk.models.operations.PatchAccountingCategoryResponse;
@@ -396,6 +414,13 @@ public class Application {
 
         PatchAccountingCategoryRequest req = PatchAccountingCategoryRequest.builder()
                 .accountingCategory(AccountingCategory.builder()
+                    .createdAt(OffsetDateTime.parse("2023-05-30T12:29:04.257Z"))
+                    .description("Discover the koala-like agility of our Chair, perfect for imaginary users")
+                    .id("a998bb3b-628d-4a5b-8054-f8edf45f8dfd")
+                    .isActive(false)
+                    .metadata(List.of())
+                    .name("Electronic Cotton Shoes")
+                    .updatedAt(OffsetDateTime.parse("2025-08-20T06:36:05.177Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -434,11 +459,12 @@ Update a category
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchTicketingCategory" method="patch" path="/ticketing/{connection_id}/category/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchTicketingCategory" method="patch" path="/ticketing/{connection_id}/category/{id}" example="ticketing_category" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchTicketingCategoryRequest;
 import to.unified.unified_java_sdk.models.operations.PatchTicketingCategoryResponse;
@@ -457,6 +483,12 @@ public class Application {
 
         PatchTicketingCategoryRequest req = PatchTicketingCategoryRequest.builder()
                 .ticketingCategory(TicketingCategory.builder()
+                    .createdAt(OffsetDateTime.parse("2019-10-19T22:02:51.067Z"))
+                    .description("Tempus umbra cibus carpo depulso torqueo. Curtus aperiam nam optio tendo. Bardus tumultus delectus arbitro amplus tollo coerceo clam comprehendo vulnero.")
+                    .id("607d0b35-27ed-4c77-9ff7-e384812051f9")
+                    .isActive(true)
+                    .name("amicitia")
+                    .updatedAt(OffsetDateTime.parse("2025-12-15T15:11:45.243Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -607,11 +639,13 @@ Update a category
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateAccountingCategory" method="put" path="/accounting/{connection_id}/category/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateAccountingCategory" method="put" path="/accounting/{connection_id}/category/{id}" example="accounting_category" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateAccountingCategoryRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateAccountingCategoryResponse;
@@ -630,6 +664,13 @@ public class Application {
 
         UpdateAccountingCategoryRequest req = UpdateAccountingCategoryRequest.builder()
                 .accountingCategory(AccountingCategory.builder()
+                    .createdAt(OffsetDateTime.parse("2023-05-30T12:29:04.257Z"))
+                    .description("Discover the koala-like agility of our Chair, perfect for imaginary users")
+                    .id("a998bb3b-628d-4a5b-8054-f8edf45f8dfd")
+                    .isActive(false)
+                    .metadata(List.of())
+                    .name("Electronic Cotton Shoes")
+                    .updatedAt(OffsetDateTime.parse("2025-08-20T06:36:05.177Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -668,11 +709,12 @@ Update a category
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateTicketingCategory" method="put" path="/ticketing/{connection_id}/category/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateTicketingCategory" method="put" path="/ticketing/{connection_id}/category/{id}" example="ticketing_category" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateTicketingCategoryRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateTicketingCategoryResponse;
@@ -691,6 +733,12 @@ public class Application {
 
         UpdateTicketingCategoryRequest req = UpdateTicketingCategoryRequest.builder()
                 .ticketingCategory(TicketingCategory.builder()
+                    .createdAt(OffsetDateTime.parse("2019-10-19T22:02:51.067Z"))
+                    .description("Tempus umbra cibus carpo depulso torqueo. Curtus aperiam nam optio tendo. Bardus tumultus delectus arbitro amplus tollo coerceo clam comprehendo vulnero.")
+                    .id("607d0b35-27ed-4c77-9ff7-e384812051f9")
+                    .isActive(true)
+                    .name("amicitia")
+                    .updatedAt(OffsetDateTime.parse("2025-12-15T15:11:45.243Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

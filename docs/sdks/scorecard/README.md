@@ -17,16 +17,17 @@ Create a scorecard
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createAtsScorecard" method="post" path="/ats/{connection_id}/scorecard" -->
+<!-- UsageSnippet language="java" operationID="createAtsScorecard" method="post" path="/ats/{connection_id}/scorecard" example="ats_scorecard" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateAtsScorecardRequest;
 import to.unified.unified_java_sdk.models.operations.CreateAtsScorecardResponse;
-import to.unified.unified_java_sdk.models.shared.AtsScorecard;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -40,6 +41,21 @@ public class Application {
 
         CreateAtsScorecardRequest req = CreateAtsScorecardRequest.builder()
                 .atsScorecard(AtsScorecard.builder()
+                    .comment("Maiores enim.")
+                    .createdAt(OffsetDateTime.parse("2022-02-20T17:09:45.498Z"))
+                    .id("47bb49f0-71b5-4a4f-9469-1344ea1e4870")
+                    .questions(List.of(
+                        AtsScorecardQuestion.builder()
+                            .text("Aliquam.")
+                            .description("Sulum textor eveniet facere vita.")
+                            .build(),
+                        AtsScorecardQuestion.builder()
+                            .text("Pecto vulpes libero vomer comburo.")
+                            .answer("Decretum.")
+                            .description("Conatus cicuta doloremque statua bonus.")
+                            .build()))
+                    .recommendation(Recommendation.STRONG_YES)
+                    .updatedAt(OffsetDateTime.parse("2023-05-27T11:10:32.892Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -192,16 +208,17 @@ Update a scorecard
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchAtsScorecard" method="patch" path="/ats/{connection_id}/scorecard/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchAtsScorecard" method="patch" path="/ats/{connection_id}/scorecard/{id}" example="ats_scorecard" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchAtsScorecardRequest;
 import to.unified.unified_java_sdk.models.operations.PatchAtsScorecardResponse;
-import to.unified.unified_java_sdk.models.shared.AtsScorecard;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -215,6 +232,21 @@ public class Application {
 
         PatchAtsScorecardRequest req = PatchAtsScorecardRequest.builder()
                 .atsScorecard(AtsScorecard.builder()
+                    .comment("Maiores enim.")
+                    .createdAt(OffsetDateTime.parse("2022-02-20T17:09:45.498Z"))
+                    .id("324dfa59-f358-4841-a28e-b7836ff6d9e4")
+                    .questions(List.of(
+                        AtsScorecardQuestion.builder()
+                            .text("Aliquam.")
+                            .description("Sulum textor eveniet facere vita.")
+                            .build(),
+                        AtsScorecardQuestion.builder()
+                            .text("Pecto vulpes libero vomer comburo.")
+                            .answer("Decretum.")
+                            .description("Conatus cicuta doloremque statua bonus.")
+                            .build()))
+                    .recommendation(Recommendation.STRONG_YES)
+                    .updatedAt(OffsetDateTime.parse("2023-05-27T11:10:32.894Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -309,16 +341,17 @@ Update a scorecard
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateAtsScorecard" method="put" path="/ats/{connection_id}/scorecard/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateAtsScorecard" method="put" path="/ats/{connection_id}/scorecard/{id}" example="ats_scorecard" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateAtsScorecardRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateAtsScorecardResponse;
-import to.unified.unified_java_sdk.models.shared.AtsScorecard;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -332,6 +365,21 @@ public class Application {
 
         UpdateAtsScorecardRequest req = UpdateAtsScorecardRequest.builder()
                 .atsScorecard(AtsScorecard.builder()
+                    .comment("Maiores enim.")
+                    .createdAt(OffsetDateTime.parse("2022-02-20T17:09:45.498Z"))
+                    .id("324dfa59-f358-4841-a28e-b7836ff6d9e4")
+                    .questions(List.of(
+                        AtsScorecardQuestion.builder()
+                            .text("Aliquam.")
+                            .description("Sulum textor eveniet facere vita.")
+                            .build(),
+                        AtsScorecardQuestion.builder()
+                            .text("Pecto vulpes libero vomer comburo.")
+                            .answer("Decretum.")
+                            .description("Conatus cicuta doloremque statua bonus.")
+                            .build()))
+                    .recommendation(Recommendation.STRONG_YES)
+                    .updatedAt(OffsetDateTime.parse("2023-05-27T11:10:32.894Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

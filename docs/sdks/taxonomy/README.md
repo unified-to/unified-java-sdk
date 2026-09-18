@@ -15,16 +15,17 @@ Create a taxonomy
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createHrisTaxonomy" method="post" path="/hris/{connection_id}/taxonomy" -->
+<!-- UsageSnippet language="java" operationID="createHrisTaxonomy" method="post" path="/hris/{connection_id}/taxonomy" example="hris_taxonomy" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateHrisTaxonomyRequest;
 import to.unified.unified_java_sdk.models.operations.CreateHrisTaxonomyResponse;
-import to.unified.unified_java_sdk.models.shared.HrisTaxonomy;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -38,6 +39,19 @@ public class Application {
 
         CreateHrisTaxonomyRequest req = CreateHrisTaxonomyRequest.builder()
                 .hrisTaxonomy(HrisTaxonomy.builder()
+                    .createdAt(OffsetDateTime.parse("2022-06-23T02:10:00.789Z"))
+                    .description("Apto demonstro audacia adstringo cursim tristis solio careo.")
+                    .domain("Electronics")
+                    .id("ede085db-5709-4d53-a490-746f3de5be17")
+                    .isActive(false)
+                    .name("International Functionality Architect")
+                    .parentId("6524b2a7-6520-4e15-8c4e-1aa6793db837")
+                    .roleIds(List.of(
+                        "2b1ef757-eb4c-4207-8af1-929afe49cd65"))
+                    .subcategory("Bamboo")
+                    .type(HrisTaxonomyType.KNOWLEDGE)
+                    .updatedAt(OffsetDateTime.parse("2023-05-22T04:57:43.336Z"))
+                    .url("https://our-polarisation.name")
                     .build())
                 .connectionId("<id>")
                 .build();

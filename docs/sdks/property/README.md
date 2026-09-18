@@ -17,11 +17,12 @@ Create a property
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createAnalyticsProperty" method="post" path="/analytics/{connection_id}/property" -->
+<!-- UsageSnippet language="java" operationID="createAnalyticsProperty" method="post" path="/analytics/{connection_id}/property" example="analytics_property" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateAnalyticsPropertyRequest;
 import to.unified.unified_java_sdk.models.operations.CreateAnalyticsPropertyResponse;
@@ -40,6 +41,12 @@ public class Application {
 
         CreateAnalyticsPropertyRequest req = CreateAnalyticsPropertyRequest.builder()
                 .analyticsProperty(AnalyticsProperty.builder()
+                    .createdAt(OffsetDateTime.parse("2021-09-05T19:04:58.430Z"))
+                    .currency("USD")
+                    .id("839e126a-c1d9-48e4-94de-156419a6be61")
+                    .name("Daniel, Goldner and Dickinson")
+                    .timezone("UTC")
+                    .updatedAt(OffsetDateTime.parse("2021-09-14T16:36:17.635Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -192,11 +199,12 @@ Update a property
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchAnalyticsProperty" method="patch" path="/analytics/{connection_id}/property/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchAnalyticsProperty" method="patch" path="/analytics/{connection_id}/property/{id}" example="analytics_property" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchAnalyticsPropertyRequest;
 import to.unified.unified_java_sdk.models.operations.PatchAnalyticsPropertyResponse;
@@ -215,6 +223,12 @@ public class Application {
 
         PatchAnalyticsPropertyRequest req = PatchAnalyticsPropertyRequest.builder()
                 .analyticsProperty(AnalyticsProperty.builder()
+                    .createdAt(OffsetDateTime.parse("2021-09-05T19:04:58.430Z"))
+                    .currency("USD")
+                    .id("5958e741-450a-4284-88c1-af3528148dcf")
+                    .name("Daniel, Goldner and Dickinson")
+                    .timezone("UTC")
+                    .updatedAt(OffsetDateTime.parse("2021-09-14T16:36:17.635Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -309,11 +323,12 @@ Update a property
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateAnalyticsProperty" method="put" path="/analytics/{connection_id}/property/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateAnalyticsProperty" method="put" path="/analytics/{connection_id}/property/{id}" example="analytics_property" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateAnalyticsPropertyRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateAnalyticsPropertyResponse;
@@ -332,6 +347,12 @@ public class Application {
 
         UpdateAnalyticsPropertyRequest req = UpdateAnalyticsPropertyRequest.builder()
                 .analyticsProperty(AnalyticsProperty.builder()
+                    .createdAt(OffsetDateTime.parse("2021-09-05T19:04:58.430Z"))
+                    .currency("USD")
+                    .id("5958e741-450a-4284-88c1-af3528148dcf")
+                    .name("Daniel, Goldner and Dickinson")
+                    .timezone("UTC")
+                    .updatedAt(OffsetDateTime.parse("2021-09-14T16:36:17.635Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

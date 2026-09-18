@@ -17,16 +17,16 @@ Create a label
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createShippingLabel" method="post" path="/shipping/{connection_id}/label" -->
+<!-- UsageSnippet language="java" operationID="createShippingLabel" method="post" path="/shipping/{connection_id}/label" example="shipping_label" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateShippingLabelRequest;
 import to.unified.unified_java_sdk.models.operations.CreateShippingLabelResponse;
-import to.unified.unified_java_sdk.models.shared.Security;
-import to.unified.unified_java_sdk.models.shared.ShippingLabel;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -40,6 +40,17 @@ public class Application {
 
         CreateShippingLabelRequest req = CreateShippingLabelRequest.builder()
                 .shippingLabel(ShippingLabel.builder()
+                    .createdAt(OffsetDateTime.parse("2022-11-18T16:45:38.067Z"))
+                    .id("b1a2cbe7-daa0-4fe1-a4db-10b32f67618f")
+                    .isVoided(false)
+                    .labelCost(40.83653403213248)
+                    .labelCostCurrency("USD")
+                    .labelFormat(LabelFormat.PNG)
+                    .labelUrl("https://optimal-meadow.net")
+                    .serviceCode("GIz")
+                    .status(ShippingLabelStatus.EXCEPTION)
+                    .trackingNumber("zYv60FOIBUJ6")
+                    .updatedAt(OffsetDateTime.parse("2024-04-16T18:20:50.737Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -192,16 +203,16 @@ Update a label
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchShippingLabel" method="patch" path="/shipping/{connection_id}/label/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchShippingLabel" method="patch" path="/shipping/{connection_id}/label/{id}" example="shipping_label" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchShippingLabelRequest;
 import to.unified.unified_java_sdk.models.operations.PatchShippingLabelResponse;
-import to.unified.unified_java_sdk.models.shared.Security;
-import to.unified.unified_java_sdk.models.shared.ShippingLabel;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -215,6 +226,17 @@ public class Application {
 
         PatchShippingLabelRequest req = PatchShippingLabelRequest.builder()
                 .shippingLabel(ShippingLabel.builder()
+                    .createdAt(OffsetDateTime.parse("2022-11-18T16:45:38.067Z"))
+                    .id("0936a3b6-f849-46e3-a10d-946d76091c5d")
+                    .isVoided(false)
+                    .labelCost(40.83653403213248)
+                    .labelCostCurrency("USD")
+                    .labelFormat(LabelFormat.PNG)
+                    .labelUrl("https://optimal-meadow.net")
+                    .serviceCode("GIz")
+                    .status(ShippingLabelStatus.EXCEPTION)
+                    .trackingNumber("zYv60FOIBUJ6")
+                    .updatedAt(OffsetDateTime.parse("2024-04-16T18:20:50.742Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -309,16 +331,16 @@ Update a label
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateShippingLabel" method="put" path="/shipping/{connection_id}/label/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateShippingLabel" method="put" path="/shipping/{connection_id}/label/{id}" example="shipping_label" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateShippingLabelRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateShippingLabelResponse;
-import to.unified.unified_java_sdk.models.shared.Security;
-import to.unified.unified_java_sdk.models.shared.ShippingLabel;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -332,6 +354,17 @@ public class Application {
 
         UpdateShippingLabelRequest req = UpdateShippingLabelRequest.builder()
                 .shippingLabel(ShippingLabel.builder()
+                    .createdAt(OffsetDateTime.parse("2022-11-18T16:45:38.067Z"))
+                    .id("0936a3b6-f849-46e3-a10d-946d76091c5d")
+                    .isVoided(false)
+                    .labelCost(40.83653403213248)
+                    .labelCostCurrency("USD")
+                    .labelFormat(LabelFormat.PNG)
+                    .labelUrl("https://optimal-meadow.net")
+                    .serviceCode("GIz")
+                    .status(ShippingLabelStatus.EXCEPTION)
+                    .trackingNumber("zYv60FOIBUJ6")
+                    .updatedAt(OffsetDateTime.parse("2024-04-16T18:20:50.742Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

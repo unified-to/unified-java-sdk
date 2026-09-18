@@ -53,11 +53,12 @@ Create an activity
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createLmsActivity" method="post" path="/lms/{connection_id}/activity" -->
+<!-- UsageSnippet language="java" operationID="createLmsActivity" method="post" path="/lms/{connection_id}/activity" example="lms_activity" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateLmsActivityRequest;
 import to.unified.unified_java_sdk.models.operations.CreateLmsActivityResponse;
@@ -76,6 +77,15 @@ public class Application {
 
         CreateLmsActivityRequest req = CreateLmsActivityRequest.builder()
                 .lmsActivity(LmsActivity.builder()
+                    .assignedGrade("summopere")
+                    .completedAt(OffsetDateTime.parse("2025-04-12T21:08:39.423Z"))
+                    .createdAt(OffsetDateTime.parse("2020-10-17T01:25:21.745Z"))
+                    .durationMinutes(55d)
+                    .id("3c4a7fe6-f616-4cb1-b6f1-b07ad7470920")
+                    .isCompleted(true)
+                    .progressPercentage(100d)
+                    .startedAt(OffsetDateTime.parse("2023-12-24T04:54:05.825Z"))
+                    .updatedAt(OffsetDateTime.parse("2022-01-23T21:45:04.318Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -113,16 +123,17 @@ Create a class
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createLmsClass" method="post" path="/lms/{connection_id}/class" -->
+<!-- UsageSnippet language="java" operationID="createLmsClass" method="post" path="/lms/{connection_id}/class" example="lms_class" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateLmsClassRequest;
 import to.unified.unified_java_sdk.models.operations.CreateLmsClassResponse;
-import to.unified.unified_java_sdk.models.shared.LmsClass;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -136,6 +147,27 @@ public class Application {
 
         CreateLmsClassRequest req = CreateLmsClassRequest.builder()
                 .lmsClass(LmsClass.builder()
+                    .createdAt(OffsetDateTime.parse("2020-02-20T14:48:51.845Z"))
+                    .description("Anser sperno decerno.")
+                    .id("c1f27f80-7668-4b4b-9265-b1894eb6243a")
+                    .instructors(List.of())
+                    .languages(List.of(
+                        "in"))
+                    .media(List.of(
+                        LmsMedia.builder()
+                            .content("Defetiscor aetas acies benevolentia ulterius. Creta bis beneficium canis. Bonus valeo vulgo creator arca peior ceno earum culpa. Tabesco apostolus talis. Ultra accommodo deinde sono culpo arto cruciamentum triduana.")
+                            .description("Esse confido.")
+                            .languages(List.of(
+                                "fa",
+                                "da"))
+                            .name("illo")
+                            .thumbnailUrl("https://loremflickr.com/199/1934?lock=4323325966476891")
+                            .type(LmsMediaType.VIDEO)
+                            .url("https://loremflickr.com/487/921?lock=5127962071241632")
+                            .build()))
+                    .name("virtus")
+                    .students(List.of())
+                    .updatedAt(OffsetDateTime.parse("2025-07-07T21:37:16.026Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -173,16 +205,17 @@ Create a collection
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createLmsCollection" method="post" path="/lms/{connection_id}/collection" -->
+<!-- UsageSnippet language="java" operationID="createLmsCollection" method="post" path="/lms/{connection_id}/collection" example="lms_collection" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateLmsCollectionRequest;
 import to.unified.unified_java_sdk.models.operations.CreateLmsCollectionResponse;
-import to.unified.unified_java_sdk.models.shared.LmsCollection;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -196,6 +229,23 @@ public class Application {
 
         CreateLmsCollectionRequest req = CreateLmsCollectionRequest.builder()
                 .lmsCollection(LmsCollection.builder()
+                    .createdAt(OffsetDateTime.parse("2019-08-19T14:40:29.227Z"))
+                    .description("Ab.")
+                    .id("8844ee01-dfb0-4ad4-af18-6b5beedaa703")
+                    .isActive(true)
+                    .media(List.of(
+                        LmsMedia.builder()
+                            .content("Accusamus earum sulum libero adficio testimonium vitae. Calcar contra vergo curis sollers. Caste brevis denuo. Tam amita ducimus capillus. Vulgaris temporibus arbustum solium id. Suppono commodo fuga surculus tripudio doloribus.")
+                            .description("Aliquam tardus careo hic umbra.")
+                            .languages(List.of(
+                                "gl"))
+                            .name("thymum")
+                            .thumbnailUrl("https://picsum.photos/seed/15O5EfV/2982/752")
+                            .type(LmsMediaType.HEADSHOT)
+                            .url("https://loremflickr.com/2679/70?lock=6078357625960554")
+                            .build()))
+                    .name("ara")
+                    .updatedAt(OffsetDateTime.parse("2026-06-28T08:01:49.217Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -233,16 +283,17 @@ Create a content
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createLmsContent" method="post" path="/lms/{connection_id}/content" -->
+<!-- UsageSnippet language="java" operationID="createLmsContent" method="post" path="/lms/{connection_id}/content" example="lms_content" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateLmsContentRequest;
 import to.unified.unified_java_sdk.models.operations.CreateLmsContentResponse;
-import to.unified.unified_java_sdk.models.shared.LmsContent;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -256,6 +307,83 @@ public class Application {
 
         CreateLmsContentRequest req = CreateLmsContentRequest.builder()
                 .lmsContent(LmsContent.builder()
+                    .categories(List.of(
+                        "territo"))
+                    .createdAt(OffsetDateTime.parse("2020-10-22T22:30:50.963Z"))
+                    .description("Usque laboriosam ventosus adflicto.")
+                    .difficulty("Beginner")
+                    .durationMinutes(19d)
+                    .externalReference("0d230e31-a9c4-4a35-a5b9-9168e91ffff5")
+                    .id("09b21f68-cdb1-4147-bb3e-6d70468ec346")
+                    .instructors(List.of(
+                        LmsReference.builder()
+                            .id("91a23b20-a7a3-4323-9548-0897c09eb49e")
+                            .name("Winston Ferry")
+                            .build()))
+                    .isActive(true)
+                    .languages(List.of(
+                        "despecto",
+                        "suppellex"))
+                    .localizations(List.of(
+                        LmsContentLocalization.builder()
+                            .description("Numquam.")
+                            .language("es")
+                            .name("validus")
+                            .build(),
+                        LmsContentLocalization.builder()
+                            .description("Callide.")
+                            .language("fr")
+                            .name("crux")
+                            .build()))
+                    .media(List.of(
+                        LmsMedia.builder()
+                            .content("Adnuo antepono vulticulus incidunt. Commemoro voro ocer arca velut vigor venustas una audeo. Consectetur totidem amor amo vigor. Patior ulciscor cohors necessitatibus beatae. Copiose cedo sub decens acer.")
+                            .description("Venia aeternus tandem spargo.")
+                            .languages(List.of(
+                                "zu",
+                                "ba"))
+                            .name("subiungo")
+                            .thumbnailUrl("https://loremflickr.com/2056/3712?lock=5644845642923518")
+                            .type(LmsMediaType.OTHER)
+                            .url("https://loremflickr.com/2593/1553?lock=8591263400111785")
+                            .build(),
+                        LmsMedia.builder()
+                            .content("Terminatio acidus tripudio teres. Compono demum aut aestivus ambitus pecus tergum verumtamen vestrum. Absque adversus desino aut tabernus tollo vigor. Cur agnitio totidem consuasor bene doloribus. Vetus abundans curriculum curatio usitas.")
+                            .description("Comedo valde caste combibo.")
+                            .languages(List.of(
+                                "it",
+                                "hu"))
+                            .name("beneficium")
+                            .thumbnailUrl("https://picsum.photos/seed/pNFr1/2597/885")
+                            .type(LmsMediaType.WEB)
+                            .url("https://loremflickr.com/3597/239?lock=7142808124990633")
+                            .build(),
+                        LmsMedia.builder()
+                            .content("Coepi demo adversus capillus aro unus templum. Aspicio alius vehemens terminatio varietas vomica. Apud thorax defero decet impedit verbera pauci laboriosam molestiae urbanus. Aveho vergo crux certus nulla caute sophismata. Caute voluptatibus patrocinor demo verumtamen adeo canis sapiente depraedor verus.")
+                            .description("Tunc barba decens.")
+                            .languages(List.of(
+                                "bn",
+                                "yo"))
+                            .name("qui")
+                            .thumbnailUrl("https://loremflickr.com/1375/3377?lock=6601832177607674")
+                            .type(LmsMediaType.IMAGE)
+                            .url("https://loremflickr.com/3927/2086?lock=5199784913821481")
+                            .build()))
+                    .name("ut")
+                    .providerName("Berge LLC")
+                    .publishedAt(OffsetDateTime.parse("2023-11-08T11:32:09.080Z"))
+                    .shortDescription("Commemoro.")
+                    .skills(List.of(
+                        "trucido"))
+                    .sortOrder(3d)
+                    .subjects(List.of(
+                        LmsSubject.builder()
+                            .name("tibi")
+                            .rank(1d)
+                            .build()))
+                    .tags(List.of(
+                        "dens"))
+                    .updatedAt(OffsetDateTime.parse("2022-09-23T11:13:51.788Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -293,16 +421,17 @@ Create a course
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createLmsCourse" method="post" path="/lms/{connection_id}/course" -->
+<!-- UsageSnippet language="java" operationID="createLmsCourse" method="post" path="/lms/{connection_id}/course" example="lms_course" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateLmsCourseRequest;
 import to.unified.unified_java_sdk.models.operations.CreateLmsCourseResponse;
-import to.unified.unified_java_sdk.models.shared.LmsCourse;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -316,6 +445,43 @@ public class Application {
 
         CreateLmsCourseRequest req = CreateLmsCourseRequest.builder()
                 .lmsCourse(LmsCourse.builder()
+                    .categories(List.of(
+                        "tergiversatio",
+                        "tumultus"))
+                    .createdAt(OffsetDateTime.parse("2022-10-06T09:58:53.559Z"))
+                    .currency("FJD")
+                    .description("Vinco alias aut capitulus.")
+                    .durationMinutes(148d)
+                    .id("950aba61-f261-4a01-9c64-0ed9cde2416e")
+                    .instructors(List.of())
+                    .isActive(true)
+                    .isPrivate(false)
+                    .languages(List.of(
+                        "desparatus",
+                        "earum",
+                        "deripio"))
+                    .media(List.of(
+                        LmsMedia.builder()
+                            .content("Adeptio crudelis ipsum utrimque quae architecto. Cum eius conitor anser abutor error adsuesco abeo. Denego nihil caries aveho.")
+                            .description("Adipiscor.")
+                            .languages(List.of(
+                                "ms",
+                                "te"))
+                            .name("tandem")
+                            .thumbnailUrl("https://picsum.photos/seed/syTatRhK03/928/273")
+                            .type(LmsMediaType.OTHER)
+                            .url("https://picsum.photos/seed/fQAbsk/2472/1671")
+                            .build()))
+                    .name("comptus")
+                    .priceAmount(84d)
+                    .providerName("Homenick - Wunsch")
+                    .publishedAt(OffsetDateTime.parse("2023-12-30T03:35:03.902Z"))
+                    .skills(List.of(
+                        "adiuvo",
+                        "tam"))
+                    .students(List.of())
+                    .timeEstimateMinutes(100d)
+                    .updatedAt(OffsetDateTime.parse("2023-02-06T22:30:52.571Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -353,16 +519,17 @@ Create an instructor
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createLmsInstructor" method="post" path="/lms/{connection_id}/instructor" -->
+<!-- UsageSnippet language="java" operationID="createLmsInstructor" method="post" path="/lms/{connection_id}/instructor" example="lms_instructor" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateLmsInstructorRequest;
 import to.unified.unified_java_sdk.models.operations.CreateLmsInstructorResponse;
-import to.unified.unified_java_sdk.models.shared.LmsInstructor;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -376,6 +543,24 @@ public class Application {
 
         CreateLmsInstructorRequest req = CreateLmsInstructorRequest.builder()
                 .lmsInstructor(LmsInstructor.builder()
+                    .createdAt(OffsetDateTime.parse("2021-10-12T16:38:54.979Z"))
+                    .emails(List.of(
+                        LmsEmail.builder()
+                            .build(),
+                        LmsEmail.builder()
+                            .build()))
+                    .firstName("Deangelo")
+                    .id("dfe83772-691a-4931-8ea8-97260a0c5abf")
+                    .imageUrl("https://avatars.githubusercontent.com/u/20232618")
+                    .lastName("Ritchie")
+                    .name("Deangelo Ritchie")
+                    .telephones(List.of(
+                        LmsTelephone.builder()
+                            .telephone("(352) 551-7989")
+                            .type(LmsTelephoneType.HOME)
+                            .build()))
+                    .title("Product Solutions Engineer")
+                    .updatedAt(OffsetDateTime.parse("2025-06-29T14:07:16.774Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -413,16 +598,17 @@ Create a student
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createLmsStudent" method="post" path="/lms/{connection_id}/student" -->
+<!-- UsageSnippet language="java" operationID="createLmsStudent" method="post" path="/lms/{connection_id}/student" example="lms_student" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateLmsStudentRequest;
 import to.unified.unified_java_sdk.models.operations.CreateLmsStudentResponse;
-import to.unified.unified_java_sdk.models.shared.LmsStudent;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -436,6 +622,32 @@ public class Application {
 
         CreateLmsStudentRequest req = CreateLmsStudentRequest.builder()
                 .lmsStudent(LmsStudent.builder()
+                    .address(PropertyLmsStudentAddress.builder()
+                        .address1("94082 Kassandra Camp")
+                        .address2("Apt. 461")
+                        .city("New Ibrahimmouth")
+                        .countryCode("US")
+                        .postalCode("52851")
+                        .region("Tennessee")
+                        .regionCode("NV")
+                        .build())
+                    .createdAt(OffsetDateTime.parse("2020-03-23T06:59:29.777Z"))
+                    .emails(List.of(
+                        LmsEmail.builder()
+                            .build(),
+                        LmsEmail.builder()
+                            .build()))
+                    .firstName("Marcella")
+                    .id("f7f415ad-d6a4-49ee-b6f4-6823b04af952")
+                    .imageUrl("https://avatars.githubusercontent.com/u/36301374")
+                    .lastName("Murazik")
+                    .name("Marcella Murazik")
+                    .telephones(List.of(
+                        LmsTelephone.builder()
+                            .telephone("(482) 469-8067")
+                            .type(LmsTelephoneType.FAX)
+                            .build()))
+                    .updatedAt(OffsetDateTime.parse("2022-06-19T13:56:16.319Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -1278,11 +1490,12 @@ Update an activity
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchLmsActivity" method="patch" path="/lms/{connection_id}/activity/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchLmsActivity" method="patch" path="/lms/{connection_id}/activity/{id}" example="lms_activity" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchLmsActivityRequest;
 import to.unified.unified_java_sdk.models.operations.PatchLmsActivityResponse;
@@ -1301,6 +1514,15 @@ public class Application {
 
         PatchLmsActivityRequest req = PatchLmsActivityRequest.builder()
                 .lmsActivity(LmsActivity.builder()
+                    .assignedGrade("summopere")
+                    .completedAt(OffsetDateTime.parse("2025-04-12T21:08:39.427Z"))
+                    .createdAt(OffsetDateTime.parse("2020-10-17T01:25:21.745Z"))
+                    .durationMinutes(55d)
+                    .id("69bd1cd5-438e-4eea-83f8-ada458c5ea2f")
+                    .isCompleted(true)
+                    .progressPercentage(100d)
+                    .startedAt(OffsetDateTime.parse("2023-12-24T04:54:05.825Z"))
+                    .updatedAt(OffsetDateTime.parse("2022-01-23T21:45:04.320Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -1339,16 +1561,17 @@ Update a class
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchLmsClass" method="patch" path="/lms/{connection_id}/class/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchLmsClass" method="patch" path="/lms/{connection_id}/class/{id}" example="lms_class" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchLmsClassRequest;
 import to.unified.unified_java_sdk.models.operations.PatchLmsClassResponse;
-import to.unified.unified_java_sdk.models.shared.LmsClass;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -1362,6 +1585,27 @@ public class Application {
 
         PatchLmsClassRequest req = PatchLmsClassRequest.builder()
                 .lmsClass(LmsClass.builder()
+                    .createdAt(OffsetDateTime.parse("2020-02-20T14:48:51.845Z"))
+                    .description("Anser sperno decerno.")
+                    .id("882383dc-a478-43e2-b8b3-f63b6709a0a4")
+                    .instructors(List.of())
+                    .languages(List.of(
+                        "in"))
+                    .media(List.of(
+                        LmsMedia.builder()
+                            .content("Defetiscor aetas acies benevolentia ulterius. Creta bis beneficium canis. Bonus valeo vulgo creator arca peior ceno earum culpa. Tabesco apostolus talis. Ultra accommodo deinde sono culpo arto cruciamentum triduana.")
+                            .description("Esse confido.")
+                            .languages(List.of(
+                                "fa",
+                                "da"))
+                            .name("illo")
+                            .thumbnailUrl("https://loremflickr.com/199/1934?lock=4323325966476891")
+                            .type(LmsMediaType.VIDEO)
+                            .url("https://loremflickr.com/487/921?lock=5127962071241632")
+                            .build()))
+                    .name("virtus")
+                    .students(List.of())
+                    .updatedAt(OffsetDateTime.parse("2025-07-07T21:37:16.038Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -1400,16 +1644,17 @@ Update a collection
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchLmsCollection" method="patch" path="/lms/{connection_id}/collection/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchLmsCollection" method="patch" path="/lms/{connection_id}/collection/{id}" example="lms_collection" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchLmsCollectionRequest;
 import to.unified.unified_java_sdk.models.operations.PatchLmsCollectionResponse;
-import to.unified.unified_java_sdk.models.shared.LmsCollection;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -1423,6 +1668,23 @@ public class Application {
 
         PatchLmsCollectionRequest req = PatchLmsCollectionRequest.builder()
                 .lmsCollection(LmsCollection.builder()
+                    .createdAt(OffsetDateTime.parse("2019-08-19T14:40:29.227Z"))
+                    .description("Ab.")
+                    .id("3add09e2-c99a-46e8-a1cc-d17257cbcbcf")
+                    .isActive(true)
+                    .media(List.of(
+                        LmsMedia.builder()
+                            .content("Accusamus earum sulum libero adficio testimonium vitae. Calcar contra vergo curis sollers. Caste brevis denuo. Tam amita ducimus capillus. Vulgaris temporibus arbustum solium id. Suppono commodo fuga surculus tripudio doloribus.")
+                            .description("Aliquam tardus careo hic umbra.")
+                            .languages(List.of(
+                                "gl"))
+                            .name("thymum")
+                            .thumbnailUrl("https://picsum.photos/seed/15O5EfV/2982/752")
+                            .type(LmsMediaType.HEADSHOT)
+                            .url("https://loremflickr.com/2679/70?lock=6078357625960554")
+                            .build()))
+                    .name("ara")
+                    .updatedAt(OffsetDateTime.parse("2026-06-28T08:01:49.226Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -1461,16 +1723,17 @@ Update a content
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchLmsContent" method="patch" path="/lms/{connection_id}/content/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchLmsContent" method="patch" path="/lms/{connection_id}/content/{id}" example="lms_content" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchLmsContentRequest;
 import to.unified.unified_java_sdk.models.operations.PatchLmsContentResponse;
-import to.unified.unified_java_sdk.models.shared.LmsContent;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -1484,6 +1747,83 @@ public class Application {
 
         PatchLmsContentRequest req = PatchLmsContentRequest.builder()
                 .lmsContent(LmsContent.builder()
+                    .categories(List.of(
+                        "territo"))
+                    .createdAt(OffsetDateTime.parse("2020-10-22T22:30:50.963Z"))
+                    .description("Usque laboriosam ventosus adflicto.")
+                    .difficulty("Beginner")
+                    .durationMinutes(19d)
+                    .externalReference("0d230e31-a9c4-4a35-a5b9-9168e91ffff5")
+                    .id("f4465935-c7ed-442f-97e4-8edf4fdfc16e")
+                    .instructors(List.of(
+                        LmsReference.builder()
+                            .id("91a23b20-a7a3-4323-9548-0897c09eb49e")
+                            .name("Winston Ferry")
+                            .build()))
+                    .isActive(true)
+                    .languages(List.of(
+                        "despecto",
+                        "suppellex"))
+                    .localizations(List.of(
+                        LmsContentLocalization.builder()
+                            .description("Numquam.")
+                            .language("es")
+                            .name("validus")
+                            .build(),
+                        LmsContentLocalization.builder()
+                            .description("Callide.")
+                            .language("fr")
+                            .name("crux")
+                            .build()))
+                    .media(List.of(
+                        LmsMedia.builder()
+                            .content("Adnuo antepono vulticulus incidunt. Commemoro voro ocer arca velut vigor venustas una audeo. Consectetur totidem amor amo vigor. Patior ulciscor cohors necessitatibus beatae. Copiose cedo sub decens acer.")
+                            .description("Venia aeternus tandem spargo.")
+                            .languages(List.of(
+                                "zu",
+                                "ba"))
+                            .name("subiungo")
+                            .thumbnailUrl("https://loremflickr.com/2056/3712?lock=5644845642923518")
+                            .type(LmsMediaType.OTHER)
+                            .url("https://loremflickr.com/2593/1553?lock=8591263400111785")
+                            .build(),
+                        LmsMedia.builder()
+                            .content("Terminatio acidus tripudio teres. Compono demum aut aestivus ambitus pecus tergum verumtamen vestrum. Absque adversus desino aut tabernus tollo vigor. Cur agnitio totidem consuasor bene doloribus. Vetus abundans curriculum curatio usitas.")
+                            .description("Comedo valde caste combibo.")
+                            .languages(List.of(
+                                "it",
+                                "hu"))
+                            .name("beneficium")
+                            .thumbnailUrl("https://picsum.photos/seed/pNFr1/2597/885")
+                            .type(LmsMediaType.WEB)
+                            .url("https://loremflickr.com/3597/239?lock=7142808124990633")
+                            .build(),
+                        LmsMedia.builder()
+                            .content("Coepi demo adversus capillus aro unus templum. Aspicio alius vehemens terminatio varietas vomica. Apud thorax defero decet impedit verbera pauci laboriosam molestiae urbanus. Aveho vergo crux certus nulla caute sophismata. Caute voluptatibus patrocinor demo verumtamen adeo canis sapiente depraedor verus.")
+                            .description("Tunc barba decens.")
+                            .languages(List.of(
+                                "bn",
+                                "yo"))
+                            .name("qui")
+                            .thumbnailUrl("https://loremflickr.com/1375/3377?lock=6601832177607674")
+                            .type(LmsMediaType.IMAGE)
+                            .url("https://loremflickr.com/3927/2086?lock=5199784913821481")
+                            .build()))
+                    .name("ut")
+                    .providerName("Berge LLC")
+                    .publishedAt(OffsetDateTime.parse("2023-11-08T11:32:09.080Z"))
+                    .shortDescription("Commemoro.")
+                    .skills(List.of(
+                        "trucido"))
+                    .sortOrder(3d)
+                    .subjects(List.of(
+                        LmsSubject.builder()
+                            .name("tibi")
+                            .rank(1d)
+                            .build()))
+                    .tags(List.of(
+                        "dens"))
+                    .updatedAt(OffsetDateTime.parse("2022-09-23T11:13:51.798Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -1522,16 +1862,17 @@ Update a course
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchLmsCourse" method="patch" path="/lms/{connection_id}/course/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchLmsCourse" method="patch" path="/lms/{connection_id}/course/{id}" example="lms_course" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchLmsCourseRequest;
 import to.unified.unified_java_sdk.models.operations.PatchLmsCourseResponse;
-import to.unified.unified_java_sdk.models.shared.LmsCourse;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -1545,6 +1886,43 @@ public class Application {
 
         PatchLmsCourseRequest req = PatchLmsCourseRequest.builder()
                 .lmsCourse(LmsCourse.builder()
+                    .categories(List.of(
+                        "tergiversatio",
+                        "tumultus"))
+                    .createdAt(OffsetDateTime.parse("2022-10-06T09:58:53.559Z"))
+                    .currency("FJD")
+                    .description("Vinco alias aut capitulus.")
+                    .durationMinutes(148d)
+                    .id("f50e97ee-407a-40a1-911f-7d1283bbb122")
+                    .instructors(List.of())
+                    .isActive(true)
+                    .isPrivate(false)
+                    .languages(List.of(
+                        "desparatus",
+                        "earum",
+                        "deripio"))
+                    .media(List.of(
+                        LmsMedia.builder()
+                            .content("Adeptio crudelis ipsum utrimque quae architecto. Cum eius conitor anser abutor error adsuesco abeo. Denego nihil caries aveho.")
+                            .description("Adipiscor.")
+                            .languages(List.of(
+                                "ms",
+                                "te"))
+                            .name("tandem")
+                            .thumbnailUrl("https://picsum.photos/seed/syTatRhK03/928/273")
+                            .type(LmsMediaType.OTHER)
+                            .url("https://picsum.photos/seed/fQAbsk/2472/1671")
+                            .build()))
+                    .name("comptus")
+                    .priceAmount(84d)
+                    .providerName("Homenick - Wunsch")
+                    .publishedAt(OffsetDateTime.parse("2023-12-30T03:35:03.902Z"))
+                    .skills(List.of(
+                        "adiuvo",
+                        "tam"))
+                    .students(List.of())
+                    .timeEstimateMinutes(100d)
+                    .updatedAt(OffsetDateTime.parse("2023-02-06T22:30:52.572Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -1583,16 +1961,17 @@ Update an instructor
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchLmsInstructor" method="patch" path="/lms/{connection_id}/instructor/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchLmsInstructor" method="patch" path="/lms/{connection_id}/instructor/{id}" example="lms_instructor" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchLmsInstructorRequest;
 import to.unified.unified_java_sdk.models.operations.PatchLmsInstructorResponse;
-import to.unified.unified_java_sdk.models.shared.LmsInstructor;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -1606,6 +1985,24 @@ public class Application {
 
         PatchLmsInstructorRequest req = PatchLmsInstructorRequest.builder()
                 .lmsInstructor(LmsInstructor.builder()
+                    .createdAt(OffsetDateTime.parse("2021-10-12T16:38:54.979Z"))
+                    .emails(List.of(
+                        LmsEmail.builder()
+                            .build(),
+                        LmsEmail.builder()
+                            .build()))
+                    .firstName("Deangelo")
+                    .id("b4d5bd82-fbdc-49d8-9af8-7010a6150a16")
+                    .imageUrl("https://avatars.githubusercontent.com/u/20232618")
+                    .lastName("Ritchie")
+                    .name("Deangelo Ritchie")
+                    .telephones(List.of(
+                        LmsTelephone.builder()
+                            .telephone("(352) 551-7989")
+                            .type(LmsTelephoneType.HOME)
+                            .build()))
+                    .title("Product Solutions Engineer")
+                    .updatedAt(OffsetDateTime.parse("2025-06-29T14:07:16.781Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -1644,16 +2041,17 @@ Update a student
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchLmsStudent" method="patch" path="/lms/{connection_id}/student/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchLmsStudent" method="patch" path="/lms/{connection_id}/student/{id}" example="lms_student" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchLmsStudentRequest;
 import to.unified.unified_java_sdk.models.operations.PatchLmsStudentResponse;
-import to.unified.unified_java_sdk.models.shared.LmsStudent;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -1667,6 +2065,32 @@ public class Application {
 
         PatchLmsStudentRequest req = PatchLmsStudentRequest.builder()
                 .lmsStudent(LmsStudent.builder()
+                    .address(PropertyLmsStudentAddress.builder()
+                        .address1("94082 Kassandra Camp")
+                        .address2("Apt. 461")
+                        .city("New Ibrahimmouth")
+                        .countryCode("US")
+                        .postalCode("52851")
+                        .region("Tennessee")
+                        .regionCode("NV")
+                        .build())
+                    .createdAt(OffsetDateTime.parse("2020-03-23T06:59:29.777Z"))
+                    .emails(List.of(
+                        LmsEmail.builder()
+                            .build(),
+                        LmsEmail.builder()
+                            .build()))
+                    .firstName("Marcella")
+                    .id("d41ddae1-7a51-41a8-8179-becbb620c443")
+                    .imageUrl("https://avatars.githubusercontent.com/u/36301374")
+                    .lastName("Murazik")
+                    .name("Marcella Murazik")
+                    .telephones(List.of(
+                        LmsTelephone.builder()
+                            .telephone("(482) 469-8067")
+                            .type(LmsTelephoneType.FAX)
+                            .build()))
+                    .updatedAt(OffsetDateTime.parse("2022-06-19T13:56:16.323Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -2097,11 +2521,12 @@ Update an activity
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateLmsActivity" method="put" path="/lms/{connection_id}/activity/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateLmsActivity" method="put" path="/lms/{connection_id}/activity/{id}" example="lms_activity" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateLmsActivityRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateLmsActivityResponse;
@@ -2120,6 +2545,15 @@ public class Application {
 
         UpdateLmsActivityRequest req = UpdateLmsActivityRequest.builder()
                 .lmsActivity(LmsActivity.builder()
+                    .assignedGrade("summopere")
+                    .completedAt(OffsetDateTime.parse("2025-04-12T21:08:39.427Z"))
+                    .createdAt(OffsetDateTime.parse("2020-10-17T01:25:21.745Z"))
+                    .durationMinutes(55d)
+                    .id("69bd1cd5-438e-4eea-83f8-ada458c5ea2f")
+                    .isCompleted(true)
+                    .progressPercentage(100d)
+                    .startedAt(OffsetDateTime.parse("2023-12-24T04:54:05.825Z"))
+                    .updatedAt(OffsetDateTime.parse("2022-01-23T21:45:04.320Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -2158,16 +2592,17 @@ Update a class
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateLmsClass" method="put" path="/lms/{connection_id}/class/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateLmsClass" method="put" path="/lms/{connection_id}/class/{id}" example="lms_class" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateLmsClassRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateLmsClassResponse;
-import to.unified.unified_java_sdk.models.shared.LmsClass;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -2181,6 +2616,27 @@ public class Application {
 
         UpdateLmsClassRequest req = UpdateLmsClassRequest.builder()
                 .lmsClass(LmsClass.builder()
+                    .createdAt(OffsetDateTime.parse("2020-02-20T14:48:51.845Z"))
+                    .description("Anser sperno decerno.")
+                    .id("882383dc-a478-43e2-b8b3-f63b6709a0a4")
+                    .instructors(List.of())
+                    .languages(List.of(
+                        "in"))
+                    .media(List.of(
+                        LmsMedia.builder()
+                            .content("Defetiscor aetas acies benevolentia ulterius. Creta bis beneficium canis. Bonus valeo vulgo creator arca peior ceno earum culpa. Tabesco apostolus talis. Ultra accommodo deinde sono culpo arto cruciamentum triduana.")
+                            .description("Esse confido.")
+                            .languages(List.of(
+                                "fa",
+                                "da"))
+                            .name("illo")
+                            .thumbnailUrl("https://loremflickr.com/199/1934?lock=4323325966476891")
+                            .type(LmsMediaType.VIDEO)
+                            .url("https://loremflickr.com/487/921?lock=5127962071241632")
+                            .build()))
+                    .name("virtus")
+                    .students(List.of())
+                    .updatedAt(OffsetDateTime.parse("2025-07-07T21:37:16.038Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -2219,16 +2675,17 @@ Update a collection
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateLmsCollection" method="put" path="/lms/{connection_id}/collection/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateLmsCollection" method="put" path="/lms/{connection_id}/collection/{id}" example="lms_collection" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateLmsCollectionRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateLmsCollectionResponse;
-import to.unified.unified_java_sdk.models.shared.LmsCollection;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -2242,6 +2699,23 @@ public class Application {
 
         UpdateLmsCollectionRequest req = UpdateLmsCollectionRequest.builder()
                 .lmsCollection(LmsCollection.builder()
+                    .createdAt(OffsetDateTime.parse("2019-08-19T14:40:29.227Z"))
+                    .description("Ab.")
+                    .id("3add09e2-c99a-46e8-a1cc-d17257cbcbcf")
+                    .isActive(true)
+                    .media(List.of(
+                        LmsMedia.builder()
+                            .content("Accusamus earum sulum libero adficio testimonium vitae. Calcar contra vergo curis sollers. Caste brevis denuo. Tam amita ducimus capillus. Vulgaris temporibus arbustum solium id. Suppono commodo fuga surculus tripudio doloribus.")
+                            .description("Aliquam tardus careo hic umbra.")
+                            .languages(List.of(
+                                "gl"))
+                            .name("thymum")
+                            .thumbnailUrl("https://picsum.photos/seed/15O5EfV/2982/752")
+                            .type(LmsMediaType.HEADSHOT)
+                            .url("https://loremflickr.com/2679/70?lock=6078357625960554")
+                            .build()))
+                    .name("ara")
+                    .updatedAt(OffsetDateTime.parse("2026-06-28T08:01:49.226Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -2280,16 +2754,17 @@ Update a content
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateLmsContent" method="put" path="/lms/{connection_id}/content/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateLmsContent" method="put" path="/lms/{connection_id}/content/{id}" example="lms_content" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateLmsContentRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateLmsContentResponse;
-import to.unified.unified_java_sdk.models.shared.LmsContent;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -2303,6 +2778,83 @@ public class Application {
 
         UpdateLmsContentRequest req = UpdateLmsContentRequest.builder()
                 .lmsContent(LmsContent.builder()
+                    .categories(List.of(
+                        "territo"))
+                    .createdAt(OffsetDateTime.parse("2020-10-22T22:30:50.963Z"))
+                    .description("Usque laboriosam ventosus adflicto.")
+                    .difficulty("Beginner")
+                    .durationMinutes(19d)
+                    .externalReference("0d230e31-a9c4-4a35-a5b9-9168e91ffff5")
+                    .id("f4465935-c7ed-442f-97e4-8edf4fdfc16e")
+                    .instructors(List.of(
+                        LmsReference.builder()
+                            .id("91a23b20-a7a3-4323-9548-0897c09eb49e")
+                            .name("Winston Ferry")
+                            .build()))
+                    .isActive(true)
+                    .languages(List.of(
+                        "despecto",
+                        "suppellex"))
+                    .localizations(List.of(
+                        LmsContentLocalization.builder()
+                            .description("Numquam.")
+                            .language("es")
+                            .name("validus")
+                            .build(),
+                        LmsContentLocalization.builder()
+                            .description("Callide.")
+                            .language("fr")
+                            .name("crux")
+                            .build()))
+                    .media(List.of(
+                        LmsMedia.builder()
+                            .content("Adnuo antepono vulticulus incidunt. Commemoro voro ocer arca velut vigor venustas una audeo. Consectetur totidem amor amo vigor. Patior ulciscor cohors necessitatibus beatae. Copiose cedo sub decens acer.")
+                            .description("Venia aeternus tandem spargo.")
+                            .languages(List.of(
+                                "zu",
+                                "ba"))
+                            .name("subiungo")
+                            .thumbnailUrl("https://loremflickr.com/2056/3712?lock=5644845642923518")
+                            .type(LmsMediaType.OTHER)
+                            .url("https://loremflickr.com/2593/1553?lock=8591263400111785")
+                            .build(),
+                        LmsMedia.builder()
+                            .content("Terminatio acidus tripudio teres. Compono demum aut aestivus ambitus pecus tergum verumtamen vestrum. Absque adversus desino aut tabernus tollo vigor. Cur agnitio totidem consuasor bene doloribus. Vetus abundans curriculum curatio usitas.")
+                            .description("Comedo valde caste combibo.")
+                            .languages(List.of(
+                                "it",
+                                "hu"))
+                            .name("beneficium")
+                            .thumbnailUrl("https://picsum.photos/seed/pNFr1/2597/885")
+                            .type(LmsMediaType.WEB)
+                            .url("https://loremflickr.com/3597/239?lock=7142808124990633")
+                            .build(),
+                        LmsMedia.builder()
+                            .content("Coepi demo adversus capillus aro unus templum. Aspicio alius vehemens terminatio varietas vomica. Apud thorax defero decet impedit verbera pauci laboriosam molestiae urbanus. Aveho vergo crux certus nulla caute sophismata. Caute voluptatibus patrocinor demo verumtamen adeo canis sapiente depraedor verus.")
+                            .description("Tunc barba decens.")
+                            .languages(List.of(
+                                "bn",
+                                "yo"))
+                            .name("qui")
+                            .thumbnailUrl("https://loremflickr.com/1375/3377?lock=6601832177607674")
+                            .type(LmsMediaType.IMAGE)
+                            .url("https://loremflickr.com/3927/2086?lock=5199784913821481")
+                            .build()))
+                    .name("ut")
+                    .providerName("Berge LLC")
+                    .publishedAt(OffsetDateTime.parse("2023-11-08T11:32:09.080Z"))
+                    .shortDescription("Commemoro.")
+                    .skills(List.of(
+                        "trucido"))
+                    .sortOrder(3d)
+                    .subjects(List.of(
+                        LmsSubject.builder()
+                            .name("tibi")
+                            .rank(1d)
+                            .build()))
+                    .tags(List.of(
+                        "dens"))
+                    .updatedAt(OffsetDateTime.parse("2022-09-23T11:13:51.798Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -2341,16 +2893,17 @@ Update a course
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateLmsCourse" method="put" path="/lms/{connection_id}/course/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateLmsCourse" method="put" path="/lms/{connection_id}/course/{id}" example="lms_course" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateLmsCourseRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateLmsCourseResponse;
-import to.unified.unified_java_sdk.models.shared.LmsCourse;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -2364,6 +2917,43 @@ public class Application {
 
         UpdateLmsCourseRequest req = UpdateLmsCourseRequest.builder()
                 .lmsCourse(LmsCourse.builder()
+                    .categories(List.of(
+                        "tergiversatio",
+                        "tumultus"))
+                    .createdAt(OffsetDateTime.parse("2022-10-06T09:58:53.559Z"))
+                    .currency("FJD")
+                    .description("Vinco alias aut capitulus.")
+                    .durationMinutes(148d)
+                    .id("f50e97ee-407a-40a1-911f-7d1283bbb122")
+                    .instructors(List.of())
+                    .isActive(true)
+                    .isPrivate(false)
+                    .languages(List.of(
+                        "desparatus",
+                        "earum",
+                        "deripio"))
+                    .media(List.of(
+                        LmsMedia.builder()
+                            .content("Adeptio crudelis ipsum utrimque quae architecto. Cum eius conitor anser abutor error adsuesco abeo. Denego nihil caries aveho.")
+                            .description("Adipiscor.")
+                            .languages(List.of(
+                                "ms",
+                                "te"))
+                            .name("tandem")
+                            .thumbnailUrl("https://picsum.photos/seed/syTatRhK03/928/273")
+                            .type(LmsMediaType.OTHER)
+                            .url("https://picsum.photos/seed/fQAbsk/2472/1671")
+                            .build()))
+                    .name("comptus")
+                    .priceAmount(84d)
+                    .providerName("Homenick - Wunsch")
+                    .publishedAt(OffsetDateTime.parse("2023-12-30T03:35:03.902Z"))
+                    .skills(List.of(
+                        "adiuvo",
+                        "tam"))
+                    .students(List.of())
+                    .timeEstimateMinutes(100d)
+                    .updatedAt(OffsetDateTime.parse("2023-02-06T22:30:52.572Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -2402,16 +2992,17 @@ Update an instructor
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateLmsInstructor" method="put" path="/lms/{connection_id}/instructor/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateLmsInstructor" method="put" path="/lms/{connection_id}/instructor/{id}" example="lms_instructor" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateLmsInstructorRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateLmsInstructorResponse;
-import to.unified.unified_java_sdk.models.shared.LmsInstructor;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -2425,6 +3016,24 @@ public class Application {
 
         UpdateLmsInstructorRequest req = UpdateLmsInstructorRequest.builder()
                 .lmsInstructor(LmsInstructor.builder()
+                    .createdAt(OffsetDateTime.parse("2021-10-12T16:38:54.979Z"))
+                    .emails(List.of(
+                        LmsEmail.builder()
+                            .build(),
+                        LmsEmail.builder()
+                            .build()))
+                    .firstName("Deangelo")
+                    .id("b4d5bd82-fbdc-49d8-9af8-7010a6150a16")
+                    .imageUrl("https://avatars.githubusercontent.com/u/20232618")
+                    .lastName("Ritchie")
+                    .name("Deangelo Ritchie")
+                    .telephones(List.of(
+                        LmsTelephone.builder()
+                            .telephone("(352) 551-7989")
+                            .type(LmsTelephoneType.HOME)
+                            .build()))
+                    .title("Product Solutions Engineer")
+                    .updatedAt(OffsetDateTime.parse("2025-06-29T14:07:16.781Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -2463,16 +3072,17 @@ Update a student
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateLmsStudent" method="put" path="/lms/{connection_id}/student/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateLmsStudent" method="put" path="/lms/{connection_id}/student/{id}" example="lms_student" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateLmsStudentRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateLmsStudentResponse;
-import to.unified.unified_java_sdk.models.shared.LmsStudent;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -2486,6 +3096,32 @@ public class Application {
 
         UpdateLmsStudentRequest req = UpdateLmsStudentRequest.builder()
                 .lmsStudent(LmsStudent.builder()
+                    .address(PropertyLmsStudentAddress.builder()
+                        .address1("94082 Kassandra Camp")
+                        .address2("Apt. 461")
+                        .city("New Ibrahimmouth")
+                        .countryCode("US")
+                        .postalCode("52851")
+                        .region("Tennessee")
+                        .regionCode("NV")
+                        .build())
+                    .createdAt(OffsetDateTime.parse("2020-03-23T06:59:29.777Z"))
+                    .emails(List.of(
+                        LmsEmail.builder()
+                            .build(),
+                        LmsEmail.builder()
+                            .build()))
+                    .firstName("Marcella")
+                    .id("d41ddae1-7a51-41a8-8179-becbb620c443")
+                    .imageUrl("https://avatars.githubusercontent.com/u/36301374")
+                    .lastName("Murazik")
+                    .name("Marcella Murazik")
+                    .telephones(List.of(
+                        LmsTelephone.builder()
+                            .telephone("(482) 469-8067")
+                            .type(LmsTelephoneType.FAX)
+                            .build()))
+                    .updatedAt(OffsetDateTime.parse("2022-06-19T13:56:16.323Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

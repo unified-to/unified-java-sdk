@@ -17,16 +17,16 @@ Create a bankaccount
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createHrisBankaccount" method="post" path="/hris/{connection_id}/bankaccount" -->
+<!-- UsageSnippet language="java" operationID="createHrisBankaccount" method="post" path="/hris/{connection_id}/bankaccount" example="hris_bankaccount" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateHrisBankaccountRequest;
 import to.unified.unified_java_sdk.models.operations.CreateHrisBankaccountResponse;
-import to.unified.unified_java_sdk.models.shared.HrisBankaccount;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -40,6 +40,16 @@ public class Application {
 
         CreateHrisBankaccountRequest req = CreateHrisBankaccountRequest.builder()
                 .hrisBankaccount(HrisBankaccount.builder()
+                    .accountNumber("****3777")
+                    .accountNumberLast4("3777")
+                    .accountType(HrisBankaccountAccountType.CHECKING)
+                    .bankName("Huel Group")
+                    .createdAt(OffsetDateTime.parse("2019-11-16T16:43:45.976Z"))
+                    .id("0ba01940-59d2-4fcb-a5b2-8633146c7a07")
+                    .isPrimary(false)
+                    .name("Checking Account")
+                    .routingNumber("448650724")
+                    .updatedAt(OffsetDateTime.parse("2025-06-04T11:31:37.518Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -192,16 +202,16 @@ Update a bankaccount
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchHrisBankaccount" method="patch" path="/hris/{connection_id}/bankaccount/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchHrisBankaccount" method="patch" path="/hris/{connection_id}/bankaccount/{id}" example="hris_bankaccount" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchHrisBankaccountRequest;
 import to.unified.unified_java_sdk.models.operations.PatchHrisBankaccountResponse;
-import to.unified.unified_java_sdk.models.shared.HrisBankaccount;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -215,6 +225,16 @@ public class Application {
 
         PatchHrisBankaccountRequest req = PatchHrisBankaccountRequest.builder()
                 .hrisBankaccount(HrisBankaccount.builder()
+                    .accountNumber("****3777")
+                    .accountNumberLast4("3777")
+                    .accountType(HrisBankaccountAccountType.CHECKING)
+                    .bankName("Huel Group")
+                    .createdAt(OffsetDateTime.parse("2019-11-16T16:43:45.976Z"))
+                    .id("48efbe5b-f668-403e-9979-a07b0ec0a98a")
+                    .isPrimary(false)
+                    .name("Checking Account")
+                    .routingNumber("448650724")
+                    .updatedAt(OffsetDateTime.parse("2025-06-04T11:31:37.525Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -309,16 +329,16 @@ Update a bankaccount
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateHrisBankaccount" method="put" path="/hris/{connection_id}/bankaccount/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateHrisBankaccount" method="put" path="/hris/{connection_id}/bankaccount/{id}" example="hris_bankaccount" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateHrisBankaccountRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateHrisBankaccountResponse;
-import to.unified.unified_java_sdk.models.shared.HrisBankaccount;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -332,6 +352,16 @@ public class Application {
 
         UpdateHrisBankaccountRequest req = UpdateHrisBankaccountRequest.builder()
                 .hrisBankaccount(HrisBankaccount.builder()
+                    .accountNumber("****3777")
+                    .accountNumberLast4("3777")
+                    .accountType(HrisBankaccountAccountType.CHECKING)
+                    .bankName("Huel Group")
+                    .createdAt(OffsetDateTime.parse("2019-11-16T16:43:45.976Z"))
+                    .id("48efbe5b-f668-403e-9979-a07b0ec0a98a")
+                    .isPrimary(false)
+                    .name("Checking Account")
+                    .routingNumber("448650724")
+                    .updatedAt(OffsetDateTime.parse("2025-06-04T11:31:37.525Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

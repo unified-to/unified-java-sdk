@@ -17,16 +17,17 @@ Create an invoice
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createAccountingInvoice" method="post" path="/accounting/{connection_id}/invoice" -->
+<!-- UsageSnippet language="java" operationID="createAccountingInvoice" method="post" path="/accounting/{connection_id}/invoice" example="accounting_invoice" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingInvoiceRequest;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingInvoiceResponse;
-import to.unified.unified_java_sdk.models.shared.AccountingInvoice;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -40,6 +41,39 @@ public class Application {
 
         CreateAccountingInvoiceRequest req = CreateAccountingInvoiceRequest.builder()
                 .accountingInvoice(AccountingInvoice.builder()
+                    .attachments(List.of(
+                        AccountingAttachment.builder()
+                            .downloadUrl("https://glossy-markup.net/")
+                            .id("645358a0-c05a-4486-b89b-0a0ed2a6c979")
+                            .mimeType("benevolentia")
+                            .name("vespillo")
+                            .build()))
+                    .balanceAmount(-1d)
+                    .categoryIds(List.of())
+                    .createdAt(OffsetDateTime.parse("2022-11-07T14:17:29.587Z"))
+                    .currency("RWF")
+                    .discountAmount(0d)
+                    .dueAt(OffsetDateTime.parse("2022-11-27T21:25:37.363Z"))
+                    .extendedNotes(List.of())
+                    .id("b81b0ef0-2818-4301-b28e-b6b0df003dc3")
+                    .invoiceNumber("vinco")
+                    .lineitems(List.of())
+                    .metadata(List.of())
+                    .notes("Auctus comburo clarus ubi.")
+                    .paidAmount(0d)
+                    .paidAt(OffsetDateTime.parse("2022-11-25T15:00:28.871Z"))
+                    .paymentCollectionMethod(AccountingInvoicePaymentCollectionMethod.SEND_INVOICE)
+                    .payments(List.of())
+                    .postedAt(OffsetDateTime.parse("2026-03-26T22:47:33.726Z"))
+                    .reference("adinventitias")
+                    .send(true)
+                    .status(AccountingInvoiceStatus.DELETED)
+                    .taxAmount(0d)
+                    .term(AccountingInvoiceTerm.NET45)
+                    .totalAmount(0d)
+                    .type(AccountingInvoiceType.CREDITMEMO)
+                    .updatedAt(OffsetDateTime.parse("2023-02-06T06:48:48.536Z"))
+                    .url("https://gifted-yarmulke.info/")
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -192,16 +226,17 @@ Update an invoice
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchAccountingInvoice" method="patch" path="/accounting/{connection_id}/invoice/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchAccountingInvoice" method="patch" path="/accounting/{connection_id}/invoice/{id}" example="accounting_invoice" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchAccountingInvoiceRequest;
 import to.unified.unified_java_sdk.models.operations.PatchAccountingInvoiceResponse;
-import to.unified.unified_java_sdk.models.shared.AccountingInvoice;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -215,6 +250,39 @@ public class Application {
 
         PatchAccountingInvoiceRequest req = PatchAccountingInvoiceRequest.builder()
                 .accountingInvoice(AccountingInvoice.builder()
+                    .attachments(List.of(
+                        AccountingAttachment.builder()
+                            .downloadUrl("https://glossy-markup.net/")
+                            .id("244da10f-d492-4fcc-b5fb-3366d5412e8a")
+                            .mimeType("benevolentia")
+                            .name("vespillo")
+                            .build()))
+                    .balanceAmount(-1d)
+                    .categoryIds(List.of())
+                    .createdAt(OffsetDateTime.parse("2022-11-07T14:17:29.587Z"))
+                    .currency("RWF")
+                    .discountAmount(0d)
+                    .dueAt(OffsetDateTime.parse("2022-11-27T21:25:37.363Z"))
+                    .extendedNotes(List.of())
+                    .id("3e24015f-f6ca-4bdc-a2d6-90fb1af81ab7")
+                    .invoiceNumber("vinco")
+                    .lineitems(List.of())
+                    .metadata(List.of())
+                    .notes("Auctus comburo clarus ubi.")
+                    .paidAmount(0d)
+                    .paidAt(OffsetDateTime.parse("2022-11-25T15:00:28.871Z"))
+                    .paymentCollectionMethod(AccountingInvoicePaymentCollectionMethod.SEND_INVOICE)
+                    .payments(List.of())
+                    .postedAt(OffsetDateTime.parse("2026-03-26T22:47:33.772Z"))
+                    .reference("adinventitias")
+                    .send(true)
+                    .status(AccountingInvoiceStatus.DELETED)
+                    .taxAmount(0d)
+                    .term(AccountingInvoiceTerm.NET45)
+                    .totalAmount(0d)
+                    .type(AccountingInvoiceType.CREDITMEMO)
+                    .updatedAt(OffsetDateTime.parse("2023-02-06T06:48:48.540Z"))
+                    .url("https://gifted-yarmulke.info/")
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -309,16 +377,17 @@ Update an invoice
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateAccountingInvoice" method="put" path="/accounting/{connection_id}/invoice/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateAccountingInvoice" method="put" path="/accounting/{connection_id}/invoice/{id}" example="accounting_invoice" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateAccountingInvoiceRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateAccountingInvoiceResponse;
-import to.unified.unified_java_sdk.models.shared.AccountingInvoice;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -332,6 +401,39 @@ public class Application {
 
         UpdateAccountingInvoiceRequest req = UpdateAccountingInvoiceRequest.builder()
                 .accountingInvoice(AccountingInvoice.builder()
+                    .attachments(List.of(
+                        AccountingAttachment.builder()
+                            .downloadUrl("https://glossy-markup.net/")
+                            .id("244da10f-d492-4fcc-b5fb-3366d5412e8a")
+                            .mimeType("benevolentia")
+                            .name("vespillo")
+                            .build()))
+                    .balanceAmount(-1d)
+                    .categoryIds(List.of())
+                    .createdAt(OffsetDateTime.parse("2022-11-07T14:17:29.587Z"))
+                    .currency("RWF")
+                    .discountAmount(0d)
+                    .dueAt(OffsetDateTime.parse("2022-11-27T21:25:37.363Z"))
+                    .extendedNotes(List.of())
+                    .id("3e24015f-f6ca-4bdc-a2d6-90fb1af81ab7")
+                    .invoiceNumber("vinco")
+                    .lineitems(List.of())
+                    .metadata(List.of())
+                    .notes("Auctus comburo clarus ubi.")
+                    .paidAmount(0d)
+                    .paidAt(OffsetDateTime.parse("2022-11-25T15:00:28.871Z"))
+                    .paymentCollectionMethod(AccountingInvoicePaymentCollectionMethod.SEND_INVOICE)
+                    .payments(List.of())
+                    .postedAt(OffsetDateTime.parse("2026-03-26T22:47:33.772Z"))
+                    .reference("adinventitias")
+                    .send(true)
+                    .status(AccountingInvoiceStatus.DELETED)
+                    .taxAmount(0d)
+                    .term(AccountingInvoiceTerm.NET45)
+                    .totalAmount(0d)
+                    .type(AccountingInvoiceType.CREDITMEMO)
+                    .updatedAt(OffsetDateTime.parse("2023-02-06T06:48:48.540Z"))
+                    .url("https://gifted-yarmulke.info/")
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

@@ -17,16 +17,18 @@ Create a deal
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createCrmDeal" method="post" path="/crm/{connection_id}/deal" -->
+<!-- UsageSnippet language="java" operationID="createCrmDeal" method="post" path="/crm/{connection_id}/deal" example="crm_deal" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
+import java.util.Map;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateCrmDealRequest;
 import to.unified.unified_java_sdk.models.operations.CreateCrmDealResponse;
-import to.unified.unified_java_sdk.models.shared.CrmDeal;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -40,6 +42,45 @@ public class Application {
 
         CreateCrmDealRequest req = CreateCrmDealRequest.builder()
                 .crmDeal(CrmDeal.builder()
+                    .amount(98162d)
+                    .closedAt(OffsetDateTime.parse("2024-03-03T13:46:56.203Z"))
+                    .closingAt(OffsetDateTime.parse("2025-08-09T21:47:04.909Z"))
+                    .createdAt(OffsetDateTime.parse("2023-07-04T12:48:48.470Z"))
+                    .currency("IQD")
+                    .description("Tabula cicuta sophismata comis tepidus sit cavus.")
+                    .id("fb9d739e-e46a-4253-80ea-9c4e45eb3f96")
+                    .metadata(List.of(
+                        CrmMetadata.builder()
+                            .extraData(CrmMetadataExtraData.of(Map.ofEntries(
+                                Map.entry("display_name", "Custom Property"))))
+                            .format(CrmMetadataFormat.TEXT)
+                            .id("3a2e4850-fb79-4e6a-958a-abab7bbc81dc")
+                            .namespace("custom")
+                            .slug("custom_property")
+                            .value(CrmMetadataValue.of("conatus"))
+                            .build()))
+                    .name("Frozen Silk Chicken")
+                    .pipelines(List.of(
+                        CrmReference.builder()
+                            .id("eff2b7cd-af8e-4f47-aa85-163272ccc4d9")
+                            .name("trans")
+                            .build()))
+                    .probability(65d)
+                    .source("cubo")
+                    .stages(List.of(
+                        CrmReference.builder()
+                            .id("1a391e21-a554-4075-9436-04b11d9c2f35")
+                            .name("tubineus")
+                            .build(),
+                        CrmReference.builder()
+                            .id("d764d0a0-f44d-482e-9090-04e20aedf149")
+                            .name("adfectus")
+                            .build()))
+                    .tags(List.of(
+                        "causa",
+                        "suus"))
+                    .updatedAt(OffsetDateTime.parse("2024-09-29T03:11:55.578Z"))
+                    .wonReason("Usque libero soleo.")
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -192,16 +233,18 @@ Update a deal
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchCrmDeal" method="patch" path="/crm/{connection_id}/deal/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchCrmDeal" method="patch" path="/crm/{connection_id}/deal/{id}" example="crm_deal" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
+import java.util.Map;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchCrmDealRequest;
 import to.unified.unified_java_sdk.models.operations.PatchCrmDealResponse;
-import to.unified.unified_java_sdk.models.shared.CrmDeal;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -215,6 +258,45 @@ public class Application {
 
         PatchCrmDealRequest req = PatchCrmDealRequest.builder()
                 .crmDeal(CrmDeal.builder()
+                    .amount(98162d)
+                    .closedAt(OffsetDateTime.parse("2024-03-03T13:46:56.208Z"))
+                    .closingAt(OffsetDateTime.parse("2025-08-09T21:47:04.924Z"))
+                    .createdAt(OffsetDateTime.parse("2023-07-04T12:48:48.470Z"))
+                    .currency("IQD")
+                    .description("Tabula cicuta sophismata comis tepidus sit cavus.")
+                    .id("c48de371-a2f9-40ba-b242-a1d9ef638384")
+                    .metadata(List.of(
+                        CrmMetadata.builder()
+                            .extraData(CrmMetadataExtraData.of(Map.ofEntries(
+                                Map.entry("display_name", "Custom Property"))))
+                            .format(CrmMetadataFormat.TEXT)
+                            .id("a53745bd-9d25-4299-93c4-8902acfaa6d1")
+                            .namespace("custom")
+                            .slug("custom_property")
+                            .value(CrmMetadataValue.of("conatus"))
+                            .build()))
+                    .name("Frozen Silk Chicken")
+                    .pipelines(List.of(
+                        CrmReference.builder()
+                            .id("ddfef141-0d4a-4bac-9498-e7274d64f9e2")
+                            .name("trans")
+                            .build()))
+                    .probability(65d)
+                    .source("cubo")
+                    .stages(List.of(
+                        CrmReference.builder()
+                            .id("b0bc65e5-f455-4d31-bdc6-3190eefddc75")
+                            .name("tubineus")
+                            .build(),
+                        CrmReference.builder()
+                            .id("7c9945f4-ba0b-4acc-bbab-b05e748707bb")
+                            .name("adfectus")
+                            .build()))
+                    .tags(List.of(
+                        "causa",
+                        "suus"))
+                    .updatedAt(OffsetDateTime.parse("2024-09-29T03:11:55.587Z"))
+                    .wonReason("Usque libero soleo.")
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -309,16 +391,18 @@ Update a deal
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateCrmDeal" method="put" path="/crm/{connection_id}/deal/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateCrmDeal" method="put" path="/crm/{connection_id}/deal/{id}" example="crm_deal" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
+import java.util.Map;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateCrmDealRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateCrmDealResponse;
-import to.unified.unified_java_sdk.models.shared.CrmDeal;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -332,6 +416,45 @@ public class Application {
 
         UpdateCrmDealRequest req = UpdateCrmDealRequest.builder()
                 .crmDeal(CrmDeal.builder()
+                    .amount(98162d)
+                    .closedAt(OffsetDateTime.parse("2024-03-03T13:46:56.208Z"))
+                    .closingAt(OffsetDateTime.parse("2025-08-09T21:47:04.924Z"))
+                    .createdAt(OffsetDateTime.parse("2023-07-04T12:48:48.470Z"))
+                    .currency("IQD")
+                    .description("Tabula cicuta sophismata comis tepidus sit cavus.")
+                    .id("c48de371-a2f9-40ba-b242-a1d9ef638384")
+                    .metadata(List.of(
+                        CrmMetadata.builder()
+                            .extraData(CrmMetadataExtraData.of(Map.ofEntries(
+                                Map.entry("display_name", "Custom Property"))))
+                            .format(CrmMetadataFormat.TEXT)
+                            .id("a53745bd-9d25-4299-93c4-8902acfaa6d1")
+                            .namespace("custom")
+                            .slug("custom_property")
+                            .value(CrmMetadataValue.of("conatus"))
+                            .build()))
+                    .name("Frozen Silk Chicken")
+                    .pipelines(List.of(
+                        CrmReference.builder()
+                            .id("ddfef141-0d4a-4bac-9498-e7274d64f9e2")
+                            .name("trans")
+                            .build()))
+                    .probability(65d)
+                    .source("cubo")
+                    .stages(List.of(
+                        CrmReference.builder()
+                            .id("b0bc65e5-f455-4d31-bdc6-3190eefddc75")
+                            .name("tubineus")
+                            .build(),
+                        CrmReference.builder()
+                            .id("7c9945f4-ba0b-4acc-bbab-b05e748707bb")
+                            .name("adfectus")
+                            .build()))
+                    .tags(List.of(
+                        "causa",
+                        "suus"))
+                    .updatedAt(OffsetDateTime.parse("2024-09-29T03:11:55.587Z"))
+                    .wonReason("Usque libero soleo.")
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

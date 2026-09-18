@@ -17,16 +17,16 @@ Create an interview
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createAtsInterview" method="post" path="/ats/{connection_id}/interview" -->
+<!-- UsageSnippet language="java" operationID="createAtsInterview" method="post" path="/ats/{connection_id}/interview" example="ats_interview" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateAtsInterviewRequest;
 import to.unified.unified_java_sdk.models.operations.CreateAtsInterviewResponse;
-import to.unified.unified_java_sdk.models.shared.AtsInterview;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -40,6 +40,14 @@ public class Application {
 
         CreateAtsInterviewRequest req = CreateAtsInterviewRequest.builder()
                 .atsInterview(AtsInterview.builder()
+                    .createdAt(OffsetDateTime.parse("2021-11-28T03:14:47.774Z"))
+                    .endAt(OffsetDateTime.parse("2025-09-23T08:18:31.424Z"))
+                    .externalEventXref("22437263-a3c4-4bef-9da5-8a0a2814ab05")
+                    .id("97378090-9e36-41ba-b377-0bf55ead9114")
+                    .location("26596 Halle Trafficway")
+                    .startAt(OffsetDateTime.parse("2025-05-19T06:26:28.146Z"))
+                    .status(AtsInterviewStatus.SCHEDULED)
+                    .updatedAt(OffsetDateTime.parse("2026-02-04T00:38:00.419Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -192,16 +200,16 @@ Update an interview
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchAtsInterview" method="patch" path="/ats/{connection_id}/interview/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchAtsInterview" method="patch" path="/ats/{connection_id}/interview/{id}" example="ats_interview" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchAtsInterviewRequest;
 import to.unified.unified_java_sdk.models.operations.PatchAtsInterviewResponse;
-import to.unified.unified_java_sdk.models.shared.AtsInterview;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -215,6 +223,14 @@ public class Application {
 
         PatchAtsInterviewRequest req = PatchAtsInterviewRequest.builder()
                 .atsInterview(AtsInterview.builder()
+                    .createdAt(OffsetDateTime.parse("2021-11-28T03:14:47.774Z"))
+                    .endAt(OffsetDateTime.parse("2025-09-23T08:18:31.430Z"))
+                    .externalEventXref("d69449a5-d6ad-4010-a31f-49b8e650458b")
+                    .id("342cb8a4-20e4-4c9a-afd7-ca235b04f094")
+                    .location("26596 Halle Trafficway")
+                    .startAt(OffsetDateTime.parse("2025-05-19T06:26:28.151Z"))
+                    .status(AtsInterviewStatus.SCHEDULED)
+                    .updatedAt(OffsetDateTime.parse("2026-02-04T00:38:00.426Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -309,16 +325,16 @@ Update an interview
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateAtsInterview" method="put" path="/ats/{connection_id}/interview/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateAtsInterview" method="put" path="/ats/{connection_id}/interview/{id}" example="ats_interview" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateAtsInterviewRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateAtsInterviewResponse;
-import to.unified.unified_java_sdk.models.shared.AtsInterview;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -332,6 +348,14 @@ public class Application {
 
         UpdateAtsInterviewRequest req = UpdateAtsInterviewRequest.builder()
                 .atsInterview(AtsInterview.builder()
+                    .createdAt(OffsetDateTime.parse("2021-11-28T03:14:47.774Z"))
+                    .endAt(OffsetDateTime.parse("2025-09-23T08:18:31.430Z"))
+                    .externalEventXref("d69449a5-d6ad-4010-a31f-49b8e650458b")
+                    .id("342cb8a4-20e4-4c9a-afd7-ca235b04f094")
+                    .location("26596 Halle Trafficway")
+                    .startAt(OffsetDateTime.parse("2025-05-19T06:26:28.151Z"))
+                    .status(AtsInterviewStatus.SCHEDULED)
+                    .updatedAt(OffsetDateTime.parse("2026-02-04T00:38:00.426Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

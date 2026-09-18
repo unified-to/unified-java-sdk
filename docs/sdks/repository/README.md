@@ -17,11 +17,12 @@ Create a repository
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createRepoRepository" method="post" path="/repo/{connection_id}/repository" -->
+<!-- UsageSnippet language="java" operationID="createRepoRepository" method="post" path="/repo/{connection_id}/repository" example="repo_repository" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateRepoRepositoryRequest;
 import to.unified.unified_java_sdk.models.operations.CreateRepoRepositoryResponse;
@@ -40,7 +41,14 @@ public class Application {
 
         CreateRepoRepositoryRequest req = CreateRepoRepositoryRequest.builder()
                 .repoRepository(RepoRepository.builder()
-                    .name("<value>")
+                    .name("suggero")
+                    .createdAt(OffsetDateTime.parse("2023-06-12T09:42:00.080Z"))
+                    .description("Tribuo torqueo aetas ustulo illum.")
+                    .id("2b8e1ef3-d009-4d87-9a50-495da886c6d8")
+                    .isPrivate(false)
+                    .owner("Marcella Kuhic")
+                    .updatedAt(OffsetDateTime.parse("2024-02-23T00:27:33.873Z"))
+                    .webUrl("https://brown-phrase.info")
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -193,11 +201,12 @@ Update a repository
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchRepoRepository" method="patch" path="/repo/{connection_id}/repository/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchRepoRepository" method="patch" path="/repo/{connection_id}/repository/{id}" example="repo_repository" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchRepoRepositoryRequest;
 import to.unified.unified_java_sdk.models.operations.PatchRepoRepositoryResponse;
@@ -216,7 +225,14 @@ public class Application {
 
         PatchRepoRepositoryRequest req = PatchRepoRepositoryRequest.builder()
                 .repoRepository(RepoRepository.builder()
-                    .name("<value>")
+                    .name("suggero")
+                    .createdAt(OffsetDateTime.parse("2023-06-12T09:42:00.080Z"))
+                    .description("Tribuo torqueo aetas ustulo illum.")
+                    .id("e4cc1567-240f-4c9f-a71e-0c80a589eb73")
+                    .isPrivate(false)
+                    .owner("Marcella Kuhic")
+                    .updatedAt(OffsetDateTime.parse("2024-02-23T00:27:33.875Z"))
+                    .webUrl("https://brown-phrase.info")
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -311,11 +327,12 @@ Update a repository
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateRepoRepository" method="put" path="/repo/{connection_id}/repository/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateRepoRepository" method="put" path="/repo/{connection_id}/repository/{id}" example="repo_repository" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateRepoRepositoryRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateRepoRepositoryResponse;
@@ -334,7 +351,14 @@ public class Application {
 
         UpdateRepoRepositoryRequest req = UpdateRepoRepositoryRequest.builder()
                 .repoRepository(RepoRepository.builder()
-                    .name("<value>")
+                    .name("suggero")
+                    .createdAt(OffsetDateTime.parse("2023-06-12T09:42:00.080Z"))
+                    .description("Tribuo torqueo aetas ustulo illum.")
+                    .id("e4cc1567-240f-4c9f-a71e-0c80a589eb73")
+                    .isPrivate(false)
+                    .owner("Marcella Kuhic")
+                    .updatedAt(OffsetDateTime.parse("2024-02-23T00:27:33.875Z"))
+                    .webUrl("https://brown-phrase.info")
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

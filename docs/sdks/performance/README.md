@@ -24,16 +24,17 @@ Create a feedback
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createPerformanceFeedback" method="post" path="/performance/{connection_id}/feedback" -->
+<!-- UsageSnippet language="java" operationID="createPerformanceFeedback" method="post" path="/performance/{connection_id}/feedback" example="performance_feedback" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreatePerformanceFeedbackRequest;
 import to.unified.unified_java_sdk.models.operations.CreatePerformanceFeedbackResponse;
-import to.unified.unified_java_sdk.models.shared.PerformanceFeedback;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -48,6 +49,15 @@ public class Application {
         CreatePerformanceFeedbackRequest req = CreatePerformanceFeedbackRequest.builder()
                 .performanceFeedback(PerformanceFeedback.builder()
                     .userId("<id>")
+                    .createdAt(OffsetDateTime.parse("2023-04-11T16:21:53.862Z"))
+                    .id("f5fce0fb-e6d4-4627-b15e-106baf0e1fee")
+                    .isVisible(true)
+                    .message("Tabernus corpus voluptate aestus.")
+                    .tags(List.of(
+                        "well-to-do",
+                        "hexagon"))
+                    .type(PerformanceFeedbackType.PRAISE)
+                    .updatedAt(OffsetDateTime.parse("2025-08-12T15:38:19.904Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -85,16 +95,17 @@ Create a goal
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createPerformanceGoal" method="post" path="/performance/{connection_id}/goal" -->
+<!-- UsageSnippet language="java" operationID="createPerformanceGoal" method="post" path="/performance/{connection_id}/goal" example="performance_goal" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreatePerformanceGoalRequest;
 import to.unified.unified_java_sdk.models.operations.CreatePerformanceGoalResponse;
-import to.unified.unified_java_sdk.models.shared.PerformanceGoal;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -108,6 +119,47 @@ public class Application {
 
         CreatePerformanceGoalRequest req = CreatePerformanceGoalRequest.builder()
                 .performanceGoal(PerformanceGoal.builder()
+                    .createdAt(OffsetDateTime.parse("2020-01-09T20:43:07.380Z"))
+                    .description("Suscipit suspendo vulnero vel facere valeo vallum degero.")
+                    .dueAt(OffsetDateTime.parse("2026-06-27T20:58:33.713Z"))
+                    .id("acafe340-8dc1-489e-8f54-8a8085a9ded3")
+                    .milestones(List.of(
+                        PerformanceGoalMilestone.builder()
+                            .name("Front-line asynchronous hub")
+                            .currentValue(10d)
+                            .dueAt(OffsetDateTime.parse("2026-05-03T17:33:02.180Z"))
+                            .id("ec90d3e3-23bd-4d9f-a5d7-e388979f90d9")
+                            .isCompleted(true)
+                            .targetValue(32d)
+                            .unit("%")
+                            .weight(7d)
+                            .build(),
+                        PerformanceGoalMilestone.builder()
+                            .name("Organized encompassing archive")
+                            .currentValue(0d)
+                            .dueAt(OffsetDateTime.parse("2026-07-07T10:43:09.591Z"))
+                            .id("09e04b09-7197-4fc4-9c32-077230408c26")
+                            .isCompleted(true)
+                            .targetValue(32d)
+                            .weight(5d)
+                            .build(),
+                        PerformanceGoalMilestone.builder()
+                            .name("Devolved directional middleware")
+                            .currentValue(31d)
+                            .description("Nobis tremo debitis.")
+                            .dueAt(OffsetDateTime.parse("2026-09-07T13:24:57.437Z"))
+                            .id("bbe63683-c1d0-4932-89ac-ef81e73ae6f1")
+                            .isCompleted(true)
+                            .targetValue(32d)
+                            .weight(5d)
+                            .build()))
+                    .name("Proactive national protocol")
+                    .progress(3d)
+                    .startAt(OffsetDateTime.parse("2025-06-26T10:33:31.577Z"))
+                    .status(PerformanceGoalStatus.CLOSED)
+                    .type(PerformanceGoalSchemasType.COMPANY)
+                    .updatedAt(OffsetDateTime.parse("2022-08-31T00:54:02.388Z"))
+                    .weight(5d)
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -605,16 +657,17 @@ Update a goal
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchPerformanceGoal" method="patch" path="/performance/{connection_id}/goal/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchPerformanceGoal" method="patch" path="/performance/{connection_id}/goal/{id}" example="performance_goal" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchPerformanceGoalRequest;
 import to.unified.unified_java_sdk.models.operations.PatchPerformanceGoalResponse;
-import to.unified.unified_java_sdk.models.shared.PerformanceGoal;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -628,6 +681,47 @@ public class Application {
 
         PatchPerformanceGoalRequest req = PatchPerformanceGoalRequest.builder()
                 .performanceGoal(PerformanceGoal.builder()
+                    .createdAt(OffsetDateTime.parse("2020-01-09T20:43:07.380Z"))
+                    .description("Suscipit suspendo vulnero vel facere valeo vallum degero.")
+                    .dueAt(OffsetDateTime.parse("2026-06-27T20:58:33.727Z"))
+                    .id("a48153d9-a081-46df-92f7-0287d23ec5db")
+                    .milestones(List.of(
+                        PerformanceGoalMilestone.builder()
+                            .name("Front-line asynchronous hub")
+                            .currentValue(10d)
+                            .dueAt(OffsetDateTime.parse("2026-05-03T17:33:02.194Z"))
+                            .id("ec90d3e3-23bd-4d9f-a5d7-e388979f90d9")
+                            .isCompleted(true)
+                            .targetValue(32d)
+                            .unit("%")
+                            .weight(7d)
+                            .build(),
+                        PerformanceGoalMilestone.builder()
+                            .name("Organized encompassing archive")
+                            .currentValue(0d)
+                            .dueAt(OffsetDateTime.parse("2026-07-07T10:43:09.604Z"))
+                            .id("09e04b09-7197-4fc4-9c32-077230408c26")
+                            .isCompleted(true)
+                            .targetValue(32d)
+                            .weight(5d)
+                            .build(),
+                        PerformanceGoalMilestone.builder()
+                            .name("Devolved directional middleware")
+                            .currentValue(31d)
+                            .description("Nobis tremo debitis.")
+                            .dueAt(OffsetDateTime.parse("2026-09-07T13:24:57.451Z"))
+                            .id("bbe63683-c1d0-4932-89ac-ef81e73ae6f1")
+                            .isCompleted(true)
+                            .targetValue(32d)
+                            .weight(5d)
+                            .build()))
+                    .name("Proactive national protocol")
+                    .progress(3d)
+                    .startAt(OffsetDateTime.parse("2025-06-26T10:33:31.589Z"))
+                    .status(PerformanceGoalStatus.CLOSED)
+                    .type(PerformanceGoalSchemasType.COMPANY)
+                    .updatedAt(OffsetDateTime.parse("2022-08-31T00:54:02.393Z"))
+                    .weight(5d)
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -722,16 +816,17 @@ Update a goal
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updatePerformanceGoal" method="put" path="/performance/{connection_id}/goal/{id}" -->
+<!-- UsageSnippet language="java" operationID="updatePerformanceGoal" method="put" path="/performance/{connection_id}/goal/{id}" example="performance_goal" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdatePerformanceGoalRequest;
 import to.unified.unified_java_sdk.models.operations.UpdatePerformanceGoalResponse;
-import to.unified.unified_java_sdk.models.shared.PerformanceGoal;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -745,6 +840,47 @@ public class Application {
 
         UpdatePerformanceGoalRequest req = UpdatePerformanceGoalRequest.builder()
                 .performanceGoal(PerformanceGoal.builder()
+                    .createdAt(OffsetDateTime.parse("2020-01-09T20:43:07.380Z"))
+                    .description("Suscipit suspendo vulnero vel facere valeo vallum degero.")
+                    .dueAt(OffsetDateTime.parse("2026-06-27T20:58:33.727Z"))
+                    .id("a48153d9-a081-46df-92f7-0287d23ec5db")
+                    .milestones(List.of(
+                        PerformanceGoalMilestone.builder()
+                            .name("Front-line asynchronous hub")
+                            .currentValue(10d)
+                            .dueAt(OffsetDateTime.parse("2026-05-03T17:33:02.194Z"))
+                            .id("ec90d3e3-23bd-4d9f-a5d7-e388979f90d9")
+                            .isCompleted(true)
+                            .targetValue(32d)
+                            .unit("%")
+                            .weight(7d)
+                            .build(),
+                        PerformanceGoalMilestone.builder()
+                            .name("Organized encompassing archive")
+                            .currentValue(0d)
+                            .dueAt(OffsetDateTime.parse("2026-07-07T10:43:09.604Z"))
+                            .id("09e04b09-7197-4fc4-9c32-077230408c26")
+                            .isCompleted(true)
+                            .targetValue(32d)
+                            .weight(5d)
+                            .build(),
+                        PerformanceGoalMilestone.builder()
+                            .name("Devolved directional middleware")
+                            .currentValue(31d)
+                            .description("Nobis tremo debitis.")
+                            .dueAt(OffsetDateTime.parse("2026-09-07T13:24:57.451Z"))
+                            .id("bbe63683-c1d0-4932-89ac-ef81e73ae6f1")
+                            .isCompleted(true)
+                            .targetValue(32d)
+                            .weight(5d)
+                            .build()))
+                    .name("Proactive national protocol")
+                    .progress(3d)
+                    .startAt(OffsetDateTime.parse("2025-06-26T10:33:31.589Z"))
+                    .status(PerformanceGoalStatus.CLOSED)
+                    .type(PerformanceGoalSchemasType.COMPANY)
+                    .updatedAt(OffsetDateTime.parse("2022-08-31T00:54:02.393Z"))
+                    .weight(5d)
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

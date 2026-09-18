@@ -17,16 +17,17 @@ Create a bankfeedtransaction
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createAccountingBankfeedtransaction" method="post" path="/accounting/{connection_id}/bankfeedtransaction" -->
+<!-- UsageSnippet language="java" operationID="createAccountingBankfeedtransaction" method="post" path="/accounting/{connection_id}/bankfeedtransaction" example="accounting_bankfeedtransaction" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingBankfeedtransactionRequest;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingBankfeedtransactionResponse;
-import to.unified.unified_java_sdk.models.shared.AccountingBankfeedtransaction;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -40,6 +41,23 @@ public class Application {
 
         CreateAccountingBankfeedtransactionRequest req = CreateAccountingBankfeedtransactionRequest.builder()
                 .accountingBankfeedtransaction(AccountingBankfeedtransaction.builder()
+                    .accountId("b7dc4175-1368-4b89-a700-d621b6666648")
+                    .amount(60889d)
+                    .bankCategory("Games")
+                    .bankfeedaccountId("34c1d05f-5b62-4bcd-9121-3be8b720941f")
+                    .categoryIds(List.of())
+                    .contactId("1ef58ebe-f9c9-46f6-9d9c-2df2658503be")
+                    .createdAt(OffsetDateTime.parse("2022-03-24T23:41:08.374Z"))
+                    .currency("SRD")
+                    .description("payment transaction at McLaughlin - Schaden using card ending with ****8233 for DOP 574.03 in account ***9523.")
+                    .id("30fb790d-3f8e-48ab-8f69-cfc3c408e989")
+                    .isPending(true)
+                    .merchantName("Reichert, Erdman and Tillman")
+                    .postedAt(OffsetDateTime.parse("2025-03-23T18:34:48.066Z"))
+                    .reference("93642593")
+                    .transactionAt(OffsetDateTime.parse("2022-07-27T19:48:15.221Z"))
+                    .type(AccountingBankfeedtransactionType.CREDIT)
+                    .updatedAt(OffsetDateTime.parse("2022-05-23T20:47:21.834Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -192,16 +210,17 @@ Update a bankfeedtransaction
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchAccountingBankfeedtransaction" method="patch" path="/accounting/{connection_id}/bankfeedtransaction/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchAccountingBankfeedtransaction" method="patch" path="/accounting/{connection_id}/bankfeedtransaction/{id}" example="accounting_bankfeedtransaction" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchAccountingBankfeedtransactionRequest;
 import to.unified.unified_java_sdk.models.operations.PatchAccountingBankfeedtransactionResponse;
-import to.unified.unified_java_sdk.models.shared.AccountingBankfeedtransaction;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -215,6 +234,23 @@ public class Application {
 
         PatchAccountingBankfeedtransactionRequest req = PatchAccountingBankfeedtransactionRequest.builder()
                 .accountingBankfeedtransaction(AccountingBankfeedtransaction.builder()
+                    .accountId("b7dc4175-1368-4b89-a700-d621b6666648")
+                    .amount(60889d)
+                    .bankCategory("Games")
+                    .bankfeedaccountId("34c1d05f-5b62-4bcd-9121-3be8b720941f")
+                    .categoryIds(List.of())
+                    .contactId("1ef58ebe-f9c9-46f6-9d9c-2df2658503be")
+                    .createdAt(OffsetDateTime.parse("2022-03-24T23:41:08.374Z"))
+                    .currency("SRD")
+                    .description("payment transaction at McLaughlin - Schaden using card ending with ****8233 for DOP 574.03 in account ***9523.")
+                    .id("99973f58-3052-444a-a355-5b7ffb177172")
+                    .isPending(true)
+                    .merchantName("Reichert, Erdman and Tillman")
+                    .postedAt(OffsetDateTime.parse("2025-03-23T18:34:48.075Z"))
+                    .reference("93642593")
+                    .transactionAt(OffsetDateTime.parse("2022-07-27T19:48:15.222Z"))
+                    .type(AccountingBankfeedtransactionType.CREDIT)
+                    .updatedAt(OffsetDateTime.parse("2022-05-23T20:47:21.835Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -309,16 +345,17 @@ Update a bankfeedtransaction
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateAccountingBankfeedtransaction" method="put" path="/accounting/{connection_id}/bankfeedtransaction/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateAccountingBankfeedtransaction" method="put" path="/accounting/{connection_id}/bankfeedtransaction/{id}" example="accounting_bankfeedtransaction" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateAccountingBankfeedtransactionRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateAccountingBankfeedtransactionResponse;
-import to.unified.unified_java_sdk.models.shared.AccountingBankfeedtransaction;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -332,6 +369,23 @@ public class Application {
 
         UpdateAccountingBankfeedtransactionRequest req = UpdateAccountingBankfeedtransactionRequest.builder()
                 .accountingBankfeedtransaction(AccountingBankfeedtransaction.builder()
+                    .accountId("b7dc4175-1368-4b89-a700-d621b6666648")
+                    .amount(60889d)
+                    .bankCategory("Games")
+                    .bankfeedaccountId("34c1d05f-5b62-4bcd-9121-3be8b720941f")
+                    .categoryIds(List.of())
+                    .contactId("1ef58ebe-f9c9-46f6-9d9c-2df2658503be")
+                    .createdAt(OffsetDateTime.parse("2022-03-24T23:41:08.374Z"))
+                    .currency("SRD")
+                    .description("payment transaction at McLaughlin - Schaden using card ending with ****8233 for DOP 574.03 in account ***9523.")
+                    .id("99973f58-3052-444a-a355-5b7ffb177172")
+                    .isPending(true)
+                    .merchantName("Reichert, Erdman and Tillman")
+                    .postedAt(OffsetDateTime.parse("2025-03-23T18:34:48.075Z"))
+                    .reference("93642593")
+                    .transactionAt(OffsetDateTime.parse("2022-07-27T19:48:15.222Z"))
+                    .type(AccountingBankfeedtransactionType.CREDIT)
+                    .updatedAt(OffsetDateTime.parse("2022-05-23T20:47:21.835Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

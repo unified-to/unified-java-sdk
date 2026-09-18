@@ -17,16 +17,17 @@ Create a paymentterm
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createAccountingPaymentterm" method="post" path="/accounting/{connection_id}/paymentterm" -->
+<!-- UsageSnippet language="java" operationID="createAccountingPaymentterm" method="post" path="/accounting/{connection_id}/paymentterm" example="accounting_paymentterm" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingPaymenttermRequest;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingPaymenttermResponse;
-import to.unified.unified_java_sdk.models.shared.AccountingPaymentterm;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -40,6 +41,21 @@ public class Application {
 
         CreateAccountingPaymenttermRequest req = CreateAccountingPaymenttermRequest.builder()
                 .accountingPaymentterm(AccountingPaymentterm.builder()
+                    .category(Category.STANDARD)
+                    .createdAt(OffsetDateTime.parse("2021-08-22T22:42:42.265Z"))
+                    .dayOfMonthDue(4d)
+                    .description("Cogito pecco eos cultura.")
+                    .discountDayOfMonth(13d)
+                    .discountDays(4d)
+                    .discountPercent(5d)
+                    .dueDays(57d)
+                    .dueNextMonthDays(9d)
+                    .id("48745512-c4a4-4ba5-964e-784f73ff4ff1")
+                    .isActive(false)
+                    .metadata(List.of())
+                    .name("Net 30")
+                    .type(AccountingPaymenttermType.NET15)
+                    .updatedAt(OffsetDateTime.parse("2025-12-11T11:07:31.854Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -192,16 +208,17 @@ Update a paymentterm
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchAccountingPaymentterm" method="patch" path="/accounting/{connection_id}/paymentterm/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchAccountingPaymentterm" method="patch" path="/accounting/{connection_id}/paymentterm/{id}" example="accounting_paymentterm" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchAccountingPaymenttermRequest;
 import to.unified.unified_java_sdk.models.operations.PatchAccountingPaymenttermResponse;
-import to.unified.unified_java_sdk.models.shared.AccountingPaymentterm;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -215,6 +232,21 @@ public class Application {
 
         PatchAccountingPaymenttermRequest req = PatchAccountingPaymenttermRequest.builder()
                 .accountingPaymentterm(AccountingPaymentterm.builder()
+                    .category(Category.STANDARD)
+                    .createdAt(OffsetDateTime.parse("2021-08-22T22:42:42.265Z"))
+                    .dayOfMonthDue(4d)
+                    .description("Cogito pecco eos cultura.")
+                    .discountDayOfMonth(13d)
+                    .discountDays(4d)
+                    .discountPercent(5d)
+                    .dueDays(57d)
+                    .dueNextMonthDays(9d)
+                    .id("2142d448-2276-437b-83d4-9bf9154c041a")
+                    .isActive(false)
+                    .metadata(List.of())
+                    .name("Net 30")
+                    .type(AccountingPaymenttermType.NET15)
+                    .updatedAt(OffsetDateTime.parse("2025-12-11T11:07:31.864Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -309,16 +341,17 @@ Update a paymentterm
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateAccountingPaymentterm" method="put" path="/accounting/{connection_id}/paymentterm/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateAccountingPaymentterm" method="put" path="/accounting/{connection_id}/paymentterm/{id}" example="accounting_paymentterm" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateAccountingPaymenttermRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateAccountingPaymenttermResponse;
-import to.unified.unified_java_sdk.models.shared.AccountingPaymentterm;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -332,6 +365,21 @@ public class Application {
 
         UpdateAccountingPaymenttermRequest req = UpdateAccountingPaymenttermRequest.builder()
                 .accountingPaymentterm(AccountingPaymentterm.builder()
+                    .category(Category.STANDARD)
+                    .createdAt(OffsetDateTime.parse("2021-08-22T22:42:42.265Z"))
+                    .dayOfMonthDue(4d)
+                    .description("Cogito pecco eos cultura.")
+                    .discountDayOfMonth(13d)
+                    .discountDays(4d)
+                    .discountPercent(5d)
+                    .dueDays(57d)
+                    .dueNextMonthDays(9d)
+                    .id("2142d448-2276-437b-83d4-9bf9154c041a")
+                    .isActive(false)
+                    .metadata(List.of())
+                    .name("Net 30")
+                    .type(AccountingPaymenttermType.NET15)
+                    .updatedAt(OffsetDateTime.parse("2025-12-11T11:07:31.864Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

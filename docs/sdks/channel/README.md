@@ -17,11 +17,13 @@ Create a channel
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createMessagingChannel" method="post" path="/messaging/{connection_id}/channel" -->
+<!-- UsageSnippet language="java" operationID="createMessagingChannel" method="post" path="/messaging/{connection_id}/channel" example="messaging_channel" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateMessagingChannelRequest;
 import to.unified.unified_java_sdk.models.operations.CreateMessagingChannelResponse;
@@ -40,6 +42,16 @@ public class Application {
 
         CreateMessagingChannelRequest req = CreateMessagingChannelRequest.builder()
                 .messagingChannel(MessagingChannel.builder()
+                    .createdAt(OffsetDateTime.parse("2023-10-05T02:09:22.795Z"))
+                    .description("Dolores tutis.")
+                    .hasSubchannels(true)
+                    .id("021b0aa2-c26f-46af-9ab5-aa8b3668976b")
+                    .isActive(false)
+                    .isPrivate(true)
+                    .members(List.of())
+                    .name("tego")
+                    .updatedAt(OffsetDateTime.parse("2026-04-23T02:24:13.912Z"))
+                    .webUrl("https://svelte-rule.name/")
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -192,11 +204,13 @@ Update a channel
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchMessagingChannel" method="patch" path="/messaging/{connection_id}/channel/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchMessagingChannel" method="patch" path="/messaging/{connection_id}/channel/{id}" example="messaging_channel" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchMessagingChannelRequest;
 import to.unified.unified_java_sdk.models.operations.PatchMessagingChannelResponse;
@@ -215,6 +229,16 @@ public class Application {
 
         PatchMessagingChannelRequest req = PatchMessagingChannelRequest.builder()
                 .messagingChannel(MessagingChannel.builder()
+                    .createdAt(OffsetDateTime.parse("2023-10-05T02:09:22.795Z"))
+                    .description("Dolores tutis.")
+                    .hasSubchannels(true)
+                    .id("40af066d-f89e-46da-9bb2-81ff7f2f83a9")
+                    .isActive(false)
+                    .isPrivate(true)
+                    .members(List.of())
+                    .name("tego")
+                    .updatedAt(OffsetDateTime.parse("2026-04-23T02:24:13.920Z"))
+                    .webUrl("https://svelte-rule.name/")
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -309,11 +333,13 @@ Update a channel
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateMessagingChannel" method="put" path="/messaging/{connection_id}/channel/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateMessagingChannel" method="put" path="/messaging/{connection_id}/channel/{id}" example="messaging_channel" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateMessagingChannelRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateMessagingChannelResponse;
@@ -332,6 +358,16 @@ public class Application {
 
         UpdateMessagingChannelRequest req = UpdateMessagingChannelRequest.builder()
                 .messagingChannel(MessagingChannel.builder()
+                    .createdAt(OffsetDateTime.parse("2023-10-05T02:09:22.795Z"))
+                    .description("Dolores tutis.")
+                    .hasSubchannels(true)
+                    .id("40af066d-f89e-46da-9bb2-81ff7f2f83a9")
+                    .isActive(false)
+                    .isPrivate(true)
+                    .members(List.of())
+                    .name("tego")
+                    .updatedAt(OffsetDateTime.parse("2026-04-23T02:24:13.920Z"))
+                    .webUrl("https://svelte-rule.name/")
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

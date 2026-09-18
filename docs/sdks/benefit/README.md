@@ -17,16 +17,16 @@ Create a benefit
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createHrisBenefit" method="post" path="/hris/{connection_id}/benefit" -->
+<!-- UsageSnippet language="java" operationID="createHrisBenefit" method="post" path="/hris/{connection_id}/benefit" example="hris_benefit" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateHrisBenefitRequest;
 import to.unified.unified_java_sdk.models.operations.CreateHrisBenefitResponse;
-import to.unified.unified_java_sdk.models.shared.HrisBenefit;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -40,6 +40,20 @@ public class Application {
 
         CreateHrisBenefitRequest req = CreateHrisBenefitRequest.builder()
                 .hrisBenefit(HrisBenefit.builder()
+                    .coverageLevel(CoverageLevel.EMPLOYEE_SPOUSE)
+                    .createdAt(OffsetDateTime.parse("2020-06-11T01:24:05.654Z"))
+                    .currency("JOD")
+                    .description("Vomito voluptas dolor sed.")
+                    .employerContributionAmount(185006d)
+                    .employerContributionMaxAmount(179093d)
+                    .employerContributionType(EmployerContributionType.PERCENTAGE)
+                    .frequency(HrisBenefitFrequency.HOUR)
+                    .id("56df050c-d73e-477d-a39f-341eca6ae236")
+                    .isActive(false)
+                    .name("Frozen Wooden Ball")
+                    .tax(Tax.PRE_TAX)
+                    .type(HrisBenefitType.GARNISHMENT)
+                    .updatedAt(OffsetDateTime.parse("2023-03-06T11:00:57.658Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -192,16 +206,16 @@ Update a benefit
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchHrisBenefit" method="patch" path="/hris/{connection_id}/benefit/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchHrisBenefit" method="patch" path="/hris/{connection_id}/benefit/{id}" example="hris_benefit" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchHrisBenefitRequest;
 import to.unified.unified_java_sdk.models.operations.PatchHrisBenefitResponse;
-import to.unified.unified_java_sdk.models.shared.HrisBenefit;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -215,6 +229,20 @@ public class Application {
 
         PatchHrisBenefitRequest req = PatchHrisBenefitRequest.builder()
                 .hrisBenefit(HrisBenefit.builder()
+                    .coverageLevel(CoverageLevel.EMPLOYEE_SPOUSE)
+                    .createdAt(OffsetDateTime.parse("2020-06-11T01:24:05.654Z"))
+                    .currency("JOD")
+                    .description("Vomito voluptas dolor sed.")
+                    .employerContributionAmount(185006d)
+                    .employerContributionMaxAmount(179093d)
+                    .employerContributionType(EmployerContributionType.PERCENTAGE)
+                    .frequency(HrisBenefitFrequency.HOUR)
+                    .id("c01bd534-fa42-44cf-a806-ff9377fd25be")
+                    .isActive(false)
+                    .name("Frozen Wooden Ball")
+                    .tax(Tax.PRE_TAX)
+                    .type(HrisBenefitType.GARNISHMENT)
+                    .updatedAt(OffsetDateTime.parse("2023-03-06T11:00:57.663Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -309,16 +337,16 @@ Update a benefit
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateHrisBenefit" method="put" path="/hris/{connection_id}/benefit/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateHrisBenefit" method="put" path="/hris/{connection_id}/benefit/{id}" example="hris_benefit" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateHrisBenefitRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateHrisBenefitResponse;
-import to.unified.unified_java_sdk.models.shared.HrisBenefit;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -332,6 +360,20 @@ public class Application {
 
         UpdateHrisBenefitRequest req = UpdateHrisBenefitRequest.builder()
                 .hrisBenefit(HrisBenefit.builder()
+                    .coverageLevel(CoverageLevel.EMPLOYEE_SPOUSE)
+                    .createdAt(OffsetDateTime.parse("2020-06-11T01:24:05.654Z"))
+                    .currency("JOD")
+                    .description("Vomito voluptas dolor sed.")
+                    .employerContributionAmount(185006d)
+                    .employerContributionMaxAmount(179093d)
+                    .employerContributionType(EmployerContributionType.PERCENTAGE)
+                    .frequency(HrisBenefitFrequency.HOUR)
+                    .id("c01bd534-fa42-44cf-a806-ff9377fd25be")
+                    .isActive(false)
+                    .name("Frozen Wooden Ball")
+                    .tax(Tax.PRE_TAX)
+                    .type(HrisBenefitType.GARNISHMENT)
+                    .updatedAt(OffsetDateTime.parse("2023-03-06T11:00:57.663Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

@@ -14,16 +14,17 @@ Create a feedback
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createPerformanceFeedback" method="post" path="/performance/{connection_id}/feedback" -->
+<!-- UsageSnippet language="java" operationID="createPerformanceFeedback" method="post" path="/performance/{connection_id}/feedback" example="performance_feedback" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreatePerformanceFeedbackRequest;
 import to.unified.unified_java_sdk.models.operations.CreatePerformanceFeedbackResponse;
-import to.unified.unified_java_sdk.models.shared.PerformanceFeedback;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -38,6 +39,15 @@ public class Application {
         CreatePerformanceFeedbackRequest req = CreatePerformanceFeedbackRequest.builder()
                 .performanceFeedback(PerformanceFeedback.builder()
                     .userId("<id>")
+                    .createdAt(OffsetDateTime.parse("2023-04-11T16:21:53.862Z"))
+                    .id("f5fce0fb-e6d4-4627-b15e-106baf0e1fee")
+                    .isVisible(true)
+                    .message("Tabernus corpus voluptate aestus.")
+                    .tags(List.of(
+                        "well-to-do",
+                        "hexagon"))
+                    .type(PerformanceFeedbackType.PRAISE)
+                    .updatedAt(OffsetDateTime.parse("2025-08-12T15:38:19.904Z"))
                     .build())
                 .connectionId("<id>")
                 .build();

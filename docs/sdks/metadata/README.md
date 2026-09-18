@@ -17,16 +17,18 @@ Create a metadata
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createMetadataMetadata" method="post" path="/metadata/{connection_id}/metadata" -->
+<!-- UsageSnippet language="java" operationID="createMetadataMetadata" method="post" path="/metadata/{connection_id}/metadata" example="metadata_metadata" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
+import java.util.Map;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateMetadataMetadataRequest;
 import to.unified.unified_java_sdk.models.operations.CreateMetadataMetadataResponse;
-import to.unified.unified_java_sdk.models.shared.MetadataMetadata;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -40,8 +42,18 @@ public class Application {
 
         CreateMetadataMetadataRequest req = CreateMetadataMetadataRequest.builder()
                 .metadataMetadata(MetadataMetadata.builder()
-                    .name("<value>")
-                    .objectType("<value>")
+                    .name("autem")
+                    .objectType("clubs_group")
+                    .createdAt(OffsetDateTime.parse("2021-03-25T03:02:17.656Z"))
+                    .format(MetadataMetadataFormat.PRICE)
+                    .id("ac11f5d2-602e-41dc-b187-ad043957c105")
+                    .isRequired(false)
+                    .objects(Map.ofEntries(
+                    ))
+                    .options(List.of())
+                    .originalFormat("advoco")
+                    .slug("arbustum")
+                    .updatedAt(OffsetDateTime.parse("2025-02-26T08:01:01.682Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -194,16 +206,18 @@ Update a metadata
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchMetadataMetadata" method="patch" path="/metadata/{connection_id}/metadata/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchMetadataMetadata" method="patch" path="/metadata/{connection_id}/metadata/{id}" example="metadata_metadata" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
+import java.util.Map;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchMetadataMetadataRequest;
 import to.unified.unified_java_sdk.models.operations.PatchMetadataMetadataResponse;
-import to.unified.unified_java_sdk.models.shared.MetadataMetadata;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -217,8 +231,18 @@ public class Application {
 
         PatchMetadataMetadataRequest req = PatchMetadataMetadataRequest.builder()
                 .metadataMetadata(MetadataMetadata.builder()
-                    .name("<value>")
-                    .objectType("<value>")
+                    .name("autem")
+                    .objectType("clubs_group")
+                    .createdAt(OffsetDateTime.parse("2021-03-25T03:02:17.656Z"))
+                    .format(MetadataMetadataFormat.PRICE)
+                    .id("5070526c-4324-4c87-bebf-a9f8aed68f09")
+                    .isRequired(false)
+                    .objects(Map.ofEntries(
+                    ))
+                    .options(List.of())
+                    .originalFormat("advoco")
+                    .slug("arbustum")
+                    .updatedAt(OffsetDateTime.parse("2025-02-26T08:01:01.690Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -313,16 +337,18 @@ Update a metadata
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateMetadataMetadata" method="put" path="/metadata/{connection_id}/metadata/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateMetadataMetadata" method="put" path="/metadata/{connection_id}/metadata/{id}" example="metadata_metadata" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
+import java.util.Map;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateMetadataMetadataRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateMetadataMetadataResponse;
-import to.unified.unified_java_sdk.models.shared.MetadataMetadata;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -336,8 +362,18 @@ public class Application {
 
         UpdateMetadataMetadataRequest req = UpdateMetadataMetadataRequest.builder()
                 .metadataMetadata(MetadataMetadata.builder()
-                    .name("<value>")
-                    .objectType("<value>")
+                    .name("autem")
+                    .objectType("clubs_group")
+                    .createdAt(OffsetDateTime.parse("2021-03-25T03:02:17.656Z"))
+                    .format(MetadataMetadataFormat.PRICE)
+                    .id("5070526c-4324-4c87-bebf-a9f8aed68f09")
+                    .isRequired(false)
+                    .objects(Map.ofEntries(
+                    ))
+                    .options(List.of())
+                    .originalFormat("advoco")
+                    .slug("arbustum")
+                    .updatedAt(OffsetDateTime.parse("2025-02-26T08:01:01.690Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

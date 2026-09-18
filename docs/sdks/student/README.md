@@ -17,16 +17,17 @@ Create a student
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createLmsStudent" method="post" path="/lms/{connection_id}/student" -->
+<!-- UsageSnippet language="java" operationID="createLmsStudent" method="post" path="/lms/{connection_id}/student" example="lms_student" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateLmsStudentRequest;
 import to.unified.unified_java_sdk.models.operations.CreateLmsStudentResponse;
-import to.unified.unified_java_sdk.models.shared.LmsStudent;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -40,6 +41,32 @@ public class Application {
 
         CreateLmsStudentRequest req = CreateLmsStudentRequest.builder()
                 .lmsStudent(LmsStudent.builder()
+                    .address(PropertyLmsStudentAddress.builder()
+                        .address1("94082 Kassandra Camp")
+                        .address2("Apt. 461")
+                        .city("New Ibrahimmouth")
+                        .countryCode("US")
+                        .postalCode("52851")
+                        .region("Tennessee")
+                        .regionCode("NV")
+                        .build())
+                    .createdAt(OffsetDateTime.parse("2020-03-23T06:59:29.777Z"))
+                    .emails(List.of(
+                        LmsEmail.builder()
+                            .build(),
+                        LmsEmail.builder()
+                            .build()))
+                    .firstName("Marcella")
+                    .id("f7f415ad-d6a4-49ee-b6f4-6823b04af952")
+                    .imageUrl("https://avatars.githubusercontent.com/u/36301374")
+                    .lastName("Murazik")
+                    .name("Marcella Murazik")
+                    .telephones(List.of(
+                        LmsTelephone.builder()
+                            .telephone("(482) 469-8067")
+                            .type(LmsTelephoneType.FAX)
+                            .build()))
+                    .updatedAt(OffsetDateTime.parse("2022-06-19T13:56:16.319Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -192,16 +219,17 @@ Update a student
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchLmsStudent" method="patch" path="/lms/{connection_id}/student/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchLmsStudent" method="patch" path="/lms/{connection_id}/student/{id}" example="lms_student" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchLmsStudentRequest;
 import to.unified.unified_java_sdk.models.operations.PatchLmsStudentResponse;
-import to.unified.unified_java_sdk.models.shared.LmsStudent;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -215,6 +243,32 @@ public class Application {
 
         PatchLmsStudentRequest req = PatchLmsStudentRequest.builder()
                 .lmsStudent(LmsStudent.builder()
+                    .address(PropertyLmsStudentAddress.builder()
+                        .address1("94082 Kassandra Camp")
+                        .address2("Apt. 461")
+                        .city("New Ibrahimmouth")
+                        .countryCode("US")
+                        .postalCode("52851")
+                        .region("Tennessee")
+                        .regionCode("NV")
+                        .build())
+                    .createdAt(OffsetDateTime.parse("2020-03-23T06:59:29.777Z"))
+                    .emails(List.of(
+                        LmsEmail.builder()
+                            .build(),
+                        LmsEmail.builder()
+                            .build()))
+                    .firstName("Marcella")
+                    .id("d41ddae1-7a51-41a8-8179-becbb620c443")
+                    .imageUrl("https://avatars.githubusercontent.com/u/36301374")
+                    .lastName("Murazik")
+                    .name("Marcella Murazik")
+                    .telephones(List.of(
+                        LmsTelephone.builder()
+                            .telephone("(482) 469-8067")
+                            .type(LmsTelephoneType.FAX)
+                            .build()))
+                    .updatedAt(OffsetDateTime.parse("2022-06-19T13:56:16.323Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -309,16 +363,17 @@ Update a student
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateLmsStudent" method="put" path="/lms/{connection_id}/student/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateLmsStudent" method="put" path="/lms/{connection_id}/student/{id}" example="lms_student" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateLmsStudentRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateLmsStudentResponse;
-import to.unified.unified_java_sdk.models.shared.LmsStudent;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -332,6 +387,32 @@ public class Application {
 
         UpdateLmsStudentRequest req = UpdateLmsStudentRequest.builder()
                 .lmsStudent(LmsStudent.builder()
+                    .address(PropertyLmsStudentAddress.builder()
+                        .address1("94082 Kassandra Camp")
+                        .address2("Apt. 461")
+                        .city("New Ibrahimmouth")
+                        .countryCode("US")
+                        .postalCode("52851")
+                        .region("Tennessee")
+                        .regionCode("NV")
+                        .build())
+                    .createdAt(OffsetDateTime.parse("2020-03-23T06:59:29.777Z"))
+                    .emails(List.of(
+                        LmsEmail.builder()
+                            .build(),
+                        LmsEmail.builder()
+                            .build()))
+                    .firstName("Marcella")
+                    .id("d41ddae1-7a51-41a8-8179-becbb620c443")
+                    .imageUrl("https://avatars.githubusercontent.com/u/36301374")
+                    .lastName("Murazik")
+                    .name("Marcella Murazik")
+                    .telephones(List.of(
+                        LmsTelephone.builder()
+                            .telephone("(482) 469-8067")
+                            .type(LmsTelephoneType.FAX)
+                            .build()))
+                    .updatedAt(OffsetDateTime.parse("2022-06-19T13:56:16.323Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

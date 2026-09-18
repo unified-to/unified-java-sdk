@@ -17,16 +17,17 @@ Create a creative
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createAdsCreative" method="post" path="/ads/{connection_id}/creative" -->
+<!-- UsageSnippet language="java" operationID="createAdsCreative" method="post" path="/ads/{connection_id}/creative" example="ads_creative" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateAdsCreativeRequest;
 import to.unified.unified_java_sdk.models.operations.CreateAdsCreativeResponse;
-import to.unified.unified_java_sdk.models.shared.AdsCreative;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -40,6 +41,15 @@ public class Application {
 
         CreateAdsCreativeRequest req = CreateAdsCreativeRequest.builder()
                 .adsCreative(AdsCreative.builder()
+                    .createdAt(OffsetDateTime.parse("2020-02-17T11:24:51.093Z"))
+                    .id("5dd7b3ce-88d6-4c92-965d-a4f57ced5201")
+                    .labels(List.of(
+                        "coma",
+                        "accedo",
+                        "termes"))
+                    .name("Brekke, Bradtke and Robel")
+                    .status(AdsCreativeStatus.PAUSED)
+                    .updatedAt(OffsetDateTime.parse("2021-06-21T01:01:35.446Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -192,16 +202,17 @@ Update a creative
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchAdsCreative" method="patch" path="/ads/{connection_id}/creative/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchAdsCreative" method="patch" path="/ads/{connection_id}/creative/{id}" example="ads_creative" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchAdsCreativeRequest;
 import to.unified.unified_java_sdk.models.operations.PatchAdsCreativeResponse;
-import to.unified.unified_java_sdk.models.shared.AdsCreative;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -215,6 +226,15 @@ public class Application {
 
         PatchAdsCreativeRequest req = PatchAdsCreativeRequest.builder()
                 .adsCreative(AdsCreative.builder()
+                    .createdAt(OffsetDateTime.parse("2020-02-17T11:24:51.093Z"))
+                    .id("d118ec82-e89d-4441-8941-08ef9518487f")
+                    .labels(List.of(
+                        "coma",
+                        "accedo",
+                        "termes"))
+                    .name("Brekke, Bradtke and Robel")
+                    .status(AdsCreativeStatus.PAUSED)
+                    .updatedAt(OffsetDateTime.parse("2021-06-21T01:01:35.450Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -309,16 +329,17 @@ Update a creative
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateAdsCreative" method="put" path="/ads/{connection_id}/creative/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateAdsCreative" method="put" path="/ads/{connection_id}/creative/{id}" example="ads_creative" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateAdsCreativeRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateAdsCreativeResponse;
-import to.unified.unified_java_sdk.models.shared.AdsCreative;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -332,6 +353,15 @@ public class Application {
 
         UpdateAdsCreativeRequest req = UpdateAdsCreativeRequest.builder()
                 .adsCreative(AdsCreative.builder()
+                    .createdAt(OffsetDateTime.parse("2020-02-17T11:24:51.093Z"))
+                    .id("d118ec82-e89d-4441-8941-08ef9518487f")
+                    .labels(List.of(
+                        "coma",
+                        "accedo",
+                        "termes"))
+                    .name("Brekke, Bradtke and Robel")
+                    .status(AdsCreativeStatus.PAUSED)
+                    .updatedAt(OffsetDateTime.parse("2021-06-21T01:01:35.450Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

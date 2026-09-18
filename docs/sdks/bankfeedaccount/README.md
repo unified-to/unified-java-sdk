@@ -17,16 +17,16 @@ Create a bankfeedaccount
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createAccountingBankfeedaccount" method="post" path="/accounting/{connection_id}/bankfeedaccount" -->
+<!-- UsageSnippet language="java" operationID="createAccountingBankfeedaccount" method="post" path="/accounting/{connection_id}/bankfeedaccount" example="accounting_bankfeedaccount" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingBankfeedaccountRequest;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingBankfeedaccountResponse;
-import to.unified.unified_java_sdk.models.shared.AccountingBankfeedaccount;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -40,6 +40,20 @@ public class Application {
 
         CreateAccountingBankfeedaccountRequest req = CreateAccountingBankfeedaccountRequest.builder()
                 .accountingBankfeedaccount(AccountingBankfeedaccount.builder()
+                    .accountId("baa0e9a4-65e9-4bf5-856a-ce46fc36ebb1")
+                    .accountNumber("30369722")
+                    .accountNumberLast4("9722")
+                    .accountType(AccountType.LOAN)
+                    .balance(90358d)
+                    .bankName("Weissnat Inc")
+                    .createdAt(OffsetDateTime.parse("2022-10-31T16:42:19.277Z"))
+                    .currency("SSP")
+                    .feedStartAt(OffsetDateTime.parse("2022-10-31T16:42:19.277Z"))
+                    .id("2ea876a9-ab62-403d-b280-b8bd398c21a5")
+                    .name("Corwin, Donnelly and Connelly Savings")
+                    .routingNumber("667753156")
+                    .status(AccountingBankfeedaccountStatus.ACTIVE)
+                    .updatedAt(OffsetDateTime.parse("2024-04-11T12:57:07.381Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -192,16 +206,16 @@ Update a bankfeedaccount
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchAccountingBankfeedaccount" method="patch" path="/accounting/{connection_id}/bankfeedaccount/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchAccountingBankfeedaccount" method="patch" path="/accounting/{connection_id}/bankfeedaccount/{id}" example="accounting_bankfeedaccount" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchAccountingBankfeedaccountRequest;
 import to.unified.unified_java_sdk.models.operations.PatchAccountingBankfeedaccountResponse;
-import to.unified.unified_java_sdk.models.shared.AccountingBankfeedaccount;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -215,6 +229,20 @@ public class Application {
 
         PatchAccountingBankfeedaccountRequest req = PatchAccountingBankfeedaccountRequest.builder()
                 .accountingBankfeedaccount(AccountingBankfeedaccount.builder()
+                    .accountId("baa0e9a4-65e9-4bf5-856a-ce46fc36ebb1")
+                    .accountNumber("30369722")
+                    .accountNumberLast4("9722")
+                    .accountType(AccountType.LOAN)
+                    .balance(90358d)
+                    .bankName("Weissnat Inc")
+                    .createdAt(OffsetDateTime.parse("2022-10-31T16:42:19.277Z"))
+                    .currency("SSP")
+                    .feedStartAt(OffsetDateTime.parse("2022-10-31T16:42:19.277Z"))
+                    .id("209a9fc6-36cf-43c0-a50c-b7e3c177603b")
+                    .name("Corwin, Donnelly and Connelly Savings")
+                    .routingNumber("667753156")
+                    .status(AccountingBankfeedaccountStatus.ACTIVE)
+                    .updatedAt(OffsetDateTime.parse("2024-04-11T12:57:07.387Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -309,16 +337,16 @@ Update a bankfeedaccount
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateAccountingBankfeedaccount" method="put" path="/accounting/{connection_id}/bankfeedaccount/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateAccountingBankfeedaccount" method="put" path="/accounting/{connection_id}/bankfeedaccount/{id}" example="accounting_bankfeedaccount" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateAccountingBankfeedaccountRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateAccountingBankfeedaccountResponse;
-import to.unified.unified_java_sdk.models.shared.AccountingBankfeedaccount;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -332,6 +360,20 @@ public class Application {
 
         UpdateAccountingBankfeedaccountRequest req = UpdateAccountingBankfeedaccountRequest.builder()
                 .accountingBankfeedaccount(AccountingBankfeedaccount.builder()
+                    .accountId("baa0e9a4-65e9-4bf5-856a-ce46fc36ebb1")
+                    .accountNumber("30369722")
+                    .accountNumberLast4("9722")
+                    .accountType(AccountType.LOAN)
+                    .balance(90358d)
+                    .bankName("Weissnat Inc")
+                    .createdAt(OffsetDateTime.parse("2022-10-31T16:42:19.277Z"))
+                    .currency("SSP")
+                    .feedStartAt(OffsetDateTime.parse("2022-10-31T16:42:19.277Z"))
+                    .id("209a9fc6-36cf-43c0-a50c-b7e3c177603b")
+                    .name("Corwin, Donnelly and Connelly Savings")
+                    .routingNumber("667753156")
+                    .status(AccountingBankfeedaccountStatus.ACTIVE)
+                    .updatedAt(OffsetDateTime.parse("2024-04-11T12:57:07.387Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

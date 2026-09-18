@@ -23,16 +23,17 @@ Create a campaign
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createAdsCampaign" method="post" path="/ads/{connection_id}/campaign" -->
+<!-- UsageSnippet language="java" operationID="createAdsCampaign" method="post" path="/ads/{connection_id}/campaign" example="ads_campaign" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateAdsCampaignRequest;
 import to.unified.unified_java_sdk.models.operations.CreateAdsCampaignResponse;
-import to.unified.unified_java_sdk.models.shared.AdsCampaign;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -46,6 +47,23 @@ public class Application {
 
         CreateAdsCampaignRequest req = CreateAdsCampaignRequest.builder()
                 .adsCampaign(AdsCampaign.builder()
+                    .budgetAmount(8743.179536121897)
+                    .budgetPeriod(BudgetPeriod.MONTHLY)
+                    .category("CREDIT")
+                    .createdAt(OffsetDateTime.parse("2022-05-21T08:51:41.868Z"))
+                    .currency("USD")
+                    .effectiveStatus(EffectiveStatus.NOT_ELIGIBLE)
+                    .endAt(OffsetDateTime.parse("2025-05-09T08:19:05.015Z"))
+                    .id("812fa2fe-ecf0-4a07-af47-1f4eeb74cfdd")
+                    .labels(List.of(
+                        "comedo"))
+                    .name("Emard Inc")
+                    .startAt(OffsetDateTime.parse("2022-07-20T04:51:23.303Z"))
+                    .status(AdsCampaignStatus.PROCESSING_FAILED)
+                    .targeting(PropertyAdsCampaignTargeting.builder()
+                        .build())
+                    .totalSpendAmount(2349.8642875347286)
+                    .updatedAt(OffsetDateTime.parse("2025-12-05T13:35:57.497Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -83,16 +101,17 @@ Create a campaign
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createMartechCampaign" method="post" path="/martech/{connection_id}/campaign" -->
+<!-- UsageSnippet language="java" operationID="createMartechCampaign" method="post" path="/martech/{connection_id}/campaign" example="martech_campaign" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateMartechCampaignRequest;
 import to.unified.unified_java_sdk.models.operations.CreateMartechCampaignResponse;
-import to.unified.unified_java_sdk.models.shared.MarketingCampaign;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -106,6 +125,20 @@ public class Application {
 
         CreateMartechCampaignRequest req = CreateMartechCampaignRequest.builder()
                 .marketingCampaign(MarketingCampaign.builder()
+                    .createdAt(OffsetDateTime.parse("2023-08-01T22:29:12.121Z"))
+                    .fromEmail("Nick.Beahan@hotmail.com")
+                    .fromName("Javier Rempel")
+                    .id("1d47a766-5cc6-4e40-959e-2dc9f36995c1")
+                    .listIds(List.of(
+                        "bde5cab9-cf2f-4ed5-adab-b33c88bac5af"))
+                    .name("Consequatur atqui sustineo.")
+                    .previewText("Bellicus tener cinis causa cavus toties.")
+                    .replyToEmail("Antwan.Abshire@hotmail.com")
+                    .sendAt(OffsetDateTime.parse("2023-03-28T12:33:25.052Z"))
+                    .status(MarketingCampaignStatus.SENT)
+                    .subjectLine("Depromo depulso turpis teres apparatus placeat ventus tolero cunctatio.")
+                    .type("plaintext")
+                    .updatedAt(OffsetDateTime.parse("2023-12-17T22:11:31.702Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -373,16 +406,17 @@ Update a campaign
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchAdsCampaign" method="patch" path="/ads/{connection_id}/campaign/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchAdsCampaign" method="patch" path="/ads/{connection_id}/campaign/{id}" example="ads_campaign" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchAdsCampaignRequest;
 import to.unified.unified_java_sdk.models.operations.PatchAdsCampaignResponse;
-import to.unified.unified_java_sdk.models.shared.AdsCampaign;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -396,6 +430,23 @@ public class Application {
 
         PatchAdsCampaignRequest req = PatchAdsCampaignRequest.builder()
                 .adsCampaign(AdsCampaign.builder()
+                    .budgetAmount(8743.179536121897)
+                    .budgetPeriod(BudgetPeriod.MONTHLY)
+                    .category("CREDIT")
+                    .createdAt(OffsetDateTime.parse("2022-05-21T08:51:41.868Z"))
+                    .currency("USD")
+                    .effectiveStatus(EffectiveStatus.NOT_ELIGIBLE)
+                    .endAt(OffsetDateTime.parse("2025-05-09T08:19:05.103Z"))
+                    .id("304d62ba-35db-4c76-b39e-4fa4e93b7f71")
+                    .labels(List.of(
+                        "comedo"))
+                    .name("Emard Inc")
+                    .startAt(OffsetDateTime.parse("2022-07-20T04:51:23.308Z"))
+                    .status(AdsCampaignStatus.PROCESSING_FAILED)
+                    .targeting(PropertyAdsCampaignTargeting.builder()
+                        .build())
+                    .totalSpendAmount(2349.8642875347286)
+                    .updatedAt(OffsetDateTime.parse("2025-12-05T13:35:57.603Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -434,16 +485,17 @@ Update a campaign
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchMartechCampaign" method="patch" path="/martech/{connection_id}/campaign/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchMartechCampaign" method="patch" path="/martech/{connection_id}/campaign/{id}" example="martech_campaign" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchMartechCampaignRequest;
 import to.unified.unified_java_sdk.models.operations.PatchMartechCampaignResponse;
-import to.unified.unified_java_sdk.models.shared.MarketingCampaign;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -457,6 +509,20 @@ public class Application {
 
         PatchMartechCampaignRequest req = PatchMartechCampaignRequest.builder()
                 .marketingCampaign(MarketingCampaign.builder()
+                    .createdAt(OffsetDateTime.parse("2023-08-01T22:29:12.121Z"))
+                    .fromEmail("Nick.Beahan@hotmail.com")
+                    .fromName("Javier Rempel")
+                    .id("a65cd827-3a78-44a7-846e-2bca453f14c1")
+                    .listIds(List.of(
+                        "bde5cab9-cf2f-4ed5-adab-b33c88bac5af"))
+                    .name("Consequatur atqui sustineo.")
+                    .previewText("Bellicus tener cinis causa cavus toties.")
+                    .replyToEmail("Antwan.Abshire@hotmail.com")
+                    .sendAt(OffsetDateTime.parse("2023-03-28T12:33:25.052Z"))
+                    .status(MarketingCampaignStatus.SENT)
+                    .subjectLine("Depromo depulso turpis teres apparatus placeat ventus tolero cunctatio.")
+                    .type("plaintext")
+                    .updatedAt(OffsetDateTime.parse("2023-12-17T22:11:31.702Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -607,16 +673,17 @@ Update a campaign
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateAdsCampaign" method="put" path="/ads/{connection_id}/campaign/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateAdsCampaign" method="put" path="/ads/{connection_id}/campaign/{id}" example="ads_campaign" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateAdsCampaignRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateAdsCampaignResponse;
-import to.unified.unified_java_sdk.models.shared.AdsCampaign;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -630,6 +697,23 @@ public class Application {
 
         UpdateAdsCampaignRequest req = UpdateAdsCampaignRequest.builder()
                 .adsCampaign(AdsCampaign.builder()
+                    .budgetAmount(8743.179536121897)
+                    .budgetPeriod(BudgetPeriod.MONTHLY)
+                    .category("CREDIT")
+                    .createdAt(OffsetDateTime.parse("2022-05-21T08:51:41.868Z"))
+                    .currency("USD")
+                    .effectiveStatus(EffectiveStatus.NOT_ELIGIBLE)
+                    .endAt(OffsetDateTime.parse("2025-05-09T08:19:05.103Z"))
+                    .id("304d62ba-35db-4c76-b39e-4fa4e93b7f71")
+                    .labels(List.of(
+                        "comedo"))
+                    .name("Emard Inc")
+                    .startAt(OffsetDateTime.parse("2022-07-20T04:51:23.308Z"))
+                    .status(AdsCampaignStatus.PROCESSING_FAILED)
+                    .targeting(PropertyAdsCampaignTargeting.builder()
+                        .build())
+                    .totalSpendAmount(2349.8642875347286)
+                    .updatedAt(OffsetDateTime.parse("2025-12-05T13:35:57.603Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -668,16 +752,17 @@ Update a campaign
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateMartechCampaign" method="put" path="/martech/{connection_id}/campaign/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateMartechCampaign" method="put" path="/martech/{connection_id}/campaign/{id}" example="martech_campaign" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateMartechCampaignRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateMartechCampaignResponse;
-import to.unified.unified_java_sdk.models.shared.MarketingCampaign;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -691,6 +776,20 @@ public class Application {
 
         UpdateMartechCampaignRequest req = UpdateMartechCampaignRequest.builder()
                 .marketingCampaign(MarketingCampaign.builder()
+                    .createdAt(OffsetDateTime.parse("2023-08-01T22:29:12.121Z"))
+                    .fromEmail("Nick.Beahan@hotmail.com")
+                    .fromName("Javier Rempel")
+                    .id("a65cd827-3a78-44a7-846e-2bca453f14c1")
+                    .listIds(List.of(
+                        "bde5cab9-cf2f-4ed5-adab-b33c88bac5af"))
+                    .name("Consequatur atqui sustineo.")
+                    .previewText("Bellicus tener cinis causa cavus toties.")
+                    .replyToEmail("Antwan.Abshire@hotmail.com")
+                    .sendAt(OffsetDateTime.parse("2023-03-28T12:33:25.052Z"))
+                    .status(MarketingCampaignStatus.SENT)
+                    .subjectLine("Depromo depulso turpis teres apparatus placeat ventus tolero cunctatio.")
+                    .type("plaintext")
+                    .updatedAt(OffsetDateTime.parse("2023-12-17T22:11:31.702Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

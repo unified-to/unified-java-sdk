@@ -29,16 +29,16 @@ Create a comment
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createKmsComment" method="post" path="/kms/{connection_id}/comment" -->
+<!-- UsageSnippet language="java" operationID="createKmsComment" method="post" path="/kms/{connection_id}/comment" example="kms_comment" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateKmsCommentRequest;
 import to.unified.unified_java_sdk.models.operations.CreateKmsCommentResponse;
-import to.unified.unified_java_sdk.models.shared.KmsComment;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -52,6 +52,12 @@ public class Application {
 
         CreateKmsCommentRequest req = CreateKmsCommentRequest.builder()
                 .kmsComment(KmsComment.builder()
+                    .content("Decimus tolero viriliter usque.")
+                    .contentType(ContentType.HTML)
+                    .createdAt(OffsetDateTime.parse("2022-08-26T14:40:49.732Z"))
+                    .id("7a7c211f-0d0c-4de6-8fa9-150729e7b4a3")
+                    .type(KmsCommentType.PAGE)
+                    .updatedAt(OffsetDateTime.parse("2023-11-16T08:15:30.752Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -89,11 +95,13 @@ Create a page
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createKmsPage" method="post" path="/kms/{connection_id}/page" -->
+<!-- UsageSnippet language="java" operationID="createKmsPage" method="post" path="/kms/{connection_id}/page" example="kms_page" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateKmsPageRequest;
 import to.unified.unified_java_sdk.models.operations.CreateKmsPageResponse;
@@ -111,7 +119,16 @@ public class Application {
 
         CreateKmsPageRequest req = CreateKmsPageRequest.builder()
                 .kmsPage(KmsPage.builder()
-                    .type(KmsPageType.TEXT)
+                    .type(KmsPageType.HTML)
+                    .createdAt(OffsetDateTime.parse("2019-05-20T18:06:50.749Z"))
+                    .downloadUrl("https://agitated-validity.info")
+                    .hasChildren(true)
+                    .id("f498e686-b37b-400a-8b10-93a6bc4e18f4")
+                    .isActive(true)
+                    .metadata(List.of())
+                    .title("even minister extract")
+                    .updatedAt(OffsetDateTime.parse("2025-09-10T18:26:23.373Z"))
+                    .webUrl("https://another-petticoat.info")
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -149,11 +166,12 @@ Create a space
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createKmsSpace" method="post" path="/kms/{connection_id}/space" -->
+<!-- UsageSnippet language="java" operationID="createKmsSpace" method="post" path="/kms/{connection_id}/space" example="kms_space" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateKmsSpaceRequest;
 import to.unified.unified_java_sdk.models.operations.CreateKmsSpaceResponse;
@@ -172,6 +190,12 @@ public class Application {
 
         CreateKmsSpaceRequest req = CreateKmsSpaceRequest.builder()
                 .kmsSpace(KmsSpace.builder()
+                    .createdAt(OffsetDateTime.parse("2022-10-31T00:56:54.246Z"))
+                    .description("Acer.")
+                    .id("72f6d852-9f5b-447f-928a-dd6a6ca5a5f6")
+                    .isActive(false)
+                    .name("into nor afore")
+                    .updatedAt(OffsetDateTime.parse("2025-12-03T15:52:28.170Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -554,16 +578,16 @@ Update a comment
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchKmsComment" method="patch" path="/kms/{connection_id}/comment/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchKmsComment" method="patch" path="/kms/{connection_id}/comment/{id}" example="kms_comment" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchKmsCommentRequest;
 import to.unified.unified_java_sdk.models.operations.PatchKmsCommentResponse;
-import to.unified.unified_java_sdk.models.shared.KmsComment;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -577,6 +601,12 @@ public class Application {
 
         PatchKmsCommentRequest req = PatchKmsCommentRequest.builder()
                 .kmsComment(KmsComment.builder()
+                    .content("Decimus tolero viriliter usque.")
+                    .contentType(ContentType.HTML)
+                    .createdAt(OffsetDateTime.parse("2022-08-26T14:40:49.732Z"))
+                    .id("6fddf474-4bea-4611-a88d-4d3410024ce8")
+                    .type(KmsCommentType.PAGE)
+                    .updatedAt(OffsetDateTime.parse("2023-11-16T08:15:30.755Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -615,11 +645,13 @@ Update a page
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchKmsPage" method="patch" path="/kms/{connection_id}/page/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchKmsPage" method="patch" path="/kms/{connection_id}/page/{id}" example="kms_page" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchKmsPageRequest;
 import to.unified.unified_java_sdk.models.operations.PatchKmsPageResponse;
@@ -637,7 +669,16 @@ public class Application {
 
         PatchKmsPageRequest req = PatchKmsPageRequest.builder()
                 .kmsPage(KmsPage.builder()
-                    .type(KmsPageType.OTHER)
+                    .type(KmsPageType.HTML)
+                    .createdAt(OffsetDateTime.parse("2019-05-20T18:06:50.749Z"))
+                    .downloadUrl("https://agitated-validity.info")
+                    .hasChildren(true)
+                    .id("0636844d-0893-488b-ae20-1aa19425e5d6")
+                    .isActive(true)
+                    .metadata(List.of())
+                    .title("even minister extract")
+                    .updatedAt(OffsetDateTime.parse("2025-09-10T18:26:23.386Z"))
+                    .webUrl("https://another-petticoat.info")
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -676,11 +717,12 @@ Update a space
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchKmsSpace" method="patch" path="/kms/{connection_id}/space/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchKmsSpace" method="patch" path="/kms/{connection_id}/space/{id}" example="kms_space" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchKmsSpaceRequest;
 import to.unified.unified_java_sdk.models.operations.PatchKmsSpaceResponse;
@@ -699,6 +741,12 @@ public class Application {
 
         PatchKmsSpaceRequest req = PatchKmsSpaceRequest.builder()
                 .kmsSpace(KmsSpace.builder()
+                    .createdAt(OffsetDateTime.parse("2022-10-31T00:56:54.246Z"))
+                    .description("Acer.")
+                    .id("4ef3edbc-fbf3-4572-ba45-0d74d5f1788b")
+                    .isActive(false)
+                    .name("into nor afore")
+                    .updatedAt(OffsetDateTime.parse("2025-12-03T15:52:28.175Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -905,16 +953,16 @@ Update a comment
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateKmsComment" method="put" path="/kms/{connection_id}/comment/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateKmsComment" method="put" path="/kms/{connection_id}/comment/{id}" example="kms_comment" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateKmsCommentRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateKmsCommentResponse;
-import to.unified.unified_java_sdk.models.shared.KmsComment;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -928,6 +976,12 @@ public class Application {
 
         UpdateKmsCommentRequest req = UpdateKmsCommentRequest.builder()
                 .kmsComment(KmsComment.builder()
+                    .content("Decimus tolero viriliter usque.")
+                    .contentType(ContentType.HTML)
+                    .createdAt(OffsetDateTime.parse("2022-08-26T14:40:49.732Z"))
+                    .id("6fddf474-4bea-4611-a88d-4d3410024ce8")
+                    .type(KmsCommentType.PAGE)
+                    .updatedAt(OffsetDateTime.parse("2023-11-16T08:15:30.755Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -966,11 +1020,13 @@ Update a page
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateKmsPage" method="put" path="/kms/{connection_id}/page/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateKmsPage" method="put" path="/kms/{connection_id}/page/{id}" example="kms_page" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateKmsPageRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateKmsPageResponse;
@@ -988,7 +1044,16 @@ public class Application {
 
         UpdateKmsPageRequest req = UpdateKmsPageRequest.builder()
                 .kmsPage(KmsPage.builder()
-                    .type(KmsPageType.OTHER)
+                    .type(KmsPageType.HTML)
+                    .createdAt(OffsetDateTime.parse("2019-05-20T18:06:50.749Z"))
+                    .downloadUrl("https://agitated-validity.info")
+                    .hasChildren(true)
+                    .id("0636844d-0893-488b-ae20-1aa19425e5d6")
+                    .isActive(true)
+                    .metadata(List.of())
+                    .title("even minister extract")
+                    .updatedAt(OffsetDateTime.parse("2025-09-10T18:26:23.386Z"))
+                    .webUrl("https://another-petticoat.info")
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -1027,11 +1092,12 @@ Update a space
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateKmsSpace" method="put" path="/kms/{connection_id}/space/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateKmsSpace" method="put" path="/kms/{connection_id}/space/{id}" example="kms_space" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateKmsSpaceRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateKmsSpaceResponse;
@@ -1050,6 +1116,12 @@ public class Application {
 
         UpdateKmsSpaceRequest req = UpdateKmsSpaceRequest.builder()
                 .kmsSpace(KmsSpace.builder()
+                    .createdAt(OffsetDateTime.parse("2022-10-31T00:56:54.246Z"))
+                    .description("Acer.")
+                    .id("4ef3edbc-fbf3-4572-ba45-0d74d5f1788b")
+                    .isActive(false)
+                    .name("into nor afore")
+                    .updatedAt(OffsetDateTime.parse("2025-12-03T15:52:28.175Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

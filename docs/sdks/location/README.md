@@ -25,16 +25,17 @@ Create a location
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createCommerceLocation" method="post" path="/commerce/{connection_id}/location" -->
+<!-- UsageSnippet language="java" operationID="createCommerceLocation" method="post" path="/commerce/{connection_id}/location" example="commerce_location" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateCommerceLocationRequest;
 import to.unified.unified_java_sdk.models.operations.CreateCommerceLocationResponse;
-import to.unified.unified_java_sdk.models.shared.CommerceLocation;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -48,6 +49,56 @@ public class Application {
 
         CreateCommerceLocationRequest req = CreateCommerceLocationRequest.builder()
                 .commerceLocation(CommerceLocation.builder()
+                    .address(PropertyCommerceLocationAddress.builder()
+                        .address1("29896 The Limes")
+                        .city("New Kenny")
+                        .countryCode("US")
+                        .postalCode("14490-0609")
+                        .region("Virginia")
+                        .regionCode("MS")
+                        .build())
+                    .categories(List.of())
+                    .createdAt(OffsetDateTime.parse("2022-12-29T04:15:21.195Z"))
+                    .currency("XCD")
+                    .description("Adsidue audentia.")
+                    .id("cc586ecd-1c4e-4aae-99e6-a4f89fb0e1cb")
+                    .imageUrl("https://picsum.photos/seed/hjFt1/1036/2220")
+                    .isActive(false)
+                    .languageLocale("vulgaris")
+                    .latitude(0d)
+                    .locationType(LocationType.RESTAURANT)
+                    .longitude(0d)
+                    .media(List.of(
+                        CommerceItemMedia.builder()
+                            .url("https://picsum.photos/seed/QVh7ViTV/3964/1567")
+                            .alt("Addo.")
+                            .height(283d)
+                            .id("f83a47f5-2eed-42eb-b7d4-efe96e7e4980")
+                            .metadata(List.of(
+                                CommerceMetadata.builder()
+                                    .id("8348bb1a-aebf-4aba-926f-e7bf46c18d55")
+                                    .slug("abutor")
+                                    .value(CommerceMetadataValue.of("damno"))
+                                    .build()))
+                            .position(40d)
+                            .type(CommerceItemMediaType.IMAGE)
+                            .width(1d)
+                            .build()))
+                    .name("Olson - Mraz")
+                    .priceLevel("")
+                    .rating(0d)
+                    .reviewCount(0d)
+                    .telephones(List.of(
+                        CommerceTelephone.builder()
+                            .telephone("(872) 522-3201")
+                            .type(CommerceTelephoneType.OTHER)
+                            .build(),
+                        CommerceTelephone.builder()
+                            .telephone("(236) 274-2445")
+                            .type(CommerceTelephoneType.MOBILE)
+                            .build()))
+                    .updatedAt(OffsetDateTime.parse("2024-04-09T09:36:01.351Z"))
+                    .webUrl("https://chilly-edge.info")
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -85,16 +136,17 @@ Create a location
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createHrisLocation" method="post" path="/hris/{connection_id}/location" -->
+<!-- UsageSnippet language="java" operationID="createHrisLocation" method="post" path="/hris/{connection_id}/location" example="hris_location" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateHrisLocationRequest;
 import to.unified.unified_java_sdk.models.operations.CreateHrisLocationResponse;
-import to.unified.unified_java_sdk.models.shared.HrisLocation;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -108,6 +160,39 @@ public class Application {
 
         CreateHrisLocationRequest req = CreateHrisLocationRequest.builder()
                 .hrisLocation(HrisLocation.builder()
+                    .address(PropertyHrisLocationAddress.builder()
+                        .address1("2743 Connelly Summit")
+                        .address2("Apt. 350")
+                        .city("Titusville")
+                        .countryCode("US")
+                        .postalCode("16154-1095")
+                        .region("Oregon")
+                        .regionCode("AL")
+                        .build())
+                    .createdAt(OffsetDateTime.parse("2021-07-18T10:32:01.414Z"))
+                    .currency("MUR")
+                    .description("Acervus caries.")
+                    .externalIdentifier("76a05081-d11e-4359-8f85-19fd2875e804")
+                    .id("48338c1d-ca7f-4eb0-bc12-a5468160ffea")
+                    .isActive(true)
+                    .isHq(false)
+                    .languageLocale("fr")
+                    .name("adhuc")
+                    .telephones(List.of(
+                        HrisTelephone.builder()
+                            .telephone("(710) 550-6997")
+                            .type(HrisTelephoneType.FAX)
+                            .build(),
+                        HrisTelephone.builder()
+                            .telephone("(208) 555-8542")
+                            .type(HrisTelephoneType.HOME)
+                            .build(),
+                        HrisTelephone.builder()
+                            .telephone("(712) 473-5482")
+                            .type(HrisTelephoneType.FAX)
+                            .build()))
+                    .timezone("America/Guyana")
+                    .updatedAt(OffsetDateTime.parse("2023-06-09T00:40:22.393Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -490,16 +575,17 @@ Update a location
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchCommerceLocation" method="patch" path="/commerce/{connection_id}/location/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchCommerceLocation" method="patch" path="/commerce/{connection_id}/location/{id}" example="commerce_location" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchCommerceLocationRequest;
 import to.unified.unified_java_sdk.models.operations.PatchCommerceLocationResponse;
-import to.unified.unified_java_sdk.models.shared.CommerceLocation;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -513,6 +599,56 @@ public class Application {
 
         PatchCommerceLocationRequest req = PatchCommerceLocationRequest.builder()
                 .commerceLocation(CommerceLocation.builder()
+                    .address(PropertyCommerceLocationAddress.builder()
+                        .address1("29896 The Limes")
+                        .city("New Kenny")
+                        .countryCode("US")
+                        .postalCode("14490-0609")
+                        .region("Virginia")
+                        .regionCode("MS")
+                        .build())
+                    .categories(List.of())
+                    .createdAt(OffsetDateTime.parse("2022-12-29T04:15:21.195Z"))
+                    .currency("XCD")
+                    .description("Adsidue audentia.")
+                    .id("4a8eb352-cec0-40d3-9002-d9db68c1420b")
+                    .imageUrl("https://picsum.photos/seed/hjFt1/1036/2220")
+                    .isActive(false)
+                    .languageLocale("vulgaris")
+                    .latitude(0d)
+                    .locationType(LocationType.RESTAURANT)
+                    .longitude(0d)
+                    .media(List.of(
+                        CommerceItemMedia.builder()
+                            .url("https://picsum.photos/seed/QVh7ViTV/3964/1567")
+                            .alt("Addo.")
+                            .height(283d)
+                            .id("3909acdf-2cde-4603-8361-fd936c020e65")
+                            .metadata(List.of(
+                                CommerceMetadata.builder()
+                                    .id("2d33a074-28fe-493c-981d-888616925162")
+                                    .slug("abutor")
+                                    .value(CommerceMetadataValue.of("damno"))
+                                    .build()))
+                            .position(40d)
+                            .type(CommerceItemMediaType.IMAGE)
+                            .width(1d)
+                            .build()))
+                    .name("Olson - Mraz")
+                    .priceLevel("")
+                    .rating(0d)
+                    .reviewCount(0d)
+                    .telephones(List.of(
+                        CommerceTelephone.builder()
+                            .telephone("(872) 522-3201")
+                            .type(CommerceTelephoneType.OTHER)
+                            .build(),
+                        CommerceTelephone.builder()
+                            .telephone("(236) 274-2445")
+                            .type(CommerceTelephoneType.MOBILE)
+                            .build()))
+                    .updatedAt(OffsetDateTime.parse("2024-04-09T09:36:01.364Z"))
+                    .webUrl("https://chilly-edge.info")
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -551,16 +687,17 @@ Update a location
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchHrisLocation" method="patch" path="/hris/{connection_id}/location/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchHrisLocation" method="patch" path="/hris/{connection_id}/location/{id}" example="hris_location" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchHrisLocationRequest;
 import to.unified.unified_java_sdk.models.operations.PatchHrisLocationResponse;
-import to.unified.unified_java_sdk.models.shared.HrisLocation;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -574,6 +711,39 @@ public class Application {
 
         PatchHrisLocationRequest req = PatchHrisLocationRequest.builder()
                 .hrisLocation(HrisLocation.builder()
+                    .address(PropertyHrisLocationAddress.builder()
+                        .address1("2743 Connelly Summit")
+                        .address2("Apt. 350")
+                        .city("Titusville")
+                        .countryCode("US")
+                        .postalCode("16154-1095")
+                        .region("Oregon")
+                        .regionCode("AL")
+                        .build())
+                    .createdAt(OffsetDateTime.parse("2021-07-18T10:32:01.414Z"))
+                    .currency("MUR")
+                    .description("Acervus caries.")
+                    .externalIdentifier("99f0dbdd-df2b-4d49-9e82-00a607a43d9f")
+                    .id("445b1f3e-80ff-43ad-a8af-2ca6e1046fd7")
+                    .isActive(true)
+                    .isHq(false)
+                    .languageLocale("fr")
+                    .name("adhuc")
+                    .telephones(List.of(
+                        HrisTelephone.builder()
+                            .telephone("(710) 550-6997")
+                            .type(HrisTelephoneType.FAX)
+                            .build(),
+                        HrisTelephone.builder()
+                            .telephone("(208) 555-8542")
+                            .type(HrisTelephoneType.HOME)
+                            .build(),
+                        HrisTelephone.builder()
+                            .telephone("(712) 473-5482")
+                            .type(HrisTelephoneType.FAX)
+                            .build()))
+                    .timezone("America/Guyana")
+                    .updatedAt(OffsetDateTime.parse("2023-06-09T00:40:22.398Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -724,16 +894,17 @@ Update a location
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateCommerceLocation" method="put" path="/commerce/{connection_id}/location/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateCommerceLocation" method="put" path="/commerce/{connection_id}/location/{id}" example="commerce_location" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateCommerceLocationRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateCommerceLocationResponse;
-import to.unified.unified_java_sdk.models.shared.CommerceLocation;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -747,6 +918,56 @@ public class Application {
 
         UpdateCommerceLocationRequest req = UpdateCommerceLocationRequest.builder()
                 .commerceLocation(CommerceLocation.builder()
+                    .address(PropertyCommerceLocationAddress.builder()
+                        .address1("29896 The Limes")
+                        .city("New Kenny")
+                        .countryCode("US")
+                        .postalCode("14490-0609")
+                        .region("Virginia")
+                        .regionCode("MS")
+                        .build())
+                    .categories(List.of())
+                    .createdAt(OffsetDateTime.parse("2022-12-29T04:15:21.195Z"))
+                    .currency("XCD")
+                    .description("Adsidue audentia.")
+                    .id("4a8eb352-cec0-40d3-9002-d9db68c1420b")
+                    .imageUrl("https://picsum.photos/seed/hjFt1/1036/2220")
+                    .isActive(false)
+                    .languageLocale("vulgaris")
+                    .latitude(0d)
+                    .locationType(LocationType.RESTAURANT)
+                    .longitude(0d)
+                    .media(List.of(
+                        CommerceItemMedia.builder()
+                            .url("https://picsum.photos/seed/QVh7ViTV/3964/1567")
+                            .alt("Addo.")
+                            .height(283d)
+                            .id("3909acdf-2cde-4603-8361-fd936c020e65")
+                            .metadata(List.of(
+                                CommerceMetadata.builder()
+                                    .id("2d33a074-28fe-493c-981d-888616925162")
+                                    .slug("abutor")
+                                    .value(CommerceMetadataValue.of("damno"))
+                                    .build()))
+                            .position(40d)
+                            .type(CommerceItemMediaType.IMAGE)
+                            .width(1d)
+                            .build()))
+                    .name("Olson - Mraz")
+                    .priceLevel("")
+                    .rating(0d)
+                    .reviewCount(0d)
+                    .telephones(List.of(
+                        CommerceTelephone.builder()
+                            .telephone("(872) 522-3201")
+                            .type(CommerceTelephoneType.OTHER)
+                            .build(),
+                        CommerceTelephone.builder()
+                            .telephone("(236) 274-2445")
+                            .type(CommerceTelephoneType.MOBILE)
+                            .build()))
+                    .updatedAt(OffsetDateTime.parse("2024-04-09T09:36:01.364Z"))
+                    .webUrl("https://chilly-edge.info")
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -785,16 +1006,17 @@ Update a location
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateHrisLocation" method="put" path="/hris/{connection_id}/location/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateHrisLocation" method="put" path="/hris/{connection_id}/location/{id}" example="hris_location" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateHrisLocationRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateHrisLocationResponse;
-import to.unified.unified_java_sdk.models.shared.HrisLocation;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -808,6 +1030,39 @@ public class Application {
 
         UpdateHrisLocationRequest req = UpdateHrisLocationRequest.builder()
                 .hrisLocation(HrisLocation.builder()
+                    .address(PropertyHrisLocationAddress.builder()
+                        .address1("2743 Connelly Summit")
+                        .address2("Apt. 350")
+                        .city("Titusville")
+                        .countryCode("US")
+                        .postalCode("16154-1095")
+                        .region("Oregon")
+                        .regionCode("AL")
+                        .build())
+                    .createdAt(OffsetDateTime.parse("2021-07-18T10:32:01.414Z"))
+                    .currency("MUR")
+                    .description("Acervus caries.")
+                    .externalIdentifier("99f0dbdd-df2b-4d49-9e82-00a607a43d9f")
+                    .id("445b1f3e-80ff-43ad-a8af-2ca6e1046fd7")
+                    .isActive(true)
+                    .isHq(false)
+                    .languageLocale("fr")
+                    .name("adhuc")
+                    .telephones(List.of(
+                        HrisTelephone.builder()
+                            .telephone("(710) 550-6997")
+                            .type(HrisTelephoneType.FAX)
+                            .build(),
+                        HrisTelephone.builder()
+                            .telephone("(208) 555-8542")
+                            .type(HrisTelephoneType.HOME)
+                            .build(),
+                        HrisTelephone.builder()
+                            .telephone("(712) 473-5482")
+                            .type(HrisTelephoneType.FAX)
+                            .build()))
+                    .timezone("America/Guyana")
+                    .updatedAt(OffsetDateTime.parse("2023-06-09T00:40:22.398Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

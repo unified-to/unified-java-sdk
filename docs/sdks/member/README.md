@@ -19,16 +19,17 @@ Create a member
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createMartechMember" method="post" path="/martech/{connection_id}/member" -->
+<!-- UsageSnippet language="java" operationID="createMartechMember" method="post" path="/martech/{connection_id}/member" example="martech_member" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateMartechMemberRequest;
 import to.unified.unified_java_sdk.models.operations.CreateMartechMemberResponse;
-import to.unified.unified_java_sdk.models.shared.MarketingMember;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -42,6 +43,30 @@ public class Application {
 
         CreateMartechMemberRequest req = CreateMartechMemberRequest.builder()
                 .marketingMember(MarketingMember.builder()
+                    .company("Miller - Franecki")
+                    .createdAt(OffsetDateTime.parse("2022-04-15T15:32:38.496Z"))
+                    .emails(List.of(
+                        MarketingEmail.builder()
+                            .email("Thalia.Abernathy61@gmail.com")
+                            .type(MarketingEmailType.HOME)
+                            .build(),
+                        MarketingEmail.builder()
+                            .email("Maymie59@hotmail.com")
+                            .type(MarketingEmailType.HOME)
+                            .build(),
+                        MarketingEmail.builder()
+                            .email("Coty27@hotmail.com")
+                            .type(MarketingEmailType.WORK)
+                            .build()))
+                    .firstName("Jude")
+                    .id("a0a955df-e281-46e9-af34-0bcaf970081d")
+                    .lastName("Leffler")
+                    .name("Jude Leffler")
+                    .status(MarketingMemberStatus.UNSUBSCRIBED)
+                    .tags(List.of(
+                        "vinco",
+                        "ceno"))
+                    .updatedAt(OffsetDateTime.parse("2025-06-15T05:07:12.559Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -309,16 +334,17 @@ Update a member
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchMartechMember" method="patch" path="/martech/{connection_id}/member/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchMartechMember" method="patch" path="/martech/{connection_id}/member/{id}" example="martech_member" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchMartechMemberRequest;
 import to.unified.unified_java_sdk.models.operations.PatchMartechMemberResponse;
-import to.unified.unified_java_sdk.models.shared.MarketingMember;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -332,6 +358,30 @@ public class Application {
 
         PatchMartechMemberRequest req = PatchMartechMemberRequest.builder()
                 .marketingMember(MarketingMember.builder()
+                    .company("Miller - Franecki")
+                    .createdAt(OffsetDateTime.parse("2022-04-15T15:32:38.496Z"))
+                    .emails(List.of(
+                        MarketingEmail.builder()
+                            .email("Thalia.Abernathy61@gmail.com")
+                            .type(MarketingEmailType.HOME)
+                            .build(),
+                        MarketingEmail.builder()
+                            .email("Maymie59@hotmail.com")
+                            .type(MarketingEmailType.HOME)
+                            .build(),
+                        MarketingEmail.builder()
+                            .email("Coty27@hotmail.com")
+                            .type(MarketingEmailType.WORK)
+                            .build()))
+                    .firstName("Jude")
+                    .id("5cfa6758-bd0c-4077-8934-7357d115348d")
+                    .lastName("Leffler")
+                    .name("Jude Leffler")
+                    .status(MarketingMemberStatus.UNSUBSCRIBED)
+                    .tags(List.of(
+                        "vinco",
+                        "ceno"))
+                    .updatedAt(OffsetDateTime.parse("2025-06-15T05:07:12.567Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -426,16 +476,17 @@ Update a member
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateMartechMember" method="put" path="/martech/{connection_id}/member/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateMartechMember" method="put" path="/martech/{connection_id}/member/{id}" example="martech_member" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateMartechMemberRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateMartechMemberResponse;
-import to.unified.unified_java_sdk.models.shared.MarketingMember;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -449,6 +500,30 @@ public class Application {
 
         UpdateMartechMemberRequest req = UpdateMartechMemberRequest.builder()
                 .marketingMember(MarketingMember.builder()
+                    .company("Miller - Franecki")
+                    .createdAt(OffsetDateTime.parse("2022-04-15T15:32:38.496Z"))
+                    .emails(List.of(
+                        MarketingEmail.builder()
+                            .email("Thalia.Abernathy61@gmail.com")
+                            .type(MarketingEmailType.HOME)
+                            .build(),
+                        MarketingEmail.builder()
+                            .email("Maymie59@hotmail.com")
+                            .type(MarketingEmailType.HOME)
+                            .build(),
+                        MarketingEmail.builder()
+                            .email("Coty27@hotmail.com")
+                            .type(MarketingEmailType.WORK)
+                            .build()))
+                    .firstName("Jude")
+                    .id("5cfa6758-bd0c-4077-8934-7357d115348d")
+                    .lastName("Leffler")
+                    .name("Jude Leffler")
+                    .status(MarketingMemberStatus.UNSUBSCRIBED)
+                    .tags(List.of(
+                        "vinco",
+                        "ceno"))
+                    .updatedAt(OffsetDateTime.parse("2025-06-15T05:07:12.567Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

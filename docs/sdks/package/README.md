@@ -19,11 +19,13 @@ Create an assessment package
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createAssessmentPackage" method="post" path="/assessment/{connection_id}/package" -->
+<!-- UsageSnippet language="java" operationID="createAssessmentPackage" method="post" path="/assessment/{connection_id}/package" example="assessment_package" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateAssessmentPackageRequest;
 import to.unified.unified_java_sdk.models.operations.CreateAssessmentPackageResponse;
@@ -41,7 +43,25 @@ public class Application {
 
         CreateAssessmentPackageRequest req = CreateAssessmentPackageRequest.builder()
                 .assessmentPackage(AssessmentPackage.builder()
-                    .type(AssessmentPackageType.REFERENCE_CHECK)
+                    .type(AssessmentPackageType.VIDEO_INTERVIEW)
+                    .aliases(List.of(
+                        "quia"))
+                    .createdAt(OffsetDateTime.parse("2022-11-18T19:48:39.433Z"))
+                    .description("Eos aedificium consectetur urbs. Admitto summa accusator tabesco distinctio vapulus culpo templum ancilla.")
+                    .hasRedirectUrl(true)
+                    .hasTargetUrl(false)
+                    .id("399d78b0-643b-4379-b5fc-7a3efac3d6b6")
+                    .infoUrl("https://ugly-instance.biz/")
+                    .integrationTypes(List.of(
+                        "viridis"))
+                    .maxScore(22d)
+                    .name("Carus sed vox doloremque vigor surgo tabella cupiditas abduco clarus.")
+                    .needsIpAddress(true)
+                    .parameters(List.of())
+                    .regions(List.of())
+                    .tags(List.of(
+                        "clamo"))
+                    .updatedAt(OffsetDateTime.parse("2023-09-18T05:29:15.659Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -309,11 +329,13 @@ Update an assessment package
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchAssessmentPackage" method="patch" path="/assessment/{connection_id}/package/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchAssessmentPackage" method="patch" path="/assessment/{connection_id}/package/{id}" example="assessment_package" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchAssessmentPackageRequest;
 import to.unified.unified_java_sdk.models.operations.PatchAssessmentPackageResponse;
@@ -331,7 +353,25 @@ public class Application {
 
         PatchAssessmentPackageRequest req = PatchAssessmentPackageRequest.builder()
                 .assessmentPackage(AssessmentPackage.builder()
-                    .type(AssessmentPackageType.BACKGROUND_CHECK)
+                    .type(AssessmentPackageType.VIDEO_INTERVIEW)
+                    .aliases(List.of(
+                        "quia"))
+                    .createdAt(OffsetDateTime.parse("2022-11-18T19:48:39.433Z"))
+                    .description("Eos aedificium consectetur urbs. Admitto summa accusator tabesco distinctio vapulus culpo templum ancilla.")
+                    .hasRedirectUrl(true)
+                    .hasTargetUrl(false)
+                    .id("b73eadb8-975d-4dc0-b2fa-e4d8b4a09f83")
+                    .infoUrl("https://ugly-instance.biz/")
+                    .integrationTypes(List.of(
+                        "viridis"))
+                    .maxScore(22d)
+                    .name("Carus sed vox doloremque vigor surgo tabella cupiditas abduco clarus.")
+                    .needsIpAddress(true)
+                    .parameters(List.of())
+                    .regions(List.of())
+                    .tags(List.of(
+                        "clamo"))
+                    .updatedAt(OffsetDateTime.parse("2023-09-18T05:29:15.663Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -426,11 +466,13 @@ Update an assessment package
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateAssessmentPackage" method="put" path="/assessment/{connection_id}/package/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateAssessmentPackage" method="put" path="/assessment/{connection_id}/package/{id}" example="assessment_package" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateAssessmentPackageRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateAssessmentPackageResponse;
@@ -448,7 +490,25 @@ public class Application {
 
         UpdateAssessmentPackageRequest req = UpdateAssessmentPackageRequest.builder()
                 .assessmentPackage(AssessmentPackage.builder()
-                    .type(AssessmentPackageType.OTHER)
+                    .type(AssessmentPackageType.VIDEO_INTERVIEW)
+                    .aliases(List.of(
+                        "quia"))
+                    .createdAt(OffsetDateTime.parse("2022-11-18T19:48:39.433Z"))
+                    .description("Eos aedificium consectetur urbs. Admitto summa accusator tabesco distinctio vapulus culpo templum ancilla.")
+                    .hasRedirectUrl(true)
+                    .hasTargetUrl(false)
+                    .id("b73eadb8-975d-4dc0-b2fa-e4d8b4a09f83")
+                    .infoUrl("https://ugly-instance.biz/")
+                    .integrationTypes(List.of(
+                        "viridis"))
+                    .maxScore(22d)
+                    .name("Carus sed vox doloremque vigor surgo tabella cupiditas abduco clarus.")
+                    .needsIpAddress(true)
+                    .parameters(List.of())
+                    .regions(List.of())
+                    .tags(List.of(
+                        "clamo"))
+                    .updatedAt(OffsetDateTime.parse("2023-09-18T05:29:15.663Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

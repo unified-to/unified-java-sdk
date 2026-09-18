@@ -14,16 +14,16 @@ Create an asset
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createAdsAsset" method="post" path="/ads/{connection_id}/asset" -->
+<!-- UsageSnippet language="java" operationID="createAdsAsset" method="post" path="/ads/{connection_id}/asset" example="ads_asset" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateAdsAssetRequest;
 import to.unified.unified_java_sdk.models.operations.CreateAdsAssetResponse;
-import to.unified.unified_java_sdk.models.shared.AdsAsset;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -37,6 +37,15 @@ public class Application {
 
         CreateAdsAssetRequest req = CreateAdsAssetRequest.builder()
                 .adsAsset(AdsAsset.builder()
+                    .createdAt(OffsetDateTime.parse("2020-03-27T20:14:38.603Z"))
+                    .height(400d)
+                    .id("9ce96283-25c4-4289-92f8-bb2dfdba3c58")
+                    .mimeType("IMAGE_PNG")
+                    .name("Lockman - DuBuque")
+                    .type(AdsAssetType.IMAGE)
+                    .updatedAt(OffsetDateTime.parse("2022-03-15T04:25:20.538Z"))
+                    .url("https://informal-perfection.com/")
+                    .width(600d)
                     .build())
                 .connectionId("<id>")
                 .build();

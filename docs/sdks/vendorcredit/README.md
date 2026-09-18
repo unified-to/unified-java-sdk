@@ -17,16 +17,17 @@ Create a vendorcredit
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createAccountingVendorcredit" method="post" path="/accounting/{connection_id}/vendorcredit" -->
+<!-- UsageSnippet language="java" operationID="createAccountingVendorcredit" method="post" path="/accounting/{connection_id}/vendorcredit" example="accounting_vendorcredit" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingVendorcreditRequest;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingVendorcreditResponse;
-import to.unified.unified_java_sdk.models.shared.AccountingVendorcredit;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -40,6 +41,20 @@ public class Application {
 
         CreateAccountingVendorcreditRequest req = CreateAccountingVendorcreditRequest.builder()
                 .accountingVendorcredit(AccountingVendorcredit.builder()
+                    .applications(List.of())
+                    .applyAmount(1d)
+                    .balanceAmount(0d)
+                    .createdAt(OffsetDateTime.parse("2023-04-15T21:14:08.197Z"))
+                    .currency("KGS")
+                    .dueAt(OffsetDateTime.parse("2023-05-06T20:38:46.775Z"))
+                    .id("e53c082c-1aa1-4192-be20-f4cdfd0cea57")
+                    .lineitems(List.of())
+                    .metadata(List.of())
+                    .notes("Conatus cruciamentum decor avaritia tantum.")
+                    .postedAt(OffsetDateTime.parse("2023-09-28T16:43:46.445Z"))
+                    .status(AccountingVendorcreditStatus.SUBMITTED)
+                    .totalAmount(0d)
+                    .updatedAt(OffsetDateTime.parse("2023-11-26T14:35:53.369Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -192,16 +207,17 @@ Update a vendorcredit
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchAccountingVendorcredit" method="patch" path="/accounting/{connection_id}/vendorcredit/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchAccountingVendorcredit" method="patch" path="/accounting/{connection_id}/vendorcredit/{id}" example="accounting_vendorcredit" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchAccountingVendorcreditRequest;
 import to.unified.unified_java_sdk.models.operations.PatchAccountingVendorcreditResponse;
-import to.unified.unified_java_sdk.models.shared.AccountingVendorcredit;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -215,6 +231,20 @@ public class Application {
 
         PatchAccountingVendorcreditRequest req = PatchAccountingVendorcreditRequest.builder()
                 .accountingVendorcredit(AccountingVendorcredit.builder()
+                    .applications(List.of())
+                    .applyAmount(1d)
+                    .balanceAmount(0d)
+                    .createdAt(OffsetDateTime.parse("2023-04-15T21:14:08.197Z"))
+                    .currency("KGS")
+                    .dueAt(OffsetDateTime.parse("2023-05-06T20:38:46.775Z"))
+                    .id("79c98d35-f30c-4832-82a9-eaa45fdf6b58")
+                    .lineitems(List.of())
+                    .metadata(List.of())
+                    .notes("Conatus cruciamentum decor avaritia tantum.")
+                    .postedAt(OffsetDateTime.parse("2023-09-28T16:43:46.448Z"))
+                    .status(AccountingVendorcreditStatus.SUBMITTED)
+                    .totalAmount(0d)
+                    .updatedAt(OffsetDateTime.parse("2023-11-26T14:35:53.374Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -309,16 +339,17 @@ Update a vendorcredit
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateAccountingVendorcredit" method="put" path="/accounting/{connection_id}/vendorcredit/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateAccountingVendorcredit" method="put" path="/accounting/{connection_id}/vendorcredit/{id}" example="accounting_vendorcredit" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateAccountingVendorcreditRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateAccountingVendorcreditResponse;
-import to.unified.unified_java_sdk.models.shared.AccountingVendorcredit;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -332,6 +363,20 @@ public class Application {
 
         UpdateAccountingVendorcreditRequest req = UpdateAccountingVendorcreditRequest.builder()
                 .accountingVendorcredit(AccountingVendorcredit.builder()
+                    .applications(List.of())
+                    .applyAmount(1d)
+                    .balanceAmount(0d)
+                    .createdAt(OffsetDateTime.parse("2023-04-15T21:14:08.197Z"))
+                    .currency("KGS")
+                    .dueAt(OffsetDateTime.parse("2023-05-06T20:38:46.775Z"))
+                    .id("79c98d35-f30c-4832-82a9-eaa45fdf6b58")
+                    .lineitems(List.of())
+                    .metadata(List.of())
+                    .notes("Conatus cruciamentum decor avaritia tantum.")
+                    .postedAt(OffsetDateTime.parse("2023-09-28T16:43:46.448Z"))
+                    .status(AccountingVendorcreditStatus.SUBMITTED)
+                    .totalAmount(0d)
+                    .updatedAt(OffsetDateTime.parse("2023-11-26T14:35:53.374Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

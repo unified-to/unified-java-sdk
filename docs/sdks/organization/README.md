@@ -25,16 +25,17 @@ Create an organization
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createAdsOrganization" method="post" path="/ads/{connection_id}/organization" -->
+<!-- UsageSnippet language="java" operationID="createAdsOrganization" method="post" path="/ads/{connection_id}/organization" example="ads_organization" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateAdsOrganizationRequest;
 import to.unified.unified_java_sdk.models.operations.CreateAdsOrganizationResponse;
-import to.unified.unified_java_sdk.models.shared.AdsOrganization;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -48,6 +49,19 @@ public class Application {
 
         CreateAdsOrganizationRequest req = CreateAdsOrganizationRequest.builder()
                 .adsOrganization(AdsOrganization.builder()
+                    .accountNumber("LQUJx8zQBW")
+                    .createdAt(OffsetDateTime.parse("2020-07-23T21:47:11.440Z"))
+                    .currency("USD")
+                    .id("0ca7207a-a860-45e9-87da-94e04e0f06a4")
+                    .managers(List.of(
+                        AdsManager.builder()
+                            .id("e4fd87df-9f8b-4fa0-a77b-b7d18669e350")
+                            .name("Parker, Leannon and Gibson")
+                            .build()))
+                    .name("Ankunding Inc")
+                    .status(AdsOrganizationStatus.PROCESSING)
+                    .timezone("Europe/Chisinau")
+                    .updatedAt(OffsetDateTime.parse("2026-02-27T02:32:02.767Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -85,11 +99,12 @@ Create an organization
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createRepoOrganization" method="post" path="/repo/{connection_id}/organization" -->
+<!-- UsageSnippet language="java" operationID="createRepoOrganization" method="post" path="/repo/{connection_id}/organization" example="repo_organization" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateRepoOrganizationRequest;
 import to.unified.unified_java_sdk.models.operations.CreateRepoOrganizationResponse;
@@ -108,6 +123,13 @@ public class Application {
 
         CreateRepoOrganizationRequest req = CreateRepoOrganizationRequest.builder()
                 .repoOrganization(RepoOrganization.builder()
+                    .avatarUrl("https://picsum.photos/seed/fGl6Lb/3157/3173")
+                    .createdAt(OffsetDateTime.parse("2022-07-07T00:18:40.748Z"))
+                    .description("Trepide defendo supra testimonium ager.")
+                    .id("94512032-1bb0-446e-b197-d5b971050f38")
+                    .name("Denesik - Lemke")
+                    .updatedAt(OffsetDateTime.parse("2023-08-12T23:35:02.193Z"))
+                    .webUrl("https://turbulent-overheard.biz")
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -490,16 +512,17 @@ Update an organization
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchAdsOrganization" method="patch" path="/ads/{connection_id}/organization/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchAdsOrganization" method="patch" path="/ads/{connection_id}/organization/{id}" example="ads_organization" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchAdsOrganizationRequest;
 import to.unified.unified_java_sdk.models.operations.PatchAdsOrganizationResponse;
-import to.unified.unified_java_sdk.models.shared.AdsOrganization;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -513,6 +536,19 @@ public class Application {
 
         PatchAdsOrganizationRequest req = PatchAdsOrganizationRequest.builder()
                 .adsOrganization(AdsOrganization.builder()
+                    .accountNumber("LQUJx8zQBW")
+                    .createdAt(OffsetDateTime.parse("2020-07-23T21:47:11.440Z"))
+                    .currency("USD")
+                    .id("6d20a695-fa80-4f8e-8b00-e3d1dd334cac")
+                    .managers(List.of(
+                        AdsManager.builder()
+                            .id("e4fd87df-9f8b-4fa0-a77b-b7d18669e350")
+                            .name("Parker, Leannon and Gibson")
+                            .build()))
+                    .name("Ankunding Inc")
+                    .status(AdsOrganizationStatus.PROCESSING)
+                    .timezone("Europe/Chisinau")
+                    .updatedAt(OffsetDateTime.parse("2026-02-27T02:32:02.778Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -551,11 +587,12 @@ Update an organization
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchRepoOrganization" method="patch" path="/repo/{connection_id}/organization/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchRepoOrganization" method="patch" path="/repo/{connection_id}/organization/{id}" example="repo_organization" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchRepoOrganizationRequest;
 import to.unified.unified_java_sdk.models.operations.PatchRepoOrganizationResponse;
@@ -574,6 +611,13 @@ public class Application {
 
         PatchRepoOrganizationRequest req = PatchRepoOrganizationRequest.builder()
                 .repoOrganization(RepoOrganization.builder()
+                    .avatarUrl("https://picsum.photos/seed/fGl6Lb/3157/3173")
+                    .createdAt(OffsetDateTime.parse("2022-07-07T00:18:40.748Z"))
+                    .description("Trepide defendo supra testimonium ager.")
+                    .id("9e3a01c3-1824-44f1-b5d3-55744e673e8a")
+                    .name("Denesik - Lemke")
+                    .updatedAt(OffsetDateTime.parse("2023-08-12T23:35:02.195Z"))
+                    .webUrl("https://turbulent-overheard.biz")
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -724,16 +768,17 @@ Update an organization
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateAdsOrganization" method="put" path="/ads/{connection_id}/organization/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateAdsOrganization" method="put" path="/ads/{connection_id}/organization/{id}" example="ads_organization" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateAdsOrganizationRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateAdsOrganizationResponse;
-import to.unified.unified_java_sdk.models.shared.AdsOrganization;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -747,6 +792,19 @@ public class Application {
 
         UpdateAdsOrganizationRequest req = UpdateAdsOrganizationRequest.builder()
                 .adsOrganization(AdsOrganization.builder()
+                    .accountNumber("LQUJx8zQBW")
+                    .createdAt(OffsetDateTime.parse("2020-07-23T21:47:11.440Z"))
+                    .currency("USD")
+                    .id("6d20a695-fa80-4f8e-8b00-e3d1dd334cac")
+                    .managers(List.of(
+                        AdsManager.builder()
+                            .id("e4fd87df-9f8b-4fa0-a77b-b7d18669e350")
+                            .name("Parker, Leannon and Gibson")
+                            .build()))
+                    .name("Ankunding Inc")
+                    .status(AdsOrganizationStatus.PROCESSING)
+                    .timezone("Europe/Chisinau")
+                    .updatedAt(OffsetDateTime.parse("2026-02-27T02:32:02.778Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -785,11 +843,12 @@ Update an organization
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateRepoOrganization" method="put" path="/repo/{connection_id}/organization/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateRepoOrganization" method="put" path="/repo/{connection_id}/organization/{id}" example="repo_organization" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateRepoOrganizationRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateRepoOrganizationResponse;
@@ -808,6 +867,13 @@ public class Application {
 
         UpdateRepoOrganizationRequest req = UpdateRepoOrganizationRequest.builder()
                 .repoOrganization(RepoOrganization.builder()
+                    .avatarUrl("https://picsum.photos/seed/fGl6Lb/3157/3173")
+                    .createdAt(OffsetDateTime.parse("2022-07-07T00:18:40.748Z"))
+                    .description("Trepide defendo supra testimonium ager.")
+                    .id("9e3a01c3-1824-44f1-b5d3-55744e673e8a")
+                    .name("Denesik - Lemke")
+                    .updatedAt(OffsetDateTime.parse("2023-08-12T23:35:02.195Z"))
+                    .webUrl("https://turbulent-overheard.biz")
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

@@ -17,16 +17,16 @@ Create an ad
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createAdsAd" method="post" path="/ads/{connection_id}/ad" -->
+<!-- UsageSnippet language="java" operationID="createAdsAd" method="post" path="/ads/{connection_id}/ad" example="ads_ad" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateAdsAdRequest;
 import to.unified.unified_java_sdk.models.operations.CreateAdsAdResponse;
-import to.unified.unified_java_sdk.models.shared.AdsAd;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -40,6 +40,17 @@ public class Application {
 
         CreateAdsAdRequest req = CreateAdsAdRequest.builder()
                 .adsAd(AdsAd.builder()
+                    .adCopy("Ascisco tolero caute sapiente. Valens unde comedo cursus crinis nobis thema. Cohaero nisi ullam tum unde ultio vilicus auditor capio.")
+                    .adType(AdType.SOCIAL)
+                    .advertiserName("Robel, Nader and Rau")
+                    .createdAt(OffsetDateTime.parse("2022-11-08T03:38:20.978Z"))
+                    .creativeAssetUrl("https://picsum.photos/seed/LwOzrpr9/948/2793")
+                    .description("Accedo vespillo carpo dolor decet stillicidium comptus tenuis.")
+                    .finalUrl("https://improbable-sanity.com")
+                    .id("6630dd45-9b8c-481f-8b7b-6e77084f0597")
+                    .name("Hermiston Group")
+                    .status(AdsAdStatus.ARCHIVED)
+                    .updatedAt(OffsetDateTime.parse("2024-06-05T02:38:36.051Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -192,16 +203,16 @@ Update an ad
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchAdsAd" method="patch" path="/ads/{connection_id}/ad/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchAdsAd" method="patch" path="/ads/{connection_id}/ad/{id}" example="ads_ad" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchAdsAdRequest;
 import to.unified.unified_java_sdk.models.operations.PatchAdsAdResponse;
-import to.unified.unified_java_sdk.models.shared.AdsAd;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -215,6 +226,17 @@ public class Application {
 
         PatchAdsAdRequest req = PatchAdsAdRequest.builder()
                 .adsAd(AdsAd.builder()
+                    .adCopy("Ascisco tolero caute sapiente. Valens unde comedo cursus crinis nobis thema. Cohaero nisi ullam tum unde ultio vilicus auditor capio.")
+                    .adType(AdType.SOCIAL)
+                    .advertiserName("Robel, Nader and Rau")
+                    .createdAt(OffsetDateTime.parse("2022-11-08T03:38:20.978Z"))
+                    .creativeAssetUrl("https://picsum.photos/seed/LwOzrpr9/948/2793")
+                    .description("Accedo vespillo carpo dolor decet stillicidium comptus tenuis.")
+                    .finalUrl("https://improbable-sanity.com")
+                    .id("1ffc1063-d278-446e-8b5e-655ef73ce5f2")
+                    .name("Hermiston Group")
+                    .status(AdsAdStatus.ARCHIVED)
+                    .updatedAt(OffsetDateTime.parse("2024-06-05T02:38:36.059Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -309,16 +331,16 @@ Update an ad
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateAdsAd" method="put" path="/ads/{connection_id}/ad/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateAdsAd" method="put" path="/ads/{connection_id}/ad/{id}" example="ads_ad" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateAdsAdRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateAdsAdResponse;
-import to.unified.unified_java_sdk.models.shared.AdsAd;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -332,6 +354,17 @@ public class Application {
 
         UpdateAdsAdRequest req = UpdateAdsAdRequest.builder()
                 .adsAd(AdsAd.builder()
+                    .adCopy("Ascisco tolero caute sapiente. Valens unde comedo cursus crinis nobis thema. Cohaero nisi ullam tum unde ultio vilicus auditor capio.")
+                    .adType(AdType.SOCIAL)
+                    .advertiserName("Robel, Nader and Rau")
+                    .createdAt(OffsetDateTime.parse("2022-11-08T03:38:20.978Z"))
+                    .creativeAssetUrl("https://picsum.photos/seed/LwOzrpr9/948/2793")
+                    .description("Accedo vespillo carpo dolor decet stillicidium comptus tenuis.")
+                    .finalUrl("https://improbable-sanity.com")
+                    .id("1ffc1063-d278-446e-8b5e-655ef73ce5f2")
+                    .name("Hermiston Group")
+                    .status(AdsAdStatus.ARCHIVED)
+                    .updatedAt(OffsetDateTime.parse("2024-06-05T02:38:36.059Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

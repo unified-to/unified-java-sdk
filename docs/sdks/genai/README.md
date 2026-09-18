@@ -15,16 +15,16 @@ Create an embedding
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createGenaiEmbedding" method="post" path="/genai/{connection_id}/embedding" -->
+<!-- UsageSnippet language="java" operationID="createGenaiEmbedding" method="post" path="/genai/{connection_id}/embedding" example="genai_embedding" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateGenaiEmbeddingRequest;
 import to.unified.unified_java_sdk.models.operations.CreateGenaiEmbeddingResponse;
-import to.unified.unified_java_sdk.models.shared.GenaiEmbedding;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -38,6 +38,17 @@ public class Application {
 
         CreateGenaiEmbeddingRequest req = CreateGenaiEmbeddingRequest.builder()
                 .genaiEmbedding(GenaiEmbedding.builder()
+                    .content(List.of(
+                        GenaiEmbeddingContent.builder()
+                            .text("Utrimque temptatio pecco demulceo.")
+                            .build()))
+                    .dimension(423d)
+                    .embeddings("Est.")
+                    .encondingFormat(EncondingFormat.FLOAT)
+                    .id("7fd5d308-20f8-4679-bdfa-0da51e707b1c")
+                    .maxTokens(223d)
+                    .tokensUsed(836d)
+                    .type("classification")
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -75,16 +86,16 @@ Create a prompt
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createGenaiPrompt" method="post" path="/genai/{connection_id}/prompt" -->
+<!-- UsageSnippet language="java" operationID="createGenaiPrompt" method="post" path="/genai/{connection_id}/prompt" example="genai_prompt" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateGenaiPromptRequest;
 import to.unified.unified_java_sdk.models.operations.CreateGenaiPromptResponse;
-import to.unified.unified_java_sdk.models.shared.GenaiPrompt;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -98,6 +109,23 @@ public class Application {
 
         CreateGenaiPromptRequest req = CreateGenaiPromptRequest.builder()
                 .genaiPrompt(GenaiPrompt.builder()
+                    .maxTokens(0.4677782787475735)
+                    .mcpAuthorizationToken("f45a6e93-7bed-49b4-a5c8-37a2ed2d58f4")
+                    .mcpDeferredTools(List.of())
+                    .mcpUrl("https://unsung-dusk.info/")
+                    .messages(List.of(
+                        GenaiContent.builder()
+                            .content("Aegre repudiandae verecundia facere statua.")
+                            .role(Role.ASSISTANT)
+                            .build(),
+                        GenaiContent.builder()
+                            .content("Speciosus xiphias soleo trepide crinis.")
+                            .role(Role.SYSTEM)
+                            .build()))
+                    .responses(List.of(
+                        "Balbus vobis circumvenio una."))
+                    .temperature(0d)
+                    .tokensUsed(975d)
                     .build())
                 .connectionId("<id>")
                 .build();

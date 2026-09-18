@@ -17,11 +17,13 @@ Create a page
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createKmsPage" method="post" path="/kms/{connection_id}/page" -->
+<!-- UsageSnippet language="java" operationID="createKmsPage" method="post" path="/kms/{connection_id}/page" example="kms_page" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateKmsPageRequest;
 import to.unified.unified_java_sdk.models.operations.CreateKmsPageResponse;
@@ -39,7 +41,16 @@ public class Application {
 
         CreateKmsPageRequest req = CreateKmsPageRequest.builder()
                 .kmsPage(KmsPage.builder()
-                    .type(KmsPageType.TEXT)
+                    .type(KmsPageType.HTML)
+                    .createdAt(OffsetDateTime.parse("2019-05-20T18:06:50.749Z"))
+                    .downloadUrl("https://agitated-validity.info")
+                    .hasChildren(true)
+                    .id("f498e686-b37b-400a-8b10-93a6bc4e18f4")
+                    .isActive(true)
+                    .metadata(List.of())
+                    .title("even minister extract")
+                    .updatedAt(OffsetDateTime.parse("2025-09-10T18:26:23.373Z"))
+                    .webUrl("https://another-petticoat.info")
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -192,11 +203,13 @@ Update a page
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchKmsPage" method="patch" path="/kms/{connection_id}/page/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchKmsPage" method="patch" path="/kms/{connection_id}/page/{id}" example="kms_page" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchKmsPageRequest;
 import to.unified.unified_java_sdk.models.operations.PatchKmsPageResponse;
@@ -214,7 +227,16 @@ public class Application {
 
         PatchKmsPageRequest req = PatchKmsPageRequest.builder()
                 .kmsPage(KmsPage.builder()
-                    .type(KmsPageType.OTHER)
+                    .type(KmsPageType.HTML)
+                    .createdAt(OffsetDateTime.parse("2019-05-20T18:06:50.749Z"))
+                    .downloadUrl("https://agitated-validity.info")
+                    .hasChildren(true)
+                    .id("0636844d-0893-488b-ae20-1aa19425e5d6")
+                    .isActive(true)
+                    .metadata(List.of())
+                    .title("even minister extract")
+                    .updatedAt(OffsetDateTime.parse("2025-09-10T18:26:23.386Z"))
+                    .webUrl("https://another-petticoat.info")
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -309,11 +331,13 @@ Update a page
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateKmsPage" method="put" path="/kms/{connection_id}/page/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateKmsPage" method="put" path="/kms/{connection_id}/page/{id}" example="kms_page" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateKmsPageRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateKmsPageResponse;
@@ -331,7 +355,16 @@ public class Application {
 
         UpdateKmsPageRequest req = UpdateKmsPageRequest.builder()
                 .kmsPage(KmsPage.builder()
-                    .type(KmsPageType.OTHER)
+                    .type(KmsPageType.HTML)
+                    .createdAt(OffsetDateTime.parse("2019-05-20T18:06:50.749Z"))
+                    .downloadUrl("https://agitated-validity.info")
+                    .hasChildren(true)
+                    .id("0636844d-0893-488b-ae20-1aa19425e5d6")
+                    .isActive(true)
+                    .metadata(List.of())
+                    .title("even minister extract")
+                    .updatedAt(OffsetDateTime.parse("2025-09-10T18:26:23.386Z"))
+                    .webUrl("https://another-petticoat.info")
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

@@ -12,16 +12,16 @@ Create an embedding
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createGenaiEmbedding" method="post" path="/genai/{connection_id}/embedding" -->
+<!-- UsageSnippet language="java" operationID="createGenaiEmbedding" method="post" path="/genai/{connection_id}/embedding" example="genai_embedding" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateGenaiEmbeddingRequest;
 import to.unified.unified_java_sdk.models.operations.CreateGenaiEmbeddingResponse;
-import to.unified.unified_java_sdk.models.shared.GenaiEmbedding;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -35,6 +35,17 @@ public class Application {
 
         CreateGenaiEmbeddingRequest req = CreateGenaiEmbeddingRequest.builder()
                 .genaiEmbedding(GenaiEmbedding.builder()
+                    .content(List.of(
+                        GenaiEmbeddingContent.builder()
+                            .text("Utrimque temptatio pecco demulceo.")
+                            .build()))
+                    .dimension(423d)
+                    .embeddings("Est.")
+                    .encondingFormat(EncondingFormat.FLOAT)
+                    .id("7fd5d308-20f8-4679-bdfa-0da51e707b1c")
+                    .maxTokens(223d)
+                    .tokensUsed(836d)
+                    .type("classification")
                     .build())
                 .connectionId("<id>")
                 .build();

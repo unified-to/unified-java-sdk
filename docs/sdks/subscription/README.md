@@ -17,16 +17,17 @@ Create a subscription
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createPaymentSubscription" method="post" path="/payment/{connection_id}/subscription" -->
+<!-- UsageSnippet language="java" operationID="createPaymentSubscription" method="post" path="/payment/{connection_id}/subscription" example="payment_subscription" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreatePaymentSubscriptionRequest;
 import to.unified.unified_java_sdk.models.operations.CreatePaymentSubscriptionResponse;
-import to.unified.unified_java_sdk.models.shared.PaymentSubscription;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -40,6 +41,21 @@ public class Application {
 
         CreatePaymentSubscriptionRequest req = CreatePaymentSubscriptionRequest.builder()
                 .paymentSubscription(PaymentSubscription.builder()
+                    .createdAt(OffsetDateTime.parse("2023-05-08T10:11:03.414Z"))
+                    .currency("WST")
+                    .currentPeriodEndAt(OffsetDateTime.parse("2023-06-03T04:20:29.157Z"))
+                    .currentPeriodStartAt(OffsetDateTime.parse("2023-05-21T03:55:58.846Z"))
+                    .dayOfMonth(1d)
+                    .description("Innovative Mouse featuring important technology and Bamboo construction")
+                    .endAt(OffsetDateTime.parse("2023-05-21T12:36:09.234Z"))
+                    .id("f7519009-e6cd-4e12-b266-7782c6582fdd")
+                    .interval(1d)
+                    .intervalUnit(IntervalUnit.MONTH)
+                    .lineitems(List.of())
+                    .startAt(OffsetDateTime.parse("2023-05-29T06:04:51.030Z"))
+                    .status(PaymentSubscriptionStatus.ACTIVE)
+                    .totalAmount(75616d)
+                    .updatedAt(OffsetDateTime.parse("2023-12-15T22:33:27.051Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -192,16 +208,17 @@ Update a subscription
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchPaymentSubscription" method="patch" path="/payment/{connection_id}/subscription/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchPaymentSubscription" method="patch" path="/payment/{connection_id}/subscription/{id}" example="payment_subscription" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchPaymentSubscriptionRequest;
 import to.unified.unified_java_sdk.models.operations.PatchPaymentSubscriptionResponse;
-import to.unified.unified_java_sdk.models.shared.PaymentSubscription;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -215,6 +232,21 @@ public class Application {
 
         PatchPaymentSubscriptionRequest req = PatchPaymentSubscriptionRequest.builder()
                 .paymentSubscription(PaymentSubscription.builder()
+                    .createdAt(OffsetDateTime.parse("2023-05-08T10:11:03.414Z"))
+                    .currency("WST")
+                    .currentPeriodEndAt(OffsetDateTime.parse("2023-06-03T04:20:29.157Z"))
+                    .currentPeriodStartAt(OffsetDateTime.parse("2023-05-21T03:55:58.846Z"))
+                    .dayOfMonth(1d)
+                    .description("Innovative Mouse featuring important technology and Bamboo construction")
+                    .endAt(OffsetDateTime.parse("2023-05-21T12:36:09.234Z"))
+                    .id("c599db6f-2bd5-4178-ab21-33a523666043")
+                    .interval(1d)
+                    .intervalUnit(IntervalUnit.MONTH)
+                    .lineitems(List.of())
+                    .startAt(OffsetDateTime.parse("2023-05-29T06:04:51.030Z"))
+                    .status(PaymentSubscriptionStatus.ACTIVE)
+                    .totalAmount(75616d)
+                    .updatedAt(OffsetDateTime.parse("2023-12-15T22:33:27.054Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -309,16 +341,17 @@ Update a subscription
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updatePaymentSubscription" method="put" path="/payment/{connection_id}/subscription/{id}" -->
+<!-- UsageSnippet language="java" operationID="updatePaymentSubscription" method="put" path="/payment/{connection_id}/subscription/{id}" example="payment_subscription" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdatePaymentSubscriptionRequest;
 import to.unified.unified_java_sdk.models.operations.UpdatePaymentSubscriptionResponse;
-import to.unified.unified_java_sdk.models.shared.PaymentSubscription;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -332,6 +365,21 @@ public class Application {
 
         UpdatePaymentSubscriptionRequest req = UpdatePaymentSubscriptionRequest.builder()
                 .paymentSubscription(PaymentSubscription.builder()
+                    .createdAt(OffsetDateTime.parse("2023-05-08T10:11:03.414Z"))
+                    .currency("WST")
+                    .currentPeriodEndAt(OffsetDateTime.parse("2023-06-03T04:20:29.157Z"))
+                    .currentPeriodStartAt(OffsetDateTime.parse("2023-05-21T03:55:58.846Z"))
+                    .dayOfMonth(1d)
+                    .description("Innovative Mouse featuring important technology and Bamboo construction")
+                    .endAt(OffsetDateTime.parse("2023-05-21T12:36:09.234Z"))
+                    .id("c599db6f-2bd5-4178-ab21-33a523666043")
+                    .interval(1d)
+                    .intervalUnit(IntervalUnit.MONTH)
+                    .lineitems(List.of())
+                    .startAt(OffsetDateTime.parse("2023-05-29T06:04:51.030Z"))
+                    .status(PaymentSubscriptionStatus.ACTIVE)
+                    .totalAmount(75616d)
+                    .updatedAt(OffsetDateTime.parse("2023-12-15T22:33:27.054Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

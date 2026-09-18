@@ -17,16 +17,17 @@ Create an account
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createAccountingAccount" method="post" path="/accounting/{connection_id}/account" -->
+<!-- UsageSnippet language="java" operationID="createAccountingAccount" method="post" path="/accounting/{connection_id}/account" example="accounting_account" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingAccountRequest;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingAccountResponse;
-import to.unified.unified_java_sdk.models.shared.AccountingAccount;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -40,6 +41,28 @@ public class Application {
 
         CreateAccountingAccountRequest req = CreateAccountingAccountRequest.builder()
                 .accountingAccount(AccountingAccount.builder()
+                    .balance(12092d)
+                    .createdAt(OffsetDateTime.parse("2022-07-03T17:57:07.391Z"))
+                    .currency("BOB")
+                    .customerDefinedCode("quo")
+                    .description("Spoliatio comedo vilitas harum cupiditate.")
+                    .id("35991572-6b6d-4a7b-a883-101be82c839d")
+                    .isPayable(true)
+                    .name("Electronic Aluminum Tuna")
+                    .status(Status.ARCHIVED)
+                    .taxonomy(List.of(
+                        AccountingAccountTaxonomy.builder()
+                            .type(AccountingAccountTaxonomyType.SUBGROUP)
+                            .value("iste")
+                            .originalType("vesper")
+                            .build(),
+                        AccountingAccountTaxonomy.builder()
+                            .type(AccountingAccountTaxonomyType.SUBGROUP)
+                            .value("peccatus")
+                            .originalType("adamo")
+                            .build()))
+                    .type(Type.BANK)
+                    .updatedAt(OffsetDateTime.parse("2023-01-03T03:11:26.602Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -192,16 +215,17 @@ Update an account
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchAccountingAccount" method="patch" path="/accounting/{connection_id}/account/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchAccountingAccount" method="patch" path="/accounting/{connection_id}/account/{id}" example="accounting_account" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchAccountingAccountRequest;
 import to.unified.unified_java_sdk.models.operations.PatchAccountingAccountResponse;
-import to.unified.unified_java_sdk.models.shared.AccountingAccount;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -215,6 +239,28 @@ public class Application {
 
         PatchAccountingAccountRequest req = PatchAccountingAccountRequest.builder()
                 .accountingAccount(AccountingAccount.builder()
+                    .balance(12092d)
+                    .createdAt(OffsetDateTime.parse("2022-07-03T17:57:07.391Z"))
+                    .currency("BOB")
+                    .customerDefinedCode("quo")
+                    .description("Spoliatio comedo vilitas harum cupiditate.")
+                    .id("31484143-f94a-4590-89ec-16b156e6b177")
+                    .isPayable(true)
+                    .name("Electronic Aluminum Tuna")
+                    .status(Status.ARCHIVED)
+                    .taxonomy(List.of(
+                        AccountingAccountTaxonomy.builder()
+                            .type(AccountingAccountTaxonomyType.SUBGROUP)
+                            .value("iste")
+                            .originalType("vesper")
+                            .build(),
+                        AccountingAccountTaxonomy.builder()
+                            .type(AccountingAccountTaxonomyType.SUBGROUP)
+                            .value("peccatus")
+                            .originalType("adamo")
+                            .build()))
+                    .type(Type.BANK)
+                    .updatedAt(OffsetDateTime.parse("2023-01-03T03:11:26.604Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -309,16 +355,17 @@ Update an account
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateAccountingAccount" method="put" path="/accounting/{connection_id}/account/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateAccountingAccount" method="put" path="/accounting/{connection_id}/account/{id}" example="accounting_account" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateAccountingAccountRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateAccountingAccountResponse;
-import to.unified.unified_java_sdk.models.shared.AccountingAccount;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -332,6 +379,28 @@ public class Application {
 
         UpdateAccountingAccountRequest req = UpdateAccountingAccountRequest.builder()
                 .accountingAccount(AccountingAccount.builder()
+                    .balance(12092d)
+                    .createdAt(OffsetDateTime.parse("2022-07-03T17:57:07.391Z"))
+                    .currency("BOB")
+                    .customerDefinedCode("quo")
+                    .description("Spoliatio comedo vilitas harum cupiditate.")
+                    .id("31484143-f94a-4590-89ec-16b156e6b177")
+                    .isPayable(true)
+                    .name("Electronic Aluminum Tuna")
+                    .status(Status.ARCHIVED)
+                    .taxonomy(List.of(
+                        AccountingAccountTaxonomy.builder()
+                            .type(AccountingAccountTaxonomyType.SUBGROUP)
+                            .value("iste")
+                            .originalType("vesper")
+                            .build(),
+                        AccountingAccountTaxonomy.builder()
+                            .type(AccountingAccountTaxonomyType.SUBGROUP)
+                            .value("peccatus")
+                            .originalType("adamo")
+                            .build()))
+                    .type(Type.BANK)
+                    .updatedAt(OffsetDateTime.parse("2023-01-03T03:11:26.604Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

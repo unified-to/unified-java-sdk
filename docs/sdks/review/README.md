@@ -23,16 +23,17 @@ Create a review
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createCommerceReview" method="post" path="/commerce/{connection_id}/review" -->
+<!-- UsageSnippet language="java" operationID="createCommerceReview" method="post" path="/commerce/{connection_id}/review" example="commerce_review" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateCommerceReviewRequest;
 import to.unified.unified_java_sdk.models.operations.CreateCommerceReviewResponse;
-import to.unified.unified_java_sdk.models.shared.CommerceReview;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -46,6 +47,72 @@ public class Application {
 
         CreateCommerceReviewRequest req = CreateCommerceReviewRequest.builder()
                 .commerceReview(CommerceReview.builder()
+                    .authorAvatarUrl("https://picsum.photos/seed/ix4Br3LA/2245/1245")
+                    .authorEmail("Cleve_Yundt@hotmail.com")
+                    .authorLocation("ipsum")
+                    .authorName("Marsha Krajcik")
+                    .comments(List.of())
+                    .content("Taedium thymum adipiscor amicitia cui.")
+                    .createdAt(OffsetDateTime.parse("2019-12-12T18:10:22.988Z"))
+                    .helpfulVotes(26d)
+                    .id("9c5b7e6f-0f4b-4750-8f10-b86d80073fd4")
+                    .isFeatured(true)
+                    .isPublic(true)
+                    .isVerified(false)
+                    .media(List.of(
+                        CommerceItemMedia.builder()
+                            .url("https://loremflickr.com/882/1004?lock=7448492654002422")
+                            .alt("Adulescens.")
+                            .height(519d)
+                            .id("816efc1a-4423-4d51-a391-83385253bc8f")
+                            .metadata(List.of(
+                                CommerceMetadata.builder()
+                                    .id("a6ebfdaa-8dfe-407d-b0d6-346a84dad5ca")
+                                    .slug("aggero")
+                                    .value(CommerceMetadataValue.of("tero"))
+                                    .build()))
+                            .position(72d)
+                            .type(CommerceItemMediaType.VIDEO)
+                            .width(75d)
+                            .build(),
+                        CommerceItemMedia.builder()
+                            .url("https://picsum.photos/seed/3QDZ8/1208/2171")
+                            .alt("Pauci timidus sol comburo thema.")
+                            .height(297d)
+                            .id("12020720-c152-456e-80bf-005ca92e532d")
+                            .metadata(List.of(
+                                CommerceMetadata.builder()
+                                    .id("4ede0b6b-5898-4c43-93eb-87357417ecee")
+                                    .slug("vito")
+                                    .value(CommerceMetadataValue.of("cuppedia"))
+                                    .build()))
+                            .position(61d)
+                            .type(CommerceItemMediaType.IMAGE)
+                            .width(96d)
+                            .build(),
+                        CommerceItemMedia.builder()
+                            .url("https://picsum.photos/seed/ytybC/2616/710")
+                            .alt("Cuppedia vestrum patruus.")
+                            .height(6d)
+                            .id("c6d2eb71-13f9-4cda-a26e-4bd7a3e27f52")
+                            .metadata(List.of(
+                                CommerceMetadata.builder()
+                                    .id("6ad69a11-2786-4752-a369-6f863517d900")
+                                    .slug("arbitro")
+                                    .value(CommerceMetadataValue.of("villa"))
+                                    .build()))
+                            .position(60d)
+                            .type(CommerceItemMediaType.VIDEO)
+                            .width(74d)
+                            .build()))
+                    .metadata(List.of())
+                    .rating(3d)
+                    .status(CommerceReviewStatus.APPROVED)
+                    .title("Coepi adamo amicitia auxilium toties.")
+                    .unhelpfulVotes(49d)
+                    .updatedAt(OffsetDateTime.parse("2025-07-24T23:16:21.947Z"))
+                    .url("https://excitable-underneath.com")
+                    .verifiedPurchase(false)
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -428,16 +495,17 @@ Update a review
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchCommerceReview" method="patch" path="/commerce/{connection_id}/review/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchCommerceReview" method="patch" path="/commerce/{connection_id}/review/{id}" example="commerce_review" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchCommerceReviewRequest;
 import to.unified.unified_java_sdk.models.operations.PatchCommerceReviewResponse;
-import to.unified.unified_java_sdk.models.shared.CommerceReview;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -451,6 +519,72 @@ public class Application {
 
         PatchCommerceReviewRequest req = PatchCommerceReviewRequest.builder()
                 .commerceReview(CommerceReview.builder()
+                    .authorAvatarUrl("https://picsum.photos/seed/ix4Br3LA/2245/1245")
+                    .authorEmail("Cleve_Yundt@hotmail.com")
+                    .authorLocation("ipsum")
+                    .authorName("Marsha Krajcik")
+                    .comments(List.of())
+                    .content("Taedium thymum adipiscor amicitia cui.")
+                    .createdAt(OffsetDateTime.parse("2019-12-12T18:10:22.988Z"))
+                    .helpfulVotes(26d)
+                    .id("fd0e9457-5554-4f0f-9f5e-eafddd7d0e37")
+                    .isFeatured(true)
+                    .isPublic(true)
+                    .isVerified(false)
+                    .media(List.of(
+                        CommerceItemMedia.builder()
+                            .url("https://loremflickr.com/882/1004?lock=7448492654002422")
+                            .alt("Adulescens.")
+                            .height(519d)
+                            .id("146b7d74-0d7e-4beb-941b-44c501241294")
+                            .metadata(List.of(
+                                CommerceMetadata.builder()
+                                    .id("cc4f6bd9-6784-4fd2-bed6-73d1869efb90")
+                                    .slug("aggero")
+                                    .value(CommerceMetadataValue.of("tero"))
+                                    .build()))
+                            .position(72d)
+                            .type(CommerceItemMediaType.VIDEO)
+                            .width(75d)
+                            .build(),
+                        CommerceItemMedia.builder()
+                            .url("https://picsum.photos/seed/3QDZ8/1208/2171")
+                            .alt("Pauci timidus sol comburo thema.")
+                            .height(297d)
+                            .id("87af2377-5bc7-415f-994c-28d4bcb0c263")
+                            .metadata(List.of(
+                                CommerceMetadata.builder()
+                                    .id("b0e23d56-6ea0-41f8-83ef-ffcf3e614638")
+                                    .slug("vito")
+                                    .value(CommerceMetadataValue.of("cuppedia"))
+                                    .build()))
+                            .position(61d)
+                            .type(CommerceItemMediaType.IMAGE)
+                            .width(96d)
+                            .build(),
+                        CommerceItemMedia.builder()
+                            .url("https://picsum.photos/seed/ytybC/2616/710")
+                            .alt("Cuppedia vestrum patruus.")
+                            .height(6d)
+                            .id("d5697010-23e7-4425-b385-99c308679379")
+                            .metadata(List.of(
+                                CommerceMetadata.builder()
+                                    .id("9ae001db-e9e0-4412-9c1f-9946f9c3559a")
+                                    .slug("arbitro")
+                                    .value(CommerceMetadataValue.of("villa"))
+                                    .build()))
+                            .position(60d)
+                            .type(CommerceItemMediaType.VIDEO)
+                            .width(74d)
+                            .build()))
+                    .metadata(List.of())
+                    .rating(3d)
+                    .status(CommerceReviewStatus.APPROVED)
+                    .title("Coepi adamo amicitia auxilium toties.")
+                    .unhelpfulVotes(49d)
+                    .updatedAt(OffsetDateTime.parse("2025-07-24T23:16:21.986Z"))
+                    .url("https://excitable-underneath.com")
+                    .verifiedPurchase(false)
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -606,16 +740,17 @@ Update a review
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateCommerceReview" method="put" path="/commerce/{connection_id}/review/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateCommerceReview" method="put" path="/commerce/{connection_id}/review/{id}" example="commerce_review" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateCommerceReviewRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateCommerceReviewResponse;
-import to.unified.unified_java_sdk.models.shared.CommerceReview;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -629,6 +764,72 @@ public class Application {
 
         UpdateCommerceReviewRequest req = UpdateCommerceReviewRequest.builder()
                 .commerceReview(CommerceReview.builder()
+                    .authorAvatarUrl("https://picsum.photos/seed/ix4Br3LA/2245/1245")
+                    .authorEmail("Cleve_Yundt@hotmail.com")
+                    .authorLocation("ipsum")
+                    .authorName("Marsha Krajcik")
+                    .comments(List.of())
+                    .content("Taedium thymum adipiscor amicitia cui.")
+                    .createdAt(OffsetDateTime.parse("2019-12-12T18:10:22.988Z"))
+                    .helpfulVotes(26d)
+                    .id("fd0e9457-5554-4f0f-9f5e-eafddd7d0e37")
+                    .isFeatured(true)
+                    .isPublic(true)
+                    .isVerified(false)
+                    .media(List.of(
+                        CommerceItemMedia.builder()
+                            .url("https://loremflickr.com/882/1004?lock=7448492654002422")
+                            .alt("Adulescens.")
+                            .height(519d)
+                            .id("146b7d74-0d7e-4beb-941b-44c501241294")
+                            .metadata(List.of(
+                                CommerceMetadata.builder()
+                                    .id("cc4f6bd9-6784-4fd2-bed6-73d1869efb90")
+                                    .slug("aggero")
+                                    .value(CommerceMetadataValue.of("tero"))
+                                    .build()))
+                            .position(72d)
+                            .type(CommerceItemMediaType.VIDEO)
+                            .width(75d)
+                            .build(),
+                        CommerceItemMedia.builder()
+                            .url("https://picsum.photos/seed/3QDZ8/1208/2171")
+                            .alt("Pauci timidus sol comburo thema.")
+                            .height(297d)
+                            .id("87af2377-5bc7-415f-994c-28d4bcb0c263")
+                            .metadata(List.of(
+                                CommerceMetadata.builder()
+                                    .id("b0e23d56-6ea0-41f8-83ef-ffcf3e614638")
+                                    .slug("vito")
+                                    .value(CommerceMetadataValue.of("cuppedia"))
+                                    .build()))
+                            .position(61d)
+                            .type(CommerceItemMediaType.IMAGE)
+                            .width(96d)
+                            .build(),
+                        CommerceItemMedia.builder()
+                            .url("https://picsum.photos/seed/ytybC/2616/710")
+                            .alt("Cuppedia vestrum patruus.")
+                            .height(6d)
+                            .id("d5697010-23e7-4425-b385-99c308679379")
+                            .metadata(List.of(
+                                CommerceMetadata.builder()
+                                    .id("9ae001db-e9e0-4412-9c1f-9946f9c3559a")
+                                    .slug("arbitro")
+                                    .value(CommerceMetadataValue.of("villa"))
+                                    .build()))
+                            .position(60d)
+                            .type(CommerceItemMediaType.VIDEO)
+                            .width(74d)
+                            .build()))
+                    .metadata(List.of())
+                    .rating(3d)
+                    .status(CommerceReviewStatus.APPROVED)
+                    .title("Coepi adamo amicitia auxilium toties.")
+                    .unhelpfulVotes(49d)
+                    .updatedAt(OffsetDateTime.parse("2025-07-24T23:16:21.986Z"))
+                    .url("https://excitable-underneath.com")
+                    .verifiedPurchase(false)
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

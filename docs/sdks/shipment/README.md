@@ -17,16 +17,16 @@ Create a shipment
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createShippingShipment" method="post" path="/shipping/{connection_id}/shipment" -->
+<!-- UsageSnippet language="java" operationID="createShippingShipment" method="post" path="/shipping/{connection_id}/shipment" example="shipping_shipment" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateShippingShipmentRequest;
 import to.unified.unified_java_sdk.models.operations.CreateShippingShipmentResponse;
-import to.unified.unified_java_sdk.models.shared.Security;
-import to.unified.unified_java_sdk.models.shared.ShippingShipment;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -40,6 +40,18 @@ public class Application {
 
         CreateShippingShipmentRequest req = CreateShippingShipmentRequest.builder()
                 .shippingShipment(ShippingShipment.builder()
+                    .carrierName("Bogisich, Franey and Koelpin")
+                    .createdAt(OffsetDateTime.parse("2022-09-12T03:11:28.960Z"))
+                    .id("aeba27e5-5821-4e2a-9407-bb494f9559b5")
+                    .rateAmount(8.86546263936907)
+                    .rateCurrency("USD")
+                    .rateEstimatedDays(8d)
+                    .rateServiceName("Fisher - Kilback")
+                    .serviceCode("F7U")
+                    .shippedAt(OffsetDateTime.parse("2025-08-24T18:20:41.033Z"))
+                    .status(ShippingShipmentStatus.PENDING)
+                    .trackingUrl("https://shallow-secrecy.info/")
+                    .updatedAt(OffsetDateTime.parse("2025-07-03T02:07:43.627Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -192,16 +204,16 @@ Update a shipment
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchShippingShipment" method="patch" path="/shipping/{connection_id}/shipment/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchShippingShipment" method="patch" path="/shipping/{connection_id}/shipment/{id}" example="shipping_shipment" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchShippingShipmentRequest;
 import to.unified.unified_java_sdk.models.operations.PatchShippingShipmentResponse;
-import to.unified.unified_java_sdk.models.shared.Security;
-import to.unified.unified_java_sdk.models.shared.ShippingShipment;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -215,6 +227,18 @@ public class Application {
 
         PatchShippingShipmentRequest req = PatchShippingShipmentRequest.builder()
                 .shippingShipment(ShippingShipment.builder()
+                    .carrierName("Bogisich, Franey and Koelpin")
+                    .createdAt(OffsetDateTime.parse("2022-09-12T03:11:28.960Z"))
+                    .id("b84ec753-8607-467c-9c32-9aea0c5c1b27")
+                    .rateAmount(8.86546263936907)
+                    .rateCurrency("USD")
+                    .rateEstimatedDays(8d)
+                    .rateServiceName("Fisher - Kilback")
+                    .serviceCode("F7U")
+                    .shippedAt(OffsetDateTime.parse("2025-08-24T18:20:41.092Z"))
+                    .status(ShippingShipmentStatus.PENDING)
+                    .trackingUrl("https://shallow-secrecy.info/")
+                    .updatedAt(OffsetDateTime.parse("2025-07-03T02:07:43.683Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -309,16 +333,16 @@ Update a shipment
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateShippingShipment" method="put" path="/shipping/{connection_id}/shipment/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateShippingShipment" method="put" path="/shipping/{connection_id}/shipment/{id}" example="shipping_shipment" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateShippingShipmentRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateShippingShipmentResponse;
-import to.unified.unified_java_sdk.models.shared.Security;
-import to.unified.unified_java_sdk.models.shared.ShippingShipment;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -332,6 +356,18 @@ public class Application {
 
         UpdateShippingShipmentRequest req = UpdateShippingShipmentRequest.builder()
                 .shippingShipment(ShippingShipment.builder()
+                    .carrierName("Bogisich, Franey and Koelpin")
+                    .createdAt(OffsetDateTime.parse("2022-09-12T03:11:28.960Z"))
+                    .id("b84ec753-8607-467c-9c32-9aea0c5c1b27")
+                    .rateAmount(8.86546263936907)
+                    .rateCurrency("USD")
+                    .rateEstimatedDays(8d)
+                    .rateServiceName("Fisher - Kilback")
+                    .serviceCode("F7U")
+                    .shippedAt(OffsetDateTime.parse("2025-08-24T18:20:41.092Z"))
+                    .status(ShippingShipmentStatus.PENDING)
+                    .trackingUrl("https://shallow-secrecy.info/")
+                    .updatedAt(OffsetDateTime.parse("2025-07-03T02:07:43.683Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

@@ -29,16 +29,16 @@ Create a document
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createAtsDocument" method="post" path="/ats/{connection_id}/document" -->
+<!-- UsageSnippet language="java" operationID="createAtsDocument" method="post" path="/ats/{connection_id}/document" example="ats_document" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateAtsDocumentRequest;
 import to.unified.unified_java_sdk.models.operations.CreateAtsDocumentResponse;
-import to.unified.unified_java_sdk.models.shared.AtsDocument;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -52,6 +52,12 @@ public class Application {
 
         CreateAtsDocumentRequest req = CreateAtsDocumentRequest.builder()
                 .atsDocument(AtsDocument.builder()
+                    .createdAt(OffsetDateTime.parse("2021-08-20T08:00:27.437Z"))
+                    .documentUrl("https://vengeful-lashes.biz")
+                    .filename("bah_white_frantically.bz")
+                    .id("8aa6ddb8-a765-430a-b6cb-cbdbc0120932")
+                    .type(AtsDocumentType.RESUME)
+                    .updatedAt(OffsetDateTime.parse("2022-11-28T22:09:41.296Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -89,16 +95,16 @@ Create a document
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createHrisDocument" method="post" path="/hris/{connection_id}/document" -->
+<!-- UsageSnippet language="java" operationID="createHrisDocument" method="post" path="/hris/{connection_id}/document" example="hris_document" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateHrisDocumentRequest;
 import to.unified.unified_java_sdk.models.operations.CreateHrisDocumentResponse;
-import to.unified.unified_java_sdk.models.shared.HrisDocument;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -112,6 +118,12 @@ public class Application {
 
         CreateHrisDocumentRequest req = CreateHrisDocumentRequest.builder()
                 .hrisDocument(HrisDocument.builder()
+                    .createdAt(OffsetDateTime.parse("2022-10-27T11:47:26.086Z"))
+                    .documentUrl("https://sore-decision.biz/")
+                    .filename("ridge_forager.xsl")
+                    .id("8e78f38f-1432-40b1-b0e2-deaf6644714c")
+                    .type(HrisDocumentType.POLICY)
+                    .updatedAt(OffsetDateTime.parse("2025-09-17T01:55:35.563Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -149,16 +161,16 @@ Create a document
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createSigningDocument" method="post" path="/signing/{connection_id}/document" -->
+<!-- UsageSnippet language="java" operationID="createSigningDocument" method="post" path="/signing/{connection_id}/document" example="signing_document" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateSigningDocumentRequest;
 import to.unified.unified_java_sdk.models.operations.CreateSigningDocumentResponse;
-import to.unified.unified_java_sdk.models.shared.Security;
-import to.unified.unified_java_sdk.models.shared.SigningDocument;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -172,6 +184,12 @@ public class Application {
 
         CreateSigningDocumentRequest req = CreateSigningDocumentRequest.builder()
                 .signingDocument(SigningDocument.builder()
+                    .createdAt(OffsetDateTime.parse("2021-05-02T09:35:23.679Z"))
+                    .expiresAt(OffsetDateTime.parse("2026-12-16T10:17:24.172Z"))
+                    .id("b56bffa4-89ef-4341-a673-29b95dfc4140")
+                    .name("nam audax absens")
+                    .status(SigningDocumentStatus.VOIDED)
+                    .updatedAt(OffsetDateTime.parse("2025-08-07T18:12:00.485Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -554,16 +572,16 @@ Update a document
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchAtsDocument" method="patch" path="/ats/{connection_id}/document/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchAtsDocument" method="patch" path="/ats/{connection_id}/document/{id}" example="ats_document" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchAtsDocumentRequest;
 import to.unified.unified_java_sdk.models.operations.PatchAtsDocumentResponse;
-import to.unified.unified_java_sdk.models.shared.AtsDocument;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -577,6 +595,12 @@ public class Application {
 
         PatchAtsDocumentRequest req = PatchAtsDocumentRequest.builder()
                 .atsDocument(AtsDocument.builder()
+                    .createdAt(OffsetDateTime.parse("2021-08-20T08:00:27.437Z"))
+                    .documentUrl("https://vengeful-lashes.biz")
+                    .filename("bah_white_frantically.bz")
+                    .id("a9316274-2e60-4f01-8b33-73b6249fd4ca")
+                    .type(AtsDocumentType.RESUME)
+                    .updatedAt(OffsetDateTime.parse("2022-11-28T22:09:41.297Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -615,16 +639,16 @@ Update a document
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchHrisDocument" method="patch" path="/hris/{connection_id}/document/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchHrisDocument" method="patch" path="/hris/{connection_id}/document/{id}" example="hris_document" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchHrisDocumentRequest;
 import to.unified.unified_java_sdk.models.operations.PatchHrisDocumentResponse;
-import to.unified.unified_java_sdk.models.shared.HrisDocument;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -638,6 +662,12 @@ public class Application {
 
         PatchHrisDocumentRequest req = PatchHrisDocumentRequest.builder()
                 .hrisDocument(HrisDocument.builder()
+                    .createdAt(OffsetDateTime.parse("2022-10-27T11:47:26.086Z"))
+                    .documentUrl("https://sore-decision.biz/")
+                    .filename("ridge_forager.xsl")
+                    .id("872f8d50-e1c5-40c1-af71-1bf3cbaa734c")
+                    .type(HrisDocumentType.POLICY)
+                    .updatedAt(OffsetDateTime.parse("2025-09-17T01:55:35.570Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -676,16 +706,16 @@ Update a document
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchSigningDocument" method="patch" path="/signing/{connection_id}/document/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchSigningDocument" method="patch" path="/signing/{connection_id}/document/{id}" example="signing_document" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchSigningDocumentRequest;
 import to.unified.unified_java_sdk.models.operations.PatchSigningDocumentResponse;
-import to.unified.unified_java_sdk.models.shared.Security;
-import to.unified.unified_java_sdk.models.shared.SigningDocument;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -699,6 +729,12 @@ public class Application {
 
         PatchSigningDocumentRequest req = PatchSigningDocumentRequest.builder()
                 .signingDocument(SigningDocument.builder()
+                    .createdAt(OffsetDateTime.parse("2021-05-02T09:35:23.679Z"))
+                    .expiresAt(OffsetDateTime.parse("2026-12-16T10:17:24.183Z"))
+                    .id("92c73198-9b1c-4527-b4de-ec85322f1a73")
+                    .name("nam audax absens")
+                    .status(SigningDocumentStatus.VOIDED)
+                    .updatedAt(OffsetDateTime.parse("2025-08-07T18:12:00.493Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -905,16 +941,16 @@ Update a document
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateAtsDocument" method="put" path="/ats/{connection_id}/document/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateAtsDocument" method="put" path="/ats/{connection_id}/document/{id}" example="ats_document" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateAtsDocumentRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateAtsDocumentResponse;
-import to.unified.unified_java_sdk.models.shared.AtsDocument;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -928,6 +964,12 @@ public class Application {
 
         UpdateAtsDocumentRequest req = UpdateAtsDocumentRequest.builder()
                 .atsDocument(AtsDocument.builder()
+                    .createdAt(OffsetDateTime.parse("2021-08-20T08:00:27.437Z"))
+                    .documentUrl("https://vengeful-lashes.biz")
+                    .filename("bah_white_frantically.bz")
+                    .id("a9316274-2e60-4f01-8b33-73b6249fd4ca")
+                    .type(AtsDocumentType.RESUME)
+                    .updatedAt(OffsetDateTime.parse("2022-11-28T22:09:41.297Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -966,16 +1008,16 @@ Update a document
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateHrisDocument" method="put" path="/hris/{connection_id}/document/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateHrisDocument" method="put" path="/hris/{connection_id}/document/{id}" example="hris_document" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateHrisDocumentRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateHrisDocumentResponse;
-import to.unified.unified_java_sdk.models.shared.HrisDocument;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -989,6 +1031,12 @@ public class Application {
 
         UpdateHrisDocumentRequest req = UpdateHrisDocumentRequest.builder()
                 .hrisDocument(HrisDocument.builder()
+                    .createdAt(OffsetDateTime.parse("2022-10-27T11:47:26.086Z"))
+                    .documentUrl("https://sore-decision.biz/")
+                    .filename("ridge_forager.xsl")
+                    .id("872f8d50-e1c5-40c1-af71-1bf3cbaa734c")
+                    .type(HrisDocumentType.POLICY)
+                    .updatedAt(OffsetDateTime.parse("2025-09-17T01:55:35.570Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -1027,16 +1075,16 @@ Update a document
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateSigningDocument" method="put" path="/signing/{connection_id}/document/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateSigningDocument" method="put" path="/signing/{connection_id}/document/{id}" example="signing_document" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateSigningDocumentRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateSigningDocumentResponse;
-import to.unified.unified_java_sdk.models.shared.Security;
-import to.unified.unified_java_sdk.models.shared.SigningDocument;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -1050,6 +1098,12 @@ public class Application {
 
         UpdateSigningDocumentRequest req = UpdateSigningDocumentRequest.builder()
                 .signingDocument(SigningDocument.builder()
+                    .createdAt(OffsetDateTime.parse("2021-05-02T09:35:23.679Z"))
+                    .expiresAt(OffsetDateTime.parse("2026-12-16T10:17:24.183Z"))
+                    .id("92c73198-9b1c-4527-b4de-ec85322f1a73")
+                    .name("nam audax absens")
+                    .status(SigningDocumentStatus.VOIDED)
+                    .updatedAt(OffsetDateTime.parse("2025-08-07T18:12:00.493Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

@@ -17,16 +17,17 @@ Create a class
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createLmsClass" method="post" path="/lms/{connection_id}/class" -->
+<!-- UsageSnippet language="java" operationID="createLmsClass" method="post" path="/lms/{connection_id}/class" example="lms_class" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateLmsClassRequest;
 import to.unified.unified_java_sdk.models.operations.CreateLmsClassResponse;
-import to.unified.unified_java_sdk.models.shared.LmsClass;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -40,6 +41,27 @@ public class Application {
 
         CreateLmsClassRequest req = CreateLmsClassRequest.builder()
                 .lmsClass(LmsClass.builder()
+                    .createdAt(OffsetDateTime.parse("2020-02-20T14:48:51.845Z"))
+                    .description("Anser sperno decerno.")
+                    .id("c1f27f80-7668-4b4b-9265-b1894eb6243a")
+                    .instructors(List.of())
+                    .languages(List.of(
+                        "in"))
+                    .media(List.of(
+                        LmsMedia.builder()
+                            .content("Defetiscor aetas acies benevolentia ulterius. Creta bis beneficium canis. Bonus valeo vulgo creator arca peior ceno earum culpa. Tabesco apostolus talis. Ultra accommodo deinde sono culpo arto cruciamentum triduana.")
+                            .description("Esse confido.")
+                            .languages(List.of(
+                                "fa",
+                                "da"))
+                            .name("illo")
+                            .thumbnailUrl("https://loremflickr.com/199/1934?lock=4323325966476891")
+                            .type(LmsMediaType.VIDEO)
+                            .url("https://loremflickr.com/487/921?lock=5127962071241632")
+                            .build()))
+                    .name("virtus")
+                    .students(List.of())
+                    .updatedAt(OffsetDateTime.parse("2025-07-07T21:37:16.026Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -192,16 +214,17 @@ Update a class
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchLmsClass" method="patch" path="/lms/{connection_id}/class/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchLmsClass" method="patch" path="/lms/{connection_id}/class/{id}" example="lms_class" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchLmsClassRequest;
 import to.unified.unified_java_sdk.models.operations.PatchLmsClassResponse;
-import to.unified.unified_java_sdk.models.shared.LmsClass;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -215,6 +238,27 @@ public class Application {
 
         PatchLmsClassRequest req = PatchLmsClassRequest.builder()
                 .lmsClass(LmsClass.builder()
+                    .createdAt(OffsetDateTime.parse("2020-02-20T14:48:51.845Z"))
+                    .description("Anser sperno decerno.")
+                    .id("882383dc-a478-43e2-b8b3-f63b6709a0a4")
+                    .instructors(List.of())
+                    .languages(List.of(
+                        "in"))
+                    .media(List.of(
+                        LmsMedia.builder()
+                            .content("Defetiscor aetas acies benevolentia ulterius. Creta bis beneficium canis. Bonus valeo vulgo creator arca peior ceno earum culpa. Tabesco apostolus talis. Ultra accommodo deinde sono culpo arto cruciamentum triduana.")
+                            .description("Esse confido.")
+                            .languages(List.of(
+                                "fa",
+                                "da"))
+                            .name("illo")
+                            .thumbnailUrl("https://loremflickr.com/199/1934?lock=4323325966476891")
+                            .type(LmsMediaType.VIDEO)
+                            .url("https://loremflickr.com/487/921?lock=5127962071241632")
+                            .build()))
+                    .name("virtus")
+                    .students(List.of())
+                    .updatedAt(OffsetDateTime.parse("2025-07-07T21:37:16.038Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -309,16 +353,17 @@ Update a class
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateLmsClass" method="put" path="/lms/{connection_id}/class/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateLmsClass" method="put" path="/lms/{connection_id}/class/{id}" example="lms_class" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateLmsClassRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateLmsClassResponse;
-import to.unified.unified_java_sdk.models.shared.LmsClass;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -332,6 +377,27 @@ public class Application {
 
         UpdateLmsClassRequest req = UpdateLmsClassRequest.builder()
                 .lmsClass(LmsClass.builder()
+                    .createdAt(OffsetDateTime.parse("2020-02-20T14:48:51.845Z"))
+                    .description("Anser sperno decerno.")
+                    .id("882383dc-a478-43e2-b8b3-f63b6709a0a4")
+                    .instructors(List.of())
+                    .languages(List.of(
+                        "in"))
+                    .media(List.of(
+                        LmsMedia.builder()
+                            .content("Defetiscor aetas acies benevolentia ulterius. Creta bis beneficium canis. Bonus valeo vulgo creator arca peior ceno earum culpa. Tabesco apostolus talis. Ultra accommodo deinde sono culpo arto cruciamentum triduana.")
+                            .description("Esse confido.")
+                            .languages(List.of(
+                                "fa",
+                                "da"))
+                            .name("illo")
+                            .thumbnailUrl("https://loremflickr.com/199/1934?lock=4323325966476891")
+                            .type(LmsMediaType.VIDEO)
+                            .url("https://loremflickr.com/487/921?lock=5127962071241632")
+                            .build()))
+                    .name("virtus")
+                    .students(List.of())
+                    .updatedAt(OffsetDateTime.parse("2025-07-07T21:37:16.038Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

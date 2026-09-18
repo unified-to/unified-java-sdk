@@ -17,16 +17,17 @@ Create a customer
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createTicketingCustomer" method="post" path="/ticketing/{connection_id}/customer" -->
+<!-- UsageSnippet language="java" operationID="createTicketingCustomer" method="post" path="/ticketing/{connection_id}/customer" example="ticketing_customer" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateTicketingCustomerRequest;
 import to.unified.unified_java_sdk.models.operations.CreateTicketingCustomerResponse;
-import to.unified.unified_java_sdk.models.shared.Security;
-import to.unified.unified_java_sdk.models.shared.TicketingCustomer;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -40,6 +41,31 @@ public class Application {
 
         CreateTicketingCustomerRequest req = CreateTicketingCustomerRequest.builder()
                 .ticketingCustomer(TicketingCustomer.builder()
+                    .createdAt(OffsetDateTime.parse("2021-03-15T12:33:14.875Z"))
+                    .emails(List.of(
+                        TicketingEmail.builder()
+                            .email("Christian_Windler@gmail.com")
+                            .type(TicketingEmailType.HOME)
+                            .build()))
+                    .id("e4eda98a-50de-46a3-969f-b9ed09d9be62")
+                    .name("Christian Windler")
+                    .tags(List.of(
+                        "casso",
+                        "peccatus"))
+                    .telephones(List.of(
+                        TicketingTelephone.builder()
+                            .telephone("(532) 242-0482")
+                            .type(TicketingTelephoneType.OTHER)
+                            .build(),
+                        TicketingTelephone.builder()
+                            .telephone("(826) 283-7431")
+                            .type(TicketingTelephoneType.MOBILE)
+                            .build(),
+                        TicketingTelephone.builder()
+                            .telephone("(483) 314-6826")
+                            .type(TicketingTelephoneType.MOBILE)
+                            .build()))
+                    .updatedAt(OffsetDateTime.parse("2026-05-04T07:40:10.066Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -192,16 +218,17 @@ Update a customer
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchTicketingCustomer" method="patch" path="/ticketing/{connection_id}/customer/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchTicketingCustomer" method="patch" path="/ticketing/{connection_id}/customer/{id}" example="ticketing_customer" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchTicketingCustomerRequest;
 import to.unified.unified_java_sdk.models.operations.PatchTicketingCustomerResponse;
-import to.unified.unified_java_sdk.models.shared.Security;
-import to.unified.unified_java_sdk.models.shared.TicketingCustomer;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -215,6 +242,31 @@ public class Application {
 
         PatchTicketingCustomerRequest req = PatchTicketingCustomerRequest.builder()
                 .ticketingCustomer(TicketingCustomer.builder()
+                    .createdAt(OffsetDateTime.parse("2021-03-15T12:33:14.875Z"))
+                    .emails(List.of(
+                        TicketingEmail.builder()
+                            .email("Christian_Windler@gmail.com")
+                            .type(TicketingEmailType.HOME)
+                            .build()))
+                    .id("9693c0c0-2580-43e7-b5e8-50ed01af5e16")
+                    .name("Christian Windler")
+                    .tags(List.of(
+                        "casso",
+                        "peccatus"))
+                    .telephones(List.of(
+                        TicketingTelephone.builder()
+                            .telephone("(532) 242-0482")
+                            .type(TicketingTelephoneType.OTHER)
+                            .build(),
+                        TicketingTelephone.builder()
+                            .telephone("(826) 283-7431")
+                            .type(TicketingTelephoneType.MOBILE)
+                            .build(),
+                        TicketingTelephone.builder()
+                            .telephone("(483) 314-6826")
+                            .type(TicketingTelephoneType.MOBILE)
+                            .build()))
+                    .updatedAt(OffsetDateTime.parse("2026-05-04T07:40:10.076Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -309,16 +361,17 @@ Update a customer
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateTicketingCustomer" method="put" path="/ticketing/{connection_id}/customer/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateTicketingCustomer" method="put" path="/ticketing/{connection_id}/customer/{id}" example="ticketing_customer" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateTicketingCustomerRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateTicketingCustomerResponse;
-import to.unified.unified_java_sdk.models.shared.Security;
-import to.unified.unified_java_sdk.models.shared.TicketingCustomer;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -332,6 +385,31 @@ public class Application {
 
         UpdateTicketingCustomerRequest req = UpdateTicketingCustomerRequest.builder()
                 .ticketingCustomer(TicketingCustomer.builder()
+                    .createdAt(OffsetDateTime.parse("2021-03-15T12:33:14.875Z"))
+                    .emails(List.of(
+                        TicketingEmail.builder()
+                            .email("Christian_Windler@gmail.com")
+                            .type(TicketingEmailType.HOME)
+                            .build()))
+                    .id("9693c0c0-2580-43e7-b5e8-50ed01af5e16")
+                    .name("Christian Windler")
+                    .tags(List.of(
+                        "casso",
+                        "peccatus"))
+                    .telephones(List.of(
+                        TicketingTelephone.builder()
+                            .telephone("(532) 242-0482")
+                            .type(TicketingTelephoneType.OTHER)
+                            .build(),
+                        TicketingTelephone.builder()
+                            .telephone("(826) 283-7431")
+                            .type(TicketingTelephoneType.MOBILE)
+                            .build(),
+                        TicketingTelephone.builder()
+                            .telephone("(483) 314-6826")
+                            .type(TicketingTelephoneType.MOBILE)
+                            .build()))
+                    .updatedAt(OffsetDateTime.parse("2026-05-04T07:40:10.076Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

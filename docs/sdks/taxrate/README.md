@@ -17,11 +17,13 @@ Create a taxrate
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createAccountingTaxrate" method="post" path="/accounting/{connection_id}/taxrate" -->
+<!-- UsageSnippet language="java" operationID="createAccountingTaxrate" method="post" path="/accounting/{connection_id}/taxrate" example="accounting_taxrate" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingTaxrateRequest;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingTaxrateResponse;
@@ -40,6 +42,14 @@ public class Application {
 
         CreateAccountingTaxrateRequest req = CreateAccountingTaxrateRequest.builder()
                 .accountingTaxrate(AccountingTaxrate.builder()
+                    .createdAt(OffsetDateTime.parse("2020-01-04T10:37:56.894Z"))
+                    .description("Nemo atrox tricesimus creator aranea.")
+                    .id("4e784882-93ea-4586-bc43-026743ba6449")
+                    .isActive(false)
+                    .metadata(List.of())
+                    .name("cogo")
+                    .rate(1d)
+                    .updatedAt(OffsetDateTime.parse("2025-11-04T07:54:19.715Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -192,11 +202,13 @@ Update a taxrate
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchAccountingTaxrate" method="patch" path="/accounting/{connection_id}/taxrate/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchAccountingTaxrate" method="patch" path="/accounting/{connection_id}/taxrate/{id}" example="accounting_taxrate" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchAccountingTaxrateRequest;
 import to.unified.unified_java_sdk.models.operations.PatchAccountingTaxrateResponse;
@@ -215,6 +227,14 @@ public class Application {
 
         PatchAccountingTaxrateRequest req = PatchAccountingTaxrateRequest.builder()
                 .accountingTaxrate(AccountingTaxrate.builder()
+                    .createdAt(OffsetDateTime.parse("2020-01-04T10:37:56.894Z"))
+                    .description("Nemo atrox tricesimus creator aranea.")
+                    .id("3a12088f-0124-4720-a4fc-8205f0fb1a05")
+                    .isActive(false)
+                    .metadata(List.of())
+                    .name("cogo")
+                    .rate(1d)
+                    .updatedAt(OffsetDateTime.parse("2025-11-04T07:54:19.725Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -309,11 +329,13 @@ Update a taxrate
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateAccountingTaxrate" method="put" path="/accounting/{connection_id}/taxrate/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateAccountingTaxrate" method="put" path="/accounting/{connection_id}/taxrate/{id}" example="accounting_taxrate" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateAccountingTaxrateRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateAccountingTaxrateResponse;
@@ -332,6 +354,14 @@ public class Application {
 
         UpdateAccountingTaxrateRequest req = UpdateAccountingTaxrateRequest.builder()
                 .accountingTaxrate(AccountingTaxrate.builder()
+                    .createdAt(OffsetDateTime.parse("2020-01-04T10:37:56.894Z"))
+                    .description("Nemo atrox tricesimus creator aranea.")
+                    .id("3a12088f-0124-4720-a4fc-8205f0fb1a05")
+                    .isActive(false)
+                    .metadata(List.of())
+                    .name("cogo")
+                    .rate(1d)
+                    .updatedAt(OffsetDateTime.parse("2025-11-04T07:54:19.725Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

@@ -19,16 +19,17 @@ Create a form
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createFormsForm" method="post" path="/forms/{connection_id}/form" -->
+<!-- UsageSnippet language="java" operationID="createFormsForm" method="post" path="/forms/{connection_id}/form" example="forms_form" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateFormsFormRequest;
 import to.unified.unified_java_sdk.models.operations.CreateFormsFormResponse;
-import to.unified.unified_java_sdk.models.shared.FormsForm;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -42,6 +43,68 @@ public class Application {
 
         CreateFormsFormRequest req = CreateFormsFormRequest.builder()
                 .formsForm(FormsForm.builder()
+                    .confirmationMessage("Cultura temeritas aptus celebrer volo pecus culpa annus aurum.")
+                    .createdAt(OffsetDateTime.parse("2023-10-05T21:34:29.094Z"))
+                    .description("Sodalitas cupiditas terebro conduco.")
+                    .fields(List.of(
+                        FormField.builder()
+                            .name("vulgivagus audio accendo")
+                            .type(FormFieldType.TEXTAREA)
+                            .createdAt(OffsetDateTime.parse("2023-10-05T21:34:29.094Z"))
+                            .id("565f27cf-2cf7-4c30-ad97-4340d859b584")
+                            .isActive(true)
+                            .isRequired(true)
+                            .maxLength(146d)
+                            .order(0d)
+                            .updatedAt(OffsetDateTime.parse("2025-04-11T17:17:35.689Z"))
+                            .build(),
+                        FormField.builder()
+                            .name("alo crebro vado")
+                            .type(FormFieldType.TEXTAREA)
+                            .createdAt(OffsetDateTime.parse("2023-10-05T21:34:29.094Z"))
+                            .id("82b263f9-2d16-4cdf-8e99-d05ba46ce817")
+                            .isActive(true)
+                            .isRequired(false)
+                            .order(1d)
+                            .updatedAt(OffsetDateTime.parse("2024-08-23T07:10:16.251Z"))
+                            .build(),
+                        FormField.builder()
+                            .name("casso tenus nesciunt")
+                            .type(FormFieldType.MULTIPLE_SELECT)
+                            .choices(List.of(
+                                "vallum",
+                                "vae",
+                                "nesciunt",
+                                "commodi",
+                                "appositus"))
+                            .createdAt(OffsetDateTime.parse("2023-10-05T21:34:29.094Z"))
+                            .defaultValue("cattus")
+                            .id("d7c963e5-2d3d-4436-a57d-a6e337d9d170")
+                            .isActive(true)
+                            .isRequired(false)
+                            .order(2d)
+                            .updatedAt(OffsetDateTime.parse("2024-02-22T02:14:33.063Z"))
+                            .build(),
+                        FormField.builder()
+                            .name("comburo utique ipsa")
+                            .type(FormFieldType.TEXTAREA)
+                            .createdAt(OffsetDateTime.parse("2023-10-05T21:34:29.094Z"))
+                            .description("Sequi antea delectatio.")
+                            .id("e45efb8f-439b-40f6-8370-99c8ec66b065")
+                            .isActive(true)
+                            .isRequired(false)
+                            .order(3d)
+                            .updatedAt(OffsetDateTime.parse("2024-11-14T23:43:34.255Z"))
+                            .build()))
+                    .hasMultipleSubmissions(false)
+                    .hasProgressBar(false)
+                    .hasShuffleQuestions(true)
+                    .id("d0766382-50db-4bb3-a245-eaefe22f656b")
+                    .isActive(false)
+                    .name("voluptatibus omnis audax Form")
+                    .publishedUrl("https://impartial-institute.org/")
+                    .responseCount(423d)
+                    .updatedAt(OffsetDateTime.parse("2024-08-15T04:23:40.243Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -309,16 +372,17 @@ Update a form
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchFormsForm" method="patch" path="/forms/{connection_id}/form/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchFormsForm" method="patch" path="/forms/{connection_id}/form/{id}" example="forms_form" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchFormsFormRequest;
 import to.unified.unified_java_sdk.models.operations.PatchFormsFormResponse;
-import to.unified.unified_java_sdk.models.shared.FormsForm;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -332,6 +396,68 @@ public class Application {
 
         PatchFormsFormRequest req = PatchFormsFormRequest.builder()
                 .formsForm(FormsForm.builder()
+                    .confirmationMessage("Cultura temeritas aptus celebrer volo pecus culpa annus aurum.")
+                    .createdAt(OffsetDateTime.parse("2023-10-05T21:34:29.094Z"))
+                    .description("Sodalitas cupiditas terebro conduco.")
+                    .fields(List.of(
+                        FormField.builder()
+                            .name("vulgivagus audio accendo")
+                            .type(FormFieldType.TEXTAREA)
+                            .createdAt(OffsetDateTime.parse("2023-10-05T21:34:29.094Z"))
+                            .id("565f27cf-2cf7-4c30-ad97-4340d859b584")
+                            .isActive(true)
+                            .isRequired(true)
+                            .maxLength(146d)
+                            .order(0d)
+                            .updatedAt(OffsetDateTime.parse("2025-04-11T17:17:35.699Z"))
+                            .build(),
+                        FormField.builder()
+                            .name("alo crebro vado")
+                            .type(FormFieldType.TEXTAREA)
+                            .createdAt(OffsetDateTime.parse("2023-10-05T21:34:29.094Z"))
+                            .id("82b263f9-2d16-4cdf-8e99-d05ba46ce817")
+                            .isActive(true)
+                            .isRequired(false)
+                            .order(1d)
+                            .updatedAt(OffsetDateTime.parse("2024-08-23T07:10:16.257Z"))
+                            .build(),
+                        FormField.builder()
+                            .name("casso tenus nesciunt")
+                            .type(FormFieldType.MULTIPLE_SELECT)
+                            .choices(List.of(
+                                "vallum",
+                                "vae",
+                                "nesciunt",
+                                "commodi",
+                                "appositus"))
+                            .createdAt(OffsetDateTime.parse("2023-10-05T21:34:29.094Z"))
+                            .defaultValue("cattus")
+                            .id("d7c963e5-2d3d-4436-a57d-a6e337d9d170")
+                            .isActive(true)
+                            .isRequired(false)
+                            .order(2d)
+                            .updatedAt(OffsetDateTime.parse("2024-02-22T02:14:33.065Z"))
+                            .build(),
+                        FormField.builder()
+                            .name("comburo utique ipsa")
+                            .type(FormFieldType.TEXTAREA)
+                            .createdAt(OffsetDateTime.parse("2023-10-05T21:34:29.094Z"))
+                            .description("Sequi antea delectatio.")
+                            .id("e45efb8f-439b-40f6-8370-99c8ec66b065")
+                            .isActive(true)
+                            .isRequired(false)
+                            .order(3d)
+                            .updatedAt(OffsetDateTime.parse("2024-11-14T23:43:34.262Z"))
+                            .build()))
+                    .hasMultipleSubmissions(false)
+                    .hasProgressBar(false)
+                    .hasShuffleQuestions(true)
+                    .id("5938349a-6b1c-42b1-9d6c-d5641aa72d7a")
+                    .isActive(false)
+                    .name("voluptatibus omnis audax Form")
+                    .publishedUrl("https://impartial-institute.org/")
+                    .responseCount(423d)
+                    .updatedAt(OffsetDateTime.parse("2024-08-15T04:23:40.249Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -426,16 +552,17 @@ Update a form
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateFormsForm" method="put" path="/forms/{connection_id}/form/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateFormsForm" method="put" path="/forms/{connection_id}/form/{id}" example="forms_form" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateFormsFormRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateFormsFormResponse;
-import to.unified.unified_java_sdk.models.shared.FormsForm;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -449,6 +576,68 @@ public class Application {
 
         UpdateFormsFormRequest req = UpdateFormsFormRequest.builder()
                 .formsForm(FormsForm.builder()
+                    .confirmationMessage("Cultura temeritas aptus celebrer volo pecus culpa annus aurum.")
+                    .createdAt(OffsetDateTime.parse("2023-10-05T21:34:29.094Z"))
+                    .description("Sodalitas cupiditas terebro conduco.")
+                    .fields(List.of(
+                        FormField.builder()
+                            .name("vulgivagus audio accendo")
+                            .type(FormFieldType.TEXTAREA)
+                            .createdAt(OffsetDateTime.parse("2023-10-05T21:34:29.094Z"))
+                            .id("565f27cf-2cf7-4c30-ad97-4340d859b584")
+                            .isActive(true)
+                            .isRequired(true)
+                            .maxLength(146d)
+                            .order(0d)
+                            .updatedAt(OffsetDateTime.parse("2025-04-11T17:17:35.699Z"))
+                            .build(),
+                        FormField.builder()
+                            .name("alo crebro vado")
+                            .type(FormFieldType.TEXTAREA)
+                            .createdAt(OffsetDateTime.parse("2023-10-05T21:34:29.094Z"))
+                            .id("82b263f9-2d16-4cdf-8e99-d05ba46ce817")
+                            .isActive(true)
+                            .isRequired(false)
+                            .order(1d)
+                            .updatedAt(OffsetDateTime.parse("2024-08-23T07:10:16.257Z"))
+                            .build(),
+                        FormField.builder()
+                            .name("casso tenus nesciunt")
+                            .type(FormFieldType.MULTIPLE_SELECT)
+                            .choices(List.of(
+                                "vallum",
+                                "vae",
+                                "nesciunt",
+                                "commodi",
+                                "appositus"))
+                            .createdAt(OffsetDateTime.parse("2023-10-05T21:34:29.094Z"))
+                            .defaultValue("cattus")
+                            .id("d7c963e5-2d3d-4436-a57d-a6e337d9d170")
+                            .isActive(true)
+                            .isRequired(false)
+                            .order(2d)
+                            .updatedAt(OffsetDateTime.parse("2024-02-22T02:14:33.065Z"))
+                            .build(),
+                        FormField.builder()
+                            .name("comburo utique ipsa")
+                            .type(FormFieldType.TEXTAREA)
+                            .createdAt(OffsetDateTime.parse("2023-10-05T21:34:29.094Z"))
+                            .description("Sequi antea delectatio.")
+                            .id("e45efb8f-439b-40f6-8370-99c8ec66b065")
+                            .isActive(true)
+                            .isRequired(false)
+                            .order(3d)
+                            .updatedAt(OffsetDateTime.parse("2024-11-14T23:43:34.262Z"))
+                            .build()))
+                    .hasMultipleSubmissions(false)
+                    .hasProgressBar(false)
+                    .hasShuffleQuestions(true)
+                    .id("5938349a-6b1c-42b1-9d6c-d5641aa72d7a")
+                    .isActive(false)
+                    .name("voluptatibus omnis audax Form")
+                    .publishedUrl("https://impartial-institute.org/")
+                    .responseCount(423d)
+                    .updatedAt(OffsetDateTime.parse("2024-08-15T04:23:40.249Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

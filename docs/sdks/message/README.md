@@ -17,16 +17,17 @@ Create a message
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createMessagingMessage" method="post" path="/messaging/{connection_id}/message" -->
+<!-- UsageSnippet language="java" operationID="createMessagingMessage" method="post" path="/messaging/{connection_id}/message" example="messaging_message" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateMessagingMessageRequest;
 import to.unified.unified_java_sdk.models.operations.CreateMessagingMessageResponse;
-import to.unified.unified_java_sdk.models.shared.MessagingMessage;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -40,6 +41,35 @@ public class Application {
 
         CreateMessagingMessageRequest req = CreateMessagingMessageRequest.builder()
                 .messagingMessage(MessagingMessage.builder()
+                    .attachments(List.of(
+                        MessagingAttachment.builder()
+                            .contentIdentifier("1c72f1d5-f6e4-4ed8-a96a-02a4102f79f4")
+                            .contentType("coaegresco")
+                            .downloadUrl("https://rotating-advertisement.org")
+                            .filename("super")
+                            .messageId("222cedb6-3d1c-47ba-982b-2520c268f506")
+                            .size(327d)
+                            .build()))
+                    .buttons(List.of(
+                        MessagingButton.builder()
+                            .id("337e2909-4d4a-4452-8eee-916bebb29ae2")
+                            .text("denuo")
+                            .build()))
+                    .createdAt(OffsetDateTime.parse("2021-11-26T09:26:33.973Z"))
+                    .destinationMembers(List.of())
+                    .hasChildren(true)
+                    .hiddenMembers(List.of())
+                    .id("222cedb6-3d1c-47ba-982b-2520c268f506")
+                    .isUnread(false)
+                    .mentionedMembers(List.of())
+                    .message("Sum utique aliquid.")
+                    .messageHtml("Articulus tardus tergiversatio.")
+                    .messageMarkdown("Territo uterque tergo curiositas.")
+                    .reactions(List.of())
+                    .reference("571483f2-d95b-4f06-8b78-d35e7046bb74")
+                    .subject("Cernuus optio cohaero summisse in.")
+                    .updatedAt(OffsetDateTime.parse("2023-07-06T11:13:40.621Z"))
+                    .webUrl("https://grumpy-kit.net")
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -192,16 +222,17 @@ Update a message
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchMessagingMessage" method="patch" path="/messaging/{connection_id}/message/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchMessagingMessage" method="patch" path="/messaging/{connection_id}/message/{id}" example="messaging_message" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchMessagingMessageRequest;
 import to.unified.unified_java_sdk.models.operations.PatchMessagingMessageResponse;
-import to.unified.unified_java_sdk.models.shared.MessagingMessage;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -215,6 +246,35 @@ public class Application {
 
         PatchMessagingMessageRequest req = PatchMessagingMessageRequest.builder()
                 .messagingMessage(MessagingMessage.builder()
+                    .attachments(List.of(
+                        MessagingAttachment.builder()
+                            .contentIdentifier("1a2fed76-5d16-4c7f-8c90-b8124cfe267b")
+                            .contentType("coaegresco")
+                            .downloadUrl("https://rotating-advertisement.org")
+                            .filename("super")
+                            .messageId("5dcf9147-6192-40ad-bfd6-c02931e4722f")
+                            .size(327d)
+                            .build()))
+                    .buttons(List.of(
+                        MessagingButton.builder()
+                            .id("11857e5d-8b5b-44bd-ab54-af6df290a21b")
+                            .text("denuo")
+                            .build()))
+                    .createdAt(OffsetDateTime.parse("2021-11-26T09:26:33.973Z"))
+                    .destinationMembers(List.of())
+                    .hasChildren(true)
+                    .hiddenMembers(List.of())
+                    .id("5dcf9147-6192-40ad-bfd6-c02931e4722f")
+                    .isUnread(false)
+                    .mentionedMembers(List.of())
+                    .message("Sum utique aliquid.")
+                    .messageHtml("Articulus tardus tergiversatio.")
+                    .messageMarkdown("Territo uterque tergo curiositas.")
+                    .reactions(List.of())
+                    .reference("571483f2-d95b-4f06-8b78-d35e7046bb74")
+                    .subject("Cernuus optio cohaero summisse in.")
+                    .updatedAt(OffsetDateTime.parse("2023-07-06T11:13:40.638Z"))
+                    .webUrl("https://grumpy-kit.net")
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -309,16 +369,17 @@ Update a message
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateMessagingMessage" method="put" path="/messaging/{connection_id}/message/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateMessagingMessage" method="put" path="/messaging/{connection_id}/message/{id}" example="messaging_message" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateMessagingMessageRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateMessagingMessageResponse;
-import to.unified.unified_java_sdk.models.shared.MessagingMessage;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -332,6 +393,35 @@ public class Application {
 
         UpdateMessagingMessageRequest req = UpdateMessagingMessageRequest.builder()
                 .messagingMessage(MessagingMessage.builder()
+                    .attachments(List.of(
+                        MessagingAttachment.builder()
+                            .contentIdentifier("1a2fed76-5d16-4c7f-8c90-b8124cfe267b")
+                            .contentType("coaegresco")
+                            .downloadUrl("https://rotating-advertisement.org")
+                            .filename("super")
+                            .messageId("5dcf9147-6192-40ad-bfd6-c02931e4722f")
+                            .size(327d)
+                            .build()))
+                    .buttons(List.of(
+                        MessagingButton.builder()
+                            .id("11857e5d-8b5b-44bd-ab54-af6df290a21b")
+                            .text("denuo")
+                            .build()))
+                    .createdAt(OffsetDateTime.parse("2021-11-26T09:26:33.973Z"))
+                    .destinationMembers(List.of())
+                    .hasChildren(true)
+                    .hiddenMembers(List.of())
+                    .id("5dcf9147-6192-40ad-bfd6-c02931e4722f")
+                    .isUnread(false)
+                    .mentionedMembers(List.of())
+                    .message("Sum utique aliquid.")
+                    .messageHtml("Articulus tardus tergiversatio.")
+                    .messageMarkdown("Territo uterque tergo curiositas.")
+                    .reactions(List.of())
+                    .reference("571483f2-d95b-4f06-8b78-d35e7046bb74")
+                    .subject("Cernuus optio cohaero summisse in.")
+                    .updatedAt(OffsetDateTime.parse("2023-07-06T11:13:40.638Z"))
+                    .webUrl("https://grumpy-kit.net")
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

@@ -21,16 +21,17 @@ Create an order
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createAccountingOrder" method="post" path="/accounting/{connection_id}/order" -->
+<!-- UsageSnippet language="java" operationID="createAccountingOrder" method="post" path="/accounting/{connection_id}/order" example="accounting_order" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingOrderRequest;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingOrderResponse;
-import to.unified.unified_java_sdk.models.shared.AccountingOrder;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -44,6 +45,33 @@ public class Application {
 
         CreateAccountingOrderRequest req = CreateAccountingOrderRequest.builder()
                 .accountingOrder(AccountingOrder.builder()
+                    .billingAddress(PropertyAccountingOrderBillingAddress.builder()
+                        .address1("802 Bechtelar Park")
+                        .address2("Apt. 436")
+                        .city("Daniellaville")
+                        .countryCode("US")
+                        .postalCode("36947")
+                        .region("Wisconsin")
+                        .regionCode("NY")
+                        .build())
+                    .createdAt(OffsetDateTime.parse("2020-11-20T03:46:49.837Z"))
+                    .currency("USD")
+                    .id("62016142-db21-434b-8958-592eefe46e72")
+                    .lineitems(List.of())
+                    .metadata(List.of())
+                    .postedAt(OffsetDateTime.parse("2022-04-05T00:14:38.752Z"))
+                    .shippingAddress(PropertyAccountingOrderShippingAddress.builder()
+                        .address1("9745 Betty Shore")
+                        .city("South Alainaland")
+                        .countryCode("US")
+                        .postalCode("25274-7654")
+                        .region("New Hampshire")
+                        .regionCode("LA")
+                        .build())
+                    .status(AccountingOrderStatus.SUBMITTED)
+                    .totalAmount(0d)
+                    .type(AccountingOrderType.PURCHASE)
+                    .updatedAt(OffsetDateTime.parse("2021-06-17T22:40:42.749Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -81,16 +109,17 @@ Create an order
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createAssessmentOrder" method="post" path="/assessment/{connection_id}/order" -->
+<!-- UsageSnippet language="java" operationID="createAssessmentOrder" method="post" path="/assessment/{connection_id}/order" example="assessment_order" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateAssessmentOrderRequest;
 import to.unified.unified_java_sdk.models.operations.CreateAssessmentOrderResponse;
-import to.unified.unified_java_sdk.models.shared.AssessmentOrder;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -106,6 +135,32 @@ public class Application {
                 .assessmentOrder(AssessmentOrder.builder()
                     .connectionId("<id>")
                     .workspaceId("<id>")
+                    .createdAt(OffsetDateTime.parse("2021-09-18T10:33:57.803Z"))
+                    .id("eb559378-8a4c-4147-b0b6-108e9aa26caa")
+                    .parameters(List.of())
+                    .profileAddresses(List.of())
+                    .profileDateOfBirth("1989-07-22T16:18:37.650Z")
+                    .profileEmails(List.of(
+                        "Cleta.Daugherty@gmail.com"))
+                    .profileFirstName("Amy")
+                    .profileGender(ProfileGender.NON_BINARY)
+                    .profileLastName("Kris-Windler")
+                    .profileName("Amy Kris-Windler")
+                    .profileResumeUrl("https://enchanted-cycle.biz/")
+                    .profileSocialMediaUrls(List.of())
+                    .profileTelephones(List.of(
+                        "(828) 263-1594 x5248"))
+                    .reference("ab")
+                    .responseAttributes(List.of())
+                    .responseDetails(List.of())
+                    .responseDownloadUrls(List.of())
+                    .responseMaxScore(82d)
+                    .responseScore(92d)
+                    .responseStatus(ResponseStatus.FAILED)
+                    .responseUrl("https://irresponsible-trench.info/")
+                    .status(AssessmentOrderStatus.REJECTED)
+                    .targetUrl("https://cautious-turret.info")
+                    .updatedAt(OffsetDateTime.parse("2023-01-17T01:52:25.097Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -316,16 +371,17 @@ Update an order
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchAccountingOrder" method="patch" path="/accounting/{connection_id}/order/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchAccountingOrder" method="patch" path="/accounting/{connection_id}/order/{id}" example="accounting_order" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchAccountingOrderRequest;
 import to.unified.unified_java_sdk.models.operations.PatchAccountingOrderResponse;
-import to.unified.unified_java_sdk.models.shared.AccountingOrder;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -339,6 +395,33 @@ public class Application {
 
         PatchAccountingOrderRequest req = PatchAccountingOrderRequest.builder()
                 .accountingOrder(AccountingOrder.builder()
+                    .billingAddress(PropertyAccountingOrderBillingAddress.builder()
+                        .address1("802 Bechtelar Park")
+                        .address2("Apt. 436")
+                        .city("Daniellaville")
+                        .countryCode("US")
+                        .postalCode("36947")
+                        .region("Wisconsin")
+                        .regionCode("NY")
+                        .build())
+                    .createdAt(OffsetDateTime.parse("2020-11-20T03:46:49.837Z"))
+                    .currency("USD")
+                    .id("ef699eb0-0563-4717-9061-214486399828")
+                    .lineitems(List.of())
+                    .metadata(List.of())
+                    .postedAt(OffsetDateTime.parse("2022-04-05T00:14:38.762Z"))
+                    .shippingAddress(PropertyAccountingOrderShippingAddress.builder()
+                        .address1("9745 Betty Shore")
+                        .city("South Alainaland")
+                        .countryCode("US")
+                        .postalCode("25274-7654")
+                        .region("New Hampshire")
+                        .regionCode("LA")
+                        .build())
+                    .status(AccountingOrderStatus.SUBMITTED)
+                    .totalAmount(0d)
+                    .type(AccountingOrderType.PURCHASE)
+                    .updatedAt(OffsetDateTime.parse("2021-06-17T22:40:42.753Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -377,16 +460,17 @@ Update an order
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchAssessmentOrder" method="patch" path="/assessment/{connection_id}/order/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchAssessmentOrder" method="patch" path="/assessment/{connection_id}/order/{id}" example="assessment_order" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchAssessmentOrderRequest;
 import to.unified.unified_java_sdk.models.operations.PatchAssessmentOrderResponse;
-import to.unified.unified_java_sdk.models.shared.AssessmentOrder;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -402,6 +486,32 @@ public class Application {
                 .assessmentOrder(AssessmentOrder.builder()
                     .connectionId("<id>")
                     .workspaceId("<id>")
+                    .createdAt(OffsetDateTime.parse("2021-09-18T10:33:57.803Z"))
+                    .id("2165508c-a576-42d8-9e14-4a01fbb91f9d")
+                    .parameters(List.of())
+                    .profileAddresses(List.of())
+                    .profileDateOfBirth("1989-07-22T16:18:37.650Z")
+                    .profileEmails(List.of(
+                        "Cleta.Daugherty@gmail.com"))
+                    .profileFirstName("Amy")
+                    .profileGender(ProfileGender.NON_BINARY)
+                    .profileLastName("Kris-Windler")
+                    .profileName("Amy Kris-Windler")
+                    .profileResumeUrl("https://enchanted-cycle.biz/")
+                    .profileSocialMediaUrls(List.of())
+                    .profileTelephones(List.of(
+                        "(828) 263-1594 x5248"))
+                    .reference("ab")
+                    .responseAttributes(List.of())
+                    .responseDetails(List.of())
+                    .responseDownloadUrls(List.of())
+                    .responseMaxScore(82d)
+                    .responseScore(92d)
+                    .responseStatus(ResponseStatus.FAILED)
+                    .responseUrl("https://irresponsible-trench.info/")
+                    .status(AssessmentOrderStatus.REJECTED)
+                    .targetUrl("https://cautious-turret.info")
+                    .updatedAt(OffsetDateTime.parse("2023-01-17T01:52:25.109Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -496,16 +606,17 @@ Update an order
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateAccountingOrder" method="put" path="/accounting/{connection_id}/order/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateAccountingOrder" method="put" path="/accounting/{connection_id}/order/{id}" example="accounting_order" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateAccountingOrderRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateAccountingOrderResponse;
-import to.unified.unified_java_sdk.models.shared.AccountingOrder;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -519,6 +630,33 @@ public class Application {
 
         UpdateAccountingOrderRequest req = UpdateAccountingOrderRequest.builder()
                 .accountingOrder(AccountingOrder.builder()
+                    .billingAddress(PropertyAccountingOrderBillingAddress.builder()
+                        .address1("802 Bechtelar Park")
+                        .address2("Apt. 436")
+                        .city("Daniellaville")
+                        .countryCode("US")
+                        .postalCode("36947")
+                        .region("Wisconsin")
+                        .regionCode("NY")
+                        .build())
+                    .createdAt(OffsetDateTime.parse("2020-11-20T03:46:49.837Z"))
+                    .currency("USD")
+                    .id("ef699eb0-0563-4717-9061-214486399828")
+                    .lineitems(List.of())
+                    .metadata(List.of())
+                    .postedAt(OffsetDateTime.parse("2022-04-05T00:14:38.762Z"))
+                    .shippingAddress(PropertyAccountingOrderShippingAddress.builder()
+                        .address1("9745 Betty Shore")
+                        .city("South Alainaland")
+                        .countryCode("US")
+                        .postalCode("25274-7654")
+                        .region("New Hampshire")
+                        .regionCode("LA")
+                        .build())
+                    .status(AccountingOrderStatus.SUBMITTED)
+                    .totalAmount(0d)
+                    .type(AccountingOrderType.PURCHASE)
+                    .updatedAt(OffsetDateTime.parse("2021-06-17T22:40:42.753Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -557,16 +695,17 @@ Update an order
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateAssessmentOrder" method="put" path="/assessment/{connection_id}/order/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateAssessmentOrder" method="put" path="/assessment/{connection_id}/order/{id}" example="assessment_order" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateAssessmentOrderRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateAssessmentOrderResponse;
-import to.unified.unified_java_sdk.models.shared.AssessmentOrder;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -582,6 +721,32 @@ public class Application {
                 .assessmentOrder(AssessmentOrder.builder()
                     .connectionId("<id>")
                     .workspaceId("<id>")
+                    .createdAt(OffsetDateTime.parse("2021-09-18T10:33:57.803Z"))
+                    .id("2165508c-a576-42d8-9e14-4a01fbb91f9d")
+                    .parameters(List.of())
+                    .profileAddresses(List.of())
+                    .profileDateOfBirth("1989-07-22T16:18:37.650Z")
+                    .profileEmails(List.of(
+                        "Cleta.Daugherty@gmail.com"))
+                    .profileFirstName("Amy")
+                    .profileGender(ProfileGender.NON_BINARY)
+                    .profileLastName("Kris-Windler")
+                    .profileName("Amy Kris-Windler")
+                    .profileResumeUrl("https://enchanted-cycle.biz/")
+                    .profileSocialMediaUrls(List.of())
+                    .profileTelephones(List.of(
+                        "(828) 263-1594 x5248"))
+                    .reference("ab")
+                    .responseAttributes(List.of())
+                    .responseDetails(List.of())
+                    .responseDownloadUrls(List.of())
+                    .responseMaxScore(82d)
+                    .responseScore(92d)
+                    .responseStatus(ResponseStatus.FAILED)
+                    .responseUrl("https://irresponsible-trench.info/")
+                    .status(AssessmentOrderStatus.REJECTED)
+                    .targetUrl("https://cautious-turret.info")
+                    .updatedAt(OffsetDateTime.parse("2023-01-17T01:52:25.109Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

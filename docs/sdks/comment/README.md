@@ -29,16 +29,16 @@ Create a comment
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createKmsComment" method="post" path="/kms/{connection_id}/comment" -->
+<!-- UsageSnippet language="java" operationID="createKmsComment" method="post" path="/kms/{connection_id}/comment" example="kms_comment" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateKmsCommentRequest;
 import to.unified.unified_java_sdk.models.operations.CreateKmsCommentResponse;
-import to.unified.unified_java_sdk.models.shared.KmsComment;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -52,6 +52,12 @@ public class Application {
 
         CreateKmsCommentRequest req = CreateKmsCommentRequest.builder()
                 .kmsComment(KmsComment.builder()
+                    .content("Decimus tolero viriliter usque.")
+                    .contentType(ContentType.HTML)
+                    .createdAt(OffsetDateTime.parse("2022-08-26T14:40:49.732Z"))
+                    .id("7a7c211f-0d0c-4de6-8fa9-150729e7b4a3")
+                    .type(KmsCommentType.PAGE)
+                    .updatedAt(OffsetDateTime.parse("2023-11-16T08:15:30.752Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -89,11 +95,12 @@ Create a comment
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createTaskComment" method="post" path="/task/{connection_id}/comment" -->
+<!-- UsageSnippet language="java" operationID="createTaskComment" method="post" path="/task/{connection_id}/comment" example="task_comment" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateTaskCommentRequest;
 import to.unified.unified_java_sdk.models.operations.CreateTaskCommentResponse;
@@ -112,6 +119,12 @@ public class Application {
 
         CreateTaskCommentRequest req = CreateTaskCommentRequest.builder()
                 .taskComment(TaskComment.builder()
+                    .createdAt(OffsetDateTime.parse("2019-10-12T20:33:37.879Z"))
+                    .hasChildren(true)
+                    .id("8b5be59d-1fbb-4870-9365-2a2f4ab8abf2")
+                    .text("Colo ulciscor sublime tabernus.")
+                    .updatedAt(OffsetDateTime.parse("2021-09-24T01:13:00.569Z"))
+                    .userName("Santina Abbott")
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -149,7 +162,7 @@ Create a comment
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createUcComment" method="post" path="/uc/{connection_id}/comment" -->
+<!-- UsageSnippet language="java" operationID="createUcComment" method="post" path="/uc/{connection_id}/comment" example="uc_comment" -->
 ```java
 package hello.world;
 
@@ -172,6 +185,10 @@ public class Application {
 
         CreateUcCommentRequest req = CreateUcCommentRequest.builder()
                 .ucComment(UcComment.builder()
+                    .content("Vociferor vitiosus.")
+                    .createdAt("2023-04-02T23:42:31.571Z")
+                    .id("f6c71223-2280-4fde-a2f8-4750d07d5346")
+                    .updatedAt("2024-02-01T19:29:21.734Z")
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -554,16 +571,16 @@ Update a comment
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchKmsComment" method="patch" path="/kms/{connection_id}/comment/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchKmsComment" method="patch" path="/kms/{connection_id}/comment/{id}" example="kms_comment" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchKmsCommentRequest;
 import to.unified.unified_java_sdk.models.operations.PatchKmsCommentResponse;
-import to.unified.unified_java_sdk.models.shared.KmsComment;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -577,6 +594,12 @@ public class Application {
 
         PatchKmsCommentRequest req = PatchKmsCommentRequest.builder()
                 .kmsComment(KmsComment.builder()
+                    .content("Decimus tolero viriliter usque.")
+                    .contentType(ContentType.HTML)
+                    .createdAt(OffsetDateTime.parse("2022-08-26T14:40:49.732Z"))
+                    .id("6fddf474-4bea-4611-a88d-4d3410024ce8")
+                    .type(KmsCommentType.PAGE)
+                    .updatedAt(OffsetDateTime.parse("2023-11-16T08:15:30.755Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -615,11 +638,12 @@ Update a comment
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchTaskComment" method="patch" path="/task/{connection_id}/comment/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchTaskComment" method="patch" path="/task/{connection_id}/comment/{id}" example="task_comment" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchTaskCommentRequest;
 import to.unified.unified_java_sdk.models.operations.PatchTaskCommentResponse;
@@ -638,6 +662,12 @@ public class Application {
 
         PatchTaskCommentRequest req = PatchTaskCommentRequest.builder()
                 .taskComment(TaskComment.builder()
+                    .createdAt(OffsetDateTime.parse("2019-10-12T20:33:37.879Z"))
+                    .hasChildren(true)
+                    .id("8ad2ce33-cddd-43a3-ae6c-d249be67536e")
+                    .text("Colo ulciscor sublime tabernus.")
+                    .updatedAt(OffsetDateTime.parse("2021-09-24T01:13:00.571Z"))
+                    .userName("Santina Abbott")
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -676,7 +706,7 @@ Update a comment
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchUcComment" method="patch" path="/uc/{connection_id}/comment/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchUcComment" method="patch" path="/uc/{connection_id}/comment/{id}" example="uc_comment" -->
 ```java
 package hello.world;
 
@@ -699,6 +729,10 @@ public class Application {
 
         PatchUcCommentRequest req = PatchUcCommentRequest.builder()
                 .ucComment(UcComment.builder()
+                    .content("Vociferor vitiosus.")
+                    .createdAt("2023-04-02T23:42:31.571Z")
+                    .id("f43b76fb-3830-472f-9736-ae94a1787acd")
+                    .updatedAt("2024-02-01T19:29:21.735Z")
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -905,16 +939,16 @@ Update a comment
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateKmsComment" method="put" path="/kms/{connection_id}/comment/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateKmsComment" method="put" path="/kms/{connection_id}/comment/{id}" example="kms_comment" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateKmsCommentRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateKmsCommentResponse;
-import to.unified.unified_java_sdk.models.shared.KmsComment;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -928,6 +962,12 @@ public class Application {
 
         UpdateKmsCommentRequest req = UpdateKmsCommentRequest.builder()
                 .kmsComment(KmsComment.builder()
+                    .content("Decimus tolero viriliter usque.")
+                    .contentType(ContentType.HTML)
+                    .createdAt(OffsetDateTime.parse("2022-08-26T14:40:49.732Z"))
+                    .id("6fddf474-4bea-4611-a88d-4d3410024ce8")
+                    .type(KmsCommentType.PAGE)
+                    .updatedAt(OffsetDateTime.parse("2023-11-16T08:15:30.755Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -966,11 +1006,12 @@ Update a comment
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateTaskComment" method="put" path="/task/{connection_id}/comment/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateTaskComment" method="put" path="/task/{connection_id}/comment/{id}" example="task_comment" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateTaskCommentRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateTaskCommentResponse;
@@ -989,6 +1030,12 @@ public class Application {
 
         UpdateTaskCommentRequest req = UpdateTaskCommentRequest.builder()
                 .taskComment(TaskComment.builder()
+                    .createdAt(OffsetDateTime.parse("2019-10-12T20:33:37.879Z"))
+                    .hasChildren(true)
+                    .id("8ad2ce33-cddd-43a3-ae6c-d249be67536e")
+                    .text("Colo ulciscor sublime tabernus.")
+                    .updatedAt(OffsetDateTime.parse("2021-09-24T01:13:00.571Z"))
+                    .userName("Santina Abbott")
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -1027,7 +1074,7 @@ Update a comment
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateUcComment" method="put" path="/uc/{connection_id}/comment/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateUcComment" method="put" path="/uc/{connection_id}/comment/{id}" example="uc_comment" -->
 ```java
 package hello.world;
 
@@ -1050,6 +1097,10 @@ public class Application {
 
         UpdateUcCommentRequest req = UpdateUcCommentRequest.builder()
                 .ucComment(UcComment.builder()
+                    .content("Vociferor vitiosus.")
+                    .createdAt("2023-04-02T23:42:31.571Z")
+                    .id("f43b76fb-3830-472f-9736-ae94a1787acd")
+                    .updatedAt("2024-02-01T19:29:21.735Z")
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

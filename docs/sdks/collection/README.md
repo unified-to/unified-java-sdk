@@ -23,16 +23,17 @@ Create a collection
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createCommerceCollection" method="post" path="/commerce/{connection_id}/collection" -->
+<!-- UsageSnippet language="java" operationID="createCommerceCollection" method="post" path="/commerce/{connection_id}/collection" example="commerce_collection" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateCommerceCollectionRequest;
 import to.unified.unified_java_sdk.models.operations.CreateCommerceCollectionResponse;
-import to.unified.unified_java_sdk.models.shared.CommerceCollection;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -46,7 +47,44 @@ public class Application {
 
         CreateCommerceCollectionRequest req = CreateCommerceCollectionRequest.builder()
                 .commerceCollection(CommerceCollection.builder()
-                    .name("<value>")
+                    .name("Small Marble Chips")
+                    .createdAt(OffsetDateTime.parse("2023-07-14T00:42:54.742Z"))
+                    .description("The Integrated leading edge website Cheese offers reliable performance and productive design")
+                    .id("b58ab754-d3cc-453d-aada-355042e8429d")
+                    .isActive(true)
+                    .isFeatured(false)
+                    .isVisible(false)
+                    .itemMetadata(List.of())
+                    .media(List.of(
+                        CommerceItemMedia.builder()
+                            .url("https://loremflickr.com/1319/1257?lock=7280448425732025")
+                            .alt("Defungo adopto thorax.")
+                            .height(759d)
+                            .id("18cba18e-9245-49d1-baee-4d1edc732151")
+                            .metadata(List.of(
+                                CommerceMetadata.builder()
+                                    .id("7ff7cc76-3780-4284-a689-c0d9dbc99f01")
+                                    .slug("censura")
+                                    .value(CommerceMetadataValue.of("toties"))
+                                    .build()))
+                            .position(80d)
+                            .type(CommerceItemMediaType.VIDEO)
+                            .width(40d)
+                            .build()))
+                    .metadata(List.of(
+                        CommerceMetadata.builder()
+                            .id("be526e0e-67e5-4c68-a5f3-c51c1391d4aa")
+                            .slug("aetas")
+                            .value(CommerceMetadataValue.of("consuasor"))
+                            .build()))
+                    .publicDescription("Generic Gloves designed with Cotton for miserable performance")
+                    .publicName("Small Marble Chips")
+                    .tags(List.of(
+                        "ambulo",
+                        "adeptio",
+                        "contego"))
+                    .type(CommerceCollectionType.COLLECTION)
+                    .updatedAt(OffsetDateTime.parse("2025-02-26T04:57:40.878Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -84,16 +122,17 @@ Create a collection
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createLmsCollection" method="post" path="/lms/{connection_id}/collection" -->
+<!-- UsageSnippet language="java" operationID="createLmsCollection" method="post" path="/lms/{connection_id}/collection" example="lms_collection" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateLmsCollectionRequest;
 import to.unified.unified_java_sdk.models.operations.CreateLmsCollectionResponse;
-import to.unified.unified_java_sdk.models.shared.LmsCollection;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -107,6 +146,23 @@ public class Application {
 
         CreateLmsCollectionRequest req = CreateLmsCollectionRequest.builder()
                 .lmsCollection(LmsCollection.builder()
+                    .createdAt(OffsetDateTime.parse("2019-08-19T14:40:29.227Z"))
+                    .description("Ab.")
+                    .id("8844ee01-dfb0-4ad4-af18-6b5beedaa703")
+                    .isActive(true)
+                    .media(List.of(
+                        LmsMedia.builder()
+                            .content("Accusamus earum sulum libero adficio testimonium vitae. Calcar contra vergo curis sollers. Caste brevis denuo. Tam amita ducimus capillus. Vulgaris temporibus arbustum solium id. Suppono commodo fuga surculus tripudio doloribus.")
+                            .description("Aliquam tardus careo hic umbra.")
+                            .languages(List.of(
+                                "gl"))
+                            .name("thymum")
+                            .thumbnailUrl("https://picsum.photos/seed/15O5EfV/2982/752")
+                            .type(LmsMediaType.HEADSHOT)
+                            .url("https://loremflickr.com/2679/70?lock=6078357625960554")
+                            .build()))
+                    .name("ara")
+                    .updatedAt(OffsetDateTime.parse("2026-06-28T08:01:49.217Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -374,16 +430,17 @@ Update a collection
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchCommerceCollection" method="patch" path="/commerce/{connection_id}/collection/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchCommerceCollection" method="patch" path="/commerce/{connection_id}/collection/{id}" example="commerce_collection" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchCommerceCollectionRequest;
 import to.unified.unified_java_sdk.models.operations.PatchCommerceCollectionResponse;
-import to.unified.unified_java_sdk.models.shared.CommerceCollection;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -397,7 +454,44 @@ public class Application {
 
         PatchCommerceCollectionRequest req = PatchCommerceCollectionRequest.builder()
                 .commerceCollection(CommerceCollection.builder()
-                    .name("<value>")
+                    .name("Small Marble Chips")
+                    .createdAt(OffsetDateTime.parse("2023-07-14T00:42:54.742Z"))
+                    .description("The Integrated leading edge website Cheese offers reliable performance and productive design")
+                    .id("8b3a40a6-30fd-497d-99e6-84c8325779e7")
+                    .isActive(true)
+                    .isFeatured(false)
+                    .isVisible(false)
+                    .itemMetadata(List.of())
+                    .media(List.of(
+                        CommerceItemMedia.builder()
+                            .url("https://loremflickr.com/1319/1257?lock=7280448425732025")
+                            .alt("Defungo adopto thorax.")
+                            .height(759d)
+                            .id("eaefabd8-15e5-4c38-8e42-3f8c461b50db")
+                            .metadata(List.of(
+                                CommerceMetadata.builder()
+                                    .id("b9ddff2c-2954-4722-b137-f457e95332ca")
+                                    .slug("censura")
+                                    .value(CommerceMetadataValue.of("toties"))
+                                    .build()))
+                            .position(80d)
+                            .type(CommerceItemMediaType.VIDEO)
+                            .width(40d)
+                            .build()))
+                    .metadata(List.of(
+                        CommerceMetadata.builder()
+                            .id("bbcbe93b-3bb0-4a94-8fda-f22c6702908a")
+                            .slug("aetas")
+                            .value(CommerceMetadataValue.of("consuasor"))
+                            .build()))
+                    .publicDescription("Generic Gloves designed with Cotton for miserable performance")
+                    .publicName("Small Marble Chips")
+                    .tags(List.of(
+                        "ambulo",
+                        "adeptio",
+                        "contego"))
+                    .type(CommerceCollectionType.COLLECTION)
+                    .updatedAt(OffsetDateTime.parse("2025-02-26T04:57:40.898Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -436,16 +530,17 @@ Update a collection
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchLmsCollection" method="patch" path="/lms/{connection_id}/collection/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchLmsCollection" method="patch" path="/lms/{connection_id}/collection/{id}" example="lms_collection" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchLmsCollectionRequest;
 import to.unified.unified_java_sdk.models.operations.PatchLmsCollectionResponse;
-import to.unified.unified_java_sdk.models.shared.LmsCollection;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -459,6 +554,23 @@ public class Application {
 
         PatchLmsCollectionRequest req = PatchLmsCollectionRequest.builder()
                 .lmsCollection(LmsCollection.builder()
+                    .createdAt(OffsetDateTime.parse("2019-08-19T14:40:29.227Z"))
+                    .description("Ab.")
+                    .id("3add09e2-c99a-46e8-a1cc-d17257cbcbcf")
+                    .isActive(true)
+                    .media(List.of(
+                        LmsMedia.builder()
+                            .content("Accusamus earum sulum libero adficio testimonium vitae. Calcar contra vergo curis sollers. Caste brevis denuo. Tam amita ducimus capillus. Vulgaris temporibus arbustum solium id. Suppono commodo fuga surculus tripudio doloribus.")
+                            .description("Aliquam tardus careo hic umbra.")
+                            .languages(List.of(
+                                "gl"))
+                            .name("thymum")
+                            .thumbnailUrl("https://picsum.photos/seed/15O5EfV/2982/752")
+                            .type(LmsMediaType.HEADSHOT)
+                            .url("https://loremflickr.com/2679/70?lock=6078357625960554")
+                            .build()))
+                    .name("ara")
+                    .updatedAt(OffsetDateTime.parse("2026-06-28T08:01:49.226Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -609,16 +721,17 @@ Update a collection
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateCommerceCollection" method="put" path="/commerce/{connection_id}/collection/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateCommerceCollection" method="put" path="/commerce/{connection_id}/collection/{id}" example="commerce_collection" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateCommerceCollectionRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateCommerceCollectionResponse;
-import to.unified.unified_java_sdk.models.shared.CommerceCollection;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -632,7 +745,44 @@ public class Application {
 
         UpdateCommerceCollectionRequest req = UpdateCommerceCollectionRequest.builder()
                 .commerceCollection(CommerceCollection.builder()
-                    .name("<value>")
+                    .name("Small Marble Chips")
+                    .createdAt(OffsetDateTime.parse("2023-07-14T00:42:54.742Z"))
+                    .description("The Integrated leading edge website Cheese offers reliable performance and productive design")
+                    .id("8b3a40a6-30fd-497d-99e6-84c8325779e7")
+                    .isActive(true)
+                    .isFeatured(false)
+                    .isVisible(false)
+                    .itemMetadata(List.of())
+                    .media(List.of(
+                        CommerceItemMedia.builder()
+                            .url("https://loremflickr.com/1319/1257?lock=7280448425732025")
+                            .alt("Defungo adopto thorax.")
+                            .height(759d)
+                            .id("eaefabd8-15e5-4c38-8e42-3f8c461b50db")
+                            .metadata(List.of(
+                                CommerceMetadata.builder()
+                                    .id("b9ddff2c-2954-4722-b137-f457e95332ca")
+                                    .slug("censura")
+                                    .value(CommerceMetadataValue.of("toties"))
+                                    .build()))
+                            .position(80d)
+                            .type(CommerceItemMediaType.VIDEO)
+                            .width(40d)
+                            .build()))
+                    .metadata(List.of(
+                        CommerceMetadata.builder()
+                            .id("bbcbe93b-3bb0-4a94-8fda-f22c6702908a")
+                            .slug("aetas")
+                            .value(CommerceMetadataValue.of("consuasor"))
+                            .build()))
+                    .publicDescription("Generic Gloves designed with Cotton for miserable performance")
+                    .publicName("Small Marble Chips")
+                    .tags(List.of(
+                        "ambulo",
+                        "adeptio",
+                        "contego"))
+                    .type(CommerceCollectionType.COLLECTION)
+                    .updatedAt(OffsetDateTime.parse("2025-02-26T04:57:40.898Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -671,16 +821,17 @@ Update a collection
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateLmsCollection" method="put" path="/lms/{connection_id}/collection/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateLmsCollection" method="put" path="/lms/{connection_id}/collection/{id}" example="lms_collection" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateLmsCollectionRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateLmsCollectionResponse;
-import to.unified.unified_java_sdk.models.shared.LmsCollection;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -694,6 +845,23 @@ public class Application {
 
         UpdateLmsCollectionRequest req = UpdateLmsCollectionRequest.builder()
                 .lmsCollection(LmsCollection.builder()
+                    .createdAt(OffsetDateTime.parse("2019-08-19T14:40:29.227Z"))
+                    .description("Ab.")
+                    .id("3add09e2-c99a-46e8-a1cc-d17257cbcbcf")
+                    .isActive(true)
+                    .media(List.of(
+                        LmsMedia.builder()
+                            .content("Accusamus earum sulum libero adficio testimonium vitae. Calcar contra vergo curis sollers. Caste brevis denuo. Tam amita ducimus capillus. Vulgaris temporibus arbustum solium id. Suppono commodo fuga surculus tripudio doloribus.")
+                            .description("Aliquam tardus careo hic umbra.")
+                            .languages(List.of(
+                                "gl"))
+                            .name("thymum")
+                            .thumbnailUrl("https://picsum.photos/seed/15O5EfV/2982/752")
+                            .type(LmsMediaType.HEADSHOT)
+                            .url("https://loremflickr.com/2679/70?lock=6078357625960554")
+                            .build()))
+                    .name("ara")
+                    .updatedAt(OffsetDateTime.parse("2026-06-28T08:01:49.226Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

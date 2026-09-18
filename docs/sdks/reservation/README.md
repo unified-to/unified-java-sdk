@@ -17,16 +17,16 @@ Create a reservation
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createCommerceReservation" method="post" path="/commerce/{connection_id}/reservation" -->
+<!-- UsageSnippet language="java" operationID="createCommerceReservation" method="post" path="/commerce/{connection_id}/reservation" example="commerce_reservation" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateCommerceReservationRequest;
 import to.unified.unified_java_sdk.models.operations.CreateCommerceReservationResponse;
-import to.unified.unified_java_sdk.models.shared.CommerceReservation;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -40,6 +40,20 @@ public class Application {
 
         CreateCommerceReservationRequest req = CreateCommerceReservationRequest.builder()
                 .commerceReservation(CommerceReservation.builder()
+                    .createdAt(OffsetDateTime.parse("2021-12-14T19:50:31.151Z"))
+                    .endAt(OffsetDateTime.parse("2022-01-01T22:00:17.868Z"))
+                    .guestEmail("Sunny.Strosin77@yahoo.com")
+                    .guestName("Annette Franecki")
+                    .guestPhone("(990) 317-6213")
+                    .id("b1514204-b55f-4d24-9c48-521dda801623")
+                    .itemName("Practical Ceramic Shoes")
+                    .notes("Adsum textilis ipsum despecto.")
+                    .size(10d)
+                    .staffName("Vickie Fahey")
+                    .startAt(OffsetDateTime.parse("2021-12-18T00:40:25.125Z"))
+                    .status(CommerceReservationStatus.PENDING)
+                    .updatedAt(OffsetDateTime.parse("2022-12-27T17:11:51.030Z"))
+                    .url("https://cluttered-pine.info/")
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -192,16 +206,16 @@ Update a reservation
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchCommerceReservation" method="patch" path="/commerce/{connection_id}/reservation/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchCommerceReservation" method="patch" path="/commerce/{connection_id}/reservation/{id}" example="commerce_reservation" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchCommerceReservationRequest;
 import to.unified.unified_java_sdk.models.operations.PatchCommerceReservationResponse;
-import to.unified.unified_java_sdk.models.shared.CommerceReservation;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -215,6 +229,20 @@ public class Application {
 
         PatchCommerceReservationRequest req = PatchCommerceReservationRequest.builder()
                 .commerceReservation(CommerceReservation.builder()
+                    .createdAt(OffsetDateTime.parse("2021-12-14T19:50:31.151Z"))
+                    .endAt(OffsetDateTime.parse("2022-01-01T22:00:17.868Z"))
+                    .guestEmail("Sunny.Strosin77@yahoo.com")
+                    .guestName("Annette Franecki")
+                    .guestPhone("(990) 317-6213")
+                    .id("ff096c0b-9130-4e0d-ba80-e903199080ed")
+                    .itemName("Practical Ceramic Shoes")
+                    .notes("Adsum textilis ipsum despecto.")
+                    .size(10d)
+                    .staffName("Vickie Fahey")
+                    .startAt(OffsetDateTime.parse("2021-12-18T00:40:25.125Z"))
+                    .status(CommerceReservationStatus.PENDING)
+                    .updatedAt(OffsetDateTime.parse("2022-12-27T17:11:51.033Z"))
+                    .url("https://cluttered-pine.info/")
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -309,16 +337,16 @@ Update a reservation
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateCommerceReservation" method="put" path="/commerce/{connection_id}/reservation/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateCommerceReservation" method="put" path="/commerce/{connection_id}/reservation/{id}" example="commerce_reservation" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateCommerceReservationRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateCommerceReservationResponse;
-import to.unified.unified_java_sdk.models.shared.CommerceReservation;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -332,6 +360,20 @@ public class Application {
 
         UpdateCommerceReservationRequest req = UpdateCommerceReservationRequest.builder()
                 .commerceReservation(CommerceReservation.builder()
+                    .createdAt(OffsetDateTime.parse("2021-12-14T19:50:31.151Z"))
+                    .endAt(OffsetDateTime.parse("2022-01-01T22:00:17.868Z"))
+                    .guestEmail("Sunny.Strosin77@yahoo.com")
+                    .guestName("Annette Franecki")
+                    .guestPhone("(990) 317-6213")
+                    .id("ff096c0b-9130-4e0d-ba80-e903199080ed")
+                    .itemName("Practical Ceramic Shoes")
+                    .notes("Adsum textilis ipsum despecto.")
+                    .size(10d)
+                    .staffName("Vickie Fahey")
+                    .startAt(OffsetDateTime.parse("2021-12-18T00:40:25.125Z"))
+                    .status(CommerceReservationStatus.PENDING)
+                    .updatedAt(OffsetDateTime.parse("2022-12-27T17:11:51.033Z"))
+                    .url("https://cluttered-pine.info/")
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

@@ -17,16 +17,18 @@ Create an item
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createCommerceItem" method="post" path="/commerce/{connection_id}/item" -->
+<!-- UsageSnippet language="java" operationID="createCommerceItem" method="post" path="/commerce/{connection_id}/item" example="commerce_item" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
+import java.util.Map;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateCommerceItemRequest;
 import to.unified.unified_java_sdk.models.operations.CreateCommerceItemResponse;
-import to.unified.unified_java_sdk.models.shared.CommerceItem;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -40,6 +42,77 @@ public class Application {
 
         CreateCommerceItemRequest req = CreateCommerceItemRequest.builder()
                 .commerceItem(CommerceItem.builder()
+                    .collections(List.of())
+                    .createdAt(OffsetDateTime.parse("2019-06-21T20:16:18.628Z"))
+                    .description("Vulnero ustulo abeo.")
+                    .duration(87d)
+                    .globalCode("calamitas")
+                    .id("23090db9-7ccf-46cb-b053-f981ec30d350")
+                    .isActive(false)
+                    .isFeatured(true)
+                    .isTaxable(true)
+                    .isVisible(true)
+                    .media(List.of(
+                        CommerceItemMedia.builder()
+                            .url("https://picsum.photos/seed/73y0uzyK/972/3753")
+                            .alt("Caterva eveniet acies candidus.")
+                            .height(663d)
+                            .id("df38e7d4-177d-4a11-9351-edb82721e558")
+                            .metadata(List.of(
+                                CommerceMetadata.builder()
+                                    .id("62ae3b90-450c-4470-8bd4-3656daad8a61")
+                                    .slug("doloremque")
+                                    .value(CommerceMetadataValue.of("allatus"))
+                                    .build()))
+                            .position(67d)
+                            .type(CommerceItemMediaType.VIDEO)
+                            .width(88d)
+                            .build(),
+                        CommerceItemMedia.builder()
+                            .url("https://picsum.photos/seed/Ao4iatfO/771/3906")
+                            .alt("Comedo.")
+                            .height(189d)
+                            .id("1e7ccccd-c5c4-4323-a3ec-f400b6d589db")
+                            .metadata(List.of(
+                                CommerceMetadata.builder()
+                                    .id("3e60902e-dc47-4c52-90fd-ddbe50defa70")
+                                    .slug("bis")
+                                    .value(CommerceMetadataValue.of("somniculosus"))
+                                    .build()))
+                            .position(3d)
+                            .type(CommerceItemMediaType.IMAGE)
+                            .width(66d)
+                            .build()))
+                    .metadata(List.of(
+                        CommerceMetadata.builder()
+                            .extraData(CommerceMetadataExtraData.of(Map.ofEntries(
+                                Map.entry("display_name", "Custom Property"))))
+                            .format(CommerceMetadataFormat.TEXT)
+                            .id("78ecb334-053f-4a97-b54d-0696bdd8e2e7")
+                            .namespace("custom")
+                            .slug("custom_property")
+                            .value(CommerceMetadataValue.of("terebro"))
+                            .build()))
+                    .name("Handcrafted Rubber Tuna")
+                    .prices(List.of(
+                        CommerceItemPrice.builder()
+                            .price(1438d)
+                            .compareAtPrice(474d)
+                            .currency("OMR")
+                            .build()))
+                    .publicDescription("Custodia ventus solio compono.")
+                    .publicName("Handcrafted Rubber Tuna")
+                    .requiresShipping(true)
+                    .slug("cohors-turba-optio")
+                    .tags(List.of(
+                        "blanditiis",
+                        "tandem"))
+                    .totalStock(579d)
+                    .type("beatae")
+                    .updatedAt(OffsetDateTime.parse("2022-04-06T18:37:08.724Z"))
+                    .vendorName("Mayer - Flatley")
+                    .weight(22d)
+                    .weightUnit(WeightUnit.KG)
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -192,16 +265,18 @@ Update an item
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchCommerceItem" method="patch" path="/commerce/{connection_id}/item/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchCommerceItem" method="patch" path="/commerce/{connection_id}/item/{id}" example="commerce_item" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
+import java.util.Map;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchCommerceItemRequest;
 import to.unified.unified_java_sdk.models.operations.PatchCommerceItemResponse;
-import to.unified.unified_java_sdk.models.shared.CommerceItem;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -215,6 +290,77 @@ public class Application {
 
         PatchCommerceItemRequest req = PatchCommerceItemRequest.builder()
                 .commerceItem(CommerceItem.builder()
+                    .collections(List.of())
+                    .createdAt(OffsetDateTime.parse("2019-06-21T20:16:18.628Z"))
+                    .description("Vulnero ustulo abeo.")
+                    .duration(87d)
+                    .globalCode("calamitas")
+                    .id("02558b58-ae12-40a8-9b05-e2d84d452e45")
+                    .isActive(false)
+                    .isFeatured(true)
+                    .isTaxable(true)
+                    .isVisible(true)
+                    .media(List.of(
+                        CommerceItemMedia.builder()
+                            .url("https://picsum.photos/seed/73y0uzyK/972/3753")
+                            .alt("Caterva eveniet acies candidus.")
+                            .height(663d)
+                            .id("e5b9651b-1231-4b3d-95ee-2cbcab6d1f05")
+                            .metadata(List.of(
+                                CommerceMetadata.builder()
+                                    .id("e329fdcd-189f-4e16-89ca-c7c3a485734c")
+                                    .slug("doloremque")
+                                    .value(CommerceMetadataValue.of("allatus"))
+                                    .build()))
+                            .position(67d)
+                            .type(CommerceItemMediaType.VIDEO)
+                            .width(88d)
+                            .build(),
+                        CommerceItemMedia.builder()
+                            .url("https://picsum.photos/seed/Ao4iatfO/771/3906")
+                            .alt("Comedo.")
+                            .height(189d)
+                            .id("df6059bd-0d6f-485b-acd5-5e118987847d")
+                            .metadata(List.of(
+                                CommerceMetadata.builder()
+                                    .id("5e7d4efa-7cb6-4883-ae2e-a6103bdc8d57")
+                                    .slug("bis")
+                                    .value(CommerceMetadataValue.of("somniculosus"))
+                                    .build()))
+                            .position(3d)
+                            .type(CommerceItemMediaType.IMAGE)
+                            .width(66d)
+                            .build()))
+                    .metadata(List.of(
+                        CommerceMetadata.builder()
+                            .extraData(CommerceMetadataExtraData.of(Map.ofEntries(
+                                Map.entry("display_name", "Custom Property"))))
+                            .format(CommerceMetadataFormat.TEXT)
+                            .id("d86dadc2-4b67-4596-aa45-72634e1b38e1")
+                            .namespace("custom")
+                            .slug("custom_property")
+                            .value(CommerceMetadataValue.of("terebro"))
+                            .build()))
+                    .name("Handcrafted Rubber Tuna")
+                    .prices(List.of(
+                        CommerceItemPrice.builder()
+                            .price(1438d)
+                            .compareAtPrice(474d)
+                            .currency("OMR")
+                            .build()))
+                    .publicDescription("Custodia ventus solio compono.")
+                    .publicName("Handcrafted Rubber Tuna")
+                    .requiresShipping(true)
+                    .slug("cohors-turba-optio")
+                    .tags(List.of(
+                        "blanditiis",
+                        "tandem"))
+                    .totalStock(579d)
+                    .type("beatae")
+                    .updatedAt(OffsetDateTime.parse("2022-04-06T18:37:08.741Z"))
+                    .vendorName("Mayer - Flatley")
+                    .weight(22d)
+                    .weightUnit(WeightUnit.KG)
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -309,16 +455,18 @@ Update an item
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateCommerceItem" method="put" path="/commerce/{connection_id}/item/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateCommerceItem" method="put" path="/commerce/{connection_id}/item/{id}" example="commerce_item" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
+import java.util.Map;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateCommerceItemRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateCommerceItemResponse;
-import to.unified.unified_java_sdk.models.shared.CommerceItem;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -332,6 +480,77 @@ public class Application {
 
         UpdateCommerceItemRequest req = UpdateCommerceItemRequest.builder()
                 .commerceItem(CommerceItem.builder()
+                    .collections(List.of())
+                    .createdAt(OffsetDateTime.parse("2019-06-21T20:16:18.628Z"))
+                    .description("Vulnero ustulo abeo.")
+                    .duration(87d)
+                    .globalCode("calamitas")
+                    .id("02558b58-ae12-40a8-9b05-e2d84d452e45")
+                    .isActive(false)
+                    .isFeatured(true)
+                    .isTaxable(true)
+                    .isVisible(true)
+                    .media(List.of(
+                        CommerceItemMedia.builder()
+                            .url("https://picsum.photos/seed/73y0uzyK/972/3753")
+                            .alt("Caterva eveniet acies candidus.")
+                            .height(663d)
+                            .id("e5b9651b-1231-4b3d-95ee-2cbcab6d1f05")
+                            .metadata(List.of(
+                                CommerceMetadata.builder()
+                                    .id("e329fdcd-189f-4e16-89ca-c7c3a485734c")
+                                    .slug("doloremque")
+                                    .value(CommerceMetadataValue.of("allatus"))
+                                    .build()))
+                            .position(67d)
+                            .type(CommerceItemMediaType.VIDEO)
+                            .width(88d)
+                            .build(),
+                        CommerceItemMedia.builder()
+                            .url("https://picsum.photos/seed/Ao4iatfO/771/3906")
+                            .alt("Comedo.")
+                            .height(189d)
+                            .id("df6059bd-0d6f-485b-acd5-5e118987847d")
+                            .metadata(List.of(
+                                CommerceMetadata.builder()
+                                    .id("5e7d4efa-7cb6-4883-ae2e-a6103bdc8d57")
+                                    .slug("bis")
+                                    .value(CommerceMetadataValue.of("somniculosus"))
+                                    .build()))
+                            .position(3d)
+                            .type(CommerceItemMediaType.IMAGE)
+                            .width(66d)
+                            .build()))
+                    .metadata(List.of(
+                        CommerceMetadata.builder()
+                            .extraData(CommerceMetadataExtraData.of(Map.ofEntries(
+                                Map.entry("display_name", "Custom Property"))))
+                            .format(CommerceMetadataFormat.TEXT)
+                            .id("d86dadc2-4b67-4596-aa45-72634e1b38e1")
+                            .namespace("custom")
+                            .slug("custom_property")
+                            .value(CommerceMetadataValue.of("terebro"))
+                            .build()))
+                    .name("Handcrafted Rubber Tuna")
+                    .prices(List.of(
+                        CommerceItemPrice.builder()
+                            .price(1438d)
+                            .compareAtPrice(474d)
+                            .currency("OMR")
+                            .build()))
+                    .publicDescription("Custodia ventus solio compono.")
+                    .publicName("Handcrafted Rubber Tuna")
+                    .requiresShipping(true)
+                    .slug("cohors-turba-optio")
+                    .tags(List.of(
+                        "blanditiis",
+                        "tandem"))
+                    .totalStock(579d)
+                    .type("beatae")
+                    .updatedAt(OffsetDateTime.parse("2022-04-06T18:37:08.741Z"))
+                    .vendorName("Mayer - Flatley")
+                    .weight(22d)
+                    .weightUnit(WeightUnit.KG)
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

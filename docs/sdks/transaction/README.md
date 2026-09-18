@@ -17,16 +17,17 @@ Create a transaction
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createAccountingTransaction" method="post" path="/accounting/{connection_id}/transaction" -->
+<!-- UsageSnippet language="java" operationID="createAccountingTransaction" method="post" path="/accounting/{connection_id}/transaction" example="accounting_transaction" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingTransactionRequest;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingTransactionResponse;
-import to.unified.unified_java_sdk.models.shared.AccountingTransaction;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -40,6 +41,23 @@ public class Application {
 
         CreateAccountingTransactionRequest req = CreateAccountingTransactionRequest.builder()
                 .accountingTransaction(AccountingTransaction.builder()
+                    .createdAt(OffsetDateTime.parse("2019-09-25T11:40:42.574Z"))
+                    .id("530ce73e-3ab8-48ff-a572-81a47cf56dc1")
+                    .lineitems(List.of(
+                        AccountingTransactionLineItem.builder()
+                            .categoryIds(List.of())
+                            .description("The Nikolas Table is the latest in a series of downright products from Beier and Sons")
+                            .id("88ce3554-fb4d-4ad0-9ace-6d2c3af152cc")
+                            .name("Salad")
+                            .objectType("delicate")
+                            .totalAmount(58531d)
+                            .unitAmount(536d)
+                            .unitQuantity(91d)
+                            .build()))
+                    .memo("withdrawal of USD 873.18 at Harber and Sons charged to account ending in 1804 using card ending in ****7022.")
+                    .taxAmount(0d)
+                    .totalAmount(94452d)
+                    .updatedAt(OffsetDateTime.parse("2021-09-10T02:36:49.519Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -192,16 +210,17 @@ Update a transaction
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchAccountingTransaction" method="patch" path="/accounting/{connection_id}/transaction/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchAccountingTransaction" method="patch" path="/accounting/{connection_id}/transaction/{id}" example="accounting_transaction" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchAccountingTransactionRequest;
 import to.unified.unified_java_sdk.models.operations.PatchAccountingTransactionResponse;
-import to.unified.unified_java_sdk.models.shared.AccountingTransaction;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -215,6 +234,23 @@ public class Application {
 
         PatchAccountingTransactionRequest req = PatchAccountingTransactionRequest.builder()
                 .accountingTransaction(AccountingTransaction.builder()
+                    .createdAt(OffsetDateTime.parse("2019-09-25T11:40:42.574Z"))
+                    .id("21b69be7-0166-4233-91c4-e92eff66f31e")
+                    .lineitems(List.of(
+                        AccountingTransactionLineItem.builder()
+                            .categoryIds(List.of())
+                            .description("The Nikolas Table is the latest in a series of downright products from Beier and Sons")
+                            .id("3dab4bec-d436-4800-9b97-68628a55b5e0")
+                            .name("Salad")
+                            .objectType("delicate")
+                            .totalAmount(58531d)
+                            .unitAmount(536d)
+                            .unitQuantity(91d)
+                            .build()))
+                    .memo("withdrawal of USD 873.18 at Harber and Sons charged to account ending in 1804 using card ending in ****7022.")
+                    .taxAmount(0d)
+                    .totalAmount(94452d)
+                    .updatedAt(OffsetDateTime.parse("2021-09-10T02:36:49.523Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -309,16 +345,17 @@ Update a transaction
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateAccountingTransaction" method="put" path="/accounting/{connection_id}/transaction/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateAccountingTransaction" method="put" path="/accounting/{connection_id}/transaction/{id}" example="accounting_transaction" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateAccountingTransactionRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateAccountingTransactionResponse;
-import to.unified.unified_java_sdk.models.shared.AccountingTransaction;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -332,6 +369,23 @@ public class Application {
 
         UpdateAccountingTransactionRequest req = UpdateAccountingTransactionRequest.builder()
                 .accountingTransaction(AccountingTransaction.builder()
+                    .createdAt(OffsetDateTime.parse("2019-09-25T11:40:42.574Z"))
+                    .id("21b69be7-0166-4233-91c4-e92eff66f31e")
+                    .lineitems(List.of(
+                        AccountingTransactionLineItem.builder()
+                            .categoryIds(List.of())
+                            .description("The Nikolas Table is the latest in a series of downright products from Beier and Sons")
+                            .id("3dab4bec-d436-4800-9b97-68628a55b5e0")
+                            .name("Salad")
+                            .objectType("delicate")
+                            .totalAmount(58531d)
+                            .unitAmount(536d)
+                            .unitQuantity(91d)
+                            .build()))
+                    .memo("withdrawal of USD 873.18 at Harber and Sons charged to account ending in 1804 using card ending in ****7022.")
+                    .taxAmount(0d)
+                    .totalAmount(94452d)
+                    .updatedAt(OffsetDateTime.parse("2021-09-10T02:36:49.523Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

@@ -17,16 +17,17 @@ Create a timeshift
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createHrisTimeshift" method="post" path="/hris/{connection_id}/timeshift" -->
+<!-- UsageSnippet language="java" operationID="createHrisTimeshift" method="post" path="/hris/{connection_id}/timeshift" example="hris_timeshift" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateHrisTimeshiftRequest;
 import to.unified.unified_java_sdk.models.operations.CreateHrisTimeshiftResponse;
-import to.unified.unified_java_sdk.models.shared.HrisTimeshift;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -41,6 +42,22 @@ public class Application {
         CreateHrisTimeshiftRequest req = CreateHrisTimeshiftRequest.builder()
                 .hrisTimeshift(HrisTimeshift.builder()
                     .employeeUserId("<id>")
+                    .approvedAt(OffsetDateTime.parse("2023-06-05T14:32:23.860Z"))
+                    .compensation(List.of(
+                        HrisCompensation.builder()
+                            .amount(76761d)
+                            .currency("JPY")
+                            .frequency(HrisCompensationFrequency.HOUR)
+                            .notes("Annus adficio suasoria architecto aggero.")
+                            .type(HrisCompensationType.OTHER)
+                            .build()))
+                    .createdAt(OffsetDateTime.parse("2019-07-01T23:53:15.738Z"))
+                    .endAt(OffsetDateTime.parse("2026-08-25T08:29:34.504Z"))
+                    .hours(8d)
+                    .id("edb7e65d-ee9c-4de9-bf02-4dccb2d29377")
+                    .isApproved(true)
+                    .startAt(OffsetDateTime.parse("2023-06-24T19:30:14.691Z"))
+                    .updatedAt(OffsetDateTime.parse("2021-06-22T20:53:37.144Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -193,16 +210,17 @@ Update a timeshift
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchHrisTimeshift" method="patch" path="/hris/{connection_id}/timeshift/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchHrisTimeshift" method="patch" path="/hris/{connection_id}/timeshift/{id}" example="hris_timeshift" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchHrisTimeshiftRequest;
 import to.unified.unified_java_sdk.models.operations.PatchHrisTimeshiftResponse;
-import to.unified.unified_java_sdk.models.shared.HrisTimeshift;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -217,6 +235,22 @@ public class Application {
         PatchHrisTimeshiftRequest req = PatchHrisTimeshiftRequest.builder()
                 .hrisTimeshift(HrisTimeshift.builder()
                     .employeeUserId("<id>")
+                    .approvedAt(OffsetDateTime.parse("2023-06-05T14:32:23.868Z"))
+                    .compensation(List.of(
+                        HrisCompensation.builder()
+                            .amount(76761d)
+                            .currency("JPY")
+                            .frequency(HrisCompensationFrequency.HOUR)
+                            .notes("Annus adficio suasoria architecto aggero.")
+                            .type(HrisCompensationType.OTHER)
+                            .build()))
+                    .createdAt(OffsetDateTime.parse("2019-07-01T23:53:15.738Z"))
+                    .endAt(OffsetDateTime.parse("2026-08-25T08:29:34.519Z"))
+                    .hours(8d)
+                    .id("c51bdd14-5147-4def-afb6-882c8f97c0df")
+                    .isApproved(true)
+                    .startAt(OffsetDateTime.parse("2023-06-24T19:30:14.699Z"))
+                    .updatedAt(OffsetDateTime.parse("2021-06-22T20:53:37.148Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -311,16 +345,17 @@ Update a timeshift
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateHrisTimeshift" method="put" path="/hris/{connection_id}/timeshift/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateHrisTimeshift" method="put" path="/hris/{connection_id}/timeshift/{id}" example="hris_timeshift" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateHrisTimeshiftRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateHrisTimeshiftResponse;
-import to.unified.unified_java_sdk.models.shared.HrisTimeshift;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -335,6 +370,22 @@ public class Application {
         UpdateHrisTimeshiftRequest req = UpdateHrisTimeshiftRequest.builder()
                 .hrisTimeshift(HrisTimeshift.builder()
                     .employeeUserId("<id>")
+                    .approvedAt(OffsetDateTime.parse("2023-06-05T14:32:23.868Z"))
+                    .compensation(List.of(
+                        HrisCompensation.builder()
+                            .amount(76761d)
+                            .currency("JPY")
+                            .frequency(HrisCompensationFrequency.HOUR)
+                            .notes("Annus adficio suasoria architecto aggero.")
+                            .type(HrisCompensationType.OTHER)
+                            .build()))
+                    .createdAt(OffsetDateTime.parse("2019-07-01T23:53:15.738Z"))
+                    .endAt(OffsetDateTime.parse("2026-08-25T08:29:34.519Z"))
+                    .hours(8d)
+                    .id("c51bdd14-5147-4def-afb6-882c8f97c0df")
+                    .isApproved(true)
+                    .startAt(OffsetDateTime.parse("2023-06-24T19:30:14.699Z"))
+                    .updatedAt(OffsetDateTime.parse("2021-06-22T20:53:37.148Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

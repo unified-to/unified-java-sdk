@@ -17,16 +17,17 @@ Create a creditmemo
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createAccountingCreditmemo" method="post" path="/accounting/{connection_id}/creditmemo" -->
+<!-- UsageSnippet language="java" operationID="createAccountingCreditmemo" method="post" path="/accounting/{connection_id}/creditmemo" example="accounting_creditmemo" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingCreditmemoRequest;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingCreditmemoResponse;
-import to.unified.unified_java_sdk.models.shared.AccountingCreditmemo;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -40,6 +41,34 @@ public class Application {
 
         CreateAccountingCreditmemoRequest req = CreateAccountingCreditmemoRequest.builder()
                 .accountingCreditmemo(AccountingCreditmemo.builder()
+                    .applications(List.of())
+                    .attachments(List.of(
+                        AccountingAttachment.builder()
+                            .downloadUrl("https://enlightened-chairperson.com/")
+                            .id("b6973779-c8a8-4f1a-9b1a-3f847c624aa4")
+                            .mimeType("complectus")
+                            .name("thesis")
+                            .build()))
+                    .createdAt(OffsetDateTime.parse("2023-09-20T01:47:01.571Z"))
+                    .creditmemoNumber("ulterius")
+                    .currency("MKD")
+                    .discountAmount(0d)
+                    .dueAt(OffsetDateTime.parse("2023-10-18T04:35:00.543Z"))
+                    .id("7fc36458-5758-4a49-9b68-4665d4871b26")
+                    .lineitems(List.of())
+                    .metadata(List.of())
+                    .notes("Dedecor amo adfero torqueo quas.")
+                    .paymentCollectionMethod(AccountingCreditmemoPaymentCollectionMethod.CHARGE_AUTOMATICALLY)
+                    .postedAt(OffsetDateTime.parse("2025-11-15T11:03:17.426Z"))
+                    .refundAmount(0d)
+                    .refundReason("Virgo inflammatio quibusdam aestivus magnam.")
+                    .refundedAt(OffsetDateTime.parse("2023-10-23T00:35:36.814Z"))
+                    .send(false)
+                    .status(AccountingCreditmemoStatus.PAID)
+                    .taxAmount(0d)
+                    .totalAmount(0d)
+                    .updatedAt(OffsetDateTime.parse("2024-11-15T13:32:51.006Z"))
+                    .url("https://lighthearted-bandwidth.net/")
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -192,16 +221,17 @@ Update a creditmemo
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchAccountingCreditmemo" method="patch" path="/accounting/{connection_id}/creditmemo/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchAccountingCreditmemo" method="patch" path="/accounting/{connection_id}/creditmemo/{id}" example="accounting_creditmemo" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchAccountingCreditmemoRequest;
 import to.unified.unified_java_sdk.models.operations.PatchAccountingCreditmemoResponse;
-import to.unified.unified_java_sdk.models.shared.AccountingCreditmemo;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -215,6 +245,34 @@ public class Application {
 
         PatchAccountingCreditmemoRequest req = PatchAccountingCreditmemoRequest.builder()
                 .accountingCreditmemo(AccountingCreditmemo.builder()
+                    .applications(List.of())
+                    .attachments(List.of(
+                        AccountingAttachment.builder()
+                            .downloadUrl("https://enlightened-chairperson.com/")
+                            .id("1caeb4ce-3f7e-48a4-afb3-469839f68cca")
+                            .mimeType("complectus")
+                            .name("thesis")
+                            .build()))
+                    .createdAt(OffsetDateTime.parse("2023-09-20T01:47:01.571Z"))
+                    .creditmemoNumber("ulterius")
+                    .currency("MKD")
+                    .discountAmount(0d)
+                    .dueAt(OffsetDateTime.parse("2023-10-18T04:35:00.543Z"))
+                    .id("c0f30724-dec9-4210-8706-4c3a535e2f65")
+                    .lineitems(List.of())
+                    .metadata(List.of())
+                    .notes("Dedecor amo adfero torqueo quas.")
+                    .paymentCollectionMethod(AccountingCreditmemoPaymentCollectionMethod.CHARGE_AUTOMATICALLY)
+                    .postedAt(OffsetDateTime.parse("2025-11-15T11:03:17.458Z"))
+                    .refundAmount(0d)
+                    .refundReason("Virgo inflammatio quibusdam aestivus magnam.")
+                    .refundedAt(OffsetDateTime.parse("2023-10-23T00:35:36.814Z"))
+                    .send(false)
+                    .status(AccountingCreditmemoStatus.PAID)
+                    .taxAmount(0d)
+                    .totalAmount(0d)
+                    .updatedAt(OffsetDateTime.parse("2024-11-15T13:32:51.023Z"))
+                    .url("https://lighthearted-bandwidth.net/")
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -309,16 +367,17 @@ Update a creditmemo
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateAccountingCreditmemo" method="put" path="/accounting/{connection_id}/creditmemo/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateAccountingCreditmemo" method="put" path="/accounting/{connection_id}/creditmemo/{id}" example="accounting_creditmemo" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateAccountingCreditmemoRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateAccountingCreditmemoResponse;
-import to.unified.unified_java_sdk.models.shared.AccountingCreditmemo;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -332,6 +391,34 @@ public class Application {
 
         UpdateAccountingCreditmemoRequest req = UpdateAccountingCreditmemoRequest.builder()
                 .accountingCreditmemo(AccountingCreditmemo.builder()
+                    .applications(List.of())
+                    .attachments(List.of(
+                        AccountingAttachment.builder()
+                            .downloadUrl("https://enlightened-chairperson.com/")
+                            .id("1caeb4ce-3f7e-48a4-afb3-469839f68cca")
+                            .mimeType("complectus")
+                            .name("thesis")
+                            .build()))
+                    .createdAt(OffsetDateTime.parse("2023-09-20T01:47:01.571Z"))
+                    .creditmemoNumber("ulterius")
+                    .currency("MKD")
+                    .discountAmount(0d)
+                    .dueAt(OffsetDateTime.parse("2023-10-18T04:35:00.543Z"))
+                    .id("c0f30724-dec9-4210-8706-4c3a535e2f65")
+                    .lineitems(List.of())
+                    .metadata(List.of())
+                    .notes("Dedecor amo adfero torqueo quas.")
+                    .paymentCollectionMethod(AccountingCreditmemoPaymentCollectionMethod.CHARGE_AUTOMATICALLY)
+                    .postedAt(OffsetDateTime.parse("2025-11-15T11:03:17.458Z"))
+                    .refundAmount(0d)
+                    .refundReason("Virgo inflammatio quibusdam aestivus magnam.")
+                    .refundedAt(OffsetDateTime.parse("2023-10-23T00:35:36.814Z"))
+                    .send(false)
+                    .status(AccountingCreditmemoStatus.PAID)
+                    .taxAmount(0d)
+                    .totalAmount(0d)
+                    .updatedAt(OffsetDateTime.parse("2024-11-15T13:32:51.023Z"))
+                    .url("https://lighthearted-bandwidth.net/")
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

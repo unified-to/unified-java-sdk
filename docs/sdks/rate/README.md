@@ -12,16 +12,17 @@ Create a rate
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createShippingRate" method="post" path="/shipping/{connection_id}/rate" -->
+<!-- UsageSnippet language="java" operationID="createShippingRate" method="post" path="/shipping/{connection_id}/rate" example="shipping_rate" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateShippingRateRequest;
 import to.unified.unified_java_sdk.models.operations.CreateShippingRateResponse;
-import to.unified.unified_java_sdk.models.shared.Security;
-import to.unified.unified_java_sdk.models.shared.ShippingRate;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -35,6 +36,22 @@ public class Application {
 
         CreateShippingRateRequest req = CreateShippingRateRequest.builder()
                 .shippingRate(ShippingRate.builder()
+                    .currency("USD")
+                    .id("08ea0d8f-f20c-4b47-9e57-6901e9b38266")
+                    .rates(List.of(
+                        ShippingRateRate.builder()
+                            .title("Turcotte Inc")
+                            .amount(54.679719475097954)
+                            .baseAmount(76.45537888631225)
+                            .currency("USD")
+                            .deliveryDays(8d)
+                            .description("Bos turpis pax amet dolorem sufficio demonstro complectus benevolentia rerum.")
+                            .estimatedDays(10d)
+                            .estimatedDeliveryEndAt(OffsetDateTime.parse("2024-01-31T23:12:25.475Z"))
+                            .isGuaranteed(true)
+                            .isNegotiatedRate(true)
+                            .taxAmount(2.2701712837442756)
+                            .build()))
                     .build())
                 .connectionId("<id>")
                 .build();

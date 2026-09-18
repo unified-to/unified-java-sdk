@@ -17,16 +17,16 @@ Create a list
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createMartechList" method="post" path="/martech/{connection_id}/list" -->
+<!-- UsageSnippet language="java" operationID="createMartechList" method="post" path="/martech/{connection_id}/list" example="martech_list" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateMartechListRequest;
 import to.unified.unified_java_sdk.models.operations.CreateMartechListResponse;
-import to.unified.unified_java_sdk.models.shared.MarketingList;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -40,6 +40,26 @@ public class Application {
 
         CreateMartechListRequest req = CreateMartechListRequest.builder()
                 .marketingList(MarketingList.builder()
+                    .address(PropertyMarketingListAddress.builder()
+                        .address1("922 Elmore Manor")
+                        .address2("Suite 925")
+                        .city("Deerfield Beach")
+                        .country("Bahrain")
+                        .postalCode("30765-6471")
+                        .region("FL")
+                        .build())
+                    .createdAt(OffsetDateTime.parse("2019-09-18T02:01:36.950Z"))
+                    .description("Currus.")
+                    .id("8d9f0783-8b3b-4844-871c-a335856a11fa")
+                    .isActive(true)
+                    .language("it")
+                    .name("Annette Nolan")
+                    .senderCompany("Hickle - Homenick")
+                    .senderEmail("Matt_Steuber@hotmail.com")
+                    .senderName("Salvatore Roob")
+                    .senderPhone("896-328-1153 x4957")
+                    .subject("Tenetur thymum circumvenio triumphus celo.")
+                    .updatedAt(OffsetDateTime.parse("2022-08-30T12:23:12.884Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -192,16 +212,16 @@ Update a list
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchMartechList" method="patch" path="/martech/{connection_id}/list/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchMartechList" method="patch" path="/martech/{connection_id}/list/{id}" example="martech_list" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchMartechListRequest;
 import to.unified.unified_java_sdk.models.operations.PatchMartechListResponse;
-import to.unified.unified_java_sdk.models.shared.MarketingList;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -215,6 +235,26 @@ public class Application {
 
         PatchMartechListRequest req = PatchMartechListRequest.builder()
                 .marketingList(MarketingList.builder()
+                    .address(PropertyMarketingListAddress.builder()
+                        .address1("922 Elmore Manor")
+                        .address2("Suite 925")
+                        .city("Deerfield Beach")
+                        .country("Bahrain")
+                        .postalCode("30765-6471")
+                        .region("FL")
+                        .build())
+                    .createdAt(OffsetDateTime.parse("2019-09-18T02:01:36.950Z"))
+                    .description("Currus.")
+                    .id("bb5014f1-fa07-4257-8cb4-383e4c685d06")
+                    .isActive(true)
+                    .language("it")
+                    .name("Annette Nolan")
+                    .senderCompany("Hickle - Homenick")
+                    .senderEmail("Matt_Steuber@hotmail.com")
+                    .senderName("Salvatore Roob")
+                    .senderPhone("896-328-1153 x4957")
+                    .subject("Tenetur thymum circumvenio triumphus celo.")
+                    .updatedAt(OffsetDateTime.parse("2022-08-30T12:23:12.891Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -309,16 +349,16 @@ Update a list
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateMartechList" method="put" path="/martech/{connection_id}/list/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateMartechList" method="put" path="/martech/{connection_id}/list/{id}" example="martech_list" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateMartechListRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateMartechListResponse;
-import to.unified.unified_java_sdk.models.shared.MarketingList;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -332,6 +372,26 @@ public class Application {
 
         UpdateMartechListRequest req = UpdateMartechListRequest.builder()
                 .marketingList(MarketingList.builder()
+                    .address(PropertyMarketingListAddress.builder()
+                        .address1("922 Elmore Manor")
+                        .address2("Suite 925")
+                        .city("Deerfield Beach")
+                        .country("Bahrain")
+                        .postalCode("30765-6471")
+                        .region("FL")
+                        .build())
+                    .createdAt(OffsetDateTime.parse("2019-09-18T02:01:36.950Z"))
+                    .description("Currus.")
+                    .id("bb5014f1-fa07-4257-8cb4-383e4c685d06")
+                    .isActive(true)
+                    .language("it")
+                    .name("Annette Nolan")
+                    .senderCompany("Hickle - Homenick")
+                    .senderEmail("Matt_Steuber@hotmail.com")
+                    .senderName("Salvatore Roob")
+                    .senderPhone("896-328-1153 x4957")
+                    .subject("Tenetur thymum circumvenio triumphus celo.")
+                    .updatedAt(OffsetDateTime.parse("2022-08-30T12:23:12.891Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

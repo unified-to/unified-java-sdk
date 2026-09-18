@@ -88,17 +88,17 @@ Create an attendance
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createHrisAttendance" method="post" path="/hris/{connection_id}/attendance" -->
+<!-- UsageSnippet language="java" operationID="createHrisAttendance" method="post" path="/hris/{connection_id}/attendance" example="hris_attendance" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateHrisAttendanceRequest;
 import to.unified.unified_java_sdk.models.operations.CreateHrisAttendanceResponse;
-import to.unified.unified_java_sdk.models.shared.HrisAttendance;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -113,8 +113,37 @@ public class Application {
         CreateHrisAttendanceRequest req = CreateHrisAttendanceRequest.builder()
                 .hrisAttendance(HrisAttendance.builder()
                     .employeeUserId("<id>")
-                    .endAt(OffsetDateTime.parse("2026-07-01T14:10:09.942Z"))
-                    .startAt(OffsetDateTime.parse("2026-03-31T03:51:43.280Z"))
+                    .endAt(OffsetDateTime.parse("2024-04-06T03:56:34.906Z"))
+                    .startAt(OffsetDateTime.parse("2021-11-09T10:26:01.081Z"))
+                    .address(PropertyHrisAttendanceAddress.builder()
+                        .address1("14108 Allie Flats")
+                        .city("Kearaborough")
+                        .countryCode("US")
+                        .postalCode("23844-2344")
+                        .region("Tennessee")
+                        .regionCode("CA")
+                        .build())
+                    .approvedAt(OffsetDateTime.parse("2021-08-13T10:36:02.699Z"))
+                    .breaks(List.of(
+                        HrisAttendanceBreak.builder()
+                            .durationMinutes(12d)
+                            .endAt(OffsetDateTime.parse("2023-10-22T16:22:57.211Z"))
+                            .id("d60a1001-5a8a-4991-8c21-f4da6036cc87")
+                            .isPaid(true)
+                            .name("Lunch")
+                            .startAt(OffsetDateTime.parse("2023-10-15T20:49:16.476Z"))
+                            .build()))
+                    .createdAt(OffsetDateTime.parse("2021-08-10T19:43:18.452Z"))
+                    .currency("UGX")
+                    .declaredTipsAmount(161d)
+                    .hourlyRate(53d)
+                    .hours(10d)
+                    .id("e9e33831-f1ad-4fd0-8ca4-1a008527e535")
+                    .jobName("Global Creative Supervisor")
+                    .nonCashTipsAmount(54d)
+                    .status(HrisAttendanceStatus.CLOSED)
+                    .timezone("America/Atikokan")
+                    .updatedAt(OffsetDateTime.parse("2022-01-17T01:25:06.883Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -152,16 +181,16 @@ Create a bankaccount
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createHrisBankaccount" method="post" path="/hris/{connection_id}/bankaccount" -->
+<!-- UsageSnippet language="java" operationID="createHrisBankaccount" method="post" path="/hris/{connection_id}/bankaccount" example="hris_bankaccount" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateHrisBankaccountRequest;
 import to.unified.unified_java_sdk.models.operations.CreateHrisBankaccountResponse;
-import to.unified.unified_java_sdk.models.shared.HrisBankaccount;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -175,6 +204,16 @@ public class Application {
 
         CreateHrisBankaccountRequest req = CreateHrisBankaccountRequest.builder()
                 .hrisBankaccount(HrisBankaccount.builder()
+                    .accountNumber("****3777")
+                    .accountNumberLast4("3777")
+                    .accountType(HrisBankaccountAccountType.CHECKING)
+                    .bankName("Huel Group")
+                    .createdAt(OffsetDateTime.parse("2019-11-16T16:43:45.976Z"))
+                    .id("0ba01940-59d2-4fcb-a5b2-8633146c7a07")
+                    .isPrimary(false)
+                    .name("Checking Account")
+                    .routingNumber("448650724")
+                    .updatedAt(OffsetDateTime.parse("2025-06-04T11:31:37.518Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -212,16 +251,16 @@ Create a benefit
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createHrisBenefit" method="post" path="/hris/{connection_id}/benefit" -->
+<!-- UsageSnippet language="java" operationID="createHrisBenefit" method="post" path="/hris/{connection_id}/benefit" example="hris_benefit" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateHrisBenefitRequest;
 import to.unified.unified_java_sdk.models.operations.CreateHrisBenefitResponse;
-import to.unified.unified_java_sdk.models.shared.HrisBenefit;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -235,6 +274,20 @@ public class Application {
 
         CreateHrisBenefitRequest req = CreateHrisBenefitRequest.builder()
                 .hrisBenefit(HrisBenefit.builder()
+                    .coverageLevel(CoverageLevel.EMPLOYEE_SPOUSE)
+                    .createdAt(OffsetDateTime.parse("2020-06-11T01:24:05.654Z"))
+                    .currency("JOD")
+                    .description("Vomito voluptas dolor sed.")
+                    .employerContributionAmount(185006d)
+                    .employerContributionMaxAmount(179093d)
+                    .employerContributionType(EmployerContributionType.PERCENTAGE)
+                    .frequency(HrisBenefitFrequency.HOUR)
+                    .id("56df050c-d73e-477d-a39f-341eca6ae236")
+                    .isActive(false)
+                    .name("Frozen Wooden Ball")
+                    .tax(Tax.PRE_TAX)
+                    .type(HrisBenefitType.GARNISHMENT)
+                    .updatedAt(OffsetDateTime.parse("2023-03-06T11:00:57.658Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -272,16 +325,16 @@ Create a company
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createHrisCompany" method="post" path="/hris/{connection_id}/company" -->
+<!-- UsageSnippet language="java" operationID="createHrisCompany" method="post" path="/hris/{connection_id}/company" example="hris_company" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateHrisCompanyRequest;
 import to.unified.unified_java_sdk.models.operations.CreateHrisCompanyResponse;
-import to.unified.unified_java_sdk.models.shared.HrisCompany;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -295,6 +348,19 @@ public class Application {
 
         CreateHrisCompanyRequest req = CreateHrisCompanyRequest.builder()
                 .hrisCompany(HrisCompany.builder()
+                    .address(PropertyHrisCompanyAddress.builder()
+                        .address1("2549 Church Walk")
+                        .city("Lake Nettiebury")
+                        .countryCode("US")
+                        .postalCode("32877-4898")
+                        .region("Idaho")
+                        .regionCode("PA")
+                        .build())
+                    .createdAt(OffsetDateTime.parse("2021-05-02T22:27:38.970Z"))
+                    .id("698ffe76-ccdf-460f-8855-4518977a5977")
+                    .legalName("Schultz LLC")
+                    .name("Gottlieb Group")
+                    .updatedAt(OffsetDateTime.parse("2026-09-05T21:12:19.808Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -332,16 +398,16 @@ Create a deduction
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createHrisDeduction" method="post" path="/hris/{connection_id}/deduction" -->
+<!-- UsageSnippet language="java" operationID="createHrisDeduction" method="post" path="/hris/{connection_id}/deduction" example="hris_deduction" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateHrisDeductionRequest;
 import to.unified.unified_java_sdk.models.operations.CreateHrisDeductionResponse;
-import to.unified.unified_java_sdk.models.shared.HrisDeduction;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -355,6 +421,17 @@ public class Application {
 
         CreateHrisDeductionRequest req = CreateHrisDeductionRequest.builder()
                 .hrisDeduction(HrisDeduction.builder()
+                    .amount(139655d)
+                    .coverageLevel(HrisDeductionCoverageLevel.EMPLOYEE_ONLY)
+                    .createdAt(OffsetDateTime.parse("2020-02-05T01:46:31.384Z"))
+                    .endAt(OffsetDateTime.parse("2026-05-22T22:53:01.272Z"))
+                    .frequency(HrisDeductionFrequency.MONTH)
+                    .id("53b67e29-3fbf-4518-9dc8-46caa54fd502")
+                    .isActive(false)
+                    .notes("Carmen desidero.")
+                    .startAt(OffsetDateTime.parse("2025-02-18T04:38:44.652Z"))
+                    .type(HrisDeductionType.FIXED)
+                    .updatedAt(OffsetDateTime.parse("2024-03-01T23:42:32.713Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -392,11 +469,13 @@ Create a device
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createHrisDevice" method="post" path="/hris/{connection_id}/device" -->
+<!-- UsageSnippet language="java" operationID="createHrisDevice" method="post" path="/hris/{connection_id}/device" example="hris_device" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateHrisDeviceRequest;
 import to.unified.unified_java_sdk.models.operations.CreateHrisDeviceResponse;
@@ -415,6 +494,23 @@ public class Application {
 
         CreateHrisDeviceRequest req = CreateHrisDeviceRequest.builder()
                 .hrisDevice(HrisDevice.builder()
+                    .adminUserIds(List.of())
+                    .assetTag("dpho9OuFNG")
+                    .createdAt(OffsetDateTime.parse("2019-04-04T17:11:40.322Z"))
+                    .hasAntivirus(false)
+                    .hasFirewall(true)
+                    .hasHdEncrypted(true)
+                    .hasPasswordManager(true)
+                    .hasScreenlock(true)
+                    .id("bcac94b2-e48a-44d8-85bb-72b920f6ac73")
+                    .isMissing(false)
+                    .manufacturer("Sanford - Hamill")
+                    .model("Refined")
+                    .name("cross_contamination_if.rar")
+                    .os("monitor")
+                    .osVersion("1.12.16")
+                    .updatedAt(OffsetDateTime.parse("2023-05-21T00:56:51.337Z"))
+                    .version("2.20.17")
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -452,16 +548,16 @@ Create a document
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createHrisDocument" method="post" path="/hris/{connection_id}/document" -->
+<!-- UsageSnippet language="java" operationID="createHrisDocument" method="post" path="/hris/{connection_id}/document" example="hris_document" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateHrisDocumentRequest;
 import to.unified.unified_java_sdk.models.operations.CreateHrisDocumentResponse;
-import to.unified.unified_java_sdk.models.shared.HrisDocument;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -475,6 +571,12 @@ public class Application {
 
         CreateHrisDocumentRequest req = CreateHrisDocumentRequest.builder()
                 .hrisDocument(HrisDocument.builder()
+                    .createdAt(OffsetDateTime.parse("2022-10-27T11:47:26.086Z"))
+                    .documentUrl("https://sore-decision.biz/")
+                    .filename("ridge_forager.xsl")
+                    .id("8e78f38f-1432-40b1-b0e2-deaf6644714c")
+                    .type(HrisDocumentType.POLICY)
+                    .updatedAt(OffsetDateTime.parse("2025-09-17T01:55:35.563Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -512,16 +614,18 @@ Create an employee
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createHrisEmployee" method="post" path="/hris/{connection_id}/employee" -->
+<!-- UsageSnippet language="java" operationID="createHrisEmployee" method="post" path="/hris/{connection_id}/employee" example="hris_employee" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
+import java.util.Map;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateHrisEmployeeRequest;
 import to.unified.unified_java_sdk.models.operations.CreateHrisEmployeeResponse;
-import to.unified.unified_java_sdk.models.shared.HrisEmployee;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -535,6 +639,110 @@ public class Application {
 
         CreateHrisEmployeeRequest req = CreateHrisEmployeeRequest.builder()
                 .hrisEmployee(HrisEmployee.builder()
+                    .address(PropertyHrisEmployeeAddress.builder()
+                        .address1("52008 Lansdowne Road")
+                        .address2("Apt. 101")
+                        .city("Connellyberg")
+                        .countryCode("US")
+                        .postalCode("18978")
+                        .region("South Dakota")
+                        .regionCode("NM")
+                        .build())
+                    .bio("sushi devotee, singer")
+                    .compensation(List.of(
+                        HrisCompensation.builder()
+                            .amount(69148d)
+                            .currency("CRC")
+                            .frequency(HrisCompensationFrequency.QUARTER)
+                            .notes("Tergeo laborum laboriosam tutis.")
+                            .type(HrisCompensationType.EQUITY)
+                            .build()))
+                    .createdAt(OffsetDateTime.parse("2019-09-16T15:08:53.262Z"))
+                    .currency("IDR")
+                    .dateOfBirth(OffsetDateTime.parse("2001-04-22"))
+                    .emails(List.of(
+                        HrisEmail.builder()
+                            .email("Zetta_Prohaska67@hotmail.com")
+                            .type(HrisEmailType.HOME)
+                            .build()))
+                    .employeeNumber("YuOt169CGu")
+                    .employmentStatus(EmploymentStatus.ACTIVE)
+                    .employmentType(HrisEmployeeEmploymentType.VOLUNTEER)
+                    .firstName("Zetta")
+                    .gender(HrisEmployeeGender.INTERSEX)
+                    .hasMfa(true)
+                    .hiredAt(OffsetDateTime.parse("2023-05-10T16:15:07.653Z"))
+                    .id("1dfdcf05-413d-4fb8-82f1-fe4ed9681c02")
+                    .imageUrl("https://loremflickr.com/3684/2116?lock=4686991638584456")
+                    .languageLocale("es")
+                    .lastName("Prohaska")
+                    .locations(List.of())
+                    .maritalStatus(MaritalStatus.MARRIED)
+                    .metadata(List.of(
+                        HrisMetadata.builder()
+                            .extraData(HrisMetadataExtraData.of(Map.ofEntries(
+                                Map.entry("display_name", "Custom Property"))))
+                            .format(HrisMetadataFormat.TEXT)
+                            .id("1af6cea0-5868-4220-b922-55797633b82d")
+                            .namespace("custom")
+                            .slug("custom_property")
+                            .value(HrisMetadataValue.of("tenetur"))
+                            .build()))
+                    .name("Zetta Prohaska")
+                    .pronouns("she/her")
+                    .relationships(List.of(
+                        HrisEmployeerelationship.builder()
+                            .emails(List.of(
+                                HrisEmail.builder()
+                                    .email("Deshaun.Sanford24@yahoo.com")
+                                    .build(),
+                                HrisEmail.builder()
+                                    .email("Rebeca.Dibbert11@hotmail.com")
+                                    .build(),
+                                HrisEmail.builder()
+                                    .email("Hester80@gmail.com")
+                                    .build()))
+                            .name("Automotive")
+                            .type(HrisEmployeerelationshipType.EMERGENCY)
+                            .build(),
+                        HrisEmployeerelationship.builder()
+                            .emails(List.of(
+                                HrisEmail.builder()
+                                    .email("Benedict_Wisozk83@hotmail.com")
+                                    .build(),
+                                HrisEmail.builder()
+                                    .email("Princess_Rath43@gmail.com")
+                                    .build(),
+                                HrisEmail.builder()
+                                    .email("Elmira92@yahoo.com")
+                                    .build()))
+                            .name("Music")
+                            .type(HrisEmployeerelationshipType.FRIEND)
+                            .build(),
+                        HrisEmployeerelationship.builder()
+                            .emails(List.of(
+                                HrisEmail.builder()
+                                    .email("Jane30@gmail.com")
+                                    .build()))
+                            .name("Jewelry")
+                            .type(HrisEmployeerelationshipType.SIBLING)
+                            .build()))
+                    .salutation("Miss")
+                    .ssnSin("yMRtj0Q3xO")
+                    .storageQuotaAllocated(3674489d)
+                    .storageQuotaAvailable(7748057d)
+                    .storageQuotaUsed(301727d)
+                    .telephones(List.of(
+                        HrisTelephone.builder()
+                            .telephone("(409) 801-3705")
+                            .type(HrisTelephoneType.FAX)
+                            .build()))
+                    .terminationReason("Communis adnuo damnatio atavus terebro acies canis cogito triumphus creber temptatio defendo cubo amissio paulatim corroboro.")
+                    .timeoffDaysTotal(12d)
+                    .timeoffDaysUsed(6d)
+                    .timezone("Africa/Harare")
+                    .title("Investor Paradigm Liaison")
+                    .updatedAt(OffsetDateTime.parse("2022-02-19T07:02:15.352Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -572,16 +780,16 @@ Create a group
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createHrisGroup" method="post" path="/hris/{connection_id}/group" -->
+<!-- UsageSnippet language="java" operationID="createHrisGroup" method="post" path="/hris/{connection_id}/group" example="hris_group" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateHrisGroupRequest;
 import to.unified.unified_java_sdk.models.operations.CreateHrisGroupResponse;
-import to.unified.unified_java_sdk.models.shared.HrisGroup;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -595,6 +803,13 @@ public class Application {
 
         CreateHrisGroupRequest req = CreateHrisGroupRequest.builder()
                 .hrisGroup(HrisGroup.builder()
+                    .createdAt(OffsetDateTime.parse("2023-11-01T13:13:40.714Z"))
+                    .description("Absorbeo casso.")
+                    .id("929982e7-4f14-49ea-83cc-de83a6e8059c")
+                    .isActive(false)
+                    .name("Games")
+                    .type(HrisGroupType.BUSINESS_UNIT)
+                    .updatedAt(OffsetDateTime.parse("2026-04-23T14:25:48.389Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -632,16 +847,17 @@ Create a location
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createHrisLocation" method="post" path="/hris/{connection_id}/location" -->
+<!-- UsageSnippet language="java" operationID="createHrisLocation" method="post" path="/hris/{connection_id}/location" example="hris_location" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateHrisLocationRequest;
 import to.unified.unified_java_sdk.models.operations.CreateHrisLocationResponse;
-import to.unified.unified_java_sdk.models.shared.HrisLocation;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -655,6 +871,39 @@ public class Application {
 
         CreateHrisLocationRequest req = CreateHrisLocationRequest.builder()
                 .hrisLocation(HrisLocation.builder()
+                    .address(PropertyHrisLocationAddress.builder()
+                        .address1("2743 Connelly Summit")
+                        .address2("Apt. 350")
+                        .city("Titusville")
+                        .countryCode("US")
+                        .postalCode("16154-1095")
+                        .region("Oregon")
+                        .regionCode("AL")
+                        .build())
+                    .createdAt(OffsetDateTime.parse("2021-07-18T10:32:01.414Z"))
+                    .currency("MUR")
+                    .description("Acervus caries.")
+                    .externalIdentifier("76a05081-d11e-4359-8f85-19fd2875e804")
+                    .id("48338c1d-ca7f-4eb0-bc12-a5468160ffea")
+                    .isActive(true)
+                    .isHq(false)
+                    .languageLocale("fr")
+                    .name("adhuc")
+                    .telephones(List.of(
+                        HrisTelephone.builder()
+                            .telephone("(710) 550-6997")
+                            .type(HrisTelephoneType.FAX)
+                            .build(),
+                        HrisTelephone.builder()
+                            .telephone("(208) 555-8542")
+                            .type(HrisTelephoneType.HOME)
+                            .build(),
+                        HrisTelephone.builder()
+                            .telephone("(712) 473-5482")
+                            .type(HrisTelephoneType.FAX)
+                            .build()))
+                    .timezone("America/Guyana")
+                    .updatedAt(OffsetDateTime.parse("2023-06-09T00:40:22.393Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -692,16 +941,17 @@ Create a taxonomy
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createHrisTaxonomy" method="post" path="/hris/{connection_id}/taxonomy" -->
+<!-- UsageSnippet language="java" operationID="createHrisTaxonomy" method="post" path="/hris/{connection_id}/taxonomy" example="hris_taxonomy" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateHrisTaxonomyRequest;
 import to.unified.unified_java_sdk.models.operations.CreateHrisTaxonomyResponse;
-import to.unified.unified_java_sdk.models.shared.HrisTaxonomy;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -715,6 +965,19 @@ public class Application {
 
         CreateHrisTaxonomyRequest req = CreateHrisTaxonomyRequest.builder()
                 .hrisTaxonomy(HrisTaxonomy.builder()
+                    .createdAt(OffsetDateTime.parse("2022-06-23T02:10:00.789Z"))
+                    .description("Apto demonstro audacia adstringo cursim tristis solio careo.")
+                    .domain("Electronics")
+                    .id("ede085db-5709-4d53-a490-746f3de5be17")
+                    .isActive(false)
+                    .name("International Functionality Architect")
+                    .parentId("6524b2a7-6520-4e15-8c4e-1aa6793db837")
+                    .roleIds(List.of(
+                        "2b1ef757-eb4c-4207-8af1-929afe49cd65"))
+                    .subcategory("Bamboo")
+                    .type(HrisTaxonomyType.KNOWLEDGE)
+                    .updatedAt(OffsetDateTime.parse("2023-05-22T04:57:43.336Z"))
+                    .url("https://our-polarisation.name")
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -752,16 +1015,16 @@ Create a timeoff
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createHrisTimeoff" method="post" path="/hris/{connection_id}/timeoff" -->
+<!-- UsageSnippet language="java" operationID="createHrisTimeoff" method="post" path="/hris/{connection_id}/timeoff" example="hris_timeoff" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateHrisTimeoffRequest;
 import to.unified.unified_java_sdk.models.operations.CreateHrisTimeoffResponse;
-import to.unified.unified_java_sdk.models.shared.HrisTimeoff;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -776,6 +1039,20 @@ public class Application {
         CreateHrisTimeoffRequest req = CreateHrisTimeoffRequest.builder()
                 .hrisTimeoff(HrisTimeoff.builder()
                     .userId("<id>")
+                    .approvedAt(OffsetDateTime.parse("2022-02-20T21:02:44.024Z"))
+                    .comments("Blandior ventus curiositas amplitudo.")
+                    .createdAt(OffsetDateTime.parse("2021-10-06T18:00:20.615Z"))
+                    .duration(4d)
+                    .durationType(DurationType.DAY)
+                    .endAt(OffsetDateTime.parse("2024-12-07T13:51:48.890Z"))
+                    .id("f08121ee-1d8f-478a-89f5-5a8d207ad122")
+                    .isPaid(true)
+                    .originalType("acerbitas ut")
+                    .reason("verto")
+                    .startAt(OffsetDateTime.parse("2023-08-23T06:57:16.399Z"))
+                    .status(HrisTimeoffStatus.DENIED)
+                    .type(HrisTimeoffType.IN_LIEU)
+                    .updatedAt(OffsetDateTime.parse("2022-07-07T19:35:06.898Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -813,16 +1090,17 @@ Create a timeshift
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createHrisTimeshift" method="post" path="/hris/{connection_id}/timeshift" -->
+<!-- UsageSnippet language="java" operationID="createHrisTimeshift" method="post" path="/hris/{connection_id}/timeshift" example="hris_timeshift" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateHrisTimeshiftRequest;
 import to.unified.unified_java_sdk.models.operations.CreateHrisTimeshiftResponse;
-import to.unified.unified_java_sdk.models.shared.HrisTimeshift;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -837,6 +1115,22 @@ public class Application {
         CreateHrisTimeshiftRequest req = CreateHrisTimeshiftRequest.builder()
                 .hrisTimeshift(HrisTimeshift.builder()
                     .employeeUserId("<id>")
+                    .approvedAt(OffsetDateTime.parse("2023-06-05T14:32:23.860Z"))
+                    .compensation(List.of(
+                        HrisCompensation.builder()
+                            .amount(76761d)
+                            .currency("JPY")
+                            .frequency(HrisCompensationFrequency.HOUR)
+                            .notes("Annus adficio suasoria architecto aggero.")
+                            .type(HrisCompensationType.OTHER)
+                            .build()))
+                    .createdAt(OffsetDateTime.parse("2019-07-01T23:53:15.738Z"))
+                    .endAt(OffsetDateTime.parse("2026-08-25T08:29:34.504Z"))
+                    .hours(8d)
+                    .id("edb7e65d-ee9c-4de9-bf02-4dccb2d29377")
+                    .isApproved(true)
+                    .startAt(OffsetDateTime.parse("2023-06-24T19:30:14.691Z"))
+                    .updatedAt(OffsetDateTime.parse("2021-06-22T20:53:37.144Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -2484,17 +2778,17 @@ Update an attendance
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchHrisAttendance" method="patch" path="/hris/{connection_id}/attendance/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchHrisAttendance" method="patch" path="/hris/{connection_id}/attendance/{id}" example="hris_attendance" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchHrisAttendanceRequest;
 import to.unified.unified_java_sdk.models.operations.PatchHrisAttendanceResponse;
-import to.unified.unified_java_sdk.models.shared.HrisAttendance;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -2509,8 +2803,37 @@ public class Application {
         PatchHrisAttendanceRequest req = PatchHrisAttendanceRequest.builder()
                 .hrisAttendance(HrisAttendance.builder()
                     .employeeUserId("<id>")
-                    .endAt(OffsetDateTime.parse("2024-09-28T22:23:28.906Z"))
-                    .startAt(OffsetDateTime.parse("2025-01-18T09:17:09.936Z"))
+                    .endAt(OffsetDateTime.parse("2024-04-06T03:56:34.918Z"))
+                    .startAt(OffsetDateTime.parse("2021-11-09T10:26:01.082Z"))
+                    .address(PropertyHrisAttendanceAddress.builder()
+                        .address1("14108 Allie Flats")
+                        .city("Kearaborough")
+                        .countryCode("US")
+                        .postalCode("23844-2344")
+                        .region("Tennessee")
+                        .regionCode("CA")
+                        .build())
+                    .approvedAt(OffsetDateTime.parse("2021-08-13T10:36:02.699Z"))
+                    .breaks(List.of(
+                        HrisAttendanceBreak.builder()
+                            .durationMinutes(12d)
+                            .endAt(OffsetDateTime.parse("2023-10-22T16:22:57.221Z"))
+                            .id("d60a1001-5a8a-4991-8c21-f4da6036cc87")
+                            .isPaid(true)
+                            .name("Lunch")
+                            .startAt(OffsetDateTime.parse("2023-10-15T20:49:16.485Z"))
+                            .build()))
+                    .createdAt(OffsetDateTime.parse("2021-08-10T19:43:18.452Z"))
+                    .currency("UGX")
+                    .declaredTipsAmount(161d)
+                    .hourlyRate(53d)
+                    .hours(10d)
+                    .id("34ef1ed7-4863-409e-bd2a-2522d8f43302")
+                    .jobName("Global Creative Supervisor")
+                    .nonCashTipsAmount(54d)
+                    .status(HrisAttendanceStatus.CLOSED)
+                    .timezone("America/Atikokan")
+                    .updatedAt(OffsetDateTime.parse("2022-01-17T01:25:06.885Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -2549,16 +2872,16 @@ Update a bankaccount
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchHrisBankaccount" method="patch" path="/hris/{connection_id}/bankaccount/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchHrisBankaccount" method="patch" path="/hris/{connection_id}/bankaccount/{id}" example="hris_bankaccount" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchHrisBankaccountRequest;
 import to.unified.unified_java_sdk.models.operations.PatchHrisBankaccountResponse;
-import to.unified.unified_java_sdk.models.shared.HrisBankaccount;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -2572,6 +2895,16 @@ public class Application {
 
         PatchHrisBankaccountRequest req = PatchHrisBankaccountRequest.builder()
                 .hrisBankaccount(HrisBankaccount.builder()
+                    .accountNumber("****3777")
+                    .accountNumberLast4("3777")
+                    .accountType(HrisBankaccountAccountType.CHECKING)
+                    .bankName("Huel Group")
+                    .createdAt(OffsetDateTime.parse("2019-11-16T16:43:45.976Z"))
+                    .id("48efbe5b-f668-403e-9979-a07b0ec0a98a")
+                    .isPrimary(false)
+                    .name("Checking Account")
+                    .routingNumber("448650724")
+                    .updatedAt(OffsetDateTime.parse("2025-06-04T11:31:37.525Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -2610,16 +2943,16 @@ Update a benefit
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchHrisBenefit" method="patch" path="/hris/{connection_id}/benefit/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchHrisBenefit" method="patch" path="/hris/{connection_id}/benefit/{id}" example="hris_benefit" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchHrisBenefitRequest;
 import to.unified.unified_java_sdk.models.operations.PatchHrisBenefitResponse;
-import to.unified.unified_java_sdk.models.shared.HrisBenefit;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -2633,6 +2966,20 @@ public class Application {
 
         PatchHrisBenefitRequest req = PatchHrisBenefitRequest.builder()
                 .hrisBenefit(HrisBenefit.builder()
+                    .coverageLevel(CoverageLevel.EMPLOYEE_SPOUSE)
+                    .createdAt(OffsetDateTime.parse("2020-06-11T01:24:05.654Z"))
+                    .currency("JOD")
+                    .description("Vomito voluptas dolor sed.")
+                    .employerContributionAmount(185006d)
+                    .employerContributionMaxAmount(179093d)
+                    .employerContributionType(EmployerContributionType.PERCENTAGE)
+                    .frequency(HrisBenefitFrequency.HOUR)
+                    .id("c01bd534-fa42-44cf-a806-ff9377fd25be")
+                    .isActive(false)
+                    .name("Frozen Wooden Ball")
+                    .tax(Tax.PRE_TAX)
+                    .type(HrisBenefitType.GARNISHMENT)
+                    .updatedAt(OffsetDateTime.parse("2023-03-06T11:00:57.663Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -2671,16 +3018,16 @@ Update a company
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchHrisCompany" method="patch" path="/hris/{connection_id}/company/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchHrisCompany" method="patch" path="/hris/{connection_id}/company/{id}" example="hris_company" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchHrisCompanyRequest;
 import to.unified.unified_java_sdk.models.operations.PatchHrisCompanyResponse;
-import to.unified.unified_java_sdk.models.shared.HrisCompany;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -2694,6 +3041,19 @@ public class Application {
 
         PatchHrisCompanyRequest req = PatchHrisCompanyRequest.builder()
                 .hrisCompany(HrisCompany.builder()
+                    .address(PropertyHrisCompanyAddress.builder()
+                        .address1("2549 Church Walk")
+                        .city("Lake Nettiebury")
+                        .countryCode("US")
+                        .postalCode("32877-4898")
+                        .region("Idaho")
+                        .regionCode("PA")
+                        .build())
+                    .createdAt(OffsetDateTime.parse("2021-05-02T22:27:38.970Z"))
+                    .id("fa4b8143-5f86-4d31-8b32-f1197757c6cf")
+                    .legalName("Schultz LLC")
+                    .name("Gottlieb Group")
+                    .updatedAt(OffsetDateTime.parse("2026-09-05T21:12:19.828Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -2732,16 +3092,16 @@ Update a deduction
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchHrisDeduction" method="patch" path="/hris/{connection_id}/deduction/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchHrisDeduction" method="patch" path="/hris/{connection_id}/deduction/{id}" example="hris_deduction" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchHrisDeductionRequest;
 import to.unified.unified_java_sdk.models.operations.PatchHrisDeductionResponse;
-import to.unified.unified_java_sdk.models.shared.HrisDeduction;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -2755,6 +3115,17 @@ public class Application {
 
         PatchHrisDeductionRequest req = PatchHrisDeductionRequest.builder()
                 .hrisDeduction(HrisDeduction.builder()
+                    .amount(139655d)
+                    .coverageLevel(HrisDeductionCoverageLevel.EMPLOYEE_ONLY)
+                    .createdAt(OffsetDateTime.parse("2020-02-05T01:46:31.384Z"))
+                    .endAt(OffsetDateTime.parse("2026-05-22T22:53:01.279Z"))
+                    .frequency(HrisDeductionFrequency.MONTH)
+                    .id("97cd633a-aa8b-4099-b8f8-f1467cc7eb2c")
+                    .isActive(false)
+                    .notes("Carmen desidero.")
+                    .startAt(OffsetDateTime.parse("2025-02-18T04:38:44.658Z"))
+                    .type(HrisDeductionType.FIXED)
+                    .updatedAt(OffsetDateTime.parse("2024-03-01T23:42:32.717Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -2793,11 +3164,13 @@ Update a device
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchHrisDevice" method="patch" path="/hris/{connection_id}/device/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchHrisDevice" method="patch" path="/hris/{connection_id}/device/{id}" example="hris_device" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchHrisDeviceRequest;
 import to.unified.unified_java_sdk.models.operations.PatchHrisDeviceResponse;
@@ -2816,6 +3189,23 @@ public class Application {
 
         PatchHrisDeviceRequest req = PatchHrisDeviceRequest.builder()
                 .hrisDevice(HrisDevice.builder()
+                    .adminUserIds(List.of())
+                    .assetTag("dpho9OuFNG")
+                    .createdAt(OffsetDateTime.parse("2019-04-04T17:11:40.322Z"))
+                    .hasAntivirus(false)
+                    .hasFirewall(true)
+                    .hasHdEncrypted(true)
+                    .hasPasswordManager(true)
+                    .hasScreenlock(true)
+                    .id("74d52d31-891f-476a-a3b5-8c9f384a35b9")
+                    .isMissing(false)
+                    .manufacturer("Sanford - Hamill")
+                    .model("Refined")
+                    .name("cross_contamination_if.rar")
+                    .os("monitor")
+                    .osVersion("1.12.16")
+                    .updatedAt(OffsetDateTime.parse("2023-05-21T00:56:51.342Z"))
+                    .version("2.20.17")
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -2854,16 +3244,16 @@ Update a document
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchHrisDocument" method="patch" path="/hris/{connection_id}/document/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchHrisDocument" method="patch" path="/hris/{connection_id}/document/{id}" example="hris_document" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchHrisDocumentRequest;
 import to.unified.unified_java_sdk.models.operations.PatchHrisDocumentResponse;
-import to.unified.unified_java_sdk.models.shared.HrisDocument;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -2877,6 +3267,12 @@ public class Application {
 
         PatchHrisDocumentRequest req = PatchHrisDocumentRequest.builder()
                 .hrisDocument(HrisDocument.builder()
+                    .createdAt(OffsetDateTime.parse("2022-10-27T11:47:26.086Z"))
+                    .documentUrl("https://sore-decision.biz/")
+                    .filename("ridge_forager.xsl")
+                    .id("872f8d50-e1c5-40c1-af71-1bf3cbaa734c")
+                    .type(HrisDocumentType.POLICY)
+                    .updatedAt(OffsetDateTime.parse("2025-09-17T01:55:35.570Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -2915,16 +3311,18 @@ Update an employee
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchHrisEmployee" method="patch" path="/hris/{connection_id}/employee/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchHrisEmployee" method="patch" path="/hris/{connection_id}/employee/{id}" example="hris_employee" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
+import java.util.Map;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchHrisEmployeeRequest;
 import to.unified.unified_java_sdk.models.operations.PatchHrisEmployeeResponse;
-import to.unified.unified_java_sdk.models.shared.HrisEmployee;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -2938,6 +3336,110 @@ public class Application {
 
         PatchHrisEmployeeRequest req = PatchHrisEmployeeRequest.builder()
                 .hrisEmployee(HrisEmployee.builder()
+                    .address(PropertyHrisEmployeeAddress.builder()
+                        .address1("52008 Lansdowne Road")
+                        .address2("Apt. 101")
+                        .city("Connellyberg")
+                        .countryCode("US")
+                        .postalCode("18978")
+                        .region("South Dakota")
+                        .regionCode("NM")
+                        .build())
+                    .bio("sushi devotee, singer")
+                    .compensation(List.of(
+                        HrisCompensation.builder()
+                            .amount(69148d)
+                            .currency("CRC")
+                            .frequency(HrisCompensationFrequency.QUARTER)
+                            .notes("Tergeo laborum laboriosam tutis.")
+                            .type(HrisCompensationType.EQUITY)
+                            .build()))
+                    .createdAt(OffsetDateTime.parse("2019-09-16T15:08:53.262Z"))
+                    .currency("IDR")
+                    .dateOfBirth(OffsetDateTime.parse("2001-04-22"))
+                    .emails(List.of(
+                        HrisEmail.builder()
+                            .email("Zetta_Prohaska67@hotmail.com")
+                            .type(HrisEmailType.HOME)
+                            .build()))
+                    .employeeNumber("YuOt169CGu")
+                    .employmentStatus(EmploymentStatus.ACTIVE)
+                    .employmentType(HrisEmployeeEmploymentType.VOLUNTEER)
+                    .firstName("Zetta")
+                    .gender(HrisEmployeeGender.INTERSEX)
+                    .hasMfa(true)
+                    .hiredAt(OffsetDateTime.parse("2023-05-10T16:15:07.690Z"))
+                    .id("f48de0fa-eaf1-4dda-a822-85ff56964d2a")
+                    .imageUrl("https://loremflickr.com/3684/2116?lock=4686991638584456")
+                    .languageLocale("es")
+                    .lastName("Prohaska")
+                    .locations(List.of())
+                    .maritalStatus(MaritalStatus.MARRIED)
+                    .metadata(List.of(
+                        HrisMetadata.builder()
+                            .extraData(HrisMetadataExtraData.of(Map.ofEntries(
+                                Map.entry("display_name", "Custom Property"))))
+                            .format(HrisMetadataFormat.TEXT)
+                            .id("a70413d9-b815-4ba9-8f48-c242e3ecee27")
+                            .namespace("custom")
+                            .slug("custom_property")
+                            .value(HrisMetadataValue.of("tenetur"))
+                            .build()))
+                    .name("Zetta Prohaska")
+                    .pronouns("she/her")
+                    .relationships(List.of(
+                        HrisEmployeerelationship.builder()
+                            .emails(List.of(
+                                HrisEmail.builder()
+                                    .email("Deshaun.Sanford24@yahoo.com")
+                                    .build(),
+                                HrisEmail.builder()
+                                    .email("Rebeca.Dibbert11@hotmail.com")
+                                    .build(),
+                                HrisEmail.builder()
+                                    .email("Hester80@gmail.com")
+                                    .build()))
+                            .name("Automotive")
+                            .type(HrisEmployeerelationshipType.EMERGENCY)
+                            .build(),
+                        HrisEmployeerelationship.builder()
+                            .emails(List.of(
+                                HrisEmail.builder()
+                                    .email("Benedict_Wisozk83@hotmail.com")
+                                    .build(),
+                                HrisEmail.builder()
+                                    .email("Princess_Rath43@gmail.com")
+                                    .build(),
+                                HrisEmail.builder()
+                                    .email("Elmira92@yahoo.com")
+                                    .build()))
+                            .name("Music")
+                            .type(HrisEmployeerelationshipType.FRIEND)
+                            .build(),
+                        HrisEmployeerelationship.builder()
+                            .emails(List.of(
+                                HrisEmail.builder()
+                                    .email("Jane30@gmail.com")
+                                    .build()))
+                            .name("Jewelry")
+                            .type(HrisEmployeerelationshipType.SIBLING)
+                            .build()))
+                    .salutation("Miss")
+                    .ssnSin("yMRtj0Q3xO")
+                    .storageQuotaAllocated(3674489d)
+                    .storageQuotaAvailable(7748057d)
+                    .storageQuotaUsed(301727d)
+                    .telephones(List.of(
+                        HrisTelephone.builder()
+                            .telephone("(409) 801-3705")
+                            .type(HrisTelephoneType.FAX)
+                            .build()))
+                    .terminationReason("Communis adnuo damnatio atavus terebro acies canis cogito triumphus creber temptatio defendo cubo amissio paulatim corroboro.")
+                    .timeoffDaysTotal(12d)
+                    .timeoffDaysUsed(6d)
+                    .timezone("Africa/Harare")
+                    .title("Investor Paradigm Liaison")
+                    .updatedAt(OffsetDateTime.parse("2022-02-19T07:02:15.376Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -2976,16 +3478,16 @@ Update a group
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchHrisGroup" method="patch" path="/hris/{connection_id}/group/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchHrisGroup" method="patch" path="/hris/{connection_id}/group/{id}" example="hris_group" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchHrisGroupRequest;
 import to.unified.unified_java_sdk.models.operations.PatchHrisGroupResponse;
-import to.unified.unified_java_sdk.models.shared.HrisGroup;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -2999,6 +3501,13 @@ public class Application {
 
         PatchHrisGroupRequest req = PatchHrisGroupRequest.builder()
                 .hrisGroup(HrisGroup.builder()
+                    .createdAt(OffsetDateTime.parse("2023-11-01T13:13:40.714Z"))
+                    .description("Absorbeo casso.")
+                    .id("e6f510a5-a158-4c0b-ac94-6d68578b4e95")
+                    .isActive(false)
+                    .name("Games")
+                    .type(HrisGroupType.BUSINESS_UNIT)
+                    .updatedAt(OffsetDateTime.parse("2026-04-23T14:25:48.395Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -3037,16 +3546,17 @@ Update a location
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchHrisLocation" method="patch" path="/hris/{connection_id}/location/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchHrisLocation" method="patch" path="/hris/{connection_id}/location/{id}" example="hris_location" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchHrisLocationRequest;
 import to.unified.unified_java_sdk.models.operations.PatchHrisLocationResponse;
-import to.unified.unified_java_sdk.models.shared.HrisLocation;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -3060,6 +3570,39 @@ public class Application {
 
         PatchHrisLocationRequest req = PatchHrisLocationRequest.builder()
                 .hrisLocation(HrisLocation.builder()
+                    .address(PropertyHrisLocationAddress.builder()
+                        .address1("2743 Connelly Summit")
+                        .address2("Apt. 350")
+                        .city("Titusville")
+                        .countryCode("US")
+                        .postalCode("16154-1095")
+                        .region("Oregon")
+                        .regionCode("AL")
+                        .build())
+                    .createdAt(OffsetDateTime.parse("2021-07-18T10:32:01.414Z"))
+                    .currency("MUR")
+                    .description("Acervus caries.")
+                    .externalIdentifier("99f0dbdd-df2b-4d49-9e82-00a607a43d9f")
+                    .id("445b1f3e-80ff-43ad-a8af-2ca6e1046fd7")
+                    .isActive(true)
+                    .isHq(false)
+                    .languageLocale("fr")
+                    .name("adhuc")
+                    .telephones(List.of(
+                        HrisTelephone.builder()
+                            .telephone("(710) 550-6997")
+                            .type(HrisTelephoneType.FAX)
+                            .build(),
+                        HrisTelephone.builder()
+                            .telephone("(208) 555-8542")
+                            .type(HrisTelephoneType.HOME)
+                            .build(),
+                        HrisTelephone.builder()
+                            .telephone("(712) 473-5482")
+                            .type(HrisTelephoneType.FAX)
+                            .build()))
+                    .timezone("America/Guyana")
+                    .updatedAt(OffsetDateTime.parse("2023-06-09T00:40:22.398Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -3098,16 +3641,16 @@ Update a timeoff
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchHrisTimeoff" method="patch" path="/hris/{connection_id}/timeoff/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchHrisTimeoff" method="patch" path="/hris/{connection_id}/timeoff/{id}" example="hris_timeoff" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchHrisTimeoffRequest;
 import to.unified.unified_java_sdk.models.operations.PatchHrisTimeoffResponse;
-import to.unified.unified_java_sdk.models.shared.HrisTimeoff;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -3122,6 +3665,20 @@ public class Application {
         PatchHrisTimeoffRequest req = PatchHrisTimeoffRequest.builder()
                 .hrisTimeoff(HrisTimeoff.builder()
                     .userId("<id>")
+                    .approvedAt(OffsetDateTime.parse("2022-02-20T21:02:44.025Z"))
+                    .comments("Blandior ventus curiositas amplitudo.")
+                    .createdAt(OffsetDateTime.parse("2021-10-06T18:00:20.615Z"))
+                    .duration(4d)
+                    .durationType(DurationType.DAY)
+                    .endAt(OffsetDateTime.parse("2024-12-07T13:51:48.897Z"))
+                    .id("f1c287db-49ea-4bb1-92e3-bfac8aaa9194")
+                    .isPaid(true)
+                    .originalType("acerbitas ut")
+                    .reason("verto")
+                    .startAt(OffsetDateTime.parse("2023-08-23T06:57:16.403Z"))
+                    .status(HrisTimeoffStatus.DENIED)
+                    .type(HrisTimeoffType.IN_LIEU)
+                    .updatedAt(OffsetDateTime.parse("2022-07-07T19:35:06.900Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -3160,16 +3717,17 @@ Update a timeshift
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchHrisTimeshift" method="patch" path="/hris/{connection_id}/timeshift/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchHrisTimeshift" method="patch" path="/hris/{connection_id}/timeshift/{id}" example="hris_timeshift" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchHrisTimeshiftRequest;
 import to.unified.unified_java_sdk.models.operations.PatchHrisTimeshiftResponse;
-import to.unified.unified_java_sdk.models.shared.HrisTimeshift;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -3184,6 +3742,22 @@ public class Application {
         PatchHrisTimeshiftRequest req = PatchHrisTimeshiftRequest.builder()
                 .hrisTimeshift(HrisTimeshift.builder()
                     .employeeUserId("<id>")
+                    .approvedAt(OffsetDateTime.parse("2023-06-05T14:32:23.868Z"))
+                    .compensation(List.of(
+                        HrisCompensation.builder()
+                            .amount(76761d)
+                            .currency("JPY")
+                            .frequency(HrisCompensationFrequency.HOUR)
+                            .notes("Annus adficio suasoria architecto aggero.")
+                            .type(HrisCompensationType.OTHER)
+                            .build()))
+                    .createdAt(OffsetDateTime.parse("2019-07-01T23:53:15.738Z"))
+                    .endAt(OffsetDateTime.parse("2026-08-25T08:29:34.519Z"))
+                    .hours(8d)
+                    .id("c51bdd14-5147-4def-afb6-882c8f97c0df")
+                    .isApproved(true)
+                    .startAt(OffsetDateTime.parse("2023-06-24T19:30:14.699Z"))
+                    .updatedAt(OffsetDateTime.parse("2021-06-22T20:53:37.148Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -3894,17 +4468,17 @@ Update an attendance
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateHrisAttendance" method="put" path="/hris/{connection_id}/attendance/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateHrisAttendance" method="put" path="/hris/{connection_id}/attendance/{id}" example="hris_attendance" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateHrisAttendanceRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateHrisAttendanceResponse;
-import to.unified.unified_java_sdk.models.shared.HrisAttendance;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -3919,8 +4493,37 @@ public class Application {
         UpdateHrisAttendanceRequest req = UpdateHrisAttendanceRequest.builder()
                 .hrisAttendance(HrisAttendance.builder()
                     .employeeUserId("<id>")
-                    .endAt(OffsetDateTime.parse("2024-07-06T19:51:15.352Z"))
-                    .startAt(OffsetDateTime.parse("2024-05-22T08:12:53.996Z"))
+                    .endAt(OffsetDateTime.parse("2024-04-06T03:56:34.918Z"))
+                    .startAt(OffsetDateTime.parse("2021-11-09T10:26:01.082Z"))
+                    .address(PropertyHrisAttendanceAddress.builder()
+                        .address1("14108 Allie Flats")
+                        .city("Kearaborough")
+                        .countryCode("US")
+                        .postalCode("23844-2344")
+                        .region("Tennessee")
+                        .regionCode("CA")
+                        .build())
+                    .approvedAt(OffsetDateTime.parse("2021-08-13T10:36:02.699Z"))
+                    .breaks(List.of(
+                        HrisAttendanceBreak.builder()
+                            .durationMinutes(12d)
+                            .endAt(OffsetDateTime.parse("2023-10-22T16:22:57.221Z"))
+                            .id("d60a1001-5a8a-4991-8c21-f4da6036cc87")
+                            .isPaid(true)
+                            .name("Lunch")
+                            .startAt(OffsetDateTime.parse("2023-10-15T20:49:16.485Z"))
+                            .build()))
+                    .createdAt(OffsetDateTime.parse("2021-08-10T19:43:18.452Z"))
+                    .currency("UGX")
+                    .declaredTipsAmount(161d)
+                    .hourlyRate(53d)
+                    .hours(10d)
+                    .id("34ef1ed7-4863-409e-bd2a-2522d8f43302")
+                    .jobName("Global Creative Supervisor")
+                    .nonCashTipsAmount(54d)
+                    .status(HrisAttendanceStatus.CLOSED)
+                    .timezone("America/Atikokan")
+                    .updatedAt(OffsetDateTime.parse("2022-01-17T01:25:06.885Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -3959,16 +4562,16 @@ Update a bankaccount
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateHrisBankaccount" method="put" path="/hris/{connection_id}/bankaccount/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateHrisBankaccount" method="put" path="/hris/{connection_id}/bankaccount/{id}" example="hris_bankaccount" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateHrisBankaccountRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateHrisBankaccountResponse;
-import to.unified.unified_java_sdk.models.shared.HrisBankaccount;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -3982,6 +4585,16 @@ public class Application {
 
         UpdateHrisBankaccountRequest req = UpdateHrisBankaccountRequest.builder()
                 .hrisBankaccount(HrisBankaccount.builder()
+                    .accountNumber("****3777")
+                    .accountNumberLast4("3777")
+                    .accountType(HrisBankaccountAccountType.CHECKING)
+                    .bankName("Huel Group")
+                    .createdAt(OffsetDateTime.parse("2019-11-16T16:43:45.976Z"))
+                    .id("48efbe5b-f668-403e-9979-a07b0ec0a98a")
+                    .isPrimary(false)
+                    .name("Checking Account")
+                    .routingNumber("448650724")
+                    .updatedAt(OffsetDateTime.parse("2025-06-04T11:31:37.525Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -4020,16 +4633,16 @@ Update a benefit
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateHrisBenefit" method="put" path="/hris/{connection_id}/benefit/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateHrisBenefit" method="put" path="/hris/{connection_id}/benefit/{id}" example="hris_benefit" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateHrisBenefitRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateHrisBenefitResponse;
-import to.unified.unified_java_sdk.models.shared.HrisBenefit;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -4043,6 +4656,20 @@ public class Application {
 
         UpdateHrisBenefitRequest req = UpdateHrisBenefitRequest.builder()
                 .hrisBenefit(HrisBenefit.builder()
+                    .coverageLevel(CoverageLevel.EMPLOYEE_SPOUSE)
+                    .createdAt(OffsetDateTime.parse("2020-06-11T01:24:05.654Z"))
+                    .currency("JOD")
+                    .description("Vomito voluptas dolor sed.")
+                    .employerContributionAmount(185006d)
+                    .employerContributionMaxAmount(179093d)
+                    .employerContributionType(EmployerContributionType.PERCENTAGE)
+                    .frequency(HrisBenefitFrequency.HOUR)
+                    .id("c01bd534-fa42-44cf-a806-ff9377fd25be")
+                    .isActive(false)
+                    .name("Frozen Wooden Ball")
+                    .tax(Tax.PRE_TAX)
+                    .type(HrisBenefitType.GARNISHMENT)
+                    .updatedAt(OffsetDateTime.parse("2023-03-06T11:00:57.663Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -4081,16 +4708,16 @@ Update a company
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateHrisCompany" method="put" path="/hris/{connection_id}/company/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateHrisCompany" method="put" path="/hris/{connection_id}/company/{id}" example="hris_company" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateHrisCompanyRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateHrisCompanyResponse;
-import to.unified.unified_java_sdk.models.shared.HrisCompany;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -4104,6 +4731,19 @@ public class Application {
 
         UpdateHrisCompanyRequest req = UpdateHrisCompanyRequest.builder()
                 .hrisCompany(HrisCompany.builder()
+                    .address(PropertyHrisCompanyAddress.builder()
+                        .address1("2549 Church Walk")
+                        .city("Lake Nettiebury")
+                        .countryCode("US")
+                        .postalCode("32877-4898")
+                        .region("Idaho")
+                        .regionCode("PA")
+                        .build())
+                    .createdAt(OffsetDateTime.parse("2021-05-02T22:27:38.970Z"))
+                    .id("fa4b8143-5f86-4d31-8b32-f1197757c6cf")
+                    .legalName("Schultz LLC")
+                    .name("Gottlieb Group")
+                    .updatedAt(OffsetDateTime.parse("2026-09-05T21:12:19.828Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -4142,16 +4782,16 @@ Update a deduction
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateHrisDeduction" method="put" path="/hris/{connection_id}/deduction/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateHrisDeduction" method="put" path="/hris/{connection_id}/deduction/{id}" example="hris_deduction" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateHrisDeductionRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateHrisDeductionResponse;
-import to.unified.unified_java_sdk.models.shared.HrisDeduction;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -4165,6 +4805,17 @@ public class Application {
 
         UpdateHrisDeductionRequest req = UpdateHrisDeductionRequest.builder()
                 .hrisDeduction(HrisDeduction.builder()
+                    .amount(139655d)
+                    .coverageLevel(HrisDeductionCoverageLevel.EMPLOYEE_ONLY)
+                    .createdAt(OffsetDateTime.parse("2020-02-05T01:46:31.384Z"))
+                    .endAt(OffsetDateTime.parse("2026-05-22T22:53:01.279Z"))
+                    .frequency(HrisDeductionFrequency.MONTH)
+                    .id("97cd633a-aa8b-4099-b8f8-f1467cc7eb2c")
+                    .isActive(false)
+                    .notes("Carmen desidero.")
+                    .startAt(OffsetDateTime.parse("2025-02-18T04:38:44.658Z"))
+                    .type(HrisDeductionType.FIXED)
+                    .updatedAt(OffsetDateTime.parse("2024-03-01T23:42:32.717Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -4203,11 +4854,13 @@ Update a device
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateHrisDevice" method="put" path="/hris/{connection_id}/device/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateHrisDevice" method="put" path="/hris/{connection_id}/device/{id}" example="hris_device" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateHrisDeviceRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateHrisDeviceResponse;
@@ -4226,6 +4879,23 @@ public class Application {
 
         UpdateHrisDeviceRequest req = UpdateHrisDeviceRequest.builder()
                 .hrisDevice(HrisDevice.builder()
+                    .adminUserIds(List.of())
+                    .assetTag("dpho9OuFNG")
+                    .createdAt(OffsetDateTime.parse("2019-04-04T17:11:40.322Z"))
+                    .hasAntivirus(false)
+                    .hasFirewall(true)
+                    .hasHdEncrypted(true)
+                    .hasPasswordManager(true)
+                    .hasScreenlock(true)
+                    .id("74d52d31-891f-476a-a3b5-8c9f384a35b9")
+                    .isMissing(false)
+                    .manufacturer("Sanford - Hamill")
+                    .model("Refined")
+                    .name("cross_contamination_if.rar")
+                    .os("monitor")
+                    .osVersion("1.12.16")
+                    .updatedAt(OffsetDateTime.parse("2023-05-21T00:56:51.342Z"))
+                    .version("2.20.17")
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -4264,16 +4934,16 @@ Update a document
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateHrisDocument" method="put" path="/hris/{connection_id}/document/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateHrisDocument" method="put" path="/hris/{connection_id}/document/{id}" example="hris_document" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateHrisDocumentRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateHrisDocumentResponse;
-import to.unified.unified_java_sdk.models.shared.HrisDocument;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -4287,6 +4957,12 @@ public class Application {
 
         UpdateHrisDocumentRequest req = UpdateHrisDocumentRequest.builder()
                 .hrisDocument(HrisDocument.builder()
+                    .createdAt(OffsetDateTime.parse("2022-10-27T11:47:26.086Z"))
+                    .documentUrl("https://sore-decision.biz/")
+                    .filename("ridge_forager.xsl")
+                    .id("872f8d50-e1c5-40c1-af71-1bf3cbaa734c")
+                    .type(HrisDocumentType.POLICY)
+                    .updatedAt(OffsetDateTime.parse("2025-09-17T01:55:35.570Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -4325,16 +5001,18 @@ Update an employee
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateHrisEmployee" method="put" path="/hris/{connection_id}/employee/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateHrisEmployee" method="put" path="/hris/{connection_id}/employee/{id}" example="hris_employee" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
+import java.util.Map;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateHrisEmployeeRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateHrisEmployeeResponse;
-import to.unified.unified_java_sdk.models.shared.HrisEmployee;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -4348,6 +5026,110 @@ public class Application {
 
         UpdateHrisEmployeeRequest req = UpdateHrisEmployeeRequest.builder()
                 .hrisEmployee(HrisEmployee.builder()
+                    .address(PropertyHrisEmployeeAddress.builder()
+                        .address1("52008 Lansdowne Road")
+                        .address2("Apt. 101")
+                        .city("Connellyberg")
+                        .countryCode("US")
+                        .postalCode("18978")
+                        .region("South Dakota")
+                        .regionCode("NM")
+                        .build())
+                    .bio("sushi devotee, singer")
+                    .compensation(List.of(
+                        HrisCompensation.builder()
+                            .amount(69148d)
+                            .currency("CRC")
+                            .frequency(HrisCompensationFrequency.QUARTER)
+                            .notes("Tergeo laborum laboriosam tutis.")
+                            .type(HrisCompensationType.EQUITY)
+                            .build()))
+                    .createdAt(OffsetDateTime.parse("2019-09-16T15:08:53.262Z"))
+                    .currency("IDR")
+                    .dateOfBirth(OffsetDateTime.parse("2001-04-22"))
+                    .emails(List.of(
+                        HrisEmail.builder()
+                            .email("Zetta_Prohaska67@hotmail.com")
+                            .type(HrisEmailType.HOME)
+                            .build()))
+                    .employeeNumber("YuOt169CGu")
+                    .employmentStatus(EmploymentStatus.ACTIVE)
+                    .employmentType(HrisEmployeeEmploymentType.VOLUNTEER)
+                    .firstName("Zetta")
+                    .gender(HrisEmployeeGender.INTERSEX)
+                    .hasMfa(true)
+                    .hiredAt(OffsetDateTime.parse("2023-05-10T16:15:07.690Z"))
+                    .id("f48de0fa-eaf1-4dda-a822-85ff56964d2a")
+                    .imageUrl("https://loremflickr.com/3684/2116?lock=4686991638584456")
+                    .languageLocale("es")
+                    .lastName("Prohaska")
+                    .locations(List.of())
+                    .maritalStatus(MaritalStatus.MARRIED)
+                    .metadata(List.of(
+                        HrisMetadata.builder()
+                            .extraData(HrisMetadataExtraData.of(Map.ofEntries(
+                                Map.entry("display_name", "Custom Property"))))
+                            .format(HrisMetadataFormat.TEXT)
+                            .id("a70413d9-b815-4ba9-8f48-c242e3ecee27")
+                            .namespace("custom")
+                            .slug("custom_property")
+                            .value(HrisMetadataValue.of("tenetur"))
+                            .build()))
+                    .name("Zetta Prohaska")
+                    .pronouns("she/her")
+                    .relationships(List.of(
+                        HrisEmployeerelationship.builder()
+                            .emails(List.of(
+                                HrisEmail.builder()
+                                    .email("Deshaun.Sanford24@yahoo.com")
+                                    .build(),
+                                HrisEmail.builder()
+                                    .email("Rebeca.Dibbert11@hotmail.com")
+                                    .build(),
+                                HrisEmail.builder()
+                                    .email("Hester80@gmail.com")
+                                    .build()))
+                            .name("Automotive")
+                            .type(HrisEmployeerelationshipType.EMERGENCY)
+                            .build(),
+                        HrisEmployeerelationship.builder()
+                            .emails(List.of(
+                                HrisEmail.builder()
+                                    .email("Benedict_Wisozk83@hotmail.com")
+                                    .build(),
+                                HrisEmail.builder()
+                                    .email("Princess_Rath43@gmail.com")
+                                    .build(),
+                                HrisEmail.builder()
+                                    .email("Elmira92@yahoo.com")
+                                    .build()))
+                            .name("Music")
+                            .type(HrisEmployeerelationshipType.FRIEND)
+                            .build(),
+                        HrisEmployeerelationship.builder()
+                            .emails(List.of(
+                                HrisEmail.builder()
+                                    .email("Jane30@gmail.com")
+                                    .build()))
+                            .name("Jewelry")
+                            .type(HrisEmployeerelationshipType.SIBLING)
+                            .build()))
+                    .salutation("Miss")
+                    .ssnSin("yMRtj0Q3xO")
+                    .storageQuotaAllocated(3674489d)
+                    .storageQuotaAvailable(7748057d)
+                    .storageQuotaUsed(301727d)
+                    .telephones(List.of(
+                        HrisTelephone.builder()
+                            .telephone("(409) 801-3705")
+                            .type(HrisTelephoneType.FAX)
+                            .build()))
+                    .terminationReason("Communis adnuo damnatio atavus terebro acies canis cogito triumphus creber temptatio defendo cubo amissio paulatim corroboro.")
+                    .timeoffDaysTotal(12d)
+                    .timeoffDaysUsed(6d)
+                    .timezone("Africa/Harare")
+                    .title("Investor Paradigm Liaison")
+                    .updatedAt(OffsetDateTime.parse("2022-02-19T07:02:15.376Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -4386,16 +5168,16 @@ Update a group
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateHrisGroup" method="put" path="/hris/{connection_id}/group/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateHrisGroup" method="put" path="/hris/{connection_id}/group/{id}" example="hris_group" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateHrisGroupRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateHrisGroupResponse;
-import to.unified.unified_java_sdk.models.shared.HrisGroup;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -4409,6 +5191,13 @@ public class Application {
 
         UpdateHrisGroupRequest req = UpdateHrisGroupRequest.builder()
                 .hrisGroup(HrisGroup.builder()
+                    .createdAt(OffsetDateTime.parse("2023-11-01T13:13:40.714Z"))
+                    .description("Absorbeo casso.")
+                    .id("e6f510a5-a158-4c0b-ac94-6d68578b4e95")
+                    .isActive(false)
+                    .name("Games")
+                    .type(HrisGroupType.BUSINESS_UNIT)
+                    .updatedAt(OffsetDateTime.parse("2026-04-23T14:25:48.395Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -4447,16 +5236,17 @@ Update a location
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateHrisLocation" method="put" path="/hris/{connection_id}/location/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateHrisLocation" method="put" path="/hris/{connection_id}/location/{id}" example="hris_location" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateHrisLocationRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateHrisLocationResponse;
-import to.unified.unified_java_sdk.models.shared.HrisLocation;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -4470,6 +5260,39 @@ public class Application {
 
         UpdateHrisLocationRequest req = UpdateHrisLocationRequest.builder()
                 .hrisLocation(HrisLocation.builder()
+                    .address(PropertyHrisLocationAddress.builder()
+                        .address1("2743 Connelly Summit")
+                        .address2("Apt. 350")
+                        .city("Titusville")
+                        .countryCode("US")
+                        .postalCode("16154-1095")
+                        .region("Oregon")
+                        .regionCode("AL")
+                        .build())
+                    .createdAt(OffsetDateTime.parse("2021-07-18T10:32:01.414Z"))
+                    .currency("MUR")
+                    .description("Acervus caries.")
+                    .externalIdentifier("99f0dbdd-df2b-4d49-9e82-00a607a43d9f")
+                    .id("445b1f3e-80ff-43ad-a8af-2ca6e1046fd7")
+                    .isActive(true)
+                    .isHq(false)
+                    .languageLocale("fr")
+                    .name("adhuc")
+                    .telephones(List.of(
+                        HrisTelephone.builder()
+                            .telephone("(710) 550-6997")
+                            .type(HrisTelephoneType.FAX)
+                            .build(),
+                        HrisTelephone.builder()
+                            .telephone("(208) 555-8542")
+                            .type(HrisTelephoneType.HOME)
+                            .build(),
+                        HrisTelephone.builder()
+                            .telephone("(712) 473-5482")
+                            .type(HrisTelephoneType.FAX)
+                            .build()))
+                    .timezone("America/Guyana")
+                    .updatedAt(OffsetDateTime.parse("2023-06-09T00:40:22.398Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -4508,16 +5331,16 @@ Update a timeoff
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateHrisTimeoff" method="put" path="/hris/{connection_id}/timeoff/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateHrisTimeoff" method="put" path="/hris/{connection_id}/timeoff/{id}" example="hris_timeoff" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateHrisTimeoffRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateHrisTimeoffResponse;
-import to.unified.unified_java_sdk.models.shared.HrisTimeoff;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -4532,6 +5355,20 @@ public class Application {
         UpdateHrisTimeoffRequest req = UpdateHrisTimeoffRequest.builder()
                 .hrisTimeoff(HrisTimeoff.builder()
                     .userId("<id>")
+                    .approvedAt(OffsetDateTime.parse("2022-02-20T21:02:44.025Z"))
+                    .comments("Blandior ventus curiositas amplitudo.")
+                    .createdAt(OffsetDateTime.parse("2021-10-06T18:00:20.615Z"))
+                    .duration(4d)
+                    .durationType(DurationType.DAY)
+                    .endAt(OffsetDateTime.parse("2024-12-07T13:51:48.897Z"))
+                    .id("f1c287db-49ea-4bb1-92e3-bfac8aaa9194")
+                    .isPaid(true)
+                    .originalType("acerbitas ut")
+                    .reason("verto")
+                    .startAt(OffsetDateTime.parse("2023-08-23T06:57:16.403Z"))
+                    .status(HrisTimeoffStatus.DENIED)
+                    .type(HrisTimeoffType.IN_LIEU)
+                    .updatedAt(OffsetDateTime.parse("2022-07-07T19:35:06.900Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -4570,16 +5407,17 @@ Update a timeshift
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateHrisTimeshift" method="put" path="/hris/{connection_id}/timeshift/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateHrisTimeshift" method="put" path="/hris/{connection_id}/timeshift/{id}" example="hris_timeshift" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateHrisTimeshiftRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateHrisTimeshiftResponse;
-import to.unified.unified_java_sdk.models.shared.HrisTimeshift;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -4594,6 +5432,22 @@ public class Application {
         UpdateHrisTimeshiftRequest req = UpdateHrisTimeshiftRequest.builder()
                 .hrisTimeshift(HrisTimeshift.builder()
                     .employeeUserId("<id>")
+                    .approvedAt(OffsetDateTime.parse("2023-06-05T14:32:23.868Z"))
+                    .compensation(List.of(
+                        HrisCompensation.builder()
+                            .amount(76761d)
+                            .currency("JPY")
+                            .frequency(HrisCompensationFrequency.HOUR)
+                            .notes("Annus adficio suasoria architecto aggero.")
+                            .type(HrisCompensationType.OTHER)
+                            .build()))
+                    .createdAt(OffsetDateTime.parse("2019-07-01T23:53:15.738Z"))
+                    .endAt(OffsetDateTime.parse("2026-08-25T08:29:34.519Z"))
+                    .hours(8d)
+                    .id("c51bdd14-5147-4def-afb6-882c8f97c0df")
+                    .isApproved(true)
+                    .startAt(OffsetDateTime.parse("2023-06-24T19:30:14.699Z"))
+                    .updatedAt(OffsetDateTime.parse("2021-06-22T20:53:37.148Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

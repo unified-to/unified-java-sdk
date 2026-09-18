@@ -17,16 +17,16 @@ Create a timeoff
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createHrisTimeoff" method="post" path="/hris/{connection_id}/timeoff" -->
+<!-- UsageSnippet language="java" operationID="createHrisTimeoff" method="post" path="/hris/{connection_id}/timeoff" example="hris_timeoff" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateHrisTimeoffRequest;
 import to.unified.unified_java_sdk.models.operations.CreateHrisTimeoffResponse;
-import to.unified.unified_java_sdk.models.shared.HrisTimeoff;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -41,6 +41,20 @@ public class Application {
         CreateHrisTimeoffRequest req = CreateHrisTimeoffRequest.builder()
                 .hrisTimeoff(HrisTimeoff.builder()
                     .userId("<id>")
+                    .approvedAt(OffsetDateTime.parse("2022-02-20T21:02:44.024Z"))
+                    .comments("Blandior ventus curiositas amplitudo.")
+                    .createdAt(OffsetDateTime.parse("2021-10-06T18:00:20.615Z"))
+                    .duration(4d)
+                    .durationType(DurationType.DAY)
+                    .endAt(OffsetDateTime.parse("2024-12-07T13:51:48.890Z"))
+                    .id("f08121ee-1d8f-478a-89f5-5a8d207ad122")
+                    .isPaid(true)
+                    .originalType("acerbitas ut")
+                    .reason("verto")
+                    .startAt(OffsetDateTime.parse("2023-08-23T06:57:16.399Z"))
+                    .status(HrisTimeoffStatus.DENIED)
+                    .type(HrisTimeoffType.IN_LIEU)
+                    .updatedAt(OffsetDateTime.parse("2022-07-07T19:35:06.898Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -193,16 +207,16 @@ Update a timeoff
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchHrisTimeoff" method="patch" path="/hris/{connection_id}/timeoff/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchHrisTimeoff" method="patch" path="/hris/{connection_id}/timeoff/{id}" example="hris_timeoff" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchHrisTimeoffRequest;
 import to.unified.unified_java_sdk.models.operations.PatchHrisTimeoffResponse;
-import to.unified.unified_java_sdk.models.shared.HrisTimeoff;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -217,6 +231,20 @@ public class Application {
         PatchHrisTimeoffRequest req = PatchHrisTimeoffRequest.builder()
                 .hrisTimeoff(HrisTimeoff.builder()
                     .userId("<id>")
+                    .approvedAt(OffsetDateTime.parse("2022-02-20T21:02:44.025Z"))
+                    .comments("Blandior ventus curiositas amplitudo.")
+                    .createdAt(OffsetDateTime.parse("2021-10-06T18:00:20.615Z"))
+                    .duration(4d)
+                    .durationType(DurationType.DAY)
+                    .endAt(OffsetDateTime.parse("2024-12-07T13:51:48.897Z"))
+                    .id("f1c287db-49ea-4bb1-92e3-bfac8aaa9194")
+                    .isPaid(true)
+                    .originalType("acerbitas ut")
+                    .reason("verto")
+                    .startAt(OffsetDateTime.parse("2023-08-23T06:57:16.403Z"))
+                    .status(HrisTimeoffStatus.DENIED)
+                    .type(HrisTimeoffType.IN_LIEU)
+                    .updatedAt(OffsetDateTime.parse("2022-07-07T19:35:06.900Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -311,16 +339,16 @@ Update a timeoff
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateHrisTimeoff" method="put" path="/hris/{connection_id}/timeoff/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateHrisTimeoff" method="put" path="/hris/{connection_id}/timeoff/{id}" example="hris_timeoff" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateHrisTimeoffRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateHrisTimeoffResponse;
-import to.unified.unified_java_sdk.models.shared.HrisTimeoff;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -335,6 +363,20 @@ public class Application {
         UpdateHrisTimeoffRequest req = UpdateHrisTimeoffRequest.builder()
                 .hrisTimeoff(HrisTimeoff.builder()
                     .userId("<id>")
+                    .approvedAt(OffsetDateTime.parse("2022-02-20T21:02:44.025Z"))
+                    .comments("Blandior ventus curiositas amplitudo.")
+                    .createdAt(OffsetDateTime.parse("2021-10-06T18:00:20.615Z"))
+                    .duration(4d)
+                    .durationType(DurationType.DAY)
+                    .endAt(OffsetDateTime.parse("2024-12-07T13:51:48.897Z"))
+                    .id("f1c287db-49ea-4bb1-92e3-bfac8aaa9194")
+                    .isPaid(true)
+                    .originalType("acerbitas ut")
+                    .reason("verto")
+                    .startAt(OffsetDateTime.parse("2023-08-23T06:57:16.403Z"))
+                    .status(HrisTimeoffStatus.DENIED)
+                    .type(HrisTimeoffType.IN_LIEU)
+                    .updatedAt(OffsetDateTime.parse("2022-07-07T19:35:06.900Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

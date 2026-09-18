@@ -21,16 +21,17 @@ Create an order
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createAssessmentOrder" method="post" path="/assessment/{connection_id}/order" -->
+<!-- UsageSnippet language="java" operationID="createAssessmentOrder" method="post" path="/assessment/{connection_id}/order" example="assessment_order" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateAssessmentOrderRequest;
 import to.unified.unified_java_sdk.models.operations.CreateAssessmentOrderResponse;
-import to.unified.unified_java_sdk.models.shared.AssessmentOrder;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -46,6 +47,32 @@ public class Application {
                 .assessmentOrder(AssessmentOrder.builder()
                     .connectionId("<id>")
                     .workspaceId("<id>")
+                    .createdAt(OffsetDateTime.parse("2021-09-18T10:33:57.803Z"))
+                    .id("eb559378-8a4c-4147-b0b6-108e9aa26caa")
+                    .parameters(List.of())
+                    .profileAddresses(List.of())
+                    .profileDateOfBirth("1989-07-22T16:18:37.650Z")
+                    .profileEmails(List.of(
+                        "Cleta.Daugherty@gmail.com"))
+                    .profileFirstName("Amy")
+                    .profileGender(ProfileGender.NON_BINARY)
+                    .profileLastName("Kris-Windler")
+                    .profileName("Amy Kris-Windler")
+                    .profileResumeUrl("https://enchanted-cycle.biz/")
+                    .profileSocialMediaUrls(List.of())
+                    .profileTelephones(List.of(
+                        "(828) 263-1594 x5248"))
+                    .reference("ab")
+                    .responseAttributes(List.of())
+                    .responseDetails(List.of())
+                    .responseDownloadUrls(List.of())
+                    .responseMaxScore(82d)
+                    .responseScore(92d)
+                    .responseStatus(ResponseStatus.FAILED)
+                    .responseUrl("https://irresponsible-trench.info/")
+                    .status(AssessmentOrderStatus.REJECTED)
+                    .targetUrl("https://cautious-turret.info")
+                    .updatedAt(OffsetDateTime.parse("2023-01-17T01:52:25.097Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -83,11 +110,13 @@ Create an assessment package
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createAssessmentPackage" method="post" path="/assessment/{connection_id}/package" -->
+<!-- UsageSnippet language="java" operationID="createAssessmentPackage" method="post" path="/assessment/{connection_id}/package" example="assessment_package" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateAssessmentPackageRequest;
 import to.unified.unified_java_sdk.models.operations.CreateAssessmentPackageResponse;
@@ -105,7 +134,25 @@ public class Application {
 
         CreateAssessmentPackageRequest req = CreateAssessmentPackageRequest.builder()
                 .assessmentPackage(AssessmentPackage.builder()
-                    .type(AssessmentPackageType.REFERENCE_CHECK)
+                    .type(AssessmentPackageType.VIDEO_INTERVIEW)
+                    .aliases(List.of(
+                        "quia"))
+                    .createdAt(OffsetDateTime.parse("2022-11-18T19:48:39.433Z"))
+                    .description("Eos aedificium consectetur urbs. Admitto summa accusator tabesco distinctio vapulus culpo templum ancilla.")
+                    .hasRedirectUrl(true)
+                    .hasTargetUrl(false)
+                    .id("399d78b0-643b-4379-b5fc-7a3efac3d6b6")
+                    .infoUrl("https://ugly-instance.biz/")
+                    .integrationTypes(List.of(
+                        "viridis"))
+                    .maxScore(22d)
+                    .name("Carus sed vox doloremque vigor surgo tabella cupiditas abduco clarus.")
+                    .needsIpAddress(true)
+                    .parameters(List.of())
+                    .regions(List.of())
+                    .tags(List.of(
+                        "clamo"))
+                    .updatedAt(OffsetDateTime.parse("2023-09-18T05:29:15.659Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -316,16 +363,17 @@ Update an order
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchAssessmentOrder" method="patch" path="/assessment/{connection_id}/order/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchAssessmentOrder" method="patch" path="/assessment/{connection_id}/order/{id}" example="assessment_order" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchAssessmentOrderRequest;
 import to.unified.unified_java_sdk.models.operations.PatchAssessmentOrderResponse;
-import to.unified.unified_java_sdk.models.shared.AssessmentOrder;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -341,6 +389,32 @@ public class Application {
                 .assessmentOrder(AssessmentOrder.builder()
                     .connectionId("<id>")
                     .workspaceId("<id>")
+                    .createdAt(OffsetDateTime.parse("2021-09-18T10:33:57.803Z"))
+                    .id("2165508c-a576-42d8-9e14-4a01fbb91f9d")
+                    .parameters(List.of())
+                    .profileAddresses(List.of())
+                    .profileDateOfBirth("1989-07-22T16:18:37.650Z")
+                    .profileEmails(List.of(
+                        "Cleta.Daugherty@gmail.com"))
+                    .profileFirstName("Amy")
+                    .profileGender(ProfileGender.NON_BINARY)
+                    .profileLastName("Kris-Windler")
+                    .profileName("Amy Kris-Windler")
+                    .profileResumeUrl("https://enchanted-cycle.biz/")
+                    .profileSocialMediaUrls(List.of())
+                    .profileTelephones(List.of(
+                        "(828) 263-1594 x5248"))
+                    .reference("ab")
+                    .responseAttributes(List.of())
+                    .responseDetails(List.of())
+                    .responseDownloadUrls(List.of())
+                    .responseMaxScore(82d)
+                    .responseScore(92d)
+                    .responseStatus(ResponseStatus.FAILED)
+                    .responseUrl("https://irresponsible-trench.info/")
+                    .status(AssessmentOrderStatus.REJECTED)
+                    .targetUrl("https://cautious-turret.info")
+                    .updatedAt(OffsetDateTime.parse("2023-01-17T01:52:25.109Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -379,11 +453,13 @@ Update an assessment package
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchAssessmentPackage" method="patch" path="/assessment/{connection_id}/package/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchAssessmentPackage" method="patch" path="/assessment/{connection_id}/package/{id}" example="assessment_package" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchAssessmentPackageRequest;
 import to.unified.unified_java_sdk.models.operations.PatchAssessmentPackageResponse;
@@ -401,7 +477,25 @@ public class Application {
 
         PatchAssessmentPackageRequest req = PatchAssessmentPackageRequest.builder()
                 .assessmentPackage(AssessmentPackage.builder()
-                    .type(AssessmentPackageType.BACKGROUND_CHECK)
+                    .type(AssessmentPackageType.VIDEO_INTERVIEW)
+                    .aliases(List.of(
+                        "quia"))
+                    .createdAt(OffsetDateTime.parse("2022-11-18T19:48:39.433Z"))
+                    .description("Eos aedificium consectetur urbs. Admitto summa accusator tabesco distinctio vapulus culpo templum ancilla.")
+                    .hasRedirectUrl(true)
+                    .hasTargetUrl(false)
+                    .id("b73eadb8-975d-4dc0-b2fa-e4d8b4a09f83")
+                    .infoUrl("https://ugly-instance.biz/")
+                    .integrationTypes(List.of(
+                        "viridis"))
+                    .maxScore(22d)
+                    .name("Carus sed vox doloremque vigor surgo tabella cupiditas abduco clarus.")
+                    .needsIpAddress(true)
+                    .parameters(List.of())
+                    .regions(List.of())
+                    .tags(List.of(
+                        "clamo"))
+                    .updatedAt(OffsetDateTime.parse("2023-09-18T05:29:15.663Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -496,16 +590,17 @@ Update an order
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateAssessmentOrder" method="put" path="/assessment/{connection_id}/order/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateAssessmentOrder" method="put" path="/assessment/{connection_id}/order/{id}" example="assessment_order" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateAssessmentOrderRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateAssessmentOrderResponse;
-import to.unified.unified_java_sdk.models.shared.AssessmentOrder;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -521,6 +616,32 @@ public class Application {
                 .assessmentOrder(AssessmentOrder.builder()
                     .connectionId("<id>")
                     .workspaceId("<id>")
+                    .createdAt(OffsetDateTime.parse("2021-09-18T10:33:57.803Z"))
+                    .id("2165508c-a576-42d8-9e14-4a01fbb91f9d")
+                    .parameters(List.of())
+                    .profileAddresses(List.of())
+                    .profileDateOfBirth("1989-07-22T16:18:37.650Z")
+                    .profileEmails(List.of(
+                        "Cleta.Daugherty@gmail.com"))
+                    .profileFirstName("Amy")
+                    .profileGender(ProfileGender.NON_BINARY)
+                    .profileLastName("Kris-Windler")
+                    .profileName("Amy Kris-Windler")
+                    .profileResumeUrl("https://enchanted-cycle.biz/")
+                    .profileSocialMediaUrls(List.of())
+                    .profileTelephones(List.of(
+                        "(828) 263-1594 x5248"))
+                    .reference("ab")
+                    .responseAttributes(List.of())
+                    .responseDetails(List.of())
+                    .responseDownloadUrls(List.of())
+                    .responseMaxScore(82d)
+                    .responseScore(92d)
+                    .responseStatus(ResponseStatus.FAILED)
+                    .responseUrl("https://irresponsible-trench.info/")
+                    .status(AssessmentOrderStatus.REJECTED)
+                    .targetUrl("https://cautious-turret.info")
+                    .updatedAt(OffsetDateTime.parse("2023-01-17T01:52:25.109Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -559,11 +680,13 @@ Update an assessment package
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateAssessmentPackage" method="put" path="/assessment/{connection_id}/package/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateAssessmentPackage" method="put" path="/assessment/{connection_id}/package/{id}" example="assessment_package" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateAssessmentPackageRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateAssessmentPackageResponse;
@@ -581,7 +704,25 @@ public class Application {
 
         UpdateAssessmentPackageRequest req = UpdateAssessmentPackageRequest.builder()
                 .assessmentPackage(AssessmentPackage.builder()
-                    .type(AssessmentPackageType.OTHER)
+                    .type(AssessmentPackageType.VIDEO_INTERVIEW)
+                    .aliases(List.of(
+                        "quia"))
+                    .createdAt(OffsetDateTime.parse("2022-11-18T19:48:39.433Z"))
+                    .description("Eos aedificium consectetur urbs. Admitto summa accusator tabesco distinctio vapulus culpo templum ancilla.")
+                    .hasRedirectUrl(true)
+                    .hasTargetUrl(false)
+                    .id("b73eadb8-975d-4dc0-b2fa-e4d8b4a09f83")
+                    .infoUrl("https://ugly-instance.biz/")
+                    .integrationTypes(List.of(
+                        "viridis"))
+                    .maxScore(22d)
+                    .name("Carus sed vox doloremque vigor surgo tabella cupiditas abduco clarus.")
+                    .needsIpAddress(true)
+                    .parameters(List.of())
+                    .regions(List.of())
+                    .tags(List.of(
+                        "clamo"))
+                    .updatedAt(OffsetDateTime.parse("2023-09-18T05:29:15.663Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

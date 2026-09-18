@@ -17,11 +17,12 @@ Create an inventory
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createCommerceInventory" method="post" path="/commerce/{connection_id}/inventory" -->
+<!-- UsageSnippet language="java" operationID="createCommerceInventory" method="post" path="/commerce/{connection_id}/inventory" example="commerce_inventory" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateCommerceInventoryRequest;
 import to.unified.unified_java_sdk.models.operations.CreateCommerceInventoryResponse;
@@ -40,6 +41,8 @@ public class Application {
 
         CreateCommerceInventoryRequest req = CreateCommerceInventoryRequest.builder()
                 .commerceInventory(CommerceInventory.builder()
+                    .available(337d)
+                    .updatedAt(OffsetDateTime.parse("2025-10-24T19:37:09.813Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -192,11 +195,12 @@ Update an inventory
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchCommerceInventory" method="patch" path="/commerce/{connection_id}/inventory/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchCommerceInventory" method="patch" path="/commerce/{connection_id}/inventory/{id}" example="commerce_inventory" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchCommerceInventoryRequest;
 import to.unified.unified_java_sdk.models.operations.PatchCommerceInventoryResponse;
@@ -215,6 +219,8 @@ public class Application {
 
         PatchCommerceInventoryRequest req = PatchCommerceInventoryRequest.builder()
                 .commerceInventory(CommerceInventory.builder()
+                    .available(337d)
+                    .updatedAt(OffsetDateTime.parse("2025-10-24T19:37:09.818Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -309,11 +315,12 @@ Update an inventory
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateCommerceInventory" method="put" path="/commerce/{connection_id}/inventory/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateCommerceInventory" method="put" path="/commerce/{connection_id}/inventory/{id}" example="commerce_inventory" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateCommerceInventoryRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateCommerceInventoryResponse;
@@ -332,6 +339,8 @@ public class Application {
 
         UpdateCommerceInventoryRequest req = UpdateCommerceInventoryRequest.builder()
                 .commerceInventory(CommerceInventory.builder()
+                    .available(337d)
+                    .updatedAt(OffsetDateTime.parse("2025-10-24T19:37:09.818Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

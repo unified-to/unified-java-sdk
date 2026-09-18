@@ -17,11 +17,12 @@ Create a commit
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createRepoCommit" method="post" path="/repo/{connection_id}/commit" -->
+<!-- UsageSnippet language="java" operationID="createRepoCommit" method="post" path="/repo/{connection_id}/commit" example="repo_commit" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateRepoCommitRequest;
 import to.unified.unified_java_sdk.models.operations.CreateRepoCommitResponse;
@@ -41,6 +42,13 @@ public class Application {
         CreateRepoCommitRequest req = CreateRepoCommitRequest.builder()
                 .repoCommit(RepoCommit.builder()
                     .repoId("<id>")
+                    .createdAt(OffsetDateTime.parse("2020-07-12T16:20:42.520Z"))
+                    .id("537657d4-be2d-4530-82aa-c8046846968a")
+                    .linesAdded(313d)
+                    .linesChanged(659d)
+                    .linesDeleted(482d)
+                    .message("Auctus ascisco esse attollo clarus odio tum bis rerum.")
+                    .updatedAt(OffsetDateTime.parse("2023-05-16T02:59:38.478Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -193,11 +201,12 @@ Update a commit
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchRepoCommit" method="patch" path="/repo/{connection_id}/commit/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchRepoCommit" method="patch" path="/repo/{connection_id}/commit/{id}" example="repo_commit" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchRepoCommitRequest;
 import to.unified.unified_java_sdk.models.operations.PatchRepoCommitResponse;
@@ -217,6 +226,13 @@ public class Application {
         PatchRepoCommitRequest req = PatchRepoCommitRequest.builder()
                 .repoCommit(RepoCommit.builder()
                     .repoId("<id>")
+                    .createdAt(OffsetDateTime.parse("2020-07-12T16:20:42.520Z"))
+                    .id("2b617b64-dffb-430e-8378-1009b9baedcf")
+                    .linesAdded(313d)
+                    .linesChanged(659d)
+                    .linesDeleted(482d)
+                    .message("Auctus ascisco esse attollo clarus odio tum bis rerum.")
+                    .updatedAt(OffsetDateTime.parse("2023-05-16T02:59:38.482Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -311,11 +327,12 @@ Update a commit
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateRepoCommit" method="put" path="/repo/{connection_id}/commit/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateRepoCommit" method="put" path="/repo/{connection_id}/commit/{id}" example="repo_commit" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateRepoCommitRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateRepoCommitResponse;
@@ -335,6 +352,13 @@ public class Application {
         UpdateRepoCommitRequest req = UpdateRepoCommitRequest.builder()
                 .repoCommit(RepoCommit.builder()
                     .repoId("<id>")
+                    .createdAt(OffsetDateTime.parse("2020-07-12T16:20:42.520Z"))
+                    .id("2b617b64-dffb-430e-8378-1009b9baedcf")
+                    .linesAdded(313d)
+                    .linesChanged(659d)
+                    .linesDeleted(482d)
+                    .message("Auctus ascisco esse attollo clarus odio tum bis rerum.")
+                    .updatedAt(OffsetDateTime.parse("2023-05-16T02:59:38.482Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

@@ -17,16 +17,17 @@ Create a bill
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createAccountingBill" method="post" path="/accounting/{connection_id}/bill" -->
+<!-- UsageSnippet language="java" operationID="createAccountingBill" method="post" path="/accounting/{connection_id}/bill" example="accounting_bill" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingBillRequest;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingBillResponse;
-import to.unified.unified_java_sdk.models.shared.AccountingBill;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -40,6 +41,28 @@ public class Application {
 
         CreateAccountingBillRequest req = CreateAccountingBillRequest.builder()
                 .accountingBill(AccountingBill.builder()
+                    .attachments(List.of())
+                    .billNumber("vitae")
+                    .categoryIds(List.of())
+                    .createdAt(OffsetDateTime.parse("2019-08-08T23:03:14.104Z"))
+                    .currency("AUD")
+                    .discountAmount(0d)
+                    .dueAt(OffsetDateTime.parse("2019-08-11T20:52:55.321Z"))
+                    .extendedNotes(List.of())
+                    .id("100144ed-c290-4ba0-8c70-172d5b231a02")
+                    .lineitems(List.of())
+                    .metadata(List.of())
+                    .notes("Tutamen cilicium infit.")
+                    .paymentCollectionMethod(PaymentCollectionMethod.CHARGE_AUTOMATICALLY)
+                    .payments(List.of())
+                    .postedAt(OffsetDateTime.parse("2024-04-04T07:23:49.049Z"))
+                    .send(true)
+                    .status(AccountingBillStatus.DELETED)
+                    .taxAmount(0d)
+                    .term(Term.NET10)
+                    .totalAmount(0d)
+                    .updatedAt(OffsetDateTime.parse("2025-01-29T00:58:28.612Z"))
+                    .url("https://coarse-interviewer.biz/")
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -192,16 +215,17 @@ Update a bill
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchAccountingBill" method="patch" path="/accounting/{connection_id}/bill/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchAccountingBill" method="patch" path="/accounting/{connection_id}/bill/{id}" example="accounting_bill" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchAccountingBillRequest;
 import to.unified.unified_java_sdk.models.operations.PatchAccountingBillResponse;
-import to.unified.unified_java_sdk.models.shared.AccountingBill;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -215,6 +239,28 @@ public class Application {
 
         PatchAccountingBillRequest req = PatchAccountingBillRequest.builder()
                 .accountingBill(AccountingBill.builder()
+                    .attachments(List.of())
+                    .billNumber("vitae")
+                    .categoryIds(List.of())
+                    .createdAt(OffsetDateTime.parse("2019-08-08T23:03:14.104Z"))
+                    .currency("AUD")
+                    .discountAmount(0d)
+                    .dueAt(OffsetDateTime.parse("2019-08-11T20:52:55.321Z"))
+                    .extendedNotes(List.of())
+                    .id("6150e708-f7e3-4cf9-8e91-303495e24cc3")
+                    .lineitems(List.of())
+                    .metadata(List.of())
+                    .notes("Tutamen cilicium infit.")
+                    .paymentCollectionMethod(PaymentCollectionMethod.CHARGE_AUTOMATICALLY)
+                    .payments(List.of())
+                    .postedAt(OffsetDateTime.parse("2024-04-04T07:23:49.078Z"))
+                    .send(true)
+                    .status(AccountingBillStatus.DELETED)
+                    .taxAmount(0d)
+                    .term(Term.NET10)
+                    .totalAmount(0d)
+                    .updatedAt(OffsetDateTime.parse("2025-01-29T00:58:28.647Z"))
+                    .url("https://coarse-interviewer.biz/")
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -309,16 +355,17 @@ Update a bill
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateAccountingBill" method="put" path="/accounting/{connection_id}/bill/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateAccountingBill" method="put" path="/accounting/{connection_id}/bill/{id}" example="accounting_bill" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateAccountingBillRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateAccountingBillResponse;
-import to.unified.unified_java_sdk.models.shared.AccountingBill;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -332,6 +379,28 @@ public class Application {
 
         UpdateAccountingBillRequest req = UpdateAccountingBillRequest.builder()
                 .accountingBill(AccountingBill.builder()
+                    .attachments(List.of())
+                    .billNumber("vitae")
+                    .categoryIds(List.of())
+                    .createdAt(OffsetDateTime.parse("2019-08-08T23:03:14.104Z"))
+                    .currency("AUD")
+                    .discountAmount(0d)
+                    .dueAt(OffsetDateTime.parse("2019-08-11T20:52:55.321Z"))
+                    .extendedNotes(List.of())
+                    .id("6150e708-f7e3-4cf9-8e91-303495e24cc3")
+                    .lineitems(List.of())
+                    .metadata(List.of())
+                    .notes("Tutamen cilicium infit.")
+                    .paymentCollectionMethod(PaymentCollectionMethod.CHARGE_AUTOMATICALLY)
+                    .payments(List.of())
+                    .postedAt(OffsetDateTime.parse("2024-04-04T07:23:49.078Z"))
+                    .send(true)
+                    .status(AccountingBillStatus.DELETED)
+                    .taxAmount(0d)
+                    .term(Term.NET10)
+                    .totalAmount(0d)
+                    .updatedAt(OffsetDateTime.parse("2025-01-29T00:58:28.647Z"))
+                    .url("https://coarse-interviewer.biz/")
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

@@ -17,17 +17,17 @@ Create an attendance
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createHrisAttendance" method="post" path="/hris/{connection_id}/attendance" -->
+<!-- UsageSnippet language="java" operationID="createHrisAttendance" method="post" path="/hris/{connection_id}/attendance" example="hris_attendance" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateHrisAttendanceRequest;
 import to.unified.unified_java_sdk.models.operations.CreateHrisAttendanceResponse;
-import to.unified.unified_java_sdk.models.shared.HrisAttendance;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -42,8 +42,37 @@ public class Application {
         CreateHrisAttendanceRequest req = CreateHrisAttendanceRequest.builder()
                 .hrisAttendance(HrisAttendance.builder()
                     .employeeUserId("<id>")
-                    .endAt(OffsetDateTime.parse("2026-07-01T14:10:09.942Z"))
-                    .startAt(OffsetDateTime.parse("2026-03-31T03:51:43.280Z"))
+                    .endAt(OffsetDateTime.parse("2024-04-06T03:56:34.906Z"))
+                    .startAt(OffsetDateTime.parse("2021-11-09T10:26:01.081Z"))
+                    .address(PropertyHrisAttendanceAddress.builder()
+                        .address1("14108 Allie Flats")
+                        .city("Kearaborough")
+                        .countryCode("US")
+                        .postalCode("23844-2344")
+                        .region("Tennessee")
+                        .regionCode("CA")
+                        .build())
+                    .approvedAt(OffsetDateTime.parse("2021-08-13T10:36:02.699Z"))
+                    .breaks(List.of(
+                        HrisAttendanceBreak.builder()
+                            .durationMinutes(12d)
+                            .endAt(OffsetDateTime.parse("2023-10-22T16:22:57.211Z"))
+                            .id("d60a1001-5a8a-4991-8c21-f4da6036cc87")
+                            .isPaid(true)
+                            .name("Lunch")
+                            .startAt(OffsetDateTime.parse("2023-10-15T20:49:16.476Z"))
+                            .build()))
+                    .createdAt(OffsetDateTime.parse("2021-08-10T19:43:18.452Z"))
+                    .currency("UGX")
+                    .declaredTipsAmount(161d)
+                    .hourlyRate(53d)
+                    .hours(10d)
+                    .id("e9e33831-f1ad-4fd0-8ca4-1a008527e535")
+                    .jobName("Global Creative Supervisor")
+                    .nonCashTipsAmount(54d)
+                    .status(HrisAttendanceStatus.CLOSED)
+                    .timezone("America/Atikokan")
+                    .updatedAt(OffsetDateTime.parse("2022-01-17T01:25:06.883Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -196,17 +225,17 @@ Update an attendance
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchHrisAttendance" method="patch" path="/hris/{connection_id}/attendance/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchHrisAttendance" method="patch" path="/hris/{connection_id}/attendance/{id}" example="hris_attendance" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchHrisAttendanceRequest;
 import to.unified.unified_java_sdk.models.operations.PatchHrisAttendanceResponse;
-import to.unified.unified_java_sdk.models.shared.HrisAttendance;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -221,8 +250,37 @@ public class Application {
         PatchHrisAttendanceRequest req = PatchHrisAttendanceRequest.builder()
                 .hrisAttendance(HrisAttendance.builder()
                     .employeeUserId("<id>")
-                    .endAt(OffsetDateTime.parse("2024-09-28T22:23:28.906Z"))
-                    .startAt(OffsetDateTime.parse("2025-01-18T09:17:09.936Z"))
+                    .endAt(OffsetDateTime.parse("2024-04-06T03:56:34.918Z"))
+                    .startAt(OffsetDateTime.parse("2021-11-09T10:26:01.082Z"))
+                    .address(PropertyHrisAttendanceAddress.builder()
+                        .address1("14108 Allie Flats")
+                        .city("Kearaborough")
+                        .countryCode("US")
+                        .postalCode("23844-2344")
+                        .region("Tennessee")
+                        .regionCode("CA")
+                        .build())
+                    .approvedAt(OffsetDateTime.parse("2021-08-13T10:36:02.699Z"))
+                    .breaks(List.of(
+                        HrisAttendanceBreak.builder()
+                            .durationMinutes(12d)
+                            .endAt(OffsetDateTime.parse("2023-10-22T16:22:57.221Z"))
+                            .id("d60a1001-5a8a-4991-8c21-f4da6036cc87")
+                            .isPaid(true)
+                            .name("Lunch")
+                            .startAt(OffsetDateTime.parse("2023-10-15T20:49:16.485Z"))
+                            .build()))
+                    .createdAt(OffsetDateTime.parse("2021-08-10T19:43:18.452Z"))
+                    .currency("UGX")
+                    .declaredTipsAmount(161d)
+                    .hourlyRate(53d)
+                    .hours(10d)
+                    .id("34ef1ed7-4863-409e-bd2a-2522d8f43302")
+                    .jobName("Global Creative Supervisor")
+                    .nonCashTipsAmount(54d)
+                    .status(HrisAttendanceStatus.CLOSED)
+                    .timezone("America/Atikokan")
+                    .updatedAt(OffsetDateTime.parse("2022-01-17T01:25:06.885Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -317,17 +375,17 @@ Update an attendance
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateHrisAttendance" method="put" path="/hris/{connection_id}/attendance/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateHrisAttendance" method="put" path="/hris/{connection_id}/attendance/{id}" example="hris_attendance" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateHrisAttendanceRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateHrisAttendanceResponse;
-import to.unified.unified_java_sdk.models.shared.HrisAttendance;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -342,8 +400,37 @@ public class Application {
         UpdateHrisAttendanceRequest req = UpdateHrisAttendanceRequest.builder()
                 .hrisAttendance(HrisAttendance.builder()
                     .employeeUserId("<id>")
-                    .endAt(OffsetDateTime.parse("2024-07-06T19:51:15.352Z"))
-                    .startAt(OffsetDateTime.parse("2024-05-22T08:12:53.996Z"))
+                    .endAt(OffsetDateTime.parse("2024-04-06T03:56:34.918Z"))
+                    .startAt(OffsetDateTime.parse("2021-11-09T10:26:01.082Z"))
+                    .address(PropertyHrisAttendanceAddress.builder()
+                        .address1("14108 Allie Flats")
+                        .city("Kearaborough")
+                        .countryCode("US")
+                        .postalCode("23844-2344")
+                        .region("Tennessee")
+                        .regionCode("CA")
+                        .build())
+                    .approvedAt(OffsetDateTime.parse("2021-08-13T10:36:02.699Z"))
+                    .breaks(List.of(
+                        HrisAttendanceBreak.builder()
+                            .durationMinutes(12d)
+                            .endAt(OffsetDateTime.parse("2023-10-22T16:22:57.221Z"))
+                            .id("d60a1001-5a8a-4991-8c21-f4da6036cc87")
+                            .isPaid(true)
+                            .name("Lunch")
+                            .startAt(OffsetDateTime.parse("2023-10-15T20:49:16.485Z"))
+                            .build()))
+                    .createdAt(OffsetDateTime.parse("2021-08-10T19:43:18.452Z"))
+                    .currency("UGX")
+                    .declaredTipsAmount(161d)
+                    .hourlyRate(53d)
+                    .hours(10d)
+                    .id("34ef1ed7-4863-409e-bd2a-2522d8f43302")
+                    .jobName("Global Creative Supervisor")
+                    .nonCashTipsAmount(54d)
+                    .status(HrisAttendanceStatus.CLOSED)
+                    .timezone("America/Atikokan")
+                    .updatedAt(OffsetDateTime.parse("2022-01-17T01:25:06.885Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

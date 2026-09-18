@@ -17,16 +17,18 @@ Create a lead
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createCrmLead" method="post" path="/crm/{connection_id}/lead" -->
+<!-- UsageSnippet language="java" operationID="createCrmLead" method="post" path="/crm/{connection_id}/lead" example="crm_lead" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
+import java.util.Map;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateCrmLeadRequest;
 import to.unified.unified_java_sdk.models.operations.CreateCrmLeadResponse;
-import to.unified.unified_java_sdk.models.shared.CrmLead;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -40,6 +42,55 @@ public class Application {
 
         CreateCrmLeadRequest req = CreateCrmLeadRequest.builder()
                 .crmLead(CrmLead.builder()
+                    .address(PropertyCrmLeadAddress.builder()
+                        .address1("528 Forest Road")
+                        .address2("Apt. 643")
+                        .city("Palm Springs")
+                        .countryCode("US")
+                        .postalCode("55624-6499")
+                        .region("New Jersey")
+                        .regionCode("LA")
+                        .build())
+                    .companyName("Tillman - Wiegand")
+                    .createdAt(OffsetDateTime.parse("2019-10-12T11:27:59.003Z"))
+                    .emails(List.of(
+                        CrmEmail.builder()
+                            .email("Velda.Sporer16@yahoo.com")
+                            .type(CrmEmailType.OTHER)
+                            .build(),
+                        CrmEmail.builder()
+                            .email("Velda.Sporer@yahoo.com")
+                            .type(CrmEmailType.HOME)
+                            .build()))
+                    .firstName("Velda")
+                    .id("5c399df0-ebd2-46ff-8824-c35785883216")
+                    .isActive(true)
+                    .lastName("Sporer")
+                    .linkUrls(List.of(
+                        "https://classic-sightseeing.com/"))
+                    .metadata(List.of(
+                        CrmMetadata.builder()
+                            .extraData(CrmMetadataExtraData.of(Map.ofEntries(
+                                Map.entry("display_name", "Custom Property"))))
+                            .format(CrmMetadataFormat.TEXT)
+                            .id("fbe45a6a-3689-4115-9e09-6d36f037697e")
+                            .namespace("custom")
+                            .slug("custom_property")
+                            .value(CrmMetadataValue.of("sublime"))
+                            .build()))
+                    .name("Velda Sporer")
+                    .source("aetas")
+                    .status("vesco")
+                    .telephones(List.of(
+                        CrmTelephone.builder()
+                            .telephone("(955) 643-9849")
+                            .type(CrmTelephoneType.OTHER)
+                            .build(),
+                        CrmTelephone.builder()
+                            .telephone("(621) 811-8800")
+                            .type(CrmTelephoneType.WORK)
+                            .build()))
+                    .updatedAt(OffsetDateTime.parse("2020-05-15T02:08:48.275Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -192,16 +243,18 @@ Update a lead
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchCrmLead" method="patch" path="/crm/{connection_id}/lead/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchCrmLead" method="patch" path="/crm/{connection_id}/lead/{id}" example="crm_lead" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
+import java.util.Map;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchCrmLeadRequest;
 import to.unified.unified_java_sdk.models.operations.PatchCrmLeadResponse;
-import to.unified.unified_java_sdk.models.shared.CrmLead;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -215,6 +268,55 @@ public class Application {
 
         PatchCrmLeadRequest req = PatchCrmLeadRequest.builder()
                 .crmLead(CrmLead.builder()
+                    .address(PropertyCrmLeadAddress.builder()
+                        .address1("528 Forest Road")
+                        .address2("Apt. 643")
+                        .city("Palm Springs")
+                        .countryCode("US")
+                        .postalCode("55624-6499")
+                        .region("New Jersey")
+                        .regionCode("LA")
+                        .build())
+                    .companyName("Tillman - Wiegand")
+                    .createdAt(OffsetDateTime.parse("2019-10-12T11:27:59.003Z"))
+                    .emails(List.of(
+                        CrmEmail.builder()
+                            .email("Velda.Sporer16@yahoo.com")
+                            .type(CrmEmailType.OTHER)
+                            .build(),
+                        CrmEmail.builder()
+                            .email("Velda.Sporer@yahoo.com")
+                            .type(CrmEmailType.HOME)
+                            .build()))
+                    .firstName("Velda")
+                    .id("8fc3f6b3-b14f-498f-8e14-f7301ba4adb4")
+                    .isActive(true)
+                    .lastName("Sporer")
+                    .linkUrls(List.of(
+                        "https://classic-sightseeing.com/"))
+                    .metadata(List.of(
+                        CrmMetadata.builder()
+                            .extraData(CrmMetadataExtraData.of(Map.ofEntries(
+                                Map.entry("display_name", "Custom Property"))))
+                            .format(CrmMetadataFormat.TEXT)
+                            .id("30eaaeae-9533-412b-bc42-a1d1a0441a29")
+                            .namespace("custom")
+                            .slug("custom_property")
+                            .value(CrmMetadataValue.of("sublime"))
+                            .build()))
+                    .name("Velda Sporer")
+                    .source("aetas")
+                    .status("vesco")
+                    .telephones(List.of(
+                        CrmTelephone.builder()
+                            .telephone("(955) 643-9849")
+                            .type(CrmTelephoneType.OTHER)
+                            .build(),
+                        CrmTelephone.builder()
+                            .telephone("(621) 811-8800")
+                            .type(CrmTelephoneType.WORK)
+                            .build()))
+                    .updatedAt(OffsetDateTime.parse("2020-05-15T02:08:48.278Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -309,16 +411,18 @@ Update a lead
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateCrmLead" method="put" path="/crm/{connection_id}/lead/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateCrmLead" method="put" path="/crm/{connection_id}/lead/{id}" example="crm_lead" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
+import java.util.Map;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateCrmLeadRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateCrmLeadResponse;
-import to.unified.unified_java_sdk.models.shared.CrmLead;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -332,6 +436,55 @@ public class Application {
 
         UpdateCrmLeadRequest req = UpdateCrmLeadRequest.builder()
                 .crmLead(CrmLead.builder()
+                    .address(PropertyCrmLeadAddress.builder()
+                        .address1("528 Forest Road")
+                        .address2("Apt. 643")
+                        .city("Palm Springs")
+                        .countryCode("US")
+                        .postalCode("55624-6499")
+                        .region("New Jersey")
+                        .regionCode("LA")
+                        .build())
+                    .companyName("Tillman - Wiegand")
+                    .createdAt(OffsetDateTime.parse("2019-10-12T11:27:59.003Z"))
+                    .emails(List.of(
+                        CrmEmail.builder()
+                            .email("Velda.Sporer16@yahoo.com")
+                            .type(CrmEmailType.OTHER)
+                            .build(),
+                        CrmEmail.builder()
+                            .email("Velda.Sporer@yahoo.com")
+                            .type(CrmEmailType.HOME)
+                            .build()))
+                    .firstName("Velda")
+                    .id("8fc3f6b3-b14f-498f-8e14-f7301ba4adb4")
+                    .isActive(true)
+                    .lastName("Sporer")
+                    .linkUrls(List.of(
+                        "https://classic-sightseeing.com/"))
+                    .metadata(List.of(
+                        CrmMetadata.builder()
+                            .extraData(CrmMetadataExtraData.of(Map.ofEntries(
+                                Map.entry("display_name", "Custom Property"))))
+                            .format(CrmMetadataFormat.TEXT)
+                            .id("30eaaeae-9533-412b-bc42-a1d1a0441a29")
+                            .namespace("custom")
+                            .slug("custom_property")
+                            .value(CrmMetadataValue.of("sublime"))
+                            .build()))
+                    .name("Velda Sporer")
+                    .source("aetas")
+                    .status("vesco")
+                    .telephones(List.of(
+                        CrmTelephone.builder()
+                            .telephone("(955) 643-9849")
+                            .type(CrmTelephoneType.OTHER)
+                            .build(),
+                        CrmTelephone.builder()
+                            .telephone("(621) 811-8800")
+                            .type(CrmTelephoneType.WORK)
+                            .build()))
+                    .updatedAt(OffsetDateTime.parse("2020-05-15T02:08:48.278Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

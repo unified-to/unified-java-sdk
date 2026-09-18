@@ -12,16 +12,16 @@ Create a query
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createDatastoreQuery" method="post" path="/datastore/{connection_id}/query" -->
+<!-- UsageSnippet language="java" operationID="createDatastoreQuery" method="post" path="/datastore/{connection_id}/query" example="datastore_query" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateDatastoreQueryRequest;
 import to.unified.unified_java_sdk.models.operations.CreateDatastoreQueryResponse;
-import to.unified.unified_java_sdk.models.shared.DatastoreQuery;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -35,6 +35,14 @@ public class Application {
 
         CreateDatastoreQueryRequest req = CreateDatastoreQueryRequest.builder()
                 .datastoreQuery(DatastoreQuery.builder()
+                    .query(PropertyDatastoreQueryQuery.builder()
+                        .filter(PropertyDatastoreQueryQueryFilter.builder()
+                            .type(PropertyDatastoreQueryQueryFilterType.OR)
+                            .build())
+                        .select(List.of(
+                            "*"))
+                        .sql("")
+                        .build())
                     .build())
                 .connectionId("<id>")
                 .build();

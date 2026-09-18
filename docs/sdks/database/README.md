@@ -17,11 +17,12 @@ Create a database
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createDatastoreDatabase" method="post" path="/datastore/{connection_id}/database" -->
+<!-- UsageSnippet language="java" operationID="createDatastoreDatabase" method="post" path="/datastore/{connection_id}/database" example="datastore_database" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateDatastoreDatabaseRequest;
 import to.unified.unified_java_sdk.models.operations.CreateDatastoreDatabaseResponse;
@@ -40,6 +41,15 @@ public class Application {
 
         CreateDatastoreDatabaseRequest req = CreateDatastoreDatabaseRequest.builder()
                 .datastoreDatabase(DatastoreDatabase.builder()
+                    .createdAt(OffsetDateTime.parse("2019-03-05T14:31:00.223Z"))
+                    .description("Substantia tantillus coniuratio repellat coerceo amet vito vorago.")
+                    .id("aaacb13f-e629-4b0c-b081-10401d4bdd94")
+                    .isActive(true)
+                    .name("Rau - O'Reilly")
+                    .password("iYLhYwOHm0NLDvI")
+                    .region("France")
+                    .updatedAt(OffsetDateTime.parse("2023-06-12T03:11:14.485Z"))
+                    .webUrl("https://optimal-signature.name")
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -192,11 +202,12 @@ Update a database
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchDatastoreDatabase" method="patch" path="/datastore/{connection_id}/database/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchDatastoreDatabase" method="patch" path="/datastore/{connection_id}/database/{id}" example="datastore_database" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchDatastoreDatabaseRequest;
 import to.unified.unified_java_sdk.models.operations.PatchDatastoreDatabaseResponse;
@@ -215,6 +226,15 @@ public class Application {
 
         PatchDatastoreDatabaseRequest req = PatchDatastoreDatabaseRequest.builder()
                 .datastoreDatabase(DatastoreDatabase.builder()
+                    .createdAt(OffsetDateTime.parse("2019-03-05T14:31:00.223Z"))
+                    .description("Substantia tantillus coniuratio repellat coerceo amet vito vorago.")
+                    .id("3de5cadd-7da8-44ec-a411-0f4fca1cd849")
+                    .isActive(true)
+                    .name("Rau - O'Reilly")
+                    .password("iYLhYwOHm0NLDvI")
+                    .region("France")
+                    .updatedAt(OffsetDateTime.parse("2023-06-12T03:11:14.489Z"))
+                    .webUrl("https://optimal-signature.name")
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -309,11 +329,12 @@ Update a database
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateDatastoreDatabase" method="put" path="/datastore/{connection_id}/database/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateDatastoreDatabase" method="put" path="/datastore/{connection_id}/database/{id}" example="datastore_database" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateDatastoreDatabaseRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateDatastoreDatabaseResponse;
@@ -332,6 +353,15 @@ public class Application {
 
         UpdateDatastoreDatabaseRequest req = UpdateDatastoreDatabaseRequest.builder()
                 .datastoreDatabase(DatastoreDatabase.builder()
+                    .createdAt(OffsetDateTime.parse("2019-03-05T14:31:00.223Z"))
+                    .description("Substantia tantillus coniuratio repellat coerceo amet vito vorago.")
+                    .id("3de5cadd-7da8-44ec-a411-0f4fca1cd849")
+                    .isActive(true)
+                    .name("Rau - O'Reilly")
+                    .password("iYLhYwOHm0NLDvI")
+                    .region("France")
+                    .updatedAt(OffsetDateTime.parse("2023-06-12T03:11:14.489Z"))
+                    .webUrl("https://optimal-signature.name")
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

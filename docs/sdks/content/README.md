@@ -17,16 +17,17 @@ Create a content
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createLmsContent" method="post" path="/lms/{connection_id}/content" -->
+<!-- UsageSnippet language="java" operationID="createLmsContent" method="post" path="/lms/{connection_id}/content" example="lms_content" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateLmsContentRequest;
 import to.unified.unified_java_sdk.models.operations.CreateLmsContentResponse;
-import to.unified.unified_java_sdk.models.shared.LmsContent;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -40,6 +41,83 @@ public class Application {
 
         CreateLmsContentRequest req = CreateLmsContentRequest.builder()
                 .lmsContent(LmsContent.builder()
+                    .categories(List.of(
+                        "territo"))
+                    .createdAt(OffsetDateTime.parse("2020-10-22T22:30:50.963Z"))
+                    .description("Usque laboriosam ventosus adflicto.")
+                    .difficulty("Beginner")
+                    .durationMinutes(19d)
+                    .externalReference("0d230e31-a9c4-4a35-a5b9-9168e91ffff5")
+                    .id("09b21f68-cdb1-4147-bb3e-6d70468ec346")
+                    .instructors(List.of(
+                        LmsReference.builder()
+                            .id("91a23b20-a7a3-4323-9548-0897c09eb49e")
+                            .name("Winston Ferry")
+                            .build()))
+                    .isActive(true)
+                    .languages(List.of(
+                        "despecto",
+                        "suppellex"))
+                    .localizations(List.of(
+                        LmsContentLocalization.builder()
+                            .description("Numquam.")
+                            .language("es")
+                            .name("validus")
+                            .build(),
+                        LmsContentLocalization.builder()
+                            .description("Callide.")
+                            .language("fr")
+                            .name("crux")
+                            .build()))
+                    .media(List.of(
+                        LmsMedia.builder()
+                            .content("Adnuo antepono vulticulus incidunt. Commemoro voro ocer arca velut vigor venustas una audeo. Consectetur totidem amor amo vigor. Patior ulciscor cohors necessitatibus beatae. Copiose cedo sub decens acer.")
+                            .description("Venia aeternus tandem spargo.")
+                            .languages(List.of(
+                                "zu",
+                                "ba"))
+                            .name("subiungo")
+                            .thumbnailUrl("https://loremflickr.com/2056/3712?lock=5644845642923518")
+                            .type(LmsMediaType.OTHER)
+                            .url("https://loremflickr.com/2593/1553?lock=8591263400111785")
+                            .build(),
+                        LmsMedia.builder()
+                            .content("Terminatio acidus tripudio teres. Compono demum aut aestivus ambitus pecus tergum verumtamen vestrum. Absque adversus desino aut tabernus tollo vigor. Cur agnitio totidem consuasor bene doloribus. Vetus abundans curriculum curatio usitas.")
+                            .description("Comedo valde caste combibo.")
+                            .languages(List.of(
+                                "it",
+                                "hu"))
+                            .name("beneficium")
+                            .thumbnailUrl("https://picsum.photos/seed/pNFr1/2597/885")
+                            .type(LmsMediaType.WEB)
+                            .url("https://loremflickr.com/3597/239?lock=7142808124990633")
+                            .build(),
+                        LmsMedia.builder()
+                            .content("Coepi demo adversus capillus aro unus templum. Aspicio alius vehemens terminatio varietas vomica. Apud thorax defero decet impedit verbera pauci laboriosam molestiae urbanus. Aveho vergo crux certus nulla caute sophismata. Caute voluptatibus patrocinor demo verumtamen adeo canis sapiente depraedor verus.")
+                            .description("Tunc barba decens.")
+                            .languages(List.of(
+                                "bn",
+                                "yo"))
+                            .name("qui")
+                            .thumbnailUrl("https://loremflickr.com/1375/3377?lock=6601832177607674")
+                            .type(LmsMediaType.IMAGE)
+                            .url("https://loremflickr.com/3927/2086?lock=5199784913821481")
+                            .build()))
+                    .name("ut")
+                    .providerName("Berge LLC")
+                    .publishedAt(OffsetDateTime.parse("2023-11-08T11:32:09.080Z"))
+                    .shortDescription("Commemoro.")
+                    .skills(List.of(
+                        "trucido"))
+                    .sortOrder(3d)
+                    .subjects(List.of(
+                        LmsSubject.builder()
+                            .name("tibi")
+                            .rank(1d)
+                            .build()))
+                    .tags(List.of(
+                        "dens"))
+                    .updatedAt(OffsetDateTime.parse("2022-09-23T11:13:51.788Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -192,16 +270,17 @@ Update a content
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchLmsContent" method="patch" path="/lms/{connection_id}/content/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchLmsContent" method="patch" path="/lms/{connection_id}/content/{id}" example="lms_content" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchLmsContentRequest;
 import to.unified.unified_java_sdk.models.operations.PatchLmsContentResponse;
-import to.unified.unified_java_sdk.models.shared.LmsContent;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -215,6 +294,83 @@ public class Application {
 
         PatchLmsContentRequest req = PatchLmsContentRequest.builder()
                 .lmsContent(LmsContent.builder()
+                    .categories(List.of(
+                        "territo"))
+                    .createdAt(OffsetDateTime.parse("2020-10-22T22:30:50.963Z"))
+                    .description("Usque laboriosam ventosus adflicto.")
+                    .difficulty("Beginner")
+                    .durationMinutes(19d)
+                    .externalReference("0d230e31-a9c4-4a35-a5b9-9168e91ffff5")
+                    .id("f4465935-c7ed-442f-97e4-8edf4fdfc16e")
+                    .instructors(List.of(
+                        LmsReference.builder()
+                            .id("91a23b20-a7a3-4323-9548-0897c09eb49e")
+                            .name("Winston Ferry")
+                            .build()))
+                    .isActive(true)
+                    .languages(List.of(
+                        "despecto",
+                        "suppellex"))
+                    .localizations(List.of(
+                        LmsContentLocalization.builder()
+                            .description("Numquam.")
+                            .language("es")
+                            .name("validus")
+                            .build(),
+                        LmsContentLocalization.builder()
+                            .description("Callide.")
+                            .language("fr")
+                            .name("crux")
+                            .build()))
+                    .media(List.of(
+                        LmsMedia.builder()
+                            .content("Adnuo antepono vulticulus incidunt. Commemoro voro ocer arca velut vigor venustas una audeo. Consectetur totidem amor amo vigor. Patior ulciscor cohors necessitatibus beatae. Copiose cedo sub decens acer.")
+                            .description("Venia aeternus tandem spargo.")
+                            .languages(List.of(
+                                "zu",
+                                "ba"))
+                            .name("subiungo")
+                            .thumbnailUrl("https://loremflickr.com/2056/3712?lock=5644845642923518")
+                            .type(LmsMediaType.OTHER)
+                            .url("https://loremflickr.com/2593/1553?lock=8591263400111785")
+                            .build(),
+                        LmsMedia.builder()
+                            .content("Terminatio acidus tripudio teres. Compono demum aut aestivus ambitus pecus tergum verumtamen vestrum. Absque adversus desino aut tabernus tollo vigor. Cur agnitio totidem consuasor bene doloribus. Vetus abundans curriculum curatio usitas.")
+                            .description("Comedo valde caste combibo.")
+                            .languages(List.of(
+                                "it",
+                                "hu"))
+                            .name("beneficium")
+                            .thumbnailUrl("https://picsum.photos/seed/pNFr1/2597/885")
+                            .type(LmsMediaType.WEB)
+                            .url("https://loremflickr.com/3597/239?lock=7142808124990633")
+                            .build(),
+                        LmsMedia.builder()
+                            .content("Coepi demo adversus capillus aro unus templum. Aspicio alius vehemens terminatio varietas vomica. Apud thorax defero decet impedit verbera pauci laboriosam molestiae urbanus. Aveho vergo crux certus nulla caute sophismata. Caute voluptatibus patrocinor demo verumtamen adeo canis sapiente depraedor verus.")
+                            .description("Tunc barba decens.")
+                            .languages(List.of(
+                                "bn",
+                                "yo"))
+                            .name("qui")
+                            .thumbnailUrl("https://loremflickr.com/1375/3377?lock=6601832177607674")
+                            .type(LmsMediaType.IMAGE)
+                            .url("https://loremflickr.com/3927/2086?lock=5199784913821481")
+                            .build()))
+                    .name("ut")
+                    .providerName("Berge LLC")
+                    .publishedAt(OffsetDateTime.parse("2023-11-08T11:32:09.080Z"))
+                    .shortDescription("Commemoro.")
+                    .skills(List.of(
+                        "trucido"))
+                    .sortOrder(3d)
+                    .subjects(List.of(
+                        LmsSubject.builder()
+                            .name("tibi")
+                            .rank(1d)
+                            .build()))
+                    .tags(List.of(
+                        "dens"))
+                    .updatedAt(OffsetDateTime.parse("2022-09-23T11:13:51.798Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -309,16 +465,17 @@ Update a content
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateLmsContent" method="put" path="/lms/{connection_id}/content/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateLmsContent" method="put" path="/lms/{connection_id}/content/{id}" example="lms_content" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateLmsContentRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateLmsContentResponse;
-import to.unified.unified_java_sdk.models.shared.LmsContent;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -332,6 +489,83 @@ public class Application {
 
         UpdateLmsContentRequest req = UpdateLmsContentRequest.builder()
                 .lmsContent(LmsContent.builder()
+                    .categories(List.of(
+                        "territo"))
+                    .createdAt(OffsetDateTime.parse("2020-10-22T22:30:50.963Z"))
+                    .description("Usque laboriosam ventosus adflicto.")
+                    .difficulty("Beginner")
+                    .durationMinutes(19d)
+                    .externalReference("0d230e31-a9c4-4a35-a5b9-9168e91ffff5")
+                    .id("f4465935-c7ed-442f-97e4-8edf4fdfc16e")
+                    .instructors(List.of(
+                        LmsReference.builder()
+                            .id("91a23b20-a7a3-4323-9548-0897c09eb49e")
+                            .name("Winston Ferry")
+                            .build()))
+                    .isActive(true)
+                    .languages(List.of(
+                        "despecto",
+                        "suppellex"))
+                    .localizations(List.of(
+                        LmsContentLocalization.builder()
+                            .description("Numquam.")
+                            .language("es")
+                            .name("validus")
+                            .build(),
+                        LmsContentLocalization.builder()
+                            .description("Callide.")
+                            .language("fr")
+                            .name("crux")
+                            .build()))
+                    .media(List.of(
+                        LmsMedia.builder()
+                            .content("Adnuo antepono vulticulus incidunt. Commemoro voro ocer arca velut vigor venustas una audeo. Consectetur totidem amor amo vigor. Patior ulciscor cohors necessitatibus beatae. Copiose cedo sub decens acer.")
+                            .description("Venia aeternus tandem spargo.")
+                            .languages(List.of(
+                                "zu",
+                                "ba"))
+                            .name("subiungo")
+                            .thumbnailUrl("https://loremflickr.com/2056/3712?lock=5644845642923518")
+                            .type(LmsMediaType.OTHER)
+                            .url("https://loremflickr.com/2593/1553?lock=8591263400111785")
+                            .build(),
+                        LmsMedia.builder()
+                            .content("Terminatio acidus tripudio teres. Compono demum aut aestivus ambitus pecus tergum verumtamen vestrum. Absque adversus desino aut tabernus tollo vigor. Cur agnitio totidem consuasor bene doloribus. Vetus abundans curriculum curatio usitas.")
+                            .description("Comedo valde caste combibo.")
+                            .languages(List.of(
+                                "it",
+                                "hu"))
+                            .name("beneficium")
+                            .thumbnailUrl("https://picsum.photos/seed/pNFr1/2597/885")
+                            .type(LmsMediaType.WEB)
+                            .url("https://loremflickr.com/3597/239?lock=7142808124990633")
+                            .build(),
+                        LmsMedia.builder()
+                            .content("Coepi demo adversus capillus aro unus templum. Aspicio alius vehemens terminatio varietas vomica. Apud thorax defero decet impedit verbera pauci laboriosam molestiae urbanus. Aveho vergo crux certus nulla caute sophismata. Caute voluptatibus patrocinor demo verumtamen adeo canis sapiente depraedor verus.")
+                            .description("Tunc barba decens.")
+                            .languages(List.of(
+                                "bn",
+                                "yo"))
+                            .name("qui")
+                            .thumbnailUrl("https://loremflickr.com/1375/3377?lock=6601832177607674")
+                            .type(LmsMediaType.IMAGE)
+                            .url("https://loremflickr.com/3927/2086?lock=5199784913821481")
+                            .build()))
+                    .name("ut")
+                    .providerName("Berge LLC")
+                    .publishedAt(OffsetDateTime.parse("2023-11-08T11:32:09.080Z"))
+                    .shortDescription("Commemoro.")
+                    .skills(List.of(
+                        "trucido"))
+                    .sortOrder(3d)
+                    .subjects(List.of(
+                        LmsSubject.builder()
+                            .name("tibi")
+                            .rank(1d)
+                            .build()))
+                    .tags(List.of(
+                        "dens"))
+                    .updatedAt(OffsetDateTime.parse("2022-09-23T11:13:51.798Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

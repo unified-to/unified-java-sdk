@@ -139,16 +139,17 @@ Create an account
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createAccountingAccount" method="post" path="/accounting/{connection_id}/account" -->
+<!-- UsageSnippet language="java" operationID="createAccountingAccount" method="post" path="/accounting/{connection_id}/account" example="accounting_account" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingAccountRequest;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingAccountResponse;
-import to.unified.unified_java_sdk.models.shared.AccountingAccount;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -162,6 +163,28 @@ public class Application {
 
         CreateAccountingAccountRequest req = CreateAccountingAccountRequest.builder()
                 .accountingAccount(AccountingAccount.builder()
+                    .balance(12092d)
+                    .createdAt(OffsetDateTime.parse("2022-07-03T17:57:07.391Z"))
+                    .currency("BOB")
+                    .customerDefinedCode("quo")
+                    .description("Spoliatio comedo vilitas harum cupiditate.")
+                    .id("35991572-6b6d-4a7b-a883-101be82c839d")
+                    .isPayable(true)
+                    .name("Electronic Aluminum Tuna")
+                    .status(Status.ARCHIVED)
+                    .taxonomy(List.of(
+                        AccountingAccountTaxonomy.builder()
+                            .type(AccountingAccountTaxonomyType.SUBGROUP)
+                            .value("iste")
+                            .originalType("vesper")
+                            .build(),
+                        AccountingAccountTaxonomy.builder()
+                            .type(AccountingAccountTaxonomyType.SUBGROUP)
+                            .value("peccatus")
+                            .originalType("adamo")
+                            .build()))
+                    .type(Type.BANK)
+                    .updatedAt(OffsetDateTime.parse("2023-01-03T03:11:26.602Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -199,16 +222,16 @@ Create a bankfeedaccount
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createAccountingBankfeedaccount" method="post" path="/accounting/{connection_id}/bankfeedaccount" -->
+<!-- UsageSnippet language="java" operationID="createAccountingBankfeedaccount" method="post" path="/accounting/{connection_id}/bankfeedaccount" example="accounting_bankfeedaccount" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingBankfeedaccountRequest;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingBankfeedaccountResponse;
-import to.unified.unified_java_sdk.models.shared.AccountingBankfeedaccount;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -222,6 +245,20 @@ public class Application {
 
         CreateAccountingBankfeedaccountRequest req = CreateAccountingBankfeedaccountRequest.builder()
                 .accountingBankfeedaccount(AccountingBankfeedaccount.builder()
+                    .accountId("baa0e9a4-65e9-4bf5-856a-ce46fc36ebb1")
+                    .accountNumber("30369722")
+                    .accountNumberLast4("9722")
+                    .accountType(AccountType.LOAN)
+                    .balance(90358d)
+                    .bankName("Weissnat Inc")
+                    .createdAt(OffsetDateTime.parse("2022-10-31T16:42:19.277Z"))
+                    .currency("SSP")
+                    .feedStartAt(OffsetDateTime.parse("2022-10-31T16:42:19.277Z"))
+                    .id("2ea876a9-ab62-403d-b280-b8bd398c21a5")
+                    .name("Corwin, Donnelly and Connelly Savings")
+                    .routingNumber("667753156")
+                    .status(AccountingBankfeedaccountStatus.ACTIVE)
+                    .updatedAt(OffsetDateTime.parse("2024-04-11T12:57:07.381Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -259,16 +296,17 @@ Create a bankfeedtransaction
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createAccountingBankfeedtransaction" method="post" path="/accounting/{connection_id}/bankfeedtransaction" -->
+<!-- UsageSnippet language="java" operationID="createAccountingBankfeedtransaction" method="post" path="/accounting/{connection_id}/bankfeedtransaction" example="accounting_bankfeedtransaction" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingBankfeedtransactionRequest;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingBankfeedtransactionResponse;
-import to.unified.unified_java_sdk.models.shared.AccountingBankfeedtransaction;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -282,6 +320,23 @@ public class Application {
 
         CreateAccountingBankfeedtransactionRequest req = CreateAccountingBankfeedtransactionRequest.builder()
                 .accountingBankfeedtransaction(AccountingBankfeedtransaction.builder()
+                    .accountId("b7dc4175-1368-4b89-a700-d621b6666648")
+                    .amount(60889d)
+                    .bankCategory("Games")
+                    .bankfeedaccountId("34c1d05f-5b62-4bcd-9121-3be8b720941f")
+                    .categoryIds(List.of())
+                    .contactId("1ef58ebe-f9c9-46f6-9d9c-2df2658503be")
+                    .createdAt(OffsetDateTime.parse("2022-03-24T23:41:08.374Z"))
+                    .currency("SRD")
+                    .description("payment transaction at McLaughlin - Schaden using card ending with ****8233 for DOP 574.03 in account ***9523.")
+                    .id("30fb790d-3f8e-48ab-8f69-cfc3c408e989")
+                    .isPending(true)
+                    .merchantName("Reichert, Erdman and Tillman")
+                    .postedAt(OffsetDateTime.parse("2025-03-23T18:34:48.066Z"))
+                    .reference("93642593")
+                    .transactionAt(OffsetDateTime.parse("2022-07-27T19:48:15.221Z"))
+                    .type(AccountingBankfeedtransactionType.CREDIT)
+                    .updatedAt(OffsetDateTime.parse("2022-05-23T20:47:21.834Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -319,16 +374,17 @@ Create a bill
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createAccountingBill" method="post" path="/accounting/{connection_id}/bill" -->
+<!-- UsageSnippet language="java" operationID="createAccountingBill" method="post" path="/accounting/{connection_id}/bill" example="accounting_bill" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingBillRequest;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingBillResponse;
-import to.unified.unified_java_sdk.models.shared.AccountingBill;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -342,6 +398,28 @@ public class Application {
 
         CreateAccountingBillRequest req = CreateAccountingBillRequest.builder()
                 .accountingBill(AccountingBill.builder()
+                    .attachments(List.of())
+                    .billNumber("vitae")
+                    .categoryIds(List.of())
+                    .createdAt(OffsetDateTime.parse("2019-08-08T23:03:14.104Z"))
+                    .currency("AUD")
+                    .discountAmount(0d)
+                    .dueAt(OffsetDateTime.parse("2019-08-11T20:52:55.321Z"))
+                    .extendedNotes(List.of())
+                    .id("100144ed-c290-4ba0-8c70-172d5b231a02")
+                    .lineitems(List.of())
+                    .metadata(List.of())
+                    .notes("Tutamen cilicium infit.")
+                    .paymentCollectionMethod(PaymentCollectionMethod.CHARGE_AUTOMATICALLY)
+                    .payments(List.of())
+                    .postedAt(OffsetDateTime.parse("2024-04-04T07:23:49.049Z"))
+                    .send(true)
+                    .status(AccountingBillStatus.DELETED)
+                    .taxAmount(0d)
+                    .term(Term.NET10)
+                    .totalAmount(0d)
+                    .updatedAt(OffsetDateTime.parse("2025-01-29T00:58:28.612Z"))
+                    .url("https://coarse-interviewer.biz/")
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -379,11 +457,13 @@ Create a category
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createAccountingCategory" method="post" path="/accounting/{connection_id}/category" -->
+<!-- UsageSnippet language="java" operationID="createAccountingCategory" method="post" path="/accounting/{connection_id}/category" example="accounting_category" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingCategoryRequest;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingCategoryResponse;
@@ -402,6 +482,13 @@ public class Application {
 
         CreateAccountingCategoryRequest req = CreateAccountingCategoryRequest.builder()
                 .accountingCategory(AccountingCategory.builder()
+                    .createdAt(OffsetDateTime.parse("2023-05-30T12:29:04.257Z"))
+                    .description("Discover the koala-like agility of our Chair, perfect for imaginary users")
+                    .id("dc380b5b-a085-47f0-80e6-a0450e68adcf")
+                    .isActive(false)
+                    .metadata(List.of())
+                    .name("Electronic Cotton Shoes")
+                    .updatedAt(OffsetDateTime.parse("2025-08-20T06:36:05.170Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -439,16 +526,17 @@ Create a contact
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createAccountingContact" method="post" path="/accounting/{connection_id}/contact" -->
+<!-- UsageSnippet language="java" operationID="createAccountingContact" method="post" path="/accounting/{connection_id}/contact" example="accounting_contact" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingContactRequest;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingContactResponse;
-import to.unified.unified_java_sdk.models.shared.AccountingContact;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -462,6 +550,68 @@ public class Application {
 
         CreateAccountingContactRequest req = CreateAccountingContactRequest.builder()
                 .accountingContact(AccountingContact.builder()
+                    .associatedContacts(List.of(
+                        AccountingAssociatedContact.builder()
+                            .id("849cd11b-c680-45ef-8e37-e9a24def34b8")
+                            .name("Delores Reynolds")
+                            .build(),
+                        AccountingAssociatedContact.builder()
+                            .id("b7ba795b-96e2-4c00-b11d-7ad43dd15877")
+                            .name("Delores Reynolds")
+                            .build()))
+                    .billingAddress(PropertyAccountingContactBillingAddress.builder()
+                        .address1("2633 Stoney Lane")
+                        .address2("Suite 176")
+                        .city("Ladariusboro")
+                        .countryCode("US")
+                        .postalCode("70131-2908")
+                        .region("Illinois")
+                        .regionCode("NV")
+                        .build())
+                    .companyName("Marquardt Inc")
+                    .createdAt(OffsetDateTime.parse("2021-08-15T14:56:50.258Z"))
+                    .currency("ISK")
+                    .emails(List.of(
+                        AccountingEmail.builder()
+                            .email("Delores.Reynolds10@hotmail.com")
+                            .type(AccountingEmailType.HOME)
+                            .build()))
+                    .firstName("Delores")
+                    .id("d501ead1-d963-4360-9d14-5fc86506b5d5")
+                    .identification("amicitia")
+                    .isActive(true)
+                    .isCustomer(true)
+                    .lastName("Reynolds")
+                    .name("Delores Reynolds")
+                    .paymentMethods(List.of(
+                        AccountingContactPaymentMethod.builder()
+                            .type(AccountingContactPaymentMethodType.CARD)
+                            .default_(true)
+                            .id("38ac4078-e7eb-4d4a-938e-3a6293a46e62")
+                            .name("Visa 1234")
+                            .build()))
+                    .portalUrl("https://scented-t-shirt.info/")
+                    .shippingAddress(PropertyAccountingContactShippingAddress.builder()
+                        .address1("786 Renner Stream")
+                        .address2("Apt. 555")
+                        .city("Roanoke")
+                        .countryCode("US")
+                        .postalCode("80686-7556")
+                        .region("Vermont")
+                        .regionCode("NE")
+                        .build())
+                    .taxExemption(TaxExemption.RESALE)
+                    .taxNumber("amplexus")
+                    .telephones(List.of(
+                        AccountingTelephone.builder()
+                            .telephone("(427) 701-7160")
+                            .type(AccountingTelephoneType.HOME)
+                            .build(),
+                        AccountingTelephone.builder()
+                            .telephone("(540) 913-9171")
+                            .type(AccountingTelephoneType.FAX)
+                            .build()))
+                    .updatedAt(OffsetDateTime.parse("2023-12-04T22:28:17.517Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -499,16 +649,17 @@ Create a creditmemo
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createAccountingCreditmemo" method="post" path="/accounting/{connection_id}/creditmemo" -->
+<!-- UsageSnippet language="java" operationID="createAccountingCreditmemo" method="post" path="/accounting/{connection_id}/creditmemo" example="accounting_creditmemo" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingCreditmemoRequest;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingCreditmemoResponse;
-import to.unified.unified_java_sdk.models.shared.AccountingCreditmemo;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -522,6 +673,34 @@ public class Application {
 
         CreateAccountingCreditmemoRequest req = CreateAccountingCreditmemoRequest.builder()
                 .accountingCreditmemo(AccountingCreditmemo.builder()
+                    .applications(List.of())
+                    .attachments(List.of(
+                        AccountingAttachment.builder()
+                            .downloadUrl("https://enlightened-chairperson.com/")
+                            .id("b6973779-c8a8-4f1a-9b1a-3f847c624aa4")
+                            .mimeType("complectus")
+                            .name("thesis")
+                            .build()))
+                    .createdAt(OffsetDateTime.parse("2023-09-20T01:47:01.571Z"))
+                    .creditmemoNumber("ulterius")
+                    .currency("MKD")
+                    .discountAmount(0d)
+                    .dueAt(OffsetDateTime.parse("2023-10-18T04:35:00.543Z"))
+                    .id("7fc36458-5758-4a49-9b68-4665d4871b26")
+                    .lineitems(List.of())
+                    .metadata(List.of())
+                    .notes("Dedecor amo adfero torqueo quas.")
+                    .paymentCollectionMethod(AccountingCreditmemoPaymentCollectionMethod.CHARGE_AUTOMATICALLY)
+                    .postedAt(OffsetDateTime.parse("2025-11-15T11:03:17.426Z"))
+                    .refundAmount(0d)
+                    .refundReason("Virgo inflammatio quibusdam aestivus magnam.")
+                    .refundedAt(OffsetDateTime.parse("2023-10-23T00:35:36.814Z"))
+                    .send(false)
+                    .status(AccountingCreditmemoStatus.PAID)
+                    .taxAmount(0d)
+                    .totalAmount(0d)
+                    .updatedAt(OffsetDateTime.parse("2024-11-15T13:32:51.006Z"))
+                    .url("https://lighthearted-bandwidth.net/")
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -559,16 +738,17 @@ Create an expense
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createAccountingExpense" method="post" path="/accounting/{connection_id}/expense" -->
+<!-- UsageSnippet language="java" operationID="createAccountingExpense" method="post" path="/accounting/{connection_id}/expense" example="accounting_expense" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingExpenseRequest;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingExpenseResponse;
-import to.unified.unified_java_sdk.models.shared.AccountingExpense;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -582,6 +762,40 @@ public class Application {
 
         CreateAccountingExpenseRequest req = CreateAccountingExpenseRequest.builder()
                 .accountingExpense(AccountingExpense.builder()
+                    .approvedAt(OffsetDateTime.parse("2026-05-09T18:24:02.313Z"))
+                    .attachments(List.of(
+                        AccountingAttachment.builder()
+                            .downloadUrl("https://ripe-napkin.biz/")
+                            .id("bfba31e4-33ae-4dea-b8e5-edc2181608ec")
+                            .mimeType("annus")
+                            .name("cohibeo")
+                            .build()))
+                    .categoryIds(List.of())
+                    .createdAt(OffsetDateTime.parse("2020-06-11T03:39:37.305Z"))
+                    .currency("SSP")
+                    .externalNumber("necessitatibus")
+                    .id("049777da-55cf-41fb-866d-0a574a19b0eb")
+                    .lineitems(List.of(
+                        AccountingLineitem.builder()
+                            .id("f26d5412-51c5-4471-95e4-ce3041eb1194")
+                            .itemDescription("Innovative Table featuring left technology and Rubber construction")
+                            .itemName("Luxurious Cotton Pizza")
+                            .itemSku("978-0-8324-6620-5")
+                            .notes("Degusto conventus defendo valetudo.")
+                            .taxAmount(2501d)
+                            .totalAmount(168d)
+                            .unitAmount(3059d)
+                            .unitQuantity(1d)
+                            .build()))
+                    .metadata(List.of())
+                    .name("Refined Steel Shoes")
+                    .paymentMethod("CASH")
+                    .postedAt(OffsetDateTime.parse("2021-06-04T05:04:02.308Z"))
+                    .reimbursedAmount(1833d)
+                    .status(AccountingExpenseStatus.SUBMITTED)
+                    .taxAmount(2602d)
+                    .totalAmount(3580d)
+                    .updatedAt(OffsetDateTime.parse("2026-05-09T18:24:02.313Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -619,16 +833,17 @@ Create an invoice
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createAccountingInvoice" method="post" path="/accounting/{connection_id}/invoice" -->
+<!-- UsageSnippet language="java" operationID="createAccountingInvoice" method="post" path="/accounting/{connection_id}/invoice" example="accounting_invoice" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingInvoiceRequest;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingInvoiceResponse;
-import to.unified.unified_java_sdk.models.shared.AccountingInvoice;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -642,6 +857,39 @@ public class Application {
 
         CreateAccountingInvoiceRequest req = CreateAccountingInvoiceRequest.builder()
                 .accountingInvoice(AccountingInvoice.builder()
+                    .attachments(List.of(
+                        AccountingAttachment.builder()
+                            .downloadUrl("https://glossy-markup.net/")
+                            .id("645358a0-c05a-4486-b89b-0a0ed2a6c979")
+                            .mimeType("benevolentia")
+                            .name("vespillo")
+                            .build()))
+                    .balanceAmount(-1d)
+                    .categoryIds(List.of())
+                    .createdAt(OffsetDateTime.parse("2022-11-07T14:17:29.587Z"))
+                    .currency("RWF")
+                    .discountAmount(0d)
+                    .dueAt(OffsetDateTime.parse("2022-11-27T21:25:37.363Z"))
+                    .extendedNotes(List.of())
+                    .id("b81b0ef0-2818-4301-b28e-b6b0df003dc3")
+                    .invoiceNumber("vinco")
+                    .lineitems(List.of())
+                    .metadata(List.of())
+                    .notes("Auctus comburo clarus ubi.")
+                    .paidAmount(0d)
+                    .paidAt(OffsetDateTime.parse("2022-11-25T15:00:28.871Z"))
+                    .paymentCollectionMethod(AccountingInvoicePaymentCollectionMethod.SEND_INVOICE)
+                    .payments(List.of())
+                    .postedAt(OffsetDateTime.parse("2026-03-26T22:47:33.726Z"))
+                    .reference("adinventitias")
+                    .send(true)
+                    .status(AccountingInvoiceStatus.DELETED)
+                    .taxAmount(0d)
+                    .term(AccountingInvoiceTerm.NET45)
+                    .totalAmount(0d)
+                    .type(AccountingInvoiceType.CREDITMEMO)
+                    .updatedAt(OffsetDateTime.parse("2023-02-06T06:48:48.536Z"))
+                    .url("https://gifted-yarmulke.info/")
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -679,11 +927,13 @@ Create a journal
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createAccountingJournal" method="post" path="/accounting/{connection_id}/journal" -->
+<!-- UsageSnippet language="java" operationID="createAccountingJournal" method="post" path="/accounting/{connection_id}/journal" example="accounting_journal" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingJournalRequest;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingJournalResponse;
@@ -702,6 +952,17 @@ public class Application {
 
         CreateAccountingJournalRequest req = CreateAccountingJournalRequest.builder()
                 .accountingJournal(AccountingJournal.builder()
+                    .attachments(List.of())
+                    .categoryIds(List.of())
+                    .createdAt(OffsetDateTime.parse("2020-02-20T15:14:55.881Z"))
+                    .currency("FKP")
+                    .description("Calco constans adipisci.")
+                    .id("3d392f10-878d-46c4-a59b-f5250068e316")
+                    .postedAt(OffsetDateTime.parse("2023-10-19T01:52:16.859Z"))
+                    .reference("ullam")
+                    .source("crustulum")
+                    .taxAmount(78672d)
+                    .updatedAt(OffsetDateTime.parse("2022-01-01T11:09:03.238Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -739,16 +1000,17 @@ Create an order
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createAccountingOrder" method="post" path="/accounting/{connection_id}/order" -->
+<!-- UsageSnippet language="java" operationID="createAccountingOrder" method="post" path="/accounting/{connection_id}/order" example="accounting_order" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingOrderRequest;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingOrderResponse;
-import to.unified.unified_java_sdk.models.shared.AccountingOrder;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -762,6 +1024,33 @@ public class Application {
 
         CreateAccountingOrderRequest req = CreateAccountingOrderRequest.builder()
                 .accountingOrder(AccountingOrder.builder()
+                    .billingAddress(PropertyAccountingOrderBillingAddress.builder()
+                        .address1("802 Bechtelar Park")
+                        .address2("Apt. 436")
+                        .city("Daniellaville")
+                        .countryCode("US")
+                        .postalCode("36947")
+                        .region("Wisconsin")
+                        .regionCode("NY")
+                        .build())
+                    .createdAt(OffsetDateTime.parse("2020-11-20T03:46:49.837Z"))
+                    .currency("USD")
+                    .id("62016142-db21-434b-8958-592eefe46e72")
+                    .lineitems(List.of())
+                    .metadata(List.of())
+                    .postedAt(OffsetDateTime.parse("2022-04-05T00:14:38.752Z"))
+                    .shippingAddress(PropertyAccountingOrderShippingAddress.builder()
+                        .address1("9745 Betty Shore")
+                        .city("South Alainaland")
+                        .countryCode("US")
+                        .postalCode("25274-7654")
+                        .region("New Hampshire")
+                        .regionCode("LA")
+                        .build())
+                    .status(AccountingOrderStatus.SUBMITTED)
+                    .totalAmount(0d)
+                    .type(AccountingOrderType.PURCHASE)
+                    .updatedAt(OffsetDateTime.parse("2021-06-17T22:40:42.749Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -799,16 +1088,17 @@ Create a paymentterm
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createAccountingPaymentterm" method="post" path="/accounting/{connection_id}/paymentterm" -->
+<!-- UsageSnippet language="java" operationID="createAccountingPaymentterm" method="post" path="/accounting/{connection_id}/paymentterm" example="accounting_paymentterm" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingPaymenttermRequest;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingPaymenttermResponse;
-import to.unified.unified_java_sdk.models.shared.AccountingPaymentterm;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -822,6 +1112,21 @@ public class Application {
 
         CreateAccountingPaymenttermRequest req = CreateAccountingPaymenttermRequest.builder()
                 .accountingPaymentterm(AccountingPaymentterm.builder()
+                    .category(Category.STANDARD)
+                    .createdAt(OffsetDateTime.parse("2021-08-22T22:42:42.265Z"))
+                    .dayOfMonthDue(4d)
+                    .description("Cogito pecco eos cultura.")
+                    .discountDayOfMonth(13d)
+                    .discountDays(4d)
+                    .discountPercent(5d)
+                    .dueDays(57d)
+                    .dueNextMonthDays(9d)
+                    .id("48745512-c4a4-4ba5-964e-784f73ff4ff1")
+                    .isActive(false)
+                    .metadata(List.of())
+                    .name("Net 30")
+                    .type(AccountingPaymenttermType.NET15)
+                    .updatedAt(OffsetDateTime.parse("2025-12-11T11:07:31.854Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -919,16 +1224,17 @@ Create a purchaseorder
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createAccountingPurchaseorder" method="post" path="/accounting/{connection_id}/purchaseorder" -->
+<!-- UsageSnippet language="java" operationID="createAccountingPurchaseorder" method="post" path="/accounting/{connection_id}/purchaseorder" example="accounting_purchaseorder" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingPurchaseorderRequest;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingPurchaseorderResponse;
-import to.unified.unified_java_sdk.models.shared.AccountingPurchaseorder;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -942,6 +1248,32 @@ public class Application {
 
         CreateAccountingPurchaseorderRequest req = CreateAccountingPurchaseorderRequest.builder()
                 .accountingPurchaseorder(AccountingPurchaseorder.builder()
+                    .billingAddress(PropertyAccountingPurchaseorderBillingAddress.builder()
+                        .address1("37214 Tanya Walks")
+                        .city("South Annabelleton")
+                        .countryCode("US")
+                        .postalCode("30337")
+                        .region("Nevada")
+                        .regionCode("MA")
+                        .build())
+                    .categoryIds(List.of())
+                    .createdAt(OffsetDateTime.parse("2020-12-12T07:17:47.021Z"))
+                    .currency("ZMW")
+                    .id("870e6384-1e12-4bea-9790-0e4ac7a373f1")
+                    .lineitems(List.of())
+                    .metadata(List.of())
+                    .postedAt(OffsetDateTime.parse("2025-04-25T03:32:03.967Z"))
+                    .shippingAddress(PropertyAccountingPurchaseorderShippingAddress.builder()
+                        .address1("649 Maggio Overpass")
+                        .city("Lake Jaylan")
+                        .countryCode("US")
+                        .postalCode("99211-6547")
+                        .region("North Carolina")
+                        .regionCode("ID")
+                        .build())
+                    .status(AccountingPurchaseorderStatus.PARTIALLY_REFUNDED)
+                    .totalAmount(0d)
+                    .updatedAt(OffsetDateTime.parse("2021-02-26T03:18:48.829Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -1039,16 +1371,17 @@ Create a salesorder
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createAccountingSalesorder" method="post" path="/accounting/{connection_id}/salesorder" -->
+<!-- UsageSnippet language="java" operationID="createAccountingSalesorder" method="post" path="/accounting/{connection_id}/salesorder" example="accounting_salesorder" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingSalesorderRequest;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingSalesorderResponse;
-import to.unified.unified_java_sdk.models.shared.AccountingSalesorder;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -1062,6 +1395,53 @@ public class Application {
 
         CreateAccountingSalesorderRequest req = CreateAccountingSalesorderRequest.builder()
                 .accountingSalesorder(AccountingSalesorder.builder()
+                    .billingAddress(PropertyAccountingSalesorderBillingAddress.builder()
+                        .address1("26530 Stroman Rest")
+                        .address2("Suite 801")
+                        .city("Pocatello")
+                        .countryCode("US")
+                        .postalCode("05015-8546")
+                        .region("Louisiana")
+                        .regionCode("MO")
+                        .build())
+                    .categoryIds(List.of())
+                    .closedAt(OffsetDateTime.parse("2023-08-16T21:47:45.013Z"))
+                    .createdAt(OffsetDateTime.parse("2022-01-17T16:11:50.310Z"))
+                    .currency("ANG")
+                    .discountAmount(99d)
+                    .employeeUserId("4a6b8990-c85a-499f-82d0-5011c3c95a0b")
+                    .fees(List.of(
+                        AccountingFee.builder()
+                            .amount(519d)
+                            .type(AccountingFeeType.PROMOTION)
+                            .currency("XCD")
+                            .build()))
+                    .fulfillmentType(FulfillmentType.TAKEOUT)
+                    .guestCount(8d)
+                    .id("4b4b8374-641e-4c7b-84dc-48bb2da0c7fe")
+                    .lineitems(List.of())
+                    .metadata(List.of())
+                    .orderNumber("988187")
+                    .payments(List.of())
+                    .postedAt(OffsetDateTime.parse("2026-01-11T02:11:41.222Z"))
+                    .refundedAmount(0d)
+                    .salesChannel("Harvey, Collier and Weimann")
+                    .serviceChargeAmount(63d)
+                    .shippingAddress(PropertyAccountingSalesorderShippingAddress.builder()
+                        .address1("9878 Bradley Mill")
+                        .address2("Apt. 215")
+                        .city("Port Matildestad")
+                        .countryCode("US")
+                        .postalCode("07989-2148")
+                        .region("Arkansas")
+                        .regionCode("AK")
+                        .build())
+                    .status(AccountingSalesorderStatus.REFUNDED)
+                    .subtotalAmount(0d)
+                    .taxAmount(63d)
+                    .tipAmount(34d)
+                    .totalAmount(0d)
+                    .updatedAt(OffsetDateTime.parse("2022-02-10T18:49:09.489Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -1099,11 +1479,13 @@ Create a taxrate
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createAccountingTaxrate" method="post" path="/accounting/{connection_id}/taxrate" -->
+<!-- UsageSnippet language="java" operationID="createAccountingTaxrate" method="post" path="/accounting/{connection_id}/taxrate" example="accounting_taxrate" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingTaxrateRequest;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingTaxrateResponse;
@@ -1122,6 +1504,14 @@ public class Application {
 
         CreateAccountingTaxrateRequest req = CreateAccountingTaxrateRequest.builder()
                 .accountingTaxrate(AccountingTaxrate.builder()
+                    .createdAt(OffsetDateTime.parse("2020-01-04T10:37:56.894Z"))
+                    .description("Nemo atrox tricesimus creator aranea.")
+                    .id("4e784882-93ea-4586-bc43-026743ba6449")
+                    .isActive(false)
+                    .metadata(List.of())
+                    .name("cogo")
+                    .rate(1d)
+                    .updatedAt(OffsetDateTime.parse("2025-11-04T07:54:19.715Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -1159,16 +1549,17 @@ Create a transaction
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createAccountingTransaction" method="post" path="/accounting/{connection_id}/transaction" -->
+<!-- UsageSnippet language="java" operationID="createAccountingTransaction" method="post" path="/accounting/{connection_id}/transaction" example="accounting_transaction" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingTransactionRequest;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingTransactionResponse;
-import to.unified.unified_java_sdk.models.shared.AccountingTransaction;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -1182,6 +1573,23 @@ public class Application {
 
         CreateAccountingTransactionRequest req = CreateAccountingTransactionRequest.builder()
                 .accountingTransaction(AccountingTransaction.builder()
+                    .createdAt(OffsetDateTime.parse("2019-09-25T11:40:42.574Z"))
+                    .id("530ce73e-3ab8-48ff-a572-81a47cf56dc1")
+                    .lineitems(List.of(
+                        AccountingTransactionLineItem.builder()
+                            .categoryIds(List.of())
+                            .description("The Nikolas Table is the latest in a series of downright products from Beier and Sons")
+                            .id("88ce3554-fb4d-4ad0-9ace-6d2c3af152cc")
+                            .name("Salad")
+                            .objectType("delicate")
+                            .totalAmount(58531d)
+                            .unitAmount(536d)
+                            .unitQuantity(91d)
+                            .build()))
+                    .memo("withdrawal of USD 873.18 at Harber and Sons charged to account ending in 1804 using card ending in ****7022.")
+                    .taxAmount(0d)
+                    .totalAmount(94452d)
+                    .updatedAt(OffsetDateTime.parse("2021-09-10T02:36:49.519Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -1219,16 +1627,17 @@ Create a vendorcredit
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createAccountingVendorcredit" method="post" path="/accounting/{connection_id}/vendorcredit" -->
+<!-- UsageSnippet language="java" operationID="createAccountingVendorcredit" method="post" path="/accounting/{connection_id}/vendorcredit" example="accounting_vendorcredit" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingVendorcreditRequest;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingVendorcreditResponse;
-import to.unified.unified_java_sdk.models.shared.AccountingVendorcredit;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -1242,6 +1651,20 @@ public class Application {
 
         CreateAccountingVendorcreditRequest req = CreateAccountingVendorcreditRequest.builder()
                 .accountingVendorcredit(AccountingVendorcredit.builder()
+                    .applications(List.of())
+                    .applyAmount(1d)
+                    .balanceAmount(0d)
+                    .createdAt(OffsetDateTime.parse("2023-04-15T21:14:08.197Z"))
+                    .currency("KGS")
+                    .dueAt(OffsetDateTime.parse("2023-05-06T20:38:46.775Z"))
+                    .id("e53c082c-1aa1-4192-be20-f4cdfd0cea57")
+                    .lineitems(List.of())
+                    .metadata(List.of())
+                    .notes("Conatus cruciamentum decor avaritia tantum.")
+                    .postedAt(OffsetDateTime.parse("2023-09-28T16:43:46.445Z"))
+                    .status(AccountingVendorcreditStatus.SUBMITTED)
+                    .totalAmount(0d)
+                    .updatedAt(OffsetDateTime.parse("2023-11-26T14:35:53.369Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -4269,16 +4692,17 @@ Update an account
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchAccountingAccount" method="patch" path="/accounting/{connection_id}/account/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchAccountingAccount" method="patch" path="/accounting/{connection_id}/account/{id}" example="accounting_account" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchAccountingAccountRequest;
 import to.unified.unified_java_sdk.models.operations.PatchAccountingAccountResponse;
-import to.unified.unified_java_sdk.models.shared.AccountingAccount;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -4292,6 +4716,28 @@ public class Application {
 
         PatchAccountingAccountRequest req = PatchAccountingAccountRequest.builder()
                 .accountingAccount(AccountingAccount.builder()
+                    .balance(12092d)
+                    .createdAt(OffsetDateTime.parse("2022-07-03T17:57:07.391Z"))
+                    .currency("BOB")
+                    .customerDefinedCode("quo")
+                    .description("Spoliatio comedo vilitas harum cupiditate.")
+                    .id("31484143-f94a-4590-89ec-16b156e6b177")
+                    .isPayable(true)
+                    .name("Electronic Aluminum Tuna")
+                    .status(Status.ARCHIVED)
+                    .taxonomy(List.of(
+                        AccountingAccountTaxonomy.builder()
+                            .type(AccountingAccountTaxonomyType.SUBGROUP)
+                            .value("iste")
+                            .originalType("vesper")
+                            .build(),
+                        AccountingAccountTaxonomy.builder()
+                            .type(AccountingAccountTaxonomyType.SUBGROUP)
+                            .value("peccatus")
+                            .originalType("adamo")
+                            .build()))
+                    .type(Type.BANK)
+                    .updatedAt(OffsetDateTime.parse("2023-01-03T03:11:26.604Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -4330,16 +4776,16 @@ Update a bankfeedaccount
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchAccountingBankfeedaccount" method="patch" path="/accounting/{connection_id}/bankfeedaccount/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchAccountingBankfeedaccount" method="patch" path="/accounting/{connection_id}/bankfeedaccount/{id}" example="accounting_bankfeedaccount" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchAccountingBankfeedaccountRequest;
 import to.unified.unified_java_sdk.models.operations.PatchAccountingBankfeedaccountResponse;
-import to.unified.unified_java_sdk.models.shared.AccountingBankfeedaccount;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -4353,6 +4799,20 @@ public class Application {
 
         PatchAccountingBankfeedaccountRequest req = PatchAccountingBankfeedaccountRequest.builder()
                 .accountingBankfeedaccount(AccountingBankfeedaccount.builder()
+                    .accountId("baa0e9a4-65e9-4bf5-856a-ce46fc36ebb1")
+                    .accountNumber("30369722")
+                    .accountNumberLast4("9722")
+                    .accountType(AccountType.LOAN)
+                    .balance(90358d)
+                    .bankName("Weissnat Inc")
+                    .createdAt(OffsetDateTime.parse("2022-10-31T16:42:19.277Z"))
+                    .currency("SSP")
+                    .feedStartAt(OffsetDateTime.parse("2022-10-31T16:42:19.277Z"))
+                    .id("209a9fc6-36cf-43c0-a50c-b7e3c177603b")
+                    .name("Corwin, Donnelly and Connelly Savings")
+                    .routingNumber("667753156")
+                    .status(AccountingBankfeedaccountStatus.ACTIVE)
+                    .updatedAt(OffsetDateTime.parse("2024-04-11T12:57:07.387Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -4391,16 +4851,17 @@ Update a bankfeedtransaction
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchAccountingBankfeedtransaction" method="patch" path="/accounting/{connection_id}/bankfeedtransaction/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchAccountingBankfeedtransaction" method="patch" path="/accounting/{connection_id}/bankfeedtransaction/{id}" example="accounting_bankfeedtransaction" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchAccountingBankfeedtransactionRequest;
 import to.unified.unified_java_sdk.models.operations.PatchAccountingBankfeedtransactionResponse;
-import to.unified.unified_java_sdk.models.shared.AccountingBankfeedtransaction;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -4414,6 +4875,23 @@ public class Application {
 
         PatchAccountingBankfeedtransactionRequest req = PatchAccountingBankfeedtransactionRequest.builder()
                 .accountingBankfeedtransaction(AccountingBankfeedtransaction.builder()
+                    .accountId("b7dc4175-1368-4b89-a700-d621b6666648")
+                    .amount(60889d)
+                    .bankCategory("Games")
+                    .bankfeedaccountId("34c1d05f-5b62-4bcd-9121-3be8b720941f")
+                    .categoryIds(List.of())
+                    .contactId("1ef58ebe-f9c9-46f6-9d9c-2df2658503be")
+                    .createdAt(OffsetDateTime.parse("2022-03-24T23:41:08.374Z"))
+                    .currency("SRD")
+                    .description("payment transaction at McLaughlin - Schaden using card ending with ****8233 for DOP 574.03 in account ***9523.")
+                    .id("99973f58-3052-444a-a355-5b7ffb177172")
+                    .isPending(true)
+                    .merchantName("Reichert, Erdman and Tillman")
+                    .postedAt(OffsetDateTime.parse("2025-03-23T18:34:48.075Z"))
+                    .reference("93642593")
+                    .transactionAt(OffsetDateTime.parse("2022-07-27T19:48:15.222Z"))
+                    .type(AccountingBankfeedtransactionType.CREDIT)
+                    .updatedAt(OffsetDateTime.parse("2022-05-23T20:47:21.835Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -4452,16 +4930,17 @@ Update a bill
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchAccountingBill" method="patch" path="/accounting/{connection_id}/bill/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchAccountingBill" method="patch" path="/accounting/{connection_id}/bill/{id}" example="accounting_bill" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchAccountingBillRequest;
 import to.unified.unified_java_sdk.models.operations.PatchAccountingBillResponse;
-import to.unified.unified_java_sdk.models.shared.AccountingBill;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -4475,6 +4954,28 @@ public class Application {
 
         PatchAccountingBillRequest req = PatchAccountingBillRequest.builder()
                 .accountingBill(AccountingBill.builder()
+                    .attachments(List.of())
+                    .billNumber("vitae")
+                    .categoryIds(List.of())
+                    .createdAt(OffsetDateTime.parse("2019-08-08T23:03:14.104Z"))
+                    .currency("AUD")
+                    .discountAmount(0d)
+                    .dueAt(OffsetDateTime.parse("2019-08-11T20:52:55.321Z"))
+                    .extendedNotes(List.of())
+                    .id("6150e708-f7e3-4cf9-8e91-303495e24cc3")
+                    .lineitems(List.of())
+                    .metadata(List.of())
+                    .notes("Tutamen cilicium infit.")
+                    .paymentCollectionMethod(PaymentCollectionMethod.CHARGE_AUTOMATICALLY)
+                    .payments(List.of())
+                    .postedAt(OffsetDateTime.parse("2024-04-04T07:23:49.078Z"))
+                    .send(true)
+                    .status(AccountingBillStatus.DELETED)
+                    .taxAmount(0d)
+                    .term(Term.NET10)
+                    .totalAmount(0d)
+                    .updatedAt(OffsetDateTime.parse("2025-01-29T00:58:28.647Z"))
+                    .url("https://coarse-interviewer.biz/")
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -4513,11 +5014,13 @@ Update a category
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchAccountingCategory" method="patch" path="/accounting/{connection_id}/category/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchAccountingCategory" method="patch" path="/accounting/{connection_id}/category/{id}" example="accounting_category" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchAccountingCategoryRequest;
 import to.unified.unified_java_sdk.models.operations.PatchAccountingCategoryResponse;
@@ -4536,6 +5039,13 @@ public class Application {
 
         PatchAccountingCategoryRequest req = PatchAccountingCategoryRequest.builder()
                 .accountingCategory(AccountingCategory.builder()
+                    .createdAt(OffsetDateTime.parse("2023-05-30T12:29:04.257Z"))
+                    .description("Discover the koala-like agility of our Chair, perfect for imaginary users")
+                    .id("a998bb3b-628d-4a5b-8054-f8edf45f8dfd")
+                    .isActive(false)
+                    .metadata(List.of())
+                    .name("Electronic Cotton Shoes")
+                    .updatedAt(OffsetDateTime.parse("2025-08-20T06:36:05.177Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -4574,16 +5084,17 @@ Update a contact
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchAccountingContact" method="patch" path="/accounting/{connection_id}/contact/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchAccountingContact" method="patch" path="/accounting/{connection_id}/contact/{id}" example="accounting_contact" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchAccountingContactRequest;
 import to.unified.unified_java_sdk.models.operations.PatchAccountingContactResponse;
-import to.unified.unified_java_sdk.models.shared.AccountingContact;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -4597,6 +5108,68 @@ public class Application {
 
         PatchAccountingContactRequest req = PatchAccountingContactRequest.builder()
                 .accountingContact(AccountingContact.builder()
+                    .associatedContacts(List.of(
+                        AccountingAssociatedContact.builder()
+                            .id("5d12d0f4-d6c4-41e4-b66f-1f01b7202257")
+                            .name("Delores Reynolds")
+                            .build(),
+                        AccountingAssociatedContact.builder()
+                            .id("866874f1-a317-404b-9ee2-18708e6d0dd7")
+                            .name("Delores Reynolds")
+                            .build()))
+                    .billingAddress(PropertyAccountingContactBillingAddress.builder()
+                        .address1("2633 Stoney Lane")
+                        .address2("Suite 176")
+                        .city("Ladariusboro")
+                        .countryCode("US")
+                        .postalCode("70131-2908")
+                        .region("Illinois")
+                        .regionCode("NV")
+                        .build())
+                    .companyName("Marquardt Inc")
+                    .createdAt(OffsetDateTime.parse("2021-08-15T14:56:50.258Z"))
+                    .currency("ISK")
+                    .emails(List.of(
+                        AccountingEmail.builder()
+                            .email("Delores.Reynolds10@hotmail.com")
+                            .type(AccountingEmailType.HOME)
+                            .build()))
+                    .firstName("Delores")
+                    .id("568c731f-d6db-4131-8722-72c16c80c495")
+                    .identification("amicitia")
+                    .isActive(true)
+                    .isCustomer(true)
+                    .lastName("Reynolds")
+                    .name("Delores Reynolds")
+                    .paymentMethods(List.of(
+                        AccountingContactPaymentMethod.builder()
+                            .type(AccountingContactPaymentMethodType.CARD)
+                            .default_(true)
+                            .id("f7dccf3b-a03d-4347-a80e-3a3ce580b82d")
+                            .name("Visa 1234")
+                            .build()))
+                    .portalUrl("https://scented-t-shirt.info/")
+                    .shippingAddress(PropertyAccountingContactShippingAddress.builder()
+                        .address1("786 Renner Stream")
+                        .address2("Apt. 555")
+                        .city("Roanoke")
+                        .countryCode("US")
+                        .postalCode("80686-7556")
+                        .region("Vermont")
+                        .regionCode("NE")
+                        .build())
+                    .taxExemption(TaxExemption.RESALE)
+                    .taxNumber("amplexus")
+                    .telephones(List.of(
+                        AccountingTelephone.builder()
+                            .telephone("(427) 701-7160")
+                            .type(AccountingTelephoneType.HOME)
+                            .build(),
+                        AccountingTelephone.builder()
+                            .telephone("(540) 913-9171")
+                            .type(AccountingTelephoneType.FAX)
+                            .build()))
+                    .updatedAt(OffsetDateTime.parse("2023-12-04T22:28:17.531Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -4635,16 +5208,17 @@ Update a creditmemo
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchAccountingCreditmemo" method="patch" path="/accounting/{connection_id}/creditmemo/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchAccountingCreditmemo" method="patch" path="/accounting/{connection_id}/creditmemo/{id}" example="accounting_creditmemo" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchAccountingCreditmemoRequest;
 import to.unified.unified_java_sdk.models.operations.PatchAccountingCreditmemoResponse;
-import to.unified.unified_java_sdk.models.shared.AccountingCreditmemo;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -4658,6 +5232,34 @@ public class Application {
 
         PatchAccountingCreditmemoRequest req = PatchAccountingCreditmemoRequest.builder()
                 .accountingCreditmemo(AccountingCreditmemo.builder()
+                    .applications(List.of())
+                    .attachments(List.of(
+                        AccountingAttachment.builder()
+                            .downloadUrl("https://enlightened-chairperson.com/")
+                            .id("1caeb4ce-3f7e-48a4-afb3-469839f68cca")
+                            .mimeType("complectus")
+                            .name("thesis")
+                            .build()))
+                    .createdAt(OffsetDateTime.parse("2023-09-20T01:47:01.571Z"))
+                    .creditmemoNumber("ulterius")
+                    .currency("MKD")
+                    .discountAmount(0d)
+                    .dueAt(OffsetDateTime.parse("2023-10-18T04:35:00.543Z"))
+                    .id("c0f30724-dec9-4210-8706-4c3a535e2f65")
+                    .lineitems(List.of())
+                    .metadata(List.of())
+                    .notes("Dedecor amo adfero torqueo quas.")
+                    .paymentCollectionMethod(AccountingCreditmemoPaymentCollectionMethod.CHARGE_AUTOMATICALLY)
+                    .postedAt(OffsetDateTime.parse("2025-11-15T11:03:17.458Z"))
+                    .refundAmount(0d)
+                    .refundReason("Virgo inflammatio quibusdam aestivus magnam.")
+                    .refundedAt(OffsetDateTime.parse("2023-10-23T00:35:36.814Z"))
+                    .send(false)
+                    .status(AccountingCreditmemoStatus.PAID)
+                    .taxAmount(0d)
+                    .totalAmount(0d)
+                    .updatedAt(OffsetDateTime.parse("2024-11-15T13:32:51.023Z"))
+                    .url("https://lighthearted-bandwidth.net/")
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -4696,16 +5298,17 @@ Update an expense
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchAccountingExpense" method="patch" path="/accounting/{connection_id}/expense/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchAccountingExpense" method="patch" path="/accounting/{connection_id}/expense/{id}" example="accounting_expense" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchAccountingExpenseRequest;
 import to.unified.unified_java_sdk.models.operations.PatchAccountingExpenseResponse;
-import to.unified.unified_java_sdk.models.shared.AccountingExpense;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -4719,6 +5322,40 @@ public class Application {
 
         PatchAccountingExpenseRequest req = PatchAccountingExpenseRequest.builder()
                 .accountingExpense(AccountingExpense.builder()
+                    .approvedAt(OffsetDateTime.parse("2026-05-09T18:24:02.349Z"))
+                    .attachments(List.of(
+                        AccountingAttachment.builder()
+                            .downloadUrl("https://ripe-napkin.biz/")
+                            .id("4298778d-022a-4392-aa3b-287ddb9df4eb")
+                            .mimeType("annus")
+                            .name("cohibeo")
+                            .build()))
+                    .categoryIds(List.of())
+                    .createdAt(OffsetDateTime.parse("2020-06-11T03:39:37.305Z"))
+                    .currency("SSP")
+                    .externalNumber("necessitatibus")
+                    .id("ed5c1758-1bcc-4ab8-b2d6-cf125fc1bd3b")
+                    .lineitems(List.of(
+                        AccountingLineitem.builder()
+                            .id("a4851a9b-120a-48e3-8f5b-ed20b4e6fb0c")
+                            .itemDescription("Innovative Table featuring left technology and Rubber construction")
+                            .itemName("Luxurious Cotton Pizza")
+                            .itemSku("978-0-8324-6620-5")
+                            .notes("Degusto conventus defendo valetudo.")
+                            .taxAmount(2501d)
+                            .totalAmount(168d)
+                            .unitAmount(3059d)
+                            .unitQuantity(1d)
+                            .build()))
+                    .metadata(List.of())
+                    .name("Refined Steel Shoes")
+                    .paymentMethod("CASH")
+                    .postedAt(OffsetDateTime.parse("2021-06-04T05:04:02.315Z"))
+                    .reimbursedAmount(1833d)
+                    .status(AccountingExpenseStatus.SUBMITTED)
+                    .taxAmount(2602d)
+                    .totalAmount(3580d)
+                    .updatedAt(OffsetDateTime.parse("2026-05-09T18:24:02.349Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -4757,16 +5394,17 @@ Update an invoice
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchAccountingInvoice" method="patch" path="/accounting/{connection_id}/invoice/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchAccountingInvoice" method="patch" path="/accounting/{connection_id}/invoice/{id}" example="accounting_invoice" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchAccountingInvoiceRequest;
 import to.unified.unified_java_sdk.models.operations.PatchAccountingInvoiceResponse;
-import to.unified.unified_java_sdk.models.shared.AccountingInvoice;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -4780,6 +5418,39 @@ public class Application {
 
         PatchAccountingInvoiceRequest req = PatchAccountingInvoiceRequest.builder()
                 .accountingInvoice(AccountingInvoice.builder()
+                    .attachments(List.of(
+                        AccountingAttachment.builder()
+                            .downloadUrl("https://glossy-markup.net/")
+                            .id("244da10f-d492-4fcc-b5fb-3366d5412e8a")
+                            .mimeType("benevolentia")
+                            .name("vespillo")
+                            .build()))
+                    .balanceAmount(-1d)
+                    .categoryIds(List.of())
+                    .createdAt(OffsetDateTime.parse("2022-11-07T14:17:29.587Z"))
+                    .currency("RWF")
+                    .discountAmount(0d)
+                    .dueAt(OffsetDateTime.parse("2022-11-27T21:25:37.363Z"))
+                    .extendedNotes(List.of())
+                    .id("3e24015f-f6ca-4bdc-a2d6-90fb1af81ab7")
+                    .invoiceNumber("vinco")
+                    .lineitems(List.of())
+                    .metadata(List.of())
+                    .notes("Auctus comburo clarus ubi.")
+                    .paidAmount(0d)
+                    .paidAt(OffsetDateTime.parse("2022-11-25T15:00:28.871Z"))
+                    .paymentCollectionMethod(AccountingInvoicePaymentCollectionMethod.SEND_INVOICE)
+                    .payments(List.of())
+                    .postedAt(OffsetDateTime.parse("2026-03-26T22:47:33.772Z"))
+                    .reference("adinventitias")
+                    .send(true)
+                    .status(AccountingInvoiceStatus.DELETED)
+                    .taxAmount(0d)
+                    .term(AccountingInvoiceTerm.NET45)
+                    .totalAmount(0d)
+                    .type(AccountingInvoiceType.CREDITMEMO)
+                    .updatedAt(OffsetDateTime.parse("2023-02-06T06:48:48.540Z"))
+                    .url("https://gifted-yarmulke.info/")
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -4818,11 +5489,13 @@ Update a journal
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchAccountingJournal" method="patch" path="/accounting/{connection_id}/journal/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchAccountingJournal" method="patch" path="/accounting/{connection_id}/journal/{id}" example="accounting_journal" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchAccountingJournalRequest;
 import to.unified.unified_java_sdk.models.operations.PatchAccountingJournalResponse;
@@ -4841,6 +5514,17 @@ public class Application {
 
         PatchAccountingJournalRequest req = PatchAccountingJournalRequest.builder()
                 .accountingJournal(AccountingJournal.builder()
+                    .attachments(List.of())
+                    .categoryIds(List.of())
+                    .createdAt(OffsetDateTime.parse("2020-02-20T15:14:55.881Z"))
+                    .currency("FKP")
+                    .description("Calco constans adipisci.")
+                    .id("92900846-008d-4177-9d82-d2c7a3f578e0")
+                    .postedAt(OffsetDateTime.parse("2023-10-19T01:52:16.870Z"))
+                    .reference("ullam")
+                    .source("crustulum")
+                    .taxAmount(78672d)
+                    .updatedAt(OffsetDateTime.parse("2022-01-01T11:09:03.243Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -4879,16 +5563,17 @@ Update an order
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchAccountingOrder" method="patch" path="/accounting/{connection_id}/order/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchAccountingOrder" method="patch" path="/accounting/{connection_id}/order/{id}" example="accounting_order" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchAccountingOrderRequest;
 import to.unified.unified_java_sdk.models.operations.PatchAccountingOrderResponse;
-import to.unified.unified_java_sdk.models.shared.AccountingOrder;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -4902,6 +5587,33 @@ public class Application {
 
         PatchAccountingOrderRequest req = PatchAccountingOrderRequest.builder()
                 .accountingOrder(AccountingOrder.builder()
+                    .billingAddress(PropertyAccountingOrderBillingAddress.builder()
+                        .address1("802 Bechtelar Park")
+                        .address2("Apt. 436")
+                        .city("Daniellaville")
+                        .countryCode("US")
+                        .postalCode("36947")
+                        .region("Wisconsin")
+                        .regionCode("NY")
+                        .build())
+                    .createdAt(OffsetDateTime.parse("2020-11-20T03:46:49.837Z"))
+                    .currency("USD")
+                    .id("ef699eb0-0563-4717-9061-214486399828")
+                    .lineitems(List.of())
+                    .metadata(List.of())
+                    .postedAt(OffsetDateTime.parse("2022-04-05T00:14:38.762Z"))
+                    .shippingAddress(PropertyAccountingOrderShippingAddress.builder()
+                        .address1("9745 Betty Shore")
+                        .city("South Alainaland")
+                        .countryCode("US")
+                        .postalCode("25274-7654")
+                        .region("New Hampshire")
+                        .regionCode("LA")
+                        .build())
+                    .status(AccountingOrderStatus.SUBMITTED)
+                    .totalAmount(0d)
+                    .type(AccountingOrderType.PURCHASE)
+                    .updatedAt(OffsetDateTime.parse("2021-06-17T22:40:42.753Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -4940,16 +5652,17 @@ Update a paymentterm
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchAccountingPaymentterm" method="patch" path="/accounting/{connection_id}/paymentterm/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchAccountingPaymentterm" method="patch" path="/accounting/{connection_id}/paymentterm/{id}" example="accounting_paymentterm" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchAccountingPaymenttermRequest;
 import to.unified.unified_java_sdk.models.operations.PatchAccountingPaymenttermResponse;
-import to.unified.unified_java_sdk.models.shared.AccountingPaymentterm;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -4963,6 +5676,21 @@ public class Application {
 
         PatchAccountingPaymenttermRequest req = PatchAccountingPaymenttermRequest.builder()
                 .accountingPaymentterm(AccountingPaymentterm.builder()
+                    .category(Category.STANDARD)
+                    .createdAt(OffsetDateTime.parse("2021-08-22T22:42:42.265Z"))
+                    .dayOfMonthDue(4d)
+                    .description("Cogito pecco eos cultura.")
+                    .discountDayOfMonth(13d)
+                    .discountDays(4d)
+                    .discountPercent(5d)
+                    .dueDays(57d)
+                    .dueNextMonthDays(9d)
+                    .id("2142d448-2276-437b-83d4-9bf9154c041a")
+                    .isActive(false)
+                    .metadata(List.of())
+                    .name("Net 30")
+                    .type(AccountingPaymenttermType.NET15)
+                    .updatedAt(OffsetDateTime.parse("2025-12-11T11:07:31.864Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -5062,16 +5790,17 @@ Update a purchaseorder
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchAccountingPurchaseorder" method="patch" path="/accounting/{connection_id}/purchaseorder/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchAccountingPurchaseorder" method="patch" path="/accounting/{connection_id}/purchaseorder/{id}" example="accounting_purchaseorder" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchAccountingPurchaseorderRequest;
 import to.unified.unified_java_sdk.models.operations.PatchAccountingPurchaseorderResponse;
-import to.unified.unified_java_sdk.models.shared.AccountingPurchaseorder;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -5085,6 +5814,32 @@ public class Application {
 
         PatchAccountingPurchaseorderRequest req = PatchAccountingPurchaseorderRequest.builder()
                 .accountingPurchaseorder(AccountingPurchaseorder.builder()
+                    .billingAddress(PropertyAccountingPurchaseorderBillingAddress.builder()
+                        .address1("37214 Tanya Walks")
+                        .city("South Annabelleton")
+                        .countryCode("US")
+                        .postalCode("30337")
+                        .region("Nevada")
+                        .regionCode("MA")
+                        .build())
+                    .categoryIds(List.of())
+                    .createdAt(OffsetDateTime.parse("2020-12-12T07:17:47.021Z"))
+                    .currency("ZMW")
+                    .id("54658ca1-f723-459d-901f-9dc45e6da571")
+                    .lineitems(List.of())
+                    .metadata(List.of())
+                    .postedAt(OffsetDateTime.parse("2025-04-25T03:32:03.994Z"))
+                    .shippingAddress(PropertyAccountingPurchaseorderShippingAddress.builder()
+                        .address1("649 Maggio Overpass")
+                        .city("Lake Jaylan")
+                        .countryCode("US")
+                        .postalCode("99211-6547")
+                        .region("North Carolina")
+                        .regionCode("ID")
+                        .build())
+                    .status(AccountingPurchaseorderStatus.PARTIALLY_REFUNDED)
+                    .totalAmount(0d)
+                    .updatedAt(OffsetDateTime.parse("2021-02-26T03:18:48.830Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -5184,16 +5939,17 @@ Update a salesorder
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchAccountingSalesorder" method="patch" path="/accounting/{connection_id}/salesorder/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchAccountingSalesorder" method="patch" path="/accounting/{connection_id}/salesorder/{id}" example="accounting_salesorder" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchAccountingSalesorderRequest;
 import to.unified.unified_java_sdk.models.operations.PatchAccountingSalesorderResponse;
-import to.unified.unified_java_sdk.models.shared.AccountingSalesorder;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -5207,6 +5963,53 @@ public class Application {
 
         PatchAccountingSalesorderRequest req = PatchAccountingSalesorderRequest.builder()
                 .accountingSalesorder(AccountingSalesorder.builder()
+                    .billingAddress(PropertyAccountingSalesorderBillingAddress.builder()
+                        .address1("26530 Stroman Rest")
+                        .address2("Suite 801")
+                        .city("Pocatello")
+                        .countryCode("US")
+                        .postalCode("05015-8546")
+                        .region("Louisiana")
+                        .regionCode("MO")
+                        .build())
+                    .categoryIds(List.of())
+                    .closedAt(OffsetDateTime.parse("2023-08-16T21:47:45.033Z"))
+                    .createdAt(OffsetDateTime.parse("2022-01-17T16:11:50.310Z"))
+                    .currency("ANG")
+                    .discountAmount(99d)
+                    .employeeUserId("4a6b8990-c85a-499f-82d0-5011c3c95a0b")
+                    .fees(List.of(
+                        AccountingFee.builder()
+                            .amount(519d)
+                            .type(AccountingFeeType.PROMOTION)
+                            .currency("XCD")
+                            .build()))
+                    .fulfillmentType(FulfillmentType.TAKEOUT)
+                    .guestCount(8d)
+                    .id("7a2572c0-20e2-47d3-9ebd-99ebd81b6655")
+                    .lineitems(List.of())
+                    .metadata(List.of())
+                    .orderNumber("988187")
+                    .payments(List.of())
+                    .postedAt(OffsetDateTime.parse("2026-01-11T02:11:41.271Z"))
+                    .refundedAmount(0d)
+                    .salesChannel("Harvey, Collier and Weimann")
+                    .serviceChargeAmount(63d)
+                    .shippingAddress(PropertyAccountingSalesorderShippingAddress.builder()
+                        .address1("9878 Bradley Mill")
+                        .address2("Apt. 215")
+                        .city("Port Matildestad")
+                        .countryCode("US")
+                        .postalCode("07989-2148")
+                        .region("Arkansas")
+                        .regionCode("AK")
+                        .build())
+                    .status(AccountingSalesorderStatus.REFUNDED)
+                    .subtotalAmount(0d)
+                    .taxAmount(63d)
+                    .tipAmount(34d)
+                    .totalAmount(0d)
+                    .updatedAt(OffsetDateTime.parse("2022-02-10T18:49:09.490Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -5245,11 +6048,13 @@ Update a taxrate
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchAccountingTaxrate" method="patch" path="/accounting/{connection_id}/taxrate/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchAccountingTaxrate" method="patch" path="/accounting/{connection_id}/taxrate/{id}" example="accounting_taxrate" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchAccountingTaxrateRequest;
 import to.unified.unified_java_sdk.models.operations.PatchAccountingTaxrateResponse;
@@ -5268,6 +6073,14 @@ public class Application {
 
         PatchAccountingTaxrateRequest req = PatchAccountingTaxrateRequest.builder()
                 .accountingTaxrate(AccountingTaxrate.builder()
+                    .createdAt(OffsetDateTime.parse("2020-01-04T10:37:56.894Z"))
+                    .description("Nemo atrox tricesimus creator aranea.")
+                    .id("3a12088f-0124-4720-a4fc-8205f0fb1a05")
+                    .isActive(false)
+                    .metadata(List.of())
+                    .name("cogo")
+                    .rate(1d)
+                    .updatedAt(OffsetDateTime.parse("2025-11-04T07:54:19.725Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -5306,16 +6119,17 @@ Update a transaction
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchAccountingTransaction" method="patch" path="/accounting/{connection_id}/transaction/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchAccountingTransaction" method="patch" path="/accounting/{connection_id}/transaction/{id}" example="accounting_transaction" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchAccountingTransactionRequest;
 import to.unified.unified_java_sdk.models.operations.PatchAccountingTransactionResponse;
-import to.unified.unified_java_sdk.models.shared.AccountingTransaction;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -5329,6 +6143,23 @@ public class Application {
 
         PatchAccountingTransactionRequest req = PatchAccountingTransactionRequest.builder()
                 .accountingTransaction(AccountingTransaction.builder()
+                    .createdAt(OffsetDateTime.parse("2019-09-25T11:40:42.574Z"))
+                    .id("21b69be7-0166-4233-91c4-e92eff66f31e")
+                    .lineitems(List.of(
+                        AccountingTransactionLineItem.builder()
+                            .categoryIds(List.of())
+                            .description("The Nikolas Table is the latest in a series of downright products from Beier and Sons")
+                            .id("3dab4bec-d436-4800-9b97-68628a55b5e0")
+                            .name("Salad")
+                            .objectType("delicate")
+                            .totalAmount(58531d)
+                            .unitAmount(536d)
+                            .unitQuantity(91d)
+                            .build()))
+                    .memo("withdrawal of USD 873.18 at Harber and Sons charged to account ending in 1804 using card ending in ****7022.")
+                    .taxAmount(0d)
+                    .totalAmount(94452d)
+                    .updatedAt(OffsetDateTime.parse("2021-09-10T02:36:49.523Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -5367,16 +6198,17 @@ Update a vendorcredit
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchAccountingVendorcredit" method="patch" path="/accounting/{connection_id}/vendorcredit/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchAccountingVendorcredit" method="patch" path="/accounting/{connection_id}/vendorcredit/{id}" example="accounting_vendorcredit" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchAccountingVendorcreditRequest;
 import to.unified.unified_java_sdk.models.operations.PatchAccountingVendorcreditResponse;
-import to.unified.unified_java_sdk.models.shared.AccountingVendorcredit;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -5390,6 +6222,20 @@ public class Application {
 
         PatchAccountingVendorcreditRequest req = PatchAccountingVendorcreditRequest.builder()
                 .accountingVendorcredit(AccountingVendorcredit.builder()
+                    .applications(List.of())
+                    .applyAmount(1d)
+                    .balanceAmount(0d)
+                    .createdAt(OffsetDateTime.parse("2023-04-15T21:14:08.197Z"))
+                    .currency("KGS")
+                    .dueAt(OffsetDateTime.parse("2023-05-06T20:38:46.775Z"))
+                    .id("79c98d35-f30c-4832-82a9-eaa45fdf6b58")
+                    .lineitems(List.of())
+                    .metadata(List.of())
+                    .notes("Conatus cruciamentum decor avaritia tantum.")
+                    .postedAt(OffsetDateTime.parse("2023-09-28T16:43:46.448Z"))
+                    .status(AccountingVendorcreditStatus.SUBMITTED)
+                    .totalAmount(0d)
+                    .updatedAt(OffsetDateTime.parse("2023-11-26T14:35:53.374Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -6492,16 +7338,17 @@ Update an account
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateAccountingAccount" method="put" path="/accounting/{connection_id}/account/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateAccountingAccount" method="put" path="/accounting/{connection_id}/account/{id}" example="accounting_account" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateAccountingAccountRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateAccountingAccountResponse;
-import to.unified.unified_java_sdk.models.shared.AccountingAccount;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -6515,6 +7362,28 @@ public class Application {
 
         UpdateAccountingAccountRequest req = UpdateAccountingAccountRequest.builder()
                 .accountingAccount(AccountingAccount.builder()
+                    .balance(12092d)
+                    .createdAt(OffsetDateTime.parse("2022-07-03T17:57:07.391Z"))
+                    .currency("BOB")
+                    .customerDefinedCode("quo")
+                    .description("Spoliatio comedo vilitas harum cupiditate.")
+                    .id("31484143-f94a-4590-89ec-16b156e6b177")
+                    .isPayable(true)
+                    .name("Electronic Aluminum Tuna")
+                    .status(Status.ARCHIVED)
+                    .taxonomy(List.of(
+                        AccountingAccountTaxonomy.builder()
+                            .type(AccountingAccountTaxonomyType.SUBGROUP)
+                            .value("iste")
+                            .originalType("vesper")
+                            .build(),
+                        AccountingAccountTaxonomy.builder()
+                            .type(AccountingAccountTaxonomyType.SUBGROUP)
+                            .value("peccatus")
+                            .originalType("adamo")
+                            .build()))
+                    .type(Type.BANK)
+                    .updatedAt(OffsetDateTime.parse("2023-01-03T03:11:26.604Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -6553,16 +7422,16 @@ Update a bankfeedaccount
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateAccountingBankfeedaccount" method="put" path="/accounting/{connection_id}/bankfeedaccount/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateAccountingBankfeedaccount" method="put" path="/accounting/{connection_id}/bankfeedaccount/{id}" example="accounting_bankfeedaccount" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateAccountingBankfeedaccountRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateAccountingBankfeedaccountResponse;
-import to.unified.unified_java_sdk.models.shared.AccountingBankfeedaccount;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -6576,6 +7445,20 @@ public class Application {
 
         UpdateAccountingBankfeedaccountRequest req = UpdateAccountingBankfeedaccountRequest.builder()
                 .accountingBankfeedaccount(AccountingBankfeedaccount.builder()
+                    .accountId("baa0e9a4-65e9-4bf5-856a-ce46fc36ebb1")
+                    .accountNumber("30369722")
+                    .accountNumberLast4("9722")
+                    .accountType(AccountType.LOAN)
+                    .balance(90358d)
+                    .bankName("Weissnat Inc")
+                    .createdAt(OffsetDateTime.parse("2022-10-31T16:42:19.277Z"))
+                    .currency("SSP")
+                    .feedStartAt(OffsetDateTime.parse("2022-10-31T16:42:19.277Z"))
+                    .id("209a9fc6-36cf-43c0-a50c-b7e3c177603b")
+                    .name("Corwin, Donnelly and Connelly Savings")
+                    .routingNumber("667753156")
+                    .status(AccountingBankfeedaccountStatus.ACTIVE)
+                    .updatedAt(OffsetDateTime.parse("2024-04-11T12:57:07.387Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -6614,16 +7497,17 @@ Update a bankfeedtransaction
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateAccountingBankfeedtransaction" method="put" path="/accounting/{connection_id}/bankfeedtransaction/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateAccountingBankfeedtransaction" method="put" path="/accounting/{connection_id}/bankfeedtransaction/{id}" example="accounting_bankfeedtransaction" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateAccountingBankfeedtransactionRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateAccountingBankfeedtransactionResponse;
-import to.unified.unified_java_sdk.models.shared.AccountingBankfeedtransaction;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -6637,6 +7521,23 @@ public class Application {
 
         UpdateAccountingBankfeedtransactionRequest req = UpdateAccountingBankfeedtransactionRequest.builder()
                 .accountingBankfeedtransaction(AccountingBankfeedtransaction.builder()
+                    .accountId("b7dc4175-1368-4b89-a700-d621b6666648")
+                    .amount(60889d)
+                    .bankCategory("Games")
+                    .bankfeedaccountId("34c1d05f-5b62-4bcd-9121-3be8b720941f")
+                    .categoryIds(List.of())
+                    .contactId("1ef58ebe-f9c9-46f6-9d9c-2df2658503be")
+                    .createdAt(OffsetDateTime.parse("2022-03-24T23:41:08.374Z"))
+                    .currency("SRD")
+                    .description("payment transaction at McLaughlin - Schaden using card ending with ****8233 for DOP 574.03 in account ***9523.")
+                    .id("99973f58-3052-444a-a355-5b7ffb177172")
+                    .isPending(true)
+                    .merchantName("Reichert, Erdman and Tillman")
+                    .postedAt(OffsetDateTime.parse("2025-03-23T18:34:48.075Z"))
+                    .reference("93642593")
+                    .transactionAt(OffsetDateTime.parse("2022-07-27T19:48:15.222Z"))
+                    .type(AccountingBankfeedtransactionType.CREDIT)
+                    .updatedAt(OffsetDateTime.parse("2022-05-23T20:47:21.835Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -6675,16 +7576,17 @@ Update a bill
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateAccountingBill" method="put" path="/accounting/{connection_id}/bill/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateAccountingBill" method="put" path="/accounting/{connection_id}/bill/{id}" example="accounting_bill" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateAccountingBillRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateAccountingBillResponse;
-import to.unified.unified_java_sdk.models.shared.AccountingBill;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -6698,6 +7600,28 @@ public class Application {
 
         UpdateAccountingBillRequest req = UpdateAccountingBillRequest.builder()
                 .accountingBill(AccountingBill.builder()
+                    .attachments(List.of())
+                    .billNumber("vitae")
+                    .categoryIds(List.of())
+                    .createdAt(OffsetDateTime.parse("2019-08-08T23:03:14.104Z"))
+                    .currency("AUD")
+                    .discountAmount(0d)
+                    .dueAt(OffsetDateTime.parse("2019-08-11T20:52:55.321Z"))
+                    .extendedNotes(List.of())
+                    .id("6150e708-f7e3-4cf9-8e91-303495e24cc3")
+                    .lineitems(List.of())
+                    .metadata(List.of())
+                    .notes("Tutamen cilicium infit.")
+                    .paymentCollectionMethod(PaymentCollectionMethod.CHARGE_AUTOMATICALLY)
+                    .payments(List.of())
+                    .postedAt(OffsetDateTime.parse("2024-04-04T07:23:49.078Z"))
+                    .send(true)
+                    .status(AccountingBillStatus.DELETED)
+                    .taxAmount(0d)
+                    .term(Term.NET10)
+                    .totalAmount(0d)
+                    .updatedAt(OffsetDateTime.parse("2025-01-29T00:58:28.647Z"))
+                    .url("https://coarse-interviewer.biz/")
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -6736,11 +7660,13 @@ Update a category
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateAccountingCategory" method="put" path="/accounting/{connection_id}/category/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateAccountingCategory" method="put" path="/accounting/{connection_id}/category/{id}" example="accounting_category" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateAccountingCategoryRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateAccountingCategoryResponse;
@@ -6759,6 +7685,13 @@ public class Application {
 
         UpdateAccountingCategoryRequest req = UpdateAccountingCategoryRequest.builder()
                 .accountingCategory(AccountingCategory.builder()
+                    .createdAt(OffsetDateTime.parse("2023-05-30T12:29:04.257Z"))
+                    .description("Discover the koala-like agility of our Chair, perfect for imaginary users")
+                    .id("a998bb3b-628d-4a5b-8054-f8edf45f8dfd")
+                    .isActive(false)
+                    .metadata(List.of())
+                    .name("Electronic Cotton Shoes")
+                    .updatedAt(OffsetDateTime.parse("2025-08-20T06:36:05.177Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -6797,16 +7730,17 @@ Update a contact
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateAccountingContact" method="put" path="/accounting/{connection_id}/contact/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateAccountingContact" method="put" path="/accounting/{connection_id}/contact/{id}" example="accounting_contact" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateAccountingContactRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateAccountingContactResponse;
-import to.unified.unified_java_sdk.models.shared.AccountingContact;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -6820,6 +7754,68 @@ public class Application {
 
         UpdateAccountingContactRequest req = UpdateAccountingContactRequest.builder()
                 .accountingContact(AccountingContact.builder()
+                    .associatedContacts(List.of(
+                        AccountingAssociatedContact.builder()
+                            .id("5d12d0f4-d6c4-41e4-b66f-1f01b7202257")
+                            .name("Delores Reynolds")
+                            .build(),
+                        AccountingAssociatedContact.builder()
+                            .id("866874f1-a317-404b-9ee2-18708e6d0dd7")
+                            .name("Delores Reynolds")
+                            .build()))
+                    .billingAddress(PropertyAccountingContactBillingAddress.builder()
+                        .address1("2633 Stoney Lane")
+                        .address2("Suite 176")
+                        .city("Ladariusboro")
+                        .countryCode("US")
+                        .postalCode("70131-2908")
+                        .region("Illinois")
+                        .regionCode("NV")
+                        .build())
+                    .companyName("Marquardt Inc")
+                    .createdAt(OffsetDateTime.parse("2021-08-15T14:56:50.258Z"))
+                    .currency("ISK")
+                    .emails(List.of(
+                        AccountingEmail.builder()
+                            .email("Delores.Reynolds10@hotmail.com")
+                            .type(AccountingEmailType.HOME)
+                            .build()))
+                    .firstName("Delores")
+                    .id("568c731f-d6db-4131-8722-72c16c80c495")
+                    .identification("amicitia")
+                    .isActive(true)
+                    .isCustomer(true)
+                    .lastName("Reynolds")
+                    .name("Delores Reynolds")
+                    .paymentMethods(List.of(
+                        AccountingContactPaymentMethod.builder()
+                            .type(AccountingContactPaymentMethodType.CARD)
+                            .default_(true)
+                            .id("f7dccf3b-a03d-4347-a80e-3a3ce580b82d")
+                            .name("Visa 1234")
+                            .build()))
+                    .portalUrl("https://scented-t-shirt.info/")
+                    .shippingAddress(PropertyAccountingContactShippingAddress.builder()
+                        .address1("786 Renner Stream")
+                        .address2("Apt. 555")
+                        .city("Roanoke")
+                        .countryCode("US")
+                        .postalCode("80686-7556")
+                        .region("Vermont")
+                        .regionCode("NE")
+                        .build())
+                    .taxExemption(TaxExemption.RESALE)
+                    .taxNumber("amplexus")
+                    .telephones(List.of(
+                        AccountingTelephone.builder()
+                            .telephone("(427) 701-7160")
+                            .type(AccountingTelephoneType.HOME)
+                            .build(),
+                        AccountingTelephone.builder()
+                            .telephone("(540) 913-9171")
+                            .type(AccountingTelephoneType.FAX)
+                            .build()))
+                    .updatedAt(OffsetDateTime.parse("2023-12-04T22:28:17.531Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -6858,16 +7854,17 @@ Update a creditmemo
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateAccountingCreditmemo" method="put" path="/accounting/{connection_id}/creditmemo/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateAccountingCreditmemo" method="put" path="/accounting/{connection_id}/creditmemo/{id}" example="accounting_creditmemo" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateAccountingCreditmemoRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateAccountingCreditmemoResponse;
-import to.unified.unified_java_sdk.models.shared.AccountingCreditmemo;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -6881,6 +7878,34 @@ public class Application {
 
         UpdateAccountingCreditmemoRequest req = UpdateAccountingCreditmemoRequest.builder()
                 .accountingCreditmemo(AccountingCreditmemo.builder()
+                    .applications(List.of())
+                    .attachments(List.of(
+                        AccountingAttachment.builder()
+                            .downloadUrl("https://enlightened-chairperson.com/")
+                            .id("1caeb4ce-3f7e-48a4-afb3-469839f68cca")
+                            .mimeType("complectus")
+                            .name("thesis")
+                            .build()))
+                    .createdAt(OffsetDateTime.parse("2023-09-20T01:47:01.571Z"))
+                    .creditmemoNumber("ulterius")
+                    .currency("MKD")
+                    .discountAmount(0d)
+                    .dueAt(OffsetDateTime.parse("2023-10-18T04:35:00.543Z"))
+                    .id("c0f30724-dec9-4210-8706-4c3a535e2f65")
+                    .lineitems(List.of())
+                    .metadata(List.of())
+                    .notes("Dedecor amo adfero torqueo quas.")
+                    .paymentCollectionMethod(AccountingCreditmemoPaymentCollectionMethod.CHARGE_AUTOMATICALLY)
+                    .postedAt(OffsetDateTime.parse("2025-11-15T11:03:17.458Z"))
+                    .refundAmount(0d)
+                    .refundReason("Virgo inflammatio quibusdam aestivus magnam.")
+                    .refundedAt(OffsetDateTime.parse("2023-10-23T00:35:36.814Z"))
+                    .send(false)
+                    .status(AccountingCreditmemoStatus.PAID)
+                    .taxAmount(0d)
+                    .totalAmount(0d)
+                    .updatedAt(OffsetDateTime.parse("2024-11-15T13:32:51.023Z"))
+                    .url("https://lighthearted-bandwidth.net/")
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -6919,16 +7944,17 @@ Update an expense
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateAccountingExpense" method="put" path="/accounting/{connection_id}/expense/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateAccountingExpense" method="put" path="/accounting/{connection_id}/expense/{id}" example="accounting_expense" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateAccountingExpenseRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateAccountingExpenseResponse;
-import to.unified.unified_java_sdk.models.shared.AccountingExpense;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -6942,6 +7968,40 @@ public class Application {
 
         UpdateAccountingExpenseRequest req = UpdateAccountingExpenseRequest.builder()
                 .accountingExpense(AccountingExpense.builder()
+                    .approvedAt(OffsetDateTime.parse("2026-05-09T18:24:02.349Z"))
+                    .attachments(List.of(
+                        AccountingAttachment.builder()
+                            .downloadUrl("https://ripe-napkin.biz/")
+                            .id("4298778d-022a-4392-aa3b-287ddb9df4eb")
+                            .mimeType("annus")
+                            .name("cohibeo")
+                            .build()))
+                    .categoryIds(List.of())
+                    .createdAt(OffsetDateTime.parse("2020-06-11T03:39:37.305Z"))
+                    .currency("SSP")
+                    .externalNumber("necessitatibus")
+                    .id("ed5c1758-1bcc-4ab8-b2d6-cf125fc1bd3b")
+                    .lineitems(List.of(
+                        AccountingLineitem.builder()
+                            .id("a4851a9b-120a-48e3-8f5b-ed20b4e6fb0c")
+                            .itemDescription("Innovative Table featuring left technology and Rubber construction")
+                            .itemName("Luxurious Cotton Pizza")
+                            .itemSku("978-0-8324-6620-5")
+                            .notes("Degusto conventus defendo valetudo.")
+                            .taxAmount(2501d)
+                            .totalAmount(168d)
+                            .unitAmount(3059d)
+                            .unitQuantity(1d)
+                            .build()))
+                    .metadata(List.of())
+                    .name("Refined Steel Shoes")
+                    .paymentMethod("CASH")
+                    .postedAt(OffsetDateTime.parse("2021-06-04T05:04:02.315Z"))
+                    .reimbursedAmount(1833d)
+                    .status(AccountingExpenseStatus.SUBMITTED)
+                    .taxAmount(2602d)
+                    .totalAmount(3580d)
+                    .updatedAt(OffsetDateTime.parse("2026-05-09T18:24:02.349Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -6980,16 +8040,17 @@ Update an invoice
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateAccountingInvoice" method="put" path="/accounting/{connection_id}/invoice/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateAccountingInvoice" method="put" path="/accounting/{connection_id}/invoice/{id}" example="accounting_invoice" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateAccountingInvoiceRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateAccountingInvoiceResponse;
-import to.unified.unified_java_sdk.models.shared.AccountingInvoice;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -7003,6 +8064,39 @@ public class Application {
 
         UpdateAccountingInvoiceRequest req = UpdateAccountingInvoiceRequest.builder()
                 .accountingInvoice(AccountingInvoice.builder()
+                    .attachments(List.of(
+                        AccountingAttachment.builder()
+                            .downloadUrl("https://glossy-markup.net/")
+                            .id("244da10f-d492-4fcc-b5fb-3366d5412e8a")
+                            .mimeType("benevolentia")
+                            .name("vespillo")
+                            .build()))
+                    .balanceAmount(-1d)
+                    .categoryIds(List.of())
+                    .createdAt(OffsetDateTime.parse("2022-11-07T14:17:29.587Z"))
+                    .currency("RWF")
+                    .discountAmount(0d)
+                    .dueAt(OffsetDateTime.parse("2022-11-27T21:25:37.363Z"))
+                    .extendedNotes(List.of())
+                    .id("3e24015f-f6ca-4bdc-a2d6-90fb1af81ab7")
+                    .invoiceNumber("vinco")
+                    .lineitems(List.of())
+                    .metadata(List.of())
+                    .notes("Auctus comburo clarus ubi.")
+                    .paidAmount(0d)
+                    .paidAt(OffsetDateTime.parse("2022-11-25T15:00:28.871Z"))
+                    .paymentCollectionMethod(AccountingInvoicePaymentCollectionMethod.SEND_INVOICE)
+                    .payments(List.of())
+                    .postedAt(OffsetDateTime.parse("2026-03-26T22:47:33.772Z"))
+                    .reference("adinventitias")
+                    .send(true)
+                    .status(AccountingInvoiceStatus.DELETED)
+                    .taxAmount(0d)
+                    .term(AccountingInvoiceTerm.NET45)
+                    .totalAmount(0d)
+                    .type(AccountingInvoiceType.CREDITMEMO)
+                    .updatedAt(OffsetDateTime.parse("2023-02-06T06:48:48.540Z"))
+                    .url("https://gifted-yarmulke.info/")
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -7041,11 +8135,13 @@ Update a journal
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateAccountingJournal" method="put" path="/accounting/{connection_id}/journal/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateAccountingJournal" method="put" path="/accounting/{connection_id}/journal/{id}" example="accounting_journal" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateAccountingJournalRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateAccountingJournalResponse;
@@ -7064,6 +8160,17 @@ public class Application {
 
         UpdateAccountingJournalRequest req = UpdateAccountingJournalRequest.builder()
                 .accountingJournal(AccountingJournal.builder()
+                    .attachments(List.of())
+                    .categoryIds(List.of())
+                    .createdAt(OffsetDateTime.parse("2020-02-20T15:14:55.881Z"))
+                    .currency("FKP")
+                    .description("Calco constans adipisci.")
+                    .id("92900846-008d-4177-9d82-d2c7a3f578e0")
+                    .postedAt(OffsetDateTime.parse("2023-10-19T01:52:16.870Z"))
+                    .reference("ullam")
+                    .source("crustulum")
+                    .taxAmount(78672d)
+                    .updatedAt(OffsetDateTime.parse("2022-01-01T11:09:03.243Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -7102,16 +8209,17 @@ Update an order
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateAccountingOrder" method="put" path="/accounting/{connection_id}/order/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateAccountingOrder" method="put" path="/accounting/{connection_id}/order/{id}" example="accounting_order" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateAccountingOrderRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateAccountingOrderResponse;
-import to.unified.unified_java_sdk.models.shared.AccountingOrder;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -7125,6 +8233,33 @@ public class Application {
 
         UpdateAccountingOrderRequest req = UpdateAccountingOrderRequest.builder()
                 .accountingOrder(AccountingOrder.builder()
+                    .billingAddress(PropertyAccountingOrderBillingAddress.builder()
+                        .address1("802 Bechtelar Park")
+                        .address2("Apt. 436")
+                        .city("Daniellaville")
+                        .countryCode("US")
+                        .postalCode("36947")
+                        .region("Wisconsin")
+                        .regionCode("NY")
+                        .build())
+                    .createdAt(OffsetDateTime.parse("2020-11-20T03:46:49.837Z"))
+                    .currency("USD")
+                    .id("ef699eb0-0563-4717-9061-214486399828")
+                    .lineitems(List.of())
+                    .metadata(List.of())
+                    .postedAt(OffsetDateTime.parse("2022-04-05T00:14:38.762Z"))
+                    .shippingAddress(PropertyAccountingOrderShippingAddress.builder()
+                        .address1("9745 Betty Shore")
+                        .city("South Alainaland")
+                        .countryCode("US")
+                        .postalCode("25274-7654")
+                        .region("New Hampshire")
+                        .regionCode("LA")
+                        .build())
+                    .status(AccountingOrderStatus.SUBMITTED)
+                    .totalAmount(0d)
+                    .type(AccountingOrderType.PURCHASE)
+                    .updatedAt(OffsetDateTime.parse("2021-06-17T22:40:42.753Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -7163,16 +8298,17 @@ Update a paymentterm
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateAccountingPaymentterm" method="put" path="/accounting/{connection_id}/paymentterm/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateAccountingPaymentterm" method="put" path="/accounting/{connection_id}/paymentterm/{id}" example="accounting_paymentterm" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateAccountingPaymenttermRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateAccountingPaymenttermResponse;
-import to.unified.unified_java_sdk.models.shared.AccountingPaymentterm;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -7186,6 +8322,21 @@ public class Application {
 
         UpdateAccountingPaymenttermRequest req = UpdateAccountingPaymenttermRequest.builder()
                 .accountingPaymentterm(AccountingPaymentterm.builder()
+                    .category(Category.STANDARD)
+                    .createdAt(OffsetDateTime.parse("2021-08-22T22:42:42.265Z"))
+                    .dayOfMonthDue(4d)
+                    .description("Cogito pecco eos cultura.")
+                    .discountDayOfMonth(13d)
+                    .discountDays(4d)
+                    .discountPercent(5d)
+                    .dueDays(57d)
+                    .dueNextMonthDays(9d)
+                    .id("2142d448-2276-437b-83d4-9bf9154c041a")
+                    .isActive(false)
+                    .metadata(List.of())
+                    .name("Net 30")
+                    .type(AccountingPaymenttermType.NET15)
+                    .updatedAt(OffsetDateTime.parse("2025-12-11T11:07:31.864Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -7285,16 +8436,17 @@ Update a purchaseorder
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateAccountingPurchaseorder" method="put" path="/accounting/{connection_id}/purchaseorder/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateAccountingPurchaseorder" method="put" path="/accounting/{connection_id}/purchaseorder/{id}" example="accounting_purchaseorder" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateAccountingPurchaseorderRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateAccountingPurchaseorderResponse;
-import to.unified.unified_java_sdk.models.shared.AccountingPurchaseorder;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -7308,6 +8460,32 @@ public class Application {
 
         UpdateAccountingPurchaseorderRequest req = UpdateAccountingPurchaseorderRequest.builder()
                 .accountingPurchaseorder(AccountingPurchaseorder.builder()
+                    .billingAddress(PropertyAccountingPurchaseorderBillingAddress.builder()
+                        .address1("37214 Tanya Walks")
+                        .city("South Annabelleton")
+                        .countryCode("US")
+                        .postalCode("30337")
+                        .region("Nevada")
+                        .regionCode("MA")
+                        .build())
+                    .categoryIds(List.of())
+                    .createdAt(OffsetDateTime.parse("2020-12-12T07:17:47.021Z"))
+                    .currency("ZMW")
+                    .id("54658ca1-f723-459d-901f-9dc45e6da571")
+                    .lineitems(List.of())
+                    .metadata(List.of())
+                    .postedAt(OffsetDateTime.parse("2025-04-25T03:32:03.994Z"))
+                    .shippingAddress(PropertyAccountingPurchaseorderShippingAddress.builder()
+                        .address1("649 Maggio Overpass")
+                        .city("Lake Jaylan")
+                        .countryCode("US")
+                        .postalCode("99211-6547")
+                        .region("North Carolina")
+                        .regionCode("ID")
+                        .build())
+                    .status(AccountingPurchaseorderStatus.PARTIALLY_REFUNDED)
+                    .totalAmount(0d)
+                    .updatedAt(OffsetDateTime.parse("2021-02-26T03:18:48.830Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -7407,16 +8585,17 @@ Update a salesorder
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateAccountingSalesorder" method="put" path="/accounting/{connection_id}/salesorder/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateAccountingSalesorder" method="put" path="/accounting/{connection_id}/salesorder/{id}" example="accounting_salesorder" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateAccountingSalesorderRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateAccountingSalesorderResponse;
-import to.unified.unified_java_sdk.models.shared.AccountingSalesorder;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -7430,6 +8609,53 @@ public class Application {
 
         UpdateAccountingSalesorderRequest req = UpdateAccountingSalesorderRequest.builder()
                 .accountingSalesorder(AccountingSalesorder.builder()
+                    .billingAddress(PropertyAccountingSalesorderBillingAddress.builder()
+                        .address1("26530 Stroman Rest")
+                        .address2("Suite 801")
+                        .city("Pocatello")
+                        .countryCode("US")
+                        .postalCode("05015-8546")
+                        .region("Louisiana")
+                        .regionCode("MO")
+                        .build())
+                    .categoryIds(List.of())
+                    .closedAt(OffsetDateTime.parse("2023-08-16T21:47:45.033Z"))
+                    .createdAt(OffsetDateTime.parse("2022-01-17T16:11:50.310Z"))
+                    .currency("ANG")
+                    .discountAmount(99d)
+                    .employeeUserId("4a6b8990-c85a-499f-82d0-5011c3c95a0b")
+                    .fees(List.of(
+                        AccountingFee.builder()
+                            .amount(519d)
+                            .type(AccountingFeeType.PROMOTION)
+                            .currency("XCD")
+                            .build()))
+                    .fulfillmentType(FulfillmentType.TAKEOUT)
+                    .guestCount(8d)
+                    .id("7a2572c0-20e2-47d3-9ebd-99ebd81b6655")
+                    .lineitems(List.of())
+                    .metadata(List.of())
+                    .orderNumber("988187")
+                    .payments(List.of())
+                    .postedAt(OffsetDateTime.parse("2026-01-11T02:11:41.271Z"))
+                    .refundedAmount(0d)
+                    .salesChannel("Harvey, Collier and Weimann")
+                    .serviceChargeAmount(63d)
+                    .shippingAddress(PropertyAccountingSalesorderShippingAddress.builder()
+                        .address1("9878 Bradley Mill")
+                        .address2("Apt. 215")
+                        .city("Port Matildestad")
+                        .countryCode("US")
+                        .postalCode("07989-2148")
+                        .region("Arkansas")
+                        .regionCode("AK")
+                        .build())
+                    .status(AccountingSalesorderStatus.REFUNDED)
+                    .subtotalAmount(0d)
+                    .taxAmount(63d)
+                    .tipAmount(34d)
+                    .totalAmount(0d)
+                    .updatedAt(OffsetDateTime.parse("2022-02-10T18:49:09.490Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -7468,11 +8694,13 @@ Update a taxrate
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateAccountingTaxrate" method="put" path="/accounting/{connection_id}/taxrate/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateAccountingTaxrate" method="put" path="/accounting/{connection_id}/taxrate/{id}" example="accounting_taxrate" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateAccountingTaxrateRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateAccountingTaxrateResponse;
@@ -7491,6 +8719,14 @@ public class Application {
 
         UpdateAccountingTaxrateRequest req = UpdateAccountingTaxrateRequest.builder()
                 .accountingTaxrate(AccountingTaxrate.builder()
+                    .createdAt(OffsetDateTime.parse("2020-01-04T10:37:56.894Z"))
+                    .description("Nemo atrox tricesimus creator aranea.")
+                    .id("3a12088f-0124-4720-a4fc-8205f0fb1a05")
+                    .isActive(false)
+                    .metadata(List.of())
+                    .name("cogo")
+                    .rate(1d)
+                    .updatedAt(OffsetDateTime.parse("2025-11-04T07:54:19.725Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -7529,16 +8765,17 @@ Update a transaction
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateAccountingTransaction" method="put" path="/accounting/{connection_id}/transaction/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateAccountingTransaction" method="put" path="/accounting/{connection_id}/transaction/{id}" example="accounting_transaction" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateAccountingTransactionRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateAccountingTransactionResponse;
-import to.unified.unified_java_sdk.models.shared.AccountingTransaction;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -7552,6 +8789,23 @@ public class Application {
 
         UpdateAccountingTransactionRequest req = UpdateAccountingTransactionRequest.builder()
                 .accountingTransaction(AccountingTransaction.builder()
+                    .createdAt(OffsetDateTime.parse("2019-09-25T11:40:42.574Z"))
+                    .id("21b69be7-0166-4233-91c4-e92eff66f31e")
+                    .lineitems(List.of(
+                        AccountingTransactionLineItem.builder()
+                            .categoryIds(List.of())
+                            .description("The Nikolas Table is the latest in a series of downright products from Beier and Sons")
+                            .id("3dab4bec-d436-4800-9b97-68628a55b5e0")
+                            .name("Salad")
+                            .objectType("delicate")
+                            .totalAmount(58531d)
+                            .unitAmount(536d)
+                            .unitQuantity(91d)
+                            .build()))
+                    .memo("withdrawal of USD 873.18 at Harber and Sons charged to account ending in 1804 using card ending in ****7022.")
+                    .taxAmount(0d)
+                    .totalAmount(94452d)
+                    .updatedAt(OffsetDateTime.parse("2021-09-10T02:36:49.523Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -7590,16 +8844,17 @@ Update a vendorcredit
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateAccountingVendorcredit" method="put" path="/accounting/{connection_id}/vendorcredit/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateAccountingVendorcredit" method="put" path="/accounting/{connection_id}/vendorcredit/{id}" example="accounting_vendorcredit" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateAccountingVendorcreditRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateAccountingVendorcreditResponse;
-import to.unified.unified_java_sdk.models.shared.AccountingVendorcredit;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -7613,6 +8868,20 @@ public class Application {
 
         UpdateAccountingVendorcreditRequest req = UpdateAccountingVendorcreditRequest.builder()
                 .accountingVendorcredit(AccountingVendorcredit.builder()
+                    .applications(List.of())
+                    .applyAmount(1d)
+                    .balanceAmount(0d)
+                    .createdAt(OffsetDateTime.parse("2023-04-15T21:14:08.197Z"))
+                    .currency("KGS")
+                    .dueAt(OffsetDateTime.parse("2023-05-06T20:38:46.775Z"))
+                    .id("79c98d35-f30c-4832-82a9-eaa45fdf6b58")
+                    .lineitems(List.of())
+                    .metadata(List.of())
+                    .notes("Conatus cruciamentum decor avaritia tantum.")
+                    .postedAt(OffsetDateTime.parse("2023-09-28T16:43:46.448Z"))
+                    .status(AccountingVendorcreditStatus.SUBMITTED)
+                    .totalAmount(0d)
+                    .updatedAt(OffsetDateTime.parse("2023-11-26T14:35:53.374Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

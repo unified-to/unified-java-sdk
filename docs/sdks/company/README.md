@@ -30,11 +30,12 @@ Create a company
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createAtsCompany" method="post" path="/ats/{connection_id}/company" -->
+<!-- UsageSnippet language="java" operationID="createAtsCompany" method="post" path="/ats/{connection_id}/company" example="ats_company" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateAtsCompanyRequest;
 import to.unified.unified_java_sdk.models.operations.CreateAtsCompanyResponse;
@@ -53,6 +54,12 @@ public class Application {
 
         CreateAtsCompanyRequest req = CreateAtsCompanyRequest.builder()
                 .atsCompany(AtsCompany.builder()
+                    .createdAt(OffsetDateTime.parse("2019-04-22T03:50:02.920Z"))
+                    .id("56afd204-7f7a-49b5-99da-923b6a432b67")
+                    .name("Gulgowski, Dibbert and Wilderman")
+                    .phone("1-602-210-4548")
+                    .updatedAt(OffsetDateTime.parse("2020-09-24T19:30:24.553Z"))
+                    .websiteUrl("https://somber-substitution.com/")
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -90,16 +97,18 @@ Create a company
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createCrmCompany" method="post" path="/crm/{connection_id}/company" -->
+<!-- UsageSnippet language="java" operationID="createCrmCompany" method="post" path="/crm/{connection_id}/company" example="crm_company" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
+import java.util.Map;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateCrmCompanyRequest;
 import to.unified.unified_java_sdk.models.operations.CreateCrmCompanyResponse;
-import to.unified.unified_java_sdk.models.shared.CrmCompany;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -113,6 +122,73 @@ public class Application {
 
         CreateCrmCompanyRequest req = CreateCrmCompanyRequest.builder()
                 .crmCompany(CrmCompany.builder()
+                    .address(PropertyCrmCompanyAddress.builder()
+                        .address1("7261 Salisbury Road")
+                        .address2("Apt. 778")
+                        .city("Harrisburg")
+                        .countryCode("US")
+                        .postalCode("56293-3678")
+                        .region("Pennsylvania")
+                        .regionCode("ID")
+                        .build())
+                    .createdAt(OffsetDateTime.parse("2020-05-11T18:26:32.925Z"))
+                    .description("Balbus crapula spiculum.")
+                    .domains(List.of(
+                        "fussy-nerve.info",
+                        "sturdy-lobster.org",
+                        "greedy-offset.name"))
+                    .emails(List.of(
+                        CrmEmail.builder()
+                            .email("Sandrine_Jacobi@hotmail.com")
+                            .type(CrmEmailType.WORK)
+                            .build(),
+                        CrmEmail.builder()
+                            .email("Sandrine_Jacobi@gmail.com")
+                            .type(CrmEmailType.WORK)
+                            .build(),
+                        CrmEmail.builder()
+                            .email("Sandrine.Jacobi@yahoo.com")
+                            .type(CrmEmailType.OTHER)
+                            .build()))
+                    .employees(967d)
+                    .id("878a4579-b9a2-4c57-8199-2ead09812aa8")
+                    .industry("Infrastructure")
+                    .isActive(true)
+                    .linkUrls(List.of(
+                        "https://blue-license.org",
+                        "https://minor-formation.com",
+                        "https://ecstatic-hammock.com"))
+                    .metadata(List.of(
+                        CrmMetadata.builder()
+                            .extraData(CrmMetadataExtraData.of(Map.ofEntries(
+                                Map.entry("display_name", "Custom Property"))))
+                            .format(CrmMetadataFormat.TEXT)
+                            .id("011e5f4e-5ac6-4bab-bc6e-ad1927085f0f")
+                            .namespace("custom")
+                            .slug("custom_property")
+                            .value(CrmMetadataValue.of("esse"))
+                            .build()))
+                    .name("Goodwin and Sons")
+                    .tags(List.of(
+                        "quaerat",
+                        "valeo"))
+                    .telephones(List.of(
+                        CrmTelephone.builder()
+                            .telephone("(432) 849-2690")
+                            .type(CrmTelephoneType.MOBILE)
+                            .build(),
+                        CrmTelephone.builder()
+                            .telephone("(606) 871-2046")
+                            .type(CrmTelephoneType.OTHER)
+                            .build(),
+                        CrmTelephone.builder()
+                            .telephone("(842) 258-9395")
+                            .type(CrmTelephoneType.MOBILE)
+                            .build()))
+                    .timezone("Europe/San_Marino")
+                    .updatedAt(OffsetDateTime.parse("2025-02-06T12:34:04.282Z"))
+                    .websites(List.of(
+                        "https://wise-possession.org"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -150,16 +226,16 @@ Create a company
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createHrisCompany" method="post" path="/hris/{connection_id}/company" -->
+<!-- UsageSnippet language="java" operationID="createHrisCompany" method="post" path="/hris/{connection_id}/company" example="hris_company" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateHrisCompanyRequest;
 import to.unified.unified_java_sdk.models.operations.CreateHrisCompanyResponse;
-import to.unified.unified_java_sdk.models.shared.HrisCompany;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -173,6 +249,19 @@ public class Application {
 
         CreateHrisCompanyRequest req = CreateHrisCompanyRequest.builder()
                 .hrisCompany(HrisCompany.builder()
+                    .address(PropertyHrisCompanyAddress.builder()
+                        .address1("2549 Church Walk")
+                        .city("Lake Nettiebury")
+                        .countryCode("US")
+                        .postalCode("32877-4898")
+                        .region("Idaho")
+                        .regionCode("PA")
+                        .build())
+                    .createdAt(OffsetDateTime.parse("2021-05-02T22:27:38.970Z"))
+                    .id("698ffe76-ccdf-460f-8855-4518977a5977")
+                    .legalName("Schultz LLC")
+                    .name("Gottlieb Group")
+                    .updatedAt(OffsetDateTime.parse("2026-09-05T21:12:19.808Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -612,11 +701,12 @@ Update a company
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchAtsCompany" method="patch" path="/ats/{connection_id}/company/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchAtsCompany" method="patch" path="/ats/{connection_id}/company/{id}" example="ats_company" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchAtsCompanyRequest;
 import to.unified.unified_java_sdk.models.operations.PatchAtsCompanyResponse;
@@ -635,6 +725,12 @@ public class Application {
 
         PatchAtsCompanyRequest req = PatchAtsCompanyRequest.builder()
                 .atsCompany(AtsCompany.builder()
+                    .createdAt(OffsetDateTime.parse("2019-04-22T03:50:02.920Z"))
+                    .id("690c8c51-afd0-48c0-af3f-6cbe5db597c6")
+                    .name("Gulgowski, Dibbert and Wilderman")
+                    .phone("1-602-210-4548")
+                    .updatedAt(OffsetDateTime.parse("2020-09-24T19:30:24.557Z"))
+                    .websiteUrl("https://somber-substitution.com/")
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -673,16 +769,18 @@ Update a company
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchCrmCompany" method="patch" path="/crm/{connection_id}/company/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchCrmCompany" method="patch" path="/crm/{connection_id}/company/{id}" example="crm_company" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
+import java.util.Map;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchCrmCompanyRequest;
 import to.unified.unified_java_sdk.models.operations.PatchCrmCompanyResponse;
-import to.unified.unified_java_sdk.models.shared.CrmCompany;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -696,6 +794,73 @@ public class Application {
 
         PatchCrmCompanyRequest req = PatchCrmCompanyRequest.builder()
                 .crmCompany(CrmCompany.builder()
+                    .address(PropertyCrmCompanyAddress.builder()
+                        .address1("7261 Salisbury Road")
+                        .address2("Apt. 778")
+                        .city("Harrisburg")
+                        .countryCode("US")
+                        .postalCode("56293-3678")
+                        .region("Pennsylvania")
+                        .regionCode("ID")
+                        .build())
+                    .createdAt(OffsetDateTime.parse("2020-05-11T18:26:32.925Z"))
+                    .description("Balbus crapula spiculum.")
+                    .domains(List.of(
+                        "fussy-nerve.info",
+                        "sturdy-lobster.org",
+                        "greedy-offset.name"))
+                    .emails(List.of(
+                        CrmEmail.builder()
+                            .email("Sandrine_Jacobi@hotmail.com")
+                            .type(CrmEmailType.WORK)
+                            .build(),
+                        CrmEmail.builder()
+                            .email("Sandrine_Jacobi@gmail.com")
+                            .type(CrmEmailType.WORK)
+                            .build(),
+                        CrmEmail.builder()
+                            .email("Sandrine.Jacobi@yahoo.com")
+                            .type(CrmEmailType.OTHER)
+                            .build()))
+                    .employees(967d)
+                    .id("8003016a-bd6c-4df3-a7c3-d668a5c955a0")
+                    .industry("Infrastructure")
+                    .isActive(true)
+                    .linkUrls(List.of(
+                        "https://blue-license.org",
+                        "https://minor-formation.com",
+                        "https://ecstatic-hammock.com"))
+                    .metadata(List.of(
+                        CrmMetadata.builder()
+                            .extraData(CrmMetadataExtraData.of(Map.ofEntries(
+                                Map.entry("display_name", "Custom Property"))))
+                            .format(CrmMetadataFormat.TEXT)
+                            .id("c0e84923-8a1c-4b7e-94a6-498d9d0416a4")
+                            .namespace("custom")
+                            .slug("custom_property")
+                            .value(CrmMetadataValue.of("esse"))
+                            .build()))
+                    .name("Goodwin and Sons")
+                    .tags(List.of(
+                        "quaerat",
+                        "valeo"))
+                    .telephones(List.of(
+                        CrmTelephone.builder()
+                            .telephone("(432) 849-2690")
+                            .type(CrmTelephoneType.MOBILE)
+                            .build(),
+                        CrmTelephone.builder()
+                            .telephone("(606) 871-2046")
+                            .type(CrmTelephoneType.OTHER)
+                            .build(),
+                        CrmTelephone.builder()
+                            .telephone("(842) 258-9395")
+                            .type(CrmTelephoneType.MOBILE)
+                            .build()))
+                    .timezone("Europe/San_Marino")
+                    .updatedAt(OffsetDateTime.parse("2025-02-06T12:34:04.305Z"))
+                    .websites(List.of(
+                        "https://wise-possession.org"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -734,16 +899,16 @@ Update a company
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchHrisCompany" method="patch" path="/hris/{connection_id}/company/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchHrisCompany" method="patch" path="/hris/{connection_id}/company/{id}" example="hris_company" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchHrisCompanyRequest;
 import to.unified.unified_java_sdk.models.operations.PatchHrisCompanyResponse;
-import to.unified.unified_java_sdk.models.shared.HrisCompany;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -757,6 +922,19 @@ public class Application {
 
         PatchHrisCompanyRequest req = PatchHrisCompanyRequest.builder()
                 .hrisCompany(HrisCompany.builder()
+                    .address(PropertyHrisCompanyAddress.builder()
+                        .address1("2549 Church Walk")
+                        .city("Lake Nettiebury")
+                        .countryCode("US")
+                        .postalCode("32877-4898")
+                        .region("Idaho")
+                        .regionCode("PA")
+                        .build())
+                    .createdAt(OffsetDateTime.parse("2021-05-02T22:27:38.970Z"))
+                    .id("fa4b8143-5f86-4d31-8b32-f1197757c6cf")
+                    .legalName("Schultz LLC")
+                    .name("Gottlieb Group")
+                    .updatedAt(OffsetDateTime.parse("2026-09-05T21:12:19.828Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -963,11 +1141,12 @@ Update a company
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateAtsCompany" method="put" path="/ats/{connection_id}/company/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateAtsCompany" method="put" path="/ats/{connection_id}/company/{id}" example="ats_company" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateAtsCompanyRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateAtsCompanyResponse;
@@ -986,6 +1165,12 @@ public class Application {
 
         UpdateAtsCompanyRequest req = UpdateAtsCompanyRequest.builder()
                 .atsCompany(AtsCompany.builder()
+                    .createdAt(OffsetDateTime.parse("2019-04-22T03:50:02.920Z"))
+                    .id("690c8c51-afd0-48c0-af3f-6cbe5db597c6")
+                    .name("Gulgowski, Dibbert and Wilderman")
+                    .phone("1-602-210-4548")
+                    .updatedAt(OffsetDateTime.parse("2020-09-24T19:30:24.557Z"))
+                    .websiteUrl("https://somber-substitution.com/")
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -1024,16 +1209,18 @@ Update a company
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateCrmCompany" method="put" path="/crm/{connection_id}/company/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateCrmCompany" method="put" path="/crm/{connection_id}/company/{id}" example="crm_company" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
+import java.util.Map;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateCrmCompanyRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateCrmCompanyResponse;
-import to.unified.unified_java_sdk.models.shared.CrmCompany;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -1047,6 +1234,73 @@ public class Application {
 
         UpdateCrmCompanyRequest req = UpdateCrmCompanyRequest.builder()
                 .crmCompany(CrmCompany.builder()
+                    .address(PropertyCrmCompanyAddress.builder()
+                        .address1("7261 Salisbury Road")
+                        .address2("Apt. 778")
+                        .city("Harrisburg")
+                        .countryCode("US")
+                        .postalCode("56293-3678")
+                        .region("Pennsylvania")
+                        .regionCode("ID")
+                        .build())
+                    .createdAt(OffsetDateTime.parse("2020-05-11T18:26:32.925Z"))
+                    .description("Balbus crapula spiculum.")
+                    .domains(List.of(
+                        "fussy-nerve.info",
+                        "sturdy-lobster.org",
+                        "greedy-offset.name"))
+                    .emails(List.of(
+                        CrmEmail.builder()
+                            .email("Sandrine_Jacobi@hotmail.com")
+                            .type(CrmEmailType.WORK)
+                            .build(),
+                        CrmEmail.builder()
+                            .email("Sandrine_Jacobi@gmail.com")
+                            .type(CrmEmailType.WORK)
+                            .build(),
+                        CrmEmail.builder()
+                            .email("Sandrine.Jacobi@yahoo.com")
+                            .type(CrmEmailType.OTHER)
+                            .build()))
+                    .employees(967d)
+                    .id("8003016a-bd6c-4df3-a7c3-d668a5c955a0")
+                    .industry("Infrastructure")
+                    .isActive(true)
+                    .linkUrls(List.of(
+                        "https://blue-license.org",
+                        "https://minor-formation.com",
+                        "https://ecstatic-hammock.com"))
+                    .metadata(List.of(
+                        CrmMetadata.builder()
+                            .extraData(CrmMetadataExtraData.of(Map.ofEntries(
+                                Map.entry("display_name", "Custom Property"))))
+                            .format(CrmMetadataFormat.TEXT)
+                            .id("c0e84923-8a1c-4b7e-94a6-498d9d0416a4")
+                            .namespace("custom")
+                            .slug("custom_property")
+                            .value(CrmMetadataValue.of("esse"))
+                            .build()))
+                    .name("Goodwin and Sons")
+                    .tags(List.of(
+                        "quaerat",
+                        "valeo"))
+                    .telephones(List.of(
+                        CrmTelephone.builder()
+                            .telephone("(432) 849-2690")
+                            .type(CrmTelephoneType.MOBILE)
+                            .build(),
+                        CrmTelephone.builder()
+                            .telephone("(606) 871-2046")
+                            .type(CrmTelephoneType.OTHER)
+                            .build(),
+                        CrmTelephone.builder()
+                            .telephone("(842) 258-9395")
+                            .type(CrmTelephoneType.MOBILE)
+                            .build()))
+                    .timezone("Europe/San_Marino")
+                    .updatedAt(OffsetDateTime.parse("2025-02-06T12:34:04.305Z"))
+                    .websites(List.of(
+                        "https://wise-possession.org"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -1085,16 +1339,16 @@ Update a company
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateHrisCompany" method="put" path="/hris/{connection_id}/company/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateHrisCompany" method="put" path="/hris/{connection_id}/company/{id}" example="hris_company" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateHrisCompanyRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateHrisCompanyResponse;
-import to.unified.unified_java_sdk.models.shared.HrisCompany;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -1108,6 +1362,19 @@ public class Application {
 
         UpdateHrisCompanyRequest req = UpdateHrisCompanyRequest.builder()
                 .hrisCompany(HrisCompany.builder()
+                    .address(PropertyHrisCompanyAddress.builder()
+                        .address1("2549 Church Walk")
+                        .city("Lake Nettiebury")
+                        .countryCode("US")
+                        .postalCode("32877-4898")
+                        .region("Idaho")
+                        .regionCode("PA")
+                        .build())
+                    .createdAt(OffsetDateTime.parse("2021-05-02T22:27:38.970Z"))
+                    .id("fa4b8143-5f86-4d31-8b32-f1197757c6cf")
+                    .legalName("Schultz LLC")
+                    .name("Gottlieb Group")
+                    .updatedAt(OffsetDateTime.parse("2026-09-05T21:12:19.828Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

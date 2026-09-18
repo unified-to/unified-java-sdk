@@ -17,16 +17,17 @@ Create a pullrequest
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createRepoPullrequest" method="post" path="/repo/{connection_id}/pullrequest" -->
+<!-- UsageSnippet language="java" operationID="createRepoPullrequest" method="post" path="/repo/{connection_id}/pullrequest" example="repo_pullrequest" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateRepoPullrequestRequest;
 import to.unified.unified_java_sdk.models.operations.CreateRepoPullrequestResponse;
-import to.unified.unified_java_sdk.models.shared.RepoPullrequest;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -40,6 +41,18 @@ public class Application {
 
         CreateRepoPullrequestRequest req = CreateRepoPullrequestRequest.builder()
                 .repoPullrequest(RepoPullrequest.builder()
+                    .closedAt(OffsetDateTime.parse("2025-04-11T21:29:15.705Z"))
+                    .createdAt(OffsetDateTime.parse("2023-02-27T09:37:13.663Z"))
+                    .id("a371259c-921a-4ab7-8890-66df1900e75a")
+                    .labels(List.of(
+                        "adhuc",
+                        "quaerat"))
+                    .notes("Coadunatio turbo curtus ceno consuasor aggero. Suggero adeo creptio tutamen vulnus aqua delicate adopto derelinquo caritas. Maiores vulgivagus succurro temporibus.")
+                    .sourceBranchId("microchip-navigate")
+                    .status(RepoPullrequestStatus.REJECTED)
+                    .targetBranchId("feed-reboot")
+                    .title("Cunae aegrus averto texo advoco bibo amet asporto.")
+                    .updatedAt(OffsetDateTime.parse("2024-12-30T23:43:16.473Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -192,16 +205,17 @@ Update a pullrequest
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchRepoPullrequest" method="patch" path="/repo/{connection_id}/pullrequest/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchRepoPullrequest" method="patch" path="/repo/{connection_id}/pullrequest/{id}" example="repo_pullrequest" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchRepoPullrequestRequest;
 import to.unified.unified_java_sdk.models.operations.PatchRepoPullrequestResponse;
-import to.unified.unified_java_sdk.models.shared.RepoPullrequest;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -215,6 +229,18 @@ public class Application {
 
         PatchRepoPullrequestRequest req = PatchRepoPullrequestRequest.builder()
                 .repoPullrequest(RepoPullrequest.builder()
+                    .closedAt(OffsetDateTime.parse("2025-04-11T21:29:15.711Z"))
+                    .createdAt(OffsetDateTime.parse("2023-02-27T09:37:13.663Z"))
+                    .id("047c6837-52d0-4609-a236-614e474b832a")
+                    .labels(List.of(
+                        "adhuc",
+                        "quaerat"))
+                    .notes("Coadunatio turbo curtus ceno consuasor aggero. Suggero adeo creptio tutamen vulnus aqua delicate adopto derelinquo caritas. Maiores vulgivagus succurro temporibus.")
+                    .sourceBranchId("microchip-navigate")
+                    .status(RepoPullrequestStatus.REJECTED)
+                    .targetBranchId("feed-reboot")
+                    .title("Cunae aegrus averto texo advoco bibo amet asporto.")
+                    .updatedAt(OffsetDateTime.parse("2024-12-30T23:43:16.479Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -309,16 +335,17 @@ Update a pullrequest
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateRepoPullrequest" method="put" path="/repo/{connection_id}/pullrequest/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateRepoPullrequest" method="put" path="/repo/{connection_id}/pullrequest/{id}" example="repo_pullrequest" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateRepoPullrequestRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateRepoPullrequestResponse;
-import to.unified.unified_java_sdk.models.shared.RepoPullrequest;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -332,6 +359,18 @@ public class Application {
 
         UpdateRepoPullrequestRequest req = UpdateRepoPullrequestRequest.builder()
                 .repoPullrequest(RepoPullrequest.builder()
+                    .closedAt(OffsetDateTime.parse("2025-04-11T21:29:15.711Z"))
+                    .createdAt(OffsetDateTime.parse("2023-02-27T09:37:13.663Z"))
+                    .id("047c6837-52d0-4609-a236-614e474b832a")
+                    .labels(List.of(
+                        "adhuc",
+                        "quaerat"))
+                    .notes("Coadunatio turbo curtus ceno consuasor aggero. Suggero adeo creptio tutamen vulnus aqua delicate adopto derelinquo caritas. Maiores vulgivagus succurro temporibus.")
+                    .sourceBranchId("microchip-navigate")
+                    .status(RepoPullrequestStatus.REJECTED)
+                    .targetBranchId("feed-reboot")
+                    .title("Cunae aegrus averto texo advoco bibo amet asporto.")
+                    .updatedAt(OffsetDateTime.parse("2024-12-30T23:43:16.479Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

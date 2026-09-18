@@ -25,16 +25,16 @@ Create a document
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createSigningDocument" method="post" path="/signing/{connection_id}/document" -->
+<!-- UsageSnippet language="java" operationID="createSigningDocument" method="post" path="/signing/{connection_id}/document" example="signing_document" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateSigningDocumentRequest;
 import to.unified.unified_java_sdk.models.operations.CreateSigningDocumentResponse;
-import to.unified.unified_java_sdk.models.shared.Security;
-import to.unified.unified_java_sdk.models.shared.SigningDocument;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -48,6 +48,12 @@ public class Application {
 
         CreateSigningDocumentRequest req = CreateSigningDocumentRequest.builder()
                 .signingDocument(SigningDocument.builder()
+                    .createdAt(OffsetDateTime.parse("2021-05-02T09:35:23.679Z"))
+                    .expiresAt(OffsetDateTime.parse("2026-12-16T10:17:24.172Z"))
+                    .id("b56bffa4-89ef-4341-a673-29b95dfc4140")
+                    .name("nam audax absens")
+                    .status(SigningDocumentStatus.VOIDED)
+                    .updatedAt(OffsetDateTime.parse("2025-08-07T18:12:00.485Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -85,16 +91,16 @@ Create a signatory
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createSigningSignatory" method="post" path="/signing/{connection_id}/signatory" -->
+<!-- UsageSnippet language="java" operationID="createSigningSignatory" method="post" path="/signing/{connection_id}/signatory" example="signing_signatory" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateSigningSignatoryRequest;
 import to.unified.unified_java_sdk.models.operations.CreateSigningSignatoryResponse;
-import to.unified.unified_java_sdk.models.shared.Security;
-import to.unified.unified_java_sdk.models.shared.SigningSignatory;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -108,6 +114,13 @@ public class Application {
 
         CreateSigningSignatoryRequest req = CreateSigningSignatoryRequest.builder()
                 .signingSignatory(SigningSignatory.builder()
+                    .createdAt(OffsetDateTime.parse("2022-04-16T19:25:01.966Z"))
+                    .email("Hardy.Wehner@gmail.com")
+                    .id("99b615fd-9943-4e49-b351-51ff875f2002")
+                    .order(5d)
+                    .role(SigningSignatoryRole.SIGNER)
+                    .status(SigningSignatoryStatus.SIGNED)
+                    .updatedAt(OffsetDateTime.parse("2026-08-10T19:04:00.900Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -490,16 +503,16 @@ Update a document
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchSigningDocument" method="patch" path="/signing/{connection_id}/document/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchSigningDocument" method="patch" path="/signing/{connection_id}/document/{id}" example="signing_document" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchSigningDocumentRequest;
 import to.unified.unified_java_sdk.models.operations.PatchSigningDocumentResponse;
-import to.unified.unified_java_sdk.models.shared.Security;
-import to.unified.unified_java_sdk.models.shared.SigningDocument;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -513,6 +526,12 @@ public class Application {
 
         PatchSigningDocumentRequest req = PatchSigningDocumentRequest.builder()
                 .signingDocument(SigningDocument.builder()
+                    .createdAt(OffsetDateTime.parse("2021-05-02T09:35:23.679Z"))
+                    .expiresAt(OffsetDateTime.parse("2026-12-16T10:17:24.183Z"))
+                    .id("92c73198-9b1c-4527-b4de-ec85322f1a73")
+                    .name("nam audax absens")
+                    .status(SigningDocumentStatus.VOIDED)
+                    .updatedAt(OffsetDateTime.parse("2025-08-07T18:12:00.493Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -551,16 +570,16 @@ Update a signatory
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchSigningSignatory" method="patch" path="/signing/{connection_id}/signatory/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchSigningSignatory" method="patch" path="/signing/{connection_id}/signatory/{id}" example="signing_signatory" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchSigningSignatoryRequest;
 import to.unified.unified_java_sdk.models.operations.PatchSigningSignatoryResponse;
-import to.unified.unified_java_sdk.models.shared.Security;
-import to.unified.unified_java_sdk.models.shared.SigningSignatory;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -574,6 +593,13 @@ public class Application {
 
         PatchSigningSignatoryRequest req = PatchSigningSignatoryRequest.builder()
                 .signingSignatory(SigningSignatory.builder()
+                    .createdAt(OffsetDateTime.parse("2022-04-16T19:25:01.966Z"))
+                    .email("Hardy.Wehner@gmail.com")
+                    .id("cbd3dc66-366a-4130-bd27-8e78a1a7f9f8")
+                    .order(5d)
+                    .role(SigningSignatoryRole.SIGNER)
+                    .status(SigningSignatoryStatus.SIGNED)
+                    .updatedAt(OffsetDateTime.parse("2026-08-10T19:04:00.911Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -724,16 +750,16 @@ Update a document
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateSigningDocument" method="put" path="/signing/{connection_id}/document/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateSigningDocument" method="put" path="/signing/{connection_id}/document/{id}" example="signing_document" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateSigningDocumentRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateSigningDocumentResponse;
-import to.unified.unified_java_sdk.models.shared.Security;
-import to.unified.unified_java_sdk.models.shared.SigningDocument;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -747,6 +773,12 @@ public class Application {
 
         UpdateSigningDocumentRequest req = UpdateSigningDocumentRequest.builder()
                 .signingDocument(SigningDocument.builder()
+                    .createdAt(OffsetDateTime.parse("2021-05-02T09:35:23.679Z"))
+                    .expiresAt(OffsetDateTime.parse("2026-12-16T10:17:24.183Z"))
+                    .id("92c73198-9b1c-4527-b4de-ec85322f1a73")
+                    .name("nam audax absens")
+                    .status(SigningDocumentStatus.VOIDED)
+                    .updatedAt(OffsetDateTime.parse("2025-08-07T18:12:00.493Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -785,16 +817,16 @@ Update a signatory
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateSigningSignatory" method="put" path="/signing/{connection_id}/signatory/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateSigningSignatory" method="put" path="/signing/{connection_id}/signatory/{id}" example="signing_signatory" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateSigningSignatoryRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateSigningSignatoryResponse;
-import to.unified.unified_java_sdk.models.shared.Security;
-import to.unified.unified_java_sdk.models.shared.SigningSignatory;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -808,6 +840,13 @@ public class Application {
 
         UpdateSigningSignatoryRequest req = UpdateSigningSignatoryRequest.builder()
                 .signingSignatory(SigningSignatory.builder()
+                    .createdAt(OffsetDateTime.parse("2022-04-16T19:25:01.966Z"))
+                    .email("Hardy.Wehner@gmail.com")
+                    .id("cbd3dc66-366a-4130-bd27-8e78a1a7f9f8")
+                    .order(5d)
+                    .role(SigningSignatoryRole.SIGNER)
+                    .status(SigningSignatoryStatus.SIGNED)
+                    .updatedAt(OffsetDateTime.parse("2026-08-10T19:04:00.911Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

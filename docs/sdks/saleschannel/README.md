@@ -17,11 +17,13 @@ Create a saleschannel
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createCommerceSaleschannel" method="post" path="/commerce/{connection_id}/saleschannel" -->
+<!-- UsageSnippet language="java" operationID="createCommerceSaleschannel" method="post" path="/commerce/{connection_id}/saleschannel" example="commerce_saleschannel" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateCommerceSaleschannelRequest;
 import to.unified.unified_java_sdk.models.operations.CreateCommerceSaleschannelResponse;
@@ -40,6 +42,13 @@ public class Application {
 
         CreateCommerceSaleschannelRequest req = CreateCommerceSaleschannelRequest.builder()
                 .commerceSaleschannel(CommerceSaleschannel.builder()
+                    .collections(List.of())
+                    .createdAt(OffsetDateTime.parse("2021-12-12T06:19:55.421Z"))
+                    .description("Utroque denuncio solutio.")
+                    .id("40686ae3-40d6-4f84-a18c-43ea22fc7e79")
+                    .isActive(false)
+                    .slug("amiculum-congregatio-suspendo")
+                    .updatedAt(OffsetDateTime.parse("2025-01-06T17:44:30.036Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -192,11 +201,13 @@ Update a saleschannel
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchCommerceSaleschannel" method="patch" path="/commerce/{connection_id}/saleschannel/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchCommerceSaleschannel" method="patch" path="/commerce/{connection_id}/saleschannel/{id}" example="commerce_saleschannel" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchCommerceSaleschannelRequest;
 import to.unified.unified_java_sdk.models.operations.PatchCommerceSaleschannelResponse;
@@ -215,6 +226,13 @@ public class Application {
 
         PatchCommerceSaleschannelRequest req = PatchCommerceSaleschannelRequest.builder()
                 .commerceSaleschannel(CommerceSaleschannel.builder()
+                    .collections(List.of())
+                    .createdAt(OffsetDateTime.parse("2021-12-12T06:19:55.421Z"))
+                    .description("Utroque denuncio solutio.")
+                    .id("9c75c38f-b43b-4042-a122-482b994e374f")
+                    .isActive(false)
+                    .slug("amiculum-congregatio-suspendo")
+                    .updatedAt(OffsetDateTime.parse("2025-01-06T17:44:30.042Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -309,11 +327,13 @@ Update a saleschannel
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateCommerceSaleschannel" method="put" path="/commerce/{connection_id}/saleschannel/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateCommerceSaleschannel" method="put" path="/commerce/{connection_id}/saleschannel/{id}" example="commerce_saleschannel" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateCommerceSaleschannelRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateCommerceSaleschannelResponse;
@@ -332,6 +352,13 @@ public class Application {
 
         UpdateCommerceSaleschannelRequest req = UpdateCommerceSaleschannelRequest.builder()
                 .commerceSaleschannel(CommerceSaleschannel.builder()
+                    .collections(List.of())
+                    .createdAt(OffsetDateTime.parse("2021-12-12T06:19:55.421Z"))
+                    .description("Utroque denuncio solutio.")
+                    .id("9c75c38f-b43b-4042-a122-482b994e374f")
+                    .isActive(false)
+                    .slug("amiculum-congregatio-suspendo")
+                    .updatedAt(OffsetDateTime.parse("2025-01-06T17:44:30.042Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

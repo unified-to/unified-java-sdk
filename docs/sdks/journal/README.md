@@ -17,11 +17,13 @@ Create a journal
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="createAccountingJournal" method="post" path="/accounting/{connection_id}/journal" -->
+<!-- UsageSnippet language="java" operationID="createAccountingJournal" method="post" path="/accounting/{connection_id}/journal" example="accounting_journal" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingJournalRequest;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingJournalResponse;
@@ -40,6 +42,17 @@ public class Application {
 
         CreateAccountingJournalRequest req = CreateAccountingJournalRequest.builder()
                 .accountingJournal(AccountingJournal.builder()
+                    .attachments(List.of())
+                    .categoryIds(List.of())
+                    .createdAt(OffsetDateTime.parse("2020-02-20T15:14:55.881Z"))
+                    .currency("FKP")
+                    .description("Calco constans adipisci.")
+                    .id("3d392f10-878d-46c4-a59b-f5250068e316")
+                    .postedAt(OffsetDateTime.parse("2023-10-19T01:52:16.859Z"))
+                    .reference("ullam")
+                    .source("crustulum")
+                    .taxAmount(78672d)
+                    .updatedAt(OffsetDateTime.parse("2022-01-01T11:09:03.238Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -192,11 +205,13 @@ Update a journal
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="patchAccountingJournal" method="patch" path="/accounting/{connection_id}/journal/{id}" -->
+<!-- UsageSnippet language="java" operationID="patchAccountingJournal" method="patch" path="/accounting/{connection_id}/journal/{id}" example="accounting_journal" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchAccountingJournalRequest;
 import to.unified.unified_java_sdk.models.operations.PatchAccountingJournalResponse;
@@ -215,6 +230,17 @@ public class Application {
 
         PatchAccountingJournalRequest req = PatchAccountingJournalRequest.builder()
                 .accountingJournal(AccountingJournal.builder()
+                    .attachments(List.of())
+                    .categoryIds(List.of())
+                    .createdAt(OffsetDateTime.parse("2020-02-20T15:14:55.881Z"))
+                    .currency("FKP")
+                    .description("Calco constans adipisci.")
+                    .id("92900846-008d-4177-9d82-d2c7a3f578e0")
+                    .postedAt(OffsetDateTime.parse("2023-10-19T01:52:16.870Z"))
+                    .reference("ullam")
+                    .source("crustulum")
+                    .taxAmount(78672d)
+                    .updatedAt(OffsetDateTime.parse("2022-01-01T11:09:03.243Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -309,11 +335,13 @@ Update a journal
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="updateAccountingJournal" method="put" path="/accounting/{connection_id}/journal/{id}" -->
+<!-- UsageSnippet language="java" operationID="updateAccountingJournal" method="put" path="/accounting/{connection_id}/journal/{id}" example="accounting_journal" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateAccountingJournalRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateAccountingJournalResponse;
@@ -332,6 +360,17 @@ public class Application {
 
         UpdateAccountingJournalRequest req = UpdateAccountingJournalRequest.builder()
                 .accountingJournal(AccountingJournal.builder()
+                    .attachments(List.of())
+                    .categoryIds(List.of())
+                    .createdAt(OffsetDateTime.parse("2020-02-20T15:14:55.881Z"))
+                    .currency("FKP")
+                    .description("Calco constans adipisci.")
+                    .id("92900846-008d-4177-9d82-d2c7a3f578e0")
+                    .postedAt(OffsetDateTime.parse("2023-10-19T01:52:16.870Z"))
+                    .reference("ullam")
+                    .source("crustulum")
+                    .taxAmount(78672d)
+                    .updatedAt(OffsetDateTime.parse("2022-01-01T11:09:03.243Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
