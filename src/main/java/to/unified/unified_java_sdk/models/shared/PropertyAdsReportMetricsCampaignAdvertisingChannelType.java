@@ -36,6 +36,7 @@ public class PropertyAdsReportMetricsCampaignAdvertisingChannelType {
     public static final PropertyAdsReportMetricsCampaignAdvertisingChannelType NATIVE = new PropertyAdsReportMetricsCampaignAdvertisingChannelType("NATIVE");
     public static final PropertyAdsReportMetricsCampaignAdvertisingChannelType CTV = new PropertyAdsReportMetricsCampaignAdvertisingChannelType("CTV");
     public static final PropertyAdsReportMetricsCampaignAdvertisingChannelType DOOH = new PropertyAdsReportMetricsCampaignAdvertisingChannelType("DOOH");
+    public static final PropertyAdsReportMetricsCampaignAdvertisingChannelType PERFORMANCE_MAX = new PropertyAdsReportMetricsCampaignAdvertisingChannelType("PERFORMANCE_MAX");
 
     // This map will grow whenever a Color gets created with a new
     // unrecognized value (a potential memory leak if the user is not
@@ -125,6 +126,7 @@ public class PropertyAdsReportMetricsCampaignAdvertisingChannelType {
         map.put("NATIVE", NATIVE);
         map.put("CTV", CTV);
         map.put("DOOH", DOOH);
+        map.put("PERFORMANCE_MAX", PERFORMANCE_MAX);
         return map;
     }
 
@@ -146,6 +148,7 @@ public class PropertyAdsReportMetricsCampaignAdvertisingChannelType {
         map.put("NATIVE", PropertyAdsReportMetricsCampaignAdvertisingChannelTypeEnum.NATIVE);
         map.put("CTV", PropertyAdsReportMetricsCampaignAdvertisingChannelTypeEnum.CTV);
         map.put("DOOH", PropertyAdsReportMetricsCampaignAdvertisingChannelTypeEnum.DOOH);
+        map.put("PERFORMANCE_MAX", PropertyAdsReportMetricsCampaignAdvertisingChannelTypeEnum.PERFORMANCE_MAX);
         return map;
     }
     
@@ -167,7 +170,8 @@ public class PropertyAdsReportMetricsCampaignAdvertisingChannelType {
         YOUTUBE("YOUTUBE"),
         NATIVE("NATIVE"),
         CTV("CTV"),
-        DOOH("DOOH"),;
+        DOOH("DOOH"),
+        PERFORMANCE_MAX("PERFORMANCE_MAX"),;
 
         private final String value;
 

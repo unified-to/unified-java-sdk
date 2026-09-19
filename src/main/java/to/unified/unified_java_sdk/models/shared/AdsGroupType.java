@@ -36,6 +36,7 @@ public class AdsGroupType {
     public static final AdsGroupType NATIVE = new AdsGroupType("NATIVE");
     public static final AdsGroupType CTV = new AdsGroupType("CTV");
     public static final AdsGroupType DOOH = new AdsGroupType("DOOH");
+    public static final AdsGroupType PERFORMANCE_MAX = new AdsGroupType("PERFORMANCE_MAX");
 
     // This map will grow whenever a Color gets created with a new
     // unrecognized value (a potential memory leak if the user is not
@@ -125,6 +126,7 @@ public class AdsGroupType {
         map.put("NATIVE", NATIVE);
         map.put("CTV", CTV);
         map.put("DOOH", DOOH);
+        map.put("PERFORMANCE_MAX", PERFORMANCE_MAX);
         return map;
     }
 
@@ -146,6 +148,7 @@ public class AdsGroupType {
         map.put("NATIVE", AdsGroupTypeEnum.NATIVE);
         map.put("CTV", AdsGroupTypeEnum.CTV);
         map.put("DOOH", AdsGroupTypeEnum.DOOH);
+        map.put("PERFORMANCE_MAX", AdsGroupTypeEnum.PERFORMANCE_MAX);
         return map;
     }
     
@@ -167,7 +170,8 @@ public class AdsGroupType {
         YOUTUBE("YOUTUBE"),
         NATIVE("NATIVE"),
         CTV("CTV"),
-        DOOH("DOOH"),;
+        DOOH("DOOH"),
+        PERFORMANCE_MAX("PERFORMANCE_MAX"),;
 
         private final String value;
 

@@ -36,6 +36,7 @@ public class AdvertisingChannelType {
     public static final AdvertisingChannelType NATIVE = new AdvertisingChannelType("NATIVE");
     public static final AdvertisingChannelType CTV = new AdvertisingChannelType("CTV");
     public static final AdvertisingChannelType DOOH = new AdvertisingChannelType("DOOH");
+    public static final AdvertisingChannelType PERFORMANCE_MAX = new AdvertisingChannelType("PERFORMANCE_MAX");
 
     // This map will grow whenever a Color gets created with a new
     // unrecognized value (a potential memory leak if the user is not
@@ -125,6 +126,7 @@ public class AdvertisingChannelType {
         map.put("NATIVE", NATIVE);
         map.put("CTV", CTV);
         map.put("DOOH", DOOH);
+        map.put("PERFORMANCE_MAX", PERFORMANCE_MAX);
         return map;
     }
 
@@ -146,6 +148,7 @@ public class AdvertisingChannelType {
         map.put("NATIVE", AdvertisingChannelTypeEnum.NATIVE);
         map.put("CTV", AdvertisingChannelTypeEnum.CTV);
         map.put("DOOH", AdvertisingChannelTypeEnum.DOOH);
+        map.put("PERFORMANCE_MAX", AdvertisingChannelTypeEnum.PERFORMANCE_MAX);
         return map;
     }
     
@@ -167,7 +170,8 @@ public class AdvertisingChannelType {
         YOUTUBE("YOUTUBE"),
         NATIVE("NATIVE"),
         CTV("CTV"),
-        DOOH("DOOH"),;
+        DOOH("DOOH"),
+        PERFORMANCE_MAX("PERFORMANCE_MAX"),;
 
         private final String value;
 

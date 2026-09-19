@@ -10,6 +10,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.core.type.TypeReference;
 import jakarta.annotation.Nullable;
 import java.lang.Boolean;
+import java.lang.Double;
 import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
@@ -26,6 +27,11 @@ public class AccountingContact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("associated_contacts")
     private List<AccountingAssociatedContact> associatedContacts;
+
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("balance_amount")
+    private Double balanceAmount;
 
 
     @JsonInclude(Include.NON_ABSENT)
@@ -94,6 +100,11 @@ public class AccountingContact {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("notes")
+    private String notes;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("organization_id")
     private String organizationId;
 
@@ -147,9 +158,15 @@ public class AccountingContact {
     @JsonProperty("updated_at")
     private OffsetDateTime updatedAt;
 
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("website")
+    private String website;
+
     @JsonCreator
     public AccountingContact(
             @JsonProperty("associated_contacts") @Nullable List<AccountingAssociatedContact> associatedContacts,
+            @JsonProperty("balance_amount") @Nullable Double balanceAmount,
             @JsonProperty("billing_address") @Nullable PropertyAccountingContactBillingAddress billingAddress,
             @JsonProperty("company_name") @Nullable String companyName,
             @JsonProperty("created_at") @Nullable OffsetDateTime createdAt,
@@ -163,6 +180,7 @@ public class AccountingContact {
             @JsonProperty("is_supplier") @Nullable Boolean isSupplier,
             @JsonProperty("last_name") @Nullable String lastName,
             @JsonProperty("name") @Nullable String name,
+            @JsonProperty("notes") @Nullable String notes,
             @JsonProperty("organization_id") @Nullable String organizationId,
             @JsonProperty("payment_methods") @Nullable List<AccountingContactPaymentMethod> paymentMethods,
             @JsonProperty("payment_terms") @Nullable AccountingContactPaymentTerms paymentTerms,
@@ -173,8 +191,10 @@ public class AccountingContact {
             @JsonProperty("tax_exemption") @Nullable TaxExemption taxExemption,
             @JsonProperty("tax_number") @Nullable String taxNumber,
             @JsonProperty("telephones") @Nullable List<AccountingTelephone> telephones,
-            @JsonProperty("updated_at") @Nullable OffsetDateTime updatedAt) {
+            @JsonProperty("updated_at") @Nullable OffsetDateTime updatedAt,
+            @JsonProperty("website") @Nullable String website) {
         this.associatedContacts = associatedContacts;
+        this.balanceAmount = balanceAmount;
         this.billingAddress = billingAddress;
         this.companyName = companyName;
         this.createdAt = createdAt;
@@ -189,6 +209,7 @@ public class AccountingContact {
         this.isSupplier = isSupplier;
         this.lastName = lastName;
         this.name = name;
+        this.notes = notes;
         this.organizationId = organizationId;
         this.paymentMethods = paymentMethods;
         this.paymentTerms = paymentTerms;
@@ -200,10 +221,12 @@ public class AccountingContact {
         this.taxNumber = taxNumber;
         this.telephones = telephones;
         this.updatedAt = updatedAt;
+        this.website = website;
     }
     
     public AccountingContact() {
         this(null, null, null,
+            null, null, null,
             null, null, null,
             null, null, null,
             null, null, null,
@@ -216,6 +239,10 @@ public class AccountingContact {
 
     public Optional<List<AccountingAssociatedContact>> associatedContacts() {
         return Optional.ofNullable(this.associatedContacts);
+    }
+
+    public Optional<Double> balanceAmount() {
+        return Optional.ofNullable(this.balanceAmount);
     }
 
     public Optional<PropertyAccountingContactBillingAddress> billingAddress() {
@@ -270,6 +297,10 @@ public class AccountingContact {
         return Optional.ofNullable(this.name);
     }
 
+    public Optional<String> notes() {
+        return Optional.ofNullable(this.notes);
+    }
+
     public Optional<String> organizationId() {
         return Optional.ofNullable(this.organizationId);
     }
@@ -314,6 +345,10 @@ public class AccountingContact {
         return Optional.ofNullable(this.updatedAt);
     }
 
+    public Optional<String> website() {
+        return Optional.ofNullable(this.website);
+    }
+
     public static Builder builder() {
         return new Builder();
     }
@@ -321,6 +356,12 @@ public class AccountingContact {
 
     public AccountingContact withAssociatedContacts(@Nullable List<AccountingAssociatedContact> associatedContacts) {
         this.associatedContacts = associatedContacts;
+        return this;
+    }
+
+
+    public AccountingContact withBalanceAmount(@Nullable Double balanceAmount) {
+        this.balanceAmount = balanceAmount;
         return this;
     }
 
@@ -403,6 +444,12 @@ public class AccountingContact {
     }
 
 
+    public AccountingContact withNotes(@Nullable String notes) {
+        this.notes = notes;
+        return this;
+    }
+
+
     public AccountingContact withOrganizationId(@Nullable String organizationId) {
         this.organizationId = organizationId;
         return this;
@@ -469,6 +516,12 @@ public class AccountingContact {
     }
 
 
+    public AccountingContact withWebsite(@Nullable String website) {
+        this.website = website;
+        return this;
+    }
+
+
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -480,6 +533,7 @@ public class AccountingContact {
         AccountingContact other = (AccountingContact) o;
         return 
             Utils.enhancedDeepEquals(this.associatedContacts, other.associatedContacts) &&
+            Utils.enhancedDeepEquals(this.balanceAmount, other.balanceAmount) &&
             Utils.enhancedDeepEquals(this.billingAddress, other.billingAddress) &&
             Utils.enhancedDeepEquals(this.companyName, other.companyName) &&
             Utils.enhancedDeepEquals(this.createdAt, other.createdAt) &&
@@ -493,6 +547,7 @@ public class AccountingContact {
             Utils.enhancedDeepEquals(this.isSupplier, other.isSupplier) &&
             Utils.enhancedDeepEquals(this.lastName, other.lastName) &&
             Utils.enhancedDeepEquals(this.name, other.name) &&
+            Utils.enhancedDeepEquals(this.notes, other.notes) &&
             Utils.enhancedDeepEquals(this.organizationId, other.organizationId) &&
             Utils.enhancedDeepEquals(this.paymentMethods, other.paymentMethods) &&
             Utils.enhancedDeepEquals(this.paymentTerms, other.paymentTerms) &&
@@ -503,27 +558,30 @@ public class AccountingContact {
             Utils.enhancedDeepEquals(this.taxExemption, other.taxExemption) &&
             Utils.enhancedDeepEquals(this.taxNumber, other.taxNumber) &&
             Utils.enhancedDeepEquals(this.telephones, other.telephones) &&
-            Utils.enhancedDeepEquals(this.updatedAt, other.updatedAt);
+            Utils.enhancedDeepEquals(this.updatedAt, other.updatedAt) &&
+            Utils.enhancedDeepEquals(this.website, other.website);
     }
     
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            associatedContacts, billingAddress, companyName,
-            createdAt, currency, emails,
-            firstName, id, identification,
-            isActive, isCustomer, isSupplier,
-            lastName, name, organizationId,
-            paymentMethods, paymentTerms, paymenttermId,
-            portalUrl, raw, shippingAddress,
-            taxExemption, taxNumber, telephones,
-            updatedAt);
+            associatedContacts, balanceAmount, billingAddress,
+            companyName, createdAt, currency,
+            emails, firstName, id,
+            identification, isActive, isCustomer,
+            isSupplier, lastName, name,
+            notes, organizationId, paymentMethods,
+            paymentTerms, paymenttermId, portalUrl,
+            raw, shippingAddress, taxExemption,
+            taxNumber, telephones, updatedAt,
+            website);
     }
     
     @Override
     public String toString() {
         return Utils.toString(AccountingContact.class,
                 "associatedContacts", associatedContacts,
+                "balanceAmount", balanceAmount,
                 "billingAddress", billingAddress,
                 "companyName", companyName,
                 "createdAt", createdAt,
@@ -537,6 +595,7 @@ public class AccountingContact {
                 "isSupplier", isSupplier,
                 "lastName", lastName,
                 "name", name,
+                "notes", notes,
                 "organizationId", organizationId,
                 "paymentMethods", paymentMethods,
                 "paymentTerms", paymentTerms,
@@ -547,13 +606,16 @@ public class AccountingContact {
                 "taxExemption", taxExemption,
                 "taxNumber", taxNumber,
                 "telephones", telephones,
-                "updatedAt", updatedAt);
+                "updatedAt", updatedAt,
+                "website", website);
     }
 
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
 
         private List<AccountingAssociatedContact> associatedContacts;
+
+        private Double balanceAmount;
 
         private PropertyAccountingContactBillingAddress billingAddress;
 
@@ -581,6 +643,8 @@ public class AccountingContact {
 
         private String name;
 
+        private String notes;
+
         private String organizationId;
 
         private List<AccountingContactPaymentMethod> paymentMethods;
@@ -603,12 +667,19 @@ public class AccountingContact {
 
         private OffsetDateTime updatedAt;
 
+        private String website;
+
         private Builder() {
           // force use of static builder() method
         }
 
         public Builder associatedContacts(@Nullable List<AccountingAssociatedContact> associatedContacts) {
             this.associatedContacts = associatedContacts;
+            return this;
+        }
+
+        public Builder balanceAmount(@Nullable Double balanceAmount) {
+            this.balanceAmount = balanceAmount;
             return this;
         }
 
@@ -677,6 +748,11 @@ public class AccountingContact {
             return this;
         }
 
+        public Builder notes(@Nullable String notes) {
+            this.notes = notes;
+            return this;
+        }
+
         public Builder organizationId(@Nullable String organizationId) {
             this.organizationId = organizationId;
             return this;
@@ -732,17 +808,23 @@ public class AccountingContact {
             return this;
         }
 
+        public Builder website(@Nullable String website) {
+            this.website = website;
+            return this;
+        }
+
         public AccountingContact build() {
             return new AccountingContact(
-                associatedContacts, billingAddress, companyName,
-                createdAt, currency, emails,
-                firstName, id, identification,
-                isActive, isCustomer, isSupplier,
-                lastName, name, organizationId,
-                paymentMethods, paymentTerms, paymenttermId,
-                portalUrl, raw, shippingAddress,
-                taxExemption, taxNumber, telephones,
-                updatedAt);
+                associatedContacts, balanceAmount, billingAddress,
+                companyName, createdAt, currency,
+                emails, firstName, id,
+                identification, isActive, isCustomer,
+                isSupplier, lastName, name,
+                notes, organizationId, paymentMethods,
+                paymentTerms, paymenttermId, portalUrl,
+                raw, shippingAddress, taxExemption,
+                taxNumber, telephones, updatedAt,
+                website);
         }
 
 

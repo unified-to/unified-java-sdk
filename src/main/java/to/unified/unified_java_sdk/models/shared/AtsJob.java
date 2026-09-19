@@ -164,6 +164,11 @@ public class AtsJob {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("summary")
+    private String summary;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     private OffsetDateTime updatedAt;
 
@@ -201,6 +206,7 @@ public class AtsJob {
             @JsonProperty("remote") @Nullable Boolean remote,
             @JsonProperty("skills") @Nullable List<String> skills,
             @JsonProperty("status") @Nullable AtsJobStatus status,
+            @JsonProperty("summary") @Nullable String summary,
             @JsonProperty("updated_at") @Nullable OffsetDateTime updatedAt,
             @JsonProperty("user_id") @Nullable String userId) {
         this.addresses = addresses;
@@ -230,6 +236,7 @@ public class AtsJob {
         this.remote = remote;
         this.skills = skills;
         this.status = status;
+        this.summary = summary;
         this.updatedAt = updatedAt;
         this.userId = userId;
     }
@@ -244,7 +251,7 @@ public class AtsJob {
             null, null, null,
             null, null, null,
             null, null, null,
-            null, null);
+            null, null, null);
     }
 
     public Optional<List<AtsAddress>> addresses() {
@@ -362,6 +369,10 @@ public class AtsJob {
 
     public Optional<AtsJobStatus> status() {
         return Optional.ofNullable(this.status);
+    }
+
+    public Optional<String> summary() {
+        return Optional.ofNullable(this.summary);
     }
 
     public Optional<OffsetDateTime> updatedAt() {
@@ -548,6 +559,12 @@ public class AtsJob {
     }
 
 
+    public AtsJob withSummary(@Nullable String summary) {
+        this.summary = summary;
+        return this;
+    }
+
+
     public AtsJob withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -597,6 +614,7 @@ public class AtsJob {
             Utils.enhancedDeepEquals(this.remote, other.remote) &&
             Utils.enhancedDeepEquals(this.skills, other.skills) &&
             Utils.enhancedDeepEquals(this.status, other.status) &&
+            Utils.enhancedDeepEquals(this.summary, other.summary) &&
             Utils.enhancedDeepEquals(this.updatedAt, other.updatedAt) &&
             Utils.enhancedDeepEquals(this.userId, other.userId);
     }
@@ -613,7 +631,7 @@ public class AtsJob {
             openings, postings, publicJobUrls,
             questions, raw, recruiterIds,
             remote, skills, status,
-            updatedAt, userId);
+            summary, updatedAt, userId);
     }
     
     @Override
@@ -646,6 +664,7 @@ public class AtsJob {
                 "remote", remote,
                 "skills", skills,
                 "status", status,
+                "summary", summary,
                 "updatedAt", updatedAt,
                 "userId", userId);
     }
@@ -706,6 +725,8 @@ public class AtsJob {
         private List<String> skills;
 
         private AtsJobStatus status;
+
+        private String summary;
 
         private OffsetDateTime updatedAt;
 
@@ -859,6 +880,11 @@ public class AtsJob {
             return this;
         }
 
+        public Builder summary(@Nullable String summary) {
+            this.summary = summary;
+            return this;
+        }
+
         public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;
@@ -880,7 +906,7 @@ public class AtsJob {
                 openings, postings, publicJobUrls,
                 questions, raw, recruiterIds,
                 remote, skills, status,
-                updatedAt, userId);
+                summary, updatedAt, userId);
         }
 
     }

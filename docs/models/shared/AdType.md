@@ -14,21 +14,22 @@ AdType custom = AdType.of("custom_value");
 
 ## Values
 
-| Name         | Value        |
-| ------------ | ------------ |
-| `TEXT`       | TEXT         |
-| `IMAGE`      | IMAGE        |
-| `VIDEO`      | VIDEO        |
-| `RESPONSIVE` | RESPONSIVE   |
-| `SHOPPING`   | SHOPPING     |
-| `APP`        | APP          |
-| `CALL`       | CALL         |
-| `CAROUSEL`   | CAROUSEL     |
-| `SOCIAL`     | SOCIAL       |
-| `DISPLAY`    | DISPLAY      |
-| `SEARCH`     | SEARCH       |
-| `AUDIO`      | AUDIO        |
-| `YOUTUBE`    | YOUTUBE      |
-| `NATIVE`     | NATIVE       |
-| `CTV`        | CTV          |
-| `DOOH`       | DOOH         |
+| Name              | Value             |
+| ----------------- | ----------------- |
+| `TEXT`            | TEXT              |
+| `IMAGE`           | IMAGE             |
+| `VIDEO`           | VIDEO             |
+| `RESPONSIVE`      | RESPONSIVE        |
+| `SHOPPING`        | SHOPPING          |
+| `APP`             | APP               |
+| `CALL`            | CALL              |
+| `CAROUSEL`        | CAROUSEL          |
+| `SOCIAL`          | SOCIAL            |
+| `DISPLAY`         | DISPLAY           |
+| `SEARCH`          | SEARCH            |
+| `AUDIO`           | AUDIO             |
+| `YOUTUBE`         | YOUTUBE           |
+| `NATIVE`          | NATIVE            |
+| `CTV`             | CTV               |
+| `DOOH`            | DOOH              |
+| `PERFORMANCE_MAX` | PERFORMANCE_MAX   |

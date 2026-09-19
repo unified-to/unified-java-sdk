@@ -22,7 +22,9 @@ public class ListCdpActivationsRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=connection_id")
     private String connectionId;
 
-
+    /**
+     * The destination ID to filter by
+     */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=destination_id")
     private String destinationId;
 
@@ -117,6 +119,9 @@ public class ListCdpActivationsRequest {
         return this.connectionId;
     }
 
+    /**
+     * The destination ID to filter by
+     */
     public Optional<String> destinationId() {
         return Optional.ofNullable(this.destinationId);
     }
@@ -189,6 +194,9 @@ public class ListCdpActivationsRequest {
     }
 
 
+    /**
+     * The destination ID to filter by
+     */
     public ListCdpActivationsRequest withDestinationId(@Nullable String destinationId) {
         this.destinationId = destinationId;
         return this;
@@ -352,6 +360,9 @@ public class ListCdpActivationsRequest {
             return this;
         }
 
+        /**
+         * The destination ID to filter by
+         */
         public Builder destinationId(@Nullable String destinationId) {
             this.destinationId = destinationId;
             return this;

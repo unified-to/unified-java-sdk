@@ -101,6 +101,11 @@ public class AtsApplication {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("summary")
+    private String summary;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     private OffsetDateTime updatedAt;
 
@@ -127,6 +132,7 @@ public class AtsApplication {
             @JsonProperty("rejected_reason") @Nullable String rejectedReason,
             @JsonProperty("source") @Nullable String source,
             @JsonProperty("status") @Nullable AtsApplicationStatus status,
+            @JsonProperty("summary") @Nullable String summary,
             @JsonProperty("updated_at") @Nullable OffsetDateTime updatedAt,
             @JsonProperty("user_id") @Nullable String userId) {
         this.answers = answers;
@@ -145,6 +151,7 @@ public class AtsApplication {
         this.rejectedReason = rejectedReason;
         this.source = source;
         this.status = status;
+        this.summary = summary;
         this.updatedAt = updatedAt;
         this.userId = userId;
     }
@@ -155,7 +162,8 @@ public class AtsApplication {
             null, null, null,
             null, null, null,
             null, null, null,
-            null, null, null);
+            null, null, null,
+            null);
     }
 
     public Optional<List<AtsApplicationAnswer>> answers() {
@@ -220,6 +228,10 @@ public class AtsApplication {
 
     public Optional<AtsApplicationStatus> status() {
         return Optional.ofNullable(this.status);
+    }
+
+    public Optional<String> summary() {
+        return Optional.ofNullable(this.summary);
     }
 
     public Optional<OffsetDateTime> updatedAt() {
@@ -331,6 +343,12 @@ public class AtsApplication {
     }
 
 
+    public AtsApplication withSummary(@Nullable String summary) {
+        this.summary = summary;
+        return this;
+    }
+
+
     public AtsApplication withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -369,6 +387,7 @@ public class AtsApplication {
             Utils.enhancedDeepEquals(this.rejectedReason, other.rejectedReason) &&
             Utils.enhancedDeepEquals(this.source, other.source) &&
             Utils.enhancedDeepEquals(this.status, other.status) &&
+            Utils.enhancedDeepEquals(this.summary, other.summary) &&
             Utils.enhancedDeepEquals(this.updatedAt, other.updatedAt) &&
             Utils.enhancedDeepEquals(this.userId, other.userId);
     }
@@ -381,7 +400,8 @@ public class AtsApplication {
             jobId, metadata, offers,
             originalStatus, originalSubstatus, raw,
             rejectedAt, rejectedReason, source,
-            status, updatedAt, userId);
+            status, summary, updatedAt,
+            userId);
     }
     
     @Override
@@ -403,6 +423,7 @@ public class AtsApplication {
                 "rejectedReason", rejectedReason,
                 "source", source,
                 "status", status,
+                "summary", summary,
                 "updatedAt", updatedAt,
                 "userId", userId);
     }
@@ -441,6 +462,8 @@ public class AtsApplication {
         private String source;
 
         private AtsApplicationStatus status;
+
+        private String summary;
 
         private OffsetDateTime updatedAt;
 
@@ -530,6 +553,11 @@ public class AtsApplication {
             return this;
         }
 
+        public Builder summary(@Nullable String summary) {
+            this.summary = summary;
+            return this;
+        }
+
         public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;
@@ -547,7 +575,8 @@ public class AtsApplication {
                 jobId, metadata, offers,
                 originalStatus, originalSubstatus, raw,
                 rejectedAt, rejectedReason, source,
-                status, updatedAt, userId);
+                status, summary, updatedAt,
+                userId);
         }
 
     }

@@ -36,6 +36,7 @@ public class PropertyAdsReportMetricsGroupType {
     public static final PropertyAdsReportMetricsGroupType NATIVE = new PropertyAdsReportMetricsGroupType("NATIVE");
     public static final PropertyAdsReportMetricsGroupType CTV = new PropertyAdsReportMetricsGroupType("CTV");
     public static final PropertyAdsReportMetricsGroupType DOOH = new PropertyAdsReportMetricsGroupType("DOOH");
+    public static final PropertyAdsReportMetricsGroupType PERFORMANCE_MAX = new PropertyAdsReportMetricsGroupType("PERFORMANCE_MAX");
 
     // This map will grow whenever a Color gets created with a new
     // unrecognized value (a potential memory leak if the user is not
@@ -125,6 +126,7 @@ public class PropertyAdsReportMetricsGroupType {
         map.put("NATIVE", NATIVE);
         map.put("CTV", CTV);
         map.put("DOOH", DOOH);
+        map.put("PERFORMANCE_MAX", PERFORMANCE_MAX);
         return map;
     }
 
@@ -146,6 +148,7 @@ public class PropertyAdsReportMetricsGroupType {
         map.put("NATIVE", PropertyAdsReportMetricsGroupTypeEnum.NATIVE);
         map.put("CTV", PropertyAdsReportMetricsGroupTypeEnum.CTV);
         map.put("DOOH", PropertyAdsReportMetricsGroupTypeEnum.DOOH);
+        map.put("PERFORMANCE_MAX", PropertyAdsReportMetricsGroupTypeEnum.PERFORMANCE_MAX);
         return map;
     }
     
@@ -167,7 +170,8 @@ public class PropertyAdsReportMetricsGroupType {
         YOUTUBE("YOUTUBE"),
         NATIVE("NATIVE"),
         CTV("CTV"),
-        DOOH("DOOH"),;
+        DOOH("DOOH"),
+        PERFORMANCE_MAX("PERFORMANCE_MAX"),;
 
         private final String value;
 

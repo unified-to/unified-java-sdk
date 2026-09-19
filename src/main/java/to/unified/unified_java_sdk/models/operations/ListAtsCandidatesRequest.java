@@ -34,6 +34,12 @@ public class ListAtsCandidatesRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     private List<ListAtsCandidatesQueryParamFields> fields;
 
+    /**
+     * The job ID to filter by
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=job_id")
+    private String jobId;
+
 
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     private Double limit;
@@ -76,6 +82,7 @@ public class ListAtsCandidatesRequest {
             @Nullable String companyId,
             @Nonnull String connectionId,
             @Nullable List<ListAtsCandidatesQueryParamFields> fields,
+            @Nullable String jobId,
             @Nullable Double limit,
             @Nullable Double offset,
             @Nullable String order,
@@ -87,6 +94,7 @@ public class ListAtsCandidatesRequest {
         this.connectionId = Optional.ofNullable(connectionId)
             .orElseThrow(() -> new IllegalArgumentException("connectionId cannot be null"));
         this.fields = fields;
+        this.jobId = jobId;
         this.limit = limit;
         this.offset = offset;
         this.order = order;
@@ -101,7 +109,7 @@ public class ListAtsCandidatesRequest {
         this(null, connectionId, null,
             null, null, null,
             null, null, null,
-            null);
+            null, null);
     }
 
     /**
@@ -123,6 +131,13 @@ public class ListAtsCandidatesRequest {
      */
     public Optional<List<ListAtsCandidatesQueryParamFields>> fields() {
         return Optional.ofNullable(this.fields);
+    }
+
+    /**
+     * The job ID to filter by
+     */
+    public Optional<String> jobId() {
+        return Optional.ofNullable(this.jobId);
     }
 
     public Optional<Double> limit() {
@@ -197,6 +212,15 @@ public class ListAtsCandidatesRequest {
     }
 
 
+    /**
+     * The job ID to filter by
+     */
+    public ListAtsCandidatesRequest withJobId(@Nullable String jobId) {
+        this.jobId = jobId;
+        return this;
+    }
+
+
     public ListAtsCandidatesRequest withLimit(@Nullable Double limit) {
         this.limit = limit;
         return this;
@@ -264,6 +288,7 @@ public class ListAtsCandidatesRequest {
             Utils.enhancedDeepEquals(this.companyId, other.companyId) &&
             Utils.enhancedDeepEquals(this.connectionId, other.connectionId) &&
             Utils.enhancedDeepEquals(this.fields, other.fields) &&
+            Utils.enhancedDeepEquals(this.jobId, other.jobId) &&
             Utils.enhancedDeepEquals(this.limit, other.limit) &&
             Utils.enhancedDeepEquals(this.offset, other.offset) &&
             Utils.enhancedDeepEquals(this.order, other.order) &&
@@ -277,9 +302,9 @@ public class ListAtsCandidatesRequest {
     public int hashCode() {
         return Utils.enhancedHash(
             companyId, connectionId, fields,
-            limit, offset, order,
-            query, raw, sort,
-            updatedGte);
+            jobId, limit, offset,
+            order, query, raw,
+            sort, updatedGte);
     }
     
     @Override
@@ -288,6 +313,7 @@ public class ListAtsCandidatesRequest {
                 "companyId", companyId,
                 "connectionId", connectionId,
                 "fields", fields,
+                "jobId", jobId,
                 "limit", limit,
                 "offset", offset,
                 "order", order,
@@ -305,6 +331,8 @@ public class ListAtsCandidatesRequest {
         private String connectionId;
 
         private List<ListAtsCandidatesQueryParamFields> fields;
+
+        private String jobId;
 
         private Double limit;
 
@@ -345,6 +373,14 @@ public class ListAtsCandidatesRequest {
          */
         public Builder fields(@Nullable List<ListAtsCandidatesQueryParamFields> fields) {
             this.fields = fields;
+            return this;
+        }
+
+        /**
+         * The job ID to filter by
+         */
+        public Builder jobId(@Nullable String jobId) {
+            this.jobId = jobId;
             return this;
         }
 
@@ -398,9 +434,9 @@ public class ListAtsCandidatesRequest {
         public ListAtsCandidatesRequest build() {
             return new ListAtsCandidatesRequest(
                 companyId, connectionId, fields,
-                limit, offset, order,
-                query, raw, sort,
-                updatedGte);
+                jobId, limit, offset,
+                order, query, raw,
+                sort, updatedGte);
         }
 
     }

@@ -30,4 +30,5 @@ CreateAtsApplicationQueryParamFields value = CreateAtsApplicationQueryParamField
 | `USER_ID`            | user_id              |
 | `METADATA`           | metadata             |
 | `ORIGINAL_SUBSTATUS` | original_substatus   |
+| `SUMMARY`            | summary              |
 | `RAW`                | raw                  |

@@ -36,6 +36,7 @@ public class AdType {
     public static final AdType NATIVE = new AdType("NATIVE");
     public static final AdType CTV = new AdType("CTV");
     public static final AdType DOOH = new AdType("DOOH");
+    public static final AdType PERFORMANCE_MAX = new AdType("PERFORMANCE_MAX");
 
     // This map will grow whenever a Color gets created with a new
     // unrecognized value (a potential memory leak if the user is not
@@ -125,6 +126,7 @@ public class AdType {
         map.put("NATIVE", NATIVE);
         map.put("CTV", CTV);
         map.put("DOOH", DOOH);
+        map.put("PERFORMANCE_MAX", PERFORMANCE_MAX);
         return map;
     }
 
@@ -146,6 +148,7 @@ public class AdType {
         map.put("NATIVE", AdTypeEnum.NATIVE);
         map.put("CTV", AdTypeEnum.CTV);
         map.put("DOOH", AdTypeEnum.DOOH);
+        map.put("PERFORMANCE_MAX", AdTypeEnum.PERFORMANCE_MAX);
         return map;
     }
     
@@ -167,7 +170,8 @@ public class AdType {
         YOUTUBE("YOUTUBE"),
         NATIVE("NATIVE"),
         CTV("CTV"),
-        DOOH("DOOH"),;
+        DOOH("DOOH"),
+        PERFORMANCE_MAX("PERFORMANCE_MAX"),;
 
         private final String value;
 

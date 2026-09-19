@@ -36,6 +36,7 @@ public enum UpdateAtsCandidateQueryParamFields {
     SKILLS("skills"),
     JOB_IDS("job_ids"),
     METADATA("metadata"),
+    SUMMARY("summary"),
     RAW("raw");
 
     @JsonValue

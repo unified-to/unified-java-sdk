@@ -129,6 +129,11 @@ public class AtsCandidate {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("summary")
+    private String summary;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     private List<String> tags;
 
@@ -187,6 +192,7 @@ public class AtsCandidate {
             @JsonProperty("raw") @Nullable Map<String, Object> raw,
             @JsonProperty("skills") @Nullable List<String> skills,
             @JsonProperty("sources") @Nullable List<String> sources,
+            @JsonProperty("summary") @Nullable String summary,
             @JsonProperty("tags") @Nullable List<String> tags,
             @JsonProperty("telephones") @Nullable List<AtsTelephone> telephones,
             @JsonProperty("title") @Nullable String title,
@@ -215,6 +221,7 @@ public class AtsCandidate {
         this.raw = raw;
         this.skills = skills;
         this.sources = sources;
+        this.summary = summary;
         this.tags = tags;
         this.telephones = telephones;
         this.title = title;
@@ -234,7 +241,7 @@ public class AtsCandidate {
             null, null, null,
             null, null, null,
             null, null, null,
-            null);
+            null, null);
     }
 
     public Optional<PropertyAtsCandidateAddress> address() {
@@ -323,6 +330,10 @@ public class AtsCandidate {
 
     public Optional<List<String>> sources() {
         return Optional.ofNullable(this.sources);
+    }
+
+    public Optional<String> summary() {
+        return Optional.ofNullable(this.summary);
     }
 
     public Optional<List<String>> tags() {
@@ -491,6 +502,12 @@ public class AtsCandidate {
     }
 
 
+    public AtsCandidate withSummary(@Nullable String summary) {
+        this.summary = summary;
+        return this;
+    }
+
+
     public AtsCandidate withTags(@Nullable List<String> tags) {
         this.tags = tags;
         return this;
@@ -567,6 +584,7 @@ public class AtsCandidate {
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
             Utils.enhancedDeepEquals(this.skills, other.skills) &&
             Utils.enhancedDeepEquals(this.sources, other.sources) &&
+            Utils.enhancedDeepEquals(this.summary, other.summary) &&
             Utils.enhancedDeepEquals(this.tags, other.tags) &&
             Utils.enhancedDeepEquals(this.telephones, other.telephones) &&
             Utils.enhancedDeepEquals(this.title, other.title) &&
@@ -586,9 +604,9 @@ public class AtsCandidate {
             jobIds, lastName, linkUrls,
             metadata, name, origin,
             raw, skills, sources,
-            tags, telephones, title,
-            updatedAt, userId, userIds,
-            webUrl);
+            summary, tags, telephones,
+            title, updatedAt, userId,
+            userIds, webUrl);
     }
     
     @Override
@@ -615,6 +633,7 @@ public class AtsCandidate {
                 "raw", raw,
                 "skills", skills,
                 "sources", sources,
+                "summary", summary,
                 "tags", tags,
                 "telephones", telephones,
                 "title", title,
@@ -668,6 +687,8 @@ public class AtsCandidate {
         private List<String> skills;
 
         private List<String> sources;
+
+        private String summary;
 
         private List<String> tags;
 
@@ -796,6 +817,11 @@ public class AtsCandidate {
             return this;
         }
 
+        public Builder summary(@Nullable String summary) {
+            this.summary = summary;
+            return this;
+        }
+
         public Builder tags(@Nullable List<String> tags) {
             this.tags = tags;
             return this;
@@ -843,9 +869,9 @@ public class AtsCandidate {
                 jobIds, lastName, linkUrls,
                 metadata, name, origin,
                 raw, skills, sources,
-                tags, telephones, title,
-                updatedAt, userId, userIds,
-                webUrl);
+                summary, tags, telephones,
+                title, updatedAt, userId,
+                userIds, webUrl);
         }
 
     }
