@@ -50,7 +50,7 @@ public class Application {
                         "2b1ef757-eb4c-4207-8af1-929afe49cd65"))
                     .subcategory("Bamboo")
                     .type(HrisTaxonomyType.KNOWLEDGE)
-                    .updatedAt(OffsetDateTime.parse("2023-05-22T10:04:44.206Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-05-22T15:32:00.590Z"))
                     .url("https://our-polarisation.name")
                     .build())
                 .connectionId("<id>")
